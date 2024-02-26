@@ -1,0 +1,869 @@
+/* style.css */
+/* #181818 */
+/* #5d5d5d for thin lines */
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 70px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 30px; /* Place 30px from top */
+}
+/* The navigation menu links */
+.sidenav a {padding: 2px;text-align: center;display: block;}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {color: #f1f1f1;border-radius: 50%;}
+/* Icons on the navbar */
+.roundedIcon {border-radius: 20%;width:50px;height:auto;outline: 2px solid white;}
+
+.main {
+    margin-left: 70px; /* Same as sidenav */  
+    background-color:#181818; 
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+div {
+    color: white;
+}
+
+* {
+/* outline: 2px solid red; */
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SHEET RECREATION HERE */
+.basicsBox {
+    width: 200px;
+    min-width: 200px;
+    height: 800px;
+    max-height: 800px;
+    background-color: #666666;
+    color: white;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.basicsTitleHeader {
+    font-size: 30px;
+    height: 25%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+.basicsHeaderBig {
+    font-size: 20px;
+    padding: 0%;
+    width: 100%;
+    background-color: #434343;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+.basicsRows {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+.basicsSummaryBox {
+    height: 16%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.basicsDRBox {
+    height: 34%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.basicsDRheaderTitle {
+    font-size: 20px;
+    width: 100%;
+    height: 20%;
+    background-color: #434343;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRheaderSmall {
+    font-size: 15px;
+    height: 7%;
+    padding: 0%;
+    width: 100%;
+    background-color: #434343;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRContainer {
+    width: 100%;
+    height: 7%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsDRStat {
+    width: 66%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRValue {
+    width: 30%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRsumContainer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsTotalDR {
+    width: 60%;
+    padding-right: 2%;
+    background-color: #434343;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsTotalDRsum {
+    width: 40%;
+    padding-right: 2%;
+    height: 100%;
+    font-size: 20px;
+    background-color: black;
+    border-right: 1px solid #434343;
+    display: flex;
+    white-space: nowrap;
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsSummaryContainer {
+    width: 100%;
+    height: 18.75%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsSummaryStat {
+    width: 66%;
+    height: 100%;
+    padding-left: 1%;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsSummaryValue {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsResistanceBox {
+    height: 13.5%;
+    width: 100%;
+    box-sizing: border-box;
+    /* white-space: nowrap; */
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.resistanceHeader {
+    width: 100%;
+    height: 24%;
+    font-size: 20px;
+    padding: 0;
+    background-color: #434343;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.resistanceContainer {
+    height: 38%;
+    width: 100%;
+    background-color: black;
+    padding: 0%;
+    display: flex;
+    box-sizing: border-box;
+}
+.resistanceIcon {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    box-sizing: border-box;
+}
+.resistanceValues {
+    width: 20%;
+    height: 100%;
+    font-size: 25px;
+    border: 1px solid #434343;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.basicsHealingBox {
+    height: 25.5%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.healingHeaderTitle {
+    font-size: 20px;
+    width: 100%;
+    height: 13%;
+    background-color: #434343;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.healingHeaderSmall {
+    font-size: 15px;
+    height: 8%;
+    padding: 0%;
+    width: 100%;
+    background-color: #434343;
+    text-align: left;
+    box-sizing: border-box;
+}
+.healingRowContainer {
+    width: 100%;
+    height: 10.1428571%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsStaminaBox {
+    height: 11%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.staminaHeaderTitle {
+    font-size: 20px;
+    width: 100%;
+    height: 30%;
+    background-color: #434343;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.staminaRowContainer {
+    width: 100%;
+    height: 23.333333%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.classBox {
+    width: 150px;
+    min-width: none;
+    height: 800px;
+    background-color: black;
+    color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+}
+.classAbilityBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.classIconContainer {
+    width: 100%;
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.classIconSelected {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.classThinHeader {
+    font-size: 15px;
+    padding: 0%;
+    height: 4%;
+    width: 100%;
+    background-color: #434343;
+    text-align: left;
+    box-sizing: border-box;
+}
+.classSelectorBox {
+    width: 100%;
+    height: 8%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.classSelector {
+    font-size: 23px;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+.classAbilityContainer {display: flex;height: 16%;box-sizing: border-box;background-color: #666666;}
+.classAbilitySelectorBox {
+    width: 60%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.classAbilitySelector {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    font-size: 15px;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+.classAbilityIcon {
+    width: 40%;
+    height: min-content;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+}
+.classAbilityDescription {
+    text-align: left;
+    font-size:10.5px;
+    height: 30%;   
+}
+.classPassivesBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.classPassiveHeader {
+    font-size: 15px;
+    padding: 0%;
+    height: 4%;
+    background-color: #666666;
+    text-align: left;
+}
+.classPassiveDescription {
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    font-size: clamp(9.5px, 0.8vw, 11px);
+    padding-top: 2px;
+}
+
+
+
+
+
+
+.classArmorBox {
+    width: 250px;
+    min-width: none;
+    height: 800px;
+    background-color: black;
+    color: white;
+}
+.primePerkBox {
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.classVoidSpace {
+    width: 100%;
+    height: 15%;
+    font-size: 10px;
+    border-bottom: 1px solid #434343;
+    border-top: 1px solid #434343;
+    text-align: center;
+    box-sizing: border-box;
+}
+.classTitle {
+    width: 100%;
+    height: 21%;
+    font-size: clamp(15px, 2vw, 25px);
+    border-bottom: 1px solid #434343;
+    border-top: 1px solid #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.classPerkContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 25.5%;
+    align-items: center;
+}
+.classPerkName {
+    font-size: clamp(8px, 2vw, 20px);
+    width: 70%;
+    height: 100%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.classPerkIconHolder {
+    width: 30%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    text-align: center;
+}
+.classPerkIcon {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+.classPerkDescription{
+    width: 100%;
+    height: 38.5%;
+    border-bottom: 1px solid #434343;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.armorHeaderBig{
+    width: 100%;
+    height: 3%;
+    font-size: clamp(8px, 2vw, 20px);
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-bottom: 1px solid black;
+}
+.armorSelectionsBox {
+    width: 100%;
+    height: 57%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.armorSelector {
+    font-size: 15;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+.armorHeader{
+    width: 100%;
+    height: 4%;
+    font-size: 15px;
+    padding: 0%;
+    background-color: #434343;
+    text-align: left;
+}
+.armorContainer {
+    width: 100%;
+    height: 21%;
+    display: flex;
+    box-sizing: border-box;
+}
+.armorSelectorBox {
+    font-size: 15;
+    width: 40%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.armorIconHolder {
+    width: 30%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    /* background-color: #666666; */
+}
+.armorIcon {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+}
+.armorValueContainer {width: 30%; height: 100%;text-align: center;}
+.armorValueHeader {
+    font-size: 9;
+    width: 100%;
+    height: 25%;
+    padding: 0%;
+    background-color: #434343;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+}
+.armorValueDisplay {
+    font-size: 9;
+    width: 100%;
+    height: 25%;
+    padding: 0%;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-left: 1px solid #434343;
+    border-right: 1px solid #434343;
+    box-sizing: border-box;
+}
+
+
+
+/* Accessory Column ----------------------------------------------*/
+.accessoriesBox {
+    width: 350px;
+    min-width: none;
+    height: 800px;
+    background-color: #666666;
+    color: white;
+    box-sizing: border-box;
+}
+.accessoriesTitleHeader {
+    font-size: 30px;
+    height: 4%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    box-sizing: border-box;
+}
+.accessoriesContainer {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    color: white;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.accessoryIconHolder {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+.accessoryIcon {
+    width: 95%;
+    height: fit-content;
+    margin: auto;
+}
+.accessoryContainer{
+    font-size: 15px;
+    width: 32%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+}
+.accessoryHeader {
+    width: 100%;
+    height: 22%;
+    font-size: 15px;
+    padding-left: 2%;
+    background-color: #434343;
+    text-align: left;
+    box-sizing: border-box;
+}
+.accessorySelectorBox {
+    width: 100%;
+    height: 78%;
+    font-size: 15px;
+    padding: 0%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.accessorySelector {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+.accessoryDescription {
+    width: 43%;
+    height: 100%;
+    text-align: left;
+    /* font-size:10px; */
+    font-size: clamp(9px, 0.8vw, 11px);
+    padding-left: 0.5%;
+    background-color: black;
+    border-right: 1px solid #434343;
+    box-sizing: border-box;
+}
+.fragmentsContainer{
+    width: 43%;
+    height: 100%;
+    font-size: 15px;
+    padding: 0%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+}
+.fragmentsSelectorBox {
+    width: 100%;
+    height: 26%;
+    padding: 0%;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #434343;
+    display: flex;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* overflow: ; */
+}
+.fragmentsSelector {
+    width: 100%;
+    height: 100%;
+    font-size: clamp(8px, 1vw, 10px);
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.fragmentsSelector + .fragmentsSelector {
+    border-top: 1px solid #666666;
+}
+.relicDescription {
+    background-color: black;
+    text-align: left;
+    font-size:11px;
+    height: 7%;
+    padding-top: 2px;
+    display: flex;
+    box-sizing: border-box;
+    border-left: 1px solid #434343;
+    border-right: 1px solid #434343;
+}
+.relicEffectsContainer {
+    width: 100%;
+    display: flex;
+    padding: 0%;
+    height: 25%;
+    background-color: black;
+}
+.relicHealingContainer {
+    width: 40%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    flex-direction: column;
+}
+.relicComplexContainer {
+    width: 60%;
+    height: 100%;
+    background-color: #434343;
+}
+.relicHeader {
+    width: 100%;
+    height: 10%;
+    font-size: 15px;
+    padding-left: 1%;
+    background-color: #434343;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.complexRowContainer {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* .staminaRowContainer {
+    width: 100%;
+    height: 23.333333%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+} */
+
+
+/* .resistanceContainer {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    padding: 0;
+    display: flex;
+}
+.resistanceIcon {
+    width: 19%;
+    height: auto;
+    border: 1px solid #434343;
+    text-align: center; */

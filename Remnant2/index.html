@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="Icon" href="images/Cowaii.png">
+    <script src="code.js"></script>
+    <title>Website Fuckery</title> <!-- Browser Tab title -->
+</head>
+
+<div id="gameNav" class="sidenav"> <!-- Sidenav -->
+    <a href="#"><img class="roundedIcon" src="images/Home.png" alt="Home Icon"></a>
+    <a href="#"><img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"></a>
+    <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
+</div>
+
+<div class="main"> <!-- The entire upper section, from Basic Stats to Accessory columns -->
+<body style="background-color:#181818;">
+
+
+<div class="basicsBox"> <!-- BASIC STATS COLUMN -->
+    <div class="basicsSummaryBox">
+        <div class="basicsTitleHeader">BASIC STATS</div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH </span><span class="basicsSummaryValue" id="summaryHealth">100</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="basicsSummaryValue" id="summaryStamina">100</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR  </span><span class="basicsSummaryValue" id="summaryArmor">0</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT </span><span class="basicsSummaryValue" id="summaryWeight">0</span></div>
+    </div>
+
+    <div class="basicsDRBox">
+        <div class="basicsDRheaderTitle">DAMAGE<br>REDUCTION</div>
+        <div class="basicsDRheaderSmall">ARMOR</div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="basicsDRValue"id="baseArmor">0</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="basicsDRValue" id="armorEff">0%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="basicsDRValue" id="totalArmor">0</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="basicsDRValue" id="armorDR">0%</span></div>
+        <div class="basicsDRheaderSmall">FLAT</div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Bulwark Stacks</span><span class="basicsDRValue" id="bulwarkStacks">0</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="basicsDRValue" id="bulwarkDR">0%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="basicsDRValue" id="otherFlat">0%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="basicsDRValue" id="totalFlat">0%</span></div>
+        <div class="basicsDRsumContainer">
+            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0%</span>
+        </div>
+    </div>
+
+    <div class="basicsResistanceBox">
+        <div class="resistanceHeader">RESISTANCES</div>
+        <div class="resistanceContainer"> <!-- Resistance Icons -->
+            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/bleed.png" alt="Bleed icon"></div>
+            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/fire.png" alt="Burn icon"></div>
+            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/shock.png" alt="Shock icon"></div>
+            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/corrosive.png" alt="Corrosive icon"></div>
+            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/blight.png" alt="Blight icon"></div>
+        </div>
+        <div class="resistanceContainer"> <!-- Resistance Values -->
+            <div class="resistanceValues" id="summaryBleed">0</div>
+            <div class="resistanceValues" id="summaryBurn">0</div>
+            <div class="resistanceValues" id="summaryShock">0</div>
+            <div class="resistanceValues" id="summaryCorrosive">0</div>
+            <div class="resistanceValues" id="summaryBlight">0</div>
+        </div>
+    </div>
+
+    <div class="basicsHealingBox">
+        <div class="healingHeaderTitle">HEALING</div>
+        <div class="healingHeaderSmall">BOOSTS</div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Relic Use Time</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="basicsDRValue">x/x/x</span></div>
+        <div class="healingHeaderSmall">REGENERATION</div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Flat HP/s</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">% HP/s</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Grey Health/s</span><span class="basicsDRValue">x</span></div>
+    </div>
+    
+    <div class="basicsStaminaBox">
+        <div class="staminaHeaderTitle">STAMINA</div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue">x</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue">x</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Type</span><span class="basicsDRValue">x</span></div>
+    </div>
+</div>
+
+<div class="classBox"> <!-- ARCHETYPE 1 COLUMN -->
+    <div class="classAbilityBox">
+    <div class="classIconContainer">
+        <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1Icon">
+    </div>
+    <div class="classThinHeader">Archetype 1:</div>
+    <div class="classSelectorBox">
+        <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
+        </select> 
+    </div>
+        <div class="classThinHeader">ABILITY 1:</div>
+            <div class="classAbilityContainer">
+                <div class="classAbilitySelectorBox">
+                    <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')">
+                        <option value="">---</option>
+                    </select> 
+                </div>
+                <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+            </div>
+            <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
+    </div>
+
+    <div class="classPassivesBox">       
+        <div class="classThinHeader">PASSIVES:</div>
+        <div class="classPassiveHeader" id="archetype1passive1"></div>
+            <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
+        <div class="classPassiveHeader" id="archetype1passive2"></div>
+            <div class="classPassiveDescription" id="archetype1passive2desc"></div>
+        <div class="classPassiveHeader" id="archetype1passive3"></div>
+            <div class="classPassiveDescription" id="archetype1passive3desc"></div>
+        <div class="classPassiveHeader" id="archetype1passive4"></div>
+            <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+    </div>
+</div>
+
+<div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
+    <div class="primePerkBox">
+        <div class="classVoidSpace">Probably loadout selection icons, here. Adjust height and shrink pperk desc based on max length among all classes.<br>A task for later.</div>
+        <div class="classTitle" id="comboTitle">---</div>
+        <div class="classPerkContainer">
+            <div class="classPerkName">PRIME PERK:<br><span id="primePerk">Select a primary archetype</span></div>
+            <div class="classPerkIconHolder">
+                <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
+            </div>
+        </div>
+        <div class="classPerkDescription" id="primePerkDesc">---</div>
+    </div>
+    <div class="armorHeaderBig">ARMOR SELECTION</div>
+    <div class="armorSelectionsBox">
+        <div class="armorHeader">Head</div>
+            <div class="armorContainer">
+                <div class="armorSelectorBox">
+                    <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
+                </div>
+                <div class="armorIconHolder">
+                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
+                </div>
+                <div class="armorValueContainer">
+                    <div class="armorValueHeader">Armor</div>
+                    <div class="armorValueDisplay" id="helmetArmor">0</div>
+                    <div class="armorValueHeader">Weight</div>
+                    <div class="armorValueDisplay" id="helmetWeight">0</div>
+                </div>
+            </div>
+        <div class="armorHeader">Chest</div>
+            <div class="armorContainer">
+                <div class="armorSelectorBox">
+                    <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
+                </div>
+                <div class="armorIconHolder">
+                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
+                </div>
+                <div class="armorValueContainer">
+                    <div class="armorValueHeader">Armor</div>
+                    <div class="armorValueDisplay" id="chestArmor">0</div>
+                    <div class="armorValueHeader">Weight</div>
+                    <div class="armorValueDisplay" id="chestWeight">0</div>
+                </div>
+            </div>
+        <div class="armorHeader">Legs</div>
+            <div class="armorContainer">
+                <div class="armorSelectorBox">
+                    <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
+                </div>
+                <div class="armorIconHolder">
+                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
+                </div>
+                <div class="armorValueContainer">
+                    <div class="armorValueHeader">Armor</div>
+                    <div class="armorValueDisplay" id="legArmor">0</div>
+                    <div class="armorValueHeader">Weight</div>
+                    <div class="armorValueDisplay" id="legWeight">0</div>
+                </div>
+            </div>
+        <div class="armorHeader">Hands</div>
+            <div class="armorContainer">
+                <div class="armorSelectorBox">
+                    <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
+                </div>
+                <div class="armorIconHolder">
+                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
+                </div>
+                <div class="armorValueContainer">
+                    <div class="armorValueHeader">Armor</div>
+                    <div class="armorValueDisplay" id="handArmor">0</div>
+                    <div class="armorValueHeader">Weight</div>
+                    <div class="armorValueDisplay" id="handWeight">0</div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="classBox"> <!-- ARCHETYPE 2 COLUMN-->
+    
+    <div class="classAbilityBox">
+    <div class="classIconContainer">
+        <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2Icon">
+    </div>
+    <div class="classThinHeader">Archetype 2:</div>
+    <div class="classSelectorBox">
+        <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')"></select> 
+    </div>
+        <div class="classThinHeader">ABILITY 2:</div>
+        <div class="classAbilityContainer">
+            <div class="classAbilitySelectorBox">
+                <select class="classAbilitySelector" id="archetype2ability"  onchange="updateAbility('archetype2')">
+                    <option value="">---</option>
+                </select> 
+            </div>
+            <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2abilityIcon">
+        </div>
+        <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
+    </div>
+            
+    <div class="classPassivesBox">
+        <div class="classThinHeader">PASSIVES:</div>
+        <div class="classPassiveHeader" id="archetype2passive1"></div>
+            <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
+        <div class="classPassiveHeader" id="archetype2passive2"></div>
+            <div class="classPassiveDescription" id="archetype2passive2desc"></div>
+        <div class="classPassiveHeader" id="archetype2passive3"></div>
+            <div class="classPassiveDescription" id="archetype2passive3desc"></div>
+        <div class="classPassiveHeader" id="archetype2passive4"></div>
+            <div class="classPassiveDescription" id="archetype2passive4desc"></div>
+    </div>
+</div>
+
+<div class="accessoriesBox"> <!-- ACCESSORY COLUMN-->
+    <div class="accessoriesTitleHeader">ACCESSORIES</div>
+    <div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Amulet Icon" id="amuletImage">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Amulet:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="amulet" onchange="updateAccessory('amulet')"></select>
+            </div>
+        </div>
+        <div class="accessoryDescription" id="amuletDesc"></div>
+    </div>
+    <div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 1 Icon" id="ring1Image">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Ring 1:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="ring1" onchange="updateAccessory('ring','1')"></select>
+            </div>
+        </div>
+        <div class="accessoryDescription" id="ring1Desc"></div>
+    </div><div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 2 Icon" id="ring2Image">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Ring 2:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="ring2" onchange="updateAccessory('ring','2')"></select>
+            </div>
+        </div>
+        <div class="accessoryDescription" id="ring2Desc"></div>
+    </div><div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 3 Icon" id="ring3Image">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Ring 3:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="ring3" onchange="updateAccessory('ring','3')"></select>
+            </div>
+        </div>
+        <div class="accessoryDescription" id="ring3Desc"></div>
+    </div><div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 4 Icon" id="ring4Image">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Ring 4:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="ring4" onchange="updateAccessory('ring','4')"></select>
+            </div>
+        </div>
+        <div class="accessoryDescription" id="ring4Desc"></div>
+    </div>
+    <div class="accessoriesTitleHeader">RELIC</div>
+    <div class="accessoriesContainer">
+        <div class="accessoryIconHolder">
+            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Relic Icon" id="relicImage">
+        </div>
+        <div class="accessoryContainer">
+            <div class="accessoryHeader">Relic:</div>
+            <div class="accessorySelectorBox">
+                <select class="accessorySelector" id="relic" onchange="updateAccessory('relic')"></select>
+            </div>
+        </div>
+        <div class="fragmentsContainer">
+            <div class="accessoryHeader">Fragments:</div>
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment1')"></select>
+            </div>
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment2')"></select>
+            </div>
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment3')"></select>
+            </div>
+        </div>
+    </div>
+    <div class="relicDescription" id="relicDesc"></div>
+    
+    
+    <div class="relicEffectsContainer">
+        <div class="relicHealingContainer">
+            <div class="relicHeader">Relic Healing</div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Over(s)</span><span class="basicsDRValue">x</span></div>
+            <div class="relicHeader">Scaled</div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue">x</span></div>
+        </div>
+        <div class="relicComplexContainer">
+            <div class="relicHeader">Complex Relic Effects</div>
+            misc shit here later, but also I have far more space than expected? Figure out wtf to do here once hookups are done.
+        </div>
+    </div>
+</div>
+<!-- asdf
+<img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"> -->
+</body>
+
+</div>
+</html> 
