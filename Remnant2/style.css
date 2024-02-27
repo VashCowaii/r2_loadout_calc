@@ -6,7 +6,9 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 70px;
+    /* width: 70px; */
+    /* width: 5vw; */
+    width: clamp(40px, 4vw, 60px);
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -14,21 +16,34 @@
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 30px; /* Place 30px from top */
+    box-sizing: border-box;
 }
 /* The navigation menu links */
-.sidenav a {padding: 2px;text-align: center;display: block;}
+.sidenav a {padding: 2px;text-align: center;display: block; box-sizing: border-box;}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {color: #f1f1f1;border-radius: 50%;}
 /* Icons on the navbar */
-.roundedIcon {border-radius: 20%;width:50px;height:auto;outline: 2px solid white;}
+.roundedIcon {
+    border-radius: 20%;
+    width:95%;
+    height:auto;
+    outline: 2px solid white;
+    box-sizing: border-box;}
 
 .main {
-    margin-left: 70px; /* Same as sidenav */  
+    /* margin-left: 70px; Same as sidenav   */
     background-color:#181818; 
-    padding-left: 0.5%;
-    padding-right: 0.5%;
+    /* padding-left: 0.2%; */
+    /* padding-left: clamp(40px, 4vw, 70px); */
+    /* padding-right: 0.2%; */
+    width: 100%;
+    /* display: flex; */
     display: flex;
+    justify-content: center;
+    /* flex-direction: ; */
+    flex-flow: row wrap;
     box-sizing: border-box;
+    /* overflow: visible; */
 }
 
 div {
@@ -40,7 +55,9 @@ div {
 font-family: Arial, Helvetica, sans-serif;
 }
 
-/* SHEET RECREATION HERE */
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- BASIC STATS Column -------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .basicsBox {
     width: 200px;
     min-width: 200px;
@@ -341,12 +358,9 @@ font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     box-sizing: border-box;
 }
-
-
-
-
-
-
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Archetype Columns --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .classBox {
     width: 150px;
     min-width: none;
@@ -460,6 +474,8 @@ font-family: Arial, Helvetica, sans-serif;
     height: 4%;
     background-color: #666666;
     text-align: left;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 .classPassiveDescription {
     width: 100%;
@@ -467,13 +483,11 @@ font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size: clamp(9.5px, 0.8vw, 11px);
     padding-top: 2px;
+    box-sizing: border-box;
 }
-
-
-
-
-
-
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- PrimePerk/Armor Column ---------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .classArmorBox {
     width: 250px;
     min-width: none;
@@ -651,10 +665,9 @@ font-family: Arial, Helvetica, sans-serif;
     border-right: 1px solid #434343;
     box-sizing: border-box;
 }
-
-
-
-/* Accessory Column ----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Accessory Column ---------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .accessoriesBox {
     width: 350px;
     min-width: none;
@@ -841,29 +854,3 @@ font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     box-sizing: border-box;
 }
-
-/* .staminaRowContainer {
-    width: 100%;
-    height: 23.333333%;
-    border-bottom: 1px solid #434343;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-} */
-
-
-/* .resistanceContainer {
-    height: auto;
-    width: 100%;
-    background-color: black;
-    padding: 0;
-    display: flex;
-}
-.resistanceIcon {
-    width: 19%;
-    height: auto;
-    border: 1px solid #434343;
-    text-align: center; */

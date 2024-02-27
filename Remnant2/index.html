@@ -10,39 +10,44 @@
     <title>Website Fuckery</title> <!-- Browser Tab title -->
 </head>
 
-<div id="gameNav" class="sidenav"> <!-- Sidenav -->
-    <a href="#"><img class="roundedIcon" src="images/Home.png" alt="Home Icon"></a>
+<!-- <div id="gameNav" class="sidenav"> Sidenav -->
+    <!-- <a href="#"><img class="roundedIcon" src="images/Home.png" alt="Home Icon"></a>
     <a href="#"><img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"></a>
     <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
-</div>
+</div> -->
 
 <div class="main"> <!-- The entire upper section, from Basic Stats to Accessory columns -->
-<body style="background-color:#181818;">
+    <div id="gameNav" class="sidenav"> <!-- Sidenav -->
+        <a href="#"><img class="roundedIcon" src="images/Home.png" alt="Home Icon"></a>
+        <a href="#"><img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"></a>
+        <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
+    </div>
+<!-- <body style="background-color:#181818;"> -->
 
 
 <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
     <div class="basicsSummaryBox">
         <div class="basicsTitleHeader">BASIC STATS</div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH </span><span class="basicsSummaryValue" id="summaryHealth">100</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="basicsSummaryValue" id="summaryStamina">100</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR  </span><span class="basicsSummaryValue" id="summaryArmor">0</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT </span><span class="basicsSummaryValue" id="summaryWeight">0</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH </span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR  </span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
+            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT </span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
     </div>
 
     <div class="basicsDRBox">
         <div class="basicsDRheaderTitle">DAMAGE<br>REDUCTION</div>
         <div class="basicsDRheaderSmall">ARMOR</div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="basicsDRValue"id="baseArmor">0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="basicsDRValue" id="armorEff">0%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="basicsDRValue" id="totalArmor">0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="basicsDRValue" id="armorDR">0%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="basicsDRValue"id="baseArmor">0.0</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="basicsDRValue" id="armorEff">100.00%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="basicsDRValue" id="totalArmor">0.0</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="basicsDRValue" id="armorDR">0.00%</span></div>
         <div class="basicsDRheaderSmall">FLAT</div>
             <div class="basicsDRContainer"><span class="basicsDRStat">Bulwark Stacks</span><span class="basicsDRValue" id="bulwarkStacks">0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="basicsDRValue" id="bulwarkDR">0%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="basicsDRValue" id="otherFlat">0%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="basicsDRValue" id="totalFlat">0%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="basicsDRValue" id="bulwarkDR">0.00%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="basicsDRValue" id="otherFlat">0.00%</span></div>
+            <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="basicsDRValue" id="totalFlat">0.00%</span></div>
         <div class="basicsDRsumContainer">
-            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0%</span>
+            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0.00%</span>
         </div>
     </div>
 
@@ -67,21 +72,21 @@
     <div class="basicsHealingBox">
         <div class="healingHeaderTitle">HEALING</div>
         <div class="healingHeaderSmall">BOOSTS</div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="basicsDRValue">x</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="basicsDRValue">x</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Relic Use Time</span><span class="basicsDRValue">x</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="basicsDRValue">x/x/x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="basicsDRValue" id="relicEFF">0.00%</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="basicsDRValue" id="healingEFF">0.00%</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Relic Use Time</span><span class="basicsDRValue" id="relicUseTime">0.00%</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="basicsDRValue" id="lifesteal">0.0/0.0/0.0</span></div>
         <div class="healingHeaderSmall">REGENERATION</div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Flat HP/s</span><span class="basicsDRValue">x</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">% HP/s</span><span class="basicsDRValue">x</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Grey Health/s</span><span class="basicsDRValue">x</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Flat HP/s</span><span class="basicsDRValue" id="flatHP/s">0.0</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">% HP/s</span><span class="basicsDRValue" id="%HP/s">0.00%</span></div>
+            <div class="healingRowContainer"><span class="basicsDRStat">Grey Health/s</span><span class="basicsDRValue" id="greyHP/s">0.2</span></div>
     </div>
     
     <div class="basicsStaminaBox">
         <div class="staminaHeaderTitle">STAMINA</div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue">x</span></div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue">x</span></div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Type</span><span class="basicsDRValue">x</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue" id="stamina/s">0.0</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue" id="staminaCost">100.00%</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Class</span><span class="basicsDRValue" id="dodgeClass">Light</span></div>
     </div>
 </div>
 
@@ -321,13 +326,13 @@
     <div class="relicEffectsContainer">
         <div class="relicHealingContainer">
             <div class="relicHeader">Relic Healing</div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue">x</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue">x</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Over(s)</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicBase">0</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue" id="relicType">0</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Over(s)</span><span class="basicsDRValue" id="relicTime">0</span></div>
             <div class="relicHeader">Scaled</div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue">x</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="basicsDRValue">x</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue">x</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicScaled">0</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="basicsDRValue" id="relic%HP/s">0</span></div>
+            <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue" id="relicHP/s">0</span></div>
         </div>
         <div class="relicComplexContainer">
             <div class="relicHeader">Complex Relic Effects</div>
@@ -337,7 +342,7 @@
 </div>
 <!-- asdf
 <img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"> -->
-</body>
+<!-- </body> -->
 
 </div>
 </html> 

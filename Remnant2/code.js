@@ -45,7 +45,7 @@ function updateArmor(armorPiece) {
    readSelection(`${armorPiece}Weight`).innerHTML=selectedArmor.WEIGHT;
    updateFormulas();
 }
-
+//Triggers whenever a new amu/ring/relic is selected
 function updateAccessory(type,place) {
    let jsonID = `${type}s`;
    let modifier = "";
@@ -80,7 +80,7 @@ function updateAccessory(type,place) {
       if (updateOtherRing===true){updateAccessory(type,otherRing);}
    }
 }
-
+//Triggers whenever a new fragment is selected
 function updateFragment(elemID) {
    let selectedValue = readSelection(elemID).value;
    for (i=1;i<=3;i++) {
@@ -97,54 +97,55 @@ function updateFragment(elemID) {
    window[`${elemID}old`]=selectedValue;
    updateFormulas();
 }
-
+//Triggers whenever a given archetype has a new selection
 function updateArchetype(archetype) {
-   let selectedArchetype = readSelection(archetype).value;
-   //Defining the opposite archetype ID call in case a swap happens
-   let archetype2 = "";
-   let updateOpposing = false;
-   if (archetype==="archetype1") {archetype2="archetype2"}
-   else {archetype2="archetype1"}
-   //If the selection matchs the opposing archetype selection, swap places like in game
-   if (selectedArchetype===readSelection(archetype2).value) {
+    let selectedArchetype = readSelection(archetype).value;
+    //Defining the opposite archetype ID call in case a swap happens
+    let archetype2 = "";
+    let updateOpposing = false;
+    if (archetype==="archetype1") {archetype2="archetype2"}
+    else {archetype2="archetype1"}
+    //If the selection matchs the opposing archetype selection, swap places like in game
+    if (selectedArchetype===readSelection(archetype2).value) {
       window[`${archetype2}old`]=window[`${archetype}old`];
       readSelection(archetype2).value=window[`${archetype}old`];
       updateOpposing = true;
-   }
-   //Update archetype icon
-   readSelection(`${archetype}Icon`).src=classInfo[selectedArchetype].classIcon;
-   //Clear abilities left in the dropdown, if any were there
-   readSelection(`${archetype}ability`).innerHTML="";
-   //Populate ability list based on selected archetype
-   populateGear(`${archetype}ability`,classInfo[selectedArchetype].abilities);
-   //Populate passive names
-   readSelection(`${archetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
-   readSelection(`${archetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
-   readSelection(`${archetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
-   readSelection(`${archetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
-   //Populate passive descriptions
-   readSelection(`${archetype}passive1desc`).innerHTML=classInfo[selectedArchetype].passives.passive1.desc;
-   readSelection(`${archetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
-   readSelection(`${archetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
-   readSelection(`${archetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
-   //needed to populate info on first ability that populates selection by default
-   updateAbility(archetype);
-   //Concatenates the two selected classes, uses resulting string to search comboTitle
-   let combo = "";
-   let part1 = readSelection("archetype1").value;
-   let part2 = readSelection("archetype2").value;
-   if (part1===""||part2==="") {combo = "-Select--Select-";}
-   else {combo = `${part1}${part2}`;}
-   readSelection("comboTitle").innerHTML=titleCombos[combo];
-   //Assigns currently selected archetype to the "Old" variable for that side(1/2) for the sake
-   //of tracking archetype selection swaps
-   window[`${archetype}old`]=selectedArchetype;
-   //Check if an archetype swap happened, and if it did, run AGAIN for the other side
-   if (updateOpposing===true){
+    }
+    //Update archetype icon
+    readSelection(`${archetype}Icon`).src=classInfo[selectedArchetype].classIcon;
+    //Clear abilities left in the dropdown, if any were there
+    readSelection(`${archetype}ability`).innerHTML="";
+    //Populate ability list based on selected archetype
+    populateGear(`${archetype}ability`,classInfo[selectedArchetype].abilities);
+    //Populate passive names
+    readSelection(`${archetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
+    readSelection(`${archetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
+    readSelection(`${archetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
+    readSelection(`${archetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
+    //Populate passive descriptions
+    readSelection(`${archetype}passive1desc`).innerHTML=classInfo[selectedArchetype].passives.passive1.desc;
+    readSelection(`${archetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
+    readSelection(`${archetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
+    readSelection(`${archetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
+    //needed to populate info on first ability that populates selection by default
+    updateAbility(archetype);
+    //Concatenates the two selected classes, uses resulting string to search comboTitle
+    let combo = "";
+    let part1 = readSelection("archetype1").value;
+    let part2 = readSelection("archetype2").value;
+    if (part1===""||part2==="") {combo = "-Select--Select-";}
+    else {combo = `${part1}${part2}`;}
+    readSelection("comboTitle").innerHTML=titleCombos[combo];
+    //Assigns currently selected archetype to the "Old" variable for that side(1/2) for the sake
+    //of tracking archetype selection swaps
+    window[`${archetype}old`]=selectedArchetype;
+    //Check if an archetype swap happened, and if it did, run AGAIN for the other side
+    if (updateOpposing===true){
       updateArchetype(archetype2);
-   }
+    }
+    updateFormulas();
 }
-
+//Triggers whenever the parent archetype changes, or whenever a new ability is selected
 function updateAbility(archetype) {
    let selectedArchetype = readSelection(archetype).value;
    let selectedAbility = readSelection(`${archetype}ability`).value;
@@ -155,24 +156,27 @@ function updateAbility(archetype) {
    }
    readSelection(`${archetype}abilityDesc`).innerHTML=classInfo[selectedArchetype].abilities[selectedAbility].desc;
    readSelection(`${archetype}abilityIcon`).src=classInfo[selectedArchetype].abilities[selectedAbility].image;
+   updateFormulas();
 }
-
+//Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
 function readSelection(elem_ID) {
     let selectedValue = document.getElementById(elem_ID);
     return selectedValue;
 }
-
+//The big cheese, the great clusterfuck, where all the formulas refresh.
 function updateFormulas() { 
+  for(elements in greatTableKnowerOfAll) {greatTableKnowerOfAll[elements]=0;}
+
 //----------BASICS COLUMN-------------------------------------------------------
   pullArmorStats();
   pullGearStats();
   pullClassStats();
 //SUMMARY STATS
-  let baseHealth = greatTableKnowerOfAll.Health;
+  let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
   let totalHealth = baseHealth * healthBoost; 
   updateDisplay("summaryHealth",totalHealth,1);
-  let baseStamina = greatTableKnowerOfAll.Stamina;
+  let baseStamina = 100 + greatTableKnowerOfAll.Stamina;
   let staminaBoost = 1 + greatTableKnowerOfAll["Stamina%"];
   let totalStamina = baseStamina * staminaBoost; 
   updateDisplay("summaryStamina",totalStamina,1);
@@ -184,17 +188,40 @@ function updateFormulas() {
   let weightBoost = 1 + greatTableKnowerOfAll["Encumbrance%"];
   let totalWeight = baseWeight * weightBoost;
   updateDisplay("summaryWeight",totalWeight,1);
+  let WeightThreshold = greatTableKnowerOfAll.WeightThreshold;
+  let dodgeClass = "";
+  let staminaPenalty = 0;
+  if (totalWeight>(75+WeightThreshold)) {
+    dodgeClass = "Flop";
+    readSelection("summaryWeight").style.color = "#e06666";
+    staminaPenalty = .75;
+  }
+  else if ((totalWeight>(50+WeightThreshold))&&(totalWeight<=(75+WeightThreshold))) {
+    dodgeClass = "Heavy";
+    readSelection("summaryWeight").style.color = "orange";
+    staminaPenalty = .5;
+  }
+  else if ((totalWeight>(25+WeightThreshold))&&(totalWeight<=(50+WeightThreshold))) {
+    dodgeClass = "Medium";
+    readSelection("summaryWeight").style.color = "#90ee90";
+    staminaPenalty = .25;
+  }
+  else {
+    dodgeClass = "Light";
+    readSelection("summaryWeight").style.color = "#93CCEA";
+    //No stamina cost penalty on light dodge
+  }
 //DAMAGE REDUCTION
 //ARMOR---
   updateDisplay("baseArmor",baseArmor,1);
   updateDisplay("armorEff",armorEff*100,2,"%");
   updateDisplay("totalArmor",totalArmor,1);
   let armorDR = totalArmor/(totalArmor+200);
-  updateDisplay("armorDR",armorDR*100,2);
+  updateDisplay("armorDR",armorDR*100,2,"%");
 //FLAT---
   let bulwarkStacks = greatTableKnowerOfAll.Bulwark;
   if (bulwarkStacks>5) {bulwarkStacks = 5;}//add a check here later to show people that they're going over stacks
-  updateDisplay("bulwarkStacks",bulwarkStacks,1);
+  updateDisplay("bulwarkStacks",bulwarkStacks,0);
   let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
   updateDisplay("bulwarkDR",bulwarkDR*100,2,"%");
   let otherFlat = greatTableKnowerOfAll.FlatDR;
@@ -205,25 +232,74 @@ function updateFormulas() {
   if (totalDR>0.8){totalDR=0.8}//add a check here later to show people that they're going over cap
   updateDisplay("totalDR",totalDR*100,2,"%");
 //RESISTANCES
-  let bleed = greatTableKnowerOfAll.Bleed * (1+greatTableKnowerOfAll["Bleed%"])
-  let burn = greatTableKnowerOfAll.Burn * (1+greatTableKnowerOfAll["Burn%"])
-  let shock = greatTableKnowerOfAll.Shock * (1+greatTableKnowerOfAll["Shock%"])
-  let corrosive = greatTableKnowerOfAll.Corrosive * (1+greatTableKnowerOfAll["Corrosive%"])
-  let blight = greatTableKnowerOfAll.Blight * (1+greatTableKnowerOfAll["Blight%"])
-  updateDisplay("Bleed",bleed,0);
-  updateDisplay("Bleed",burn,0);
-  updateDisplay("Bleed",shock,0);
-  updateDisplay("Bleed",corrosive,0);
-  updateDisplay("Bleed",blight,0);
+  let bleed = greatTableKnowerOfAll.Bleed * (1+greatTableKnowerOfAll["Bleed%"]);
+  let burn = greatTableKnowerOfAll.Burn * (1+greatTableKnowerOfAll["Burn%"]);
+  let shock = greatTableKnowerOfAll.Shock * (1+greatTableKnowerOfAll["Shock%"]);
+  let corrosive = greatTableKnowerOfAll.Corrosive * (1+greatTableKnowerOfAll["Corrosive%"]);
+  let blight = greatTableKnowerOfAll.Blight * (1+greatTableKnowerOfAll["Blight%"]);
+  updateDisplay("summaryBleed",bleed,0);
+  updateDisplay("summaryBurn",burn,0);
+  updateDisplay("summaryShock",shock,0);
+  updateDisplay("summaryCorrosive",corrosive,0);
+  updateDisplay("summaryBlight",blight,0);
 //HEALING
 //BOOSTS---
+  let relicEffectiveness = greatTableKnowerOfAll.RelicEFF;
+  updateDisplay("relicEFF",relicEffectiveness*100,2,"%");
+  let healingEffectiveness = greatTableKnowerOfAll.HealingEFF;
+  updateDisplay("healingEFF",healingEffectiveness*100,2,"%");
+  let relicUseTime = greatTableKnowerOfAll.RelicSpeed;
+  updateDisplay("relicUseTime",relicUseTime*100,2,"%");
+  let lifestealALL = greatTableKnowerOfAll.Lifesteal;
+  let lifestealMelee = greatTableKnowerOfAll.MLifesteal;
+  let lifestealRange = greatTableKnowerOfAll.RLifesteal;
+  readSelection("lifesteal").innerHTML = `${(lifestealALL).toFixed(1)}/${(lifestealMelee).toFixed(1)}/${(lifestealRange).toFixed(1)}`;
 //REGENERATION---
+  let flatHPperSec = greatTableKnowerOfAll["HP/S+"];
+  updateDisplay("flatHP/s",flatHPperSec,1);
+  let percHPperSec = greatTableKnowerOfAll["HP/S%"];
+  updateDisplay("%HP/s",percHPperSec*100,2,"%");
+  let greyHPperSec = 0.2 + greatTableKnowerOfAll["GreyHP/S+"];
+  let greyPercHPperSec = greatTableKnowerOfAll["GreyHP/S%"];
+  let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
+  updateDisplay("greyHP/s",totalGreyHPperSec,1);
 //STAMINA
+let staminaPerSec = greatTableKnowerOfAll["Stamina/S+"];
+updateDisplay("stamina/s",staminaPerSec,1);
+let staminaPenaltyAdjustment = 1;
+if (greatTableKnowerOfAll.StaminaPenaltyAdjustment != 0) {staminaPenaltyAdjustment = greatTableKnowerOfAll.StaminaPenaltyAdjustment}
+let staminaCost = 1 + (staminaPenalty*staminaPenaltyAdjustment) + greatTableKnowerOfAll.StaminaCost;
+updateDisplay("staminaCost",staminaCost*100,2,"%");
+readSelection("dodgeClass").innerHTML = dodgeClass;
 //----------END BASICS COLUMN---------------------------------------------------
+//----------RELIC STATS UNDER ACCESSORIES---------------------------------------------------
+//RELIC HEALING
+let relicHPbase = greatTableKnowerOfAll.RelicHPbase;
+updateDisplay("relicBase",relicHPbase,2);
+let relicHPtype = greatTableKnowerOfAll.RelicHPtype;
+readSelection("relicType").innerHTML = relicHPtype;
+let relicHPtime = greatTableKnowerOfAll.RelicHPtime;
+updateDisplay("relicTime",relicHPtime,0);
+//SCALED
+let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
+if (relicHPtype==="%"){
+  updateDisplay("relicScaled",relicHPscaled,1,"%");
+  updateDisplay("relic%HP/s",(relicHPscaled/relicHPtime),1,"%");
+  updateDisplay("relicHP/s",((relicHPscaled/relicHPtime)/100)*totalHealth,1);
+}
+else {
+  updateDisplay("relicScaled",relicHPscaled,1);
+  readSelection("relic%HP/s").innerHTML = "---";
+  updateDisplay("relicHP/s",(relicHPscaled/relicHPtime),1);
+}
+
 }
 //Shorthand for shit I got tired of typing every god damn time.
 function updateDisplay (elemID,statistic,rounding,percent) {
-  readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percent}`
+  let percentage = "";
+  if (percent==null) {percentage=""}
+  else {percentage=percent}
+  readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
 }
 //Used in updateFormulas() to fill armor(armor/weight) values on the master table
 function pullArmorStats() {
@@ -285,71 +361,70 @@ function pullGearStats() {
   pullStats(fragments[readSelection("fragment2").value].stats);
   pullStats(fragments[readSelection("fragment3").value].stats);
 }
-//Shorthand for looping through an elements "stat" object and adding it to the corresponding master list attr
+//Shorthand for looping through an elements "stat" object and adding it to the corresponding master attribute
 function pullStats(path) {
   for (elements in path) {
+    if (elements != "RelicHPtype")
     greatTableKnowerOfAll[elements] += path[elements]
+    else {
+    greatTableKnowerOfAll[elements] = path[elements]
+    }
   }
 }
 
 const greatTableKnowerOfAll = {
-   "Health": null,
-   "Health%": null,
-   "Armor": null,
-   "Armor%": null,
-   "FlatDR": null,
-   "AbilityDR": null,
-   "RelicDR": null,
-   "MutatorDR": null,
-   "Bulwark": null,
-   "AbilityBulwark": null,
-   "RelicBulwark": null,
-   "REdamage": null,
-   "DMGKept": null,
-   "RelicSpeed": null,
-   "RelicEFF": null,
-   "HealingEFF": null,
-   "HP/S+": null,
-   "HP/S%": null,
-   "RelicHPbase": null,
-   "RelicHPtype": null,
-   "RelicHPtime": null,
-   "GreyHP/S+": null,
-   "Stamina": null,
-   "Stamina%": null,
-   "Stamina/S+": null,
-   "StaminaCost": null,
-   "ShieldEFF": null,
-   "Shield": null,
-   "Shield%/S": null,
-   "Lifesteal": null,
-   "MLifesteal": null,
-   "RLifesteal": null,
-   "Encumbrance": null,
-   "Encumbrance%": null,
-   "Bleed": null,
-   "Bleed%": null,
-   "Burn": null,
-   "Burn%": null,
-   "Shock": null,
-   "Shock%": null,
-   "Corrosive": null,
-   "Corrosive%": null,
-   "Blight": null,
-   "Blight%": null,
-   "GreyHP/S%": null,
-   "HealingModifiers": null,
-   "ConcLimit": null,
-   "WeightThreshold": null
+   "Health": 0,
+   "Health%": 0,
+   "Armor": 0,
+   "Armor%": 0,
+   "FlatDR": 0,
+   "Bulwark": 0,
+   "REdamage": 0,
+   "DMGKept": 0,
+   "RelicSpeed": 0,
+   "RelicEFF": 0,
+   "HealingEFF": 0,
+   "HP/S+": 0,
+   "HP/S%": 0,
+   "RelicHPbase": 0,
+   "RelicHPtype": 0,
+   "RelicHPtime": 0,
+   "GreyHP/S+": 0,
+   "Stamina": 0,
+   "Stamina%": 0,
+   "Stamina/S+": 0,
+   "StaminaCost": 0,
+   "StaminaPenaltyAdjustment": 0,
+   "ShieldEFF": 0,
+   "Shield": 0,
+   "Shield%/S": 0,
+   "Lifesteal": 0,
+   "MLifesteal": 0,
+   "RLifesteal": 0,
+   "Encumbrance": 0,
+   "Encumbrance%": 0,
+   "Bleed": 0,
+   "Bleed%": 0,
+   "Burn": 0,
+   "Burn%": 0,
+   "Shock": 0,
+   "Shock%": 0,
+   "Corrosive": 0,
+   "Corrosive%": 0,
+   "Blight": 0,
+   "Blight%": 0,
+   "GreyHP/S%": 0,
+   "HealingModifiers": 0,
+   "ConcLimit": 0,
+   "WeightThreshold": 0
 }
-
 // HELMET JSON ---------------------------
 const helmets = {
     "Unequipped": {
        "SLOT": "Head",
        "VALUE": 0,
        "WEIGHT": 0,
-       "IMAGE": "",
+       "IMAGE": "images/Remnant/clear.png",
        "Bleed": 0,
        "Burn": 0,
        "Shock": 0,
@@ -660,7 +735,7 @@ const chests = {
        "SLOT": "Chest",
        "VALUE": 0,
        "WEIGHT": 0,
-       "IMAGE": "",
+       "IMAGE": "images/Remnant/clear.png",
        "Bleed": 0,
        "Burn": 0,
        "Shock": 0,
@@ -938,7 +1013,7 @@ const legs = {
        "SLOT": "Leg",
        "VALUE": 0,
        "WEIGHT": 0,
-       "IMAGE": "",
+       "IMAGE": "images/Remnant/clear.png",
        "Bleed": 0,
        "Burn": 0,
        "Shock": 0,
@@ -1216,7 +1291,7 @@ const hands = {
        "SLOT": "Hand",
        "VALUE": 0,
        "WEIGHT": 0,
-       "IMAGE": "",
+       "IMAGE": "images/Remnant/clear.png",
        "Bleed": 0,
        "Burn": 0,
        "Shock": 0,
@@ -1488,6 +1563,7 @@ const hands = {
        "Blight": 1
     }
 }
+//Container used when referencing the armor tables using variables
 const armor = {
     "helmets": helmets,
     "chests": chests,
@@ -1496,635 +1572,749 @@ const armor = {
 }
 //Archetypes and abilities/passives
 const classInfo = {
-   "": {
-      "classIcon": "images/Remnant/clear.png",
-      "primePerk": "",
-      "primePerkDesc": "",
-      "primePerkImage": "images/Remnant/clear.png",
-      "abilities": {
-        "": {
-          "name": "",
-          "desc": "",
-          "image": "images/Remnant/clear.png"
-        },
+  "": {
+    "classIcon": "images/Remnant/clear.png",
+    "primePerk": "",
+    "primePerkDesc": "",
+    "primePerkImage": "images/Remnant/clear.png",
+    "abilities": {
+      "": {
+        "name": "",
+        "desc": "",
+        "image": "images/Remnant/clear.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "",
+    "passives": {
+      "passive1": {
+        "name": "",
+        "desc": "",
+        "stats": {}
       },
-      "classTrait": "",
-      "trait1": "",
-      "trait2": "",
-      "trait3": "",
-      "trait4": "",
-      "passives": {
-        "passive1": {
-          "name": "",
-          "desc": ""
-        },
-        "passive2": {
-          "name": "",
-          "desc": ""
-        },
-        "passive3": {
-          "name": "",
-          "desc": ""
-        },
-        "passive4": {
-          "name": "",
-          "desc": ""
+      "passive2": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      }
+    }
+  },
+  "Alchemist": {
+    "classIcon": "https://i.imgur.com/ZPl3KSX.png",
+    "primePerk": "SPIRITED",
+    "primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
+    "primePerkImage": "https://i.imgur.com/ngzoXha.png",
+    "abilities": {
+      "Vial: Stone Mist": {
+        "name": "Vial: Stone Mist",
+        "desc": "Creates vapor cloud, lasts 10s, gives STONESKIN. STONESKIN reduces incoming damage by 25%, stagger -1, increases Blight Buildup Decay Rate, grants status effect immunity. Lasts 15s.",
+        "image": "https://i.imgur.com/DlOYA8w.png",
+        "stats": {
+          "FlatDR": 0.25
+        }
+      },
+      "Vial: Frenzy Dust": {
+        "name": "Vial: Frenzy Dust",
+        "desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and the Movement Speed by 15%. Lasts 15s.",
+        "image": "https://i.imgur.com/g6jasJ9.png",
+        "stats": {}
+      },
+      "Vial: Elixir of Life": {
+        "name": "Vial: Elixir of Life",
+        "desc": "Creates vapor cloud that lasts 10s and applies LIVING WILL. LIVING WILL grants 5 HP/s, and protects against fatal damage. Can revive downed players. Lasts 20s. Revived allies cannot be affected by Living Will for 180s.",
+        "image": "https://i.imgur.com/wrudffE.png",
+        "stats": {
+          "HP/S+": 5
         }
       }
     },
-   "Alchemist": {
-     "classIcon": "https://i.imgur.com/ZPl3KSX.png",
-     "primePerk": "SPIRITED",
-     "primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
-     "primePerkImage": "https://i.imgur.com/ngzoXha.png",
-     "abilities": {
-       "Vial: Stone Mist": {
-         "name": "Vial: Stone Mist",
-         "desc": "Creates vapor cloud, lasts 10s, gives STONESKIN. STONESKIN reduces incoming damage by 25%, stagger -1, increases Blight Buildup Decay Rate, grants status effect immunity. Lasts 15s.",
-         "image": "https://i.imgur.com/DlOYA8w.png",
-         "FlatDR": 0.25
-       },
-       "Vial: Frenzy Dust": {
-         "name": "Vial: Frenzy Dust",
-         "desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and the Movement Speed by 15%. Lasts 15s.",
-         "image": "https://i.imgur.com/g6jasJ9.png"
-       },
-       "Vial: Elixir of Life": {
-         "name": "Vial: Elixir of Life",
-         "desc": "Creates vapor cloud that lasts 10s and applies LIVING WILL. LIVING WILL grants 5 HP/s, and protects against fatal damage. Can revive downed players. Lasts 20s. Revived allies cannot be affected by Living Will for 180s.",
-         "image": "https://i.imgur.com/wrudffE.png",
-         "HP/S+": 5
-       }
-     },
-     "classTrait": "Potency",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Alchemist",
-     "passives": {
-       "passive1": {
-         "name": "Liquid Courage",
-         "desc": "Grants +25% All Damage and +5% CC"
-       },
-       "passive2": {
-         "name": "Panacea",
-         "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Resistance.",
-         "Bleed": 10,
-         "Burn": 10,
-         "Shock": 10,
-         "Corrosive": 10,
-         "Blight": 10
-       },
-       "passive3": {
-         "name": "Gold to Lead",
-         "desc": "Picking up Scrap or Metals has a 15% chance to award Ammo to the Alchemist."
-       },
-       "passive4": {
-         "name": "Experimentalist",
-         "desc": "Using a Relic applies a random buff on the Alchemist and all allies within 20m for 60s. Cannot be overriden."
-       }
-     }
-   },
-   "Archon": {
-     "classIcon": "https://i.imgur.com/jQRIXws.png",
-     "primePerk": "TEMPEST",
-     "primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
-     "primePerkImage": "https://i.imgur.com/Iw2bzME.png",
-     "abilities": {
-       "Reality Rune": {
-         "name": "Reality Rune",
-         "desc": "Conjures a 7m protective dome which applies SLOW to any enemy or enemy projectile. Allies inside gain 25% DR. Lasts 15s.",
-         "image": "https://i.imgur.com/x7UoRtJ.png",
-         "FlatDR": 0.25
-       },
-       "Chaos Gate": {
-         "name": "Chaos Gate",
-         "desc": "Conjures a 7m unstable zone which grants allies 15% increased damage dealth, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
-         "image": "https://i.imgur.com/yMfhLzm.png",
-         "FlatDR": -0.15
-       },
-       "Havoc Form": {
-         "name": "Havoc Form",
-         "desc": "Gain new abilities 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
-         "image": "https://i.imgur.com/xW3J8IF.png",
-         "FlatDR": 0.5
-       }
-     },
-     "classTrait": "Flash Caster",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Archon",
-     "passives": {
-       "passive1": {
-         "name": "Amplify",
-         "desc": "Mod (+50%DMG +10%CC)"
-       },
-       "passive2": {
-         "name": "Power Creep",
-         "desc": "Mod use: 5% mod power spent regened by team over 10s. While active, allies gain 5% Mod Power Generation."
-       },
-       "passive3": {
-         "name": "Spirit Within",
-         "desc": "Mod Power/charge -15%, refunds 15% Mod cost, split among active mods."
-       },
-       "passive4": {
-         "name": "Power Leak",
-         "desc": "Using a Relic grants 200 Mod Power for both equipped Mods, and an additional 100 to current Mod."
-       }
-     }
-   },
-   "Challenger": {
-     "classIcon": "https://i.imgur.com/o8Lf7rI.png",
-     "primePerk": "DIE HARD",
-     "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. Resets at Worldstone or on death.",
-     "primePerkImage": "https://i.imgur.com/P031gGk.png",
-     "abilities": {
-       "War Stomp": {
-         "name": "War Stomp",
-         "desc": "Creates a high-impact tremor that deals 450 damage and additional stagger in a forward cone up to 7.5m. Deals damage in all directions at point blank range.",
-         "image": "https://i.imgur.com/ODcWQIW.png"
-       },
-       "Juggernaut": {
-         "name": "Juggernaut",
-         "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
-         "image": "https://i.imgur.com/byx30R2.png",
-         "Bulwark": 3
-       },
-       "Rampage": {
-         "name": "Rampage",
-         "desc": "Fire Rate +15%, Reload Speed +20%, and Movement Speed +10%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
-         "image": "https://i.imgur.com/rWVGPZE.png"
-       }
-     },
-     "classTrait": "Strong Back",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Challenger",
-     "passives": {
-       "passive1": {
-         "name": "Close Quarters",
-         "desc": "Grants +35% All Damage to enemies within 10m. Bonus tapers off up to 20m. CC increased up to 10%."
-       },
-       "passive2": {
-         "name": "Intimidating Presence",
-         "desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%)",
-         "REdamage": -0.1
-       },
-       "passive3": {
-         "name": "Powerlifter",
-         "desc": "Both the Stamina cost increase for each weight bracket and Stamina Regen Delay are reduced by 50%."
-       },
-       "passive4": {
-         "name": "Face of Danger",
-         "desc": "Using a Relic within 10m of an enemy grants 2 stacks of Bulwark and 10% increased Damage for 10s.",
-         "Bulwark": 2
-       }
-     }
-   },
-   "Engineer": {
-     "classIcon": "https://i.imgur.com/fpQvoPX.png",
-     "primePerk": "HIGH TECH",
-     "primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s.",
-     "primePerkImage": "https://i.imgur.com/YB2qmK4.png",
-     "abilities": {
-       "Heavy Weapon: Vulcan": {
-         "name": "Heavy Weapon: Vulcan",
-         "desc": "Deploys a Vulcan Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-         "image": "https://i.imgur.com/T1Hh6u1.png"
-       },
-       "Heavy Weapon: Flamethrower": {
-         "name": "Heavy Weapon: Flamethrower",
-         "desc": "Deploys a Flamethrower Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-         "image": "https://i.imgur.com/eAyyozf.png"
-       },
-       "Heavy Weapon: Impact Cannon": {
-         "name": "Heavy Weapon: Impact Cannon",
-         "desc": "Deploys a Impact Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-         "image": "https://i.imgur.com/lTdM40D.png"
-       }
-     },
-     "classTrait": "Fortify",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Engineer",
-     "passives": {
-       "passive1": {
-         "name": "Metalworker",
-         "desc": "Skill (+50%DMG +10%CC). Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)"
-       },
-       "passive2": {
-         "name": "Magnetic Field",
-         "desc": "Heavy Weapons grant 15% DR and gradually restore ammo to allies within 2.5m.",
-         "FlatDR": 0.15
-       },
-       "passive3": {
-         "name": "Heavy Mobility",
-         "desc": "While carrying a Heavy Weapon, +35% Movement Speed, Evade Speed/Distance +25%."
-       },
-       "passive4": {
-         "name": "Surplus",
-         "desc": "Relic use: refills 15% Heavy Weapon. Doubled if HW stowed. If Stowed HW is full, +ammo drop based on the surplus."
-       }
-     }
-   },
-   "Explorer": {
-     "classIcon": "https://i.imgur.com/cDpCyTV.png",
-     "primePerk": "LUCKY",
-     "primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
-     "primePerkImage": "https://i.imgur.com/XavGKpc.png",
-     "abilities": {
-       "Plainswalker": {
-         "name": "Plainswalker",
-         "desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
-         "image": "https://i.imgur.com/eP7Oaxp.png"
-       },
-       "Gold Digger": {
-         "name": "Gold Digger",
-         "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2.4 HP/s, or HASTE.",
-         "image": "https://i.imgur.com/mO87xP5.png"
-       },
-       "Fortune Hunter": {
-         "name": "Fortune Hunter",
-         "desc": "Reveal special items within 40m for all allies. Lasts 60s.",
-         "image": "https://i.imgur.com/ms00nlw.png"
-       }
-     },
-     "classTrait": "Swiftness",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Explorer",
-     "passives": {
-       "passive1": {
-         "name": "Scavenger",
-         "desc": "Pickup stacks grant +5% All Damage and +5% CC for 20s. Can +Duration up to 60s. Max 5 stacks."
-       },
-       "passive2": {
-         "name": "Metal Detector",
-         "desc": "Ammo, Currency, Metal Drop Chance for party +10% and +chance of Consumables dropping from Chests."
-       },
-       "passive3": {
-         "name": "Prospector",
-         "desc": "Relic Frag pickups +quality. 5% chance to gain 2nd of the same type/quality."
-       },
-       "passive4": {
-         "name": "Self Discovery",
-         "desc": "Using a Relic instantly fills Scavenger Stacks, grants +1 Stack, and prevents Stack Decay for 30s."
-       }
-     }
-   },
-   "Gunslinger": {
-     "classIcon": "https://i.imgur.com/K3UiRqk.png",
-     "primePerk": "LOADED",
-     "primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
-     "primePerkImage": "https://i.imgur.com/S3jXNiC.png",
-     "abilities": {
-       "Quick Draw": {
-         "name": "Quick Draw",
-         "desc": "Pull out your trusty side piece and unload up to 6 Critical Shots from the hip. Each shot deals 105 base damage and double stagger value.",
-         "image": "https://i.imgur.com/hXCtCic.png"
-       },
-       "Sidewinder": {
-         "name": "Sidewinder",
-         "desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 50%. Cycling weapons will automatically reload incoming Firearms. Lasts 12s.",
-         "image": "https://i.imgur.com/WhKotQP.png"
-       },
-       "Bulletstorm": {
-         "name": "Bulletstorm",
-         "desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
-         "image": "https://i.imgur.com/7fI4Ht1.png"
-       }
-     },
-     "classTrait": "Ammo Reserves",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Gunslinger",
-     "passives": {
-       "passive1": {
-         "name": "Swift Shot",
-         "desc": "Gain 15% Fire Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms."
-       },
-       "passive2": {
-         "name": "Posse Up",
-         "desc": "Ammo pickups +30%/player, split equally. Ammo Boxes drop more ammo."
-       },
-       "passive3": {
-         "name": "Quick Hands",
-         "desc": "Firearms +10% Reload Speed. DOUBLED is mag is empty."
-       },
-       "passive4": {
-         "name": "Sleight of Hand",
-         "desc": "Using a Relic reloads equipped firearm and increases Ranged Damage by 15% for 10s."
-       }
-     }
-   },
-   "Handler": {
-     "classIcon": "https://i.imgur.com/J9qtmtl.png",
-     "primePerk": "BONDED",
-     "primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge.",
-     "primePerkImage": "https://i.imgur.com/0lU6F1v.png",
-     "abilities": {
-       "Guard Dog": {
-         "name": "Guard Dog",
-         "desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
-         "image": "https://i.imgur.com/RxQSvqN.png",
-         "REdamage": -0.15
-       },
-       "Support Dog": {
-         "name": "Support Dog",
-         "desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
-         "image": "https://i.imgur.com/9STXt4w.png",
-         "HP/S%": 0.02
-       },
-       "Attack Dog": {
-         "name": "Attack Dog",
-         "desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
-         "image": "https://i.imgur.com/kctUuXl.png"
-       }
-     },
-     "classTrait": "Kinship",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Handler",
-     "passives": {
-       "passive1": {
-         "name": "Pack Hunter",
-         "desc": "Gain +30% Ranged/Skill Damage, +5% Ranged/Skill CC while Companion is within 40m."
-       },
-       "passive2": {
-         "name": "Spirit of the Wolf",
-         "desc": "Move Speed +10%. Allies within 10m gain your MS(if faster). Team Stamina Cost -15%."
-       },
-       "passive3": {
-         "name": "Teamwork",
-         "desc": "Handler/Companion +30% Revive Speed. While reviving, both receive 50% less damage."
-       },
-       "passive4": {
-         "name": "Best Friend",
-         "desc": "Using a Relic fully restores Companion health and grants them 25% Damage and 35% DR for 15s."
-       }
-     }
-   },
-   "Hunter": {
-     "classIcon": "https://i.imgur.com/eYtHptC.png",
-     "primePerk": "DEAD TO RIGHTS",
-     "primePerkDesc": "Dealing 55 Base Ranged Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
-     "primePerkImage": "https://i.imgur.com/3NzvZxO.png",
-     "abilities": {
-       "Hunter's Mark": {
-         "name": "Hunter's Mark",
-         "desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s.",
-         "image": "https://i.imgur.com/XhxFSww.png"
-       },
-       "Hunter's Focus": {
-         "name": "Hunter's Focus",
-         "desc": "Aiming Down Sights uninterrupted/without shooting for 1s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 75%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
-         "image": "https://i.imgur.com/mMsdIv0.png"
-       },
-       "Hunter's Shroud": {
-         "name": "Hunter's Shroud",
-         "desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken.",
-         "image": "https://i.imgur.com/sKyrI4o.png"
-       }
-     },
-     "classTrait": "Longshot",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Hunter",
-     "passives": {
-       "passive1": {
-         "name": "Deadeye",
-         "desc": "Gain 40% Ranged Damage, 15% Weakspot Damage and 5% Ranged Critical Chance."
-       },
-       "passive2": {
-         "name": "Return to Sender",
-         "desc": "Weakspot/Crit kills +50% ammo drops and 2x ammo drop chance."
-       },
-       "passive3": {
-         "name": "Urgency",
-         "desc": "Firearms +15% Reload Speed +15% Movement Speed after Kill. Lasts 5s."
-       },
-       "passive4": {
-         "name": "Intuition",
-         "desc": "Relic use: +duration of active Hunter Skill by 10s. Dimishes/use. Weakspot Kills against MARKED +5% Relic Speed within 15s. Stacks 10x."
-       }
-     }
-   },
-   "Invader": {
-     "classIcon": "https://i.imgur.com/dTDMY2T.png",
-     "primePerk": "SHADOW",
-     "primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
-     "primePerkImage": "https://i.imgur.com/lnR7rLO.png",
-     "abilities": {
-       "Void Cloak": {
-         "name": "Void Cloak",
-         "desc": "Auto perfect dodge incoming direct damage for 60s. Each auto-evade reduces timer by 33% - 100% based on damage absorbed and spawns a Decoy for 3s.",
-         "image": "https://i.imgur.com/I2Q5sBt.png"
-       },
-       "Worm Hole": {
-         "name": "Worm Hole",
-         "desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location.",
-         "image": "https://i.imgur.com/WGSsTj5.png"
-       },
-       "Reboot": {
-         "name": "Reboot",
-         "desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
-         "image": "https://i.imgur.com/9qAcUWQ.png",
-         "FlatDR": 0.1
-       }
-     },
-     "classTrait": "Untouchable",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Invader",
-     "passives": {
-       "passive1": {
-         "name": "S.H.A.R.K.",
-         "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 15s. Max 5 stacks."
-       },
-       "passive2": {
-         "name": "Loophole",
-         "desc": "Ally Ranged/Melee DMG against enemies distracted by Decoy grants 7.5% base damage as Lifesteal.",
-         "Lifesteal": 0.075
-       },
-       "passive3": {
-         "name": "Circumvent",
-         "desc": "Evade/Combat Slide cost -15%. Perfect Dodges gain an additional -15%."
-       },
-       "passive4": {
-         "name": "Override",
-         "desc": "Relic use: -25% Threat gen for 10s. While is active, next Evade creates Empowered Decoy, lasts 5.5s."
-       }
-     }
-   },
-   "Medic": {
-     "classIcon": "https://i.imgur.com/oNaYl4e.png",
-     "primePerk": "REGENERATOR",
-     "primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
-     "primePerkImage": "https://i.imgur.com/7m2eEaX.png",
-     "abilities": {
-       "Wellspring": {
-         "name": "Wellspring",
-         "desc": "Punch the ground to create a 3m Healing Spring AOE which restores 15 HP/s and increases Blight Decay Rate. Lasts 15s.",
-         "image": "https://i.imgur.com/54CIz3f.png",
-         "HP/S+": 15
-       },
-       "Healing Shield": {
-         "name": "Healing Shield",
-         "desc": "The Medic quickly expels healing energy to SHIELD all allies within 25m for 100% of their max HP for 10s. Heals 30% HP over the duration.",
-         "image": "https://i.imgur.com/DPg45oM.png",
-         "HP/S%": 0.03,
-         "Shield": 1
-       },
-       "Redemption": {
-         "name": "Redemption",
-         "desc": "The Medic unleashes a 30m shockwave that revives downed allies and restores 75% max HP over 10s. Every additional 1s increases the heal by 75%(3% max).",
-         "image": "https://i.imgur.com/rOZRmAT.png",
-         "HP/S%": 0.37
-       }
-     },
-     "classTrait": "Triage",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Medic",
-     "passives": {
-       "passive1": {
-         "name": "Invigorated",
-         "desc": "Grants +25% All Damage and +5% CC"
-       },
-       "passive2": {
-         "name": "Benevolence",
-         "desc": "Relic Efficacy +15%. Heal nearby allies 30% of the total heal value, 60% for allies below 35% HP.",
-         "RelicEFF": 0.15
-       },
-       "passive3": {
-         "name": "Backbone",
-         "desc": "Increases the hits Medic can take before losing Grey Health by 2."
-       },
-       "passive4": {
-         "name": "Benefactor",
-         "desc": "Relic Use Speed +20%. Relic Use gains -1 Stagger.",
-         "RelicSpeed": -0.2
-       }
-     }
-   },
-   "Ritualist": {
-     "classIcon": "https://i.imgur.com/kNPGSac.png",
-     "primePerk": "VILE",
-     "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected\n\nInfected: Victim receives 5% more Status Effect damage, On death, spreads\nall statuses to nearby enemies within 5m",
-     "primePerkImage": "https://i.imgur.com/CIV7N6m.png",
-     "abilities": {
-       "Eruption": {
-         "name": "Eruption",
-         "desc": "Creates 1m explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
-         "image": "https://i.imgur.com/R8EtgyF.png"
-       },
-       "Miasma": {
-         "name": "Miasma",
-         "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 1500 base damage. Lasts 11s.",
-         "image": "https://i.imgur.com/eDxZ9tS.png"
-       },
-       "Death Wish": {
-         "name": "Death Wish",
-         "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal.",
-         "image": "https://i.imgur.com/pQJvLnK.png"
-       }
-     },
-     "classTrait": "Affliction",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Ritualist",
-     "passives": {
-       "passive1": {
-         "name": "Wrath",
-         "desc": " +20% DMG and +10% CC to enemies with negative status effects."
-       },
-       "passive2": {
-         "name": "Terrify",
-         "desc": "Killing applies TERRIFIED within 5m for 20s. Enemies deal -5% damage and are more likely to drop ammo.",
-         "REdamage": -0.05
-       },
-       "passive3": {
-         "name": "Dark Blood",
-         "desc": "Reduces damage received from Negative Status Effects by 25%. Reduce blight gain by 50%."
-       },
-       "passive4": {
-         "name": "Purge",
-         "desc": "On Relic Use, cleanses all Negative Status Effects. Effects cleansed are applied to enemies within 7.5m."
-       }
-     }
-   },
-   "Summoner": {
-     "classIcon": "https://i.imgur.com/9JmNOaV.png",
-     "primePerk": "RUTHLESS",
-     "primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed.",
-     "primePerkImage": "https://i.imgur.com/qoTK4rj.png",
-     "abilities": {
-       "Minion: Hollow": {
-         "name": "Minion: Hollow",
-         "desc": "Summons a Root Hollow minion to fight by your side. Costs 15% of max HP to summon, but will not kill Summoner. Max (2).",
-         "image": "https://i.imgur.com/pBk7zxN.png"
-       },
-       "Minion: Flyer": {
-         "name": "Minion: Flyer",
-         "desc": "Summons a Root Flyer minion to fight by your side. Costs 10% of max HP to summon, but will not kill Summoner. Max (2).",
-         "image": "https://i.imgur.com/riPDVj0.png"
-       },
-       "Minion: Reaver": {
-         "name": "Minion: Reaver",
-         "desc": "Summons a Root Reaver minion to fight by your side. Costs 35% of max HP to summon, but will not kill Summoner. Max (1).",
-         "image": "https://i.imgur.com/3luNpYE.png"
-       }
-     },
-     "classTrait": "Regrowth",
-     "trait1": "",
-     "trait2": "",
-     "trait3": "",
-     "trait4": "",
-     "name": "Summoner",
-     "passives": {
-       "passive1": {
-         "name": "Dominator",
-         "desc": "Mod/Skill (+35%DMG, +5%CC) with active minion. Sacrifice gives Ranged/Melee (+30%DMG +5%CC), for 30s or until summon."
-       },
-       "passive2": {
-         "name": "Residue",
-         "desc": "Minions leave a 3m Aura on death, heals 2.5% HP/s and increases healing by 20%. Lasts 10s.",
-         "HealingEFF": 0.2,
-         "HP/S%": 0.025
-       },
-       "passive3": {
-         "name": "Outrage",
-         "desc": "Sacrifice grants 3% Lifesteal/Minion Sacrificed, +15% Move Speed. Lasts 10s.",
-         "Lifesteal": 0.06
-       },
-       "passive4": {
-         "name": "Incite",
-         "desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC. Lasts 30s."
-       }
-     }
-   }
- }
+    "classTrait": "Potency",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Alchemist",
+    "passives": {
+      "passive1": {
+        "name": "Liquid Courage",
+        "desc": "Grants +25% All Damage and +5% CC",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Panacea",
+        "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Resistance.",
+        "stats": {
+          "Bleed": 10,
+          "Burn": 10,
+          "Shock": 10,
+          "Corrosive": 10,
+          "Blight": 10
+        }
+      },
+      "passive3": {
+        "name": "Gold to Lead",
+        "desc": "Picking up Scrap or Metals has a 15% chance to award Ammo to the Alchemist.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Experimentalist",
+        "desc": "Using a Relic applies a random buff on the Alchemist and all allies within 20m for 60s. Cannot be overriden.",
+        "stats": {}
+      }
+    }
+  },
+  "Archon": {
+    "classIcon": "https://i.imgur.com/jQRIXws.png",
+    "primePerk": "TEMPEST",
+    "primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
+    "primePerkImage": "https://i.imgur.com/Iw2bzME.png",
+    "abilities": {
+      "Reality Rune": {
+        "name": "Reality Rune",
+        "desc": "Conjures a 7m protective dome which applies SLOW to any enemy or enemy projectile. Allies inside gain 25% DR. Lasts 15s.",
+        "image": "https://i.imgur.com/x7UoRtJ.png",
+        "stats": {
+          "FlatDR": 0.25
+        }
+      },
+      "Chaos Gate": {
+        "name": "Chaos Gate",
+        "desc": "Conjures a 7m unstable zone which grants allies 15% increased damage dealth, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
+        "image": "https://i.imgur.com/yMfhLzm.png",
+        "stats": {
+          "FlatDR": -0.15
+        }
+      },
+      "Havoc Form": {
+        "name": "Havoc Form",
+        "desc": "Gain new abilities 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
+        "image": "https://i.imgur.com/xW3J8IF.png",
+        "stats": {
+          "FlatDR": 0.5
+        }
+      }
+    },
+    "classTrait": "Flash Caster",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Archon",
+    "passives": {
+      "passive1": {
+        "name": "Amplify",
+        "desc": "Mod (+50%DMG +10%CC)",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Power Creep",
+        "desc": "Mod use: 5% mod power spent regened by team over 10s. While active, allies gain 5% Mod Power Generation.",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "Spirit Within",
+        "desc": "Mod Power/charge -15%, refunds 15% Mod cost, split among active mods.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Power Leak",
+        "desc": "Using a Relic grants 200 Mod Power for both equipped Mods, and an additional 100 to current Mod.",
+        "stats": {}
+      }
+    }
+  },
+  "Challenger": {
+    "classIcon": "https://i.imgur.com/o8Lf7rI.png",
+    "primePerk": "DIE HARD",
+    "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. Resets at Worldstone or on death.",
+    "primePerkImage": "https://i.imgur.com/P031gGk.png",
+    "abilities": {
+      "War Stomp": {
+        "name": "War Stomp",
+        "desc": "Creates a high-impact tremor that deals 450 damage and additional stagger in a forward cone up to 7.5m. Deals damage in all directions at point blank range.",
+        "image": "https://i.imgur.com/ODcWQIW.png",
+        "stats": {}
+      },
+      "Juggernaut": {
+        "name": "Juggernaut",
+        "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
+        "image": "https://i.imgur.com/byx30R2.png",
+        "stats": {
+          "Bulwark": 3
+        }
+      },
+      "Rampage": {
+        "name": "Rampage",
+        "desc": "Fire Rate +15%, Reload Speed +20%, and Movement Speed +10%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
+        "image": "https://i.imgur.com/rWVGPZE.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Strong Back",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Challenger",
+    "passives": {
+      "passive1": {
+        "name": "Close Quarters",
+        "desc": "Grants +35% All Damage to enemies within 10m. Bonus tapers off up to 20m. CC increased up to 10%.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Intimidating Presence",
+        "desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%)",
+        "stats": {
+          "REdamage": -0.1
+        }
+      },
+      "passive3": {
+        "name": "Powerlifter",
+        "desc": "Both the Stamina cost increase for each weight bracket and Stamina Regen Delay are reduced by 50%.",
+        "stats": {
+          "StaminaPenaltyAdjustment": 0.5
+        }
+      },
+      "passive4": {
+        "name": "Face of Danger",
+        "desc": "Using a Relic within 10m of an enemy grants 2 stacks of Bulwark and 10% increased Damage for 10s.",
+        "stats": {
+          "Bulwark": 2
+        }
+      }
+    }
+  },
+  "Engineer": {
+    "classIcon": "https://i.imgur.com/fpQvoPX.png",
+    "primePerk": "HIGH TECH",
+    "primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s.",
+    "primePerkImage": "https://i.imgur.com/YB2qmK4.png",
+    "abilities": {
+      "Heavy Weapon: Vulcan": {
+        "name": "Heavy Weapon: Vulcan",
+        "desc": "Deploys a Vulcan Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+        "image": "https://i.imgur.com/T1Hh6u1.png",
+        "stats": {}
+      },
+      "Heavy Weapon: Flamethrower": {
+        "name": "Heavy Weapon: Flamethrower",
+        "desc": "Deploys a Flamethrower Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+        "image": "https://i.imgur.com/eAyyozf.png",
+        "stats": {}
+      },
+      "Heavy Weapon: Impact Cannon": {
+        "name": "Heavy Weapon: Impact Cannon",
+        "desc": "Deploys a Impact Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+        "image": "https://i.imgur.com/lTdM40D.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Fortify",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Engineer",
+    "passives": {
+      "passive1": {
+        "name": "Metalworker",
+        "desc": "Skill (+50%DMG +10%CC). Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Magnetic Field",
+        "desc": "Heavy Weapons grant 15% DR and gradually restore ammo to allies within 2.5m.",
+        "stats": {
+          "FlatDR": 0.15
+        }
+      },
+      "passive3": {
+        "name": "Heavy Mobility",
+        "desc": "While carrying a Heavy Weapon, +35% Movement Speed, Evade Speed/Distance +25%.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Surplus",
+        "desc": "Relic use: refills 15% Heavy Weapon. Doubled if HW stowed. If Stowed HW is full, +ammo drop based on the surplus.",
+        "stats": {}
+      }
+    }
+  },
+  "Explorer": {
+    "classIcon": "https://i.imgur.com/cDpCyTV.png",
+    "primePerk": "LUCKY",
+    "primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
+    "primePerkImage": "https://i.imgur.com/XavGKpc.png",
+    "abilities": {
+      "Plainswalker": {
+        "name": "Plainswalker",
+        "desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
+        "image": "https://i.imgur.com/eP7Oaxp.png",
+        "stats": {}
+      },
+      "Gold Digger": {
+        "name": "Gold Digger",
+        "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2.4 HP/s, or HASTE.",
+        "image": "https://i.imgur.com/mO87xP5.png",
+        "stats": {}
+      },
+      "Fortune Hunter": {
+        "name": "Fortune Hunter",
+        "desc": "Reveal special items within 40m for all allies. Lasts 60s.",
+        "image": "https://i.imgur.com/ms00nlw.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Swiftness",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Explorer",
+    "passives": {
+      "passive1": {
+        "name": "Scavenger",
+        "desc": "Pickup stacks grant +5% All Damage and +5% CC for 20s. Can +Duration up to 60s. Max 5 stacks.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Metal Detector",
+        "desc": "Ammo, Currency, Metal Drop Chance for party +10% and +chance of Consumables dropping from Chests.",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "Prospector",
+        "desc": "Relic Frag pickups +quality. 5% chance to gain 2nd of the same type/quality.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Self Discovery",
+        "desc": "Using a Relic instantly fills Scavenger Stacks, grants +1 Stack, and prevents Stack Decay for 30s.",
+        "stats": {}
+      }
+    }
+  },
+  "Gunslinger": {
+    "classIcon": "https://i.imgur.com/K3UiRqk.png",
+    "primePerk": "LOADED",
+    "primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
+    "primePerkImage": "https://i.imgur.com/S3jXNiC.png",
+    "abilities": {
+      "Quick Draw": {
+        "name": "Quick Draw",
+        "desc": "Pull out your trusty side piece and unload up to 6 Critical Shots from the hip. Each shot deals 105 base damage and double stagger value.",
+        "image": "https://i.imgur.com/hXCtCic.png",
+        "stats": {}
+      },
+      "Sidewinder": {
+        "name": "Sidewinder",
+        "desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 50%. Cycling weapons will automatically reload incoming Firearms. Lasts 12s.",
+        "image": "https://i.imgur.com/WhKotQP.png",
+        "stats": {}
+      },
+      "Bulletstorm": {
+        "name": "Bulletstorm",
+        "desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
+        "image": "https://i.imgur.com/7fI4Ht1.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Ammo Reserves",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Gunslinger",
+    "passives": {
+      "passive1": {
+        "name": "Swift Shot",
+        "desc": "Gain 15% Fire Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Posse Up",
+        "desc": "Ammo pickups +30%/player, split equally. Ammo Boxes drop more ammo.",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "Quick Hands",
+        "desc": "Firearms +10% Reload Speed. DOUBLED is mag is empty.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Sleight of Hand",
+        "desc": "Using a Relic reloads equipped firearm and increases Ranged Damage by 15% for 10s.",
+        "stats": {}
+      }
+    }
+  },
+  "Handler": {
+    "classIcon": "https://i.imgur.com/J9qtmtl.png",
+    "primePerk": "BONDED",
+    "primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge.",
+    "primePerkImage": "https://i.imgur.com/0lU6F1v.png",
+    "abilities": {
+      "Guard Dog": {
+        "name": "Guard Dog",
+        "desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
+        "image": "https://i.imgur.com/RxQSvqN.png",
+        "stats": {
+          "REdamage": -0.15
+        }
+      },
+      "Support Dog": {
+        "name": "Support Dog",
+        "desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
+        "image": "https://i.imgur.com/9STXt4w.png",
+        "stats": {
+          "HP/S%": 0.02
+        }
+      },
+      "Attack Dog": {
+        "name": "Attack Dog",
+        "desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
+        "image": "https://i.imgur.com/kctUuXl.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Kinship",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Handler",
+    "passives": {
+      "passive1": {
+        "name": "Pack Hunter",
+        "desc": "Gain +30% Ranged/Skill Damage, +5% Ranged/Skill CC while Companion is within 40m.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Spirit of the Wolf",
+        "desc": "Move Speed +10%. Allies within 10m gain your MS(if faster). Team Stamina Cost -15%.",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "Teamwork",
+        "desc": "Handler/Companion +30% Revive Speed. While reviving, both receive 50% less damage.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Best Friend",
+        "desc": "Using a Relic fully restores Companion health and grants them 25% Damage and 35% DR for 15s.",
+        "stats": {}
+      }
+    }
+  },
+  "Hunter": {
+    "classIcon": "https://i.imgur.com/eYtHptC.png",
+    "primePerk": "DEAD TO RIGHTS",
+    "primePerkDesc": "Dealing 55 Base Ranged Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
+    "primePerkImage": "https://i.imgur.com/3NzvZxO.png",
+    "abilities": {
+      "Hunter's Mark": {
+        "name": "Hunter's Mark",
+        "desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s.",
+        "image": "https://i.imgur.com/XhxFSww.png",
+        "stats": {}
+      },
+      "Hunter's Focus": {
+        "name": "Hunter's Focus",
+        "desc": "Aiming Down Sights uninterrupted/without shooting for 1s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 75%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
+        "image": "https://i.imgur.com/mMsdIv0.png",
+        "stats": {}
+      },
+      "Hunter's Shroud": {
+        "name": "Hunter's Shroud",
+        "desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken.",
+        "image": "https://i.imgur.com/sKyrI4o.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Longshot",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Hunter",
+    "passives": {
+      "passive1": {
+        "name": "Deadeye",
+        "desc": "Gain 40% Ranged Damage, 15% Weakspot Damage and 5% Ranged Critical Chance.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Return to Sender",
+        "desc": "Weakspot/Crit kills +50% ammo drops and 2x ammo drop chance.",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "Urgency",
+        "desc": "Firearms +15% Reload Speed +15% Movement Speed after Kill. Lasts 5s.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Intuition",
+        "desc": "Relic use: +duration of active Hunter Skill by 10s. Dimishes/use. Weakspot Kills against MARKED +5% Relic Speed within 15s. Stacks 10x.",
+        "stats": {}
+      }
+    }
+  },
+  "Invader": {
+    "classIcon": "https://i.imgur.com/dTDMY2T.png",
+    "primePerk": "SHADOW",
+    "primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
+    "primePerkImage": "https://i.imgur.com/lnR7rLO.png",
+    "abilities": {
+      "Void Cloak": {
+        "name": "Void Cloak",
+        "desc": "Auto perfect dodge incoming direct damage for 60s. Each auto-evade reduces timer by 33% - 100% based on damage absorbed and spawns a Decoy for 3s.",
+        "image": "https://i.imgur.com/I2Q5sBt.png",
+        "stats": {}
+      },
+      "Worm Hole": {
+        "name": "Worm Hole",
+        "desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location.",
+        "image": "https://i.imgur.com/WGSsTj5.png",
+        "stats": {}
+      },
+      "Reboot": {
+        "name": "Reboot",
+        "desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
+        "image": "https://i.imgur.com/9qAcUWQ.png",
+        "stats": {
+          "FlatDR": 0.1
+        }
+      }
+    },
+    "classTrait": "Untouchable",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Invader",
+    "passives": {
+      "passive1": {
+        "name": "S.H.A.R.K.",
+        "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 15s. Max 5 stacks.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Loophole",
+        "desc": "Ally Ranged/Melee DMG against enemies distracted by Decoy grants 7.5% base damage as Lifesteal.",
+        "stats": {
+          "Lifesteal": 0.075
+        }
+      },
+      "passive3": {
+        "name": "Circumvent",
+        "desc": "Evade/Combat Slide cost -15%. Perfect Dodges gain an additional -15%.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Override",
+        "desc": "Relic use: -25% Threat gen for 10s. While is active, next Evade creates Empowered Decoy, lasts 5.5s.",
+        "stats": {}
+      }
+    }
+  },
+  "Medic": {
+    "classIcon": "https://i.imgur.com/oNaYl4e.png",
+    "primePerk": "REGENERATOR",
+    "primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
+    "primePerkImage": "https://i.imgur.com/7m2eEaX.png",
+    "abilities": {
+      "Wellspring": {
+        "name": "Wellspring",
+        "desc": "Punch the ground to create a 3m Healing Spring AOE which restores 15 HP/s and increases Blight Decay Rate. Lasts 15s.",
+        "image": "https://i.imgur.com/54CIz3f.png",
+        "stats": {
+          "HP/S+": 15
+        }
+      },
+      "Healing Shield": {
+        "name": "Healing Shield",
+        "desc": "The Medic quickly expels healing energy to SHIELD all allies within 25m for 100% of their max HP for 10s. Heals 30% HP over the duration.",
+        "image": "https://i.imgur.com/DPg45oM.png",
+        "stats": {
+          "HP/S%": 0.03,
+          "Shield": 1
+        }
+      },
+      "Redemption": {
+        "name": "Redemption",
+        "desc": "The Medic unleashes a 30m shockwave that revives downed allies and restores 75% max HP over 10s. Every additional 1s increases the heal by 75%(3% max).",
+        "image": "https://i.imgur.com/rOZRmAT.png",
+        "stats": {
+          "HP/S%": 0.37
+        }
+      }
+    },
+    "classTrait": "Triage",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Medic",
+    "passives": {
+      "passive1": {
+        "name": "Invigorated",
+        "desc": "Grants +25% All Damage and +5% CC",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Benevolence",
+        "desc": "Relic Efficacy +15%. Heal nearby allies 30% of the total heal value, 60% for allies below 35% HP.",
+        "stats": {
+          "RelicEFF": 0.15
+        }
+      },
+      "passive3": {
+        "name": "Backbone",
+        "desc": "Increases the hits Medic can take before losing Grey Health by 2.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Benefactor",
+        "desc": "Relic Use Speed +20%. Relic Use gains -1 Stagger.",
+        "stats": {
+          "RelicSpeed": -0.2
+        }
+      }
+    }
+  },
+  "Ritualist": {
+    "classIcon": "https://i.imgur.com/kNPGSac.png",
+    "primePerk": "VILE",
+    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected\n\nInfected: Victim receives 5% more Status Effect damage, On death, spreads\nall statuses to nearby enemies within 5m",
+    "primePerkImage": "https://i.imgur.com/CIV7N6m.png",
+    "abilities": {
+      "Eruption": {
+        "name": "Eruption",
+        "desc": "Creates 1m explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
+        "image": "https://i.imgur.com/R8EtgyF.png",
+        "stats": {}
+      },
+      "Miasma": {
+        "name": "Miasma",
+        "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 1500 base damage. Lasts 11s.",
+        "image": "https://i.imgur.com/eDxZ9tS.png",
+        "stats": {}
+      },
+      "Death Wish": {
+        "name": "Death Wish",
+        "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal.",
+        "image": "https://i.imgur.com/pQJvLnK.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Affliction",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Ritualist",
+    "passives": {
+      "passive1": {
+        "name": "Wrath",
+        "desc": " +20% DMG and +10% CC to enemies with negative status effects.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Terrify",
+        "desc": "Killing applies TERRIFIED within 5m for 20s. Enemies deal -5% damage and are more likely to drop ammo.",
+        "stats": {
+          "REdamage": -0.05
+        }
+      },
+      "passive3": {
+        "name": "Dark Blood",
+        "desc": "Reduces damage received from Negative Status Effects by 25%. Reduce blight gain by 50%.",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "Purge",
+        "desc": "On Relic Use, cleanses all Negative Status Effects. Effects cleansed are applied to enemies within 7.5m.",
+        "stats": {}
+      }
+    }
+  },
+  "Summoner": {
+    "classIcon": "https://i.imgur.com/9JmNOaV.png",
+    "primePerk": "RUTHLESS",
+    "primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed.",
+    "primePerkImage": "https://i.imgur.com/qoTK4rj.png",
+    "abilities": {
+      "Minion: Hollow": {
+        "name": "Minion: Hollow",
+        "desc": "Summons a Root Hollow minion to fight by your side. Costs 15% of max HP to summon, but will not kill Summoner. Max (2).",
+        "image": "https://i.imgur.com/pBk7zxN.png",
+        "stats": {}
+      },
+      "Minion: Flyer": {
+        "name": "Minion: Flyer",
+        "desc": "Summons a Root Flyer minion to fight by your side. Costs 10% of max HP to summon, but will not kill Summoner. Max (2).",
+        "image": "https://i.imgur.com/riPDVj0.png",
+        "stats": {}
+      },
+      "Minion: Reaver": {
+        "name": "Minion: Reaver",
+        "desc": "Summons a Root Reaver minion to fight by your side. Costs 35% of max HP to summon, but will not kill Summoner. Max (1).",
+        "image": "https://i.imgur.com/3luNpYE.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "Regrowth",
+    "trait1": "",
+    "trait2": "",
+    "trait3": "",
+    "trait4": "",
+    "name": "Summoner",
+    "passives": {
+      "passive1": {
+        "name": "Dominator",
+        "desc": "Mod/Skill (+35%DMG, +5%CC) with active minion. Sacrifice gives Ranged/Melee (+30%DMG +5%CC), for 30s or until summon.",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "Residue",
+        "desc": "Minions leave a 3m Aura on death, heals 2.5% HP/s and increases healing by 20%. Lasts 10s.",
+        "stats": {
+          "HealingEFF": 0.2,
+          "HP/S%": 0.025
+        }
+      },
+      "passive3": {
+        "name": "Outrage",
+        "desc": "Sacrifice grants 3% Lifesteal/Minion Sacrificed, +15% Move Speed. Lasts 10s.",
+        "stats": {
+          "Lifesteal": 0.06
+        }
+      },
+      "passive4": {
+        "name": "Incite",
+        "desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC. Lasts 30s.",
+        "stats": {}
+      }
+    }
+  }
+}
 //class title combos: diehard bulldog etc
 const titleCombos = {
    "-Select--Select-": "---",
@@ -2263,4421 +2453,2421 @@ const titleCombos = {
 }
 //amulets
 const amulets = {
-   "": {
-      "name": "",
-      "slot": "",
-      "image": "images/Remnant/clear.png",
-      "desc": ""
-    },
-   "Brewmaster's Cork": {
-      "stats": {
-         "FlatDR": 0.06,
-         "ConcLimit": 2,
-      },
-      "custom": null,
-      "name": "Brewmaster's Cork",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/6ThjInO.png",
-      "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions."
-   },
-   "Broken Pocket Watch": {
-      "stats": {
-         "Stamina/S+": 25,
-         "StaminaCost": -0.5,
-      },
-      "custom": null,
-      "name": "Broken Pocket Watch",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/pezml7V.png",
-      "desc": "Increases Stamina Regen by 25 and reduces Stamina cost by 50%"
-   },
-   "Cost of Betrayal": {
-      "stats": {
-         "FlatDR": -0.2,
-      },
-      "custom": null,
-      "name": "Cost of Betrayal",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/DVLQa4r.png",
-      "desc": "Reduces Max Relic Charges to 1. Increases All Damage by 20% when wearer has 1 Relic Charge. Increases incoming damage by 20% when wearer has no Relic Charges and after 30s, regain 1 Relic Charge."
-   },
-   "Daredevil Charm": {
-      "stats": {
-         "FlatDR": -0.2,
-      },
-      "custom": null,
-      "name": "Daredevil Charm",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/xYeiUHJ.png",
-      "desc": "Gain 7.5% to all damage dealt, 3% Movement Speed, and 5% all damage taken for each piece of unequipped armor."
-   },
-   "Decayed Margin": {
-      "stats": {
-         "MLifesteal": 0.06,
-      },
-      "custom": null,
-      "name": "Decayed Margin",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/OczSOml.png",
-      "desc": "Melee hits gain 1.5% base damage dealt as Lifesteal. For each 25% missing Health, gain 1.5% additional Melee Lifesteal. When Health is full, gain 25% Melee Damage."
-   },
-   "Difference Engine": {
-      "stats": {
-         "Lifesteal": 0.015,
-      },
-      "custom": null,
-      "name": "Difference Engine",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/7jO1Jja.png",
-      "desc": "While a Shield is active, gain 20% damage and 1.5% of base dealt as Lifesteal."
-   },
-   "Effigy Pendant": {
-      "stats": {
-         "FlatDR": 0.1,
-      },
-      "custom": null,
-      "name": "Effigy Pendant",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/bOMsSOR.png",
-      "desc": "While Grey Health is present, gain 15% to all damage dealt, 10% damage reduction and 1 additional hit before Grey Health is removed."
-   },
-   "Full Moon Circlet": {
-      "stats": {
-         "RLifesteal": 0.03,
-      },
-      "custom": null,
-      "name": "Full Moon Circlet",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/BqFIFjB.png",
-      "desc": "Ranged damage Lifesteals 3% of base damage dealt. At full health, damage is increased by 20%."
-   },
-   "Indignant Fetish": {
-      "stats": {
-         "FlatDR": 0.1,
-      },
-      "custom": null,
-      "name": "Indignant Fetish",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/IPIEGF1.png",
-      "desc": "Taking damage from enemies increases all damage dealt by 25% and reduces all incoming damage by 10%. Lasts 20s."
-   },
-   "Kuri Kuri Charm": {
-      "stats": {
-         "RelicSpeed": -0.5,
-      },
-      "custom": null,
-      "name": "Kuri Kuri Charm",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/TAqxcep.png",
-      "desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge."
-   },
-   "Leto's Amulet": {
-      "stats": {
-         "StaminaCost": -0.3,
-         "Encumbrance%": -0.4,
-      },
-      "custom": null,
-      "name": "Leto's Amulet",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/LgUJb0q.png",
-      "desc": "Reduces Encumbrance by 40% and Stamina Cost by 15%."
-   },
-   "Matriarch's Insignia": {
-      "stats": {
-         "Stamina/S+": 10,
-      },
-      "custom": null,
-      "name": "Matriarch's Insignia",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/dXxuPsN.png",
-      "desc": "Increases Melee Damage by 35% and causes all successful Melee Attacks to restore 10 Stamina."
-   },
-   "Navigator's Pendant": {
-      "stats": {
-         "Health": 25,
-         "Stamina": 25,
-         "Encumbrance": -10,
-      },
-      "custom": null,
-      "name": "Navigator's Pendant",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/MNg2vz5.png",
-      "desc": "Grants 20 Health, 20 Stamina, and -10 Armor Encumbrance."
-   },
-   "Nightmare Spiral": {
-      "stats": {
-         "HealingEFF": -0.95,
-         "RLifesteal": 0.1,
-      },
-      "custom": null,
-      "name": "Nightmare Spiral",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/6AfY7ml.png",
-      "desc": "Gain 10% of base Ranged damage dealt as Lifesteal. Reduces Healing Effectiveness by 95%."
-   },
-   "Nimue's Ribbon": {
-      "stats": {
-         "RelicEFF": 0.5,
-      },
-      "custom": null,
-      "name": "Nimue's Ribbon",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/AnlCvZc.png",
-      "desc": "Increase Relic Healing Effectiveness by 50% Activating a Relic grants HASTE for 25s."
-   },
-   "Participation Medal": {
-      "stats": {
-         "Health": 10,
-         "FlatDR": 0.1,
-      },
-      "custom": null,
-      "name": "Participation Medal",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/A71iDWl.png",
-      "desc": "Increase Health by 10, Stamina by 10, Movement Speed by 10%, and Damage Reduction by 10%."
-   },
-   "Red Doe Sigil": {
-      "stats": {
-         "RelicEFF": 0.3,
-      },
-      "custom": null,
-      "name": "Red Doe Sigil",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/ZETFv52.png",
-      "desc": "Increases Relic Healing Effectiveness by 30% which doubles when the wearer's Health is below 50%."
-   },
-   "Rusted Navigator's Pendant": {
-      "stats": {
-         "Health": 20,
-         "Stamina": 20,
-         "Encumbrance": -15,
-      },
-      "custom": null,
-      "name": "Rusted Navigator's Pendant",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/B2H2Xrb.png",
-      "desc": "Grants 15 Health, 15 Stamina, and -15 Armor Encumbrance."
-   },
-   "Twisted Idol": {
-      "stats": {
-         "Armor%": 0.35,
-         "Encumbrance": -15,
-      },
-      "custom": null,
-      "name": "Twisted Idol",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/xfS6EZM.png",
-      "desc": "Increases Armor Effectiveness by 30% and reduces Encumbrance by 15."
-   },
-   "Whispering Marble": {
-      "stats": {
-         "Bulwark": 3,
-      },
-      "custom": null,
-      "name": "Whispering Marble",
-      "slot": "Amulet",
-      "image": "https://i.imgur.com/fFlOKNC.png",
-      "desc": "Grants 3 stacks of BULWARK. Increases All Damage by 3% per stack of BULWARK."
-   }
- }
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {
+    }
+  },
+  "Brewmaster's Cork": {
+    "custom": null,
+    "name": "Brewmaster's Cork",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/6ThjInO.png",
+    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions.",
+    "stats": {
+      "FlatDR": 0.06,
+      "ConcLimit": 2
+    }
+  },
+  "Broken Pocket Watch": {
+    "custom": null,
+    "name": "Broken Pocket Watch",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/pezml7V.png",
+    "desc": "Increases Stamina Regen by 25 and reduces Stamina cost by 50%",
+    "stats": {
+      "Stamina/S+": 25,
+      "StaminaCost": -0.5
+    }
+  },
+  "Cost of Betrayal": {
+    "custom": null,
+    "name": "Cost of Betrayal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/DVLQa4r.png",
+    "desc": "Reduces Max Relic Charges to 1. Increases All Damage by 20% when wearer has 1 Relic Charge. Increases incoming damage by 20% when wearer has no Relic Charges and after 30s, regain 1 Relic Charge.",
+    "stats": {
+      "FlatDR": -0.2
+    }
+  },
+  "Daredevil Charm": {
+    "custom": null,
+    "name": "Daredevil Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/xYeiUHJ.png",
+    "desc": "Gain 7.5% to all damage dealt, 3% Movement Speed, and 5% all damage taken for each piece of unequipped armor.",
+    "stats": {
+      "FlatDR": -0.2
+    }
+  },
+  "Decayed Margin": {
+    "custom": null,
+    "name": "Decayed Margin",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/OczSOml.png",
+    "desc": "Melee hits gain 1.5% base damage dealt as Lifesteal. For each 25% missing Health, gain 1.5% additional Melee Lifesteal. When Health is full, gain 25% Melee Damage.",
+    "stats": {
+      "MLifesteal": 0.06
+    }
+  },
+  "Difference Engine": {
+    "custom": null,
+    "name": "Difference Engine",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7jO1Jja.png",
+    "desc": "While a Shield is active, gain 20% damage and 1.5% of base dealt as Lifesteal.",
+    "stats": {
+      "Lifesteal": 0.015
+    }
+  },
+  "Effigy Pendant": {
+    "custom": null,
+    "name": "Effigy Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/bOMsSOR.png",
+    "desc": "While Grey Health is present, gain 15% to all damage dealt, 10% damage reduction and 1 additional hit before Grey Health is removed.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Full Moon Circlet": {
+    "custom": null,
+    "name": "Full Moon Circlet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/BqFIFjB.png",
+    "desc": "Ranged damage Lifesteals 3% of base damage dealt. At full health, damage is increased by 20%.",
+    "stats": {
+      "RLifesteal": 0.03
+    }
+  },
+  "Indignant Fetish": {
+    "custom": null,
+    "name": "Indignant Fetish",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/IPIEGF1.png",
+    "desc": "Taking damage from enemies increases all damage dealt by 25% and reduces all incoming damage by 10%. Lasts 20s.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Kuri Kuri Charm": {
+    "custom": null,
+    "name": "Kuri Kuri Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/TAqxcep.png",
+    "desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge.",
+    "stats": {
+      "RelicSpeed": -0.5
+    }
+  },
+  "Leto's Amulet": {
+    "custom": null,
+    "name": "Leto's Amulet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/LgUJb0q.png",
+    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 15%.",
+    "stats": {
+      "StaminaCost": -0.3,
+      "Encumbrance%": -0.4
+    }
+  },
+  "Matriarch's Insignia": {
+    "custom": null,
+    "name": "Matriarch's Insignia",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/dXxuPsN.png",
+    "desc": "Increases Melee Damage by 35% and causes all successful Melee Attacks to restore 10 Stamina.",
+    "stats": {
+      "Stamina/S+": 10
+    }
+  },
+  "Navigator's Pendant": {
+    "custom": null,
+    "name": "Navigator's Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/MNg2vz5.png",
+    "desc": "Grants 20 Health, 20 Stamina, and -10 Armor Encumbrance.",
+    "stats": {
+      "Health": 25,
+      "Stamina": 25,
+      "Encumbrance": -10
+    }
+  },
+  "Nightmare Spiral": {
+    "custom": null,
+    "name": "Nightmare Spiral",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/6AfY7ml.png",
+    "desc": "Gain 10% of base Ranged damage dealt as Lifesteal. Reduces Healing Effectiveness by 95%.",
+    "stats": {
+      "HealingEFF": -0.95,
+      "RLifesteal": 0.1
+    }
+  },
+  "Nimue's Ribbon": {
+    "custom": null,
+    "name": "Nimue's Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/AnlCvZc.png",
+    "desc": "Increase Relic Healing Effectiveness by 50% Activating a Relic grants HASTE for 25s.",
+    "stats": {
+      "RelicEFF": 0.5
+    }
+  },
+  "Participation Medal": {
+    "custom": null,
+    "name": "Participation Medal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/A71iDWl.png",
+    "desc": "Increase Health by 10, Stamina by 10, Movement Speed by 10%, and Damage Reduction by 10%.",
+    "stats": {
+      "Health": 10,
+      "FlatDR": 0.1,
+      "Stamina": 10
+    }
+  },
+  "Red Doe Sigil": {
+    "custom": null,
+    "name": "Red Doe Sigil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/ZETFv52.png",
+    "desc": "Increases Relic Healing Effectiveness by 30% which doubles when the wearer's Health is below 50%.",
+    "stats": {
+      "RelicEFF": 0.3
+    }
+  },
+  "Rusted Navigator's Pendant": {
+    "custom": null,
+    "name": "Rusted Navigator's Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/B2H2Xrb.png",
+    "desc": "Grants 15 Health, 15 Stamina, and -15 Armor Encumbrance.",
+    "stats": {
+      "Health": 20,
+      "Stamina": 20,
+      "Encumbrance": -15
+    }
+  },
+  "Twisted Idol": {
+    "custom": null,
+    "name": "Twisted Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/xfS6EZM.png",
+    "desc": "Increases Armor Effectiveness by 30% and reduces Encumbrance by 15.",
+    "stats": {
+      "Armor%": 0.35,
+      "Encumbrance": -15
+    }
+  },
+  "Whispering Marble": {
+    "custom": null,
+    "name": "Whispering Marble",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/fFlOKNC.png",
+    "desc": "Grants 3 stacks of BULWARK. Increases All Damage by 3% per stack of BULWARK.",
+    "stats": {
+      "Bulwark": 3
+    }
+  },
+  "Abrasive Whetstone": {
+    "name": "Abrasive Whetstone",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/BGhiSG7.png",
+    "desc": "When attacking a BLEEDING enemy, Crit Chance is increased by 15% and Crit Damage is increased by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ankh of Power": {
+    "name": "Ankh of Power",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/WkrGH56.png",
+    "desc": "Grants a 15% increase to all damage. Consuming a Relic doubles the bonus for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Birthright of the Lost": {
+    "name": "Birthright of the Lost",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/VPIbeEn.png",
+    "desc": "On perfect dodge, apply EXPOSED on the attacker for 10s. EXPOSED: Target receives up to 24% additional damage from all sources. Expose amount is reduced for each human ally alive.",
+    "custom": null,
+    "stats": {}
+  },
+  "Butcher's Fetish": {
+    "name": "Butcher's Fetish",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/z2BiNlI.png",
+    "desc": "Increases Critical Chance by 15% and Critical Damage by 25% for 15s after striking enemy with a Charged Melee Attack.",
+    "custom": null,
+    "stats": {}
+  },
+  "Chains of Amplification": {
+    "name": "Chains of Amplification",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/1g026l1.png",
+    "desc": "Increases all damage dealt to targets suffering from a Status Effect by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Cleansing Stone": {
+    "name": "Cleansing Stone",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/nUx4aqq.png",
+    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 15% of wearers Max Health to all allies within 7m when cleansed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Core Booster": {
+    "name": "Core Booster",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/JhQqxss.png",
+    "desc": "Increases weakspot damage by 50% for 10s after killing an enemy.",
+    "custom": null,
+    "stats": {}
+  },
+  "Death-Soaked Idol": {
+    "name": "Death-Soaked Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/mqnq3Nd.png",
+    "desc": "Increases All Damage by 5% for each entity within 20m suffering from a unique Negative Status Effect. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Death's Embrace": {
+    "name": "Death's Embrace",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/3SCAws6.png",
+    "desc": "Gain 20% to all damage when Health is below 100%. Gain HASTE when below 50% Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Detonation Trigger": {
+    "name": "Detonation Trigger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/C2ou1K9.png",
+    "desc": "Increases Explosion damage by 25%. Explosions apply 405 BURNING damage over 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Downward Spiral": {
+    "name": "Downward Spiral",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/1tpuPCv.png",
+    "desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
+    "custom": null,
+    "stats": {}
+  },
+  "Effluvium Enhancer": {
+    "name": "Effluvium Enhancer",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/a8XzCSa.png",
+    "desc": "Increases ACID damage by 20% and CORROSIVE damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Emergency Switch": {
+    "name": "Emergency Switch",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/KiNCWOQ.png",
+    "desc": "When below 50% health, chance to consume Relic on use is reduced by 35%. Final Relic Charge is not consumed on use, but effect cannot be triggered again for 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Energized Neck Coil": {
+    "name": "Energized Neck Coil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/D8np6HK.png",
+    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Energy Diverter": {
+    "name": "Energy Diverter",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/kyW5Mc4.png",
+    "desc": "While a SHIELD is active, gain 10 Critical Chance and 15% to all damage dealt.",
+    "custom": null,
+    "stats": {}
+  },
+  "Escalation Protocol": {
+    "name": "Escalation Protocol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/3FBd6mQ.png",
+    "desc": "Increases all damage dealt by 2.5% for 10s after killing an enemy. Stacks 10x. Dealing damage refreshes the timer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of Euphoria": {
+    "name": "Gift of Euphoria",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/af9ocpB.png",
+    "desc": "Spending 25 Stamina grants 5% Critical Chance for 7s. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of Melancholy": {
+    "name": "Gift of Melancholy",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/pmhZbAP.png",
+    "desc": "Increases All Damage dealt by 25% when Stamina is at 100% for 7s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of the Unbound": {
+    "name": "Gift of the Unbound",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/djQ080C.png",
+    "desc": "Disables negative effects of Burden Rings. Restricts Maximum Health gained by 20% per effect disabled.",
+    "custom": null,
+    "stats": {}
+  },
+  "Golden Ribbon": {
+    "name": "Golden Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/mkQ1Wdu.png",
+    "desc": "Increases Mod damage by 25%. Activating a MOD grants HASTE for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunfire Security Lanyard": {
+    "name": "Gunfire Security Lanyard",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/SJvpfrq.png",
+    "desc": "Automatically reloads Magazine over time. Does not work for single shot weapons.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunslinger's Charm": {
+    "name": "Gunslinger's Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/aArKNFe.png",
+    "desc": "Increases Fire Rate by 15% and Reload Speed by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hallowed Egg": {
+    "name": "Hallowed Egg",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/ejNQT1u.png",
+    "desc": "Spending at least 30% of Firearms magazine to deal damage increases Melee damage by 10% for 7s. Stacks 5x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hyperconductor": {
+    "name": "Hyperconductor",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/05B1ZWv.png",
+    "desc": "Gain double Skill Charges. Increases Skill Cooldowns by 50% and reduces Max Power Generation by 15%.\nFor Heavy Weapons, doubles Heavy Weapon Ammo instead.",
+    "custom": null,
+    "stats": {}
+  },
+  "Index of the Scribe": {
+    "name": "Index of the Scribe",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/zSYA3EZ.png",
+    "desc": "Increases Mod and Skill Weakspot Damage by 35%",
+    "custom": null,
+    "stats": {}
+  },
+  "Inert Overcharger": {
+    "name": "Inert Overcharger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/AsO6Lqk.png",
+    "desc": "Standing still increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
+    "custom": null,
+    "stats": {}
+  },
+  "Insulation Driver": {
+    "name": "Insulation Driver",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/hVWNy7n.png",
+    "desc": "While BULWARK is active, gain 15% to all damage dealt and HASTE.",
+    "custom": null,
+    "stats": {}
+  },
+  "Jester's Bell": {
+    "name": "Jester's Bell",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/snemrNx.png",
+    "desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 20% for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Kinetic Shield Exchanger": {
+    "name": "Kinetic Shield Exchanger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/aOeSDgV.png",
+    "desc": "While a SHIELD is active, gain 25% Mod damage and generate 15% additional Mod power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Laemir Censer": {
+    "name": "Laemir Censer",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/2Su74Nr.png",
+    "desc": "Increases Mod Duration by 50%. Increases Mod Cost by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Legacy Protocol": {
+    "name": "Legacy Protocol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/e7SZ2wA.png",
+    "desc": "Lowers skill cooldown by 20% and increased skill duration by 15%",
+    "custom": null,
+    "stats": {}
+  },
+  "Neckbone Necklace": {
+    "name": "Neckbone Necklace",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/73gZf2p.png",
+    "desc": "Reduces the Damage of Status Effects applied to wearer by 50%. Gain 25% increased Damage when suffering from a Status Effect or Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Necklace of Flowing Life": {
+    "name": "Necklace of Flowing Life",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/zUQur45.png",
+    "desc": "Increases Grey Health conversion by an additional 100%. When Grey Health Conversion triggers, gain 5x the amount as Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Necklace of Supremacy": {
+    "name": "Necklace of Supremacy",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/hjpAbVO.png",
+    "desc": "After 7s of not being damaged, increases all damage dealt by 15%. Increases to 25% if Health is full.",
+    "custom": null,
+    "stats": {}
+  },
+  "Nightweaver's Grudge": {
+    "name": "Nightweaver's Grudge",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/olPhK3n.png",
+    "desc": "Gain 20% Critical Chance and HASTE when within 15m of an entity suffering from a Status Effect.",
+    "custom": null,
+    "stats": {}
+  },
+  "One True King Sigil": {
+    "name": "One True King Sigil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/tmuZR6e.png",
+    "desc": "Increases Mod damage by 20%. Enhances the effect of Faerin's Sigil and Faelin's Sigil by 50% per Sigil equipped.",
+    "custom": null,
+    "stats": {}
+  },
+  "One-Eyed Joker Idol": {
+    "name": "One-Eyed Joker Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/qkK6Zfa.png",
+    "desc": "Neutral Backdash creates a Magic Card lasting 1s. If Card absorbs enemy damage gain 25% Critical Chance for 5s. Neutral Backdash cost 30% additional Stamina.",
+    "custom": null,
+    "stats": {}
+  },
+  "Onyx Pendulum": {
+    "name": "Onyx Pendulum",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/9id6NdN.png",
+    "desc": "Firearm damage adds stacks which increase the damage of stowed firearm by 2.5% for 15s. Stacks 10x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Range Finder": {
+    "name": "Range Finder",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/vVzcvUT.png",
+    "desc": "After killing an enemy, gain 10% Ranged damage and 2m Firearm Range. Stacks 3x Lasts 10s. ranged Weakspot Hits will refresh duration.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ravager's Mark": {
+    "name": "Ravager's Mark",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/S9vukN0.png",
+    "desc": "Increases all damage dealt to BLEEDING targets by 20%. Bonus increases to 30% for targets with 50% or lower Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Samoflange": {
+    "name": "Samoflange",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/K6r1t6G.png",
+    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 50%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Scavenger's Bauble": {
+    "name": "Scavenger's Bauble",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/KKblm64.png",
+    "desc": "Increases Scrap pickups by 50%, Automatically pick up any nearby crafting materials.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shaed Bloom Crystal": {
+    "name": "Shaed Bloom Crystal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/CDYAYVM.png",
+    "desc": "Gain a 30% damage bonus. Every 5s, the bonus switches between Physical and Elemental damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shock Devide": {
+    "name": "Shock Devide",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/Idx09iv.png",
+    "desc": "Increases SHOCK damage by 20% and OVERLOADED damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Silver Ribbon": {
+    "name": "Silver Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/9HjFOzc.png",
+    "desc": "Increases Skill damage by 25%.\nActivating a SKILL grants HASTE for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sinister Totem": {
+    "name": "Sinister Totem",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/Fi6Mm8z.png",
+    "desc": "Applying or refreshing a Negative Status Effect to an enemy increases Status Damage by 1% for 15s. Max 50 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Anchor": {
+    "name": "Soul Anchor",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/UZz8npM.png",
+    "desc": "Summoning increases all damage dealt by 20% for 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Spirit Wisp Amulet": {
+    "name": "Spirit Wisp Amulet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/SVSTOGi.png",
+    "desc": "Activating a Mod reduces current Skill Cooldowns by 3% for every 300 Mod Power spent.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stalker's Brand": {
+    "name": "Stalker's Brand",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7ixzuFA.png",
+    "desc": "Gain 10% Ranged and 15% Melee damage. Bonus double versus enemies not targeting wearer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Talisman of the Sun": {
+    "name": "Talisman of the Sun",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/2flZAsF.png",
+    "desc": "Increases FIRE damage by 20% and BURNING damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Toxic Release Valve": {
+    "name": "Toxic Release Valve",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7Q99SlN.png",
+    "desc": "Swapping Firearms releases a Toxic Cloud, which deals 148.5 ACID Damage to all enemies within 7m. and applies CORROSION. \nCan only happen once every 3s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Vengance Idol": {
+    "name": "Vengance Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/eUupOV1.png",
+    "desc": "Increases all damage dealt by 30% when the wearer's Health is below 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Void Idol": {
+    "name": "Void Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/k2JFzAb.png",
+    "desc": "Increases Reload Speed by 20%. Reloads only require 50% of magazine from reserves to fully reload.",
+    "custom": null,
+    "stats": {}
+  },
+  "Weightless Weight": {
+    "name": "Weightless Weight",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/u3DCJPN.png",
+    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75%  for every each 5 point of Armor Encumbrance.",
+    "custom": null,
+    "stats": {}
+  }
+}
 //rings
 const rings = {
-   "": {
-      "name": "",
-      "slot": "",
-      "image": "images/Remnant/clear.png",
-      "desc": ""
-    },
-   "Acid Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": 15,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Acid Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/1OjHB3w.png",
-     "desc": "Increases ACID damage by 10% and ACID Resistance by 15%."
-   },
-   "Alchemy Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": 0.06,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Alchemy Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/WCc31LC.png",
-     "desc": "Increases base Lifesteal by 5% while suffering from a negative STATUS or BLIGHT Effect."
-   },
-   "Amber Moonstone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.25,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Amber Moonstone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/yDme9m6.png",
-     "desc": "When the wearer's Health drops below 30%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects."
-   },
-   "Atonement Fold": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": -0.5,
-     "HP/S+": -1,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Atonement Fold",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/JKbFfdo.png",
-     "desc": "Self-inflicts BLEEDING Status upon the wearer, causing 1.1 BLEED damage per second. Increases Critical Chance by 10%."
-   },
-   "Berserker's Crest": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": -0.25,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Berserker's Crest",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/rmtGIHu.png",
-     "desc": "Increases Melee Charge Speed by 20% and reduces Melee Stamina Cost by 25%."
-   },
-   "Bisected Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": -0.15,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": -1,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Bisected Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/piWaWV1.png",
-     "desc": "Gain Infinite Stamina. All damage received is increased by 25%."
-   },
-   "Blessed Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Blessed Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/uox5REc.png",
-     "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 15s."
-   },
-   "Blood Tinged Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": 1,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Blood Tinged Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/FwQSexk.png",
-     "desc": "Gain 2 Health Regeneration per second when within 10m of a BLEEDING entity."
-   },
-   "Booster Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": 25,
-     "Bleed%": null,
-     "Burn": 25,
-     "Burn%": null,
-     "Shock": 25,
-     "Shock%": null,
-     "Corrosive": 25,
-     "Corrosive%": null,
-     "Blight": 25,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Booster Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/MdwGBHS.png",
-     "desc": "Increases all Status Resistances by 10."
-   },
-   "Bridge Warden's Crest": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.1,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Bridge Warden's Crest",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/RilQIVY.png",
-     "desc": "Perfect Dodge increases Melee Damage by 15% for 7 seconds. Perfect Evade Flop also gains 10% Damage Reduction for the duration."
-   },
-   "Dull Steel Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": 25,
-     "custom": null,
-     "name": "Dull Steel Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/EA0XgdY.png",
-     "desc": "Reduces Dodge Weight Class by 1."
-   },
-   "Burden of the Audacious": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": -0.5,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Burden of the Audacious",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/C0RzzoB.png",
-     "desc": "Decreases all healing by 75%. Perfect Dodges heal for 15% of Max Health."
-   },
-   "Burden of the Rebel": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": 0.25,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Burden of the Rebel",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/IveQE8G.png",
-     "desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%."
-   },
-   "Celerity Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": -0.2,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Celerity Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/np0NbwG.png",
-     "desc": "Increases Consumable and Relic Use Speed by 20%."
-   },
-   "Conservation Seal": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": 0.25,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Conservation Seal",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/Ay25cdg.png",
-     "desc": "For every 10% of Health missing  (Max 50%) gain 3% chance to not consume Relic and 5% increased Relic Efficacy on next use."
-   },
-   "Dead King's Memento": {
-     "Health": 15,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dead King's Memento",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/sqqtoCx.png",
-     "desc": "Increases Health by 15."
-   },
-   "Defensive Action Loop": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.1,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Defensive Action Loop",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/XEWuX4t.png",
-     "desc": "While reloading, and for 3s after reload completes, incoming damage is reduced by 10%."
-   },
-   "Drakestone Pearl": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Drakestone Pearl",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/nKjyfJW.png",
-     "desc": "Enables Stamina Regeneration during Melee Attacks at 20% of the normal rate."
-   },
-   "Dran Memento": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": 20,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": -5,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dran Memento",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/g7aQ1mS.png",
-     "desc": "Increases Max Stamina by 20 and reduces Encumbrance by 5."
-   },
-   "Dran Scavenger Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.005,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dran Scavenger Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/MLcD5HP.png",
-     "desc": "Collecting Scrap, Iron, and Ammo pickups regenerates 10% of Max Health and increases all damage dealt by 8% for 30s."
-   },
-   "Dread Font": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": 2,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dread Font",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/u9gicxw.png",
-     "desc": "Increases Grey Health Regeneration rate by 2 per second."
-   },
-   "Dried Clay Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 1,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dried Clay Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/gIb2Zy4.png",
-     "desc": "Grants 1 stack of BULWARK. Increases All Damage by 60% of the total Damage Reduction granted by BULWARK stacks"
-   },
-   "Dying Ember": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": 0.06,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dying Ember",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/RsWl7xg.png",
-     "desc": "Gain 5% of base Melee damage dealt as Lifesteal."
-   },
-   "Elevated Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": -5,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": 5,
-     "custom": null,
-     "name": "Elevated Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/QYx9EXM.png",
-     "desc": "Increases Dodge Weight Threshold by 5. Reduces Encumbrance by 5."
-   },
-   "Embrace of Sha'Hala": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.2,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Embrace of Sha'Hala",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/U4AFGBq.png",
-     "desc": "Wearer gains 5% incoming damage reduction for each Negative Status Effect or Blight they are suffering from. Max 4 stacks."
-   },
-   "Encrypted Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.02,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Encrypted Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/bYVtoLs.png",
-     "desc": "Using a Mod regenerates 10% of Max Health over 10s. Can stack up to 30s."
-   },
-   "Endaira's Endless Loop": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": 1.5,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Endaira's Endless Loop",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/mSx7Qlo.png",
-     "desc": "After Sprinting for 2s, the wearer gains 1.5 Health Regeneration per second until they stop Sprinting."
-   },
-   "Excess Coil": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.25,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Excess Coil",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/v4eVeRb.png",
-     "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 10s."
-   },
-   "Fae Bruiser Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Fae Bruiser Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/wGSIuzZ.png",
-     "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 7s. Does not stack with itself."
-   },
-   "Fae Protector Signet": {
-     "Health": 10,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": 10,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": -5,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Fae Protector Signet",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/CQw0Dh3.png",
-     "desc": "Increases Max Health and Stamina by 10 and Reduces Encumbrance by 5."
-   },
-   "Fae Shaman Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": -0.25,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": 0.334,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Fae Shaman Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/PE11RyA.png",
-     "desc": "Increases Health Regeneration by 0.25 and Relic Use Speed by 25%."
-   },
-   "Feastmaster's Signet": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": 1,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Feastmaster's Signet",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/nGdYcPn.png",
-     "desc": "Increases active Concoction Limit by1."
-   },
-   "Fire Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": 15,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Fire Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/IQU4gEo.png",
-     "desc": "Increases FIRE damage by 10% and FIRE Resistance by 15."
-   },
-   "Game Master's Pride": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": "#REF!",
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Game Master's Pride",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/VypAuYL.png",
-     "desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring."
-   },
-   "Generating Band": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.03,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Generating Band",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/mVXV1hI.png",
-     "desc": "Regenerate 3% of Max Health per second while a Shield is active."
-   },
-   "Grounding Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": 15,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Grounding Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/ec1BAwl.png",
-     "desc": "Increases SHOCK damage by 10% and SHOCK Resistance by 15."
-   },
-   "Guardian's Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Guardian's Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/kcoHwmB.png",
-     "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 10s after taking Melee damage."
-   },
-   "Hardcore Metal Band": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 5,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Hardcore Metal Band",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/EOJ4ifQ.png",
-     "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks."
-   },
-   "Hardened Coil": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.15,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Hardened Coil",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/RyhPR5V.png",
-     "desc": "Reduces all incoming damage by 3% for each 10% of missing Health. Max 15% reduction."
-   },
-   "Heart of the Wolf": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": 25,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Heart of the Wolf",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/VOlJGPQ.png",
-     "desc": "Increases Max Stamina by 25 and Movement Speed by 10%."
-   },
-   "Lithic Signet": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.05,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Lithic Signet",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/lKaOMFa.png",
-     "desc": "Reduces all incoming damage by 5%."
-   },
-   "Low Yield Recovery Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.01,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Low Yield Recovery Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/TqKSFYf.png",
-     "desc": "Killing an enemy regenerates 5% Max Health over 5s. Additional kills increase duration by 5s. Max 30s."
-   },
-   "Mechanic's Cog": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 1,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Mechanic's Cog",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/yNEMPKp.png",
-     "desc": "While carrying an Engineer Heavy Weapon, gain 15% Movement Speed and 1 Stack of BULWARK"
-   },
-   "Meteorite Shard Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": 50,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Meteorite Shard Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/iFVAXGg.png",
-     "desc": "Increases Encumbrance by 50. Increases Unarmed damage by 50%."
-   },
-   "Reaping Stone": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": 0.03,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Reaping Stone",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/ewW6qSI.png",
-     "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 2% of base damage dealt as Lifesteal for 10s."
-   },
-   "Rerouting Cable": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.5,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Rerouting Cable",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/5WuiZyF.png",
-     "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 25 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD."
-   },
-   "Reserve Boosting Gem": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": 2,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Reserve Boosting Gem",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/RaJqZ5L.png",
-     "desc": "Increases Health Regeneration by 0.333 per second. 1s after going below 50% Health, increases regeneration value to 2 per second until 50% Health is reached."
-   },
-   "Restriction Cord": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.1,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Restriction Cord",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/JXW7CYK.png",
-     "desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%."
-   },
-   "Ring of Crisis": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.25,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Ring of Crisis",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/YDj6FJW.png",
-     "desc": "When wearer's Health drops below 25%, gain a Shield for 25% of Max Health. Lasts 10s."
-   },
-   "Ring of Grace": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.015,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Ring of Grace",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/hRYyLB8.png",
-     "desc": "Taking enemy damage causes 10% of Maximum Health to regenerate over 10s."
-   },
-   "Ring of the Forest Spirit": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": 0.15,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Ring of the Forest Spirit",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/1vmrJ4M.png",
-     "desc": "Relic Healing Effectiveness is increased by 15%."
-   },
-   "Ring of the Robust": {
-     "Health": 10,
-     "Health%": null,
-     "Armor": 20,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Ring of the Robust",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/1v1vjvc.png",
-     "desc": "Increases Max Health by 10, and Armor by 20."
-   },
-   "Rusted Heirloom": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Rusted Heirloom",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/EDj2xgR.png",
-     "desc": "Grants 2 Stacks of BULWARK below 50% Max HP."
-   },
-   "Seal of the Empress": {
-     "Health": 20,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": -5,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Seal of the Empress",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/tIMbLe4.png",
-     "desc": "Increases Max Health by 20. Reduces Max Stamina by 10."
-   },
-   "Soul Guard": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Soul Guard",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/yIQ0RvA.png",
-     "desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS."
-   },
-   "Stream Coupler": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": 0.02,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Stream Coupler",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/LZaaVzj.png",
-     "desc": "Using a Skill regenerates 10% of Max Health over 5s."
-   },
-   "Tightly Wound Coil": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.15,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Tightly Wound Coil",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/5jcUZvV.png",
-     "desc": "When spending 75% or more of current magazine, gain a SHIELD for 10% of Max Health for 5s. Does not stack with itself."
-   },
-   "Vacuum Seal": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.15,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Vacuum Seal",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/dPZ9kJW.png",
-     "desc": "Increases Automatic Pickup Range for Scrap by 100%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 10% of Max Health for l0s Does not stack."
-   },
-   "White Glass Bead": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 0.15,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "White Glass Bead",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/yCElr1x.png",
-     "desc": "Perfect Dodge applies a SHIELD for 15% of Max Health. Lasts 10s. Cannot Stack with itself."
-   },
-   "Worn Admiral's Ring": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": -2,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Worn Admiral's Ring",
-     "slot": "Ring",
-     "image": "https://i.imgur.com/JvFeQx7.png",
-     "desc": "All damage received is increased by 200%. All damage dealt is increased by 10%."
-   }
- }
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Ring",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {
+    }
+  },
+  "Acid Stone": {
+    "custom": null,
+    "name": "Acid Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1OjHB3w.png",
+    "desc": "Increases ACID damage by 10% and ACID Resistance by 15%.",
+    "stats": {
+      "Corrosive": 15
+    }
+  },
+  "Alchemy Stone": {
+    "custom": null,
+    "name": "Alchemy Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/WCc31LC.png",
+    "desc": "Increases base Lifesteal by 5% while suffering from a negative STATUS or BLIGHT Effect.",
+    "stats": {
+      "Lifesteal": 0.06
+    }
+  },
+  "Amber Moonstone": {
+    "custom": null,
+    "name": "Amber Moonstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yDme9m6.png",
+    "desc": "When the wearer's Health drops below 30%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
+    "stats": {
+      "FlatDR": 0.25
+    }
+  },
+  "Atonement Fold": {
+    "custom": null,
+    "name": "Atonement Fold",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JKbFfdo.png",
+    "desc": "Self-inflicts BLEEDING Status upon the wearer, causing 1.1 BLEED damage per second. Increases Critical Chance by 10%.",
+    "stats": {
+      "HealingEFF": -0.5,
+      "HP/S+": -1
+    }
+  },
+  "Berserker's Crest": {
+    "custom": null,
+    "name": "Berserker's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/rmtGIHu.png",
+    "desc": "Increases Melee Charge Speed by 20% and reduces Melee Stamina Cost by 25%.",
+    "stats": {
+      "StaminaCost": -0.25
+    }
+  },
+  "Bisected Ring": {
+    "custom": null,
+    "name": "Bisected Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/piWaWV1.png",
+    "desc": "Gain Infinite Stamina. All damage received is increased by 25%.",
+    "stats": {
+      "FlatDR": -0.15,
+      "StaminaCost": -1
+    }
+  },
+  "Blessed Ring": {
+    "custom": null,
+    "name": "Blessed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uox5REc.png",
+    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 15s.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Blood Tinged Ring": {
+    "custom": null,
+    "name": "Blood Tinged Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/FwQSexk.png",
+    "desc": "Gain 2 Health Regeneration per second when within 10m of a BLEEDING entity.",
+    "stats": {
+      "HP/S+": 1
+    }
+  },
+  "Booster Ring": {
+    "custom": null,
+    "name": "Booster Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/MdwGBHS.png",
+    "desc": "Increases all Status Resistances by 10.",
+    "stats": {
+      "Bleed": 25,
+      "Burn": 25,
+      "Shock": 25,
+      "Corrosive": 25,
+      "Blight": 25
+    }
+  },
+  "Bridge Warden's Crest": {
+    "custom": null,
+    "name": "Bridge Warden's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RilQIVY.png",
+    "desc": "Perfect Dodge increases Melee Damage by 15% for 7 seconds. Perfect Evade Flop also gains 10% Damage Reduction for the duration.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Dull Steel Ring": {
+    "custom": null,
+    "name": "Dull Steel Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EA0XgdY.png",
+    "desc": "Reduces Dodge Weight Class by 1.",
+    "stats": {
+      "WeightThreshold": 25
+    }
+  },
+  "Burden of the Audacious": {
+    "custom": null,
+    "name": "Burden of the Audacious",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/C0RzzoB.png",
+    "desc": "Decreases all healing by 75%. Perfect Dodges heal for 15% of Max Health.",
+    "stats": {
+      "HealingEFF": -0.5
+    }
+  },
+  "Burden of the Rebel": {
+    "custom": null,
+    "name": "Burden of the Rebel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IveQE8G.png",
+    "desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%.",
+    "stats": {
+      "RelicSpeed": 0.25
+    }
+  },
+  "Celerity Stone": {
+    "custom": null,
+    "name": "Celerity Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/np0NbwG.png",
+    "desc": "Increases Consumable and Relic Use Speed by 20%.",
+    "stats": {
+      "RelicSpeed": -0.2
+    }
+  },
+  "Conservation Seal": {
+    "custom": null,
+    "name": "Conservation Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Ay25cdg.png",
+    "desc": "For every 10% of Health missing  (Max 50%) gain 3% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
+    "stats": {
+      "RelicEFF": 0.25
+    }
+  },
+  "Dead King's Memento": {
+    "custom": null,
+    "name": "Dead King's Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/sqqtoCx.png",
+    "desc": "Increases Health by 15.",
+    "stats": {
+      "Health": 15
+    }
+  },
+  "Defensive Action Loop": {
+    "custom": null,
+    "name": "Defensive Action Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XEWuX4t.png",
+    "desc": "While reloading, and for 3s after reload completes, incoming damage is reduced by 10%.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Drakestone Pearl": {
+    "custom": null,
+    "name": "Drakestone Pearl",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nKjyfJW.png",
+    "desc": "Enables Stamina Regeneration during Melee Attacks at 20% of the normal rate.",
+    "stats": {}
+  },
+  "Dran Memento": {
+    "custom": null,
+    "name": "Dran Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/g7aQ1mS.png",
+    "desc": "Increases Max Stamina by 20 and reduces Encumbrance by 5.",
+    "stats": {
+      "Stamina": 20,
+      "Encumbrance": -5
+    }
+  },
+  "Dran Scavenger Ring": {
+    "custom": null,
+    "name": "Dran Scavenger Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/MLcD5HP.png",
+    "desc": "Collecting Scrap, Iron, and Ammo pickups regenerates 10% of Max Health and increases all damage dealt by 8% for 30s.",
+    "stats": {
+      "HP/S%": 0.005
+    }
+  },
+  "Dread Font": {
+    "custom": null,
+    "name": "Dread Font",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/u9gicxw.png",
+    "desc": "Increases Grey Health Regeneration rate by 2 per second.",
+    "stats": {
+      "GreyHP/S+": 2
+    }
+  },
+  "Dried Clay Ring": {
+    "custom": null,
+    "name": "Dried Clay Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gIb2Zy4.png",
+    "desc": "Grants 1 stack of BULWARK. Increases All Damage by 60% of the total Damage Reduction granted by BULWARK stacks",
+    "stats": {
+      "Bulwark": 1
+    }
+  },
+  "Dying Ember": {
+    "custom": null,
+    "name": "Dying Ember",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RsWl7xg.png",
+    "desc": "Gain 5% of base Melee damage dealt as Lifesteal.",
+    "stats": {
+      "MLifesteal": 0.06
+    }
+  },
+  "Elevated Ring": {
+    "custom": null,
+    "name": "Elevated Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QYx9EXM.png",
+    "desc": "Increases Dodge Weight Threshold by 5. Reduces Encumbrance by 5.",
+    "stats": {
+      "Encumbrance": -5,
+      "WeightThreshold": 5
+    }
+  },
+  "Embrace of Sha'Hala": {
+    "custom": null,
+    "name": "Embrace of Sha'Hala",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/U4AFGBq.png",
+    "desc": "Wearer gains 5% incoming damage reduction for each Negative Status Effect or Blight they are suffering from. Max 4 stacks.",
+    "stats": {
+      "FlatDR": 0.2
+    }
+  },
+  "Encrypted Ring": {
+    "custom": null,
+    "name": "Encrypted Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/bYVtoLs.png",
+    "desc": "Using a Mod regenerates 10% of Max Health over 10s. Can stack up to 30s.",
+    "stats": {
+      "HP/S%": 0.02
+    }
+  },
+  "Endaira's Endless Loop": {
+    "custom": null,
+    "name": "Endaira's Endless Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/mSx7Qlo.png",
+    "desc": "After Sprinting for 2s, the wearer gains 1.5 Health Regeneration per second until they stop Sprinting.",
+    "stats": {
+      "HP/S+": 1.5
+    }
+  },
+  "Excess Coil": {
+    "custom": null,
+    "name": "Excess Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/v4eVeRb.png",
+    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 10s.",
+    "stats": {
+      "Shield": 0.25
+    }
+  },
+  "Fae Bruiser Ring": {
+    "custom": null,
+    "name": "Fae Bruiser Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/wGSIuzZ.png",
+    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 7s. Does not stack with itself.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Fae Protector Signet": {
+    "custom": null,
+    "name": "Fae Protector Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CQw0Dh3.png",
+    "desc": "Increases Max Health and Stamina by 10 and Reduces Encumbrance by 5.",
+    "stats": {
+      "Health": 10,
+      "Stamina": 10,
+      "Encumbrance": -5
+    }
+  },
+  "Fae Shaman Ring": {
+    "custom": null,
+    "name": "Fae Shaman Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/PE11RyA.png",
+    "desc": "Increases Health Regeneration by 0.25 and Relic Use Speed by 25%.",
+    "stats": {
+      "RelicSpeed": -0.25,
+      "HP/S+": 0.334
+    }
+  },
+  "Feastmaster's Signet": {
+    "custom": null,
+    "name": "Feastmaster's Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nGdYcPn.png",
+    "desc": "Increases active Concoction Limit by1.",
+    "stats": {
+      "ConcLimit": 1
+    }
+  },
+  "Fire Stone": {
+    "custom": null,
+    "name": "Fire Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IQU4gEo.png",
+    "desc": "Increases FIRE damage by 10% and FIRE Resistance by 15.",
+    "stats": {
+      "Burn": 15
+    }
+  },
+  "Game Master's Pride": {
+    "custom": null,
+    "name": "Game Master's Pride",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VypAuYL.png",
+    "desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
+    "stats": {
+      "DMGKept": 0
+    }
+  },
+  "Generating Band": {
+    "custom": null,
+    "name": "Generating Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/mVXV1hI.png",
+    "desc": "Regenerate 3% of Max Health per second while a Shield is active.",
+    "stats": {
+      "HP/S%": 0.03
+    }
+  },
+  "Grounding Stone": {
+    "custom": null,
+    "name": "Grounding Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ec1BAwl.png",
+    "desc": "Increases SHOCK damage by 10% and SHOCK Resistance by 15.",
+    "stats": {
+      "Shock": 15
+    }
+  },
+  "Guardian's Ring": {
+    "custom": null,
+    "name": "Guardian's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kcoHwmB.png",
+    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 10s after taking Melee damage.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Hardcore Metal Band": {
+    "custom": null,
+    "name": "Hardcore Metal Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EOJ4ifQ.png",
+    "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks.",
+    "stats": {
+      "Bulwark": 5
+    }
+  },
+  "Hardened Coil": {
+    "custom": null,
+    "name": "Hardened Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RyhPR5V.png",
+    "desc": "Reduces all incoming damage by 3% for each 10% of missing Health. Max 15% reduction.",
+    "stats": {
+      "FlatDR": 0.15
+    }
+  },
+  "Heart of the Wolf": {
+    "custom": null,
+    "name": "Heart of the Wolf",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VOlJGPQ.png",
+    "desc": "Increases Max Stamina by 25 and Movement Speed by 10%.",
+    "stats": {
+      "Stamina": 25
+    }
+  },
+  "Lithic Signet": {
+    "custom": null,
+    "name": "Lithic Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lKaOMFa.png",
+    "desc": "Reduces all incoming damage by 5%.",
+    "stats": {
+      "FlatDR": 0.05
+    }
+  },
+  "Low Yield Recovery Ring": {
+    "custom": null,
+    "name": "Low Yield Recovery Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/TqKSFYf.png",
+    "desc": "Killing an enemy regenerates 5% Max Health over 5s. Additional kills increase duration by 5s. Max 30s.",
+    "stats": {
+      "HP/S%": 0.01
+    }
+  },
+  "Mechanic's Cog": {
+    "custom": null,
+    "name": "Mechanic's Cog",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yNEMPKp.png",
+    "desc": "While carrying an Engineer Heavy Weapon, gain 15% Movement Speed and 1 Stack of BULWARK",
+    "stats": {
+      "Bulwark": 1
+    }
+  },
+  "Meteorite Shard Ring": {
+    "custom": null,
+    "name": "Meteorite Shard Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/iFVAXGg.png",
+    "desc": "Increases Encumbrance by 50. Increases Unarmed damage by 50%.",
+    "stats": {
+      "Encumbrance": 50
+    }
+  },
+  "Reaping Stone": {
+    "custom": null,
+    "name": "Reaping Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ewW6qSI.png",
+    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 2% of base damage dealt as Lifesteal for 10s.",
+    "stats": {
+      "Lifesteal": 0.03
+    }
+  },
+  "Rerouting Cable": {
+    "custom": null,
+    "name": "Rerouting Cable",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5WuiZyF.png",
+    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 25 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
+    "stats": {
+      "Shield": 0.5
+    }
+  },
+  "Reserve Boosting Gem": {
+    "custom": null,
+    "name": "Reserve Boosting Gem",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RaJqZ5L.png",
+    "desc": "Increases Health Regeneration by 0.333 per second. 1s after going below 50% Health, increases regeneration value to 2 per second until 50% Health is reached.",
+    "stats": {
+      "HP/S+": 2
+    }
+  },
+  "Restriction Cord": {
+    "custom": null,
+    "name": "Restriction Cord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JXW7CYK.png",
+    "desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Ring of Crisis": {
+    "custom": null,
+    "name": "Ring of Crisis",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/YDj6FJW.png",
+    "desc": "When wearer's Health drops below 25%, gain a Shield for 25% of Max Health. Lasts 10s.",
+    "stats": {
+      "Shield": 0.25
+    }
+  },
+  "Ring of Grace": {
+    "custom": null,
+    "name": "Ring of Grace",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hRYyLB8.png",
+    "desc": "Taking enemy damage causes 10% of Maximum Health to regenerate over 10s.",
+    "stats": {
+      "HP/S%": 0.015
+    }
+  },
+  "Ring of the Forest Spirit": {
+    "custom": null,
+    "name": "Ring of the Forest Spirit",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1vmrJ4M.png",
+    "desc": "Relic Healing Effectiveness is increased by 15%.",
+    "stats": {
+      "RelicEFF": 0.15
+    }
+  },
+  "Ring of the Robust": {
+    "custom": null,
+    "name": "Ring of the Robust",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1v1vjvc.png",
+    "desc": "Increases Max Health by 10, and Armor by 20.",
+    "stats": {
+      "Health": 10,
+      "Armor": 20
+    }
+  },
+  "Rusted Heirloom": {
+    "custom": null,
+    "name": "Rusted Heirloom",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EDj2xgR.png",
+    "desc": "Grants 2 Stacks of BULWARK below 50% Max HP.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Seal of the Empress": {
+    "custom": null,
+    "name": "Seal of the Empress",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/tIMbLe4.png",
+    "desc": "Increases Max Health by 20. Reduces Max Stamina by 10.",
+    "stats": {
+      "Health": 20,
+      "Stamina": -5
+    }
+  },
+  "Soul Guard": {
+    "custom": null,
+    "name": "Soul Guard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yIQ0RvA.png",
+    "desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Stream Coupler": {
+    "custom": null,
+    "name": "Stream Coupler",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/LZaaVzj.png",
+    "desc": "Using a Skill regenerates 10% of Max Health over 5s.",
+    "stats": {
+      "HP/S%": 0.02
+    }
+  },
+  "Tightly Wound Coil": {
+    "custom": null,
+    "name": "Tightly Wound Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5jcUZvV.png",
+    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 10% of Max Health for 5s. Does not stack with itself.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "Vacuum Seal": {
+    "custom": null,
+    "name": "Vacuum Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dPZ9kJW.png",
+    "desc": "Increases Automatic Pickup Range for Scrap by 100%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 10% of Max Health for l0s Does not stack.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "White Glass Bead": {
+    "custom": null,
+    "name": "White Glass Bead",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yCElr1x.png",
+    "desc": "Perfect Dodge applies a SHIELD for 15% of Max Health. Lasts 10s. Cannot Stack with itself.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "Worn Admiral's Ring": {
+    "custom": null,
+    "name": "Worn Admiral's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JvFeQx7.png",
+    "desc": "All damage received is increased by 200%. All damage dealt is increased by 10%.",
+    "stats": {
+      "FlatDR": -2
+    }
+  },
+  "A'taerii Booster": {
+    "name": "A'taerii Booster",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/axWgmdF.png",
+    "desc": "While carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ahanae Crystal": {
+    "name": "Ahanae Crystal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1h8JP0P.png",
+    "desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
+    "custom": null,
+    "stats": {}
+  },
+  "Akari War Band": {
+    "name": "Akari War Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/SSCTs8m.png",
+    "desc": "Perfect Dodges increase Critical Chance by 15% and Critical Damage by 15% for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Alumni Ring": {
+    "name": "Alumni Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/98DHKR8.png",
+    "desc": "Increases all Elemental damage dealt by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Anastasija's Inspiration": {
+    "name": "Anastasija's Inspiration",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pEyCJCz.png",
+    "desc": "When receiving healing effects, gain HASTE for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Archer's Crest": {
+    "name": "Archer's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hebDd2e.png",
+    "desc": "Increases Projectile Speed by 20% and Decreases Weapon Charge Time by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Assasin's Seal": {
+    "name": "Assasin's Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/WCEC9mQ.png",
+    "desc": "Reduces enemy Awareness Range by 25%. Increases all damage dealt to enemies not targeting wearer by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band Band": {
+    "name": "Band Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RuML02u.png",
+    "desc": "Increases Speed of Revive and being Revived by 35%. Increases Downed Health and Downed Movement Speed by 100%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band of Accord": {
+    "name": "Band of Accord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/j96UfGb.png",
+    "desc": "Ammo acquired on pickup is increased by 25% per ally also wearing this ring and is shared with other allies.",
+    "custom": null,
+    "stats": {}
+  },
+  "Black Cat Ring": {
+    "name": "Black Cat Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kGcb2bP.png",
+    "desc": "When taking fatal damage, instead of dying, the wearer's Health will drop to 1, and Movement Speed will increase by 25% for 10s. 2m cooldown.",
+    "custom": null,
+    "stats": {}
+  },
+  "Black Pawn Stamp": {
+    "name": "Black Pawn Stamp",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dD36frl.png",
+    "desc": "Reduces Cooldowns of Skills by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blackout Ring": {
+    "name": "Blackout Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XWlUGrz.png",
+    "desc": "After dealing 20% of the Weapon's Total Magazine base damage, increases Reload Speed by 3%. Stacks 5x Cleared on Reload.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blasting Cap Ring": {
+    "name": "Blasting Cap Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/H4SsDyP.png",
+    "desc": "Increases Explosive damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blood Jewel": {
+    "name": "Blood Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pQnGgzm.png",
+    "desc": "Charged Melee Attacks apply BLEEDING, dealing 460 BLEED damage over 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Braided Thorns": {
+    "name": "Braided Thorns",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uYQJTbt.png",
+    "desc": "After killing an enemy, gain 15% increased Critical Chance for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Brawler's Pride": {
+    "name": "Brawler's Pride",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CxHl9LF.png",
+    "desc": "Increases Melee Attack Speed by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Destroyer": {
+    "name": "Burden of the Destroyer",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Ats9zGp.png",
+    "desc": "Decreases Ideal Range of all Firearms by 25%. Increases all damage dealt by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Divine": {
+    "name": "Burden of the Divine",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/crxYVVR.png",
+    "desc": "All damage dealt by wearer is reduced by 10%. 50% of self healing applies to allies.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Follower": {
+    "name": "Burden of the Follower",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ESnOlvZ.png",
+    "desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Gambler": {
+    "name": "Burden of the Gambler",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/wau1C2H.png",
+    "desc": "Disables Weakspots. Increases Critical Chance by 10% and Critical Damage by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Mariner": {
+    "name": "Burden of the Mariner",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/xL6XUkp.png",
+    "desc": "Increases Skill Cooldowns by 25%. Generate 10% additional Mod Power for each Skill on Cooldown.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Stargazer": {
+    "name": "Burden of the Stargazer",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/BnxrVjO.png",
+    "desc": "Reduces Skill Cooldowns by 15%. Activating a Skill costs 15% Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Warlock": {
+    "name": "Burden of the Warlock",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EBbruJQ.png",
+    "desc": "Reduces Mod Power Requirement by 15%. Activating a Mod costs 15% Health as Grey Health. Activation cannot kill wearer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Captain's Insignia": {
+    "name": "Captain's Insignia",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5053ADe.png",
+    "desc": "Increases Revive Speed and Relic Consume Speed by 25% per downed or dead ally. Max 2 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Cataloger's Jewel": {
+    "name": "Cataloger's Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/obwAA1Z.png",
+    "desc": "Automatically generates 8 Mod Power per second.",
+    "custom": null,
+    "stats": {}
+  },
+  "Compulsion Loop": {
+    "name": "Compulsion Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/KjlvKNb.png",
+    "desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Constant Variable Ring": {
+    "name": "Constant Variable Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XbAVvXy.png",
+    "desc": "Increases Ranged damage up to 20% based on current Weapon's Overheat value.",
+    "custom": null,
+    "stats": {}
+  },
+  "Deceiver's Band": {
+    "name": "Deceiver's Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gV5Jj4T.png",
+    "desc": "After performing a Slide, gain 15% Evade Speed and 10% Movement Speed for 12s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Deep Pocket Ring": {
+    "name": "Deep Pocket Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/7BIXpps.png",
+    "desc": "Increases Ammo Reserves by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Dense Silicon Ring": {
+    "name": "Dense Silicon Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/W7a2AAy.png",
+    "desc": "Gain 200% of Health Regenerated as Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Devourer Loop": {
+    "name": "Devourer Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eoiPiPb.png",
+    "desc": "Critical Hits have 1% chance to reset Skill Cooldowns. Can only occur once every 10s. Increases all incoming damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Drzyr Sniper Sigil": {
+    "name": "Drzyr Sniper Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gB8H4yg.png",
+    "desc": "Increases the minimum damage at Max Falloff Range from 20% to 40%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fae Hunter Ring": {
+    "name": "Fae Hunter Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/F5WlCfy.png",
+    "desc": "Increases Range of Firearms by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fae Warrior Ring": {
+    "name": "Fae Warrior Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Pg3IIvj.png",
+    "desc": "Increases Melee Damage by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faelin's Sigil": {
+    "name": "Faelin's Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/afSBWrz.png",
+    "desc": "Melee Damage generates 10% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faerin's Sigil": {
+    "name": "Faerin's Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/x0KQha1.png",
+    "desc": "Critical and Weakspot Hits generates 10% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Feedback Loop": {
+    "name": "Feedback Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CbRwDEv.png",
+    "desc": "Perfect Dodge triggers a 3m AOE blast that deal 115 SHOCK Damage and applies OVERLOADED.",
+    "custom": null,
+    "stats": {}
+  },
+  "Flyweight's Sting": {
+    "name": "Flyweight's Sting",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/OPDwFzE.png",
+    "desc": "Increases Melee damage while Armor Encumbrance is below 50. Damage bonus increases with lower Encumbrance, up to 25% at 0 Weight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Focusing Shard": {
+    "name": "Focusing Shard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/6b2l9Fn.png",
+    "desc": "Reduce Recoil by 25%. Aiming Down Sights gradually reduces Spread by 35% over 3.5s",
+    "custom": null,
+    "stats": {}
+  },
+  "Frivolous Band": {
+    "name": "Frivolous Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/4ZYXN7y.png",
+    "desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Galvanized Resupply Band": {
+    "name": "Galvanized Resupply Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/G4mvLEM.png",
+    "desc": "Increases Ammo Pickups by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunslinger's Ring": {
+    "name": "Gunslinger's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/xcTmguG.png",
+    "desc": "Increases Firearm Swap Speed by 30% and Reload Speed by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Haymaker's Ring": {
+    "name": "Haymaker's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nGYrice.png",
+    "desc": "Increase Melee damage by 0.2% for every 1 points of Armor Encumbrance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hex Ward": {
+    "name": "Hex Ward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lDeCV9P.png",
+    "desc": "Prevents CURSE Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Kinetic Cycle Stone": {
+    "name": "Kinetic Cycle Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ZSeg93m.png",
+    "desc": "Increases Mod and Skill Cast Speed by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Lodestone Ring": {
+    "name": "Lodestone Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/4pVgedQ.png",
+    "desc": "Increases all damage dealt against illuminated enemies by 5%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Metal Driver": {
+    "name": "Metal Driver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IrZfsn3.png",
+    "desc": "Killing Blows increase Reload Speed by 5% for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Microcompressor": {
+    "name": "Microcompressor",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ZmdjgMg.png",
+    "desc": "Reduces Heat Generation when firing weapons that Overheat by -30%. Increases Heat Reduction Rate by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Momentum Driver": {
+    "name": "Momentum Driver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Klo7dZK.png",
+    "desc": "After Sprinting for 2s, Movement Speed is increased by 15% and Stagger Level reduced by 1.",
+    "custom": null,
+    "stats": {}
+  },
+  "Outcast Ring": {
+    "name": "Outcast Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ilmuv3E.png",
+    "desc": "Increases Reload Speed by 5% for 15s after reloading. Stacks 5x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Point Focus Ring": {
+    "name": "Point Focus Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VeJfTGj.png",
+    "desc": "Reduces Initial Spread and Recoil by 35%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Power Complex": {
+    "name": "Power Complex",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/BFmNCo7.png",
+    "desc": "Increases All Damage dealt by 1% per second to a maximum of 15%. Dodging resets Power Complex to 0%",
+    "custom": null,
+    "stats": {}
+  },
+  "Power Saver": {
+    "name": "Power Saver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pIpnSNr.png",
+    "desc": "At Max Health, gain a 25% chance to not use a Relic charge.",
+    "custom": null,
+    "stats": {}
+  },
+  "Probability Cord": {
+    "name": "Probability Cord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/foSQNJc.png",
+    "desc": "Increases Crit Damage by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Propulsion Loop": {
+    "name": "Propulsion Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QZbsb7Z.png",
+    "desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Provisioner Ring": {
+    "name": "Provisioner Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uBLgUk1.png",
+    "desc": "Firearms reload over time while stowed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Deflection": {
+    "name": "Ring of Deflection",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/jF3Mzdb.png",
+    "desc": "Direct Damage against wearer has a 20% Chance to be converted entirely to Grey Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Diversion": {
+    "name": "Ring of Diversion",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nAVKBr3.png",
+    "desc": "Increases invulnerability window while evading and sliding.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Flawed Beauty": {
+    "name": "Ring of Flawed Beauty",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/63VsNsb.png",
+    "desc": "Ranged Weakspot damage is increased by 25%. Ranged damage is reduced by 15% when failing to hit a Weakspot.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Omens": {
+    "name": "Ring of Omens",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/KJcUE68.png",
+    "desc": "Evades cost 15% Max Health as Grey Health instead of Stamina.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Restocking": {
+    "name": "Ring of Restocking",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/F8DRcO3.png",
+    "desc": "Reloads within 1.5s of a Critical Hit or Weakspot Kill are 20% faster.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Retribution": {
+    "name": "Ring of Retribution",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/rR3dVDM.png",
+    "desc": "Incoming enemy damage increases Reload Speed and all outgoing damage by 10%. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Damned": {
+    "name": "Ring of the Damned",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5E67Fr9.png",
+    "desc": "Increases all damage dealt by10% while Grey Health is present.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rock of Anguish": {
+    "name": "Rock of Anguish",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/sTN2j8O.png",
+    "desc": "Gain 5% Movement Speed and 7.5% Reload Speed for every 25% of Max Health missing.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rotward": {
+    "name": "Rotward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pdMSAGz.png",
+    "desc": "Prevents ROOT ROT Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sagestone": {
+    "name": "Sagestone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/umsBSMb.png",
+    "desc": "Increases earned Experience by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sapphire Dreamstone": {
+    "name": "Sapphire Dreamstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Y0pOWme.png",
+    "desc": "Critical Hits reduce Skill Cooldowns by 3%. Can only happen once every 2s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shard Banded Ring": {
+    "name": "Shard Banded Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/vcHG4OE.png",
+    "desc": "Increases Mod damage by 12%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shiny Hog Lure": {
+    "name": "Shiny Hog Lure",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VxBhwHj.png",
+    "desc": "Reloading grants 25-30 Mod Power to both weapons based on percentage of Magazine reloaded.",
+    "custom": null,
+    "stats": {}
+  },
+  "Singed Ring": {
+    "name": "Singed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Q95ZVoD.png",
+    "desc": "Increases all damage dealt to BURNING enemies by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Slayer's Crest": {
+    "name": "Slayer's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/3G6dPAU.png",
+    "desc": "Increases Melee damage by 25% when attacking enemies from behind",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Link": {
+    "name": "Soul Link",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eYIVSq5.png",
+    "desc": "Summons Lifesteal 5% of base damage dealt which returns to the wearer as Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Shard": {
+    "name": "Soul Shard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/FNrBeeO.png",
+    "desc": "Increase all damage dealt by 4% for each summon. Max 12%",
+    "custom": null,
+    "stats": {}
+  },
+  "Spirit Stone": {
+    "name": "Spirit Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hGLx1Sw.png",
+    "desc": "Increases Mod Power generation by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stockpile Charger": {
+    "name": "Stockpile Charger",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Sd6QnN7.png",
+    "desc": "After picking up ammo, increases the damage of that Ammo Type by 13% for 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Balance": {
+    "name": "Stone of Balance",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/t2vLIcx.png",
+    "desc": "Increases all damage by 7%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Continuance": {
+    "name": "Stone of Continuance",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5i8oMVc.png",
+    "desc": "Increases Skill Duration by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Expanse": {
+    "name": "Stone of Expanse",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hHbHvq7.png",
+    "desc": "Increases Ranged damage by 12%. Reduces all other damage dealt by 6%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Malevolence": {
+    "name": "Stone of Malevolence",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dKsbuo5.png",
+    "desc": "Elemental damage generates 15% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Subterfuge Link": {
+    "name": "Subterfuge Link",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/AiVCfgS.png",
+    "desc": "After killing an enemy, increases the Cast Speed of the next Mod or Skill Cast by 35%. Lasts 15s or until consumed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Suppression Ward": {
+    "name": "Suppression Ward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/oGjllob.png",
+    "desc": "Prevents SUPPRESSION Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Targeting Jewel": {
+    "name": "Targeting Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/TzMDIup.png",
+    "desc": "Increases Range on all Firearms by 4m. Reduces Spread by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tarnished Ring": {
+    "name": "Tarnished Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/R7Ph6XS.png",
+    "desc": "Increases damage of Unarmed Attacks by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tear of Kaeula": {
+    "name": "Tear of Kaeula",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VEF7RT7.png",
+    "desc": "Increases Relic capacity by 2 while equipped",
+    "custom": null,
+    "stats": {}
+  },
+  "Tempest Conduit": {
+    "name": "Tempest Conduit",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ehsTUnb.png",
+    "desc": "After receiving Elemental Damage, increases all damage dealt by 10% and Resistance to the received Element by 20 for 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Timekeeper's Jewel": {
+    "name": "Timekeeper's Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dQJa4uZ.png",
+    "desc": "Increases the duration of all Status Effects applied by wearer. Durations varies per status.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tomb Dweller's Ring": {
+    "name": "Tomb Dweller's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/zU1d2Jv.png",
+    "desc": "Increases Movement Speed by 10% for 7s after Vaulting, Climbing, Leaping, and entering Water, stacks 1x. Reduces Fall Damage by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Vestige of Power": {
+    "name": "Vestige of Power",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dGb8KtT.png",
+    "desc": "After 7s of not being damaged, increases Ranged and Melee Damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Wax Sealed Ring": {
+    "name": "Wax Sealed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QWSOrWv.png",
+    "desc": "Killing blows increase Ranged and Melee Damage by 4% for 15s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "White Pawn Stamp": {
+    "name": "White Pawn Stamp",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XWIyMzt.png",
+    "desc": "Reduces Mod Power Requirement by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Wind Hollow Circlet": {
+    "name": "Wind Hollow Circlet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/emsfpxo.png",
+    "desc": "Increases Reload Speed by 12%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Zania's Malice": {
+    "name": "Zania's Malice",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XmrZq1f.png",
+    "desc": "Dealing Weakspot damage increases Weakspot damage by 10% for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Zohee's Ring": {
+    "name": "Zohee's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IIGjX0s.png",
+    "desc": "Increases Mod Duration by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band of the Fanatic": {
+    "name": "Band of the Fanatic",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/UIr8vdF.png",
+    "desc": "Increases Status Effect Damage by 25% and reduces Status Effect Duration by 65%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bitter Memento": {
+    "name": "Bitter Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/f7efFOL.png",
+    "desc": "Sets 1% of wearer's Max Health as Grey Health",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Departed": {
+    "name": "Burden of the Departed",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/qbxgPvR.png",
+    "desc": "Reduces Total Relic Charges by 33%. Increases all damage dealt by 10%",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Sciolist": {
+    "name": "Burden of the Sciolist",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/H1uIGCc.png",
+    "desc": "Reduces Ammo Reserves by 25%. Increases Mod and Skill Damage by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Crimson Dreamstone": {
+    "name": "Crimson Dreamstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Hvdjf3E.png",
+    "desc": "Crit hits increase Skill Damage 1% for 10s. Max stack 15.",
+    "custom": null,
+    "stats": {}
+  },
+  "Digested Hog Lure": {
+    "name": "Digested Hog Lure",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/afvkERC.png",
+    "desc": "Reloading increases Mod Damage by 10% for 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Jewel of the Beholden": {
+    "name": "Jewel of the Beholden",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lMEjRfc.png",
+    "desc": "On Relic Use, increase Mod Damage by 15% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Lighthouse Keeper's Ring": {
+    "name": "Lighthouse Keeper's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eK7FFzJ.png",
+    "desc": "Automatically generate 3 Mod Power per second for each entity within 10m suffering from a Negative Status Effect. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Offering Stone": {
+    "name": "Offering Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/p5KYKUv.png",
+    "desc": "Dealing Ranged Damage increases all Damage by 1% for 1s. Stacks 15x. After killing an enemy, extends the duration to 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Painless Obsidian": {
+    "name": "Painless Obsidian",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/d7mRPGv.png",
+    "desc": "When Grey Health is present, gain Haste.",
+    "custom": null,
+    "stats": {}
+  },
+  "Red Ring of Death": {
+    "name": "Red Ring of Death",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yCM92bw.png",
+    "desc": "Duplicates the last damaging Negative Status applied to target. Reduces outgoing Status Effect Damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Infinite Damage": {
+    "name": "Ring of Infinite Damage",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/62AOM5e.png",
+    "desc": "Increases fire rate by 8%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Castaway": {
+    "name": "Ring of the Castaway",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/tM23HGd.png",
+    "desc": "Increases base Consumable Duration by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Vain": {
+    "name": "Ring of the Vain",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/6Js9c98.png",
+    "desc": "Reduces Invulnerability Window on Evade and Combat Slide by 50%. Increases Movement Speed while aiming by 35%",
+    "custom": null,
+    "stats": {}
+  },
+  "Shadow of Misery": {
+    "name": "Shadow of Misery",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/bSdXmAn.png",
+    "desc": "Increase Status Effect Damage by 15%",
+    "custom": null,
+    "stats": {}
+  },
+  "Shaed Stone": {
+    "name": "Shaed Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hSczyvm.png",
+    "desc": "Increases Skill damage by 12%",
+    "custom": null,
+    "stats": {}
+  },
+  "Wood Ring": {
+    "name": "Wood Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kD37fi0.png",
+    "desc": "Increases Stagger Damage by 15%",
+    "custom": null,
+    "stats": {}
+  }
+}
 //relics
 const relics = {
-   "": {
-      "name": "",
-      "slot": "",
-      "image": "images/Remnant/clear.png",
-      "desc": ""
-    },
-   "Blooming Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 175,
-     "RelicHPtype": "%",
-     "RelicHPtime": 25,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Blooming Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/MS9iTn2.png",
-     "desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs"
-   },
-   "Broken Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 50,
-     "RelicHPtype": "%",
-     "RelicHPtime": 0,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Broken Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/ED6vA4O.png",
-     "desc": "Innate 50% Use Speed Bonus. On use, sets current Health to 50% of max Health over 0.25s."
-   },
-   "Constrained Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": 2,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 100,
-     "RelicHPtype": "F",
-     "RelicHPtime": 5,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Constrained Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/XrOcmlC.png",
-     "desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active."
-   },
-   "Crystal Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": 0.25,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 100,
-     "RelicHPtype": "%",
-     "RelicHPtime": 10,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Crystal Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/IzshYKv.png",
-     "desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s."
-   },
-   "Decayed Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 120,
-     "RelicHPtype": "F",
-     "RelicHPtime": 9,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Decayed Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/tohxOex.png",
-     "desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s."
-   },
-   "Dragon Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 70,
-     "RelicHPtype": "F",
-     "RelicHPtime": 0,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Dragon Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/NGV4R9f.png",
-     "desc": "On use, heals 70 Health over 0.5s."
-   },
-   "Enlarged Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": -0.5,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 140,
-     "RelicHPtype": "F",
-     "RelicHPtime": 0,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Enlarged Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/R8IDlZ5.png",
-     "desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved."
-   },
-   "Lifeless Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 30,
-     "RelicHPtype": "F",
-     "RelicHPtime": 0,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Lifeless Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/FO9ZSlo.png",
-     "desc": "On use, heals 30 Health over 0.5s. Relic capacity is doubled"
-   },
-   "Paper Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 100,
-     "RelicHPtype": "%",
-     "RelicHPtime": 0,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Paper Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/3jEWEwm.png",
-     "desc": "Heals up to 100% of current health over 0.25s. Gain 1 Stack/10% Health Restored. After 15s, remove 10% per Stack. Kills remove 1 Stack."
-   },
-   "Pulsing Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 115,
-     "RelicHPtype": "F",
-     "RelicHPtime": 15,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Pulsing Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/iLmISVw.png",
-     "desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s."
-   },
-   "Resonating Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 50,
-     "RelicHPtype": "%",
-     "RelicHPtime": 5,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Resonating Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/FE0rnqe.png",
-     "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s."
-   },
-   "Ripened Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 105,
-     "RelicHPtype": "F",
-     "RelicHPtime": 5.5,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Ripened Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/grFXckO.png",
-     "desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s."
-   },
-   "Runed Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 50,
-     "RelicHPtype": "F",
-     "RelicHPtime": 10,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Runed Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/Qwh52G2.png",
-     "desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s."
-   },
-   "Shielded Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": 1,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Shielded Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/xb5Q6Cw.png",
-     "desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage"
-   },
-   "Siphon Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": null,
-     "RelicHPtype": null,
-     "RelicHPtime": null,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": 0.1,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Siphon Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/7mlMeUF.png",
-     "desc": "On use, grants 10% of base damage dealt as Lifesteal for 10s."
-   },
-   "Tranquil Heart": {
-     "Health": null,
-     "Health%": null,
-     "Armor": null,
-     "Armor%": null,
-     "FlatDR": null,
-     "AbilityDR": null,
-     "RelicDR": null,
-     "MutatorDR": null,
-     "Bulwark": null,
-     "AbilityBulwark": null,
-     "RelicBulwark": null,
-     "REdamage": null,
-     "DMGKept": null,
-     "RelicSpeed": null,
-     "RelicEFF": null,
-     "HealingEFF": null,
-     "HP/S+": null,
-     "HP/S%": null,
-     "RelicHPbase": 2,
-     "RelicHPtype": "P",
-     "RelicHPtime": 1,
-     "GreyHP/S+": null,
-     "Stamina": null,
-     "Stamina%": null,
-     "Stamina/S+": null,
-     "StaminaCost": null,
-     "ShieldEFF": null,
-     "Shield": null,
-     "Shield%/S": null,
-     "Lifesteal": null,
-     "MLifesteal": null,
-     "RLifesteal": null,
-     "Encumbrance": null,
-     "Encumbrance%": null,
-     "Bleed": null,
-     "Bleed%": null,
-     "Burn": null,
-     "Burn%": null,
-     "Shock": null,
-     "Shock%": null,
-     "Corrosive": null,
-     "Corrosive%": null,
-     "Blight": null,
-     "Blight%": null,
-     "GreyHP/S%": null,
-     "HealingModifiers": null,
-     "ConcLimit": null,
-     "WeightThreshold": null,
-     "custom": null,
-     "name": "Tranquil Heart",
-     "slot": "Relic",
-     "image": "https://i.imgur.com/MCRXwqy.png",
-     "desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s."
-   }
- }
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Relic",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
+  "Blooming Heart": {
+    "custom": null,
+    "name": "Blooming Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/MS9iTn2.png",
+    "desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
+    "stats": {
+      "RelicHPbase": 175,
+      "RelicHPtime": 25,
+      "RelicHPtype": "%"
+    }
+  },
+  "Broken Heart": {
+    "custom": null,
+    "name": "Broken Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/ED6vA4O.png",
+    "desc": "Innate 50% Use Speed Bonus. On use, sets current Health to 50% of max Health over 0.25s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtime": 0,
+      "RelicHPtype": "%"
+    }
+  },
+  "Constrained Heart": {
+    "custom": null,
+    "name": "Constrained Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/XrOcmlC.png",
+    "desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active.",
+    "stats": {
+      "Bulwark": 2,
+      "RelicHPbase": 100,
+      "RelicHPtime": 5,
+      "RelicHPtype": "F"
+    }
+  },
+  "Crystal Heart": {
+    "custom": null,
+    "name": "Crystal Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/IzshYKv.png",
+    "desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s.",
+    "stats": {
+      "FlatDR": 0.25,
+      "RelicHPbase": 100,
+      "RelicHPtime": 10,
+      "RelicHPtype": "%"
+    }
+  },
+  "Decayed Heart": {
+    "custom": null,
+    "name": "Decayed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/tohxOex.png",
+    "desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
+    "stats": {
+      "RelicHPbase": 120,
+      "RelicHPtime": 9,
+      "RelicHPtype": "F"
+    }
+  },
+  "Dragon Heart": {
+    "custom": null,
+    "name": "Dragon Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/NGV4R9f.png",
+    "desc": "On use, heals 70 Health over 0.5s.",
+    "stats": {
+      "RelicHPbase": 70,
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
+    }
+  },
+  "Enlarged Heart": {
+    "custom": null,
+    "name": "Enlarged Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/R8IDlZ5.png",
+    "desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
+    "stats": {
+      "RelicSpeed": -0.5,
+      "RelicHPbase": 140,
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
+    }
+  },
+  "Lifeless Heart": {
+    "custom": null,
+    "name": "Lifeless Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/FO9ZSlo.png",
+    "desc": "On use, heals 30 Health over 0.5s. Relic capacity is doubled",
+    "stats": {
+      "RelicHPbase": 30,
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
+    }
+  },
+  "Paper Heart": {
+    "custom": null,
+    "name": "Paper Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/3jEWEwm.png",
+    "desc": "Heals up to 100% of current health over 0.25s. Gain 1 Stack/10% Health Restored. After 15s, remove 10% per Stack. Kills remove 1 Stack.",
+    "stats": {
+      "RelicHPbase": 100,
+      "RelicHPtime": 0,
+      "RelicHPtype": "%"
+    }
+  },
+  "Pulsing Heart": {
+    "custom": null,
+    "name": "Pulsing Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/iLmISVw.png",
+    "desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
+    "stats": {
+      "RelicHPbase": 115,
+      "RelicHPtime": 15,
+      "RelicHPtype": "F"
+    }
+  },
+  "Resonating Heart": {
+    "custom": null,
+    "name": "Resonating Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/FE0rnqe.png",
+    "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtime": 5,
+      "RelicHPtype": "%"
+    }
+  },
+  "Ripened Heart": {
+    "custom": null,
+    "name": "Ripened Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/grFXckO.png",
+    "desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
+    "stats": {
+      "RelicHPbase": 105,
+      "RelicHPtime": 5.5,
+      "RelicHPtype": "F"
+    }
+  },
+  "Runed Heart": {
+    "custom": null,
+    "name": "Runed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Qwh52G2.png",
+    "desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtime": 10,
+      "RelicHPtype": "F"
+    }
+  },
+  "Shielded Heart": {
+    "custom": null,
+    "name": "Shielded Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/xb5Q6Cw.png",
+    "desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage",
+    "stats": {
+      "Shield": 1
+    }
+  },
+  "Siphon Heart": {
+    "custom": null,
+    "name": "Siphon Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/7mlMeUF.png",
+    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 10s.",
+    "stats": {
+      "Lifesteal": 0.1
+    }
+  },
+  "Tranquil Heart": {
+    "custom": null,
+    "name": "Tranquil Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/MCRXwqy.png",
+    "desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
+    "stats": {
+      "RelicHPbase": 2,
+      "RelicHPtime": 1,
+      "RelicHPtype": "P"
+    }
+  },
+  "Diverted Heart": {
+    "name": "Diverted Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/WwFk4mW.png",
+    "desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Quilted Heart": {
+    "name": "Quilted Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/s4iwM4Y.png",
+    "desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Reprocessed Heart": {
+    "name": "Reprocessed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Oybn4VO.png",
+    "desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
+    "custom": null,
+    "stats": {}
+  },
+  "Salvaged Heart": {
+    "name": "Salvaged Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/dkOBGtB.png",
+    "desc": "Innate 50% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tormented Heart": {
+    "name": "Tormented Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/K6URUKQ.png",
+    "desc": "Innate 20% Use Speed bonus. On use, deals 240 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
+    "custom": null,
+    "stats": {}
+  },
+  "Unsullied Heart": {
+    "name": "Unsullied Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/gZuGDom.png",
+    "desc": "On use, heals for 100% of Current Health over 0.5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Void Heart": {
+    "name": "Void Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Iun7kD6.png",
+    "desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
+    "custom": null,
+    "stats": {}
+  }
+}
+//Container used when referencing accessory tables using variables
 const gear = {
    "amulets": amulets,
    "rings": rings,
@@ -6685,687 +4875,907 @@ const gear = {
 }
 //traits
 const traits = {
-   "Barkskin": {
-     "name": "Barkskin",
-     "property": "FlatDR",
-     "level": {
-       "1": 0.01,
-       "2": 0.02,
-       "3": 0.03,
-       "4": 0.04,
-       "5": 0.05,
-       "6": 0.06,
-       "7": 0.07,
-       "8": 0.08,
-       "9": 0.09,
-       "10": 0.1
-     }
-   },
-   "Blood Bond": {
-     "name": "Blood Bond",
-     "property": "DMGKept",
-     "level": {
-       "1": -0.01,
-       "2": -0.02,
-       "3": -0.03,
-       "4": -0.04,
-       "5": -0.05,
-       "6": -0.06,
-       "7": -0.07,
-       "8": -0.08,
-       "9": -0.09,
-       "10": -0.1
-     }
-   },
-   "Bloodstream": {
-     "name": "Bloodstream",
-     "property": "GreyHP/S+",
-     "level": {
-       "1": 0.3,
-       "2": 0.6,
-       "3": 0.9,
-       "4": 1.2,
-       "5": 1.5,
-       "6": 1.8,
-       "7": 2.1,
-       "8": 2.4,
-       "9": 2.7,
-       "10": 3
-     }
-   },
-   "Endurance": {
-     "name": "Endurance",
-     "property": "Stamina",
-     "level": {
-       "1": 3,
-       "2": 6,
-       "3": 9,
-       "4": 12,
-       "5": 15,
-       "6": 18,
-       "7": 21,
-       "8": 24,
-       "9": 27,
-       "10": 30
-     }
-   },
-   "Fortify": {
-     "name": "Fortify",
-     "property": "Armor%",
-     "level": {
-       "1": 0.05,
-       "2": 0.1,
-       "3": 0.15,
-       "4": 0.2,
-       "5": 0.25,
-       "6": 0.3,
-       "7": 0.35,
-       "8": 0.4,
-       "9": 0.45,
-       "10": 0.5
-     }
-   },
-   "Glutton": {
-     "name": "Glutton",
-     "property": "RelicSpeed",
-     "level": {
-       "1": -0.03,
-       "2": -0.06,
-       "3": -0.09,
-       "4": -0.12,
-       "5": -0.15,
-       "6": -0.18,
-       "7": -0.21,
-       "8": -0.24,
-       "9": -0.27,
-       "10": -0.3
-     }
-   },
-   "Recovery": {
-     "name": "Recovery",
-     "property": "Stamina/S+",
-     "level": {
-       "1": 3,
-       "2": 6,
-       "3": 9,
-       "4": 12,
-       "5": 15,
-       "6": 18,
-       "7": 21,
-       "8": 24,
-       "9": 27,
-       "10": 30
-     }
-   },
-   "Regrowth": {
-     "name": "Regrowth",
-     "property": "HP/S+",
-     "level": {
-       "1": 0.15,
-       "2": 0.3,
-       "3": 0.45,
-       "4": 0.6,
-       "5": 0.75,
-       "6": 0.9,
-       "7": 1.05,
-       "8": 1.2,
-       "9": 1.35,
-       "10": 1.5
-     }
-   },
-   "Siphoner": {
-     "name": "Siphoner",
-     "property": "Lifesteal",
-     "level": {
-       "1": 0.003,
-       "2": 0.006,
-       "3": 0.009000000000000001,
-       "4": 0.012,
-       "5": 0.015,
-       "6": 0.018000000000000002,
-       "7": 0.021,
-       "8": 0.024,
-       "9": 0.027000000000000003,
-       "10": 0.03
-     }
-   },
-   "Strong Back": {
-     "name": "Strong Back",
-     "property": "WeightThreshold",
-     "level": {
-       "1": 1.5,
-       "2": 3,
-       "3": 4.5,
-       "4": 6,
-       "5": 7.5,
-       "6": 9,
-       "7": 10.5,
-       "8": 12,
-       "9": 13.5,
-       "10": 15
-     }
-   },
-   "Triage": {
-     "name": "Triage",
-     "property": "HealingEFF",
-     "level": {
-       "1": 0.05,
-       "2": 0.1,
-       "3": 0.15,
-       "4": 0.2,
-       "5": 0.25,
-       "6": 0.3,
-       "7": 0.35,
-       "8": 0.4,
-       "9": 0.45,
-       "10": 0.5
-     }
-   },
-   "Vigor": {
-     "name": "Vigor",
-     "property": "Health",
-     "level": {
-       "1": 3,
-       "2": 6,
-       "3": 9,
-       "4": 12,
-       "5": 15,
-       "6": 18,
-       "7": 21,
-       "8": 24,
-       "9": 27,
-       "10": 30
-     }
-   },
-   "Dark Pact": {
-     "name": "Dark Pact",
-     "property": "GreyHP/S%",
-     "level": {
-       "1": -0.09,
-       "2": -0.18,
-       "3": -0.27,
-       "4": -0.36,
-       "5": -0.45,
-       "6": -0.54,
-       "7": -0.63,
-       "8": -0.72,
-       "9": -0.81,
-       "10": -0.9
-     }
-   }
- }
+  "": {
+    "name": "",
+    "property": "",
+    "level": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0
+    }
+  },
+  "Barkskin": {
+    "name": "Barkskin",
+    "property": "FlatDR",
+    "level": {
+      "1": 0.01,
+      "2": 0.02,
+      "3": 0.03,
+      "4": 0.04,
+      "5": 0.05,
+      "6": 0.06,
+      "7": 0.07,
+      "8": 0.08,
+      "9": 0.09,
+      "10": 0.1
+    }
+  },
+  "Blood Bond": {
+    "name": "Blood Bond",
+    "property": "DMGKept",
+    "level": {
+      "1": -0.01,
+      "2": -0.02,
+      "3": -0.03,
+      "4": -0.04,
+      "5": -0.05,
+      "6": -0.06,
+      "7": -0.07,
+      "8": -0.08,
+      "9": -0.09,
+      "10": -0.1
+    }
+  },
+  "Bloodstream": {
+    "name": "Bloodstream",
+    "property": "GreyHP/S+",
+    "level": {
+      "1": 0.3,
+      "2": 0.6,
+      "3": 0.9,
+      "4": 1.2,
+      "5": 1.5,
+      "6": 1.8,
+      "7": 2.1,
+      "8": 2.4,
+      "9": 2.7,
+      "10": 3
+    }
+  },
+  "Endurance": {
+    "name": "Endurance",
+    "property": "Stamina",
+    "level": {
+      "1": 3,
+      "2": 6,
+      "3": 9,
+      "4": 12,
+      "5": 15,
+      "6": 18,
+      "7": 21,
+      "8": 24,
+      "9": 27,
+      "10": 30
+    }
+  },
+  "Fortify": {
+    "name": "Fortify",
+    "property": "Armor%",
+    "level": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.15,
+      "4": 0.2,
+      "5": 0.25,
+      "6": 0.3,
+      "7": 0.35,
+      "8": 0.4,
+      "9": 0.45,
+      "10": 0.5
+    }
+  },
+  "Glutton": {
+    "name": "Glutton",
+    "property": "RelicSpeed",
+    "level": {
+      "1": -0.03,
+      "2": -0.06,
+      "3": -0.09,
+      "4": -0.12,
+      "5": -0.15,
+      "6": -0.18,
+      "7": -0.21,
+      "8": -0.24,
+      "9": -0.27,
+      "10": -0.3
+    }
+  },
+  "Recovery": {
+    "name": "Recovery",
+    "property": "Stamina/S+",
+    "level": {
+      "1": 3,
+      "2": 6,
+      "3": 9,
+      "4": 12,
+      "5": 15,
+      "6": 18,
+      "7": 21,
+      "8": 24,
+      "9": 27,
+      "10": 30
+    }
+  },
+  "Regrowth": {
+    "name": "Regrowth",
+    "property": "HP/S+",
+    "level": {
+      "1": 0.15,
+      "2": 0.3,
+      "3": 0.45,
+      "4": 0.6,
+      "5": 0.75,
+      "6": 0.9,
+      "7": 1.05,
+      "8": 1.2,
+      "9": 1.35,
+      "10": 1.5
+    }
+  },
+  "Siphoner": {
+    "name": "Siphoner",
+    "property": "Lifesteal",
+    "level": {
+      "1": 0.003,
+      "2": 0.006,
+      "3": 0.009000000000000001,
+      "4": 0.012,
+      "5": 0.015,
+      "6": 0.018000000000000002,
+      "7": 0.021,
+      "8": 0.024,
+      "9": 0.027000000000000003,
+      "10": 0.03
+    }
+  },
+  "Strong Back": {
+    "name": "Strong Back",
+    "property": "WeightThreshold",
+    "level": {
+      "1": 1.5,
+      "2": 3,
+      "3": 4.5,
+      "4": 6,
+      "5": 7.5,
+      "6": 9,
+      "7": 10.5,
+      "8": 12,
+      "9": 13.5,
+      "10": 15
+    }
+  },
+  "Triage": {
+    "name": "Triage",
+    "property": "HealingEFF",
+    "level": {
+      "1": 0.05,
+      "2": 0.1,
+      "3": 0.15,
+      "4": 0.2,
+      "5": 0.25,
+      "6": 0.3,
+      "7": 0.35,
+      "8": 0.4,
+      "9": 0.45,
+      "10": 0.5
+    }
+  },
+  "Vigor": {
+    "name": "Vigor",
+    "property": "Health",
+    "level": {
+      "1": 3,
+      "2": 6,
+      "3": 9,
+      "4": 12,
+      "5": 15,
+      "6": 18,
+      "7": 21,
+      "8": 24,
+      "9": 27,
+      "10": 30
+    }
+  },
+  "Dark Pact": {
+    "name": "Dark Pact",
+    "property": "GreyHP/S%",
+    "level": {
+      "1": -0.09,
+      "2": -0.18,
+      "3": -0.27,
+      "4": -0.36,
+      "5": -0.45,
+      "6": -0.54,
+      "7": -0.63,
+      "8": -0.72,
+      "9": -0.81,
+      "10": -0.9
+    }
+  },
+  "Expertise": {
+    "name": "Expertise",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Spirit": {
+    "name": "Spirit",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Ammo Reserves": {
+    "name": "Ammo Reserves",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Kinship": {
+    "name": "Kinship",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Swiftness": {
+    "name": "Swiftness",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Longshot": {
+    "name": "Longshot",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Potency": {
+    "name": "Potency",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Untouchable": {
+    "name": "Untouchable",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Flash Caster": {
+    "name": "Flash Caster",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Amplitude": {
+    "name": "Amplitude",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Arcane Strike": {
+    "name": "Arcane Strike",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Fitness": {
+    "name": "Fitness",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Footwork": {
+    "name": "Footwork",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Handling": {
+    "name": "Handling",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Resonance": {
+    "name": "Resonance",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Revivalist": {
+    "name": "Revivalist",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Rugged": {
+    "name": "Rugged",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Scholar": {
+    "name": "Scholar",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Shadeskin": {
+    "name": "Shadeskin",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Wayfarer": {
+    "name": "Wayfarer",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  },
+  "Affliction": {
+    "name": "Affliction",
+    "property": null,
+    "level": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  }
+}
 
 const fragments = {
-   "": {},
-   "Ammo Pickups": {},
-   "Ammo Reserves": {},
-   "Armor Effectiveness": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": 0.15,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Armor Effectiveness",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Blight Resistance": {},
-   "Casting Speed": {},
-   "Charge Melee Cost": {},
-   "Consumable Duration": {},
-   "Consumable Speed": {},
-   "Damage Reduction": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": 0.05,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Damage Reduction",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Elemental Damage": {},
-   "Elemental Resistance": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "",
+    "image": "",
+    "desc": "",
+    "stats": {}
+  },
+  "Armor Effectiveness": {
+    "custom": null,
+    "name": "Armor Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Armor%": 0.15
+    }
+  },
+  "Damage Reduction": {
+    "custom": null,
+    "name": "Damage Reduction",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "FlatDR": 0.05
+    }
+  },
+  "Elemental Resistance": {
+    "custom": null,
+    "name": "Elemental Resistance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
       "Bleed": 10,
-      "Bleed%": null,
       "Burn": 10,
-      "Burn%": null,
       "Shock": 10,
-      "Shock%": null,
       "Corrosive": 10,
-      "Corrosive%": null,
-      "Blight": 10,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Elemental Resistance",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Grey Health Rate": {},
-   "Healing Effectiveness": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": 0.2,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Healing Effectiveness",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Health": {
-      "Health": null,
-      "Health%": 0.15,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Health",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Melee Attack Speed": {},
-   "Melee Critical Chance": {},
-   "Melee Critical Damage": {},
-   "Melee Damage": {},
-   "Mod Cost": {},
-   "Mod Damage": {},
-   "Mod Duration": {},
-   "Ranged Critical Chance": {},
-   "Ranged Critical Damage": {},
-   "Ranged Damage": {},
-   "Ranged Fire Rate": {},
-   "Recoil": {},
-   "Revive Speed": {},
-   "Shield Effectiveness": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": 0.2,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Shield Effectiveness",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Skill Cooldown": {},
-   "Skill Damage": {},
-   "Skill Duration": {},
-   "Spread Recovery": {},
-   "Stagger Damage": {},
-   "Stamina": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": 0.15,
-      "Stamina/S+": null,
-      "StaminaCost": null,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Stamina",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Stamina Cost": {
-      "Health": null,
-      "Health%": null,
-      "Armor": null,
-      "Armor%": null,
-      "FlatDR": null,
-      "AbilityDR": null,
-      "RelicDR": null,
-      "MutatorDR": null,
-      "Bulwark": null,
-      "AbilityBulwark": null,
-      "RelicBulwark": null,
-      "REdamage": null,
-      "DMGKept": null,
-      "RelicSpeed": null,
-      "RelicEFF": null,
-      "HealingEFF": null,
-      "HP/S+": null,
-      "HP/S%": null,
-      "RelicHPbase": null,
-      "RelicHPtype": null,
-      "RelicHPtime": null,
-      "GreyHP/S+": null,
-      "Stamina": null,
-      "Stamina%": null,
-      "Stamina/S+": null,
-      "StaminaCost": -0.2,
-      "ShieldEFF": null,
-      "Shield": null,
-      "Shield%/S": null,
-      "Lifesteal": null,
-      "MLifesteal": null,
-      "RLifesteal": null,
-      "Encumbrance": null,
-      "Encumbrance%": null,
-      "Bleed": null,
-      "Bleed%": null,
-      "Burn": null,
-      "Burn%": null,
-      "Shock": null,
-      "Shock%": null,
-      "Corrosive": null,
-      "Corrosive%": null,
-      "Blight": null,
-      "Blight%": null,
-      "GreyHP/S%": null,
-      "HealingModifiers": null,
-      "ConcLimit": null,
-      "WeightThreshold": null,
-      "custom": null,
-      "name": "Stamina Cost",
-      "slot": "RFrag",
-      "image": null,
-      "desc": null
-   },
-   "Stamina Recovery Delay": {},
-   "Weakspot Damage": {},
-   "Weapon Spread": {},
-   "Weapon Swap": {}
- }
+      "Blight": 10
+    }
+  },
+  "Healing Effectiveness": {
+    "custom": null,
+    "name": "Healing Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "HealingEFF": 0.2
+    }
+  },
+  "Health": {
+    "custom": null,
+    "name": "Health",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Health%": 0.15
+    }
+  },
+  "Shield Effectiveness": {
+    "custom": null,
+    "name": "Shield Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "ShieldEFF": 0.2
+    }
+  },
+  "Stamina": {
+    "custom": null,
+    "name": "Stamina",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Stamina%": 0.15
+    }
+  },
+  "Stamina Cost": {
+    "custom": null,
+    "name": "Stamina Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "StaminaCost": -0.2
+    }
+  },
+  "Ammo Pickups": {
+    "name": "Ammo Pickups",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ammo Reserves": {
+    "name": "Ammo Reserves",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Blight Resistance": {
+    "name": "Blight Resistance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Casting Speed": {
+    "name": "Casting Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Charge Melee Cost": {
+    "name": "Charge Melee Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Consumable Duration": {
+    "name": "Consumable Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Consumable Speed": {
+    "name": "Consumable Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Elemental Damage": {
+    "name": "Elemental Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Grey Health Rate": {
+    "name": "Grey Health Rate",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Attack Speed": {
+    "name": "Melee Attack Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Critical Chance": {
+    "name": "Melee Critical Chance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Critical Damage": {
+    "name": "Melee Critical Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Damage": {
+    "name": "Melee Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Cost": {
+    "name": "Mod Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Damage": {
+    "name": "Mod Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Duration": {
+    "name": "Mod Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Critical Chance": {
+    "name": "Ranged Critical Chance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Critical Damage": {
+    "name": "Ranged Critical Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Damage": {
+    "name": "Ranged Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Fire Rate": {
+    "name": "Ranged Fire Rate",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Recoil": {
+    "name": "Recoil",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Revive Speed": {
+    "name": "Revive Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Cooldown": {
+    "name": "Skill Cooldown",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Damage": {
+    "name": "Skill Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Duration": {
+    "name": "Skill Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Spread Recovery": {
+    "name": "Spread Recovery",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Stagger Damage": {
+    "name": "Stagger Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Stamina Recovery Delay": {
+    "name": "Stamina Recovery Delay",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weakspot Damage": {
+    "name": "Weakspot Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weapon Spread": {
+    "name": "Weapon Spread",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weapon Swap": {
+    "name": "Weapon Swap",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}

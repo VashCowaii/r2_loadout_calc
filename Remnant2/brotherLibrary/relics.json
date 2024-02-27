@@ -1,0 +1,249 @@
+{
+  "Blooming Heart": {
+    "custom": null,
+    "name": "Blooming Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/MS9iTn2.png",
+    "desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
+    "stats": {
+      "RelicHPbase": 175,
+      "RelicHPtype": "%",
+      "RelicHPtime": 25
+    }
+  },
+  "Broken Heart": {
+    "custom": null,
+    "name": "Broken Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/ED6vA4O.png",
+    "desc": "Innate 50% Use Speed Bonus. On use, sets current Health to 50% of max Health over 0.25s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtype": "%",
+      "RelicHPtime": 0
+    }
+  },
+  "Constrained Heart": {
+    "custom": null,
+    "name": "Constrained Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/XrOcmlC.png",
+    "desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active.",
+    "stats": {
+      "Bulwark": 2,
+      "RelicHPbase": 100,
+      "RelicHPtype": "F",
+      "RelicHPtime": 5
+    }
+  },
+  "Crystal Heart": {
+    "custom": null,
+    "name": "Crystal Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/IzshYKv.png",
+    "desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s.",
+    "stats": {
+      "FlatDR": 0.25,
+      "RelicHPbase": 100,
+      "RelicHPtype": "%",
+      "RelicHPtime": 10
+    }
+  },
+  "Decayed Heart": {
+    "custom": null,
+    "name": "Decayed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/tohxOex.png",
+    "desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
+    "stats": {
+      "RelicHPbase": 120,
+      "RelicHPtype": "F",
+      "RelicHPtime": 9
+    }
+  },
+  "Dragon Heart": {
+    "custom": null,
+    "name": "Dragon Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/NGV4R9f.png",
+    "desc": "On use, heals 70 Health over 0.5s.",
+    "stats": {
+      "RelicHPbase": 70,
+      "RelicHPtype": "F",
+      "RelicHPtime": 0
+    }
+  },
+  "Enlarged Heart": {
+    "custom": null,
+    "name": "Enlarged Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/R8IDlZ5.png",
+    "desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
+    "stats": {
+      "RelicSpeed": -0.5,
+      "RelicHPbase": 140,
+      "RelicHPtype": "F",
+      "RelicHPtime": 0
+    }
+  },
+  "Lifeless Heart": {
+    "custom": null,
+    "name": "Lifeless Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/FO9ZSlo.png",
+    "desc": "On use, heals 30 Health over 0.5s. Relic capacity is doubled",
+    "stats": {
+      "RelicHPbase": 30,
+      "RelicHPtype": "F",
+      "RelicHPtime": 0
+    }
+  },
+  "Paper Heart": {
+    "custom": null,
+    "name": "Paper Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/3jEWEwm.png",
+    "desc": "Heals up to 100% of current health over 0.25s. Gain 1 Stack/10% Health Restored. After 15s, remove 10% per Stack. Kills remove 1 Stack.",
+    "stats": {
+      "RelicHPbase": 100,
+      "RelicHPtype": "%",
+      "RelicHPtime": 0
+    }
+  },
+  "Pulsing Heart": {
+    "custom": null,
+    "name": "Pulsing Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/iLmISVw.png",
+    "desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
+    "stats": {
+      "RelicHPbase": 115,
+      "RelicHPtype": "F",
+      "RelicHPtime": 15
+    }
+  },
+  "Resonating Heart": {
+    "custom": null,
+    "name": "Resonating Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/FE0rnqe.png",
+    "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtype": "%",
+      "RelicHPtime": 5
+    }
+  },
+  "Ripened Heart": {
+    "custom": null,
+    "name": "Ripened Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/grFXckO.png",
+    "desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
+    "stats": {
+      "RelicHPbase": 105,
+      "RelicHPtype": "F",
+      "RelicHPtime": 5.5
+    }
+  },
+  "Runed Heart": {
+    "custom": null,
+    "name": "Runed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Qwh52G2.png",
+    "desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
+    "stats": {
+      "RelicHPbase": 50,
+      "RelicHPtype": "F",
+      "RelicHPtime": 10
+    }
+  },
+  "Shielded Heart": {
+    "custom": null,
+    "name": "Shielded Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/xb5Q6Cw.png",
+    "desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage",
+    "stats": {
+      "Shield": 1
+    }
+  },
+  "Siphon Heart": {
+    "custom": null,
+    "name": "Siphon Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/7mlMeUF.png",
+    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 10s.",
+    "stats": {
+      "Lifesteal": 0.1
+    }
+  },
+  "Tranquil Heart": {
+    "custom": null,
+    "name": "Tranquil Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/MCRXwqy.png",
+    "desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
+    "stats": {
+      "RelicHPbase": 2,
+      "RelicHPtype": "P",
+      "RelicHPtime": 1
+    }
+  },
+  "Diverted Heart": {
+    "name": "Diverted Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/WwFk4mW.png",
+    "desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Quilted Heart": {
+    "name": "Quilted Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/s4iwM4Y.png",
+    "desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Reprocessed Heart": {
+    "name": "Reprocessed Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Oybn4VO.png",
+    "desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
+    "custom": null,
+    "stats": {}
+  },
+  "Salvaged Heart": {
+    "name": "Salvaged Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/dkOBGtB.png",
+    "desc": "Innate 50% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tormented Heart": {
+    "name": "Tormented Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/K6URUKQ.png",
+    "desc": "Innate 20% Use Speed bonus. On use, deals 240 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
+    "custom": null,
+    "stats": {}
+  },
+  "Unsullied Heart": {
+    "name": "Unsullied Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/gZuGDom.png",
+    "desc": "On use, heals for 100% of Current Health over 0.5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Void Heart": {
+    "name": "Void Heart",
+    "slot": "Relic",
+    "image": "https://i.imgur.com/Iun7kD6.png",
+    "desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
+    "custom": null,
+    "stats": {}
+  }
+}

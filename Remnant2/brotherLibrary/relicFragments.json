@@ -1,0 +1,334 @@
+{
+  "Armor Effectiveness": {
+    "custom": null,
+    "name": "Armor Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Armor%": 0.15
+    }
+  },
+  "Damage Reduction": {
+    "custom": null,
+    "name": "Damage Reduction",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "FlatDR": 0.05
+    }
+  },
+  "Elemental Resistance": {
+    "custom": null,
+    "name": "Elemental Resistance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Bleed": 10,
+      "Burn": 10,
+      "Shock": 10,
+      "Corrosive": 10,
+      "Blight": 10
+    }
+  },
+  "Healing Effectiveness": {
+    "custom": null,
+    "name": "Healing Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "HealingEFF": 0.2
+    }
+  },
+  "Health": {
+    "custom": null,
+    "name": "Health",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Health%": 0.15
+    }
+  },
+  "Shield Effectiveness": {
+    "custom": null,
+    "name": "Shield Effectiveness",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "ShieldEFF": 0.2
+    }
+  },
+  "Stamina": {
+    "custom": null,
+    "name": "Stamina",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "Stamina%": 0.15
+    }
+  },
+  "Stamina Cost": {
+    "custom": null,
+    "name": "Stamina Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "stats": {
+      "StaminaCost": -0.2
+    }
+  },
+  "Ammo Pickups": {
+    "name": "Ammo Pickups",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ammo Reserves": {
+    "name": "Ammo Reserves",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Blight Resistance": {
+    "name": "Blight Resistance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Casting Speed": {
+    "name": "Casting Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Charge Melee Cost": {
+    "name": "Charge Melee Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Consumable Duration": {
+    "name": "Consumable Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Consumable Speed": {
+    "name": "Consumable Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Elemental Damage": {
+    "name": "Elemental Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Grey Health Rate": {
+    "name": "Grey Health Rate",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Attack Speed": {
+    "name": "Melee Attack Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Critical Chance": {
+    "name": "Melee Critical Chance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Critical Damage": {
+    "name": "Melee Critical Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Melee Damage": {
+    "name": "Melee Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Cost": {
+    "name": "Mod Cost",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Damage": {
+    "name": "Mod Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Mod Duration": {
+    "name": "Mod Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Critical Chance": {
+    "name": "Ranged Critical Chance",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Critical Damage": {
+    "name": "Ranged Critical Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Damage": {
+    "name": "Ranged Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ranged Fire Rate": {
+    "name": "Ranged Fire Rate",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Recoil": {
+    "name": "Recoil",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Revive Speed": {
+    "name": "Revive Speed",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Cooldown": {
+    "name": "Skill Cooldown",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Damage": {
+    "name": "Skill Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Skill Duration": {
+    "name": "Skill Duration",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Spread Recovery": {
+    "name": "Spread Recovery",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Stagger Damage": {
+    "name": "Stagger Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Stamina Recovery Delay": {
+    "name": "Stamina Recovery Delay",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weakspot Damage": {
+    "name": "Weakspot Damage",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weapon Spread": {
+    "name": "Weapon Spread",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Weapon Swap": {
+    "name": "Weapon Swap",
+    "slot": "RFrag",
+    "image": "",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}

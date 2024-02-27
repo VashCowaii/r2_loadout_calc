@@ -1,0 +1,1493 @@
+{
+  "Acid Stone": {
+    "custom": null,
+    "name": "Acid Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1OjHB3w.png",
+    "desc": "Increases ACID damage by 10% and ACID Resistance by 15%.",
+    "stats": {
+      "Corrosive": 15
+    }
+  },
+  "Alchemy Stone": {
+    "custom": null,
+    "name": "Alchemy Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/WCc31LC.png",
+    "desc": "Increases base Lifesteal by 5% while suffering from a negative STATUS or BLIGHT Effect.",
+    "stats": {
+      "Lifesteal": 0.06
+    }
+  },
+  "Amber Moonstone": {
+    "custom": null,
+    "name": "Amber Moonstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yDme9m6.png",
+    "desc": "When the wearer's Health drops below 30%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
+    "stats": {
+      "FlatDR": 0.25
+    }
+  },
+  "Atonement Fold": {
+    "custom": null,
+    "name": "Atonement Fold",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JKbFfdo.png",
+    "desc": "Self-inflicts BLEEDING Status upon the wearer, causing 1.1 BLEED damage per second. Increases Critical Chance by 10%.",
+    "stats": {
+      "HealingEFF": -0.5,
+      "HP/S+": -1
+    }
+  },
+  "Berserker's Crest": {
+    "custom": null,
+    "name": "Berserker's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/rmtGIHu.png",
+    "desc": "Increases Melee Charge Speed by 20% and reduces Melee Stamina Cost by 25%.",
+    "stats": {
+      "StaminaCost": -0.25
+    }
+  },
+  "Bisected Ring": {
+    "custom": null,
+    "name": "Bisected Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/piWaWV1.png",
+    "desc": "Gain Infinite Stamina. All damage received is increased by 25%.",
+    "stats": {
+      "FlatDR": -0.15,
+      "StaminaCost": -1
+    }
+  },
+  "Blessed Ring": {
+    "custom": null,
+    "name": "Blessed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uox5REc.png",
+    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 15s.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Blood Tinged Ring": {
+    "custom": null,
+    "name": "Blood Tinged Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/FwQSexk.png",
+    "desc": "Gain 2 Health Regeneration per second when within 10m of a BLEEDING entity.",
+    "stats": {
+      "HP/S+": 1
+    }
+  },
+  "Booster Ring": {
+    "custom": null,
+    "name": "Booster Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/MdwGBHS.png",
+    "desc": "Increases all Status Resistances by 10.",
+    "stats": {
+      "Bleed": 25,
+      "Burn": 25,
+      "Shock": 25,
+      "Corrosive": 25,
+      "Blight": 25
+    }
+  },
+  "Bridge Warden's Crest": {
+    "custom": null,
+    "name": "Bridge Warden's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RilQIVY.png",
+    "desc": "Perfect Dodge increases Melee Damage by 15% for 7 seconds. Perfect Evade Flop also gains 10% Damage Reduction for the duration.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Dull Steel Ring": {
+    "custom": null,
+    "name": "Dull Steel Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EA0XgdY.png",
+    "desc": "Reduces Dodge Weight Class by 1.",
+    "stats": {
+      "WeightThreshold": 25
+    }
+  },
+  "Burden of the Audacious": {
+    "custom": null,
+    "name": "Burden of the Audacious",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/C0RzzoB.png",
+    "desc": "Decreases all healing by 75%. Perfect Dodges heal for 15% of Max Health.",
+    "stats": {
+      "HealingEFF": -0.5
+    }
+  },
+  "Burden of the Rebel": {
+    "custom": null,
+    "name": "Burden of the Rebel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IveQE8G.png",
+    "desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%.",
+    "stats": {
+      "RelicSpeed": 0.25
+    }
+  },
+  "Celerity Stone": {
+    "custom": null,
+    "name": "Celerity Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/np0NbwG.png",
+    "desc": "Increases Consumable and Relic Use Speed by 20%.",
+    "stats": {
+      "RelicSpeed": -0.2
+    }
+  },
+  "Conservation Seal": {
+    "custom": null,
+    "name": "Conservation Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Ay25cdg.png",
+    "desc": "For every 10% of Health missing  (Max 50%) gain 3% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
+    "stats": {
+      "RelicEFF": 0.25
+    }
+  },
+  "Dead King's Memento": {
+    "custom": null,
+    "name": "Dead King's Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/sqqtoCx.png",
+    "desc": "Increases Health by 15.",
+    "stats": {
+      "Health": 15
+    }
+  },
+  "Defensive Action Loop": {
+    "custom": null,
+    "name": "Defensive Action Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XEWuX4t.png",
+    "desc": "While reloading, and for 3s after reload completes, incoming damage is reduced by 10%.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Drakestone Pearl": {
+    "custom": null,
+    "name": "Drakestone Pearl",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nKjyfJW.png",
+    "desc": "Enables Stamina Regeneration during Melee Attacks at 20% of the normal rate.",
+    "stats": {}
+  },
+  "Dran Memento": {
+    "custom": null,
+    "name": "Dran Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/g7aQ1mS.png",
+    "desc": "Increases Max Stamina by 20 and reduces Encumbrance by 5.",
+    "stats": {
+      "Stamina": 20,
+      "Encumbrance": -5
+    }
+  },
+  "Dran Scavenger Ring": {
+    "custom": null,
+    "name": "Dran Scavenger Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/MLcD5HP.png",
+    "desc": "Collecting Scrap, Iron, and Ammo pickups regenerates 10% of Max Health and increases all damage dealt by 8% for 30s.",
+    "stats": {
+      "HP/S%": 0.005
+    }
+  },
+  "Dread Font": {
+    "custom": null,
+    "name": "Dread Font",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/u9gicxw.png",
+    "desc": "Increases Grey Health Regeneration rate by 2 per second.",
+    "stats": {
+      "GreyHP/S+": 2
+    }
+  },
+  "Dried Clay Ring": {
+    "custom": null,
+    "name": "Dried Clay Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gIb2Zy4.png",
+    "desc": "Grants 1 stack of BULWARK. Increases All Damage by 60% of the total Damage Reduction granted by BULWARK stacks",
+    "stats": {
+      "Bulwark": 1
+    }
+  },
+  "Dying Ember": {
+    "custom": null,
+    "name": "Dying Ember",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RsWl7xg.png",
+    "desc": "Gain 5% of base Melee damage dealt as Lifesteal.",
+    "stats": {
+      "MLifesteal": 0.06
+    }
+  },
+  "Elevated Ring": {
+    "custom": null,
+    "name": "Elevated Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QYx9EXM.png",
+    "desc": "Increases Dodge Weight Threshold by 5. Reduces Encumbrance by 5.",
+    "stats": {
+      "Encumbrance": -5,
+      "WeightThreshold": 5
+    }
+  },
+  "Embrace of Sha'Hala": {
+    "custom": null,
+    "name": "Embrace of Sha'Hala",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/U4AFGBq.png",
+    "desc": "Wearer gains 5% incoming damage reduction for each Negative Status Effect or Blight they are suffering from. Max 4 stacks.",
+    "stats": {
+      "FlatDR": 0.2
+    }
+  },
+  "Encrypted Ring": {
+    "custom": null,
+    "name": "Encrypted Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/bYVtoLs.png",
+    "desc": "Using a Mod regenerates 10% of Max Health over 10s. Can stack up to 30s.",
+    "stats": {
+      "HP/S%": 0.02
+    }
+  },
+  "Endaira's Endless Loop": {
+    "custom": null,
+    "name": "Endaira's Endless Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/mSx7Qlo.png",
+    "desc": "After Sprinting for 2s, the wearer gains 1.5 Health Regeneration per second until they stop Sprinting.",
+    "stats": {
+      "HP/S+": 1.5
+    }
+  },
+  "Excess Coil": {
+    "custom": null,
+    "name": "Excess Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/v4eVeRb.png",
+    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 10s.",
+    "stats": {
+      "Shield": 0.25
+    }
+  },
+  "Fae Bruiser Ring": {
+    "custom": null,
+    "name": "Fae Bruiser Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/wGSIuzZ.png",
+    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 7s. Does not stack with itself.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Fae Protector Signet": {
+    "custom": null,
+    "name": "Fae Protector Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CQw0Dh3.png",
+    "desc": "Increases Max Health and Stamina by 10 and Reduces Encumbrance by 5.",
+    "stats": {
+      "Health": 10,
+      "Stamina": 10,
+      "Encumbrance": -5
+    }
+  },
+  "Fae Shaman Ring": {
+    "custom": null,
+    "name": "Fae Shaman Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/PE11RyA.png",
+    "desc": "Increases Health Regeneration by 0.25 and Relic Use Speed by 25%.",
+    "stats": {
+      "RelicSpeed": -0.25,
+      "HP/S+": 0.334
+    }
+  },
+  "Feastmaster's Signet": {
+    "custom": null,
+    "name": "Feastmaster's Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nGdYcPn.png",
+    "desc": "Increases active Concoction Limit by1.",
+    "stats": {
+      "ConcLimit": 1
+    }
+  },
+  "Fire Stone": {
+    "custom": null,
+    "name": "Fire Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IQU4gEo.png",
+    "desc": "Increases FIRE damage by 10% and FIRE Resistance by 15.",
+    "stats": {
+      "Burn": 15
+    }
+  },
+  "Game Master's Pride": {
+    "custom": null,
+    "name": "Game Master's Pride",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VypAuYL.png",
+    "desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
+    "stats": {
+      "DMGKept": "#REF!"
+    }
+  },
+  "Generating Band": {
+    "custom": null,
+    "name": "Generating Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/mVXV1hI.png",
+    "desc": "Regenerate 3% of Max Health per second while a Shield is active.",
+    "stats": {
+      "HP/S%": 0.03
+    }
+  },
+  "Grounding Stone": {
+    "custom": null,
+    "name": "Grounding Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ec1BAwl.png",
+    "desc": "Increases SHOCK damage by 10% and SHOCK Resistance by 15.",
+    "stats": {
+      "Shock": 15
+    }
+  },
+  "Guardian's Ring": {
+    "custom": null,
+    "name": "Guardian's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kcoHwmB.png",
+    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 10s after taking Melee damage.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Hardcore Metal Band": {
+    "custom": null,
+    "name": "Hardcore Metal Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EOJ4ifQ.png",
+    "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks.",
+    "stats": {
+      "Bulwark": 5
+    }
+  },
+  "Hardened Coil": {
+    "custom": null,
+    "name": "Hardened Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RyhPR5V.png",
+    "desc": "Reduces all incoming damage by 3% for each 10% of missing Health. Max 15% reduction.",
+    "stats": {
+      "FlatDR": 0.15
+    }
+  },
+  "Heart of the Wolf": {
+    "custom": null,
+    "name": "Heart of the Wolf",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VOlJGPQ.png",
+    "desc": "Increases Max Stamina by 25 and Movement Speed by 10%.",
+    "stats": {
+      "Stamina": 25
+    }
+  },
+  "Lithic Signet": {
+    "custom": null,
+    "name": "Lithic Signet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lKaOMFa.png",
+    "desc": "Reduces all incoming damage by 5%.",
+    "stats": {
+      "FlatDR": 0.05
+    }
+  },
+  "Low Yield Recovery Ring": {
+    "custom": null,
+    "name": "Low Yield Recovery Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/TqKSFYf.png",
+    "desc": "Killing an enemy regenerates 5% Max Health over 5s. Additional kills increase duration by 5s. Max 30s.",
+    "stats": {
+      "HP/S%": 0.01
+    }
+  },
+  "Mechanic's Cog": {
+    "custom": null,
+    "name": "Mechanic's Cog",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yNEMPKp.png",
+    "desc": "While carrying an Engineer Heavy Weapon, gain 15% Movement Speed and 1 Stack of BULWARK",
+    "stats": {
+      "Bulwark": 1
+    }
+  },
+  "Meteorite Shard Ring": {
+    "custom": null,
+    "name": "Meteorite Shard Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/iFVAXGg.png",
+    "desc": "Increases Encumbrance by 50. Increases Unarmed damage by 50%.",
+    "stats": {
+      "Encumbrance": 50
+    }
+  },
+  "Reaping Stone": {
+    "custom": null,
+    "name": "Reaping Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ewW6qSI.png",
+    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 2% of base damage dealt as Lifesteal for 10s.",
+    "stats": {
+      "Lifesteal": 0.03
+    }
+  },
+  "Rerouting Cable": {
+    "custom": null,
+    "name": "Rerouting Cable",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5WuiZyF.png",
+    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 25 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
+    "stats": {
+      "Shield": 0.5
+    }
+  },
+  "Reserve Boosting Gem": {
+    "custom": null,
+    "name": "Reserve Boosting Gem",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RaJqZ5L.png",
+    "desc": "Increases Health Regeneration by 0.333 per second. 1s after going below 50% Health, increases regeneration value to 2 per second until 50% Health is reached.",
+    "stats": {
+      "HP/S+": 2
+    }
+  },
+  "Restriction Cord": {
+    "custom": null,
+    "name": "Restriction Cord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JXW7CYK.png",
+    "desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Ring of Crisis": {
+    "custom": null,
+    "name": "Ring of Crisis",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/YDj6FJW.png",
+    "desc": "When wearer's Health drops below 25%, gain a Shield for 25% of Max Health. Lasts 10s.",
+    "stats": {
+      "Shield": 0.25
+    }
+  },
+  "Ring of Grace": {
+    "custom": null,
+    "name": "Ring of Grace",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hRYyLB8.png",
+    "desc": "Taking enemy damage causes 10% of Maximum Health to regenerate over 10s.",
+    "stats": {
+      "HP/S%": 0.015
+    }
+  },
+  "Ring of the Forest Spirit": {
+    "custom": null,
+    "name": "Ring of the Forest Spirit",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1vmrJ4M.png",
+    "desc": "Relic Healing Effectiveness is increased by 15%.",
+    "stats": {
+      "RelicEFF": 0.15
+    }
+  },
+  "Ring of the Robust": {
+    "custom": null,
+    "name": "Ring of the Robust",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1v1vjvc.png",
+    "desc": "Increases Max Health by 10, and Armor by 20.",
+    "stats": {
+      "Health": 10,
+      "Armor": 20
+    }
+  },
+  "Rusted Heirloom": {
+    "custom": null,
+    "name": "Rusted Heirloom",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EDj2xgR.png",
+    "desc": "Grants 2 Stacks of BULWARK below 50% Max HP.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Seal of the Empress": {
+    "custom": null,
+    "name": "Seal of the Empress",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/tIMbLe4.png",
+    "desc": "Increases Max Health by 20. Reduces Max Stamina by 10.",
+    "stats": {
+      "Health": 20,
+      "Stamina": -5
+    }
+  },
+  "Soul Guard": {
+    "custom": null,
+    "name": "Soul Guard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yIQ0RvA.png",
+    "desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS.",
+    "stats": {
+      "Bulwark": 2
+    }
+  },
+  "Stream Coupler": {
+    "custom": null,
+    "name": "Stream Coupler",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/LZaaVzj.png",
+    "desc": "Using a Skill regenerates 10% of Max Health over 5s.",
+    "stats": {
+      "HP/S%": 0.02
+    }
+  },
+  "Tightly Wound Coil": {
+    "custom": null,
+    "name": "Tightly Wound Coil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5jcUZvV.png",
+    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 10% of Max Health for 5s. Does not stack with itself.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "Vacuum Seal": {
+    "custom": null,
+    "name": "Vacuum Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dPZ9kJW.png",
+    "desc": "Increases Automatic Pickup Range for Scrap by 100%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 10% of Max Health for l0s Does not stack.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "White Glass Bead": {
+    "custom": null,
+    "name": "White Glass Bead",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yCElr1x.png",
+    "desc": "Perfect Dodge applies a SHIELD for 15% of Max Health. Lasts 10s. Cannot Stack with itself.",
+    "stats": {
+      "Shield": 0.15
+    }
+  },
+  "Worn Admiral's Ring": {
+    "custom": null,
+    "name": "Worn Admiral's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/JvFeQx7.png",
+    "desc": "All damage received is increased by 200%. All damage dealt is increased by 10%.",
+    "stats": {
+      "FlatDR": -2
+    }
+  },
+  "A'taerii Booster": {
+    "name": "A'taerii Booster",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/axWgmdF.png",
+    "desc": "While carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ahanae Crystal": {
+    "name": "Ahanae Crystal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/1h8JP0P.png",
+    "desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
+    "custom": null,
+    "stats": {}
+  },
+  "Akari War Band": {
+    "name": "Akari War Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/SSCTs8m.png",
+    "desc": "Perfect Dodges increase Critical Chance by 15% and Critical Damage by 15% for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Alumni Ring": {
+    "name": "Alumni Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/98DHKR8.png",
+    "desc": "Increases all Elemental damage dealt by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Anastasija's Inspiration": {
+    "name": "Anastasija's Inspiration",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pEyCJCz.png",
+    "desc": "When receiving healing effects, gain HASTE for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Archer's Crest": {
+    "name": "Archer's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hebDd2e.png",
+    "desc": "Increases Projectile Speed by 20% and Decreases Weapon Charge Time by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Assasin's Seal": {
+    "name": "Assasin's Seal",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/WCEC9mQ.png",
+    "desc": "Reduces enemy Awareness Range by 25%. Increases all damage dealt to enemies not targeting wearer by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band Band": {
+    "name": "Band Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/RuML02u.png",
+    "desc": "Increases Speed of Revive and being Revived by 35%. Increases Downed Health and Downed Movement Speed by 100%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band of Accord": {
+    "name": "Band of Accord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/j96UfGb.png",
+    "desc": "Ammo acquired on pickup is increased by 25% per ally also wearing this ring and is shared with other allies.",
+    "custom": null,
+    "stats": {}
+  },
+  "Black Cat Ring": {
+    "name": "Black Cat Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kGcb2bP.png",
+    "desc": "When taking fatal damage, instead of dying, the wearer's Health will drop to 1, and Movement Speed will increase by 25% for 10s. 2m cooldown.",
+    "custom": null,
+    "stats": {}
+  },
+  "Black Pawn Stamp": {
+    "name": "Black Pawn Stamp",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dD36frl.png",
+    "desc": "Reduces Cooldowns of Skills by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blackout Ring": {
+    "name": "Blackout Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XWlUGrz.png",
+    "desc": "After dealing 20% of the Weapon's Total Magazine base damage, increases Reload Speed by 3%. Stacks 5x Cleared on Reload.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blasting Cap Ring": {
+    "name": "Blasting Cap Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/H4SsDyP.png",
+    "desc": "Increases Explosive damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blood Jewel": {
+    "name": "Blood Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pQnGgzm.png",
+    "desc": "Charged Melee Attacks apply BLEEDING, dealing 460 BLEED damage over 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Braided Thorns": {
+    "name": "Braided Thorns",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uYQJTbt.png",
+    "desc": "After killing an enemy, gain 15% increased Critical Chance for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Brawler's Pride": {
+    "name": "Brawler's Pride",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CxHl9LF.png",
+    "desc": "Increases Melee Attack Speed by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Destroyer": {
+    "name": "Burden of the Destroyer",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Ats9zGp.png",
+    "desc": "Decreases Ideal Range of all Firearms by 25%. Increases all damage dealt by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Divine": {
+    "name": "Burden of the Divine",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/crxYVVR.png",
+    "desc": "All damage dealt by wearer is reduced by 10%. 50% of self healing applies to allies.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Follower": {
+    "name": "Burden of the Follower",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ESnOlvZ.png",
+    "desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Gambler": {
+    "name": "Burden of the Gambler",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/wau1C2H.png",
+    "desc": "Disables Weakspots. Increases Critical Chance by 10% and Critical Damage by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Mariner": {
+    "name": "Burden of the Mariner",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/xL6XUkp.png",
+    "desc": "Increases Skill Cooldowns by 25%. Generate 10% additional Mod Power for each Skill on Cooldown.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Stargazer": {
+    "name": "Burden of the Stargazer",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/BnxrVjO.png",
+    "desc": "Reduces Skill Cooldowns by 15%. Activating a Skill costs 15% Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Warlock": {
+    "name": "Burden of the Warlock",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/EBbruJQ.png",
+    "desc": "Reduces Mod Power Requirement by 15%. Activating a Mod costs 15% Health as Grey Health. Activation cannot kill wearer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Captain's Insignia": {
+    "name": "Captain's Insignia",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5053ADe.png",
+    "desc": "Increases Revive Speed and Relic Consume Speed by 25% per downed or dead ally. Max 2 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Cataloger's Jewel": {
+    "name": "Cataloger's Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/obwAA1Z.png",
+    "desc": "Automatically generates 8 Mod Power per second.",
+    "custom": null,
+    "stats": {}
+  },
+  "Compulsion Loop": {
+    "name": "Compulsion Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/KjlvKNb.png",
+    "desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Constant Variable Ring": {
+    "name": "Constant Variable Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XbAVvXy.png",
+    "desc": "Increases Ranged damage up to 20% based on current Weapon's Overheat value.",
+    "custom": null,
+    "stats": {}
+  },
+  "Deceiver's Band": {
+    "name": "Deceiver's Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gV5Jj4T.png",
+    "desc": "After performing a Slide, gain 15% Evade Speed and 10% Movement Speed for 12s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Deep Pocket Ring": {
+    "name": "Deep Pocket Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/7BIXpps.png",
+    "desc": "Increases Ammo Reserves by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Dense Silicon Ring": {
+    "name": "Dense Silicon Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/W7a2AAy.png",
+    "desc": "Gain 200% of Health Regenerated as Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Devourer Loop": {
+    "name": "Devourer Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eoiPiPb.png",
+    "desc": "Critical Hits have 1% chance to reset Skill Cooldowns. Can only occur once every 10s. Increases all incoming damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Drzyr Sniper Sigil": {
+    "name": "Drzyr Sniper Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/gB8H4yg.png",
+    "desc": "Increases the minimum damage at Max Falloff Range from 20% to 40%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fae Hunter Ring": {
+    "name": "Fae Hunter Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/F5WlCfy.png",
+    "desc": "Increases Range of Firearms by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fae Warrior Ring": {
+    "name": "Fae Warrior Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Pg3IIvj.png",
+    "desc": "Increases Melee Damage by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faelin's Sigil": {
+    "name": "Faelin's Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/afSBWrz.png",
+    "desc": "Melee Damage generates 10% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faerin's Sigil": {
+    "name": "Faerin's Sigil",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/x0KQha1.png",
+    "desc": "Critical and Weakspot Hits generates 10% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Feedback Loop": {
+    "name": "Feedback Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/CbRwDEv.png",
+    "desc": "Perfect Dodge triggers a 3m AOE blast that deal 115 SHOCK Damage and applies OVERLOADED.",
+    "custom": null,
+    "stats": {}
+  },
+  "Flyweight's Sting": {
+    "name": "Flyweight's Sting",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/OPDwFzE.png",
+    "desc": "Increases Melee damage while Armor Encumbrance is below 50. Damage bonus increases with lower Encumbrance, up to 25% at 0 Weight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Focusing Shard": {
+    "name": "Focusing Shard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/6b2l9Fn.png",
+    "desc": "Reduce Recoil by 25%. Aiming Down Sights gradually reduces Spread by 35% over 3.5s",
+    "custom": null,
+    "stats": {}
+  },
+  "Frivolous Band": {
+    "name": "Frivolous Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/4ZYXN7y.png",
+    "desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Galvanized Resupply Band": {
+    "name": "Galvanized Resupply Band",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/G4mvLEM.png",
+    "desc": "Increases Ammo Pickups by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunslinger's Ring": {
+    "name": "Gunslinger's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/xcTmguG.png",
+    "desc": "Increases Firearm Swap Speed by 30% and Reload Speed by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Haymaker's Ring": {
+    "name": "Haymaker's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nGYrice.png",
+    "desc": "Increase Melee damage by 0.2% for every 1 points of Armor Encumbrance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hex Ward": {
+    "name": "Hex Ward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lDeCV9P.png",
+    "desc": "Prevents CURSE Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Kinetic Cycle Stone": {
+    "name": "Kinetic Cycle Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ZSeg93m.png",
+    "desc": "Increases Mod and Skill Cast Speed by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Lodestone Ring": {
+    "name": "Lodestone Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/4pVgedQ.png",
+    "desc": "Increases all damage dealt against illuminated enemies by 5%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Metal Driver": {
+    "name": "Metal Driver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IrZfsn3.png",
+    "desc": "Killing Blows increase Reload Speed by 5% for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Microcompressor": {
+    "name": "Microcompressor",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ZmdjgMg.png",
+    "desc": "Reduces Heat Generation when firing weapons that Overheat by -30%. Increases Heat Reduction Rate by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Momentum Driver": {
+    "name": "Momentum Driver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Klo7dZK.png",
+    "desc": "After Sprinting for 2s, Movement Speed is increased by 15% and Stagger Level reduced by 1.",
+    "custom": null,
+    "stats": {}
+  },
+  "Outcast Ring": {
+    "name": "Outcast Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ilmuv3E.png",
+    "desc": "Increases Reload Speed by 5% for 15s after reloading. Stacks 5x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Point Focus Ring": {
+    "name": "Point Focus Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VeJfTGj.png",
+    "desc": "Reduces Initial Spread and Recoil by 35%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Power Complex": {
+    "name": "Power Complex",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/BFmNCo7.png",
+    "desc": "Increases All Damage dealt by 1% per second to a maximum of 15%. Dodging resets Power Complex to 0%",
+    "custom": null,
+    "stats": {}
+  },
+  "Power Saver": {
+    "name": "Power Saver",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pIpnSNr.png",
+    "desc": "At Max Health, gain a 25% chance to not use a Relic charge.",
+    "custom": null,
+    "stats": {}
+  },
+  "Probability Cord": {
+    "name": "Probability Cord",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/foSQNJc.png",
+    "desc": "Increases Crit Damage by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Propulsion Loop": {
+    "name": "Propulsion Loop",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QZbsb7Z.png",
+    "desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Provisioner Ring": {
+    "name": "Provisioner Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/uBLgUk1.png",
+    "desc": "Firearms reload over time while stowed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Deflection": {
+    "name": "Ring of Deflection",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/jF3Mzdb.png",
+    "desc": "Direct Damage against wearer has a 20% Chance to be converted entirely to Grey Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Diversion": {
+    "name": "Ring of Diversion",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/nAVKBr3.png",
+    "desc": "Increases invulnerability window while evading and sliding.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Flawed Beauty": {
+    "name": "Ring of Flawed Beauty",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/63VsNsb.png",
+    "desc": "Ranged Weakspot damage is increased by 25%. Ranged damage is reduced by 15% when failing to hit a Weakspot.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Omens": {
+    "name": "Ring of Omens",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/KJcUE68.png",
+    "desc": "Evades cost 15% Max Health as Grey Health instead of Stamina.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Restocking": {
+    "name": "Ring of Restocking",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/F8DRcO3.png",
+    "desc": "Reloads within 1.5s of a Critical Hit or Weakspot Kill are 20% faster.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Retribution": {
+    "name": "Ring of Retribution",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/rR3dVDM.png",
+    "desc": "Incoming enemy damage increases Reload Speed and all outgoing damage by 10%. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Damned": {
+    "name": "Ring of the Damned",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5E67Fr9.png",
+    "desc": "Increases all damage dealt by10% while Grey Health is present.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rock of Anguish": {
+    "name": "Rock of Anguish",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/sTN2j8O.png",
+    "desc": "Gain 5% Movement Speed and 7.5% Reload Speed for every 25% of Max Health missing.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rotward": {
+    "name": "Rotward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/pdMSAGz.png",
+    "desc": "Prevents ROOT ROT Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sagestone": {
+    "name": "Sagestone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/umsBSMb.png",
+    "desc": "Increases earned Experience by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sapphire Dreamstone": {
+    "name": "Sapphire Dreamstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Y0pOWme.png",
+    "desc": "Critical Hits reduce Skill Cooldowns by 3%. Can only happen once every 2s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shard Banded Ring": {
+    "name": "Shard Banded Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/vcHG4OE.png",
+    "desc": "Increases Mod damage by 12%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shiny Hog Lure": {
+    "name": "Shiny Hog Lure",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VxBhwHj.png",
+    "desc": "Reloading grants 25-30 Mod Power to both weapons based on percentage of Magazine reloaded.",
+    "custom": null,
+    "stats": {}
+  },
+  "Singed Ring": {
+    "name": "Singed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Q95ZVoD.png",
+    "desc": "Increases all damage dealt to BURNING enemies by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Slayer's Crest": {
+    "name": "Slayer's Crest",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/3G6dPAU.png",
+    "desc": "Increases Melee damage by 25% when attacking enemies from behind",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Link": {
+    "name": "Soul Link",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eYIVSq5.png",
+    "desc": "Summons Lifesteal 5% of base damage dealt which returns to the wearer as Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Shard": {
+    "name": "Soul Shard",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/FNrBeeO.png",
+    "desc": "Increase all damage dealt by 4% for each summon. Max 12%",
+    "custom": null,
+    "stats": {}
+  },
+  "Spirit Stone": {
+    "name": "Spirit Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hGLx1Sw.png",
+    "desc": "Increases Mod Power generation by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stockpile Charger": {
+    "name": "Stockpile Charger",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Sd6QnN7.png",
+    "desc": "After picking up ammo, increases the damage of that Ammo Type by 13% for 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Balance": {
+    "name": "Stone of Balance",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/t2vLIcx.png",
+    "desc": "Increases all damage by 7%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Continuance": {
+    "name": "Stone of Continuance",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/5i8oMVc.png",
+    "desc": "Increases Skill Duration by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Expanse": {
+    "name": "Stone of Expanse",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hHbHvq7.png",
+    "desc": "Increases Ranged damage by 12%. Reduces all other damage dealt by 6%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stone of Malevolence": {
+    "name": "Stone of Malevolence",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dKsbuo5.png",
+    "desc": "Elemental damage generates 15% additional Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Subterfuge Link": {
+    "name": "Subterfuge Link",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/AiVCfgS.png",
+    "desc": "After killing an enemy, increases the Cast Speed of the next Mod or Skill Cast by 35%. Lasts 15s or until consumed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Suppression Ward": {
+    "name": "Suppression Ward",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/oGjllob.png",
+    "desc": "Prevents SUPPRESSION Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Targeting Jewel": {
+    "name": "Targeting Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/TzMDIup.png",
+    "desc": "Increases Range on all Firearms by 4m. Reduces Spread by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tarnished Ring": {
+    "name": "Tarnished Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/R7Ph6XS.png",
+    "desc": "Increases damage of Unarmed Attacks by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tear of Kaeula": {
+    "name": "Tear of Kaeula",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/VEF7RT7.png",
+    "desc": "Increases Relic capacity by 2 while equipped",
+    "custom": null,
+    "stats": {}
+  },
+  "Tempest Conduit": {
+    "name": "Tempest Conduit",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/ehsTUnb.png",
+    "desc": "After receiving Elemental Damage, increases all damage dealt by 10% and Resistance to the received Element by 20 for 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Timekeeper's Jewel": {
+    "name": "Timekeeper's Jewel",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dQJa4uZ.png",
+    "desc": "Increases the duration of all Status Effects applied by wearer. Durations varies per status.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tomb Dweller's Ring": {
+    "name": "Tomb Dweller's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/zU1d2Jv.png",
+    "desc": "Increases Movement Speed by 10% for 7s after Vaulting, Climbing, Leaping, and entering Water, stacks 1x. Reduces Fall Damage by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Vestige of Power": {
+    "name": "Vestige of Power",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/dGb8KtT.png",
+    "desc": "After 7s of not being damaged, increases Ranged and Melee Damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Wax Sealed Ring": {
+    "name": "Wax Sealed Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/QWSOrWv.png",
+    "desc": "Killing blows increase Ranged and Melee Damage by 4% for 15s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "White Pawn Stamp": {
+    "name": "White Pawn Stamp",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XWIyMzt.png",
+    "desc": "Reduces Mod Power Requirement by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Wind Hollow Circlet": {
+    "name": "Wind Hollow Circlet",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/emsfpxo.png",
+    "desc": "Increases Reload Speed by 12%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Zania's Malice": {
+    "name": "Zania's Malice",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/XmrZq1f.png",
+    "desc": "Dealing Weakspot damage increases Weakspot damage by 10% for 7s. Stacks 3x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Zohee's Ring": {
+    "name": "Zohee's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/IIGjX0s.png",
+    "desc": "Increases Mod Duration by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Band of the Fanatic": {
+    "name": "Band of the Fanatic",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/UIr8vdF.png",
+    "desc": "Increases Status Effect Damage by 25% and reduces Status Effect Duration by 65%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bitter Memento": {
+    "name": "Bitter Memento",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/f7efFOL.png",
+    "desc": "Sets 1% of wearer's Max Health as Grey Health",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Departed": {
+    "name": "Burden of the Departed",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/qbxgPvR.png",
+    "desc": "Reduces Total Relic Charges by 33%. Increases all damage dealt by 10%",
+    "custom": null,
+    "stats": {}
+  },
+  "Burden of the Sciolist": {
+    "name": "Burden of the Sciolist",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/H1uIGCc.png",
+    "desc": "Reduces Ammo Reserves by 25%. Increases Mod and Skill Damage by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Crimson Dreamstone": {
+    "name": "Crimson Dreamstone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/Hvdjf3E.png",
+    "desc": "Crit hits increase Skill Damage 1% for 10s. Max stack 15.",
+    "custom": null,
+    "stats": {}
+  },
+  "Digested Hog Lure": {
+    "name": "Digested Hog Lure",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/afvkERC.png",
+    "desc": "Reloading increases Mod Damage by 10% for 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Jewel of the Beholden": {
+    "name": "Jewel of the Beholden",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/lMEjRfc.png",
+    "desc": "On Relic Use, increase Mod Damage by 15% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Lighthouse Keeper's Ring": {
+    "name": "Lighthouse Keeper's Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/eK7FFzJ.png",
+    "desc": "Automatically generate 3 Mod Power per second for each entity within 10m suffering from a Negative Status Effect. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Offering Stone": {
+    "name": "Offering Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/p5KYKUv.png",
+    "desc": "Dealing Ranged Damage increases all Damage by 1% for 1s. Stacks 15x. After killing an enemy, extends the duration to 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Painless Obsidian": {
+    "name": "Painless Obsidian",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/d7mRPGv.png",
+    "desc": "When Grey Health is present, gain Haste.",
+    "custom": null,
+    "stats": {}
+  },
+  "Red Ring of Death": {
+    "name": "Red Ring of Death",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/yCM92bw.png",
+    "desc": "Duplicates the last damaging Negative Status applied to target. Reduces outgoing Status Effect Damage by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Infinite Damage": {
+    "name": "Ring of Infinite Damage",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/62AOM5e.png",
+    "desc": "Increases fire rate by 8%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Castaway": {
+    "name": "Ring of the Castaway",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/tM23HGd.png",
+    "desc": "Increases base Consumable Duration by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of the Vain": {
+    "name": "Ring of the Vain",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/6Js9c98.png",
+    "desc": "Reduces Invulnerability Window on Evade and Combat Slide by 50%. Increases Movement Speed while aiming by 35%",
+    "custom": null,
+    "stats": {}
+  },
+  "Shadow of Misery": {
+    "name": "Shadow of Misery",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/bSdXmAn.png",
+    "desc": "Increase Status Effect Damage by 15%",
+    "custom": null,
+    "stats": {}
+  },
+  "Shaed Stone": {
+    "name": "Shaed Stone",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/hSczyvm.png",
+    "desc": "Increases Skill damage by 12%",
+    "custom": null,
+    "stats": {}
+  },
+  "Wood Ring": {
+    "name": "Wood Ring",
+    "slot": "Ring",
+    "image": "https://i.imgur.com/kD37fi0.png",
+    "desc": "Increases Stagger Damage by 15%",
+    "custom": null,
+    "stats": {}
+  }
+}

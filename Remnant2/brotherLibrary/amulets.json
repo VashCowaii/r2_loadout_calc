@@ -1,0 +1,645 @@
+{
+  "Brewmaster's Cork": {
+    "custom": null,
+    "name": "Brewmaster's Cork",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/6ThjInO.png",
+    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions.",
+    "stats": {
+      "FlatDR": 0.06,
+      "ConcLimit": 2
+    }
+  },
+  "Broken Pocket Watch": {
+    "custom": null,
+    "name": "Broken Pocket Watch",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/pezml7V.png",
+    "desc": "Increases Stamina Regen by 25 and reduces Stamina cost by 50%",
+    "stats": {
+      "Stamina/S+": 25,
+      "StaminaCost": -0.5
+    }
+  },
+  "Cost of Betrayal": {
+    "custom": null,
+    "name": "Cost of Betrayal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/DVLQa4r.png",
+    "desc": "Reduces Max Relic Charges to 1. Increases All Damage by 20% when wearer has 1 Relic Charge. Increases incoming damage by 20% when wearer has no Relic Charges and after 30s, regain 1 Relic Charge.",
+    "stats": {
+      "FlatDR": -0.2
+    }
+  },
+  "Daredevil Charm": {
+    "custom": null,
+    "name": "Daredevil Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/xYeiUHJ.png",
+    "desc": "Gain 7.5% to all damage dealt, 3% Movement Speed, and 5% all damage taken for each piece of unequipped armor.",
+    "stats": {
+      "FlatDR": -0.2
+    }
+  },
+  "Decayed Margin": {
+    "custom": null,
+    "name": "Decayed Margin",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/OczSOml.png",
+    "desc": "Melee hits gain 1.5% base damage dealt as Lifesteal. For each 25% missing Health, gain 1.5% additional Melee Lifesteal. When Health is full, gain 25% Melee Damage.",
+    "stats": {
+      "MLifesteal": 0.06
+    }
+  },
+  "Difference Engine": {
+    "custom": null,
+    "name": "Difference Engine",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7jO1Jja.png",
+    "desc": "While a Shield is active, gain 20% damage and 1.5% of base dealt as Lifesteal.",
+    "stats": {
+      "Lifesteal": 0.015
+    }
+  },
+  "Effigy Pendant": {
+    "custom": null,
+    "name": "Effigy Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/bOMsSOR.png",
+    "desc": "While Grey Health is present, gain 15% to all damage dealt, 10% damage reduction and 1 additional hit before Grey Health is removed.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Full Moon Circlet": {
+    "custom": null,
+    "name": "Full Moon Circlet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/BqFIFjB.png",
+    "desc": "Ranged damage Lifesteals 3% of base damage dealt. At full health, damage is increased by 20%.",
+    "stats": {
+      "RLifesteal": 0.03
+    }
+  },
+  "Indignant Fetish": {
+    "custom": null,
+    "name": "Indignant Fetish",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/IPIEGF1.png",
+    "desc": "Taking damage from enemies increases all damage dealt by 25% and reduces all incoming damage by 10%. Lasts 20s.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Kuri Kuri Charm": {
+    "custom": null,
+    "name": "Kuri Kuri Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/TAqxcep.png",
+    "desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge.",
+    "stats": {
+      "RelicSpeed": -0.5
+    }
+  },
+  "Leto's Amulet": {
+    "custom": null,
+    "name": "Leto's Amulet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/LgUJb0q.png",
+    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 15%.",
+    "stats": {
+      "StaminaCost": -0.3,
+      "Encumbrance%": -0.4
+    }
+  },
+  "Matriarch's Insignia": {
+    "custom": null,
+    "name": "Matriarch's Insignia",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/dXxuPsN.png",
+    "desc": "Increases Melee Damage by 35% and causes all successful Melee Attacks to restore 10 Stamina.",
+    "stats": {
+      "Stamina/S+": 10
+    }
+  },
+  "Navigator's Pendant": {
+    "custom": null,
+    "name": "Navigator's Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/MNg2vz5.png",
+    "desc": "Grants 20 Health, 20 Stamina, and -10 Armor Encumbrance.",
+    "stats": {
+      "Health": 25,
+      "Stamina": 25,
+      "Encumbrance": -10
+    }
+  },
+  "Nightmare Spiral": {
+    "custom": null,
+    "name": "Nightmare Spiral",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/6AfY7ml.png",
+    "desc": "Gain 10% of base Ranged damage dealt as Lifesteal. Reduces Healing Effectiveness by 95%.",
+    "stats": {
+      "HealingEFF": -0.95,
+      "RLifesteal": 0.1
+    }
+  },
+  "Nimue's Ribbon": {
+    "custom": null,
+    "name": "Nimue's Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/AnlCvZc.png",
+    "desc": "Increase Relic Healing Effectiveness by 50% Activating a Relic grants HASTE for 25s.",
+    "stats": {
+      "RelicEFF": 0.5
+    }
+  },
+  "Participation Medal": {
+    "custom": null,
+    "name": "Participation Medal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/A71iDWl.png",
+    "desc": "Increase Health by 10, Stamina by 10, Movement Speed by 10%, and Damage Reduction by 10%.",
+    "stats": {
+      "Health": 10,
+      "FlatDR": 0.1,
+      "Stamina": 10
+    }
+  },
+  "Red Doe Sigil": {
+    "custom": null,
+    "name": "Red Doe Sigil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/ZETFv52.png",
+    "desc": "Increases Relic Healing Effectiveness by 30% which doubles when the wearer's Health is below 50%.",
+    "stats": {
+      "RelicEFF": 0.3
+    }
+  },
+  "Rusted Navigator's Pendant": {
+    "custom": null,
+    "name": "Rusted Navigator's Pendant",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/B2H2Xrb.png",
+    "desc": "Grants 15 Health, 15 Stamina, and -15 Armor Encumbrance.",
+    "stats": {
+      "Health": 20,
+      "Stamina": 20,
+      "Encumbrance": -15
+    }
+  },
+  "Twisted Idol": {
+    "custom": null,
+    "name": "Twisted Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/xfS6EZM.png",
+    "desc": "Increases Armor Effectiveness by 30% and reduces Encumbrance by 15.",
+    "stats": {
+      "Armor%": 0.35,
+      "Encumbrance": -15
+    }
+  },
+  "Whispering Marble": {
+    "custom": null,
+    "name": "Whispering Marble",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/fFlOKNC.png",
+    "desc": "Grants 3 stacks of BULWARK. Increases All Damage by 3% per stack of BULWARK.",
+    "stats": {
+      "Bulwark": 3
+    }
+  },
+  "Abrasive Whetstone": {
+    "name": "Abrasive Whetstone",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/BGhiSG7.png",
+    "desc": "When attacking a BLEEDING enemy, Crit Chance is increased by 15% and Crit Damage is increased by 30%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ankh of Power": {
+    "name": "Ankh of Power",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/WkrGH56.png",
+    "desc": "Grants a 15% increase to all damage. Consuming a Relic doubles the bonus for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Birthright of the Lost": {
+    "name": "Birthright of the Lost",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/VPIbeEn.png",
+    "desc": "On perfect dodge, apply EXPOSED on the attacker for 10s. EXPOSED: Target receives up to 24% additional damage from all sources. Expose amount is reduced for each human ally alive.",
+    "custom": null,
+    "stats": {}
+  },
+  "Butcher's Fetish": {
+    "name": "Butcher's Fetish",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/z2BiNlI.png",
+    "desc": "Increases Critical Chance by 15% and Critical Damage by 25% for 15s after striking enemy with a Charged Melee Attack.",
+    "custom": null,
+    "stats": {}
+  },
+  "Chains of Amplification": {
+    "name": "Chains of Amplification",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/1g026l1.png",
+    "desc": "Increases all damage dealt to targets suffering from a Status Effect by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Cleansing Stone": {
+    "name": "Cleansing Stone",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/nUx4aqq.png",
+    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 15% of wearers Max Health to all allies within 7m when cleansed.",
+    "custom": null,
+    "stats": {}
+  },
+  "Core Booster": {
+    "name": "Core Booster",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/JhQqxss.png",
+    "desc": "Increases weakspot damage by 50% for 10s after killing an enemy.",
+    "custom": null,
+    "stats": {}
+  },
+  "Death-Soaked Idol": {
+    "name": "Death-Soaked Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/mqnq3Nd.png",
+    "desc": "Increases All Damage by 5% for each entity within 20m suffering from a unique Negative Status Effect. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Death's Embrace": {
+    "name": "Death's Embrace",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/3SCAws6.png",
+    "desc": "Gain 20% to all damage when Health is below 100%. Gain HASTE when below 50% Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Detonation Trigger": {
+    "name": "Detonation Trigger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/C2ou1K9.png",
+    "desc": "Increases Explosion damage by 25%. Explosions apply 405 BURNING damage over 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Downward Spiral": {
+    "name": "Downward Spiral",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/1tpuPCv.png",
+    "desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
+    "custom": null,
+    "stats": {}
+  },
+  "Effluvium Enhancer": {
+    "name": "Effluvium Enhancer",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/a8XzCSa.png",
+    "desc": "Increases ACID damage by 20% and CORROSIVE damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Emergency Switch": {
+    "name": "Emergency Switch",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/KiNCWOQ.png",
+    "desc": "When below 50% health, chance to consume Relic on use is reduced by 35%. Final Relic Charge is not consumed on use, but effect cannot be triggered again for 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Energized Neck Coil": {
+    "name": "Energized Neck Coil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/D8np6HK.png",
+    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Energy Diverter": {
+    "name": "Energy Diverter",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/kyW5Mc4.png",
+    "desc": "While a SHIELD is active, gain 10 Critical Chance and 15% to all damage dealt.",
+    "custom": null,
+    "stats": {}
+  },
+  "Escalation Protocol": {
+    "name": "Escalation Protocol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/3FBd6mQ.png",
+    "desc": "Increases all damage dealt by 2.5% for 10s after killing an enemy. Stacks 10x. Dealing damage refreshes the timer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of Euphoria": {
+    "name": "Gift of Euphoria",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/af9ocpB.png",
+    "desc": "Spending 25 Stamina grants 5% Critical Chance for 7s. Max 5 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of Melancholy": {
+    "name": "Gift of Melancholy",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/pmhZbAP.png",
+    "desc": "Increases All Damage dealt by 25% when Stamina is at 100% for 7s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gift of the Unbound": {
+    "name": "Gift of the Unbound",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/djQ080C.png",
+    "desc": "Disables negative effects of Burden Rings. Restricts Maximum Health gained by 20% per effect disabled.",
+    "custom": null,
+    "stats": {}
+  },
+  "Golden Ribbon": {
+    "name": "Golden Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/mkQ1Wdu.png",
+    "desc": "Increases Mod damage by 25%. Activating a MOD grants HASTE for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunfire Security Lanyard": {
+    "name": "Gunfire Security Lanyard",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/SJvpfrq.png",
+    "desc": "Automatically reloads Magazine over time. Does not work for single shot weapons.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gunslinger's Charm": {
+    "name": "Gunslinger's Charm",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/aArKNFe.png",
+    "desc": "Increases Fire Rate by 15% and Reload Speed by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hallowed Egg": {
+    "name": "Hallowed Egg",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/ejNQT1u.png",
+    "desc": "Spending at least 30% of Firearms magazine to deal damage increases Melee damage by 10% for 7s. Stacks 5x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hyperconductor": {
+    "name": "Hyperconductor",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/05B1ZWv.png",
+    "desc": "Gain double Skill Charges. Increases Skill Cooldowns by 50% and reduces Max Power Generation by 15%.\nFor Heavy Weapons, doubles Heavy Weapon Ammo instead.",
+    "custom": null,
+    "stats": {}
+  },
+  "Index of the Scribe": {
+    "name": "Index of the Scribe",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/zSYA3EZ.png",
+    "desc": "Increases Mod and Skill Weakspot Damage by 35%",
+    "custom": null,
+    "stats": {}
+  },
+  "Inert Overcharger": {
+    "name": "Inert Overcharger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/AsO6Lqk.png",
+    "desc": "Standing still increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
+    "custom": null,
+    "stats": {}
+  },
+  "Insulation Driver": {
+    "name": "Insulation Driver",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/hVWNy7n.png",
+    "desc": "While BULWARK is active, gain 15% to all damage dealt and HASTE.",
+    "custom": null,
+    "stats": {}
+  },
+  "Jester's Bell": {
+    "name": "Jester's Bell",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/snemrNx.png",
+    "desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 20% for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Kinetic Shield Exchanger": {
+    "name": "Kinetic Shield Exchanger",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/aOeSDgV.png",
+    "desc": "While a SHIELD is active, gain 25% Mod damage and generate 15% additional Mod power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Laemir Censer": {
+    "name": "Laemir Censer",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/2Su74Nr.png",
+    "desc": "Increases Mod Duration by 50%. Increases Mod Cost by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Legacy Protocol": {
+    "name": "Legacy Protocol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/e7SZ2wA.png",
+    "desc": "Lowers skill cooldown by 20% and increased skill duration by 15%",
+    "custom": null,
+    "stats": {}
+  },
+  "Neckbone Necklace": {
+    "name": "Neckbone Necklace",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/73gZf2p.png",
+    "desc": "Reduces the Damage of Status Effects applied to wearer by 50%. Gain 25% increased Damage when suffering from a Status Effect or Blight.",
+    "custom": null,
+    "stats": {}
+  },
+  "Necklace of Flowing Life": {
+    "name": "Necklace of Flowing Life",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/zUQur45.png",
+    "desc": "Increases Grey Health conversion by an additional 100%. When Grey Health Conversion triggers, gain 5x the amount as Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Necklace of Supremacy": {
+    "name": "Necklace of Supremacy",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/hjpAbVO.png",
+    "desc": "After 7s of not being damaged, increases all damage dealt by 15%. Increases to 25% if Health is full.",
+    "custom": null,
+    "stats": {}
+  },
+  "Nightweaver's Grudge": {
+    "name": "Nightweaver's Grudge",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/olPhK3n.png",
+    "desc": "Gain 20% Critical Chance and HASTE when within 15m of an entity suffering from a Status Effect.",
+    "custom": null,
+    "stats": {}
+  },
+  "One True King Sigil": {
+    "name": "One True King Sigil",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/tmuZR6e.png",
+    "desc": "Increases Mod damage by 20%. Enhances the effect of Faerin's Sigil and Faelin's Sigil by 50% per Sigil equipped.",
+    "custom": null,
+    "stats": {}
+  },
+  "One-Eyed Joker Idol": {
+    "name": "One-Eyed Joker Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/qkK6Zfa.png",
+    "desc": "Neutral Backdash creates a Magic Card lasting 1s. If Card absorbs enemy damage gain 25% Critical Chance for 5s. Neutral Backdash cost 30% additional Stamina.",
+    "custom": null,
+    "stats": {}
+  },
+  "Onyx Pendulum": {
+    "name": "Onyx Pendulum",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/9id6NdN.png",
+    "desc": "Firearm damage adds stacks which increase the damage of stowed firearm by 2.5% for 15s. Stacks 10x.",
+    "custom": null,
+    "stats": {}
+  },
+  "Range Finder": {
+    "name": "Range Finder",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/vVzcvUT.png",
+    "desc": "After killing an enemy, gain 10% Ranged damage and 2m Firearm Range. Stacks 3x Lasts 10s. ranged Weakspot Hits will refresh duration.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ravager's Mark": {
+    "name": "Ravager's Mark",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/S9vukN0.png",
+    "desc": "Increases all damage dealt to BLEEDING targets by 20%. Bonus increases to 30% for targets with 50% or lower Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Samoflange": {
+    "name": "Samoflange",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/K6r1t6G.png",
+    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 50%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Scavenger's Bauble": {
+    "name": "Scavenger's Bauble",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/KKblm64.png",
+    "desc": "Increases Scrap pickups by 50%, Automatically pick up any nearby crafting materials.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shaed Bloom Crystal": {
+    "name": "Shaed Bloom Crystal",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/CDYAYVM.png",
+    "desc": "Gain a 30% damage bonus. Every 5s, the bonus switches between Physical and Elemental damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shock Devide": {
+    "name": "Shock Devide",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/Idx09iv.png",
+    "desc": "Increases SHOCK damage by 20% and OVERLOADED damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Silver Ribbon": {
+    "name": "Silver Ribbon",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/9HjFOzc.png",
+    "desc": "Increases Skill damage by 25%.\nActivating a SKILL grants HASTE for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sinister Totem": {
+    "name": "Sinister Totem",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/Fi6Mm8z.png",
+    "desc": "Applying or refreshing a Negative Status Effect to an enemy increases Status Damage by 1% for 15s. Max 50 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Soul Anchor": {
+    "name": "Soul Anchor",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/UZz8npM.png",
+    "desc": "Summoning increases all damage dealt by 20% for 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Spirit Wisp Amulet": {
+    "name": "Spirit Wisp Amulet",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/SVSTOGi.png",
+    "desc": "Activating a Mod reduces current Skill Cooldowns by 3% for every 300 Mod Power spent.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stalker's Brand": {
+    "name": "Stalker's Brand",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7ixzuFA.png",
+    "desc": "Gain 10% Ranged and 15% Melee damage. Bonus double versus enemies not targeting wearer.",
+    "custom": null,
+    "stats": {}
+  },
+  "Talisman of the Sun": {
+    "name": "Talisman of the Sun",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/2flZAsF.png",
+    "desc": "Increases FIRE damage by 20% and BURNING damage by 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Toxic Release Valve": {
+    "name": "Toxic Release Valve",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/7Q99SlN.png",
+    "desc": "Swapping Firearms releases a Toxic Cloud, which deals 148.5 ACID Damage to all enemies within 7m. and applies CORROSION. \nCan only happen once every 3s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Vengance Idol": {
+    "name": "Vengance Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/eUupOV1.png",
+    "desc": "Increases all damage dealt by 30% when the wearer's Health is below 50%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Void Idol": {
+    "name": "Void Idol",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/k2JFzAb.png",
+    "desc": "Increases Reload Speed by 20%. Reloads only require 50% of magazine from reserves to fully reload.",
+    "custom": null,
+    "stats": {}
+  },
+  "Weightless Weight": {
+    "name": "Weightless Weight",
+    "slot": "Amulet",
+    "image": "https://i.imgur.com/u3DCJPN.png",
+    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75%  for every each 5 point of Armor Encumbrance.",
+    "custom": null,
+    "stats": {}
+  }
+}

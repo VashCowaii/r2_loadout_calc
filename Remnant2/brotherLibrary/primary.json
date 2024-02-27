@@ -1,0 +1,226 @@
+{
+  "Apha / Omega": {
+    "name": "Apha / Omega",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/K09B7HA.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Aphelion": {
+    "name": "Aphelion",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/T8cOqup.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "AS-10 \"Bulldog\"": {
+    "name": "AS-10 \"Bulldog\"",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/2QjX1cc.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Blackmaw AR-47": {
+    "name": "Blackmaw AR-47",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/8BulDTG.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Chicago Typewriter": {
+    "name": "Chicago Typewriter",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/LfVagOA.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Coach Gun": {
+    "name": "Coach Gun",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/vbdeHPF.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Crescent Moon": {
+    "name": "Crescent Moon",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/E2pTfLu.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Crossbow": {
+    "name": "Crossbow",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U8ffNlf.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Deceit": {
+    "name": "Deceit",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/0Xab9GS.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ford's Scattergun": {
+    "name": "Ford's Scattergun",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bYVHFE0.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Huntmaster M1": {
+    "name": "Huntmaster M1",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bD69k24.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Merciless": {
+    "name": "Merciless",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bKiLETg.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Monarch": {
+    "name": "Monarch",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U8RyR87.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Nightfall": {
+    "name": "Nightfall",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/KIKHC8j.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Plasma Cutter": {
+    "name": "Plasma Cutter",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U5SZR7N.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Pulse Rifle": {
+    "name": "Pulse Rifle",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/WvnbBeE.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Repulsor": {
+    "name": "Repulsor",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/R5xX0lR.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Royal Hunting Bow": {
+    "name": "Royal Hunting Bow",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/qIuYA7p.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rusty Lever Action": {
+    "name": "Rusty Lever Action",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/ME75DJd.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sagittarius": {
+    "name": "Sagittarius",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/DX9g5wy.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Savior": {
+    "name": "Savior",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/5EbRPEP.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sparkfire": {
+    "name": "Sparkfire",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/8Ih2RHZ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sporebloom": {
+    "name": "Sporebloom",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/vH9n0QZ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Starkiller": {
+    "name": "Starkiller",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/WbIBKbg.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Twisted Arbalest": {
+    "name": "Twisted Arbalest",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/4mv86u2.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Widowmaker": {
+    "name": "Widowmaker",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/ZdhL2Gi.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Wrangler 1860": {
+    "name": "Wrangler 1860",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/CcgGPGe.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "XMG57 \"Bonesaw\"": {
+    "name": "XMG57 \"Bonesaw\"",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/iThO1Ae.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}

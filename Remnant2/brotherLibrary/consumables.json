@@ -1,0 +1,126 @@
+{
+  "Blood Root": {
+    "custom": null,
+    "name": "Blood Root",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/okPmaon.png",
+    "desc": "Regenerates 1.5 Health per second. Lasts 30s.",
+    "stats": {
+      "HP/S+": 1.5
+    }
+  },
+  "Confidence Booster": {
+    "custom": null,
+    "name": "Confidence Booster",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/95R0m9e.png",
+    "desc": "Reduces incoming damage by 10% and Stagger by 1. Lasts 20s.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Ambit Ember": {
+    "name": "Ambit Ember",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/Zvx8Gxg.png",
+    "desc": "Slightly increases Evade Window and Evade Speed by 15%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Antidote": {
+    "name": "Antidote",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/eEvswcC.png",
+    "desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ethereal Orb": {
+    "name": "Ethereal Orb",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/1CDLiyQ.png",
+    "desc": "Removes OVERLOADED effect and increases SHOCK resistance by 15%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faerie Needle": {
+    "name": "Faerie Needle",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/rDMjtwG.png",
+    "desc": "Increases Mod Power Regen by 10 MP per second. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gul Serum": {
+    "name": "Gul Serum",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/K4iNOeU.png",
+    "desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Mud Rub": {
+    "name": "Mud Rub",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/EFmWirZ.png",
+    "desc": "Extinguishes BURNING effect and increases FIRE resistance by 15. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Mystery Jerky": {
+    "name": "Mystery Jerky",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/M3hexEO.png",
+    "desc": "Converts 1 Health into Grey Health per second. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Oilskin Balm": {
+    "name": "Oilskin Balm",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/gv2Ic0X.png",
+    "desc": "Cures ROOT ROT Blight and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Orange Slices": {
+    "name": "Orange Slices",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/nodMi8Y.png",
+    "desc": "Regenerates 5% Health instantly.",
+    "custom": null,
+    "stats": {}
+  },
+  "Processed Koara": {
+    "name": "Processed Koara",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/FIJdQqh.png",
+    "desc": "Decreases Stamina Recovery delay by 75% and Stamina Regen Penalty by 50%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Purified Salve": {
+    "name": "Purified Salve",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/VieDQu8.png",
+    "desc": "Cures CURSE and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rocket Fuel": {
+    "name": "Rocket Fuel",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/v9VNMqo.png",
+    "desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Timeworn Unguent": {
+    "name": "Timeworn Unguent",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/JQXgOot.png",
+    "desc": "Cures SUPPRESSION Blight and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  }
+}
