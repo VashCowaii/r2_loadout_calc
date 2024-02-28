@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8"> 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="Icon" href="images/Cowaii.png">
     <script src="code.js"></script>
@@ -22,7 +23,7 @@
         <a href="#"><img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"></a>
         <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
     </div>
-<!-- <body style="background-color:#181818;"> -->
+<body style="background-color:#181818;">
 
 
 <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
@@ -84,156 +85,159 @@
     
     <div class="basicsStaminaBox">
         <div class="staminaHeaderTitle">STAMINA</div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue" id="stamina/s">0.0</span></div>
+            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue" id="stamina/s">33.0</span></div>
             <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue" id="staminaCost">100.00%</span></div>
             <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Class</span><span class="basicsDRValue" id="dodgeClass">Light</span></div>
     </div>
 </div>
 
-<div class="classBox"> <!-- ARCHETYPE 1 COLUMN -->
-    <div class="classAbilityBox">
-    <div class="classIconContainer">
-        <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1Icon">
+<div class="mainBody">
+    <div class="classBox"> <!-- ARCHETYPE 1 COLUMN -->
+        <div class="classAbilityBox">
+        <div class="classIconContainer">
+            <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1Icon">
+        </div>
+        <div class="classThinHeader">Archetype 1:</div>
+        <div class="classSelectorBox">
+            <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
+                <!-- <option></option> -->
+            </select> 
+        </div>
+            <div class="classThinHeader">ABILITY 1:</div>
+                <div class="classAbilityContainer">
+                    <div class="classAbilitySelectorBox">
+                        <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')">
+                            <!-- <option></option> -->
+                        </select> 
+                    </div>
+                    <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+                </div>
+                <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
+        </div>
+
+        <div class="classPassivesBox">       
+            <div class="classThinHeader">PASSIVES:</div>
+            <div class="classPassiveHeader" id="archetype1passive1"></div>
+                <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
+            <div class="classPassiveHeader" id="archetype1passive2"></div>
+                <div class="classPassiveDescription" id="archetype1passive2desc"></div>
+            <div class="classPassiveHeader" id="archetype1passive3"></div>
+                <div class="classPassiveDescription" id="archetype1passive3desc"></div>
+            <div class="classPassiveHeader" id="archetype1passive4"></div>
+                <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+        </div>
     </div>
-    <div class="classThinHeader">Archetype 1:</div>
-    <div class="classSelectorBox">
-        <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
-        </select> 
+    <div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
+        <div class="primePerkBox">
+            <div class="classVoidSpace">Probably loadout selection icons, here. Adjust height and shrink pperk desc based on max length among all classes.<br>A task for later.</div>
+            <div class="classTitle" id="comboTitle">---</div>
+            <div class="classPerkContainer">
+                <div class="classPerkName">PRIME PERK:<br><span id="primePerk">Select a primary archetype</span></div>
+                <div class="classPerkIconHolder">
+                    <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
+                </div>
+            </div>
+            <div class="classPerkDescription" id="primePerkDesc">---</div>
+        </div>
+        <div class="armorHeaderBig">ARMOR SELECTION</div>
+        <div class="armorSelectionsBox">
+            <div class="armorHeader">Head</div>
+                <div class="armorContainer">
+                    <div class="armorSelectorBox">
+                        <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
+                    </div>
+                    <div class="armorIconHolder">
+                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
+                    </div>
+                    <div class="armorValueContainer">
+                        <div class="armorValueHeader">Armor</div>
+                        <div class="armorValueDisplay" id="helmetArmor">0</div>
+                        <div class="armorValueHeader">Weight</div>
+                        <div class="armorValueDisplay" id="helmetWeight">0</div>
+                    </div>
+                </div>
+            <div class="armorHeader">Chest</div>
+                <div class="armorContainer">
+                    <div class="armorSelectorBox">
+                        <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
+                    </div>
+                    <div class="armorIconHolder">
+                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
+                    </div>
+                    <div class="armorValueContainer">
+                        <div class="armorValueHeader">Armor</div>
+                        <div class="armorValueDisplay" id="chestArmor">0</div>
+                        <div class="armorValueHeader">Weight</div>
+                        <div class="armorValueDisplay" id="chestWeight">0</div>
+                    </div>
+                </div>
+            <div class="armorHeader">Legs</div>
+                <div class="armorContainer">
+                    <div class="armorSelectorBox">
+                        <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
+                    </div>
+                    <div class="armorIconHolder">
+                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
+                    </div>
+                    <div class="armorValueContainer">
+                        <div class="armorValueHeader">Armor</div>
+                        <div class="armorValueDisplay" id="legArmor">0</div>
+                        <div class="armorValueHeader">Weight</div>
+                        <div class="armorValueDisplay" id="legWeight">0</div>
+                    </div>
+                </div>
+            <div class="armorHeader">Hands</div>
+                <div class="armorContainer">
+                    <div class="armorSelectorBox">
+                        <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
+                    </div>
+                    <div class="armorIconHolder">
+                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
+                    </div>
+                    <div class="armorValueContainer">
+                        <div class="armorValueHeader">Armor</div>
+                        <div class="armorValueDisplay" id="handArmor">0</div>
+                        <div class="armorValueHeader">Weight</div>
+                        <div class="armorValueDisplay" id="handWeight">0</div>
+                    </div>
+                </div>
+        </div>
     </div>
-        <div class="classThinHeader">ABILITY 1:</div>
+    <div class="classBox"> <!-- ARCHETYPE 2 COLUMN-->
+        
+        <div class="classAbilityBox">
+        <div class="classIconContainer">
+            <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2Icon">
+        </div>
+        <div class="classThinHeader">Archetype 2:</div>
+        <div class="classSelectorBox">
+            <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')">
+                <!-- <option></option> -->
+            </select> 
+        </div>
+            <div class="classThinHeader">ABILITY 2:</div>
             <div class="classAbilityContainer">
                 <div class="classAbilitySelectorBox">
-                    <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')">
-                        <option value="">---</option>
+                    <select class="classAbilitySelector" id="archetype2ability" onchange="updateAbility('archetype2')">
+                    <!-- <option></option> -->
                     </select> 
                 </div>
-                <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+                <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2abilityIcon">
             </div>
-            <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
-    </div>
-
-    <div class="classPassivesBox">       
-        <div class="classThinHeader">PASSIVES:</div>
-        <div class="classPassiveHeader" id="archetype1passive1"></div>
-            <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
-        <div class="classPassiveHeader" id="archetype1passive2"></div>
-            <div class="classPassiveDescription" id="archetype1passive2desc"></div>
-        <div class="classPassiveHeader" id="archetype1passive3"></div>
-            <div class="classPassiveDescription" id="archetype1passive3desc"></div>
-        <div class="classPassiveHeader" id="archetype1passive4"></div>
-            <div class="classPassiveDescription" id="archetype1passive4desc"></div>
-    </div>
-</div>
-
-<div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
-    <div class="primePerkBox">
-        <div class="classVoidSpace">Probably loadout selection icons, here. Adjust height and shrink pperk desc based on max length among all classes.<br>A task for later.</div>
-        <div class="classTitle" id="comboTitle">---</div>
-        <div class="classPerkContainer">
-            <div class="classPerkName">PRIME PERK:<br><span id="primePerk">Select a primary archetype</span></div>
-            <div class="classPerkIconHolder">
-                <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
-            </div>
+            <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
         </div>
-        <div class="classPerkDescription" id="primePerkDesc">---</div>
-    </div>
-    <div class="armorHeaderBig">ARMOR SELECTION</div>
-    <div class="armorSelectionsBox">
-        <div class="armorHeader">Head</div>
-            <div class="armorContainer">
-                <div class="armorSelectorBox">
-                    <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
-                </div>
-                <div class="armorIconHolder">
-                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
-                </div>
-                <div class="armorValueContainer">
-                    <div class="armorValueHeader">Armor</div>
-                    <div class="armorValueDisplay" id="helmetArmor">0</div>
-                    <div class="armorValueHeader">Weight</div>
-                    <div class="armorValueDisplay" id="helmetWeight">0</div>
-                </div>
-            </div>
-        <div class="armorHeader">Chest</div>
-            <div class="armorContainer">
-                <div class="armorSelectorBox">
-                    <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
-                </div>
-                <div class="armorIconHolder">
-                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
-                </div>
-                <div class="armorValueContainer">
-                    <div class="armorValueHeader">Armor</div>
-                    <div class="armorValueDisplay" id="chestArmor">0</div>
-                    <div class="armorValueHeader">Weight</div>
-                    <div class="armorValueDisplay" id="chestWeight">0</div>
-                </div>
-            </div>
-        <div class="armorHeader">Legs</div>
-            <div class="armorContainer">
-                <div class="armorSelectorBox">
-                    <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
-                </div>
-                <div class="armorIconHolder">
-                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
-                </div>
-                <div class="armorValueContainer">
-                    <div class="armorValueHeader">Armor</div>
-                    <div class="armorValueDisplay" id="legArmor">0</div>
-                    <div class="armorValueHeader">Weight</div>
-                    <div class="armorValueDisplay" id="legWeight">0</div>
-                </div>
-            </div>
-        <div class="armorHeader">Hands</div>
-            <div class="armorContainer">
-                <div class="armorSelectorBox">
-                    <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
-                </div>
-                <div class="armorIconHolder">
-                    <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
-                </div>
-                <div class="armorValueContainer">
-                    <div class="armorValueHeader">Armor</div>
-                    <div class="armorValueDisplay" id="handArmor">0</div>
-                    <div class="armorValueHeader">Weight</div>
-                    <div class="armorValueDisplay" id="handWeight">0</div>
-                </div>
-            </div>
-    </div>
-</div>
-
-<div class="classBox"> <!-- ARCHETYPE 2 COLUMN-->
-    
-    <div class="classAbilityBox">
-    <div class="classIconContainer">
-        <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2Icon">
-    </div>
-    <div class="classThinHeader">Archetype 2:</div>
-    <div class="classSelectorBox">
-        <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')"></select> 
-    </div>
-        <div class="classThinHeader">ABILITY 2:</div>
-        <div class="classAbilityContainer">
-            <div class="classAbilitySelectorBox">
-                <select class="classAbilitySelector" id="archetype2ability"  onchange="updateAbility('archetype2')">
-                    <option value="">---</option>
-                </select> 
-            </div>
-            <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2abilityIcon">
+                
+        <div class="classPassivesBox">
+            <div class="classThinHeader">PASSIVES:</div>
+            <div class="classPassiveHeader" id="archetype2passive1"></div>
+                <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
+            <div class="classPassiveHeader" id="archetype2passive2"></div>
+                <div class="classPassiveDescription" id="archetype2passive2desc"></div>
+            <div class="classPassiveHeader" id="archetype2passive3"></div>
+                <div class="classPassiveDescription" id="archetype2passive3desc"></div>
+            <div class="classPassiveHeader" id="archetype2passive4"></div>
+                <div class="classPassiveDescription" id="archetype2passive4desc"></div>
         </div>
-        <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
-    </div>
-            
-    <div class="classPassivesBox">
-        <div class="classThinHeader">PASSIVES:</div>
-        <div class="classPassiveHeader" id="archetype2passive1"></div>
-            <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
-        <div class="classPassiveHeader" id="archetype2passive2"></div>
-            <div class="classPassiveDescription" id="archetype2passive2desc"></div>
-        <div class="classPassiveHeader" id="archetype2passive3"></div>
-            <div class="classPassiveDescription" id="archetype2passive3desc"></div>
-        <div class="classPassiveHeader" id="archetype2passive4"></div>
-            <div class="classPassiveDescription" id="archetype2passive4desc"></div>
     </div>
 </div>
 
@@ -342,7 +346,62 @@
 </div>
 <!-- asdf
 <img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"> -->
-<!-- </body> -->
+<div class="consumablesBox">
+    <div class="bottomTitleHeader">CONSUMABLES</div>
+</div>
+<div class="weaponsBox">
+    <div class="bottomTitleHeader">WEAPONS</div>
+</div>
+<div class="traitsBox">
+    <div class="bottomTitleHeader">TRAITS</div>
+    <div class="traitContainer">
+        <button type="button" class="traitButton" onclick="updateTrait('trait1','-')">-</button>
+        <div class="traitLineHolder">
+            <div class="traitNameHolder">
+                <select class="traitSelector" id="trait1" onchange="updateTrait('trait1')"></select>
+                <div class="traitLevelDisplay" id="trait1Level">0</div> 
+                </div>
+            <div class="traitLevelContainer">
+                <div class="pointsSpent" id="trait1Spent"></div>
+                <div class="intrinsicPoints" id="trait1Intrinsic"></div>
+                <div class="traitLevelBar">
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                    <div class="traitLevelCircle"></div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="traitButton" onclick="updateTrait('trait1','+')">+</button>
+    </div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+    <div class="traitContainer"></div>
+</div>
+
+</body>
 
 </div>
 </html> 

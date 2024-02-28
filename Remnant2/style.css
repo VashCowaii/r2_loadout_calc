@@ -28,23 +28,45 @@
     width:95%;
     height:auto;
     outline: 2px solid white;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
 .main {
-    /* margin-left: 70px; Same as sidenav   */
+    /* margin-left: 40px; same as sidenav  */
+    /* padding: 0%; */
+
+    padding-left: clamp(50px, 1vw, 65px);
+    width: 100%;
+    /* width: 1100px; */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* min-width: 550px;
+    max-width: 1280px; */
+    /* margin-right: clamp(40px, 4vw, 60px); */
     background-color:#181818; 
     /* padding-left: 0.2%; */
     /* padding-left: clamp(40px, 4vw, 70px); */
     /* padding-right: 0.2%; */
-    width: 100%;
     /* display: flex; */
     display: flex;
     justify-content: center;
+    align-items: center;
     /* flex-direction: ; */
     flex-flow: row wrap;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+
     /* overflow: visible; */
 }
+
+/* this is for archselects and armor columns */
+.mainBody {
+    display: flex;
+    /* order: 1; */
+    white-space: nowrap;
+}
+
 
 div {
     color: white;
@@ -59,17 +81,28 @@ font-family: Arial, Helvetica, sans-serif;
 /* ------------------------- BASIC STATS Column -------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .basicsBox {
-    width: 200px;
-    min-width: 200px;
+    /* width: 200px; */
+    /* width: 30%; */
+
+    width: clamp(200px, 20vw, 300px);
+
+    /* min-width: 190px;
+    max-width: 300px;  */
     height: 800px;
     max-height: 800px;
     background-color: #666666;
     color: white;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    /* white-space: wrap; */
     box-sizing: border-box;
 }
+/* .basicsBox>* {
+    flex: 1 1 auto;
+} */
 .basicsTitleHeader {
     font-size: 30px;
+    /* font-size: 200%; */
     height: 25%;
     width: 100%;
     white-space: nowrap;
@@ -269,8 +302,8 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .resistanceIcon {
-    width: 100%;
-    height: fit-content;
+    width: auto;
+    height: 100%;
     text-align: center;
     box-sizing: border-box;
 }
@@ -362,14 +395,16 @@ font-family: Arial, Helvetica, sans-serif;
 /* ------------------------- Archetype Columns --------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .classBox {
-    width: 150px;
-    min-width: none;
+    /* width: 150px; */
+    /* min-width: none; */
+    width: clamp(150px, 10vw, 150px);
     height: 800px;
     background-color: black;
     color: white;
     border-left: 2px solid black;
     border-right: 2px solid black;
     box-sizing: border-box;
+    /* flex-grow: 1; */
 }
 .classAbilityBox {
     width: 100%;
@@ -411,7 +446,8 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .classSelector {
-    font-size: 23px;
+    /* font-size: 23px; */
+    font-size: clamp(18px, 2vw, 23px);
     width: 100%;
     height: 100%;
     padding: 0%;
@@ -461,6 +497,7 @@ font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size:10.5px;
     height: 30%;   
+    white-space: wrap;
 }
 .classPassivesBox {
     width: 100%;
@@ -484,16 +521,19 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(9.5px, 0.8vw, 11px);
     padding-top: 2px;
     box-sizing: border-box;
+    white-space: wrap;
 }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------- PrimePerk/Armor Column ---------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .classArmorBox {
     width: 250px;
-    min-width: none;
+    /* min-width: none; */
     height: 800px;
     background-color: black;
     color: white;
+    /* flex-grow: 2; */
+    /* max-width: 300; */
 }
 .primePerkBox {
     width: 100%;
@@ -510,6 +550,7 @@ font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid #434343;
     border-top: 1px solid #434343;
     text-align: center;
+    white-space: wrap;
     box-sizing: border-box;
 }
 .classTitle {
@@ -523,6 +564,7 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
+    white-space: wrap;
 }
 .classPerkContainer {
     width: 100%;
@@ -530,6 +572,7 @@ font-family: Arial, Helvetica, sans-serif;
     flex-direction: row;
     height: 25.5%;
     align-items: center;
+    white-space: wrap;
 }
 .classPerkName {
     font-size: clamp(8px, 2vw, 20px);
@@ -560,6 +603,7 @@ font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid #434343;
     font-size: 12px;
     text-align: center;
+    white-space: wrap;
     box-sizing: border-box;
 }
 .armorHeaderBig{
@@ -852,5 +896,215 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-items: center;
     justify-content: center;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Consumables Column ---------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+
+
+.consumablesBox {
+    /* width: 200px; */
+    width: clamp(200px, 20vw, 300px);
+    /* min-width: 190px; */
+    height: 800px;
+    max-height: 800px;
+    background-color: #666666;
+    color: white;
+    /* white-space: wrap; */
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.weaponsBox {
+    width: 550px;
+    /* min-width: 190px; */
+    height: 800px;
+    max-height: 800px;
+    background-color: black;
+    color: white;
+    /* white-space: wrap; */
+    box-sizing: border-box;
+    border-top: 1px solid #666666;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------TRAITS ------------------------------------------------------------ */
+.traitsBox {
+    width: 350px;
+    min-width: none;
+    height: 800px;
+    background-color: #666666;
+    color: white;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.traitContainer {
+    width: 100%;
+    height: 4.8%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.traitButton {
+    width: 10%;
+    height: 100%;
+    border-bottom: 1px solid #434343;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.traitLineHolder {
+    width: 80%;
+    height: 100%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.traitNameHolder {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.traitSelector {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+.traitLevelDisplay {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    
+}
+.traitLevelContainer {
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    display: flex;
+    /* display: inline-flex; */
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    position: relative;
+    /* overflow: visible; */
+}
+.traitLevelBar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* left: 1px; */
+    top: 1px;
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    /* overflow: visible; */
+}
+.traitLevelCircle {
+    /* border-radius: 50%; */
+    outline: 1px solid white;
+    width: 10%;
+    height: 95%;
+    box-sizing: border-box;
+    /* #93CCEA for the blue, just "orange" will work for the core traits */
+}
+.pointsSpent {
+    background-color: #93CCEA;
+    height: 100%;
+    width: 0%;
+    border-top: 2px solid #434343;
+    position: absolute;
+}
+.intrinsicPoints {
+    background-color: orange;
+    height: 100%;
+    width: 0%;
+    /* box-sizing: border-box; */
+    border-top: 2px solid #434343;
+    position: absolute;
+
+}
+
+/* .roundedIcon {
+    border-radius: 20%;
+    width:95%;
+    height:auto;
+    outline: 2px solid white;
+    box-sizing: border-box;
+} */
+
+/* .basicsDRStat {
+    width: 66%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRValue {
+    width: 30%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+} */
+
+.bottomTitleHeader {
+    font-size: 30px;
+    /* font-size: 200%; */
+    height: 4%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
     box-sizing: border-box;
 }

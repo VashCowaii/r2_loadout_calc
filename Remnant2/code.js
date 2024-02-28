@@ -1,5 +1,6 @@
 //used for archetype selection swaps in updateArchetype()
-let archetype1old,archetype2old;
+let archetype1old ="";
+let archetype2old ="";
 let ring1old,ring2old,ring3old,ring4old;
 let fragment1old,fragment2old,fragment3old;
 //Generalized select <option> population. *should* be able to be used for any gear selection,
@@ -7,13 +8,13 @@ let fragment1old,fragment2old,fragment3old;
 function populateGear(elem_ID,collection) {
    const select = readSelection(elem_ID);
 
-   for (const gear in collection) {
+  for (const gear in collection) {
       if (collection.hasOwnProperty(gear)) {
-         const option = document.createElement("option");
-         option.text = gear;
-         select.appendChild(option);
+          const option = document.createElement("option");
+          option.text = gear;
+          select.appendChild(option);
       }
-   }
+  }
 }
 //Everything I want to load by default, without event triggers
 document.addEventListener("DOMContentLoaded", function() {
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
    populateGear("fragment1",fragments);
    populateGear("fragment2",fragments);
    populateGear("fragment3",fragments);
+   populateGear("trait1",traits);
 })
 //Update armor related information
 function updateArmor(armorPiece) {
@@ -105,18 +107,14 @@ function updateArchetype(archetype) {
     let updateOpposing = false;
     if (archetype==="archetype1") {archetype2="archetype2"}
     else {archetype2="archetype1"}
-    //If the selection matchs the opposing archetype selection, swap places like in game
-    if (selectedArchetype===readSelection(archetype2).value) {
-      window[`${archetype2}old`]=window[`${archetype}old`];
-      readSelection(archetype2).value=window[`${archetype}old`];
-      updateOpposing = true;
-    }
     //Update archetype icon
     readSelection(`${archetype}Icon`).src=classInfo[selectedArchetype].classIcon;
     //Clear abilities left in the dropdown, if any were there
     readSelection(`${archetype}ability`).innerHTML="";
     //Populate ability list based on selected archetype
     populateGear(`${archetype}ability`,classInfo[selectedArchetype].abilities);
+    //needed to populate info on first ability that populates selection by default
+    updateAbility(archetype);
     //Populate passive names
     readSelection(`${archetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
     readSelection(`${archetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
@@ -127,15 +125,16 @@ function updateArchetype(archetype) {
     readSelection(`${archetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
     readSelection(`${archetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
     readSelection(`${archetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
-    //needed to populate info on first ability that populates selection by default
-    updateAbility(archetype);
+    //If the selection matches the opposing archetype selection, swap places like in game
+    if (selectedArchetype===readSelection(archetype2).value&&readSelection(archetype2).value!="") {
+      window[`${archetype2}old`]=window[`${archetype}old`];
+      readSelection(archetype2).value=window[`${archetype}old`];
+      updateOpposing = true;
+    }
     //Concatenates the two selected classes, uses resulting string to search comboTitle
-    let combo = "";
     let part1 = readSelection("archetype1").value;
     let part2 = readSelection("archetype2").value;
-    if (part1===""||part2==="") {combo = "-Select--Select-";}
-    else {combo = `${part1}${part2}`;}
-    readSelection("comboTitle").innerHTML=titleCombos[combo];
+    readSelection("comboTitle").innerHTML=titleCombos[`${part1}${part2}`];
     //Assigns currently selected archetype to the "Old" variable for that side(1/2) for the sake
     //of tracking archetype selection swaps
     window[`${archetype}old`]=selectedArchetype;
@@ -159,14 +158,16 @@ function updateAbility(archetype) {
    updateFormulas();
 }
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
-function readSelection(elem_ID) {
-    let selectedValue = document.getElementById(elem_ID);
+function readSelection(elemID) {
+    let selectedValue = document.getElementById(elemID);
     return selectedValue;
 }
 //The big cheese, the great clusterfuck, where all the formulas refresh.
 function updateFormulas() { 
+  //Reset the table
   for(elements in greatTableKnowerOfAll) {greatTableKnowerOfAll[elements]=0;}
-
+//----------TRAITS--------------------------------------------------------------
+  pullTraits();
 //----------BASICS COLUMN-------------------------------------------------------
   pullArmorStats();
   pullGearStats();
@@ -229,8 +230,14 @@ function updateFormulas() {
   let totalFlat = bulwarkDR+otherFlat;
   updateDisplay("totalFlat",totalFlat*100,2,"%");
   let totalDR = 1-(1-armorDR)*(1-totalFlat);
-  if (totalDR>0.8){totalDR=0.8}//add a check here later to show people that they're going over cap
   updateDisplay("totalDR",totalDR*100,2,"%");
+  if (totalDR>0.8){
+    totalDR=0.8
+    readSelection("totalDR").style.color = "#e06666"
+  }
+  else {
+    readSelection("totalDR").style.color = "white"
+  }//add a check here later to show people that they're going over cap
 //RESISTANCES
   let bleed = greatTableKnowerOfAll.Bleed * (1+greatTableKnowerOfAll["Bleed%"]);
   let burn = greatTableKnowerOfAll.Burn * (1+greatTableKnowerOfAll["Burn%"]);
@@ -264,7 +271,7 @@ function updateFormulas() {
   let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
   updateDisplay("greyHP/s",totalGreyHPperSec,1);
 //STAMINA
-let staminaPerSec = greatTableKnowerOfAll["Stamina/S+"];
+let staminaPerSec = 33 + greatTableKnowerOfAll["Stamina/S+"];
 updateDisplay("stamina/s",staminaPerSec,1);
 let staminaPenaltyAdjustment = 1;
 if (greatTableKnowerOfAll.StaminaPenaltyAdjustment != 0) {staminaPenaltyAdjustment = greatTableKnowerOfAll.StaminaPenaltyAdjustment}
@@ -301,6 +308,15 @@ function updateDisplay (elemID,statistic,rounding,percent) {
   else {percentage=percent}
   readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
 }
+//Used in updateFormulas() to fill trait property values on the master table
+function pullTraits () {
+  //Yoink all active trait values
+  for (i=1;i<=1;i++) {
+    let traitLevel = +readSelection(`trait${i}Level`).innerHTML;
+    let traitPath = traits[readSelection(`trait${i}`).value];
+    greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
+  }
+}
 //Used in updateFormulas() to fill armor(armor/weight) values on the master table
 function pullArmorStats() {
   let armorTotalWeight = +readSelection("helmetWeight").innerHTML +
@@ -328,22 +344,29 @@ function readArmorResistance(resistance) {
 }
 //Used in updateFormulas() to read class specific statistics and add them to the master table
 function pullClassStats() {
+  // let archetype1 = readSelection("archetype1").value;
+  // let archetype2 = readSelection("archetype2").value;
   let path1 = classInfo[readSelection("archetype1").value];
   let ability1 = readSelection("archetype1ability").value;
   let path2 = classInfo[readSelection("archetype2").value];
   let ability2 = readSelection("archetype2ability").value;
 //Archetype1
-  pullStats(path1.abilities[ability1].stats);
-  pullStats(path1.passives.passive1.stats);
-  pullStats(path1.passives.passive2.stats);
-  pullStats(path1.passives.passive3.stats);
-  pullStats(path1.passives.passive4.stats);
+    pullStats(path1.abilities[ability1].stats);
+    pullStats(path1.passives.passive1.stats);
+    pullStats(path1.passives.passive2.stats); 
+    pullStats(path1.passives.passive3.stats);
+    pullStats(path1.passives.passive4.stats);
+//Trait points from primary archetype
+    greatTableKnowerOfAll.Endurance = path1.Endurance;
+    greatTableKnowerOfAll.Expertise = path1.Expertise;
+    greatTableKnowerOfAll.Spirit = path1.Spirit;
+    greatTableKnowerOfAll.Vigor = path1.Vigor;
 //Archetype2
-  pullStats(path2.abilities[ability2].stats);
-  pullStats(path2.passives.passive1.stats);
-  pullStats(path2.passives.passive2.stats);
-  pullStats(path2.passives.passive3.stats);
-  pullStats(path2.passives.passive4.stats);
+    pullStats(path2.abilities[ability2].stats);
+    pullStats(path2.passives.passive1.stats);
+    pullStats(path2.passives.passive2.stats);
+    pullStats(path2.passives.passive3.stats);
+    pullStats(path2.passives.passive4.stats);
 }
 //Used in updateFormulas() to read gear specific statistics and add them to the master table
 function pullGearStats() {
@@ -363,60 +386,123 @@ function pullGearStats() {
 }
 //Shorthand for looping through an elements "stat" object and adding it to the corresponding master attribute
 function pullStats(path) {
-  for (elements in path) {
-    if (elements != "RelicHPtype")
-    greatTableKnowerOfAll[elements] += path[elements]
-    else {
-    greatTableKnowerOfAll[elements] = path[elements]
+    for (elements in path) {
+      if (elements != "RelicHPtype")
+      greatTableKnowerOfAll[elements] += path[elements]
+      else {
+      greatTableKnowerOfAll[elements] = path[elements]
+      }
+    }
+}
+//THE GREAT TRAIT FUCKERY
+function updateTrait(elemID,adjustment) {
+  let traitName = readSelection(elemID).value;
+  let traitLevel = readSelection(`${elemID}Level`);
+  let traitSpentBar = readSelection(`${elemID}Spent`).style;
+  let traitIntrinsicBar = readSelection(`${elemID}Intrinsic`).style;
+  let bluePoints = 0;
+//Checks if trait selected is blank. If it is, skip pretty everything.
+if (traitName!=""){
+  let change = false;
+  if (adjustment!=null) {change=true}
+  let defaultPoints = 0;
+  let totalPoints = 0;
+  //Check if it's an intrinsic trait. If it is, expand orange bar to fit level specified
+  //Also declare how many user points are displayed on top of the intrinsics
+  if (greatTableKnowerOfAll[traitName] > 0) {
+    defaultPoints = greatTableKnowerOfAll[traitName];
+    bluePoints = +traitLevel.innerHTML - defaultPoints;
+    if (bluePoints<0) {bluePoints=0}
+  }
+  else {
+    bluePoints = +traitLevel.innerHTML;
+    //If we are swapping from an intrinsic to a non-intrinsic trait, remove points based
+    //on the amount given by the trait prior, like in game
+    if (traitName!=traitRecords[elemID].name && bluePoints!=traitRecords[elemID].spent) {
+      bluePoints += -(bluePoints - traitRecords[elemID].spent);
     }
   }
+  //If a button was used, adjust values accordingly
+  if (change===true) {
+    if (adjustment==="+"){
+      if ((bluePoints+defaultPoints)!=10) {bluePoints += 1};
+    } else if (adjustment==="-") {
+      if (bluePoints!=0) {bluePoints += -1};
+    }
+    totalPoints = bluePoints + defaultPoints;
+    if (totalPoints<defaultPoints) {totalPoints = defaultPoints}
+    else if (totalPoints>=10) {totalPoints = 10}
+    traitLevel.innerHTML = totalPoints;
+  }
+  //If no button was used, update
+  else {
+    if (bluePoints<0) {bluePoints=0}
+    traitLevel.innerHTML = bluePoints + defaultPoints;
+  }
+  traitIntrinsicBar.width = `${defaultPoints * 10}%`
+  traitSpentBar.width = `${+traitLevel.innerHTML * 10}%`
+}
+else {
+  traitLevel.innerHTML = "0";
+  traitSpentBar.width = "0%";
+  traitIntrinsicBar.width = "0%";
+}
+
+traitRecords[elemID].name = traitName;
+traitRecords[elemID].spent = bluePoints;
+//Finally, update formulas based on the newly displayed values for this trait
+updateFormulas();
 }
 
 const greatTableKnowerOfAll = {
-   "Health": 0,
-   "Health%": 0,
-   "Armor": 0,
-   "Armor%": 0,
-   "FlatDR": 0,
-   "Bulwark": 0,
-   "REdamage": 0,
-   "DMGKept": 0,
-   "RelicSpeed": 0,
-   "RelicEFF": 0,
-   "HealingEFF": 0,
-   "HP/S+": 0,
-   "HP/S%": 0,
-   "RelicHPbase": 0,
-   "RelicHPtype": 0,
-   "RelicHPtime": 0,
-   "GreyHP/S+": 0,
-   "Stamina": 0,
-   "Stamina%": 0,
-   "Stamina/S+": 0,
-   "StaminaCost": 0,
-   "StaminaPenaltyAdjustment": 0,
-   "ShieldEFF": 0,
-   "Shield": 0,
-   "Shield%/S": 0,
-   "Lifesteal": 0,
-   "MLifesteal": 0,
-   "RLifesteal": 0,
-   "Encumbrance": 0,
-   "Encumbrance%": 0,
-   "Bleed": 0,
-   "Bleed%": 0,
-   "Burn": 0,
-   "Burn%": 0,
-   "Shock": 0,
-   "Shock%": 0,
-   "Corrosive": 0,
-   "Corrosive%": 0,
-   "Blight": 0,
-   "Blight%": 0,
-   "GreyHP/S%": 0,
-   "HealingModifiers": 0,
-   "ConcLimit": 0,
-   "WeightThreshold": 0
+  "Health": 0,
+  "Health%": 0,
+  "Armor": 0,
+  "Armor%": 0,
+  "FlatDR": 0,
+  "Bulwark": 0,
+  "REdamage": 0,
+  "DMGKept": 0,
+  "RelicSpeed": 0,
+  "RelicEFF": 0,
+  "HealingEFF": 0,
+  "HP/S+": 0,
+  "HP/S%": 0,
+  "RelicHPbase": 0,
+  "RelicHPtype": 0,
+  "RelicHPtime": 0,
+  "GreyHP/S+": 0,
+  "Stamina": 0,
+  "Stamina%": 0,
+  "Stamina/S+": 0,
+  "StaminaCost": 0,
+  "StaminaPenaltyAdjustment": 0,
+  "ShieldEFF": 0,
+  "Shield": 0,
+  "Shield%/S": 0,
+  "Lifesteal": 0,
+  "MLifesteal": 0,
+  "RLifesteal": 0,
+  "Encumbrance": 0,
+  "Encumbrance%": 0,
+  "WeightThreshold": 0,
+  "Bleed": 0,
+  "Bleed%": 0,
+  "Burn": 0,
+  "Burn%": 0,
+  "Shock": 0,
+  "Shock%": 0,
+  "Corrosive": 0,
+  "Corrosive%": 0,
+  "Blight": 0,
+  "Blight%": 0,
+  "GreyHP/S%": 0,
+  "HealingModifiers": 0,
+  "ConcLimit": 0,
+  "Endurance": 0,
+  "Expertise": 0,
+  "Spirit": 0,
+  "Vigor": 0
 }
 // HELMET JSON ---------------------------
 const helmets = {
@@ -1574,7 +1660,7 @@ const armor = {
 const classInfo = {
   "": {
     "classIcon": "images/Remnant/clear.png",
-    "primePerk": "",
+    "primePerk": "Select a primary archetype",
     "primePerkDesc": "",
     "primePerkImage": "images/Remnant/clear.png",
     "abilities": {
@@ -1586,10 +1672,10 @@ const classInfo = {
       }
     },
     "classTrait": "",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 0,
+    "Spirit": 0,
+    "Vigor": 0,
     "name": "",
     "passives": {
       "passive1": {
@@ -1644,10 +1730,10 @@ const classInfo = {
       }
     },
     "classTrait": "Potency",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 2,
+    "Spirit": 2,
+    "Vigor": 1,
     "name": "Alchemist",
     "passives": {
       "passive1": {
@@ -1710,10 +1796,10 @@ const classInfo = {
       }
     },
     "classTrait": "Flash Caster",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 0,
+    "Spirit": 3,
+    "Vigor": 1,
     "name": "Archon",
     "passives": {
       "passive1": {
@@ -1766,10 +1852,10 @@ const classInfo = {
       }
     },
     "classTrait": "Strong Back",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 0,
+    "Spirit": 0,
+    "Vigor": 3,
     "name": "Challenger",
     "passives": {
       "passive1": {
@@ -1826,10 +1912,10 @@ const classInfo = {
       }
     },
     "classTrait": "Fortify",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 1,
+    "Spirit": 0,
+    "Vigor": 2,
     "name": "Engineer",
     "passives": {
       "passive1": {
@@ -1882,10 +1968,10 @@ const classInfo = {
       }
     },
     "classTrait": "Swiftness",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 1,
+    "Spirit": 2,
+    "Vigor": 0,
     "name": "Explorer",
     "passives": {
       "passive1": {
@@ -1936,10 +2022,10 @@ const classInfo = {
       }
     },
     "classTrait": "Ammo Reserves",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 2,
+    "Spirit": 0,
+    "Vigor": 2,
     "name": "Gunslinger",
     "passives": {
       "passive1": {
@@ -1994,10 +2080,10 @@ const classInfo = {
       }
     },
     "classTrait": "Kinship",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 3,
+    "Spirit": 0,
+    "Vigor": 1,
     "name": "Handler",
     "passives": {
       "passive1": {
@@ -2048,10 +2134,10 @@ const classInfo = {
       }
     },
     "classTrait": "Longshot",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 2,
+    "Spirit": 0,
+    "Vigor": 1,
     "name": "Hunter",
     "passives": {
       "passive1": {
@@ -2104,10 +2190,10 @@ const classInfo = {
       }
     },
     "classTrait": "Untouchable",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 4,
+    "Expertise": 0,
+    "Spirit": 1,
+    "Vigor": 0,
     "name": "Invader",
     "passives": {
       "passive1": {
@@ -2167,10 +2253,10 @@ const classInfo = {
       }
     },
     "classTrait": "Triage",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 2,
+    "Spirit": 1,
+    "Vigor": 2,
     "name": "Medic",
     "passives": {
       "passive1": {
@@ -2225,10 +2311,10 @@ const classInfo = {
       }
     },
     "classTrait": "Affliction",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 2,
+    "Spirit": 2,
+    "Vigor": 0,
     "name": "Ritualist",
     "passives": {
       "passive1": {
@@ -2281,10 +2367,10 @@ const classInfo = {
       }
     },
     "classTrait": "Regrowth",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 1,
+    "Spirit": 3,
+    "Vigor": 1,
     "name": "Summoner",
     "passives": {
       "passive1": {
@@ -2317,139 +2403,163 @@ const classInfo = {
 }
 //class title combos: diehard bulldog etc
 const titleCombos = {
-   "-Select--Select-": "---",
-   "AlchemistChallenger": "SPIRITED CONSERVATOR",
-   "AlchemistExplorer": "SPIRITED APOTHECARY",
-   "AlchemistGunslinger": "SPIRITED LEADBRINGER",
-   "AlchemistHandler": "SPIRITED GREY WOLF",
-   "AlchemistHunter": "SPIRITED ISOLATOR",
-   "AlchemistMedic": "SPIRITED SHAMAN",
-   "AlchemistSummoner": "SPIRITED CONJURER",
-   "AlchemistEngineer": "SPIRITED ARTIFICER",
-   "AlchemistInvader": "SPIRITED TRICKSTER",
-   "AlchemistArchon": "SPIRITED THAUMATURGE",
-   "AlchemistRitualist": "SPIRITED DIABOLIST",
-   "ChallengerAlchemist": "DIE HARD CONSERVATOR",
-   "ChallengerExplorer": "DIE HARD CRUSADER",
-   "ChallengerGunslinger": "DIE HARD MERCENARY",
-   "ChallengerHandler": "DIE HARD BULLDOG",
-   "ChallengerHunter": "DIE HARD SOLDIER",
-   "ChallengerMedic": "DIE HARD GUARDIAN",
-   "ChallengerSummoner": "DIE HARD OVERSEER",
-   "ChallengerEngineer": "DIE HARD SENTINEL",
-   "ChallengerInvader": "DIE HARD DESTROYER",
-   "ChallengerArchon": "DIE HARD ARBITER",
-   "ChallengerRitualist": "DIE HARD WARLORD",
-   "ExplorerAlchemist": "LUCKY APOTHECARY",
-   "ExplorerChallenger": "LUCKY CRUSADER",
-   "ExplorerGunslinger": "LUCKY RAIDER",
-   "ExplorerHandler": "LUCKY BLOODHOUND",
-   "ExplorerHunter": "LUCKY OUTRIDER",
-   "ExplorerMedic": "LUCKY SURVIVALIST",
-   "ExplorerSummoner": "LUCKY HERALD",
-   "ExplorerEngineer": "LUCKY PIONEER",
-   "ExplorerInvader": "LUCKY MARAUDER",
-   "ExplorerArchon": "LUCKY TRAILBLAZER",
-   "ExplorerRitualist": "LUCKY OUTCAST",
-   "GunslingerAlchemist": "LOADED LEADBRINGER",
-   "GunslingerChallenger": "LOADED MERCENARY",
-   "GunslingerExplorer": "LOADED RAIDER",
-   "GunslingerHandler": "LOADED RIDGEBACK",
-   "GunslingerHunter": "LOADED SHARPSHOOTER",
-   "GunslingerMedic": "LOADED PEACEMAKER",
-   "GunslingerSummoner": "LOADED TORMENTOR",
-   "GunslingerEngineer": "LOADED BARRELSMITH",
-   "GunslingerInvader": "LOADED PROFESSIONAL",
-   "GunslingerArchon": "LOADED FIREBRAND",
-   "GunslingerRitualist": "LOADED PUNISHER",
-   "HandlerAlchemist": "BONDED GREY WOLF",
-   "HandlerChallenger": "BONDED BULLDOG",
-   "HandlerExplorer": "BONDED BLOODHOUND",
-   "HandlerGunslinger": "BONDED RIDGEBACK",
-   "HandlerHunter": "BONDED PREDATOR",
-   "HandlerMedic": "BONDED SHEPHERD",
-   "HandlerSummoner": "BONDED BEASTMASTER",
-   "HandlerEngineer": "BONDED ROUGHNECK",
-   "HandlerInvader": "BONDED PROWLER",
-   "HandlerArchon": "BONDED HARRIER",
-   "HandlerRitualist": "BONDED HELLHOUND",
-   "HunterAlchemist": "DEAD TO RIGHTS ISOLATOR",
-   "HunterChallenger": "DEAD TO RIGHTS SOLDIER",
-   "HunterExplorer": "DEAD TO RIGHTS OUTRIDER",
-   "HunterGunslinger": "DEAD TO RIGHTS SHARPSHOOTER",
-   "HunterHandler": "DEAD TO RIGHTS PREDATOR",
-   "HunterMedic": "DEAD TO RIGHTS RANGER",
-   "HunterSummoner": "DEAD TO RIGHTS PAINBRINGER",
-   "HunterEngineer": "DEAD TO RIGHTS TACTICIAN",
-   "HunterInvader": "DEAD TO RIGHTS ASSASSIN",
-   "HunterArchon": "DEAD TO RIGHTS VANQUISHER",
-   "HunterRitualist": "DEAD TO RIGHTS HEADHUNTER",
-   "MedicAlchemist": "REGENERATOR SHAMAN",
-   "MedicChallenger": "REGENERATOR GUARDIAN",
-   "MedicExplorer": "REGENERATOR SURVIVALIST",
-   "MedicGunslinger": "REGENERATOR PEACEMAKER",
-   "MedicHandler": "REGENERATOR SHEPHERD",
-   "MedicHunter": "REGENERATOR RANGER",
-   "MedicSummoner": "REGENERATOR DEFILER",
-   "MedicEngineer": "REGENERATOR SPECIALIST",
-   "MedicInvader": "REGENERATOR BLOODLETTER",
-   "MedicArchon": "REGENERATOR VIRTUOSO",
-   "MedicRitualist": "REGENERATOR PLAGUE DOCTOR",
-   "SummonerAlchemist": "RUTHLESS CONJURER",
-   "SummonerChallenger": "RUTHLESS OVERSEER",
-   "SummonerExplorer": "RUTHLESS HERALD",
-   "SummonerGunslinger": "RUTHLESS TORMENTOR",
-   "SummonerHandler": "RUTHLESS BEASTMASTER",
-   "SummonerHunter": "RUTHLESS PAINBRINGER",
-   "SummonerMedic": "RUTHLESS DEFILER",
-   "SummonerEngineer": "RUTHLESS MASTERMIND",
-   "SummonerInvader": "RUTHLESS TYRANT",
-   "SummonerArchon": "RUTHLESS INVOKER",
-   "SummonerRitualist": "RUTHLESS GRAVELORD",
-   "EngineerAlchemist": "HIGH TECH ARTIFICER",
-   "EngineerChallenger": "HIGH TECH SENTINEL",
-   "EngineerExplorer": "HIGH TECH PIONEER",
-   "EngineerGunslinger": "HIGH TECH BARRELSMITH",
-   "EngineerHandler": "HIGH TECH ROUGHNECK",
-   "EngineerHunter": "HIGH TECH TACTICIAN",
-   "EngineerMedic": "HIGH TECH SPECIALIST",
-   "EngineerSummoner": "HIGH TECH MASTERMIND",
-   "EngineerInvader": "HIGH TECH OPERATOR",
-   "EngineerArchon": "HIGH TECH LUMINARY",
-   "EngineerRitualist": "HIGH TECH WRECKER",
-   "InvaderAlchemist": "SHADOW TRICKSTER",
-   "InvaderChallenger": "SHADOW DESTROYER",
-   "InvaderExplorer": "SHADOW MARAUDER",
-   "InvaderGunslinger": "SHADOW PROFESSIONAL",
-   "InvaderHandler": "SHADOW PROWLER",
-   "InvaderHunter": "SHADOW ASSASSIN",
-   "InvaderMedic": "SHADOW BLOODLETTER",
-   "InvaderSummoner": "SHADOW TYRANT",
-   "InvaderEngineer": "SHADOW OPERATOR",
-   "InvaderArchon": "SHADOW RUINER",
-   "InvaderRitualist": "SHADOW REAPER",
-   "ArchonAlchemist": "TEMPEST THAUMATURGE",
-   "ArchonChallenger": "TEMPEST ARBITER",
-   "ArchonExplorer": "TEMPEST TRAILBLAZER",
-   "ArchonGunslinger": "TEMPEST FIREBRAND",
-   "ArchonHandler": "TEMPEST HARRIER",
-   "ArchonHunter": "TEMPEST VANQUISHER",
-   "ArchonMedic": "TEMPEST VIRTUOSO",
-   "ArchonSummoner": "TEMPEST INVOKER",
-   "ArchonEngineer": "TEMPEST LUMINARY",
-   "ArchonInvader": "TEMPEST RUINER",
-   "ArchonRitualist": "TEMPEST HARBINGER",
-   "RitualistAlchemist": "VILE DIABOLIST",
-   "RitualistChallenger": "VILE WARLORD",
-   "RitualistExplorer": "VILE OUTCAST",
-   "RitualistGunslinger": "VILE PUNISHER",
-   "RitualistHandler": "VILE HELLHOUND",
-   "RitualistHunter": "VILE HEADHUNTER",
-   "RitualistMedic": "VILE PLAGUE DOCTOR",
-   "RitualistSummoner": "VILE GRAVELORD",
-   "RitualistEngineer": "VILE WRECKER",
-   "RitualistInvader": "VILE REAPER",
-   "RitualistArchon": "VILE HARBINGER"
+  "Alchemist": "",
+  "Archon": "",
+  "Challenger": "",
+  "Engineer": "",
+  "Explorer": "",
+  "Gunslinger": "",
+  "Handler": "",
+  "Hunter": "",
+  "Invader": "",
+  "Medic": "",
+  "Ritualist": "",
+  "Summoner": "",
+  "AlchemistAlchemist": "If you see this, report to Vash exactly how you did it",
+  "ArchonArchon": "If you see this, report to Vash exactly how you did it",
+  "ChallengerChallenger": "If you see this, report to Vash exactly how you did it",
+  "EngineerEngineer": "If you see this, report to Vash exactly how you did it",
+  "ExplorerExplorer": "If you see this, report to Vash exactly how you did it",
+  "GunslingerGunslinger": "If you see this, report to Vash exactly how you did it",
+  "HandlerHandler": "If you see this, report to Vash exactly how you did it",
+  "HunterHunter": "If you see this, report to Vash exactly how you did it",
+  "InvaderInvader": "If you see this, report to Vash exactly how you did it",
+  "MedicMedic": "If you see this, report to Vash exactly how you did it",
+  "RitualistRitualist": "If you see this, report to Vash exactly how you did it",
+  "SummonerSummoner": "If you see this, report to Vash exactly how you did it",
+  "": "---",
+  "AlchemistChallenger": "SPIRITED CONSERVATOR",
+  "AlchemistExplorer": "SPIRITED APOTHECARY",
+  "AlchemistGunslinger": "SPIRITED LEADBRINGER",
+  "AlchemistHandler": "SPIRITED GREY WOLF",
+  "AlchemistHunter": "SPIRITED ISOLATOR",
+  "AlchemistMedic": "SPIRITED SHAMAN",
+  "AlchemistSummoner": "SPIRITED CONJURER",
+  "AlchemistEngineer": "SPIRITED ARTIFICER",
+  "AlchemistInvader": "SPIRITED TRICKSTER",
+  "AlchemistArchon": "SPIRITED THAUMATURGE",
+  "AlchemistRitualist": "SPIRITED DIABOLIST",
+  "ChallengerAlchemist": "DIE HARD CONSERVATOR",
+  "ChallengerExplorer": "DIE HARD CRUSADER",
+  "ChallengerGunslinger": "DIE HARD MERCENARY",
+  "ChallengerHandler": "DIE HARD BULLDOG",
+  "ChallengerHunter": "DIE HARD SOLDIER",
+  "ChallengerMedic": "DIE HARD GUARDIAN",
+  "ChallengerSummoner": "DIE HARD OVERSEER",
+  "ChallengerEngineer": "DIE HARD SENTINEL",
+  "ChallengerInvader": "DIE HARD DESTROYER",
+  "ChallengerArchon": "DIE HARD ARBITER",
+  "ChallengerRitualist": "DIE HARD WARLORD",
+  "ExplorerAlchemist": "LUCKY APOTHECARY",
+  "ExplorerChallenger": "LUCKY CRUSADER",
+  "ExplorerGunslinger": "LUCKY RAIDER",
+  "ExplorerHandler": "LUCKY BLOODHOUND",
+  "ExplorerHunter": "LUCKY OUTRIDER",
+  "ExplorerMedic": "LUCKY SURVIVALIST",
+  "ExplorerSummoner": "LUCKY HERALD",
+  "ExplorerEngineer": "LUCKY PIONEER",
+  "ExplorerInvader": "LUCKY MARAUDER",
+  "ExplorerArchon": "LUCKY TRAILBLAZER",
+  "ExplorerRitualist": "LUCKY OUTCAST",
+  "GunslingerAlchemist": "LOADED LEADBRINGER",
+  "GunslingerChallenger": "LOADED MERCENARY",
+  "GunslingerExplorer": "LOADED RAIDER",
+  "GunslingerHandler": "LOADED RIDGEBACK",
+  "GunslingerHunter": "LOADED SHARPSHOOTER",
+  "GunslingerMedic": "LOADED PEACEMAKER",
+  "GunslingerSummoner": "LOADED TORMENTOR",
+  "GunslingerEngineer": "LOADED BARRELSMITH",
+  "GunslingerInvader": "LOADED PROFESSIONAL",
+  "GunslingerArchon": "LOADED FIREBRAND",
+  "GunslingerRitualist": "LOADED PUNISHER",
+  "HandlerAlchemist": "BONDED GREY WOLF",
+  "HandlerChallenger": "BONDED BULLDOG",
+  "HandlerExplorer": "BONDED BLOODHOUND",
+  "HandlerGunslinger": "BONDED RIDGEBACK",
+  "HandlerHunter": "BONDED PREDATOR",
+  "HandlerMedic": "BONDED SHEPHERD",
+  "HandlerSummoner": "BONDED BEASTMASTER",
+  "HandlerEngineer": "BONDED ROUGHNECK",
+  "HandlerInvader": "BONDED PROWLER",
+  "HandlerArchon": "BONDED HARRIER",
+  "HandlerRitualist": "BONDED HELLHOUND",
+  "HunterAlchemist": "DEAD TO RIGHTS ISOLATOR",
+  "HunterChallenger": "DEAD TO RIGHTS SOLDIER",
+  "HunterExplorer": "DEAD TO RIGHTS OUTRIDER",
+  "HunterGunslinger": "DEAD TO RIGHTS SHARPSHOOTER",
+  "HunterHandler": "DEAD TO RIGHTS PREDATOR",
+  "HunterMedic": "DEAD TO RIGHTS RANGER",
+  "HunterSummoner": "DEAD TO RIGHTS PAINBRINGER",
+  "HunterEngineer": "DEAD TO RIGHTS TACTICIAN",
+  "HunterInvader": "DEAD TO RIGHTS ASSASSIN",
+  "HunterArchon": "DEAD TO RIGHTS VANQUISHER",
+  "HunterRitualist": "DEAD TO RIGHTS HEADHUNTER",
+  "MedicAlchemist": "REGENERATOR SHAMAN",
+  "MedicChallenger": "REGENERATOR GUARDIAN",
+  "MedicExplorer": "REGENERATOR SURVIVALIST",
+  "MedicGunslinger": "REGENERATOR PEACEMAKER",
+  "MedicHandler": "REGENERATOR SHEPHERD",
+  "MedicHunter": "REGENERATOR RANGER",
+  "MedicSummoner": "REGENERATOR DEFILER",
+  "MedicEngineer": "REGENERATOR SPECIALIST",
+  "MedicInvader": "REGENERATOR BLOODLETTER",
+  "MedicArchon": "REGENERATOR VIRTUOSO",
+  "MedicRitualist": "REGENERATOR PLAGUE DOCTOR",
+  "SummonerAlchemist": "RUTHLESS CONJURER",
+  "SummonerChallenger": "RUTHLESS OVERSEER",
+  "SummonerExplorer": "RUTHLESS HERALD",
+  "SummonerGunslinger": "RUTHLESS TORMENTOR",
+  "SummonerHandler": "RUTHLESS BEASTMASTER",
+  "SummonerHunter": "RUTHLESS PAINBRINGER",
+  "SummonerMedic": "RUTHLESS DEFILER",
+  "SummonerEngineer": "RUTHLESS MASTERMIND",
+  "SummonerInvader": "RUTHLESS TYRANT",
+  "SummonerArchon": "RUTHLESS INVOKER",
+  "SummonerRitualist": "RUTHLESS GRAVELORD",
+  "EngineerAlchemist": "HIGH TECH ARTIFICER",
+  "EngineerChallenger": "HIGH TECH SENTINEL",
+  "EngineerExplorer": "HIGH TECH PIONEER",
+  "EngineerGunslinger": "HIGH TECH BARRELSMITH",
+  "EngineerHandler": "HIGH TECH ROUGHNECK",
+  "EngineerHunter": "HIGH TECH TACTICIAN",
+  "EngineerMedic": "HIGH TECH SPECIALIST",
+  "EngineerSummoner": "HIGH TECH MASTERMIND",
+  "EngineerInvader": "HIGH TECH OPERATOR",
+  "EngineerArchon": "HIGH TECH LUMINARY",
+  "EngineerRitualist": "HIGH TECH WRECKER",
+  "InvaderAlchemist": "SHADOW TRICKSTER",
+  "InvaderChallenger": "SHADOW DESTROYER",
+  "InvaderExplorer": "SHADOW MARAUDER",
+  "InvaderGunslinger": "SHADOW PROFESSIONAL",
+  "InvaderHandler": "SHADOW PROWLER",
+  "InvaderHunter": "SHADOW ASSASSIN",
+  "InvaderMedic": "SHADOW BLOODLETTER",
+  "InvaderSummoner": "SHADOW TYRANT",
+  "InvaderEngineer": "SHADOW OPERATOR",
+  "InvaderArchon": "SHADOW RUINER",
+  "InvaderRitualist": "SHADOW REAPER",
+  "ArchonAlchemist": "TEMPEST THAUMATURGE",
+  "ArchonChallenger": "TEMPEST ARBITER",
+  "ArchonExplorer": "TEMPEST TRAILBLAZER",
+  "ArchonGunslinger": "TEMPEST FIREBRAND",
+  "ArchonHandler": "TEMPEST HARRIER",
+  "ArchonHunter": "TEMPEST VANQUISHER",
+  "ArchonMedic": "TEMPEST VIRTUOSO",
+  "ArchonSummoner": "TEMPEST INVOKER",
+  "ArchonEngineer": "TEMPEST LUMINARY",
+  "ArchonInvader": "TEMPEST RUINER",
+  "ArchonRitualist": "TEMPEST HARBINGER",
+  "RitualistAlchemist": "VILE DIABOLIST",
+  "RitualistChallenger": "VILE WARLORD",
+  "RitualistExplorer": "VILE OUTCAST",
+  "RitualistGunslinger": "VILE PUNISHER",
+  "RitualistHandler": "VILE HELLHOUND",
+  "RitualistHunter": "VILE HEADHUNTER",
+  "RitualistMedic": "VILE PLAGUE DOCTOR",
+  "RitualistSummoner": "VILE GRAVELORD",
+  "RitualistEngineer": "VILE WRECKER",
+  "RitualistInvader": "VILE REAPER",
+  "RitualistArchon": "VILE HARBINGER"
 }
 //amulets
 const amulets = {
@@ -4879,6 +4989,7 @@ const traits = {
     "name": "",
     "property": "",
     "level": {
+      "0": 0,
       "1": 0,
       "2": 0,
       "3": 0,
@@ -4895,6 +5006,7 @@ const traits = {
     "name": "Barkskin",
     "property": "FlatDR",
     "level": {
+      "0": 0,
       "1": 0.01,
       "2": 0.02,
       "3": 0.03,
@@ -4911,6 +5023,7 @@ const traits = {
     "name": "Blood Bond",
     "property": "DMGKept",
     "level": {
+      "0": 0,
       "1": -0.01,
       "2": -0.02,
       "3": -0.03,
@@ -4943,6 +5056,7 @@ const traits = {
     "name": "Endurance",
     "property": "Stamina",
     "level": {
+      "0": 0,
       "1": 3,
       "2": 6,
       "3": 9,
@@ -4959,6 +5073,7 @@ const traits = {
     "name": "Fortify",
     "property": "Armor%",
     "level": {
+      "0": 0,
       "1": 0.05,
       "2": 0.1,
       "3": 0.15,
@@ -4975,6 +5090,7 @@ const traits = {
     "name": "Glutton",
     "property": "RelicSpeed",
     "level": {
+      "0": 0,
       "1": -0.03,
       "2": -0.06,
       "3": -0.09,
@@ -4991,6 +5107,7 @@ const traits = {
     "name": "Recovery",
     "property": "Stamina/S+",
     "level": {
+      "0": 0,
       "1": 3,
       "2": 6,
       "3": 9,
@@ -5007,6 +5124,7 @@ const traits = {
     "name": "Regrowth",
     "property": "HP/S+",
     "level": {
+      "0": 0,
       "1": 0.15,
       "2": 0.3,
       "3": 0.45,
@@ -5023,6 +5141,7 @@ const traits = {
     "name": "Siphoner",
     "property": "Lifesteal",
     "level": {
+      "0": 0,
       "1": 0.003,
       "2": 0.006,
       "3": 0.009000000000000001,
@@ -5039,6 +5158,7 @@ const traits = {
     "name": "Strong Back",
     "property": "WeightThreshold",
     "level": {
+      "0": 0,
       "1": 1.5,
       "2": 3,
       "3": 4.5,
@@ -5055,6 +5175,7 @@ const traits = {
     "name": "Triage",
     "property": "HealingEFF",
     "level": {
+      "0": 0,
       "1": 0.05,
       "2": 0.1,
       "3": 0.15,
@@ -5071,6 +5192,7 @@ const traits = {
     "name": "Vigor",
     "property": "Health",
     "level": {
+      "0": 0,
       "1": 3,
       "2": 6,
       "3": 9,
@@ -5087,6 +5209,7 @@ const traits = {
     "name": "Dark Pact",
     "property": "GreyHP/S%",
     "level": {
+      "0": 0,
       "1": -0.09,
       "2": -0.18,
       "3": -0.27,
@@ -5103,6 +5226,7 @@ const traits = {
     "name": "Expertise",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5119,6 +5243,7 @@ const traits = {
     "name": "Spirit",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5135,6 +5260,7 @@ const traits = {
     "name": "Ammo Reserves",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5151,6 +5277,7 @@ const traits = {
     "name": "Kinship",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5167,6 +5294,7 @@ const traits = {
     "name": "Swiftness",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5183,6 +5311,7 @@ const traits = {
     "name": "Longshot",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5199,6 +5328,7 @@ const traits = {
     "name": "Potency",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5215,6 +5345,7 @@ const traits = {
     "name": "Untouchable",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5231,6 +5362,7 @@ const traits = {
     "name": "Flash Caster",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5247,6 +5379,7 @@ const traits = {
     "name": "Amplitude",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5263,6 +5396,7 @@ const traits = {
     "name": "Arcane Strike",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5279,6 +5413,7 @@ const traits = {
     "name": "Fitness",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5295,6 +5430,7 @@ const traits = {
     "name": "Footwork",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5311,6 +5447,7 @@ const traits = {
     "name": "Handling",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5327,6 +5464,7 @@ const traits = {
     "name": "Resonance",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5343,6 +5481,7 @@ const traits = {
     "name": "Revivalist",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5359,6 +5498,7 @@ const traits = {
     "name": "Rugged",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5375,6 +5515,7 @@ const traits = {
     "name": "Scholar",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5391,6 +5532,7 @@ const traits = {
     "name": "Shadeskin",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5407,6 +5549,7 @@ const traits = {
     "name": "Wayfarer",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5423,6 +5566,7 @@ const traits = {
     "name": "Affliction",
     "property": null,
     "level": {
+      "0": null,
       "1": null,
       "2": null,
       "3": null,
@@ -5436,7 +5580,88 @@ const traits = {
     }
   }
 }
-
+const traitRecords = {
+  "trait1": {
+    "name": "",
+    "spent": 0
+  },
+  "trait2": {
+    "name": "",
+    "spent": 0
+  },
+  "trait3": {
+    "name": "",
+    "spent": 0
+  },
+  "trait4": {
+    "name": "",
+    "spent": 0
+  },
+  "trait5": {
+    "name": "",
+    "spent": 0
+  },
+  "trait6": {
+    "name": "",
+    "spent": 0
+  },
+  "trait7": {
+    "name": "",
+    "spent": 0
+  },
+  "trait8": {
+    "name": "",
+    "spent": 0
+  },
+  "trait9": {
+    "name": "",
+    "spent": 0
+  },
+  "trait10": {
+    "name": "",
+    "spent": 0
+  },
+  "trait11": {
+    "name": "",
+    "spent": 0
+  },
+  "trait12": {
+    "name": "",
+    "spent": 0
+  },
+  "trait13": {
+    "name": "",
+    "spent": 0
+  },
+  "trait14": {
+    "name": "",
+    "spent": 0
+  },
+  "trait15": {
+    "name": "",
+    "spent": 0
+  },
+  "trait16": {
+    "name": "",
+    "spent": 0
+  },
+  "trait17": {
+    "name": "",
+    "spent": 0
+  },
+  "trait18": {
+    "name": "",
+    "spent": 0
+  },
+  "trait19": {
+    "name": "",
+    "spent": 0
+  },
+  "trait20": {
+    "name": "",
+    "spent": 0
+  },
+}
 const fragments = {
   "": {
     "custom": null,
