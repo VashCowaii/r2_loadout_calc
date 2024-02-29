@@ -18,23 +18,61 @@ function populateGear(elem_ID,collection) {
 }
 //Everything I want to load by default, without event triggers
 document.addEventListener("DOMContentLoaded", function() {
-   populateGear("helmetChoice",helmets);
-   populateGear("chestChoice",chests);
-   populateGear("legChoice",legs);
-   populateGear("handChoice",hands);
-   populateGear("archetype1",classInfo);
-   populateGear("archetype2",classInfo);
-   populateGear("amulet",amulets);
-   populateGear("ring1",rings);
-   populateGear("ring2",rings);
-   populateGear("ring3",rings);
-   populateGear("ring4",rings);
-   populateGear("relic",relics);
-   populateGear("fragment1",fragments);
-   populateGear("fragment2",fragments);
-   populateGear("fragment3",fragments);
-   populateGear("trait1",traits);
+  populateGear("helmetChoice",helmets);
+  populateGear("chestChoice",chests);
+  populateGear("legChoice",legs);
+  populateGear("handChoice",hands);
+  populateGear("archetype1",classInfo);
+  populateGear("archetype2",classInfo);
+  populateGear("amulet",amulets);
+  populateGear("ring1",rings);
+  populateGear("ring2",rings);
+  populateGear("ring3",rings);
+  populateGear("ring4",rings);
+  populateGear("relic",relics);
+  populateGear("fragment1",fragments);
+  populateGear("fragment2",fragments);
+  populateGear("fragment3",fragments);
+  populateGear("trait1",traits);
+  populateGear("primary",primary);
+  populateGear("melee",melee);
+  populateGear("secondary",secondary);
+  populateGear("primaryMutator",rangedMutators);
+  populateGear("meleeMutator",meleeMutators);
+  populateGear("secondaryMutator",rangedMutators);
+  populateGear("primaryMod",rangedMods);
+  // populateGear("meleeMod",meleeMods);
+  populateGear("secondaryMod",rangedMods);
 })
+
+//Triggers whenever a new weapon is selected
+function updateWeapon(type) {
+  let selectedWeapon = readSelection(type);
+  //Update accessory image, description, and then refresh formulas.
+  readSelection(`${type}Image`).src=weapons[type][selectedWeapon.value].image;
+  // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  updateFormulas();
+}
+
+//Triggers whenever a new mutator is selected
+function updateMutator(type) {
+  let selectedMutator = readSelection(`${type}Mutator`);
+  //Update accessory image, description, and then refresh formulas.
+  readSelection(`${type}MutatorDesc`).innerHTML=mutators[`${type}Mutators`][selectedMutator.value].desc;
+  // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  updateFormulas();
+}
+
+//Triggers whenever a new mod is selected
+function updateMod(type) {
+  let selectedMod = readSelection(`${type}Mod`);
+  //Update accessory image, description, and then refresh formulas.
+  readSelection(`${type}ModDesc`).innerHTML=mods[`${type}Mods`][selectedMod.value].desc;
+  readSelection(`${type}ModImage`).src=mods[`${type}Mods`][selectedMod.value].image;
+  // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  updateFormulas();
+}
+
 //Update armor related information
 function updateArmor(armorPiece) {
    elem_ID = armorPiece + "Choice";
@@ -168,6 +206,8 @@ function updateFormulas() {
   for(elements in greatTableKnowerOfAll) {greatTableKnowerOfAll[elements]=0;}
 //----------TRAITS--------------------------------------------------------------
   pullTraits();
+//----------WEAPONS-------------------------------------------------------------
+  pullWeapons();
 //----------BASICS COLUMN-------------------------------------------------------
   pullArmorStats();
   pullGearStats();
@@ -308,6 +348,34 @@ function updateDisplay (elemID,statistic,rounding,percent) {
   else {percentage=percent}
   readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
 }
+
+//Used in updateFormulas() to fill weapon/mod/mutator property values on the master table
+function pullWeapons () {
+  let primaryWeapon = readSelection("primary");
+  let primaryWeaponMutator = readSelection("primaryMutator");
+  let primaryWeaponMod = readSelection("primaryMod");
+
+  let meleeWeapon = readSelection("melee");
+  let meleeWeaponMutator = readSelection("meleeMutator");
+  // let meleeWeaponMod = readSelection("meleeMod"); //not yet
+
+  let secondaryWeapon = readSelection("secondary");
+  let secondaryWeaponMutator = readSelection("secondaryMutator");
+  let secondaryWeaponMod = readSelection("secondaryMod");
+
+  pullStats(weapons.primary[primaryWeapon.value].stats);
+  pullStats(weapons.melee[meleeWeapon.value].stats);
+  pullStats(weapons.secondary[secondaryWeapon.value].stats);
+
+  pullStats(mutators.primaryMutators[primaryWeaponMutator.value].stats);
+  pullStats(mutators.meleeMutators[meleeWeaponMutator.value].stats);
+  pullStats(mutators.secondaryMutators[secondaryWeaponMutator.value].stats);
+
+  pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
+  // pullStats(mods.meleeMods[meleeWeaponMod.value].stats); //not yet
+  pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
+}
+
 //Used in updateFormulas() to fill trait property values on the master table
 function pullTraits () {
   //Yoink all active trait values
@@ -401,23 +469,36 @@ function updateTrait(elemID,adjustment) {
   let traitSpentBar = readSelection(`${elemID}Spent`).style;
   let traitIntrinsicBar = readSelection(`${elemID}Intrinsic`).style;
   let bluePoints = 0;
-//Checks if trait selected is blank. If it is, skip pretty everything.
+  let defaultPoints = 0;
+//Checks if trait selected is blank. If it is, skip pretty much everything.
 if (traitName!=""){
   let change = false;
   if (adjustment!=null) {change=true}
-  let defaultPoints = 0;
   let totalPoints = 0;
   //Check if it's an intrinsic trait. If it is, expand orange bar to fit level specified
   //Also declare how many user points are displayed on top of the intrinsics
   if (greatTableKnowerOfAll[traitName] > 0) {
     defaultPoints = greatTableKnowerOfAll[traitName];
-    bluePoints = +traitLevel.innerHTML - defaultPoints;
-    if (bluePoints<0) {bluePoints=0}
+    // bluePoints = +traitLevel.innerHTML - defaultPoints;
+    // if (bluePoints<0) {bluePoints=0}
+
+    bluePoints = +traitLevel.innerHTML;
+    //If swapping from intrinsic to another intrinsic trait, adjust value based on prior
+    //spent points AS WELL AS prior intrinsic points, like in game.
+    if (traitName!=traitRecords[elemID].name && bluePoints!=traitRecords[elemID].spent) {
+      let intrinsicAdjustment = defaultPoints - traitRecords[elemID].default;
+      if (intrinsicAdjustment<0){intrinsicAdjustment=0}
+      bluePoints += -(bluePoints - traitRecords[elemID].spent) - intrinsicAdjustment;
+    }
+    else {
+      bluePoints += -defaultPoints;
+      if (bluePoints<0) {bluePoints=0}
+    }
   }
   else {
     bluePoints = +traitLevel.innerHTML;
-    //If we are swapping from an intrinsic to a non-intrinsic trait, remove points based
-    //on the amount given by the trait prior, like in game
+    //If we are swapping from an intrinsic to a NON-intrinsic trait, remove points based
+    //on the amount given by the trait prior, like in game.
     if (traitName!=traitRecords[elemID].name && bluePoints!=traitRecords[elemID].spent) {
       bluePoints += -(bluePoints - traitRecords[elemID].spent);
     }
@@ -447,8 +528,8 @@ else {
   traitSpentBar.width = "0%";
   traitIntrinsicBar.width = "0%";
 }
-
 traitRecords[elemID].name = traitName;
+traitRecords[elemID].default = defaultPoints;
 traitRecords[elemID].spent = bluePoints;
 //Finally, update formulas based on the newly displayed values for this trait
 updateFormulas();
@@ -5583,82 +5664,102 @@ const traits = {
 const traitRecords = {
   "trait1": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait2": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait3": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait4": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait5": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait6": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait7": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait8": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait9": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait10": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait11": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait12": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait13": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait14": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait15": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait16": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait17": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait18": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait19": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
   "trait20": {
     "name": "",
+    "default": 0,
     "spent": 0
   },
 }
@@ -6003,4 +6104,1436 @@ const fragments = {
     "custom": null,
     "stats": {}
   }
+}
+const primary = {
+  "": {
+    "name": "",
+    "slot": "Primary",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Alpha / Omega": {
+    "name": "Alpha / Omega",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/K09B7HA.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Aphelion": {
+    "name": "Aphelion",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/T8cOqup.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "AS-10 \"Bulldog\"": {
+    "name": "AS-10 \"Bulldog\"",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/2QjX1cc.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Blackmaw AR-47": {
+    "name": "Blackmaw AR-47",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/8BulDTG.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Chicago Typewriter": {
+    "name": "Chicago Typewriter",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/LfVagOA.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Coach Gun": {
+    "name": "Coach Gun",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/vbdeHPF.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Crescent Moon": {
+    "name": "Crescent Moon",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/E2pTfLu.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Crossbow": {
+    "name": "Crossbow",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U8ffNlf.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Deceit": {
+    "name": "Deceit",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/0Xab9GS.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ford's Scattergun": {
+    "name": "Ford's Scattergun",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bYVHFE0.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Huntmaster M1": {
+    "name": "Huntmaster M1",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bD69k24.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Merciless": {
+    "name": "Merciless",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/bKiLETg.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Monarch": {
+    "name": "Monarch",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U8RyR87.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Nightfall": {
+    "name": "Nightfall",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/KIKHC8j.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Plasma Cutter": {
+    "name": "Plasma Cutter",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/U5SZR7N.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Pulse Rifle": {
+    "name": "Pulse Rifle",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/WvnbBeE.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Repulsor": {
+    "name": "Repulsor",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/R5xX0lR.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Royal Hunting Bow": {
+    "name": "Royal Hunting Bow",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/qIuYA7p.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rusty Lever Action": {
+    "name": "Rusty Lever Action",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/ME75DJd.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sagittarius": {
+    "name": "Sagittarius",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/DX9g5wy.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Savior": {
+    "name": "Savior",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/5EbRPEP.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sparkfire": {
+    "name": "Sparkfire",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/8Ih2RHZ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sporebloom": {
+    "name": "Sporebloom",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/vH9n0QZ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Starkiller": {
+    "name": "Starkiller",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/WbIBKbg.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Twisted Arbalest": {
+    "name": "Twisted Arbalest",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/4mv86u2.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Widowmaker": {
+    "name": "Widowmaker",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/ZdhL2Gi.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Wrangler 1860": {
+    "name": "Wrangler 1860",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/CcgGPGe.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "XMG57 \"Bonesaw\"": {
+    "name": "XMG57 \"Bonesaw\"",
+    "slot": "Primary",
+    "image": "https://i.imgur.com/iThO1Ae.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}
+const melee = {
+  "": {
+    "name": "",
+    "slot": "Melee",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Abyssal Hook": {
+    "name": "Abyssal Hook",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/C6WSwg5.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Assasin's Dagger": {
+    "name": "Assasin's Dagger",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/tUoxIjq.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Atom Smasher": {
+    "name": "Atom Smasher",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/B1sxeUO.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Atom Splitter": {
+    "name": "Atom Splitter",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/ILQREiu.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Blade of Gul": {
+    "name": "Blade of Gul",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/XsU2xIh.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Bone Chopper": {
+    "name": "Bone Chopper",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/WkocApr.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Decayed Claws": {
+    "name": "Decayed Claws",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/d1aOVHT.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Dreamcatcher": {
+    "name": "Dreamcatcher",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/KpJIJ1m.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Edge of the Forest": {
+    "name": "Edge of the Forest",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/4e0ppfF.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Feral Judgement": {
+    "name": "Feral Judgement",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/BX1Q6EM.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Gas Giant": {
+    "name": "Gas Giant",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/1vtoOeJ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Godsplitter": {
+    "name": "Godsplitter",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/wUkoLfc.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Hero's Sword": {
+    "name": "Hero's Sword",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/oiFso8l.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Huntress Spear": {
+    "name": "Huntress Spear",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/7yVujBc.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Iron Greatsword": {
+    "name": "Iron Greatsword",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/mO9q5ye.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Knuckle Dusters": {
+    "name": "Knuckle Dusters",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/urerCK4.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Krell Axe": {
+    "name": "Krell Axe",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/YbRgQib.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Labyrinth Staff": {
+    "name": "Labyrinth Staff",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/VckAywV.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Nightshade": {
+    "name": "Nightshade",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/OGzZHxg.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ornate Blade": {
+    "name": "Ornate Blade",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/OEIjZd1.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ornate Flail": {
+    "name": "Ornate Flail",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/GKuz90Q.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rebellion Spear": {
+    "name": "Rebellion Spear",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/U3ULrr8.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Red Doe Staff": {
+    "name": "Red Doe Staff",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/JKFD9eH.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Ritualist Scythe": {
+    "name": "Ritualist Scythe",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/bVwGuzl.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Royal Broadsword": {
+    "name": "Royal Broadsword",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/ieexaGx.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rusted Claws": {
+    "name": "Rusted Claws",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/757mhJV.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Scrap Hammer": {
+    "name": "Scrap Hammer",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/DE922T1.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Scrap Hatchet": {
+    "name": "Scrap Hatchet",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/tGAImVM.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Scrap Staff": {
+    "name": "Scrap Staff",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/udTG1Sh.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Smolder": {
+    "name": "Smolder",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/j7euImI.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Spectral Blade": {
+    "name": "Spectral Blade",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/yJYpLfp.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Steel Flail": {
+    "name": "Steel Flail",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/vot0Yun.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Steel Katana": {
+    "name": "Steel Katana",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/XtVRdCS.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Steel Scythe": {
+    "name": "Steel Scythe",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/Yz4od58.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Steel Spear": {
+    "name": "Steel Spear",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/tdoXTxo.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Steel Sword": {
+    "name": "Steel Sword",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/ZL392SZ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Stonebreaker": {
+    "name": "Stonebreaker",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/r6Qkg46.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Vice Grips": {
+    "name": "Vice Grips",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/wS2KpDN.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "World's Edge": {
+    "name": "World's Edge",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/JCp45QQ.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Wrathbringer": {
+    "name": "Wrathbringer",
+    "slot": "Melee",
+    "image": "https://i.imgur.com/k5OWHG9.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}
+const secondary = {
+  "": {
+    "name": "",
+    "slot": "Secondary",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Anguish": {
+    "name": "Anguish",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/0gppMay.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Bolt Driver": {
+    "name": "Bolt Driver",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/gGi5Si3.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Cube Gun": {
+    "name": "Cube Gun",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/i3vXdho.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Double Barrel": {
+    "name": "Double Barrel",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/CT6HC5Q.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Enigma": {
+    "name": "Enigma",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/fOmmzB2.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Hellfire": {
+    "name": "Hellfire",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/LLV8stE.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Meridian": {
+    "name": "Meridian",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/Rik5moS.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "MP60-R": {
+    "name": "MP60-R",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/GajfJr4.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Nebula": {
+    "name": "Nebula",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/CCFAx7C.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Repeater Pistol": {
+    "name": "Repeater Pistol",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/2WpKiJD.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rune Pistol": {
+    "name": "Rune Pistol",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/5wbklj6.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rupture Canon": {
+    "name": "Rupture Canon",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/Pz8bvNH.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Rusty Repeater": {
+    "name": "Rusty Repeater",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/kzfbxfG.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Service Pistol": {
+    "name": "Service Pistol",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/KFf6KZ4.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Silverback Model 500": {
+    "name": "Silverback Model 500",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/8YPtljt.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sorrow": {
+    "name": "Sorrow",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/wxOnxL2.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Star Shot": {
+    "name": "Star Shot",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/7bxkb4d.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Sureshot": {
+    "name": "Sureshot",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/h9boJvd.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Tech 22": {
+    "name": "Tech 22",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/QdMIi8M.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Western Classic": {
+    "name": "Western Classic",
+    "slot": "Secondary",
+    "image": "https://i.imgur.com/eZk5Mej.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  }
+}
+const weapons = {
+  "primary": primary,
+  "melee": melee,
+  "secondary": secondary
+}
+const rangedMutators = {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "",
+    "stats": {}
+  },
+  "Spirit Healer": {
+    "custom": null,
+    "name": "Spirit Healer",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Regenerate 5% Health over 5s for every 500 Mod Power spent. Level 10: Allies within 15m are healed for 50% of the primary effect.",
+    "stats": {
+      "HP/S%": 0.02
+    }
+  },
+  "Bandit": {
+    "name": "Bandit",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "On hit, grants 10% chanche to return spent Ammo directly into the magazine of this weapon. Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
+    "custom": null,
+    "stats": {}
+  },
+  "Battery": {
+    "name": "Battery",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Ranged Hits increase the next Weakspot Hit by 10% per stack. Max 5 Stacks. Level 10: At Max Stacks, the next Weakspot Hit deals 15% additional damage over 3s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bottom Feeder": {
+    "name": "Bottom Feeder",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases this weapon's Ranged Damage by 5% for every 20% reserve ammo missing. Level 10: When the weapon runs out of ammo, it gains infinite ammo for 5s. Can only happen once every 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bottom Heavy": {
+    "name": "Bottom Heavy",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Fire Rate by 7.5% and an additional 1% for every 10% of Magazine missing. Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bulletweaver": {
+    "name": "Bulletweaver",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Mod use increases Fire Rate of this weapon by 10% for 7s. Level 10: Reloading from empty increases Mod Generation of this weapon by 15%. Lasts 7s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Deadly Calm": {
+    "name": "Deadly Calm",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Continuosly Aiming increases Ranged Damage by up to 10% over 3s.  Level 10: Ranged Critical Hit Chance increased by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Dreadful": {
+    "name": "Dreadful",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Ranged Damage by 2% for every 10% of total Health present as Grey Health. Max 20% increase. Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
+    "custom": null,
+    "stats": {}
+  },
+  "Extender": {
+    "name": "Extender",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Magazine Capacity of this weapon by 30%. Level 10: Increases Reload Speed of this weapon by 15%",
+    "custom": null,
+    "stats": {}
+  },
+  "Failsafe": {
+    "name": "Failsafe",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Attached Mod deals 10% additional Mod Damage. Level 10: Attached Mod use gains a 15% chace to not consume charge.",
+    "custom": null,
+    "stats": {}
+  },
+  "Feedback": {
+    "name": "Feedback",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Using this weapon's Mod generates 10% of single charge value as passive Mod Power over 10s. Does not stack. Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fetid Wounds": {
+    "name": "Fetid Wounds",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Critical Chance of this weapon by 3% per unique Negative Status Effect on the enemy. Max 15% increase. Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ghost Shell": {
+    "name": "Ghost Shell",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 20%. Level 10: Increases Weakspot Critical Chance by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Harmonizer": {
+    "name": "Harmonizer",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Mod Damage by 10%.  Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ingenuity": {
+    "name": "Ingenuity",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Reduces the Heat Generation of this weapon by 25%. Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
+    "custom": null,
+    "stats": {}
+  },
+  "Kill Switch": {
+    "name": "Kill Switch",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Switching to this weapon creates an Explosive Burst which deals 50 Damage to all enemies within 7m. Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s",
+    "custom": null,
+    "stats": {}
+  },
+  "Lithely": {
+    "name": "Lithely",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increase this weapon's Reload Speed by 4% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks. Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Maelstrom": {
+    "name": "Maelstrom",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases this weapon‘s Elemental Damage by 5.5% for each unique Elemental Status Effect on the target. Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Momentum": {
+    "name": "Momentum",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 1.5% for 3s. Max 10 stacks. Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Prophecy": {
+    "name": "Prophecy",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Using this weapon's mod increases Mod Power Generation by 3% for 10s. Max 5 stacks. Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Refunder": {
+    "name": "Refunder",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Shots from this weapon have 20% chance to return spent Ammo to reserves. Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sequenced Shot": {
+    "name": "Sequenced Shot",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 10% for 3s. Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Slayer": {
+    "name": "Slayer",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Reloading increases the damage of this weapon's next shot by 10%. Lasts 3s.  Level 10: Increases Reload Speed by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Sleeper": {
+    "name": "Sleeper",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 3 seconds after it is drawn. Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Supercharger": {
+    "name": "Supercharger",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Charge Speed of Bows and Fusion Rifles by 10%. Level 10: Charged Primary Shots of Bows and Fusion Rigles gain 15% Critical Chance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Timewave": {
+    "name": "Timewave",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Mod Use applies SLOW status on all enemies within 7.5m for 3.5s. Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
+    "custom": null,
+    "stats": {}
+  },
+  "Transpose": {
+    "name": "Transpose",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Picking up Ammo increases Ranged damage by 10% for 20s.  Level 10: Ammo pickups are added directly to the magazine.",
+    "custom": null,
+    "stats": {}
+  },
+  "Twisting Wounds": {
+    "name": "Twisting Wounds",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "Increases Ranged damage of this weapon by 10% to BLEEDING targets. Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 100 BLEED damage over 10s.",
+    "custom": null,
+    "stats": {}
+  }
+}
+const meleeMutators = {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "",
+    "stats": {}
+  },
+  "Edgelord": {
+    "custom": null,
+    "name": "Edgelord",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee Charge Speed by 15% and Melee Attack Speed by 10%. Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
+    "stats": {
+      "MLifesteal": 0.03
+    }
+  },
+  "Shield Breaker": {
+    "custom": null,
+    "name": "Shield Breaker",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Attacks grant a Shield for 2% of Max Health. Max 20%. Last 10s.  Level 10: Charged Melee Attacks consume all Shield to increase damage of next strike by 1% per Shield Consumed. Max 100%.",
+    "stats": {
+      "Shield": 0.2
+    }
+  },
+  "Steadfast": {
+    "custom": null,
+    "name": "Steadfast",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Charged Melee Attacks cannot be interrupted and gain 10% damage reduction from all sources. Level 10: All damage taken during Charged Melee Attack is covered to Grey Health.",
+    "stats": {
+      "FlatDR": 0.2
+    }
+  },
+  "Vampire Blade": {
+    "custom": null,
+    "name": "Vampire Blade",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee Damage by 10% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
+    "stats": {
+      "MLifesteal": 0.03
+    }
+  },
+  "Dervish": {
+    "name": "Dervish",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee Damage by 20% for 10s when activating a Skill. Level 10: Melee kills reduce Skill Cooldowns by 5%. Can trigger once every 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Disengage": {
+    "name": "Disengage",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Strikes increase the damage of the next Backdash Evade Attack by 4%. Max 5 Stacks.\nLasts 7.5s. Level 10: Perfect Neutral Evades grants 5 stacks",
+    "custom": null,
+    "stats": {}
+  },
+  "Executor": {
+    "name": "Executor",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 10% of the original duration. Cannot exceed original max duration. Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 10m with a Negative Status Effect. Max 4 stacks.",
+    "custom": null,
+    "stats": {}
+  },
+  "Guts": {
+    "name": "Guts",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee Critical Chance by 5% when Grey Health is present. Level 10: Increases Melee Critical Damage by 2.5% for every 10% of Grey Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Latency": {
+    "name": "Latency",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 10% less damage to charge. Level 10: Increase the potency of readied Melee Special abilities by 25%.",
+    "custom": null,
+    "stats": {}
+  },
+  "Misfortune": {
+    "name": "Misfortune",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increase Melee damage by 5% for each unique Negative Status the target is suffering from. Level 10: Melee Attacks apply SLOW for 2s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Opportunist": {
+    "name": "Opportunist",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance of the next Melee Attack by 50% for 3s. Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
+    "custom": null,
+    "stats": {}
+  },
+  "Overdrive": {
+    "name": "Overdrive",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Critical Hits increase Melee Critical Chance and Critical Damage by 5% for 7.5s. stacking up to 5 times. Level 10: Melee Critical Strikes deal 20% additional damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Reinvigorate": {
+    "name": "Reinvigorate",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Reduces Stamina Cost of all Charged Melee Attacks by 25%. Level 10: Melee Charge Attacks gain 15% additional damage and 10% Critical Chance.",
+    "custom": null,
+    "stats": {}
+  },
+  "Resentment": {
+    "name": "Resentment",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Gain 10% Melee Damage when Grey Health is present.  Level 10: Reduces Stagger by 1 when using any Melee Attack.",
+    "custom": null,
+    "stats": {}
+  },
+  "Shocker": {
+    "name": "Shocker",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Empowers weapon after 5 hits. While empowered. the next Charged Melee hit strikes all enemies within 10m with SHOCK Damage. Level 10: The SHOCK Damage now applies OVERLOADED dealing 100 damage over 5.05s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stormbringer": {
+    "name": "Stormbringer",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases the Status Effect Damage applied by Melee Attacks by 25%. Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Striker": {
+    "name": "Striker",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Hits increase Melee Damage by 3% for 10s. Max 5 Stacks. Level 10: Increases Movement Speed by 3% per stack.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tainted Blade": {
+    "name": "Tainted Blade",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee Damage by 5% per stack of CORRODED on the target. Level 10: Charged Melee Attacks apply CORRODED, dealing 500 ACID Damage over 205.",
+    "custom": null,
+    "stats": {}
+  },
+  "Top Heavy": {
+    "name": "Top Heavy",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases this weapon's Ranged Damage by up to 7.5% based on how close the magazine capacity is to full. Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
+    "custom": null,
+    "stats": {}
+  },
+  "Transference": {
+    "name": "Transference",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 10s. Level 10: When a Firearm reserve is full, melee Strikes generate 100% additional Mod Power ofr that weapon.",
+    "custom": null,
+    "stats": {}
+  },
+  "Vengeful Strike": {
+    "name": "Vengeful Strike",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Increases Melee damage by 20% when below 50% Max Health. Level 10: Increases Melee Critical Chance by 15% when below 50% Max Health.",
+    "custom": null,
+    "stats": {}
+  },
+  "Weaponlord": {
+    "name": "Weaponlord",
+    "slot": "MMutator",
+    "image": "",
+    "desc": "Basic Melee Attack increase the next Charge Attack by 7%. Max 5 Stacks.  Level 10: At Max Stacks, the next Charge Attack gains 100% Critical Chance.",
+    "custom": null,
+    "stats": {}
+  }
+}
+const mutators = {
+  "primaryMutators": rangedMutators,
+  "meleeMutators": meleeMutators,
+  "secondaryMutators": rangedMutators
+}
+const rangedMods = {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Mod",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
+  "Song of Eafir": {
+    "custom": null,
+    "name": "Song of Eafir",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/6MAqXoQ.png",
+    "desc": "Fires a shot infused with the binding power of the Song of Eafir. Staggers most ground enemies within 10m and deals 450 damage to Flying enemies within the same range.\nThe song continues for 15s, afflicting targets within 15m with SLOW, and a 15% decrease to damage dealt.",
+    "stats": {
+      "REdamage": -0.15
+    }
+  },
+  "Astral Burst": {
+    "name": "Astral Burst",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/8hE87IA.png",
+    "desc": "Fires a short range burst of 7 star fragments which deal 90 damage each. Fragments bounce off walls up to 3 times, dealing 25% additional damage per bounce. Weakspot hits deal reduced damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Blood Draw": {
+    "name": "Blood Draw",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/1Iz3US5.png",
+    "desc": "Shoots out razor-sharp Chain Shards which impale up to 5 targets within 15m, dealing X30 damage. On hit, chains are pulled towards the caster, dealing 750 damage split equally among enemies and applying 825 BLEEDING damage over 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Bore": {
+    "name": "Bore",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/9jIAj8a.png",
+    "desc": "Fires a drill projectile which bores into enemies on contact, dealing 240 damage. After fully burrowing into an enemy, creates a Weakspot which grants 50% of normal Weakspot Damage on hit. If attached to an existing Weakspot, Ranged Crit Chance is increased by 15% when attacking the drill. Lasts 6s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Concussive Shot": {
+    "name": "Concussive Shot",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/gNclurD.png",
+    "desc": "Fires a focused blast of air through all targets within 8m, dealing 465 damage and 5x impact.",
+    "custom": null,
+    "stats": {}
+  },
+  "Corrosive Rounds": {
+    "name": "Corrosive Rounds",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/aitCmr9.png",
+    "desc": "Imbues ammunition with TOXIC and increases Range Crit Chance by 15% for 20s. Shots also apply CORRODED, dealing 300 damage over 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Creeping Mist": {
+    "name": "Creeping Mist",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/8bOJSbr.png",
+    "desc": "Shoots a cannister out that shatters on impact to reveal an expanding mist, starting at 7.5m and growing to 15m over 5s. The mist lasts 20s. While affected, enemies receive 25% additional Status Effect Damage and are 5% more likely to be struck with a critical hit from any source. The mists debuff persists for 10s after target exits the mist.",
+    "custom": null,
+    "stats": {}
+  },
+  "Defrag": {
+    "name": "Defrag",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/2EIYw7v.png",
+    "desc": "Infects weapon with Malware for 30s, causing shots to apply FRAGMENTED for 5s. When a FRAGMENTED enemy dies, they create a Glitch that lasts 15s.\n\nPicking up a Glitch increases All damage by 20% for 15s.\n\nDestroying a Glitch causes it to destabilize, creating a 5m Virus Pool which deals 75 damage per second and applies the FRAGMENTED debuff to enemies inside. Virus Pools last 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Energy Wall": {
+    "name": "Energy Wall",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/cO7GyIG.png",
+    "desc": "Deploys an energy barrier on impact with ground. Allies can shoot through Energy Wall but enemy projectiles are absorbed (up to 1000 damage\nreceived). Max 1 Wall at a time. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Familiar": {
+    "name": "Familiar",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/UmF10KH.png",
+    "desc": "Summons Faerie Familiar to aid in combat. The Familiar selects a random enemy within 10m and slashes through them for 75 damage each attack. Familiar will select a new target when the previous one dies. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Fargazer": {
+    "name": "Fargazer",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/Y9BXiib.png",
+    "desc": "Calls forth an eye of Legion to gaze at player's AIM target. For every 0.25s Fargazer focuses on a target within 25m, a stack of MADNESS Status is applied for 5s. Each stack deals 9 Damage per second. Max 10 stacks. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Firestorm": {
+    "name": "Firestorm",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/ZoRb70h.png",
+    "desc": "Creates a whirling cyclone that sucks in nearby targets and applies BURNING for 10s. The center of the cyclone deals 225 FIRE damage per second. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Healing Shot": {
+    "name": "Healing Shot",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/iqu7fjp.png",
+    "desc": "Launches a payload that explodes on contact with allies, healing 30% of their max health. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s, slowly losing healing potency over time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Helix": {
+    "name": "Helix",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/LEpfV1I.png",
+    "desc": "Shoots a helix of missiles, dealing 170 damage. On contact, divides into 6 smaller rockets which seek additional targets, dealing 90 damage on contact.",
+    "custom": null,
+    "stats": {}
+  },
+  "Hotshot": {
+    "name": "Hotshot",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/VpqAixm.png",
+    "desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
+    "custom": null,
+    "stats": {}
+  },
+  "Knight Guard": {
+    "name": "Knight Guard",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/JeUqAsH.png",
+    "desc": "Summons Knight Guard to aid in combat. The Guards hurl penetrating slashes at a random enemy dealing 15 damage. The Guards will melee enemies if close enough for 15 damage. Lasts 20s",
+    "custom": null,
+    "stats": {}
+  },
+  "Overflow": {
+    "name": "Overflow",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/mnNhghp.png",
+    "desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Prismatic Driver": {
+    "name": "Prismatic Driver",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/D4vzv8x.png",
+    "desc": "Fires a superheated beam which deals 75 Mod Damage per second. Sustaining the beam on a target causes an explosion which deals 450 Mod damage in a 3m AOE.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ring of Spears": {
+    "name": "Ring of Spears",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/paSALmR.png",
+    "desc": "Calls forth 7 phantom spears to encircle the wielder for 25 seconds. This ring will deal up to 35 damage per second to nearby enemies, based on the number of spears remaining in the ring. While the mod is active, these spears can be thrown by tapping the mod button, dealing 100 damage to the first enemy hit. Spears will remain at their impact point for the duration of the mod or until recalled by holding the mod button. When recalled, spears will return to the wielder, dealing 50 damage to enemies along their path. When all recalled spears have reached the wielder, they cause an explosion dealing up to 350 damage based on the number of spears recalled.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rootlash": {
+    "name": "Rootlash",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/IFqxPee.png",
+    "desc": "Launches a projectile which summons a Root Tentacle. Tentacles deal 90 damage and steal 1.5% of the hero's Max Health per hit. Lasts 20s. (Max 2)",
+    "custom": null,
+    "stats": {}
+  },
+  "Rotted Arrow": {
+    "name": "Rotted Arrow",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/oJO0QFG.png",
+    "desc": "Fires a rotten arrow that deals 56 damage and detonates for another 180 damage within 4m. A deadly gas cloud is left behind that deals 600 damage over 5s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Scrap Shot": {
+    "name": "Scrap Shot",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/PBn7ytP.png",
+    "desc": "Fires a caltrops grenade that explodes to cover an area of 6m. Caltrops deal 60 damage per second and SLOW to enemies that walk over them. Lasts 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Skewer": {
+    "name": "Skewer",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/ckpUuDp.png",
+    "desc": "Fires a Wretched Spear which embeds itself on contact. Spears deal 470 damage on hit, rapidly dividing inside the target until bursting, dealing 420 damage to all targets within 3m. Spears embedded in the environment remain in place for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Soulbinder": {
+    "name": "Soulbinder",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/BW1I8Tp.png",
+    "desc": "Fires a projectile that attaches to the enemy dealing 120 damage. Enemies within 7m become bound to the primary target after impact and share 60% of damage dealt to them. Lasts 15s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Space Crabs": {
+    "name": "Space Crabs",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/DhojdeS.png",
+    "desc": "Launch an alien egg that bursts on impact, releasing 5 Space Crabs. Crabs follow the caster, leaping towards enemies within 4m, and exploding, dealing 180 Damage each.",
+    "custom": null,
+    "stats": {}
+  },
+  "Stasis Beam": {
+    "name": "Stasis Beam",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/pGgMiaN.png",
+    "desc": "Fires a beam which deals X45 damage per second, and applies SLOW Debuff. After 3s of application to a target, SLOW becomes STASIS, freezing the target in place for 10s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Time Lapse": {
+    "name": "Time Lapse",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/r9Keesw.png",
+    "desc": "Creates a 6m blast which freezes all standard enemies for 7s.\nDealing damage to frozen enemies immediately breaks the Time Lapse effect, applying SLOW for the remaining duration",
+    "custom": null,
+    "stats": {}
+  },
+  "Tremor": {
+    "name": "Tremor",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/vWIWTkz.png",
+    "desc": "Fires a projectile that cracks the ground and spawns shockwaves that deal X225 damage Within 9m for 6s. Shockwaves inflict 3x impact.",
+    "custom": null,
+    "stats": {}
+  },
+  "Voltaic Rondure": {
+    "name": "Voltaic Rondure",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/oWMDim4.png",
+    "desc": "Launches a slow-moving orb that pulses every 0.5s, striking enemies within 3m for 60 SHOCK damage and applying OVERLOADED for 15s. The orb lasts 20s. The orb can be overcharged by striking it with additional damage.",
+    "custom": null,
+    "stats": {}
+  },
+  "Witchfire": {
+    "name": "Witchfire",
+    "slot": "Mod",
+    "image": "https://i.imgur.com/2X2SSs8.png",
+    "desc": "Fires a highly volatile projectile that explodes to leave a line of flaming terrain. Deals 165 FIRE Damage per second, and applies BURNING, dealing 600 damage over 10s. Lasts 5s.",
+    "custom": null,
+    "stats": {}
+  }
+}
+const meleeMods = {}
+const mods = {
+  "primaryMods": rangedMods,
+  "meleeMods": meleeMods,
+  "secondaryMods": rangedMods
 }
