@@ -3,6 +3,8 @@ let archetype1old ="";
 let archetype2old ="";
 let ring1old,ring2old,ring3old,ring4old;
 let fragment1old,fragment2old,fragment3old;
+let concoction1old,concoction2old,concoction3old,concoction4old,concoction5old,concoction6old,concoction7old;
+let primaryMutatorOld,secondaryMutatorOld;
 //Generalized select <option> population. *should* be able to be used for any gear selection,
 //provided there is a distinct json format to pull from
 function populateGear(elem_ID,collection) {
@@ -41,9 +43,50 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("meleeMutator",meleeMutators);
   populateGear("secondaryMutator",rangedMutators);
   populateGear("primaryMod",rangedMods);
-  // populateGear("meleeMod",meleeMods);
+  // populateGear("meleeMod",meleeMods); //not yet
   populateGear("secondaryMod",rangedMods);
+  populateGear("concoction1",concoctions);
+  populateGear("concoction2",concoctions);
+  populateGear("concoction3",concoctions);
+  populateGear("concoction4",concoctions);
+  populateGear("concoction5",concoctions);
+  populateGear("concoction6",concoctions);
+  populateGear("concoction7",concoctions);
+  populateGear("quickUse1",quickUses);
+  populateGear("quickUse2",quickUses);
 })
+
+
+function updateConsumable(type,ID) {
+  let selectedConsumable = readSelection(`${type}${ID}`);
+  let concLimit = +readSelection("concValueDisplay").innerHTML;
+  let updateOtherConsumable = false;
+  readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
+  readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
+
+  if (type==="concoction") {
+   for (i=1;i<=concLimit;i++) {
+      let current = readSelection(`concoction${i}`).value;
+      console.log(current)
+      //Checks ID's on ACTIVE concoctions for a dupe, non-matching ID, that isn't blank.
+      //If criteria met, swap places like in game.
+      if ((current===selectedConsumable.value) && ((`concoction${i}`)!=(`${type}${ID}`)) && (current!="")) {
+         window[`concoction${i}old`]=window[`${type}${ID}old`];
+         readSelection(`concoction${i}`).value=window[`${type}${ID}old`];
+         otherConsumable = i;
+         updateOtherConsumable = true;
+         break;
+      }
+   }
+  }
+   window[`${type}${ID}old`]=selectedConsumable.value;
+
+  if (type==="concoction" && updateOtherConsumable===true) {
+    updateConsumable(type,otherConsumable);
+  }
+
+  updateFormulas();
+}
 
 //Triggers whenever a new weapon is selected
 function updateWeapon(type) {
@@ -212,6 +255,11 @@ function updateFormulas() {
   pullArmorStats();
   pullGearStats();
   pullClassStats();
+//----------CONSUMABLES---------------------------------------------------------
+//--These have to come after everything else, in order to take advantage of the correct concLimit
+  let concLimit = 1 + greatTableKnowerOfAll.ConcLimit;
+  updateDisplay("concValueDisplay",concLimit,0);
+  pullConsumables(concLimit);
 //SUMMARY STATS
   let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
@@ -349,7 +397,38 @@ function updateDisplay (elemID,statistic,rounding,percent) {
   readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
 }
 
-//Used in updateFormulas() to fill weapon/mod/mutator property values on the master table
+//Used in updateFormulas() to fill consumable values on the master table
+function pullConsumables (concLimit) {
+  let concoction1 = readSelection("concoction1");
+  let concoction2 = readSelection("concoction2");
+  let concoction3 = readSelection("concoction3");
+  let concoction4 = readSelection("concoction4");
+  let concoction5 = readSelection("concoction5");
+  let concoction6 = readSelection("concoction6");
+  let concoction7 = readSelection("concoction7");
+  let quickUse1 = readSelection("quickUse1");
+  let quickUse2 = readSelection("quickUse2");
+
+  for (i=1;i<=7;i++) {
+    let concoction = readSelection(`concoction${i}`);
+    if (i<=concLimit) {
+      concoction.disabled = false;
+      concoction.style.backgroundColor = "#d9d9d9";
+      pullStats(concoctions[concoction.value].stats);
+    }
+    else {
+      concoction.value = "";
+      concoction.style.backgroundColor = "#434343";
+      readSelection(`concoction${i}Icon`).src = "images/Remnant/clear.png";
+      readSelection(`concoction${i}Desc`).innerHTML = "";
+      concoction.disabled = true;
+    }
+  }
+  pullStats(quickUses[quickUse1.value].stats);
+  pullStats(quickUses[quickUse2.value].stats);
+}
+
+//Used in updateFormulas() to fill weapon/mod/mutator values on the master table
 function pullWeapons () {
   let primaryWeapon = readSelection("primary");
   let primaryWeaponMutator = readSelection("primaryMutator");
@@ -7536,4 +7615,302 @@ const mods = {
   "primaryMods": rangedMods,
   "meleeMods": meleeMods,
   "secondaryMods": rangedMods
+}
+const concoctions = {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Conc",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
+  "Meat Shake": {
+    "custom": null,
+    "name": "Meat Shake",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/pPM3hgw.png",
+    "desc": "Increases Damage Reduction by 8%. Lasts 60m and will stay in effect after death. Only one concoction may be active at a time.",
+    "stats": {
+      "FlatDR": 0.08
+    }
+  },
+  "Mudtooth's Tonic": {
+    "custom": null,
+    "name": "Mudtooth's Tonic",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/UPbE9sV.png",
+    "desc": "Increases Max Health by 25. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "Health": 25
+    }
+  },
+  "Mudtooth's Stew": {
+    "custom": null,
+    "name": "Mudtooth's Stew",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/tXDJ04Z.png",
+    "desc": "Increases Max Stamina by 25, Lasts 60m and will stay in effect after death Only one Concoction may be active at a time.",
+    "stats": {
+      "Stamina": 25
+    }
+  },
+  "Verdant Tea": {
+    "custom": null,
+    "name": "Verdant Tea",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/KGsglLE.png",
+    "desc": "Increases Stamina Recovery by 20 per second and reduces Stamina Regen Penalty by 50%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "Stamina/S+": 20
+    }
+  },
+  "Dark Cider": {
+    "custom": null,
+    "name": "Dark Cider",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/mnKm9eM.png",
+    "desc": "Increases Health by 6.66%, Stamina by 6.66%, and Movement Speed by 6.66%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "Health%": 0.0666,
+      "Stamina%": 0.0666
+    }
+  },
+  "Bark Extract": {
+    "custom": null,
+    "name": "Bark Extract",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/Z75cZW0.png",
+    "desc": "Increases Armor by 30. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "Armor": 30
+    }
+  },
+  "Strong Drink": {
+    "custom": null,
+    "name": "Strong Drink",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/mLU3GUm.png",
+    "desc": "Reduces Encumbrance by 10. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "Encumbrance": -10
+    }
+  },
+  "Root Water": {
+    "custom": null,
+    "name": "Root Water",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/sKbI9q7.png",
+    "desc": "Regenerates 0.75 Health per second. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "HP/S+": 0.75
+    }
+  },
+  "Sacred Lakewater": {
+    "custom": null,
+    "name": "Sacred Lakewater",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/the7NcR.png",
+    "desc": "Increases Grey Health Conversion by 50% and Grey Health Regen by 1 per secorid. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "GreyHP/S+": 1
+    }
+  },
+  "Sanguine Vapor": {
+    "custom": null,
+    "name": "Sanguine Vapor",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/lPM6EYX.png",
+    "desc": "Increases Ranged and Melee Lifesteal by 3.5% of base damage. Increases damage taken by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "stats": {
+      "FlatDR": -0.1,
+      "Lifesteal": 0.035
+    }
+  },
+  "Bottled Shaedberry": {
+    "name": "Bottled Shaedberry",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/KvDLkCJ.png",
+    "desc": "Increases Mod Power Generation by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Chilled Steam": {
+    "name": "Chilled Steam",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/ifZbxJK.png",
+    "desc": "Increases Movement Speed by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Dark Fluid": {
+    "name": "Dark Fluid",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/C3JYjJN.png",
+    "desc": "Increases Distance of Evade and Combat Slide by 15% and reduces the cost by 20%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Tranquility Font": {
+    "name": "Tranquility Font",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/EGgRM3C.png",
+    "desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 35%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Xenoplasm": {
+    "name": "Xenoplasm",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/KWvfn6L.png",
+    "desc": "Reduces Skill Cooldowns by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  },
+  "Mudtooth's Elixir": {
+    "name": "Mudtooth's Elixir",
+    "slot": "Conc",
+    "image": "https://i.imgur.com/kx1Pdxz.png",
+    "desc": "Increases Experience Gains by 15%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+    "custom": null,
+    "stats": {}
+  }
+}
+const quickUses = {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Cons",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
+  "Blood Root": {
+    "custom": null,
+    "name": "Blood Root",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/okPmaon.png",
+    "desc": "Regenerates 1.5 Health per second. Lasts 30s.",
+    "stats": {
+      "HP/S+": 1.5
+    }
+  },
+  "Confidence Booster": {
+    "custom": null,
+    "name": "Confidence Booster",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/95R0m9e.png",
+    "desc": "Reduces incoming damage by 10% and Stagger by 1. Lasts 20s.",
+    "stats": {
+      "FlatDR": 0.1
+    }
+  },
+  "Ambit Ember": {
+    "name": "Ambit Ember",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/Zvx8Gxg.png",
+    "desc": "Slightly increases Evade Window and Evade Speed by 15%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Antidote": {
+    "name": "Antidote",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/eEvswcC.png",
+    "desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Ethereal Orb": {
+    "name": "Ethereal Orb",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/1CDLiyQ.png",
+    "desc": "Removes OVERLOADED effect and increases SHOCK resistance by 15%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Faerie Needle": {
+    "name": "Faerie Needle",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/rDMjtwG.png",
+    "desc": "Increases Mod Power Regen by 10 MP per second. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Gul Serum": {
+    "name": "Gul Serum",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/K4iNOeU.png",
+    "desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Mud Rub": {
+    "name": "Mud Rub",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/EFmWirZ.png",
+    "desc": "Extinguishes BURNING effect and increases FIRE resistance by 15. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Mystery Jerky": {
+    "name": "Mystery Jerky",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/M3hexEO.png",
+    "desc": "Converts 1 Health into Grey Health per second. Lasts 30s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Oilskin Balm": {
+    "name": "Oilskin Balm",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/gv2Ic0X.png",
+    "desc": "Cures ROOT ROT Blight and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Orange Slices": {
+    "name": "Orange Slices",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/nodMi8Y.png",
+    "desc": "Regenerates 5% Health instantly.",
+    "custom": null,
+    "stats": {}
+  },
+  "Processed Koara": {
+    "name": "Processed Koara",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/FIJdQqh.png",
+    "desc": "Decreases Stamina Recovery delay by 75% and Stamina Regen Penalty by 50%. Lasts 60s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Purified Salve": {
+    "name": "Purified Salve",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/VieDQu8.png",
+    "desc": "Cures CURSE and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  },
+  "Rocket Fuel": {
+    "name": "Rocket Fuel",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/v9VNMqo.png",
+    "desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
+    "custom": null,
+    "stats": {}
+  },
+  "Timeworn Unguent": {
+    "name": "Timeworn Unguent",
+    "slot": "Cons",
+    "image": "https://i.imgur.com/JQXgOot.png",
+    "desc": "Cures SUPPRESSION Blight and increases Blight Resistance by 25%. Lasts 10m.",
+    "custom": null,
+    "stats": {}
+  }
+}
+const consumables = {
+  "concoctions": concoctions,
+  "quickUses": quickUses
 }

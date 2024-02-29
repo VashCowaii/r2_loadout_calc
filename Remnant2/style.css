@@ -901,10 +901,8 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 /* ----------------------------------------------------------------------------------------*/
-/* ------------------------- Consumables Column ---------------------------------------------*/
+/* ------------------------- Consumables Column -------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
-
-
 .consumablesBox {
     /* width: 200px; */
     width: clamp(200px, 20vw, 300px);
@@ -919,7 +917,129 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
 }
-/* -------------------WEAPONS ------------------------------------------------------------ */
+.consumablesWholeBox {
+    width: 100%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+}
+.consumablesHeader {
+    width: 100%;
+    height: 3%;
+    font-size: 20px;
+    padding-left: 1%;
+    border: 1px solid black;
+    background-color: #434343;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.concLimitHeader {
+    width: 66%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.concLimitValue {
+    width: 40%;
+    height: 100%;
+    font-size: 20px;
+    padding-right: 2%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.consumableContainer {
+    width: 100%;
+    height: 10.4444%;
+    border: 1px solid #434343;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.consumableImageBox {
+    width: 30%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.consumableImage {
+    width: fit-content;
+    height: 100%;
+    box-sizing: border-box;
+}
+.consumableInfoBox {
+    width: 70%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.consumableSelectorBox {
+    width: 100%;
+    height: 22%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.consumableSelector {
+    /* font-size: 23px; */
+    font-size: clamp(9px, 2vw, 12px);
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+.consumableDesc {
+    width: 100%;
+    height: 78%;
+    text-align: left;
+    white-space: wrap;
+    font-size:10px;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- WEAPONS Column -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .weaponsBox {
     width: 550px;
     /* min-width: 190px; */
@@ -929,7 +1049,7 @@ font-family: Arial, Helvetica, sans-serif;
     color: white;
     /* white-space: wrap; */
     box-sizing: border-box;
-    border-top: 1px solid #666666;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     white-space: nowrap;
@@ -1126,10 +1246,9 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding-right: 2%;
 }
-
-
-
-/* -------------------TRAITS ------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- TRAITS Column ------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 .traitsBox {
     width: 350px;
     min-width: none;
@@ -1141,7 +1260,6 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
 }
-
 .traitContainer {
     width: 100%;
     height: 4.8%;
@@ -1259,36 +1377,6 @@ font-family: Arial, Helvetica, sans-serif;
 
 }
 
-/* .roundedIcon {
-    border-radius: 20%;
-    width:95%;
-    height:auto;
-    outline: 2px solid white;
-    box-sizing: border-box;
-} */
-
-/* .basicsDRStat {
-    width: 66%;
-    height: 100%;
-    font-size: 14px;
-    display: flex;
-    text-align: left;
-    justify-content: left;
-    white-space: nowrap;
-    align-items: center;
-    box-sizing: border-box;
-}
-.basicsDRValue {
-    width: 30%;
-    height: 100%;
-    font-size: 14px;
-    display: flex;
-    text-align: right;
-    justify-content: right;
-    white-space: nowrap;
-    align-items: center;
-    box-sizing: border-box;
-} */
 
 .bottomTitleHeader {
     font-size: 30px;
