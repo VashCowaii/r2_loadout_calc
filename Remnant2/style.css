@@ -95,7 +95,7 @@
     display: none;
     position: absolute;
     background-color: #d9d9d9;
-    width: 250px;
+    width: 260px;
     /* display: flex; */
     /* min-width: 160px; */
     z-index: 1;
@@ -127,6 +127,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    border: 2px solid black;
     overflow-y: auto;
 }
 .togglesHeader { 
@@ -1087,12 +1088,143 @@ font-family: Arial, Helvetica, sans-serif;
     width: 60%;
     height: 100%;
     background-color: #434343;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.relicComplexDesc {
+    width: 100%;
+    height: 30%;
+    font-size: 11px;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.relicComplexInputRow {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    /* text-align: left;
+    align-items: center;
+    justify-content: left; */
+    display: flex;
+    box-sizing: border-box;
+    background-color: #666666;
+    color: white;
+}
+.complexInputHeader {
+    width: 50%;
+    height: 100%;
+    font: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.complexInput {
+    width: 40%;
+    height: 100%;
+    font: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.complexPercBox {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.relicComplexSummaryBox {
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    display: flex;
+}
+.relicComplexSummaryHalf {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.complexHalfHeader {
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.complexHalfHalfBox {
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+.complexHalfHalfHeader {
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.complexHalfValueBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    font-size: 9px;
+}
+.complexHalfValue {
+    width: 50%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+.relicHeaderBig {
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    text-align: center;
+    /* font-size: clamp(12px, 1.1vw, 15px); */
+    padding-left: 1%;
+    background-color: #434343;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: left; */
+    white-space: wrap;
+    box-sizing: border-box;
 }
 .relicHeader {
     width: 100%;
     height: 10%;
-    /* font-size: 15px; */
-    font-size: clamp(12px, 1.1vw, 15px);
+    font-size: 15px;
+    /* font-size: clamp(12px, 1.1vw, 15px); */
     padding-left: 1%;
     background-color: #434343;
     text-align: left;

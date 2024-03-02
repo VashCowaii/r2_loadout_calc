@@ -5,6 +5,7 @@ let ring1old,ring2old,ring3old,ring4old;
 let fragment1old,fragment2old,fragment3old;
 let concoction1old,concoction2old,concoction3old,concoction4old,concoction5old,concoction6old,concoction7old;
 let primaryMutatorOld,secondaryMutatorOld;
+let scaledRelicBaseRecords;
 
 
 // for (i=1;i<=4;i++) {
@@ -296,6 +297,54 @@ function soulShard() {
   //for dmg later
   // += +readSelection("minionCount").value;
 }
+
+function resonatingHeart(relicHPscaled,totalHealth) {
+  let path = relics["Resonating Heart"]
+  //Healing/Relic EFF already factored before this function even starts
+  readSelection("complexDesc").innerHTML = path.complex;
+  readSelection("complexInputHeader").innerHTML = "Input:";
+  //window[relics[readSelection(`relic`).value].custom](relicHPscaled);
+  let inputValue = readSelection("complexInput").value * 2;
+
+
+  let relicPercHPpSec = 0;
+  let relicHPpSec = 0;
+  let avgPercHPpSec = 0;
+  let avgHPpSec = 0;
+  //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
+  //we will first check if the input is blank/0 before pulling either basic or complex stats.
+  if (inputValue != null && inputValue > 0) {
+    relicPercHPpSec = inputValue/20;
+    relicHPpSec = (relicPercHPpSec/100) * totalHealth
+    avgPercHPpSec = (relicHPscaled + inputValue)/25
+    avgHPpSec = (avgPercHPpSec/100) * totalHealth;
+  }
+
+  readSelection("complexLeftHalf").innerHTML = `
+  <div class="complexHalfHeader">2x over 20s</div>
+  <div class="complexHalfHalfBox">
+    <div class="complexHalfHalfHeader">%/s</div>
+    <div class="complexHalfHalfHeader">HP/s</div>
+  </div>
+  <div class="complexHalfValueBox">
+    <div class="complexHalfValue">${relicPercHPpSec.toFixed(2)}%</div>
+    <div class="complexHalfValue">${relicHPpSec.toFixed(2)}</div>
+  </div>
+  `;
+  readSelection("complexRightHalf").innerHTML = `
+  <div class="complexHalfHeader">AVG over 25s</div>
+  <div class="complexHalfHalfBox">
+    <div class="complexHalfHalfHeader">%/s</div>
+    <div class="complexHalfHalfHeader">HP/s</div>
+  </div>
+  <div class="complexHalfValueBox">
+    <div class="complexHalfValue">${avgPercHPpSec.toFixed(2)}%</div>
+    <div class="complexHalfValue">${avgHPpSec.toFixed(2)}</div>
+  </div>
+  `;
+ return [avgPercHPpSec,avgHPpSec]
+}
+
 //Displays all selected gear within the toggles menu. Does not utilize checks here, that's elsewhere
 function pullToggles() {
   readSelection("toggledHead").innerHTML = readSelection("helmetChoice").value
@@ -491,9 +540,9 @@ let teamCount = readSelection("teamCount");
   let lifestealRange = greatTableKnowerOfAll.RLifesteal;
   readSelection("lifesteal").innerHTML = `${(lifestealALL).toFixed(1)}/${(lifestealMelee).toFixed(1)}/${(lifestealRange).toFixed(1)}`;
 //REGENERATION---
-  let flatHPperSec = greatTableKnowerOfAll["HP/S+"] * globalHealingMod;
+  let flatHPperSec = greatTableKnowerOfAll["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
   updateDisplay("flatHP/s",flatHPperSec,1);
-  let percHPperSec = greatTableKnowerOfAll["HP/S%"] * globalHealingMod;
+  let percHPperSec = greatTableKnowerOfAll["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
   updateDisplay("%HP/s",percHPperSec*100,2,"%");
   let greyHPperSec = 0.2 + greatTableKnowerOfAll["GreyHP/S+"];
   let greyPercHPperSec = greatTableKnowerOfAll["GreyHP/S%"];
@@ -528,6 +577,36 @@ else {
   readSelection("relic%HP/s").innerHTML = "---";
   updateDisplay("relicHP/s",(relicHPscaled/relicHPtime),1);
 }
+//Now that healing values have populated, check and call for custom relic functions
+//for the sake of complex relic effects
+let relicComplexArray;
+if (readSelection("USEtoggledRelic").checked != true) {
+  if (relics[readSelection(`relic`).value].custom != null) {
+    readSelection("complexInput").disabled = false;
+    relicComplexArray = window[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
+  }
+  else { //clear complex effect
+    readSelection("complexInput").disabled = true;
+    readSelection("complexInput").value = "";
+    readSelection("complexInputHeader").innerHTML = "";
+    readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
+    readSelection("complexLeftHalf").innerHTML = "";
+    readSelection("complexRightHalf").innerHTML = "";
+  }
+}
+else { //clear complex effect
+  readSelection("complexInput").disabled = true;
+  readSelection("complexInput").value = "";
+  readSelection("complexInputHeader").innerHTML = "";
+  readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
+  readSelection("complexLeftHalf").innerHTML = "";
+  readSelection("complexRightHalf").innerHTML = "";
+}
+let useComplexValues = false;
+if (relicComplexArray != null && relicComplexArray != 0) {
+  if (relicComplexArray[0] > 0) {useComplexValues = true;}
+}
+
 //----------MULTIPLICATIVE MITIGATION SOURCES---------------------------------------------------
 //REDUCED ENEMY DAMAGE
 let reducedEnemyDamage = 1;
@@ -580,8 +659,55 @@ if (useShieldEHP===false){shieldEHP=0}
 let totalEHP = baseEHP + shieldEHP;
 updateDisplay("EHP",totalEHP,2);
 //----------HEALING----------------------------------------------------------------------------
+// flatHPperSec
+// percHPperSec
+// useComplexValues
+// relicComplexArray[]//avg%/s,avgHP/s
+// relicHPscaled
+// relicHPtype
+// includeRelicHealing ID
+
+updateDisplay("advancedFlat",flatHPperSec,2);
+updateDisplay("advanced%",percHPperSec*100,2,"%");
+updateDisplay("advancedTotalFlat",flatHPperSec + percHPperSec*totalHealth,2);
+updateDisplay("advancedTotal%",(percHPperSec + flatHPperSec/totalHealth)*100,2,"%");
+
+let advancedRelicFlat,advancedRelicPerc;
+if (useComplexValues===true) {
+  advancedRelicPerc = relicComplexArray[0];
+  advancedRelicFlat = 0;
+}
+else {
+  if (relicHPtype==="P"||relicHPtype==="F") {
+    advancedRelicPerc = 0;
+    advancedRelicFlat = relicHPscaled/relicHPtime;
+  }
+  else { //If the type is %
+    advancedRelicPerc = relicHPscaled/relicHPtime;
+    advancedRelicFlat = 0;
+  }
+}
+updateDisplay("advancedRelicFlat",advancedRelicFlat,2);
+updateDisplay("advancedRelic%",advancedRelicPerc,2,"%");
+updateDisplay("advancedRelicTotalFlat",advancedRelicFlat + (advancedRelicPerc/100)*totalHealth,2);
+updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth),2,"%");
+
+let useRelicHealing = readSelection("includeRelicHealing").checked != false;
+let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
+let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
+if (useRelicHealing===true) {
+  advancedTotalFlatHP += advancedRelicFlat + (advancedRelicPerc/100)*totalHealth
+  advancedTotalPercHP += advancedRelicPerc + advancedRelicFlat/totalHealth
+}
+
+updateDisplay("totalHealingFlat",advancedTotalFlatHP,2);
+updateDisplay("totalHealing%",advancedTotalPercHP,2,"%");
+
+let EHPpSec = baseEHP * (advancedTotalPercHP/100);
+updateDisplay("EHP/s",EHPpSec,2);
 
 }
+
 //Shorthand for shit I got tired of typing every god damn time.
 function updateDisplay (elemID,statistic,rounding,percent) {
   let percentage = "";
@@ -844,9 +970,7 @@ function pullGearStats() {
 //Relic
 if (readSelection("USEtoggledRelic").checked != true) {
   pullStats(relics[readSelection("relic").value].stats);
-  if (relics[readSelection(`relic`).value].custom != null) {
-    window[relics[readSelection(`relic`).value].custom]();
-  }
+  //Custom gets called later, not here for relics
 }
 //Fragments
   for (i=1;i<=3;i++) {
@@ -5358,11 +5482,12 @@ const relics = {
     }
   },
   "Resonating Heart": {
-    "custom": null,
+    "custom": "resonatingHeart",
     "name": "Resonating Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/FE0rnqe.png",
     "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s.",
+    "complex": "How much OVERhealing are we going to 'pretend' you'll achieve in the 5sec window? Enter your best guess:",
     "stats": {
       "RelicHPbase": 50,
       "RelicHPtime": 5,

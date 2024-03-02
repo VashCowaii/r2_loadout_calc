@@ -676,10 +676,9 @@
             </div>
         </div>
         <div class="relicDescription" id="relicDesc"></div>
-        
-        
         <div class="relicEffectsContainer">
             <div class="relicHealingContainer">
+                <div class="relicHeaderBig">Basic Relic Effects</div>
                 <div class="relicHeader">Relic Healing</div>
                 <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicBase">0</span></div>
                 <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue" id="relicType">0</span></div>
@@ -690,8 +689,17 @@
                 <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue" id="relicHP/s">0</span></div>
             </div>
             <div class="relicComplexContainer">
-                <div class="relicHeader">Complex Relic Effects</div>
-                misc shit here later, but also I have far more space than expected? Figure out wtf to do here once hookups are done.
+                <div class="relicHeaderBig">Complex Relic Effects</div>
+                <div class="relicComplexDesc" id="complexDesc">No complex relic effects are currently active.</div>
+                <div class="relicComplexInputRow">
+                    <div class="complexInputHeader" id="complexInputHeader"></div>
+                    <input type="number" class="complexInput" id="complexInput" onchange="updateFormulas()" disabled>
+                    <div class="complexPercBox">%</div>
+                </div>
+                <div class="relicComplexSummaryBox">
+                    <div class="relicComplexSummaryHalf" id="complexLeftHalf"></div>
+                    <div class="relicComplexSummaryHalf" id="complexRightHalf"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -1568,42 +1576,42 @@
             <div class="advancedCategoryHeader">HEALING</div>
             <div class="advancedHealingBox">Passive + Abilities</div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue">0.00</div>
+                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue" id="advancedFlat">0.00</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue">0.00%</div>
+                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue" id="advanced%">0.00%</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue">0.00</div>
+                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue" id="advancedTotalFlat">0.00</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue">0.00%</div>
+                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue" id="advancedTotal%">0.00%</div>
             </div>
             <div class="advancedHealingBox">Relic</div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue">0.00</div>
+                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue" id="advancedRelicFlat">0.00</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue">0.00%</div>
+                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue" id="advancedRelic%">0.00%</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue">0.00</div>
+                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue" id="advancedRelicTotalFlat">0.00</div>
             </div>
             <div class="advancedHealingBox">
-                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue">0.00%</div>
+                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue" id="advancedRelicTotal%">0.00%</div>
             </div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Include Relic Healing?</div><div class="advancedMiscBoxValue">
-                <input type="checkbox" id="includeRelicHealing" class="shieldsCheckBox"/>
+                <input type="checkbox" id="includeRelicHealing" class="shieldsCheckBox" onchange="updateFormulas()"/>
             </div></div>
             <div class="totalHealingBigHeader">Total Healing/s</div>
             <div class="totalHealingBox">
                 <div class="totalHealingBoxHalf">
                     <div class="totalHealingHeader">As flat HP/s</div>
-                    <div class="totalHealingValue">0.00</div>
+                    <div class="totalHealingValue" id="totalHealingFlat">0.00</div>
                 </div>
                 <div class="totalHealingBoxHalf">
                     <div class="totalHealingHeader">As % HP/s</div>
-                    <div class="totalHealingValue">0.00%</div>
+                    <div class="totalHealingValue" id="totalHealing%">0.00%</div>
                 </div>
             </div>
         </div>
