@@ -17,673 +17,1650 @@
     <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
 </div> -->
 
-<div class="main"> <!-- The entire upper section, from Basic Stats to Accessory columns -->
+<body style="background-color:#181818;padding: 0;">
     <div id="gameNav" class="sidenav"> <!-- Sidenav -->
         <a href="#"><img class="roundedIcon" src="images/Home.png" alt="Home Icon"></a>
         <a href="#"><img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"></a>
         <a href="#"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
     </div>
-<body style="background-color:#181818;">
 
+    <!-- <div id="togglesMenu" class="togglesMenuBox">
+        <a href="javascript:void(0)" class="closeToggles" onclick="closeToggles()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div> -->
 
-<div class="basicsBox"> <!-- BASIC STATS COLUMN -->
-    <div class="basicsSummaryBox">
-        <div class="basicsTitleHeader">BASIC STATS</div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH </span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR  </span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
-            <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT </span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
-    </div>
+<div class="main"> <!-- The entire upper section, from Basic Stats to Accessory columns -->
 
-    <div class="basicsDRBox">
-        <div class="basicsDRheaderTitle">DAMAGE<br>REDUCTION</div>
-        <div class="basicsDRheaderSmall">ARMOR</div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="basicsDRValue"id="baseArmor">0.0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="basicsDRValue" id="armorEff">100.00%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="basicsDRValue" id="totalArmor">0.0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="basicsDRValue" id="armorDR">0.00%</span></div>
-        <div class="basicsDRheaderSmall">FLAT</div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Bulwark Stacks</span><span class="basicsDRValue" id="bulwarkStacks">0</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="basicsDRValue" id="bulwarkDR">0.00%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="basicsDRValue" id="otherFlat">0.00%</span></div>
-            <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="basicsDRValue" id="totalFlat">0.00%</span></div>
-        <div class="basicsDRsumContainer">
-            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0.00%</span>
+<div class="theGreatBox">
+
+<div class="basicsToAccessoriesBox">
+    <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
+        <div class="basicsSummaryBox">
+            <div class="basicsTitleHeader">BASIC STATS</div>
+                <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH </span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
+                <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
+                <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR  </span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
+                <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT </span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
+        </div>
+
+        <div class="basicsDRBox">
+            <div class="basicsDRheaderTitle">DAMAGE<br>REDUCTION</div>
+            <div class="basicsDRheaderSmall">ARMOR</div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="basicsDRValue"id="baseArmor">0.0</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="basicsDRValue" id="armorEff">100.00%</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="basicsDRValue" id="totalArmor">0.0</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="basicsDRValue" id="armorDR">0.00%</span></div>
+            <div class="basicsDRheaderSmall">FLAT</div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Bulwark Stacks</span><span class="basicsDRValue" id="bulwarkStacks">0</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="basicsDRValue" id="bulwarkDR">0.00%</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="basicsDRValue" id="otherFlat">0.00%</span></div>
+                <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="basicsDRValue" id="totalFlat">0.00%</span></div>
+            <div class="basicsDRsumContainer">
+                <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0.00%</span>
+            </div>
+        </div>
+
+        <div class="basicsResistanceBox">
+            <div class="resistanceHeader">RESISTANCES</div>
+            <div class="resistanceContainer"> <!-- Resistance Icons -->
+                <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/bleed.png" alt="Bleed icon"></div>
+                <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/fire.png" alt="Burn icon"></div>
+                <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/shock.png" alt="Shock icon"></div>
+                <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/corrosive.png" alt="Corrosive icon"></div>
+                <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/blight.png" alt="Blight icon"></div>
+            </div>
+            <div class="resistanceContainer"> <!-- Resistance Values -->
+                <div class="resistanceValues" id="summaryBleed">0</div>
+                <div class="resistanceValues" id="summaryBurn">0</div>
+                <div class="resistanceValues" id="summaryShock">0</div>
+                <div class="resistanceValues" id="summaryCorrosive">0</div>
+                <div class="resistanceValues" id="summaryBlight">0</div>
+            </div>
+        </div>
+
+        <div class="basicsHealingBox">
+            <div class="healingHeaderTitle">HEALING</div>
+            <div class="healingHeaderSmall">BOOSTS</div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="basicsDRValue" id="relicEFF">0.00%</span></div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="basicsDRValue" id="healingEFF">0.00%</span></div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Relic Use Time</span><span class="basicsDRValue" id="relicUseTime">0.00%</span></div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="basicsDRValue" id="lifesteal">0.0/0.0/0.0</span></div>
+            <div class="healingHeaderSmall">REGENERATION</div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Flat HP/s</span><span class="basicsDRValue" id="flatHP/s">0.0</span></div>
+                <div class="healingRowContainer"><span class="basicsDRStat">% HP/s</span><span class="basicsDRValue" id="%HP/s">0.00%</span></div>
+                <div class="healingRowContainer"><span class="basicsDRStat">Grey Health/s</span><span class="basicsDRValue" id="greyHP/s">0.2</span></div>
+        </div>
+        
+        <div class="basicsStaminaBox">
+            <div class="staminaHeaderTitle">STAMINA</div>
+                <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue" id="stamina/s">33.0</span></div>
+                <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue" id="staminaCost">100.00%</span></div>
+                <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Class</span><span class="basicsDRValue" id="dodgeClass">Light</span></div>
         </div>
     </div>
+    <div class="classAndArmor">
+        <div class="classBox"> <!-- ARCHETYPE 1 COLUMN -->
+            <div class="classAbilityBox">
+            <div class="classIconContainer">
+                <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1Icon">
+            </div>
+            <div class="classThinHeader">Archetype 1:</div>
+            <div class="classSelectorBox">
+                <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
+                    <!-- <option></option> -->
+                </select> 
+            </div>
+                <div class="classThinHeader">ABILITY 1:</div>
+                    <div class="classAbilityContainer">
+                        <div class="classAbilitySelectorBox">
+                            <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')">
+                                <!-- <option></option> -->
+                            </select> 
+                        </div>
+                        <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+                    </div>
+                    <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
+            </div>
 
-    <div class="basicsResistanceBox">
-        <div class="resistanceHeader">RESISTANCES</div>
-        <div class="resistanceContainer"> <!-- Resistance Icons -->
-            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/bleed.png" alt="Bleed icon"></div>
-            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/fire.png" alt="Burn icon"></div>
-            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/shock.png" alt="Shock icon"></div>
-            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/corrosive.png" alt="Corrosive icon"></div>
-            <div class="resistanceValues"><img class="resistanceIcon" src="images/Remnant/Status/blight.png" alt="Blight icon"></div>
+            <div class="classPassivesBox">       
+                <div class="classThinHeader">PASSIVES:</div>
+                <div class="classPassiveHeader" id="archetype1passive1"></div>
+                    <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
+                <div class="classPassiveHeader" id="archetype1passive2"></div>
+                    <div class="classPassiveDescription" id="archetype1passive2desc"></div>
+                <div class="classPassiveHeader" id="archetype1passive3"></div>
+                    <div class="classPassiveDescription" id="archetype1passive3desc"></div>
+                <div class="classPassiveHeader" id="archetype1passive4"></div>
+                    <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+            </div>
         </div>
-        <div class="resistanceContainer"> <!-- Resistance Values -->
-            <div class="resistanceValues" id="summaryBleed">0</div>
-            <div class="resistanceValues" id="summaryBurn">0</div>
-            <div class="resistanceValues" id="summaryShock">0</div>
-            <div class="resistanceValues" id="summaryCorrosive">0</div>
-            <div class="resistanceValues" id="summaryBlight">0</div>
+        <div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
+            <div class="primePerkBox">
+                <div class="classVoidSpace">
+                    <div class="iconsBar">
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <img class="settingsIcon" src="images/Remnant/Gear-icon.png" alt="Settings Icon">
+                            </button>
+                            <div class="dropdown-content">
+                                <div class="togglesBox">
+                                    <div class="togglesHeader">TOGGLES</div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Item:</div><div class="togglesValue" style="background-color: #434343;">Value:</div><div class="togglesUse" style="background-color: #434343;">Off?</div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Head:</div><div class="togglesValue" id="toggledHead"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledHead" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Chest:</div><div class="togglesValue" id="toggledChest"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledChest" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Legs:</div><div class="togglesValue" id="toggledLegs"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledLegs" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Hands:</div><div class="togglesValue" id="toggledHands"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledHands" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Amulet:</div><div class="togglesValue" id="toggledAmulet"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledAmulet" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ring1:</div><div class="togglesValue" id="toggledRing1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledRing1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ring2:</div><div class="togglesValue" id="toggledRing2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledRing2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ring3:</div><div class="togglesValue" id="toggledRing3"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledRing3" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ring4:</div><div class="togglesValue" id="toggledRing4"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledRing4" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Relic:</div><div class="togglesValue" id="toggledRelic"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledRelic" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">rFrag1:</div><div class="togglesValue" id="toggledrFrag1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledrFrag1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">rFrag2:</div><div class="togglesValue" id="toggledrFrag2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledrFrag2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">rFrag3:</div><div class="togglesValue" id="toggledrFrag3"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledrFrag3" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">PrimeP:</div><div class="togglesValue" id="toggledPrimeP"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPrimeP" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ability1:</div><div class="togglesValue" id="toggledAbility1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledAbility1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive1:</div><div class="togglesValue" id="toggledPassive1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive2:</div><div class="togglesValue" id="toggledPassive2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive3:</div><div class="togglesValue" id="toggledPassive3"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive3" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive4:</div><div class="togglesValue" id="toggledPassive4"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive4" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Ability2:</div><div class="togglesValue" id="toggledAbility2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledAbility2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive5:</div><div class="togglesValue" id="toggledPassive5"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive5" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive6:</div><div class="togglesValue" id="toggledPassive6"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive6" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive7:</div><div class="togglesValue" id="toggledPassive7"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive7" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Passive8:</div><div class="togglesValue" id="toggledPassive8"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPassive8" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Primary:</div><div class="togglesValue" id="toggledPrimary"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledPrimary" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">pMutator:</div><div class="togglesValue" id="toggledpMutator"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledpMutator" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">pMod:</div><div class="togglesValue" id="toggledpMod"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledpMod" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Melee:</div><div class="togglesValue" id="toggledMelee"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledMelee" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">mMutator:</div><div class="togglesValue" id="toggledmMutator"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledmMutator" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">mMod:</div><div class="togglesValue" id="toggledmMod"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledmMod" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Secondary:</div><div class="togglesValue" id="toggledSecondary"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledSecondary" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">sMutator:</div><div class="togglesValue" id="toggledsMutator"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledsMutator" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">sMod:</div><div class="togglesValue" id="toggledsMod"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledsMod" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc1:</div><div class="togglesValue" id="toggledConc1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc2:</div><div class="togglesValue" id="toggledConc2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc3:</div><div class="togglesValue" id="toggledConc3"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc3" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc4:</div><div class="togglesValue" id="toggledConc4"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc4" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc5:</div><div class="togglesValue" id="toggledConc5"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc5" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc6:</div><div class="togglesValue" id="toggledConc6"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc6" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Conc7:</div><div class="togglesValue" id="toggledConc7"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledConc7" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Quick1:</div><div class="togglesValue" id="toggledQuick1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledQuick1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Quick2:</div><div class="togglesValue" id="toggledQuick2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledQuick2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait1:</div><div class="togglesValue" id="toggledTrait1"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait1" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait2:</div><div class="togglesValue" id="toggledTrait2"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait2" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait3:</div><div class="togglesValue" id="toggledTrait3"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait3" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait4:</div><div class="togglesValue" id="toggledTrait4"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait4" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait5:</div><div class="togglesValue" id="toggledTrait5"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait5" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait6:</div><div class="togglesValue" id="toggledTrait6"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait6" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait7:</div><div class="togglesValue" id="toggledTrait7"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait7" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait8:</div><div class="togglesValue" id="toggledTrait8"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait8" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait9:</div><div class="togglesValue" id="toggledTrait9"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait9" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait10:</div><div class="togglesValue" id="toggledTrait10"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait10" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait11:</div><div class="togglesValue" id="toggledTrait11"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait11" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait12:</div><div class="togglesValue" id="toggledTrait12"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait12" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait13:</div><div class="togglesValue" id="toggledTrait13"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait13" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait14:</div><div class="togglesValue" id="toggledTrait14"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait14" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait15:</div><div class="togglesValue" id="toggledTrait15"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait15" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait16:</div><div class="togglesValue" id="toggledTrait16"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait16" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait17:</div><div class="togglesValue" id="toggledTrait17"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait17" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait18:</div><div class="togglesValue" id="toggledTrait18"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait18" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait19:</div><div class="togglesValue" id="toggledTrait19"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait19" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                    <div class="togglesRowBox">
+                                        <div class="togglesStat">Trait20:</div><div class="togglesValue" id="toggledTrait20"></div><div class="togglesUse">
+                                            <input type="checkbox" id="USEtoggledTrait20" class="togglesCheckBox" onchange="updateFormulas()"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <img class="settingsIcon" src="images/Remnant/Question-Mark.png" alt="Help Icon">
+                            </button>
+                            <div class="dropdown-content">
+                                <img class="settingsIcon" src="images/Remnant/Question-Mark.png" alt="Help Icon">
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <img class="settingsIcon" src="images/Remnant/Book-Icon.png" alt="Builds Icon">
+                            </button>
+                            <div class="dropdown-content">
+                                <img class="settingsIcon" src="images/Remnant/Book-Icon.png" alt="Builds Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="classTitle" id="comboTitle">---</div>
+                <div class="classPerkContainer">
+                    <div class="classPerkName">PRIME PERK:<br><span id="primePerk"></span></div>
+                    <div class="classPerkIconHolder">
+                        <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
+                    </div>
+                </div>
+                <div class="classPerkDescription" id="primePerkDesc">---</div>
+            </div>
+            <div class="armorHeaderBig">ARMOR SELECTION</div>
+            <div class="armorSelectionsBox">
+                <div class="armorHeader">Head</div>
+                    <div class="armorContainer">
+                        <div class="armorSelectorBox">
+                            <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
+                        </div>
+                        <div class="armorIconHolder">
+                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
+                        </div>
+                        <div class="armorValueContainer">
+                            <div class="armorValueHeader">Armor</div>
+                            <div class="armorValueDisplay" id="helmetArmor">0</div>
+                            <div class="armorValueHeader">Weight</div>
+                            <div class="armorValueDisplay" id="helmetWeight">0</div>
+                        </div>
+                    </div>
+                <div class="armorHeader">Chest</div>
+                    <div class="armorContainer">
+                        <div class="armorSelectorBox">
+                            <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
+                        </div>
+                        <div class="armorIconHolder">
+                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
+                        </div>
+                        <div class="armorValueContainer">
+                            <div class="armorValueHeader">Armor</div>
+                            <div class="armorValueDisplay" id="chestArmor">0</div>
+                            <div class="armorValueHeader">Weight</div>
+                            <div class="armorValueDisplay" id="chestWeight">0</div>
+                        </div>
+                    </div>
+                <div class="armorHeader">Legs</div>
+                    <div class="armorContainer">
+                        <div class="armorSelectorBox">
+                            <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
+                        </div>
+                        <div class="armorIconHolder">
+                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
+                        </div>
+                        <div class="armorValueContainer">
+                            <div class="armorValueHeader">Armor</div>
+                            <div class="armorValueDisplay" id="legArmor">0</div>
+                            <div class="armorValueHeader">Weight</div>
+                            <div class="armorValueDisplay" id="legWeight">0</div>
+                        </div>
+                    </div>
+                <div class="armorHeader">Hands</div>
+                    <div class="armorContainer">
+                        <div class="armorSelectorBox">
+                            <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
+                        </div>
+                        <div class="armorIconHolder">
+                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
+                        </div>
+                        <div class="armorValueContainer">
+                            <div class="armorValueHeader">Armor</div>
+                            <div class="armorValueDisplay" id="handArmor">0</div>
+                            <div class="armorValueHeader">Weight</div>
+                            <div class="armorValueDisplay" id="handWeight">0</div>
+                        </div>
+                    </div>
+            </div>
         </div>
-    </div>
-
-    <div class="basicsHealingBox">
-        <div class="healingHeaderTitle">HEALING</div>
-        <div class="healingHeaderSmall">BOOSTS</div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="basicsDRValue" id="relicEFF">0.00%</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="basicsDRValue" id="healingEFF">0.00%</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Relic Use Time</span><span class="basicsDRValue" id="relicUseTime">0.00%</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="basicsDRValue" id="lifesteal">0.0/0.0/0.0</span></div>
-        <div class="healingHeaderSmall">REGENERATION</div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Flat HP/s</span><span class="basicsDRValue" id="flatHP/s">0.0</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">% HP/s</span><span class="basicsDRValue" id="%HP/s">0.00%</span></div>
-            <div class="healingRowContainer"><span class="basicsDRStat">Grey Health/s</span><span class="basicsDRValue" id="greyHP/s">0.2</span></div>
-    </div>
-    
-    <div class="basicsStaminaBox">
-        <div class="staminaHeaderTitle">STAMINA</div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Regen/s</span><span class="basicsDRValue" id="stamina/s">33.0</span></div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Cost</span><span class="basicsDRValue" id="staminaCost">100.00%</span></div>
-            <div class="staminaRowContainer"><span class="basicsDRStat">Dodge Class</span><span class="basicsDRValue" id="dodgeClass">Light</span></div>
-    </div>
-</div>
-
-<div class="mainBody">
-    <div class="classBox"> <!-- ARCHETYPE 1 COLUMN -->
-        <div class="classAbilityBox">
-        <div class="classIconContainer">
-            <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1Icon">
-        </div>
-        <div class="classThinHeader">Archetype 1:</div>
-        <div class="classSelectorBox">
-            <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
-                <!-- <option></option> -->
-            </select> 
-        </div>
-            <div class="classThinHeader">ABILITY 1:</div>
+        <div class="classBox"> <!-- ARCHETYPE 2 COLUMN-->
+            
+            <div class="classAbilityBox">
+            <div class="classIconContainer">
+                <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2Icon">
+            </div>
+            <div class="classThinHeader">Archetype 2:</div>
+            <div class="classSelectorBox">
+                <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')">
+                    <!-- <option></option> -->
+                </select> 
+            </div>
+                <div class="classThinHeader">ABILITY 2:</div>
                 <div class="classAbilityContainer">
                     <div class="classAbilitySelectorBox">
-                        <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')">
-                            <!-- <option></option> -->
+                        <select class="classAbilitySelector" id="archetype2ability" onchange="updateAbility('archetype2')">
+                        <!-- <option></option> -->
                         </select> 
                     </div>
-                    <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+                    <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2abilityIcon">
                 </div>
-                <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
-        </div>
-
-        <div class="classPassivesBox">       
-            <div class="classThinHeader">PASSIVES:</div>
-            <div class="classPassiveHeader" id="archetype1passive1"></div>
-                <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
-            <div class="classPassiveHeader" id="archetype1passive2"></div>
-                <div class="classPassiveDescription" id="archetype1passive2desc"></div>
-            <div class="classPassiveHeader" id="archetype1passive3"></div>
-                <div class="classPassiveDescription" id="archetype1passive3desc"></div>
-            <div class="classPassiveHeader" id="archetype1passive4"></div>
-                <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+                <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
+            </div>
+                    
+            <div class="classPassivesBox">
+                <div class="classThinHeader">PASSIVES:</div>
+                <div class="classPassiveHeader" id="archetype2passive1"></div>
+                    <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
+                <div class="classPassiveHeader" id="archetype2passive2"></div>
+                    <div class="classPassiveDescription" id="archetype2passive2desc"></div>
+                <div class="classPassiveHeader" id="archetype2passive3"></div>
+                    <div class="classPassiveDescription" id="archetype2passive3desc"></div>
+                <div class="classPassiveHeader" id="archetype2passive4"></div>
+                    <div class="classPassiveDescription" id="archetype2passive4desc"></div>
+            </div>
         </div>
     </div>
-    <div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
-        <div class="primePerkBox">
-            <div class="classVoidSpace">Probably loadout selection icons, here. Adjust height and shrink pperk desc based on max length among all classes.<br>A task for later.</div>
-            <div class="classTitle" id="comboTitle">---</div>
-            <div class="classPerkContainer">
-                <div class="classPerkName">PRIME PERK:<br><span id="primePerk">Select a primary archetype</span></div>
-                <div class="classPerkIconHolder">
-                    <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
+    <div class="accessoriesBox"> <!-- ACCESSORY COLUMN-->
+        <div class="accessoriesTitleHeader">ACCESSORIES</div>
+        <div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Amulet Icon" id="amuletImage">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Amulet:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="amulet" onchange="updateAccessory('amulet')"></select>
                 </div>
             </div>
-            <div class="classPerkDescription" id="primePerkDesc">---</div>
+            <div class="accessoryDescription" id="amuletDesc"></div>
         </div>
-        <div class="armorHeaderBig">ARMOR SELECTION</div>
-        <div class="armorSelectionsBox">
-            <div class="armorHeader">Head</div>
-                <div class="armorContainer">
-                    <div class="armorSelectorBox">
-                        <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
-                    </div>
-                    <div class="armorIconHolder">
-                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
-                    </div>
-                    <div class="armorValueContainer">
-                        <div class="armorValueHeader">Armor</div>
-                        <div class="armorValueDisplay" id="helmetArmor">0</div>
-                        <div class="armorValueHeader">Weight</div>
-                        <div class="armorValueDisplay" id="helmetWeight">0</div>
-                    </div>
+        <div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 1 Icon" id="ring1Image">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Ring 1:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="ring1" onchange="updateAccessory('ring','1')"></select>
                 </div>
-            <div class="armorHeader">Chest</div>
-                <div class="armorContainer">
-                    <div class="armorSelectorBox">
-                        <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
-                    </div>
-                    <div class="armorIconHolder">
-                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
-                    </div>
-                    <div class="armorValueContainer">
-                        <div class="armorValueHeader">Armor</div>
-                        <div class="armorValueDisplay" id="chestArmor">0</div>
-                        <div class="armorValueHeader">Weight</div>
-                        <div class="armorValueDisplay" id="chestWeight">0</div>
-                    </div>
+            </div>
+            <div class="accessoryDescription" id="ring1Desc"></div>
+        </div><div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 2 Icon" id="ring2Image">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Ring 2:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="ring2" onchange="updateAccessory('ring','2')"></select>
                 </div>
-            <div class="armorHeader">Legs</div>
-                <div class="armorContainer">
-                    <div class="armorSelectorBox">
-                        <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
-                    </div>
-                    <div class="armorIconHolder">
-                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
-                    </div>
-                    <div class="armorValueContainer">
-                        <div class="armorValueHeader">Armor</div>
-                        <div class="armorValueDisplay" id="legArmor">0</div>
-                        <div class="armorValueHeader">Weight</div>
-                        <div class="armorValueDisplay" id="legWeight">0</div>
-                    </div>
+            </div>
+            <div class="accessoryDescription" id="ring2Desc"></div>
+        </div><div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 3 Icon" id="ring3Image">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Ring 3:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="ring3" onchange="updateAccessory('ring','3')"></select>
                 </div>
-            <div class="armorHeader">Hands</div>
-                <div class="armorContainer">
-                    <div class="armorSelectorBox">
-                        <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
-                    </div>
-                    <div class="armorIconHolder">
-                        <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
-                    </div>
-                    <div class="armorValueContainer">
-                        <div class="armorValueHeader">Armor</div>
-                        <div class="armorValueDisplay" id="handArmor">0</div>
-                        <div class="armorValueHeader">Weight</div>
-                        <div class="armorValueDisplay" id="handWeight">0</div>
-                    </div>
+            </div>
+            <div class="accessoryDescription" id="ring3Desc"></div>
+        </div><div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 4 Icon" id="ring4Image">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Ring 4:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="ring4" onchange="updateAccessory('ring','4')"></select>
                 </div>
+            </div>
+            <div class="accessoryDescription" id="ring4Desc"></div>
         </div>
-    </div>
-    <div class="classBox"> <!-- ARCHETYPE 2 COLUMN-->
+        <div class="accessoriesTitleHeader">RELIC</div>
+        <div class="accessoriesContainer">
+            <div class="accessoryIconHolder">
+                <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Relic Icon" id="relicImage">
+            </div>
+            <div class="accessoryContainer">
+                <div class="accessoryHeader">Relic:</div>
+                <div class="accessorySelectorBox">
+                    <select class="accessorySelector" id="relic" onchange="updateAccessory('relic')"></select>
+                </div>
+            </div>
+            <div class="fragmentsContainer">
+                <div class="accessoryHeader">Fragments:</div>
+                <div class="fragmentsSelectorBox">
+                    <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment1')"></select>
+                </div>
+                <div class="fragmentsSelectorBox">
+                    <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment2')"></select>
+                </div>
+                <div class="fragmentsSelectorBox">
+                    <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment3')"></select>
+                </div>
+            </div>
+        </div>
+        <div class="relicDescription" id="relicDesc"></div>
         
-        <div class="classAbilityBox">
-        <div class="classIconContainer">
-            <img class="classIconSelected" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2Icon">
-        </div>
-        <div class="classThinHeader">Archetype 2:</div>
-        <div class="classSelectorBox">
-            <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')">
-                <!-- <option></option> -->
-            </select> 
-        </div>
-            <div class="classThinHeader">ABILITY 2:</div>
-            <div class="classAbilityContainer">
-                <div class="classAbilitySelectorBox">
-                    <select class="classAbilitySelector" id="archetype2ability" onchange="updateAbility('archetype2')">
-                    <!-- <option></option> -->
-                    </select> 
-                </div>
-                <img class="classAbilityIcon" src="images/Remnant/clear.png" alt="Class 2 Icon" id="archetype2abilityIcon">
+        
+        <div class="relicEffectsContainer">
+            <div class="relicHealingContainer">
+                <div class="relicHeader">Relic Healing</div>
+                <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicBase">0</span></div>
+                <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue" id="relicType">0</span></div>
+                <div class="complexRowContainer"><span class="basicsDRStat">Over(s)</span><span class="basicsDRValue" id="relicTime">0</span></div>
+                <div class="relicHeader">Scaled</div>
+                <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicScaled">0</span></div>
+                <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="basicsDRValue" id="relic%HP/s">0</span></div>
+                <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue" id="relicHP/s">0</span></div>
             </div>
-            <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
-        </div>
-                
-        <div class="classPassivesBox">
-            <div class="classThinHeader">PASSIVES:</div>
-            <div class="classPassiveHeader" id="archetype2passive1"></div>
-                <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
-            <div class="classPassiveHeader" id="archetype2passive2"></div>
-                <div class="classPassiveDescription" id="archetype2passive2desc"></div>
-            <div class="classPassiveHeader" id="archetype2passive3"></div>
-                <div class="classPassiveDescription" id="archetype2passive3desc"></div>
-            <div class="classPassiveHeader" id="archetype2passive4"></div>
-                <div class="classPassiveDescription" id="archetype2passive4desc"></div>
+            <div class="relicComplexContainer">
+                <div class="relicHeader">Complex Relic Effects</div>
+                misc shit here later, but also I have far more space than expected? Figure out wtf to do here once hookups are done.
+            </div>
         </div>
     </div>
 </div>
 
-<div class="accessoriesBox"> <!-- ACCESSORY COLUMN-->
-    <div class="accessoriesTitleHeader">ACCESSORIES</div>
-    <div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Amulet Icon" id="amuletImage">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Amulet:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="amulet" onchange="updateAccessory('amulet')"></select>
-            </div>
-        </div>
-        <div class="accessoryDescription" id="amuletDesc"></div>
-    </div>
-    <div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 1 Icon" id="ring1Image">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Ring 1:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="ring1" onchange="updateAccessory('ring','1')"></select>
-            </div>
-        </div>
-        <div class="accessoryDescription" id="ring1Desc"></div>
-    </div><div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 2 Icon" id="ring2Image">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Ring 2:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="ring2" onchange="updateAccessory('ring','2')"></select>
-            </div>
-        </div>
-        <div class="accessoryDescription" id="ring2Desc"></div>
-    </div><div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 3 Icon" id="ring3Image">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Ring 3:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="ring3" onchange="updateAccessory('ring','3')"></select>
-            </div>
-        </div>
-        <div class="accessoryDescription" id="ring3Desc"></div>
-    </div><div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 4 Icon" id="ring4Image">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Ring 4:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="ring4" onchange="updateAccessory('ring','4')"></select>
-            </div>
-        </div>
-        <div class="accessoryDescription" id="ring4Desc"></div>
-    </div>
-    <div class="accessoriesTitleHeader">RELIC</div>
-    <div class="accessoriesContainer">
-        <div class="accessoryIconHolder">
-            <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Relic Icon" id="relicImage">
-        </div>
-        <div class="accessoryContainer">
-            <div class="accessoryHeader">Relic:</div>
-            <div class="accessorySelectorBox">
-                <select class="accessorySelector" id="relic" onchange="updateAccessory('relic')"></select>
-            </div>
-        </div>
-        <div class="fragmentsContainer">
-            <div class="accessoryHeader">Fragments:</div>
-            <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment1')"></select>
-            </div>
-            <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment2')"></select>
-            </div>
-            <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment3')"></select>
-            </div>
-        </div>
-    </div>
-    <div class="relicDescription" id="relicDesc"></div>
-    
-    
-    <div class="relicEffectsContainer">
-        <div class="relicHealingContainer">
-            <div class="relicHeader">Relic Healing</div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicBase">0</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="basicsDRValue" id="relicType">0</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Over(s)</span><span class="basicsDRValue" id="relicTime">0</span></div>
-            <div class="relicHeader">Scaled</div>
-            <div class="complexRowContainer"><span class="basicsDRStat">Base</span><span class="basicsDRValue" id="relicScaled">0</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="basicsDRValue" id="relic%HP/s">0</span></div>
-            <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="basicsDRValue" id="relicHP/s">0</span></div>
-        </div>
-        <div class="relicComplexContainer">
-            <div class="relicHeader">Complex Relic Effects</div>
-            misc shit here later, but also I have far more space than expected? Figure out wtf to do here once hookups are done.
-        </div>
-    </div>
-</div>
-<!-- asdf
-<img class="roundedIcon" src="images/Remnant/R2icon_NoCrop.jpg" alt="Remnant 2 Icon"> -->
-<div class="consumablesBox">
-    <div class="bottomTitleHeader">CONSUMABLES</div>
-    <div class="consumablesWholeBox">
-        <div class="consumablesHeader"><span class="concLimitHeader">Concoctions</span><span class="concLimitValue">Limit:<span id="concValueDisplay">1</span></div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 1 Icon" id="concoction1Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction1" onchange="updateConsumable('concoction','1')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction1Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 2 Icon" id="concoction2Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction2" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','2')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction2Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 3 Icon" id="concoction3Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction3" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','3')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction3Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 4 Icon" id="concoction4Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction4" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','4')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction4Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 5 Icon" id="concoction5Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction5" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','5')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction5Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 6 Icon" id="concoction6Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction6" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','6')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction6Desc"></div>
-            </div>
-        </div>
-        <div class="consumableContainer">
-            <div class="consumableImageBox">
-                <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 7 Icon" id="concoction7Icon">
-            </div>
-            <div class="consumableInfoBox">
-                <div class="consumableSelectorBox">
-                    <select class="consumableSelector" id="concoction7" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','7')">
-                    </select> 
-                </div>
-                <div class="consumableDesc" id="concoction7Desc"></div>
-            </div>
-        </div>
-        <div class="consumablesHeader">Quick-Use Consumables</div>
+<div class="consumablesToTraitsBox">
+    <div class="consumablesBox">
+        <div class="bottomTitleHeader">CONSUMABLES</div>
+        <div class="consumablesWholeBox">
+            <div class="consumablesHeader"><span class="concLimitHeader">Concoctions</span><span class="concLimitValue">Limit:<span id="concValueDisplay">1</span></div>
             <div class="consumableContainer">
                 <div class="consumableImageBox">
-                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Quick-Use 1 Icon" id="quickUse1Icon">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 1 Icon" id="concoction1Icon">
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="quickUse1" onchange="updateConsumable('quickUse','1')">
+                        <select class="consumableSelector" id="concoction1" onchange="updateConsumable('concoction','1')">
                         </select> 
                     </div>
-                    <div class="consumableDesc" id="quickUse1Desc"></div>
+                    <div class="consumableDesc" id="concoction1Desc"></div>
                 </div>
             </div>
             <div class="consumableContainer">
                 <div class="consumableImageBox">
-                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Quick-Use 2 Icon" id="quickUse2Icon">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 2 Icon" id="concoction2Icon">
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="quickUse2" onchange="updateConsumable('quickUse','2')">
+                        <select class="consumableSelector" id="concoction2" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','2')">
                         </select> 
                     </div>
-                    <div class="consumableDesc" id="quickUse2Desc"></div>
+                    <div class="consumableDesc" id="concoction2Desc"></div>
                 </div>
             </div>
-    </div>
-</div>
-<div class="weaponsBox">
-    <div class="bottomTitleHeader">WEAPONS</div>
-    <div class="weaponsWholeBox">
-        <div class="weaponsThirdsBox">
-            <div class="weaponImageBox">
-                <img class="weaponImage" src="images/Remnant/clear.png" alt="Primary Weapon Icon" id="primaryImage">
-            </div>
-            <div class="weaponSelectorBox">
-                <select class="weaponSelector" id="primary" onchange="updateWeapon('primary')"></select> 
-            </div>
-            <div class="mutatorHeaderBox">
-                <div class="mutatorHeader">Mutator:</div>
-                <div class="mutatorSelectorBox">
-                    <select class="weaponSelector" id="primaryMutator" onchange="updateMutator('primary')"></select>
+            <div class="consumableContainer">
+                <div class="consumableImageBox">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 3 Icon" id="concoction3Icon">
+                </div>
+                <div class="consumableInfoBox">
+                    <div class="consumableSelectorBox">
+                        <select class="consumableSelector" id="concoction3" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','3')">
+                        </select> 
+                    </div>
+                    <div class="consumableDesc" id="concoction3Desc"></div>
                 </div>
             </div>
-            <div class="mutatorDesc" id="primaryMutatorDesc"></div>
-            <div class="mutatorHeaderBox">
-                <div class="modSelectorBox">
-                    <select class="modSelector" id="primaryMod" onchange="updateMod('primary')"></select>
+            <div class="consumableContainer">
+                <div class="consumableImageBox">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 4 Icon" id="concoction4Icon">
                 </div>
-                <div class="modHeader">Mod</div>
-                <div class="modImageBox">
-                    <img class="modImage" src="images/Remnant/clear.png" alt="Primary Mod Icon" id="primaryModImage">
-                </div>
-            </div>
-            <div class="mutatorDesc" id="primaryModDesc"></div>
-            <!-- These all need ID's later when dmg calcs get added. -->
-            <div class="weaponRowContainer">
-                <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
-            </div>
-        </div>
-        <div class="weaponsThirdsBox">
-            <div class="weaponImageBox">
-                <img class="weaponImage" src="images/Remnant/clear.png" alt="Melee Weapon Icon" id="meleeImage">
-            </div>
-            <div class="weaponSelectorBox">
-                <select class="weaponSelector" id="melee" onchange="updateWeapon('melee')"></select> 
-            </div>
-            <div class="mutatorHeaderBox">
-                <div class="mutatorHeader">Mutator:</div>
-                <div class="mutatorSelectorBox">
-                    <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('melee')"></select>
+                <div class="consumableInfoBox">
+                    <div class="consumableSelectorBox">
+                        <select class="consumableSelector" id="concoction4" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','4')">
+                        </select> 
+                    </div>
+                    <div class="consumableDesc" id="concoction4Desc"></div>
                 </div>
             </div>
-            <div class="mutatorDesc" id="meleeMutatorDesc"></div>
-            <div class="mutatorHeaderBox">
-                <div class="modSelectorBox">
-                    <select class="modSelector" id="meleeMod" onchange="updateMod('melee')"></select>
+            <div class="consumableContainer">
+                <div class="consumableImageBox">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 5 Icon" id="concoction5Icon">
                 </div>
-                <div class="modHeader">Mod</div>
-                <div class="modImageBox">
-                    <img class="modImage" src="images/Remnant/clear.png" alt="Melee Mod Icon" id="meleeModImage">
-                </div>
-            </div>
-            <div class="mutatorDesc" id="meleeModDesc">Built-in mods will be added later<br><br>DMG calcs are not added YET.</div>
-            <!-- These all need ID's later when dmg calcs get added. -->
-            <div class="weaponRowContainer">
-                <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Attack Speed:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Stamina Cost:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Charge DMG:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Charge Speed:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Charge Cost:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Special Cost:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
-            </div>
-        </div>
-        <div class="weaponsThirdsBox">
-            <div class="weaponImageBox">
-                <img class="weaponImage" src="images/Remnant/clear.png" alt="Secondary Weapon Icon" id="secondaryImage">
-            </div>
-            <div class="weaponSelectorBox">
-                <select class="weaponSelector" id="secondary" onchange="updateWeapon('secondary')"></select> 
-            </div>
-            <div class="mutatorHeaderBox">
-                <div class="mutatorHeader">Mutator:</div>
-                <div class="mutatorSelectorBox">
-                    <select class="weaponSelector" id="secondaryMutator" onchange="updateMutator('secondary')"></select>
+                <div class="consumableInfoBox">
+                    <div class="consumableSelectorBox">
+                        <select class="consumableSelector" id="concoction5" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','5')">
+                        </select> 
+                    </div>
+                    <div class="consumableDesc" id="concoction5Desc"></div>
                 </div>
             </div>
-            <div class="mutatorDesc" id="secondaryMutatorDesc"></div>
-            <div class="mutatorHeaderBox">
-                <div class="modSelectorBox">
-                    <select class="modSelector" id="secondaryMod" onchange="updateMod('secondary')"></select>
+            <div class="consumableContainer">
+                <div class="consumableImageBox">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 6 Icon" id="concoction6Icon">
                 </div>
-                <div class="modHeader">Mod</div>
-                <div class="modImageBox">
-                    <img class="modImage" src="images/Remnant/clear.png" alt="Secondary Mod Icon" id="secondaryModImage">
+                <div class="consumableInfoBox">
+                    <div class="consumableSelectorBox">
+                        <select class="consumableSelector" id="concoction6" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','6')">
+                        </select> 
+                    </div>
+                    <div class="consumableDesc" id="concoction6Desc"></div>
                 </div>
             </div>
-            <div class="mutatorDesc" id="secondaryModDesc"></div>
-            <!-- These all need ID's later when dmg calcs get added. -->
-            <div class="weaponRowContainer">
-                <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+            <div class="consumableContainer">
+                <div class="consumableImageBox">
+                    <img class="consumableImage" src="images/Remnant/clear.png" alt="Concoction 7 Icon" id="concoction7Icon">
+                </div>
+                <div class="consumableInfoBox">
+                    <div class="consumableSelectorBox">
+                        <select class="consumableSelector" id="concoction7" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','7')">
+                        </select> 
+                    </div>
+                    <div class="consumableDesc" id="concoction7Desc"></div>
+                </div>
             </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-            </div>
-            <div class="weaponRowContainer">
-                <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
-            </div>
+            <div class="consumablesHeader">Quick-Use Consumables</div>
+                <div class="consumableContainer">
+                    <div class="consumableImageBox">
+                        <img class="consumableImage" src="images/Remnant/clear.png" alt="Quick-Use 1 Icon" id="quickUse1Icon">
+                    </div>
+                    <div class="consumableInfoBox">
+                        <div class="consumableSelectorBox">
+                            <select class="consumableSelector" id="quickUse1" onchange="updateConsumable('quickUse','1')">
+                            </select> 
+                        </div>
+                        <div class="consumableDesc" id="quickUse1Desc"></div>
+                    </div>
+                </div>
+                <div class="consumableContainer">
+                    <div class="consumableImageBox">
+                        <img class="consumableImage" src="images/Remnant/clear.png" alt="Quick-Use 2 Icon" id="quickUse2Icon">
+                    </div>
+                    <div class="consumableInfoBox">
+                        <div class="consumableSelectorBox">
+                            <select class="consumableSelector" id="quickUse2" onchange="updateConsumable('quickUse','2')">
+                            </select> 
+                        </div>
+                        <div class="consumableDesc" id="quickUse2Desc"></div>
+                    </div>
+                </div>
         </div>
     </div>
-</div>
-<div class="traitsBox">
-    <div class="bottomTitleHeader">TRAITS</div>
-    <div class="traitContainer">
-        <button type="button" class="traitButton" onclick="updateTrait('trait1','-')">-</button>
-        <div class="traitLineHolder">
-            <div class="traitNameHolder">
-                <select class="traitSelector" id="trait1" onchange="updateTrait('trait1')"></select>
-                <div class="traitLevelDisplay" id="trait1Level">0</div> 
+    <div class="weaponsBox">
+        <div class="bottomTitleHeader">WEAPONS</div>
+        <div class="weaponsWholeBox">
+            <div class="weaponsThirdsBox">
+                <div class="weaponImageBox">
+                    <img class="weaponImage" src="images/Remnant/clear.png" alt="Primary Weapon Icon" id="primaryImage">
                 </div>
-            <div class="traitLevelContainer">
-                <div class="pointsSpent" id="trait1Spent"></div>
-                <div class="intrinsicPoints" id="trait1Intrinsic"></div>
-                <div class="traitLevelBar">
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
-                    <div class="traitLevelCircle"></div>
+                <div class="weaponSelectorBox">
+                    <select class="weaponSelector" id="primary" onchange="updateWeapon('primary')"></select> 
+                </div>
+                <div class="mutatorHeaderBox">
+                    <div class="mutatorHeader">Mutator:</div>
+                    <div class="mutatorSelectorBox">
+                        <select class="weaponSelector" id="primaryMutator" onchange="updateMutator('primary')"></select>
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="primaryMutatorDesc"></div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="primaryMod" onchange="updateMod('primary')"></select>
+                    </div>
+                    <div class="modHeader">Mod</div>
+                    <div class="modImageBox">
+                        <img class="modImage" src="images/Remnant/clear.png" alt="Primary Mod Icon" id="primaryModImage">
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="primaryModDesc"></div>
+                <!-- These all need ID's later when dmg calcs get added. -->
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                </div>
+            </div>
+            <div class="weaponsThirdsBox">
+                <div class="weaponImageBox">
+                    <img class="weaponImage" src="images/Remnant/clear.png" alt="Melee Weapon Icon" id="meleeImage">
+                </div>
+                <div class="weaponSelectorBox">
+                    <select class="weaponSelector" id="melee" onchange="updateWeapon('melee')"></select> 
+                </div>
+                <div class="mutatorHeaderBox">
+                    <div class="mutatorHeader">Mutator:</div>
+                    <div class="mutatorSelectorBox">
+                        <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('melee')"></select>
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="meleeMutatorDesc"></div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="meleeMod" onchange="updateMod('melee')"></select>
+                    </div>
+                    <div class="modHeader">Mod</div>
+                    <div class="modImageBox">
+                        <img class="modImage" src="images/Remnant/clear.png" alt="Melee Mod Icon" id="meleeModImage">
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="meleeModDesc">Built-in mods will be added later<br><br>DMG calcs are not added YET.</div>
+                <!-- These all need ID's later when dmg calcs get added. -->
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Attack Speed:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Stamina Cost:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Charge DMG:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Charge Speed:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Charge Cost:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Special Cost:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                </div>
+            </div>
+            <div class="weaponsThirdsBox">
+                <div class="weaponImageBox">
+                    <img class="weaponImage" src="images/Remnant/clear.png" alt="Secondary Weapon Icon" id="secondaryImage">
+                </div>
+                <div class="weaponSelectorBox">
+                    <select class="weaponSelector" id="secondary" onchange="updateWeapon('secondary')"></select> 
+                </div>
+                <div class="mutatorHeaderBox">
+                    <div class="mutatorHeader">Mutator:</div>
+                    <div class="mutatorSelectorBox">
+                        <select class="weaponSelector" id="secondaryMutator" onchange="updateMutator('secondary')"></select>
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="secondaryMutatorDesc"></div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="secondaryMod" onchange="updateMod('secondary')"></select>
+                    </div>
+                    <div class="modHeader">Mod</div>
+                    <div class="modImageBox">
+                        <img class="modImage" src="images/Remnant/clear.png" alt="Secondary Mod Icon" id="secondaryModImage">
+                    </div>
+                </div>
+                <div class="mutatorDesc" id="secondaryModDesc"></div>
+                <!-- These all need ID's later when dmg calcs get added. -->
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                </div>
+                <div class="weaponRowContainer">
+                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
                 </div>
             </div>
         </div>
-        <button type="button" class="traitButton" onclick="updateTrait('trait1','+')">+</button>
     </div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
-    <div class="traitContainer"></div>
+    <div class="traitsBox">
+        <div class="bottomTitleHeader">TRAITS</div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait1','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait1" onchange="updateTrait('trait1')"></select>
+                    <div class="traitLevelDisplay" id="trait1Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait1Spent"></div>
+                    <div class="intrinsicPoints" id="trait1Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait1','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait2','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait2" onchange="updateTrait('trait2')"></select>
+                    <div class="traitLevelDisplay" id="trait2Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait2Spent"></div>
+                    <div class="intrinsicPoints" id="trait2Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait2','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait3','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait3" onchange="updateTrait('trait3')"></select>
+                    <div class="traitLevelDisplay" id="trait3Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait3Spent"></div>
+                    <div class="intrinsicPoints" id="trait3Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait3','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait4','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait4" onchange="updateTrait('trait4')"></select>
+                    <div class="traitLevelDisplay" id="trait4Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait4Spent"></div>
+                    <div class="intrinsicPoints" id="trait4Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait4','+')">+</button>
+        </div>
+        <div class="traitContainer"><button type="button" class="traitButton" onclick="updateTrait('trait5','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait5" onchange="updateTrait('trait5')"></select>
+                    <div class="traitLevelDisplay" id="trait5Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait5Spent"></div>
+                    <div class="intrinsicPoints" id="trait5Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait5','+')">+</button></div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait6','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait6" onchange="updateTrait('trait6')"></select>
+                    <div class="traitLevelDisplay" id="trait6Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait6Spent"></div>
+                    <div class="intrinsicPoints" id="trait6Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait6','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait7','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait7" onchange="updateTrait('trait7')"></select>
+                    <div class="traitLevelDisplay" id="trait7Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait7Spent"></div>
+                    <div class="intrinsicPoints" id="trait7Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait7','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait8','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait8" onchange="updateTrait('trait8')"></select>
+                    <div class="traitLevelDisplay" id="trait8Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait8Spent"></div>
+                    <div class="intrinsicPoints" id="trait8Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait8','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait9','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait9" onchange="updateTrait('trait9')"></select>
+                    <div class="traitLevelDisplay" id="trait9Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait9Spent"></div>
+                    <div class="intrinsicPoints" id="trait9Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait9','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait10','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait10" onchange="updateTrait('trait10')"></select>
+                    <div class="traitLevelDisplay" id="trait10Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait10Spent"></div>
+                    <div class="intrinsicPoints" id="trait10Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait10','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait11','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait11" onchange="updateTrait('trait11')"></select>
+                    <div class="traitLevelDisplay" id="trait11Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait11Spent"></div>
+                    <div class="intrinsicPoints" id="trait11Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait11','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait12','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait12" onchange="updateTrait('trait12')"></select>
+                    <div class="traitLevelDisplay" id="trait12Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait12Spent"></div>
+                    <div class="intrinsicPoints" id="trait12Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait12','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait13','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait13" onchange="updateTrait('trait13')"></select>
+                    <div class="traitLevelDisplay" id="trait13Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait13Spent"></div>
+                    <div class="intrinsicPoints" id="trait13Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait13','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait14','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait14" onchange="updateTrait('trait14')"></select>
+                    <div class="traitLevelDisplay" id="trait14Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait14Spent"></div>
+                    <div class="intrinsicPoints" id="trait14Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait14','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait15','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait15" onchange="updateTrait('trait15')"></select>
+                    <div class="traitLevelDisplay" id="trait15Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait15Spent"></div>
+                    <div class="intrinsicPoints" id="trait15Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait15','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait16','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait16" onchange="updateTrait('trait16')"></select>
+                    <div class="traitLevelDisplay" id="trait16Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait16Spent"></div>
+                    <div class="intrinsicPoints" id="trait16Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait16','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait17','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait17" onchange="updateTrait('trait17')"></select>
+                    <div class="traitLevelDisplay" id="trait17Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait17Spent"></div>
+                    <div class="intrinsicPoints" id="trait17Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait17','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait18','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait18" onchange="updateTrait('trait18')"></select>
+                    <div class="traitLevelDisplay" id="trait18Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait18Spent"></div>
+                    <div class="intrinsicPoints" id="trait18Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait18','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait19','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait19" onchange="updateTrait('trait19')"></select>
+                    <div class="traitLevelDisplay" id="trait19Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait19Spent"></div>
+                    <div class="intrinsicPoints" id="trait19Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait19','+')">+</button>
+        </div>
+        <div class="traitContainer">
+            <button type="button" class="traitButton" onclick="updateTrait('trait20','-')">-</button>
+            <div class="traitLineHolder">
+                <div class="traitNameHolder">
+                    <select class="traitSelector" id="trait20" onchange="updateTrait('trait20')"></select>
+                    <div class="traitLevelDisplay" id="trait20Level">0</div> 
+                    </div>
+                <div class="traitLevelContainer">
+                    <div class="pointsSpent" id="trait20Spent"></div>
+                    <div class="intrinsicPoints" id="trait20Intrinsic"></div>
+                    <div class="traitLevelBar">
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                        <div class="traitLevelCircle"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="traitButton" onclick="updateTrait('trait20','+')">+</button>
+        </div>
+    </div>
 </div>
 
+<div class="advancedStatsBox">
+    <div class="advancedStatsTitleHeader">ADVANCED STATS</div>
+    <div class="advancedStatsHeader">KEY SURVIVABILITY STATS</div>
+    <div class="advancedSummaryContainer">
+        <div class="advancedSummaryThirds">
+            <span class="advancedSummaryStat">EHP:</span><span class="advancedSummaryValue" id="EHP">100.00</span>
+        </div>
+        <div class="advancedSummaryThirds">
+            <span class="advancedSummaryStat">EHP/s:</span><span class="advancedSummaryValue" id="EHP/s">0.00</span>
+        </div>
+        <div class="advancedSummaryThirds">
+            <span class="advancedSummaryStat">Effective DR:</span><span class="advancedSummaryValue" id="effectiveDR">0.00%</span>
+        </div>
+    </div>
+    <div class="advancedCategoryBoxHolder">
+        <!-- DR Factors  -->
+        <div class="advancedCategoryBox">
+            <div class="advancedCategoryHeader">DR FACTORS</div>
+            <div class="totalBonusDRHeader">Bonus Damage Mitigation</div>
+            <div class="advancedDRBoxThin">
+                <div class="advancedDRStat">Type</div>
+                <div class="advancedDRValue">Amt%</div>
+                <div class="advancedDRHeaderUse">Use?</div>
+            </div>
+            <div class="advancedDRBox">
+                <div class="advancedDRStat">Reduced Enemy DMG:</div>
+                <div class="advancedDRValue" id="REdamage">0.00%</div>
+                <div class="advancedDRHeaderUse">
+                    <input type="checkbox" id="includeREdamage" class="advancedDRCheckBox" onchange="updateFormulas()"/>
+                </div>
+            </div>
+            <div class="advancedDRBox">
+                <div class="advancedDRStat">Damage Kept:</div>
+                <div class="advancedDRValue" id="DMGKept">0.00%</div>
+                <div class="advancedDRHeaderUse">
+                    <input type="checkbox" id="includeDMGKept" class="advancedDRCheckBox" onchange="updateFormulas()"/>
+                </div>
+            </div>
+            <div class="totalBonusDRHeader">Total Bonus%</div>
+            <div class="totalBonusDR" id="totalBonusMitigation">0.00%</div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Coop?</div><div class="advancedMiscBoxValue">
+                <select class="advancedMiscSelector" id="isCoop" onchange="updateFormulas()">
+                    <option>Solo</option>
+                    <option>Co-op</option>
+                </select>
+            </div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Team Count:</div><div class="advancedMiscBoxValue">
+                <select class="advancedMiscSelector" id="teamCount" disabled onchange="updateFormulas()">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div></div>
+        </div>
+        <!-- Healing Factors  -->
+        <div class="advancedCategoryBox">
+            <div class="advancedCategoryHeader">HEALING</div>
+            <div class="advancedHealingBox">Passive + Abilities</div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue">0.00</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue">0.00%</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue">0.00</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue">0.00%</div>
+            </div>
+            <div class="advancedHealingBox">Relic</div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Flat only HP/s</div><div class="advancedHealingBoxValue">0.00</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">% only HP/s</div><div class="advancedHealingBoxValue">0.00%</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Total HP/s as Flat</div><div class="advancedHealingBoxValue">0.00</div>
+            </div>
+            <div class="advancedHealingBox">
+                <div class="advancedHealingBoxStat">Total HP/s as %</div><div class="advancedHealingBoxValue">0.00%</div>
+            </div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Include Relic Healing?</div><div class="advancedMiscBoxValue">
+                <input type="checkbox" id="includeRelicHealing" class="shieldsCheckBox"/>
+            </div></div>
+            <div class="totalHealingBigHeader">Total Healing/s</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader">As flat HP/s</div>
+                    <div class="totalHealingValue">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader">As % HP/s</div>
+                    <div class="totalHealingValue">0.00%</div>
+                </div>
+            </div>
+        </div>
+        <!-- Shield Factors  -->
+        <div class="advancedCategoryBox">
+            <div class="advancedCategoryHeader">SHIELDS</div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Shields%</div><div class="advancedMiscBoxValue" id="shield%">0.00%</div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Bonus%</div><div class="advancedMiscBoxValue" id="shieldEff">0.00%</div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Total%</div><div class="advancedMiscBoxValue" id="totalShield%">0.00%</div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Shield EHP</div><div class="advancedMiscBoxValue" id="shieldEHP">0.00</div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Include Shield EHP in Total EHP?</div><div class="advancedMiscBoxValue">
+                <input type="checkbox" id="includeShields" class="shieldsCheckBox" onchange="updateFormulas()"/>
+            </div></div>
+            <div class="shieldsFiller"></div>
+        </div>
+        <!-- Misc Factors  -->
+        <div class="advancedCategoryBox">
+            <div class="advancedCategoryHeader">MISC</div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Summon Count</div><div class="advancedMiscBoxValue">
+                <select class="advancedMiscSelector" id="minionCount">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div></div>
+            <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Spirit Healer Stacks</div><div class="advancedMiscBoxValue">
+                <select class="advancedMiscSelector">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div></div>
+            <div class="miscFiller"></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- </body> -->
+
+</div>
 </body>
-
-</div>
 </html> 

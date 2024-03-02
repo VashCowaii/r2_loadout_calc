@@ -5,6 +5,18 @@ let ring1old,ring2old,ring3old,ring4old;
 let fragment1old,fragment2old,fragment3old;
 let concoction1old,concoction2old,concoction3old,concoction4old,concoction5old,concoction6old,concoction7old;
 let primaryMutatorOld,secondaryMutatorOld;
+
+
+// for (i=1;i<=4;i++) {
+//   if (readSelection(`USEtoggledRing${i}`).checked != true) {
+//     pullStats(rings[readSelection(`ring${i}`).value].stats);
+//     if (rings[readSelection(`ring${i}`).value].custom != null) {
+//       window[rings[readSelection(`ring${i}`).value].custom]();
+//     }
+//   }
+// }
+
+
 //Generalized select <option> population. *should* be able to be used for any gear selection,
 //provided there is a distinct json format to pull from
 function populateGear(elem_ID,collection) {
@@ -35,7 +47,28 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("fragment1",fragments);
   populateGear("fragment2",fragments);
   populateGear("fragment3",fragments);
+
   populateGear("trait1",traits);
+  populateGear("trait2",traits);
+  populateGear("trait3",traits);
+  populateGear("trait4",traits);
+  populateGear("trait5",traits);
+  populateGear("trait6",traits);
+  populateGear("trait7",traits);
+  populateGear("trait8",traits);
+  populateGear("trait9",traits);
+  populateGear("trait10",traits);
+  populateGear("trait11",traits);
+  populateGear("trait12",traits);
+  populateGear("trait13",traits);
+  populateGear("trait14",traits);
+  populateGear("trait15",traits);
+  populateGear("trait16",traits);
+  populateGear("trait17",traits);
+  populateGear("trait18",traits);
+  populateGear("trait19",traits);
+  populateGear("trait20",traits);
+
   populateGear("primary",primary);
   populateGear("melee",melee);
   populateGear("secondary",secondary);
@@ -56,18 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("quickUse2",quickUses);
 })
 
-
 function updateConsumable(type,ID) {
   let selectedConsumable = readSelection(`${type}${ID}`);
   let concLimit = +readSelection("concValueDisplay").innerHTML;
   let updateOtherConsumable = false;
+  let otherConsumable = 0;
   readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
   readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
 
   if (type==="concoction") {
    for (i=1;i<=concLimit;i++) {
       let current = readSelection(`concoction${i}`).value;
-      console.log(current)
       //Checks ID's on ACTIVE concoctions for a dupe, non-matching ID, that isn't blank.
       //If criteria met, swap places like in game.
       if ((current===selectedConsumable.value) && ((`concoction${i}`)!=(`${type}${ID}`)) && (current!="")) {
@@ -79,12 +111,10 @@ function updateConsumable(type,ID) {
       }
    }
   }
-   window[`${type}${ID}old`]=selectedConsumable.value;
-
+  window[`${type}${ID}old`]=selectedConsumable.value;
   if (type==="concoction" && updateOtherConsumable===true) {
     updateConsumable(type,otherConsumable);
   }
-
   updateFormulas();
 }
 
@@ -243,10 +273,118 @@ function readSelection(elemID) {
     let selectedValue = document.getElementById(elemID);
     return selectedValue;
 }
+
+function gameMasters() {
+  greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
+  greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
+}
+function brewMasters() {
+  for (i=1;i<=7;i++) {
+    let activeConcoction = readSelection(`concoction${i}`).value;
+    if (activeConcoction != null && activeConcoction != "") {
+      greatTableKnowerOfAll.FlatDR += 0.02;
+    }
+  }
+}
+function restrictionCord() {
+  greatTableKnowerOfAll.GlobalHealthModifier = greatTableKnowerOfAll.GlobalHealthModifier * 0.5;
+}
+function soulGuard() {
+  greatTableKnowerOfAll.Bulwark += +readSelection("minionCount").value;
+}
+function soulShard() {
+  //for dmg later
+  // += +readSelection("minionCount").value;
+}
+//Displays all selected gear within the toggles menu. Does not utilize checks here, that's elsewhere
+function pullToggles() {
+  readSelection("toggledHead").innerHTML = readSelection("helmetChoice").value
+  readSelection("toggledChest").innerHTML = readSelection("chestChoice").value
+  readSelection("toggledLegs").innerHTML = readSelection("legChoice").value
+  readSelection("toggledHands").innerHTML = readSelection("handChoice").value
+
+  readSelection("toggledAmulet").innerHTML = readSelection("amulet").value
+  readSelection("toggledRing1").innerHTML = readSelection("ring1").value
+  readSelection("toggledRing2").innerHTML = readSelection("ring2").value
+  readSelection("toggledRing3").innerHTML = readSelection("ring3").value
+  readSelection("toggledRing4").innerHTML = readSelection("ring4").value
+
+  readSelection("toggledRelic").innerHTML = readSelection("relic").value
+  readSelection("toggledrFrag1").innerHTML = readSelection("fragment1").value
+  readSelection("toggledrFrag2").innerHTML = readSelection("fragment2").value
+  readSelection("toggledrFrag3").innerHTML = readSelection("fragment3").value
+
+  readSelection("toggledPrimeP").innerHTML = readSelection("primePerk").innerHTML
+  readSelection("toggledAbility1").innerHTML = readSelection("archetype1ability").value
+  readSelection("toggledPassive1").innerHTML = readSelection("archetype1passive1").innerHTML
+  readSelection("toggledPassive2").innerHTML = readSelection("archetype1passive2").innerHTML
+  readSelection("toggledPassive3").innerHTML = readSelection("archetype1passive3").innerHTML
+  readSelection("toggledPassive4").innerHTML = readSelection("archetype1passive4").innerHTML
+
+  readSelection("toggledAbility2").innerHTML = readSelection("archetype2ability").value
+  readSelection("toggledPassive5").innerHTML = readSelection("archetype2passive1").innerHTML
+  readSelection("toggledPassive6").innerHTML = readSelection("archetype2passive2").innerHTML
+  readSelection("toggledPassive7").innerHTML = readSelection("archetype2passive3").innerHTML
+  readSelection("toggledPassive8").innerHTML = readSelection("archetype2passive4").innerHTML
+
+  readSelection("toggledPrimary").innerHTML = readSelection("primary").value
+  readSelection("toggledpMutator").innerHTML = readSelection("primaryMutator").value
+  readSelection("toggledpMod").innerHTML = readSelection("primaryMod").value
+
+  readSelection("toggledMelee").innerHTML = readSelection("melee").value
+  readSelection("toggledmMutator").innerHTML = readSelection("meleeMutator").value
+  readSelection("toggledmMod").innerHTML = readSelection("meleeMod").value
+
+  readSelection("toggledSecondary").innerHTML = readSelection("secondary").value
+  readSelection("toggledsMutator").innerHTML = readSelection("secondaryMutator").value
+  readSelection("toggledsMod").innerHTML = readSelection("secondaryMod").value
+
+  readSelection("toggledConc1").innerHTML = readSelection("concoction1").value
+  readSelection("toggledConc2").innerHTML = readSelection("concoction2").value
+  readSelection("toggledConc3").innerHTML = readSelection("concoction3").value
+  readSelection("toggledConc4").innerHTML = readSelection("concoction4").value
+  readSelection("toggledConc5").innerHTML = readSelection("concoction5").value
+  readSelection("toggledConc6").innerHTML = readSelection("concoction6").value
+  readSelection("toggledConc7").innerHTML = readSelection("concoction7").value
+
+  readSelection("toggledQuick1").innerHTML = readSelection("quickUse1").value
+  readSelection("toggledQuick2").innerHTML = readSelection("quickUse2").value
+
+  for (i=1;i<=20;i++) {
+    readSelection(`toggledTrait${i}`).innerHTML = `${readSelection(`trait${i}`).value} ${readSelection(`trait${i}Level`).innerHTML}`
+  }
+}
 //The big cheese, the great clusterfuck, where all the formulas refresh.
 function updateFormulas() { 
+  //Fill the Toggles table
+  pullToggles();
   //Reset the table
-  for(elements in greatTableKnowerOfAll) {greatTableKnowerOfAll[elements]=0;}
+  for(elements in greatTableKnowerOfAll) {
+    if (elements!="REdamage" && elements!="DMGKept" && elements!="GlobalHealthModifier" && elements!="GlobalHealingEff") {
+      greatTableKnowerOfAll[elements]=0;
+    }
+    else if (elements==="GlobalHealthModifier"||elements==="GlobalHealingEff") {
+      greatTableKnowerOfAll[elements]=1;
+    }
+    else {
+      greatTableKnowerOfAll[elements]=[];
+    }
+  }
+
+//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST-------------------------
+let isCoop = readSelection("isCoop");
+let teamCount = readSelection("teamCount");
+  if (isCoop.value==="Co-op") {
+    isCoop = true;
+    teamCount.disabled = false;
+    teamCount = teamCount.value
+  }
+  else {
+    isCoop = false;
+    teamCount.value = 1;
+    teamCount.disabled = true;
+    teamCount = 1;
+  }
 //----------TRAITS--------------------------------------------------------------
   pullTraits();
 //----------WEAPONS-------------------------------------------------------------
@@ -263,7 +401,8 @@ function updateFormulas() {
 //SUMMARY STATS
   let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
-  let totalHealth = baseHealth * healthBoost; 
+  let globalHealth = greatTableKnowerOfAll.GlobalHealthModifier;
+  let totalHealth = baseHealth * healthBoost * globalHealth; 
   updateDisplay("summaryHealth",totalHealth,1);
   let baseStamina = 100 + greatTableKnowerOfAll.Stamina;
   let staminaBoost = 1 + greatTableKnowerOfAll["Stamina%"];
@@ -338,6 +477,8 @@ function updateFormulas() {
   updateDisplay("summaryCorrosive",corrosive,0);
   updateDisplay("summaryBlight",blight,0);
 //HEALING
+  //this is for shit like game master's pride, it's a global multi modifier
+  let globalHealingMod = greatTableKnowerOfAll.GlobalHealingEff;
 //BOOSTS---
   let relicEffectiveness = greatTableKnowerOfAll.RelicEFF;
   updateDisplay("relicEFF",relicEffectiveness*100,2,"%");
@@ -350,9 +491,9 @@ function updateFormulas() {
   let lifestealRange = greatTableKnowerOfAll.RLifesteal;
   readSelection("lifesteal").innerHTML = `${(lifestealALL).toFixed(1)}/${(lifestealMelee).toFixed(1)}/${(lifestealRange).toFixed(1)}`;
 //REGENERATION---
-  let flatHPperSec = greatTableKnowerOfAll["HP/S+"];
+  let flatHPperSec = greatTableKnowerOfAll["HP/S+"] * globalHealingMod;
   updateDisplay("flatHP/s",flatHPperSec,1);
-  let percHPperSec = greatTableKnowerOfAll["HP/S%"];
+  let percHPperSec = greatTableKnowerOfAll["HP/S%"] * globalHealingMod;
   updateDisplay("%HP/s",percHPperSec*100,2,"%");
   let greyHPperSec = 0.2 + greatTableKnowerOfAll["GreyHP/S+"];
   let greyPercHPperSec = greatTableKnowerOfAll["GreyHP/S%"];
@@ -369,7 +510,7 @@ readSelection("dodgeClass").innerHTML = dodgeClass;
 //----------END BASICS COLUMN---------------------------------------------------
 //----------RELIC STATS UNDER ACCESSORIES---------------------------------------------------
 //RELIC HEALING
-let relicHPbase = greatTableKnowerOfAll.RelicHPbase;
+let relicHPbase = greatTableKnowerOfAll.RelicHPbase * globalHealingMod;
 updateDisplay("relicBase",relicHPbase,2);
 let relicHPtype = greatTableKnowerOfAll.RelicHPtype;
 readSelection("relicType").innerHTML = relicHPtype;
@@ -387,6 +528,58 @@ else {
   readSelection("relic%HP/s").innerHTML = "---";
   updateDisplay("relicHP/s",(relicHPscaled/relicHPtime),1);
 }
+//----------MULTIPLICATIVE MITIGATION SOURCES---------------------------------------------------
+//REDUCED ENEMY DAMAGE
+let reducedEnemyDamage = 1;
+  for (let i=0;i<=greatTableKnowerOfAll.REdamage.length-1;i++) {
+    reducedEnemyDamage = reducedEnemyDamage * (1+greatTableKnowerOfAll.REdamage[i]);
+  }
+  reducedEnemyDamage += -1;
+//DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
+let damageKept = 1;
+  for (let i=0;i<=greatTableKnowerOfAll.DMGKept.length-1;i++) { //ADD GAMEMASTER'S CHECK HERE LATER
+      damageKept = damageKept * (1+greatTableKnowerOfAll.DMGKept[i]);
+  }
+  damageKept += -1;
+updateDisplay("REdamage",reducedEnemyDamage*100,2,"%");
+updateDisplay("DMGKept",damageKept*100,2,"%");
+//If either box is checked, convert the format to dmg taken instead of dmg reduced, for use
+//in the big cheese equation.
+let useREdamage = readSelection("includeREdamage").checked;
+  if (useREdamage===false){reducedEnemyDamage=1}
+  else {
+    reducedEnemyDamage += 1;
+  }
+let useDMGKept = readSelection("includeDMGKept").checked;
+  if (useDMGKept===false){damageKept=1}
+  else {
+    damageKept += 1;
+  }
+//TOTAL BONUS TO EFFECTIVE DR, BASED ON REDMG AND DMGKEPT
+let totalBonusMitigation = (damageKept*reducedEnemyDamage)-1;
+updateDisplay("totalBonusMitigation",totalBonusMitigation*100,2,"%");
+//TOTAL EFFECTIVE DAMAGE REDUCTION INCLUDING REDMG AND DMGKEPT
+let effectiveDR = 1-(1-totalDR)*(1+totalBonusMitigation);
+updateDisplay("effectiveDR",effectiveDR*100,2,"%");
+//----------BASE EHP----------------------------------------------------------------------------
+let baseEHP = totalHealth/(1-effectiveDR); 
+  //declaring this here so we can use it in shield EHP before adding it
+  //back into the total EHP display. This is necessary for the sake of EHP/s as well.
+//----------SHIELDS----------------------------------------------------------------------------
+let percShields = greatTableKnowerOfAll.Shield;
+let shieldEff = greatTableKnowerOfAll.ShieldEFF;
+updateDisplay("shield%",percShields*100,2,"%");
+updateDisplay("shieldEff",shieldEff*100,2,"%");
+let totalPercShields = percShields * (1+shieldEff);
+updateDisplay("totalShield%",totalPercShields*100,2,"%");
+let shieldEHP = baseEHP * totalPercShields;
+updateDisplay("shieldEHP",shieldEHP,2);
+let useShieldEHP = readSelection("includeShields").checked;
+//----------TOTAL EHP----------------------------------------------------------------------------
+if (useShieldEHP===false){shieldEHP=0}
+let totalEHP = baseEHP + shieldEHP;
+updateDisplay("EHP",totalEHP,2);
+//----------HEALING----------------------------------------------------------------------------
 
 }
 //Shorthand for shit I got tired of typing every god damn time.
@@ -396,7 +589,6 @@ function updateDisplay (elemID,statistic,rounding,percent) {
   else {percentage=percent}
   readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
 }
-
 //Used in updateFormulas() to fill consumable values on the master table
 function pullConsumables (concLimit) {
   let concoction1 = readSelection("concoction1");
@@ -408,73 +600,154 @@ function pullConsumables (concLimit) {
   let concoction7 = readSelection("concoction7");
   let quickUse1 = readSelection("quickUse1");
   let quickUse2 = readSelection("quickUse2");
-
+//Concoctions
   for (i=1;i<=7;i++) {
     let concoction = readSelection(`concoction${i}`);
     if (i<=concLimit) {
       concoction.disabled = false;
       concoction.style.backgroundColor = "#d9d9d9";
-      pullStats(concoctions[concoction.value].stats);
+      if (readSelection(`USEtoggledConc${i}`).checked != true) {
+        pullStats(concoctions[concoction.value].stats);
+        if (concoctions[concoction.value].custom != null) {
+          window[concoctions[concoction.value].custom]();
+        }
+      }
     }
     else {
       concoction.value = "";
       concoction.style.backgroundColor = "#434343";
       readSelection(`concoction${i}Icon`).src = "images/Remnant/clear.png";
       readSelection(`concoction${i}Desc`).innerHTML = "";
+      window[`concoction${i}old`]="";
       concoction.disabled = true;
     }
   }
-  pullStats(quickUses[quickUse1.value].stats);
-  pullStats(quickUses[quickUse2.value].stats);
+//Quick-Use Consumables
+  if (readSelection(`USEtoggledQuick1`).checked != true) {
+    pullStats(quickUses[quickUse1.value].stats);
+    if (quickUses[readSelection(`quickUse1`).value].custom != null) {
+      window[quickUses[readSelection(`quickUse1`).value].custom]();
+    }
+  }
+  if (readSelection(`USEtoggledQuick2`).checked != true) {
+    pullStats(quickUses[quickUse2.value].stats);
+    if (quickUses[readSelection(`quickUse2`).value].custom != null) {
+      window[quickUses[readSelection(`quickUse2`).value].custom]();
+    }
+  }
 }
-
 //Used in updateFormulas() to fill weapon/mod/mutator values on the master table
 function pullWeapons () {
   let primaryWeapon = readSelection("primary");
   let primaryWeaponMutator = readSelection("primaryMutator");
   let primaryWeaponMod = readSelection("primaryMod");
-
   let meleeWeapon = readSelection("melee");
   let meleeWeaponMutator = readSelection("meleeMutator");
   // let meleeWeaponMod = readSelection("meleeMod"); //not yet
-
   let secondaryWeapon = readSelection("secondary");
   let secondaryWeaponMutator = readSelection("secondaryMutator");
   let secondaryWeaponMod = readSelection("secondaryMod");
-
-  pullStats(weapons.primary[primaryWeapon.value].stats);
-  pullStats(weapons.melee[meleeWeapon.value].stats);
-  pullStats(weapons.secondary[secondaryWeapon.value].stats);
-
-  pullStats(mutators.primaryMutators[primaryWeaponMutator.value].stats);
-  pullStats(mutators.meleeMutators[meleeWeaponMutator.value].stats);
-  pullStats(mutators.secondaryMutators[secondaryWeaponMutator.value].stats);
-
+//Weapons
+  if (readSelection(`USEtoggledPrimary`).checked != true) {
+    pullStats(weapons.primary[primaryWeapon.value].stats);
+    // console.log(weareadSelection(`primary`).value)
+    // console.log("hi: " + weapons[readSelection(`primary`).value].custom)
+    if (primary[readSelection(`primary`).value].custom != null) {
+      window[primary[readSelection(`primary`).value].custom]();
+    }
+  }
+  if (readSelection(`USEtoggledMelee`).checked != true) {
+    pullStats(weapons.melee[meleeWeapon.value].stats);
+    if (melee[readSelection(`melee`).value].custom != null) {
+      window[melee[readSelection(`melee`).value].custom]();
+    }
+  }
+  if (readSelection(`USEtoggledSecondary`).checked != true) {
+    pullStats(weapons.secondary[secondaryWeapon.value].stats);
+    if (secondary[readSelection(`secondary`).value].custom != null) {
+      window[secondary[readSelection(`secondary`).value].custom]();
+    }
+  }
+//Mutators
+  if (readSelection(`USEtoggledpMutator`).checked != true) {
+    pullStats(mutators.primaryMutators[primaryWeaponMutator.value].stats);
+    if (mutators.primaryMutators[readSelection(`primaryMutator`).value].custom != null) {
+      window[mutators.primaryMutators[readSelection(`primaryMutator`).value].custom]();
+    }
+  }
+  if (readSelection(`USEtoggledmMutator`).checked != true) {
+    pullStats(mutators.meleeMutators[meleeWeaponMutator.value].stats);
+    if (mutators.meleeMutators[readSelection(`meleeMutator`).value].custom != null) {
+      window[mutators.meleeMutators[readSelection(`meleeMutator`).value].custom]();
+    }
+  }
+  if (readSelection(`USEtoggledsMutator`).checked != true) {
+    pullStats(mutators.secondaryMutators[secondaryWeaponMutator.value].stats);
+    if (mutators.secondaryMutators[readSelection(`secondaryMutator`).value].custom != null) {
+      window[mutators.secondaryMutators[readSelection(`secondaryMutator`).value].custom]();
+    }
+  }
+//Mods
+if (readSelection(`USEtoggledpMod`).checked != true) {
   pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
-  // pullStats(mods.meleeMods[meleeWeaponMod.value].stats); //not yet
-  pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
+  if (mods.primaryMods[readSelection(`primaryMod`).value].custom != null) {
+    window[mods.primaryMods[readSelection(`primaryMod`).value].custom]();
+  }
 }
-
+// if (readSelection(`USEtoggledmMod`).checked != true) { //----------------NOT YET BUT WE WILL USE THIS LATER--------------
+//   pullStats(mods.meleeMods[meleeWeaponMod.value].stats);
+//   if (mods.meleeMods[readSelection(`meleeMod`).value].custom != null) {
+//     window[mods.meleeMods[readSelection(`meleeMod`).value].custom]();
+//   }
+// }
+if (readSelection(`USEtoggledsMod`).checked != true) {
+  pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
+  if (mods.secondaryMods[readSelection(`secondaryMod`).value].custom != null) {
+    window[mods.secondaryMods[readSelection(`secondaryMod`).value].custom]();
+  }
+}
+}
 //Used in updateFormulas() to fill trait property values on the master table
 function pullTraits () {
   //Yoink all active trait values
-  for (i=1;i<=1;i++) {
+  for (i=1;i<=20;i++) {
     let traitLevel = +readSelection(`trait${i}Level`).innerHTML;
     let traitPath = traits[readSelection(`trait${i}`).value];
-    greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
+    if (readSelection(`USEtoggledTrait${i}`).checked != true) {
+      if (traitPath.property != "REdamage" && traitPath.property != "DMGKept") {
+        greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
+      }
+      else if (traitPath.property==="REdamage" || traitPath.property==="DMGKept") {
+        greatTableKnowerOfAll[traitPath.property].push(traitPath.level[traitLevel]);
+        //put these two types into their respective multiplicative arrays
+      }
+      if (traits[readSelection(`trait${i}`).value].custom != null) {
+        window[traits[readSelection(`trait${i}`).value].custom]();
+      }
+    }
   }
 }
 //Used in updateFormulas() to fill armor(armor/weight) values on the master table
 function pullArmorStats() {
-  let armorTotalWeight = +readSelection("helmetWeight").innerHTML +
-  +readSelection("chestWeight").innerHTML +
-  +readSelection("legWeight").innerHTML +
-  +readSelection("handWeight").innerHTML;
+  let armorTotalWeight = 0;
+  let armorTotalArmor = 0;
+  if (readSelection(`USEtoggledHead`).checked != true) {
+    armorTotalWeight += +readSelection("helmetWeight").innerHTML;
+    armorTotalArmor += +readSelection("helmetArmor").innerHTML;
+  }
+  if (readSelection(`USEtoggledChest`).checked != true) {
+    armorTotalWeight += +readSelection("chestWeight").innerHTML;
+    armorTotalArmor += +readSelection("chestArmor").innerHTML;
+  }
+  if (readSelection(`USEtoggledLegs`).checked != true) {
+    armorTotalWeight += +readSelection("legWeight").innerHTML;
+    armorTotalArmor += +readSelection("legArmor").innerHTML;
+  }
+  if (readSelection(`USEtoggledHands`).checked != true) {
+    armorTotalWeight += +readSelection("handWeight").innerHTML;
+    armorTotalArmor += +readSelection("handArmor").innerHTML;
+  }
   greatTableKnowerOfAll.Encumbrance += armorTotalWeight;
-  let armorTotalArmor = +readSelection("helmetArmor").innerHTML +
-  +readSelection("chestArmor").innerHTML +
-  +readSelection("legArmor").innerHTML +
-  +readSelection("handArmor").innerHTML;
   greatTableKnowerOfAll.Armor += armorTotalArmor;
   readArmorResistance("Bleed");
   readArmorResistance("Burn");
@@ -484,10 +757,18 @@ function pullArmorStats() {
 }
 //Used in pullArmorStats() to fill resistance values on the master table
 function readArmorResistance(resistance) {
-  greatTableKnowerOfAll[resistance] += +helmets[readSelection("helmetChoice").value][resistance] +
-    +chests[readSelection("chestChoice").value][resistance] +
-    +legs[readSelection("legChoice").value][resistance] +
-    +hands[readSelection("handChoice").value][resistance];
+  if (readSelection(`USEtoggledHead`).checked != true) {
+    greatTableKnowerOfAll[resistance] += +helmets[readSelection("helmetChoice").value][resistance];
+  }
+  if (readSelection(`USEtoggledChest`).checked != true) {
+    greatTableKnowerOfAll[resistance] += +chests[readSelection("chestChoice").value][resistance];
+  }
+  if (readSelection(`USEtoggledLegs`).checked != true) {
+    greatTableKnowerOfAll[resistance] += +legs[readSelection("legChoice").value][resistance];
+  }
+  if (readSelection(`USEtoggledHands`).checked != true) {
+    greatTableKnowerOfAll[resistance] += +hands[readSelection("handChoice").value][resistance];
+  }
 }
 //Used in updateFormulas() to read class specific statistics and add them to the master table
 function pullClassStats() {
@@ -497,47 +778,98 @@ function pullClassStats() {
   let ability1 = readSelection("archetype1ability").value;
   let path2 = classInfo[readSelection("archetype2").value];
   let ability2 = readSelection("archetype2ability").value;
+//Prime Perk
+  if (readSelection(`USEtoggledPrimeP`).checked != true) {
+    pullStats(path1.primeStats);
+    if (path1.custom != null) {
+      path1["custom"]();
+    }
+  }
 //Archetype1
+  if (readSelection(`USEtoggledAbility1`).checked != true) {
     pullStats(path1.abilities[ability1].stats);
-    pullStats(path1.passives.passive1.stats);
-    pullStats(path1.passives.passive2.stats); 
-    pullStats(path1.passives.passive3.stats);
-    pullStats(path1.passives.passive4.stats);
+    if (path1.abilities[ability1].custom != null) {
+      path1.abilities[ability1]["custom"]();
+    }
+  }
+  for (i=1;i<=4;i++) {
+    if (readSelection(`USEtoggledPassive${i}`).checked != true) {
+      pullStats(path1.passives[`passive${i}`].stats);
+      if (path1.passives[`passive${i}`].custom != null) {
+        window[path1.passives[`passive${i}`].custom]();
+      }
+    }
+  }
+    // pullStats(path1.passives.passive1.stats);
 //Trait points from primary archetype
     greatTableKnowerOfAll.Endurance = path1.Endurance;
     greatTableKnowerOfAll.Expertise = path1.Expertise;
     greatTableKnowerOfAll.Spirit = path1.Spirit;
     greatTableKnowerOfAll.Vigor = path1.Vigor;
 //Archetype2
+  if (readSelection(`USEtoggledAbility2`).checked != true) {
     pullStats(path2.abilities[ability2].stats);
-    pullStats(path2.passives.passive1.stats);
-    pullStats(path2.passives.passive2.stats);
-    pullStats(path2.passives.passive3.stats);
-    pullStats(path2.passives.passive4.stats);
+    if (path2.abilities[ability2].custom != null) {
+      path2.abilities[ability2]["custom"]();
+    }
+  }
+  for (i=1;i<=4;i++) {
+    if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
+      pullStats(path2.passives[`passive${i}`].stats);
+      if (path2.passives[`passive${i}`].custom != null) {
+        window[path2.passives[`passive${i}`].custom]();
+      }
+    }
+  }
+    // pullStats(path2.passives.passive1.stats);
 }
 //Used in updateFormulas() to read gear specific statistics and add them to the master table
 function pullGearStats() {
 //Amulet
-  pullStats(amulets[readSelection("amulet").value].stats);
+  if (readSelection("USEtoggledAmulet").checked != true) {
+    pullStats(amulets[readSelection("amulet").value].stats);
+    if (amulets[readSelection(`amulet`).value].custom != null) {
+      window[amulets[readSelection(`amulet`).value].custom]();
+    }
+  }
 //Rings
-  pullStats(rings[readSelection("ring1").value].stats);
-  pullStats(rings[readSelection("ring2").value].stats);
-  pullStats(rings[readSelection("ring3").value].stats);
-  pullStats(rings[readSelection("ring4").value].stats);
+  for (i=1;i<=4;i++) {
+    if (readSelection(`USEtoggledRing${i}`).checked != true) {
+    pullStats(rings[readSelection(`ring${i}`).value].stats);
+    if (rings[readSelection(`ring${i}`).value].custom != null) {
+      window[rings[readSelection(`ring${i}`).value].custom]();
+    }
+    }
+  }
 //Relic
+if (readSelection("USEtoggledRelic").checked != true) {
   pullStats(relics[readSelection("relic").value].stats);
+  if (relics[readSelection(`relic`).value].custom != null) {
+    window[relics[readSelection(`relic`).value].custom]();
+  }
+}
 //Fragments
-  pullStats(fragments[readSelection("fragment1").value].stats);
-  pullStats(fragments[readSelection("fragment2").value].stats);
-  pullStats(fragments[readSelection("fragment3").value].stats);
+  for (i=1;i<=3;i++) {
+    if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
+    pullStats(fragments[readSelection(`fragment${i}`).value].stats);
+    if (fragments[readSelection(`fragment${i}`).value].custom != null) {
+      window[fragments[readSelection(`fragment${i}`).value].custom]();
+    }
+    }
+  }
 }
 //Shorthand for looping through an elements "stat" object and adding it to the corresponding master attribute
 function pullStats(path) {
     for (elements in path) {
-      if (elements != "RelicHPtype")
-      greatTableKnowerOfAll[elements] += path[elements]
-      else {
-      greatTableKnowerOfAll[elements] = path[elements]
+      if (elements != "RelicHPtype" && elements != "REdamage" && elements != "DMGKept") {
+        greatTableKnowerOfAll[elements] += path[elements];
+      }
+      else if (elements==="RelicHPtype"){
+        greatTableKnowerOfAll[elements] = path[elements];
+      }
+      else if (elements==="REdamage" || elements==="DMGKept") {
+        greatTableKnowerOfAll[elements].push(path[elements]);
+        //This slaps them into an array for each as they are ALL multiplicative to each other.
       }
     }
 }
@@ -617,15 +949,17 @@ updateFormulas();
 const greatTableKnowerOfAll = {
   "Health": 0,
   "Health%": 0,
+  "GlobalHealthModifier": 0,
   "Armor": 0,
   "Armor%": 0,
   "FlatDR": 0,
   "Bulwark": 0,
-  "REdamage": 0,
-  "DMGKept": 0,
+  "REdamage": [0],
+  "DMGKept": [0],
   "RelicSpeed": 0,
   "RelicEFF": 0,
   "HealingEFF": 0,
+  "GlobalHealingEff": 0,
   "HP/S+": 0,
   "HP/S%": 0,
   "RelicHPbase": 0,
@@ -1865,6 +2199,9 @@ const classInfo = {
     "primePerk": "SPIRITED",
     "primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
     "primePerkImage": "https://i.imgur.com/ngzoXha.png",
+    "primeStats": {
+      "ConcLimit": 3
+    },
     "abilities": {
       "Vial: Stone Mist": {
         "name": "Vial: Stone Mist",
@@ -1929,6 +2266,7 @@ const classInfo = {
     "primePerk": "TEMPEST",
     "primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
     "primePerkImage": "https://i.imgur.com/Iw2bzME.png",
+    "primeStats": {},
     "abilities": {
       "Reality Rune": {
         "name": "Reality Rune",
@@ -1989,6 +2327,9 @@ const classInfo = {
     "primePerk": "DIE HARD",
     "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. Resets at Worldstone or on death.",
     "primePerkImage": "https://i.imgur.com/P031gGk.png",
+    "primeStats": {
+      "Bulwark": 1,
+    },
     "abilities": {
       "War Stomp": {
         "name": "War Stomp",
@@ -2051,6 +2392,7 @@ const classInfo = {
     "primePerk": "HIGH TECH",
     "primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s.",
     "primePerkImage": "https://i.imgur.com/YB2qmK4.png",
+    "primeStats": {},
     "abilities": {
       "Heavy Weapon: Vulcan": {
         "name": "Heavy Weapon: Vulcan",
@@ -2107,6 +2449,7 @@ const classInfo = {
     "primePerk": "LUCKY",
     "primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
     "primePerkImage": "https://i.imgur.com/XavGKpc.png",
+    "primeStats": {},
     "abilities": {
       "Plainswalker": {
         "name": "Plainswalker",
@@ -2161,6 +2504,7 @@ const classInfo = {
     "primePerk": "LOADED",
     "primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
     "primePerkImage": "https://i.imgur.com/S3jXNiC.png",
+    "primeStats": {},
     "abilities": {
       "Quick Draw": {
         "name": "Quick Draw",
@@ -2215,6 +2559,7 @@ const classInfo = {
     "primePerk": "BONDED",
     "primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge.",
     "primePerkImage": "https://i.imgur.com/0lU6F1v.png",
+    "primeStats": {},
     "abilities": {
       "Guard Dog": {
         "name": "Guard Dog",
@@ -2273,6 +2618,7 @@ const classInfo = {
     "primePerk": "DEAD TO RIGHTS",
     "primePerkDesc": "Dealing 55 Base Ranged Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
     "primePerkImage": "https://i.imgur.com/3NzvZxO.png",
+    "primeStats": {},
     "abilities": {
       "Hunter's Mark": {
         "name": "Hunter's Mark",
@@ -2327,6 +2673,7 @@ const classInfo = {
     "primePerk": "SHADOW",
     "primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
     "primePerkImage": "https://i.imgur.com/lnR7rLO.png",
+    "primeStats": {},
     "abilities": {
       "Void Cloak": {
         "name": "Void Cloak",
@@ -2385,6 +2732,7 @@ const classInfo = {
     "primePerk": "REGENERATOR",
     "primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
     "primePerkImage": "https://i.imgur.com/7m2eEaX.png",
+    "primeStats": {},
     "abilities": {
       "Wellspring": {
         "name": "Wellspring",
@@ -2448,8 +2796,9 @@ const classInfo = {
   "Ritualist": {
     "classIcon": "https://i.imgur.com/kNPGSac.png",
     "primePerk": "VILE",
-    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected\n\nInfected: Victim receives 5% more Status Effect damage, On death, spreads\nall statuses to nearby enemies within 5m",
+    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 5% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
     "primePerkImage": "https://i.imgur.com/CIV7N6m.png",
+    "primeStats": {},
     "abilities": {
       "Eruption": {
         "name": "Eruption",
@@ -2506,6 +2855,7 @@ const classInfo = {
     "primePerk": "RUTHLESS",
     "primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed.",
     "primePerkImage": "https://i.imgur.com/qoTK4rj.png",
+    "primeStats": {},
     "abilities": {
       "Minion: Hollow": {
         "name": "Minion: Hollow",
@@ -2733,13 +3083,12 @@ const amulets = {
     }
   },
   "Brewmaster's Cork": {
-    "custom": null,
+    "custom": "brewMasters",
     "name": "Brewmaster's Cork",
     "slot": "Amulet",
     "image": "https://i.imgur.com/6ThjInO.png",
     "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions.",
     "stats": {
-      "FlatDR": 0.06,
       "ConcLimit": 2
     }
   },
@@ -3727,14 +4076,12 @@ const rings = {
     }
   },
   "Game Master's Pride": {
-    "custom": null,
+    "custom": "gameMasters",
     "name": "Game Master's Pride",
     "slot": "Ring",
     "image": "https://i.imgur.com/VypAuYL.png",
     "desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
-    "stats": {
-      "DMGKept": 0
-    }
+    "stats": {}
   },
   "Generating Band": {
     "custom": null,
@@ -3867,13 +4214,13 @@ const rings = {
     }
   },
   "Restriction Cord": {
-    "custom": null,
+    "custom": "restrictionCord",
     "name": "Restriction Cord",
     "slot": "Ring",
     "image": "https://i.imgur.com/JXW7CYK.png",
     "desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%.",
     "stats": {
-      "FlatDR": 0.1
+      "FlatDR": 0.1,
     }
   },
   "Ring of Crisis": {
@@ -3939,14 +4286,12 @@ const rings = {
     }
   },
   "Soul Guard": {
-    "custom": null,
+    "custom": "soulGuard",
     "name": "Soul Guard",
     "slot": "Ring",
     "image": "https://i.imgur.com/yIQ0RvA.png",
     "desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS.",
-    "stats": {
-      "Bulwark": 2
-    }
+    "stats": {}
   },
   "Stream Coupler": {
     "custom": null,
@@ -4579,7 +4924,7 @@ const rings = {
     "slot": "Ring",
     "image": "https://i.imgur.com/FNrBeeO.png",
     "desc": "Increase all damage dealt by 4% for each summon. Max 12%",
-    "custom": null,
+    "custom": "soulShard",
     "stats": {}
   },
   "Spirit Stone": {
