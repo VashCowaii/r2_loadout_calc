@@ -1,6 +1,14 @@
 {
-  "Apha / Omega": {
-    "name": "Apha / Omega",
+  "": {
+    "name": "",
+    "slot": "Primary",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
+  "Alpha / Omega": {
+    "name": "Alpha / Omega",
     "slot": "Primary",
     "image": "https://i.imgur.com/K09B7HA.png",
     "desc": "",

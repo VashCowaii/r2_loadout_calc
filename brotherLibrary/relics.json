@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Relic",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
   "Blooming Heart": {
     "custom": null,
     "name": "Blooming Heart",
@@ -7,8 +15,8 @@
     "desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
     "stats": {
       "RelicHPbase": 175,
-      "RelicHPtype": "%",
-      "RelicHPtime": 25
+      "RelicHPtime": 25,
+      "RelicHPtype": "%"
     }
   },
   "Broken Heart": {
@@ -19,8 +27,8 @@
     "desc": "Innate 50% Use Speed Bonus. On use, sets current Health to 50% of max Health over 0.25s.",
     "stats": {
       "RelicHPbase": 50,
-      "RelicHPtype": "%",
-      "RelicHPtime": 0
+      "RelicHPtime": 0,
+      "RelicHPtype": "%"
     }
   },
   "Constrained Heart": {
@@ -32,8 +40,8 @@
     "stats": {
       "Bulwark": 2,
       "RelicHPbase": 100,
-      "RelicHPtype": "F",
-      "RelicHPtime": 5
+      "RelicHPtime": 5,
+      "RelicHPtype": "F"
     }
   },
   "Crystal Heart": {
@@ -45,8 +53,8 @@
     "stats": {
       "FlatDR": 0.25,
       "RelicHPbase": 100,
-      "RelicHPtype": "%",
-      "RelicHPtime": 10
+      "RelicHPtime": 10,
+      "RelicHPtype": "%"
     }
   },
   "Decayed Heart": {
@@ -57,8 +65,8 @@
     "desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
     "stats": {
       "RelicHPbase": 120,
-      "RelicHPtype": "F",
-      "RelicHPtime": 9
+      "RelicHPtime": 9,
+      "RelicHPtype": "F"
     }
   },
   "Dragon Heart": {
@@ -69,8 +77,8 @@
     "desc": "On use, heals 70 Health over 0.5s.",
     "stats": {
       "RelicHPbase": 70,
-      "RelicHPtype": "F",
-      "RelicHPtime": 0
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
     }
   },
   "Enlarged Heart": {
@@ -82,8 +90,8 @@
     "stats": {
       "RelicSpeed": -0.5,
       "RelicHPbase": 140,
-      "RelicHPtype": "F",
-      "RelicHPtime": 0
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
     }
   },
   "Lifeless Heart": {
@@ -94,8 +102,8 @@
     "desc": "On use, heals 30 Health over 0.5s. Relic capacity is doubled",
     "stats": {
       "RelicHPbase": 30,
-      "RelicHPtype": "F",
-      "RelicHPtime": 0
+      "RelicHPtime": 0,
+      "RelicHPtype": "F"
     }
   },
   "Paper Heart": {
@@ -106,8 +114,8 @@
     "desc": "Heals up to 100% of current health over 0.25s. Gain 1 Stack/10% Health Restored. After 15s, remove 10% per Stack. Kills remove 1 Stack.",
     "stats": {
       "RelicHPbase": 100,
-      "RelicHPtype": "%",
-      "RelicHPtime": 0
+      "RelicHPtime": 0,
+      "RelicHPtype": "%"
     }
   },
   "Pulsing Heart": {
@@ -118,20 +126,21 @@
     "desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
     "stats": {
       "RelicHPbase": 115,
-      "RelicHPtype": "F",
-      "RelicHPtime": 15
+      "RelicHPtime": 15,
+      "RelicHPtype": "F"
     }
   },
   "Resonating Heart": {
-    "custom": null,
+    "custom": "resonatingHeart",
     "name": "Resonating Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/FE0rnqe.png",
     "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s.",
+    "complex": "How much OVERhealing are we going to 'pretend' you'll achieve in the 5sec window? Enter your best guess:",
     "stats": {
       "RelicHPbase": 50,
-      "RelicHPtype": "%",
-      "RelicHPtime": 5
+      "RelicHPtime": 5,
+      "RelicHPtype": "%"
     }
   },
   "Ripened Heart": {
@@ -142,8 +151,8 @@
     "desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
     "stats": {
       "RelicHPbase": 105,
-      "RelicHPtype": "F",
-      "RelicHPtime": 5.5
+      "RelicHPtime": 5.5,
+      "RelicHPtype": "F"
     }
   },
   "Runed Heart": {
@@ -154,8 +163,8 @@
     "desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
     "stats": {
       "RelicHPbase": 50,
-      "RelicHPtype": "F",
-      "RelicHPtime": 10
+      "RelicHPtime": 10,
+      "RelicHPtype": "F"
     }
   },
   "Shielded Heart": {
@@ -173,7 +182,7 @@
     "name": "Siphon Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/7mlMeUF.png",
-    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 10s.",
+    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
     "stats": {
       "Lifesteal": 0.1
     }
@@ -186,8 +195,8 @@
     "desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
     "stats": {
       "RelicHPbase": 2,
-      "RelicHPtype": "P",
-      "RelicHPtime": 1
+      "RelicHPtime": 1,
+      "RelicHPtype": "P"
     }
   },
   "Diverted Heart": {
@@ -226,7 +235,7 @@
     "name": "Tormented Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/K6URUKQ.png",
-    "desc": "Innate 20% Use Speed bonus. On use, deals 240 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
+    "desc": "Innate 20% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
     "custom": null,
     "stats": {}
   },

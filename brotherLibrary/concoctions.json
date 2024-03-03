@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Conc",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
   "Meat Shake": {
     "custom": null,
     "name": "Meat Shake",
@@ -129,7 +137,7 @@
     "name": "Tranquility Font",
     "slot": "Conc",
     "image": "https://i.imgur.com/EGgRM3C.png",
-    "desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 35%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
+    "desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 25%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
     "custom": null,
     "stats": {}
   },

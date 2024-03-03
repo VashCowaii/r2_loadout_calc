@@ -1,12 +1,20 @@
 {
-  "Brewmaster's Cork": {
+  "": {
     "custom": null,
+    "name": "",
+    "slot": "",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {
+    }
+  },
+  "Brewmaster's Cork": {
+    "custom": "brewMasters",
     "name": "Brewmaster's Cork",
     "slot": "Amulet",
     "image": "https://i.imgur.com/6ThjInO.png",
-    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions.",
+    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction.",
     "stats": {
-      "FlatDR": 0.06,
       "ConcLimit": 2
     }
   },
@@ -106,7 +114,7 @@
     "name": "Leto's Amulet",
     "slot": "Amulet",
     "image": "https://i.imgur.com/LgUJb0q.png",
-    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 15%.",
+    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 30%.",
     "stats": {
       "StaminaCost": -0.3,
       "Encumbrance%": -0.4
@@ -127,7 +135,7 @@
     "name": "Navigator's Pendant",
     "slot": "Amulet",
     "image": "https://i.imgur.com/MNg2vz5.png",
-    "desc": "Grants 20 Health, 20 Stamina, and -10 Armor Encumbrance.",
+    "desc": "Grants 25 Health, 25 Stamina, and -10 Armor Encumbrance.",
     "stats": {
       "Health": 25,
       "Stamina": 25,
@@ -182,7 +190,7 @@
     "name": "Rusted Navigator's Pendant",
     "slot": "Amulet",
     "image": "https://i.imgur.com/B2H2Xrb.png",
-    "desc": "Grants 15 Health, 15 Stamina, and -15 Armor Encumbrance.",
+    "desc": "Grants 20 Health, 20 Stamina, and -15 Armor Encumbrance.",
     "stats": {
       "Health": 20,
       "Stamina": 20,
@@ -254,7 +262,7 @@
     "name": "Cleansing Stone",
     "slot": "Amulet",
     "image": "https://i.imgur.com/nUx4aqq.png",
-    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 15% of wearers Max Health to all allies within 7m when cleansed.",
+    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 25% of wearers Max Health to all allies within 20m when cleansed.",
     "custom": null,
     "stats": {}
   },
@@ -318,7 +326,7 @@
     "name": "Energized Neck Coil",
     "slot": "Amulet",
     "image": "https://i.imgur.com/D8np6HK.png",
-    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage.",
+    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage. Each target can be affected once every 5 seconds.",
     "custom": null,
     "stats": {}
   },
@@ -534,7 +542,7 @@
     "name": "Samoflange",
     "slot": "Amulet",
     "image": "https://i.imgur.com/K6r1t6G.png",
-    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 50%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
+    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 60%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
     "custom": null,
     "stats": {}
   },
@@ -638,7 +646,7 @@
     "name": "Weightless Weight",
     "slot": "Amulet",
     "image": "https://i.imgur.com/u3DCJPN.png",
-    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75%  for every each 5 point of Armor Encumbrance.",
+    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75% for each 5 point of Armor Encumbrance.",
     "custom": null,
     "stats": {}
   }

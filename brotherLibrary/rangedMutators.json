@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "RMutator",
+    "image": "",
+    "desc": "",
+    "stats": {}
+  },
   "Spirit Healer": {
     "custom": null,
     "name": "Spirit Healer",

@@ -1,4 +1,12 @@
 {
+  "": {
+    "name": "",
+    "slot": "Melee",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
   "Abyssal Hook": {
     "name": "Abyssal Hook",
     "slot": "Melee",

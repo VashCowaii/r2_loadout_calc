@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Cons",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
   "Blood Root": {
     "custom": null,
     "name": "Blood Root",

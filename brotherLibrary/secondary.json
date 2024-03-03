@@ -1,4 +1,12 @@
 {
+  "": {
+    "name": "",
+    "slot": "Secondary",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "custom": null,
+    "stats": {}
+  },
   "Anguish": {
     "name": "Anguish",
     "slot": "Secondary",

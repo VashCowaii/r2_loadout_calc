@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Mod",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {}
+  },
   "Song of Eafir": {
     "custom": null,
     "name": "Song of Eafir",

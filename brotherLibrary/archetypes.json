@@ -1,9 +1,54 @@
 {
+  "": {
+    "classIcon": "images/Remnant/clear.png",
+    "primePerk": "Select a primary archetype",
+    "primePerkDesc": "",
+    "primePerkImage": "images/Remnant/clear.png",
+    "abilities": {
+      "": {
+        "name": "",
+        "desc": "",
+        "image": "images/Remnant/clear.png",
+        "stats": {}
+      }
+    },
+    "classTrait": "",
+    "Endurance": 0,
+    "Expertise": 0,
+    "Spirit": 0,
+    "Vigor": 0,
+    "name": "",
+    "passives": {
+      "passive1": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      },
+      "passive2": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      },
+      "passive3": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      },
+      "passive4": {
+        "name": "",
+        "desc": "",
+        "stats": {}
+      }
+    }
+  },
   "Alchemist": {
     "classIcon": "https://i.imgur.com/ZPl3KSX.png",
     "primePerk": "SPIRITED",
     "primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
     "primePerkImage": "https://i.imgur.com/ngzoXha.png",
+    "primeStats": {
+      "ConcLimit": 3
+    },
     "abilities": {
       "Vial: Stone Mist": {
         "name": "Vial: Stone Mist",
@@ -29,10 +74,10 @@
       }
     },
     "classTrait": "Potency",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 2,
+    "Spirit": 2,
+    "Vigor": 1,
     "name": "Alchemist",
     "passives": {
       "passive1": {
@@ -42,13 +87,13 @@
       },
       "passive2": {
         "name": "Panacea",
-        "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Resistance.",
+        "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Status and Blight Resistance.",
         "stats": {
-          "Bleed": 10,
-          "Burn": 10,
-          "Shock": 10,
-          "Corrosive": 10,
-          "Blight": 10
+          "Bleed": 15,
+          "Burn": 15,
+          "Shock": 15,
+          "Corrosive": 15,
+          "Blight": 15
         }
       },
       "passive3": {
@@ -68,6 +113,7 @@
     "primePerk": "TEMPEST",
     "primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
     "primePerkImage": "https://i.imgur.com/Iw2bzME.png",
+    "primeStats": {},
     "abilities": {
       "Reality Rune": {
         "name": "Reality Rune",
@@ -79,7 +125,7 @@
       },
       "Chaos Gate": {
         "name": "Chaos Gate",
-        "desc": "Conjures a 7m unstable zone which grants allies 15% increased damage dealth, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
+        "desc": "Conjures a 7m unstable zone which grants allies 50% increased All damage dealt, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
         "image": "https://i.imgur.com/yMfhLzm.png",
         "stats": {
           "FlatDR": -0.15
@@ -95,10 +141,10 @@
       }
     },
     "classTrait": "Flash Caster",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 0,
+    "Spirit": 3,
+    "Vigor": 1,
     "name": "Archon",
     "passives": {
       "passive1": {
@@ -113,7 +159,7 @@
       },
       "passive3": {
         "name": "Spirit Within",
-        "desc": "Mod Power/charge -15%, refunds 15% Mod cost, split among active mods.",
+        "desc": "Mod Power/charge -15%, instantly refunds 15% Mod cost, split among active mods.",
         "stats": {}
       },
       "passive4": {
@@ -126,8 +172,11 @@
   "Challenger": {
     "classIcon": "https://i.imgur.com/o8Lf7rI.png",
     "primePerk": "DIE HARD",
-    "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. Resets at Worldstone or on death.",
+    "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. While on cooldown, Challenger gains 1 stack of BULWARK. Resets at Worldstone or on death.",
     "primePerkImage": "https://i.imgur.com/P031gGk.png",
+    "primeStats": {
+      "Bulwark": 1
+    },
     "abilities": {
       "War Stomp": {
         "name": "War Stomp",
@@ -137,7 +186,7 @@
       },
       "Juggernaut": {
         "name": "Juggernaut",
-        "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
+        "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
         "image": "https://i.imgur.com/byx30R2.png",
         "stats": {
           "Bulwark": 3
@@ -145,16 +194,16 @@
       },
       "Rampage": {
         "name": "Rampage",
-        "desc": "Fire Rate +15%, Reload Speed +20%, and Movement Speed +10%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
+        "desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
         "image": "https://i.imgur.com/rWVGPZE.png",
         "stats": {}
       }
     },
     "classTrait": "Strong Back",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 0,
+    "Spirit": 0,
+    "Vigor": 3,
     "name": "Challenger",
     "passives": {
       "passive1": {
@@ -172,7 +221,9 @@
       "passive3": {
         "name": "Powerlifter",
         "desc": "Both the Stamina cost increase for each weight bracket and Stamina Regen Delay are reduced by 50%.",
-        "stats": {}
+        "stats": {
+          "StaminaPenaltyAdjustment": 0.5
+        }
       },
       "passive4": {
         "name": "Face of Danger",
@@ -188,6 +239,7 @@
     "primePerk": "HIGH TECH",
     "primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s.",
     "primePerkImage": "https://i.imgur.com/YB2qmK4.png",
+    "primeStats": {},
     "abilities": {
       "Heavy Weapon: Vulcan": {
         "name": "Heavy Weapon: Vulcan",
@@ -209,15 +261,15 @@
       }
     },
     "classTrait": "Fortify",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 1,
+    "Spirit": 0,
+    "Vigor": 2,
     "name": "Engineer",
     "passives": {
       "passive1": {
         "name": "Metalworker",
-        "desc": "Skill (+50%DMG +10%CC). Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
+        "desc": "Skill (+50%DMG +10%CC). Ranged (+25%DMG +10%CC) Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
         "stats": {}
       },
       "passive2": {
@@ -244,6 +296,7 @@
     "primePerk": "LUCKY",
     "primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
     "primePerkImage": "https://i.imgur.com/XavGKpc.png",
+    "primeStats": {},
     "abilities": {
       "Plainswalker": {
         "name": "Plainswalker",
@@ -253,7 +306,7 @@
       },
       "Gold Digger": {
         "name": "Gold Digger",
-        "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2.4 HP/s, or HASTE.",
+        "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
         "image": "https://i.imgur.com/mO87xP5.png",
         "stats": {}
       },
@@ -265,10 +318,10 @@
       }
     },
     "classTrait": "Swiftness",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 1,
+    "Spirit": 2,
+    "Vigor": 0,
     "name": "Explorer",
     "passives": {
       "passive1": {
@@ -298,6 +351,7 @@
     "primePerk": "LOADED",
     "primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
     "primePerkImage": "https://i.imgur.com/S3jXNiC.png",
+    "primeStats": {},
     "abilities": {
       "Quick Draw": {
         "name": "Quick Draw",
@@ -319,10 +373,10 @@
       }
     },
     "classTrait": "Ammo Reserves",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 2,
+    "Spirit": 0,
+    "Vigor": 2,
     "name": "Gunslinger",
     "passives": {
       "passive1": {
@@ -337,7 +391,7 @@
       },
       "passive3": {
         "name": "Quick Hands",
-        "desc": "Firearms +10% Reload Speed. DOUBLED is mag is empty.",
+        "desc": "Firearms +10% Reload Speed. DOUBLED if mag is empty.",
         "stats": {}
       },
       "passive4": {
@@ -352,6 +406,7 @@
     "primePerk": "BONDED",
     "primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge.",
     "primePerkImage": "https://i.imgur.com/0lU6F1v.png",
+    "primeStats": {},
     "abilities": {
       "Guard Dog": {
         "name": "Guard Dog",
@@ -377,15 +432,15 @@
       }
     },
     "classTrait": "Kinship",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 3,
+    "Spirit": 0,
+    "Vigor": 1,
     "name": "Handler",
     "passives": {
       "passive1": {
         "name": "Pack Hunter",
-        "desc": "Gain +30% Ranged/Skill Damage, +5% Ranged/Skill CC while Companion is within 40m.",
+        "desc": "Gain +30% Ranged/Skill/Melee Damage, +5% Ranged/Skill/Melee CC while Companion is within 40m.",
         "stats": {}
       },
       "passive2": {
@@ -410,6 +465,7 @@
     "primePerk": "DEAD TO RIGHTS",
     "primePerkDesc": "Dealing 55 Base Ranged Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
     "primePerkImage": "https://i.imgur.com/3NzvZxO.png",
+    "primeStats": {},
     "abilities": {
       "Hunter's Mark": {
         "name": "Hunter's Mark",
@@ -419,7 +475,7 @@
       },
       "Hunter's Focus": {
         "name": "Hunter's Focus",
-        "desc": "Aiming Down Sights uninterrupted/without shooting for 1s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 75%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
+        "desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
         "image": "https://i.imgur.com/mMsdIv0.png",
         "stats": {}
       },
@@ -431,10 +487,10 @@
       }
     },
     "classTrait": "Longshot",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 2,
+    "Expertise": 2,
+    "Spirit": 0,
+    "Vigor": 1,
     "name": "Hunter",
     "passives": {
       "passive1": {
@@ -464,6 +520,7 @@
     "primePerk": "SHADOW",
     "primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
     "primePerkImage": "https://i.imgur.com/lnR7rLO.png",
+    "primeStats": {},
     "abilities": {
       "Void Cloak": {
         "name": "Void Cloak",
@@ -487,15 +544,15 @@
       }
     },
     "classTrait": "Untouchable",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 4,
+    "Expertise": 0,
+    "Spirit": 1,
+    "Vigor": 0,
     "name": "Invader",
     "passives": {
       "passive1": {
         "name": "S.H.A.R.K.",
-        "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 15s. Max 5 stacks.",
+        "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 10s. Max 5 stacks. Perfect Evade grants 5 stacks.",
         "stats": {}
       },
       "passive2": {
@@ -522,6 +579,7 @@
     "primePerk": "REGENERATOR",
     "primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
     "primePerkImage": "https://i.imgur.com/7m2eEaX.png",
+    "primeStats": {},
     "abilities": {
       "Wellspring": {
         "name": "Wellspring",
@@ -550,10 +608,10 @@
       }
     },
     "classTrait": "Triage",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 2,
+    "Spirit": 1,
+    "Vigor": 2,
     "name": "Medic",
     "passives": {
       "passive1": {
@@ -585,33 +643,34 @@
   "Ritualist": {
     "classIcon": "https://i.imgur.com/kNPGSac.png",
     "primePerk": "VILE",
-    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected\n\nInfected: Victim receives 5% more Status Effect damage, On death, spreads\nall statuses to nearby enemies within 5m",
+    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
     "primePerkImage": "https://i.imgur.com/CIV7N6m.png",
+    "primeStats": {},
     "abilities": {
       "Eruption": {
         "name": "Eruption",
-        "desc": "Creates 1m explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
+        "desc": "Creates explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
         "image": "https://i.imgur.com/R8EtgyF.png",
         "stats": {}
       },
       "Miasma": {
         "name": "Miasma",
-        "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 1500 base damage. Lasts 11s.",
+        "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 3,000 base damage. Lasts 20s.",
         "image": "https://i.imgur.com/eDxZ9tS.png",
         "stats": {}
       },
       "Death Wish": {
         "name": "Death Wish",
-        "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal.",
+        "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health reduction is minimized by Kinship.",
         "image": "https://i.imgur.com/pQJvLnK.png",
         "stats": {}
       }
     },
     "classTrait": "Affliction",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 1,
+    "Expertise": 2,
+    "Spirit": 2,
+    "Vigor": 0,
     "name": "Ritualist",
     "passives": {
       "passive1": {
@@ -643,6 +702,7 @@
     "primePerk": "RUTHLESS",
     "primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed.",
     "primePerkImage": "https://i.imgur.com/qoTK4rj.png",
+    "primeStats": {},
     "abilities": {
       "Minion: Hollow": {
         "name": "Minion: Hollow",
@@ -664,15 +724,15 @@
       }
     },
     "classTrait": "Regrowth",
-    "trait1": "",
-    "trait2": "",
-    "trait3": "",
-    "trait4": "",
+    "Endurance": 0,
+    "Expertise": 1,
+    "Spirit": 3,
+    "Vigor": 1,
     "name": "Summoner",
     "passives": {
       "passive1": {
         "name": "Dominator",
-        "desc": "Mod/Skill (+35%DMG, +5%CC) with active minion. Sacrifice gives Ranged/Melee (+30%DMG +5%CC), for 30s or until summon.",
+        "desc": "Mod/Skill/Explosive (+35%DMG, +5%CC) with active minion.",
         "stats": {}
       },
       "passive2": {

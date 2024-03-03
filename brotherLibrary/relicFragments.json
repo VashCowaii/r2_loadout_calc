@@ -1,4 +1,12 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "",
+    "image": "",
+    "desc": "",
+    "stats": {}
+  },
   "Armor Effectiveness": {
     "custom": null,
     "name": "Armor Effectiveness",

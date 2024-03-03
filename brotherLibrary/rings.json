@@ -1,4 +1,13 @@
 {
+  "": {
+    "custom": null,
+    "name": "",
+    "slot": "Ring",
+    "image": "images/Remnant/clear.png",
+    "desc": "",
+    "stats": {
+    }
+  },
   "Acid Stone": {
     "custom": null,
     "name": "Acid Stone",
@@ -14,7 +23,7 @@
     "name": "Alchemy Stone",
     "slot": "Ring",
     "image": "https://i.imgur.com/WCc31LC.png",
-    "desc": "Increases base Lifesteal by 5% while suffering from a negative STATUS or BLIGHT Effect.",
+    "desc": "Increases base Lifesteal by 6% while suffering from a negative STATUS or BLIGHT Effect.",
     "stats": {
       "Lifesteal": 0.06
     }
@@ -24,7 +33,7 @@
     "name": "Amber Moonstone",
     "slot": "Ring",
     "image": "https://i.imgur.com/yDme9m6.png",
-    "desc": "When the wearer's Health drops below 30%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
+    "desc": "When the wearer's Health drops below 35%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
     "stats": {
       "FlatDR": 0.25
     }
@@ -55,7 +64,7 @@
     "name": "Bisected Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/piWaWV1.png",
-    "desc": "Gain Infinite Stamina. All damage received is increased by 25%.",
+    "desc": "Gain Infinite Stamina. All damage received is increased by 15%.",
     "stats": {
       "FlatDR": -0.15,
       "StaminaCost": -1
@@ -66,7 +75,7 @@
     "name": "Blessed Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/uox5REc.png",
-    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 15s.",
+    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 30s.",
     "stats": {
       "Bulwark": 2
     }
@@ -86,7 +95,7 @@
     "name": "Booster Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/MdwGBHS.png",
-    "desc": "Increases all Status Resistances by 10.",
+    "desc": "Increases all Status Resistances by 25.",
     "stats": {
       "Bleed": 25,
       "Burn": 25,
@@ -120,7 +129,7 @@
     "name": "Burden of the Audacious",
     "slot": "Ring",
     "image": "https://i.imgur.com/C0RzzoB.png",
-    "desc": "Decreases all healing by 75%. Perfect Dodges heal for 15% of Max Health.",
+    "desc": "Decreases all healing by 50%. Perfect Dodges heal for 20% of Max Health.",
     "stats": {
       "HealingEFF": -0.5
     }
@@ -150,7 +159,7 @@
     "name": "Conservation Seal",
     "slot": "Ring",
     "image": "https://i.imgur.com/Ay25cdg.png",
-    "desc": "For every 10% of Health missing  (Max 50%) gain 3% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
+    "desc": "For every 10% of Health missing  (Max 50%) gain 5% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
     "stats": {
       "RelicEFF": 0.25
     }
@@ -229,7 +238,7 @@
     "name": "Dying Ember",
     "slot": "Ring",
     "image": "https://i.imgur.com/RsWl7xg.png",
-    "desc": "Gain 5% of base Melee damage dealt as Lifesteal.",
+    "desc": "Gain 6% of base Melee damage dealt as Lifesteal.",
     "stats": {
       "MLifesteal": 0.06
     }
@@ -260,7 +269,7 @@
     "name": "Encrypted Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/bYVtoLs.png",
-    "desc": "Using a Mod regenerates 10% of Max Health over 10s. Can stack up to 30s.",
+    "desc": "Using a Mod regenerates 20% of Max Health over 10s. Can stack up to 30s.",
     "stats": {
       "HP/S%": 0.02
     }
@@ -280,7 +289,7 @@
     "name": "Excess Coil",
     "slot": "Ring",
     "image": "https://i.imgur.com/v4eVeRb.png",
-    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 10s.",
+    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 15s.",
     "stats": {
       "Shield": 0.25
     }
@@ -290,7 +299,7 @@
     "name": "Fae Bruiser Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/wGSIuzZ.png",
-    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 7s. Does not stack with itself.",
+    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 15s. Does not stack with itself.",
     "stats": {
       "Bulwark": 2
     }
@@ -312,10 +321,10 @@
     "name": "Fae Shaman Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/PE11RyA.png",
-    "desc": "Increases Health Regeneration by 0.25 and Relic Use Speed by 25%.",
+    "desc": "Increases Health Regeneration by 0.35 and Relic Use Speed by 25%.",
     "stats": {
       "RelicSpeed": -0.25,
-      "HP/S+": 0.334
+      "HP/S+": 0.35
     }
   },
   "Feastmaster's Signet": {
@@ -339,14 +348,12 @@
     }
   },
   "Game Master's Pride": {
-    "custom": null,
+    "custom": "gameMasters",
     "name": "Game Master's Pride",
     "slot": "Ring",
     "image": "https://i.imgur.com/VypAuYL.png",
     "desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
-    "stats": {
-      "DMGKept": "#REF!"
-    }
+    "stats": {}
   },
   "Generating Band": {
     "custom": null,
@@ -373,7 +380,7 @@
     "name": "Guardian's Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/kcoHwmB.png",
-    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 10s after taking Melee damage.",
+    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 15s after taking Melee damage.",
     "stats": {
       "Bulwark": 2
     }
@@ -415,7 +422,7 @@
     "image": "https://i.imgur.com/lKaOMFa.png",
     "desc": "Reduces all incoming damage by 5%.",
     "stats": {
-      "FlatDR": 0.05
+      "FlatDR": 0.07
     }
   },
   "Low Yield Recovery Ring": {
@@ -423,7 +430,7 @@
     "name": "Low Yield Recovery Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/TqKSFYf.png",
-    "desc": "Killing an enemy regenerates 5% Max Health over 5s. Additional kills increase duration by 5s. Max 30s.",
+    "desc": "Killing an enemy regenerates 6% Max Health over 6s. Additional kills increase duration by 6s. Max 30s.",
     "stats": {
       "HP/S%": 0.01
     }
@@ -453,7 +460,7 @@
     "name": "Reaping Stone",
     "slot": "Ring",
     "image": "https://i.imgur.com/ewW6qSI.png",
-    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 2% of base damage dealt as Lifesteal for 10s.",
+    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 3% of base damage dealt as Lifesteal for 10s.",
     "stats": {
       "Lifesteal": 0.03
     }
@@ -463,7 +470,7 @@
     "name": "Rerouting Cable",
     "slot": "Ring",
     "image": "https://i.imgur.com/5WuiZyF.png",
-    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 25 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
+    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 20 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
     "stats": {
       "Shield": 0.5
     }
@@ -479,7 +486,7 @@
     }
   },
   "Restriction Cord": {
-    "custom": null,
+    "custom": "restrictionCord",
     "name": "Restriction Cord",
     "slot": "Ring",
     "image": "https://i.imgur.com/JXW7CYK.png",
@@ -503,7 +510,7 @@
     "name": "Ring of Grace",
     "slot": "Ring",
     "image": "https://i.imgur.com/hRYyLB8.png",
-    "desc": "Taking enemy damage causes 10% of Maximum Health to regenerate over 10s.",
+    "desc": "Taking enemy damage causes 15% of Maximum Health to regenerate over 10s.",
     "stats": {
       "HP/S%": 0.015
     }
@@ -544,21 +551,19 @@
     "name": "Seal of the Empress",
     "slot": "Ring",
     "image": "https://i.imgur.com/tIMbLe4.png",
-    "desc": "Increases Max Health by 20. Reduces Max Stamina by 10.",
+    "desc": "Increases Max Health by 20. Reduces Max Stamina by 5.",
     "stats": {
       "Health": 20,
       "Stamina": -5
     }
   },
   "Soul Guard": {
-    "custom": null,
+    "custom": "soulGuard",
     "name": "Soul Guard",
     "slot": "Ring",
     "image": "https://i.imgur.com/yIQ0RvA.png",
     "desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS.",
-    "stats": {
-      "Bulwark": 2
-    }
+    "stats": {}
   },
   "Stream Coupler": {
     "custom": null,
@@ -575,7 +580,7 @@
     "name": "Tightly Wound Coil",
     "slot": "Ring",
     "image": "https://i.imgur.com/5jcUZvV.png",
-    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 10% of Max Health for 5s. Does not stack with itself.",
+    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 15% of Max Health for 5s. Does not stack with itself.",
     "stats": {
       "Shield": 0.15
     }
@@ -585,7 +590,7 @@
     "name": "Vacuum Seal",
     "slot": "Ring",
     "image": "https://i.imgur.com/dPZ9kJW.png",
-    "desc": "Increases Automatic Pickup Range for Scrap by 100%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 10% of Max Health for l0s Does not stack.",
+    "desc": "Increases Automatic Pickup Range for Scrap by 150%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 15% of Max Health for 15s Does not stack.",
     "stats": {
       "Shield": 0.15
     }
@@ -918,7 +923,7 @@
     "name": "Focusing Shard",
     "slot": "Ring",
     "image": "https://i.imgur.com/6b2l9Fn.png",
-    "desc": "Reduce Recoil by 25%. Aiming Down Sights gradually reduces Spread by 35% over 3.5s",
+    "desc": "Reduce Recoil by 50%. Aiming Down Sights gradually reduces Spread by 30% over 3s",
     "custom": null,
     "stats": {}
   },
@@ -1014,7 +1019,7 @@
     "name": "Point Focus Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/VeJfTGj.png",
-    "desc": "Reduces Initial Spread and Recoil by 35%.",
+    "desc": "Reduces Initial Spread and Recoil by 25%.",
     "custom": null,
     "stats": {}
   },
@@ -1062,7 +1067,7 @@
     "name": "Ring of Deflection",
     "slot": "Ring",
     "image": "https://i.imgur.com/jF3Mzdb.png",
-    "desc": "Direct Damage against wearer has a 20% Chance to be converted entirely to Grey Health.",
+    "desc": "Direct Damage against wearer has a 35% Chance to be converted entirely to Grey Health.",
     "custom": null,
     "stats": {}
   },
@@ -1110,7 +1115,7 @@
     "name": "Ring of the Damned",
     "slot": "Ring",
     "image": "https://i.imgur.com/5E67Fr9.png",
-    "desc": "Increases all damage dealt by10% while Grey Health is present.",
+    "desc": "Increases all damage dealt by 10% while Grey Health is present.",
     "custom": null,
     "stats": {}
   },
@@ -1191,7 +1196,7 @@
     "slot": "Ring",
     "image": "https://i.imgur.com/FNrBeeO.png",
     "desc": "Increase all damage dealt by 4% for each summon. Max 12%",
-    "custom": null,
+    "custom": "soulShard",
     "stats": {}
   },
   "Spirit Stone": {
@@ -1302,7 +1307,7 @@
     "name": "Tomb Dweller's Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/zU1d2Jv.png",
-    "desc": "Increases Movement Speed by 10% for 7s after Vaulting, Climbing, Leaping, and entering Water, stacks 1x. Reduces Fall Damage by 25%.",
+    "desc": "Increases Movement Speed by 10% for 10s after Vaulting, Climbing, Leaping, and entering Water, stacks 3x. Reduces Fall Damage by 25%.",
     "custom": null,
     "stats": {}
   },
@@ -1398,7 +1403,7 @@
     "name": "Digested Hog Lure",
     "slot": "Ring",
     "image": "https://i.imgur.com/afvkERC.png",
-    "desc": "Reloading increases Mod Damage by 10% for 5s.",
+    "desc": "Reloading increases Mod Damage by 15% for 5s.",
     "custom": null,
     "stats": {}
   },
