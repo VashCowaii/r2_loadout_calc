@@ -1123,7 +1123,9 @@ const greatTableKnowerOfAll = {
   "Vigor": 0
 }
 // HELMET JSON ---------------------------
-import helmets from './brotherLibrary/helmets.json'
+// import helmets from './brotherLibrary/helmets.json';
+
+import helmets from './brotherLibrary/helmets.json' assert { type: 'json' };
 // CHEST JSON ---------------------------
 const chests = {
     "Unequipped": {
