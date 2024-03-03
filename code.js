@@ -3844,7 +3844,7 @@ const amulets = {
     "name": "Weightless Weight",
     "slot": "Amulet",
     "image": "https://i.imgur.com/u3DCJPN.png",
-    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75%  for every each 5 point of Armor Encumbrance.",
+    "desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75% for each 5 point of Armor Encumbrance.",
     "custom": null,
     "stats": {}
   }
