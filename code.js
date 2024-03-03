@@ -8,18 +8,10 @@ let primaryMutatorOld,secondaryMutatorOld;
 let scaledRelicBaseRecords;
 
 
-// for (i=1;i<=4;i++) {
-//   if (readSelection(`USEtoggledRing${i}`).checked != true) {
-//     pullStats(rings[readSelection(`ring${i}`).value].stats);
-//     if (rings[readSelection(`ring${i}`).value].custom != null) {
-//       window[rings[readSelection(`ring${i}`).value].custom]();
-//     }
-//   }
-// }
-
 
 //Generalized select <option> population. *should* be able to be used for any gear selection,
 //provided there is a distinct json format to pull from
+
 function populateGear(elem_ID,collection) {
    const select = readSelection(elem_ID);
 
@@ -1122,17 +1114,7 @@ const greatTableKnowerOfAll = {
   "Spirit": 0,
   "Vigor": 0
 }
-// HELMET JSON ---------------------------
-// import helmets from './brotherLibrary/helmets.json';
 
-import helmets from './brotherLibrary/helmets.json' assert { type: 'json' };
-// CHEST JSON ---------------------------
-import chests from './brotherLibrary/chests.json' assert { type: 'json' };
-// LEG JSON ---------------------------
-import legs from './brotherLibrary/legs.json' assert { type: 'json' };
-
-// HAND JSON ---------------------------
-import hands from './brotherLibrary/hands.json' assert { type: 'json' };
 //Container used when referencing the armor tables using variables
 const armor = {
     "helmets": helmets,
@@ -1140,9 +1122,6 @@ const armor = {
     "legs": legs,
     "hands": hands,
 }
-//Archetypes and abilities/passives
-import classInfo from './brotherLibrary/archetypes.json' assert { type: 'json' };
-//class title combos: diehard bulldog etc
 const titleCombos = {
   "Alchemist": "",
   "Archon": "",
@@ -1302,15 +1281,11 @@ const titleCombos = {
   "RitualistInvader": "VILE REAPER",
   "RitualistArchon": "VILE HARBINGER"
 }
-import amulets from './brotherLibrary/amulets.json' assert { type: 'json' };
-import rings from './brotherLibrary/rings.json' assert { type: 'json' };
-import relics from './brotherLibrary/relics.json' assert { type: 'json' };
 const gear = {
    "amulets": amulets,
    "rings": rings,
    "relics": relics
 }
-import traits from './brotherLibrary/traits.json' assert { type: 'json' };
 const traitRecords = {
   "trait1": {
     "name": "",
@@ -1413,31 +1388,22 @@ const traitRecords = {
     "spent": 0
   },
 }
-import fragments from './brotherLibrary/relicFragments.json' assert { type: 'json' };
-import primary from './brotherLibrary/primary.json' assert { type: 'json' };
-import melee from './brotherLibrary/melee.json' assert { type: 'json' };
-import secondary from './brotherLibrary/secondary.json' assert { type: 'json' };
 const weapons = {
   "primary": primary,
   "melee": melee,
   "secondary": secondary
 }
-import rangedMutators from './brotherLibrary/rangedMutators.json' assert { type: 'json' };
-import meleeMutators from './brotherLibrary/meleeMutators.json' assert { type: 'json' };
 const mutators = {
   "primaryMutators": rangedMutators,
   "meleeMutators": meleeMutators,
   "secondaryMutators": rangedMutators
 }
-import rangedMods from './brotherLibrary/mods.json' assert { type: 'json' };
 //const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
 const mods = {
   "primaryMods": rangedMods,
-  "meleeMods": "meleeMods",
+  "meleeMods": "meleeMods",//Later, remove quotes obv
   "secondaryMods": rangedMods
 }
-import concoctions from './brotherLibrary/concoctions.json' assert { type: 'json' };
-import quickUses from './brotherLibrary/consumables.json' assert { type: 'json' };
 const consumables = {
   "concoctions": concoctions,
   "quickUses": quickUses
