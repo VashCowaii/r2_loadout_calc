@@ -70,6 +70,7 @@ html,body {
     background-color:#181818; 
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 .theGreatBox {
