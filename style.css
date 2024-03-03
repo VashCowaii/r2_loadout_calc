@@ -41,7 +41,7 @@
     border-top: 1px solid #434343;
     display: flex;
     text-align: center;
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
 }
 /* d9d9d9 */
@@ -160,7 +160,7 @@
     justify-content: center;
     align-items: center;
     background-color: #434343;
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
 }
 .togglesValue {
@@ -196,7 +196,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
 }
 
 
@@ -256,7 +256,6 @@ div {
 * {
 /* outline: 2px solid red; */
 font-family: Arial, Helvetica, sans-serif;
-overflow-wrap: break-word;
 }
 
 
@@ -294,7 +293,7 @@ overflow-wrap: break-word;
     color: white;
     display: flex;
     flex-direction: column;
-    /* white-space: wrap; */
+    /* white-space: normal; */
     box-sizing: border-box;
 }
 /* .basicsBox>* {
@@ -663,7 +662,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .classAbilityContainer {display: flex;height: 16%;box-sizing: border-box;background-color: #666666;}
 .classAbilitySelectorBox {
@@ -688,7 +687,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .classAbilityIcon {
     width: 40%;
@@ -701,7 +700,7 @@ overflow-wrap: break-word;
     text-align: left;
     font-size:10.5px;
     height: 30%;   
-    white-space: wrap;
+    white-space: normal;
     overflow-y: auto;
 }
 .classPassivesBox {
@@ -726,7 +725,7 @@ overflow-wrap: break-word;
     font-size: clamp(9.5px, 0.8vw, 11px);
     padding-top: 2px;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
     overflow-wrap: break-word;
     overflow-y: auto;
 }
@@ -762,7 +761,7 @@ overflow-wrap: break-word;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .classPerkContainer {
     width: 100%;
@@ -770,7 +769,7 @@ overflow-wrap: break-word;
     flex-direction: row;
     height: 25.5%;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
 }
 .classPerkName {
     font-size: clamp(8px, 2vw, 20px);
@@ -801,7 +800,7 @@ overflow-wrap: break-word;
     border-bottom: 1px solid #434343;
     font-size: 12px;
     text-align: center;
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
 }
 .armorHeaderBig{
@@ -841,7 +840,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .armorHeader{
     width: 100%;
@@ -1004,7 +1003,7 @@ overflow-wrap: break-word;
     justify-content: center;
     display: flex;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .accessoryDescription {
     width: 43%;
@@ -1017,7 +1016,7 @@ overflow-wrap: break-word;
     background-color: black;
     border-right: 1px solid #434343;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
     overflow-y: auto;
 }
 .fragmentsContainer{
@@ -1068,7 +1067,7 @@ overflow-wrap: break-word;
     box-sizing: border-box;
     border-left: 1px solid #434343;
     border-right: 1px solid #434343;
-    white-space: wrap;
+    white-space: normal;
     overflow-y: auto;
 }
 .relicEffectsContainer {
@@ -1077,7 +1076,7 @@ overflow-wrap: break-word;
     padding: 0%;
     height: 25%;
     background-color: black;
-    white-space: wrap;
+    white-space: normal;
 }
 .relicHealingContainer {
     width: 40%;
@@ -1219,7 +1218,7 @@ overflow-wrap: break-word;
     align-items: center;
     justify-content: center;
     /* text-align: left; */
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
 }
 .relicHeader {
@@ -1259,7 +1258,7 @@ overflow-wrap: break-word;
     max-height: 800px;
     background-color: #666666;
     color: white;
-    /* white-space: wrap; */
+    /* white-space: normal; */
     box-sizing: border-box;
     border-top: 1px solid black;
     display: flex;
@@ -1370,13 +1369,13 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .consumableDesc {
     width: 100%;
     height: 78%;
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
     font-size:10px;
     color: white;
     box-sizing: border-box;
@@ -1396,7 +1395,7 @@ overflow-wrap: break-word;
     max-height: 800px;
     background-color: black;
     color: white;
-    /* white-space: wrap; */
+    /* white-space: normal; */
     box-sizing: border-box;
     border: 1px solid black;
     display: flex;
@@ -1457,7 +1456,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .mutatorHeaderBox {
     width: 100%;
@@ -1503,13 +1502,13 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .mutatorDesc {
     width: 100%;
     height: 15%;
     text-align: left;
-    white-space: wrap;
+    white-space: normal;
     font-size:10px;
     color: white;
     box-sizing: border-box;
@@ -1536,7 +1535,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .modHeader {
     width: 25%;
@@ -1548,7 +1547,7 @@ overflow-wrap: break-word;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-    white-space: wrap;
+    white-space: normal;
 }
 .modImageBox {
     width: 25%;
@@ -1904,7 +1903,7 @@ overflow-wrap: break-word;
     justify-content: center;
     align-items: center;
     background-color: #434343;
-    white-space: wrap;
+    white-space: normal;
 }
 .advancedMiscBoxValue {
     width: 40%;
@@ -1914,7 +1913,7 @@ overflow-wrap: break-word;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
 }
 .shieldsCheckBox {
     width: 30%;
@@ -1924,7 +1923,7 @@ overflow-wrap: break-word;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
 }
 .advancedMiscSelector {
     font-size: 20px;
@@ -1938,7 +1937,7 @@ overflow-wrap: break-word;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    /* white-space: wrap; */
+    /* white-space: normal; */
 }
 .shieldsFiller {
     width: 100%;
@@ -1976,7 +1975,7 @@ overflow-wrap: break-word;
     justify-content: left;
     align-items: center;
     background-color: #434343;
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
     padding-left: 2%;
 }
@@ -1988,7 +1987,7 @@ overflow-wrap: break-word;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
     background-color: #666666;
     box-sizing: border-box;
 }
@@ -2086,7 +2085,7 @@ overflow-wrap: break-word;
     justify-content: center;
     align-items: center;
     background-color: #434343;
-    white-space: wrap;
+    white-space: normal;
     box-sizing: border-box;
 }
 .advancedDRValue {
@@ -2122,7 +2121,7 @@ overflow-wrap: break-word;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: wrap;
+    white-space: normal;
 }
 .totalBonusDRHeader {
     height: 10%;
