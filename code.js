@@ -1433,7 +1433,7 @@ import rangedMods from './brotherLibrary/mods.json' assert { type: 'json' };
 //const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
 const mods = {
   "primaryMods": rangedMods,
-  "meleeMods": meleeMods,
+  "meleeMods": "meleeMods",
   "secondaryMods": rangedMods
 }
 import concoctions from './brotherLibrary/concoctions.json' assert { type: 'json' };
