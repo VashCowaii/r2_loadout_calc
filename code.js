@@ -2829,7 +2829,7 @@ const classInfo = {
     "passives": {
       "passive1": {
         "name": "S.H.A.R.K.",
-        "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 15s. Max 5 stacks.",
+        "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 10s. Max 5 stacks. Perfect Evade grants 5 stacks.",
         "stats": {}
       },
       "passive2": {
@@ -8225,7 +8225,7 @@ const concoctions = {
     "name": "Tranquility Font",
     "slot": "Conc",
     "image": "https://i.imgur.com/EGgRM3C.png",
-    "desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 35%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
+    "desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 25%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
     "custom": null,
     "stats": {}
   },
