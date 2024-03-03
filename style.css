@@ -256,6 +256,7 @@ div {
 * {
 /* outline: 2px solid red; */
 font-family: Arial, Helvetica, sans-serif;
+overflow-wrap: break-word;
 }
 
 
@@ -726,6 +727,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding-top: 2px;
     box-sizing: border-box;
     white-space: wrap;
+    overflow-wrap: break-word;
     overflow-y: auto;
 }
 /* ----------------------------------------------------------------------------------------*/
