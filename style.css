@@ -726,7 +726,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding-top: 2px;
     box-sizing: border-box;
     white-space: normal;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
     overflow-y: auto;
 }
 /* ----------------------------------------------------------------------------------------*/

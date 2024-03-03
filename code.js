@@ -1836,7 +1836,7 @@ const legs = {
     },
     "Knotted Greaves": {
        "SLOT": "Leg",
-       "VALUE": 13.1,
+       "VALUE": 31.1,
        "WEIGHT": 13.8,
        "IMAGE": "https://i.imgur.com/dhh0LsI.png",
        "Bleed": 1,
@@ -2364,13 +2364,13 @@ const classInfo = {
       },
       "passive2": {
         "name": "Panacea",
-        "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Resistance.",
+        "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Status and Blight Resistance.",
         "stats": {
-          "Bleed": 10,
-          "Burn": 10,
-          "Shock": 10,
-          "Corrosive": 10,
-          "Blight": 10
+          "Bleed": 15,
+          "Burn": 15,
+          "Shock": 15,
+          "Corrosive": 15,
+          "Blight": 15
         }
       },
       "passive3": {
@@ -2402,7 +2402,7 @@ const classInfo = {
       },
       "Chaos Gate": {
         "name": "Chaos Gate",
-        "desc": "Conjures a 7m unstable zone which grants allies 15% increased damage dealth, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
+        "desc": "Conjures a 7m unstable zone which grants allies 50% increased All damage dealt, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
         "image": "https://i.imgur.com/yMfhLzm.png",
         "stats": {
           "FlatDR": -0.15
@@ -2436,7 +2436,7 @@ const classInfo = {
       },
       "passive3": {
         "name": "Spirit Within",
-        "desc": "Mod Power/charge -15%, refunds 15% Mod cost, split among active mods.",
+        "desc": "Mod Power/charge -15%, instantly refunds 15% Mod cost, split among active mods.",
         "stats": {}
       },
       "passive4": {
@@ -2449,7 +2449,7 @@ const classInfo = {
   "Challenger": {
     "classIcon": "https://i.imgur.com/o8Lf7rI.png",
     "primePerk": "DIE HARD",
-    "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. Resets at Worldstone or on death.",
+    "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. While on cooldown, Challenger gains 1 stack of BULWARK. Resets at Worldstone or on death.",
     "primePerkImage": "https://i.imgur.com/P031gGk.png",
     "primeStats": {
       "Bulwark": 1,
@@ -2463,7 +2463,7 @@ const classInfo = {
       },
       "Juggernaut": {
         "name": "Juggernaut",
-        "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
+        "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
         "image": "https://i.imgur.com/byx30R2.png",
         "stats": {
           "Bulwark": 3
@@ -2471,7 +2471,7 @@ const classInfo = {
       },
       "Rampage": {
         "name": "Rampage",
-        "desc": "Fire Rate +15%, Reload Speed +20%, and Movement Speed +10%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
+        "desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
         "image": "https://i.imgur.com/rWVGPZE.png",
         "stats": {}
       }
@@ -2546,7 +2546,7 @@ const classInfo = {
     "passives": {
       "passive1": {
         "name": "Metalworker",
-        "desc": "Skill (+50%DMG +10%CC). Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
+        "desc": "Skill (+50%DMG +10%CC). Ranged (+25%DMG +10%CC) Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
         "stats": {}
       },
       "passive2": {
@@ -2583,7 +2583,7 @@ const classInfo = {
       },
       "Gold Digger": {
         "name": "Gold Digger",
-        "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2.4 HP/s, or HASTE.",
+        "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
         "image": "https://i.imgur.com/mO87xP5.png",
         "stats": {}
       },
@@ -2668,7 +2668,7 @@ const classInfo = {
       },
       "passive3": {
         "name": "Quick Hands",
-        "desc": "Firearms +10% Reload Speed. DOUBLED is mag is empty.",
+        "desc": "Firearms +10% Reload Speed. DOUBLED if mag is empty.",
         "stats": {}
       },
       "passive4": {
@@ -2717,7 +2717,7 @@ const classInfo = {
     "passives": {
       "passive1": {
         "name": "Pack Hunter",
-        "desc": "Gain +30% Ranged/Skill Damage, +5% Ranged/Skill CC while Companion is within 40m.",
+        "desc": "Gain +30% Ranged/Skill/Melee Damage, +5% Ranged/Skill/Melee CC while Companion is within 40m.",
         "stats": {}
       },
       "passive2": {
@@ -2752,7 +2752,7 @@ const classInfo = {
       },
       "Hunter's Focus": {
         "name": "Hunter's Focus",
-        "desc": "Aiming Down Sights uninterrupted/without shooting for 1s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 75%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
+        "desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
         "image": "https://i.imgur.com/mMsdIv0.png",
         "stats": {}
       },
@@ -2920,25 +2920,25 @@ const classInfo = {
   "Ritualist": {
     "classIcon": "https://i.imgur.com/kNPGSac.png",
     "primePerk": "VILE",
-    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 5% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
+    "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
     "primePerkImage": "https://i.imgur.com/CIV7N6m.png",
     "primeStats": {},
     "abilities": {
       "Eruption": {
         "name": "Eruption",
-        "desc": "Creates 1m explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
+        "desc": "Creates explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
         "image": "https://i.imgur.com/R8EtgyF.png",
         "stats": {}
       },
       "Miasma": {
         "name": "Miasma",
-        "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 1500 base damage. Lasts 11s.",
+        "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 3,000 base damage. Lasts 20s.",
         "image": "https://i.imgur.com/eDxZ9tS.png",
         "stats": {}
       },
       "Death Wish": {
         "name": "Death Wish",
-        "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal.",
+        "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health reduction is minimized by Kinship.",
         "image": "https://i.imgur.com/pQJvLnK.png",
         "stats": {}
       }
@@ -3009,7 +3009,7 @@ const classInfo = {
     "passives": {
       "passive1": {
         "name": "Dominator",
-        "desc": "Mod/Skill (+35%DMG, +5%CC) with active minion. Sacrifice gives Ranged/Melee (+30%DMG +5%CC), for 30s or until summon.",
+        "desc": "Mod/Skill/Explosive (+35%DMG, +5%CC) with active minion.",
         "stats": {}
       },
       "passive2": {
@@ -3211,7 +3211,7 @@ const amulets = {
     "name": "Brewmaster's Cork",
     "slot": "Amulet",
     "image": "https://i.imgur.com/6ThjInO.png",
-    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction. Sheet assumes your concoction limit, is your amount of active concoctions.",
+    "desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction.",
     "stats": {
       "ConcLimit": 2
     }
@@ -3312,7 +3312,7 @@ const amulets = {
     "name": "Leto's Amulet",
     "slot": "Amulet",
     "image": "https://i.imgur.com/LgUJb0q.png",
-    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 15%.",
+    "desc": "Reduces Encumbrance by 40% and Stamina Cost by 30%.",
     "stats": {
       "StaminaCost": -0.3,
       "Encumbrance%": -0.4
@@ -3333,7 +3333,7 @@ const amulets = {
     "name": "Navigator's Pendant",
     "slot": "Amulet",
     "image": "https://i.imgur.com/MNg2vz5.png",
-    "desc": "Grants 20 Health, 20 Stamina, and -10 Armor Encumbrance.",
+    "desc": "Grants 25 Health, 25 Stamina, and -10 Armor Encumbrance.",
     "stats": {
       "Health": 25,
       "Stamina": 25,
@@ -3388,7 +3388,7 @@ const amulets = {
     "name": "Rusted Navigator's Pendant",
     "slot": "Amulet",
     "image": "https://i.imgur.com/B2H2Xrb.png",
-    "desc": "Grants 15 Health, 15 Stamina, and -15 Armor Encumbrance.",
+    "desc": "Grants 20 Health, 20 Stamina, and -15 Armor Encumbrance.",
     "stats": {
       "Health": 20,
       "Stamina": 20,
@@ -3460,7 +3460,7 @@ const amulets = {
     "name": "Cleansing Stone",
     "slot": "Amulet",
     "image": "https://i.imgur.com/nUx4aqq.png",
-    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 15% of wearers Max Health to all allies within 7m when cleansed.",
+    "desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 25% of wearers Max Health to all allies within 20m when cleansed.",
     "custom": null,
     "stats": {}
   },
@@ -3524,7 +3524,7 @@ const amulets = {
     "name": "Energized Neck Coil",
     "slot": "Amulet",
     "image": "https://i.imgur.com/D8np6HK.png",
-    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage.",
+    "desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage. Each target can be affected once every 5 seconds.",
     "custom": null,
     "stats": {}
   },
@@ -3740,7 +3740,7 @@ const amulets = {
     "name": "Samoflange",
     "slot": "Amulet",
     "image": "https://i.imgur.com/K6r1t6G.png",
-    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 50%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
+    "desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 60%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
     "custom": null,
     "stats": {}
   },
@@ -3875,7 +3875,7 @@ const rings = {
     "name": "Alchemy Stone",
     "slot": "Ring",
     "image": "https://i.imgur.com/WCc31LC.png",
-    "desc": "Increases base Lifesteal by 5% while suffering from a negative STATUS or BLIGHT Effect.",
+    "desc": "Increases base Lifesteal by 6% while suffering from a negative STATUS or BLIGHT Effect.",
     "stats": {
       "Lifesteal": 0.06
     }
@@ -3885,7 +3885,7 @@ const rings = {
     "name": "Amber Moonstone",
     "slot": "Ring",
     "image": "https://i.imgur.com/yDme9m6.png",
-    "desc": "When the wearer's Health drops below 30%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
+    "desc": "When the wearer's Health drops below 35%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
     "stats": {
       "FlatDR": 0.25
     }
@@ -3916,7 +3916,7 @@ const rings = {
     "name": "Bisected Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/piWaWV1.png",
-    "desc": "Gain Infinite Stamina. All damage received is increased by 25%.",
+    "desc": "Gain Infinite Stamina. All damage received is increased by 15%.",
     "stats": {
       "FlatDR": -0.15,
       "StaminaCost": -1
@@ -3927,7 +3927,7 @@ const rings = {
     "name": "Blessed Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/uox5REc.png",
-    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 15s.",
+    "desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 30s.",
     "stats": {
       "Bulwark": 2
     }
@@ -3947,7 +3947,7 @@ const rings = {
     "name": "Booster Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/MdwGBHS.png",
-    "desc": "Increases all Status Resistances by 10.",
+    "desc": "Increases all Status Resistances by 25.",
     "stats": {
       "Bleed": 25,
       "Burn": 25,
@@ -3981,7 +3981,7 @@ const rings = {
     "name": "Burden of the Audacious",
     "slot": "Ring",
     "image": "https://i.imgur.com/C0RzzoB.png",
-    "desc": "Decreases all healing by 75%. Perfect Dodges heal for 15% of Max Health.",
+    "desc": "Decreases all healing by 50%. Perfect Dodges heal for 20% of Max Health.",
     "stats": {
       "HealingEFF": -0.5
     }
@@ -4011,7 +4011,7 @@ const rings = {
     "name": "Conservation Seal",
     "slot": "Ring",
     "image": "https://i.imgur.com/Ay25cdg.png",
-    "desc": "For every 10% of Health missing  (Max 50%) gain 3% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
+    "desc": "For every 10% of Health missing  (Max 50%) gain 5% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
     "stats": {
       "RelicEFF": 0.25
     }
@@ -4090,7 +4090,7 @@ const rings = {
     "name": "Dying Ember",
     "slot": "Ring",
     "image": "https://i.imgur.com/RsWl7xg.png",
-    "desc": "Gain 5% of base Melee damage dealt as Lifesteal.",
+    "desc": "Gain 6% of base Melee damage dealt as Lifesteal.",
     "stats": {
       "MLifesteal": 0.06
     }
@@ -4121,7 +4121,7 @@ const rings = {
     "name": "Encrypted Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/bYVtoLs.png",
-    "desc": "Using a Mod regenerates 10% of Max Health over 10s. Can stack up to 30s.",
+    "desc": "Using a Mod regenerates 20% of Max Health over 10s. Can stack up to 30s.",
     "stats": {
       "HP/S%": 0.02
     }
@@ -4141,7 +4141,7 @@ const rings = {
     "name": "Excess Coil",
     "slot": "Ring",
     "image": "https://i.imgur.com/v4eVeRb.png",
-    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 10s.",
+    "desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 15s.",
     "stats": {
       "Shield": 0.25
     }
@@ -4151,7 +4151,7 @@ const rings = {
     "name": "Fae Bruiser Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/wGSIuzZ.png",
-    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 7s. Does not stack with itself.",
+    "desc": "Dealing Melee damage grants 2 Stack of BULWARK for 15s. Does not stack with itself.",
     "stats": {
       "Bulwark": 2
     }
@@ -4173,10 +4173,10 @@ const rings = {
     "name": "Fae Shaman Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/PE11RyA.png",
-    "desc": "Increases Health Regeneration by 0.25 and Relic Use Speed by 25%.",
+    "desc": "Increases Health Regeneration by 0.35 and Relic Use Speed by 25%.",
     "stats": {
       "RelicSpeed": -0.25,
-      "HP/S+": 0.334
+      "HP/S+": 0.35
     }
   },
   "Feastmaster's Signet": {
@@ -4232,7 +4232,7 @@ const rings = {
     "name": "Guardian's Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/kcoHwmB.png",
-    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 10s after taking Melee damage.",
+    "desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 15s after taking Melee damage.",
     "stats": {
       "Bulwark": 2
     }
@@ -4274,7 +4274,7 @@ const rings = {
     "image": "https://i.imgur.com/lKaOMFa.png",
     "desc": "Reduces all incoming damage by 5%.",
     "stats": {
-      "FlatDR": 0.05
+      "FlatDR": 0.07
     }
   },
   "Low Yield Recovery Ring": {
@@ -4282,7 +4282,7 @@ const rings = {
     "name": "Low Yield Recovery Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/TqKSFYf.png",
-    "desc": "Killing an enemy regenerates 5% Max Health over 5s. Additional kills increase duration by 5s. Max 30s.",
+    "desc": "Killing an enemy regenerates 6% Max Health over 6s. Additional kills increase duration by 6s. Max 30s.",
     "stats": {
       "HP/S%": 0.01
     }
@@ -4312,7 +4312,7 @@ const rings = {
     "name": "Reaping Stone",
     "slot": "Ring",
     "image": "https://i.imgur.com/ewW6qSI.png",
-    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 2% of base damage dealt as Lifesteal for 10s.",
+    "desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 3% of base damage dealt as Lifesteal for 10s.",
     "stats": {
       "Lifesteal": 0.03
     }
@@ -4322,7 +4322,7 @@ const rings = {
     "name": "Rerouting Cable",
     "slot": "Ring",
     "image": "https://i.imgur.com/5WuiZyF.png",
-    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 25 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
+    "desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 20 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
     "stats": {
       "Shield": 0.5
     }
@@ -4362,7 +4362,7 @@ const rings = {
     "name": "Ring of Grace",
     "slot": "Ring",
     "image": "https://i.imgur.com/hRYyLB8.png",
-    "desc": "Taking enemy damage causes 10% of Maximum Health to regenerate over 10s.",
+    "desc": "Taking enemy damage causes 15% of Maximum Health to regenerate over 10s.",
     "stats": {
       "HP/S%": 0.015
     }
@@ -4403,7 +4403,7 @@ const rings = {
     "name": "Seal of the Empress",
     "slot": "Ring",
     "image": "https://i.imgur.com/tIMbLe4.png",
-    "desc": "Increases Max Health by 20. Reduces Max Stamina by 10.",
+    "desc": "Increases Max Health by 20. Reduces Max Stamina by 5.",
     "stats": {
       "Health": 20,
       "Stamina": -5
@@ -4432,7 +4432,7 @@ const rings = {
     "name": "Tightly Wound Coil",
     "slot": "Ring",
     "image": "https://i.imgur.com/5jcUZvV.png",
-    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 10% of Max Health for 5s. Does not stack with itself.",
+    "desc": "When spending 75% or more of current magazine, gain a SHIELD for 15% of Max Health for 5s. Does not stack with itself.",
     "stats": {
       "Shield": 0.15
     }
@@ -4442,7 +4442,7 @@ const rings = {
     "name": "Vacuum Seal",
     "slot": "Ring",
     "image": "https://i.imgur.com/dPZ9kJW.png",
-    "desc": "Increases Automatic Pickup Range for Scrap by 100%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 10% of Max Health for l0s Does not stack.",
+    "desc": "Increases Automatic Pickup Range for Scrap by 150%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 15% of Max Health for 15s Does not stack.",
     "stats": {
       "Shield": 0.15
     }
@@ -4775,7 +4775,7 @@ const rings = {
     "name": "Focusing Shard",
     "slot": "Ring",
     "image": "https://i.imgur.com/6b2l9Fn.png",
-    "desc": "Reduce Recoil by 25%. Aiming Down Sights gradually reduces Spread by 35% over 3.5s",
+    "desc": "Reduce Recoil by 50%. Aiming Down Sights gradually reduces Spread by 30% over 3s",
     "custom": null,
     "stats": {}
   },
@@ -4871,7 +4871,7 @@ const rings = {
     "name": "Point Focus Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/VeJfTGj.png",
-    "desc": "Reduces Initial Spread and Recoil by 35%.",
+    "desc": "Reduces Initial Spread and Recoil by 25%.",
     "custom": null,
     "stats": {}
   },
@@ -4919,7 +4919,7 @@ const rings = {
     "name": "Ring of Deflection",
     "slot": "Ring",
     "image": "https://i.imgur.com/jF3Mzdb.png",
-    "desc": "Direct Damage against wearer has a 20% Chance to be converted entirely to Grey Health.",
+    "desc": "Direct Damage against wearer has a 35% Chance to be converted entirely to Grey Health.",
     "custom": null,
     "stats": {}
   },
@@ -4967,7 +4967,7 @@ const rings = {
     "name": "Ring of the Damned",
     "slot": "Ring",
     "image": "https://i.imgur.com/5E67Fr9.png",
-    "desc": "Increases all damage dealt by10% while Grey Health is present.",
+    "desc": "Increases all damage dealt by 10% while Grey Health is present.",
     "custom": null,
     "stats": {}
   },
@@ -5159,7 +5159,7 @@ const rings = {
     "name": "Tomb Dweller's Ring",
     "slot": "Ring",
     "image": "https://i.imgur.com/zU1d2Jv.png",
-    "desc": "Increases Movement Speed by 10% for 7s after Vaulting, Climbing, Leaping, and entering Water, stacks 1x. Reduces Fall Damage by 25%.",
+    "desc": "Increases Movement Speed by 10% for 10s after Vaulting, Climbing, Leaping, and entering Water, stacks 3x. Reduces Fall Damage by 25%.",
     "custom": null,
     "stats": {}
   },
@@ -5255,7 +5255,7 @@ const rings = {
     "name": "Digested Hog Lure",
     "slot": "Ring",
     "image": "https://i.imgur.com/afvkERC.png",
-    "desc": "Reloading increases Mod Damage by 10% for 5s.",
+    "desc": "Reloading increases Mod Damage by 15% for 5s.",
     "custom": null,
     "stats": {}
   },
@@ -5533,7 +5533,7 @@ const relics = {
     "name": "Siphon Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/7mlMeUF.png",
-    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 10s.",
+    "desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
     "stats": {
       "Lifesteal": 0.1
     }
@@ -5586,7 +5586,7 @@ const relics = {
     "name": "Tormented Heart",
     "slot": "Relic",
     "image": "https://i.imgur.com/K6URUKQ.png",
-    "desc": "Innate 20% Use Speed bonus. On use, deals 240 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
+    "desc": "Innate 20% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
     "custom": null,
     "stats": {}
   },
