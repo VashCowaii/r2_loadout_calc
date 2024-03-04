@@ -39,7 +39,6 @@ html,body {
     align-items: center;
     justify-content: center;
     color: white;
-    
 }
 .footerIconBox {
     width: 30%;
@@ -53,14 +52,12 @@ html,body {
     border-top: 1px solid #434343;
 }
 .footerIcon {
-        border-radius: 50%;
-        width:32px;
-        height:auto;
-        outline: 2px solid white;
-        box-sizing: border-box;
+    border-radius: 50%;
+    width:32px;
+    height:auto;
+    outline: 2px solid white;
+    box-sizing: border-box;
 }
-
-
 .main {
     width: 100%;
     min-height: 100%;
@@ -87,7 +84,6 @@ html,body {
     overflow: auto;
     margin: 0;
 }
-
 
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -117,7 +113,7 @@ html,body {
 * {
     /* outline: 2px solid red; */
     font-family: Arial, Helvetica, sans-serif;
-    }
+}
 
 .honkaiWaitingBox {
     width: 100%;

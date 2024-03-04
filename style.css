@@ -56,11 +56,11 @@ html,body {
     border-top: 1px solid #434343;
 }
 .footerIcon {
-        border-radius: 50%;
-        width:32px;
-        height:auto;
-        outline: 2px solid white;
-        box-sizing: border-box;
+    border-radius: 50%;
+    width:32px;
+    height:auto;
+    outline: 2px solid white;
+    box-sizing: border-box;
 }
 .main {
     width: 100%;

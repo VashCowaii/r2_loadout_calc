@@ -564,10 +564,16 @@ if (relicHPtype==="%"){
   updateDisplay("relic%HP/s",(relicHPscaled/relicHPtime),1,"%");
   updateDisplay("relicHP/s",((relicHPscaled/relicHPtime)/100)*totalHealth,1);
 }
-else {
+else if (relicHPtype==="P"||relicHPtype==="F") {
   updateDisplay("relicScaled",relicHPscaled,1);
   readSelection("relic%HP/s").innerHTML = "---";
   updateDisplay("relicHP/s",(relicHPscaled/relicHPtime),1);
+}
+else {//if null
+  relicHPscaled = 0;
+  readSelection("relicScaled").innerHTML = "---";
+  readSelection("relic%HP/s").innerHTML = "---";
+  readSelection("relicHP/s").innerHTML = "---";
 }
 //Now that healing values have populated, check and call for custom relic functions
 //for the sake of complex relic effects
