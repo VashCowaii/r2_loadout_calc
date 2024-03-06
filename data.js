@@ -5303,6 +5303,46 @@ window.primary = {
       "custom": null,
       "stats": {}
     },
+    "Corrupted Aphelion": {
+      "name": "Corrupted Aphelion",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/dlIBWvL.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Arbalest": {
+      "name": "Corrupted Arbalest",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/HoYjkRv.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Deceit": {
+      "name": "Corrupted Deceit",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/XMxVOEe.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Merciless": {
+      "name": "Corrupted Merciless",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/HftrrQ4.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Savior": {
+      "name": "Corrupted Savior",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/3tdzF0X.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
     "Crescent Moon": {
       "name": "Crescent Moon",
       "slot": "Primary",
@@ -5831,6 +5871,46 @@ window.secondary = {
       "name": "Bolt Driver",
       "slot": "Secondary",
       "image": "https://i.imgur.com/gGi5Si3.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Cube Gun": {
+      "name": "Corrupted Cube Gun",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/mPa2332.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Meridian": {
+      "name": "Corrupted Meridian",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/2xOide1.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Nebula": {
+      "name": "Corrupted Nebula",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/SbGPpes.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Rune Pistol": {
+      "name": "Corrupted Rune Pistol",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/scAvb4g.png",
+      "desc": "",
+      "custom": null,
+      "stats": {}
+    },
+    "Corrupted Sorrow": {
+      "name": "Corrupted Sorrow",
+      "slot": "Secondary",
+      "image": "https://i.imgur.com/bYciWNm.png",
       "desc": "",
       "custom": null,
       "stats": {}
