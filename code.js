@@ -681,8 +681,12 @@ else {
     advancedRelicPerc = 0;
     advancedRelicFlat = relicHPscaled/relicHPtime;
   }
-  else { //If the type is %
+  else if (relicHPtype==="%") {
     advancedRelicPerc = relicHPscaled/relicHPtime;
+    advancedRelicFlat = 0;
+  }
+  else { //If there is no relic type(unique relic like Shielded Heart)
+    advancedRelicPerc = 0;
     advancedRelicFlat = 0;
   }
 }
