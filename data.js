@@ -5989,21 +5989,11 @@ window.rangedMutators = {
       "desc": "",
       "stats": {}
     },
-    "Spirit Healer": {
-      "custom": null,
-      "name": "Spirit Healer",
-      "slot": "RMutator",
-      "image": "",
-      "desc": "Regenerate 5% Health over 5s for every 500 Mod Power spent. Level 10: Allies within 15m are healed for 50% of the primary effect.",
-      "stats": {
-        "HP/S%": 0.02
-      }
-    },
     "Bandit": {
       "name": "Bandit",
       "slot": "RMutator",
       "image": "",
-      "desc": "On hit, grants 10% chanche to return spent Ammo directly into the magazine of this weapon. Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
+      "desc": "On hit, grants 30% chanche to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
       "custom": null,
       "stats": {}
     },
@@ -6011,7 +6001,7 @@ window.rangedMutators = {
       "name": "Battery",
       "slot": "RMutator",
       "image": "",
-      "desc": "Ranged Hits increase the next Weakspot Hit by 10% per stack. Max 5 Stacks. Level 10: At Max Stacks, the next Weakspot Hit deals 15% additional damage over 3s.",
+      "desc": "Increases Weakspot Damage by 20% for every 400 Mod Power Spent by the attached weapon's mod. Max 3 stacks. Lasts 10s.<br>Level 10: At Max Stacks, gain 10% Critical Chance on Weakspot Hits",
       "custom": null,
       "stats": {}
     },
@@ -6019,7 +6009,7 @@ window.rangedMutators = {
       "name": "Bottom Feeder",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases this weapon's Ranged Damage by 5% for every 20% reserve ammo missing. Level 10: When the weapon runs out of ammo, it gains infinite ammo for 5s. Can only happen once every 60s.",
+      "desc": "Increases this weapon's Ranged Damage by 7.5% for every 20% reserve ammo missing.<br>Level 10: When the weapon runs out of ammo, it gains infinite ammo for 5s. Can only happen once every 60s.",
       "custom": null,
       "stats": {}
     },
@@ -6027,7 +6017,7 @@ window.rangedMutators = {
       "name": "Bottom Heavy",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Fire Rate by 7.5% and an additional 1% for every 10% of Magazine missing. Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
+      "desc": "Increases Fire Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
       "custom": null,
       "stats": {}
     },
@@ -6035,7 +6025,7 @@ window.rangedMutators = {
       "name": "Bulletweaver",
       "slot": "RMutator",
       "image": "",
-      "desc": "Mod use increases Fire Rate of this weapon by 10% for 7s. Level 10: Reloading from empty increases Mod Generation of this weapon by 15%. Lasts 7s.",
+      "desc": "Mod use increases Fire Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
       "custom": null,
       "stats": {}
     },
@@ -6043,7 +6033,7 @@ window.rangedMutators = {
       "name": "Deadly Calm",
       "slot": "RMutator",
       "image": "",
-      "desc": "Continuosly Aiming increases Ranged Damage by up to 10% over 3s.  Level 10: Ranged Critical Hit Chance increased by 10%.",
+      "desc": "Continuosly Aiming increases Ranged Damage by up to 20% over 3s.<br>Level 10: Ranged Critical Hit Chance increased by 10%.",
       "custom": null,
       "stats": {}
     },
@@ -6051,7 +6041,7 @@ window.rangedMutators = {
       "name": "Dreadful",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Ranged Damage by 2% for every 10% of total Health present as Grey Health. Max 20% increase. Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
+      "desc": "Increases Ranged Damage by 4% for every 10% of total Health present as Grey Health. Max 20% increase.<br>Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
       "custom": null,
       "stats": {}
     },
@@ -6059,7 +6049,7 @@ window.rangedMutators = {
       "name": "Extender",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Magazine Capacity of this weapon by 30%. Level 10: Increases Reload Speed of this weapon by 15%",
+      "desc": "Increases Magazine Capacity of this weapon by 40%.<br>Level 10: Increases Reload Speed of this weapon by 15%",
       "custom": null,
       "stats": {}
     },
@@ -6067,7 +6057,7 @@ window.rangedMutators = {
       "name": "Failsafe",
       "slot": "RMutator",
       "image": "",
-      "desc": "Attached Mod deals 10% additional Mod Damage. Level 10: Attached Mod use gains a 15% chace to not consume charge.",
+      "desc": "Attached Mod deals 20% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
       "custom": null,
       "stats": {}
     },
@@ -6075,7 +6065,7 @@ window.rangedMutators = {
       "name": "Feedback",
       "slot": "RMutator",
       "image": "",
-      "desc": "Using this weapon's Mod generates 10% of single charge value as passive Mod Power over 10s. Does not stack. Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
+      "desc": "Using this weapon's Mod generates 20% of single charge value as passive Mod Power over 10s. Does not stack.<br>Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
       "custom": null,
       "stats": {}
     },
@@ -6083,7 +6073,7 @@ window.rangedMutators = {
       "name": "Fetid Wounds",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Critical Chance of this weapon by 3% per unique Negative Status Effect on the enemy. Max 15% increase. Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
+      "desc": "Increases Critical Chance of this weapon by 5% per unique Negative Status Effect on the enemy. Max 15% increase.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
       "custom": null,
       "stats": {}
     },
@@ -6091,7 +6081,7 @@ window.rangedMutators = {
       "name": "Ghost Shell",
       "slot": "RMutator",
       "image": "",
-      "desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 20%. Level 10: Increases Weakspot Critical Chance by 15%.",
+      "desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 40%.<br>Level 10: Increases Weakspot Critical Chance by 15%.",
       "custom": null,
       "stats": {}
     },
@@ -6099,7 +6089,7 @@ window.rangedMutators = {
       "name": "Harmonizer",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Mod Damage by 10%.  Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
+      "desc": "Increases Mod Damage by 20%.<br>Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
       "custom": null,
       "stats": {}
     },
@@ -6107,7 +6097,7 @@ window.rangedMutators = {
       "name": "Ingenuity",
       "slot": "RMutator",
       "image": "",
-      "desc": "Reduces the Heat Generation of this weapon by 25%. Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
+      "desc": "Reduces the Heat Generation of this weapon by 50%.<br>Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
       "custom": null,
       "stats": {}
     },
@@ -6115,7 +6105,7 @@ window.rangedMutators = {
       "name": "Kill Switch",
       "slot": "RMutator",
       "image": "",
-      "desc": "Switching to this weapon creates an Explosive Burst which deals 50 Damage to all enemies within 7m. Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s",
+      "desc": "Switching to this weapon creates an Explosive Burst which deals 250 Damage to all enemies within 7m. Can only happen once every 10s.<br>Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s.",
       "custom": null,
       "stats": {}
     },
@@ -6123,7 +6113,7 @@ window.rangedMutators = {
       "name": "Lithely",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increase this weapon's Reload Speed by 4% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks. Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
+      "desc": "Increase this weapon's Reload Speed by 7% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks.<br>Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
       "custom": null,
       "stats": {}
     },
@@ -6131,7 +6121,7 @@ window.rangedMutators = {
       "name": "Maelstrom",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases this weapon‘s Elemental Damage by 5.5% for each unique Elemental Status Effect on the target. Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
+      "desc": "Increases this weapon‘s Elemental Damage by 10% for each unique Elemental Status Effect on the target.<br>Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
       "custom": null,
       "stats": {}
     },
@@ -6139,7 +6129,7 @@ window.rangedMutators = {
       "name": "Momentum",
       "slot": "RMutator",
       "image": "",
-      "desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 1.5% for 3s. Max 10 stacks. Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
+      "desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 3% for 3s. Max 10 stacks.<br>Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
       "custom": null,
       "stats": {}
     },
@@ -6147,7 +6137,7 @@ window.rangedMutators = {
       "name": "Prophecy",
       "slot": "RMutator",
       "image": "",
-      "desc": "Using this weapon's mod increases Mod Power Generation by 3% for 10s. Max 5 stacks. Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
+      "desc": "Using this weapon's mod increases Mod Power Generation by 6% for 10s. Max 5 stacks.<br>Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
       "custom": null,
       "stats": {}
     },
@@ -6155,7 +6145,7 @@ window.rangedMutators = {
       "name": "Refunder",
       "slot": "RMutator",
       "image": "",
-      "desc": "Shots from this weapon have 20% chance to return spent Ammo to reserves. Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
+      "desc": "Shots from this weapon have 35% chance to return spent Ammo to reserves.<br>Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
       "custom": null,
       "stats": {}
     },
@@ -6163,7 +6153,7 @@ window.rangedMutators = {
       "name": "Sequenced Shot",
       "slot": "RMutator",
       "image": "",
-      "desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 10% for 3s. Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
+      "desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 35% for 3s.<br>Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
       "custom": null,
       "stats": {}
     },
@@ -6171,7 +6161,7 @@ window.rangedMutators = {
       "name": "Slayer",
       "slot": "RMutator",
       "image": "",
-      "desc": "Reloading increases the damage of this weapon's next shot by 10%. Lasts 3s.  Level 10: Increases Reload Speed by 15%.",
+      "desc": "Reloading increases the damage of this weapon's next shot by 20%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
       "custom": null,
       "stats": {}
     },
@@ -6179,15 +6169,25 @@ window.rangedMutators = {
       "name": "Sleeper",
       "slot": "RMutator",
       "image": "",
-      "desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 3 seconds after it is drawn. Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
+      "desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 5 seconds after it is drawn.<br>Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
       "custom": null,
       "stats": {}
+    },
+    "Spirit Healer": {
+      "custom": null,
+      "name": "Spirit Healer",
+      "slot": "RMutator",
+      "image": "",
+      "desc": "Regenerate 5% Health over 5s for every 300 Mod Power spent.<br>Level 10: Allies within 15m are healed for 50% of the primary effect.",
+      "stats": {
+        "HP/S%": 0.02
+      }
     },
     "Supercharger": {
       "name": "Supercharger",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Charge Speed of Bows and Fusion Rifles by 10%. Level 10: Charged Primary Shots of Bows and Fusion Rigles gain 15% Critical Chance.",
+      "desc": "Increases Charge Speed of Bows and Fusion Rifles by 30%.<br>Level 10: Charged Primary Shots of Bows and Fusion Rifles gain 15% Critical Chance.",
       "custom": null,
       "stats": {}
     },
@@ -6195,7 +6195,15 @@ window.rangedMutators = {
       "name": "Timewave",
       "slot": "RMutator",
       "image": "",
-      "desc": "Mod Use applies SLOW status on all enemies within 7.5m for 3.5s. Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
+      "desc": "Mod Use applies SLOW status on all enemies within 7.5m for 7s.<br>Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
+      "custom": null,
+      "stats": {}
+    },
+    "Top Heavy": {
+      "name": "Top Heavy",
+      "slot": "MMutator",
+      "image": "",
+      "desc": "Increases this weapon's Ranged Damage by up to 15% based on how close the magazine capacity is to full.<br>Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
       "custom": null,
       "stats": {}
     },
@@ -6203,7 +6211,7 @@ window.rangedMutators = {
       "name": "Transpose",
       "slot": "RMutator",
       "image": "",
-      "desc": "Picking up Ammo increases Ranged damage by 10% for 20s.  Level 10: Ammo pickups are added directly to the magazine.",
+      "desc": "Picking up Ammo increases Ranged damage by 20% for 20s.<br>Level 10: Ammo pickups are added directly to the magazine.",
       "custom": null,
       "stats": {}
     },
@@ -6211,7 +6219,7 @@ window.rangedMutators = {
       "name": "Twisting Wounds",
       "slot": "RMutator",
       "image": "",
-      "desc": "Increases Ranged damage of this weapon by 10% to BLEEDING targets. Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 100 BLEED damage over 10s.",
+      "desc": "Increases Ranged damage of this weapon by 20% to BLEEDING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 200 BLEED damage over 10s.",
       "custom": null,
       "stats": {}
     }
@@ -6225,67 +6233,37 @@ window.meleeMutators = {
       "desc": "",
       "stats": {}
     },
-    "Edgelord": {
-      "custom": null,
-      "name": "Edgelord",
-      "slot": "MMutator",
-      "image": "",
-      "desc": "Increases Melee Charge Speed by 15% and Melee Attack Speed by 10%. Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
-      "stats": {
-        "MLifesteal": 0.03
-      }
-    },
-    "Shield Breaker": {
-      "custom": null,
-      "name": "Shield Breaker",
-      "slot": "MMutator",
-      "image": "",
-      "desc": "Melee Attacks grant a Shield for 2% of Max Health. Max 20%. Last 10s.  Level 10: Charged Melee Attacks consume all Shield to increase damage of next strike by 1% per Shield Consumed. Max 100%.",
-      "stats": {
-        "Shield": 0.2
-      }
-    },
-    "Steadfast": {
-      "custom": null,
-      "name": "Steadfast",
-      "slot": "MMutator",
-      "image": "",
-      "desc": "Charged Melee Attacks cannot be interrupted and gain 10% damage reduction from all sources. Level 10: All damage taken during Charged Melee Attack is covered to Grey Health.",
-      "stats": {
-        "FlatDR": 0.2
-      }
-    },
-    "Vampire Blade": {
-      "custom": null,
-      "name": "Vampire Blade",
-      "slot": "MMutator",
-      "image": "",
-      "desc": "Increases Melee Damage by 10% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
-      "stats": {
-        "MLifesteal": 0.03
-      }
-    },
     "Dervish": {
+      "custom": null,
       "name": "Dervish",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increases Melee Damage by 20% for 10s when activating a Skill. Level 10: Melee kills reduce Skill Cooldowns by 5%. Can trigger once every 5s.",
-      "custom": null,
+      "desc": "Increases Melee Damage by 40% for 10s when activating a skill.<br>Level 10: Melee kills reduce Skill Cooldowns by 5%. Can trigger once every 5s.",
       "stats": {}
     },
     "Disengage": {
       "name": "Disengage",
       "slot": "MMutator",
       "image": "",
-      "desc": "Melee Strikes increase the damage of the next Backdash Evade Attack by 4%. Max 5 Stacks.\nLasts 7.5s. Level 10: Perfect Neutral Evades grants 5 stacks",
+      "desc": "Melee Strikes increase the damage of the next Backdash Evade Attack by 10%. Max 5 Stacks. Lasts 7.5s.<br>Level 10: Perfect Neutral Evades grants 5 stacks",
       "custom": null,
       "stats": {}
+    },
+    "Edgelord": {
+      "custom": null,
+      "name": "Edgelord",
+      "slot": "MMutator",
+      "image": "",
+      "desc": "Increases Melee Charge Speed by 35% and Melee Attack Speed by 10%.<br>Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
+      "stats": {
+        "MLifesteal": 0.03
+      }
     },
     "Executor": {
       "name": "Executor",
       "slot": "MMutator",
       "image": "",
-      "desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 10% of the original duration. Cannot exceed original max duration. Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 10m with a Negative Status Effect. Max 4 stacks.",
+      "desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 30% of the original duration. Cannot exceed original max duration.<br>Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 10m with a Negative Status Effect. Max 4 stacks.",
       "custom": null,
       "stats": {}
     },
@@ -6293,7 +6271,7 @@ window.meleeMutators = {
       "name": "Guts",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increases Melee Critical Chance by 5% when Grey Health is present. Level 10: Increases Melee Critical Damage by 2.5% for every 10% of Grey Health.",
+      "desc": "Increases Melee Critical Chance by 25% when Grey Health is present.<br>Level 10: Increases Melee Critical Damage by 2.5% for every 10% of Grey Health.",
       "custom": null,
       "stats": {}
     },
@@ -6301,7 +6279,7 @@ window.meleeMutators = {
       "name": "Latency",
       "slot": "MMutator",
       "image": "",
-      "desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 10% less damage to charge. Level 10: Increase the potency of readied Melee Special abilities by 25%.",
+      "desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 35% less damage to charge.<br>Level 10: Increase the potency of readied Melee Special abilities by 25%.",
       "custom": null,
       "stats": {}
     },
@@ -6309,7 +6287,7 @@ window.meleeMutators = {
       "name": "Misfortune",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increase Melee damage by 5% for each unique Negative Status the target is suffering from. Level 10: Melee Attacks apply SLOW for 2s.",
+      "desc": "Increase Melee damage by 8% for each unique Negative Status the target is suffering from.<br>Level 10: Melee Attacks apply SLOW for 2s.",
       "custom": null,
       "stats": {}
     },
@@ -6317,7 +6295,7 @@ window.meleeMutators = {
       "name": "Opportunist",
       "slot": "MMutator",
       "image": "",
-      "desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance of the next Melee Attack by 50% for 3s. Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
+      "desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance of the next Melee Attack by 100% for 3s.<br>Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
       "custom": null,
       "stats": {}
     },
@@ -6325,7 +6303,7 @@ window.meleeMutators = {
       "name": "Overdrive",
       "slot": "MMutator",
       "image": "",
-      "desc": "Melee Critical Hits increase Melee Critical Chance and Critical Damage by 5% for 7.5s. stacking up to 5 times. Level 10: Melee Critical Strikes deal 20% additional damage.",
+      "desc": "Melee Critical Hits increase Melee Critical Chance and Critical Damage by 5% for 15s. stacking up to 5 times.<br>Level 10: Melee Critical Strikes deal 20% additional damage.",
       "custom": null,
       "stats": {}
     },
@@ -6333,7 +6311,7 @@ window.meleeMutators = {
       "name": "Reinvigorate",
       "slot": "MMutator",
       "image": "",
-      "desc": "Reduces Stamina Cost of all Charged Melee Attacks by 25%. Level 10: Melee Charge Attacks gain 15% additional damage and 10% Critical Chance.",
+      "desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 15% additional damage and 10% Critical Chance.",
       "custom": null,
       "stats": {}
     },
@@ -6341,23 +6319,43 @@ window.meleeMutators = {
       "name": "Resentment",
       "slot": "MMutator",
       "image": "",
-      "desc": "Gain 10% Melee Damage when Grey Health is present.  Level 10: Reduces Stagger by 1 when using any Melee Attack.",
+      "desc": "Gain 30% Melee Damage when Grey Health is present.<br>Level 10: Reduces Stagger by 1 when using any Melee Attack.",
       "custom": null,
       "stats": {}
+    },
+    "Shielded Strike": {
+      "custom": null,
+      "name": "Shielded Strike",
+      "slot": "MMutator",
+      "image": "",
+      "desc": "Melee Attacks grant a Shield for 4% of Max Health. Max 40%. Last 10s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
+      "stats": {
+        "Shield": 0.4
+      }
     },
     "Shocker": {
       "name": "Shocker",
       "slot": "MMutator",
       "image": "",
-      "desc": "Empowers weapon after 5 hits. While empowered. the next Charged Melee hit strikes all enemies within 10m with SHOCK Damage. Level 10: The SHOCK Damage now applies OVERLOADED dealing 100 damage over 5.05s.",
+      "desc": "Empowers weapon after 5 hits. While empowered, the next Charged Melee hit strikes all enemies within 7m with 100 SHOCK Damage.<br>Level 10: The SHOCK Damage now applies OVERLOADED dealing 125 damage every 5s for 25s.",
       "custom": null,
       "stats": {}
+    },
+    "Steadfast": {
+      "custom": null,
+      "name": "Steadfast",
+      "slot": "MMutator",
+      "image": "",
+      "desc": "Charged Melee Attacks cannot be interrupted and gain 20% damage reduction from all sources.<br>Level 10: All damage taken during Charged Melee Attack is covered to Grey Health.",
+      "stats": {
+        "FlatDR": 0.2
+      }
     },
     "Stormbringer": {
       "name": "Stormbringer",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increases the Status Effect Damage applied by Melee Attacks by 25%. Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
+      "desc": "Increases the Status Effect Damage applied by Melee Attacks by 50%.<br>Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
       "custom": null,
       "stats": {}
     },
@@ -6365,7 +6363,7 @@ window.meleeMutators = {
       "name": "Striker",
       "slot": "MMutator",
       "image": "",
-      "desc": "Melee Hits increase Melee Damage by 3% for 10s. Max 5 Stacks. Level 10: Increases Movement Speed by 3% per stack.",
+      "desc": "Melee Hits increase Melee Damage by 6% for 10s. Max 5 Stacks.<br>Level 10: Increases Movement Speed by 3% per stack.",
       "custom": null,
       "stats": {}
     },
@@ -6373,15 +6371,7 @@ window.meleeMutators = {
       "name": "Tainted Blade",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increases Melee Damage by 5% per stack of CORRODED on the target. Level 10: Charged Melee Attacks apply CORRODED, dealing 500 ACID Damage over 205.",
-      "custom": null,
-      "stats": {}
-    },
-    "Top Heavy": {
-      "name": "Top Heavy",
-      "slot": "MMutator",
-      "image": "",
-      "desc": "Increases this weapon's Ranged Damage by up to 7.5% based on how close the magazine capacity is to full. Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
+      "desc": "Increases Melee Damage by 10% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 500 ACID Damage over 20s.",
       "custom": null,
       "stats": {}
     },
@@ -6389,15 +6379,25 @@ window.meleeMutators = {
       "name": "Transference",
       "slot": "MMutator",
       "image": "",
-      "desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 10s. Level 10: When a Firearm reserve is full, melee Strikes generate 100% additional Mod Power ofr that weapon.",
+      "desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 5s.<br>Level 10: When a Firearm reserve is full, Melee Strikes generate 25% additional Mod Power for that weapon.",
       "custom": null,
       "stats": {}
+    },
+    "Vampire Blade": {
+      "custom": null,
+      "name": "Vampire Blade",
+      "slot": "MMutator",
+      "image": "",
+      "desc": "Increases Melee Damage by 25% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
+      "stats": {
+        "MLifesteal": 0.03
+      }
     },
     "Vengeful Strike": {
       "name": "Vengeful Strike",
       "slot": "MMutator",
       "image": "",
-      "desc": "Increases Melee damage by 20% when below 50% Max Health. Level 10: Increases Melee Critical Chance by 15% when below 50% Max Health.",
+      "desc": "Increases Melee damage by 50% when below 50% Max Health. Level 10:<br>Increases Melee Critical Chance by 15% when below 50% Max Health.",
       "custom": null,
       "stats": {}
     },
@@ -6405,7 +6405,7 @@ window.meleeMutators = {
       "name": "Weaponlord",
       "slot": "MMutator",
       "image": "",
-      "desc": "Basic Melee Attack increase the next Charge Attack by 7%. Max 5 Stacks.  Level 10: At Max Stacks, the next Charge Attack gains 100% Critical Chance.",
+      "desc": "Basic Melee Attack increase the next Charge Attack by 10%. Max 5 Stacks.<br>Level 10: At Max Stacks, the next Charge Attack gains 100% Critical Chance.",
       "custom": null,
       "stats": {}
     }
