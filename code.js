@@ -571,6 +571,7 @@ else if (relicHPtype==="P"||relicHPtype==="F") {
 }
 else {//if null
   relicHPscaled = 0;
+  relicHPtime = 0;
   readSelection("relicScaled").innerHTML = "---";
   readSelection("relic%HP/s").innerHTML = "---";
   readSelection("relicHP/s").innerHTML = "---";
