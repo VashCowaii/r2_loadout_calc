@@ -104,7 +104,7 @@
             </div>
             <div class="classThinHeader">Archetype 1:</div>
             <div class="classSelectorBox">
-                <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype1')">
+                <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype','1')">
                     <!-- <option></option> -->
                 </select> 
             </div>
@@ -134,7 +134,7 @@
         </div>
         <div class="classArmorBox"> <!-- PRIME PERK AND ARMOR SELECTION COLUMN -->
             <div class="primePerkBox">
-                <div class="classVoidSpace">
+                <div class="classVoidSpace"> <!-- TOGGLES, HELP, and BUILDS -->
                     <div class="iconsBar">
                         <div class="dropdown">
                             <button class="dropbtn">
@@ -577,7 +577,7 @@
             </div>
             <div class="classThinHeader">Archetype 2:</div>
             <div class="classSelectorBox">
-                <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype2')">
+                <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype','2')">
                     <!-- <option></option> -->
                 </select> 
             </div>
@@ -679,13 +679,13 @@
             <div class="fragmentsContainer">
                 <div class="accessoryHeader">Fragments:</div>
                 <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment1')"></select>
+                    <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment','1')"></select>
                 </div>
                 <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment2')"></select>
+                    <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment','2')"></select>
                 </div>
                 <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment3')"></select>
+                    <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment','3')"></select>
                 </div>
             </div>
         </div>
@@ -848,13 +848,13 @@
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="primaryMutator" onchange="updateMutator('primary')"></select>
+                        <select class="weaponSelector" id="rangedMutator1" onchange="updateMutator('rangedMutator','1')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="primaryMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
                     <div class="modSelectorBox">
-                        <select class="modSelector" id="primaryMod" onchange="updateMod('primary')"></select>
+                        <select class="modSelector" id="rangedMod1" onchange="updateMod('rangedMod','1')"></select>
                     </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">
@@ -904,13 +904,13 @@
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('melee')"></select>
+                        <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('meleeMutator')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="meleeMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
                     <div class="modSelectorBox">
-                        <select class="modSelector" id="meleeMod" onchange="updateMod('melee')"></select>
+                        <select class="modSelector" id="meleeMod" onchange="updateMod('meleeMod')"></select>
                     </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">
@@ -960,13 +960,13 @@
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="secondaryMutator" onchange="updateMutator('secondary')"></select>
+                        <select class="weaponSelector" id="rangedMutator2" onchange="updateMutator('rangedMutator','2')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="secondaryMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
                     <div class="modSelectorBox">
-                        <select class="modSelector" id="secondaryMod" onchange="updateMod('secondary')"></select>
+                        <select class="modSelector" id="rangedMod2" onchange="updateMod('rangedMod','2')"></select>
                     </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">

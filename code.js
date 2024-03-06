@@ -1,10 +1,11 @@
 //used for archetype selection swaps in updateArchetype()
-let archetype1old ="";
-let archetype2old ="";
-let ring1old,ring2old,ring3old,ring4old;
-let fragment1old,fragment2old,fragment3old;
-let concoction1old,concoction2old,concoction3old,concoction4old,concoction5old,concoction6old,concoction7old;
-let primaryMutatorOld,secondaryMutatorOld;
+let archetype1Old ="";
+let archetype2Old ="";
+let ring1Old,ring2Old,ring3Old,ring4Old;
+let fragment1Old,fragment2Old,fragment3Old;
+let concoction1Old,concoction2Old,concoction3Old,concoction4Old,concoction5Old,concoction6Old,concoction7Old;
+let rangedMutator1Old,rangedMutator2Old;
+let rangedMod1Old,rangedMod2Old;
 let scaledRelicBaseRecords;
 
 
@@ -65,12 +66,12 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("primary",primary);
   populateGear("melee",melee);
   populateGear("secondary",secondary);
-  populateGear("primaryMutator",rangedMutators);
+  populateGear("rangedMutator1",rangedMutators);
   populateGear("meleeMutator",meleeMutators);
-  populateGear("secondaryMutator",rangedMutators);
-  populateGear("primaryMod",rangedMods);
+  populateGear("rangedMutator2",rangedMutators);
+  populateGear("rangedMod1",rangedMods);
   // populateGear("meleeMod",meleeMods); //not yet
-  populateGear("secondaryMod",rangedMods);
+  populateGear("rangedMod2",rangedMods);
   populateGear("concoction1",concoctions);
   populateGear("concoction2",concoctions);
   populateGear("concoction3",concoctions);
@@ -85,29 +86,11 @@ document.addEventListener("DOMContentLoaded", function() {
 function updateConsumable(type,ID) {
   let selectedConsumable = readSelection(`${type}${ID}`);
   let concLimit = +readSelection("concValueDisplay").innerHTML;
-  let updateOtherConsumable = false;
-  let otherConsumable = 0;
   readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
   readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
-
-  if (type==="concoction") {
-   for (i=1;i<=concLimit;i++) {
-      let current = readSelection(`concoction${i}`).value;
-      //Checks ID's on ACTIVE concoctions for a dupe, non-matching ID, that isn't blank.
-      //If criteria met, swap places like in game.
-      if ((current===selectedConsumable.value) && ((`concoction${i}`)!=(`${type}${ID}`)) && (current!="")) {
-         window[`concoction${i}old`]=window[`${type}${ID}old`];
-         readSelection(`concoction${i}`).value=window[`${type}${ID}old`];
-         otherConsumable = i;
-         updateOtherConsumable = true;
-         break;
-      }
-   }
-  }
-  window[`${type}${ID}old`]=selectedConsumable.value;
-  if (type==="concoction" && updateOtherConsumable===true) {
-    updateConsumable(type,otherConsumable);
-  }
+  //Pass the selected value into duplicate checks, under the same function to repeat if swapped,
+  //-using "several" handling to loop through more than 2 options, stopping the loop at the conc limit
+  checkDuplicateSelection(type,ID,`updateConsumable`,`several`,concLimit);
   updateFormulas();
 }
 
@@ -121,21 +104,33 @@ function updateWeapon(type) {
 }
 
 //Triggers whenever a new mutator is selected
-function updateMutator(type) {
-  let selectedMutator = readSelection(`${type}Mutator`);
+function updateMutator(type,value) {
+  let collection = 'melee';
+  let modifier = ``;
+  if (value===`1`) {collection = 'primary';modifier=value}
+  else if (value===`2`) {collection = `secondary`;modifier=value}
+  let selectedMutator = readSelection(`${type}${modifier}`).value;
   //Update accessory image, description, and then refresh formulas.
-  readSelection(`${type}MutatorDesc`).innerHTML=mutators[`${type}Mutators`][selectedMutator.value].desc;
-  // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  readSelection(`${collection}MutatorDesc`).innerHTML=mutators[`${collection}Mutators`][selectedMutator].desc;
+  if (type==="rangedMutator") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
+    checkDuplicateSelection(type,value,`updateMutator`,`duo`);
+  }
   updateFormulas();
 }
 
 //Triggers whenever a new mod is selected
-function updateMod(type) {
-  let selectedMod = readSelection(`${type}Mod`);
+function updateMod(type,value) {
+  let collection = 'melee';
+  let modifier = ``;
+  if (value===`1`) {collection = 'primary';modifier=value}
+  else if (value===`2`) {collection = `secondary`;modifier=value}
+  let selectedMod = readSelection(`${type}${modifier}`);
   //Update accessory image, description, and then refresh formulas.
-  readSelection(`${type}ModDesc`).innerHTML=mods[`${type}Mods`][selectedMod.value].desc;
-  readSelection(`${type}ModImage`).src=mods[`${type}Mods`][selectedMod.value].image;
-  // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  readSelection(`${collection}ModDesc`).innerHTML=mods[`${collection}Mods`][selectedMod.value].desc;
+  readSelection(`${collection}ModImage`).src=mods[`${collection}Mods`][selectedMod.value].image;
+  if (type==="rangedMod") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
+    checkDuplicateSelection(type,value,`updateMod`,`duo`);
+  }
   updateFormulas();
 }
 
@@ -153,101 +148,96 @@ function updateArmor(armorPiece) {
 }
 //Triggers whenever a new amu/ring/relic is selected
 function updateAccessory(type,place) {
-   let jsonID = `${type}s`;
-   let modifier = "";
-   if (place!=null){modifier=place;}
-   let selectedValue = readSelection(`${type}${modifier}`).value;
-   //Declaring necessary checks to use in watching for dupe ring swaps.
-   let updateOtherRing = false;
-   let otherRing = "";
-   if (type==="ring") {
-      for (i=1;i<=4;i++) {
-         let current = readSelection(`${type}${i}`).value;
-         //Checks ID's ring1-ring4 for a dupe, non-matching ID, that isn't blank.
-         //If criteria met, swap places like in game.
-         if ((current===selectedValue) && ((`${type}${i}`)!=(`${type}${modifier}`)) && (current!="")) {
-            window[`${type}${i}old`]=window[`${type}${modifier}old`];
-            readSelection(`${type}${i}`).value=window[`${type}${modifier}old`];
-            updateOtherRing = true;
-            otherRing = i;
-            break;
-         }
-      }
-   }
-   //Update accessory image, description, and then refresh formulas.
-   readSelection(`${type}${modifier}Image`).src=gear[jsonID][selectedValue].image;
-   readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
-   updateFormulas();
-   //Assigns currently selected ring to the "Old" variable(1/2/3/4) for the sake
-   //of tracking dupe ring selection swaps
-   if (type==="ring") {
-      window[`${type}${modifier}old`]=selectedValue;
-      //if a dupe swap is found, update AGAIN for the ring we swapped with as well
-      if (updateOtherRing===true){updateAccessory(type,otherRing);}
-   }
+  let jsonID = `${type}s`;
+  let modifier = "";
+  if (place!=null){modifier=place;}
+  let selectedValue = readSelection(`${type}${modifier}`).value;
+  //Update accessory image, description, and then refresh formulas.
+  readSelection(`${type}${modifier}Image`).src=gear[jsonID][selectedValue].image;
+  readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+  if (type==="ring") {
+    checkDuplicateSelection(type,place,`updateAccessory`,`several`,4);
+  }
+  updateFormulas();
 }
 //Triggers whenever a new fragment is selected
-function updateFragment(elemID) {
-   let selectedValue = readSelection(elemID).value;
-   for (i=1;i<=3;i++) {
-      let current = readSelection(`fragment${i}`).value;
-      //Checks ID's fragment1-3 for a dupe, non-matching ID, that isn't blank.
-      //If criteria met, swap places like in game.
-      if ((current===selectedValue) && ((`fragment${i}`)!=(elemID)) && (current!="")) {
-         window[`fragment${i}old`]=window[`${elemID}old`];
-         readSelection(`fragment${i}`).value=window[`${elemID}old`];
-         //no "updateOther" is needed as only frag names populate. Their values are used in updateForms.
-         break;
-      }
-   }
-   window[`${elemID}old`]=selectedValue;
+function updateFragment(elem,ID) {
+   checkDuplicateSelection(elem,ID,`updateFragment`,`several`,3);
    updateFormulas();
 }
 //Triggers whenever a given archetype has a new selection
-function updateArchetype(archetype) {
-    let selectedArchetype = readSelection(archetype).value;
-    //Defining the opposite archetype ID call in case a swap happens
-    let archetype2 = "";
-    let updateOpposing = false;
-    if (archetype==="archetype1") {archetype2="archetype2"}
-    else {archetype2="archetype1"}
+function updateArchetype(archetype,value) {
+    let overArchetype = `${archetype}${value}`
+    let selectedArchetype = readSelection(overArchetype).value;
     //Update archetype icon
-    readSelection(`${archetype}Icon`).src=classInfo[selectedArchetype].classIcon;
+    readSelection(`${overArchetype}Icon`).src=classInfo[selectedArchetype].classIcon;
     //Clear abilities left in the dropdown, if any were there
-    readSelection(`${archetype}ability`).innerHTML="";
+    readSelection(`${overArchetype}ability`).innerHTML="";
     //Populate ability list based on selected archetype
-    populateGear(`${archetype}ability`,classInfo[selectedArchetype].abilities);
+    populateGear(`${overArchetype}ability`,classInfo[selectedArchetype].abilities);
     //needed to populate info on first ability that populates selection by default
-    updateAbility(archetype);
+    updateAbility(overArchetype);
     //Populate passive names
-    readSelection(`${archetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
-    readSelection(`${archetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
-    readSelection(`${archetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
-    readSelection(`${archetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
+    readSelection(`${overArchetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
+    readSelection(`${overArchetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
+    readSelection(`${overArchetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
+    readSelection(`${overArchetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
     //Populate passive descriptions
-    readSelection(`${archetype}passive1desc`).innerHTML=classInfo[selectedArchetype].passives.passive1.desc;
-    readSelection(`${archetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
-    readSelection(`${archetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
-    readSelection(`${archetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
-    //If the selection matches the opposing archetype selection, swap places like in game
-    if (selectedArchetype===readSelection(archetype2).value&&readSelection(archetype2).value!="") {
-      window[`${archetype2}old`]=window[`${archetype}old`];
-      readSelection(archetype2).value=window[`${archetype}old`];
-      updateOpposing = true;
-    }
+    readSelection(`${overArchetype}passive1desc`).innerHTML=classInfo[selectedArchetype].passives.passive1.desc;
+    readSelection(`${overArchetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
+    readSelection(`${overArchetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
+    readSelection(`${overArchetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
+    //Check if this selection was a duplicate, and if it was, swap places with the old info.
+    checkDuplicateSelection(archetype,value,`updateArchetype`,`duo`);
     //Concatenates the two selected classes, uses resulting string to search comboTitle
     let part1 = readSelection("archetype1").value;
     let part2 = readSelection("archetype2").value;
     readSelection("comboTitle").innerHTML=titleCombos[`${part1}${part2}`];
-    //Assigns currently selected archetype to the "Old" variable for that side(1/2) for the sake
-    //of tracking archetype selection swaps
-    window[`${archetype}old`]=selectedArchetype;
-    //Check if an archetype swap happened, and if it did, run AGAIN for the other side
-    if (updateOpposing===true){
-      updateArchetype(archetype2);
-    }
+    //In closing, update all formulas
     updateFormulas();
 }
+
+function checkDuplicateSelection(collection,value,functionName,handling,limits) {
+  //Collection, collection ID number, function to reuse on swap, "duo" or "several" handling, limits several if needed
+  let option1 = `${collection}${value}`;
+  let selectedOption = readSelection(option1).value;
+  let option2 = ``;
+  let oppositeValue = ``; //for use in recalling the function associated
+  let updateOpposing = false;
+  if (handling==="duo") { //For use with archetypes, quick use cons, and other things with only 2 selections.
+    //Defining the opposite selection ID call in case a swap happens
+    if (option1===`${collection}1`) {option2=`${collection}2`;oppositeValue = `2`;}
+    else {option2=`${collection}1`;oppositeValue = `1`;}
+    //If the selection matches the opposing selection, swap places like in game
+    if (selectedOption===readSelection(option2).value && readSelection(option2).value!="") {
+      window[`${option2}Old`]=window[`${option1}Old`];
+      readSelection(option2).value=window[`${option1}Old`];
+      updateOpposing = true;
+    }
+  }
+  else if (handling==="several") { //For use with concoctions, rings, and things with more than 2.
+    for (i=1;i<=limits;i++) {
+        let current = readSelection(`${collection}${i}`).value;
+        //Checks ID's on ACTIVE selections for a dupe, non-matching ID, that isn't blank.
+        //If criteria met, swap places like in game.
+        if ((current===selectedOption) && ((`${collection}${i}`)!=(`${collection}${value}`)) && (current!="")) {
+          window[`${collection}${i}Old`]=window[`${collection}${value}Old`];
+          readSelection(`${collection}${i}`).value=window[`${collection}${value}Old`];
+          oppositeValue = i;
+          updateOpposing = true;
+          break;
+        }
+    }
+  }
+  //Assigns currently selected option to the "Old" variable for that selection for the sake
+  //of tracking selection swaps
+  window[`${option1}Old`]=selectedOption;
+  if (updateOpposing===true && collection != "fragment"){ //update the swapped item, if not a fragment(they have no displays)
+    window[functionName](collection,oppositeValue);
+  }
+}
+
+
 //Triggers whenever the parent archetype changes, or whenever a new ability is selected
 function updateAbility(archetype) {
    let selectedArchetype = readSelection(archetype).value;
@@ -369,16 +359,16 @@ function pullToggles() {
   readSelection("toggledPassive8").innerHTML = readSelection("archetype2passive4").innerHTML
 
   readSelection("toggledPrimary").innerHTML = readSelection("primary").value
-  readSelection("toggledpMutator").innerHTML = readSelection("primaryMutator").value
-  readSelection("toggledpMod").innerHTML = readSelection("primaryMod").value
+  readSelection("toggledpMutator").innerHTML = readSelection("rangedMutator1").value
+  readSelection("toggledpMod").innerHTML = readSelection("rangedMod1").value
 
   readSelection("toggledMelee").innerHTML = readSelection("melee").value
   readSelection("toggledmMutator").innerHTML = readSelection("meleeMutator").value
   readSelection("toggledmMod").innerHTML = readSelection("meleeMod").value
 
   readSelection("toggledSecondary").innerHTML = readSelection("secondary").value
-  readSelection("toggledsMutator").innerHTML = readSelection("secondaryMutator").value
-  readSelection("toggledsMod").innerHTML = readSelection("secondaryMod").value
+  readSelection("toggledsMutator").innerHTML = readSelection("rangedMutator2").value
+  readSelection("toggledsMod").innerHTML = readSelection("rangedMod2").value
 
   readSelection("toggledConc1").innerHTML = readSelection("concoction1").value
   readSelection("toggledConc2").innerHTML = readSelection("concoction2").value
@@ -658,14 +648,6 @@ if (useShieldEHP===false){shieldEHP=0}
 let totalEHP = baseEHP + shieldEHP;
 updateDisplay("EHP",totalEHP,2);
 //----------HEALING----------------------------------------------------------------------------
-// flatHPperSec
-// percHPperSec
-// useComplexValues
-// relicComplexArray[]//avg%/s,avgHP/s
-// relicHPscaled
-// relicHPtype
-// includeRelicHealing ID
-
 updateDisplay("advancedFlat",flatHPperSec,2);
 updateDisplay("advanced%",percHPperSec*100,2,"%");
 updateDisplay("advancedTotalFlat",flatHPperSec + percHPperSec*totalHealth,2);
@@ -685,7 +667,7 @@ else {
     advancedRelicPerc = relicHPscaled/relicHPtime;
     advancedRelicFlat = 0;
   }
-  else { //If there is no relic type(unique relic like Shielded Heart)
+  else { //If there is no healing type(unique relic like Shielded Heart)
     advancedRelicPerc = 0;
     advancedRelicFlat = 0;
   }
@@ -768,19 +750,17 @@ function pullConsumables (concLimit) {
 //Used in updateFormulas() to fill weapon/mod/mutator values on the master table
 function pullWeapons () {
   let primaryWeapon = readSelection("primary");
-  let primaryWeaponMutator = readSelection("primaryMutator");
-  let primaryWeaponMod = readSelection("primaryMod");
+  let primaryWeaponMutator = readSelection("rangedMutator1");
+  let primaryWeaponMod = readSelection("rangedMod1");
   let meleeWeapon = readSelection("melee");
   let meleeWeaponMutator = readSelection("meleeMutator");
   // let meleeWeaponMod = readSelection("meleeMod"); //not yet
   let secondaryWeapon = readSelection("secondary");
-  let secondaryWeaponMutator = readSelection("secondaryMutator");
-  let secondaryWeaponMod = readSelection("secondaryMod");
+  let secondaryWeaponMutator = readSelection("rangedMutator2");
+  let secondaryWeaponMod = readSelection("rangedMod2");
 //Weapons
   if (readSelection(`USEtoggledPrimary`).checked != true) {
     pullStats(weapons.primary[primaryWeapon.value].stats);
-    // console.log(weareadSelection(`primary`).value)
-    // console.log("hi: " + weapons[readSelection(`primary`).value].custom)
     if (primary[readSelection(`primary`).value].custom != null) {
       window[primary[readSelection(`primary`).value].custom]();
     }
@@ -800,8 +780,8 @@ function pullWeapons () {
 //Mutators
   if (readSelection(`USEtoggledpMutator`).checked != true) {
     pullStats(mutators.primaryMutators[primaryWeaponMutator.value].stats);
-    if (mutators.primaryMutators[readSelection(`primaryMutator`).value].custom != null) {
-      window[mutators.primaryMutators[readSelection(`primaryMutator`).value].custom]();
+    if (mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom != null) {
+      window[mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom]();
     }
   }
   if (readSelection(`USEtoggledmMutator`).checked != true) {
@@ -812,15 +792,15 @@ function pullWeapons () {
   }
   if (readSelection(`USEtoggledsMutator`).checked != true) {
     pullStats(mutators.secondaryMutators[secondaryWeaponMutator.value].stats);
-    if (mutators.secondaryMutators[readSelection(`secondaryMutator`).value].custom != null) {
-      window[mutators.secondaryMutators[readSelection(`secondaryMutator`).value].custom]();
+    if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom != null) {
+      window[mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom]();
     }
   }
 //Mods
 if (readSelection(`USEtoggledpMod`).checked != true) {
   pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
-  if (mods.primaryMods[readSelection(`primaryMod`).value].custom != null) {
-    window[mods.primaryMods[readSelection(`primaryMod`).value].custom]();
+  if (mods.primaryMods[readSelection(`rangedMod1`).value].custom != null) {
+    window[mods.primaryMods[readSelection(`rangedMod1`).value].custom]();
   }
 }
 // if (readSelection(`USEtoggledmMod`).checked != true) { //----------------NOT YET BUT WE WILL USE THIS LATER--------------
@@ -831,8 +811,8 @@ if (readSelection(`USEtoggledpMod`).checked != true) {
 // }
 if (readSelection(`USEtoggledsMod`).checked != true) {
   pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
-  if (mods.secondaryMods[readSelection(`secondaryMod`).value].custom != null) {
-    window[mods.secondaryMods[readSelection(`secondaryMod`).value].custom]();
+  if (mods.secondaryMods[readSelection(`rangedMod2`).value].custom != null) {
+    window[mods.secondaryMods[readSelection(`rangedMod2`).value].custom]();
   }
 }
 }
