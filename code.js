@@ -337,7 +337,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
       readSelection(`${elemID}Level`).innerHTML = greatTraitRecords[elemID].level
     }
   }
-  else if (activeTraits===0 && megaBox.innerHTML===emptyTraitBoxHeader) { //If we just loaded the page, make the first trait box.
+  else if (activeTraits===0 && (megaBox.innerHTML===emptyTraitBoxHeader || megaBox.innerHTML===`<div class="bottomTitleHeader">TRAITS</div>`)) { //If we just loaded the page, make the first trait box.
     modifyTraitRecord("create",1);
     megaBox.innerHTML += traitBoxShortHand(1);
     populateGear("trait1",traits);
