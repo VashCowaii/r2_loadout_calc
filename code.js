@@ -39,6 +39,23 @@ function traitBoxShortHand(elemID) {
             <button type="button" class="traitButton" onclick="updateTrait('trait',${elemID},'+')">+</button>
         </div>`
 }
+
+function generateTraitToggles() {
+  let megaBox = readSelection("traitTogglesMegaBox");
+  megaBox.innerHTML = "";
+  for (let i=1;i<=activeTraits;i++) {
+    megaBox.innerHTML += traitToggleShortHand(i);
+  }
+}
+
+function traitToggleShortHand(elemID) {
+  return  `<div class="togglesRowBox">
+            <div class="togglesStat">Trait${elemID}:</div><div class="togglesValue" id="toggledTrait${elemID}"></div><div class="togglesUse">
+                <input type="checkbox" id="USEtoggledTrait${elemID}" class="togglesCheckBox" onchange="updateFormulas()"/>
+            </div>
+          </div>`
+}
+
 function modifyTraitRecord(action,ID,name,level,defaultPoints,spentPoints) {
   if (action==="create") {
     if (name==null) {name=""}
@@ -52,17 +69,19 @@ function modifyTraitRecord(action,ID,name,level,defaultPoints,spentPoints) {
       "spent": spentPoints
     }
     activeTraits += 1;
+    console.log("Active TraitsC: " + activeTraits)
   }
   else if (action==="delete") {
     delete greatTraitRecords[`trait${ID}`];
     activeTraits -= 1;
+    console.log("Active TraitsD: " + activeTraits)
   }
   else {
     alert("Something went wrong with modifyTraitRecord()");
   }
 }
 function insertTrait(traitName,traitLevel,defaultPoints) {
-  for (i=activeTraits;i>1;i--) {
+  for (let i=activeTraits;i>1;i--) {
     greatTraitRecords[`trait${i}`].name = greatTraitRecords[`trait${i-1}`].name;
     greatTraitRecords[`trait${i}`].level = greatTraitRecords[`trait${i-1}`].level;
     greatTraitRecords[`trait${i}`].spent = greatTraitRecords[`trait${i-1}`].spent;
@@ -107,7 +126,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     //Vigor Trait Checks
     if (useVigor === true) {
       let foundClassTrait = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName==="Vigor" && i != 1){foundClassTrait=true;otherTrait=i;}
       }
@@ -130,7 +149,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     //Spirit Trait Checks
     if (useSpirit === true) {
       let foundClassTrait = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName==="Spirit" && i != 1){foundClassTrait=true;otherTrait=i;}
       }
@@ -153,7 +172,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     //Expertise Trait Checks
     if (useExpertise === true) {
       let foundClassTrait = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName==="Expertise" && i != 1){foundClassTrait=true;otherTrait=i;}
       }
@@ -176,7 +195,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     //Endurance Trait Checks
     if (useEndurance === true) {
       let foundClassTrait = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName==="Endurance" && i != 1){foundClassTrait=true;otherTrait=i;}
       }
@@ -200,7 +219,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     if (class2Active === true) {
       let foundClassTrait2 = false;
       // let foundClassTrait2 = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName===trait2Path && i != 1){foundClassTrait2=true;otherTrait=i;}
       }
@@ -222,7 +241,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     if (class1Active === true) {
       let foundClassTrait1 = false;
       // let foundClassTrait2 = false;
-      for (i=1;i<=activeTraits;i++) {
+      for (let i=1;i<=activeTraits;i++) {
         let checkName = greatTraitRecords[`trait${i}`].name;
         if (checkName===trait1Path && i != 1){foundClassTrait1=true;otherTrait=i;}
         // else if (checkName===trait2Path){foundClassTrait2=true}
@@ -244,13 +263,16 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
 
 
 
-    for (i=1;i<=activeTraits;i++) { //Sort trait records and create/delete accordingly.
+    for (let i=1;i<=activeTraits;i++) { //Sort trait records and create/delete accordingly.
       //If the last trait is not blank, make a new blank trait slot.
+      console.log("record mod: "+i)
       if (i===activeTraits && greatTraitRecords[`trait${i}`].name != "") {
         modifyTraitRecord("create",i+1);
+        console.log("we're making the new box " + i)
+        console.log("NEWactive: " + activeTraits)
       }
       //If the current is filled and +1 is blank
-      else if (i < activeTraits-1 && greatTraitRecords[`trait${i}`].name != "" && greatTraitRecords[`trait${i+1}`].name === "") {
+      else if (i < (activeTraits-1) && greatTraitRecords[`trait${i}`].name != "" && greatTraitRecords[`trait${i+1}`].name === "") {
         //And then +2 is not, move the +2 into +1 
         if (greatTraitRecords[`trait${i+1}`].name === "" && greatTraitRecords[`trait${i+2}`].name != "") {
           greatTraitRecords[`trait${i+1}`] = greatTraitRecords[`trait${i+2}`];
@@ -280,11 +302,12 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
         }
       }
       megaBox.innerHTML += traitBoxShortHand(i);
+      console.log("Box "+i+" was made")
       populateGear(`trait${i}`,traits);
       // readSelection(`trait${i}`).value = greatTraitRecords[`trait${i}`].name; //this might not work how I hope
 
     }
-    for (i=1;i<activeTraits;i++) { //Now that boxes are generated, fix their assigned values
+    for (let i=1;i<activeTraits;i++) { //Now that boxes are generated, fix their assigned values
       //can't seem to save .value while actively modifying the innerHTML, else I'd call it in the earlier loop
       readSelection(`trait${i}`).value = greatTraitRecords[`trait${i}`].name;
       let traitName = greatTraitRecords[`trait${i}`].name;
@@ -325,7 +348,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
       }
       //If it matches the class trait that was in the slot just before then.
       else if ((greatTraitRecords[elemID].name===classInfo[archetype1Olds].classTrait && classInfo[archetype1Olds].classTrait != "") || (greatTraitRecords[elemID].name===classInfo[archetype2Olds].classTrait && classInfo[archetype2Olds].classTrait != "")) {
-        if (greatTraitRecords[elemID].level===0 && (i===1 || i===2 || i===3)) {
+        if (greatTraitRecords[elemID].level===0 && (i===1 || i===2)) {
           greatTraitRecords[elemID].name = "";
           readSelection(elemID).value = "";
           updateAgain = true;
@@ -344,6 +367,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     //
   }
 if (updateAgain===true) {updateTraitCollection();} //Repeat if there would be multiple blank slots not handled this late
+generateTraitToggles();
 }
 
 //THE NO LONGER AS GREAT TRAIT FUCKERY
@@ -363,10 +387,9 @@ if (traitName!=""){
   if (totalPoints>=10) {totalPoints = 10}
   }
 }
-checkDuplicateSelection(collection,elemID,`updateTrait`,`trait`,activeTraits,totalPoints);
-// greatTraitRecords[`${collection}${elemID}`].name = traitName;
-// greatTraitRecords[`${collection}${elemID}`].level = totalPoints;
-
+greatTraitRecords[`${collection}${elemID}`].name = readSelection(`${collection}${elemID}`).value;
+greatTraitRecords[`${collection}${elemID}`].level = totalPoints;
+//Dupe/swaps are not needed for traits as the dropdowns for them decrease with selections
 //Finally, update formulas based on the newly displayed values for this trait
 updateTraitCollection()
 updateFormulas();
@@ -375,15 +398,34 @@ updateFormulas();
 //Generalized select <option> population. *should* be able to be used for any gear selection,
 //provided there is a distinct json format to pull from
 
-function populateGear(elem_ID,collection) {
-   const select = readSelection(elem_ID);
-
-  for (const gear in collection) {
+function populateGear(elemID,collection) {
+  const select = readSelection(elemID);
+  if (collection != traits) {
+    for (const gear in collection) {
       if (collection.hasOwnProperty(gear)) {
           const option = document.createElement("option");
           option.text = gear;
           select.appendChild(option);
       }
+    }
+  }
+  else {
+    for (const gear in collection) {
+      if (collection.hasOwnProperty(gear)) {
+          let matchFound = false;
+          for (let i=1;i<=activeTraits;i++) {
+            if (gear === greatTraitRecords[`trait${i}`].name && gear != "" && `trait${i}` != elemID) {
+              matchFound = true;
+              break;
+            }
+          }
+          if (matchFound===false) {
+          const option = document.createElement("option");
+          option.text = gear;
+          select.appendChild(option);
+          }
+      }
+    }
   }
 }
 //Everything I want to load by default, without event triggers
@@ -405,27 +447,6 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("fragment3",fragments);
 
   updateTraitCollection();
-
-  // populateGear("trait1",traits);
-  // populateGear("trait2",traits);
-  // populateGear("trait3",traits);
-  // populateGear("trait4",traits);
-  // populateGear("trait5",traits);
-  // populateGear("trait6",traits);
-  // populateGear("trait7",traits);
-  // populateGear("trait8",traits);
-  // populateGear("trait9",traits);
-  // populateGear("trait10",traits);
-  // populateGear("trait11",traits);
-  // populateGear("trait12",traits);
-  // populateGear("trait13",traits);
-  // populateGear("trait14",traits);
-  // populateGear("trait15",traits);
-  // populateGear("trait16",traits);
-  // populateGear("trait17",traits);
-  // populateGear("trait18",traits);
-  // populateGear("trait19",traits);
-  // populateGear("trait20",traits);
 
   populateGear("primary",primary);
   populateGear("melee",melee);
@@ -563,20 +584,13 @@ function updateArchetype(archetype,value) {
     updateFormulas();
 }
 
-function checkDuplicateSelection(collection,value,functionName,handling,limits,totalPoints) {
+function checkDuplicateSelection(collection,value,functionName,handling,limits) {
   //Collection, collection ID number, function to reuse on swap, "duo"/"several"/"trait" handling, limits several if needed
-  //totalPoints for trait handling only
   let option1 = `${collection}${value}`;
   let selectedOption = readSelection(option1).value;
   let option2 = ``;
   let oppositeValue = ``; //for use in recalling the function associated
   let updateOpposing = false;
-  //For traits specifically
-  let trait1Path = classInfo[readSelection("archetype1").value].classTrait;
-  let trait2Path = classInfo[readSelection("archetype2").value].classTrait;
-
-
-  if (handling != "trait") {
     if (handling==="duo") { //For use with archetypes, quick use cons, and other things with only 2 selections.
       //Defining the opposite selection ID call in case a swap happens
       if (option1===`${collection}1`) {option2=`${collection}2`;oppositeValue = `2`;}
@@ -608,34 +622,6 @@ function checkDuplicateSelection(collection,value,functionName,handling,limits,t
     if (updateOpposing===true && collection != "fragment"){ //update the swapped item, if not a fragment(they have no displays)
       window[functionName](collection,oppositeValue);
     }
-  }
-  else { //If trait handling
-    let attemptedClassDupe = false;
-    for (i=1;i<=limits;i++) {
-      // let current = readSelection(`${collection}${i}`).value;
-      let current = greatTraitRecords[`${collection}${i}`].name;
-      if ((current===selectedOption) && ((`${collection}${i}`)!=(`${collection}${value}`)) && (current!="")) {
-        if ((current != trait1Path) && (current != trait2Path)) {
-          // console.log("Reached trait handling inner IF")
-          greatTraitRecords[`${collection}${i}`].name = greatTraitRecords[`${collection}${value}`].name;
-          totalPoints = greatTraitRecords[`${collection}${i}`].level;
-          greatTraitRecords[`${collection}${i}`].level = greatTraitRecords[`${collection}${value}`].level + greatTraitRecords[`${collection}${i}`].default;
-          break;
-        }
-        else if ((current === trait1Path && trait1Path != "") || (current === trait2Path && trait2Path != "")){
-          // console.log("Reached trait handling `else`")
-          greatTraitRecords[`${collection}${value}`].name = "";
-          greatTraitRecords[`${collection}${value}`].level = 0;
-          attemptedClassDupe = true;
-          break;
-        }
-      }
-    }
-    if (attemptedClassDupe===false) {
-      greatTraitRecords[`${collection}${value}`].name = readSelection(`${collection}${value}`).value;
-      greatTraitRecords[`${collection}${value}`].level = totalPoints;
-    }
-  }
 }
 
 
@@ -663,7 +649,7 @@ function gameMasters() {
   greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
 }
 function brewMasters() {
-  for (i=1;i<=7;i++) {
+  for (let i=1;i<=7;i++) {
     let activeConcoction = readSelection(`concoction${i}`).value;
     if (activeConcoction != null && activeConcoction != "") {
       greatTableKnowerOfAll.FlatDR += 0.02;
@@ -781,9 +767,11 @@ function pullToggles() {
 
   readSelection("toggledQuick1").innerHTML = readSelection("quickUse1").value
   readSelection("toggledQuick2").innerHTML = readSelection("quickUse2").value
-
-  for (i=1;i<=activeTraits;i++) {
-    readSelection(`toggledTrait${i}`).innerHTML = `${readSelection(`trait${i}`).value} ${readSelection(`trait${i}Level`).innerHTML}`
+  //Only check as many traits are generated
+  for (let i=1;i<=activeTraits;i++) {
+    let traitLevel = greatTraitRecords[`trait${i}`].level;
+    if (traitLevel === 0) {traitLevel=""}
+    readSelection(`toggledTrait${i}`).innerHTML = `${greatTraitRecords[`trait${i}`].name} ${traitLevel}`
   }
 }
 //The big cheese, the great clusterfuck, where all the formulas refresh.
@@ -791,7 +779,7 @@ function updateFormulas() {
   //Fill the Toggles table
   pullToggles();
   //Reset the table
-  for(elements in greatTableKnowerOfAll) {
+  for(let elements in greatTableKnowerOfAll) {
     if (elements!="REdamage" && elements!="DMGKept" && elements!="GlobalHealthModifier" && elements!="GlobalHealingEff") {
       greatTableKnowerOfAll[elements]=0;
     }
@@ -1220,9 +1208,11 @@ if (readSelection(`USEtoggledsMod`).checked != true) {
 //Used in updateFormulas() to fill trait property values on the master table
 function pullTraits () {
   //Yoink all active trait values
-  for (i=1;i<=activeTraits;i++) {
-    let traitLevel = +readSelection(`trait${i}Level`).innerHTML;
-    let traitPath = traits[readSelection(`trait${i}`).value];
+  for (let i=1;i<=activeTraits;i++) {
+    let traitLevel = greatTraitRecords[`trait${i}`].level;
+    let traitPath = traits[greatTraitRecords[`trait${i}`].name];
+    console.log(i)
+    // console.log(greatTraitRecords[`trait${i}`].name)
     if (readSelection(`USEtoggledTrait${i}`).checked != true) {
       if (traitPath.property != "REdamage" && traitPath.property != "DMGKept") {
         greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
@@ -1231,8 +1221,8 @@ function pullTraits () {
         greatTableKnowerOfAll[traitPath.property].push(traitPath.level[traitLevel]);
         //put these two types into their respective multiplicative arrays
       }
-      if (traits[readSelection(`trait${i}`).value].custom != null) {
-        window[traits[readSelection(`trait${i}`).value].custom]();
+      if (traits[greatTraitRecords[`trait${i}`].name].custom != null) {
+        window[traits[greatTraitRecords[`trait${i}`].name].custom]();
       }
     }
   }
@@ -1302,7 +1292,7 @@ function pullClassStats() {
       path1.abilities[ability1]["custom"]();
     }
   }
-  for (i=1;i<=4;i++) {
+  for (let i=1;i<=4;i++) {
     if (readSelection(`USEtoggledPassive${i}`).checked != true) {
       pullStats(path1.passives[`passive${i}`].stats);
       if (path1.passives[`passive${i}`].custom != null) {
@@ -1323,7 +1313,7 @@ function pullClassStats() {
       path2.abilities[ability2]["custom"]();
     }
   }
-  for (i=1;i<=4;i++) {
+  for (let i=1;i<=4;i++) {
     if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
       pullStats(path2.passives[`passive${i}`].stats);
       if (path2.passives[`passive${i}`].custom != null) {
@@ -1343,7 +1333,7 @@ function pullGearStats() {
     }
   }
 //Rings
-  for (i=1;i<=4;i++) {
+  for (let i=1;i<=4;i++) {
     if (readSelection(`USEtoggledRing${i}`).checked != true) {
     pullStats(rings[readSelection(`ring${i}`).value].stats);
     if (rings[readSelection(`ring${i}`).value].custom != null) {
@@ -1357,7 +1347,7 @@ if (readSelection("USEtoggledRelic").checked != true) {
   //Custom gets called later, not here for relics
 }
 //Fragments
-  for (i=1;i<=3;i++) {
+  for (let i=1;i<=3;i++) {
     if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
     pullStats(fragments[readSelection(`fragment${i}`).value].stats);
     if (fragments[readSelection(`fragment${i}`).value].custom != null) {
@@ -1368,7 +1358,7 @@ if (readSelection("USEtoggledRelic").checked != true) {
 }
 //Shorthand for looping through an elements "stat" object and adding it to the corresponding master attribute
 function pullStats(path) {
-    for (elements in path) {
+    for (let elements in path) {
       if (elements != "RelicHPtype" && elements != "REdamage" && elements != "DMGKept") {
         greatTableKnowerOfAll[elements] += path[elements];
       }

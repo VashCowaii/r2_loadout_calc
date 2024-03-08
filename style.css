@@ -247,7 +247,7 @@ html,body {
     font-size: 15px;
 }
 
-  .togglesBox {
+.togglesBox {
     width: 100%;
     height: 600px;
     background-color: #666666;
@@ -270,10 +270,17 @@ html,body {
     box-sizing: border-box;
 }
 .togglesRowBox {
-    height: 3%;
+    height: 18px;
     box-sizing: border-box;
     border-bottom: 1px solid #434343;
     display: flex;
+}
+.togglesTraitBox {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 
