@@ -7,8 +7,10 @@ let concoction1Old,concoction2Old,concoction3Old,concoction4Old,concoction5Old,c
 let rangedMutator1Old,rangedMutator2Old;
 let rangedMod1Old,rangedMod2Old;
 let scaledRelicBaseRecords;
-let emptyTraitBoxHeader = readSelection("traitsMegaBox").innerHTML;
+let emptyTraitBoxHeader = `<div class="bottomTitleHeader"><span>TRAITS <span id="spentCount"></span>/<span id="traitCap"></span></span></div>`;
 let activeTraits = 0;
+let traitPointCount = 0;
+let traitPointCap = 85;
 let greatTraitRecords = {}; //Automatically generated content, no touchy
 
 function traitBoxShortHand(elemID) {
@@ -69,12 +71,10 @@ function modifyTraitRecord(action,ID,name,level,defaultPoints,spentPoints) {
       "spent": spentPoints
     }
     activeTraits += 1;
-    console.log("Active TraitsC: " + activeTraits)
   }
   else if (action==="delete") {
     delete greatTraitRecords[`trait${ID}`];
     activeTraits -= 1;
-    console.log("Active TraitsD: " + activeTraits)
   }
   else {
     alert("Something went wrong with modifyTraitRecord()");
@@ -265,11 +265,8 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
 
     for (let i=1;i<=activeTraits;i++) { //Sort trait records and create/delete accordingly.
       //If the last trait is not blank, make a new blank trait slot.
-      console.log("record mod: "+i)
       if (i===activeTraits && greatTraitRecords[`trait${i}`].name != "") {
         modifyTraitRecord("create",i+1);
-        console.log("we're making the new box " + i)
-        console.log("NEWactive: " + activeTraits)
       }
       //If the current is filled and +1 is blank
       else if (i < (activeTraits-1) && greatTraitRecords[`trait${i}`].name != "" && greatTraitRecords[`trait${i+1}`].name === "") {
@@ -302,7 +299,6 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
         }
       }
       megaBox.innerHTML += traitBoxShortHand(i);
-      console.log("Box "+i+" was made")
       populateGear(`trait${i}`,traits);
       // readSelection(`trait${i}`).value = greatTraitRecords[`trait${i}`].name; //this might not work how I hope
 
@@ -360,14 +356,27 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
       readSelection(`${elemID}Level`).innerHTML = greatTraitRecords[elemID].level
     }
   }
-  else if (activeTraits===0 && (megaBox.innerHTML===emptyTraitBoxHeader || megaBox.innerHTML===`<div class="bottomTitleHeader">TRAITS</div>`)) { //If we just loaded the page, make the first trait box.
+  else if (activeTraits===0) { //If we just loaded the page, make the first trait box.
     modifyTraitRecord("create",1);
+    megaBox.innerHTML = emptyTraitBoxHeader;
     megaBox.innerHTML += traitBoxShortHand(1);
     populateGear("trait1",traits);
     //
   }
 if (updateAgain===true) {updateTraitCollection();} //Repeat if there would be multiple blank slots not handled this late
 generateTraitToggles();
+updateTraitPoints();
+}
+
+function updateTraitPoints() {
+  let traitPoints = readSelection("spentCount");
+  let traitCap = readSelection("traitCap");
+  traitPointCount = 0;
+  for (let i=1;i<=activeTraits;i++) {
+    traitPointCount += greatTraitRecords[`trait${i}`].spent
+  }
+  traitPoints.innerHTML = traitPointCount;
+  traitCap.innerHTML = traitPointCap;
 }
 
 //THE NO LONGER AS GREAT TRAIT FUCKERY
@@ -380,9 +389,10 @@ if (traitName!=""){
   //If a button was used, adjust values accordingly
   if (change===true) {
     if (adjustment==="+"){
-      if (totalPoints != 10) {totalPoints += 1};
+      if (totalPoints != 10 && traitPointCount != traitPointCap) {totalPoints += 1};
     } else if (adjustment==="-") {
-      if (totalPoints != 0) {totalPoints -= 1};
+      if (totalPoints != 0) {totalPoints -= 1}
+      else {readSelection(`${collection}${elemID}`).value = "";}
     }
   if (totalPoints>=10) {totalPoints = 10}
   }
@@ -1211,8 +1221,6 @@ function pullTraits () {
   for (let i=1;i<=activeTraits;i++) {
     let traitLevel = greatTraitRecords[`trait${i}`].level;
     let traitPath = traits[greatTraitRecords[`trait${i}`].name];
-    console.log(i)
-    // console.log(greatTraitRecords[`trait${i}`].name)
     if (readSelection(`USEtoggledTrait${i}`).checked != true) {
       if (traitPath.property != "REdamage" && traitPath.property != "DMGKept") {
         greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
