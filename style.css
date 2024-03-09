@@ -2378,5 +2378,58 @@ font-family: Arial, Helvetica, sans-serif;
         border-bottom: 1px solid black;
         box-sizing: border-box;
     }
+
+
+    .mainBody {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        justify-content: center;
+    }
+    .theGreatBox {
+        padding-left: 0px;
+        padding-top: 6%;
+        box-sizing: border-box;
+    }
+    .generalFooter {
+        padding-left: 0px;
+        box-sizing: border-box;
+    }
+    .main {
+        padding-top: 6%;
+    }
+
+    .sidenav {
+        height: 6%;
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-direction: row;
+        position: fixed; 
+        z-index: 1; 
+        top: 0; 
+        background-color: #111;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .sidenav a {padding: 0px;width: 20%;height: 90%;}
+    .roundedIcon {
+        /* border-radius: 20%; */
+        width: auto;
+        height:100%;
+        outline: 2px solid white;
+        box-sizing: border-box;
+    }
+    .togglesRowBox {
+        height: 23px;
+    }
+    .togglesCheckBox {
+        width: 50%;
+        height: 100%;
+    }
 }
 
