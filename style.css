@@ -990,14 +990,16 @@ font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     display: flex;
     text-align: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
     /* background-color: #666666; */
 }
 .armorIcon {
     width: 100%;
     /* height: auto; */
-    height: min-content;
+    height: auto;
+    /* object-fit: cover; */
     margin: auto;
 }
 .armorValueContainer {width: 30%; height: 100%;text-align: center;}
