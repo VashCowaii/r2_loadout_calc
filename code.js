@@ -336,13 +336,6 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
       greatTraitRecords[elemID].spent = greatTraitRecords[elemID].level - greatTraitRecords[elemID].default;
       greatTraitRecords[elemID].level = greatTraitRecords[elemID].spent + greatTraitRecords[elemID].default
 
-      console.log(greatTraitRecords[elemID].name)
-      console.log(greatTraitRecords[elemID].level)
-      if (greatTraitRecords[elemID].name != "" && greatTraitRecords[elemID].level === 0) {
-        console.log("hi")
-        readSelection(`traitButtonMinus${i}`).innerHTML = `<img src="images/TrashIcon.png" class="traitButtonImage" alt="trash icon">`;
-      }
-
       //If it matches a currently selected class trait
       if ((greatTraitRecords[elemID].name===trait1Path && trait1Path != "") || (greatTraitRecords[elemID].name===trait2Path && trait2Path != "")) {
         greatTraitRecords[elemID].default = 10;
@@ -356,6 +349,21 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
           readSelection(elemID).value = "";
           updateAgain = true;
         }
+      }
+
+      if (greatTraitRecords[elemID].name != "" && greatTraitRecords[elemID].level === 0) {
+        readSelection(`traitButtonMinus${i}`).innerHTML = `<img src="images/TrashIcon.png" class="traitButtonImage" alt="trash icon">`;
+      }
+      else if (greatTraitRecords[elemID].name != "" && greatTraitRecords[elemID].level === 10) {
+        readSelection(`traitButtonPlus${i}`).innerHTML = "";
+        readSelection(`traitButtonPlus${i}`).disabled = true;
+      }
+      if (greatTraitRecords[elemID].name != "" && greatTraitRecords[elemID].level === greatTraitRecords[elemID].default && greatTraitRecords[elemID].level != 0) {
+        readSelection(`traitButtonMinus${i}`).innerHTML = "";
+        readSelection(`traitButtonMinus${i}`).disabled = true;
+      }
+      if (greatTraitRecords[elemID].default > 0) {
+        readSelection(`trait${i}`).disabled = true;
       }
       //Then adjust bar width and level display.
       readSelection(`trait${i}Intrinsic`).style.width = `${greatTraitRecords[elemID].default * 10}%`
