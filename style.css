@@ -61,6 +61,7 @@ html,body {
     height:auto;
     outline: 2px solid white;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .main {
     width: 100%;
@@ -137,6 +138,7 @@ html,body {
 .settingsIcon {
     width: 70%;
     height: auto;
+    object-fit: contain;
 }
 
 /* Navbar container */
@@ -623,6 +625,7 @@ font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     text-align: center;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .resistanceValues {
     width: 20%;
@@ -746,6 +749,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .classThinHeader {
     font-size: 15px;
@@ -812,6 +816,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     text-align: center;
     margin: auto;
+    object-fit: contain;
 }
 .classAbilityDescription {
     text-align: left;
@@ -908,6 +913,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: fit-content;
     margin: auto;
+    object-fit: contain;
 }
 .classPerkDescription{
     width: 100%;
@@ -1073,6 +1079,7 @@ font-family: Arial, Helvetica, sans-serif;
 .accessoryIcon {
     width: auto;
     height: 100%;
+    object-fit: contain;
     margin: auto;
     /* display: flex;
     text-align: center;
