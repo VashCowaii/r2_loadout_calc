@@ -31,7 +31,6 @@
 
 <div class="theGreatBox">
 
-<div class="basicsToAccessoriesBox">
     <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
         <div class="basicsSummaryBox">
             <div class="basicsTitleHeader">BASIC STATS</div>
@@ -618,9 +617,7 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="consumablesToTraitsBox">
     <div class="consumablesBox">
         <div class="bottomTitleHeader">CONSUMABLES</div>
         <div class="consumablesWholeBox">
@@ -909,9 +906,8 @@
             </div>
         </div>
     </div>
-    <div class="traitsBox" id="traitsMegaBox"><div class="bottomTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div>
+    <div class="traitsBox" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div>
     <!-- traitsMegaBox gets filled in automatically using the trait code -->
-</div>
 
 <div class="advancedStatsBox">
     <div class="advancedStatsTitleHeader">ADVANCED STATS</div>
@@ -929,7 +925,7 @@
     </div>
     <div class="advancedCategoryBoxHolder">
         <!-- DR Factors  -->
-        <div class="advancedCategoryBox">
+        <div class="advancedCategoryBox advStatsMobileAdjustment">
             <div class="advancedCategoryHeader">DR FACTORS</div>
             <div class="totalBonusDRHeader">Bonus Damage Mitigation</div>
             <div class="advancedDRBoxThin">
@@ -968,7 +964,7 @@
             </div></div>
         </div>
         <!-- Healing Factors  -->
-        <div class="advancedCategoryBox">
+        <div class="advancedCategoryBox advStatsMobileAdjustment">
             <div class="advancedCategoryHeader">HEALING</div>
             <div class="advancedHealingBox">Passive + Abilities</div>
             <div class="advancedHealingBox">
@@ -1012,7 +1008,7 @@
             </div>
         </div>
         <!-- Shield Factors  -->
-        <div class="advancedCategoryBox">
+        <div class="advancedCategoryBox advStatsMobileAdjustment">
             <div class="advancedCategoryHeader">SHIELDS</div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Shields%</div><div class="advancedMiscBoxValue" id="shield%">0.00%</div></div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Bonus%</div><div class="advancedMiscBoxValue" id="shieldEff">0.00%</div></div>
@@ -1024,7 +1020,7 @@
             <div class="shieldsFiller"></div>
         </div>
         <!-- Misc Factors  -->
-        <div class="advancedCategoryBox">
+        <div class="advancedCategoryBox advStatsMobileAdjustment">
             <div class="advancedCategoryHeader">MISC</div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Summon Count</div><div class="advancedMiscBoxValue">
                 <select class="advancedMiscSelector" id="minionCount">
@@ -1061,6 +1057,9 @@
     </div>
 </div>
 </div>
+
+
+<br><br><br>
 <footer class="generalFooter"> 
     <div class="footerBox">
         <div class="footerTextBox"><span>Support the project on <a href="https://www.patreon.com/vashcowaii/membership" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;">Patreon</a>.<br>Created by <a href="https://www.youtube.com/@VashCowaii" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;">Vash Cowaii</a>.</span></div>

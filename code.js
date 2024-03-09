@@ -7,7 +7,7 @@ let concoction1Old,concoction2Old,concoction3Old,concoction4Old,concoction5Old,c
 let rangedMutator1Old,rangedMutator2Old;
 let rangedMod1Old,rangedMod2Old;
 let scaledRelicBaseRecords;
-let emptyTraitBoxHeader = `<div class="bottomTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div>`;
+let emptyTraitBoxHeader = `<div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div>`;
 let activeTraits = 0;
 let traitPointCount = 0;
 let traitPointCap = 85;

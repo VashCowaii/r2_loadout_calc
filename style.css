@@ -77,16 +77,25 @@ html,body {
 .theGreatBox {
     width: 100%;
     padding-left: clamp(40px, 10vw, 60px);
+    min-width: 930px;
     max-width: 1280px;
     height: auto;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
+    /* display: flex; */
+    /* white-space: nowrap; */
+    /* flex-flow: row; */
+    display: grid;
+    /* flex-direction: row; */
+    /* justify-content: center;
+    align-items: center; */
+    /* white-space: nowrap; */
     box-sizing: border-box;
     padding-bottom: 100px;
-    overflow: auto;
+    white-space: nowrap;
+    /* overflow: auto; */
     margin: 0;
+
+    grid-template-columns: [first] 25% [line2] auto [line3] 35% [end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line];
 }
 
 .sidenav {
@@ -343,11 +352,15 @@ html,body {
 /* this is for archselects and armor columns */
 .classAndArmor {
     display: flex;
-    width: 40%;
-    min-width: 450px;
+    width: 100%;
+    /* min-width: 450px; */
     height: auto;
     display: flex;
     white-space: nowrap;
+    /* flex-grow: 2; */
+
+    grid-column: 2 / span 1;
+    grid-row: 1;
 }
 
 
@@ -362,12 +375,15 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 .basicsToAccessoriesBox {
-    width: 100%;
-    min-width: 930px;
-    max-width: 1280px;
-    height: auto;
+    /* width: 100%; */
+    flex-basis: 100%;
+    /* min-width: 930px;
+    max-width: 1280px; */
+    height: 0;
     display: flex;
     white-space: nowrap;
+    page-break-after: always;
+    break-after: always;
 }
 .consumablesToTraitsBox {
     min-width: 930px;
@@ -380,15 +396,15 @@ font-family: Arial, Helvetica, sans-serif;
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------- BASIC STATS Column -------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
+
+
+
+
 .basicsBox {
-    width: 25%;
-    min-width: 200px;
-    /* width: 30%; */
-
-    /* width: clamp(200px, 20vw, 300px); */
-
-    /* min-width: 190px;
-    max-width: 300px;  */
+    /* width: 100%;
+    min-width: 200px; */
+    /* flex-grow: 1; */
+    width: 100%;
     height: 800px;
     max-height: 800px;
     background-color: #666666;
@@ -709,7 +725,6 @@ font-family: Arial, Helvetica, sans-serif;
     border-right: 2px solid black;
     box-sizing: border-box;
     white-space: nowrap;
-    /* flex-grow: 1; */
 }
 .classAbilityBox {
     width: 100%;
@@ -841,8 +856,6 @@ font-family: Arial, Helvetica, sans-serif;
     height: 800px;
     background-color: black;
     color: white;
-    /* flex-grow: 2; */
-    /* max-width: 300; */
 }
 .primePerkBox {
     width: 100%;
@@ -1012,10 +1025,8 @@ font-family: Arial, Helvetica, sans-serif;
 /* ------------------------- Accessory Column ---------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .accessoriesBox {
-    /* width: 350px; */
-    width: 35%;
-    min-width: 280px;
-    /* min-width: none; */
+    width: 100%;
+    /* min-width: 280px; */
     height: 800px;
     background-color: #666666;
     color: white;
@@ -1352,8 +1363,8 @@ font-family: Arial, Helvetica, sans-serif;
 /* ----------------------------------------------------------------------------------------*/
 .consumablesBox {
     /* width: 300px; */
-    width: 25%;
-    min-width: 200px;
+    width: 100%;
+    /* min-width: 200px; */
     /* width: clamp(200px, 20vw, 300px); */
     /* min-width: 190px; */
     height: 800px;
@@ -1490,8 +1501,8 @@ font-family: Arial, Helvetica, sans-serif;
 .weaponsBox {
     /* width: 550px; */
 
-    width: 40%;
-    min-width: 450px;
+    width: 100%;
+    /* min-width: 450px; */
     /* min-width: 190px; */
     height: 800px;
     max-height: 800px;
@@ -1517,7 +1528,6 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
 }
 .weaponImageBox {
     width: 100%;
@@ -1705,8 +1715,8 @@ font-family: Arial, Helvetica, sans-serif;
 /* ----------------------------------------------------------------------------------------*/
 .traitsBox {
     /* width: 350px; */
-    width: 35%;
-    min-width: 280px;
+    width: 100%;
+    /* min-width: 280px; */
     /* min-width: none; */
     height: 800px;
     background-color: #666666;
@@ -1847,6 +1857,20 @@ font-family: Arial, Helvetica, sans-serif;
     position: absolute;
 
 }
+.traitMegaTitleHeader {
+    font-size: clamp(24px, 2vw, 30px);
+    height: 35px;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
 /* USED IN ALL MIDDLE LEVEL TITLE HEADERS */
 .bottomTitleHeader {
     font-size: clamp(24px, 2vw, 30px);
@@ -1876,6 +1900,8 @@ font-family: Arial, Helvetica, sans-serif;
     height: 500px;
     white-space: nowrap;
     box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 3;
 }
 .advancedStatsTitleHeader {
     font-size: 30px;
@@ -1971,7 +1997,8 @@ font-family: Arial, Helvetica, sans-serif;
 .advancedCategoryBox {
     width: 25%;
     /* min-width: 232.5px; */
-    height: 100%;
+    /* height: 100%;*/
+    height: auto;
     box-sizing: border-box;
     border: 1px solid black;
     display: flex;
@@ -1979,7 +2006,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .advancedCategoryHeader {
     font-size: 20px;
-    height: 10%;
+    height: 40px;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
@@ -1996,7 +2023,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 /* -----------------------------SHIELDS AND MISC------------------------*/
 .advancedShieldBox {
-    height: 10%;
+    height: 40px;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
@@ -2135,7 +2162,7 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .totalHealingHeader {
-    height: 30%;
+    height: 40%;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
@@ -2270,3 +2297,86 @@ font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px solid black;
     box-sizing: border-box;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .theGreatBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    /* grid-template-columns: [first] 25% [line2] auto [line3] 35% [end]; */
+    /* grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line]; */
+
+
+    .basicsBox,.classAndArmor,.accessoriesBox,.consumablesBox,.weaponsBox,.traitsBox,.advancedStatsBox {
+        width: 100%;
+        min-width: 100%;
+    }
+    .advancedStatsBox {
+        height: auto;
+    }
+    .advancedCategoryBoxHolder {
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+    }
+    .advancedCategoryBox {
+        width: 100%;
+        min-width: 100%;
+        height: 350px;
+    }
+
+    .shieldsFiller,.miscFiller {
+        height: 0%;
+    }
+
+    .traitContainer {
+        height: 40px;
+    }
+    .traitButtonImage {
+        width: fit-content;
+        height: 100%;
+        min-width: 0;
+    }
+
+    .classAndArmor{order: 0;}
+    .accessoriesBox {order: 1;}
+    .weaponsBox {order: 2;}
+    .traitsBox {order: 3;height: auto;}
+    .consumablesBox {order: 4;}
+    .basicsBox {order: 5;}
+    .advancedStatsBox {order: 6;}
+
+    .footerIconBox {width: 80%;}
+
+
+    .advancedCategoryBox.advStatsMobileAdjustment {
+        height: auto;
+        min-height: 0;
+    }
+
+    .advancedHealingBox {
+        height: 10%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0%;
+        font-size: 15px;
+        /* background-color: #666666; */
+        background-color: #434343;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+}
+
