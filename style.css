@@ -297,6 +297,7 @@ html,body {
     width: 100%;
     height: auto;
     filter: brightness(2);
+    object-fit: contain;
 }
 
 
@@ -1458,6 +1459,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: fit-content;
     height: 100%;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .consumableInfoBox {
     width: 70%;
@@ -1556,6 +1558,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: fit-content;
     height: 100%;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .weaponSelectorBox {
     width: 100%;
@@ -1685,6 +1688,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
+    object-fit: contain;
 }
 .weaponRowContainer {
     width: 100%;
@@ -2356,6 +2360,7 @@ font-family: Arial, Helvetica, sans-serif;
         width: fit-content;
         height: 100%;
         min-width: 0;
+        object-fit: contain;
     }
 
     .classAndArmor{order: 0;}
