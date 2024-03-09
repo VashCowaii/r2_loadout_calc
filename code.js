@@ -15,7 +15,7 @@ let greatTraitRecords = {}; //Automatically generated content, no touchy
 
 function traitBoxShortHand(elemID) {
   return `<div class="traitContainer">
-            <button type="button" class="traitButton" onclick="updateTrait('trait',${elemID},'-')">-</button>
+            <button type="button" class="traitButton" onclick="updateTrait('trait',${elemID},'-')" id="traitButtonMinus${elemID}">-</button>
             <div class="traitLineHolder">
                 <div class="traitNameHolder">
                     <select class="traitSelector" id="trait${elemID}" onchange="updateTrait('trait',${elemID})"></select>
@@ -38,7 +38,7 @@ function traitBoxShortHand(elemID) {
                     </div>
                 </div>
             </div>
-            <button type="button" class="traitButton" onclick="updateTrait('trait',${elemID},'+')">+</button>
+            <button type="button" class="traitButton" onclick="updateTrait('trait',${elemID},'+')" id="traitButtonPlus${elemID}">+</button>
         </div>`
 }
 
@@ -335,6 +335,13 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
       greatTraitRecords[elemID].default = defaultPoints; //Assign w/e the resulting default value was
       greatTraitRecords[elemID].spent = greatTraitRecords[elemID].level - greatTraitRecords[elemID].default;
       greatTraitRecords[elemID].level = greatTraitRecords[elemID].spent + greatTraitRecords[elemID].default
+
+      console.log(greatTraitRecords[elemID].name)
+      console.log(greatTraitRecords[elemID].level)
+      if (greatTraitRecords[elemID].name != "" && greatTraitRecords[elemID].level === 0) {
+        console.log("hi")
+        readSelection(`traitButtonMinus${i}`).innerHTML = `<img src="images/TrashIcon.png" class="traitButtonImage" alt="trash icon">`;
+      }
 
       //If it matches a currently selected class trait
       if ((greatTraitRecords[elemID].name===trait1Path && trait1Path != "") || (greatTraitRecords[elemID].name===trait2Path && trait2Path != "")) {

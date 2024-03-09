@@ -282,6 +282,11 @@ html,body {
     flex-direction: column;
     box-sizing: border-box;
 }
+.traitButtonImage {
+    width: 100%;
+    height: auto;
+    filter: brightness(2);
+}
 
 
 
