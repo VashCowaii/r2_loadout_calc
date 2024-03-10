@@ -787,7 +787,6 @@ function updateURLparameters() {
   urlObject.secondary.push(readSelection("rangedMod2").value);
   for (i=1;i<=7;i++) {
     urlObject.consumable.push(readSelection(`concoction${i}`).value)
-    console.log(readSelection(`concoction${i}`).value)
   }
   urlObject.consumable.push(readSelection("quickUse1").value);
   urlObject.consumable.push(readSelection("quickUse2").value);
@@ -1006,7 +1005,12 @@ function updateConsumable(type,ID) {
   readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
   //Pass the selected value into duplicate checks, under the same function to repeat if swapped,
   //-using "several" handling to loop through more than 2 options, stopping the loop at the conc limit
+  if (type==="concoction") {
   checkDuplicateSelection(type,ID,`updateConsumable`,`several`,concLimit);
+  }
+  else if (type==="quickUse") {
+    checkDuplicateSelection(type,ID,`updateConsumable`,`duo`);
+  }
   updateFormulas();
 }
 
