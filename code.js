@@ -787,6 +787,7 @@ function updateURLparameters() {
   urlObject.secondary.push(readSelection("rangedMod2").value);
   for (i=1;i<=7;i++) {
     urlObject.consumable.push(readSelection(`concoction${i}`).value)
+    console.log(readSelection(`concoction${i}`).value)
   }
   urlObject.consumable.push(readSelection("quickUse1").value);
   urlObject.consumable.push(readSelection("quickUse2").value);
@@ -950,12 +951,12 @@ function importURLparameters() {
         updateConsumable('concoction',i+1);
       }
     }
-    if (urlConcoctions[8-1] != "" && urlConcoctions[8-1] != null) {
-      readSelection(`quickUse1`).value = urlConcoctions[8-1];
+    if (urlConcoctions[7] != "" && urlConcoctions[7] != null) {
+      readSelection(`quickUse1`).value = urlConcoctions[7];
       updateConsumable('quickUse',1);
     }
-    if (urlConcoctions[9-1] != "" && urlConcoctions[9-1] != null) {
-      readSelection(`quickUse2`).value = urlConcoctions[9-1];
+    if (urlConcoctions[8] != "" && urlConcoctions[8] != null) {
+      readSelection(`quickUse2`).value = urlConcoctions[8];
       updateConsumable('quickUse',2);
     }
   }
