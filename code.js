@@ -749,167 +749,166 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function importURLparameters() {
   let feed = (new URL(document.location)).searchParams;
-  if (feed != null && feed != "") {
-    let urlTraits = feed.get("trait");
-    let urlArchs = feed.get("archetype");
-    let urlArmor = feed.get("armor");
-    let urlPrimary = feed.get("primary");
-    let urlMelee = feed.get("melee");
-    let urlSecondary = feed.get("secondary");
-    let urlConcoctions = feed.get("consumable");
-    let urlAccessory = feed.get("accessory");
-    let urlRelic = feed.get("relic");
-    let urlSettings = feed.get("settings");
-    // let urlQuickUse = feed.get("quickUse");
-  //TRAITS
-    if (urlTraits != null) {
-        urlTraits = urlTraits.split(",")
-        let traitCounter = 1;
-        for (traitors of urlTraits) {
-            let traitLevel = traitors.replace(/[^0-9]/g,"");
-            let traitName = traitors.replace(/[0-9]/g,"");
-            modifyTraitRecord("create",traitCounter,traitName,traitLevel)
-            traitCounter += 1;
-        }
+  let urlTraits = feed.get("trait");
+  let urlArchs = feed.get("archetype");
+  let urlArmor = feed.get("armor");
+  let urlPrimary = feed.get("primary");
+  let urlMelee = feed.get("melee");
+  let urlSecondary = feed.get("secondary");
+  let urlConcoctions = feed.get("consumable");
+  let urlAccessory = feed.get("accessory");
+  let urlRelic = feed.get("relic");
+  let urlSettings = feed.get("settings");
+  // let urlQuickUse = feed.get("quickUse");
+//TRAITS
+  if (urlTraits != null) {
+      urlTraits = urlTraits.split(",")
+      let traitCounter = 1;
+      for (traitors of urlTraits) {
+          let traitLevel = traitors.replace(/[^0-9]/g,"");
+          let traitName = traitors.replace(/[0-9]/g,"");
+          modifyTraitRecord("create",traitCounter,traitName,traitLevel)
+          traitCounter += 1;
+      }
+  }
+  updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
+//ARCHETYPES AND ABILITIES
+  if (urlArchs != null) {
+    urlArchs = urlArchs.split(",");
+    if (urlArchs[0] != "" && urlArchs[0] != null) {
+      readSelection("archetype1").value = urlArchs[0];
+      updateArchetype('archetype','1');
     }
-    updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
-  //ARCHETYPES AND ABILITIES
-    if (urlArchs != null) {
-      urlArchs = urlArchs.split(",");
-      if (urlArchs[0] != "" && urlArchs[0] != null) {
-        readSelection("archetype1").value = urlArchs[0];
-        updateArchetype('archetype','1');
-      }
-      if (urlArchs[1] != "" && urlArchs[1] != null) {
-        readSelection("archetype2").value = urlArchs[1]; 
-        updateArchetype('archetype','2');
-      }
-      if (urlArchs[2] != "" && urlArchs[2] != null && urlArchs[0] != "") {
-        readSelection("archetype1ability").value = urlArchs[2];
-        updateAbility('archetype1');
-      }
-      if (urlArchs[3] != "" && urlArchs[3] != null && urlArchs[1] != "") {
-        readSelection("archetype2ability").value = urlArchs[3];
-        updateAbility('archetype2');
-      }  
+    if (urlArchs[1] != "" && urlArchs[1] != null) {
+      readSelection("archetype2").value = urlArchs[1]; 
+      updateArchetype('archetype','2');
     }
-  //ARMOR
-    if (urlArmor != null) {
-      urlArmor = urlArmor.split(",");
-      console.log(urlArmor)
-      if (urlArmor[0] != "" && urlArmor[0] != null) {
-        readSelection("helmetChoice").value = urlArmor[0];
-        updateArmor('helmet');
-      }
-      if (urlArmor[1] != "" && urlArmor[1] != null) {
-        readSelection("chestChoice").value = urlArmor[1];
-        updateArmor('chest');
-      }
-      if (urlArmor[2] != "" && urlArmor[2] != null) {
-        readSelection("legChoice").value = urlArmor[2];
-        updateArmor('leg');
-      }
-      if (urlArmor[3] != "" && urlArmor[3] != null) {
-        readSelection("handChoice").value = urlArmor[3];
-        updateArmor('hand');
-      }
+    if (urlArchs[2] != "" && urlArchs[2] != null && urlArchs[0] != "") {
+      readSelection("archetype1ability").value = urlArchs[2];
+      updateAbility('archetype1');
+    }
+    if (urlArchs[3] != "" && urlArchs[3] != null && urlArchs[1] != "") {
+      readSelection("archetype2ability").value = urlArchs[3];
+      updateAbility('archetype2');
+    }  
+  }
+//ARMOR
+  if (urlArmor != null) {
+    urlArmor = urlArmor.split(",");
+    console.log(urlArmor)
+    if (urlArmor[0] != "" && urlArmor[0] != null) {
+      readSelection("helmetChoice").value = urlArmor[0];
+      updateArmor('helmet');
+    }
+    if (urlArmor[1] != "" && urlArmor[1] != null) {
+      readSelection("chestChoice").value = urlArmor[1];
+      updateArmor('chest');
+    }
+    if (urlArmor[2] != "" && urlArmor[2] != null) {
+      readSelection("legChoice").value = urlArmor[2];
+      updateArmor('leg');
+    }
+    if (urlArmor[3] != "" && urlArmor[3] != null) {
+      readSelection("handChoice").value = urlArmor[3];
+      updateArmor('hand');
+    }
 
+  }
+//WEAPONS
+  if (urlPrimary != null) {
+    urlPrimary = urlPrimary.split(",");
+    if (urlPrimary[0] != "" && urlPrimary[0] != null) {
+      readSelection("primary").value = urlPrimary[0];
+      updateWeapon('primary');
     }
-  //WEAPONS
-    if (urlPrimary != null) {
-      urlPrimary = urlPrimary.split(",");
-      if (urlPrimary[0] != "" && urlPrimary[0] != null) {
-        readSelection("primary").value = urlPrimary[0];
-        updateWeapon('primary');
-      }
-      if (urlPrimary[1] != "" && urlPrimary[1] != null) {
-        readSelection("rangedMutator1").value = urlPrimary[1];
-        updateMutator('rangedMutator','1');
-      }
-      if (urlPrimary[2] != "" && urlPrimary[2] != null) {
-        readSelection("rangedMod1").value = urlPrimary[2];
-        updateMod('rangedMod','1');
-      }
+    if (urlPrimary[1] != "" && urlPrimary[1] != null) {
+      readSelection("rangedMutator1").value = urlPrimary[1];
+      updateMutator('rangedMutator','1');
     }
-    if (urlMelee != null) {
-      urlMelee = urlMelee.split(",");
-      if (urlMelee[0] != "" && urlMelee[0] != null) {
-        readSelection("melee").value = urlMelee[0];
-        updateWeapon('melee');
-      }
-      if (urlMelee[1] != "" && urlMelee[1] != null) {
-        readSelection("meleeMutator").value = urlMelee[1];
-        updateMutator('meleeMutator');
-      }
-    }
-    if (urlSecondary != null) {
-      urlSecondary = urlSecondary.split(",");
-      if (urlSecondary[0] != "" && urlSecondary[0] != null) {
-        readSelection("secondary").value = urlSecondary[0];
-        updateWeapon('secondary');
-      }
-      if (urlSecondary[1] != "" && urlSecondary[1] != null) {
-        readSelection("rangedMutator2").value = urlSecondary[1];
-        updateMutator('rangedMutator','2');
-      }
-      if (urlSecondary[2] != "" && urlSecondary[2] != null) {
-        readSelection("rangedMod2").value = urlSecondary[2];
-        updateMod('rangedMod','2');
-      }
-    }
-  //CONCOCTIONS AND QUICK USE CONSUMABLES
-    if (urlConcoctions != null) {
-      updateFormulas();
-      urlConcoctions = urlConcoctions.split(",");
-      console.log(totalConcLimit)
-      for (let i=0;i<totalConcLimit;i++) {
-        if (urlConcoctions[i] != "" && urlConcoctions[i] != null) {
-          readSelection(`concoction${i+1}`).value = urlConcoctions[i];
-          updateConsumable('concoction',i+1);
-        }
-      }
-      if (urlConcoctions[8-1] != "" && urlConcoctions[8-1] != null) {
-        readSelection(`quickUse1`).value = urlConcoctions[8-1];
-        updateConsumable('quickUse',1);
-      }
-      if (urlConcoctions[9-1] != "" && urlConcoctions[9-1] != null) {
-        readSelection(`quickUse2`).value = urlConcoctions[9-1];
-        updateConsumable('quickUse',2);
-      }
-    }
-  //AMULET AND RINGS
-    if (urlAccessory != null) {
-      urlAccessory = urlAccessory.split(",");
-      if (urlAccessory[0] != "" && urlAccessory[0] != null) {
-        readSelection("amulet").value = urlAccessory[0];
-        updateAccessory('amulet');
-      }
-      for (let i=1;i<=4;i++) {
-        if (urlAccessory[i] != "" && urlAccessory[i] != null) {
-          readSelection(`ring${i}`).value = urlAccessory[i];
-          updateAccessory('ring',i);
-        }
-      }
-    }
-  //RELIC AND FRAGMENTS
-    if (urlRelic != null) {
-      urlRelic = urlRelic.split(",");
-      if (urlRelic[0] != "" && urlRelic[0] != null) {
-        readSelection("relic").value = urlRelic[0];
-        updateAccessory('relic');
-      }
-      for (let i=1;i<=3;i++) {
-        if (urlRelic[i] != "" && urlRelic[i] != null) {
-          readSelection(`fragment${i}`).value = urlRelic[i];
-          updateFragment('fragment',i);
-        }
-      }
-    }
-  //CHECK IF TOGGLES ARE THERE OR NOT TO NOTIFY PEOPLE COMING FROM R2TK
-    if (urlSettings === null) {
-      alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+    if (urlPrimary[2] != "" && urlPrimary[2] != null) {
+      readSelection("rangedMod1").value = urlPrimary[2];
+      updateMod('rangedMod','1');
     }
   }
+  if (urlMelee != null) {
+    urlMelee = urlMelee.split(",");
+    if (urlMelee[0] != "" && urlMelee[0] != null) {
+      readSelection("melee").value = urlMelee[0];
+      updateWeapon('melee');
+    }
+    if (urlMelee[1] != "" && urlMelee[1] != null) {
+      readSelection("meleeMutator").value = urlMelee[1];
+      updateMutator('meleeMutator');
+    }
+  }
+  if (urlSecondary != null) {
+    urlSecondary = urlSecondary.split(",");
+    if (urlSecondary[0] != "" && urlSecondary[0] != null) {
+      readSelection("secondary").value = urlSecondary[0];
+      updateWeapon('secondary');
+    }
+    if (urlSecondary[1] != "" && urlSecondary[1] != null) {
+      readSelection("rangedMutator2").value = urlSecondary[1];
+      updateMutator('rangedMutator','2');
+    }
+    if (urlSecondary[2] != "" && urlSecondary[2] != null) {
+      readSelection("rangedMod2").value = urlSecondary[2];
+      updateMod('rangedMod','2');
+    }
+  }
+//CONCOCTIONS AND QUICK USE CONSUMABLES
+  if (urlConcoctions != null) {
+    updateFormulas();
+    urlConcoctions = urlConcoctions.split(",");
+    console.log(totalConcLimit)
+    for (let i=0;i<totalConcLimit;i++) {
+      if (urlConcoctions[i] != "" && urlConcoctions[i] != null) {
+        readSelection(`concoction${i+1}`).value = urlConcoctions[i];
+        updateConsumable('concoction',i+1);
+      }
+    }
+    if (urlConcoctions[8-1] != "" && urlConcoctions[8-1] != null) {
+      readSelection(`quickUse1`).value = urlConcoctions[8-1];
+      updateConsumable('quickUse',1);
+    }
+    if (urlConcoctions[9-1] != "" && urlConcoctions[9-1] != null) {
+      readSelection(`quickUse2`).value = urlConcoctions[9-1];
+      updateConsumable('quickUse',2);
+    }
+  }
+//AMULET AND RINGS
+  if (urlAccessory != null) {
+    urlAccessory = urlAccessory.split(",");
+    if (urlAccessory[0] != "" && urlAccessory[0] != null) {
+      readSelection("amulet").value = urlAccessory[0];
+      updateAccessory('amulet');
+    }
+    for (let i=1;i<=4;i++) {
+      if (urlAccessory[i] != "" && urlAccessory[i] != null) {
+        readSelection(`ring${i}`).value = urlAccessory[i];
+        updateAccessory('ring',i);
+      }
+    }
+  }
+//RELIC AND FRAGMENTS
+  if (urlRelic != null) {
+    urlRelic = urlRelic.split(",");
+    if (urlRelic[0] != "" && urlRelic[0] != null) {
+      readSelection("relic").value = urlRelic[0];
+      updateAccessory('relic');
+    }
+    for (let i=1;i<=3;i++) {
+      if (urlRelic[i] != "" && urlRelic[i] != null) {
+        readSelection(`fragment${i}`).value = urlRelic[i];
+        updateFragment('fragment',i);
+      }
+    }
+  }
+//CHECK IF TOGGLES ARE THERE OR NOT TO NOTIFY PEOPLE COMING FROM R2TK
+  if (urlSettings === null) {
+    alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+  }
+
 }
 
 
