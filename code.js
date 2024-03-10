@@ -905,7 +905,7 @@ function importURLparameters() {
     }
   }
 //CHECK IF TOGGLES ARE THERE OR NOT TO NOTIFY PEOPLE COMING FROM R2TK
-  if (urlSettings === null && feed != null || feed != "") {
+  if (urlSettings === null && feed != null && feed != "") {
     alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
   }
 
