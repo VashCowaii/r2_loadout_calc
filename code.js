@@ -813,7 +813,9 @@ function updateURLparameters() {
   urlParamIsEmpty("settings");
 
   const params = new URLSearchParams(urlObject);
-  const newUrl = `${window.location.origin}/index.html?${params}`;
+  decoded = params.toString();
+  decoded = decoded.replace(/%2C/g, ',');
+  const newUrl = `${window.location.origin}/index.html?${decoded}`;
   history.replaceState({}, '', newUrl);
 }
 
