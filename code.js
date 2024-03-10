@@ -940,6 +940,20 @@ function importURLparameters() {
       updateMod('rangedMod','2');
     }
   }
+//AMULET AND RINGS
+  if (urlAccessory != null) {
+    urlAccessory = urlAccessory.split(",");
+    if (urlAccessory[0] != "" && urlAccessory[0] != null) {
+      readSelection("amulet").value = urlAccessory[0];
+      updateAccessory('amulet');
+    }
+    for (let i=1;i<=4;i++) {
+      if (urlAccessory[i] != "" && urlAccessory[i] != null) {
+        readSelection(`ring${i}`).value = urlAccessory[i];
+        updateAccessory('ring',i);
+      }
+    }
+  }
 //CONCOCTIONS AND QUICK USE CONSUMABLES
   if (urlConcoctions != null) {
     updateFormulas();
@@ -957,20 +971,6 @@ function importURLparameters() {
     if (urlConcoctions[8] != "" && urlConcoctions[8] != null) {
       readSelection(`quickUse2`).value = urlConcoctions[8];
       updateConsumable('quickUse',2);
-    }
-  }
-//AMULET AND RINGS
-  if (urlAccessory != null) {
-    urlAccessory = urlAccessory.split(",");
-    if (urlAccessory[0] != "" && urlAccessory[0] != null) {
-      readSelection("amulet").value = urlAccessory[0];
-      updateAccessory('amulet');
-    }
-    for (let i=1;i<=4;i++) {
-      if (urlAccessory[i] != "" && urlAccessory[i] != null) {
-        readSelection(`ring${i}`).value = urlAccessory[i];
-        updateAccessory('ring',i);
-      }
     }
   }
 //RELIC AND FRAGMENTS
@@ -1000,13 +1000,13 @@ function importURLparameters() {
 
 function updateConsumable(type,ID) {
   let selectedConsumable = readSelection(`${type}${ID}`);
-  let concLimit = +readSelection("concValueDisplay").innerHTML;
+  // let concLimit = +readSelection("concValueDisplay").innerHTML;
   readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
   readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
   //Pass the selected value into duplicate checks, under the same function to repeat if swapped,
   //-using "several" handling to loop through more than 2 options, stopping the loop at the conc limit
   if (type==="concoction") {
-  checkDuplicateSelection(type,ID,`updateConsumable`,`several`,concLimit);
+  checkDuplicateSelection(type,ID,`updateConsumable`,`several`,totalConcLimit);
   }
   else if (type==="quickUse") {
     checkDuplicateSelection(type,ID,`updateConsumable`,`duo`);
