@@ -785,7 +785,7 @@ function updateURLparameters() {
   urlObject.secondary.push(readSelection("secondary").value);
   urlObject.secondary.push(readSelection("rangedMutator2").value);
   urlObject.secondary.push(readSelection("rangedMod2").value);
-  for (i=1;i<=totalConcLimit;i++) {
+  for (i=1;i<=7;i++) {
     urlObject.consumable.push(readSelection(`concoction${i}`).value)
   }
   urlObject.consumable.push(readSelection("quickUse1").value);
