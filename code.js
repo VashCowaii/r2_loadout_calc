@@ -13,6 +13,7 @@ let traitPointCount = 0;
 let traitPointCap = 85;
 let totalConcLimit = 0;
 let greatTraitRecords = {}; //Automatically generated content, no touchy
+let urlObject = {};
 
 //The great container, the knower of all
 const greatTableKnowerOfAll = {
@@ -747,6 +748,90 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
+function updateURLparameters() {
+  urlObject = {
+    "trait": [],
+    "archetype": [],
+    "armor": [],
+    "primary": [],
+    "melee": [],
+    "secondary": [],
+    "consumable": [],
+    "accessory": [],
+    "relic": [],
+    "settings": ["filler"]
+  }
+
+  for (i=1;i<activeTraits;i++) {
+    let traitName = greatTraitRecords[`trait${i}`].name;
+    let traitLevel = greatTraitRecords[`trait${i}`].level;
+    let concatenated = `${traitName}${traitLevel}`;
+    urlObject.trait.push(concatenated)
+  }
+  urlObject.archetype.push(readSelection("archetype1").value);
+  urlObject.archetype.push(readSelection("archetype2").value);
+  urlObject.archetype.push(readSelection("archetype1ability").value);
+  urlObject.archetype.push(readSelection("archetype2ability").value);
+  urlObject.armor.push(readSelection("helmetChoice").value);
+  urlObject.armor.push(readSelection("chestChoice").value);
+  urlObject.armor.push(readSelection("legChoice").value);
+  urlObject.armor.push(readSelection("handChoice").value);
+  urlObject.primary.push(readSelection("primary").value);
+  urlObject.primary.push(readSelection("rangedMutator1").value);
+  urlObject.primary.push(readSelection("rangedMod1").value);
+  urlObject.melee.push(readSelection("melee").value);
+  urlObject.melee.push(readSelection("meleeMutator").value);
+  // urlObject.melee.push(readSelection("meleeMod").value);
+  urlObject.secondary.push(readSelection("secondary").value);
+  urlObject.secondary.push(readSelection("rangedMutator2").value);
+  urlObject.secondary.push(readSelection("rangedMod2").value);
+  for (i=1;i<=totalConcLimit;i++) {
+    urlObject.consumable.push(readSelection(`concoction${i}`).value)
+  }
+  urlObject.consumable.push(readSelection("quickUse1").value);
+  urlObject.consumable.push(readSelection("quickUse2").value);
+  urlObject.consumable.push("");//For later when I add 2 more quickuse
+  urlObject.consumable.push("");
+  urlObject.accessory.push(readSelection("amulet").value);
+  for (i=1;i<=4;i++) {
+    urlObject.accessory.push(readSelection(`ring${i}`).value);
+  }
+  urlObject.relic.push(readSelection("relic").value);
+  for (i=1;i<=3;i++) {
+    urlObject.relic.push(readSelection(`fragment${i}`).value);
+  }
+  //Add settings here later
+  urlParamIsEmpty("trait");
+  urlParamIsEmpty("archetype");
+  urlParamIsEmpty("armor");
+  urlParamIsEmpty("primary");
+  urlParamIsEmpty("melee");
+  urlParamIsEmpty("secondary");
+  urlParamIsEmpty("consumable");
+  urlParamIsEmpty("accessory");
+  urlParamIsEmpty("relic");
+  urlParamIsEmpty("settings");
+
+  const params = new URLSearchParams(urlObject);
+  const newUrl = `${window.location.origin}/index.html?${params}`;
+  history.replaceState({}, '', newUrl);
+}
+
+function urlParamIsEmpty(objElement) {
+  if (urlObject[objElement] === null || urlObject[objElement] === "" || urlObject[objElement].length === 0) {
+    delete urlObject[objElement];
+  }
+  else{
+    let foundValue = false;
+    for (i=0;i<urlObject[objElement].length;i++) {
+      if (urlObject[objElement][i] != null && urlObject[objElement][i] != ``) {foundValue=true;break;}
+    }
+    if (foundValue===false) {
+      delete urlObject[objElement];
+    }
+  }
+}
+
 function importURLparameters() {
   let feed = (new URL(document.location)).searchParams;
   let urlTraits = feed.get("trait");
@@ -795,7 +880,6 @@ function importURLparameters() {
 //ARMOR
   if (urlArmor != null) {
     urlArmor = urlArmor.split(",");
-    console.log(urlArmor)
     if (urlArmor[0] != "" && urlArmor[0] != null) {
       readSelection("helmetChoice").value = urlArmor[0];
       updateArmor('helmet');
@@ -860,7 +944,6 @@ function importURLparameters() {
   if (urlConcoctions != null) {
     updateFormulas();
     urlConcoctions = urlConcoctions.split(",");
-    console.log(totalConcLimit)
     for (let i=0;i<totalConcLimit;i++) {
       if (urlConcoctions[i] != "" && urlConcoctions[i] != null) {
         readSelection(`concoction${i+1}`).value = urlConcoctions[i];
@@ -908,7 +991,6 @@ function importURLparameters() {
   if (urlSettings === null && feed != null && feed != "") {
     alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
   }
-
 }
 
 
@@ -1523,6 +1605,7 @@ updateDisplay("totalHealing%",advancedTotalPercHP,2,"%");
 let EHPpSec = baseEHP * (advancedTotalPercHP/100);
 updateDisplay("EHP/s",EHPpSec,2);
 
+updateURLparameters();
 }
 
 //Shorthand for shit I got tired of typing every god damn time.
