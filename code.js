@@ -11,7 +11,292 @@ let emptyTraitBoxHeader = `<div class="traitMegaTitleHeader"><span>TRAITS <span 
 let activeTraits = 0;
 let traitPointCount = 0;
 let traitPointCap = 85;
+let totalConcLimit = 0;
 let greatTraitRecords = {}; //Automatically generated content, no touchy
+
+//The great container, the knower of all
+const greatTableKnowerOfAll = {
+  "Health": 0,
+  "Health%": 0,
+  "GlobalHealthModifier": 0,
+  "Armor": 0,
+  "Armor%": 0,
+  "FlatDR": 0,
+  "Bulwark": 0,
+  "REdamage": [0],
+  "DMGKept": [0],
+  "RelicSpeed": 0,
+  "RelicEFF": 0,
+  "HealingEFF": 0,
+  "GlobalHealingEff": 0,
+  "HP/S+": 0,
+  "HP/S%": 0,
+  "RelicHPbase": 0,
+  "RelicHPtype": 0,
+  "RelicHPtime": 0,
+  "GreyHP/S+": 0,
+  "Stamina": 0,
+  "Stamina%": 0,
+  "Stamina/S+": 0,
+  "StaminaCost": 0,
+  "StaminaPenaltyAdjustment": 0,
+  "ShieldEFF": 0,
+  "Shield": 0,
+  "Shield%/S": 0,
+  "Lifesteal": 0,
+  "MLifesteal": 0,
+  "RLifesteal": 0,
+  "Encumbrance": 0,
+  "Encumbrance%": 0,
+  "WeightThreshold": 0,
+  "Bleed": 0,
+  "Bleed%": 0,
+  "Burn": 0,
+  "Burn%": 0,
+  "Shock": 0,
+  "Shock%": 0,
+  "Corrosive": 0,
+  "Corrosive%": 0,
+  "Blight": 0,
+  "Blight%": 0,
+  "GreyHP/S%": 0,
+  "HealingModifiers": 0,
+  "ConcLimit": 0,
+  "Endurance": 0,
+  "Expertise": 0,
+  "Spirit": 0,
+  "Vigor": 0
+}
+//Container used when referencing the armor tables using variables
+const armor = {
+    "helmets": helmets,
+    "chests": chests,
+    "legs": legs,
+    "hands": hands,
+}
+//class title combos that display above the prime perk
+const titleCombos = {
+  "Alchemist": "",
+  "Archon": "",
+  "Challenger": "",
+  "Engineer": "",
+  "Explorer": "",
+  "Gunslinger": "",
+  "Handler": "",
+  "Hunter": "",
+  "Invader": "",
+  "Medic": "",
+  "Ritualist": "",
+  "Summoner": "",
+  "AlchemistAlchemist": "If you see this, report to Vash exactly how you did it",
+  "ArchonArchon": "If you see this, report to Vash exactly how you did it",
+  "ChallengerChallenger": "If you see this, report to Vash exactly how you did it",
+  "EngineerEngineer": "If you see this, report to Vash exactly how you did it",
+  "ExplorerExplorer": "If you see this, report to Vash exactly how you did it",
+  "GunslingerGunslinger": "If you see this, report to Vash exactly how you did it",
+  "HandlerHandler": "If you see this, report to Vash exactly how you did it",
+  "HunterHunter": "If you see this, report to Vash exactly how you did it",
+  "InvaderInvader": "If you see this, report to Vash exactly how you did it",
+  "MedicMedic": "If you see this, report to Vash exactly how you did it",
+  "RitualistRitualist": "If you see this, report to Vash exactly how you did it",
+  "SummonerSummoner": "If you see this, report to Vash exactly how you did it",
+  "": "---",
+  "AlchemistChallenger": "SPIRITED CONSERVATOR",
+  "AlchemistExplorer": "SPIRITED APOTHECARY",
+  "AlchemistGunslinger": "SPIRITED LEADBRINGER",
+  "AlchemistHandler": "SPIRITED GREY WOLF",
+  "AlchemistHunter": "SPIRITED ISOLATOR",
+  "AlchemistMedic": "SPIRITED SHAMAN",
+  "AlchemistSummoner": "SPIRITED CONJURER",
+  "AlchemistEngineer": "SPIRITED ARTIFICER",
+  "AlchemistInvader": "SPIRITED TRICKSTER",
+  "AlchemistArchon": "SPIRITED THAUMATURGE",
+  "AlchemistRitualist": "SPIRITED DIABOLIST",
+  "ChallengerAlchemist": "DIE HARD CONSERVATOR",
+  "ChallengerExplorer": "DIE HARD CRUSADER",
+  "ChallengerGunslinger": "DIE HARD MERCENARY",
+  "ChallengerHandler": "DIE HARD BULLDOG",
+  "ChallengerHunter": "DIE HARD SOLDIER",
+  "ChallengerMedic": "DIE HARD GUARDIAN",
+  "ChallengerSummoner": "DIE HARD OVERSEER",
+  "ChallengerEngineer": "DIE HARD SENTINEL",
+  "ChallengerInvader": "DIE HARD DESTROYER",
+  "ChallengerArchon": "DIE HARD ARBITER",
+  "ChallengerRitualist": "DIE HARD WARLORD",
+  "ExplorerAlchemist": "LUCKY APOTHECARY",
+  "ExplorerChallenger": "LUCKY CRUSADER",
+  "ExplorerGunslinger": "LUCKY RAIDER",
+  "ExplorerHandler": "LUCKY BLOODHOUND",
+  "ExplorerHunter": "LUCKY OUTRIDER",
+  "ExplorerMedic": "LUCKY SURVIVALIST",
+  "ExplorerSummoner": "LUCKY HERALD",
+  "ExplorerEngineer": "LUCKY PIONEER",
+  "ExplorerInvader": "LUCKY MARAUDER",
+  "ExplorerArchon": "LUCKY TRAILBLAZER",
+  "ExplorerRitualist": "LUCKY OUTCAST",
+  "GunslingerAlchemist": "LOADED LEADBRINGER",
+  "GunslingerChallenger": "LOADED MERCENARY",
+  "GunslingerExplorer": "LOADED RAIDER",
+  "GunslingerHandler": "LOADED RIDGEBACK",
+  "GunslingerHunter": "LOADED SHARPSHOOTER",
+  "GunslingerMedic": "LOADED PEACEMAKER",
+  "GunslingerSummoner": "LOADED TORMENTOR",
+  "GunslingerEngineer": "LOADED BARRELSMITH",
+  "GunslingerInvader": "LOADED PROFESSIONAL",
+  "GunslingerArchon": "LOADED FIREBRAND",
+  "GunslingerRitualist": "LOADED PUNISHER",
+  "HandlerAlchemist": "BONDED GREY WOLF",
+  "HandlerChallenger": "BONDED BULLDOG",
+  "HandlerExplorer": "BONDED BLOODHOUND",
+  "HandlerGunslinger": "BONDED RIDGEBACK",
+  "HandlerHunter": "BONDED PREDATOR",
+  "HandlerMedic": "BONDED SHEPHERD",
+  "HandlerSummoner": "BONDED BEASTMASTER",
+  "HandlerEngineer": "BONDED ROUGHNECK",
+  "HandlerInvader": "BONDED PROWLER",
+  "HandlerArchon": "BONDED HARRIER",
+  "HandlerRitualist": "BONDED HELLHOUND",
+  "HunterAlchemist": "DEAD TO RIGHTS ISOLATOR",
+  "HunterChallenger": "DEAD TO RIGHTS SOLDIER",
+  "HunterExplorer": "DEAD TO RIGHTS OUTRIDER",
+  "HunterGunslinger": "DEAD TO RIGHTS SHARPSHOOTER",
+  "HunterHandler": "DEAD TO RIGHTS PREDATOR",
+  "HunterMedic": "DEAD TO RIGHTS RANGER",
+  "HunterSummoner": "DEAD TO RIGHTS PAINBRINGER",
+  "HunterEngineer": "DEAD TO RIGHTS TACTICIAN",
+  "HunterInvader": "DEAD TO RIGHTS ASSASSIN",
+  "HunterArchon": "DEAD TO RIGHTS VANQUISHER",
+  "HunterRitualist": "DEAD TO RIGHTS HEADHUNTER",
+  "MedicAlchemist": "REGENERATOR SHAMAN",
+  "MedicChallenger": "REGENERATOR GUARDIAN",
+  "MedicExplorer": "REGENERATOR SURVIVALIST",
+  "MedicGunslinger": "REGENERATOR PEACEMAKER",
+  "MedicHandler": "REGENERATOR SHEPHERD",
+  "MedicHunter": "REGENERATOR RANGER",
+  "MedicSummoner": "REGENERATOR DEFILER",
+  "MedicEngineer": "REGENERATOR SPECIALIST",
+  "MedicInvader": "REGENERATOR BLOODLETTER",
+  "MedicArchon": "REGENERATOR VIRTUOSO",
+  "MedicRitualist": "REGENERATOR PLAGUE DOCTOR",
+  "SummonerAlchemist": "RUTHLESS CONJURER",
+  "SummonerChallenger": "RUTHLESS OVERSEER",
+  "SummonerExplorer": "RUTHLESS HERALD",
+  "SummonerGunslinger": "RUTHLESS TORMENTOR",
+  "SummonerHandler": "RUTHLESS BEASTMASTER",
+  "SummonerHunter": "RUTHLESS PAINBRINGER",
+  "SummonerMedic": "RUTHLESS DEFILER",
+  "SummonerEngineer": "RUTHLESS MASTERMIND",
+  "SummonerInvader": "RUTHLESS TYRANT",
+  "SummonerArchon": "RUTHLESS INVOKER",
+  "SummonerRitualist": "RUTHLESS GRAVELORD",
+  "EngineerAlchemist": "HIGH TECH ARTIFICER",
+  "EngineerChallenger": "HIGH TECH SENTINEL",
+  "EngineerExplorer": "HIGH TECH PIONEER",
+  "EngineerGunslinger": "HIGH TECH BARRELSMITH",
+  "EngineerHandler": "HIGH TECH ROUGHNECK",
+  "EngineerHunter": "HIGH TECH TACTICIAN",
+  "EngineerMedic": "HIGH TECH SPECIALIST",
+  "EngineerSummoner": "HIGH TECH MASTERMIND",
+  "EngineerInvader": "HIGH TECH OPERATOR",
+  "EngineerArchon": "HIGH TECH LUMINARY",
+  "EngineerRitualist": "HIGH TECH WRECKER",
+  "InvaderAlchemist": "SHADOW TRICKSTER",
+  "InvaderChallenger": "SHADOW DESTROYER",
+  "InvaderExplorer": "SHADOW MARAUDER",
+  "InvaderGunslinger": "SHADOW PROFESSIONAL",
+  "InvaderHandler": "SHADOW PROWLER",
+  "InvaderHunter": "SHADOW ASSASSIN",
+  "InvaderMedic": "SHADOW BLOODLETTER",
+  "InvaderSummoner": "SHADOW TYRANT",
+  "InvaderEngineer": "SHADOW OPERATOR",
+  "InvaderArchon": "SHADOW RUINER",
+  "InvaderRitualist": "SHADOW REAPER",
+  "ArchonAlchemist": "TEMPEST THAUMATURGE",
+  "ArchonChallenger": "TEMPEST ARBITER",
+  "ArchonExplorer": "TEMPEST TRAILBLAZER",
+  "ArchonGunslinger": "TEMPEST FIREBRAND",
+  "ArchonHandler": "TEMPEST HARRIER",
+  "ArchonHunter": "TEMPEST VANQUISHER",
+  "ArchonMedic": "TEMPEST VIRTUOSO",
+  "ArchonSummoner": "TEMPEST INVOKER",
+  "ArchonEngineer": "TEMPEST LUMINARY",
+  "ArchonInvader": "TEMPEST RUINER",
+  "ArchonRitualist": "TEMPEST HARBINGER",
+  "RitualistAlchemist": "VILE DIABOLIST",
+  "RitualistChallenger": "VILE WARLORD",
+  "RitualistExplorer": "VILE OUTCAST",
+  "RitualistGunslinger": "VILE PUNISHER",
+  "RitualistHandler": "VILE HELLHOUND",
+  "RitualistHunter": "VILE HEADHUNTER",
+  "RitualistMedic": "VILE PLAGUE DOCTOR",
+  "RitualistSummoner": "VILE GRAVELORD",
+  "RitualistEngineer": "VILE WRECKER",
+  "RitualistInvader": "VILE REAPER",
+  "RitualistArchon": "VILE HARBINGER"
+}
+const gear = {
+   "amulets": amulets,
+   "rings": rings,
+   "relics": relics
+}
+const weapons = {
+  "primary": primary,
+  "melee": melee,
+  "secondary": secondary
+}
+const mutators = {
+  "primaryMutators": rangedMutators,
+  "meleeMutators": meleeMutators,
+  "secondaryMutators": rangedMutators
+}
+//const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
+const mods = {
+  "primaryMods": rangedMods,
+  "meleeMods": "meleeMods",//Later, remove quotes obv
+  "secondaryMods": rangedMods
+}
+const consumables = {
+  "concoctions": concoctions,
+  "quickUses": quickUses
+}
+
+//Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
+function readSelection(elemID) {
+  let selectedValue = document.getElementById(elemID);
+  return selectedValue;
+}
+//Generalized select <option> population. *should* be able to be used for any gear selection,
+//provided there is a distinct json format to pull from
+function populateGear(elemID,collection) {
+  const select = readSelection(elemID);
+  if (collection != traits) {
+    for (const gear in collection) {
+      if (collection.hasOwnProperty(gear)) {
+          const option = document.createElement("option");
+          option.text = gear;
+          select.appendChild(option);
+      }
+    }
+  }
+  else {
+    for (const gear in collection) {
+      if (collection.hasOwnProperty(gear)) {
+          let matchFound = false;
+          for (let i=1;i<=activeTraits;i++) {
+            if (gear === greatTraitRecords[`trait${i}`].name && gear != "" && `trait${i}` != elemID) {
+              matchFound = true;
+              break;
+            }
+          }
+          if (matchFound===false) {
+          const option = document.createElement("option");
+          option.text = gear;
+          select.appendChild(option);
+          }
+      }
+    }
+  }
+}
 
 function traitBoxShortHand(elemID) {
   return `<div class="traitContainer">
@@ -63,7 +348,7 @@ function modifyTraitRecord(action,ID,name,level,defaultPoints,spentPoints) {
     if (name==null) {name=""}
     if (level==null) {level=0;}
     if (defaultPoints==null) {defaultPoints=0}
-    if (spentPoints==null) {spentPoints=""}
+    if (spentPoints==null) {spentPoints=0}
     greatTraitRecords[`trait${ID}`] = {
       "name": name,
       "level": level,
@@ -420,40 +705,7 @@ updateTraitCollection()
 updateFormulas();
 }
 
-//Generalized select <option> population. *should* be able to be used for any gear selection,
-//provided there is a distinct json format to pull from
-
-function populateGear(elemID,collection) {
-  const select = readSelection(elemID);
-  if (collection != traits) {
-    for (const gear in collection) {
-      if (collection.hasOwnProperty(gear)) {
-          const option = document.createElement("option");
-          option.text = gear;
-          select.appendChild(option);
-      }
-    }
-  }
-  else {
-    for (const gear in collection) {
-      if (collection.hasOwnProperty(gear)) {
-          let matchFound = false;
-          for (let i=1;i<=activeTraits;i++) {
-            if (gear === greatTraitRecords[`trait${i}`].name && gear != "" && `trait${i}` != elemID) {
-              matchFound = true;
-              break;
-            }
-          }
-          if (matchFound===false) {
-          const option = document.createElement("option");
-          option.text = gear;
-          select.appendChild(option);
-          }
-      }
-    }
-  }
-}
-//Everything I want to load by default, without event triggers
+// Everything I want to load by default, without event triggers
 document.addEventListener("DOMContentLoaded", function() {
   populateGear("helmetChoice",helmets);
   populateGear("chestChoice",chests);
@@ -471,7 +723,7 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("fragment2",fragments);
   populateGear("fragment3",fragments);
 
-  updateTraitCollection();
+  // updateTraitCollection(); //gets called in importURLparams
 
   populateGear("primary",primary);
   populateGear("melee",melee);
@@ -491,7 +743,179 @@ document.addEventListener("DOMContentLoaded", function() {
   populateGear("concoction7",concoctions);
   populateGear("quickUse1",quickUses);
   populateGear("quickUse2",quickUses);
+  importURLparameters();
 })
+
+
+function importURLparameters() {
+  let feed = (new URL(document.location)).searchParams;
+  if (feed != null && feed != "") {
+    let urlTraits = feed.get("trait");
+    let urlArchs = feed.get("archetype");
+    let urlArmor = feed.get("armor");
+    let urlPrimary = feed.get("primary");
+    let urlMelee = feed.get("melee");
+    let urlSecondary = feed.get("secondary");
+    let urlConcoctions = feed.get("consumable");
+    let urlAccessory = feed.get("accessory");
+    let urlRelic = feed.get("relic");
+    let urlSettings = feed.get("settings");
+    // let urlQuickUse = feed.get("quickUse");
+  //TRAITS
+    if (urlTraits != null) {
+        urlTraits = urlTraits.split(",")
+        let traitCounter = 1;
+        for (traitors of urlTraits) {
+            let traitLevel = traitors.replace(/[^0-9]/g,"");
+            let traitName = traitors.replace(/[0-9]/g,"");
+            modifyTraitRecord("create",traitCounter,traitName,traitLevel)
+            traitCounter += 1;
+        }
+    }
+    updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
+  //ARCHETYPES AND ABILITIES
+    if (urlArchs != null) {
+      urlArchs = urlArchs.split(",");
+      if (urlArchs[0] != "" && urlArchs[0] != null) {
+        readSelection("archetype1").value = urlArchs[0];
+        updateArchetype('archetype','1');
+      }
+      if (urlArchs[1] != "" && urlArchs[1] != null) {
+        readSelection("archetype2").value = urlArchs[1]; 
+        updateArchetype('archetype','2');
+      }
+      if (urlArchs[2] != "" && urlArchs[2] != null && urlArchs[0] != "") {
+        readSelection("archetype1ability").value = urlArchs[2];
+        updateAbility('archetype1');
+      }
+      if (urlArchs[3] != "" && urlArchs[3] != null && urlArchs[1] != "") {
+        readSelection("archetype2ability").value = urlArchs[3];
+        updateAbility('archetype2');
+      }  
+    }
+  //ARMOR
+    if (urlArmor != null) {
+      urlArmor = urlArmor.split(",");
+      console.log(urlArmor)
+      if (urlArmor[0] != "" && urlArmor[0] != null) {
+        readSelection("helmetChoice").value = urlArmor[0];
+        updateArmor('helmet');
+      }
+      if (urlArmor[1] != "" && urlArmor[1] != null) {
+        readSelection("chestChoice").value = urlArmor[1];
+        updateArmor('chest');
+      }
+      if (urlArmor[2] != "" && urlArmor[2] != null) {
+        readSelection("legChoice").value = urlArmor[2];
+        updateArmor('leg');
+      }
+      if (urlArmor[3] != "" && urlArmor[3] != null) {
+        readSelection("handChoice").value = urlArmor[3];
+        updateArmor('hand');
+      }
+
+    }
+  //WEAPONS
+    if (urlPrimary != null) {
+      urlPrimary = urlPrimary.split(",");
+      if (urlPrimary[0] != "" && urlPrimary[0] != null) {
+        readSelection("primary").value = urlPrimary[0];
+        updateWeapon('primary');
+      }
+      if (urlPrimary[1] != "" && urlPrimary[1] != null) {
+        readSelection("rangedMutator1").value = urlPrimary[1];
+        updateMutator('rangedMutator','1');
+      }
+      if (urlPrimary[2] != "" && urlPrimary[2] != null) {
+        readSelection("rangedMod1").value = urlPrimary[2];
+        updateMod('rangedMod','1');
+      }
+    }
+    if (urlMelee != null) {
+      urlMelee = urlMelee.split(",");
+      if (urlMelee[0] != "" && urlMelee[0] != null) {
+        readSelection("melee").value = urlMelee[0];
+        updateWeapon('melee');
+      }
+      if (urlMelee[1] != "" && urlMelee[1] != null) {
+        readSelection("meleeMutator").value = urlMelee[1];
+        updateMutator('meleeMutator');
+      }
+    }
+    if (urlSecondary != null) {
+      urlSecondary = urlSecondary.split(",");
+      if (urlSecondary[0] != "" && urlSecondary[0] != null) {
+        readSelection("secondary").value = urlSecondary[0];
+        updateWeapon('secondary');
+      }
+      if (urlSecondary[1] != "" && urlSecondary[1] != null) {
+        readSelection("rangedMutator2").value = urlSecondary[1];
+        updateMutator('rangedMutator','2');
+      }
+      if (urlSecondary[2] != "" && urlSecondary[2] != null) {
+        readSelection("rangedMod2").value = urlSecondary[2];
+        updateMod('rangedMod','2');
+      }
+    }
+  //CONCOCTIONS AND QUICK USE CONSUMABLES
+    if (urlConcoctions != null) {
+      updateFormulas();
+      urlConcoctions = urlConcoctions.split(",");
+      console.log(totalConcLimit)
+      for (let i=0;i<totalConcLimit;i++) {
+        if (urlConcoctions[i] != "" && urlConcoctions[i] != null) {
+          readSelection(`concoction${i+1}`).value = urlConcoctions[i];
+          updateConsumable('concoction',i+1);
+        }
+      }
+      if (urlConcoctions[8-1] != "" && urlConcoctions[8-1] != null) {
+        readSelection(`quickUse1`).value = urlConcoctions[8-1];
+        updateConsumable('quickUse',1);
+      }
+      if (urlConcoctions[9-1] != "" && urlConcoctions[9-1] != null) {
+        readSelection(`quickUse2`).value = urlConcoctions[9-1];
+        updateConsumable('quickUse',2);
+      }
+    }
+  //AMULET AND RINGS
+    if (urlAccessory != null) {
+      urlAccessory = urlAccessory.split(",");
+      if (urlAccessory[0] != "" && urlAccessory[0] != null) {
+        readSelection("amulet").value = urlAccessory[0];
+        updateAccessory('amulet');
+      }
+      for (let i=1;i<=4;i++) {
+        if (urlAccessory[i] != "" && urlAccessory[i] != null) {
+          readSelection(`ring${i}`).value = urlAccessory[i];
+          updateAccessory('ring',i);
+        }
+      }
+    }
+  //RELIC AND FRAGMENTS
+    if (urlRelic != null) {
+      urlRelic = urlRelic.split(",");
+      if (urlRelic[0] != "" && urlRelic[0] != null) {
+        readSelection("relic").value = urlRelic[0];
+        updateAccessory('relic');
+      }
+      for (let i=1;i<=3;i++) {
+        if (urlRelic[i] != "" && urlRelic[i] != null) {
+          readSelection(`fragment${i}`).value = urlRelic[i];
+          updateFragment('fragment',i);
+        }
+      }
+    }
+  //CHECK IF TOGGLES ARE THERE OR NOT TO NOTIFY PEOPLE COMING FROM R2TK
+    if (urlSettings === null) {
+      alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+    }
+  }
+}
+
+
+
+
+
 
 function updateConsumable(type,ID) {
   let selectedConsumable = readSelection(`${type}${ID}`);
@@ -662,11 +1086,6 @@ function updateAbility(archetype) {
    readSelection(`${archetype}abilityDesc`).innerHTML=classInfo[selectedArchetype].abilities[selectedAbility].desc;
    readSelection(`${archetype}abilityIcon`).src=classInfo[selectedArchetype].abilities[selectedAbility].image;
    updateFormulas();
-}
-//Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
-function readSelection(elemID) {
-    let selectedValue = document.getElementById(elemID);
-    return selectedValue;
 }
 
 function gameMasters() {
@@ -840,9 +1259,9 @@ let teamCount = readSelection("teamCount");
   pullClassStats();
 //----------CONSUMABLES---------------------------------------------------------
 //--These have to come after everything else, in order to take advantage of the correct concLimit
-  let concLimit = 1 + greatTableKnowerOfAll.ConcLimit;
-  updateDisplay("concValueDisplay",concLimit,0);
-  pullConsumables(concLimit);
+  totalConcLimit = 1 + greatTableKnowerOfAll.ConcLimit;
+  updateDisplay("concValueDisplay",totalConcLimit,0);
+  pullConsumables(totalConcLimit);
 //SUMMARY STATS
   let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
@@ -1393,249 +1812,4 @@ function pullStats(path) {
         //This slaps them into an array for each as they are ALL multiplicative to each other.
       }
     }
-}
-
-const greatTableKnowerOfAll = {
-  "Health": 0,
-  "Health%": 0,
-  "GlobalHealthModifier": 0,
-  "Armor": 0,
-  "Armor%": 0,
-  "FlatDR": 0,
-  "Bulwark": 0,
-  "REdamage": [0],
-  "DMGKept": [0],
-  "RelicSpeed": 0,
-  "RelicEFF": 0,
-  "HealingEFF": 0,
-  "GlobalHealingEff": 0,
-  "HP/S+": 0,
-  "HP/S%": 0,
-  "RelicHPbase": 0,
-  "RelicHPtype": 0,
-  "RelicHPtime": 0,
-  "GreyHP/S+": 0,
-  "Stamina": 0,
-  "Stamina%": 0,
-  "Stamina/S+": 0,
-  "StaminaCost": 0,
-  "StaminaPenaltyAdjustment": 0,
-  "ShieldEFF": 0,
-  "Shield": 0,
-  "Shield%/S": 0,
-  "Lifesteal": 0,
-  "MLifesteal": 0,
-  "RLifesteal": 0,
-  "Encumbrance": 0,
-  "Encumbrance%": 0,
-  "WeightThreshold": 0,
-  "Bleed": 0,
-  "Bleed%": 0,
-  "Burn": 0,
-  "Burn%": 0,
-  "Shock": 0,
-  "Shock%": 0,
-  "Corrosive": 0,
-  "Corrosive%": 0,
-  "Blight": 0,
-  "Blight%": 0,
-  "GreyHP/S%": 0,
-  "HealingModifiers": 0,
-  "ConcLimit": 0,
-  "Endurance": 0,
-  "Expertise": 0,
-  "Spirit": 0,
-  "Vigor": 0
-}
-
-//Container used when referencing the armor tables using variables
-const armor = {
-    "helmets": helmets,
-    "chests": chests,
-    "legs": legs,
-    "hands": hands,
-}
-const titleCombos = {
-  "Alchemist": "",
-  "Archon": "",
-  "Challenger": "",
-  "Engineer": "",
-  "Explorer": "",
-  "Gunslinger": "",
-  "Handler": "",
-  "Hunter": "",
-  "Invader": "",
-  "Medic": "",
-  "Ritualist": "",
-  "Summoner": "",
-  "AlchemistAlchemist": "If you see this, report to Vash exactly how you did it",
-  "ArchonArchon": "If you see this, report to Vash exactly how you did it",
-  "ChallengerChallenger": "If you see this, report to Vash exactly how you did it",
-  "EngineerEngineer": "If you see this, report to Vash exactly how you did it",
-  "ExplorerExplorer": "If you see this, report to Vash exactly how you did it",
-  "GunslingerGunslinger": "If you see this, report to Vash exactly how you did it",
-  "HandlerHandler": "If you see this, report to Vash exactly how you did it",
-  "HunterHunter": "If you see this, report to Vash exactly how you did it",
-  "InvaderInvader": "If you see this, report to Vash exactly how you did it",
-  "MedicMedic": "If you see this, report to Vash exactly how you did it",
-  "RitualistRitualist": "If you see this, report to Vash exactly how you did it",
-  "SummonerSummoner": "If you see this, report to Vash exactly how you did it",
-  "": "---",
-  "AlchemistChallenger": "SPIRITED CONSERVATOR",
-  "AlchemistExplorer": "SPIRITED APOTHECARY",
-  "AlchemistGunslinger": "SPIRITED LEADBRINGER",
-  "AlchemistHandler": "SPIRITED GREY WOLF",
-  "AlchemistHunter": "SPIRITED ISOLATOR",
-  "AlchemistMedic": "SPIRITED SHAMAN",
-  "AlchemistSummoner": "SPIRITED CONJURER",
-  "AlchemistEngineer": "SPIRITED ARTIFICER",
-  "AlchemistInvader": "SPIRITED TRICKSTER",
-  "AlchemistArchon": "SPIRITED THAUMATURGE",
-  "AlchemistRitualist": "SPIRITED DIABOLIST",
-  "ChallengerAlchemist": "DIE HARD CONSERVATOR",
-  "ChallengerExplorer": "DIE HARD CRUSADER",
-  "ChallengerGunslinger": "DIE HARD MERCENARY",
-  "ChallengerHandler": "DIE HARD BULLDOG",
-  "ChallengerHunter": "DIE HARD SOLDIER",
-  "ChallengerMedic": "DIE HARD GUARDIAN",
-  "ChallengerSummoner": "DIE HARD OVERSEER",
-  "ChallengerEngineer": "DIE HARD SENTINEL",
-  "ChallengerInvader": "DIE HARD DESTROYER",
-  "ChallengerArchon": "DIE HARD ARBITER",
-  "ChallengerRitualist": "DIE HARD WARLORD",
-  "ExplorerAlchemist": "LUCKY APOTHECARY",
-  "ExplorerChallenger": "LUCKY CRUSADER",
-  "ExplorerGunslinger": "LUCKY RAIDER",
-  "ExplorerHandler": "LUCKY BLOODHOUND",
-  "ExplorerHunter": "LUCKY OUTRIDER",
-  "ExplorerMedic": "LUCKY SURVIVALIST",
-  "ExplorerSummoner": "LUCKY HERALD",
-  "ExplorerEngineer": "LUCKY PIONEER",
-  "ExplorerInvader": "LUCKY MARAUDER",
-  "ExplorerArchon": "LUCKY TRAILBLAZER",
-  "ExplorerRitualist": "LUCKY OUTCAST",
-  "GunslingerAlchemist": "LOADED LEADBRINGER",
-  "GunslingerChallenger": "LOADED MERCENARY",
-  "GunslingerExplorer": "LOADED RAIDER",
-  "GunslingerHandler": "LOADED RIDGEBACK",
-  "GunslingerHunter": "LOADED SHARPSHOOTER",
-  "GunslingerMedic": "LOADED PEACEMAKER",
-  "GunslingerSummoner": "LOADED TORMENTOR",
-  "GunslingerEngineer": "LOADED BARRELSMITH",
-  "GunslingerInvader": "LOADED PROFESSIONAL",
-  "GunslingerArchon": "LOADED FIREBRAND",
-  "GunslingerRitualist": "LOADED PUNISHER",
-  "HandlerAlchemist": "BONDED GREY WOLF",
-  "HandlerChallenger": "BONDED BULLDOG",
-  "HandlerExplorer": "BONDED BLOODHOUND",
-  "HandlerGunslinger": "BONDED RIDGEBACK",
-  "HandlerHunter": "BONDED PREDATOR",
-  "HandlerMedic": "BONDED SHEPHERD",
-  "HandlerSummoner": "BONDED BEASTMASTER",
-  "HandlerEngineer": "BONDED ROUGHNECK",
-  "HandlerInvader": "BONDED PROWLER",
-  "HandlerArchon": "BONDED HARRIER",
-  "HandlerRitualist": "BONDED HELLHOUND",
-  "HunterAlchemist": "DEAD TO RIGHTS ISOLATOR",
-  "HunterChallenger": "DEAD TO RIGHTS SOLDIER",
-  "HunterExplorer": "DEAD TO RIGHTS OUTRIDER",
-  "HunterGunslinger": "DEAD TO RIGHTS SHARPSHOOTER",
-  "HunterHandler": "DEAD TO RIGHTS PREDATOR",
-  "HunterMedic": "DEAD TO RIGHTS RANGER",
-  "HunterSummoner": "DEAD TO RIGHTS PAINBRINGER",
-  "HunterEngineer": "DEAD TO RIGHTS TACTICIAN",
-  "HunterInvader": "DEAD TO RIGHTS ASSASSIN",
-  "HunterArchon": "DEAD TO RIGHTS VANQUISHER",
-  "HunterRitualist": "DEAD TO RIGHTS HEADHUNTER",
-  "MedicAlchemist": "REGENERATOR SHAMAN",
-  "MedicChallenger": "REGENERATOR GUARDIAN",
-  "MedicExplorer": "REGENERATOR SURVIVALIST",
-  "MedicGunslinger": "REGENERATOR PEACEMAKER",
-  "MedicHandler": "REGENERATOR SHEPHERD",
-  "MedicHunter": "REGENERATOR RANGER",
-  "MedicSummoner": "REGENERATOR DEFILER",
-  "MedicEngineer": "REGENERATOR SPECIALIST",
-  "MedicInvader": "REGENERATOR BLOODLETTER",
-  "MedicArchon": "REGENERATOR VIRTUOSO",
-  "MedicRitualist": "REGENERATOR PLAGUE DOCTOR",
-  "SummonerAlchemist": "RUTHLESS CONJURER",
-  "SummonerChallenger": "RUTHLESS OVERSEER",
-  "SummonerExplorer": "RUTHLESS HERALD",
-  "SummonerGunslinger": "RUTHLESS TORMENTOR",
-  "SummonerHandler": "RUTHLESS BEASTMASTER",
-  "SummonerHunter": "RUTHLESS PAINBRINGER",
-  "SummonerMedic": "RUTHLESS DEFILER",
-  "SummonerEngineer": "RUTHLESS MASTERMIND",
-  "SummonerInvader": "RUTHLESS TYRANT",
-  "SummonerArchon": "RUTHLESS INVOKER",
-  "SummonerRitualist": "RUTHLESS GRAVELORD",
-  "EngineerAlchemist": "HIGH TECH ARTIFICER",
-  "EngineerChallenger": "HIGH TECH SENTINEL",
-  "EngineerExplorer": "HIGH TECH PIONEER",
-  "EngineerGunslinger": "HIGH TECH BARRELSMITH",
-  "EngineerHandler": "HIGH TECH ROUGHNECK",
-  "EngineerHunter": "HIGH TECH TACTICIAN",
-  "EngineerMedic": "HIGH TECH SPECIALIST",
-  "EngineerSummoner": "HIGH TECH MASTERMIND",
-  "EngineerInvader": "HIGH TECH OPERATOR",
-  "EngineerArchon": "HIGH TECH LUMINARY",
-  "EngineerRitualist": "HIGH TECH WRECKER",
-  "InvaderAlchemist": "SHADOW TRICKSTER",
-  "InvaderChallenger": "SHADOW DESTROYER",
-  "InvaderExplorer": "SHADOW MARAUDER",
-  "InvaderGunslinger": "SHADOW PROFESSIONAL",
-  "InvaderHandler": "SHADOW PROWLER",
-  "InvaderHunter": "SHADOW ASSASSIN",
-  "InvaderMedic": "SHADOW BLOODLETTER",
-  "InvaderSummoner": "SHADOW TYRANT",
-  "InvaderEngineer": "SHADOW OPERATOR",
-  "InvaderArchon": "SHADOW RUINER",
-  "InvaderRitualist": "SHADOW REAPER",
-  "ArchonAlchemist": "TEMPEST THAUMATURGE",
-  "ArchonChallenger": "TEMPEST ARBITER",
-  "ArchonExplorer": "TEMPEST TRAILBLAZER",
-  "ArchonGunslinger": "TEMPEST FIREBRAND",
-  "ArchonHandler": "TEMPEST HARRIER",
-  "ArchonHunter": "TEMPEST VANQUISHER",
-  "ArchonMedic": "TEMPEST VIRTUOSO",
-  "ArchonSummoner": "TEMPEST INVOKER",
-  "ArchonEngineer": "TEMPEST LUMINARY",
-  "ArchonInvader": "TEMPEST RUINER",
-  "ArchonRitualist": "TEMPEST HARBINGER",
-  "RitualistAlchemist": "VILE DIABOLIST",
-  "RitualistChallenger": "VILE WARLORD",
-  "RitualistExplorer": "VILE OUTCAST",
-  "RitualistGunslinger": "VILE PUNISHER",
-  "RitualistHandler": "VILE HELLHOUND",
-  "RitualistHunter": "VILE HEADHUNTER",
-  "RitualistMedic": "VILE PLAGUE DOCTOR",
-  "RitualistSummoner": "VILE GRAVELORD",
-  "RitualistEngineer": "VILE WRECKER",
-  "RitualistInvader": "VILE REAPER",
-  "RitualistArchon": "VILE HARBINGER"
-}
-const gear = {
-   "amulets": amulets,
-   "rings": rings,
-   "relics": relics
-}
-const weapons = {
-  "primary": primary,
-  "melee": melee,
-  "secondary": secondary
-}
-const mutators = {
-  "primaryMutators": rangedMutators,
-  "meleeMutators": meleeMutators,
-  "secondaryMutators": rangedMutators
-}
-//const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
-const mods = {
-  "primaryMods": rangedMods,
-  "meleeMods": "meleeMods",//Later, remove quotes obv
-  "secondaryMods": rangedMods
-}
-const consumables = {
-  "concoctions": concoctions,
-  "quickUses": quickUses
 }

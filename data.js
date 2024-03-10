@@ -1,5 +1,5 @@
 window.helmets = {
-    "Unequipped": {
+    "": {
        "SLOT": "Head",
        "VALUE": 0,
        "WEIGHT": 0,
@@ -309,7 +309,7 @@ window.helmets = {
     }
 }
 window.chests = {
-    "Unequipped": {
+    "": {
        "SLOT": "Chest",
        "VALUE": 0,
        "WEIGHT": 0,
@@ -586,7 +586,7 @@ window.chests = {
     }
 }
 window.legs = {
-    "Unequipped": {
+    "": {
        "SLOT": "Leg",
        "VALUE": 0,
        "WEIGHT": 0,
@@ -863,7 +863,7 @@ window.legs = {
     }
 }
 window.hands = {
-    "Unequipped": {
+    "": {
        "SLOT": "Hand",
        "VALUE": 0,
        "WEIGHT": 0,
