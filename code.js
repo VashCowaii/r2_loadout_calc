@@ -1147,10 +1147,14 @@ function importURLparameters() {
     importURLsetting("includeShields",urlAdvanced[5][3]);
     updateFormulas();
   }
+//Last updateFormulas for good measure, if feed exists and isn't just the source
+  if (feed != null && feed != "s=s") {
+    updateFormulas();
+  }
 //CHECK SOURCE PARAM IS MISSING, SO WE CAN NOTIFY PEEPS COMING FROM R2TK
-if (urlSource === null && feed != null && feed != "") {
-  alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
-}
+  if (urlSource != "s" && feed != null && feed != "") {
+    alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+  }
 }
 
 function importURLsetting(checkBoxID,arrayIDvalue) {
