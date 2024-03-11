@@ -124,11 +124,63 @@ html,body {
     outline: 2px solid white;
     box-sizing: border-box;
 }
+.exportBar {
+    width: 100%;
+    height: 11.5%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* border-radius: 5%; */
+}
+.exportButton {
+    width: 100%;
+    height: 100%;
+    background-color: #434343;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.exportButton:hover {
+    background-color: #1a1a1a;
+    color: black;
+}
+/* <div class="exportText">Export to R2TK</div>
+                        <div class="exportIconBox"></div> */
+.exportText {
+    height: 100%;
+    width: 65%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+}
+.exportIconBox {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.exportIcon {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
 .classVoidSpace {
     width: 100%;
     height: 15%;
-    border-bottom: 1px solid #434343;
-    border-top: 1px solid #434343;
     display: flex;
     text-align: center;
     white-space: normal;
@@ -136,38 +188,37 @@ html,body {
 }
 /* d9d9d9 */
 .settingsIcon {
-    width: 70%;
-    height: auto;
+    /* width: 70%; */
+    height: 80%;
+    width: auto;
     object-fit: contain;
 }
 
 /* Navbar container */
 .iconsBar {
-    /* background-color: white; */
     width: 100%;
-    height: 100%;
     display: flex;
     box-sizing: border-box;
     padding: 0%;
   }
-  /* The dropdown container */
   .dropdown {
-    float: left;
     width: 33.3333%;
-    overflow: hidden;
-    background-color: #d9d9d9;
+    position: relative;
+    /* overflow: visible; */
     border-radius: 20%;
     box-sizing: border-box;
-    border: 2px solid black;
-    padding: 0%;
+    border: 2px solid #666666;
     text-align: center;
   }
   .dropbtn {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
+    border-radius: 20%;
   }
   /* Dropdown button */
   .dropdown .dropbtn {
@@ -176,9 +227,9 @@ html,body {
     color: black;
     border: none;
     outline: none;
-    /* color: #d9d9d9; */
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    padding: 0;
+    margin: 0; 
     box-sizing: border-box;
   }
   /* Dropdown content (hidden by default) */
@@ -186,9 +237,9 @@ html,body {
     display: none;
     position: absolute;
     background-color: #d9d9d9;
+    top: 100%;
+    left: 0%;
     width: 260px;
-    /* display: flex; */
-    /* min-width: 160px; */
     z-index: 1;
     box-sizing: border-box;
   }
@@ -876,7 +927,6 @@ font-family: Arial, Helvetica, sans-serif;
     height: 21%;
     font-size: clamp(15px, 2vw, 25px);
     border-bottom: 1px solid #434343;
-    border-top: 1px solid #434343;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -918,12 +968,13 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .classPerkDescription{
     width: 100%;
-    height: 38.5%;
+    height: 27%;
     border-bottom: 1px solid #434343;
     font-size: 12px;
     text-align: center;
     white-space: normal;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 .armorHeaderBig{
     width: 100%;

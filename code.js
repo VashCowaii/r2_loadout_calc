@@ -747,8 +747,9 @@ document.addEventListener("DOMContentLoaded", function() {
   importURLparameters();
 })
 
-
-function updateURLparameters() {
+//Used to modify and actively update the browser URL display without a page reload.
+//Also used to compile the query string when exporting to R2TK.
+function updateURLparameters(isExported) {
   urlObject = {
     "trait": [],
     "archetype": [],
@@ -763,7 +764,6 @@ function updateURLparameters() {
     "adv": [],
     "s": ["s"]
   }
-
   for (i=1;i<activeTraits;i++) {
     let traitName = greatTraitRecords[`trait${i}`].name;
     let traitLevel = greatTraitRecords[`trait${i}`].level;
@@ -892,13 +892,35 @@ function updateURLparameters() {
   urlParamIsEmpty("settings");
   urlParamIsEmpty("adv");
 
-  const params = new URLSearchParams(urlObject);
-  decoded = params.toString();
-  decoded = decoded.replace(/%2C/g, ',');
-  const newUrl = `${window.location.origin}/index.html?${decoded}`;
-  history.replaceState({}, '', newUrl);
+  if (isExported != true) {
+    const params = new URLSearchParams(urlObject);
+    decoded = params.toString();
+    decoded = decoded.replace(/%2C/g, ',');
+    const newUrl = `${window.location.origin}/index.html?${decoded}`;
+    history.replaceState({}, '', newUrl);
+  }
 }
 
+function confirmExport() {
+  let confirmed = confirm(`This build will be opened in Remnant2Toolkit.com for sharing purposes.\n\n"Why export, though?"\nBecause this is a calculator, not a builds hub. THAT SAID, please be aware that exported builds do not save toggles/settings you have chosen here. If you need a build link that includes your chosen settings, use the URL in your browser.`);
+  if (confirmed===true) {
+    let R2TKprefix = `https://remnant2toolkit.com/builder`
+    updateURLparameters(true)
+    urlObject.source = "vash";
+
+    delete urlObject.settings;
+    delete urlObject.adv;
+    delete urlObject.s;
+
+    const params = new URLSearchParams(urlObject);
+    decoded = params.toString();
+    decoded = decoded.replace(/%2C/g, ',');
+    const newUrl = `${R2TKprefix}?${decoded}`;
+    window.open(newUrl, '_blank').focus();
+  }
+}
+
+//Used in updateURLparameters() to delete a given parameter if it is empty
 function urlParamIsEmpty(objElement) {
   if (urlObject[objElement] === null || urlObject[objElement] === "" || urlObject[objElement].length === 0) {
     delete urlObject[objElement];
@@ -913,7 +935,7 @@ function urlParamIsEmpty(objElement) {
     }
   }
 }
-
+//Reads the query string if one exists, and populates all fields/updates formulas accordinlyg
 function importURLparameters() {
   let feed = (new URL(document.location)).searchParams;
   let urlTraits = feed.get("trait");
@@ -1156,13 +1178,13 @@ function importURLparameters() {
     alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
   }
 }
-
+//Used in importURLparameters for shorthand checks
 function importURLsetting(checkBoxID,arrayIDvalue) {
   if (arrayIDvalue != null && arrayIDvalue === "1") {
     readSelection(checkBoxID).checked = true;
   }
 }
-
+//Used in updateURLparameters for shorthand checks
 function exportURLsetting(checkBoxID,objElement) {
   if (objElement != "adv") {
     if (readSelection(checkBoxID) != null && readSelection(checkBoxID).checked === true) {

@@ -1183,10 +1183,10 @@ window.classInfo = {
 		}
 	},
 	"Alchemist": {
-		"classIcon": "https://i.imgur.com/ZPl3KSX.png",
+		"classIcon": "./brotherLibrary/classIconImages/Alchemist.png",
 		"primePerk": "SPIRITED",
 		"primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
-		"primePerkImage": "https://i.imgur.com/ngzoXha.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Spirited.png",
 		"primeStats": {
 			"ConcLimit": 3
 		},
@@ -1194,7 +1194,7 @@ window.classInfo = {
 			"Vial: Stone Mist": {
 				"name": "Vial: Stone Mist",
 				"desc": "Creates vapor cloud, lasts 10s, gives STONESKIN. STONESKIN reduces incoming damage by 25%, stagger -1, increases Blight Buildup Decay Rate, grants status effect immunity. Lasts 15s.",
-				"image": "https://i.imgur.com/DlOYA8w.png",
+				"image": "./brotherLibrary/abilitiesImages/Vial_ Stone Mist.png",
 				"stats": {
 					"FlatDR": 0.25
 				}
@@ -1202,13 +1202,13 @@ window.classInfo = {
 			"Vial: Frenzy Dust": {
 				"name": "Vial: Frenzy Dust",
 				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and the Movement Speed by 15%. Lasts 15s.",
-				"image": "https://i.imgur.com/g6jasJ9.png",
+				"image": "./brotherLibrary/abilitiesImages/Vial_ Frenzy Dust.png",
 				"stats": {}
 			},
 			"Vial: Elixir of Life": {
 				"name": "Vial: Elixir of Life",
 				"desc": "Creates vapor cloud that lasts 10s and applies LIVING WILL. LIVING WILL grants 5 HP/s, and protects against fatal damage. Can revive downed players. Lasts 20s. Revived allies cannot be affected by Living Will for 180s.",
-				"image": "https://i.imgur.com/wrudffE.png",
+				"image": "./brotherLibrary/abilitiesImages/Vial_ Elixir of Life.png",
 				"stats": {
 					"HP/S+": 5
 				}
@@ -1250,16 +1250,16 @@ window.classInfo = {
 		}
 	},
 	"Archon": {
-		"classIcon": "https://i.imgur.com/jQRIXws.png",
+		"classIcon": "./brotherLibrary/classIconImages/Archon.png",
 		"primePerk": "TEMPEST",
 		"primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
-		"primePerkImage": "https://i.imgur.com/Iw2bzME.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Tempest.png",
 		"primeStats": {},
 		"abilities": {
 			"Reality Rune": {
 				"name": "Reality Rune",
 				"desc": "Conjures a 7m protective dome which applies SLOW to any enemy or enemy projectile. Allies inside gain 25% DR. Lasts 15s.",
-				"image": "https://i.imgur.com/x7UoRtJ.png",
+				"image": "./brotherLibrary/abilitiesImages/Reality Rune.png",
 				"stats": {
 					"FlatDR": 0.25
 				}
@@ -1267,7 +1267,7 @@ window.classInfo = {
 			"Chaos Gate": {
 				"name": "Chaos Gate",
 				"desc": "Conjures a 7m unstable zone which grants allies 50% increased All damage dealt, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
-				"image": "https://i.imgur.com/yMfhLzm.png",
+				"image": "./brotherLibrary/abilitiesImages/Chaos Gate.png",
 				"stats": {
 					"FlatDR": -0.15
 				}
@@ -1275,7 +1275,7 @@ window.classInfo = {
 			"Havoc Form": {
 				"name": "Havoc Form",
 				"desc": "Gain new abilities 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
-				"image": "https://i.imgur.com/xW3J8IF.png",
+				"image": "./brotherLibrary/abilitiesImages/Havoc Form.png",
 				"stats": {
 					"FlatDR": 0.5
 				}
@@ -1311,10 +1311,10 @@ window.classInfo = {
 		}
 	},
 	"Challenger": {
-		"classIcon": "https://i.imgur.com/o8Lf7rI.png",
+		"classIcon": "./brotherLibrary/classIconImages/Challenger.png",
 		"primePerk": "DIE HARD",
 		"primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. While on cooldown, Challenger gains 1 stack of BULWARK. Resets at Worldstone or on death.",
-		"primePerkImage": "https://i.imgur.com/P031gGk.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Die Hard.png",
 		"primeStats": {
 			"Bulwark": 1
 		},
@@ -1322,13 +1322,13 @@ window.classInfo = {
 			"War Stomp": {
 				"name": "War Stomp",
 				"desc": "Creates a high-impact tremor that deals 450 damage and additional stagger in a forward cone up to 7.5m. Deals damage in all directions at point blank range.",
-				"image": "https://i.imgur.com/ODcWQIW.png",
+				"image": "./brotherLibrary/abilitiesImages/War Stomp.png",
 				"stats": {}
 			},
 			"Juggernaut": {
 				"name": "Juggernaut",
 				"desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
-				"image": "https://i.imgur.com/byx30R2.png",
+				"image": "./brotherLibrary/abilitiesImages/Juggernaut.png",
 				"stats": {
 					"Bulwark": 3
 				}
@@ -1336,7 +1336,7 @@ window.classInfo = {
 			"Rampage": {
 				"name": "Rampage",
 				"desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
-				"image": "https://i.imgur.com/rWVGPZE.png",
+				"image": "./brotherLibrary/abilitiesImages/Rampage.png",
 				"stats": {}
 			}
 		},
@@ -1376,28 +1376,28 @@ window.classInfo = {
 		}
 	},
 	"Engineer": {
-		"classIcon": "https://i.imgur.com/fpQvoPX.png",
+		"classIcon": "./brotherLibrary/classIconImages/Engineer.png",
 		"primePerk": "HIGH TECH",
 		"primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s.",
-		"primePerkImage": "https://i.imgur.com/YB2qmK4.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/High Tech.png",
 		"primeStats": {},
 		"abilities": {
 			"Heavy Weapon: Vulcan": {
 				"name": "Heavy Weapon: Vulcan",
 				"desc": "Deploys a Vulcan Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "https://i.imgur.com/T1Hh6u1.png",
+				"image": "./brotherLibrary/abilitiesImages/Heavy Weapon_ Vulcan.png",
 				"stats": {}
 			},
 			"Heavy Weapon: Flamethrower": {
 				"name": "Heavy Weapon: Flamethrower",
 				"desc": "Deploys a Flamethrower Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "https://i.imgur.com/eAyyozf.png",
+				"image": "./brotherLibrary/abilitiesImages/Heavy Weapon_ Flamethrower.png",
 				"stats": {}
 			},
 			"Heavy Weapon: Impact Cannon": {
 				"name": "Heavy Weapon: Impact Cannon",
 				"desc": "Deploys a Impact Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "https://i.imgur.com/lTdM40D.png",
+				"image": "./brotherLibrary/abilitiesImages/Heavy Weapon_ Impact Cannon.png",
 				"stats": {}
 			}
 		},
@@ -1433,28 +1433,28 @@ window.classInfo = {
 		}
 	},
 	"Explorer": {
-		"classIcon": "https://i.imgur.com/cDpCyTV.png",
+		"classIcon": "./brotherLibrary/classIconImages/Explorer.png",
 		"primePerk": "LUCKY",
 		"primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
-		"primePerkImage": "https://i.imgur.com/XavGKpc.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Lucky.png",
 		"primeStats": {},
 		"abilities": {
 			"Plainswalker": {
 				"name": "Plainswalker",
 				"desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
-				"image": "https://i.imgur.com/eP7Oaxp.png",
+				"image": "./brotherLibrary/abilitiesImages/Plainswalker.png",
 				"stats": {}
 			},
 			"Gold Digger": {
 				"name": "Gold Digger",
 				"desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
-				"image": "https://i.imgur.com/mO87xP5.png",
+				"image": "./brotherLibrary/abilitiesImages/Gold Digger.png",
 				"stats": {}
 			},
 			"Fortune Hunter": {
 				"name": "Fortune Hunter",
 				"desc": "Reveal special items within 40m for all allies. Lasts 60s.",
-				"image": "https://i.imgur.com/ms00nlw.png",
+				"image": "./brotherLibrary/abilitiesImages/Fortune Hunter.png",
 				"stats": {}
 			}
 		},
@@ -1488,28 +1488,28 @@ window.classInfo = {
 		}
 	},
 	"Gunslinger": {
-		"classIcon": "https://i.imgur.com/K3UiRqk.png",
+		"classIcon": "./brotherLibrary/classIconImages/Gunslinger.png",
 		"primePerk": "LOADED",
 		"primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
-		"primePerkImage": "https://i.imgur.com/S3jXNiC.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Loaded.png",
 		"primeStats": {},
 		"abilities": {
 			"Quick Draw": {
 				"name": "Quick Draw",
 				"desc": "Pull out your trusty side piece and unload up to 6 Critical Shots from the hip. Each shot deals 105 base damage and double stagger value.",
-				"image": "https://i.imgur.com/hXCtCic.png",
+				"image": "./brotherLibrary/abilitiesImages/Quick Draw.png",
 				"stats": {}
 			},
 			"Sidewinder": {
 				"name": "Sidewinder",
 				"desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 50%. Cycling weapons will automatically reload incoming Firearms. Lasts 12s.",
-				"image": "https://i.imgur.com/WhKotQP.png",
+				"image": "./brotherLibrary/abilitiesImages/Sidewinder.png",
 				"stats": {}
 			},
 			"Bulletstorm": {
 				"name": "Bulletstorm",
 				"desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
-				"image": "https://i.imgur.com/7fI4Ht1.png",
+				"image": "./brotherLibrary/abilitiesImages/Bulletstorm.png",
 				"stats": {}
 			}
 		},
@@ -1543,16 +1543,16 @@ window.classInfo = {
 		}
 	},
 	"Handler": {
-		"classIcon": "https://i.imgur.com/J9qtmtl.png",
+		"classIcon": "./brotherLibrary/classIconImages/Handler.png",
 		"primePerk": "BONDED",
 		"primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge.",
-		"primePerkImage": "https://i.imgur.com/0lU6F1v.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Bonded.png",
 		"primeStats": {},
 		"abilities": {
 			"Guard Dog": {
 				"name": "Guard Dog",
 				"desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
-				"image": "https://i.imgur.com/RxQSvqN.png",
+				"image": "./brotherLibrary/abilitiesImages/Guard Dog.png",
 				"stats": {
 					"REdamage": -0.15
 				}
@@ -1560,7 +1560,7 @@ window.classInfo = {
 			"Support Dog": {
 				"name": "Support Dog",
 				"desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
-				"image": "https://i.imgur.com/9STXt4w.png",
+				"image": "./brotherLibrary/abilitiesImages/Support Dog.png",
 				"stats": {
 					"HP/S%": 0.02
 				}
@@ -1568,7 +1568,7 @@ window.classInfo = {
 			"Attack Dog": {
 				"name": "Attack Dog",
 				"desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
-				"image": "https://i.imgur.com/kctUuXl.png",
+				"image": "./brotherLibrary/abilitiesImages/Attack Dog.png",
 				"stats": {}
 			}
 		},
@@ -1602,28 +1602,28 @@ window.classInfo = {
 		}
 	},
 	"Hunter": {
-		"classIcon": "https://i.imgur.com/eYtHptC.png",
+		"classIcon": "./brotherLibrary/classIconImages/Hunter.png",
 		"primePerk": "DEAD TO RIGHTS",
 		"primePerkDesc": "Dealing 55 Base Ranged Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
-		"primePerkImage": "https://i.imgur.com/3NzvZxO.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Dead to Rights.png",
 		"primeStats": {},
 		"abilities": {
 			"Hunter's Mark": {
 				"name": "Hunter's Mark",
 				"desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s.",
-				"image": "https://i.imgur.com/XhxFSww.png",
+				"image": "./brotherLibrary/abilitiesImages/Hunter's Mark.png",
 				"stats": {}
 			},
 			"Hunter's Focus": {
 				"name": "Hunter's Focus",
 				"desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
-				"image": "https://i.imgur.com/mMsdIv0.png",
+				"image": "./brotherLibrary/abilitiesImages/Hunter's Focus.png",
 				"stats": {}
 			},
 			"Hunter's Shroud": {
 				"name": "Hunter's Shroud",
 				"desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken.",
-				"image": "https://i.imgur.com/sKyrI4o.png",
+				"image": "./brotherLibrary/abilitiesImages/Hunter's Shroud.png",
 				"stats": {}
 			}
 		},
@@ -1657,28 +1657,28 @@ window.classInfo = {
 		}
 	},
 	"Invader": {
-		"classIcon": "https://i.imgur.com/dTDMY2T.png",
+		"classIcon": "./brotherLibrary/classIconImages/Invader.png",
 		"primePerk": "SHADOW",
 		"primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
-		"primePerkImage": "https://i.imgur.com/lnR7rLO.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Shadow.png",
 		"primeStats": {},
 		"abilities": {
 			"Void Cloak": {
 				"name": "Void Cloak",
 				"desc": "Auto perfect dodge incoming direct damage for 60s. Each auto-evade reduces timer by 33% - 100% based on damage absorbed and spawns a Decoy for 3s.",
-				"image": "https://i.imgur.com/I2Q5sBt.png",
+				"image": "./brotherLibrary/abilitiesImages/Void Cloak.png",
 				"stats": {}
 			},
 			"Worm Hole": {
 				"name": "Worm Hole",
 				"desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location.",
-				"image": "https://i.imgur.com/WGSsTj5.png",
+				"image": "./brotherLibrary/abilitiesImages/Worm Hole.png",
 				"stats": {}
 			},
 			"Reboot": {
 				"name": "Reboot",
 				"desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
-				"image": "https://i.imgur.com/9qAcUWQ.png",
+				"image": "./brotherLibrary/abilitiesImages/Reboot.png",
 				"stats": {
 					"FlatDR": 0.1
 				}
@@ -1716,16 +1716,16 @@ window.classInfo = {
 		}
 	},
 	"Medic": {
-		"classIcon": "https://i.imgur.com/oNaYl4e.png",
+		"classIcon": "./brotherLibrary/classIconImages/Medic.png",
 		"primePerk": "REGENERATOR",
 		"primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
-		"primePerkImage": "https://i.imgur.com/7m2eEaX.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Regenerator.png",
 		"primeStats": {},
 		"abilities": {
 			"Wellspring": {
 				"name": "Wellspring",
 				"desc": "Punch the ground to create a 3m Healing Spring AOE which restores 15 HP/s and increases Blight Decay Rate. Lasts 15s.",
-				"image": "https://i.imgur.com/54CIz3f.png",
+				"image": "./brotherLibrary/abilitiesImages/Wellspring.png",
 				"stats": {
 					"HP/S+": 15
 				}
@@ -1733,7 +1733,7 @@ window.classInfo = {
 			"Healing Shield": {
 				"name": "Healing Shield",
 				"desc": "The Medic quickly expels healing energy to SHIELD all allies within 25m for 100% of their max HP for 10s. Heals 30% HP over the duration.",
-				"image": "https://i.imgur.com/DPg45oM.png",
+				"image": "./brotherLibrary/abilitiesImages/Healing Shield.png",
 				"stats": {
 					"HP/S%": 0.03,
 					"Shield": 1
@@ -1742,7 +1742,7 @@ window.classInfo = {
 			"Redemption": {
 				"name": "Redemption",
 				"desc": "The Medic unleashes a 30m shockwave that revives downed allies and restores 75% max HP over 10s. Every additional 1s increases the heal by 75%(3% max).",
-				"image": "https://i.imgur.com/rOZRmAT.png",
+				"image": "./brotherLibrary/abilitiesImages/Redemption.png",
 				"stats": {
 					"HP/S%": 0.37
 				}
@@ -1782,28 +1782,28 @@ window.classInfo = {
 		}
 	},
 	"Ritualist": {
-		"classIcon": "https://i.imgur.com/kNPGSac.png",
+		"classIcon": "./brotherLibrary/classIconImages/Ritualist.png",
 		"primePerk": "VILE",
 		"primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
-		"primePerkImage": "https://i.imgur.com/CIV7N6m.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Vile.png",
 		"primeStats": {},
 		"abilities": {
 			"Eruption": {
 				"name": "Eruption",
 				"desc": "Creates explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
-				"image": "https://i.imgur.com/R8EtgyF.png",
+				"image": "./brotherLibrary/abilitiesImages/Eruption.png",
 				"stats": {}
 			},
 			"Miasma": {
 				"name": "Miasma",
 				"desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 3,000 base damage. Lasts 20s.",
-				"image": "https://i.imgur.com/eDxZ9tS.png",
+				"image": "./brotherLibrary/abilitiesImages/Miasma.png",
 				"stats": {}
 			},
 			"Death Wish": {
 				"name": "Death Wish",
 				"desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health reduction is minimized by Kinship.",
-				"image": "https://i.imgur.com/pQJvLnK.png",
+				"image": "./brotherLibrary/abilitiesImages/Death Wish.png",
 				"stats": {}
 			}
 		},
@@ -1839,28 +1839,28 @@ window.classInfo = {
 		}
 	},
 	"Summoner": {
-		"classIcon": "https://i.imgur.com/9JmNOaV.png",
+		"classIcon": "./brotherLibrary/classIconImages/Summoner.png",
 		"primePerk": "RUTHLESS",
 		"primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed.",
-		"primePerkImage": "https://i.imgur.com/qoTK4rj.png",
+		"primePerkImage": "./brotherLibrary/primePerkImages/Ruthless.png",
 		"primeStats": {},
 		"abilities": {
 			"Minion: Hollow": {
 				"name": "Minion: Hollow",
 				"desc": "Summons a Root Hollow minion to fight by your side. Costs 15% of max HP to summon, but will not kill Summoner. Max (2).",
-				"image": "https://i.imgur.com/pBk7zxN.png",
+				"image": "./brotherLibrary/abilitiesImages/Minion_ Hollow.png",
 				"stats": {}
 			},
 			"Minion: Flyer": {
 				"name": "Minion: Flyer",
 				"desc": "Summons a Root Flyer minion to fight by your side. Costs 10% of max HP to summon, but will not kill Summoner. Max (2).",
-				"image": "https://i.imgur.com/riPDVj0.png",
+				"image": "./brotherLibrary/abilitiesImages/Minion_ Flyer.png",
 				"stats": {}
 			},
 			"Minion: Reaver": {
 				"name": "Minion: Reaver",
 				"desc": "Summons a Root Reaver minion to fight by your side. Costs 35% of max HP to summon, but will not kill Summoner. Max (1).",
-				"image": "https://i.imgur.com/3luNpYE.png",
+				"image": "./brotherLibrary/abilitiesImages/Minion_ Reaver.png",
 				"stats": {}
 			}
 		},
@@ -1911,7 +1911,7 @@ window.amulets = {
 	"Abrasive Whetstone": {
 		"name": "Abrasive Whetstone",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/BGhiSG7.png",
+		"image": "./brotherLibrary/amuletsImages/Abrasive Whetstone.png",
 		"desc": "When attacking a BLEEDING enemy, Crit Chance is increased by 15% and Crit Damage is increased by 30%.",
 		"custom": null,
 		"stats": {}
@@ -1919,7 +1919,7 @@ window.amulets = {
 	"Ankh of Power": {
 		"name": "Ankh of Power",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/WkrGH56.png",
+		"image": "./brotherLibrary/amuletsImages/Ankh of Power.png",
 		"desc": "Grants a 15% increase to all damage. Consuming a Relic doubles the bonus for 15s.",
 		"custom": null,
 		"stats": {}
@@ -1927,7 +1927,7 @@ window.amulets = {
 	"Birthright of the Lost": {
 		"name": "Birthright of the Lost",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/VPIbeEn.png",
+		"image": "./brotherLibrary/amuletsImages/Birthright of the Lost.png",
 		"desc": "On perfect dodge, apply EXPOSED on the attacker for 10s. EXPOSED: Target receives up to 24% additional damage from all sources. Expose amount is reduced for each human ally alive.",
 		"custom": null,
 		"stats": {}
@@ -1936,7 +1936,7 @@ window.amulets = {
 		"custom": "brewMasters",
 		"name": "Brewmaster's Cork",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/6ThjInO.png",
+		"image": "./brotherLibrary/amuletsImages/Brewmaster's Cork.png",
 		"desc": "Increases active Concoction limit by 2. Grants 2% flat DR per active concoction.",
 		"stats": {
 			"ConcLimit": 2
@@ -1946,7 +1946,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Broken Pocket Watch",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/pezml7V.png",
+		"image": "./brotherLibrary/amuletsImages/Broken Pocket Watch.png",
 		"desc": "Increases Stamina Regen by 25 and reduces Stamina cost by 50%",
 		"stats": {
 			"Stamina/S+": 25,
@@ -1956,7 +1956,7 @@ window.amulets = {
 	"Butcher's Fetish": {
 		"name": "Butcher's Fetish",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/z2BiNlI.png",
+		"image": "./brotherLibrary/amuletsImages/Butcher's Fetish.png",
 		"desc": "Increases Critical Chance by 15% and Critical Damage by 25% for 15s after striking enemy with a Charged Melee Attack.",
 		"custom": null,
 		"stats": {}
@@ -1964,7 +1964,7 @@ window.amulets = {
 	"Chains of Amplification": {
 		"name": "Chains of Amplification",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/1g026l1.png",
+		"image": "./brotherLibrary/amuletsImages/Chains of Amplification.png",
 		"desc": "Increases all damage dealt to targets suffering from a Status Effect by 20%.",
 		"custom": null,
 		"stats": {}
@@ -1972,7 +1972,7 @@ window.amulets = {
 	"Cleansing Stone": {
 		"name": "Cleansing Stone",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/nUx4aqq.png",
+		"image": "./brotherLibrary/amuletsImages/Cleansing Stone.png",
 		"desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 25% of wearers Max Health to all allies within 20m when cleansed.",
 		"custom": null,
 		"stats": {}
@@ -1980,7 +1980,7 @@ window.amulets = {
 	"Core Booster": {
 		"name": "Core Booster",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/JhQqxss.png",
+		"image": "./brotherLibrary/amuletsImages/Core Booster.png",
 		"desc": "Increases weakspot damage by 50% for 10s after killing an enemy.",
 		"custom": null,
 		"stats": {}
@@ -1989,7 +1989,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Cost of Betrayal",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/DVLQa4r.png",
+		"image": "./brotherLibrary/amuletsImages/Cost of Betrayal.png",
 		"desc": "Reduces Max Relic Charges to 1. Increases All Damage by 20% when wearer has 1 Relic Charge. Increases incoming damage by 20% when wearer has no Relic Charges and after 30s, regain 1 Relic Charge.",
 		"stats": {
 			"FlatDR": -0.2
@@ -1999,7 +1999,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Daredevil Charm",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/xYeiUHJ.png",
+		"image": "./brotherLibrary/amuletsImages/Daredevil Charm.png",
 		"desc": "Gain 7.5% to all damage dealt, 3% Movement Speed, and 5% all damage taken for each piece of unequipped armor.",
 		"stats": {
 			"FlatDR": -0.2
@@ -2008,7 +2008,7 @@ window.amulets = {
 	"Death's Embrace": {
 		"name": "Death's Embrace",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/3SCAws6.png",
+		"image": "./brotherLibrary/amuletsImages/Death's Embrace.png",
 		"desc": "Gain 20% to all damage when Health is below 100%. Gain HASTE when below 50% Health.",
 		"custom": null,
 		"stats": {}
@@ -2016,7 +2016,7 @@ window.amulets = {
 	"Death-Soaked Idol": {
 		"name": "Death-Soaked Idol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/mqnq3Nd.png",
+		"image": "./brotherLibrary/amuletsImages/Death-Soaked Idol.png",
 		"desc": "Increases All Damage by 5% for each entity within 20m suffering from a unique Negative Status Effect. Max 5 stacks.",
 		"custom": null,
 		"stats": {}
@@ -2025,7 +2025,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Decayed Margin",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/OczSOml.png",
+		"image": "./brotherLibrary/amuletsImages/Decayed Margin.png",
 		"desc": "Melee hits gain 1.5% base damage dealt as Lifesteal. For each 25% missing Health, gain 1.5% additional Melee Lifesteal. When Health is full, gain 25% Melee Damage.",
 		"stats": {
 			"MLifesteal": 0.06
@@ -2034,7 +2034,7 @@ window.amulets = {
 	"Detonation Trigger": {
 		"name": "Detonation Trigger",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/C2ou1K9.png",
+		"image": "./brotherLibrary/amuletsImages/Detonation Trigger.png",
 		"desc": "Increases Explosion damage by 25%. Explosions apply 405 BURNING damage over 5s.",
 		"custom": null,
 		"stats": {}
@@ -2043,7 +2043,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Difference Engine",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/7jO1Jja.png",
+		"image": "./brotherLibrary/amuletsImages/Difference Engine.png",
 		"desc": "While a Shield is active, gain 20% damage and 1.5% of base dealt as Lifesteal.",
 		"stats": {
 			"Lifesteal": 0.015
@@ -2052,7 +2052,7 @@ window.amulets = {
 	"Downward Spiral": {
 		"name": "Downward Spiral",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/1tpuPCv.png",
+		"image": "./brotherLibrary/amuletsImages/Downward Spiral.png",
 		"desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
 		"custom": null,
 		"stats": {}
@@ -2061,7 +2061,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Effigy Pendant",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/bOMsSOR.png",
+		"image": "./brotherLibrary/amuletsImages/Effigy Pendant.png",
 		"desc": "While Grey Health is present, gain 15% to all damage dealt, 10% damage reduction and 1 additional hit before Grey Health is removed.",
 		"stats": {
 			"FlatDR": 0.1
@@ -2070,7 +2070,7 @@ window.amulets = {
 	"Effluvium Enhancer": {
 		"name": "Effluvium Enhancer",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/a8XzCSa.png",
+		"image": "./brotherLibrary/amuletsImages/Effluvium Enhancer.png",
 		"desc": "Increases ACID damage by 20% and CORROSIVE damage by 50%.",
 		"custom": null,
 		"stats": {}
@@ -2078,7 +2078,7 @@ window.amulets = {
 	"Emergency Switch": {
 		"name": "Emergency Switch",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/KiNCWOQ.png",
+		"image": "./brotherLibrary/amuletsImages/Emergency Switch.png",
 		"desc": "When below 50% health, chance to consume Relic on use is reduced by 35%. Final Relic Charge is not consumed on use, but effect cannot be triggered again for 60s.",
 		"custom": null,
 		"stats": {}
@@ -2086,7 +2086,7 @@ window.amulets = {
 	"Energized Neck Coil": {
 		"name": "Energized Neck Coil",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/D8np6HK.png",
+		"image": "./brotherLibrary/amuletsImages/Energized Neck Coil.png",
 		"desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage. Each target can be affected once every 5 seconds.",
 		"custom": null,
 		"stats": {}
@@ -2094,7 +2094,7 @@ window.amulets = {
 	"Energy Diverter": {
 		"name": "Energy Diverter",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/kyW5Mc4.png",
+		"image": "./brotherLibrary/amuletsImages/Energy Diverter.png",
 		"desc": "While a SHIELD is active, gain 10 Critical Chance and 15% to all damage dealt.",
 		"custom": null,
 		"stats": {}
@@ -2102,7 +2102,7 @@ window.amulets = {
 	"Escalation Protocol": {
 		"name": "Escalation Protocol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/3FBd6mQ.png",
+		"image": "./brotherLibrary/amuletsImages/Escalation Protocol.png",
 		"desc": "Increases all damage dealt by 2.5% for 10s after killing an enemy. Stacks 10x. Dealing damage refreshes the timer.",
 		"custom": null,
 		"stats": {}
@@ -2111,7 +2111,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Full Moon Circlet",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/BqFIFjB.png",
+		"image": "./brotherLibrary/amuletsImages/Full Moon Circlet.png",
 		"desc": "Ranged damage Lifesteals 3% of base damage dealt. At full health, damage is increased by 20%.",
 		"stats": {
 			"RLifesteal": 0.03
@@ -2120,7 +2120,7 @@ window.amulets = {
 	"Gift of Euphoria": {
 		"name": "Gift of Euphoria",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/af9ocpB.png",
+		"image": "./brotherLibrary/amuletsImages/Gift of Euphoria.png",
 		"desc": "Spending 25 Stamina grants 5% Critical Chance for 7s. Max 5 stacks.",
 		"custom": null,
 		"stats": {}
@@ -2128,7 +2128,7 @@ window.amulets = {
 	"Gift of Melancholy": {
 		"name": "Gift of Melancholy",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/pmhZbAP.png",
+		"image": "./brotherLibrary/amuletsImages/Gift of Melancholy.png",
 		"desc": "Increases All Damage dealt by 25% when Stamina is at 100% for 7s.",
 		"custom": null,
 		"stats": {}
@@ -2136,7 +2136,7 @@ window.amulets = {
 	"Gift of the Unbound": {
 		"name": "Gift of the Unbound",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/djQ080C.png",
+		"image": "./brotherLibrary/amuletsImages/Gift of the Unbound.png",
 		"desc": "Disables negative effects of Burden Rings. Restricts Maximum Health gained by 20% per effect disabled.",
 		"custom": null,
 		"stats": {}
@@ -2144,7 +2144,7 @@ window.amulets = {
 	"Golden Ribbon": {
 		"name": "Golden Ribbon",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/mkQ1Wdu.png",
+		"image": "./brotherLibrary/amuletsImages/Golden Ribbon.png",
 		"desc": "Increases Mod damage by 25%. Activating a MOD grants HASTE for 15s.",
 		"custom": null,
 		"stats": {}
@@ -2152,7 +2152,7 @@ window.amulets = {
 	"Gunfire Security Lanyard": {
 		"name": "Gunfire Security Lanyard",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/SJvpfrq.png",
+		"image": "./brotherLibrary/amuletsImages/Gunfire Security Lanyard.png",
 		"desc": "Automatically reloads Magazine over time. Does not work for single shot weapons.",
 		"custom": null,
 		"stats": {}
@@ -2160,7 +2160,7 @@ window.amulets = {
 	"Gunslinger's Charm": {
 		"name": "Gunslinger's Charm",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/aArKNFe.png",
+		"image": "./brotherLibrary/amuletsImages/Gunslinger's Charm.png",
 		"desc": "Increases Fire Rate by 15% and Reload Speed by 20%.",
 		"custom": null,
 		"stats": {}
@@ -2168,7 +2168,7 @@ window.amulets = {
 	"Hallowed Egg": {
 		"name": "Hallowed Egg",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/ejNQT1u.png",
+		"image": "./brotherLibrary/amuletsImages/Hallowed Egg.png",
 		"desc": "Spending at least 30% of Firearms magazine to deal damage increases Melee damage by 10% for 7s. Stacks 5x.",
 		"custom": null,
 		"stats": {}
@@ -2176,7 +2176,7 @@ window.amulets = {
 	"Hyperconductor": {
 		"name": "Hyperconductor",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/05B1ZWv.png",
+		"image": "./brotherLibrary/amuletsImages/Hyperconductor.png",
 		"desc": "Gain double Skill Charges. Increases Skill Cooldowns by 50% and reduces Max Power Generation by 15%.\nFor Heavy Weapons, doubles Heavy Weapon Ammo instead.",
 		"custom": null,
 		"stats": {}
@@ -2184,7 +2184,7 @@ window.amulets = {
 	"Index of the Scribe": {
 		"name": "Index of the Scribe",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/zSYA3EZ.png",
+		"image": "./brotherLibrary/amuletsImages/Index of the Scribe.png",
 		"desc": "Increases Mod and Skill Weakspot Damage by 35%",
 		"custom": null,
 		"stats": {}
@@ -2193,7 +2193,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Indignant Fetish",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/IPIEGF1.png",
+		"image": "./brotherLibrary/amuletsImages/Indignant Fetish.png",
 		"desc": "Taking damage from enemies increases all damage dealt by 25% and reduces all incoming damage by 10%. Lasts 20s.",
 		"stats": {
 			"FlatDR": 0.1
@@ -2202,7 +2202,7 @@ window.amulets = {
 	"Inert Overcharger": {
 		"name": "Inert Overcharger",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/AsO6Lqk.png",
+		"image": "./brotherLibrary/amuletsImages/Inert Overcharger.png",
 		"desc": "Standing still increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
 		"custom": null,
 		"stats": {}
@@ -2210,7 +2210,7 @@ window.amulets = {
 	"Insulation Driver": {
 		"name": "Insulation Driver",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/hVWNy7n.png",
+		"image": "./brotherLibrary/amuletsImages/Insulation Driver.png",
 		"desc": "While BULWARK is active, gain 15% to all damage dealt and HASTE.",
 		"custom": null,
 		"stats": {}
@@ -2218,7 +2218,7 @@ window.amulets = {
 	"Jester's Bell": {
 		"name": "Jester's Bell",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/snemrNx.png",
+		"image": "./brotherLibrary/amuletsImages/Jester's Bell.png",
 		"desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 20% for 15s.",
 		"custom": null,
 		"stats": {}
@@ -2226,7 +2226,7 @@ window.amulets = {
 	"Kinetic Shield Exchanger": {
 		"name": "Kinetic Shield Exchanger",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/aOeSDgV.png",
+		"image": "./brotherLibrary/amuletsImages/Kinetic Shield Exchanger.png",
 		"desc": "While a SHIELD is active, gain 25% Mod damage and generate 15% additional Mod power.",
 		"custom": null,
 		"stats": {}
@@ -2235,7 +2235,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Kuri Kuri Charm",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/TAqxcep.png",
+		"image": "./brotherLibrary/amuletsImages/Kuri Kuri Charm.png",
 		"desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge.",
 		"stats": {
 			"RelicSpeed": -0.5
@@ -2244,7 +2244,7 @@ window.amulets = {
 	"Laemir Censer": {
 		"name": "Laemir Censer",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/2Su74Nr.png",
+		"image": "./brotherLibrary/amuletsImages/Laemir Censer.png",
 		"desc": "Increases Mod Duration by 50%. Increases Mod Cost by 15%.",
 		"custom": null,
 		"stats": {}
@@ -2252,7 +2252,7 @@ window.amulets = {
 	"Legacy Protocol": {
 		"name": "Legacy Protocol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/e7SZ2wA.png",
+		"image": "./brotherLibrary/amuletsImages/Legacy Protocol.png",
 		"desc": "Lowers skill cooldown by 20% and increased skill duration by 15%",
 		"custom": null,
 		"stats": {}
@@ -2261,7 +2261,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Leto's Amulet",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/LgUJb0q.png",
+		"image": "./brotherLibrary/amuletsImages/Leto's Amulet.png",
 		"desc": "Reduces Encumbrance by 40% and Stamina Cost by 30%.",
 		"stats": {
 			"StaminaCost": -0.3,
@@ -2272,7 +2272,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Matriarch's Insignia",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/dXxuPsN.png",
+		"image": "./brotherLibrary/amuletsImages/Matriarch's Insignia.png",
 		"desc": "Increases Melee Damage by 35% and causes all successful Melee Attacks to restore 10 Stamina.",
 		"stats": {
 			"Stamina/S+": 10
@@ -2282,7 +2282,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Navigator's Pendant",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/MNg2vz5.png",
+		"image": "./brotherLibrary/amuletsImages/Navigator's Pendant.png",
 		"desc": "Grants 25 Health, 25 Stamina, and -10 Armor Encumbrance.",
 		"stats": {
 			"Health": 25,
@@ -2293,7 +2293,7 @@ window.amulets = {
 	"Neckbone Necklace": {
 		"name": "Neckbone Necklace",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/73gZf2p.png",
+		"image": "./brotherLibrary/amuletsImages/Neckbone Necklace.png",
 		"desc": "Reduces the Damage of Status Effects applied to wearer by 50%. Gain 25% increased Damage when suffering from a Status Effect or Blight.",
 		"custom": null,
 		"stats": {}
@@ -2301,7 +2301,7 @@ window.amulets = {
 	"Necklace of Flowing Life": {
 		"name": "Necklace of Flowing Life",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/zUQur45.png",
+		"image": "./brotherLibrary/amuletsImages/Necklace of Flowing Life.png",
 		"desc": "Increases Grey Health conversion by an additional 100%. When Grey Health Conversion triggers, gain 5x the amount as Mod Power.",
 		"custom": null,
 		"stats": {}
@@ -2309,7 +2309,7 @@ window.amulets = {
 	"Necklace of Supremacy": {
 		"name": "Necklace of Supremacy",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/hjpAbVO.png",
+		"image": "./brotherLibrary/amuletsImages/Necklace of Supremacy.png",
 		"desc": "After 7s of not being damaged, increases all damage dealt by 15%. Increases to 25% if Health is full.",
 		"custom": null,
 		"stats": {}
@@ -2318,7 +2318,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Nightmare Spiral",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/6AfY7ml.png",
+		"image": "./brotherLibrary/amuletsImages/Nightmare Spiral.png",
 		"desc": "Gain 10% of base Ranged damage dealt as Lifesteal. Reduces Healing Effectiveness by 95%.",
 		"stats": {
 			"HealingEFF": -0.95,
@@ -2328,7 +2328,7 @@ window.amulets = {
 	"Nightweaver's Grudge": {
 		"name": "Nightweaver's Grudge",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/olPhK3n.png",
+		"image": "./brotherLibrary/amuletsImages/Nightweaver's Grudge.png",
 		"desc": "Gain 20% Critical Chance and HASTE when within 15m of an entity suffering from a Status Effect.",
 		"custom": null,
 		"stats": {}
@@ -2337,7 +2337,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Nimue's Ribbon",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/AnlCvZc.png",
+		"image": "./brotherLibrary/amuletsImages/Nimue's Ribbon.png",
 		"desc": "Increase Relic Healing Effectiveness by 50% Activating a Relic grants HASTE for 25s.",
 		"stats": {
 			"RelicEFF": 0.5
@@ -2346,7 +2346,7 @@ window.amulets = {
 	"One True King Sigil": {
 		"name": "One True King Sigil",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/tmuZR6e.png",
+		"image": "./brotherLibrary/amuletsImages/One True King Sigil.png",
 		"desc": "Increases Mod damage by 20%. Enhances the effect of Faerin's Sigil and Faelin's Sigil by 50% per Sigil equipped.",
 		"custom": null,
 		"stats": {}
@@ -2354,7 +2354,7 @@ window.amulets = {
 	"One-Eyed Joker Idol": {
 		"name": "One-Eyed Joker Idol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/qkK6Zfa.png",
+		"image": "./brotherLibrary/amuletsImages/One-Eyed Joker Idol.png",
 		"desc": "Neutral Backdash creates a Magic Card lasting 1s. If Card absorbs enemy damage gain 25% Critical Chance for 5s. Neutral Backdash cost 30% additional Stamina.",
 		"custom": null,
 		"stats": {}
@@ -2362,7 +2362,7 @@ window.amulets = {
 	"Onyx Pendulum": {
 		"name": "Onyx Pendulum",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/9id6NdN.png",
+		"image": "./brotherLibrary/amuletsImages/Onyx Pendulum.png",
 		"desc": "Firearm damage adds stacks which increase the damage of stowed firearm by 2.5% for 15s. Stacks 10x.",
 		"custom": null,
 		"stats": {}
@@ -2371,7 +2371,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Participation Medal",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/A71iDWl.png",
+		"image": "./brotherLibrary/amuletsImages/Participation Medal.png",
 		"desc": "Increase Health by 10, Stamina by 10, Movement Speed by 10%, and Damage Reduction by 10%.",
 		"stats": {
 			"Health": 10,
@@ -2382,7 +2382,7 @@ window.amulets = {
 	"Range Finder": {
 		"name": "Range Finder",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/vVzcvUT.png",
+		"image": "./brotherLibrary/amuletsImages/Range Finder.png",
 		"desc": "After killing an enemy, gain 10% Ranged damage and 2m Firearm Range. Stacks 3x Lasts 10s. ranged Weakspot Hits will refresh duration.",
 		"custom": null,
 		"stats": {}
@@ -2390,7 +2390,7 @@ window.amulets = {
 	"Ravager's Mark": {
 		"name": "Ravager's Mark",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/S9vukN0.png",
+		"image": "./brotherLibrary/amuletsImages/Ravager's Mark.png",
 		"desc": "Increases all damage dealt to BLEEDING targets by 20%. Bonus increases to 30% for targets with 50% or lower Health.",
 		"custom": null,
 		"stats": {}
@@ -2399,7 +2399,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Red Doe Sigil",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/ZETFv52.png",
+		"image": "./brotherLibrary/amuletsImages/Red Doe Sigil.png",
 		"desc": "Increases Relic Healing Effectiveness by 30% which doubles when the wearer's Health is below 50%.",
 		"stats": {
 			"RelicEFF": 0.3
@@ -2409,7 +2409,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Rusted Navigator's Pendant",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/B2H2Xrb.png",
+		"image": "./brotherLibrary/amuletsImages/Rusted Navigator's Pendant.png",
 		"desc": "Grants 20 Health, 20 Stamina, and -15 Armor Encumbrance.",
 		"stats": {
 			"Health": 20,
@@ -2420,7 +2420,7 @@ window.amulets = {
 	"Samoflange": {
 		"name": "Samoflange",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/K6r1t6G.png",
+		"image": "./brotherLibrary/amuletsImages/Samoflange.png",
 		"desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 60%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
 		"custom": null,
 		"stats": {}
@@ -2428,7 +2428,7 @@ window.amulets = {
 	"Scavenger's Bauble": {
 		"name": "Scavenger's Bauble",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/KKblm64.png",
+		"image": "./brotherLibrary/amuletsImages/Scavenger's Bauble.png",
 		"desc": "Increases Scrap pickups by 50%, Automatically pick up any nearby crafting materials.",
 		"custom": null,
 		"stats": {}
@@ -2436,15 +2436,15 @@ window.amulets = {
 	"Shaed Bloom Crystal": {
 		"name": "Shaed Bloom Crystal",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/CDYAYVM.png",
+		"image": "./brotherLibrary/amuletsImages/Shaed Bloom Crystal.png",
 		"desc": "Gain a 30% damage bonus. Every 5s, the bonus switches between Physical and Elemental damage.",
 		"custom": null,
 		"stats": {}
 	},
-	"Shock Devide": {
-		"name": "Shock Devide",
+	"Shock Device": {
+		"name": "Shock Device",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/Idx09iv.png",
+		"image": "./brotherLibrary/amuletsImages/Shock Device.png",
 		"desc": "Increases SHOCK damage by 20% and OVERLOADED damage by 50%.",
 		"custom": null,
 		"stats": {}
@@ -2452,7 +2452,7 @@ window.amulets = {
 	"Silver Ribbon": {
 		"name": "Silver Ribbon",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/9HjFOzc.png",
+		"image": "./brotherLibrary/amuletsImages/Silver Ribbon.png",
 		"desc": "Increases Skill damage by 25%.\nActivating a SKILL grants HASTE for 15s.",
 		"custom": null,
 		"stats": {}
@@ -2460,7 +2460,7 @@ window.amulets = {
 	"Sinister Totem": {
 		"name": "Sinister Totem",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/Fi6Mm8z.png",
+		"image": "./brotherLibrary/amuletsImages/Sinister Totem.png",
 		"desc": "Applying or refreshing a Negative Status Effect to an enemy increases Status Damage by 1% for 15s. Max 50 stacks.",
 		"custom": null,
 		"stats": {}
@@ -2468,7 +2468,7 @@ window.amulets = {
 	"Soul Anchor": {
 		"name": "Soul Anchor",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/UZz8npM.png",
+		"image": "./brotherLibrary/amuletsImages/Soul Anchor.png",
 		"desc": "Summoning increases all damage dealt by 20% for 30s.",
 		"custom": null,
 		"stats": {}
@@ -2476,7 +2476,7 @@ window.amulets = {
 	"Spirit Wisp Amulet": {
 		"name": "Spirit Wisp Amulet",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/SVSTOGi.png",
+		"image": "./brotherLibrary/amuletsImages/Spirit Wisp Amulet.png",
 		"desc": "Activating a Mod reduces current Skill Cooldowns by 3% for every 300 Mod Power spent.",
 		"custom": null,
 		"stats": {}
@@ -2484,7 +2484,7 @@ window.amulets = {
 	"Stalker's Brand": {
 		"name": "Stalker's Brand",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/7ixzuFA.png",
+		"image": "./brotherLibrary/amuletsImages/Stalker's Brand.png",
 		"desc": "Gain 10% Ranged and 15% Melee damage. Bonus double versus enemies not targeting wearer.",
 		"custom": null,
 		"stats": {}
@@ -2492,7 +2492,7 @@ window.amulets = {
 	"Talisman of the Sun": {
 		"name": "Talisman of the Sun",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/2flZAsF.png",
+		"image": "./brotherLibrary/amuletsImages/Talisman of the Sun.png",
 		"desc": "Increases FIRE damage by 20% and BURNING damage by 50%.",
 		"custom": null,
 		"stats": {}
@@ -2500,7 +2500,7 @@ window.amulets = {
 	"Toxic Release Valve": {
 		"name": "Toxic Release Valve",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/7Q99SlN.png",
+		"image": "./brotherLibrary/amuletsImages/Toxic Release Valve.png",
 		"desc": "Swapping Firearms releases a Toxic Cloud, which deals 148.5 ACID Damage to all enemies within 7m. and applies CORROSION. \nCan only happen once every 3s.",
 		"custom": null,
 		"stats": {}
@@ -2509,17 +2509,17 @@ window.amulets = {
 		"custom": null,
 		"name": "Twisted Idol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/xfS6EZM.png",
+		"image": "./brotherLibrary/amuletsImages/Twisted Idol.png",
 		"desc": "Increases Armor Effectiveness by 30% and reduces Encumbrance by 15.",
 		"stats": {
 			"Armor%": 0.35,
 			"Encumbrance": -15
 		}
 	},
-	"Vengance Idol": {
-		"name": "Vengance Idol",
+	"Vengeance Idol": {
+		"name": "Vengeance Idol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/eUupOV1.png",
+		"image": "./brotherLibrary/amuletsImages/Vengeance Idol.png",
 		"desc": "Increases all damage dealt by 30% when the wearer's Health is below 50%.",
 		"custom": null,
 		"stats": {}
@@ -2527,7 +2527,7 @@ window.amulets = {
 	"Void Idol": {
 		"name": "Void Idol",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/k2JFzAb.png",
+		"image": "./brotherLibrary/amuletsImages/Void Idol.png",
 		"desc": "Increases Reload Speed by 20%. Reloads only require 50% of magazine from reserves to fully reload.",
 		"custom": null,
 		"stats": {}
@@ -2535,7 +2535,7 @@ window.amulets = {
 	"Weightless Weight": {
 		"name": "Weightless Weight",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/u3DCJPN.png",
+		"image": "./brotherLibrary/amuletsImages/Weightless Weight.png",
 		"desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75% for each 5 point of Armor Encumbrance.",
 		"custom": null,
 		"stats": {}
@@ -2544,7 +2544,7 @@ window.amulets = {
 		"custom": null,
 		"name": "Whispering Marble",
 		"slot": "Amulet",
-		"image": "https://i.imgur.com/fFlOKNC.png",
+		"image": "./brotherLibrary/amuletsImages/Whispering Marble.png",
 		"desc": "Grants 3 stacks of BULWARK. Increases All Damage by 3% per stack of BULWARK.",
 		"stats": {
 			"Bulwark": 3
@@ -2563,7 +2563,7 @@ window.rings = {
 	"A'taerii Booster": {
 		"name": "A'taerii Booster",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/axWgmdF.png",
+		"image": "./brotherLibrary/ringsImages/A'taerii Booster.png",
 		"desc": "While carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance.",
 		"custom": null,
 		"stats": {}
@@ -2572,7 +2572,7 @@ window.rings = {
 		"custom": null,
 		"name": "Acid Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/1OjHB3w.png",
+		"image": "./brotherLibrary/ringsImages/Acid Stone.png",
 		"desc": "Increases ACID damage by 10% and ACID Resistance by 15%.",
 		"stats": {
 			"Corrosive": 15
@@ -2581,7 +2581,7 @@ window.rings = {
 	"Ahanae Crystal": {
 		"name": "Ahanae Crystal",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/1h8JP0P.png",
+		"image": "./brotherLibrary/ringsImages/Ahanae Crystal.png",
 		"desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
 		"custom": null,
 		"stats": {}
@@ -2589,7 +2589,7 @@ window.rings = {
 	"Akari War Band": {
 		"name": "Akari War Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/SSCTs8m.png",
+		"image": "./brotherLibrary/ringsImages/Akari War Band.png",
 		"desc": "Perfect Dodges increase Critical Chance by 15% and Critical Damage by 15% for 15s.",
 		"custom": null,
 		"stats": {}
@@ -2598,7 +2598,7 @@ window.rings = {
 		"custom": null,
 		"name": "Alchemy Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/WCc31LC.png",
+		"image": "./brotherLibrary/ringsImages/Alchemy Stone.png",
 		"desc": "Increases base Lifesteal by 6% while suffering from a negative STATUS or BLIGHT Effect.",
 		"stats": {
 			"Lifesteal": 0.06
@@ -2607,7 +2607,7 @@ window.rings = {
 	"Alumni Ring": {
 		"name": "Alumni Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/98DHKR8.png",
+		"image": "./brotherLibrary/ringsImages/Alumni Ring.png",
 		"desc": "Increases all Elemental damage dealt by 10%.",
 		"custom": null,
 		"stats": {}
@@ -2616,7 +2616,7 @@ window.rings = {
 		"custom": null,
 		"name": "Amber Moonstone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/yDme9m6.png",
+		"image": "./brotherLibrary/ringsImages/Amber Moonstone.png",
 		"desc": "When the wearer's Health drops below 35%, all incoming damage is reduced by 25% and wearer becomes immune to Temporary Status Effects.",
 		"stats": {
 			"FlatDR": 0.25
@@ -2625,7 +2625,7 @@ window.rings = {
 	"Anastasija's Inspiration": {
 		"name": "Anastasija's Inspiration",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/pEyCJCz.png",
+		"image": "./brotherLibrary/ringsImages/Anastasija's Inspiration.png",
 		"desc": "When receiving healing effects, gain HASTE for 10s.",
 		"custom": null,
 		"stats": {}
@@ -2633,15 +2633,15 @@ window.rings = {
 	"Archer's Crest": {
 		"name": "Archer's Crest",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/hebDd2e.png",
+		"image": "./brotherLibrary/ringsImages/Archer's Crest.png",
 		"desc": "Increases Projectile Speed by 20% and Decreases Weapon Charge Time by 25%.",
 		"custom": null,
 		"stats": {}
 	},
-	"Assasin's Seal": {
-		"name": "Assasin's Seal",
+	"Assassin's Seal": {
+		"name": "Assassin's Seal",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/WCEC9mQ.png",
+		"image": "./brotherLibrary/ringsImages/Assassin's Seal.png",
 		"desc": "Reduces enemy Awareness Range by 25%. Increases all damage dealt to enemies not targeting wearer by 10%.",
 		"custom": null,
 		"stats": {}
@@ -2650,7 +2650,7 @@ window.rings = {
 		"custom": null,
 		"name": "Atonement Fold",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/JKbFfdo.png",
+		"image": "./brotherLibrary/ringsImages/Atonement Fold.png",
 		"desc": "Self-inflicts BLEEDING Status upon the wearer, causing 1.1 BLEED damage per second. Increases Critical Chance by 10%.",
 		"stats": {
 			"HealingEFF": -0.5,
@@ -2660,7 +2660,7 @@ window.rings = {
 	"Band Band": {
 		"name": "Band Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/RuML02u.png",
+		"image": "./brotherLibrary/ringsImages/Band Band.png",
 		"desc": "Increases Speed of Revive and being Revived by 35%. Increases Downed Health and Downed Movement Speed by 100%.",
 		"custom": null,
 		"stats": {}
@@ -2668,7 +2668,7 @@ window.rings = {
 	"Band of Accord": {
 		"name": "Band of Accord",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/j96UfGb.png",
+		"image": "./brotherLibrary/ringsImages/Band of Accord.png",
 		"desc": "Ammo acquired on pickup is increased by 25% per ally also wearing this ring and is shared with other allies.",
 		"custom": null,
 		"stats": {}
@@ -2676,7 +2676,7 @@ window.rings = {
 	"Band of the Fanatic": {
 		"name": "Band of the Fanatic",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/UIr8vdF.png",
+		"image": "./brotherLibrary/ringsImages/Band of the Fanatic.png",
 		"desc": "Increases Status Effect Damage by 25% and reduces Status Effect Duration by 65%.",
 		"custom": null,
 		"stats": {}
@@ -2685,7 +2685,7 @@ window.rings = {
 		"custom": null,
 		"name": "Berserker's Crest",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/rmtGIHu.png",
+		"image": "./brotherLibrary/ringsImages/Berserker's Crest.png",
 		"desc": "Increases Melee Charge Speed by 20% and reduces Melee Stamina Cost by 25%.",
 		"stats": {
 			"StaminaCost": -0.25
@@ -2695,7 +2695,7 @@ window.rings = {
 		"custom": null,
 		"name": "Bisected Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/piWaWV1.png",
+		"image": "./brotherLibrary/ringsImages/Bisected Ring.png",
 		"desc": "Gain Infinite Stamina. All damage received is increased by 15%.",
 		"stats": {
 			"FlatDR": -0.15,
@@ -2705,7 +2705,7 @@ window.rings = {
 	"Bitter Memento": {
 		"name": "Bitter Memento",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/f7efFOL.png",
+		"image": "./brotherLibrary/ringsImages/Bitter Memento.png",
 		"desc": "Sets 1% of wearer's Max Health as Grey Health",
 		"custom": null,
 		"stats": {}
@@ -2713,7 +2713,7 @@ window.rings = {
 	"Black Cat Ring": {
 		"name": "Black Cat Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/kGcb2bP.png",
+		"image": "./brotherLibrary/ringsImages/Black Cat Ring.png",
 		"desc": "When taking fatal damage, instead of dying, the wearer's Health will drop to 1, and Movement Speed will increase by 25% for 10s. 2m cooldown.",
 		"custom": null,
 		"stats": {}
@@ -2721,7 +2721,7 @@ window.rings = {
 	"Black Pawn Stamp": {
 		"name": "Black Pawn Stamp",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/dD36frl.png",
+		"image": "./brotherLibrary/ringsImages/Black Pawn Stamp.png",
 		"desc": "Reduces Cooldowns of Skills by 10%.",
 		"custom": null,
 		"stats": {}
@@ -2729,7 +2729,7 @@ window.rings = {
 	"Blackout Ring": {
 		"name": "Blackout Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/XWlUGrz.png",
+		"image": "./brotherLibrary/ringsImages/Blackout Ring.png",
 		"desc": "After dealing 20% of the Weapon's Total Magazine base damage, increases Reload Speed by 3%. Stacks 5x Cleared on Reload.",
 		"custom": null,
 		"stats": {}
@@ -2737,7 +2737,7 @@ window.rings = {
 	"Blasting Cap Ring": {
 		"name": "Blasting Cap Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/H4SsDyP.png",
+		"image": "./brotherLibrary/ringsImages/Blasting Cap Ring.png",
 		"desc": "Increases Explosive damage by 10%.",
 		"custom": null,
 		"stats": {}
@@ -2746,7 +2746,7 @@ window.rings = {
 		"custom": null,
 		"name": "Blessed Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/uox5REc.png",
+		"image": "./brotherLibrary/ringsImages/Blessed Ring.png",
 		"desc": "After receiving a benefit from a Relic, gain 2 Stacks of BULWARK for 30s.",
 		"stats": {
 			"Bulwark": 2
@@ -2755,7 +2755,7 @@ window.rings = {
 	"Blood Jewel": {
 		"name": "Blood Jewel",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/pQnGgzm.png",
+		"image": "./brotherLibrary/ringsImages/Blood Jewel.png",
 		"desc": "Charged Melee Attacks apply BLEEDING, dealing 460 BLEED damage over 20s.",
 		"custom": null,
 		"stats": {}
@@ -2764,7 +2764,7 @@ window.rings = {
 		"custom": null,
 		"name": "Blood Tinged Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/FwQSexk.png",
+		"image": "./brotherLibrary/ringsImages/Blood Tinged Ring.png",
 		"desc": "Gain 2 Health Regeneration per second when within 10m of a BLEEDING entity.",
 		"stats": {
 			"HP/S+": 1
@@ -2774,7 +2774,7 @@ window.rings = {
 		"custom": null,
 		"name": "Booster Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/MdwGBHS.png",
+		"image": "./brotherLibrary/ringsImages/Booster Ring.png",
 		"desc": "Increases all Status Resistances by 25.",
 		"stats": {
 			"Bleed": 25,
@@ -2787,7 +2787,7 @@ window.rings = {
 	"Braided Thorns": {
 		"name": "Braided Thorns",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/uYQJTbt.png",
+		"image": "./brotherLibrary/ringsImages/Braided Thorns.png",
 		"desc": "After killing an enemy, gain 15% increased Critical Chance for 10s.",
 		"custom": null,
 		"stats": {}
@@ -2795,7 +2795,7 @@ window.rings = {
 	"Brawler's Pride": {
 		"name": "Brawler's Pride",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/CxHl9LF.png",
+		"image": "./brotherLibrary/ringsImages/Brawler's Pride.png",
 		"desc": "Increases Melee Attack Speed by 15%.",
 		"custom": null,
 		"stats": {}
@@ -2804,7 +2804,7 @@ window.rings = {
 		"custom": null,
 		"name": "Bridge Warden's Crest",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/RilQIVY.png",
+		"image": "./brotherLibrary/ringsImages/Bridge Warden's Crest.png",
 		"desc": "Perfect Dodge increases Melee Damage by 15% for 7 seconds. Perfect Evade Flop also gains 10% Damage Reduction for the duration.",
 		"stats": {
 			"FlatDR": 0.1
@@ -2814,7 +2814,7 @@ window.rings = {
 		"custom": null,
 		"name": "Burden of the Audacious",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/C0RzzoB.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Audacious.png",
 		"desc": "Decreases all healing by 50%. Perfect Dodges heal for 20% of Max Health.",
 		"stats": {
 			"HealingEFF": -0.5
@@ -2823,7 +2823,7 @@ window.rings = {
 	"Burden of the Departed": {
 		"name": "Burden of the Departed",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/qbxgPvR.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Departed.png",
 		"desc": "Reduces Total Relic Charges by 33%. Increases all damage dealt by 10%",
 		"custom": null,
 		"stats": {}
@@ -2831,7 +2831,7 @@ window.rings = {
 	"Burden of the Destroyer": {
 		"name": "Burden of the Destroyer",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Ats9zGp.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Destroyer.png",
 		"desc": "Decreases Ideal Range of all Firearms by 25%. Increases all damage dealt by 15%.",
 		"custom": null,
 		"stats": {}
@@ -2839,7 +2839,7 @@ window.rings = {
 	"Burden of the Divine": {
 		"name": "Burden of the Divine",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/crxYVVR.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Divine.png",
 		"desc": "All damage dealt by wearer is reduced by 10%. 50% of self healing applies to allies.",
 		"custom": null,
 		"stats": {}
@@ -2847,7 +2847,7 @@ window.rings = {
 	"Burden of the Follower": {
 		"name": "Burden of the Follower",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ESnOlvZ.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Follower.png",
 		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 50%.",
 		"custom": null,
 		"stats": {}
@@ -2855,7 +2855,7 @@ window.rings = {
 	"Burden of the Gambler": {
 		"name": "Burden of the Gambler",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/wau1C2H.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Gambler.png",
 		"desc": "Disables Weakspots. Increases Critical Chance by 10% and Critical Damage by 20%.",
 		"custom": null,
 		"stats": {}
@@ -2863,7 +2863,7 @@ window.rings = {
 	"Burden of the Mariner": {
 		"name": "Burden of the Mariner",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/xL6XUkp.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Mariner.png",
 		"desc": "Increases Skill Cooldowns by 25%. Generate 10% additional Mod Power for each Skill on Cooldown.",
 		"custom": null,
 		"stats": {}
@@ -2872,7 +2872,7 @@ window.rings = {
 		"custom": null,
 		"name": "Burden of the Rebel",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/IveQE8G.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Rebel.png",
 		"desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%.",
 		"stats": {
 			"RelicSpeed": 0.25
@@ -2881,7 +2881,7 @@ window.rings = {
 	"Burden of the Sciolist": {
 		"name": "Burden of the Sciolist",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/H1uIGCc.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Sciolist.png",
 		"desc": "Reduces Ammo Reserves by 25%. Increases Mod and Skill Damage by 15%.",
 		"custom": null,
 		"stats": {}
@@ -2889,7 +2889,7 @@ window.rings = {
 	"Burden of the Stargazer": {
 		"name": "Burden of the Stargazer",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/BnxrVjO.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Stargazer.png",
 		"desc": "Reduces Skill Cooldowns by 15%. Activating a Skill costs 15% Health.",
 		"custom": null,
 		"stats": {}
@@ -2897,7 +2897,7 @@ window.rings = {
 	"Burden of the Warlock": {
 		"name": "Burden of the Warlock",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/EBbruJQ.png",
+		"image": "./brotherLibrary/ringsImages/Burden of the Warlock.png",
 		"desc": "Reduces Mod Power Requirement by 15%. Activating a Mod costs 15% Health as Grey Health. Activation cannot kill wearer.",
 		"custom": null,
 		"stats": {}
@@ -2905,7 +2905,7 @@ window.rings = {
 	"Captain's Insignia": {
 		"name": "Captain's Insignia",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/5053ADe.png",
+		"image": "./brotherLibrary/ringsImages/Captain's Insignia.png",
 		"desc": "Increases Revive Speed and Relic Consume Speed by 25% per downed or dead ally. Max 2 stacks.",
 		"custom": null,
 		"stats": {}
@@ -2913,7 +2913,7 @@ window.rings = {
 	"Cataloger's Jewel": {
 		"name": "Cataloger's Jewel",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/obwAA1Z.png",
+		"image": "./brotherLibrary/ringsImages/Cataloger's Jewel.png",
 		"desc": "Automatically generates 8 Mod Power per second.",
 		"custom": null,
 		"stats": {}
@@ -2922,7 +2922,7 @@ window.rings = {
 		"custom": null,
 		"name": "Celerity Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/np0NbwG.png",
+		"image": "./brotherLibrary/ringsImages/Celerity Stone.png",
 		"desc": "Increases Consumable and Relic Use Speed by 20%.",
 		"stats": {
 			"RelicSpeed": -0.2
@@ -2931,7 +2931,7 @@ window.rings = {
 	"Compulsion Loop": {
 		"name": "Compulsion Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/KjlvKNb.png",
+		"image": "./brotherLibrary/ringsImages/Compulsion Loop.png",
 		"desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 7s. Stacks 3x.",
 		"custom": null,
 		"stats": {}
@@ -2940,7 +2940,7 @@ window.rings = {
 		"custom": null,
 		"name": "Conservation Seal",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Ay25cdg.png",
+		"image": "./brotherLibrary/ringsImages/Conservation Seal.png",
 		"desc": "For every 10% of Health missing  (Max 50%) gain 5% chance to not consume Relic and 5% increased Relic Efficacy on next use.",
 		"stats": {
 			"RelicEFF": 0.25
@@ -2949,7 +2949,7 @@ window.rings = {
 	"Constant Variable Ring": {
 		"name": "Constant Variable Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/XbAVvXy.png",
+		"image": "./brotherLibrary/ringsImages/Constant Variable Ring.png",
 		"desc": "Increases Ranged damage up to 20% based on current Weapon's Overheat value.",
 		"custom": null,
 		"stats": {}
@@ -2957,7 +2957,7 @@ window.rings = {
 	"Crimson Dreamstone": {
 		"name": "Crimson Dreamstone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Hvdjf3E.png",
+		"image": "./brotherLibrary/ringsImages/Crimson Dreamstone.png",
 		"desc": "Crit hits increase Skill Damage 1% for 10s. Max stack 15.",
 		"custom": null,
 		"stats": {}
@@ -2966,7 +2966,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dead King's Memento",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/sqqtoCx.png",
+		"image": "./brotherLibrary/ringsImages/Dead King's Memento.png",
 		"desc": "Increases Health by 15.",
 		"stats": {
 			"Health": 15
@@ -2975,7 +2975,7 @@ window.rings = {
 	"Deceiver's Band": {
 		"name": "Deceiver's Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/gV5Jj4T.png",
+		"image": "./brotherLibrary/ringsImages/Deceiver's Band.png",
 		"desc": "After performing a Slide, gain 15% Evade Speed and 10% Movement Speed for 12s.",
 		"custom": null,
 		"stats": {}
@@ -2983,7 +2983,7 @@ window.rings = {
 	"Deep Pocket Ring": {
 		"name": "Deep Pocket Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/7BIXpps.png",
+		"image": "./brotherLibrary/ringsImages/Deep Pocket Ring.png",
 		"desc": "Increases Ammo Reserves by 25%.",
 		"custom": null,
 		"stats": {}
@@ -2992,7 +2992,7 @@ window.rings = {
 		"custom": null,
 		"name": "Defensive Action Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/XEWuX4t.png",
+		"image": "./brotherLibrary/ringsImages/Defensive Action Loop.png",
 		"desc": "While reloading, and for 3s after reload completes, incoming damage is reduced by 10%.",
 		"stats": {
 			"FlatDR": 0.1
@@ -3001,7 +3001,7 @@ window.rings = {
 	"Dense Silicon Ring": {
 		"name": "Dense Silicon Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/W7a2AAy.png",
+		"image": "./brotherLibrary/ringsImages/Dense Silicon Ring.png",
 		"desc": "Gain 200% of Health Regenerated as Mod Power.",
 		"custom": null,
 		"stats": {}
@@ -3009,7 +3009,7 @@ window.rings = {
 	"Devourer Loop": {
 		"name": "Devourer Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/eoiPiPb.png",
+		"image": "./brotherLibrary/ringsImages/Devourer Loop.png",
 		"desc": "Critical Hits have 1% chance to reset Skill Cooldowns. Can only occur once every 10s. Increases all incoming damage by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3017,7 +3017,7 @@ window.rings = {
 	"Digested Hog Lure": {
 		"name": "Digested Hog Lure",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/afvkERC.png",
+		"image": "./brotherLibrary/ringsImages/Digested Hog Lure.png",
 		"desc": "Reloading increases Mod Damage by 15% for 5s.",
 		"custom": null,
 		"stats": {}
@@ -3026,7 +3026,7 @@ window.rings = {
 		"custom": null,
 		"name": "Drakestone Pearl",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/nKjyfJW.png",
+		"image": "./brotherLibrary/ringsImages/Drakestone Pearl.png",
 		"desc": "Enables Stamina Regeneration during Melee Attacks at 20% of the normal rate.",
 		"stats": {}
 	},
@@ -3034,7 +3034,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dran Memento",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/g7aQ1mS.png",
+		"image": "./brotherLibrary/ringsImages/Dran Memento.png",
 		"desc": "Increases Max Stamina by 20 and reduces Encumbrance by 5.",
 		"stats": {
 			"Stamina": 20,
@@ -3045,7 +3045,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dran Scavenger Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/MLcD5HP.png",
+		"image": "./brotherLibrary/ringsImages/Dran Scavenger Ring.png",
 		"desc": "Collecting Scrap, Iron, and Ammo pickups regenerates 10% of Max Health and increases all damage dealt by 8% for 30s.",
 		"stats": {
 			"HP/S%": 0.005
@@ -3055,7 +3055,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dread Font",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/u9gicxw.png",
+		"image": "./brotherLibrary/ringsImages/Dread Font.png",
 		"desc": "Increases Grey Health Regeneration rate by 2 per second.",
 		"stats": {
 			"GreyHP/S+": 2
@@ -3065,7 +3065,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dried Clay Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/gIb2Zy4.png",
+		"image": "./brotherLibrary/ringsImages/Dried Clay Ring.png",
 		"desc": "Grants 1 stack of BULWARK. Increases All Damage by 60% of the total Damage Reduction granted by BULWARK stacks",
 		"stats": {
 			"Bulwark": 1
@@ -3074,7 +3074,7 @@ window.rings = {
 	"Drzyr Sniper Sigil": {
 		"name": "Drzyr Sniper Sigil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/gB8H4yg.png",
+		"image": "./brotherLibrary/ringsImages/Drzyr Sniper Sigil.png",
 		"desc": "Increases the minimum damage at Max Falloff Range from 20% to 40%.",
 		"custom": null,
 		"stats": {}
@@ -3083,7 +3083,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dull Steel Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/EA0XgdY.png",
+		"image": "./brotherLibrary/ringsImages/Dull Steel Ring.png",
 		"desc": "Reduces Dodge Weight Class by 1.",
 		"stats": {
 			"WeightThreshold": 25
@@ -3093,7 +3093,7 @@ window.rings = {
 		"custom": null,
 		"name": "Dying Ember",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/RsWl7xg.png",
+		"image": "./brotherLibrary/ringsImages/Dying Ember.png",
 		"desc": "Gain 6% of base Melee damage dealt as Lifesteal.",
 		"stats": {
 			"MLifesteal": 0.06
@@ -3103,7 +3103,7 @@ window.rings = {
 		"custom": null,
 		"name": "Elevated Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/QYx9EXM.png",
+		"image": "./brotherLibrary/ringsImages/Elevated Ring.png",
 		"desc": "Increases Dodge Weight Threshold by 5. Reduces Encumbrance by 5.",
 		"stats": {
 			"Encumbrance": -5,
@@ -3114,7 +3114,7 @@ window.rings = {
 		"custom": null,
 		"name": "Embrace of Sha'Hala",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/U4AFGBq.png",
+		"image": "./brotherLibrary/ringsImages/Embrace of Sha'Hala.png",
 		"desc": "Wearer gains 5% incoming damage reduction for each Negative Status Effect or Blight they are suffering from. Max 4 stacks.",
 		"stats": {
 			"FlatDR": 0.2
@@ -3124,7 +3124,7 @@ window.rings = {
 		"custom": null,
 		"name": "Encrypted Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/bYVtoLs.png",
+		"image": "./brotherLibrary/ringsImages/Encrypted Ring.png",
 		"desc": "Using a Mod regenerates 20% of Max Health over 10s. Can stack up to 30s.",
 		"stats": {
 			"HP/S%": 0.02
@@ -3134,7 +3134,7 @@ window.rings = {
 		"custom": null,
 		"name": "Endaira's Endless Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/mSx7Qlo.png",
+		"image": "./brotherLibrary/ringsImages/Endaira's Endless Loop.png",
 		"desc": "After Sprinting for 2s, the wearer gains 1.5 Health Regeneration per second until they stop Sprinting.",
 		"stats": {
 			"HP/S+": 1.5
@@ -3144,7 +3144,7 @@ window.rings = {
 		"custom": null,
 		"name": "Excess Coil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/v4eVeRb.png",
+		"image": "./brotherLibrary/ringsImages/Excess Coil.png",
 		"desc": "Activating a Skill grants a Shield for 25% of Max Health. Cannot stack with itself. Lasts 15s.",
 		"stats": {
 			"Shield": 0.25
@@ -3154,7 +3154,7 @@ window.rings = {
 		"custom": null,
 		"name": "Fae Bruiser Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/wGSIuzZ.png",
+		"image": "./brotherLibrary/ringsImages/Fae Bruiser Ring.png",
 		"desc": "Dealing Melee damage grants 2 Stack of BULWARK for 15s. Does not stack with itself.",
 		"stats": {
 			"Bulwark": 2
@@ -3163,7 +3163,7 @@ window.rings = {
 	"Fae Hunter Ring": {
 		"name": "Fae Hunter Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/F5WlCfy.png",
+		"image": "./brotherLibrary/ringsImages/Fae Hunter Ring.png",
 		"desc": "Increases Range of Firearms by 30%.",
 		"custom": null,
 		"stats": {}
@@ -3172,7 +3172,7 @@ window.rings = {
 		"custom": null,
 		"name": "Fae Protector Signet",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/CQw0Dh3.png",
+		"image": "./brotherLibrary/ringsImages/Fae Protector Signet.png",
 		"desc": "Increases Max Health and Stamina by 10 and Reduces Encumbrance by 5.",
 		"stats": {
 			"Health": 10,
@@ -3184,7 +3184,7 @@ window.rings = {
 		"custom": null,
 		"name": "Fae Shaman Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/PE11RyA.png",
+		"image": "./brotherLibrary/ringsImages/Fae Shaman Ring.png",
 		"desc": "Increases Health Regeneration by 0.35 and Relic Use Speed by 25%.",
 		"stats": {
 			"RelicSpeed": -0.25,
@@ -3194,7 +3194,7 @@ window.rings = {
 	"Fae Warrior Ring": {
 		"name": "Fae Warrior Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Pg3IIvj.png",
+		"image": "./brotherLibrary/ringsImages/Fae Warrior Ring.png",
 		"desc": "Increases Melee Damage by 15%.",
 		"custom": null,
 		"stats": {}
@@ -3202,7 +3202,7 @@ window.rings = {
 	"Faelin's Sigil": {
 		"name": "Faelin's Sigil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/afSBWrz.png",
+		"image": "./brotherLibrary/ringsImages/Faelin's Sigil.png",
 		"desc": "Melee Damage generates 10% additional Mod Power.",
 		"custom": null,
 		"stats": {}
@@ -3210,7 +3210,7 @@ window.rings = {
 	"Faerin's Sigil": {
 		"name": "Faerin's Sigil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/x0KQha1.png",
+		"image": "./brotherLibrary/ringsImages/Faerin's Sigil.png",
 		"desc": "Critical and Weakspot Hits generates 10% additional Mod Power.",
 		"custom": null,
 		"stats": {}
@@ -3219,7 +3219,7 @@ window.rings = {
 		"custom": null,
 		"name": "Feastmaster's Signet",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/nGdYcPn.png",
+		"image": "./brotherLibrary/ringsImages/Feastmaster's Signet.png",
 		"desc": "Increases active Concoction Limit by1.",
 		"stats": {
 			"ConcLimit": 1
@@ -3228,7 +3228,7 @@ window.rings = {
 	"Feedback Loop": {
 		"name": "Feedback Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/CbRwDEv.png",
+		"image": "./brotherLibrary/ringsImages/Feedback Loop.png",
 		"desc": "Perfect Dodge triggers a 3m AOE blast that deal 115 SHOCK Damage and applies OVERLOADED.",
 		"custom": null,
 		"stats": {}
@@ -3237,7 +3237,7 @@ window.rings = {
 		"custom": null,
 		"name": "Fire Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/IQU4gEo.png",
+		"image": "./brotherLibrary/ringsImages/Fire Stone.png",
 		"desc": "Increases FIRE damage by 10% and FIRE Resistance by 15.",
 		"stats": {
 			"Burn": 15
@@ -3246,7 +3246,7 @@ window.rings = {
 	"Flyweight's Sting": {
 		"name": "Flyweight's Sting",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/OPDwFzE.png",
+		"image": "./brotherLibrary/ringsImages/Flyweight's Sting.png",
 		"desc": "Increases Melee damage while Armor Encumbrance is below 50. Damage bonus increases with lower Encumbrance, up to 25% at 0 Weight.",
 		"custom": null,
 		"stats": {}
@@ -3254,7 +3254,7 @@ window.rings = {
 	"Focusing Shard": {
 		"name": "Focusing Shard",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/6b2l9Fn.png",
+		"image": "./brotherLibrary/ringsImages/Focusing Shard.png",
 		"desc": "Reduce Recoil by 50%. Aiming Down Sights gradually reduces Spread by 30% over 3s",
 		"custom": null,
 		"stats": {}
@@ -3262,7 +3262,7 @@ window.rings = {
 	"Frivolous Band": {
 		"name": "Frivolous Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/4ZYXN7y.png",
+		"image": "./brotherLibrary/ringsImages/Frivolous Band.png",
 		"desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 10s.",
 		"custom": null,
 		"stats": {}
@@ -3270,7 +3270,7 @@ window.rings = {
 	"Galvanized Resupply Band": {
 		"name": "Galvanized Resupply Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/G4mvLEM.png",
+		"image": "./brotherLibrary/ringsImages/Galvanized Resupply Band.png",
 		"desc": "Increases Ammo Pickups by 50%.",
 		"custom": null,
 		"stats": {}
@@ -3279,7 +3279,7 @@ window.rings = {
 		"custom": "gameMasters",
 		"name": "Game Master's Pride",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/VypAuYL.png",
+		"image": "./brotherLibrary/ringsImages/Game Master's Pride.png",
 		"desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
 		"stats": {}
 	},
@@ -3287,7 +3287,7 @@ window.rings = {
 		"custom": null,
 		"name": "Generating Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/mVXV1hI.png",
+		"image": "./brotherLibrary/ringsImages/Generating Band.png",
 		"desc": "Regenerate 3% of Max Health per second while a Shield is active.",
 		"stats": {
 			"HP/S%": 0.03
@@ -3297,7 +3297,7 @@ window.rings = {
 		"custom": null,
 		"name": "Grounding Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ec1BAwl.png",
+		"image": "./brotherLibrary/ringsImages/Grounding Stone.png",
 		"desc": "Increases SHOCK damage by 10% and SHOCK Resistance by 15.",
 		"stats": {
 			"Shock": 15
@@ -3307,7 +3307,7 @@ window.rings = {
 		"custom": null,
 		"name": "Guardian's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/kcoHwmB.png",
+		"image": "./brotherLibrary/ringsImages/Guardian's Ring.png",
 		"desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 15s after taking Melee damage.",
 		"stats": {
 			"Bulwark": 2
@@ -3316,7 +3316,7 @@ window.rings = {
 	"Gunslinger's Ring": {
 		"name": "Gunslinger's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/xcTmguG.png",
+		"image": "./brotherLibrary/ringsImages/Gunslinger's Ring.png",
 		"desc": "Increases Firearm Swap Speed by 30% and Reload Speed by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3325,7 +3325,7 @@ window.rings = {
 		"custom": null,
 		"name": "Hardcore Metal Band",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/EOJ4ifQ.png",
+		"image": "./brotherLibrary/ringsImages/Hardcore Metal Band.png",
 		"desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks.",
 		"stats": {
 			"Bulwark": 5
@@ -3335,7 +3335,7 @@ window.rings = {
 		"custom": null,
 		"name": "Hardened Coil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/RyhPR5V.png",
+		"image": "./brotherLibrary/ringsImages/Hardened Coil.png",
 		"desc": "Reduces all incoming damage by 3% for each 10% of missing Health. Max 15% reduction.",
 		"stats": {
 			"FlatDR": 0.15
@@ -3344,7 +3344,7 @@ window.rings = {
 	"Haymaker's Ring": {
 		"name": "Haymaker's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/nGYrice.png",
+		"image": "./brotherLibrary/ringsImages/Haymaker's Ring.png",
 		"desc": "Increase Melee damage by 0.2% for every 1 points of Armor Encumbrance.",
 		"custom": null,
 		"stats": {}
@@ -3353,7 +3353,7 @@ window.rings = {
 		"custom": null,
 		"name": "Heart of the Wolf",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/VOlJGPQ.png",
+		"image": "./brotherLibrary/ringsImages/Heart of the Wolf.png",
 		"desc": "Increases Max Stamina by 25 and Movement Speed by 10%.",
 		"stats": {
 			"Stamina": 25
@@ -3362,7 +3362,7 @@ window.rings = {
 	"Hex Ward": {
 		"name": "Hex Ward",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/lDeCV9P.png",
+		"image": "./brotherLibrary/ringsImages/Hex Ward.png",
 		"desc": "Prevents CURSE Blight.",
 		"custom": null,
 		"stats": {}
@@ -3370,7 +3370,7 @@ window.rings = {
 	"Jewel of the Beholden": {
 		"name": "Jewel of the Beholden",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/lMEjRfc.png",
+		"image": "./brotherLibrary/ringsImages/Jewel of the Beholden.png",
 		"desc": "On Relic Use, increase Mod Damage by 15% for 10s.",
 		"custom": null,
 		"stats": {}
@@ -3378,7 +3378,7 @@ window.rings = {
 	"Kinetic Cycle Stone": {
 		"name": "Kinetic Cycle Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ZSeg93m.png",
+		"image": "./brotherLibrary/ringsImages/Kinetic Cycle Stone.png",
 		"desc": "Increases Mod and Skill Cast Speed by 20%.",
 		"custom": null,
 		"stats": {}
@@ -3386,7 +3386,7 @@ window.rings = {
 	"Lighthouse Keeper's Ring": {
 		"name": "Lighthouse Keeper's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/eK7FFzJ.png",
+		"image": "./brotherLibrary/ringsImages/Lighthouse Keeper's Ring.png",
 		"desc": "Automatically generate 3 Mod Power per second for each entity within 10m suffering from a Negative Status Effect. Max 5 stacks.",
 		"custom": null,
 		"stats": {}
@@ -3395,7 +3395,7 @@ window.rings = {
 		"custom": null,
 		"name": "Lithic Signet",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/lKaOMFa.png",
+		"image": "./brotherLibrary/ringsImages/Lithic Signet.png",
 		"desc": "Reduces all incoming damage by 5%.",
 		"stats": {
 			"FlatDR": 0.07
@@ -3404,7 +3404,7 @@ window.rings = {
 	"Lodestone Ring": {
 		"name": "Lodestone Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/4pVgedQ.png",
+		"image": "./brotherLibrary/ringsImages/Lodestone Ring.png",
 		"desc": "Increases all damage dealt against illuminated enemies by 5%.",
 		"custom": null,
 		"stats": {}
@@ -3413,7 +3413,7 @@ window.rings = {
 		"custom": null,
 		"name": "Low Yield Recovery Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/TqKSFYf.png",
+		"image": "./brotherLibrary/ringsImages/Low Yield Recovery Ring.png",
 		"desc": "Killing an enemy regenerates 6% Max Health over 6s. Additional kills increase duration by 6s. Max 30s.",
 		"stats": {
 			"HP/S%": 0.01
@@ -3423,7 +3423,7 @@ window.rings = {
 		"custom": null,
 		"name": "Mechanic's Cog",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/yNEMPKp.png",
+		"image": "./brotherLibrary/ringsImages/Mechanic's Cog.png",
 		"desc": "While carrying an Engineer Heavy Weapon, gain 15% Movement Speed and 1 Stack of BULWARK",
 		"stats": {
 			"Bulwark": 1
@@ -3432,7 +3432,7 @@ window.rings = {
 	"Metal Driver": {
 		"name": "Metal Driver",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/IrZfsn3.png",
+		"image": "./brotherLibrary/ringsImages/Metal Driver.png",
 		"desc": "Killing Blows increase Reload Speed by 5% for 7s. Stacks 3x.",
 		"custom": null,
 		"stats": {}
@@ -3441,7 +3441,7 @@ window.rings = {
 		"custom": null,
 		"name": "Meteorite Shard Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/iFVAXGg.png",
+		"image": "./brotherLibrary/ringsImages/Meteorite Shard Ring.png",
 		"desc": "Increases Encumbrance by 50. Increases Unarmed damage by 50%.",
 		"stats": {
 			"Encumbrance": 50
@@ -3450,7 +3450,7 @@ window.rings = {
 	"Microcompressor": {
 		"name": "Microcompressor",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ZmdjgMg.png",
+		"image": "./brotherLibrary/ringsImages/Microcompressor.png",
 		"desc": "Reduces Heat Generation when firing weapons that Overheat by -30%. Increases Heat Reduction Rate by 30%.",
 		"custom": null,
 		"stats": {}
@@ -3458,7 +3458,7 @@ window.rings = {
 	"Momentum Driver": {
 		"name": "Momentum Driver",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Klo7dZK.png",
+		"image": "./brotherLibrary/ringsImages/Momentum Driver.png",
 		"desc": "After Sprinting for 2s, Movement Speed is increased by 15% and Stagger Level reduced by 1.",
 		"custom": null,
 		"stats": {}
@@ -3466,7 +3466,7 @@ window.rings = {
 	"Offering Stone": {
 		"name": "Offering Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/p5KYKUv.png",
+		"image": "./brotherLibrary/ringsImages/Offering Stone.png",
 		"desc": "Dealing Ranged Damage increases all Damage by 1% for 1s. Stacks 15x. After killing an enemy, extends the duration to 10s.",
 		"custom": null,
 		"stats": {}
@@ -3474,7 +3474,7 @@ window.rings = {
 	"Outcast Ring": {
 		"name": "Outcast Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ilmuv3E.png",
+		"image": "./brotherLibrary/ringsImages/Outcast Ring.png",
 		"desc": "Increases Reload Speed by 5% for 15s after reloading. Stacks 5x.",
 		"custom": null,
 		"stats": {}
@@ -3482,7 +3482,7 @@ window.rings = {
 	"Painless Obsidian": {
 		"name": "Painless Obsidian",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/d7mRPGv.png",
+		"image": "./brotherLibrary/ringsImages/Painless Obsidian.png",
 		"desc": "When Grey Health is present, gain Haste.",
 		"custom": null,
 		"stats": {}
@@ -3490,7 +3490,7 @@ window.rings = {
 	"Point Focus Ring": {
 		"name": "Point Focus Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/VeJfTGj.png",
+		"image": "./brotherLibrary/ringsImages/Point Focus Ring.png",
 		"desc": "Reduces Initial Spread and Recoil by 25%.",
 		"custom": null,
 		"stats": {}
@@ -3498,7 +3498,7 @@ window.rings = {
 	"Power Complex": {
 		"name": "Power Complex",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/BFmNCo7.png",
+		"image": "./brotherLibrary/ringsImages/Power Complex.png",
 		"desc": "Increases All Damage dealt by 1% per second to a maximum of 15%. Dodging resets Power Complex to 0%",
 		"custom": null,
 		"stats": {}
@@ -3506,7 +3506,7 @@ window.rings = {
 	"Power Saver": {
 		"name": "Power Saver",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/pIpnSNr.png",
+		"image": "./brotherLibrary/ringsImages/Power Saver.png",
 		"desc": "At Max Health, gain a 25% chance to not use a Relic charge.",
 		"custom": null,
 		"stats": {}
@@ -3514,7 +3514,7 @@ window.rings = {
 	"Probability Cord": {
 		"name": "Probability Cord",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/foSQNJc.png",
+		"image": "./brotherLibrary/ringsImages/Probability Cord.png",
 		"desc": "Increases Crit Damage by 30%.",
 		"custom": null,
 		"stats": {}
@@ -3522,7 +3522,7 @@ window.rings = {
 	"Propulsion Loop": {
 		"name": "Propulsion Loop",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/QZbsb7Z.png",
+		"image": "./brotherLibrary/ringsImages/Propulsion Loop.png",
 		"desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x.",
 		"custom": null,
 		"stats": {}
@@ -3530,7 +3530,7 @@ window.rings = {
 	"Provisioner Ring": {
 		"name": "Provisioner Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/uBLgUk1.png",
+		"image": "./brotherLibrary/ringsImages/Provisioner Ring.png",
 		"desc": "Firearms reload over time while stowed.",
 		"custom": null,
 		"stats": {}
@@ -3539,7 +3539,7 @@ window.rings = {
 		"custom": null,
 		"name": "Reaping Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ewW6qSI.png",
+		"image": "./brotherLibrary/ringsImages/Reaping Stone.png",
 		"desc": "After an Elemental Status Effect is removed from wearer, they become immune to all Elemental Status Effects and gain 3% of base damage dealt as Lifesteal for 10s.",
 		"stats": {
 			"Lifesteal": 0.03
@@ -3548,7 +3548,7 @@ window.rings = {
 	"Red Ring of Death": {
 		"name": "Red Ring of Death",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/yCM92bw.png",
+		"image": "./brotherLibrary/ringsImages/Red Ring of Death.png",
 		"desc": "Duplicates the last damaging Negative Status applied to target. Reduces outgoing Status Effect Damage by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3557,7 +3557,7 @@ window.rings = {
 		"custom": null,
 		"name": "Rerouting Cable",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/5WuiZyF.png",
+		"image": "./brotherLibrary/ringsImages/Rerouting Cable.png",
 		"desc": "Gain 5% of Max Health as a SHIELD for 5s after spending 20 Stamina. Accumulation resets after 5s of inaction. Max 50% SHIELD.",
 		"stats": {
 			"Shield": 0.5
@@ -3567,7 +3567,7 @@ window.rings = {
 		"custom": null,
 		"name": "Reserve Boosting Gem",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/RaJqZ5L.png",
+		"image": "./brotherLibrary/ringsImages/Reserve Boosting Gem.png",
 		"desc": "Increases Health Regeneration by 0.333 per second. 1s after going below 50% Health, increases regeneration value to 2 per second until 50% Health is reached.",
 		"stats": {
 			"HP/S+": 2
@@ -3577,7 +3577,7 @@ window.rings = {
 		"custom": "restrictionCord",
 		"name": "Restriction Cord",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/JXW7CYK.png",
+		"image": "./brotherLibrary/ringsImages/Restriction Cord.png",
 		"desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%.",
 		"stats": {
 			"FlatDR": 0.1
@@ -3587,7 +3587,7 @@ window.rings = {
 		"custom": null,
 		"name": "Ring of Crisis",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/YDj6FJW.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Crisis.png",
 		"desc": "When wearer's Health drops below 25%, gain a Shield for 25% of Max Health. Lasts 10s.",
 		"stats": {
 			"Shield": 0.25
@@ -3596,7 +3596,7 @@ window.rings = {
 	"Ring of Deflection": {
 		"name": "Ring of Deflection",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/jF3Mzdb.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Deflection.png",
 		"desc": "Direct Damage against wearer has a 35% Chance to be converted entirely to Grey Health.",
 		"custom": null,
 		"stats": {}
@@ -3604,7 +3604,7 @@ window.rings = {
 	"Ring of Diversion": {
 		"name": "Ring of Diversion",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/nAVKBr3.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Diversion.png",
 		"desc": "Increases invulnerability window while evading and sliding.",
 		"custom": null,
 		"stats": {}
@@ -3612,7 +3612,7 @@ window.rings = {
 	"Ring of Flawed Beauty": {
 		"name": "Ring of Flawed Beauty",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/63VsNsb.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Flawed Beauty.png",
 		"desc": "Ranged Weakspot damage is increased by 25%. Ranged damage is reduced by 15% when failing to hit a Weakspot.",
 		"custom": null,
 		"stats": {}
@@ -3621,7 +3621,7 @@ window.rings = {
 		"custom": null,
 		"name": "Ring of Grace",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/hRYyLB8.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Grace.png",
 		"desc": "Taking enemy damage causes 15% of Maximum Health to regenerate over 10s.",
 		"stats": {
 			"HP/S%": 0.015
@@ -3630,7 +3630,7 @@ window.rings = {
 	"Ring of Infinite Damage": {
 		"name": "Ring of Infinite Damage",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/62AOM5e.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Infinite Damage.png",
 		"desc": "Increases fire rate by 8%.",
 		"custom": null,
 		"stats": {}
@@ -3638,7 +3638,7 @@ window.rings = {
 	"Ring of Omens": {
 		"name": "Ring of Omens",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/KJcUE68.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Omens.png",
 		"desc": "Evades cost 15% Max Health as Grey Health instead of Stamina.",
 		"custom": null,
 		"stats": {}
@@ -3646,7 +3646,7 @@ window.rings = {
 	"Ring of Restocking": {
 		"name": "Ring of Restocking",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/F8DRcO3.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Restocking.png",
 		"desc": "Reloads within 1.5s of a Critical Hit or Weakspot Kill are 20% faster.",
 		"custom": null,
 		"stats": {}
@@ -3654,7 +3654,7 @@ window.rings = {
 	"Ring of Retribution": {
 		"name": "Ring of Retribution",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/rR3dVDM.png",
+		"image": "./brotherLibrary/ringsImages/Ring of Retribution.png",
 		"desc": "Incoming enemy damage increases Reload Speed and all outgoing damage by 10%. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -3662,7 +3662,7 @@ window.rings = {
 	"Ring of the Castaway": {
 		"name": "Ring of the Castaway",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/tM23HGd.png",
+		"image": "./brotherLibrary/ringsImages/Ring of the Castaway.png",
 		"desc": "Increases base Consumable Duration by 50%.",
 		"custom": null,
 		"stats": {}
@@ -3670,7 +3670,7 @@ window.rings = {
 	"Ring of the Damned": {
 		"name": "Ring of the Damned",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/5E67Fr9.png",
+		"image": "./brotherLibrary/ringsImages/Ring of the Damned.png",
 		"desc": "Increases all damage dealt by 10% while Grey Health is present.",
 		"custom": null,
 		"stats": {}
@@ -3679,7 +3679,7 @@ window.rings = {
 		"custom": null,
 		"name": "Ring of the Forest Spirit",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/1vmrJ4M.png",
+		"image": "./brotherLibrary/ringsImages/Ring of the Forest Spirit.png",
 		"desc": "Relic Healing Effectiveness is increased by 15%.",
 		"stats": {
 			"RelicEFF": 0.15
@@ -3689,7 +3689,7 @@ window.rings = {
 		"custom": null,
 		"name": "Ring of the Robust",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/1v1vjvc.png",
+		"image": "./brotherLibrary/ringsImages/Ring of the Robust.png",
 		"desc": "Increases Max Health by 10, and Armor by 20.",
 		"stats": {
 			"Health": 10,
@@ -3699,7 +3699,7 @@ window.rings = {
 	"Ring of the Vain": {
 		"name": "Ring of the Vain",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/6Js9c98.png",
+		"image": "./brotherLibrary/ringsImages/Ring of the Vain.png",
 		"desc": "Reduces Invulnerability Window on Evade and Combat Slide by 50%. Increases Movement Speed while aiming by 35%",
 		"custom": null,
 		"stats": {}
@@ -3707,7 +3707,7 @@ window.rings = {
 	"Rock of Anguish": {
 		"name": "Rock of Anguish",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/sTN2j8O.png",
+		"image": "./brotherLibrary/ringsImages/Rock of Anguish.png",
 		"desc": "Gain 5% Movement Speed and 7.5% Reload Speed for every 25% of Max Health missing.",
 		"custom": null,
 		"stats": {}
@@ -3715,7 +3715,7 @@ window.rings = {
 	"Rotward": {
 		"name": "Rotward",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/pdMSAGz.png",
+		"image": "./brotherLibrary/ringsImages/Rotward.png",
 		"desc": "Prevents ROOT ROT Blight.",
 		"custom": null,
 		"stats": {}
@@ -3724,7 +3724,7 @@ window.rings = {
 		"custom": null,
 		"name": "Rusted Heirloom",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/EDj2xgR.png",
+		"image": "./brotherLibrary/ringsImages/Rusted Heirloom.png",
 		"desc": "Grants 2 Stacks of BULWARK below 50% Max HP.",
 		"stats": {
 			"Bulwark": 2
@@ -3733,7 +3733,7 @@ window.rings = {
 	"Sagestone": {
 		"name": "Sagestone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/umsBSMb.png",
+		"image": "./brotherLibrary/ringsImages/Sagestone.png",
 		"desc": "Increases earned Experience by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3741,7 +3741,7 @@ window.rings = {
 	"Sapphire Dreamstone": {
 		"name": "Sapphire Dreamstone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Y0pOWme.png",
+		"image": "./brotherLibrary/ringsImages/Sapphire Dreamstone.png",
 		"desc": "Critical Hits reduce Skill Cooldowns by 3%. Can only happen once every 2s.",
 		"custom": null,
 		"stats": {}
@@ -3750,7 +3750,7 @@ window.rings = {
 		"custom": null,
 		"name": "Seal of the Empress",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/tIMbLe4.png",
+		"image": "./brotherLibrary/ringsImages/Seal of the Empress.png",
 		"desc": "Increases Max Health by 20. Reduces Max Stamina by 5.",
 		"stats": {
 			"Health": 20,
@@ -3760,7 +3760,7 @@ window.rings = {
 	"Shadow of Misery": {
 		"name": "Shadow of Misery",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/bSdXmAn.png",
+		"image": "./brotherLibrary/ringsImages/Shadow of Misery.png",
 		"desc": "Increase Status Effect Damage by 15%",
 		"custom": null,
 		"stats": {}
@@ -3768,7 +3768,7 @@ window.rings = {
 	"Shaed Stone": {
 		"name": "Shaed Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/hSczyvm.png",
+		"image": "./brotherLibrary/ringsImages/Shaed Stone.png",
 		"desc": "Increases Skill damage by 12%",
 		"custom": null,
 		"stats": {}
@@ -3776,7 +3776,7 @@ window.rings = {
 	"Shard Banded Ring": {
 		"name": "Shard Banded Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/vcHG4OE.png",
+		"image": "./brotherLibrary/ringsImages/Shard Banded Ring.png",
 		"desc": "Increases Mod damage by 12%.",
 		"custom": null,
 		"stats": {}
@@ -3784,7 +3784,7 @@ window.rings = {
 	"Shiny Hog Lure": {
 		"name": "Shiny Hog Lure",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/VxBhwHj.png",
+		"image": "./brotherLibrary/ringsImages/Shiny Hog Lure.png",
 		"desc": "Reloading grants 25-30 Mod Power to both weapons based on percentage of Magazine reloaded.",
 		"custom": null,
 		"stats": {}
@@ -3792,7 +3792,7 @@ window.rings = {
 	"Singed Ring": {
 		"name": "Singed Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Q95ZVoD.png",
+		"image": "./brotherLibrary/ringsImages/Singed ring.png",
 		"desc": "Increases all damage dealt to BURNING enemies by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3800,7 +3800,7 @@ window.rings = {
 	"Slayer's Crest": {
 		"name": "Slayer's Crest",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/3G6dPAU.png",
+		"image": "./brotherLibrary/ringsImages/Slayer's Crest.png",
 		"desc": "Increases Melee damage by 25% when attacking enemies from behind",
 		"custom": null,
 		"stats": {}
@@ -3809,14 +3809,14 @@ window.rings = {
 		"custom": "soulGuard",
 		"name": "Soul Guard",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/yIQ0RvA.png",
+		"image": "./brotherLibrary/ringsImages/Soul Guard.png",
 		"desc": "Gain a stack of BULWARK for each active Summon. SPECIFY IN ADVANCED STATS.",
 		"stats": {}
 	},
 	"Soul Link": {
 		"name": "Soul Link",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/eYIVSq5.png",
+		"image": "./brotherLibrary/ringsImages/Soul Link.png",
 		"desc": "Summons Lifesteal 5% of base damage dealt which returns to the wearer as Health.",
 		"custom": null,
 		"stats": {}
@@ -3824,7 +3824,7 @@ window.rings = {
 	"Soul Shard": {
 		"name": "Soul Shard",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/FNrBeeO.png",
+		"image": "./brotherLibrary/ringsImages/Soul Shard.png",
 		"desc": "Increase all damage dealt by 4% for each summon. Max 12%",
 		"custom": "soulShard",
 		"stats": {}
@@ -3832,7 +3832,7 @@ window.rings = {
 	"Spirit Stone": {
 		"name": "Spirit Stone",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/hGLx1Sw.png",
+		"image": "./brotherLibrary/ringsImages/Spirit Stone.png",
 		"desc": "Increases Mod Power generation by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3840,7 +3840,7 @@ window.rings = {
 	"Stockpile Charger": {
 		"name": "Stockpile Charger",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/Sd6QnN7.png",
+		"image": "./brotherLibrary/ringsImages/Stockpile Charger.png",
 		"desc": "After picking up ammo, increases the damage of that Ammo Type by 13% for 20s.",
 		"custom": null,
 		"stats": {}
@@ -3848,7 +3848,7 @@ window.rings = {
 	"Stone of Balance": {
 		"name": "Stone of Balance",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/t2vLIcx.png",
+		"image": "./brotherLibrary/ringsImages/Stone of Balance.png",
 		"desc": "Increases all damage by 7%.",
 		"custom": null,
 		"stats": {}
@@ -3856,7 +3856,7 @@ window.rings = {
 	"Stone of Continuance": {
 		"name": "Stone of Continuance",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/5i8oMVc.png",
+		"image": "./brotherLibrary/ringsImages/Stone of Continuance.png",
 		"desc": "Increases Skill Duration by 25%.",
 		"custom": null,
 		"stats": {}
@@ -3864,7 +3864,7 @@ window.rings = {
 	"Stone of Expanse": {
 		"name": "Stone of Expanse",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/hHbHvq7.png",
+		"image": "./brotherLibrary/ringsImages/Stone of Expanse.png",
 		"desc": "Increases Ranged damage by 12%. Reduces all other damage dealt by 6%.",
 		"custom": null,
 		"stats": {}
@@ -3872,7 +3872,7 @@ window.rings = {
 	"Stone of Malevolence": {
 		"name": "Stone of Malevolence",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/dKsbuo5.png",
+		"image": "./brotherLibrary/ringsImages/Stone of Malevolence.png",
 		"desc": "Elemental damage generates 15% additional Mod Power.",
 		"custom": null,
 		"stats": {}
@@ -3881,7 +3881,7 @@ window.rings = {
 		"custom": null,
 		"name": "Stream Coupler",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/LZaaVzj.png",
+		"image": "./brotherLibrary/ringsImages/Stream Coupler.png",
 		"desc": "Using a Skill regenerates 10% of Max Health over 5s.",
 		"stats": {
 			"HP/S%": 0.02
@@ -3890,7 +3890,7 @@ window.rings = {
 	"Subterfuge Link": {
 		"name": "Subterfuge Link",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/AiVCfgS.png",
+		"image": "./brotherLibrary/ringsImages/Subterfuge Link.png",
 		"desc": "After killing an enemy, increases the Cast Speed of the next Mod or Skill Cast by 35%. Lasts 15s or until consumed.",
 		"custom": null,
 		"stats": {}
@@ -3898,7 +3898,7 @@ window.rings = {
 	"Suppression Ward": {
 		"name": "Suppression Ward",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/oGjllob.png",
+		"image": "./brotherLibrary/ringsImages/Suppression Ward.png",
 		"desc": "Prevents SUPPRESSION Blight.",
 		"custom": null,
 		"stats": {}
@@ -3906,7 +3906,7 @@ window.rings = {
 	"Targeting Jewel": {
 		"name": "Targeting Jewel",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/TzMDIup.png",
+		"image": "./brotherLibrary/ringsImages/Targeting Jewel.png",
 		"desc": "Increases Range on all Firearms by 4m. Reduces Spread by 15%.",
 		"custom": null,
 		"stats": {}
@@ -3914,7 +3914,7 @@ window.rings = {
 	"Tarnished Ring": {
 		"name": "Tarnished Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/R7Ph6XS.png",
+		"image": "./brotherLibrary/ringsImages/Tarnished Ring.png",
 		"desc": "Increases damage of Unarmed Attacks by 30%.",
 		"custom": null,
 		"stats": {}
@@ -3922,7 +3922,7 @@ window.rings = {
 	"Tear of Kaeula": {
 		"name": "Tear of Kaeula",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/VEF7RT7.png",
+		"image": "./brotherLibrary/ringsImages/Tear of Kaeula.png",
 		"desc": "Increases Relic capacity by 2 while equipped",
 		"custom": null,
 		"stats": {}
@@ -3930,7 +3930,7 @@ window.rings = {
 	"Tempest Conduit": {
 		"name": "Tempest Conduit",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/ehsTUnb.png",
+		"image": "./brotherLibrary/ringsImages/Tempest Conduit.png",
 		"desc": "After receiving Elemental Damage, increases all damage dealt by 10% and Resistance to the received Element by 20 for 20s.",
 		"custom": null,
 		"stats": {}
@@ -3939,7 +3939,7 @@ window.rings = {
 		"custom": null,
 		"name": "Tightly Wound Coil",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/5jcUZvV.png",
+		"image": "./brotherLibrary/ringsImages/Tightly Wound Coil.png",
 		"desc": "When spending 75% or more of current magazine, gain a SHIELD for 15% of Max Health for 5s. Does not stack with itself.",
 		"stats": {
 			"Shield": 0.15
@@ -3948,7 +3948,7 @@ window.rings = {
 	"Timekeeper's Jewel": {
 		"name": "Timekeeper's Jewel",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/dQJa4uZ.png",
+		"image": "./brotherLibrary/ringsImages/Timekeeper's Jewel.png",
 		"desc": "Increases the duration of all Status Effects applied by wearer. Durations varies per status.",
 		"custom": null,
 		"stats": {}
@@ -3956,7 +3956,7 @@ window.rings = {
 	"Tomb Dweller's Ring": {
 		"name": "Tomb Dweller's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/zU1d2Jv.png",
+		"image": "./brotherLibrary/ringsImages/Tomb Dweller's Ring.png",
 		"desc": "Increases Movement Speed by 10% for 10s after Vaulting, Climbing, Leaping, and entering Water, stacks 3x. Reduces Fall Damage by 25%.",
 		"custom": null,
 		"stats": {}
@@ -3965,7 +3965,7 @@ window.rings = {
 		"custom": null,
 		"name": "Vacuum Seal",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/dPZ9kJW.png",
+		"image": "./brotherLibrary/ringsImages/Vacuum Seal.png",
 		"desc": "Increases Automatic Pickup Range for Scrap by 150%. Picking up Scrap, Iron, or Ammo grants a SHIELD for 15% of Max Health for 15s Does not stack.",
 		"stats": {
 			"Shield": 0.15
@@ -3974,7 +3974,7 @@ window.rings = {
 	"Vestige of Power": {
 		"name": "Vestige of Power",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/dGb8KtT.png",
+		"image": "./brotherLibrary/ringsImages/Vestige of Power.png",
 		"desc": "After 7s of not being damaged, increases Ranged and Melee Damage by 10%.",
 		"custom": null,
 		"stats": {}
@@ -3982,7 +3982,7 @@ window.rings = {
 	"Wax Sealed Ring": {
 		"name": "Wax Sealed Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/QWSOrWv.png",
+		"image": "./brotherLibrary/ringsImages/Wax Sealed Ring.png",
 		"desc": "Killing blows increase Ranged and Melee Damage by 4% for 15s. Stacks 3x.",
 		"custom": null,
 		"stats": {}
@@ -3991,7 +3991,7 @@ window.rings = {
 		"custom": null,
 		"name": "White Glass Bead",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/yCElr1x.png",
+		"image": "./brotherLibrary/ringsImages/White Glass Bead.png",
 		"desc": "Perfect Dodge applies a SHIELD for 15% of Max Health. Lasts 10s. Cannot Stack with itself.",
 		"stats": {
 			"Shield": 0.15
@@ -4000,7 +4000,7 @@ window.rings = {
 	"White Pawn Stamp": {
 		"name": "White Pawn Stamp",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/XWIyMzt.png",
+		"image": "./brotherLibrary/ringsImages/White Pawn Stamp.png",
 		"desc": "Reduces Mod Power Requirement by 10%.",
 		"custom": null,
 		"stats": {}
@@ -4008,7 +4008,7 @@ window.rings = {
 	"Wind Hollow Circlet": {
 		"name": "Wind Hollow Circlet",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/emsfpxo.png",
+		"image": "./brotherLibrary/ringsImages/Wind Hollow Circlet.png",
 		"desc": "Increases Reload Speed by 12%.",
 		"custom": null,
 		"stats": {}
@@ -4016,7 +4016,7 @@ window.rings = {
 	"Wood Ring": {
 		"name": "Wood Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/kD37fi0.png",
+		"image": "./brotherLibrary/ringsImages/Wood Ring.png",
 		"desc": "Increases Stagger Damage by 15%",
 		"custom": null,
 		"stats": {}
@@ -4025,7 +4025,7 @@ window.rings = {
 		"custom": null,
 		"name": "Worn Admiral's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/JvFeQx7.png",
+		"image": "./brotherLibrary/ringsImages/Worn Admiral's Ring.png",
 		"desc": "All damage received is increased by 200%. All damage dealt is increased by 10%.",
 		"stats": {
 			"FlatDR": -2
@@ -4034,7 +4034,7 @@ window.rings = {
 	"Zania's Malice": {
 		"name": "Zania's Malice",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/XmrZq1f.png",
+		"image": "./brotherLibrary/ringsImages/Zania's Malice.png",
 		"desc": "Dealing Weakspot damage increases Weakspot damage by 10% for 7s. Stacks 3x.",
 		"custom": null,
 		"stats": {}
@@ -4042,7 +4042,7 @@ window.rings = {
 	"Zohee's Ring": {
 		"name": "Zohee's Ring",
 		"slot": "Ring",
-		"image": "https://i.imgur.com/IIGjX0s.png",
+		"image": "./brotherLibrary/ringsImages/Zohee's Ring.png",
 		"desc": "Increases Mod Duration by 15%.",
 		"custom": null,
 		"stats": {}
@@ -4061,7 +4061,7 @@ window.relics = {
 		"custom": null,
 		"name": "Blooming Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/MS9iTn2.png",
+		"image": "./brotherLibrary/relicsImages/Blooming Heart.png",
 		"desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
 		"stats": {
 			"RelicHPbase": 175,
@@ -4073,7 +4073,7 @@ window.relics = {
 		"custom": null,
 		"name": "Broken Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/ED6vA4O.png",
+		"image": "./brotherLibrary/relicsImages/Broken Heart.png",
 		"desc": "Innate 50% Use Speed Bonus. On use, sets current Health to 50% of max Health over 0.25s.",
 		"stats": {
 			"RelicHPbase": 50,
@@ -4085,7 +4085,7 @@ window.relics = {
 		"custom": null,
 		"name": "Constrained Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/XrOcmlC.png",
+		"image": "./brotherLibrary/relicsImages/Constrained Heart.png",
 		"desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active.",
 		"stats": {
 			"Bulwark": 2,
@@ -4098,7 +4098,7 @@ window.relics = {
 		"custom": null,
 		"name": "Crystal Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/IzshYKv.png",
+		"image": "./brotherLibrary/relicsImages/Crystal Heart.png",
 		"desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s.",
 		"stats": {
 			"FlatDR": 0.25,
@@ -4111,7 +4111,7 @@ window.relics = {
 		"custom": null,
 		"name": "Decayed Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/tohxOex.png",
+		"image": "./brotherLibrary/relicsImages/Decayed Heart.png",
 		"desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
 		"stats": {
 			"RelicHPbase": 120,
@@ -4122,7 +4122,7 @@ window.relics = {
 	"Diverted Heart": {
 		"name": "Diverted Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/WwFk4mW.png",
+		"image": "./brotherLibrary/relicsImages/Diverted Heart.png",
 		"desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -4131,7 +4131,7 @@ window.relics = {
 		"custom": null,
 		"name": "Dragon Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/NGV4R9f.png",
+		"image": "./brotherLibrary/relicsImages/Dragon Heart.png",
 		"desc": "On use, heals 70 Health over 0.5s.",
 		"stats": {
 			"RelicHPbase": 70,
@@ -4143,7 +4143,7 @@ window.relics = {
 		"custom": null,
 		"name": "Enlarged Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/R8IDlZ5.png",
+		"image": "./brotherLibrary/relicsImages/Enlarged Heart.png",
 		"desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
 		"stats": {
 			"RelicSpeed": -0.5,
@@ -4156,7 +4156,7 @@ window.relics = {
 		"custom": null,
 		"name": "Lifeless Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/FO9ZSlo.png",
+		"image": "./brotherLibrary/relicsImages/Lifeless Heart.png",
 		"desc": "On use, heals 30 Health over 0.5s. Relic capacity is doubled",
 		"stats": {
 			"RelicHPbase": 30,
@@ -4168,7 +4168,7 @@ window.relics = {
 		"custom": null,
 		"name": "Paper Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/3jEWEwm.png",
+		"image": "./brotherLibrary/relicsImages/Paper Heart.png",
 		"desc": "Heals up to 100% of current health over 0.25s. Gain 1 Stack/10% Health Restored. After 15s, remove 10% per Stack. Kills remove 1 Stack.",
 		"stats": {
 			"RelicHPbase": 100,
@@ -4180,7 +4180,7 @@ window.relics = {
 		"custom": null,
 		"name": "Pulsing Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/iLmISVw.png",
+		"image": "./brotherLibrary/relicsImages/Pulsing Heart.png",
 		"desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
 		"stats": {
 			"RelicHPbase": 115,
@@ -4191,7 +4191,7 @@ window.relics = {
 	"Quilted Heart": {
 		"name": "Quilted Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/s4iwM4Y.png",
+		"image": "./brotherLibrary/relicsImages/Quilted Heart.png",
 		"desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
 		"custom": null,
 		"stats": {}
@@ -4199,7 +4199,7 @@ window.relics = {
 	"Reprocessed Heart": {
 		"name": "Reprocessed Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/Oybn4VO.png",
+		"image": "./brotherLibrary/relicsImages/Reprocessed Heart.png",
 		"desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
 		"custom": null,
 		"stats": {}
@@ -4208,7 +4208,7 @@ window.relics = {
 		"custom": "resonatingHeart",
 		"name": "Resonating Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/FE0rnqe.png",
+		"image": "./brotherLibrary/relicsImages/Resonating Heart.png",
 		"desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s.",
 		"complex": "How much OVERhealing are we going to 'pretend' you'll achieve in the 5sec window? Enter your best guess:",
 		"stats": {
@@ -4221,7 +4221,7 @@ window.relics = {
 		"custom": null,
 		"name": "Ripened Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/grFXckO.png",
+		"image": "./brotherLibrary/relicsImages/Ripened Heart.png",
 		"desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
 		"stats": {
 			"RelicHPbase": 105,
@@ -4233,7 +4233,7 @@ window.relics = {
 		"custom": null,
 		"name": "Runed Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/Qwh52G2.png",
+		"image": "./brotherLibrary/relicsImages/Runed Heart.png",
 		"desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
 		"stats": {
 			"RelicHPbase": 50,
@@ -4244,7 +4244,7 @@ window.relics = {
 	"Salvaged Heart": {
 		"name": "Salvaged Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/dkOBGtB.png",
+		"image": "./brotherLibrary/relicsImages/Salvaged Heart.png",
 		"desc": "Innate 50% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
 		"custom": null,
 		"stats": {}
@@ -4253,7 +4253,7 @@ window.relics = {
 		"custom": null,
 		"name": "Shielded Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/xb5Q6Cw.png",
+		"image": "./brotherLibrary/relicsImages/Shielded Heart.png",
 		"desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage",
 		"stats": {
 			"Shield": 1
@@ -4263,7 +4263,7 @@ window.relics = {
 		"custom": null,
 		"name": "Siphon Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/7mlMeUF.png",
+		"image": "./brotherLibrary/relicsImages/Siphon Heart.png",
 		"desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
 		"stats": {
 			"Lifesteal": 0.1
@@ -4272,7 +4272,7 @@ window.relics = {
 	"Tormented Heart": {
 		"name": "Tormented Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/K6URUKQ.png",
+		"image": "./brotherLibrary/relicsImages/Tormented Heart.png",
 		"desc": "Innate 20% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 25% of damage dealt. ",
 		"custom": null,
 		"stats": {}
@@ -4281,7 +4281,7 @@ window.relics = {
 		"custom": null,
 		"name": "Tranquil Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/MCRXwqy.png",
+		"image": "./brotherLibrary/relicsImages/Tranquil Heart.png",
 		"desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
 		"stats": {
 			"RelicHPbase": 2,
@@ -4292,7 +4292,7 @@ window.relics = {
 	"Unsullied Heart": {
 		"name": "Unsullied Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/gZuGDom.png",
+		"image": "./brotherLibrary/relicsImages/Unsullied Heart.png",
 		"desc": "On use, heals for 100% of Current Health over 0.5s.",
 		"custom": null,
 		"stats": {}
@@ -4300,7 +4300,7 @@ window.relics = {
 	"Void Heart": {
 		"name": "Void Heart",
 		"slot": "Relic",
-		"image": "https://i.imgur.com/Iun7kD6.png",
+		"image": "./brotherLibrary/relicsImages/Void Heart.png",
 		"desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
 		"custom": null,
 		"stats": {}
@@ -5256,7 +5256,7 @@ window.primary = {
 	"AS-10 \"Bulldog\"": {
 		"name": "AS-10 \"Bulldog\"",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/2QjX1cc.png",
+		"image": `./brotherLibrary/primaryImages/AS-10 _Bulldog_.png`,
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5264,7 +5264,7 @@ window.primary = {
 	"Alpha / Omega": {
 		"name": "Alpha / Omega",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/K09B7HA.png",
+		"image": "./brotherLibrary/primaryImages/Alpha _ Omega.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5272,7 +5272,7 @@ window.primary = {
 	"Aphelion": {
 		"name": "Aphelion",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/T8cOqup.png",
+		"image": "./brotherLibrary/primaryImages/Aphelion.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5280,7 +5280,7 @@ window.primary = {
 	"Blackmaw AR-47": {
 		"name": "Blackmaw AR-47",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/8BulDTG.png",
+		"image": "./brotherLibrary/primaryImages/Blackmaw AR-47.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5288,7 +5288,7 @@ window.primary = {
 	"Chicago Typewriter": {
 		"name": "Chicago Typewriter",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/LfVagOA.png",
+		"image": "./brotherLibrary/primaryImages/Chicago Typewriter.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5296,7 +5296,7 @@ window.primary = {
 	"Coach Gun": {
 		"name": "Coach Gun",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/vbdeHPF.png",
+		"image": "./brotherLibrary/primaryImages/Coach Gun.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5304,7 +5304,7 @@ window.primary = {
 	"Corrupted Aphelion": {
 		"name": "Corrupted Aphelion",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/dlIBWvL.png",
+		"image": "./brotherLibrary/primaryImages/Corrupted Aphelion.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5312,7 +5312,7 @@ window.primary = {
 	"Corrupted Arbalest": {
 		"name": "Corrupted Arbalest",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/HoYjkRv.png",
+		"image": "./brotherLibrary/primaryImages/Corrupted Arbalest.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5320,7 +5320,7 @@ window.primary = {
 	"Corrupted Deceit": {
 		"name": "Corrupted Deceit",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/XMxVOEe.png",
+		"image": "./brotherLibrary/primaryImages/Corrupted Deceit.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5328,7 +5328,7 @@ window.primary = {
 	"Corrupted Merciless": {
 		"name": "Corrupted Merciless",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/HftrrQ4.png",
+		"image": "./brotherLibrary/primaryImages/Corrupted Merciless.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5336,7 +5336,7 @@ window.primary = {
 	"Corrupted Savior": {
 		"name": "Corrupted Savior",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/3tdzF0X.png",
+		"image": "./brotherLibrary/primaryImages/Corrupted Savior.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5344,7 +5344,7 @@ window.primary = {
 	"Crescent Moon": {
 		"name": "Crescent Moon",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/E2pTfLu.png",
+		"image": "./brotherLibrary/primaryImages/Crescent Moon.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5352,7 +5352,7 @@ window.primary = {
 	"Crossbow": {
 		"name": "Crossbow",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/U8ffNlf.png",
+		"image": "./brotherLibrary/primaryImages/Crossbow.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5360,7 +5360,7 @@ window.primary = {
 	"Deceit": {
 		"name": "Deceit",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/0Xab9GS.png",
+		"image": "./brotherLibrary/primaryImages/Deceit.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5368,7 +5368,7 @@ window.primary = {
 	"Ford's Scattergun": {
 		"name": "Ford's Scattergun",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/bYVHFE0.png",
+		"image": "./brotherLibrary/primaryImages/Ford's Scattergun.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5376,7 +5376,7 @@ window.primary = {
 	"Huntmaster M1": {
 		"name": "Huntmaster M1",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/bD69k24.png",
+		"image": "./brotherLibrary/primaryImages/Huntmaster M1.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5384,7 +5384,7 @@ window.primary = {
 	"Merciless": {
 		"name": "Merciless",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/bKiLETg.png",
+		"image": "./brotherLibrary/primaryImages/Merciless.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5392,7 +5392,7 @@ window.primary = {
 	"Monarch": {
 		"name": "Monarch",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/U8RyR87.png",
+		"image": "./brotherLibrary/primaryImages/Monarch.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5400,7 +5400,7 @@ window.primary = {
 	"Nightfall": {
 		"name": "Nightfall",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/KIKHC8j.png",
+		"image": "./brotherLibrary/primaryImages/Nightfall.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5408,7 +5408,7 @@ window.primary = {
 	"Plasma Cutter": {
 		"name": "Plasma Cutter",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/U5SZR7N.png",
+		"image": "./brotherLibrary/primaryImages/Plasma Cutter.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5416,7 +5416,7 @@ window.primary = {
 	"Pulse Rifle": {
 		"name": "Pulse Rifle",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/WvnbBeE.png",
+		"image": "./brotherLibrary/primaryImages/Pulse Rifle.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5424,7 +5424,7 @@ window.primary = {
 	"Repulsor": {
 		"name": "Repulsor",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/R5xX0lR.png",
+		"image": "./brotherLibrary/primaryImages/Repulsor.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5432,7 +5432,7 @@ window.primary = {
 	"Royal Hunting Bow": {
 		"name": "Royal Hunting Bow",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/qIuYA7p.png",
+		"image": "./brotherLibrary/primaryImages/Royal Hunting Bow.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5440,7 +5440,7 @@ window.primary = {
 	"Rusty Lever Action": {
 		"name": "Rusty Lever Action",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/ME75DJd.png",
+		"image": "./brotherLibrary/primaryImages/Rusty Lever Action.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5448,7 +5448,7 @@ window.primary = {
 	"Sagittarius": {
 		"name": "Sagittarius",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/DX9g5wy.png",
+		"image": "./brotherLibrary/primaryImages/Sagittarius.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5456,7 +5456,7 @@ window.primary = {
 	"Savior": {
 		"name": "Savior",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/5EbRPEP.png",
+		"image": "./brotherLibrary/primaryImages/Savior.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5464,7 +5464,7 @@ window.primary = {
 	"Sparkfire": {
 		"name": "Sparkfire",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/8Ih2RHZ.png",
+		"image": "./brotherLibrary/primaryImages/Sparkfire.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5472,7 +5472,7 @@ window.primary = {
 	"Sporebloom": {
 		"name": "Sporebloom",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/vH9n0QZ.png",
+		"image": "./brotherLibrary/primaryImages/Sporebloom.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5480,7 +5480,7 @@ window.primary = {
 	"Starkiller": {
 		"name": "Starkiller",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/WbIBKbg.png",
+		"image": "./brotherLibrary/primaryImages/Starkiller.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5488,7 +5488,7 @@ window.primary = {
 	"Twisted Arbalest": {
 		"name": "Twisted Arbalest",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/4mv86u2.png",
+		"image": "./brotherLibrary/primaryImages/Twisted Arbalest.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5496,7 +5496,7 @@ window.primary = {
 	"Widowmaker": {
 		"name": "Widowmaker",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/ZdhL2Gi.png",
+		"image": "./brotherLibrary/primaryImages/Widowmaker.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5504,7 +5504,7 @@ window.primary = {
 	"Wrangler 1860": {
 		"name": "Wrangler 1860",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/CcgGPGe.png",
+		"image": "./brotherLibrary/primaryImages/Wrangler 1860.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5512,7 +5512,7 @@ window.primary = {
 	"XMG57 \"Bonesaw\"": {
 		"name": "XMG57 \"Bonesaw\"",
 		"slot": "Primary",
-		"image": "https://i.imgur.com/iThO1Ae.png",
+		"image": "./brotherLibrary/primaryImages/XMG57 _Bonesaw_.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5530,15 +5530,15 @@ window.melee = {
 	"Abyssal Hook": {
 		"name": "Abyssal Hook",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/C6WSwg5.png",
+		"image": "./brotherLibrary/meleeImages/Abyssal Hook.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
 	},
-	"Assasin's Dagger": {
-		"name": "Assasin's Dagger",
+	"Assassin's Dagger": {
+		"name": "Assassin's Dagger",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/tUoxIjq.png",
+		"image": "./brotherLibrary/meleeImages/Assassin's Dagger.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5546,7 +5546,7 @@ window.melee = {
 	"Atom Smasher": {
 		"name": "Atom Smasher",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/B1sxeUO.png",
+		"image": "./brotherLibrary/meleeImages/Atom Smasher.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5554,7 +5554,7 @@ window.melee = {
 	"Atom Splitter": {
 		"name": "Atom Splitter",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/ILQREiu.png",
+		"image": "./brotherLibrary/meleeImages/Atom Splitter.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5562,7 +5562,7 @@ window.melee = {
 	"Blade of Gul": {
 		"name": "Blade of Gul",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/XsU2xIh.png",
+		"image": "./brotherLibrary/meleeImages/Blade of Gul.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5570,7 +5570,7 @@ window.melee = {
 	"Bone Chopper": {
 		"name": "Bone Chopper",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/WkocApr.png",
+		"image": "./brotherLibrary/meleeImages/Bone Chopper.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5578,7 +5578,7 @@ window.melee = {
 	"Decayed Claws": {
 		"name": "Decayed Claws",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/d1aOVHT.png",
+		"image": "./brotherLibrary/meleeImages/Decayed Claws.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5586,7 +5586,7 @@ window.melee = {
 	"Dreamcatcher": {
 		"name": "Dreamcatcher",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/KpJIJ1m.png",
+		"image": "./brotherLibrary/meleeImages/Dreamcatcher.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5594,7 +5594,7 @@ window.melee = {
 	"Edge of the Forest": {
 		"name": "Edge of the Forest",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/4e0ppfF.png",
+		"image": "./brotherLibrary/meleeImages/Edge of the Forest.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5602,7 +5602,7 @@ window.melee = {
 	"Feral Judgement": {
 		"name": "Feral Judgement",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/BX1Q6EM.png",
+		"image": "./brotherLibrary/meleeImages/Feral Judgement.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5610,7 +5610,7 @@ window.melee = {
 	"Gas Giant": {
 		"name": "Gas Giant",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/1vtoOeJ.png",
+		"image": "./brotherLibrary/meleeImages/Gas Giant.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5618,7 +5618,7 @@ window.melee = {
 	"Godsplitter": {
 		"name": "Godsplitter",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/wUkoLfc.png",
+		"image": "./brotherLibrary/meleeImages/Godsplitter.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5626,7 +5626,7 @@ window.melee = {
 	"Hero's Sword": {
 		"name": "Hero's Sword",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/oiFso8l.png",
+		"image": "./brotherLibrary/meleeImages/Hero's Sword.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5634,7 +5634,7 @@ window.melee = {
 	"Huntress Spear": {
 		"name": "Huntress Spear",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/7yVujBc.png",
+		"image": "./brotherLibrary/meleeImages/Huntress Spear.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5642,7 +5642,7 @@ window.melee = {
 	"Iron Greatsword": {
 		"name": "Iron Greatsword",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/mO9q5ye.png",
+		"image": "./brotherLibrary/meleeImages/Iron Greatsword.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5650,7 +5650,7 @@ window.melee = {
 	"Knuckle Dusters": {
 		"name": "Knuckle Dusters",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/urerCK4.png",
+		"image": "./brotherLibrary/meleeImages/Knuckle Dusters.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5658,7 +5658,7 @@ window.melee = {
 	"Krell Axe": {
 		"name": "Krell Axe",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/YbRgQib.png",
+		"image": "./brotherLibrary/meleeImages/Krell Axe.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5666,7 +5666,7 @@ window.melee = {
 	"Labyrinth Staff": {
 		"name": "Labyrinth Staff",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/VckAywV.png",
+		"image": "./brotherLibrary/meleeImages/Labyrinth Staff.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5674,7 +5674,7 @@ window.melee = {
 	"Nightshade": {
 		"name": "Nightshade",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/OGzZHxg.png",
+		"image": "./brotherLibrary/meleeImages/Nightshade.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5682,7 +5682,7 @@ window.melee = {
 	"Ornate Blade": {
 		"name": "Ornate Blade",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/OEIjZd1.png",
+		"image": "./brotherLibrary/meleeImages/Ornate Blade.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5690,7 +5690,7 @@ window.melee = {
 	"Ornate Flail": {
 		"name": "Ornate Flail",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/GKuz90Q.png",
+		"image": "./brotherLibrary/meleeImages/Ornate Flail.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5698,7 +5698,7 @@ window.melee = {
 	"Rebellion Spear": {
 		"name": "Rebellion Spear",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/U3ULrr8.png",
+		"image": "./brotherLibrary/meleeImages/Rebellion Spear.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5706,7 +5706,7 @@ window.melee = {
 	"Red Doe Staff": {
 		"name": "Red Doe Staff",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/JKFD9eH.png",
+		"image": "./brotherLibrary/meleeImages/Red Doe Staff.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5714,7 +5714,7 @@ window.melee = {
 	"Ritualist Scythe": {
 		"name": "Ritualist Scythe",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/bVwGuzl.png",
+		"image": "./brotherLibrary/meleeImages/Ritualist Scythe.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5722,7 +5722,7 @@ window.melee = {
 	"Royal Broadsword": {
 		"name": "Royal Broadsword",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/ieexaGx.png",
+		"image": "./brotherLibrary/meleeImages/Royal Broadsword.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5730,7 +5730,7 @@ window.melee = {
 	"Rusted Claws": {
 		"name": "Rusted Claws",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/757mhJV.png",
+		"image": "./brotherLibrary/meleeImages/Rusted Claws.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5738,7 +5738,7 @@ window.melee = {
 	"Scrap Hammer": {
 		"name": "Scrap Hammer",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/DE922T1.png",
+		"image": "./brotherLibrary/meleeImages/Scrap Hammer.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5746,7 +5746,7 @@ window.melee = {
 	"Scrap Hatchet": {
 		"name": "Scrap Hatchet",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/tGAImVM.png",
+		"image": "./brotherLibrary/meleeImages/Scrap Hatchet.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5754,7 +5754,7 @@ window.melee = {
 	"Scrap Staff": {
 		"name": "Scrap Staff",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/udTG1Sh.png",
+		"image": "./brotherLibrary/meleeImages/Scrap Staff.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5762,7 +5762,7 @@ window.melee = {
 	"Smolder": {
 		"name": "Smolder",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/j7euImI.png",
+		"image": "./brotherLibrary/meleeImages/Smolder.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5770,7 +5770,7 @@ window.melee = {
 	"Spectral Blade": {
 		"name": "Spectral Blade",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/yJYpLfp.png",
+		"image": "./brotherLibrary/meleeImages/Spectral Blade.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5778,7 +5778,7 @@ window.melee = {
 	"Steel Flail": {
 		"name": "Steel Flail",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/vot0Yun.png",
+		"image": "./brotherLibrary/meleeImages/Steel Flail.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5786,7 +5786,7 @@ window.melee = {
 	"Steel Katana": {
 		"name": "Steel Katana",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/XtVRdCS.png",
+		"image": "./brotherLibrary/meleeImages/Steel Katana.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5794,7 +5794,7 @@ window.melee = {
 	"Steel Scythe": {
 		"name": "Steel Scythe",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/Yz4od58.png",
+		"image": "./brotherLibrary/meleeImages/Steel Scythe.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5802,7 +5802,7 @@ window.melee = {
 	"Steel Spear": {
 		"name": "Steel Spear",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/tdoXTxo.png",
+		"image": "./brotherLibrary/meleeImages/Steel Spear.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5810,7 +5810,7 @@ window.melee = {
 	"Steel Sword": {
 		"name": "Steel Sword",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/ZL392SZ.png",
+		"image": "./brotherLibrary/meleeImages/Steel Sword.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5818,7 +5818,7 @@ window.melee = {
 	"Stonebreaker": {
 		"name": "Stonebreaker",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/r6Qkg46.png",
+		"image": "./brotherLibrary/meleeImages/Stonebreaker.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5826,7 +5826,7 @@ window.melee = {
 	"Vice Grips": {
 		"name": "Vice Grips",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/wS2KpDN.png",
+		"image": "./brotherLibrary/meleeImages/Vice Grips.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5834,7 +5834,7 @@ window.melee = {
 	"World's Edge": {
 		"name": "World's Edge",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/JCp45QQ.png",
+		"image": "./brotherLibrary/meleeImages/World's Edge.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5842,7 +5842,7 @@ window.melee = {
 	"Wrathbringer": {
 		"name": "Wrathbringer",
 		"slot": "Melee",
-		"image": "https://i.imgur.com/k5OWHG9.png",
+		"image": "./brotherLibrary/meleeImages/Wrathbringer.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5860,7 +5860,7 @@ window.secondary = {
 	"Anguish": {
 		"name": "Anguish",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/0gppMay.png",
+		"image": "./brotherLibrary/secondaryImages/Anguish.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5868,7 +5868,7 @@ window.secondary = {
 	"Bolt Driver": {
 		"name": "Bolt Driver",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/gGi5Si3.png",
+		"image": "./brotherLibrary/secondaryImages/Bolt Driver.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5876,7 +5876,7 @@ window.secondary = {
 	"Corrupted Cube Gun": {
 		"name": "Corrupted Cube Gun",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/mPa2332.png",
+		"image": "./brotherLibrary/secondaryImages/Corrupted Cube Gun.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5884,7 +5884,7 @@ window.secondary = {
 	"Corrupted Meridian": {
 		"name": "Corrupted Meridian",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/2xOide1.png",
+		"image": "./brotherLibrary/secondaryImages/Corrupted Meridian.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5892,7 +5892,7 @@ window.secondary = {
 	"Corrupted Nebula": {
 		"name": "Corrupted Nebula",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/SbGPpes.png",
+		"image": "./brotherLibrary/secondaryImages/Corrupted Nebula.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5900,7 +5900,7 @@ window.secondary = {
 	"Corrupted Rune Pistol": {
 		"name": "Corrupted Rune Pistol",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/scAvb4g.png",
+		"image": "./brotherLibrary/secondaryImages/Corrupted Rune Pistol.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5908,7 +5908,7 @@ window.secondary = {
 	"Corrupted Sorrow": {
 		"name": "Corrupted Sorrow",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/bYciWNm.png",
+		"image": "./brotherLibrary/secondaryImages/Corrupted Sorrow.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5916,7 +5916,7 @@ window.secondary = {
 	"Cube Gun": {
 		"name": "Cube Gun",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/i3vXdho.png",
+		"image": "./brotherLibrary/secondaryImages/Cube Gun.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5924,7 +5924,7 @@ window.secondary = {
 	"Double Barrel": {
 		"name": "Double Barrel",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/CT6HC5Q.png",
+		"image": "./brotherLibrary/secondaryImages/Double Barrel.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5932,7 +5932,7 @@ window.secondary = {
 	"Enigma": {
 		"name": "Enigma",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/fOmmzB2.png",
+		"image": "./brotherLibrary/secondaryImages/Enigma.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5940,7 +5940,7 @@ window.secondary = {
 	"Hellfire": {
 		"name": "Hellfire",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/LLV8stE.png",
+		"image": "./brotherLibrary/secondaryImages/Hellfire.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5948,7 +5948,7 @@ window.secondary = {
 	"MP60-R": {
 		"name": "MP60-R",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/GajfJr4.png",
+		"image": "./brotherLibrary/secondaryImages/MP60-R.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5956,7 +5956,7 @@ window.secondary = {
 	"Meridian": {
 		"name": "Meridian",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/Rik5moS.png",
+		"image": "./brotherLibrary/secondaryImages/Meridian.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5964,7 +5964,7 @@ window.secondary = {
 	"Nebula": {
 		"name": "Nebula",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/CCFAx7C.png",
+		"image": "./brotherLibrary/secondaryImages/Nebula.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5972,7 +5972,7 @@ window.secondary = {
 	"Repeater Pistol": {
 		"name": "Repeater Pistol",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/2WpKiJD.png",
+		"image": "./brotherLibrary/secondaryImages/Repeater Pistol.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5980,15 +5980,15 @@ window.secondary = {
 	"Rune Pistol": {
 		"name": "Rune Pistol",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/5wbklj6.png",
+		"image": "./brotherLibrary/secondaryImages/Rune Pistol.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
 	},
-	"Rupture Canon": {
-		"name": "Rupture Canon",
+	"Rupture Cannon": {
+		"name": "Rupture Cannon",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/Pz8bvNH.png",
+		"image": "./brotherLibrary/secondaryImages/Rupture Cannon.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -5996,7 +5996,7 @@ window.secondary = {
 	"Rusty Repeater": {
 		"name": "Rusty Repeater",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/kzfbxfG.png",
+		"image": "./brotherLibrary/secondaryImages/Rusty Repeater.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6004,7 +6004,7 @@ window.secondary = {
 	"Service Pistol": {
 		"name": "Service Pistol",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/KFf6KZ4.png",
+		"image": "./brotherLibrary/secondaryImages/Service Pistol.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6012,7 +6012,7 @@ window.secondary = {
 	"Silverback Model 500": {
 		"name": "Silverback Model 500",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/8YPtljt.png",
+		"image": "./brotherLibrary/secondaryImages/Silverback Model 500.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6020,7 +6020,7 @@ window.secondary = {
 	"Sorrow": {
 		"name": "Sorrow",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/wxOnxL2.png",
+		"image": "./brotherLibrary/secondaryImages/Sorrow.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6028,7 +6028,7 @@ window.secondary = {
 	"Star Shot": {
 		"name": "Star Shot",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/7bxkb4d.png",
+		"image": "./brotherLibrary/secondaryImages/Star Shot.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6036,7 +6036,7 @@ window.secondary = {
 	"Sureshot": {
 		"name": "Sureshot",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/h9boJvd.png",
+		"image": "./brotherLibrary/secondaryImages/Sureshot.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6044,7 +6044,7 @@ window.secondary = {
 	"Tech 22": {
 		"name": "Tech 22",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/QdMIi8M.png",
+		"image": "./brotherLibrary/secondaryImages/Tech 22.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6052,7 +6052,7 @@ window.secondary = {
 	"Western Classic": {
 		"name": "Western Classic",
 		"slot": "Secondary",
-		"image": "https://i.imgur.com/eZk5Mej.png",
+		"image": "./brotherLibrary/secondaryImages/Western Classic.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}
@@ -6500,7 +6500,7 @@ window.rangedMods = {
 	"Astral Burst": {
 		"name": "Astral Burst",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/8hE87IA.png",
+		"image": "./brotherLibrary/modsImages/Astral Burst.png",
 		"desc": "Fires a short range burst of 7 star fragments which deal 90 damage each. Fragments bounce off walls up to 3 times, dealing 25% additional damage per bounce. Weakspot hits deal reduced damage.",
 		"custom": null,
 		"stats": {}
@@ -6508,7 +6508,7 @@ window.rangedMods = {
 	"Blood Draw": {
 		"name": "Blood Draw",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/1Iz3US5.png",
+		"image": "./brotherLibrary/modsImages/Blood Draw.png",
 		"desc": "Shoots out razor-sharp Chain Shards which impale up to 5 targets within 15m, dealing X30 damage. On hit, chains are pulled towards the caster, dealing 750 damage split equally among enemies and applying 825 BLEEDING damage over 15s.",
 		"custom": null,
 		"stats": {}
@@ -6516,7 +6516,7 @@ window.rangedMods = {
 	"Bore": {
 		"name": "Bore",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/9jIAj8a.png",
+		"image": "./brotherLibrary/modsImages/Bore.png",
 		"desc": "Fires a drill projectile which bores into enemies on contact, dealing 240 damage. After fully burrowing into an enemy, creates a Weakspot which grants 50% of normal Weakspot Damage on hit. If attached to an existing Weakspot, Ranged Crit Chance is increased by 15% when attacking the drill. Lasts 6s.",
 		"custom": null,
 		"stats": {}
@@ -6524,7 +6524,7 @@ window.rangedMods = {
 	"Concussive Shot": {
 		"name": "Concussive Shot",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/gNclurD.png",
+		"image": "./brotherLibrary/modsImages/Concussive Shot.png",
 		"desc": "Fires a focused blast of air through all targets within 8m, dealing 465 damage and 5x impact.",
 		"custom": null,
 		"stats": {}
@@ -6532,7 +6532,7 @@ window.rangedMods = {
 	"Corrosive Rounds": {
 		"name": "Corrosive Rounds",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/aitCmr9.png",
+		"image": "./brotherLibrary/modsImages/Corrosive Rounds.png",
 		"desc": "Imbues ammunition with TOXIC and increases Range Crit Chance by 15% for 20s. Shots also apply CORRODED, dealing 300 damage over 10s.",
 		"custom": null,
 		"stats": {}
@@ -6540,7 +6540,7 @@ window.rangedMods = {
 	"Creeping Mist": {
 		"name": "Creeping Mist",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/8bOJSbr.png",
+		"image": "./brotherLibrary/modsImages/Creeping Mist.png",
 		"desc": "Shoots a cannister out that shatters on impact to reveal an expanding mist, starting at 7.5m and growing to 15m over 5s. The mist lasts 20s. While affected, enemies receive 25% additional Status Effect Damage and are 5% more likely to be struck with a critical hit from any source. The mists debuff persists for 10s after target exits the mist.",
 		"custom": null,
 		"stats": {}
@@ -6548,7 +6548,7 @@ window.rangedMods = {
 	"Defrag": {
 		"name": "Defrag",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/2EIYw7v.png",
+		"image": "./brotherLibrary/modsImages/Defrag.png",
 		"desc": "Infects weapon with Malware for 30s, causing shots to apply FRAGMENTED for 5s. When a FRAGMENTED enemy dies, they create a Glitch that lasts 15s.\n\nPicking up a Glitch increases All damage by 20% for 15s.\n\nDestroying a Glitch causes it to destabilize, creating a 5m Virus Pool which deals 75 damage per second and applies the FRAGMENTED debuff to enemies inside. Virus Pools last 15s.",
 		"custom": null,
 		"stats": {}
@@ -6556,7 +6556,7 @@ window.rangedMods = {
 	"Energy Wall": {
 		"name": "Energy Wall",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/cO7GyIG.png",
+		"image": "./brotherLibrary/modsImages/Energy Wall.png",
 		"desc": "Deploys an energy barrier on impact with ground. Allies can shoot through Energy Wall but enemy projectiles are absorbed (up to 1000 damage\nreceived). Max 1 Wall at a time. Lasts 30s.",
 		"custom": null,
 		"stats": {}
@@ -6564,7 +6564,7 @@ window.rangedMods = {
 	"Familiar": {
 		"name": "Familiar",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/UmF10KH.png",
+		"image": "./brotherLibrary/modsImages/Familiar.png",
 		"desc": "Summons Faerie Familiar to aid in combat. The Familiar selects a random enemy within 10m and slashes through them for 75 damage each attack. Familiar will select a new target when the previous one dies. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -6572,7 +6572,7 @@ window.rangedMods = {
 	"Fargazer": {
 		"name": "Fargazer",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/Y9BXiib.png",
+		"image": "./brotherLibrary/modsImages/Fargazer.png",
 		"desc": "Calls forth an eye of Legion to gaze at player's AIM target. For every 0.25s Fargazer focuses on a target within 25m, a stack of MADNESS Status is applied for 5s. Each stack deals 9 Damage per second. Max 10 stacks. Lasts 30s.",
 		"custom": null,
 		"stats": {}
@@ -6580,7 +6580,7 @@ window.rangedMods = {
 	"Firestorm": {
 		"name": "Firestorm",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/ZoRb70h.png",
+		"image": "./brotherLibrary/modsImages/Firestorm.png",
 		"desc": "Creates a whirling cyclone that sucks in nearby targets and applies BURNING for 10s. The center of the cyclone deals 225 FIRE damage per second. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -6588,7 +6588,7 @@ window.rangedMods = {
 	"Healing Shot": {
 		"name": "Healing Shot",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/iqu7fjp.png",
+		"image": "./brotherLibrary/modsImages/Healing Shot.png",
 		"desc": "Launches a payload that explodes on contact with allies, healing 30% of their max health. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s, slowly losing healing potency over time.",
 		"custom": null,
 		"stats": {}
@@ -6596,7 +6596,7 @@ window.rangedMods = {
 	"Helix": {
 		"name": "Helix",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/LEpfV1I.png",
+		"image": "./brotherLibrary/modsImages/Helix.png",
 		"desc": "Shoots a helix of missiles, dealing 170 damage. On contact, divides into 6 smaller rockets which seek additional targets, dealing 90 damage on contact.",
 		"custom": null,
 		"stats": {}
@@ -6604,7 +6604,7 @@ window.rangedMods = {
 	"Hotshot": {
 		"name": "Hotshot",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/VpqAixm.png",
+		"image": "./brotherLibrary/modsImages/Hotshot.png",
 		"desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
 		"custom": null,
 		"stats": {}
@@ -6612,7 +6612,7 @@ window.rangedMods = {
 	"Knight Guard": {
 		"name": "Knight Guard",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/JeUqAsH.png",
+		"image": "./brotherLibrary/modsImages/Knight Guard.png",
 		"desc": "Summons Knight Guard to aid in combat. The Guards hurl penetrating slashes at a random enemy dealing 15 damage. The Guards will melee enemies if close enough for 15 damage. Lasts 20s",
 		"custom": null,
 		"stats": {}
@@ -6620,7 +6620,7 @@ window.rangedMods = {
 	"Overflow": {
 		"name": "Overflow",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/mnNhghp.png",
+		"image": "./brotherLibrary/modsImages/Overflow.png",
 		"desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
 		"custom": null,
 		"stats": {}
@@ -6628,7 +6628,7 @@ window.rangedMods = {
 	"Prismatic Driver": {
 		"name": "Prismatic Driver",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/D4vzv8x.png",
+		"image": "./brotherLibrary/modsImages/Prismatic Driver.png",
 		"desc": "Fires a superheated beam which deals 75 Mod Damage per second. Sustaining the beam on a target causes an explosion which deals 450 Mod damage in a 3m AOE.",
 		"custom": null,
 		"stats": {}
@@ -6636,7 +6636,7 @@ window.rangedMods = {
 	"Ring of Spears": {
 		"name": "Ring of Spears",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/paSALmR.png",
+		"image": "./brotherLibrary/modsImages/Ring of Spears.png",
 		"desc": "Calls forth 7 phantom spears to encircle the wielder for 25 seconds. This ring will deal up to 35 damage per second to nearby enemies, based on the number of spears remaining in the ring. While the mod is active, these spears can be thrown by tapping the mod button, dealing 100 damage to the first enemy hit. Spears will remain at their impact point for the duration of the mod or until recalled by holding the mod button. When recalled, spears will return to the wielder, dealing 50 damage to enemies along their path. When all recalled spears have reached the wielder, they cause an explosion dealing up to 350 damage based on the number of spears recalled.",
 		"custom": null,
 		"stats": {}
@@ -6644,7 +6644,7 @@ window.rangedMods = {
 	"Rootlash": {
 		"name": "Rootlash",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/IFqxPee.png",
+		"image": "./brotherLibrary/modsImages/Rootlash.png",
 		"desc": "Launches a projectile which summons a Root Tentacle. Tentacles deal 90 damage and steal 1.5% of the hero's Max Health per hit. Lasts 20s. (Max 2)",
 		"custom": null,
 		"stats": {}
@@ -6652,7 +6652,7 @@ window.rangedMods = {
 	"Rotted Arrow": {
 		"name": "Rotted Arrow",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/oJO0QFG.png",
+		"image": "./brotherLibrary/modsImages/Rotted Arrow.png",
 		"desc": "Fires a rotten arrow that deals 56 damage and detonates for another 180 damage within 4m. A deadly gas cloud is left behind that deals 600 damage over 5s.",
 		"custom": null,
 		"stats": {}
@@ -6660,7 +6660,7 @@ window.rangedMods = {
 	"Scrap Shot": {
 		"name": "Scrap Shot",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/PBn7ytP.png",
+		"image": "./brotherLibrary/modsImages/Scrap Shot.png",
 		"desc": "Fires a caltrops grenade that explodes to cover an area of 6m. Caltrops deal 60 damage per second and SLOW to enemies that walk over them. Lasts 10s.",
 		"custom": null,
 		"stats": {}
@@ -6668,7 +6668,7 @@ window.rangedMods = {
 	"Skewer": {
 		"name": "Skewer",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/ckpUuDp.png",
+		"image": "./brotherLibrary/modsImages/Skewer.png",
 		"desc": "Fires a Wretched Spear which embeds itself on contact. Spears deal 470 damage on hit, rapidly dividing inside the target until bursting, dealing 420 damage to all targets within 3m. Spears embedded in the environment remain in place for 10s.",
 		"custom": null,
 		"stats": {}
@@ -6677,7 +6677,7 @@ window.rangedMods = {
 		"custom": null,
 		"name": "Song of Eafir",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/6MAqXoQ.png",
+		"image": "./brotherLibrary/modsImages/Song of Eafir.png",
 		"desc": "Fires a shot infused with the binding power of the Song of Eafir. Staggers most ground enemies within 10m and deals 450 damage to Flying enemies within the same range.\nThe song continues for 15s, afflicting targets within 15m with SLOW, and a 15% decrease to damage dealt.",
 		"stats": {
 			"REdamage": -0.15
@@ -6686,7 +6686,7 @@ window.rangedMods = {
 	"Soulbinder": {
 		"name": "Soulbinder",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/BW1I8Tp.png",
+		"image": "./brotherLibrary/modsImages/Soulbinder.png",
 		"desc": "Fires a projectile that attaches to the enemy dealing 120 damage. Enemies within 7m become bound to the primary target after impact and share 60% of damage dealt to them. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -6694,7 +6694,7 @@ window.rangedMods = {
 	"Space Crabs": {
 		"name": "Space Crabs",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/DhojdeS.png",
+		"image": "./brotherLibrary/modsImages/Space Crabs.png",
 		"desc": "Launch an alien egg that bursts on impact, releasing 5 Space Crabs. Crabs follow the caster, leaping towards enemies within 4m, and exploding, dealing 180 Damage each.",
 		"custom": null,
 		"stats": {}
@@ -6702,7 +6702,7 @@ window.rangedMods = {
 	"Stasis Beam": {
 		"name": "Stasis Beam",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/pGgMiaN.png",
+		"image": "./brotherLibrary/modsImages/Stasis Beam.png",
 		"desc": "Fires a beam which deals X45 damage per second, and applies SLOW Debuff. After 3s of application to a target, SLOW becomes STASIS, freezing the target in place for 10s.",
 		"custom": null,
 		"stats": {}
@@ -6710,7 +6710,7 @@ window.rangedMods = {
 	"Time Lapse": {
 		"name": "Time Lapse",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/r9Keesw.png",
+		"image": "./brotherLibrary/modsImages/Time Lapse.png",
 		"desc": "Creates a 6m blast which freezes all standard enemies for 7s.\nDealing damage to frozen enemies immediately breaks the Time Lapse effect, applying SLOW for the remaining duration",
 		"custom": null,
 		"stats": {}
@@ -6718,7 +6718,7 @@ window.rangedMods = {
 	"Tremor": {
 		"name": "Tremor",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/vWIWTkz.png",
+		"image": "./brotherLibrary/modsImages/Tremor.png",
 		"desc": "Fires a projectile that cracks the ground and spawns shockwaves that deal X225 damage Within 9m for 6s. Shockwaves inflict 3x impact.",
 		"custom": null,
 		"stats": {}
@@ -6726,7 +6726,7 @@ window.rangedMods = {
 	"Voltaic Rondure": {
 		"name": "Voltaic Rondure",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/oWMDim4.png",
+		"image": "./brotherLibrary/modsImages/Voltaic Rondure.png",
 		"desc": "Launches a slow-moving orb that pulses every 0.5s, striking enemies within 3m for 60 SHOCK damage and applying OVERLOADED for 15s. The orb lasts 20s. The orb can be overcharged by striking it with additional damage.",
 		"custom": null,
 		"stats": {}
@@ -6734,7 +6734,7 @@ window.rangedMods = {
 	"Witchfire": {
 		"name": "Witchfire",
 		"slot": "Mod",
-		"image": "https://i.imgur.com/2X2SSs8.png",
+		"image": "./brotherLibrary/modsImages/Witchfire.png",
 		"desc": "Fires a highly volatile projectile that explodes to leave a line of flaming terrain. Deals 165 FIRE Damage per second, and applies BURNING, dealing 600 damage over 10s. Lasts 5s.",
 		"custom": null,
 		"stats": {}
@@ -6753,7 +6753,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Bark Extract",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/Z75cZW0.png",
+		"image": "./brotherLibrary/concoctionsImages/Bark Extract.png",
 		"desc": "Increases Armor by 30. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Armor": 30
@@ -6762,7 +6762,7 @@ window.concoctions = {
 	"Bottled Shaedberry": {
 		"name": "Bottled Shaedberry",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/KvDLkCJ.png",
+		"image": "./brotherLibrary/concoctionsImages/Bottled Shaedberry.png",
 		"desc": "Increases Mod Power Generation by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6770,7 +6770,7 @@ window.concoctions = {
 	"Chilled Steam": {
 		"name": "Chilled Steam",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/ifZbxJK.png",
+		"image": "./brotherLibrary/concoctionsImages/Chilled Steam.png",
 		"desc": "Increases Movement Speed by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6779,7 +6779,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Dark Cider",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/mnKm9eM.png",
+		"image": "./brotherLibrary/concoctionsImages/Dark Cider.png",
 		"desc": "Increases Health by 6.66%, Stamina by 6.66%, and Movement Speed by 6.66%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Health%": 0.0666,
@@ -6789,7 +6789,7 @@ window.concoctions = {
 	"Dark Fluid": {
 		"name": "Dark Fluid",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/C3JYjJN.png",
+		"image": "./brotherLibrary/concoctionsImages/Dark Fluid.png",
 		"desc": "Increases Distance of Evade and Combat Slide by 15% and reduces the cost by 20%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6798,7 +6798,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Meat Shake",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/pPM3hgw.png",
+		"image": "./brotherLibrary/concoctionsImages/Meat Shake.png",
 		"desc": "Increases Damage Reduction by 8%. Lasts 60m and will stay in effect after death. Only one concoction may be active at a time.",
 		"stats": {
 			"FlatDR": 0.08
@@ -6807,7 +6807,7 @@ window.concoctions = {
 	"Mudtooth's Elixir": {
 		"name": "Mudtooth's Elixir",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/kx1Pdxz.png",
+		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Elixir.png",
 		"desc": "Increases Experience Gains by 15%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6816,7 +6816,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Mudtooth's Stew",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/tXDJ04Z.png",
+		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Stew.png",
 		"desc": "Increases Max Stamina by 25, Lasts 60m and will stay in effect after death Only one Concoction may be active at a time.",
 		"stats": {
 			"Stamina": 25
@@ -6826,7 +6826,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Mudtooth's Tonic",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/UPbE9sV.png",
+		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Tonic.png",
 		"desc": "Increases Max Health by 25. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Health": 25
@@ -6836,7 +6836,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Root Water",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/sKbI9q7.png",
+		"image": "./brotherLibrary/concoctionsImages/Root Water.png",
 		"desc": "Regenerates 0.75 Health per second. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"HP/S+": 0.75
@@ -6846,7 +6846,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Sacred Lakewater",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/the7NcR.png",
+		"image": "./brotherLibrary/concoctionsImages/Sacred Lakewater.png",
 		"desc": "Increases Grey Health Conversion by 50% and Grey Health Regen by 1 per secorid. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"GreyHP/S+": 1
@@ -6856,7 +6856,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Sanguine Vapor",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/lPM6EYX.png",
+		"image": "./brotherLibrary/concoctionsImages/Sanguine Vapor.png",
 		"desc": "Increases Ranged and Melee Lifesteal by 3.5% of base damage. Increases damage taken by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"FlatDR": -0.1,
@@ -6867,7 +6867,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Strong Drink",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/mLU3GUm.png",
+		"image": "./brotherLibrary/concoctionsImages/Strong Drink.png",
 		"desc": "Reduces Encumbrance by 10. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Encumbrance": -10
@@ -6876,7 +6876,7 @@ window.concoctions = {
 	"Tranquility Font": {
 		"name": "Tranquility Font",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/EGgRM3C.png",
+		"image": "./brotherLibrary/concoctionsImages/Tranquility Font.png",
 		"desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 25%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6885,7 +6885,7 @@ window.concoctions = {
 		"custom": null,
 		"name": "Verdant Tea",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/KGsglLE.png",
+		"image": "./brotherLibrary/concoctionsImages/Verdant Tea.png",
 		"desc": "Increases Stamina Recovery by 20 per second and reduces Stamina Regen Penalty by 50%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Stamina/S+": 20
@@ -6894,7 +6894,7 @@ window.concoctions = {
 	"Xenoplasm": {
 		"name": "Xenoplasm",
 		"slot": "Conc",
-		"image": "https://i.imgur.com/KWvfn6L.png",
+		"image": "./brotherLibrary/concoctionsImages/Xenoplasm.png",
 		"desc": "Reduces Skill Cooldowns by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
 		"stats": {}
@@ -6912,7 +6912,7 @@ window.quickUses = {
 	"Ambit Ember": {
 		"name": "Ambit Ember",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/Zvx8Gxg.png",
+		"image": "./brotherLibrary/consumablesImages/Ambit Ember.png",
 		"desc": "Slightly increases Evade Window and Evade Speed by 15%. Lasts 60s.",
 		"custom": null,
 		"stats": {}
@@ -6920,7 +6920,7 @@ window.quickUses = {
 	"Antidote": {
 		"name": "Antidote",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/eEvswcC.png",
+		"image": "./brotherLibrary/consumablesImages/Antidote.png",
 		"desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
 		"custom": null,
 		"stats": {}
@@ -6929,7 +6929,7 @@ window.quickUses = {
 		"custom": null,
 		"name": "Blood Root",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/okPmaon.png",
+		"image": "./brotherLibrary/consumablesImages/Blood Root.png",
 		"desc": "Regenerates 1.5 Health per second. Lasts 30s.",
 		"stats": {
 			"HP/S+": 1.5
@@ -6939,7 +6939,7 @@ window.quickUses = {
 		"custom": null,
 		"name": "Confidence Booster",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/95R0m9e.png",
+		"image": "./brotherLibrary/consumablesImages/Confidence Booster.png",
 		"desc": "Reduces incoming damage by 10% and Stagger by 1. Lasts 20s.",
 		"stats": {
 			"FlatDR": 0.1
@@ -6948,7 +6948,7 @@ window.quickUses = {
 	"Ethereal Orb": {
 		"name": "Ethereal Orb",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/1CDLiyQ.png",
+		"image": "./brotherLibrary/consumablesImages/Ethereal Orb.png",
 		"desc": "Removes OVERLOADED effect and increases SHOCK resistance by 15%. Lasts 10m.",
 		"custom": null,
 		"stats": {}
@@ -6956,7 +6956,7 @@ window.quickUses = {
 	"Faerie Needle": {
 		"name": "Faerie Needle",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/rDMjtwG.png",
+		"image": "./brotherLibrary/consumablesImages/Faerie Needle.png",
 		"desc": "Increases Mod Power Regen by 10 MP per second. Lasts 30s.",
 		"custom": null,
 		"stats": {}
@@ -6964,7 +6964,7 @@ window.quickUses = {
 	"Gul Serum": {
 		"name": "Gul Serum",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/K4iNOeU.png",
+		"image": "./brotherLibrary/consumablesImages/Gul Serum.png",
 		"desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
 		"custom": null,
 		"stats": {}
@@ -6972,7 +6972,7 @@ window.quickUses = {
 	"Mud Rub": {
 		"name": "Mud Rub",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/EFmWirZ.png",
+		"image": "./brotherLibrary/consumablesImages/Mud Rub.png",
 		"desc": "Extinguishes BURNING effect and increases FIRE resistance by 15. Lasts 10m.",
 		"custom": null,
 		"stats": {}
@@ -6980,7 +6980,7 @@ window.quickUses = {
 	"Mystery Jerky": {
 		"name": "Mystery Jerky",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/M3hexEO.png",
+		"image": "./brotherLibrary/consumablesImages/Mystery Jerky.png",
 		"desc": "Converts 1 Health into Grey Health per second. Lasts 30s.",
 		"custom": null,
 		"stats": {}
@@ -6988,7 +6988,7 @@ window.quickUses = {
 	"Oilskin Balm": {
 		"name": "Oilskin Balm",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/gv2Ic0X.png",
+		"image": "./brotherLibrary/consumablesImages/Oilskin Balm.png",
 		"desc": "Cures ROOT ROT Blight and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
 		"stats": {}
@@ -6996,7 +6996,7 @@ window.quickUses = {
 	"Orange Slices": {
 		"name": "Orange Slices",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/nodMi8Y.png",
+		"image": "./brotherLibrary/consumablesImages/Orange Slices.png",
 		"desc": "Regenerates 5% Health instantly.",
 		"custom": null,
 		"stats": {}
@@ -7004,7 +7004,7 @@ window.quickUses = {
 	"Processed Koara": {
 		"name": "Processed Koara",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/FIJdQqh.png",
+		"image": "./brotherLibrary/consumablesImages/Processed Koara.png",
 		"desc": "Decreases Stamina Recovery delay by 75% and Stamina Regen Penalty by 50%. Lasts 60s.",
 		"custom": null,
 		"stats": {}
@@ -7012,7 +7012,7 @@ window.quickUses = {
 	"Purified Salve": {
 		"name": "Purified Salve",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/VieDQu8.png",
+		"image": "./brotherLibrary/consumablesImages/Purified Salve.png",
 		"desc": "Cures CURSE and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
 		"stats": {}
@@ -7020,7 +7020,7 @@ window.quickUses = {
 	"Rocket Fuel": {
 		"name": "Rocket Fuel",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/v9VNMqo.png",
+		"image": "./brotherLibrary/consumablesImages/Rocket Fuel.png",
 		"desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
 		"custom": null,
 		"stats": {}
@@ -7028,7 +7028,7 @@ window.quickUses = {
 	"Timeworn Unguent": {
 		"name": "Timeworn Unguent",
 		"slot": "Cons",
-		"image": "https://i.imgur.com/JQXgOot.png",
+		"image": "./brotherLibrary/consumablesImages/Timeworn Unguent.png",
 		"desc": "Cures SUPPRESSION Blight and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
 		"stats": {}
