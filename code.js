@@ -759,7 +759,9 @@ function updateURLparameters() {
     "consumable": [],
     "accessory": [],
     "relic": [],
-    "settings": ["filler"]
+    "settings": [],
+    "adv": [],
+    "s": ["s"]
   }
 
   for (i=1;i<activeTraits;i++) {
@@ -800,7 +802,84 @@ function updateURLparameters() {
   for (i=1;i<=3;i++) {
     urlObject.relic.push(readSelection(`fragment${i}`).value);
   }
-  //Add settings here later
+  exportURLsetting("USEtoggledHead","settings");
+  exportURLsetting("USEtoggledChest","settings");
+  exportURLsetting("USEtoggledLegs","settings");
+  exportURLsetting("USEtoggledHands","settings");
+  exportURLsetting("USEtoggledAmulet","settings");
+  exportURLsetting("USEtoggledRing1","settings");
+  exportURLsetting("USEtoggledRing2","settings");
+  exportURLsetting("USEtoggledRing3","settings");
+  exportURLsetting("USEtoggledRing4","settings");
+  exportURLsetting("USEtoggledRelic","settings");
+  exportURLsetting("USEtoggledrFrag1","settings");
+  exportURLsetting("USEtoggledrFrag2","settings");
+  exportURLsetting("USEtoggledrFrag3","settings");
+  exportURLsetting("USEtoggledPrimeP","settings");
+  exportURLsetting("USEtoggledAbility1","settings");
+  exportURLsetting("USEtoggledPassive1","settings");
+  exportURLsetting("USEtoggledPassive2","settings");
+  exportURLsetting("USEtoggledPassive3","settings");
+  exportURLsetting("USEtoggledPassive4","settings");
+  exportURLsetting("USEtoggledAbility2","settings");
+  exportURLsetting("USEtoggledPassive5","settings");
+  exportURLsetting("USEtoggledPassive6","settings");
+  exportURLsetting("USEtoggledPassive7","settings");
+  exportURLsetting("USEtoggledPassive8","settings");
+  exportURLsetting("USEtoggledPrimary","settings");
+  exportURLsetting("USEtoggledpMutator","settings");
+  exportURLsetting("USEtoggledpMod","settings");
+  exportURLsetting("USEtoggledMelee","settings");
+  exportURLsetting("USEtoggledmMutator","settings");
+  exportURLsetting("USEtoggledmMod","settings");
+  exportURLsetting("USEtoggledSecondary","settings");
+  exportURLsetting("USEtoggledsMutator","settings");
+  exportURLsetting("USEtoggledsMod","settings");
+  exportURLsetting("USEtoggledConc1","settings");
+  exportURLsetting("USEtoggledConc2","settings");
+  exportURLsetting("USEtoggledConc3","settings");
+  exportURLsetting("USEtoggledConc4","settings");
+  exportURLsetting("USEtoggledConc5","settings");
+  exportURLsetting("USEtoggledConc6","settings");
+  exportURLsetting("USEtoggledConc7","settings");
+  exportURLsetting("USEtoggledQuick1","settings");
+  exportURLsetting("USEtoggledQuick2","settings");
+  exportURLsetting("USEtoggledQuick3","settings");
+  exportURLsetting("USEtoggledQuick4","settings");
+  for (let i=1;i<activeTraits;i++) {
+    exportURLsetting(`USEtoggledTrait${i}`,"settings")
+  }
+  urlObject.settings = urlObject.settings.replace(/\.?0+$/, '');
+//Advanced Stats Settings
+  if (readSelection("complexInput").value != null && readSelection("complexInput").value != 0) {
+    urlObject.adv.push(readSelection("complexInput").value);
+  }
+  else {urlObject.adv.push("")}
+  if (readSelection("isCoop").value != null && readSelection("isCoop").value != "Solo") {
+    urlObject.adv.push(readSelection("isCoop").value);
+  }
+  else {urlObject.adv.push("")}
+  if (readSelection("teamCount").value != null && readSelection("teamCount").value != 1) {
+    urlObject.adv.push(readSelection("teamCount").value);
+  }
+  else {urlObject.adv.push("")}
+  if (readSelection("minionCount").value != null && readSelection("minionCount").value != 0) {
+    urlObject.adv.push(readSelection("minionCount").value);
+  }
+  else {urlObject.adv.push("")}
+  if (readSelection("spiritHealerStacks").value != null && readSelection("spiritHealerStacks").value != 0) {
+    urlObject.adv.push(readSelection("spiritHealerStacks").value);
+  }
+  else {urlObject.adv.push("")}
+  urlObject.adv.push("");
+  exportURLsetting("includeREdamage","adv");
+  exportURLsetting("includeDMGKept","adv");
+  exportURLsetting("includeRelicHealing","adv");
+  exportURLsetting("includeShields","adv");
+  //remove trailing 0's from the last parameter, helps clear the URL if no adv settings are active
+  urlObject.adv[5] = urlObject.adv[5].replace(/\.?0+$/, '');
+
+//Delete a given parameter if it stores no values
   urlParamIsEmpty("trait");
   urlParamIsEmpty("archetype");
   urlParamIsEmpty("armor");
@@ -811,6 +890,7 @@ function updateURLparameters() {
   urlParamIsEmpty("accessory");
   urlParamIsEmpty("relic");
   urlParamIsEmpty("settings");
+  urlParamIsEmpty("adv");
 
   const params = new URLSearchParams(urlObject);
   decoded = params.toString();
@@ -846,6 +926,8 @@ function importURLparameters() {
   let urlAccessory = feed.get("accessory");
   let urlRelic = feed.get("relic");
   let urlSettings = feed.get("settings");
+  let urlAdvanced = feed.get("adv");
+  let urlSource = feed.get("s");
   // let urlQuickUse = feed.get("quickUse");
 //TRAITS
   if (urlTraits != null) {
@@ -989,14 +1071,112 @@ function importURLparameters() {
       }
     }
   }
-//CHECK IF TOGGLES ARE THERE OR NOT TO NOTIFY PEOPLE COMING FROM R2TK
-  if (urlSettings === null && feed != null && feed != "") {
-    alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+//SETTINGS
+  if (urlSettings != null) {
+    importURLsetting("USEtoggledHead",urlSettings[0]);
+    importURLsetting("USEtoggledChest",urlSettings[1]);
+    importURLsetting("USEtoggledLegs",urlSettings[2]);
+    importURLsetting("USEtoggledHands",urlSettings[3]);
+    importURLsetting("USEtoggledAmulet",urlSettings[4]);
+    importURLsetting("USEtoggledRing1",urlSettings[5]);
+    importURLsetting("USEtoggledRing2",urlSettings[6]);
+    importURLsetting("USEtoggledRing3",urlSettings[7]);
+    importURLsetting("USEtoggledRing4",urlSettings[8]);
+    importURLsetting("USEtoggledRelic",urlSettings[9]);
+    importURLsetting("USEtoggledrFrag1",urlSettings[10]);
+    importURLsetting("USEtoggledrFrag2",urlSettings[11]);
+    importURLsetting("USEtoggledrFrag3",urlSettings[12]);
+    importURLsetting("USEtoggledPrimeP",urlSettings[13]);
+    importURLsetting("USEtoggledAbility1",urlSettings[14]);
+    importURLsetting("USEtoggledPassive1",urlSettings[15]);
+    importURLsetting("USEtoggledPassive2",urlSettings[16]);
+    importURLsetting("USEtoggledPassive3",urlSettings[17]);
+    importURLsetting("USEtoggledPassive4",urlSettings[18]);
+    importURLsetting("USEtoggledAbility2",urlSettings[19]);
+    importURLsetting("USEtoggledPassive5",urlSettings[20]);
+    importURLsetting("USEtoggledPassive6",urlSettings[21]);
+    importURLsetting("USEtoggledPassive7",urlSettings[22]);
+    importURLsetting("USEtoggledPassive8",urlSettings[23]);
+    importURLsetting("USEtoggledPrimary",urlSettings[24]);
+    importURLsetting("USEtoggledpMutator",urlSettings[25]);
+    importURLsetting("USEtoggledpMod",urlSettings[26]);
+    importURLsetting("USEtoggledMelee",urlSettings[27]);
+    importURLsetting("USEtoggledmMutator",urlSettings[28]);
+    importURLsetting("USEtoggledmMod",urlSettings[29]);
+    importURLsetting("USEtoggledSecondary",urlSettings[30]);
+    importURLsetting("USEtoggledsMutator",urlSettings[31]);
+    importURLsetting("USEtoggledsMod",urlSettings[32]);
+    importURLsetting("USEtoggledConc1",urlSettings[33]);
+    importURLsetting("USEtoggledConc2",urlSettings[34]);
+    importURLsetting("USEtoggledConc3",urlSettings[35]);
+    importURLsetting("USEtoggledConc4",urlSettings[36]);
+    importURLsetting("USEtoggledConc5",urlSettings[37]);
+    importURLsetting("USEtoggledConc6",urlSettings[38]);
+    importURLsetting("USEtoggledConc7",urlSettings[39]);
+    importURLsetting("USEtoggledQuick1",urlSettings[40]);
+    importURLsetting("USEtoggledQuick2",urlSettings[41]);
+    //42
+    //43 for the other two quick use that I don't have yet
+    for (let i=1;i<activeTraits;i++) {
+      importURLsetting(`USEtoggledTrait${i}`,urlSettings[43+i])
+
+    }
+    updateFormulas();
+  }
+//ADVANCED STATS LOGGING
+  if (urlAdvanced != null) {
+    urlAdvanced = urlAdvanced.split(",");
+    if (urlAdvanced[0] != null && urlAdvanced[0] != "") {
+      readSelection("complexInput").value = urlAdvanced[0];
+    }
+    if (urlAdvanced[1] != null && urlAdvanced[1] != "") {
+      readSelection("isCoop").value = urlAdvanced[1];
+    }
+    if (urlAdvanced[2] != null && urlAdvanced[2] != "") {
+      readSelection("teamCount").value = urlAdvanced[2];
+    }
+    if (urlAdvanced[3] != null && urlAdvanced[3] != "") {
+      readSelection("minionCount").value = urlAdvanced[3];
+    }
+    if (urlAdvanced[4] != null && urlAdvanced[4] != "") {
+      readSelection("spiritHealerStacks").value = urlAdvanced[4];
+    }
+    importURLsetting("includeREdamage",urlAdvanced[5][0]);
+    importURLsetting("includeDMGKept",urlAdvanced[5][1]);
+    importURLsetting("includeRelicHealing",urlAdvanced[5][2]);
+    importURLsetting("includeShields",urlAdvanced[5][3]);
+    updateFormulas();
+  }
+//CHECK SOURCE PARAM IS MISSING, SO WE CAN NOTIFY PEEPS COMING FROM R2TK
+if (urlSource === null && feed != null && feed != "") {
+  alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
+}
+}
+
+function importURLsetting(checkBoxID,arrayIDvalue) {
+  if (arrayIDvalue != null && arrayIDvalue === "1") {
+    readSelection(checkBoxID).checked = true;
   }
 }
 
-
-
+function exportURLsetting(checkBoxID,objElement) {
+  if (objElement != "adv") {
+    if (readSelection(checkBoxID) != null && readSelection(checkBoxID).checked === true) {
+      urlObject[objElement] += "1";
+    }
+    else if (readSelection(checkBoxID) === null || readSelection(checkBoxID).checked === false) {
+      urlObject[objElement] += "0";
+    }
+  }
+  else {
+    if (readSelection(checkBoxID) != null && readSelection(checkBoxID).checked === true) {
+      urlObject.adv[5] += "1";
+    }
+    else if (readSelection(checkBoxID) === null || readSelection(checkBoxID).checked === false) {
+      urlObject.adv[5] += "0";
+    }
+  }
+}
 
 
 

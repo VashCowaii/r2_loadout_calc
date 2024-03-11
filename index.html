@@ -139,7 +139,7 @@
                             <button class="dropbtn">
                                 <img class="settingsIcon" src="images/Remnant/Gear-icon.png" alt="Settings Icon">
                             </button>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content"> <!-- ALL THE TOGGLES -->
                                 <div class="togglesBox">
                                     <div class="togglesHeader">TOGGLES</div>
                                     <div class="togglesRowBox">
@@ -397,7 +397,7 @@
                     </div>
                 </div>
                 <div class="classTitle" id="comboTitle">---</div>
-                <div class="classPerkContainer">
+                <div class="classPerkContainer"> <!-- PRIME PERK -->
                     <div class="classPerkName">PRIME PERK:<br><span id="primePerk"></span></div>
                     <div class="classPerkIconHolder">
                         <img class="classPerkIcon" src="images/Remnant/clear.png" alt="Prime Perk Icon" id="primePerkIcon">
@@ -1023,7 +1023,7 @@
         <div class="advancedCategoryBox advStatsMobileAdjustment">
             <div class="advancedCategoryHeader">MISC</div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Summon Count</div><div class="advancedMiscBoxValue">
-                <select class="advancedMiscSelector" id="minionCount">
+                <select class="advancedMiscSelector" id="minionCount" onchange="updateFormulas()">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -1038,7 +1038,7 @@
                 </select>
             </div></div>
             <div class="advancedShieldBox"><div class="advancedMiscBoxStat">Spirit Healer Stacks</div><div class="advancedMiscBoxValue">
-                <select class="advancedMiscSelector">
+                <select class="advancedMiscSelector" id="spiritHealerStacks" onchange="updateFormulas()">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
