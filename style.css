@@ -252,10 +252,15 @@ html,body{
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
-    position: absolute;
     background-color: #d9d9d9;
+    position: absolute;
     top: 100%;
     left: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* position: fixed;
+    top: 0;
+    right: 0; */
     width: 260px;
     z-index: 1;
     box-sizing: border-box;
