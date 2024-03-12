@@ -3006,10 +3006,10 @@ window.rings = {
 		"custom": null,
 		"stats": {}
 	},
-	"Devourer Loop": {
-		"name": "Devourer Loop",
+	"Devoured Loop": {
+		"name": "Devoured Loop",
 		"slot": "Ring",
-		"image": "./brotherLibrary/ringsImages/Devourer Loop.png",
+		"image": "./brotherLibrary/ringsImages/Devoured Loop.png",
 		"desc": "Critical Hits have 1% chance to reset Skill Cooldowns. Can only occur once every 10s. Increases all incoming damage by 10%.",
 		"custom": null,
 		"stats": {}
