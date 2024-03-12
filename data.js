@@ -5461,10 +5461,10 @@ window.primary = {
 		"custom": null,
 		"stats": {}
 	},
-	"Sparkfire": {
-		"name": "Sparkfire",
+	"Sparkfire Shotgun": {
+		"name": "Sparkfire Shotgun",
 		"slot": "Primary",
-		"image": "./brotherLibrary/primaryImages/Sparkfire.png",
+		"image": "./brotherLibrary/primaryImages/Sparkfire Shotgun.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}

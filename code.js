@@ -664,6 +664,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     populateGear("trait1",traits);
     //
   }
+
 if (updateAgain===true) {updateTraitCollection();} //Repeat if there would be multiple blank slots not handled this late
 generateTraitToggles();
 updateTraitPoints();
@@ -950,7 +951,6 @@ function importURLparameters() {
   let urlSettings = feed.get("settings");
   let urlAdvanced = feed.get("adv");
   let urlSource = feed.get("s");
-  // let urlQuickUse = feed.get("quickUse");
 //TRAITS
   if (urlTraits != null) {
       urlTraits = urlTraits.split(",")
@@ -963,7 +963,8 @@ function importURLparameters() {
       }
   }
   updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
-//ARCHETYPES AND ABILITIES
+  //Also, for the sake of imports with more than the trait cap, need to establish default points now for later
+  //ARCHETYPES AND ABILITIES
   if (urlArchs != null) {
     urlArchs = urlArchs.split(",");
     if (urlArchs[0] != "" && urlArchs[0] != null) {
@@ -982,6 +983,28 @@ function importURLparameters() {
       readSelection("archetype2ability").value = urlArchs[3];
       updateAbility('archetype2');
     }  
+  }
+  //If an import has over the trait cap in points spent
+  if (urlTraits != null && traitPointCount > traitPointCap) {
+  let traitsOverCap = traitPointCount - traitPointCap;
+  if (traitsOverCap > 0) {
+    for (let i=activeTraits;i>0;i-=1) {
+      let currentImportLevel = greatTraitRecords[`trait${i}`].level;
+      if (currentImportLevel >= traitsOverCap && currentImportLevel != 0 && traitsOverCap != 0) {
+        //Example: if the current level of 10 is greater than the diff over the cap 8
+        // then 10-8=2, the level is now 2 and the diff is now 0
+        let importAdjustmentValue = currentImportLevel - traitsOverCap;
+        greatTraitRecords[`trait${i}`].level = importAdjustmentValue;
+        traitsOverCap = 0;
+      }
+      //But if the current level of 2 is less than the diff of 8, 8-2=6 the new diff, and current now 0
+      else if (currentImportLevel < traitsOverCap && traitsOverCap > 0 && currentImportLevel != 0 && traitsOverCap != 0) {
+        traitsOverCap -= currentImportLevel;
+        greatTraitRecords[`trait${i}`].level = 0;
+      }
+    }
+    updateTraitCollection();//Update needed to adjust everything again based on what just happened
+  }
   }
 //ARMOR
   if (urlArmor != null) {
