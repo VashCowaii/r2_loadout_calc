@@ -65,6 +65,8 @@ html,body {
 }
 .main {
     width: 100%;
+    max-width: 1280px;
+    /* min-width: 930px; */
     min-height: 100%;
     position: relative;
     padding: 0;
@@ -78,8 +80,8 @@ html,body {
 .theGreatBox {
     width: 100%;
     padding-left: clamp(40px, 10vw, 60px);
-    min-width: 930px;
-    max-width: 1280px;
+    /* min-width: 930px;
+    max-width: 1280px; */
     height: auto;
     /* display: flex; */
     /* white-space: nowrap; */
@@ -95,7 +97,7 @@ html,body {
     /* overflow: auto; */
     margin: 0;
 
-    grid-template-columns: [first] 25% [line2] auto [line3] 35% [end];
+    grid-template-columns: [first] 25% [line2] 40% [line3] 35% [end];
     grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line];
 }
 
