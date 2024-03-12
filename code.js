@@ -936,7 +936,7 @@ function urlParamIsEmpty(objElement) {
     }
   }
 }
-//Reads the query string if one exists, and populates all fields/updates formulas accordingly
+//Reads the query string if one exists, and populates all fields/updates formulas accordingly -- push text test
 function importURLparameters() {
   let feed = (new URL(document.location)).searchParams;
   let urlTraits = feed.get("trait");
