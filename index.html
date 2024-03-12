@@ -413,66 +413,74 @@
                 </div>
                 <div class="classPerkDescription" id="primePerkDesc">---</div> <!-- PRIME PERK DESCRIPTION-->
             </div>
-            <div class="armorHeaderBig">ARMOR SELECTION</div>
+            <div class="armorHeaderBig">ARMOR</div>
             <div class="armorSelectionsBox">
-                <div class="armorHeader">Head</div>
+                <!-- <div class="armorHeader">Head</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
                             <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
                         </div>
-                        <div class="armorIconHolder">
-                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
-                        </div>
-                        <div class="armorValueContainer">
-                            <div class="armorValueHeader">Armor</div>
-                            <div class="armorValueDisplay" id="helmetArmor">0</div>
-                            <div class="armorValueHeader">Weight</div>
-                            <div class="armorValueDisplay" id="helmetWeight">0</div>
+                        <div class="armorIconToStatsBox">
+                            <div class="armorIconHolder">
+                                <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Head Icon" id="helmetImage">
+                            </div>
+                            <div class="armorValueContainer">
+                                <div class="armorValueHeader">Armor</div>
+                                <div class="armorValueDisplay" id="helmetArmor">0</div>
+                                <div class="armorValueHeader">Weight</div>
+                                <div class="armorValueDisplay" id="helmetWeight">0</div>
+                            </div>
                         </div>
                     </div>
-                <div class="armorHeader">Chest</div>
+                <!-- <div class="armorHeader">Chest</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
                             <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
                         </div>
-                        <div class="armorIconHolder">
-                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
-                        </div>
-                        <div class="armorValueContainer">
-                            <div class="armorValueHeader">Armor</div>
-                            <div class="armorValueDisplay" id="chestArmor">0</div>
-                            <div class="armorValueHeader">Weight</div>
-                            <div class="armorValueDisplay" id="chestWeight">0</div>
+                        <div class="armorIconToStatsBox">
+                            <div class="armorIconHolder">
+                                <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Chest Icon" id="chestImage">
+                            </div>
+                            <div class="armorValueContainer">
+                                <div class="armorValueHeader">Armor</div>
+                                <div class="armorValueDisplay" id="chestArmor">0</div>
+                                <div class="armorValueHeader">Weight</div>
+                                <div class="armorValueDisplay" id="chestWeight">0</div>
+                            </div>
                         </div>
                     </div>
-                <div class="armorHeader">Legs</div>
+                <!-- <div class="armorHeader">Legs</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
                             <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
                         </div>
-                        <div class="armorIconHolder">
-                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
-                        </div>
-                        <div class="armorValueContainer">
-                            <div class="armorValueHeader">Armor</div>
-                            <div class="armorValueDisplay" id="legArmor">0</div>
-                            <div class="armorValueHeader">Weight</div>
-                            <div class="armorValueDisplay" id="legWeight">0</div>
+                        <div class="armorIconToStatsBox">
+                            <div class="armorIconHolder">
+                                <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Legs Icon" id="legImage">
+                            </div>
+                            <div class="armorValueContainer">
+                                <div class="armorValueHeader">Armor</div>
+                                <div class="armorValueDisplay" id="legArmor">0</div>
+                                <div class="armorValueHeader">Weight</div>
+                                <div class="armorValueDisplay" id="legWeight">0</div>
+                            </div>
                         </div>
                     </div>
-                <div class="armorHeader">Hands</div>
+                <!-- <div class="armorHeader">Hands</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
                             <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
                         </div>
-                        <div class="armorIconHolder">
-                            <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
-                        </div>
-                        <div class="armorValueContainer">
-                            <div class="armorValueHeader">Armor</div>
-                            <div class="armorValueDisplay" id="handArmor">0</div>
-                            <div class="armorValueHeader">Weight</div>
-                            <div class="armorValueDisplay" id="handWeight">0</div>
+                        <div class="armorIconToStatsBox">
+                            <div class="armorIconHolder">
+                                <img class="armorIcon" src="images/Remnant/clear.png" alt="Armor: Hands Icon" id="handImage">
+                            </div>
+                            <div class="armorValueContainer">
+                                <div class="armorValueHeader">Armor</div>
+                                <div class="armorValueDisplay" id="handArmor">0</div>
+                                <div class="armorValueHeader">Weight</div>
+                                <div class="armorValueDisplay" id="handWeight">0</div>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -521,57 +529,57 @@
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Amulet Icon" id="amuletImage">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Amulet:</div>
+                <!-- <div class="accessoryHeader">Amulet:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="amulet" onchange="updateAccessory('amulet')"></select>
                 </div>
+                <div class="accessoryDescription" id="amuletDesc"></div>
             </div>
-            <div class="accessoryDescription" id="amuletDesc"></div>
         </div>
         <div class="accessoriesContainer">
             <div class="accessoryIconHolder">
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 1 Icon" id="ring1Image">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Ring 1:</div>
+                <!-- <div class="accessoryHeader">Ring 1:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="ring1" onchange="updateAccessory('ring','1')"></select>
                 </div>
+                <div class="accessoryDescription" id="ring1Desc"></div>
             </div>
-            <div class="accessoryDescription" id="ring1Desc"></div>
         </div><div class="accessoriesContainer">
             <div class="accessoryIconHolder">
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 2 Icon" id="ring2Image">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Ring 2:</div>
+                <!-- <div class="accessoryHeader">Ring 2:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="ring2" onchange="updateAccessory('ring','2')"></select>
                 </div>
+                <div class="accessoryDescription" id="ring2Desc"></div>
             </div>
-            <div class="accessoryDescription" id="ring2Desc"></div>
         </div><div class="accessoriesContainer">
             <div class="accessoryIconHolder">
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 3 Icon" id="ring3Image">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Ring 3:</div>
+                <!-- <div class="accessoryHeader">Ring 3:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="ring3" onchange="updateAccessory('ring','3')"></select>
                 </div>
+                <div class="accessoryDescription" id="ring3Desc"></div>
             </div>
-            <div class="accessoryDescription" id="ring3Desc"></div>
         </div><div class="accessoriesContainer">
             <div class="accessoryIconHolder">
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Ring 4 Icon" id="ring4Image">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Ring 4:</div>
+                <!-- <div class="accessoryHeader">Ring 4:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="ring4" onchange="updateAccessory('ring','4')"></select>
                 </div>
+                <div class="accessoryDescription" id="ring4Desc"></div>
             </div>
-            <div class="accessoryDescription" id="ring4Desc"></div>
         </div>
         <div class="accessoriesTitleHeader">RELIC</div>
         <div class="accessoriesContainer">
@@ -579,25 +587,25 @@
                 <img class="accessoryIcon" src="images/Remnant/clear.png" alt="Relic Icon" id="relicImage">
             </div>
             <div class="accessoryContainer">
-                <div class="accessoryHeader">Relic:</div>
+                <!-- <div class="accessoryHeader">Relic:</div> -->
                 <div class="accessorySelectorBox">
                     <select class="accessorySelector" id="relic" onchange="updateAccessory('relic')"></select>
                 </div>
-            </div>
-            <div class="fragmentsContainer">
-                <div class="accessoryHeader">Fragments:</div>
-                <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment','1')"></select>
-                </div>
-                <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment','2')"></select>
-                </div>
-                <div class="fragmentsSelectorBox">
-                    <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment','3')"></select>
-                </div>
+                <div class="accessoryDescription" id="relicDesc"></div>
             </div>
         </div>
-        <div class="relicDescription" id="relicDesc"></div>
+        <div class="fragmentsContainer">
+            <!-- <div class="accessoryHeader">Fragments:</div> -->
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment','1')"></select>
+            </div>
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment','2')"></select>
+            </div>
+            <div class="fragmentsSelectorBox">
+                <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment','3')"></select>
+            </div>
+        </div>
         <div class="relicEffectsContainer">
             <div class="relicHealingContainer">
                 <div class="relicHeaderBig">Basic Relic Effects</div>
@@ -744,7 +752,7 @@
     <div class="weaponsBox">
         <div class="bottomTitleHeader">WEAPONS</div>
         <div class="weaponsWholeBox">
-            <div class="weaponsThirdsBox">
+            <div class="weaponsThirdsBox"> <!-- PRIMARY -->
                 <div class="weaponImageBox">
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Primary Weapon Icon" id="primaryImage">
                 </div>
@@ -800,7 +808,7 @@
                     <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
                 </div>
             </div>
-            <div class="weaponsThirdsBox">
+            <div class="weaponsThirdsBox"> <!-- MELEE-->
                 <div class="weaponImageBox">
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Melee Weapon Icon" id="meleeImage">
                 </div>
@@ -856,7 +864,7 @@
                     <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
                 </div>
             </div>
-            <div class="weaponsThirdsBox">
+            <div class="weaponsThirdsBox"> <!-- SECONDARY-->
                 <div class="weaponImageBox">
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Secondary Weapon Icon" id="secondaryImage">
                 </div>
