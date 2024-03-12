@@ -1269,7 +1269,7 @@ function updateArmor(armorPiece) {
    let selectedValue = readSelection(elem_ID).value;
    let selectedArmor = armor[json_ID][selectedValue]
    //assign new image path to the img tag src
-   readSelection(`${armorPiece}Image`).src=selectedArmor.IMAGE;
+   readSelection(`${armorPiece}Image`).src=selectedArmor.image;
    readSelection(`${armorPiece}Armor`).innerHTML=selectedArmor.VALUE;
    readSelection(`${armorPiece}Weight`).innerHTML=selectedArmor.WEIGHT;
    updateFormulas();
