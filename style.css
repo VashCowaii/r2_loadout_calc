@@ -9,6 +9,12 @@ html,body {
     height: 100%;
 }
 
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .generalFooter {
     position: absolute;
@@ -73,7 +79,9 @@ html,body {
     margin: 0;
     background-color:#181818; 
     display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     padding-top: 10px;
     box-sizing: border-box;
 }
@@ -86,17 +94,23 @@ html,body {
     /* flex-flow: row; */
     display: grid;
     /* flex-direction: row; */
-    /* justify-content: center;
+    /* text-align: center;
+    justify-content: center;
     align-items: center; */
     /* white-space: nowrap; */
     box-sizing: border-box;
     padding-bottom: 100px;
     white-space: nowrap;
     /* overflow: auto; */
-    margin: 0;
 
     grid-template-columns: [first] 25% [line2] 40% [line3] 35% [end];
     grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line];
+
+    /* margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center; */
 }
 
 .sidenav {
