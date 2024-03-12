@@ -18,6 +18,8 @@ html,body{
 }
 .thisShouldNotWork {
     width: 50px;
+    min-width: 50px;
+    white-space: nowrap;
 }
 
 .generalFooter {
@@ -79,12 +81,7 @@ html,body{
     /* min-width: 930px; */
     min-height: 100%;
     position: relative;
-    padding: 0;
-    /* padding-left: 50px; */
-    padding-right: 0;
-    /* margin: auto;
-    margin-right: 50%;
-    margin-left: 50%; */
+    padding: 5px;
     padding-top: 10px;
     padding-bottom: 100px;
     /* margin: 0; */
@@ -2464,11 +2461,10 @@ font-family: Arial, Helvetica, sans-serif;
         box-sizing: border-box;
     }
     .main {
-        padding-left: 0px;
+        /* padding: 1px; */
         /* padding-top: 10px; */
         padding-top: 6%;
         /* box-sizing: border-box; */
-
     }
 
     .thisShouldNotWork {
