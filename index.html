@@ -760,53 +760,60 @@
                 <div class="weaponSelectorBox">
                     <select class="weaponSelector" id="primary" onchange="updateWeapon('primary')"></select> 
                 </div>
+                <div class="weaponDescriptionBox" id="primaryDescription"></div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
+                </div>
+                <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
                         <select class="weaponSelector" id="rangedMutator1" onchange="updateMutator('rangedMutator','1')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="primaryMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
-                    <div class="modSelectorBox">
-                        <select class="modSelector" id="rangedMod1" onchange="updateMod('rangedMod','1')"></select>
-                    </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">
                         <img class="modImage" src="images/Remnant/clear.png" alt="Primary Mod Icon" id="primaryModImage">
                     </div>
                 </div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="rangedMod1" onchange="updateMod('rangedMod','1')"></select>
+                    </div>
+                </div>
                 <div class="mutatorDesc" id="primaryModDesc"></div>
                 <!-- These all need ID's later when dmg calcs get added. -->
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                <div class="weaponStatsHolder">
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                    </div>
                 </div>
             </div>
             <div class="weaponsThirdsBox"> <!-- MELEE-->
@@ -816,53 +823,60 @@
                 <div class="weaponSelectorBox">
                     <select class="weaponSelector" id="melee" onchange="updateWeapon('melee')"></select> 
                 </div>
+                <div class="weaponDescriptionBox" id="meleeDescription"></div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
+                </div>
+                <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
                         <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('meleeMutator')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="meleeMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
-                    <div class="modSelectorBox">
-                        <select class="modSelector" id="meleeMod" onchange="updateMod('meleeMod')"></select>
-                    </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">
                         <img class="modImage" src="images/Remnant/clear.png" alt="Melee Mod Icon" id="meleeModImage">
                     </div>
                 </div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="meleeMod" onchange="updateMod('meleeMod')"></select>
+                    </div>
+                </div>
                 <div class="mutatorDesc" id="meleeModDesc">Built-in mods will be added later<br><br>DMG calcs are not added YET.</div>
                 <!-- These all need ID's later when dmg calcs get added. -->
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Attack Speed:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Stamina Cost:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Charge DMG:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Charge Speed:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Charge Cost:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Special Cost:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                <div class="weaponStatsHolder">
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Attack Speed:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Stamina Cost:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Charge DMG:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Charge Speed:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Charge Cost:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Special Cost:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                    </div>
                 </div>
             </div>
             <div class="weaponsThirdsBox"> <!-- SECONDARY-->
@@ -872,53 +886,60 @@
                 <div class="weaponSelectorBox">
                     <select class="weaponSelector" id="secondary" onchange="updateWeapon('secondary')"></select> 
                 </div>
+                <div class="weaponDescriptionBox" id="secondaryDescription"></div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorHeader">Mutator:</div>
+                </div>
+                <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
                         <select class="weaponSelector" id="rangedMutator2" onchange="updateMutator('rangedMutator','2')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="secondaryMutatorDesc"></div>
                 <div class="mutatorHeaderBox">
-                    <div class="modSelectorBox">
-                        <select class="modSelector" id="rangedMod2" onchange="updateMod('rangedMod','2')"></select>
-                    </div>
                     <div class="modHeader">Mod</div>
                     <div class="modImageBox">
                         <img class="modImage" src="images/Remnant/clear.png" alt="Secondary Mod Icon" id="secondaryModImage">
                     </div>
                 </div>
+                <div class="mutatorHeaderBox">
+                    <div class="modSelectorBox">
+                        <select class="modSelector" id="rangedMod2" onchange="updateMod('rangedMod','2')"></select>
+                    </div>
+                </div>
                 <div class="mutatorDesc" id="secondaryModDesc"></div>
                 <!-- These all need ID's later when dmg calcs get added. -->
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
-                </div>
-                <div class="weaponRowContainer">
-                    <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                <div class="weaponStatsHolder">
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">DMG (Maxed):</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">RPS:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Reload Speed:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Ideal Range:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Falloff Range:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Magazine:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Reserves:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Crit Chance:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Weak Spot:</span><span class="weaponValue">X</span>
+                    </div>
+                    <div class="weaponRowContainer">
+                        <span class="weaponStat">Stagger:</span><span class="weaponValue">X</span>
+                    </div>
                 </div>
             </div>
         </div>
