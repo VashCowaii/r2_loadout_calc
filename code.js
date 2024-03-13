@@ -1857,8 +1857,8 @@ let useRelicHealing = readSelection("includeRelicHealing").checked != false;
 let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
 let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
 if (useRelicHealing===true) {
-  advancedTotalFlatHP += advancedRelicFlat + (advancedRelicPerc/100)*totalHealth
-  advancedTotalPercHP += (advancedRelicPerc) + advancedRelicFlat/totalHealth
+  advancedTotalFlatHP += advancedRelicFlat + (advancedRelicPerc/100)*totalHealth;
+  advancedTotalPercHP += (advancedRelicPerc) + (advancedRelicFlat/totalHealth) * 100;
 }
 
 updateDisplay("totalHealingFlat",advancedTotalFlatHP,2);
