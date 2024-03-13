@@ -664,6 +664,7 @@ function updateTraitCollection(archetype1Old,archetype2Old) {
     populateGear("trait1",traits);
     //
   }
+
 if (updateAgain===true) {updateTraitCollection();} //Repeat if there would be multiple blank slots not handled this late
 generateTraitToggles();
 updateTraitPoints();
@@ -935,7 +936,7 @@ function urlParamIsEmpty(objElement) {
     }
   }
 }
-//Reads the query string if one exists, and populates all fields/updates formulas accordinlyg
+//Reads the query string if one exists, and populates all fields/updates formulas accordingly -- push text test
 function importURLparameters() {
   let feed = (new URL(document.location)).searchParams;
   let urlTraits = feed.get("trait");
@@ -950,7 +951,6 @@ function importURLparameters() {
   let urlSettings = feed.get("settings");
   let urlAdvanced = feed.get("adv");
   let urlSource = feed.get("s");
-  // let urlQuickUse = feed.get("quickUse");
 //TRAITS
   if (urlTraits != null) {
       urlTraits = urlTraits.split(",")
@@ -963,7 +963,8 @@ function importURLparameters() {
       }
   }
   updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
-//ARCHETYPES AND ABILITIES
+  //Also, for the sake of imports with more than the trait cap, need to establish default points now for later
+  //ARCHETYPES AND ABILITIES
   if (urlArchs != null) {
     urlArchs = urlArchs.split(",");
     if (urlArchs[0] != "" && urlArchs[0] != null) {
@@ -982,6 +983,28 @@ function importURLparameters() {
       readSelection("archetype2ability").value = urlArchs[3];
       updateAbility('archetype2');
     }  
+  }
+  //If an import has over the trait cap in points spent
+  if (urlTraits != null && traitPointCount > traitPointCap) {
+  let traitsOverCap = traitPointCount - traitPointCap;
+  if (traitsOverCap > 0) {
+    for (let i=activeTraits;i>0;i-=1) {
+      let currentImportLevel = greatTraitRecords[`trait${i}`].level;
+      if (currentImportLevel >= traitsOverCap && currentImportLevel != 0 && traitsOverCap != 0) {
+        //Example: if the current level of 10 is greater than the diff over the cap 8
+        // then 10-8=2, the level is now 2 and the diff is now 0
+        let importAdjustmentValue = currentImportLevel - traitsOverCap;
+        greatTraitRecords[`trait${i}`].level = importAdjustmentValue;
+        traitsOverCap = 0;
+      }
+      //But if the current level of 2 is less than the diff of 8, 8-2=6 the new diff, and current now 0
+      else if (currentImportLevel < traitsOverCap && traitsOverCap > 0 && currentImportLevel != 0 && traitsOverCap != 0) {
+        traitsOverCap -= currentImportLevel;
+        greatTraitRecords[`trait${i}`].level = 0;
+      }
+    }
+    updateTraitCollection();//Update needed to adjust everything again based on what just happened
+  }
   }
 //ARMOR
   if (urlArmor != null) {
@@ -1227,7 +1250,31 @@ function updateWeapon(type) {
   let selectedWeapon = readSelection(type);
   //Update accessory image, description, and then refresh formulas.
   readSelection(`${type}Image`).src=weapons[type][selectedWeapon.value].image;
+  readSelection(`${type}Description`).innerHTML=weapons[type][selectedWeapon.value].desc;
   // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+
+  let weaponObjectReference = weapons[type][selectedWeapon.value]
+  if (type==="melee") {
+    readSelection("meleeStat1").innerHTML = weaponObjectReference.DMG;
+    readSelection("meleeStat2").innerHTML = weaponObjectReference.atkSpeed;
+    readSelection("meleeStat3").innerHTML = weaponObjectReference.stamCost;
+    readSelection("meleeStat4").innerHTML = weaponObjectReference.chargeDMG;
+    readSelection("meleeStat5").innerHTML = weaponObjectReference.chargeSpeed;
+    readSelection("meleeStat6").innerHTML = weaponObjectReference.chargeCost;
+    readSelection("meleeStat7").innerHTML = weaponObjectReference.specialCost;
+    readSelection("meleeStat8").innerHTML = weaponObjectReference.critChance;
+    readSelection("meleeStat9").innerHTML = weaponObjectReference.weakSpot;
+    readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
+    readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
+    readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
+
+
+    // updateMod('meleeMod');
+    // console.log(weaponObjectReference.builtIN)
+  }
+
+
+
   updateFormulas();
 }
 
@@ -1250,10 +1297,12 @@ function updateMutator(type,value) {
 function updateMod(type,value) {
   let collection = 'melee';
   let modifier = ``;
+  let builtIN = false;
   if (value===`1`) {collection = 'primary';modifier=value}
   else if (value===`2`) {collection = `secondary`;modifier=value}
   let selectedMod = readSelection(`${type}${modifier}`);
   //Update accessory image, description, and then refresh formulas.
+  
   readSelection(`${collection}ModDesc`).innerHTML=mods[`${collection}Mods`][selectedMod.value].desc;
   readSelection(`${collection}ModImage`).src=mods[`${collection}Mods`][selectedMod.value].image;
   if (type==="rangedMod") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
@@ -1381,7 +1430,7 @@ function updateAbility(archetype) {
    readSelection(`${archetype}abilityIcon`).src=classInfo[selectedArchetype].abilities[selectedAbility].image;
    updateFormulas();
 }
-
+//<-- BEGIN CUSTOM ITEM FUNCTIONS
 function gameMasters() {
   greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
   greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
@@ -1404,7 +1453,6 @@ function soulShard() {
   //for dmg later
   // += +readSelection("minionCount").value * w/e;
 }
-
 function resonatingHeart(relicHPscaled,totalHealth) {
   let path = relics["Resonating Heart"]
   //Healing/Relic EFF already factored before this function even starts
@@ -1451,7 +1499,7 @@ function resonatingHeart(relicHPscaled,totalHealth) {
   `;
  return [avgPercHPpSec,avgHPpSec]
 }
-
+//END CUSTOM ITEM FUNCTIONS -->
 //Displays all selected gear within the toggles menu. Does not utilize checks here, that's elsewhere
 function pullToggles() {
   readSelection("toggledHead").innerHTML = readSelection("helmetChoice").value
@@ -1778,7 +1826,7 @@ updateDisplay("EHP",totalEHP,2);
 updateDisplay("advancedFlat",flatHPperSec,2);
 updateDisplay("advanced%",percHPperSec*100,2,"%");
 updateDisplay("advancedTotalFlat",flatHPperSec + percHPperSec*totalHealth,2);
-updateDisplay("advancedTotal%",(percHPperSec + flatHPperSec/totalHealth)*100,2,"%");
+updateDisplay("advancedTotal%",(percHPperSec + flatHPperSec/totalHealth)*100,2,"%"); 
 
 let advancedRelicFlat,advancedRelicPerc;
 if (useComplexValues===true) {
@@ -1802,7 +1850,7 @@ else {
 updateDisplay("advancedRelicFlat",advancedRelicFlat,2);
 updateDisplay("advancedRelic%",advancedRelicPerc,2,"%");
 updateDisplay("advancedRelicTotalFlat",advancedRelicFlat + (advancedRelicPerc/100)*totalHealth,2);
-updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth),2,"%");
+updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth)*100,2,"%");
 
 let useRelicHealing = readSelection("includeRelicHealing").checked != false;
 let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
