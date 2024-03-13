@@ -5525,7 +5525,20 @@ window.melee = {
 		"image": "images/Remnant/clear.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 0,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0,
+		"weakSpot": 0,
+		"stagger": 0
 	},
 	"Abyssal Hook": {
 		"name": "Abyssal Hook",
@@ -5533,7 +5546,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Abyssal Hook.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Fathomless Deep",
+		"DMG": 303,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.06,
+		"weakSpot": 0.85,
+		"stagger": 0.80
 	},
 	"Assassin's Dagger": {
 		"name": "Assassin's Dagger",
@@ -5541,7 +5567,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Assassin's Dagger.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Bloodthirst",
+		"DMG": 123,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": -0.03,
+		"weakSpot": 1.10,
+		"stagger": -0.15
 	},
 	"Atom Smasher": {
 		"name": "Atom Smasher",
@@ -5549,7 +5588,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Atom Smasher.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Accelerator",
+		"DMG": 216,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 0.95,
+		"stagger": 0.11
 	},
 	"Atom Splitter": {
 		"name": "Atom Splitter",
@@ -5557,7 +5609,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Atom Splitter.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Fission Strike",
+		"DMG": 300,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 0.90,
+		"stagger": 0.06
 	},
 	"Blade of Gul": {
 		"name": "Blade of Gul",
@@ -5565,7 +5630,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Blade of Gul.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 171,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.04,
+		"weakSpot": 1.0,
+		"stagger": 0.06
 	},
 	"Bone Chopper": {
 		"name": "Bone Chopper",
@@ -5573,7 +5651,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Bone Chopper.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 174,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.07,
+		"weakSpot": 1.05,
+		"stagger": -0.03
 	},
 	"Decayed Claws": {
 		"name": "Decayed Claws",
@@ -5581,7 +5672,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Decayed Claws.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 147,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.16,
+		"weakSpot": 1.10,
+		"stagger": -0.04
 	},
 	"Dreamcatcher": {
 		"name": "Dreamcatcher",
@@ -5589,7 +5693,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Dreamcatcher.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Dreamwave",
+		"DMG": 174,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 0.95,
+		"stagger": 0.03
 	},
 	"Edge of the Forest": {
 		"name": "Edge of the Forest",
@@ -5597,7 +5714,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Edge of the Forest.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 177,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.09,
+		"weakSpot": 1.05,
+		"stagger": -0.15
 	},
 	"Feral Judgement": {
 		"name": "Feral Judgement",
@@ -5605,7 +5735,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Feral Judgement.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Death Sentence",
+		"DMG": 159,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.13,
+		"weakSpot": 1.10,
+		"stagger": -0.15
 	},
 	"Gas Giant": {
 		"name": "Gas Giant",
@@ -5613,7 +5756,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Gas Giant.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Dealing damage unleashes the dormant Toxic Gas within the head. When infused, Basic Attacks apply CORRODED for 5s.",
+		"builtIN": "Dying Breath",
+		"DMG": 222,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.03,
+		"weakSpot": 0.95,
+		"stagger": 0.08
 	},
 	"Godsplitter": {
 		"name": "Godsplitter",
@@ -5621,7 +5777,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Godsplitter.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Cannot score Weakspot hits without its Mod behavior.",
+		"builtIN": "Fracture",
+		"DMG": 114,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.02,
+		"weakSpot": 0.50,
+		"stagger": -0.20
 	},
 	"Hero's Sword": {
 		"name": "Hero's Sword",
@@ -5629,7 +5798,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Hero's Sword.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Energy Wave",
+		"DMG": 153,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 35,
+		"critChance": 0.05,
+		"weakSpot": 0.90,
+		"stagger": -0.10
 	},
 	"Huntress Spear": {
 		"name": "Huntress Spear",
@@ -5637,7 +5819,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Huntress Spear.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Charge Melee Attacks apply CORROSION dealing 300 ACID damage over 5s.",
+		"builtIN": "Javelin",
+		"DMG": 189,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 25,
+		"critChance": 0.06,
+		"weakSpot": 1.0,
+		"stagger": -0.5
 	},
 	"Iron Greatsword": {
 		"name": "Iron Greatsword",
@@ -5645,7 +5840,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Iron Greatsword.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 315,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 0.95,
+		"stagger": 0.13
 	},
 	"Knuckle Dusters": {
 		"name": "Knuckle Dusters",
@@ -5653,7 +5861,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Knuckle Dusters.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 129,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 1.10,
+		"stagger": 0.05
 	},
 	"Krell Axe": {
 		"name": "Krell Axe",
@@ -5661,7 +5882,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Krell Axe.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Infused with Krell Shock magic, can be thrown if the wielder has stamina. Axe will magically reappear in-hand. Charge to throw.",
+		"builtIN": "Krell Edge",
+		"DMG": 162,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 25,
+		"critChance": 0.03,
+		"weakSpot": 0.85,
+		"stagger": -0.10
 	},
 	"Labyrinth Staff": {
 		"name": "Labyrinth Staff",
@@ -5669,7 +5903,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Labyrinth Staff.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Basic Strikes generate 10% additional Mod Power. Charge Attacks perform an AOE which strikes all enemies within 2m, dealing 225 Damage. AOE Damage generates 50% additional Mod Power.",
+		"builtIN": "",
+		"DMG": 192,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.08,
+		"weakSpot": 0.95,
+		"stagger": 0.05
 	},
 	"Nightshade": {
 		"name": "Nightshade",
@@ -5677,7 +5924,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Nightshade.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Neutral Dodge grants the power of Lifesteal",
+		"builtIN": "Beyond The Veil",
+		"DMG": 141,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.18,
+		"weakSpot": 1.10,
+		"stagger": -0.20
 	},
 	"Ornate Blade": {
 		"name": "Ornate Blade",
@@ -5685,7 +5945,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Ornate Blade.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 156,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.11,
+		"weakSpot": 1.05,
+		"stagger": -0.05
 	},
 	"Ornate Flail": {
 		"name": "Ornate Flail",
@@ -5693,7 +5966,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Ornate Flail.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Can be charged to continuously swing, at the cost of stamina.",
+		"builtIN": "",
+		"DMG": 189,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.11,
+		"weakSpot": 1.0,
+		"stagger": -0.03
 	},
 	"Rebellion Spear": {
 		"name": "Rebellion Spear",
@@ -5701,7 +5987,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Rebellion Spear.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 180,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.13,
+		"weakSpot": 1.10,
+		"stagger": 0.02
 	},
 	"Red Doe Staff": {
 		"name": "Red Doe Staff",
@@ -5709,7 +6008,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Red Doe Staff.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Lifeline",
+		"DMG": 186,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.03,
+		"weakSpot": 0.95,
+		"stagger": 0.08
 	},
 	"Ritualist Scythe": {
 		"name": "Ritualist Scythe",
@@ -5717,7 +6029,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Ritualist Scythe.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Reaver",
+		"DMG": 153,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.05,
+		"weakSpot": 1.0,
+		"stagger": -0.19
 	},
 	"Royal Broadsword": {
 		"name": "Royal Broadsword",
@@ -5725,7 +6050,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Royal Broadsword.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 306,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.07,
+		"weakSpot": 0.95,
+		"stagger": 0.11
 	},
 	"Rusted Claws": {
 		"name": "Rusted Claws",
@@ -5733,7 +6071,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Rusted Claws.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 153,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.14,
+		"weakSpot": 1.10,
+		"stagger": -0.09
 	},
 	"Scrap Hammer": {
 		"name": "Scrap Hammer",
@@ -5741,7 +6092,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Scrap Hammer.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 249,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.08,
+		"weakSpot": 0.95,
+		"stagger": 0.09
 	},
 	"Scrap Hatchet": {
 		"name": "Scrap Hatchet",
@@ -5749,7 +6113,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Scrap Hatchet.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Charge attatcks strike twicew",
+		"builtIN": "",
+		"DMG": 171,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.06,
+		"weakSpot": 1.05,
+		"stagger": 0.01
 	},
 	"Scrap Staff": {
 		"name": "Scrap Staff",
@@ -5757,7 +6134,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Scrap Staff.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 195,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.06,
+		"weakSpot": 0.95,
+		"stagger": 0.08
 	},
 	"Smolder": {
 		"name": "Smolder",
@@ -5765,7 +6155,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Smolder.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "A scorched blade imbued with FIRE.",
+		"builtIN": "Blaze",
+		"DMG": 138,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.04,
+		"weakSpot": 0.95,
+		"stagger": 0.01
 	},
 	"Spectral Blade": {
 		"name": "Spectral Blade",
@@ -5773,7 +6176,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Spectral Blade.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "Whirlwind",
+		"DMG": 159,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.08,
+		"weakSpot": 1.05,
+		"stagger": -0.25
 	},
 	"Steel Flail": {
 		"name": "Steel Flail",
@@ -5781,7 +6197,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Steel Flail.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Charge to continuously chain overhead swings, at the cost of stamina.",
+		"builtIN": "",
+		"DMG": 207,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.04,
+		"weakSpot": 1.0,
+		"stagger": 0.06
 	},
 	"Steel Katana": {
 		"name": "Steel Katana",
@@ -5789,7 +6218,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Steel Katana.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 168,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.10,
+		"weakSpot": 1.05,
+		"stagger": -0.10
 	},
 	"Steel Scythe": {
 		"name": "Steel Scythe",
@@ -5797,7 +6239,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Steel Scythe.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 165,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.10,
+		"weakSpot": 1.0,
+		"stagger": -0.15
 	},
 	"Steel Spear": {
 		"name": "Steel Spear",
@@ -5805,7 +6260,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Steel Spear.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 183,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.09,
+		"weakSpot": 1.10,
+		"stagger": -0.04
 	},
 	"Steel Sword": {
 		"name": "Steel Sword",
@@ -5813,7 +6281,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Steel Sword.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 168,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.07,
+		"weakSpot": 1.0,
+		"stagger": 0.02
 	},
 	"Stonebreaker": {
 		"name": "Stonebreaker",
@@ -5821,7 +6302,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Stonebreaker.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Charge Attacks can summon small shockwaves",
+		"builtIN": "Faultline",
+		"DMG": 309,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 35,
+		"critChance": 0.04,
+		"weakSpot": 0.95,
+		"stagger": 0.10
 	},
 	"Vice Grips": {
 		"name": "Vice Grips",
@@ -5829,7 +6323,20 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/Vice Grips.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "",
+		"builtIN": "",
+		"DMG": 165,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.06,
+		"weakSpot": 1.10,
+		"stagger": -0.18
 	},
 	"World's Edge": {
 		"name": "World's Edge",
@@ -5837,12 +6344,200 @@ window.melee = {
 		"image": "./brotherLibrary/meleeImages/World's Edge.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {},
+
+		"desc": "Charge Attacks cast waves.",
+		"builtIN": "Horizon Strike",
+		"DMG": 303,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 1,
+		"critChance": 0.06,
+		"weakSpot": 0.85,
+		"stagger": 0.80
 	},
 	"Wrathbringer": {
 		"name": "Wrathbringer",
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Wrathbringer.png",
+		"desc": "",
+		"custom": null,
+		"stats": {},
+
+		"desc": "Its dormant power can be awakened by taking damage",
+		"builtIN": "Awakening",
+		"DMG": 303,
+		"atkSpeed": 0,
+		"stamCost": 0,
+		"chargeDMG": 0,
+		"chargeSpeed": 0,
+		"chargeCost": 0,
+		"specialCost": 0,
+		"critChance": 0.06,
+		"weakSpot": 0.85,
+		"stagger": 0.80
+	}
+}
+window.builtInMelee = {
+	"": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "images/Remnant/clear.png",
+		"desc": "",
+		"stats": {}
+	},
+	"Fathomless Deep": {
+		"name": "Fathomless Deep",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fathomless Deep.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Bloodthirst": {
+		"name": "Bloodthirst",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Bloodthirst.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Accelerator": {
+		"name": "Accelerator",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Accelerator.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Fission Strike": {
+		"name": "Fission Strike",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fission Strike.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Dreamwave": {
+		"name": "Dreamwave",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Dreamwave.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Death Sentence": {
+		"name": "Death Sentence",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Death Sentence.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Dying Breath": {
+		"name": "Dying Breath",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Dying Breath.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Fracture": {
+		"name": "Fracture",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fracture.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Energy Wave": {
+		"name": "Energy Wave",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Energy Wave.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Javelin": {
+		"name": "Javelin",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Javelin.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Krell Edge": {
+		"name": "Krell Edge",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Krell Edge.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Beyond The Veil": {
+		"name": "Beyond The Veil",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Lifeline": {
+		"name": "Lifeline",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Lifeline.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Reaver": {
+		"name": "Reaver",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Blaze": {
+		"name": "Blaze",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Blaze.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Whirlwind": {
+		"name": "Whirlwind",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Whirlwind.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Faultline": {
+		"name": "Faultline",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Faultline.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Horizon Strike": {
+		"name": "Horizon Strike",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Horizon Strike.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Awakening": {
+		"name": "Awakening",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Awakening.png",
 		"desc": "",
 		"custom": null,
 		"stats": {}

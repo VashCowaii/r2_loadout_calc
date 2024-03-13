@@ -1250,7 +1250,31 @@ function updateWeapon(type) {
   let selectedWeapon = readSelection(type);
   //Update accessory image, description, and then refresh formulas.
   readSelection(`${type}Image`).src=weapons[type][selectedWeapon.value].image;
+  readSelection(`${type}Description`).innerHTML=weapons[type][selectedWeapon.value].desc;
   // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+
+  let weaponObjectReference = weapons[type][selectedWeapon.value]
+  if (type==="melee") {
+    readSelection("meleeStat1").innerHTML = weaponObjectReference.DMG;
+    readSelection("meleeStat2").innerHTML = weaponObjectReference.atkSpeed;
+    readSelection("meleeStat3").innerHTML = weaponObjectReference.stamCost;
+    readSelection("meleeStat4").innerHTML = weaponObjectReference.chargeDMG;
+    readSelection("meleeStat5").innerHTML = weaponObjectReference.chargeSpeed;
+    readSelection("meleeStat6").innerHTML = weaponObjectReference.chargeCost;
+    readSelection("meleeStat7").innerHTML = weaponObjectReference.specialCost;
+    readSelection("meleeStat8").innerHTML = weaponObjectReference.critChance;
+    readSelection("meleeStat9").innerHTML = weaponObjectReference.weakSpot;
+    readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
+    readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
+    readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
+
+
+    // updateMod('meleeMod');
+    // console.log(weaponObjectReference.builtIN)
+  }
+
+
+
   updateFormulas();
 }
 
@@ -1273,10 +1297,12 @@ function updateMutator(type,value) {
 function updateMod(type,value) {
   let collection = 'melee';
   let modifier = ``;
+  let builtIN = false;
   if (value===`1`) {collection = 'primary';modifier=value}
   else if (value===`2`) {collection = `secondary`;modifier=value}
   let selectedMod = readSelection(`${type}${modifier}`);
   //Update accessory image, description, and then refresh formulas.
+  
   readSelection(`${collection}ModDesc`).innerHTML=mods[`${collection}Mods`][selectedMod.value].desc;
   readSelection(`${collection}ModImage`).src=mods[`${collection}Mods`][selectedMod.value].image;
   if (type==="rangedMod") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
@@ -1404,7 +1430,7 @@ function updateAbility(archetype) {
    readSelection(`${archetype}abilityIcon`).src=classInfo[selectedArchetype].abilities[selectedAbility].image;
    updateFormulas();
 }
-
+//<-- BEGIN CUSTOM ITEM FUNCTIONS
 function gameMasters() {
   greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
   greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
@@ -1427,7 +1453,6 @@ function soulShard() {
   //for dmg later
   // += +readSelection("minionCount").value * w/e;
 }
-
 function resonatingHeart(relicHPscaled,totalHealth) {
   let path = relics["Resonating Heart"]
   //Healing/Relic EFF already factored before this function even starts
@@ -1474,7 +1499,7 @@ function resonatingHeart(relicHPscaled,totalHealth) {
   `;
  return [avgPercHPpSec,avgHPpSec]
 }
-
+//END CUSTOM ITEM FUNCTIONS -->
 //Displays all selected gear within the toggles menu. Does not utilize checks here, that's elsewhere
 function pullToggles() {
   readSelection("toggledHead").innerHTML = readSelection("helmetChoice").value
@@ -1801,7 +1826,7 @@ updateDisplay("EHP",totalEHP,2);
 updateDisplay("advancedFlat",flatHPperSec,2);
 updateDisplay("advanced%",percHPperSec*100,2,"%");
 updateDisplay("advancedTotalFlat",flatHPperSec + percHPperSec*totalHealth,2);
-updateDisplay("advancedTotal%",(percHPperSec + flatHPperSec/totalHealth)*100,2,"%");
+updateDisplay("advancedTotal%",(percHPperSec + flatHPperSec/totalHealth)*100,2,"%"); 
 
 let advancedRelicFlat,advancedRelicPerc;
 if (useComplexValues===true) {
@@ -1825,7 +1850,7 @@ else {
 updateDisplay("advancedRelicFlat",advancedRelicFlat,2);
 updateDisplay("advancedRelic%",advancedRelicPerc,2,"%");
 updateDisplay("advancedRelicTotalFlat",advancedRelicFlat + (advancedRelicPerc/100)*totalHealth,2);
-updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth),2,"%");
+updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth)*100,2,"%");
 
 let useRelicHealing = readSelection("includeRelicHealing").checked != false;
 let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
