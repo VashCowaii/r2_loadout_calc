@@ -3792,7 +3792,7 @@ window.rings = {
 	"Singed Ring": {
 		"name": "Singed Ring",
 		"slot": "Ring",
-		"image": "./brotherLibrary/ringsImages/Singed ring.png",
+		"image": "./brotherLibrary/ringsImages/Singed Ring.png",
 		"desc": "Increases all damage dealt to BURNING enemies by 10%.",
 		"custom": null,
 		"stats": {}
