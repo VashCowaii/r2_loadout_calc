@@ -1851,14 +1851,14 @@ else {
 updateDisplay("advancedRelicFlat",advancedRelicFlat,2);
 updateDisplay("advancedRelic%",advancedRelicPerc,2,"%");
 updateDisplay("advancedRelicTotalFlat",advancedRelicFlat + (advancedRelicPerc/100)*totalHealth,2);
-updateDisplay("advancedRelicTotal%",(advancedRelicPerc + advancedRelicFlat/totalHealth)*100,2,"%");
+updateDisplay("advancedRelicTotal%",((advancedRelicPerc/100) + advancedRelicFlat/totalHealth)*100,2,"%");
 
 let useRelicHealing = readSelection("includeRelicHealing").checked != false;
 let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
 let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
 if (useRelicHealing===true) {
   advancedTotalFlatHP += advancedRelicFlat + (advancedRelicPerc/100)*totalHealth
-  advancedTotalPercHP += advancedRelicPerc + advancedRelicFlat/totalHealth
+  advancedTotalPercHP += (advancedRelicPerc) + advancedRelicFlat/totalHealth
 }
 
 updateDisplay("totalHealingFlat",advancedTotalFlatHP,2);
