@@ -1267,6 +1267,7 @@ function updateWeapon(type) {
     readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
     readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
     readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
+    readSelection("meleeModDesc").innerHTML = builtInMelee[weaponObjectReference.builtIN].desc
 
 
     // updateMod('meleeMod');

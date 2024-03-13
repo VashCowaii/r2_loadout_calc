@@ -6394,7 +6394,7 @@ window.builtInMelee = {
 		"name": "Fathomless Deep",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fathomless Deep.png",
-		"desc": "",
+		"desc": "Charged Melee Hits grant Fathomless Deep which increases Melee Stagger by 10% per stack for 5s. Max 3 stacks.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6402,7 +6402,7 @@ window.builtInMelee = {
 		"name": "Bloodthirst",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Bloodthirst.png",
-		"desc": "",
+		"desc": "Damage increases by 25% against BLEEDING enemies, and 25% when attacking from behind. Charge Attacks deal 200 BLEEDING damage over 10s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6410,7 +6410,7 @@ window.builtInMelee = {
 		"name": "Accelerator",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Accelerator.png",
-		"desc": "",
+		"desc": "Charge Melee Attacks increase the speed of all Melee Attacks by 10% for 5s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6418,7 +6418,7 @@ window.builtInMelee = {
 		"name": "Fission Strike",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fission Strike.png",
-		"desc": "",
+		"desc": "On Neutral Evade Attacks Atom Splitter achieves Nuclear Fission releasing a wave of charged particles which deals 450 damage to targets within 20m. Charged Neutral Evade Attacks increase range by 3x and damage by 25%.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6426,7 +6426,7 @@ window.builtInMelee = {
 		"name": "Dreamwave",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Dreamwave.png",
-		"desc": "",
+		"desc": "After dealing 750 damage, Charge Attack will release a Dreamwave, flowing outwards 20m and returning to caster. Dreamwave applies SLOW to all enemies for 10s and grants a Stack of Reverie for each enemy affected. Each Stack grants +2% to All Damage and +2% Movement Speed, which lasts 15s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6434,7 +6434,7 @@ window.builtInMelee = {
 		"name": "Death Sentence",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Death Sentence.png",
-		"desc": "",
+		"desc": "Dealing Melee Damage 6 times over 10s empowers Feral Judgement. When empowered, Neutral Backdash Charge Attacks apply Death Sentence. After 1.5s of being sentenced, the enemy will suffer 10 Phantom Strikes dealing 75 Damage each. Deals 25% additional damage to BLEEDING enemies.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6442,7 +6442,7 @@ window.builtInMelee = {
 		"name": "Dying Breath",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Dying Breath.png",
-		"desc": "",
+		"desc": "When Infused, Neutral Backdash Charge Attack explodes in a 3m AOE and leaves an ACID Cloud which lasts for 15s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6450,7 +6450,7 @@ window.builtInMelee = {
 		"name": "Fracture",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fracture.png",
-		"desc": "",
+		"desc": "Charge Attacks taint the blood of the targets, causing all attacks from Godsplitter to register as Weakspot hits for 2s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6458,7 +6458,7 @@ window.builtInMelee = {
 		"name": "Energy Wave",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Energy Wave.png",
-		"desc": "",
+		"desc": "Charge Attacks use Stamina to release an energy wave projectile allowing the wielder to strike enemies from much farther away.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6466,7 +6466,7 @@ window.builtInMelee = {
 		"name": "Javelin",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Javelin.png",
-		"desc": "",
+		"desc": "Charge attacks use 25 stamina to throw the spear, which returns to the wielder's hand.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6474,7 +6474,7 @@ window.builtInMelee = {
 		"name": "Krell Edge",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Krell Edge.png",
-		"desc": "",
+		"desc": "Charge to throw the Krell Axe which applies OVERLOADED on hit, dealing 150 SHOCK damage every 5s for 10s. Shortly after throwing, another will appear in the wielder's hand.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6482,7 +6482,7 @@ window.builtInMelee = {
 		"name": "Beyond The Veil",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
-		"desc": "",
+		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6490,7 +6490,7 @@ window.builtInMelee = {
 		"name": "Lifeline",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Lifeline.png",
-		"desc": "",
+		"desc": "After dealing 750 damage, the next Charge Attack causes the Spirit of the Red Doe to stampede forward, dealing 480 damage to enemies and regenerating 10% Health to allies.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6498,7 +6498,7 @@ window.builtInMelee = {
 		"name": "Reaver",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
-		"desc": "",
+		"desc": "Increases Melee Damage by 10% if the target is suffering from a Negative Status Effect.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6506,7 +6506,7 @@ window.builtInMelee = {
 		"name": "Blaze",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Blaze.png",
-		"desc": "",
+		"desc": "Charge Melee Attacks apply BURNING which deals 150 FIRE damage over 5s",
 		"custom": null,
 		"stats": {}
 	},
@@ -6514,7 +6514,7 @@ window.builtInMelee = {
 		"name": "Whirlwind",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Whirlwind.png",
-		"desc": "",
+		"desc": "Performing a Charge Melee Attack during a Neutral Backdash creates a Whirlwind of slashes which strike all enemies within 8m for 273 damage.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6522,7 +6522,7 @@ window.builtInMelee = {
 		"name": "Faultline",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Faultline.png",
-		"desc": "",
+		"desc": "Melee Charge attacks fire off ground-based shockwaves which deal 345 damage. Costs 35 Stamina.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6530,7 +6530,7 @@ window.builtInMelee = {
 		"name": "Horizon Strike",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Horizon Strike.png",
-		"desc": "",
+		"desc": "Charge Attacks release a wide horizontal projectile that penetrates through multiple enemies dealing 348 damage.",
 		"custom": null,
 		"stats": {}
 	},
@@ -6538,7 +6538,7 @@ window.builtInMelee = {
 		"name": "Awakening",
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Awakening.png",
-		"desc": "",
+		"desc": "Incoming damage grants Awakening which increases Melee Damage by % per stack for 10s. Max 10 stacks.",
 		"custom": null,
 		"stats": {}
 	}
