@@ -1,0 +1,185 @@
+* {
+    /* outline: 2px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,body {
+    background-color:#181818;
+    padding: 0; 
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.thisShouldNotWork {
+    width: 50px;
+    white-space: nowrap;
+}
+.generalFooter {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    /* padding-left: 50x; */
+    max-width: 1280px;
+    box-sizing: border-box;
+    /* justify-content: center;
+    align-items: center; */
+    white-space: nowrap;
+}
+.footerBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+    border-top: 1px solid #434343;
+    box-sizing: border-box;
+}
+.footerTextBox {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.footerIconBox {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border-top: 1px solid #434343;
+}
+.footerIcon {
+    border-radius: 50%;
+    width:32px;
+    height:auto;
+    outline: 2px solid white;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.main {
+    width: calc(100% - 50px);
+    max-width: 1280px;
+    /* min-width: 930px; */
+    min-height: 100%;
+    position: relative;
+    padding: 3px;
+    /* padding-top: 10px; */
+    padding-bottom: 100px;
+    /* margin: 0; */
+    background-color:#181818; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto;
+}
+.theGreatBox {
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    grid-template-columns: [first] 25% [line2] 40% [line3] 35% [end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line];
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 50px;
+    /* min-width: 50px;
+    max-width: 60px; */
+    position: fixed; 
+    /* Stay in place */
+    z-index: 1; 
+    /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 30px; /* Place 30px from top */
+    box-sizing: border-box;
+}
+.sidenav a {
+    padding: 3px;
+    text-align: center;
+    display: block; 
+    box-sizing: border-box; 
+    width: 50px;
+    height: 50px;
+    /* height: min-content; */
+}
+/* hover */
+.sidenav a:hover {color: #f1f1f1;border-radius: 50%;}
+/* Icons on the navbar */
+.roundedIcon {
+    border-radius: 20%;
+    width:100%;
+    height:100%;
+    outline: 2px solid white;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+    .theGreatBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        padding-left: 0px;
+        box-sizing: border-box;
+    }
+    .main {
+        width: 100%;
+        /* min-height: calc(100% - 50px); */
+        padding-top: 50px;
+    }
+    .footerIconBox {width: 80%;}
+    .mainBody {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        justify-content: center;
+    }
+    .generalFooter {
+        padding-left: 0px;
+        box-sizing: border-box;
+    }
+    .thisShouldNotWork { /* Buffer for the navbar, negated on mobile/vertical view */
+        width: 0px;
+    }
+    .sidenav {
+        height: 50px;
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-direction: row;
+        position: fixed; 
+        z-index: 1; 
+        top: 0; 
+        background-color: #111;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow-y: hidden;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+}

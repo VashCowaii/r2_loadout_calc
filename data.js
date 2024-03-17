@@ -1,3 +1,6 @@
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------------- ARMOR -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.helmets = {
 	"": {
 	  "SLOT": "Head",
@@ -307,7 +310,7 @@ window.helmets = {
 	  "Blight": 1,
 	  "image": "./brotherLibrary/helmetsImages/Zealot's Hat.png"
 	}
-  }
+}
 window.chests = {
 	"": {
 	  "SLOT": "Chest",
@@ -584,7 +587,7 @@ window.chests = {
 	  "Blight": 4,
 	  "image": "./brotherLibrary/chestsImages/Zealot's Overcoat.png"
 	}
-  }
+}
 window.legs = {
 	"": {
 	  "SLOT": "Leg",
@@ -861,7 +864,7 @@ window.legs = {
 	  "Blight": 3,
 	  "image": "./brotherLibrary/legsImages/Zealot's Seaboots.png"
 	}
-  }
+}
 window.hands = {
 	"": {
 	  "SLOT": "Hand",
@@ -1138,7 +1141,10 @@ window.hands = {
 	  "Blight": 1,
 	  "image": "./brotherLibrary/handsImages/Zealot's Wraps.png"
 	}
-  }
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------- ARCHETYPES/ABILITIES --------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.classInfo = {
 	"": {
 		"classIcon": "images/Remnant/clear.png",
@@ -1899,6 +1905,169 @@ window.classInfo = {
 		}
 	}
 }
+//class title combos that display above the prime perk
+window.titleCombos = {
+	"Alchemist": "",
+	"Archon": "",
+	"Challenger": "",
+	"Engineer": "",
+	"Explorer": "",
+	"Gunslinger": "",
+	"Handler": "",
+	"Hunter": "",
+	"Invader": "",
+	"Medic": "",
+	"Ritualist": "",
+	"Summoner": "",
+	"AlchemistAlchemist": "If you see this, report to Vash exactly how you did it",
+	"ArchonArchon": "If you see this, report to Vash exactly how you did it",
+	"ChallengerChallenger": "If you see this, report to Vash exactly how you did it",
+	"EngineerEngineer": "If you see this, report to Vash exactly how you did it",
+	"ExplorerExplorer": "If you see this, report to Vash exactly how you did it",
+	"GunslingerGunslinger": "If you see this, report to Vash exactly how you did it",
+	"HandlerHandler": "If you see this, report to Vash exactly how you did it",
+	"HunterHunter": "If you see this, report to Vash exactly how you did it",
+	"InvaderInvader": "If you see this, report to Vash exactly how you did it",
+	"MedicMedic": "If you see this, report to Vash exactly how you did it",
+	"RitualistRitualist": "If you see this, report to Vash exactly how you did it",
+	"SummonerSummoner": "If you see this, report to Vash exactly how you did it",
+	"": "---",
+	"AlchemistChallenger": "SPIRITED CONSERVATOR",
+	"AlchemistExplorer": "SPIRITED APOTHECARY",
+	"AlchemistGunslinger": "SPIRITED LEADBRINGER",
+	"AlchemistHandler": "SPIRITED GREY WOLF",
+	"AlchemistHunter": "SPIRITED ISOLATOR",
+	"AlchemistMedic": "SPIRITED SHAMAN",
+	"AlchemistSummoner": "SPIRITED CONJURER",
+	"AlchemistEngineer": "SPIRITED ARTIFICER",
+	"AlchemistInvader": "SPIRITED TRICKSTER",
+	"AlchemistArchon": "SPIRITED THAUMATURGE",
+	"AlchemistRitualist": "SPIRITED DIABOLIST",
+	"ChallengerAlchemist": "DIE HARD CONSERVATOR",
+	"ChallengerExplorer": "DIE HARD CRUSADER",
+	"ChallengerGunslinger": "DIE HARD MERCENARY",
+	"ChallengerHandler": "DIE HARD BULLDOG",
+	"ChallengerHunter": "DIE HARD SOLDIER",
+	"ChallengerMedic": "DIE HARD GUARDIAN",
+	"ChallengerSummoner": "DIE HARD OVERSEER",
+	"ChallengerEngineer": "DIE HARD SENTINEL",
+	"ChallengerInvader": "DIE HARD DESTROYER",
+	"ChallengerArchon": "DIE HARD ARBITER",
+	"ChallengerRitualist": "DIE HARD WARLORD",
+	"ExplorerAlchemist": "LUCKY APOTHECARY",
+	"ExplorerChallenger": "LUCKY CRUSADER",
+	"ExplorerGunslinger": "LUCKY RAIDER",
+	"ExplorerHandler": "LUCKY BLOODHOUND",
+	"ExplorerHunter": "LUCKY OUTRIDER",
+	"ExplorerMedic": "LUCKY SURVIVALIST",
+	"ExplorerSummoner": "LUCKY HERALD",
+	"ExplorerEngineer": "LUCKY PIONEER",
+	"ExplorerInvader": "LUCKY MARAUDER",
+	"ExplorerArchon": "LUCKY TRAILBLAZER",
+	"ExplorerRitualist": "LUCKY OUTCAST",
+	"GunslingerAlchemist": "LOADED LEADBRINGER",
+	"GunslingerChallenger": "LOADED MERCENARY",
+	"GunslingerExplorer": "LOADED RAIDER",
+	"GunslingerHandler": "LOADED RIDGEBACK",
+	"GunslingerHunter": "LOADED SHARPSHOOTER",
+	"GunslingerMedic": "LOADED PEACEMAKER",
+	"GunslingerSummoner": "LOADED TORMENTOR",
+	"GunslingerEngineer": "LOADED BARRELSMITH",
+	"GunslingerInvader": "LOADED PROFESSIONAL",
+	"GunslingerArchon": "LOADED FIREBRAND",
+	"GunslingerRitualist": "LOADED PUNISHER",
+	"HandlerAlchemist": "BONDED GREY WOLF",
+	"HandlerChallenger": "BONDED BULLDOG",
+	"HandlerExplorer": "BONDED BLOODHOUND",
+	"HandlerGunslinger": "BONDED RIDGEBACK",
+	"HandlerHunter": "BONDED PREDATOR",
+	"HandlerMedic": "BONDED SHEPHERD",
+	"HandlerSummoner": "BONDED BEASTMASTER",
+	"HandlerEngineer": "BONDED ROUGHNECK",
+	"HandlerInvader": "BONDED PROWLER",
+	"HandlerArchon": "BONDED HARRIER",
+	"HandlerRitualist": "BONDED HELLHOUND",
+	"HunterAlchemist": "DEAD TO RIGHTS ISOLATOR",
+	"HunterChallenger": "DEAD TO RIGHTS SOLDIER",
+	"HunterExplorer": "DEAD TO RIGHTS OUTRIDER",
+	"HunterGunslinger": "DEAD TO RIGHTS SHARPSHOOTER",
+	"HunterHandler": "DEAD TO RIGHTS PREDATOR",
+	"HunterMedic": "DEAD TO RIGHTS RANGER",
+	"HunterSummoner": "DEAD TO RIGHTS PAINBRINGER",
+	"HunterEngineer": "DEAD TO RIGHTS TACTICIAN",
+	"HunterInvader": "DEAD TO RIGHTS ASSASSIN",
+	"HunterArchon": "DEAD TO RIGHTS VANQUISHER",
+	"HunterRitualist": "DEAD TO RIGHTS HEADHUNTER",
+	"MedicAlchemist": "REGENERATOR SHAMAN",
+	"MedicChallenger": "REGENERATOR GUARDIAN",
+	"MedicExplorer": "REGENERATOR SURVIVALIST",
+	"MedicGunslinger": "REGENERATOR PEACEMAKER",
+	"MedicHandler": "REGENERATOR SHEPHERD",
+	"MedicHunter": "REGENERATOR RANGER",
+	"MedicSummoner": "REGENERATOR DEFILER",
+	"MedicEngineer": "REGENERATOR SPECIALIST",
+	"MedicInvader": "REGENERATOR BLOODLETTER",
+	"MedicArchon": "REGENERATOR VIRTUOSO",
+	"MedicRitualist": "REGENERATOR PLAGUE DOCTOR",
+	"SummonerAlchemist": "RUTHLESS CONJURER",
+	"SummonerChallenger": "RUTHLESS OVERSEER",
+	"SummonerExplorer": "RUTHLESS HERALD",
+	"SummonerGunslinger": "RUTHLESS TORMENTOR",
+	"SummonerHandler": "RUTHLESS BEASTMASTER",
+	"SummonerHunter": "RUTHLESS PAINBRINGER",
+	"SummonerMedic": "RUTHLESS DEFILER",
+	"SummonerEngineer": "RUTHLESS MASTERMIND",
+	"SummonerInvader": "RUTHLESS TYRANT",
+	"SummonerArchon": "RUTHLESS INVOKER",
+	"SummonerRitualist": "RUTHLESS GRAVELORD",
+	"EngineerAlchemist": "HIGH TECH ARTIFICER",
+	"EngineerChallenger": "HIGH TECH SENTINEL",
+	"EngineerExplorer": "HIGH TECH PIONEER",
+	"EngineerGunslinger": "HIGH TECH BARRELSMITH",
+	"EngineerHandler": "HIGH TECH ROUGHNECK",
+	"EngineerHunter": "HIGH TECH TACTICIAN",
+	"EngineerMedic": "HIGH TECH SPECIALIST",
+	"EngineerSummoner": "HIGH TECH MASTERMIND",
+	"EngineerInvader": "HIGH TECH OPERATOR",
+	"EngineerArchon": "HIGH TECH LUMINARY",
+	"EngineerRitualist": "HIGH TECH WRECKER",
+	"InvaderAlchemist": "SHADOW TRICKSTER",
+	"InvaderChallenger": "SHADOW DESTROYER",
+	"InvaderExplorer": "SHADOW MARAUDER",
+	"InvaderGunslinger": "SHADOW PROFESSIONAL",
+	"InvaderHandler": "SHADOW PROWLER",
+	"InvaderHunter": "SHADOW ASSASSIN",
+	"InvaderMedic": "SHADOW BLOODLETTER",
+	"InvaderSummoner": "SHADOW TYRANT",
+	"InvaderEngineer": "SHADOW OPERATOR",
+	"InvaderArchon": "SHADOW RUINER",
+	"InvaderRitualist": "SHADOW REAPER",
+	"ArchonAlchemist": "TEMPEST THAUMATURGE",
+	"ArchonChallenger": "TEMPEST ARBITER",
+	"ArchonExplorer": "TEMPEST TRAILBLAZER",
+	"ArchonGunslinger": "TEMPEST FIREBRAND",
+	"ArchonHandler": "TEMPEST HARRIER",
+	"ArchonHunter": "TEMPEST VANQUISHER",
+	"ArchonMedic": "TEMPEST VIRTUOSO",
+	"ArchonSummoner": "TEMPEST INVOKER",
+	"ArchonEngineer": "TEMPEST LUMINARY",
+	"ArchonInvader": "TEMPEST RUINER",
+	"ArchonRitualist": "TEMPEST HARBINGER",
+	"RitualistAlchemist": "VILE DIABOLIST",
+	"RitualistChallenger": "VILE WARLORD",
+	"RitualistExplorer": "VILE OUTCAST",
+	"RitualistGunslinger": "VILE PUNISHER",
+	"RitualistHandler": "VILE HELLHOUND",
+	"RitualistHunter": "VILE HEADHUNTER",
+	"RitualistMedic": "VILE PLAGUE DOCTOR",
+	"RitualistSummoner": "VILE GRAVELORD",
+	"RitualistEngineer": "VILE WRECKER",
+	"RitualistInvader": "VILE REAPER",
+	"RitualistArchon": "VILE HARBINGER"
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------------- ACCESSORIES --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.amulets = {
 	"": {
 		"custom": null,
@@ -4306,6 +4475,351 @@ window.relics = {
 		"stats": {}
 	}
 }
+window.fragments = {
+	"": {
+		"custom": null,
+		"name": "",
+		"slot": "",
+		"image": "",
+		"desc": "",
+		"stats": {}
+	},
+	"Ammo Pickups": {
+		"name": "Ammo Pickups",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Ammo Reserves": {
+		"name": "Ammo Reserves",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Armor Effectiveness": {
+		"custom": null,
+		"name": "Armor Effectiveness",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"Armor%": 0.15
+		}
+	},
+	"Blight Resistance": {
+		"name": "Blight Resistance",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Casting Speed": {
+		"name": "Casting Speed",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Charge Melee Cost": {
+		"name": "Charge Melee Cost",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Consumable Duration": {
+		"name": "Consumable Duration",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Consumable Speed": {
+		"name": "Consumable Speed",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Damage Reduction": {
+		"custom": null,
+		"name": "Damage Reduction",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"FlatDR": 0.05
+		}
+	},
+	"Elemental Damage": {
+		"name": "Elemental Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Elemental Resistance": {
+		"custom": null,
+		"name": "Elemental Resistance",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"Bleed": 10,
+			"Burn": 10,
+			"Shock": 10,
+			"Corrosive": 10,
+			"Blight": 10
+		}
+	},
+	"Grey Health Rate": {
+		"name": "Grey Health Rate",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Healing Effectiveness": {
+		"custom": null,
+		"name": "Healing Effectiveness",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"HealingEFF": 0.2
+		}
+	},
+	"Health": {
+		"custom": null,
+		"name": "Health",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"Health%": 0.15
+		}
+	},
+	"Melee Attack Speed": {
+		"name": "Melee Attack Speed",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Melee Critical Chance": {
+		"name": "Melee Critical Chance",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Melee Critical Damage": {
+		"name": "Melee Critical Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Melee Damage": {
+		"name": "Melee Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Mod Cost": {
+		"name": "Mod Cost",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Mod Damage": {
+		"name": "Mod Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Mod Duration": {
+		"name": "Mod Duration",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Ranged Critical Chance": {
+		"name": "Ranged Critical Chance",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Ranged Critical Damage": {
+		"name": "Ranged Critical Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Ranged Damage": {
+		"name": "Ranged Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Ranged Fire Rate": {
+		"name": "Ranged Fire Rate",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Recoil": {
+		"name": "Recoil",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Revive Speed": {
+		"name": "Revive Speed",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Shield Effectiveness": {
+		"custom": null,
+		"name": "Shield Effectiveness",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"ShieldEFF": 0.2
+		}
+	},
+	"Skill Cooldown": {
+		"name": "Skill Cooldown",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Skill Damage": {
+		"name": "Skill Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Skill Duration": {
+		"name": "Skill Duration",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Spread Recovery": {
+		"name": "Spread Recovery",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Stagger Damage": {
+		"name": "Stagger Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Stamina Cost": {
+		"custom": null,
+		"name": "Stamina Cost",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"StaminaCost": -0.2
+		}
+	},
+	"Stamina Recovery Delay": {
+		"name": "Stamina Recovery Delay",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Stamina": {
+		"custom": null,
+		"name": "Stamina",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"Stamina%": 0.15
+		}
+	},
+	"Weakspot Damage": {
+		"name": "Weakspot Damage",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Weapon Spread": {
+		"name": "Weapon Spread",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Weapon Swap": {
+		"name": "Weapon Swap",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	}
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------------------ TRAITS --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.traits = {
 	"": {
 		"name": "",
@@ -4902,348 +5416,9 @@ window.traits = {
 		}
 	}
 }
-window.fragments = {
-	"": {
-		"custom": null,
-		"name": "",
-		"slot": "",
-		"image": "",
-		"desc": "",
-		"stats": {}
-	},
-	"Ammo Pickups": {
-		"name": "Ammo Pickups",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Ammo Reserves": {
-		"name": "Ammo Reserves",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Armor Effectiveness": {
-		"custom": null,
-		"name": "Armor Effectiveness",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"Armor%": 0.15
-		}
-	},
-	"Blight Resistance": {
-		"name": "Blight Resistance",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Casting Speed": {
-		"name": "Casting Speed",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Charge Melee Cost": {
-		"name": "Charge Melee Cost",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Consumable Duration": {
-		"name": "Consumable Duration",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Consumable Speed": {
-		"name": "Consumable Speed",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Damage Reduction": {
-		"custom": null,
-		"name": "Damage Reduction",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"FlatDR": 0.05
-		}
-	},
-	"Elemental Damage": {
-		"name": "Elemental Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Elemental Resistance": {
-		"custom": null,
-		"name": "Elemental Resistance",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"Bleed": 10,
-			"Burn": 10,
-			"Shock": 10,
-			"Corrosive": 10,
-			"Blight": 10
-		}
-	},
-	"Grey Health Rate": {
-		"name": "Grey Health Rate",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Healing Effectiveness": {
-		"custom": null,
-		"name": "Healing Effectiveness",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"HealingEFF": 0.2
-		}
-	},
-	"Health": {
-		"custom": null,
-		"name": "Health",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"Health%": 0.15
-		}
-	},
-	"Melee Attack Speed": {
-		"name": "Melee Attack Speed",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Melee Critical Chance": {
-		"name": "Melee Critical Chance",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Melee Critical Damage": {
-		"name": "Melee Critical Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Melee Damage": {
-		"name": "Melee Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Mod Cost": {
-		"name": "Mod Cost",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Mod Damage": {
-		"name": "Mod Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Mod Duration": {
-		"name": "Mod Duration",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Ranged Critical Chance": {
-		"name": "Ranged Critical Chance",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Ranged Critical Damage": {
-		"name": "Ranged Critical Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Ranged Damage": {
-		"name": "Ranged Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Ranged Fire Rate": {
-		"name": "Ranged Fire Rate",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Recoil": {
-		"name": "Recoil",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Revive Speed": {
-		"name": "Revive Speed",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Shield Effectiveness": {
-		"custom": null,
-		"name": "Shield Effectiveness",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"ShieldEFF": 0.2
-		}
-	},
-	"Skill Cooldown": {
-		"name": "Skill Cooldown",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Skill Damage": {
-		"name": "Skill Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Skill Duration": {
-		"name": "Skill Duration",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Spread Recovery": {
-		"name": "Spread Recovery",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Stagger Damage": {
-		"name": "Stagger Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Stamina Cost": {
-		"custom": null,
-		"name": "Stamina Cost",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"StaminaCost": -0.2
-		}
-	},
-	"Stamina Recovery Delay": {
-		"name": "Stamina Recovery Delay",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Stamina": {
-		"custom": null,
-		"name": "Stamina",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"Stamina%": 0.15
-		}
-	},
-	"Weakspot Damage": {
-		"name": "Weakspot Damage",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Weapon Spread": {
-		"name": "Weapon Spread",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	},
-	"Weapon Swap": {
-		"name": "Weapon Swap",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"custom": null,
-		"stats": {}
-	}
-}
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------------- WEAPONS ---------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.primary = {
 	"": {
 		"name": "",
@@ -5538,7 +5713,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0,
 		"weakSpot": 0,
-		"stagger": 0
+		"stagger": 0,
+		"weaponClass": "Fist"
 	},
 	"Abyssal Hook": {
 		"name": "Abyssal Hook",
@@ -5559,7 +5735,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.06,
 		"weakSpot": 0.85,
-		"stagger": 0.80
+		"stagger": 0.80,
+		"weaponClass": "Hammer"
 	},
 	"Assassin's Dagger": {
 		"name": "Assassin's Dagger",
@@ -5580,7 +5757,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": -0.03,
 		"weakSpot": 1.10,
-		"stagger": -0.15
+		"stagger": -0.15,
+		"weaponClass": "Sword"
 	},
 	"Atom Smasher": {
 		"name": "Atom Smasher",
@@ -5601,7 +5779,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 0.95,
-		"stagger": 0.11
+		"stagger": 0.11,
+		"weaponClass": "Hammer"
 	},
 	"Atom Splitter": {
 		"name": "Atom Splitter",
@@ -5622,7 +5801,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 0.90,
-		"stagger": 0.06
+		"stagger": 0.06,
+		"weaponClass": "Greatsword"
 	},
 	"Blade of Gul": {
 		"name": "Blade of Gul",
@@ -5643,7 +5823,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.04,
 		"weakSpot": 1.0,
-		"stagger": 0.06
+		"stagger": 0.06,
+		"weaponClass": "Sword"
 	},
 	"Bone Chopper": {
 		"name": "Bone Chopper",
@@ -5664,7 +5845,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.07,
 		"weakSpot": 1.05,
-		"stagger": -0.03
+		"stagger": -0.03,
+		"weaponClass": "Axe"
 	},
 	"Decayed Claws": {
 		"name": "Decayed Claws",
@@ -5685,7 +5867,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.16,
 		"weakSpot": 1.10,
-		"stagger": -0.04
+		"stagger": -0.04,
+		"weaponClass": "Claw"
 	},
 	"Dreamcatcher": {
 		"name": "Dreamcatcher",
@@ -5706,7 +5889,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 0.95,
-		"stagger": 0.03
+		"stagger": 0.03,
+		"weaponClass": "Staff"
 	},
 	"Edge of the Forest": {
 		"name": "Edge of the Forest",
@@ -5727,7 +5911,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.09,
 		"weakSpot": 1.05,
-		"stagger": -0.15
+		"stagger": -0.15,
+		"weaponClass": "Katana"
 	},
 	"Feral Judgement": {
 		"name": "Feral Judgement",
@@ -5748,7 +5933,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.13,
 		"weakSpot": 1.10,
-		"stagger": -0.15
+		"stagger": -0.15,
+		"weaponClass": "Claw"
 	},
 	"Gas Giant": {
 		"name": "Gas Giant",
@@ -5769,7 +5955,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.03,
 		"weakSpot": 0.95,
-		"stagger": 0.08
+		"stagger": 0.08,
+		"weaponClass": "Hammer"
 	},
 	"Godsplitter": {
 		"name": "Godsplitter",
@@ -5790,7 +5977,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.02,
 		"weakSpot": 0.50,
-		"stagger": -0.20
+		"stagger": -0.20,
+		"weaponClass": "Sword"
 	},
 	"Hero's Sword": {
 		"name": "Hero's Sword",
@@ -5811,7 +5999,8 @@ window.melee = {
 		"specialCost": 35,
 		"critChance": 0.05,
 		"weakSpot": 0.90,
-		"stagger": -0.10
+		"stagger": -0.10,
+		"weaponClass": "Sword"
 	},
 	"Huntress Spear": {
 		"name": "Huntress Spear",
@@ -5832,7 +6021,8 @@ window.melee = {
 		"specialCost": 25,
 		"critChance": 0.06,
 		"weakSpot": 1.0,
-		"stagger": -0.5
+		"stagger": -0.5,
+		"weaponClass": "Spear"
 	},
 	"Iron Greatsword": {
 		"name": "Iron Greatsword",
@@ -5853,7 +6043,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 0.95,
-		"stagger": 0.13
+		"stagger": 0.13,
+		"weaponClass": "Greatsword"
 	},
 	"Knuckle Dusters": {
 		"name": "Knuckle Dusters",
@@ -5874,7 +6065,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 1.10,
-		"stagger": 0.05
+		"stagger": 0.05,
+		"weaponClass": "Fist"
 	},
 	"Krell Axe": {
 		"name": "Krell Axe",
@@ -5895,7 +6087,8 @@ window.melee = {
 		"specialCost": 25,
 		"critChance": 0.03,
 		"weakSpot": 0.85,
-		"stagger": -0.10
+		"stagger": -0.10,
+		"weaponClass": "Axe"
 	},
 	"Labyrinth Staff": {
 		"name": "Labyrinth Staff",
@@ -5916,7 +6109,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.08,
 		"weakSpot": 0.95,
-		"stagger": 0.05
+		"stagger": 0.05,
+		"weaponClass": "Staff"
 	},
 	"Nightshade": {
 		"name": "Nightshade",
@@ -5937,7 +6131,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.18,
 		"weakSpot": 1.10,
-		"stagger": -0.20
+		"stagger": -0.20,
+		"weaponClass": "Claw"
 	},
 	"Ornate Blade": {
 		"name": "Ornate Blade",
@@ -5958,7 +6153,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.11,
 		"weakSpot": 1.05,
-		"stagger": -0.05
+		"stagger": -0.05,
+		"weaponClass": "Sword"
 	},
 	"Ornate Flail": {
 		"name": "Ornate Flail",
@@ -5979,7 +6175,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.11,
 		"weakSpot": 1.0,
-		"stagger": -0.03
+		"stagger": -0.03,
+		"weaponClass": "Flail"
 	},
 	"Rebellion Spear": {
 		"name": "Rebellion Spear",
@@ -6000,7 +6197,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.13,
 		"weakSpot": 1.10,
-		"stagger": 0.02
+		"stagger": 0.02,
+		"weaponClass": "Spear"
 	},
 	"Red Doe Staff": {
 		"name": "Red Doe Staff",
@@ -6021,7 +6219,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.03,
 		"weakSpot": 0.95,
-		"stagger": 0.08
+		"stagger": 0.08,
+		"weaponClass": "Staff"
 	},
 	"Ritualist Scythe": {
 		"name": "Ritualist Scythe",
@@ -6042,7 +6241,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.05,
 		"weakSpot": 1.0,
-		"stagger": -0.19
+		"stagger": -0.19,
+		"weaponClass": "Scythe"
 	},
 	"Royal Broadsword": {
 		"name": "Royal Broadsword",
@@ -6063,7 +6263,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.07,
 		"weakSpot": 0.95,
-		"stagger": 0.11
+		"stagger": 0.11,
+		"weaponClass": "Greatsword"
 	},
 	"Rusted Claws": {
 		"name": "Rusted Claws",
@@ -6084,7 +6285,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.14,
 		"weakSpot": 1.10,
-		"stagger": -0.09
+		"stagger": -0.09,
+		"weaponClass": "Claw"
 	},
 	"Scrap Hammer": {
 		"name": "Scrap Hammer",
@@ -6105,7 +6307,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.08,
 		"weakSpot": 0.95,
-		"stagger": 0.09
+		"stagger": 0.09,
+		"weaponClass": "Hammer"
 	},
 	"Scrap Hatchet": {
 		"name": "Scrap Hatchet",
@@ -6126,7 +6329,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.06,
 		"weakSpot": 1.05,
-		"stagger": 0.01
+		"stagger": 0.01,
+		"weaponClass": "Axe"
 	},
 	"Scrap Staff": {
 		"name": "Scrap Staff",
@@ -6147,7 +6351,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.06,
 		"weakSpot": 0.95,
-		"stagger": 0.08
+		"stagger": 0.08,
+		"weaponClass": "Staff"
 	},
 	"Smolder": {
 		"name": "Smolder",
@@ -6168,7 +6373,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.04,
 		"weakSpot": 0.95,
-		"stagger": 0.01
+		"stagger": 0.01,
+		"weaponClass": "Sword"
 	},
 	"Spectral Blade": {
 		"name": "Spectral Blade",
@@ -6189,7 +6395,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.08,
 		"weakSpot": 1.05,
-		"stagger": -0.25
+		"stagger": -0.25,
+		"weaponClass": "Katana"
 	},
 	"Steel Flail": {
 		"name": "Steel Flail",
@@ -6210,7 +6417,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.04,
 		"weakSpot": 1.0,
-		"stagger": 0.06
+		"stagger": 0.06,
+		"weaponClass": "Flail"
 	},
 	"Steel Katana": {
 		"name": "Steel Katana",
@@ -6231,7 +6439,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.10,
 		"weakSpot": 1.05,
-		"stagger": -0.10
+		"stagger": -0.10,
+		"weaponClass": "Katana"
 	},
 	"Steel Scythe": {
 		"name": "Steel Scythe",
@@ -6252,7 +6461,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.10,
 		"weakSpot": 1.0,
-		"stagger": -0.15
+		"stagger": -0.15,
+		"weaponClass": "Scythe"
 	},
 	"Steel Spear": {
 		"name": "Steel Spear",
@@ -6273,7 +6483,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.09,
 		"weakSpot": 1.10,
-		"stagger": -0.04
+		"stagger": -0.04,
+		"weaponClass": "Spear"
 	},
 	"Steel Sword": {
 		"name": "Steel Sword",
@@ -6294,7 +6505,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.07,
 		"weakSpot": 1.0,
-		"stagger": 0.02
+		"stagger": 0.02,
+		"weaponClass": "Sword"
 	},
 	"Stonebreaker": {
 		"name": "Stonebreaker",
@@ -6315,7 +6527,8 @@ window.melee = {
 		"specialCost": 35,
 		"critChance": 0.04,
 		"weakSpot": 0.95,
-		"stagger": 0.10
+		"stagger": 0.10,
+		"weaponClass": "Greatsword"
 	},
 	"Vice Grips": {
 		"name": "Vice Grips",
@@ -6336,7 +6549,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.06,
 		"weakSpot": 1.10,
-		"stagger": -0.18
+		"stagger": -0.18,
+		"weaponClass": "Claw"
 	},
 	"World's Edge": {
 		"name": "World's Edge",
@@ -6357,7 +6571,8 @@ window.melee = {
 		"specialCost": 1,
 		"critChance": 0.06,
 		"weakSpot": 0.85,
-		"stagger": 0.80
+		"stagger": 0.80,
+		"weaponClass": "Greatsword"
 	},
 	"Wrathbringer": {
 		"name": "Wrathbringer",
@@ -6378,169 +6593,8 @@ window.melee = {
 		"specialCost": 0,
 		"critChance": 0.06,
 		"weakSpot": 0.85,
-		"stagger": 0.80
-	}
-}
-window.builtInMelee = {
-	"": {
-		"custom": null,
-		"name": "",
-		"slot": "Mod",
-		"image": "images/Remnant/clear.png",
-		"desc": "",
-		"stats": {}
-	},
-	"Fathomless Deep": {
-		"name": "Fathomless Deep",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Fathomless Deep.png",
-		"desc": "Charged Melee Hits grant Fathomless Deep which increases Melee Stagger by 10% per stack for 5s. Max 3 stacks.",
-		"custom": null,
-		"stats": {}
-	},
-	"Bloodthirst": {
-		"name": "Bloodthirst",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Bloodthirst.png",
-		"desc": "Damage increases by 25% against BLEEDING enemies, and 25% when attacking from behind. Charge Attacks deal 200 BLEEDING damage over 10s.",
-		"custom": null,
-		"stats": {}
-	},
-	"Accelerator": {
-		"name": "Accelerator",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Accelerator.png",
-		"desc": "Charge Melee Attacks increase the speed of all Melee Attacks by 10% for 5s.",
-		"custom": null,
-		"stats": {}
-	},
-	"Fission Strike": {
-		"name": "Fission Strike",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Fission Strike.png",
-		"desc": "On Neutral Evade Attacks Atom Splitter achieves Nuclear Fission releasing a wave of charged particles which deals 450 damage to targets within 20m. Charged Neutral Evade Attacks increase range by 3x and damage by 25%.",
-		"custom": null,
-		"stats": {}
-	},
-	"Dreamwave": {
-		"name": "Dreamwave",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Dreamwave.png",
-		"desc": "After dealing 750 damage, Charge Attack will release a Dreamwave, flowing outwards 20m and returning to caster. Dreamwave applies SLOW to all enemies for 10s and grants a Stack of Reverie for each enemy affected. Each Stack grants +2% to All Damage and +2% Movement Speed, which lasts 15s.",
-		"custom": null,
-		"stats": {}
-	},
-	"Death Sentence": {
-		"name": "Death Sentence",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Death Sentence.png",
-		"desc": "Dealing Melee Damage 6 times over 10s empowers Feral Judgement. When empowered, Neutral Backdash Charge Attacks apply Death Sentence. After 1.5s of being sentenced, the enemy will suffer 10 Phantom Strikes dealing 75 Damage each. Deals 25% additional damage to BLEEDING enemies.",
-		"custom": null,
-		"stats": {}
-	},
-	"Dying Breath": {
-		"name": "Dying Breath",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Dying Breath.png",
-		"desc": "When Infused, Neutral Backdash Charge Attack explodes in a 3m AOE and leaves an ACID Cloud which lasts for 15s.",
-		"custom": null,
-		"stats": {}
-	},
-	"Fracture": {
-		"name": "Fracture",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Fracture.png",
-		"desc": "Charge Attacks taint the blood of the targets, causing all attacks from Godsplitter to register as Weakspot hits for 2s.",
-		"custom": null,
-		"stats": {}
-	},
-	"Energy Wave": {
-		"name": "Energy Wave",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Energy Wave.png",
-		"desc": "Charge Attacks use Stamina to release an energy wave projectile allowing the wielder to strike enemies from much farther away.",
-		"custom": null,
-		"stats": {}
-	},
-	"Javelin": {
-		"name": "Javelin",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Javelin.png",
-		"desc": "Charge attacks use 25 stamina to throw the spear, which returns to the wielder's hand.",
-		"custom": null,
-		"stats": {}
-	},
-	"Krell Edge": {
-		"name": "Krell Edge",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Krell Edge.png",
-		"desc": "Charge to throw the Krell Axe which applies OVERLOADED on hit, dealing 150 SHOCK damage every 5s for 10s. Shortly after throwing, another will appear in the wielder's hand.",
-		"custom": null,
-		"stats": {}
-	},
-	"Beyond The Veil": {
-		"name": "Beyond The Veil",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
-		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration.",
-		"custom": null,
-		"stats": {}
-	},
-	"Lifeline": {
-		"name": "Lifeline",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Lifeline.png",
-		"desc": "After dealing 750 damage, the next Charge Attack causes the Spirit of the Red Doe to stampede forward, dealing 480 damage to enemies and regenerating 10% Health to allies.",
-		"custom": null,
-		"stats": {}
-	},
-	"Reaver": {
-		"name": "Reaver",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
-		"desc": "Increases Melee Damage by 10% if the target is suffering from a Negative Status Effect.",
-		"custom": null,
-		"stats": {}
-	},
-	"Blaze": {
-		"name": "Blaze",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Blaze.png",
-		"desc": "Charge Melee Attacks apply BURNING which deals 150 FIRE damage over 5s",
-		"custom": null,
-		"stats": {}
-	},
-	"Whirlwind": {
-		"name": "Whirlwind",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Whirlwind.png",
-		"desc": "Performing a Charge Melee Attack during a Neutral Backdash creates a Whirlwind of slashes which strike all enemies within 8m for 273 damage.",
-		"custom": null,
-		"stats": {}
-	},
-	"Faultline": {
-		"name": "Faultline",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Faultline.png",
-		"desc": "Melee Charge attacks fire off ground-based shockwaves which deal 345 damage. Costs 35 Stamina.",
-		"custom": null,
-		"stats": {}
-	},
-	"Horizon Strike": {
-		"name": "Horizon Strike",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Horizon Strike.png",
-		"desc": "Charge Attacks release a wide horizontal projectile that penetrates through multiple enemies dealing 348 damage.",
-		"custom": null,
-		"stats": {}
-	},
-	"Awakening": {
-		"name": "Awakening",
-		"slot": "Mod",
-		"image": "./brotherLibrary/meleeModsImages/Awakening.png",
-		"desc": "Incoming damage grants Awakening which increases Melee Damage by % per stack for 10s. Max 10 stacks.",
-		"custom": null,
-		"stats": {}
+		"stagger": 0.80,
+		"weaponClass": "Hammer"
 	}
 }
 window.secondary = {
@@ -6753,6 +6807,9 @@ window.secondary = {
 		"stats": {}
 	}
 }
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------------- MUTATORS --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.rangedMutators = {
 	"": {
 		"custom": null,
@@ -7183,6 +7240,9 @@ window.meleeMutators = {
 		"stats": {}
 	}
 }
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------------------- MODS ---------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.rangedMods = {
 	"": {
 		"custom": null,
@@ -7296,10 +7356,10 @@ window.rangedMods = {
 		"custom": null,
 		"stats": {}
 	},
-	"Hotshot": {
-		"name": "Hotshot",
+	"Hot Shot": {
+		"name": "Hot Shot",
 		"slot": "Mod",
-		"image": "./brotherLibrary/modsImages/Hotshot.png",
+		"image": "./brotherLibrary/modsImages/Hot Shot.png",
 		"desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
 		"custom": null,
 		"stats": {}
@@ -7435,6 +7495,171 @@ window.rangedMods = {
 		"stats": {}
 	}
 }
+window.builtInMelee = {
+	"": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "images/Remnant/clear.png",
+		"desc": "",
+		"stats": {}
+	},
+	"Fathomless Deep": {
+		"name": "Fathomless Deep",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fathomless Deep.png",
+		"desc": "Charged Melee Hits grant Fathomless Deep which increases Melee Stagger by 10% per stack for 5s. Max 3 stacks.",
+		"custom": null,
+		"stats": {}
+	},
+	"Bloodthirst": {
+		"name": "Bloodthirst",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Bloodthirst.png",
+		"desc": "Damage increases by 25% against BLEEDING enemies, and 25% when attacking from behind. Charge Attacks deal 200 BLEEDING damage over 10s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Accelerator": {
+		"name": "Accelerator",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Accelerator.png",
+		"desc": "Charge Melee Attacks increase the speed of all Melee Attacks by 10% for 5s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Fission Strike": {
+		"name": "Fission Strike",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fission Strike.png",
+		"desc": "On Neutral Evade Attacks Atom Splitter achieves Nuclear Fission releasing a wave of charged particles which deals 450 damage to targets within 20m. Charged Neutral Evade Attacks increase range by 3x and damage by 25%.",
+		"custom": null,
+		"stats": {}
+	},
+	"Dreamwave": {
+		"name": "Dreamwave",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Dreamwave.png",
+		"desc": "After dealing 750 damage, Charge Attack will release a Dreamwave, flowing outwards 20m and returning to caster. Dreamwave applies SLOW to all enemies for 10s and grants a Stack of Reverie for each enemy affected. Each Stack grants +2% to All Damage and +2% Movement Speed, which lasts 15s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Death Sentence": {
+		"name": "Death Sentence",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Death Sentence.png",
+		"desc": "Dealing Melee Damage 6 times over 10s empowers Feral Judgement. When empowered, Neutral Backdash Charge Attacks apply Death Sentence. After 1.5s of being sentenced, the enemy will suffer 10 Phantom Strikes dealing 75 Damage each. Deals 25% additional damage to BLEEDING enemies.",
+		"custom": null,
+		"stats": {}
+	},
+	"Dying Breath": {
+		"name": "Dying Breath",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Dying Breath.png",
+		"desc": "When Infused, Neutral Backdash Charge Attack explodes in a 3m AOE and leaves an ACID Cloud which lasts for 15s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Fracture": {
+		"name": "Fracture",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Fracture.png",
+		"desc": "Charge Attacks taint the blood of the targets, causing all attacks from Godsplitter to register as Weakspot hits for 2s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Energy Wave": {
+		"name": "Energy Wave",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Energy Wave.png",
+		"desc": "Charge Attacks use Stamina to release an energy wave projectile allowing the wielder to strike enemies from much farther away.",
+		"custom": null,
+		"stats": {}
+	},
+	"Javelin": {
+		"name": "Javelin",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Javelin.png",
+		"desc": "Charge attacks use 25 stamina to throw the spear, which returns to the wielder's hand.",
+		"custom": null,
+		"stats": {}
+	},
+	"Krell Edge": {
+		"name": "Krell Edge",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Krell Edge.png",
+		"desc": "Charge to throw the Krell Axe which applies OVERLOADED on hit, dealing 150 SHOCK damage every 5s for 10s. Shortly after throwing, another will appear in the wielder's hand.",
+		"custom": null,
+		"stats": {}
+	},
+	"Beyond The Veil": {
+		"name": "Beyond The Veil",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
+		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration.",
+		"custom": null,
+		"stats": {}
+	},
+	"Lifeline": {
+		"name": "Lifeline",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Lifeline.png",
+		"desc": "After dealing 750 damage, the next Charge Attack causes the Spirit of the Red Doe to stampede forward, dealing 480 damage to enemies and regenerating 10% Health to allies.",
+		"custom": null,
+		"stats": {}
+	},
+	"Reaver": {
+		"name": "Reaver",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
+		"desc": "Increases Melee Damage by 10% if the target is suffering from a Negative Status Effect.",
+		"custom": null,
+		"stats": {}
+	},
+	"Blaze": {
+		"name": "Blaze",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Blaze.png",
+		"desc": "Charge Melee Attacks apply BURNING which deals 150 FIRE damage over 5s",
+		"custom": null,
+		"stats": {}
+	},
+	"Whirlwind": {
+		"name": "Whirlwind",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Whirlwind.png",
+		"desc": "Performing a Charge Melee Attack during a Neutral Backdash creates a Whirlwind of slashes which strike all enemies within 8m for 273 damage.",
+		"custom": null,
+		"stats": {}
+	},
+	"Faultline": {
+		"name": "Faultline",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Faultline.png",
+		"desc": "Melee Charge attacks fire off ground-based shockwaves which deal 345 damage. Costs 35 Stamina.",
+		"custom": null,
+		"stats": {}
+	},
+	"Horizon Strike": {
+		"name": "Horizon Strike",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Horizon Strike.png",
+		"desc": "Charge Attacks release a wide horizontal projectile that penetrates through multiple enemies dealing 348 damage.",
+		"custom": null,
+		"stats": {}
+	},
+	"Awakening": {
+		"name": "Awakening",
+		"slot": "Mod",
+		"image": "./brotherLibrary/meleeModsImages/Awakening.png",
+		"desc": "Incoming damage grants Awakening which increases Melee Damage by % per stack for 10s. Max 10 stacks.",
+		"custom": null,
+		"stats": {}
+	}
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------------- CONSUMABLES --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
 window.concoctions = {
 	"": {
 		"custom": null,
@@ -7729,3 +7954,292 @@ window.quickUses = {
 		"stats": {}
 	}
 }
+/* ----------------------------------------------------------------------------------------*/
+/* -------------------------------- ANIMATIONS --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+window.weaponClass = {
+	"Hammer": {
+		"basicAttack": {
+			"mv": [1,1],
+			"duration": 1.3,
+			"chainDuration": 2.03333333,
+		},
+		"chargeAttack": {
+			"mv": [2.3,2.3],
+			"duration": 2.61666666,
+			"chainDuration": 3.166666666,
+		},
+		"backstep": {
+			"mv": [1],
+			"duration": 1.716666666,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2.8],
+			"duration": 2.6,
+			"chainDuration": null,
+		}
+	},
+	"Greatsword": {
+		"basicAttack": {
+			"mv": [1,1.05,1.1],
+			"duration": 1.3166666666,
+			"chainDuration": 2.9833333333,
+		},
+		"chargeAttack": {
+			"mv": [1.7,1.8,1.9],
+			"duration": 1.5833333333,
+			"chainDuration": 4.033333333,
+		},
+		"backstep": {
+			"mv": [1.5],
+			"duration": 2.916666666,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2.35],
+			"duration": 3.333333333,
+			"chainDuration": null,
+		},
+	},
+	"Sword": {
+		"basicAttack": {
+			"mv": [1,1.05,1.15],
+			"duration": 0.916666666,
+			"chainDuration": 2.0333333333,
+		},
+		"chargeAttack": {
+			"mv": [2.2,2.2,2.25],
+			"duration": 1.4833333333,
+			"chainDuration": 3.4666666666,
+		},
+		"backstep": {
+			"mv": [1.05],
+			"duration": 1.4166666666,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2.25],
+			"duration": 1.7,
+			"chainDuration": null,
+		},
+	},
+	"Claw": {
+		"basicAttack": {
+			"mv": [1,1.1,1.2],
+			"duration": 0.95,
+			"chainDuration": 2.2666666666,
+		},
+		"chargeAttack": {
+			"mv": [1.85,1.9,2.35],
+			"duration": 1.166666666,
+			"chainDuration": 3.1333333333,
+		},
+		"backstep": {
+			"mv": [1.4],
+			"duration": 1.9,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2,2],
+			"duration": 2.1166666666,
+			"chainDuration": null,
+		},
+	},
+	"Scythe": {
+		"basicAttack": {
+			"mv": [1,1.1,1.15,1.25],
+			"duration": 1.16666666,
+			"chainDuration": 3.3833333333,
+		},
+		"chargeAttack": {
+			"mv": [[1.1,1.1,1.1],[1.25,1.25,1.25],[1.35,1.35,1.35],[2.65,2.7]],
+			"duration": 1.76666666,
+			"chainDuration": 5.55,
+		},
+		"backstep": {
+			"mv": [1.1],
+			"duration": 1.55,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [1.1,1.1,1.1],
+			"duration": 2.3333333333,
+			"chainDuration": null,
+		},
+	},
+	"Fist": {
+		"basicAttack": {
+			"mv": [1,1],
+			"duration": 0.8833333333,
+			"chainDuration": 1.4,
+		},
+		"chargeAttack": {
+			"mv": [2.5,2.5],
+			"duration": 1.0833333333,
+			"chainDuration": 2.1666666666,
+		},
+		"backstep": {
+			"mv": [1.7],
+			"duration": 1.4333333333,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [4.1],
+			"duration": 2.0833333333,
+			"chainDuration": null,
+		},
+	},
+	"Flail": {
+		
+	},
+	"Spear": {
+		"basicAttack": {
+			"mv": [1,1,1.1],
+			"duration": 0.9,
+			"chainDuration": 2.1,
+		},
+		"chargeAttack": {
+			"mv": [1.9,2,2.25],
+			"duration": 1.7333333333,
+			"chainDuration": 3.4,
+		},
+		"backstep": {
+			"mv": [1.15],
+			"duration": 1.5666666666,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2],
+			"duration": 1.9333333333,
+			"chainDuration": null,
+		},
+	},
+	"Katana": {
+		"basicAttack": {
+			"mv": [1,1.1,1.2],
+			"duration": 0.9666666666,
+			"chainDuration": 2.266666666,
+		},
+		"chargeAttack": {
+			"mv": [1.8,1.9,2.1],
+			"duration": 1.2166666666,
+			"chainDuration": 2.883333333,
+		},
+		"backstep": {
+			"mv": [1.05],
+			"duration": 1.2166666666,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [0.9,0.9],
+			"duration": 2.3,
+			"chainDuration": null,
+		},
+	},
+	"Staff": {
+		"basicAttack": {
+			"mv": [1,1.1,1.2],
+			"duration": 1.0166666666,
+			"chainDuration": 2.5,
+		},
+		"chargeAttack": {
+			"mv": [1.5,1.15],
+			"duration": 1.7,
+			"chainDuration": null,
+		},
+		"backstep": {
+			"mv": [1,0.9],
+			"duration": 1.7,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [2,2],
+			"duration": 2.6,
+			"chainDuration": null,
+		},
+	},
+	"Axe": {
+		"basicAttack": {
+			"mv": [1,1],
+			"duration": 1.0166666666,
+			"chainDuration": 1.6,
+		},
+		"chargeAttack": {
+			"mv": [[1.4,1.4],[1.4,1.4]],
+			"duration": 3.2333333333,
+			"chainDuration": null,
+		},
+		"backstep": {
+			"mv": [1.3],
+			"duration": 1.5333333333,
+			"chainDuration": null,
+		},
+		"backstepCharge": {
+			"mv": [1.65,1.65],
+			"duration": 2.3333333333,
+			"chainDuration": null,
+		},
+	},
+	"Special": {},
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------- COLLECTION CONTAINERS -------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+//Container used when referencing the armor tables using variables
+window.armor = {
+    "helmets": helmets,
+    "chests": chests,
+    "legs": legs,
+    "hands": hands,
+}
+window.gear = {
+   "amulets": amulets,
+   "rings": rings,
+   "relics": relics
+}
+window.weapons = {
+  "primary": primary,
+  "melee": melee,
+  "secondary": secondary
+}
+window.mutators = {
+  "primaryMutators": rangedMutators,
+  "meleeMutators": meleeMutators,
+  "secondaryMutators": rangedMutators
+}
+//const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
+window.mods = {
+  "primaryMods": rangedMods,
+  "meleeMods": "meleeMods",//Later, remove quotes obv
+  "secondaryMods": rangedMods
+}
+window.consumables = {
+  "concoctions": concoctions,
+  "quickUses": quickUses
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ----------------------------------- GLOBAL RECORDS -------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+window.globalRecords = {
+	generateRecords(name,limit) {
+		for (let i=1;i<=limit;i++) {
+			globalRecords[`${name}${i}Old`] = "";
+		}
+	},
+	"scaledRelicBaseRecords": 0,
+	"emptyTraitBoxHeader": `<div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div>`,
+	"activeTraits": 0,
+	"traitPointCount": 0,
+	"traitPointCap": 85,
+	"totalConcLimit": 0,
+	"greatTraitRecords": {},
+	"urlObject": {}
+}
+globalRecords.generateRecords("archetype",2);
+globalRecords.generateRecords("ring",4);
+globalRecords.generateRecords("fragment",3);
+globalRecords.generateRecords("concoction",7);
+globalRecords.generateRecords("quickUse",2);
+globalRecords.generateRecords("rangedMutator",2);
+globalRecords.generateRecords("rangeMod",2);

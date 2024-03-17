@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="changeLog.css">
+    <link rel="Icon" href="images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>Changelog / To-Do List</title> <!-- Browser Tab title -->
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    <div id="gameNav" class="sidenav"> <!-- Sidenav -->
+        <a href="homePage.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Cowaii.png" alt="Home Icon" style="border-radius: 50%;"></a>
+        <a href="index.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Remnant/R2icon.png" alt="Remnant 2 Icon"></a>
+        <a href="honkaiHome.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
+        <a href="changeLog.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/clipBoard.png" alt="Change Log Icon"></a>
+    </div>
+    <div class="thisShouldNotWork"></div>
+
+<div class="main">
+<div class="theGreatBox">
+    <div class="changeLogMegaBox">
+        <div class="changeLogHeaderIconHolder">
+            <img class="honkaiWaitImage" src="images/madPrince.png" alt="Home Page MadPrince">
+        </div>
+        <div class="changeLogMegaHalves"> <!-- Changelog -->
+            <div class="changeLogMegaHeader">ChangeLog</div>
+            <div class="changeLogMegaBody">
+                <!-- template -->
+                <!-- <div>
+                    <h1>March X, 2024</h1>
+                    <ul>
+                        <li>asdf</li>
+                    </ul>
+                </div> -->
+                <div>
+                    <h1>March 17, 2024</h1>
+                    <ul>
+                        <li>Fixed incorrect spelling "Hotshot" to "Hot Shot", along with its image name/path</li>
+                        <li>Added mobile formatting to the homepage and honkai homepage</li>
+                        <li>Added the changelog/to-do list page, which you are viewing now</li>
+                        <li>Added changelog/to-do list page to the navbar with a clipboard icon</li>
+                        <li>Added various backend statistics, not in use yet. These mean nothing without their respective calculations, which will come in a future update</li>
+                        <li>Shifted repeating key CSS declarations to a new file main.css. Things like navbar/footer have been moved there for uniformity in adjustments, between all pages that use these elements.</li>
+                        <li>Major code overhaul. Bundled functions by type, moved global vars to data.js under globalRecords</li>
+                        <li>Added a notification that checks the query string in an import for any invalid items, and lists them so the user will know if an import error occurs that is related to spelling, or lack of an item in my data sets.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 13, 2024</h1>
+                    <ul>
+                        <li>Reformat for the skills areas</li>
+                        <li>Added missing ":" on mod header</li>
+                        <li>Fixed font-size on mod/mutator selector elements</li>
+                        <li>Fixed an issue where advanced stats relic healing was not displayed properly</li>
+                        <li>Fixed an issue where EHP/s was not factoring in relic healing properly</li>
+                        <li>Added basic melee statistics to data.js</li>
+                        <li>Added display handling for the aforementioned statistics, which will now display on the rows underneath the weapon</li>
+                        <li>Added images and descriptions for all built-in melee mods. These will now populate when the associated melee weapon is selected</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 12, 2024</h1>
+                    <ul>
+                        <li>Reformat for: Armor, Weapons, Relic, Accessory, and Prime Perk sections</li>
+                        <li>Fixed an issue where the main body wasn't centering properly relative to the space leftover from the navbar</li>
+                        <li>Added a tremendous amount of mobile formatting adjustments</li>
+                        <li>Fixed an issue where mobile dropdown menus were not centering properly</li>
+                        <li>Shifted to a fixed height on the mobile navbar, so it wouldn't constantly adjust depending on the scroll state of the page</li>
+                        <li>Fixed an issue where the class title was too big for its container depending on the combination in use</li>
+                        <li>Fixed "Devoured Loop" spelling, was "Devourer Loop"</li>
+                        <li>Added handling/logic if an import was read to have higher traits spent than the 85 point limit. When such an import is received, it will read backwards up the trait list, and remove points until we reach the 85 point limit</li>
+                        <li>Fixed an incorrect image path for Singed Ring</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 11, 2024</h1>
+                    <ul>
+                        <li>1.0 Export Feature Collaboration with remnant2toolkit.com</li>
+                        <li>Changed most image filepaths away from imgur links. We crutched pretty hard on imgur when the calc was just a spreadsheet, but now that we're hosting our own service, and since it was technically against imgur TOS to do what we were doing, this marks the shift towards removing all imgur links in use</li>
+                        <li>Added the images for armor, and adjusted the filepaths away from imgur links. This <i>should</i> be the last of the imgur links</li>
+                        <li>Fixed minor width issues with Firefox. Firefox is hellscape that breaks all my formatting, and there's still lots to do here in the future</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 10, 2024</h1>
+                    <ul>
+                        <li>Added the ability for external sources to import builds</li>
+                        <li>Fixed an issue where traits were not populated correctly</li>
+                        <li>Fixed an issue where imported build notifications were shown when not relevant.</li>
+                        <li>Added URL item logging. Now, all selections are stored in and actively modify the URL. This means that the link can be used to "share" the build if needed.</li>
+                        <li>Fixed an issue where URL logging did not actively modify the URL correctly</li>
+                        <li>Fixed an issue where concoction limit was not being honored by URL logging</li>
+                        <li>Decoded %2C back to commas within the URL logging, to reduce query string length</li>
+                        <li>Added URL logging for toggles, and advanced stat settings. Now EVERYTHING is saved in a URL if sharing is needed in its current state, settings and all, settings no longer have to be rechecked upon pageload</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 9, 2024</h1>
+                    <ul>
+                        <li>Mobile friendly formatting v0.1. Hardly perfect, but better than nothing until I can improve it</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 8, 2024</h1>
+                    <ul>
+                        <li>Trait dropdowns now exclude what has already been selected in other boxes</li>
+                        <li>Fixed an error that would occur if the user generated more than 20 traits. This was due to the toggles being generated based on the prior limit of 20 traits, toggles are now generated automatically according to the current amount of active traits</li>
+                        <li>Added the trait cap functionality, matching it to the limit of 85 points like the game</li>
+                        <li>Added smol qol feature to delete a trait if it were level 0 and the "-" adjustment was clicked. Traits at this stage will display a trash can icon instead of a "-" symbol on the button</li>
+                        <li>Added styling and additional logic to autopopulated traits</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 7, 2024</h1>
+                    <ul>
+                        <li>Added trait autopopulation based on selected archetypes, as well as the ability to delete traits.</li>
+                        <li>Fixed an issue when certain browser extensions modified html with injections/parse, the trait generation box would not populate correctly.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 5, 2024</h1>
+                    <ul>
+                        <li>Updated Mutator information</li>
+                        <li>Added corrupted weapons</li>
+                        <li>Alphabetized selector element lists</li>
+                        <li>Fixed an issue for when relics were selected that did not provide direct healing(eg: Lifesteal, Shields)</li>
+                        <li>Optimized dupe/swap handling, added the same logic to quickuse, mods, and mutators</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 3, 2024</h1>
+                    <ul>
+                        <li>1.0 Release. Lots happened before this point, but if you REALLY care about that then go look at github.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changeLogMegaFooterBuffer"></div>
+        </div>
+        <div class="changeLogMegaHalves"> <!-- To-Do List -->
+            <div class="changeLogMegaHeader">To-Do List</div>
+            <div class="changeLogMegaBody">
+                <div>
+                    <h1>Will Do:</h1>
+                    <ul>
+                        <li>Make Blood Bond's values only populate when the selected summon count is greater than 0. Haven't done this yet as I'm not sure how I want to handle advanced trait statistic logic, but I'll know once I get rolling on dmg calcs</li>
+                        <li>Finish mobile support. This would mainly entail swapping all checkboxes, to slider toggles, but beyond that mobile is pretty much exactly where I want it for now</li>
+                        <li>Damage Calculations: <b>Monster Task</b></li>
+                        <li>Loadouts - Not entirely positive how I want to do this yet, but I do know that a build calculator without the ability to compare one build to another, is kinda sad</li>
+                        <li>Restructure consumables area so the selection boxes only generated when needed/no others exist, like Traits do. Also allow quick-use consumables to handle 4 selections, instead of 2(in-game has 4 slots, 4 is a reasonable limit)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Might Do:</h1>
+                    <ul>
+                        <li>Add fragment level specification so people aren't forced into Mythic level assumptions. This is kind of a cancerous task though, and not really worth it. If I do end up doing this, and can't find the values for all levels, I might have to allow user input to specify level values but it just seems like a pedantic amount of customization, and if I do that then what next? Allowing weapon level specification? Blegh, no</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Will Not Do:</h1>
+                    <ul>
+                        <li>Expanded builds sharing logic</li>
+                        <li>Accounts/sign-ins(with the singular exception of allowing loadout saves later, possibly, but likely no)</li>
+                        <li>Anything that far exceeds the bounds of a <i><b>calculator</b></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changeLogMegaFooterBuffer"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="generalFooter"> 
+    <div class="footerBox">
+        <div class="footerTextBox"><span>Support the project on <a href="https://www.patreon.com/vashcowaii/membership" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;">Patreon</a>.<br>Created by <a href="https://www.youtube.com/@VashCowaii" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;">Vash Cowaii</a>.</span></div>
+        <div class="footerIconBox">
+            <a href="https://www.youtube.com/@VashCowaii" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="images/youtube.webp" alt="YT Icon"></a>
+            <a href="https://twitter.com/VCowaii" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="images/twitter.webp" alt="Twitter Icon"></a>
+            <a href="https://discord.gg/45BkqHZ" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="images/discord.webp" alt="Discord Icon"></a>
+            <a href="https://github.com/VashCowaii" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="images/github.webp" alt="Github Icon"></a>
+            <a href="https://www.patreon.com/vashcowaii/membership" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="images/patreon.png" alt="Patreon Icon"></a>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html> 

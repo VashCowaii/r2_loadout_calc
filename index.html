@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="calculator.css">
     <link rel="Icon" href="images/Cowaii.png">
     <title>R2 Loadout Calculator</title> <!-- Browser Tab title -->
 </head>
@@ -16,7 +17,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-FSMSXXML0Z');
 </script>
 
@@ -25,6 +25,7 @@
         <a href="homePage.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Cowaii.png" alt="Home Icon" style="border-radius: 50%;"></a>
         <a href="index.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Remnant/R2icon.png" alt="Remnant 2 Icon"></a>
         <a href="honkaiHome.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Honkai/HonkaiIcon.jpg" alt="Honkai Star Rail Icon"></a>
+        <a href="changeLog.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/clipBoard.png" alt="Change Log Icon"></a>
     </div>
     <div class="thisShouldNotWork"></div>
 
@@ -104,7 +105,7 @@
             </div>
             <div class="classThinHeader">Archetype 1:</div>
             <div class="classSelectorBox">
-                <select class="classSelector" id="archetype1" onchange="updateArchetype('archetype','1')">
+                <select class="classSelector" id="archetype1" onchange="userTrigger.updateArchetype('archetype','1')">
                 </select> 
             </div>
             <div class="classSelectorBox">
@@ -115,7 +116,7 @@
             </div>
             <div class="classSelectorBox">
                 <div class="classAbilitySelectorBox">
-                    <select class="classAbilitySelector" id="archetype1ability"  onchange="updateAbility('archetype1')"></select> 
+                    <select class="classAbilitySelector" id="archetype1ability"  onchange="userTrigger.updateAbility('archetype1')"></select> 
                 </div>
             </div>
                 <div class="classAbilityDescription" id="archetype1abilityDesc"></div>
@@ -399,7 +400,7 @@
                     </div>
                 </div>
                 <div class="exportBar"> <!-- EXPORT BUILD BUTTON AREA -->
-                    <button type="button" class="exportButton" onclick="confirmExport()">
+                    <button type="button" class="exportButton" onclick="manipulateURL.confirmExport()">
                         <div class="exportText">Export to R2TK</div>
                         <div class="exportIconBox">
                             <img class="exportIcon" src="images/R2TK.png" alt="R2TK Icon">
@@ -420,7 +421,7 @@
                 <!-- <div class="armorHeader">Head</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
-                            <select class="armorSelector" id="helmetChoice" onchange="updateArmor('helmet')"></select>     
+                            <select class="armorSelector" id="helmetChoice" onchange="userTrigger.updateArmor('helmet')"></select>     
                         </div>
                         <div class="armorIconToStatsBox">
                             <div class="armorIconHolder">
@@ -437,7 +438,7 @@
                 <!-- <div class="armorHeader">Chest</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
-                            <select class="armorSelector" id="chestChoice" onchange="updateArmor('chest')"></select> 
+                            <select class="armorSelector" id="chestChoice" onchange="userTrigger.updateArmor('chest')"></select> 
                         </div>
                         <div class="armorIconToStatsBox">
                             <div class="armorIconHolder">
@@ -454,7 +455,7 @@
                 <!-- <div class="armorHeader">Legs</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
-                            <select class="armorSelector" id="legChoice" onchange="updateArmor('leg')"></select> 
+                            <select class="armorSelector" id="legChoice" onchange="userTrigger.updateArmor('leg')"></select> 
                         </div>
                         <div class="armorIconToStatsBox">
                             <div class="armorIconHolder">
@@ -471,7 +472,7 @@
                 <!-- <div class="armorHeader">Hands</div> -->
                     <div class="armorContainer">
                         <div class="armorSelectorBox">
-                            <select class="armorSelector" id="handChoice" onchange="updateArmor('hand')"></select> 
+                            <select class="armorSelector" id="handChoice" onchange="userTrigger.updateArmor('hand')"></select> 
                         </div>
                         <div class="armorIconToStatsBox">
                             <div class="armorIconHolder">
@@ -494,7 +495,7 @@
                 </div>
                 <div class="classThinHeader">Archetype 2:</div>
                 <div class="classSelectorBox">
-                    <select class="classSelector" id="archetype2" onchange="updateArchetype('archetype','2')">
+                    <select class="classSelector" id="archetype2" onchange="userTrigger.updateArchetype('archetype','2')">
                     </select> 
                 </div>
                 <div class="classSelectorBox">
@@ -505,7 +506,7 @@
                 </div>
                 <div class="classSelectorBox">
                     <div class="classAbilitySelectorBox">
-                        <select class="classAbilitySelector" id="archetype2ability"  onchange="updateAbility('archetype2')"></select> 
+                        <select class="classAbilitySelector" id="archetype2ability"  onchange="userTrigger.updateAbility('archetype2')"></select> 
                     </div>
                 </div>
                     <div class="classAbilityDescription" id="archetype2abilityDesc"></div>
@@ -533,7 +534,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Amulet:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="amulet" onchange="updateAccessory('amulet')"></select>
+                    <select class="accessorySelector" id="amulet" onchange="userTrigger.updateAccessory('amulet')"></select>
                 </div>
                 <div class="accessoryDescription" id="amuletDesc"></div>
             </div>
@@ -545,7 +546,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Ring 1:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="ring1" onchange="updateAccessory('ring','1')"></select>
+                    <select class="accessorySelector" id="ring1" onchange="userTrigger.updateAccessory('ring','1')"></select>
                 </div>
                 <div class="accessoryDescription" id="ring1Desc"></div>
             </div>
@@ -556,7 +557,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Ring 2:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="ring2" onchange="updateAccessory('ring','2')"></select>
+                    <select class="accessorySelector" id="ring2" onchange="userTrigger.updateAccessory('ring','2')"></select>
                 </div>
                 <div class="accessoryDescription" id="ring2Desc"></div>
             </div>
@@ -567,7 +568,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Ring 3:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="ring3" onchange="updateAccessory('ring','3')"></select>
+                    <select class="accessorySelector" id="ring3" onchange="userTrigger.updateAccessory('ring','3')"></select>
                 </div>
                 <div class="accessoryDescription" id="ring3Desc"></div>
             </div>
@@ -578,7 +579,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Ring 4:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="ring4" onchange="updateAccessory('ring','4')"></select>
+                    <select class="accessorySelector" id="ring4" onchange="userTrigger.updateAccessory('ring','4')"></select>
                 </div>
                 <div class="accessoryDescription" id="ring4Desc"></div>
             </div>
@@ -591,7 +592,7 @@
             <div class="accessoryContainer">
                 <!-- <div class="accessoryHeader">Relic:</div> -->
                 <div class="accessorySelectorBox">
-                    <select class="accessorySelector" id="relic" onchange="updateAccessory('relic')"></select>
+                    <select class="accessorySelector" id="relic" onchange="userTrigger.updateAccessory('relic')"></select>
                 </div>
                 <div class="accessoryDescription" id="relicDesc"></div>
             </div>
@@ -599,13 +600,13 @@
         <div class="fragmentsContainer">
             <!-- <div class="accessoryHeader">Fragments:</div> -->
             <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment1" onchange="updateFragment('fragment','1')"></select>
+                <select class="fragmentsSelector" id="fragment1" onchange="userTrigger.updateFragment('fragment','1')"></select>
             </div>
             <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment2" onchange="updateFragment('fragment','2')"></select>
+                <select class="fragmentsSelector" id="fragment2" onchange="userTrigger.updateFragment('fragment','2')"></select>
             </div>
             <div class="fragmentsSelectorBox">
-                <select class="fragmentsSelector" id="fragment3" onchange="updateFragment('fragment','3')"></select>
+                <select class="fragmentsSelector" id="fragment3" onchange="userTrigger.updateFragment('fragment','3')"></select>
             </div>
         </div>
         <div class="relicEffectsContainer">
@@ -646,7 +647,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction1" onchange="updateConsumable('concoction','1')">
+                        <select class="consumableSelector" id="concoction1" onchange="userTrigger.updateConsumable('concoction','1')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction1Desc"></div>
@@ -658,7 +659,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction2" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','2')">
+                        <select class="consumableSelector" id="concoction2" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','2')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction2Desc"></div>
@@ -670,7 +671,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction3" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','3')">
+                        <select class="consumableSelector" id="concoction3" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','3')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction3Desc"></div>
@@ -682,7 +683,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction4" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','4')">
+                        <select class="consumableSelector" id="concoction4" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','4')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction4Desc"></div>
@@ -694,7 +695,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction5" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','5')">
+                        <select class="consumableSelector" id="concoction5" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','5')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction5Desc"></div>
@@ -706,7 +707,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction6" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','6')">
+                        <select class="consumableSelector" id="concoction6" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','6')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction6Desc"></div>
@@ -718,7 +719,7 @@
                 </div>
                 <div class="consumableInfoBox">
                     <div class="consumableSelectorBox">
-                        <select class="consumableSelector" id="concoction7" style="background-color: #434343;" disabled onchange="updateConsumable('concoction','7')">
+                        <select class="consumableSelector" id="concoction7" style="background-color: #434343;" disabled onchange="userTrigger.updateConsumable('concoction','7')">
                         </select> 
                     </div>
                     <div class="consumableDesc" id="concoction7Desc"></div>
@@ -731,7 +732,7 @@
                     </div>
                     <div class="consumableInfoBox">
                         <div class="consumableSelectorBox">
-                            <select class="consumableSelector" id="quickUse1" onchange="updateConsumable('quickUse','1')">
+                            <select class="consumableSelector" id="quickUse1" onchange="userTrigger.updateConsumable('quickUse','1')">
                             </select> 
                         </div>
                         <div class="consumableDesc" id="quickUse1Desc"></div>
@@ -743,7 +744,7 @@
                     </div>
                     <div class="consumableInfoBox">
                         <div class="consumableSelectorBox">
-                            <select class="consumableSelector" id="quickUse2" onchange="updateConsumable('quickUse','2')">
+                            <select class="consumableSelector" id="quickUse2" onchange="userTrigger.updateConsumable('quickUse','2')">
                             </select> 
                         </div>
                         <div class="consumableDesc" id="quickUse2Desc"></div>
@@ -759,7 +760,7 @@
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Primary Weapon Icon" id="primaryImage">
                 </div>
                 <div class="weaponSelectorBox">
-                    <select class="weaponSelector" id="primary" onchange="updateWeapon('primary')"></select> 
+                    <select class="weaponSelector" id="primary" onchange="userTrigger.updateWeapon('primary')"></select> 
                 </div>
                 <div class="weaponDescriptionBox" id="primaryDescription"></div>
                 <div class="mutatorHeaderBox">
@@ -767,7 +768,7 @@
                 </div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="rangedMutator1" onchange="updateMutator('rangedMutator','1')"></select>
+                        <select class="weaponSelector" id="rangedMutator1" onchange="userTrigger.updateMutator('rangedMutator','1')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="primaryMutatorDesc"></div>
@@ -779,7 +780,7 @@
                 </div>
                 <div class="mutatorHeaderBox">
                     <div class="modSelectorBox">
-                        <select class="modSelector" id="rangedMod1" onchange="updateMod('rangedMod','1')"></select>
+                        <select class="modSelector" id="rangedMod1" onchange="userTrigger.updateMod('rangedMod','1')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="primaryModDesc"></div>
@@ -822,7 +823,7 @@
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Melee Weapon Icon" id="meleeImage">
                 </div>
                 <div class="weaponSelectorBox">
-                    <select class="weaponSelector" id="melee" onchange="updateWeapon('melee')"></select> 
+                    <select class="weaponSelector" id="melee" onchange="userTrigger.updateWeapon('melee')"></select> 
                 </div>
                 <div class="weaponDescriptionBox" id="meleeDescription"></div>
                 <div class="mutatorHeaderBox">
@@ -830,7 +831,7 @@
                 </div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="meleeMutator" onchange="updateMutator('meleeMutator')"></select>
+                        <select class="weaponSelector" id="meleeMutator" onchange="userTrigger.updateMutator('meleeMutator')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="meleeMutatorDesc"></div>
@@ -883,7 +884,7 @@
                     <img class="weaponImage" src="images/Remnant/clear.png" alt="Secondary Weapon Icon" id="secondaryImage">
                 </div>
                 <div class="weaponSelectorBox">
-                    <select class="weaponSelector" id="secondary" onchange="updateWeapon('secondary')"></select> 
+                    <select class="weaponSelector" id="secondary" onchange="userTrigger.updateWeapon('secondary')"></select> 
                 </div>
                 <div class="weaponDescriptionBox" id="secondaryDescription"></div>
                 <div class="mutatorHeaderBox">
@@ -891,7 +892,7 @@
                 </div>
                 <div class="mutatorHeaderBox">
                     <div class="mutatorSelectorBox">
-                        <select class="weaponSelector" id="rangedMutator2" onchange="updateMutator('rangedMutator','2')"></select>
+                        <select class="weaponSelector" id="rangedMutator2" onchange="userTrigger.updateMutator('rangedMutator','2')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="secondaryMutatorDesc"></div>
@@ -903,7 +904,7 @@
                 </div>
                 <div class="mutatorHeaderBox">
                     <div class="modSelectorBox">
-                        <select class="modSelector" id="rangedMod2" onchange="updateMod('rangedMod','2')"></select>
+                        <select class="modSelector" id="rangedMod2" onchange="userTrigger.updateMod('rangedMod','2')"></select>
                     </div>
                 </div>
                 <div class="mutatorDesc" id="secondaryModDesc"></div>
@@ -1093,6 +1094,11 @@
         </div>
     </div>
 </div>
+<div class="damageStatsBox">
+    <!-- <div class="advancedStatsTitleHeader">DAMAGE STATISTICS</div> -->
+</div>
+
+
 </div>
 
 
