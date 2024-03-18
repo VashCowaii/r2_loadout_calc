@@ -156,7 +156,7 @@ window.helmets = {
 	  "Blight": 1,
 	  "image": "./brotherLibrary/helmetsImages/Knotted Helm.png"
 	},
-	"Labryinth Headplate": {
+	"Labyrinth Headplate": {
 	  "SLOT": "Head",
 	  "VALUE": 12.9,
 	  "WEIGHT": 5.4,
@@ -165,7 +165,7 @@ window.helmets = {
 	  "Shock": 3,
 	  "Corrosive": 0,
 	  "Blight": 0,
-	  "image": "./brotherLibrary/helmetsImages/Labryinth Headplate.png"
+	  "image": "./brotherLibrary/helmetsImages/Labyrinth Headplate.png"
 	},
 	"Leto Mark 1 Helmet": {
 	  "SLOT": "Head",
@@ -233,7 +233,7 @@ window.helmets = {
 	  "Blight": 1,
 	  "image": "./brotherLibrary/helmetsImages/Radiant Visage.png"
 	},
-	"Realmwaker Beret": {
+	"Realmwalker Beret": {
 	  "SLOT": "Head",
 	  "VALUE": 7.2,
 	  "WEIGHT": 2.9,
@@ -242,7 +242,7 @@ window.helmets = {
 	  "Shock": 1,
 	  "Corrosive": 0,
 	  "Blight": 1,
-	  "image": "./brotherLibrary/helmetsImages/Realmwaker Beret.png"
+	  "image": "./brotherLibrary/helmetsImages/Realmwalker Beret.png"
 	},
 	"Red Widow Headdress": {
 	  "SLOT": "Head",
@@ -444,7 +444,7 @@ window.chests = {
 	  "Blight": 3,
 	  "image": "./brotherLibrary/chestsImages/Knotted Cage.png"
 	},
-	"Labryinth Mantle": {
+	"Labyrinth Mantle": {
 	  "SLOT": "Chest",
 	  "VALUE": 51,
 	  "WEIGHT": 21.6,
@@ -453,7 +453,7 @@ window.chests = {
 	  "Shock": 6,
 	  "Corrosive": 0,
 	  "Blight": 0,
-	  "image": "./brotherLibrary/chestsImages/Labryinth Mantle.png"
+	  "image": "./brotherLibrary/chestsImages/Labyrinth Mantle.png"
 	},
 	"Leto Mark 1 Armor": {
 	  "SLOT": "Chest",
@@ -998,7 +998,7 @@ window.hands = {
 	  "Blight": 1,
 	  "image": "./brotherLibrary/handsImages/Knotted Gloves.png"
 	},
-	"Labyrinth Gloves": {
+	"Labyrinth Gauntlets": {
 	  "SLOT": "Hand",
 	  "VALUE": 12.9,
 	  "WEIGHT": 5.4,
@@ -1007,7 +1007,7 @@ window.hands = {
 	  "Shock": 4,
 	  "Corrosive": 0,
 	  "Blight": 0,
-	  "image": "./brotherLibrary/handsImages/Labyrinth Gloves.png"
+	  "image": "./brotherLibrary/handsImages/Labyrinth Gauntlets.png"
 	},
 	"Leto Mark 1 Gloves": {
 	  "SLOT": "Hand",
@@ -2083,7 +2083,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Abrasive Whetstone.png",
 		"desc": "When attacking a BLEEDING enemy, Crit Chance is increased by 15% and Crit Damage is increased by 30%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.15,
+			"AllCritDamage": 0.30,
+		}
 	},
 	"Ankh of Power": {
 		"name": "Ankh of Power",
@@ -2091,7 +2094,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Ankh of Power.png",
 		"desc": "Grants a 15% increase to all damage. Consuming a Relic doubles the bonus for 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.3,
+		}
 	},
 	"Birthright of the Lost": {
 		"name": "Birthright of the Lost",
@@ -2099,7 +2104,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Birthright of the Lost.png",
 		"desc": "On perfect dodge, apply EXPOSED on the attacker for 10s. EXPOSED: Target receives up to 24% additional damage from all sources. Expose amount is reduced for each human ally alive.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.24,
+		}
 	},
 	"Brewmaster's Cork": {
 		"custom": "brewMasters",
@@ -2128,7 +2135,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Butcher's Fetish.png",
 		"desc": "Increases Critical Chance by 15% and Critical Damage by 25% for 15s after striking enemy with a Charged Melee Attack.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.15,
+			"AllCritDamage": 0.25,
+		}
 	},
 	"Chains of Amplification": {
 		"name": "Chains of Amplification",
@@ -2136,7 +2146,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Chains of Amplification.png",
 		"desc": "Increases all damage dealt to targets suffering from a Status Effect by 20%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.20,
+		}
 	},
 	"Cleansing Stone": {
 		"name": "Cleansing Stone",
@@ -2152,27 +2164,28 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Core Booster.png",
 		"desc": "Increases weakspot damage by 50% for 10s after killing an enemy.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllWeakspot": 0.5,
+		}
 	},
 	"Cost of Betrayal": {
-		"custom": null,
+		"custom": "costOfBetrayal",
 		"name": "Cost of Betrayal",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Cost of Betrayal.png",
 		"desc": "Reduces Max Relic Charges to 1. Increases All Damage by 20% when wearer has 1 Relic Charge. Increases incoming damage by 20% when wearer has no Relic Charges and after 30s, regain 1 Relic Charge.",
 		"stats": {
-			"FlatDR": -0.2
+			"FlatDR": -0.2,
+			"AllDamage": 0,
 		}
 	},
-	"Daredevil Charm": {
-		"custom": null,
-		"name": "Daredevil Charm",
+	"Daredevil's Charm": {
+		"custom": "daredevil",
+		"name": "Daredevil's Charm",
 		"slot": "Amulet",
-		"image": "./brotherLibrary/amuletsImages/Daredevil Charm.png",
+		"image": "./brotherLibrary/amuletsImages/Daredevil's Charm.png",
 		"desc": "Gain 7.5% to all damage dealt, 3% Movement Speed, and 5% all damage taken for each piece of unequipped armor.",
-		"stats": {
-			"FlatDR": -0.2
-		}
+		"stats": {}
 	},
 	"Death's Embrace": {
 		"name": "Death's Embrace",
@@ -2180,7 +2193,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Death's Embrace.png",
 		"desc": "Gain 20% to all damage when Health is below 100%. Gain HASTE when below 50% Health.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.2,
+			"HASTE": 1,
+		}
 	},
 	"Death-Soaked Idol": {
 		"name": "Death-Soaked Idol",
@@ -2188,7 +2204,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Death-Soaked Idol.png",
 		"desc": "Increases All Damage by 5% for each entity within 20m suffering from a unique Negative Status Effect. Max 5 stacks.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.25,
+		}
 	},
 	"Decayed Margin": {
 		"custom": null,
@@ -2197,7 +2215,8 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Decayed Margin.png",
 		"desc": "Melee hits gain 1.5% base damage dealt as Lifesteal. For each 25% missing Health, gain 1.5% additional Melee Lifesteal. When Health is full, gain 25% Melee Damage.",
 		"stats": {
-			"MLifesteal": 0.06
+			"MLifesteal": 0.06,
+			"MeleeDamage": 0.25,
 		}
 	},
 	"Detonation Trigger": {
@@ -2206,17 +2225,17 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Detonation Trigger.png",
 		"desc": "Increases Explosion damage by 25%. Explosions apply 405 BURNING damage over 5s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ExplosionDamage": 0.25,
+		}
 	},
 	"Difference Engine": {
-		"custom": null,
+		"custom": "differenceEngine",
 		"name": "Difference Engine",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Difference Engine.png",
 		"desc": "While a Shield is active, gain 20% damage and 1.5% of base dealt as Lifesteal.",
-		"stats": {
-			"Lifesteal": 0.015
-		}
+		"stats": {}
 	},
 	"Downward Spiral": {
 		"name": "Downward Spiral",
@@ -2224,7 +2243,11 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Downward Spiral.png",
 		"desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AttackSpeed": 0.15,
+			"MeleeDamage": 0.20,
+			"RangedDamage": 0.15,
+		}
 	},
 	"Effigy Pendant": {
 		"custom": null,
@@ -2233,7 +2256,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Effigy Pendant.png",
 		"desc": "While Grey Health is present, gain 15% to all damage dealt, 10% damage reduction and 1 additional hit before Grey Health is removed.",
 		"stats": {
-			"FlatDR": 0.1
+			"FlatDR": 0.1,
+			"AllDamage": 0.15,
+			"GreyHPHitThreshold": 1,
 		}
 	},
 	"Effluvium Enhancer": {
@@ -2242,7 +2267,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Effluvium Enhancer.png",
 		"desc": "Increases ACID damage by 20% and CORROSIVE damage by 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AcidDamage": 0.2,
+			"CorrosiveDamage": 0.5,
+		}
 	},
 	"Emergency Switch": {
 		"name": "Emergency Switch",
@@ -2258,15 +2286,20 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Energized Neck Coil.png",
 		"desc": "Increases Status Effect damage by 25%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage. Each target can be affected once every 5 seconds.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": 0.25,
+		}
 	},
 	"Energy Diverter": {
 		"name": "Energy Diverter",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Energy Diverter.png",
 		"desc": "While a SHIELD is active, gain 10 Critical Chance and 15% to all damage dealt.",
-		"custom": null,
-		"stats": {}
+		"custom": "energyDiverter",
+		"stats": {
+			"AllCritChance": 0.1,
+			"AllDamage": 0.15,
+		}
 	},
 	"Escalation Protocol": {
 		"name": "Escalation Protocol",
@@ -2274,7 +2307,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Escalation Protocol.png",
 		"desc": "Increases all damage dealt by 2.5% for 10s after killing an enemy. Stacks 10x. Dealing damage refreshes the timer.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.25,
+		}
 	},
 	"Full Moon Circlet": {
 		"custom": null,
@@ -2283,7 +2318,8 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Full Moon Circlet.png",
 		"desc": "Ranged damage Lifesteals 3% of base damage dealt. At full health, damage is increased by 20%.",
 		"stats": {
-			"RLifesteal": 0.03
+			"RLifesteal": 0.03,
+			"RangedDamage": 0.2,
 		}
 	},
 	"Gift of Euphoria": {
@@ -2292,7 +2328,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Gift of Euphoria.png",
 		"desc": "Spending 25 Stamina grants 5% Critical Chance for 7s. Max 5 stacks.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.25,
+		}
 	},
 	"Gift of Melancholy": {
 		"name": "Gift of Melancholy",
@@ -2300,14 +2338,16 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Gift of Melancholy.png",
 		"desc": "Increases All Damage dealt by 25% when Stamina is at 100% for 7s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.25,
+		}
 	},
 	"Gift of the Unbound": {
 		"name": "Gift of the Unbound",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gift of the Unbound.png",
 		"desc": "Disables negative effects of Burden Rings. Restricts Maximum Health gained by 20% per effect disabled.",
-		"custom": null,
+		"custom": "giftOfTheUnbound",
 		"stats": {}
 	},
 	"Golden Ribbon": {
@@ -2316,7 +2356,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Golden Ribbon.png",
 		"desc": "Increases Mod damage by 25%. Activating a MOD grants HASTE for 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDamage": 0.25,
+			"HASTE": 1,
+		}
 	},
 	"Gunfire Security Lanyard": {
 		"name": "Gunfire Security Lanyard",
@@ -2332,7 +2375,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Gunslinger's Charm.png",
 		"desc": "Increases Fire Rate by 15% and Reload Speed by 20%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.15,
+			"ReloadSpeed": 0.2,
+		}
 	},
 	"Hallowed Egg": {
 		"name": "Hallowed Egg",
@@ -2340,7 +2386,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Hallowed Egg.png",
 		"desc": "Spending at least 30% of Firearms magazine to deal damage increases Melee damage by 10% for 7s. Stacks 5x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.5,
+		}
 	},
 	"Hyperconductor": {
 		"name": "Hyperconductor",
@@ -2348,7 +2396,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Hyperconductor.png",
 		"desc": "Gain double Skill Charges. Increases Skill Cooldowns by 50% and reduces Max Power Generation by 15%.\nFor Heavy Weapons, doubles Heavy Weapon Ammo instead.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": 0.5,
+			"ModPowerGen": 0.15,
+		}
 	},
 	"Index of the Scribe": {
 		"name": "Index of the Scribe",
@@ -2356,7 +2407,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Index of the Scribe.png",
 		"desc": "Increases Mod and Skill Weakspot Damage by 35%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModWeakspot": 0.35,
+			"SkillWeakspot": 0.35,
+		}
 	},
 	"Indignant Fetish": {
 		"custom": null,
@@ -2365,7 +2419,8 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Indignant Fetish.png",
 		"desc": "Taking damage from enemies increases all damage dealt by 25% and reduces all incoming damage by 10%. Lasts 20s.",
 		"stats": {
-			"FlatDR": 0.1
+			"FlatDR": 0.1,
+			"AllDamage": 0.25,
 		}
 	},
 	"Inert Overcharger": {
@@ -2374,14 +2429,18 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Inert Overcharger.png",
 		"desc": "Standing still increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.20,
+			"ReloadSpeed": 0.15,
+			"Recoil": 0.50,
+		}
 	},
 	"Insulation Driver": {
 		"name": "Insulation Driver",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Insulation Driver.png",
 		"desc": "While BULWARK is active, gain 15% to all damage dealt and HASTE.",
-		"custom": null,
+		"custom": "insulationDriver",
 		"stats": {}
 	},
 	"Jester's Bell": {
@@ -2390,14 +2449,18 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Jester's Bell.png",
 		"desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 20% for 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModSpeed": 0.35,
+			"CastSpeed": 0.35,
+			"AllDamage": 0.2,
+		}
 	},
 	"Kinetic Shield Exchanger": {
 		"name": "Kinetic Shield Exchanger",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Kinetic Shield Exchanger.png",
 		"desc": "While a SHIELD is active, gain 25% Mod damage and generate 15% additional Mod power.",
-		"custom": null,
+		"custom": "kineticShieldExchanger",
 		"stats": {}
 	},
 	"Kuri Kuri Charm": {
@@ -2416,7 +2479,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Laemir Censer.png",
 		"desc": "Increases Mod Duration by 50%. Increases Mod Cost by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDuration": 0.5,
+			"ModCost": 0.15,
+		}
 	},
 	"Legacy Protocol": {
 		"name": "Legacy Protocol",
@@ -2424,7 +2490,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Legacy Protocol.png",
 		"desc": "Lowers skill cooldown by 20% and increased skill duration by 15%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": -0.2,
+			"SkillDuration": 0.15,
+		}
 	},
 	"Leto's Amulet": {
 		"custom": null,
@@ -2444,7 +2513,8 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Matriarch's Insignia.png",
 		"desc": "Increases Melee Damage by 35% and causes all successful Melee Attacks to restore 10 Stamina.",
 		"stats": {
-			"Stamina/S+": 10
+			"Stamina/S+": 10,
+			"MeleeDamage": 0.35,
 		}
 	},
 	"Navigator's Pendant": {
@@ -2465,7 +2535,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Neckbone Necklace.png",
 		"desc": "Reduces the Damage of Status Effects applied to wearer by 50%. Gain 25% increased Damage when suffering from a Status Effect or Blight.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": -0.5,
+			"AllDamage": 0.25,
+		}
 	},
 	"Necklace of Flowing Life": {
 		"name": "Necklace of Flowing Life",
@@ -2481,7 +2554,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Necklace of Supremacy.png",
 		"desc": "After 7s of not being damaged, increases all damage dealt by 15%. Increases to 25% if Health is full.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.25,
+		}
 	},
 	"Nightmare Spiral": {
 		"custom": null,
@@ -2500,7 +2575,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Nightweaver's Grudge.png",
 		"desc": "Gain 20% Critical Chance and HASTE when within 15m of an entity suffering from a Status Effect.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.2,
+			"HASTE": 1,
+		}
 	},
 	"Nimue's Ribbon": {
 		"custom": null,
@@ -2509,7 +2587,8 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Nimue's Ribbon.png",
 		"desc": "Increase Relic Healing Effectiveness by 50% Activating a Relic grants HASTE for 25s.",
 		"stats": {
-			"RelicEFF": 0.5
+			"RelicEFF": 0.5,
+			"HASTE": 1,
 		}
 	},
 	"One True King Sigil": {
@@ -2517,8 +2596,10 @@ window.amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/One True King Sigil.png",
 		"desc": "Increases Mod damage by 20%. Enhances the effect of Faerin's Sigil and Faelin's Sigil by 50% per Sigil equipped.",
-		"custom": null,
-		"stats": {}
+		"custom": "oneTrueKingSigil",
+		"stats": {
+			"ModDamage": 0.2,
+		}
 	},
 	"One-Eyed Joker Idol": {
 		"name": "One-Eyed Joker Idol",
@@ -2526,7 +2607,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/One-Eyed Joker Idol.png",
 		"desc": "Neutral Backdash creates a Magic Card lasting 1s. If Card absorbs enemy damage gain 25% Critical Chance for 5s. Neutral Backdash cost 30% additional Stamina.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.25,
+		}
 	},
 	"Onyx Pendulum": {
 		"name": "Onyx Pendulum",
@@ -2534,7 +2617,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Onyx Pendulum.png",
 		"desc": "Firearm damage adds stacks which increase the damage of stowed firearm by 2.5% for 15s. Stacks 10x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"UniqueMulti": 0.25,
+		}
 	},
 	"Participation Medal": {
 		"custom": null,
@@ -2545,7 +2630,7 @@ window.amulets = {
 		"stats": {
 			"Health": 10,
 			"FlatDR": 0.1,
-			"Stamina": 10
+			"Stamina": 10,
 		}
 	},
 	"Range Finder": {
@@ -2554,7 +2639,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Range Finder.png",
 		"desc": "After killing an enemy, gain 10% Ranged damage and 2m Firearm Range. Stacks 3x Lasts 10s. ranged Weakspot Hits will refresh duration.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.30,
+			"Range": 2,
+		}
 	},
 	"Ravager's Mark": {
 		"name": "Ravager's Mark",
@@ -2562,7 +2650,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Ravager's Mark.png",
 		"desc": "Increases all damage dealt to BLEEDING targets by 20%. Bonus increases to 30% for targets with 50% or lower Health.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.3,
+		}
 	},
 	"Red Doe Sigil": {
 		"custom": null,
@@ -2571,7 +2661,7 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Red Doe Sigil.png",
 		"desc": "Increases Relic Healing Effectiveness by 30% which doubles when the wearer's Health is below 50%.",
 		"stats": {
-			"RelicEFF": 0.3
+			"RelicEFF": 0.3,
 		}
 	},
 	"Rusted Navigator's Pendant": {
@@ -2592,7 +2682,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Samoflange.png",
 		"desc": "Direct damage taken from enemies, and any additional damage within 2s, is reduced by 60%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FlatDR": -0.15,
+		}
 	},
 	"Scavenger's Bauble": {
 		"name": "Scavenger's Bauble",
@@ -2608,7 +2700,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Shaed Bloom Crystal.png",
 		"desc": "Gain a 30% damage bonus. Every 5s, the bonus switches between Physical and Elemental damage.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.15,
+			"ElementalDamage": 0.15,
+		}
 	},
 	"Shock Device": {
 		"name": "Shock Device",
@@ -2616,7 +2711,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Shock Device.png",
 		"desc": "Increases SHOCK damage by 20% and OVERLOADED damage by 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ShockDamage": 0.20,
+			"OverloadedDamage": 0.50,
+		}
 	},
 	"Silver Ribbon": {
 		"name": "Silver Ribbon",
@@ -2624,7 +2722,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Silver Ribbon.png",
 		"desc": "Increases Skill damage by 25%.\nActivating a SKILL grants HASTE for 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDamage": 0.25,
+			"HASTE": 1,
+		}
 	},
 	"Sinister Totem": {
 		"name": "Sinister Totem",
@@ -2632,7 +2733,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Sinister Totem.png",
 		"desc": "Applying or refreshing a Negative Status Effect to an enemy increases Status Damage by 1% for 15s. Max 50 stacks.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": 0.5,
+		}
 	},
 	"Soul Anchor": {
 		"name": "Soul Anchor",
@@ -2640,14 +2743,16 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Soul Anchor.png",
 		"desc": "Summoning increases all damage dealt by 20% for 30s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.2,
+		}
 	},
 	"Spirit Wisp Amulet": {
 		"name": "Spirit Wisp Amulet",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Spirit Wisp Amulet.png",
 		"desc": "Activating a Mod reduces current Skill Cooldowns by 3% for every 300 Mod Power spent.",
-		"custom": null,
+		"custom": "spiritWisp",
 		"stats": {}
 	},
 	"Stalker's Brand": {
@@ -2656,7 +2761,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Stalker's Brand.png",
 		"desc": "Gain 10% Ranged and 15% Melee damage. Bonus double versus enemies not targeting wearer.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.1,
+			"MeleeDamage": 0.15,
+		}
 	},
 	"Talisman of the Sun": {
 		"name": "Talisman of the Sun",
@@ -2664,7 +2772,10 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Talisman of the Sun.png",
 		"desc": "Increases FIRE damage by 20% and BURNING damage by 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireDamage": 0.20,
+			"BurningDamage": 0.50,
+		}
 	},
 	"Toxic Release Valve": {
 		"name": "Toxic Release Valve",
@@ -2691,7 +2802,9 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Vengeance Idol.png",
 		"desc": "Increases all damage dealt by 30% when the wearer's Health is below 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.30,
+		}
 	},
 	"Void Idol": {
 		"name": "Void Idol",
@@ -2699,18 +2812,21 @@ window.amulets = {
 		"image": "./brotherLibrary/amuletsImages/Void Idol.png",
 		"desc": "Increases Reload Speed by 20%. Reloads only require 50% of magazine from reserves to fully reload.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.2,
+			//"ReservesMulti": 2,
+		}
 	},
 	"Weightless Weight": {
 		"name": "Weightless Weight",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Weightless Weight.png",
 		"desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75% for each 5 point of Armor Encumbrance.",
-		"custom": null,
+		"custom": "weightlessWeight",
 		"stats": {}
 	},
 	"Whispering Marble": {
-		"custom": null,
+		"custom": "whisperingMarble",
 		"name": "Whispering Marble",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Whispering Marble.png",
@@ -2879,10 +2995,10 @@ window.rings = {
 		"custom": null,
 		"stats": {}
 	},
-	"Black Cat Ring": {
-		"name": "Black Cat Ring",
+	"Black Cat Band": {
+		"name": "Black Cat Band",
 		"slot": "Ring",
-		"image": "./brotherLibrary/ringsImages/Black Cat Ring.png",
+		"image": "./brotherLibrary/ringsImages/Black Cat Band.png",
 		"desc": "When taking fatal damage, instead of dying, the wearer's Health will drop to 1, and Movement Speed will increase by 25% for 10s. 2m cooldown.",
 		"custom": null,
 		"stats": {}
@@ -3374,7 +3490,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Faelin's Sigil.png",
 		"desc": "Melee Damage generates 10% additional Mod Power.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGenMelee": 0.10
+		}
 	},
 	"Faerin's Sigil": {
 		"name": "Faerin's Sigil",
@@ -3382,7 +3500,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Faerin's Sigil.png",
 		"desc": "Critical and Weakspot Hits generates 10% additional Mod Power.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGenCrit": 0.10,
+			"ModPowerGenWeakspot": 0.10
+		}
 	},
 	"Feastmaster's Signet": {
 		"custom": null,
@@ -4288,10 +4409,10 @@ window.relics = {
 			"RelicHPtype": "F"
 		}
 	},
-	"Diverted Heart": {
-		"name": "Diverted Heart",
+	"Diverting Heart": {
+		"name": "Diverting Heart",
 		"slot": "Relic",
-		"image": "./brotherLibrary/relicsImages/Diverted Heart.png",
+		"image": "./brotherLibrary/relicsImages/Diverting Heart.png",
 		"desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
 		"custom": null,
 		"stats": {}
@@ -4992,19 +5113,19 @@ window.traits = {
 	},
 	"Expertise": {
 		"name": "Expertise",
-		"property": null,
+		"property": "CDR",
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": -0.00,
+			"1": -0.02,
+			"2": -0.04,
+			"3": -0.06,
+			"4": -0.08,
+			"5": -0.10,
+			"6": -0.12,
+			"7": -0.14,
+			"8": -0.16,
+			"9": -0.18,
+			"10": -0.20
 		}
 	},
 	"Fitness": {
@@ -7837,11 +7958,43 @@ window.quickUses = {
 		"custom": null,
 		"stats": {}
 	},
+	"Ammo Box": {
+		"name": "Ammo Box",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Ammo Box.png",
+		"desc": "Repleneshes all reserve ammo.",
+		"custom": null,
+		"stats": {}
+	},
 	"Antidote": {
 		"name": "Antidote",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Antidote.png",
 		"desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
+		"custom": null,
+		"stats": {}
+	},
+	"Bandage": {
+		"name": "Bandage",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Bandage.png",
+		"desc": "Stops BLEEDING and restores all grey health.",
+		"custom": null,
+		"stats": {}
+	},
+	"Binding Orb": {
+		"name": "Binding Orb",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Binding Orb.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Black Tar": {
+		"name": "Black Tar",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Black Tar.png",
+		"desc": "",
 		"custom": null,
 		"stats": {}
 	},
@@ -7855,6 +8008,14 @@ window.quickUses = {
 			"HP/S+": 1.5
 		}
 	},
+	"Brightstone": {
+		"name": "Brightstone",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Brightstone.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
 	"Confidence Booster": {
 		"custom": null,
 		"name": "Confidence Booster",
@@ -7864,6 +8025,14 @@ window.quickUses = {
 		"stats": {
 			"FlatDR": 0.1
 		}
+	},
+	"Dried Fruit": {
+		"name": "Dried Fruit",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Dried Fruit.png",
+		"desc": "Regenerates 5% Health instantly.",
+		"custom": null,
+		"stats": {}
 	},
 	"Ethereal Orb": {
 		"name": "Ethereal Orb",
@@ -7886,6 +8055,22 @@ window.quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Gul Serum.png",
 		"desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
+		"custom": null,
+		"stats": {}
+	},
+	"Koara Pellet": {
+		"name": "Koara Pellet",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Koara Pellet.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Liquid Escape": {
+		"name": "Liquid Escape",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Liquid Escape.png",
+		"desc": "Kills the character and returns them to the last used checkpoint.",
 		"custom": null,
 		"stats": {}
 	},
@@ -7913,11 +8098,27 @@ window.quickUses = {
 		"custom": null,
 		"stats": {}
 	},
-	"Orange Slices": {
-		"name": "Orange Slices",
+	"Orb of Undoing": {
+		"name": "Orb of Undoing",
 		"slot": "Cons",
-		"image": "./brotherLibrary/consumablesImages/Orange Slices.png",
-		"desc": "Regenerates 5% Health instantly.",
+		"image": "./brotherLibrary/consumablesImages/Orb of Undoing.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Pipe Bomb": {
+		"name": "Pipe Bomb",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Pipe Bomb.png",
+		"desc": "",
+		"custom": null,
+		"stats": {}
+	},
+	"Poisoned Ambit Ember Capsule": {
+		"name": "Poisoned Ambit Ember Capsule",
+		"slot": "Cons",
+		"image": "./brotherLibrary/consumablesImages/Poisoned Ambit Ember Capsule.png",
+		"desc": "",
 		"custom": null,
 		"stats": {}
 	},

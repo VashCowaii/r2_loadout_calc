@@ -1,54 +1,52 @@
 const greatTableKnowerOfAll = {
-  "Health": 0,
-  "Health%": 0,
-  "GlobalHealthModifier": 0,
-  "Armor": 0,
-  "Armor%": 0,
+  "Health": 0,"Health%": 0,"GlobalHealthModifier": 0,
+  "Armor": 0,"Armor%": 0,
   "FlatDR": 0,
   "Bulwark": 0,
-  "REdamage": [0],
-  "DMGKept": [0],
-  "RelicSpeed": 0,
-  "RelicEFF": 0,
-  "HealingEFF": 0,
-  "GlobalHealingEff": 0,
+  "REdamage": [0],"DMGKept": [0],
+  "RelicSpeed": 0,"RelicEFF": 0,
+  "HealingEFF": 0,"GlobalHealingEff": 0,
   "HP/S+": 0,
   "HP/S%": 0,
-  "RelicHPbase": 0,
-  "RelicHPtype": 0,
-  "RelicHPtime": 0,
-  "GreyHP/S+": 0,
+  "RelicHPbase": 0,"RelicHPtype": 0,"RelicHPtime": 0,
+  "RelicCharges": 0,
+  "RelicChargesOverride": 0,
+  "GreyHP/S+": 0,"GreyHPHitThreshold": 0,
   "Stamina": 0,
   "Stamina%": 0,
   "Stamina/S+": 0,
   "StaminaCost": 0,
   "StaminaPenaltyAdjustment": 0,
-  "ShieldEFF": 0,
-  "Shield": 0,
-  "Shield%/S": 0,
-  "Lifesteal": 0,
-  "MLifesteal": 0,
-  "RLifesteal": 0,
-  "Encumbrance": 0,
-  "Encumbrance%": 0,
-  "WeightThreshold": 0,
-  "Bleed": 0,
-  "Bleed%": 0,
-  "Burn": 0,
-  "Burn%": 0,
-  "Shock": 0,
-  "Shock%": 0,
-  "Corrosive": 0,
-  "Corrosive%": 0,
-  "Blight": 0,
-  "Blight%": 0,
+  "ShieldEFF": 0,"Shield": 0,"Shield%/S": 0,
+  "Lifesteal": 0,"MLifesteal": 0,"RLifesteal": 0,
+  "Encumbrance": 0,"Encumbrance%": 0,"WeightThreshold": 0,
+  "Bleed": 0,"Bleed%": 0,
+  "Burn": 0,"Burn%": 0,
+  "Shock": 0,"Shock%": 0,
+  "Corrosive": 0,"Corrosive%": 0,
+  "Blight": 0,"Blight%": 0,
   "GreyHP/S%": 0,
   "HealingModifiers": 0,
   "ConcLimit": 0,
-  "Endurance": 0,
-  "Expertise": 0,
-  "Spirit": 0,
-  "Vigor": 0
+  "Endurance": 0,"Expertise": 0,"Spirit": 0,"Vigor": 0,
+  "AllDamage": 0,"MeleeDamage": 0,"ExplosionDamage": 0,"CorrosiveDamage": 0,"AcidDamage": 0,
+  "StatusDamage": 0,"ModDamage": 0,"ElementalDamage": 0,"ShockDamage": 0,"OverloadedDamage": 0,
+  "BurningDamage": 0,"FireDamage": 0,
+  "UniqueMulti": [0],
+  "AllCritChance": 0,"MeleeCritChance": 0,"RangedCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,"ExplosiveCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,
+  "AllCritDamage": 0,"MeleeCritDamage": 0,"RangedCritDamage": 0,
+  "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,
+  "HASTE": 0,
+  "AttackSpeed": 0,"ChargeSpeed": 0,
+  "FireRate": 0,"ReloadSpeed": 0,
+  "ModSpeed": 0,"CastSpeed": 0,
+  "CDR": 0,
+  "ModPowerGen": 0,"ModCost": 0,
+  "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,
+  "ModDuration": 0,"SkillDuration": 0,
+  "Recoil": 0,"Range": 0,
+  "MovementSpeed": 0,
+  //"ReservesMulti": 0,
 }
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
 function readSelection(elemID) {
@@ -1492,23 +1490,14 @@ let formulasValues = {
   //Prime Perk
     if (readSelection(`USEtoggledPrimeP`).checked != true) {
       formulasValues.pullStats(path1.primeStats);
-      if (path1.custom != null) {
-        path1["custom"]();
-      }
     }
   //Archetype1
     if (readSelection(`USEtoggledAbility1`).checked != true) {
       formulasValues.pullStats(path1.abilities[ability1].stats);
-      if (path1.abilities[ability1].custom != null) {
-        path1.abilities[ability1]["custom"]();
-      }
     }
     for (let i=1;i<=4;i++) {
       if (readSelection(`USEtoggledPassive${i}`).checked != true) {
         formulasValues.pullStats(path1.passives[`passive${i}`].stats);
-        if (path1.passives[`passive${i}`].custom != null) {
-          customItemFunctions[path1.passives[`passive${i}`].custom]();
-        }
       }
     }
       // formulasValues.pullStats(path1.passives.passive1.stats);
@@ -1520,16 +1509,10 @@ let formulasValues = {
   //Archetype2
     if (readSelection(`USEtoggledAbility2`).checked != true) {
       formulasValues.pullStats(path2.abilities[ability2].stats);
-      if (path2.abilities[ability2].custom != null) {
-        path2.abilities[ability2]["custom"]();
-      }
     }
     for (let i=1;i<=4;i++) {
       if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
         formulasValues.pullStats(path2.passives[`passive${i}`].stats);
-        if (path2.passives[`passive${i}`].custom != null) {
-          customItemFunctions[path2.passives[`passive${i}`].custom]();
-        }
       }
     }
       // formulasValues.pullStats(path2.passives.passive1.stats);
@@ -1538,33 +1521,23 @@ let formulasValues = {
   //Utilizes toggle states
   pullGearStats() {
     //Amulet
-      if (readSelection("USEtoggledAmulet").checked != true) {
-        formulasValues.pullStats(amulets[readSelection("amulet").value].stats);
-        if (amulets[readSelection(`amulet`).value].custom != null) {
-          customItemFunctions[amulets[readSelection(`amulet`).value].custom]();
-        }
-      }
+    if (readSelection("USEtoggledAmulet").checked != true) {
+      formulasValues.pullStats(amulets[readSelection("amulet").value].stats);
+    }
     //Rings
-      for (let i=1;i<=4;i++) {
-        if (readSelection(`USEtoggledRing${i}`).checked != true) {
-        formulasValues.pullStats(rings[readSelection(`ring${i}`).value].stats);
-        if (rings[readSelection(`ring${i}`).value].custom != null) {
-          customItemFunctions[rings[readSelection(`ring${i}`).value].custom]();
-        }
-        }
+    for (let i=1;i<=4;i++) {
+      if (readSelection(`USEtoggledRing${i}`).checked != true) {
+      formulasValues.pullStats(rings[readSelection(`ring${i}`).value].stats);
       }
+    }
     //Relic
     if (readSelection("USEtoggledRelic").checked != true) {
       formulasValues.pullStats(relics[readSelection("relic").value].stats);
-      //Custom gets called later, not here for relics
     }
     //Fragments
     for (let i=1;i<=3;i++) {
       if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
       formulasValues.pullStats(fragments[readSelection(`fragment${i}`).value].stats);
-      if (fragments[readSelection(`fragment${i}`).value].custom != null) {
-        customItemFunctions[fragments[readSelection(`fragment${i}`).value].custom]();
-      }
       }
     }
   },
@@ -1592,12 +1565,105 @@ let formulasValues = {
     if (percent==null) {percentage=""}
     else {percentage=percent}
     readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
+  },
+  //Used to call unique item functions AFTER the base statistics have populated greatTableKnowerOfAll
+  callUniqueFunctions(item,relicHPscaled,totalHealth) {
+    //relicHPscaled and totalHealth are only used for when item is "relic"
+    if (item==="amulet") {
+      if (readSelection("USEtoggledAmulet").checked != true) {
+        if (amulets[readSelection(`amulet`).value].custom != null) {
+          customItemFunctions[amulets[readSelection(`amulet`).value].custom]();
+        }
+      }
+    }
+    else if (item==="ring") {
+      for (let i=1;i<=4;i++) {
+        if (readSelection(`USEtoggledRing${i}`).checked != true) {
+        if (rings[readSelection(`ring${i}`).value].custom != null) {
+          customItemFunctions[rings[readSelection(`ring${i}`).value].custom]();
+        }
+        }
+      }
+    }
+    else if (item==="relic") {
+      let relicComplexArray;
+      if (readSelection("USEtoggledRelic").checked != true) {
+        if (relics[readSelection(`relic`).value].custom != null) {
+          readSelection("complexInput").disabled = false;
+          relicComplexArray = customItemFunctions[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
+        }
+        else { //clear complex effect
+          readSelection("complexInput").disabled = true;
+          readSelection("complexInput").value = "";
+          readSelection("complexInputHeader").innerHTML = "";
+          readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
+          readSelection("complexLeftHalf").innerHTML = "";
+          readSelection("complexRightHalf").innerHTML = "";
+        }
+      }
+      else { //clear complex effect
+        readSelection("complexInput").disabled = true;
+        readSelection("complexInput").value = "";
+        readSelection("complexInputHeader").innerHTML = "";
+        readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
+        readSelection("complexLeftHalf").innerHTML = "";
+        readSelection("complexRightHalf").innerHTML = "";
+      }
+      //Fragments
+      for (let i=1;i<=3;i++) {
+        if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
+        if (fragments[readSelection(`fragment${i}`).value].custom != null) {
+          customItemFunctions[fragments[readSelection(`fragment${i}`).value].custom]();
+        }
+        }
+      }
+      return relicComplexArray;
+    }
+    else if (item==="class") {
+      let path1 = classInfo[readSelection("archetype1").value];
+      let ability1 = readSelection("archetype1ability").value;
+      let path2 = classInfo[readSelection("archetype2").value];
+      let ability2 = readSelection("archetype2ability").value;
+      //Prime Perk
+      if (readSelection(`USEtoggledPrimeP`).checked != true) {
+        if (path1.custom != null) {
+          path1["custom"]();
+        }
+      }
+      //Archetype1
+      if (readSelection(`USEtoggledAbility1`).checked != true) {
+        if (path1.abilities[ability1].custom != null) {
+          path1.abilities[ability1]["custom"]();
+        }
+      }
+      for (let i=1;i<=4;i++) {
+        if (readSelection(`USEtoggledPassive${i}`).checked != true) {
+          if (path1.passives[`passive${i}`].custom != null) {
+            customItemFunctions[path1.passives[`passive${i}`].custom]();
+          }
+        }
+      }
+      //Archetype2
+      if (readSelection(`USEtoggledAbility2`).checked != true) {
+        if (path2.abilities[ability2].custom != null) {
+          path2.abilities[ability2]["custom"]();
+        }
+      }
+      for (let i=1;i<=4;i++) {
+        if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
+          if (path2.passives[`passive${i}`].custom != null) {
+            customItemFunctions[path2.passives[`passive${i}`].custom]();
+          }
+        }
+      }
+    }
   }
 }
 /* ---------------------------------------------------------------------------------------- */
 /* ---------------------- Custom, item-specific functions --------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
 let customItemFunctions = {
+  //Function names are specified in data.js under a given entry's "custom" key.
   gameMasters() {
     greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
     greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
@@ -1610,8 +1676,100 @@ let customItemFunctions = {
       }
     }
   },
+  costOfBetrayal() {
+    greatTableKnowerOfAll.RelicChargesOverride = 1;
+  },
+  daredevil() {
+    let armorMissing = 4;
+    if (readSelection("helmetChoice").value != "") {armorMissing -= 1;}
+    if (readSelection("chestChoice").value != "") {armorMissing -= 1;}
+    if (readSelection("legChoice").value != "") {armorMissing -= 1;}
+    if (readSelection("handChoice").value != "") {armorMissing -= 1;}
+    greatTableKnowerOfAll.AllDamage += 0.075 * armorMissing;
+    greatTableKnowerOfAll.MovementSpeed += 0.03 * armorMissing;
+    greatTableKnowerOfAll.FlatDR -= 0.05 * armorMissing;
+  },
+  differenceEngine() {
+    if (greatTableKnowerOfAll.Shield > 0) {
+      greatTableKnowerOfAll.Lifesteal += 0.015;
+      greatTableKnowerOfAll.AllDamage += 0.20;
+    }
+  },
+  energyDiverter() {
+    if (greatTableKnowerOfAll.Shield > 0) {
+      greatTableKnowerOfAll.AllCritChance += 0.10;
+      greatTableKnowerOfAll.AllDamage += 0.15;
+    }
+  },
+  giftOfTheUnbound() {
+    let activeBurdens = 0;
+    for (i=1;i<=4;i++) {
+      if (readSelection(`ring${i}`).value.includes("Burden") === true) {
+        activeBurdens += 1;
+      }
+    }
+    if (activeBurdens > 0) {
+      greatTableKnowerOfAll.GlobalHealthModifier *= 1 - (0.20 * activeBurdens);
+    }
+    //Remember to add checks for the negative effects later, on burden rings, to negate them.
+  },
+  insulationDriver() {
+    if (greatTableKnowerOfAll.Bulwark > 0) {
+      greatTableKnowerOfAll.AllDamage += 0.15;
+      greatTableKnowerOfAll.HASTE += 1;
+    }
+  },
+  kineticShieldExchanger() {
+    if (greatTableKnowerOfAll.Shield > 0) {
+      greatTableKnowerOfAll.ModDamage += 0.25;
+      greatTableKnowerOfAll.ModPowerGen += 0.15;
+    }
+  },
+  oneTrueKingSigil() {
+    let faerinActive = false;
+    let faelinActive = false;
+    let imposterRings = 0;
+    for (i=1;i<=4;i++) {
+      if (readSelection(`ring${i}`).value.includes("Faerin's Sigil") === true) {
+        faerinActive = true;
+        imposterRings += 1;
+      }
+      else if (readSelection(`ring${i}`).value.includes("Faelin's Sigil") === true) {
+        faelinActive = true;
+        imposterRings += 1;
+      }
+    }
+    if (imposterRings > 0) {
+      let modifier = 0.5;
+      if (faerinActive === true) {
+        let faeRpath1 = rings[`Faerin's Sigil`].stats.ModPowerGenCrit;
+        let faeRpath2 = rings[`Faerin's Sigil`].stats.ModPowerGenWeakspot;
+        greatTableKnowerOfAll.ModPowerGenCrit += faeRpath1 * (modifier * imposterRings);
+        greatTableKnowerOfAll.ModPowerGenWeakspot += faeRpath2 * (modifier * imposterRings);
+      }
+      if (faelinActive === true) {
+        let faeLpath = rings[`Faelin's Sigil`].stats.ModPowerGenCrit;
+        greatTableKnowerOfAll.ModPowerGenMelee += faeLpath * (modifier * imposterRings);
+      }
+    }
+  },
+  spiritWisp() {
+    //Add stuff later
+  },
+  weightlessWeight() {
+    let weight = greatTableKnowerOfAll.Encumbrance * (1+greatTableKnowerOfAll["Encumbrance%"]);
+    if (weight < 0) {weight = 0;}
+    let multi = Math.floor(weight/5);
+    greatTableKnowerOfAll.StaminaCost += -0.0075 * multi;
+    greatTableKnowerOfAll.MovementSpeed += 0.0075 * multi;
+  },
+  whisperingMarble() {
+    let bulwarkStacks = greatTableKnowerOfAll.Bulwark;
+    if (bulwarkStacks > 5) {bulwarkStacks = 5;}
+    greatTableKnowerOfAll.AllDamage += 0.03 * bulwarkStacks;
+  },
   restrictionCord() {
-    greatTableKnowerOfAll.GlobalHealthModifier = greatTableKnowerOfAll.GlobalHealthModifier * 0.5;
+    greatTableKnowerOfAll.GlobalHealthModifier *= 0.5;
   },
   soulGuard() {
     greatTableKnowerOfAll.Bulwark += +readSelection("minionCount").value;
@@ -1675,7 +1833,7 @@ function updateFormulas() {
   formulasValues.pullToggles();
   //Reset the table
   for(let elements in greatTableKnowerOfAll) {
-    if (elements!="REdamage" && elements!="DMGKept" && elements!="GlobalHealthModifier" && elements!="GlobalHealingEff") {
+    if (elements!="REdamage" && elements!="DMGKept" && elements!="GlobalHealthModifier" && elements!="GlobalHealingEff" && elements!="UniqueMulti") {
       greatTableKnowerOfAll[elements]=0;
     }
     else if (elements==="GlobalHealthModifier"||elements==="GlobalHealingEff") {
@@ -1689,6 +1847,7 @@ function updateFormulas() {
 //MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST-------------------------
 let isCoop = readSelection("isCoop");
 let teamCount = readSelection("teamCount");
+//If coop is selected, enable the teamcount dropdown
   if (isCoop.value==="Co-op") {
     isCoop = true;
     teamCount.disabled = false;
@@ -1713,6 +1872,10 @@ let teamCount = readSelection("teamCount");
   globalRecords.totalConcLimit = 1 + greatTableKnowerOfAll.ConcLimit;
   formulasValues.updateDisplay("concValueDisplay",globalRecords.totalConcLimit,0);
   formulasValues.pullConsumables(globalRecords.totalConcLimit);
+//----------CUSTOM FUNCTIONS FOR EVERYTHING BUT RELICS(they are called later)---
+formulasValues.callUniqueFunctions("ring");
+formulasValues.callUniqueFunctions("amulet");
+formulasValues.callUniqueFunctions("class");
 //SUMMARY STATS
   let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
@@ -1728,6 +1891,7 @@ let teamCount = readSelection("teamCount");
   let totalArmor = baseArmor * armorEff;
   formulasValues.updateDisplay("summaryArmor",totalArmor,1);
   let baseWeight = greatTableKnowerOfAll.Encumbrance;
+  if (baseWeight < 0) {baseWeight = 0;}
   let weightBoost = 1 + greatTableKnowerOfAll["Encumbrance%"];
   let totalWeight = baseWeight * weightBoost;
   formulasValues.updateDisplay("summaryWeight",totalWeight,1);
@@ -1852,29 +2016,7 @@ else {//if null
 }
 //Now that healing values have populated, check and call for custom relic functions
 //for the sake of complex relic effects
-let relicComplexArray;
-if (readSelection("USEtoggledRelic").checked != true) {
-  if (relics[readSelection(`relic`).value].custom != null) {
-    readSelection("complexInput").disabled = false;
-    relicComplexArray = customItemFunctions[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
-  }
-  else { //clear complex effect
-    readSelection("complexInput").disabled = true;
-    readSelection("complexInput").value = "";
-    readSelection("complexInputHeader").innerHTML = "";
-    readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
-    readSelection("complexLeftHalf").innerHTML = "";
-    readSelection("complexRightHalf").innerHTML = "";
-  }
-}
-else { //clear complex effect
-  readSelection("complexInput").disabled = true;
-  readSelection("complexInput").value = "";
-  readSelection("complexInputHeader").innerHTML = "";
-  readSelection("complexDesc").innerHTML = "No complex relic effects are currently active.";
-  readSelection("complexLeftHalf").innerHTML = "";
-  readSelection("complexRightHalf").innerHTML = "";
-}
+let relicComplexArray = formulasValues.callUniqueFunctions("relic",relicHPscaled,totalHealth);
 let useComplexValues = false;
 if (relicComplexArray != null && relicComplexArray != 0) {
   if (relicComplexArray[0] > 0) {useComplexValues = true;}
