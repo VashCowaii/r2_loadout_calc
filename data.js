@@ -2850,7 +2850,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/A'taerii Booster.png",
 		"desc": "While carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance.",
-		"custom": null,
+		"custom": "ataeriiBooster",
 		"stats": {}
 	},
 	"Acid Stone": {
@@ -2860,7 +2860,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Acid Stone.png",
 		"desc": "Increases ACID damage by 10% and ACID Resistance by 15%.",
 		"stats": {
-			"Corrosive": 15
+			"AcidDamage": 0.10,
+			"Corrosive": 15,
 		}
 	},
 	"Ahanae Crystal": {
@@ -2868,7 +2869,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ahanae Crystal.png",
 		"desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
-		"custom": null,
+		"custom": "ahanaeCrystal",
 		"stats": {}
 	},
 	"Akari War Band": {
@@ -2876,8 +2877,11 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Akari War Band.png",
 		"desc": "Perfect Dodges increase Critical Chance by 15% and Critical Damage by 15% for 15s.",
-		"custom": null,
-		"stats": {}
+		"custom": "akariWarBand",
+		"stats": {
+			"AllCritChance": 0.15,
+			"AllCritDamage": 0.15, //Delete these when perfect dodge can be specified
+		}
 	},
 	"Alchemy Stone": {
 		"custom": null,
@@ -2886,7 +2890,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Alchemy Stone.png",
 		"desc": "Increases base Lifesteal by 6% while suffering from a negative STATUS or BLIGHT Effect.",
 		"stats": {
-			"Lifesteal": 0.06
+			"Lifesteal": 0.06,
 		}
 	},
 	"Alumni Ring": {
@@ -2895,7 +2899,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Alumni Ring.png",
 		"desc": "Increases all Elemental damage dealt by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ElementalDamage": 0.10,
+		}
 	},
 	"Amber Moonstone": {
 		"custom": null,
@@ -2913,7 +2919,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Anastasija's Inspiration.png",
 		"desc": "When receiving healing effects, gain HASTE for 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"HASTE": 1,
+		}
 	},
 	"Archer's Crest": {
 		"name": "Archer's Crest",
@@ -2921,7 +2929,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Archer's Crest.png",
 		"desc": "Increases Projectile Speed by 20% and Decreases Weapon Charge Time by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ProjectileSpeed": -0.20,
+			"WeaponChargeTime": -0.25,
+		}
 	},
 	"Assassin's Seal": {
 		"name": "Assassin's Seal",
@@ -2964,7 +2975,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Band of the Fanatic.png",
 		"desc": "Increases Status Effect Damage by 25% and reduces Status Effect Duration by 65%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": 0.25,
+			"StatusDuration": -0.65,
+		}
 	},
 	"Berserker's Crest": {
 		"custom": null,
@@ -2973,7 +2987,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Berserker's Crest.png",
 		"desc": "Increases Melee Charge Speed by 20% and reduces Melee Stamina Cost by 25%.",
 		"stats": {
-			"StaminaCost": -0.25
+			"StaminaCost": -0.25,
+			"ChargeSpeed": 0.20,
 		}
 	},
 	"Bisected Ring": {
@@ -2984,7 +2999,7 @@ window.rings = {
 		"desc": "Gain Infinite Stamina. All damage received is increased by 15%.",
 		"stats": {
 			"FlatDR": -0.15,
-			"StaminaCost": -1
+			"StaminaNegation": 1,
 		}
 	},
 	"Bitter Memento": {
@@ -3009,7 +3024,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Black Pawn Stamp.png",
 		"desc": "Reduces Cooldowns of Skills by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": -0.10,
+		}
 	},
 	"Blackout Ring": {
 		"name": "Blackout Ring",
@@ -3017,7 +3034,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Blackout Ring.png",
 		"desc": "After dealing 20% of the Weapon's Total Magazine base damage, increases Reload Speed by 3%. Stacks 5x Cleared on Reload.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.15,
+		}
 	},
 	"Blasting Cap Ring": {
 		"name": "Blasting Cap Ring",
@@ -3025,7 +3044,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Blasting Cap Ring.png",
 		"desc": "Increases Explosive damage by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ExplosiveDamage": 0.10,
+		}
 	},
 	"Blessed Ring": {
 		"custom": null,
@@ -3052,7 +3073,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Blood Tinged Ring.png",
 		"desc": "Gain 2 Health Regeneration per second when within 10m of a BLEEDING entity.",
 		"stats": {
-			"HP/S+": 1
+			"HP/S+": 2,
 		}
 	},
 	"Booster Ring": {
@@ -3075,7 +3096,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Braided Thorns.png",
 		"desc": "After killing an enemy, gain 15% increased Critical Chance for 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.15,
+		}
 	},
 	"Brawler's Pride": {
 		"name": "Brawler's Pride",
@@ -3083,7 +3106,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Brawler's Pride.png",
 		"desc": "Increases Melee Attack Speed by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AttackSpeed": 0.15,
+		}
 	},
 	"Bridge Warden's Crest": {
 		"custom": null,
@@ -3092,6 +3117,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Bridge Warden's Crest.png",
 		"desc": "Perfect Dodge increases Melee Damage by 15% for 7 seconds. Perfect Evade Flop also gains 10% Damage Reduction for the duration.",
 		"stats": {
+			"MeleeDamage": 0.15,
 			"FlatDR": 0.1
 		}
 	},
@@ -3244,7 +3270,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Compulsion Loop.png",
 		"desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 7s. Stacks 3x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.15,
+			"AttackSpeed": .015,
+		}
 	},
 	"Conservation Seal": {
 		"custom": null,
@@ -3270,7 +3299,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Crimson Dreamstone.png",
 		"desc": "Crit hits increase Skill Damage 1% for 10s. Max stack 15.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDamage": 0.15,
+		}
 	},
 	"Dead King's Memento": {
 		"custom": null,
@@ -3288,7 +3319,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Deceiver's Band.png",
 		"desc": "After performing a Slide, gain 15% Evade Speed and 10% Movement Speed for 12s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MovementSpeed": 0.10,
+		}
 	},
 	"Deep Pocket Ring": {
 		"name": "Deep Pocket Ring",
@@ -3296,7 +3329,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Deep Pocket Ring.png",
 		"desc": "Increases Ammo Reserves by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Reserves": 0.25,
+		}
 	},
 	"Defensive Action Loop": {
 		"custom": null,
@@ -3322,7 +3357,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Devoured Loop.png",
 		"desc": "Critical Hits have 1% chance to reset Skill Cooldowns. Can only occur once every 10s. Increases all incoming damage by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FlatDR": -0.10,
+		}
 	},
 	"Digested Hog Lure": {
 		"name": "Digested Hog Lure",
@@ -3330,7 +3367,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Digested Hog Lure.png",
 		"desc": "Reloading increases Mod Damage by 15% for 5s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDamage": 0.15,
+		}
 	},
 	"Drakestone Pearl": {
 		"custom": null,
@@ -3338,7 +3377,9 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Drakestone Pearl.png",
 		"desc": "Enables Stamina Regeneration during Melee Attacks at 20% of the normal rate.",
-		"stats": {}
+		"stats": {
+			"Stamina/S+Multi": 0.20,
+		}
 	},
 	"Dran Memento": {
 		"custom": null,
@@ -3358,7 +3399,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Dran Scavenger Ring.png",
 		"desc": "Collecting Scrap, Iron, and Ammo pickups regenerates 10% of Max Health and increases all damage dealt by 8% for 30s.",
 		"stats": {
-			"HP/S%": 0.005
+			"HP/S%": 0.005,
+			"AllDamage": 0.08,
 		}
 	},
 	"Dread Font": {
@@ -3372,7 +3414,7 @@ window.rings = {
 		}
 	},
 	"Dried Clay Ring": {
-		"custom": null,
+		"custom": "driedClayRing",
 		"name": "Dried Clay Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dried Clay Ring.png",
@@ -3476,7 +3518,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Fae Hunter Ring.png",
 		"desc": "Increases Range of Firearms by 30%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Range%": 0.30,
+		}
 	},
 	"Fae Protector Signet": {
 		"custom": null,
@@ -3507,7 +3551,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Fae Warrior Ring.png",
 		"desc": "Increases Melee Damage by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.15,
+		}
 	},
 	"Faelin's Sigil": {
 		"name": "Faelin's Sigil",
@@ -3535,7 +3581,7 @@ window.rings = {
 		"name": "Feastmaster's Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Feastmaster's Signet.png",
-		"desc": "Increases active Concoction Limit by1.",
+		"desc": "Increases active Concoction Limit by 1.",
 		"stats": {
 			"ConcLimit": 1
 		}
@@ -3555,7 +3601,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Fire Stone.png",
 		"desc": "Increases FIRE damage by 10% and FIRE Resistance by 15.",
 		"stats": {
-			"Burn": 15
+			"FireDamage": 0.10,
+			"Burn": 15,
 		}
 	},
 	"Flyweight's Sting": {
@@ -3563,7 +3610,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Flyweight's Sting.png",
 		"desc": "Increases Melee damage while Armor Encumbrance is below 50. Damage bonus increases with lower Encumbrance, up to 25% at 0 Weight.",
-		"custom": null,
+		"custom": "flyweightsSting",
 		"stats": {}
 	},
 	"Focusing Shard": {
@@ -3572,7 +3619,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Focusing Shard.png",
 		"desc": "Reduce Recoil by 50%. Aiming Down Sights gradually reduces Spread by 30% over 3s",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Recoil": -0.50,
+			"Spread": -0.30,
+		}
 	},
 	"Frivolous Band": {
 		"name": "Frivolous Band",
@@ -3580,7 +3630,11 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Frivolous Band.png",
 		"desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"EvadeSpeed": 0.10,
+			"FireRate": 0.10,
+			"AttackSpeed": 0.10,
+		}
 	},
 	"Galvanized Resupply Band": {
 		"name": "Galvanized Resupply Band",
@@ -3595,18 +3649,16 @@ window.rings = {
 		"name": "Game Master's Pride",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Game Master's Pride.png",
-		"desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly amoung all allies wearing this ring.",
+		"desc": "Reduces all healing by 50%. Splits all damage and remaining healing evenly among all allies wearing this ring.",
 		"stats": {}
 	},
 	"Generating Band": {
-		"custom": null,
+		"custom": "generatingBand",
 		"name": "Generating Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Generating Band.png",
 		"desc": "Regenerate 3% of Max Health per second while a Shield is active.",
-		"stats": {
-			"HP/S%": 0.03
-		}
+		"stats": {}
 	},
 	"Grounding Stone": {
 		"custom": null,
@@ -3615,7 +3667,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Grounding Stone.png",
 		"desc": "Increases SHOCK damage by 10% and SHOCK Resistance by 15.",
 		"stats": {
-			"Shock": 15
+			"ShockDamage": 0.10,
+			"Shock": 15,
 		}
 	},
 	"Guardian's Ring": {
@@ -3625,7 +3678,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Guardian's Ring.png",
 		"desc": "Adds 1 Stack of BULWARK when within 15m of an enemy. Increases to 2 Stacks for 15s after taking Melee damage.",
 		"stats": {
-			"Bulwark": 2
+			"Bulwark": 2,
 		}
 	},
 	"Gunslinger's Ring": {
@@ -3634,7 +3687,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Gunslinger's Ring.png",
 		"desc": "Increases Firearm Swap Speed by 30% and Reload Speed by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"WeaponSwapSpeed": 0.30,
+			"ReloadSpeed": 0.10,
+		}
 	},
 	"Hardcore Metal Band": {
 		"custom": null,
@@ -3661,7 +3717,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Haymaker's Ring.png",
 		"desc": "Increase Melee damage by 0.2% for every 1 points of Armor Encumbrance.",
-		"custom": null,
+		"custom": "haymakersRing",
 		"stats": {}
 	},
 	"Heart of the Wolf": {
@@ -3671,7 +3727,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Heart of the Wolf.png",
 		"desc": "Increases Max Stamina by 25 and Movement Speed by 10%.",
 		"stats": {
-			"Stamina": 25
+			"Stamina": 25,
+			"MovementSpeed": 0.10,
 		}
 	},
 	"Hex Ward": {
@@ -3688,7 +3745,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Jewel of the Beholden.png",
 		"desc": "On Relic Use, increase Mod Damage by 15% for 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDamage": 0.10,
+		}
 	},
 	"Kinetic Cycle Stone": {
 		"name": "Kinetic Cycle Stone",
@@ -3696,7 +3755,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Kinetic Cycle Stone.png",
 		"desc": "Increases Mod and Skill Cast Speed by 20%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModSpeed": 0.20,
+			"CastSpeed": 0.20,
+		}
 	},
 	"Lighthouse Keeper's Ring": {
 		"name": "Lighthouse Keeper's Ring",
@@ -3711,7 +3773,7 @@ window.rings = {
 		"name": "Lithic Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Lithic Signet.png",
-		"desc": "Reduces all incoming damage by 5%.",
+		"desc": "Reduces all incoming damage by 7%.",
 		"stats": {
 			"FlatDR": 0.07
 		}
@@ -3721,7 +3783,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Lodestone Ring.png",
 		"desc": "Increases all damage dealt against illuminated enemies by 5%.",
-		"custom": null,
+		"custom": "lodestoneRing",
 		"stats": {}
 	},
 	"Low Yield Recovery Ring": {
@@ -3735,7 +3797,7 @@ window.rings = {
 		}
 	},
 	"Mechanic's Cog": {
-		"custom": null,
+		"custom": "mechanicsCog",
 		"name": "Mechanic's Cog",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Mechanic's Cog.png",
@@ -3750,7 +3812,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Metal Driver.png",
 		"desc": "Killing Blows increase Reload Speed by 5% for 7s. Stacks 3x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.15,
+		}
 	},
 	"Meteorite Shard Ring": {
 		"custom": null,
@@ -3759,7 +3823,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Meteorite Shard Ring.png",
 		"desc": "Increases Encumbrance by 50. Increases Unarmed damage by 50%.",
 		"stats": {
-			"Encumbrance": 50
+			"Encumbrance": 50,
+			"FistDamage": 0.50,
 		}
 	},
 	"Microcompressor": {
@@ -3776,7 +3841,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Momentum Driver.png",
 		"desc": "After Sprinting for 2s, Movement Speed is increased by 15% and Stagger Level reduced by 1.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MovementSpeed": 0.15,
+		}
 	},
 	"Offering Stone": {
 		"name": "Offering Stone",
@@ -3784,7 +3851,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Offering Stone.png",
 		"desc": "Dealing Ranged Damage increases all Damage by 1% for 1s. Stacks 15x. After killing an enemy, extends the duration to 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.15,
+		}
 	},
 	"Outcast Ring": {
 		"name": "Outcast Ring",
@@ -3792,7 +3861,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Outcast Ring.png",
 		"desc": "Increases Reload Speed by 5% for 15s after reloading. Stacks 5x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.25,
+		}
 	},
 	"Painless Obsidian": {
 		"name": "Painless Obsidian",
@@ -3808,7 +3879,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Point Focus Ring.png",
 		"desc": "Reduces Initial Spread and Recoil by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Spread": -0.25,
+			"Recoil": -0.25,
+		}
 	},
 	"Power Complex": {
 		"name": "Power Complex",
@@ -3816,7 +3890,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Power Complex.png",
 		"desc": "Increases All Damage dealt by 1% per second to a maximum of 15%. Dodging resets Power Complex to 0%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.15,
+		}
 	},
 	"Power Saver": {
 		"name": "Power Saver",
@@ -3832,7 +3908,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Probability Cord.png",
 		"desc": "Increases Crit Damage by 30%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritDamage": 0.30,
+		}
 	},
 	"Propulsion Loop": {
 		"name": "Propulsion Loop",
@@ -3840,7 +3918,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Propulsion Loop.png",
 		"desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MovementSpeed": 0.15,
+			"RelicSpeed": -0.30,
+		}
 	},
 	"Provisioner Ring": {
 		"name": "Provisioner Ring",
@@ -3866,7 +3947,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Red Ring of Death.png",
 		"desc": "Duplicates the last damaging Negative Status applied to target. Reduces outgoing Status Effect Damage by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": -0.10,
+		}
 	},
 	"Rerouting Cable": {
 		"custom": null,
@@ -3895,7 +3978,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Restriction Cord.png",
 		"desc": "Restricts the wearer from Healing above 50% of their Max Health and reduces all incoming damage by 15%.",
 		"stats": {
-			"FlatDR": 0.1
+			"FlatDR": 0.15,
 		}
 	},
 	"Ring of Crisis": {
@@ -3930,7 +4013,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Ring of Flawed Beauty.png",
 		"desc": "Ranged Weakspot damage is increased by 25%. Ranged damage is reduced by 15% when failing to hit a Weakspot.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedWeakspot": 0.25, //check if the -ranged dmg is a unique negative multi.
+		}
 	},
 	"Ring of Grace": {
 		"custom": null,
@@ -3948,7 +4033,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Ring of Infinite Damage.png",
 		"desc": "Increases fire rate by 8%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.08,
+		}
 	},
 	"Ring of Omens": {
 		"name": "Ring of Omens",
@@ -3972,7 +4059,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Ring of Retribution.png",
 		"desc": "Incoming enemy damage increases Reload Speed and all outgoing damage by 10%. Lasts 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.10,
+			"AllDamage": 0.10,
+		}
 	},
 	"Ring of the Castaway": {
 		"name": "Ring of the Castaway",
@@ -3980,7 +4070,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Ring of the Castaway.png",
 		"desc": "Increases base Consumable Duration by 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ConsumableDuration": 0.50,
+		}
 	},
 	"Ring of the Damned": {
 		"name": "Ring of the Damned",
@@ -3988,7 +4080,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Ring of the Damned.png",
 		"desc": "Increases all damage dealt by 10% while Grey Health is present.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.10,
+		}
 	},
 	"Ring of the Forest Spirit": {
 		"custom": null,
@@ -4078,7 +4172,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Shadow of Misery.png",
 		"desc": "Increase Status Effect Damage by 15%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StatusDamage": 0.15,
+		}
 	},
 	"Shaed Stone": {
 		"name": "Shaed Stone",
@@ -4086,7 +4182,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Shaed Stone.png",
 		"desc": "Increases Skill damage by 12%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDamage": 0.12,
+		}
 	},
 	"Shard Banded Ring": {
 		"name": "Shard Banded Ring",
@@ -4094,7 +4192,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Shard Banded Ring.png",
 		"desc": "Increases Mod damage by 12%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDamage": 0.12,
+		}
 	},
 	"Shiny Hog Lure": {
 		"name": "Shiny Hog Lure",
@@ -4109,7 +4209,7 @@ window.rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Singed Ring.png",
 		"desc": "Increases all damage dealt to BURNING enemies by 10%.",
-		"custom": null,
+		"custom": "singedRing",
 		"stats": {}
 	},
 	"Slayer's Crest": {
@@ -4118,7 +4218,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Slayer's Crest.png",
 		"desc": "Increases Melee damage by 25% when attacking enemies from behind",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.25,
+		}
 	},
 	"Soul Guard": {
 		"custom": "soulGuard",
@@ -4140,7 +4242,7 @@ window.rings = {
 		"name": "Soul Shard",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Soul Shard.png",
-		"desc": "Increase all damage dealt by 4% for each summon. Max 12%",
+		"desc": "Increase all damage dealt by 4% for each summon. Max 12%. SPECIFY IN ADVANCED STATS.",
 		"custom": "soulShard",
 		"stats": {}
 	},
@@ -4150,7 +4252,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Spirit Stone.png",
 		"desc": "Increases Mod Power generation by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGen": 0.10,
+		}
 	},
 	"Stockpile Charger": {
 		"name": "Stockpile Charger",
@@ -4166,7 +4270,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Stone of Balance.png",
 		"desc": "Increases all damage by 7%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.07,
+		}
 	},
 	"Stone of Continuance": {
 		"name": "Stone of Continuance",
@@ -4174,7 +4280,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Stone of Continuance.png",
 		"desc": "Increases Skill Duration by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDuration": 0.25,
+		}
 	},
 	"Stone of Expanse": {
 		"name": "Stone of Expanse",
@@ -4182,7 +4290,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Stone of Expanse.png",
 		"desc": "Increases Ranged damage by 12%. Reduces all other damage dealt by 6%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.18,
+			"AllDamage": -0.06,
+		}
 	},
 	"Stone of Malevolence": {
 		"name": "Stone of Malevolence",
@@ -4190,7 +4301,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Stone of Malevolence.png",
 		"desc": "Elemental damage generates 15% additional Mod Power.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGenElemental": 0,
+		}
 	},
 	"Stream Coupler": {
 		"custom": null,
@@ -4208,7 +4321,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Subterfuge Link.png",
 		"desc": "After killing an enemy, increases the Cast Speed of the next Mod or Skill Cast by 35%. Lasts 15s or until consumed.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModSpeed": 0.35,
+			"CastSpeed": 0.35,
+		}
 	},
 	"Suppression Ward": {
 		"name": "Suppression Ward",
@@ -4224,7 +4340,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Targeting Jewel.png",
 		"desc": "Increases Range on all Firearms by 4m. Reduces Spread by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Range": 4,
+			"Spread": -0.15,
+		}
 	},
 	"Tarnished Ring": {
 		"name": "Tarnished Ring",
@@ -4232,7 +4351,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Tarnished Ring.png",
 		"desc": "Increases damage of Unarmed Attacks by 30%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FistDamage": 0.30,
+		}
 	},
 	"Tear of Kaeula": {
 		"name": "Tear of Kaeula",
@@ -4240,7 +4361,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Tear of Kaeula.png",
 		"desc": "Increases Relic capacity by 2 while equipped",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RelicCharges": 2,
+		}
 	},
 	"Tempest Conduit": {
 		"name": "Tempest Conduit",
@@ -4248,7 +4371,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Tempest Conduit.png",
 		"desc": "After receiving Elemental Damage, increases all damage dealt by 10% and Resistance to the received Element by 20 for 20s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": 0.10,
+		}
 	},
 	"Tightly Wound Coil": {
 		"custom": null,
@@ -4266,7 +4391,7 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Timekeeper's Jewel.png",
 		"desc": "Increases the duration of all Status Effects applied by wearer. Durations varies per status.",
 		"custom": null,
-		"stats": {}
+		"stats": {} //work this out later
 	},
 	"Tomb Dweller's Ring": {
 		"name": "Tomb Dweller's Ring",
@@ -4274,7 +4399,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Tomb Dweller's Ring.png",
 		"desc": "Increases Movement Speed by 10% for 10s after Vaulting, Climbing, Leaping, and entering Water, stacks 3x. Reduces Fall Damage by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MovementSpeed": 0.10,
+		}
 	},
 	"Vacuum Seal": {
 		"custom": null,
@@ -4292,7 +4419,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Vestige of Power.png",
 		"desc": "After 7s of not being damaged, increases Ranged and Melee Damage by 10%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.10,
+			"MeleeDamage": 0.10,
+		}
 	},
 	"Wax Sealed Ring": {
 		"name": "Wax Sealed Ring",
@@ -4300,7 +4430,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Wax Sealed Ring.png",
 		"desc": "Killing blows increase Ranged and Melee Damage by 4% for 15s. Stacks 3x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.12,
+			"MeleeDamage": 0.12,
+		}
 	},
 	"White Glass Bead": {
 		"custom": null,
@@ -4326,7 +4459,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Wind Hollow Circlet.png",
 		"desc": "Increases Reload Speed by 12%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ReloadSpeed": 0.12,
+		}
 	},
 	"Wood Ring": {
 		"name": "Wood Ring",
@@ -4334,7 +4469,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Wood Ring.png",
 		"desc": "Increases Stagger Damage by 15%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StaggerDamage": 0.15,
+		}
 	},
 	"Worn Admiral's Ring": {
 		"custom": null,
@@ -4343,7 +4480,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Worn Admiral's Ring.png",
 		"desc": "All damage received is increased by 200%. All damage dealt is increased by 10%.",
 		"stats": {
-			"FlatDR": -2
+			"FlatDR": -2,
+			"AllDamage": 0.10,
 		}
 	},
 	"Zania's Malice": {
@@ -4352,7 +4490,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Zania's Malice.png",
 		"desc": "Dealing Weakspot damage increases Weakspot damage by 10% for 7s. Stacks 3x.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllWeakspot": 0.30,
+		}
 	},
 	"Zohee's Ring": {
 		"name": "Zohee's Ring",
@@ -4360,7 +4500,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Zohee's Ring.png",
 		"desc": "Increases Mod Duration by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDuration": 0.15,
+		}
 	}
 }
 window.relics = {
