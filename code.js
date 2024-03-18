@@ -9,8 +9,7 @@ const greatTableKnowerOfAll = {
   "HP/S+": 0,
   "HP/S%": 0,
   "RelicHPbase": 0,"RelicHPtype": 0,"RelicHPtime": 0,
-  "RelicCharges": 0,
-  "RelicChargesOverride": 0,
+  "RelicCharges": 0,"RelicCharges%": 0,"RelicChargesOverride": 0,
   "GreyHP/S+": 0,"GreyHPHitThreshold": 0,
   "Stamina": 0,
   "Stamina%": 0,
@@ -44,9 +43,9 @@ const greatTableKnowerOfAll = {
   "ModPowerGen": 0,"ModCost": 0,
   "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,
   "ModDuration": 0,"SkillDuration": 0,
-  "Recoil": 0,"Range": 0,
+  "Recoil": 0,"Range": 0,"Range%": 0,
   "MovementSpeed": 0,
-  //"ReservesMulti": 0,
+  "Reserves": 0,"ReservesMulti": 0,
 }
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
 function readSelection(elemID) {
@@ -1703,13 +1702,49 @@ let customItemFunctions = {
   },
   giftOfTheUnbound() {
     let activeBurdens = 0;
+    let healthModifier = 0.20
     for (i=1;i<=4;i++) {
-      if (readSelection(`ring${i}`).value.includes("Burden") === true) {
+      let ringPath = readSelection(`ring${i}`).value
+      if (ringPath.includes("Burden") === true) {
         activeBurdens += 1;
+        //Negate all negative effects of any equipped burdens.
+        if (ringPath.includes("Audacious") === true) {
+          greatTableKnowerOfAll.HealingEFF += -1 * rings[`Burden of the Audacious`].stats.HealingEFF;
+        }
+        else if (ringPath.includes("Departed") === true) {
+          greatTableKnowerOfAll[`RelicCharges%`] += -1 * rings[`Burden of the Departed`].stats[`RelicCharges%`];
+        }
+        else if (ringPath.includes("Destroyer") === true) {
+          greatTableKnowerOfAll[`Range%`] += -1 * rings[`Burden of the Destroyer`].stats[`Range%`];
+        }
+        else if (ringPath.includes("Divine") === true) {
+          greatTableKnowerOfAll.AllDamage += -1 * rings[`Burden of the Divine`].stats.AllDamage;
+        }
+        else if (ringPath.includes("Follower") === true) {
+          greatTableKnowerOfAll.FireRate += -1 * rings[`Burden of the Follower`].stats.FireRate;
+        }
+        else if (ringPath.includes("Gambler") === true) {
+          //Enable weakspot
+        }
+        else if (ringPath.includes("Mariner") === true) {
+          greatTableKnowerOfAll.CDR += -1 * rings[`Burden of the Mariner`].stats.CDR;
+        }
+        else if (ringPath.includes("Rebel") === true) {
+          greatTableKnowerOfAll.RelicSpeed += -1 * rings[`Burden of the Rebel`].stats.RelicSpeed;
+        }
+        else if (ringPath.includes("Sciolist") === true) {
+          greatTableKnowerOfAll.Reserves += -1 * rings[`Burden of the Sciolist`].stats.Reserves;
+        }
+        else if (ringPath.includes("Stargazer") === true) {
+          //Negate health cost on skill activation.
+        }
+        else if (ringPath.includes("Warlock") === true) {
+          //Negate health cost on mod activation.
+        }
       }
     }
     if (activeBurdens > 0) {
-      greatTableKnowerOfAll.GlobalHealthModifier *= 1 - (0.20 * activeBurdens);
+      greatTableKnowerOfAll.GlobalHealthModifier *= 1 - (healthModifier * activeBurdens);
     }
     //Remember to add checks for the negative effects later, on burden rings, to negate them.
   },
@@ -1754,7 +1789,7 @@ let customItemFunctions = {
     }
   },
   spiritWisp() {
-    //Add stuff later
+    //Add mod stuff later
   },
   weightlessWeight() {
     let weight = greatTableKnowerOfAll.Encumbrance * (1+greatTableKnowerOfAll["Encumbrance%"]);

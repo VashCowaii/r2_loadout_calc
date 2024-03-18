@@ -3111,7 +3111,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Departed.png",
 		"desc": "Reduces Total Relic Charges by 33%. Increases all damage dealt by 10%",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RelicCharges%": -0.33,
+			"AllDamage": 0.10,
+		}
 	},
 	"Burden of the Destroyer": {
 		"name": "Burden of the Destroyer",
@@ -3119,7 +3122,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Destroyer.png",
 		"desc": "Decreases Ideal Range of all Firearms by 25%. Increases all damage dealt by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Range%": -0.25,
+			"AllDamage": 0.15,
+		}
 	},
 	"Burden of the Divine": {
 		"name": "Burden of the Divine",
@@ -3127,7 +3133,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Divine.png",
 		"desc": "All damage dealt by wearer is reduced by 10%. 50% of self healing applies to allies.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllDamage": -0.10,
+		}
 	},
 	"Burden of the Follower": {
 		"name": "Burden of the Follower",
@@ -3135,7 +3143,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Follower.png",
 		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 50%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": -0.15,
+			"ModPowerGen": 0.50,
+		}
 	},
 	"Burden of the Gambler": {
 		"name": "Burden of the Gambler",
@@ -3143,7 +3154,10 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Gambler.png",
 		"desc": "Disables Weakspots. Increases Critical Chance by 10% and Critical Damage by 20%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllCritChance": 0.10,
+			"AllCritDamage": 0.20,
+		}
 	},
 	"Burden of the Mariner": {
 		"name": "Burden of the Mariner",
@@ -3151,7 +3165,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Mariner.png",
 		"desc": "Increases Skill Cooldowns by 25%. Generate 10% additional Mod Power for each Skill on Cooldown.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": 0.25,
+		}
 	},
 	"Burden of the Rebel": {
 		"custom": null,
@@ -3160,7 +3176,8 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Rebel.png",
 		"desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%.",
 		"stats": {
-			"RelicSpeed": 0.25
+			"CDR": -0.15,
+			"RelicSpeed": 0.25,
 		}
 	},
 	"Burden of the Sciolist": {
@@ -3169,7 +3186,11 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Sciolist.png",
 		"desc": "Reduces Ammo Reserves by 25%. Increases Mod and Skill Damage by 15%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Reserves": -0.25,
+			"ModDamage": 0.15,
+			"SkillDamage": 0.15,
+		}
 	},
 	"Burden of the Stargazer": {
 		"name": "Burden of the Stargazer",
@@ -3177,7 +3198,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Stargazer.png",
 		"desc": "Reduces Skill Cooldowns by 15%. Activating a Skill costs 15% Health.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": -0.15,
+		}
 	},
 	"Burden of the Warlock": {
 		"name": "Burden of the Warlock",
@@ -3185,7 +3208,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Burden of the Warlock.png",
 		"desc": "Reduces Mod Power Requirement by 15%. Activating a Mod costs 15% Health as Grey Health. Activation cannot kill wearer.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModCost": -0.15,
+		}
 	},
 	"Captain's Insignia": {
 		"name": "Captain's Insignia",
