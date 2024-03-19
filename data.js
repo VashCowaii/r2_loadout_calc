@@ -3252,7 +3252,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Cataloger's Jewel.png",
 		"desc": "Automatically generates 8 Mod Power per second.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGen/s": 8,
+		}
 	},
 	"Celerity Stone": {
 		"custom": null,
@@ -3766,7 +3768,9 @@ window.rings = {
 		"image": "./brotherLibrary/ringsImages/Lighthouse Keeper's Ring.png",
 		"desc": "Automatically generate 3 Mod Power per second for each entity within 10m suffering from a Negative Status Effect. Max 5 stacks.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGen/s": 15,
+		}
 	},
 	"Lithic Signet": {
 		"custom": null,
@@ -4031,7 +4035,7 @@ window.rings = {
 		"name": "Ring of Infinite Damage",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Infinite Damage.png",
-		"desc": "Increases fire rate by 8%.",
+		"desc": "Increases Fire Rate by 8%.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.08,
@@ -4786,7 +4790,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Reserves": 0.20,
+		}
 	},
 	"Armor Effectiveness": {
 		"custom": null,
@@ -4804,7 +4810,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Blight": 30,
+		}
 	},
 	"Casting Speed": {
 		"name": "Casting Speed",
@@ -4812,7 +4820,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CastSpeed": 0.20,
+		}
 	},
 	"Charge Melee Cost": {
 		"name": "Charge Melee Cost",
@@ -4820,7 +4830,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ChargeCost": -0.30,
+		}
 	},
 	"Consumable Duration": {
 		"name": "Consumable Duration",
@@ -4828,7 +4840,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ConsumableDuration": 0.20,
+		}
 	},
 	"Consumable Speed": {
 		"name": "Consumable Speed",
@@ -4836,7 +4850,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RelicSpeed": -0.15
+		}
 	},
 	"Damage Reduction": {
 		"custom": null,
@@ -4845,7 +4861,7 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"stats": {
-			"FlatDR": 0.05
+			"FlatDR": 0.05,
 		}
 	},
 	"Elemental Damage": {
@@ -4854,7 +4870,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ElementalDamage": 0.10,
+		}
 	},
 	"Elemental Resistance": {
 		"custom": null,
@@ -4863,11 +4881,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"stats": {
-			"Bleed": 10,
 			"Burn": 10,
 			"Shock": 10,
 			"Corrosive": 10,
-			"Blight": 10
 		}
 	},
 	"Grey Health Rate": {
@@ -4876,7 +4892,7 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {} //this is legit ONLY the CONVERSION rate
 	},
 	"Healing Effectiveness": {
 		"custom": null,
@@ -4904,7 +4920,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AttackSpeed": 0.15,
+		}
 	},
 	"Melee Critical Chance": {
 		"name": "Melee Critical Chance",
@@ -4912,7 +4930,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeCritChance": 0.10,
+		}
 	},
 	"Melee Critical Damage": {
 		"name": "Melee Critical Damage",
@@ -4920,7 +4940,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeCritDamage": 0.20,
+		}
 	},
 	"Melee Damage": {
 		"name": "Melee Damage",
@@ -4928,7 +4950,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.15,
+		}
 	},
 	"Mod Cost": {
 		"name": "Mod Cost",
@@ -4936,7 +4960,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModCost": -0.10,
+		}
 	},
 	"Mod Damage": {
 		"name": "Mod Damage",
@@ -4944,7 +4970,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDamage": 0.10,
+		}
 	},
 	"Mod Duration": {
 		"name": "Mod Duration",
@@ -4952,7 +4980,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModDuration": 0.15,
+		}
 	},
 	"Ranged Critical Chance": {
 		"name": "Ranged Critical Chance",
@@ -4960,7 +4990,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedCritChance": 0.10,
+		}
 	},
 	"Ranged Critical Damage": {
 		"name": "Ranged Critical Damage",
@@ -4968,7 +5000,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedCritDamage": 0.20,
+		}
 	},
 	"Ranged Damage": {
 		"name": "Ranged Damage",
@@ -4976,7 +5010,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"RangedDamage": 0.10,
+		}
 	},
 	"Ranged Fire Rate": {
 		"name": "Ranged Fire Rate",
@@ -4984,7 +5020,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.10,
+		}
 	},
 	"Recoil": {
 		"name": "Recoil",
@@ -4992,7 +5030,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Recoil": -0.30,
+		}
 	},
 	"Revive Speed": {
 		"name": "Revive Speed",
@@ -5018,7 +5058,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": -0.10,
+		}
 	},
 	"Skill Damage": {
 		"name": "Skill Damage",
@@ -5026,7 +5068,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDamage": 0.10,
+		}
 	},
 	"Skill Duration": {
 		"name": "Skill Duration",
@@ -5034,7 +5078,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SkillDuration": 0.15,
+		}
 	},
 	"Spread Recovery": {
 		"name": "Spread Recovery",
@@ -5042,7 +5088,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SpreadRecovery": -0.30,
+		}
 	},
 	"Stagger Damage": {
 		"name": "Stagger Damage",
@@ -5050,7 +5098,19 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StaggerDamage": 0.20,
+		}
+	},
+	"Stamina": {
+		"custom": null,
+		"name": "Stamina",
+		"slot": "RFrag",
+		"image": "",
+		"desc": "",
+		"stats": {
+			"Stamina%": 0.15
+		}
 	},
 	"Stamina Cost": {
 		"custom": null,
@@ -5070,23 +5130,15 @@ window.fragments = {
 		"custom": null,
 		"stats": {}
 	},
-	"Stamina": {
-		"custom": null,
-		"name": "Stamina",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"stats": {
-			"Stamina%": 0.15
-		}
-	},
 	"Weakspot Damage": {
 		"name": "Weakspot Damage",
 		"slot": "RFrag",
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"AllWeakspot": 0.15,
+		}
 	},
 	"Weapon Spread": {
 		"name": "Weapon Spread",
@@ -5094,7 +5146,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Spread": -0.20,
+		}
 	},
 	"Weapon Swap": {
 		"name": "Weapon Swap",
@@ -5102,7 +5156,9 @@ window.fragments = {
 		"image": "",
 		"desc": "",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"WeaponSwapSpeed": 0.20,
+		}
 	}
 }
 /* ----------------------------------------------------------------------------------------*/
@@ -5112,6 +5168,7 @@ window.traits = {
 	"": {
 		"name": "",
 		"property": "",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0,
@@ -5128,41 +5185,44 @@ window.traits = {
 	},
 	"Affliction": {
 		"name": "Affliction",
-		"property": null,
+		"property": "StatusDuration",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.10,
+			"2": 0.20,
+			"3": 0.30,
+			"4": 0.40,
+			"5": 0.50,
+			"6": 0.60,
+			"7": 0.70,
+			"8": 0.80,
+			"9": 0.90,
+			"10": 1
 		}
 	},
 	"Ammo Reserves": {
 		"name": "Ammo Reserves",
-		"property": null,
+		"property": "Reserves",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	},
 	"Amplitude": {
 		"name": "Amplitude",
 		"property": null,
+		"custom": null,
 		"level": {
 			"0": null,
 			"1": null,
@@ -5179,24 +5239,26 @@ window.traits = {
 	},
 	"Arcane Strike": {
 		"name": "Arcane Strike",
-		"property": null,
+		"property": "ModPowerGenMelee",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	},
 	"Barkskin": {
 		"name": "Barkskin",
 		"property": "FlatDR",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0.01,
@@ -5214,6 +5276,7 @@ window.traits = {
 	"Blood Bond": {
 		"name": "Blood Bond",
 		"property": "DMGKept",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": -0.01,
@@ -5231,6 +5294,7 @@ window.traits = {
 	"Bloodstream": {
 		"name": "Bloodstream",
 		"property": "GreyHP/S+",
+		"custom": null,
 		"level": {
 			"1": 0.3,
 			"2": 0.6,
@@ -5247,6 +5311,7 @@ window.traits = {
 	"Dark Pact": {
 		"name": "Dark Pact",
 		"property": "GreyHP/S%",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": -0.09,
@@ -5264,6 +5329,7 @@ window.traits = {
 	"Endurance": {
 		"name": "Endurance",
 		"property": "Stamina",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -5281,6 +5347,7 @@ window.traits = {
 	"Expertise": {
 		"name": "Expertise",
 		"property": "CDR",
+		"custom": null,
 		"level": {
 			"0": -0.00,
 			"1": -0.02,
@@ -5297,58 +5364,62 @@ window.traits = {
 	},
 	"Fitness": {
 		"name": "Fitness",
-		"property": null,
+		"property": "EvadeDistance",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.03,
+			"2": 0.06,
+			"3": 0.09,
+			"4": 0.12,
+			"5": 0.15,
+			"6": 0.18,
+			"7": 0.21,
+			"8": 0.24,
+			"9": 0.27,
+			"10": 0.30
 		}
 	},
 	"Flash Caster": {
 		"name": "Flash Caster",
-		"property": null,
+		"property": "CastSpeed",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	},
 	"Footwork": {
 		"name": "Footwork",
-		"property": null,
+		"property": "AimMovementSpeed",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.0,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	},
 	"Fortify": {
 		"name": "Fortify",
 		"property": "Armor%",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0.05,
@@ -5366,6 +5437,7 @@ window.traits = {
 	"Glutton": {
 		"name": "Glutton",
 		"property": "RelicSpeed",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": -0.03,
@@ -5382,75 +5454,80 @@ window.traits = {
 	},
 	"Handling": {
 		"name": "Handling",
-		"property": null,
+		"property": ["Spread","Recoil"],
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": -0.00,
+			"1": -0.04,
+			"2": -0.08,
+			"3": -0.12,
+			"4": -0.16,
+			"5": -0.20,
+			"6": -0.24,
+			"7": -0.28,
+			"8": -0.32,
+			"9": -0.36,
+			"10": -0.40
 		}
 	},
 	"Kinship": {
 		"name": "Kinship",
-		"property": null,
+		"property": "SelfDamageModifier",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": -0.00,
+			"1": -0.08,
+			"2": -0.16,
+			"3": -0.24,
+			"4": -0.32,
+			"5": -0.40,
+			"6": -0.48,
+			"7": -0.56,
+			"8": -0.64,
+			"9": -0.72,
+			"10": -0.80
 		}
 	},
 	"Longshot": {
 		"name": "Longshot",
-		"property": null,
+		"property": "Range",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.60,
+			"2": 1.20,
+			"3": 1.80,
+			"4": 2.40,
+			"5": 3.00,
+			"6": 3.60,
+			"7": 4.20,
+			"8": 4.80,
+			"9": 5.40,
+			"10": 6.00
 		}
 	},
 	"Potency": {
 		"name": "Potency",
-		"property": null,
+		"property": "ConsumableDuration",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.10,
+			"2": 0.20,
+			"3": 0.30,
+			"4": 0.40,
+			"5": 0.50,
+			"6": 0.60,
+			"7": 0.70,
+			"8": 0.80,
+			"9": 0.90,
+			"10": 1.00
 		}
 	},
 	"Recovery": {
 		"name": "Recovery",
 		"property": "Stamina/S+",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -5468,6 +5545,7 @@ window.traits = {
 	"Regrowth": {
 		"name": "Regrowth",
 		"property": "HP/S+",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0.15,
@@ -5485,6 +5563,7 @@ window.traits = {
 	"Resonance": {
 		"name": "Resonance",
 		"property": null,
+		"custom": null,
 		"level": {
 			"0": null,
 			"1": null,
@@ -5502,6 +5581,7 @@ window.traits = {
 	"Revivalist": {
 		"name": "Revivalist",
 		"property": null,
+		"custom": null,
 		"level": {
 			"0": null,
 			"1": null,
@@ -5518,24 +5598,26 @@ window.traits = {
 	},
 	"Rugged": {
 		"name": "Rugged",
-		"property": null,
+		"property": "SummonHealth%",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.10,
+			"2": 0.20,
+			"3": 0.30,
+			"4": 0.40,
+			"5": 0.50,
+			"6": 0.60,
+			"7": 0.70,
+			"8": 0.80,
+			"9": 0.90,
+			"10": 1.00
 		}
 	},
 	"Scholar": {
 		"name": "Scholar",
 		"property": null,
+		"custom": null,
 		"level": {
 			"0": null,
 			"1": null,
@@ -5552,58 +5634,62 @@ window.traits = {
 	},
 	"Shadeskin": {
 		"name": "Shadeskin",
-		"property": null,
+		"property": ["Burn","Shock","Corrosive"],
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0,
+			"1": 2,
+			"2": 4,
+			"3": 6,
+			"4": 8,
+			"5": 10,
+			"6": 12,
+			"7": 14,
+			"8": 16,
+			"9": 18,
+			"10": 20
 		}
 	},
 	"Siphoner": {
 		"name": "Siphoner",
 		"property": "Lifesteal",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0.003,
 			"2": 0.006,
-			"3": 0.009000000000000001,
+			"3": 0.009,
 			"4": 0.012,
 			"5": 0.015,
-			"6": 0.018000000000000002,
+			"6": 0.018,
 			"7": 0.021,
 			"8": 0.024,
-			"9": 0.027000000000000003,
-			"10": 0.03
+			"9": 0.027,
+			"10": 0.030
 		}
 	},
 	"Spirit": {
 		"name": "Spirit",
-		"property": null,
+		"property": "ModPowerGen",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.02,
+			"2": 0.04,
+			"3": 0.06,
+			"4": 0.08,
+			"5": 0.10,
+			"6": 0.12,
+			"7": 0.14,
+			"8": 0.16,
+			"9": 0.18,
+			"10": 0.20
 		}
 	},
 	"Strong Back": {
 		"name": "Strong Back",
 		"property": "WeightThreshold",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 1.5,
@@ -5620,24 +5706,26 @@ window.traits = {
 	},
 	"Swiftness": {
 		"name": "Swiftness",
-		"property": null,
+		"property": "MovementSpeed",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.01,
+			"2": 0.02,
+			"3": 0.03,
+			"4": 0.05,
+			"5": 0.06,
+			"6": 0.07,
+			"7": 0.10,
+			"8": 0.11,
+			"9": 0.12,
+			"10": 0.15
 		}
 	},
 	"Triage": {
 		"name": "Triage",
 		"property": "HealingEFF",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 0.05,
@@ -5654,24 +5742,26 @@ window.traits = {
 	},
 	"Untouchable": {
 		"name": "Untouchable",
-		"property": null,
+		"property": "iFrameWindow",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.03,
+			"2": 0.06,
+			"3": 0.09,
+			"4": 0.12,
+			"5": 0.15,
+			"6": 0.18,
+			"7": 0.21,
+			"8": 0.24,
+			"9": 0.27,
+			"10": 0.30
 		}
 	},
 	"Vigor": {
 		"name": "Vigor",
 		"property": "Health",
+		"custom": null,
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -5688,19 +5778,20 @@ window.traits = {
 	},
 	"Wayfarer": {
 		"name": "Wayfarer",
-		"property": null,
+		"property": "EnvMovementSpeed",
+		"custom": null,
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	}
 }
@@ -7357,7 +7448,9 @@ window.meleeMutators = {
 		"slot": "MMutator",
 		"image": "",
 		"desc": "Increases Melee Damage by 40% for 10s when activating a skill.<br>Level 10: Melee kills reduce Skill Cooldowns by 5%. Can trigger once every 5s.",
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.40,
+		}
 	},
 	"Disengage": {
 		"name": "Disengage",
@@ -7365,7 +7458,9 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Melee Strikes increase the damage of the next Backdash Evade Attack by 10%. Max 5 Stacks. Lasts 7.5s.<br>Level 10: Perfect Neutral Evades grants 5 stacks",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"BackstepDamage": 0.50,
+		}
 	},
 	"Edgelord": {
 		"custom": null,
@@ -7374,7 +7469,9 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases Melee Charge Speed by 35% and Melee Attack Speed by 10%.<br>Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
 		"stats": {
-			"MLifesteal": 0.03
+			"ChargeSpeed": 0.35,
+			"AttackSpeed": 0.10,
+			"MChargedLifesteal": 0.03,
 		}
 	},
 	"Executor": {
@@ -7383,7 +7480,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 30% of the original duration. Cannot exceed original max duration.<br>Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 10m with a Negative Status Effect. Max 4 stacks.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ChargeSpeed": 0.20,
+			"AttackSpeed": 0.20,
+		}
 	},
 	"Guts": {
 		"name": "Guts",
@@ -7391,7 +7491,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases Melee Critical Chance by 25% when Grey Health is present.<br>Level 10: Increases Melee Critical Damage by 2.5% for every 10% of Grey Health.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeCritChance": 0.25,
+			"MeleeCritDamage": 0.125, //Obv almost all this stuff needs custom functions based on user specifications
+		}
 	},
 	"Latency": {
 		"name": "Latency",
@@ -7399,7 +7502,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 35% less damage to charge.<br>Level 10: Increase the potency of readied Melee Special abilities by 25%.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeSpecialAbilityCharge": -0.35,
+			"MeleeSpecialAbilityDamage": 0.25,
+		}
 	},
 	"Misfortune": {
 		"name": "Misfortune",
@@ -7415,15 +7521,21 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance of the next Melee Attack by 100% for 3s.<br>Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeCritChance": 1.0,
+		}
 	},
 	"Overdrive": {
 		"name": "Overdrive",
 		"slot": "MMutator",
 		"image": "",
-		"desc": "Melee Critical Hits increase Melee Critical Chance and Critical Damage by 5% for 15s. stacking up to 5 times.<br>Level 10: Melee Critical Strikes deal 20% additional damage.",
+		"desc": "Melee Critical Hits increase Melee Critical Chance and Critical Damage by 5% for 15s. Stacking up to 5 times.<br>Level 10: Melee Critical Strikes deal 20% additional damage.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeCritChance": 0.25,
+			"MeleeCritDamage": 0.25,
+			"MeleeCritDamage": 0.20, //This is specifically for the lvl 10 effect
+		}
 	},
 	"Reinvigorate": {
 		"name": "Reinvigorate",
@@ -7431,7 +7543,11 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 15% additional damage and 10% Critical Chance.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ChargeCost": -0.50,
+			"ChargeDamage": 0.15,
+			"ChargeCritChance": 0.10,
+		}
 	},
 	"Resentment": {
 		"name": "Resentment",
@@ -7439,10 +7555,12 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Gain 30% Melee Damage when Grey Health is present.<br>Level 10: Reduces Stagger by 1 when using any Melee Attack.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.30,
+		}
 	},
 	"Shielded Strike": {
-		"custom": null,
+		"custom": "shieldedStrike",
 		"name": "Shielded Strike",
 		"slot": "MMutator",
 		"image": "",
@@ -7464,7 +7582,7 @@ window.meleeMutators = {
 		"name": "Steadfast",
 		"slot": "MMutator",
 		"image": "",
-		"desc": "Charged Melee Attacks cannot be interrupted and gain 20% damage reduction from all sources.<br>Level 10: All damage taken during Charged Melee Attack is covered to Grey Health.",
+		"desc": "Charged Melee Attacks cannot be interrupted and gain 20% damage reduction from all sources.<br>Level 10: All damage taken during Charged Melee Attack is converted to Grey Health.",
 		"stats": {
 			"FlatDR": 0.2
 		}
@@ -7475,7 +7593,9 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases the Status Effect Damage applied by Melee Attacks by 50%.<br>Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeStatusDamage": 0.50,//the res reduction might be a multi, check that later.
+		}
 	},
 	"Striker": {
 		"name": "Striker",
@@ -7483,7 +7603,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Melee Hits increase Melee Damage by 6% for 10s. Max 5 Stacks.<br>Level 10: Increases Movement Speed by 3% per stack.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.30,
+			"MovementSpeed": 0.15,
+		}
 	},
 	"Tainted Blade": {
 		"name": "Tainted Blade",
@@ -7491,7 +7614,9 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases Melee Damage by 10% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 500 ACID Damage over 20s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.50,
+		}
 	},
 	"Transference": {
 		"name": "Transference",
@@ -7499,7 +7624,9 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 5s.<br>Level 10: When a Firearm reserve is full, Melee Strikes generate 25% additional Mod Power for that weapon.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGenMelee": 0.25,
+		}
 	},
 	"Vampire Blade": {
 		"custom": null,
@@ -7508,7 +7635,8 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases Melee Damage by 25% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
 		"stats": {
-			"MLifesteal": 0.03
+			"MeleeDamage": 0.25,
+			"MLifesteal": 0.03,
 		}
 	},
 	"Vengeful Strike": {
@@ -7517,7 +7645,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Increases Melee damage by 50% when below 50% Max Health. Level 10:<br>Increases Melee Critical Chance by 15% when below 50% Max Health.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MeleeDamage": 0.50,
+			"MeleeCritChance": 0.15,
+		}
 	},
 	"Weaponlord": {
 		"name": "Weaponlord",
@@ -7525,7 +7656,10 @@ window.meleeMutators = {
 		"image": "",
 		"desc": "Basic Melee Attack increase the next Charge Attack by 10%. Max 5 Stacks.<br>Level 10: At Max Stacks, the next Charge Attack gains 100% Critical Chance.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ChargeDamage": 0.50,
+			"ChargeCritChance": 1.0,
+		}
 	}
 }
 /* ----------------------------------------------------------------------------------------*/
@@ -7964,7 +8098,7 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Bark Extract.png",
 		"desc": "Increases Armor by 30. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
-			"Armor": 30
+			"Armor": 30,
 		}
 	},
 	"Bottled Shaedberry": {
@@ -7973,7 +8107,9 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Bottled Shaedberry.png",
 		"desc": "Increases Mod Power Generation by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGen": 0.10,
+		}
 	},
 	"Chilled Steam": {
 		"name": "Chilled Steam",
@@ -7981,7 +8117,9 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Chilled Steam.png",
 		"desc": "Increases Movement Speed by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"MovementSpeed": 0.10,
+		}
 	},
 	"Dark Cider": {
 		"custom": null,
@@ -7991,7 +8129,8 @@ window.concoctions = {
 		"desc": "Increases Health by 6.66%, Stamina by 6.66%, and Movement Speed by 6.66%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"Health%": 0.0666,
-			"Stamina%": 0.0666
+			"Stamina%": 0.0666,
+			"MovementSpeed": 0.0666,
 		}
 	},
 	"Dark Fluid": {
@@ -8000,7 +8139,10 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Dark Fluid.png",
 		"desc": "Increases Distance of Evade and Combat Slide by 15% and reduces the cost by 20%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"EvadeDistance": 0.15,
+			"EvadeCost": 0.20,
+		}
 	},
 	"Meat Shake": {
 		"custom": null,
@@ -8068,7 +8210,8 @@ window.concoctions = {
 		"desc": "Increases Ranged and Melee Lifesteal by 3.5% of base damage. Increases damage taken by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"stats": {
 			"FlatDR": -0.1,
-			"Lifesteal": 0.035
+			"RLifesteal": 0.035,
+			"MLifesteal": 0.035,
 		}
 	},
 	"Strong Drink": {
@@ -8087,7 +8230,10 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Tranquility Font.png",
 		"desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 25%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Spread": -0.25,
+			"Recoil": -0.25,
+		}
 	},
 	"Verdant Tea": {
 		"custom": null,
@@ -8105,7 +8251,9 @@ window.concoctions = {
 		"image": "./brotherLibrary/concoctionsImages/Xenoplasm.png",
 		"desc": "Reduces Skill Cooldowns by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"CDR": -0.10
+		}
 	}
 }
 window.quickUses = {
@@ -8123,7 +8271,10 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Ambit Ember.png",
 		"desc": "Slightly increases Evade Window and Evade Speed by 15%. Lasts 60s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			// "iFrameWindow": ???,
+			"EvadeSpeed": 0.15,
+		}
 	},
 	"Ammo Box": {
 		"name": "Ammo Box",
@@ -8139,7 +8290,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Antidote.png",
 		"desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Corrosive": 15,
+		}
 	},
 	"Bandage": {
 		"name": "Bandage",
@@ -8153,15 +8306,17 @@ window.quickUses = {
 		"name": "Binding Orb",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Binding Orb.png",
-		"desc": "",
+		"desc": "When thrown, Device becomes an anchor and applies SLOW to all enemies within 4m. Lasts 20s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"SLOW": 1,
+		}
 	},
 	"Black Tar": {
 		"name": "Black Tar",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Black Tar.png",
-		"desc": "",
+		"desc": "When thrown, explodes in a 4m radius dealing 30 damage and creating a puddle lasting 15s which applies TARRED for 30s to creatures inside. Ranged damage and other FIRE sources ignite TARRED entities, dealing 250 BURNING damage over 10s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -8179,9 +8334,11 @@ window.quickUses = {
 		"name": "Brightstone",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Brightstone.png",
-		"desc": "",
+		"desc": "When thrown, explodes in a 4m radius dealing 225 damage and leaving a mysterious Mist which causes enemies to receive 10% additional damage. Debuff lasts 10s after enemies leave the Mist. Lasts 15s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"UniqueMulti": 1.10,
+		}
 	},
 	"Confidence Booster": {
 		"custom": null,
@@ -8207,7 +8364,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Ethereal Orb.png",
 		"desc": "Removes OVERLOADED effect and increases SHOCK resistance by 15%. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Shock": 15,
+		}
 	},
 	"Faerie Needle": {
 		"name": "Faerie Needle",
@@ -8215,7 +8374,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Faerie Needle.png",
 		"desc": "Increases Mod Power Regen by 10 MP per second. Lasts 30s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"ModPowerGen/s": 10,
+		}
 	},
 	"Gul Serum": {
 		"name": "Gul Serum",
@@ -8223,13 +8384,15 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Gul Serum.png",
 		"desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"StaminaCost": -0.50,
+		}
 	},
 	"Koara Pellet": {
 		"name": "Koara Pellet",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Koara Pellet.png",
-		"desc": "",
+		"desc": "Consume to restore 10% of Max Health instantly.",
 		"custom": null,
 		"stats": {}
 	},
@@ -8247,7 +8410,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Mud Rub.png",
 		"desc": "Extinguishes BURNING effect and increases FIRE resistance by 15. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Burn": 15,
+		}
 	},
 	"Mystery Jerky": {
 		"name": "Mystery Jerky",
@@ -8263,13 +8428,15 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Oilskin Balm.png",
 		"desc": "Cures ROOT ROT Blight and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Blight": 25,
+		}
 	},
 	"Orb of Undoing": {
 		"name": "Orb of Undoing",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Orb of Undoing.png",
-		"desc": "",
+		"desc": "Reset all spent Trait Points",
 		"custom": null,
 		"stats": {}
 	},
@@ -8277,7 +8444,7 @@ window.quickUses = {
 		"name": "Pipe Bomb",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Pipe Bomb.png",
-		"desc": "",
+		"desc": "When thrown, explodes in a 4m radius dealing 450 damage and applying BLEEDING, which deals an additional 1,350 BLEED damage over 30s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -8285,7 +8452,7 @@ window.quickUses = {
 		"name": "Poisoned Ambit Ember Capsule",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Poisoned Ambit Ember Capsule.png",
-		"desc": "",
+		"desc": "Use to equip the capsule which can be thrown by pressing FIRE. The capsule will detonate after 2s or upon hitting an enemy, releasing a chemical agent which dampens the psionic abilities of long-term Ambit Ember users.",
 		"custom": null,
 		"stats": {}
 	},
@@ -8303,7 +8470,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Purified Salve.png",
 		"desc": "Cures CURSE and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Blight": 25,
+		}
 	},
 	"Rocket Fuel": {
 		"name": "Rocket Fuel",
@@ -8311,7 +8480,10 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Rocket Fuel.png",
 		"desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"FireRate": 0.10,
+			"AttackSpeed": 0.15,
+		}
 	},
 	"Timeworn Unguent": {
 		"name": "Timeworn Unguent",
@@ -8319,7 +8491,9 @@ window.quickUses = {
 		"image": "./brotherLibrary/consumablesImages/Timeworn Unguent.png",
 		"desc": "Cures SUPPRESSION Blight and increases Blight Resistance by 25%. Lasts 10m.",
 		"custom": null,
-		"stats": {}
+		"stats": {
+			"Blight": 25,
+		}
 	}
 }
 /* ----------------------------------------------------------------------------------------*/
@@ -8586,6 +8760,21 @@ window.consumables = {
   "concoctions": concoctions,
   "quickUses": quickUses
 }
+/* ----------------------------------------------------------------------------------------*/
+/* ---------------------------------- SUBSTAT MODIFIERS -----------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+window.substatColorMods = [
+	"corrosive","corroded","acid","toxic",
+	"bleed","bleeding",
+	"shock","shocked","overload","overloaded",
+	"slow","bulwark","haste","status","tarred","spirit of the red doe",
+	"fire","burn","burning",
+	"shield","shields",
+	"blight","madness","fragmented",
+	"curse",
+	"root rot",
+	"suppression"
+]
 /* ----------------------------------------------------------------------------------------*/
 /* ----------------------------------- GLOBAL RECORDS -------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/

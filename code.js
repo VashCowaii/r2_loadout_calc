@@ -1,9 +1,11 @@
 const greatTableKnowerOfAll = {
   "Health": 0,"Health%": 0,"GlobalHealthModifier": 0,
+  "SummonHealth%": 0,
   "Armor": 0,"Armor%": 0,
   "FlatDR": 0,
   "Bulwark": 0,
   "REdamage": [0],"DMGKept": [0],
+  "SelfDamageModifier": 0,
   "RelicSpeed": 0,"RelicEFF": 0,
   "HealingEFF": 0,"GlobalHealingEff": 0,
   "HP/S+": 0,
@@ -15,12 +17,12 @@ const greatTableKnowerOfAll = {
   "Stamina": 0,
   "Stamina%": 0,
   "Stamina/S+": 0,"Stamina/S+Multi": 0,
-  "StaminaCost": 0,
+  "StaminaCost": 0,"EvadeCost": 0,
   "StaminaNegation": 0,
   "StaminaPenaltyAdjustment": 0,
-  "EvadeSpeed": 0,
+  "EvadeSpeed": 0,"EvadeDistance": 0,"iFrames": 0,"iFrameWindow": 0,
   "ShieldEFF": 0,"Shield": 0,"Shield%/S": 0,
-  "Lifesteal": 0,"MLifesteal": 0,"RLifesteal": 0,
+  "Lifesteal": 0,"MLifesteal": 0,"RLifesteal": 0,"MChargedLifeSteal": 0,
   "Encumbrance": 0,"Encumbrance%": 0,"WeightThreshold": 0,
   "Bleed": 0,"Bleed%": 0,
   "Burn": 0,"Burn%": 0,
@@ -31,26 +33,29 @@ const greatTableKnowerOfAll = {
   "HealingModifiers": 0,
   "ConcLimit": 0,
   "Endurance": 0,"Expertise": 0,"Spirit": 0,"Vigor": 0,
-  "AllDamage": 0,"MeleeDamage": 0,"ExplosionDamage": 0,"CorrosiveDamage": 0,"AcidDamage": 0,
+  "AllDamage": 0,"MeleeDamage": 0,"BackstepDamage": 0,
+  "MeleeSpecialAbilityCharge": 0,"MeleeSpecialAbilityDamage": 0,
+  "ExplosionDamage": 0,"CorrosiveDamage": 0,"AcidDamage": 0,
   "FistDamage": 0,"StaggerDamage": 0,
   "StatusDamage": 0,"ModDamage": 0,"ElementalDamage": 0,"ShockDamage": 0,"OverloadedDamage": 0,
   "StatusDuration": 0,
+  "MeleeStatusDamage": 0,
   "BurningDamage": 0,"FireDamage": 0,
   "UniqueMulti": [0],
   "AllCritChance": 0,"MeleeCritChance": 0,"RangedCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,"ExplosiveCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,
   "AllCritDamage": 0,"MeleeCritDamage": 0,"RangedCritDamage": 0,
   "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,
-  "HASTE": 0,
-  "AttackSpeed": 0,"ChargeSpeed": 0,
+  "HASTE": 0,"SLOW": 0,
+  "AttackSpeed": 0,"ChargeSpeed": 0,"ChargeCost": 0,"ChargeCritChance": 0,"ChargeDamage": 0,
   "FireRate": 0,"ReloadSpeed": 0,"WeaponSwapSpeed": 0,
   "ModSpeed": 0,"CastSpeed": 0,
   "CDR": 0,
-  "ModPowerGen": 0,"ModCost": 0,
+  "ModPowerGen/s": 0,"ModPowerGen": 0,"ModCost": 0,
   "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,"ModPowerGenElemental": 0,
   "ModDuration": 0,"SkillDuration": 0,
-  "Recoil": 0,"Range": 0,"Range%": 0,"Spread": 0,
+  "Recoil": 0,"Range": 0,"Range%": 0,"Spread": 0,"SpreadRecovery": 0,
   "ProjectileSpeed": 0,"WeaponChargeTime": 0,
-  "MovementSpeed": 0,
+  "MovementSpeed": 0,"EnvMovementSpeed": 0,"AimMovementSpeed": 0,
   "Reserves": 0,"ReservesMulti": 0,
 }
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
@@ -1020,7 +1025,7 @@ let userTrigger = {
     let selectedConsumable = readSelection(`${type}${ID}`);
     // let concLimit = +readSelection("concValueDisplay").innerHTML;
     readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
-    readSelection(`${type}${ID}Desc`).innerHTML=consumables[`${type}s`][selectedConsumable.value].desc;
+    readSelection(`${type}${ID}Desc`).innerHTML = userTrigger.updateSubstatColor(consumables[`${type}s`][selectedConsumable.value].desc);
     //Pass the selected value into duplicate checks, under the same function to repeat if swapped,
     //-using "several" handling to loop through more than 2 options, stopping the loop at the conc limit
     if (type==="concoction") {
@@ -1036,7 +1041,7 @@ let userTrigger = {
     let selectedWeapon = readSelection(type);
     //Update accessory image, description, and then refresh formulas.
     readSelection(`${type}Image`).src=weapons[type][selectedWeapon.value].image;
-    readSelection(`${type}Description`).innerHTML=weapons[type][selectedWeapon.value].desc;
+    readSelection(`${type}Description`).innerHTML=userTrigger.updateSubstatColor(weapons[type][selectedWeapon.value].desc);
     // readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
 
     let weaponObjectReference = weapons[type][selectedWeapon.value]
@@ -1053,7 +1058,7 @@ let userTrigger = {
       readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
       readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
       readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
-      readSelection("meleeModDesc").innerHTML = builtInMelee[weaponObjectReference.builtIN].desc
+      readSelection("meleeModDesc").innerHTML = userTrigger.updateSubstatColor(builtInMelee[weaponObjectReference.builtIN].desc);
       // userTrigger.updateMod('meleeMod');
       // console.log(weaponObjectReference.builtIN)
     }
@@ -1067,11 +1072,12 @@ let userTrigger = {
     else if (value===`2`) {collection = `secondary`;modifier=value}
     let selectedMutator = readSelection(`${type}${modifier}`).value;
     //Update accessory image, description, and then refresh formulas.
-    readSelection(`${collection}MutatorDesc`).innerHTML=mutators[`${collection}Mutators`][selectedMutator].desc;
+    readSelection(`${collection}MutatorDesc`).innerHTML = userTrigger.updateSubstatColor(mutators[`${collection}Mutators`][selectedMutator].desc);
     if (type==="rangedMutator") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
       userTrigger.checkDuplicateSelection(type,value,`updateMutator`,`duo`);
     }
     updateFormulas();
+    userTrigger.updateSubstatColor(`${type}${modifier}Desc`);
   },
   //Triggers whenever a new mod is selected
   updateMod(type,value) {
@@ -1083,7 +1089,7 @@ let userTrigger = {
     let selectedMod = readSelection(`${type}${modifier}`);
     //Update accessory image, description, and then refresh formulas.
     
-    readSelection(`${collection}ModDesc`).innerHTML=mods[`${collection}Mods`][selectedMod.value].desc;
+    readSelection(`${collection}ModDesc`).innerHTML=userTrigger.updateSubstatColor(mods[`${collection}Mods`][selectedMod.value].desc);
     readSelection(`${collection}ModImage`).src=mods[`${collection}Mods`][selectedMod.value].image;
     if (type==="rangedMod") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
       userTrigger.checkDuplicateSelection(type,value,`updateMod`,`duo`);
@@ -1110,7 +1116,7 @@ let userTrigger = {
     let selectedValue = readSelection(`${type}${modifier}`).value;
     //Update accessory image, description, and then refresh formulas.
     readSelection(`${type}${modifier}Image`).src=gear[jsonID][selectedValue].image;
-    readSelection(`${type}${modifier}Desc`).innerHTML=gear[jsonID][selectedValue].desc;
+    readSelection(`${type}${modifier}Desc`).innerHTML=userTrigger.updateSubstatColor(gear[jsonID][selectedValue].desc);
     if (type==="ring") {
       userTrigger.checkDuplicateSelection(type,place,`updateAccessory`,`several`,4);
     }
@@ -1140,10 +1146,10 @@ let userTrigger = {
     readSelection(`${overArchetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
     readSelection(`${overArchetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
     //Populate passive descriptions
-    readSelection(`${overArchetype}passive1desc`).innerHTML=classInfo[selectedArchetype].passives.passive1.desc;
-    readSelection(`${overArchetype}passive2desc`).innerHTML=classInfo[selectedArchetype].passives.passive2.desc;
-    readSelection(`${overArchetype}passive3desc`).innerHTML=classInfo[selectedArchetype].passives.passive3.desc;
-    readSelection(`${overArchetype}passive4desc`).innerHTML=classInfo[selectedArchetype].passives.passive4.desc;
+    readSelection(`${overArchetype}passive1desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive1.desc);
+    readSelection(`${overArchetype}passive2desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive2.desc);
+    readSelection(`${overArchetype}passive3desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive3.desc);
+    readSelection(`${overArchetype}passive4desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive4.desc);
     //Update traits based on class selection
     manipulateTrait.updateTraitCollection(globalRecords.archetype1Old,globalRecords.archetype2Old);
     //Check if this selection was a duplicate, and if it was, swap places with the old info.
@@ -1162,9 +1168,9 @@ let userTrigger = {
     if (archetype==="archetype1") {
       readSelection(`primePerk`).innerHTML=classInfo[selectedArchetype].primePerk;
       readSelection(`primePerkIcon`).src=classInfo[selectedArchetype].primePerkImage;
-      readSelection(`primePerkDesc`).innerHTML=classInfo[selectedArchetype].primePerkDesc;
+      readSelection(`primePerkDesc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].primePerkDesc);
     }
-    readSelection(`${archetype}abilityDesc`).innerHTML=classInfo[selectedArchetype].abilities[selectedAbility].desc;
+    readSelection(`${archetype}abilityDesc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].abilities[selectedAbility].desc);
     readSelection(`${archetype}abilityIcon`).src=classInfo[selectedArchetype].abilities[selectedAbility].image;
     updateFormulas();
   },
@@ -1233,6 +1239,17 @@ let userTrigger = {
       if (updateOpposing===true && collection != "fragment"){ //update the swapped item, if not a fragment(they have no displays)
         userTrigger[functionName](collection,oppositeValue);
       }
+  },
+  //Used to modify the description of any given item, using substat color specifications from substatColorMods{}
+  updateSubstatColor(description) {
+    for (let substat of substatColorMods) {
+      if (description.toLowerCase().includes(substat) === true && description.toLowerCase().includes("fire rate") === false) {
+        //b = word boundary, g = global, i = case insensitive, \\ bc \ itself is an escape in js
+        let regEx = new RegExp('\\b' + substat + '\\b', 'gi');
+        description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
+      }
+    }
+    return description;
   }
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -1381,21 +1398,12 @@ let formulasValues = {
   //Mutators
     if (readSelection(`USEtoggledpMutator`).checked != true) {
       formulasValues.pullStats(mutators.primaryMutators[primaryWeaponMutator.value].stats);
-      if (mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom != null) {
-        customItemFunctions[mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom]();
-      }
     }
     if (readSelection(`USEtoggledmMutator`).checked != true) {
       formulasValues.pullStats(mutators.meleeMutators[meleeWeaponMutator.value].stats);
-      if (mutators.meleeMutators[readSelection(`meleeMutator`).value].custom != null) {
-        customItemFunctions[mutators.meleeMutators[readSelection(`meleeMutator`).value].custom]();
-      }
     }
     if (readSelection(`USEtoggledsMutator`).checked != true) {
       formulasValues.pullStats(mutators.secondaryMutators[secondaryWeaponMutator.value].stats);
-      if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom != null) {
-        customItemFunctions[mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom]();
-      }
     }
   //Mods
   if (readSelection(`USEtoggledpMod`).checked != true) {
@@ -1424,15 +1432,20 @@ let formulasValues = {
     for (let i=1;i<=globalRecords.activeTraits;i++) {
       let traitLevel = globalRecords.greatTraitRecords[`trait${i}`].level;
       let traitPath = traits[globalRecords.greatTraitRecords[`trait${i}`].name];
+      let propertyArray = Array.isArray(traitPath.property);
       if (traitPath != undefined && readSelection(`USEtoggledTrait${i}`).checked != true) {
-        if (traitPath.property != "REdamage" && traitPath.property != "DMGKept") {
+        if (traitPath.property != "REdamage" && traitPath.property != "DMGKept" && propertyArray === false) {
           greatTableKnowerOfAll[traitPath.property] += traitPath.level[traitLevel];
         }
-        else if (traitPath.property==="REdamage" || traitPath.property==="DMGKept") {
+        else if (traitPath.property==="REdamage" || traitPath.property==="DMGKept" && propertyArray === false) {
           greatTableKnowerOfAll[traitPath.property].push(traitPath.level[traitLevel]);
           //put these two types into their respective multiplicative arrays
         }
-        if (traits[globalRecords.greatTraitRecords[`trait${i}`].name].custom != null) {
+        else if (propertyArray === true) {
+          for (i=0;i<=traitPath.property.length;i++)
+          greatTableKnowerOfAll[traitPath.property[i]] += traitPath.level[traitLevel];
+        }
+        if (traitPath.custom != null) {
           customItemFunctions[traits[globalRecords.greatTraitRecords[`trait${i}`].name].custom]();
         }
       }
@@ -1662,7 +1675,24 @@ let formulasValues = {
         }
       }
     }
-  }
+    else if (item==="mutators") {
+      if (readSelection(`USEtoggledpMutator`).checked != true) {
+        if (mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom != null) {
+          customItemFunctions.mutators[mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom]();
+        }
+      }
+      if (readSelection(`USEtoggledmMutator`).checked != true) {
+        if (mutators.meleeMutators[readSelection(`meleeMutator`).value].custom != null) {
+          customItemFunctions.mutators[mutators.meleeMutators[readSelection(`meleeMutator`).value].custom]();
+        }
+      }
+      if (readSelection(`USEtoggledsMutator`).checked != true) {
+        if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom != null) {
+          customItemFunctions.mutators[mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom]();
+        }
+      }
+    }
+  },
 }
 /* ---------------------------------------------------------------------------------------- */
 /* ---------------------- Custom, item-specific functions --------------------------------- */
@@ -1931,6 +1961,17 @@ let customItemFunctions = {
     </div>
     `;
    return [avgPercHPpSec,avgHPpSec]
+  },
+  "mutators": {
+    shieldedStrike() {
+      let shieldAmount = greatTableKnowerOfAll.Shield;
+      let cap = 0.40;
+      let dmgCap = 0.25;
+      if (shieldAmount > 0) {
+        if (shieldAmount > cap) {shieldAmount = cap;}
+        greatTableKnowerOfAll.ChargeDamage += (shieldAmount/cap) * dmgCap;
+      }
+    },
   }
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -1985,6 +2026,7 @@ let teamCount = readSelection("teamCount");
 formulasValues.callUniqueFunctions("ring");
 formulasValues.callUniqueFunctions("amulet");
 formulasValues.callUniqueFunctions("class");
+formulasValues.callUniqueFunctions("mutators");
 //SUMMARY STATS
   let baseHealth = 100 + greatTableKnowerOfAll.Health;
   let healthBoost = 1 + greatTableKnowerOfAll["Health%"];
