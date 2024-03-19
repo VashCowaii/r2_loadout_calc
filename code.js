@@ -1670,10 +1670,6 @@ let formulasValues = {
 let customItemFunctions = {
   //Function names are specified in data.js under a given entry's "custom" key.
   "amulets": {
-    gameMasters() {
-      greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
-      greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
-    },
     brewMasters() {
       for (let i=1;i<=7;i++) {
         let activeConcoction = readSelection(`concoction${i}`).value;
@@ -1846,6 +1842,10 @@ let customItemFunctions = {
       if (weight < 50) {
         greatTableKnowerOfAll.MeleeDamage += (1 - (weight/49)) * 0.25;
       }
+    },
+    gameMasters() {
+      greatTableKnowerOfAll.DMGKept.push(1/readSelection("teamCount").value);
+      greatTableKnowerOfAll.GlobalHealingEff = greatTableKnowerOfAll.GlobalHealingEff * 0.5;
     },
     generatingBand() {
       if (greatTableKnowerOfAll.Shield > 0) {
