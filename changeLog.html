@@ -51,6 +51,7 @@
                     <h1>March 19, 2024</h1>
                     <ul>
                         <li>Added substat color tagging. So stuff like <span style="color: #f9ebb8;">BULWARK</span> or <span style="color: #7171a7;">OVERLOADED</span>, that kind of stuff now will adjust color accordingly within descriptions.</li>
+                        <li>Improved regex filter used in the aforementioned point, to exclude compounded words or words with ":" or "-". This way fire-rate does not get modified just because it has fire in it and the hyphen wasn't recognized.</li>
                         <li>Added all backend statistics and custom item functions(if applicable) for the following categories. These were previously partially ignored as the skipped stats had nothing to do with tanking, EHP, or survivability in general.
                             <br>Some of these additions will reflect right now, such as Shadeskin, but a lot of these don't have displays hooked up yet.
                         </li>

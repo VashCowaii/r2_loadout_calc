@@ -1243,9 +1243,10 @@ let userTrigger = {
   //Used to modify the description of any given item, using substat color specifications from substatColorMods{}
   updateSubstatColor(description) {
     for (let substat of substatColorMods) {
-      if (description.toLowerCase().includes(substat) === true && description.toLowerCase().includes("fire rate") === false) {
+      if (description.toLowerCase().includes(substat) === true) {
         //b = word boundary, g = global, i = case insensitive, \\ bc \ itself is an escape in js
-        let regEx = new RegExp('\\b' + substat + '\\b', 'gi');
+        //(?![-:]) look ahead and see - or a :, and if there is, exclude the entry. This way, fire-rate is excluded, and others.
+        let regEx = new RegExp('\\b' + substat + '(?![-:])\\b', 'gi');
         description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
       }
     }
