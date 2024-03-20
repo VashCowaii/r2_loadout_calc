@@ -1207,9 +1207,14 @@ window.classInfo = {
 			},
 			"Vial: Frenzy Dust": {
 				"name": "Vial: Frenzy Dust",
-				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire-Rate, Reload Speed, and Melee Speed by 20%, and the Movement Speed by 15%. Lasts 15s.",
+				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire-Rate, Reload Speed, and Melee Speed by 20%, and then Movement Speed by 15%. Lasts 15s.",
 				"image": "./brotherLibrary/abilitiesImages/Vial_ Frenzy Dust.png",
-				"stats": {}
+				"stats": {
+					"FireRate": 0.20,
+					"ReloadSpeed": 0.20,
+					"AttackSpeed": 0.20,
+					"MovementSpeed": 0.15,
+				}
 			},
 			"Vial: Elixir of Life": {
 				"name": "Vial: Elixir of Life",
@@ -1230,7 +1235,10 @@ window.classInfo = {
 			"passive1": {
 				"name": "Liquid Courage",
 				"desc": "Grants +25% All Damage and +5% CC",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.25,
+					"AllCritChance": 0.05,
+				}
 			},
 			"passive2": {
 				"name": "Panacea",
@@ -1260,7 +1268,9 @@ window.classInfo = {
 		"primePerk": "TEMPEST",
 		"primePerkDesc": "Automatically generate 3 Mod Power per second. Casting a mod increases mod generation by 100% for 10s.",
 		"primePerkImage": "./brotherLibrary/primePerkImages/Tempest.png",
-		"primeStats": {},
+		"primeStats": {
+			"ModPowerGen": 1.0
+		},
 		"abilities": {
 			"Reality Rune": {
 				"name": "Reality Rune",
@@ -1275,12 +1285,14 @@ window.classInfo = {
 				"desc": "Conjures a 7m unstable zone which grants allies 50% increased All damage dealt, 25% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
 				"image": "./brotherLibrary/abilitiesImages/Chaos Gate.png",
 				"stats": {
+					"AllDamage": 0.50,
+					"ModPowerGen": 0.25,
 					"FlatDR": -0.15
 				}
 			},
 			"Havoc Form": {
 				"name": "Havoc Form",
-				"desc": "Gain new abilities 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
+				"desc": "Gain new abilities for 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
 				"image": "./brotherLibrary/abilitiesImages/Havoc Form.png",
 				"stats": {
 					"FlatDR": 0.5
@@ -1297,17 +1309,24 @@ window.classInfo = {
 			"passive1": {
 				"name": "Amplify",
 				"desc": "Mod (+50%DMG +10%CC)",
-				"stats": {}
+				"stats": {
+					"ModDamage": 0.50,
+					"ModCritChance": 0.10,
+				}
 			},
 			"passive2": {
 				"name": "Power Creep",
 				"desc": "Mod use: 5% mod power spent regened by team over 10s. While active, allies gain 5% Mod Power Generation.",
-				"stats": {}
+				"stats": {
+					"ModPowerGen": 0.05
+				}
 			},
 			"passive3": {
 				"name": "Spirit Within",
 				"desc": "Mod Power/charge -15%, instantly refunds 15% Mod cost, split among active mods.",
-				"stats": {}
+				"stats": {
+					"ModCost": -0.15,
+				}
 			},
 			"passive4": {
 				"name": "Power Leak",
@@ -1336,14 +1355,22 @@ window.classInfo = {
 				"desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
 				"image": "./brotherLibrary/abilitiesImages/Juggernaut.png",
 				"stats": {
-					"Bulwark": 3
+					"Bulwark": 3,
+					"MovementSpeed": 0.15,
+					"AttackSpeed": 0.15,
+					"StaminaCost": -0.15,
+					"MeleeDamage": 0.50
 				}
 			},
 			"Rampage": {
 				"name": "Rampage",
 				"desc": "Fire-Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
 				"image": "./brotherLibrary/abilitiesImages/Rampage.png",
-				"stats": {}
+				"stats": {
+					"FireRate": 0.15,
+					"ReloadSpeed": 0.25,
+					"MovementSpeed": 0.15
+				}
 			}
 		},
 		"classTrait": "Strong Back",
@@ -1356,7 +1383,10 @@ window.classInfo = {
 			"passive1": {
 				"name": "Close Quarters",
 				"desc": "Grants +35% All Damage to enemies within 10m. Bonus tapers off up to 20m. CC increased up to 10%.",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.35,
+					"AllCritChance": 0.10
+				}
 			},
 			"passive2": {
 				"name": "Intimidating Presence",
@@ -1376,7 +1406,8 @@ window.classInfo = {
 				"name": "Face of Danger",
 				"desc": "Using a Relic within 10m of an enemy grants 2 stacks of Bulwark and 10% increased Damage for 10s.",
 				"stats": {
-					"Bulwark": 2
+					"Bulwark": 2,
+					"AllDamage": 0.10
 				}
 			}
 		}
@@ -1417,7 +1448,12 @@ window.classInfo = {
 			"passive1": {
 				"name": "Metalworker",
 				"desc": "Skill (+50%DMG +10%CC). Ranged (+25%DMG +10%CC) Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
-				"stats": {}
+				"stats": {
+					"SkillDamage": 0.50,
+					"SkillCritChance": 0.10,
+					"RangedDamage": 0.25,
+					"RangedCritChance": 0.10
+				}
 			},
 			"passive2": {
 				"name": "Magnetic Field",
@@ -1449,7 +1485,10 @@ window.classInfo = {
 				"name": "Plainswalker",
 				"desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
 				"image": "./brotherLibrary/abilitiesImages/Plainswalker.png",
-				"stats": {}
+				"stats": {
+					"MovementSpeed": 0.20,
+					"StaminaCost": -0.80
+				}
 			},
 			"Gold Digger": {
 				"name": "Gold Digger",
@@ -1474,7 +1513,10 @@ window.classInfo = {
 			"passive1": {
 				"name": "Scavenger",
 				"desc": "Pickup stacks grant +5% All Damage and +5% CC for 20s. Can +Duration up to 60s. Max 5 stacks.",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.25,
+					"AllCritChance": 0.25
+				}
 			},
 			"passive2": {
 				"name": "Metal Detector",
@@ -1516,7 +1558,12 @@ window.classInfo = {
 				"name": "Bulletstorm",
 				"desc": "Fire-Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
 				"image": "./brotherLibrary/abilitiesImages/Bulletstorm.png",
-				"stats": {}
+				"stats": {
+					"FireRate": 0.20,
+					"ReloadSpeed": 0.50,
+					"BowCritChance": 0.15,
+					"ProjectileSpeed": 0.50
+				}
 			}
 		},
 		"classTrait": "Ammo Reserves",
@@ -1529,7 +1576,12 @@ window.classInfo = {
 			"passive1": {
 				"name": "Swift Shot",
 				"desc": "Gain 15% Fire-Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
-				"stats": {}
+				"stats": {
+					"FireRate": 0.15,
+					"RangedDamage": 0.25,
+					"PrimaryCritChance": 0.05,
+					"SecondaryCritChance": 0.05,
+				}
 			},
 			"passive2": {
 				"name": "Posse Up",
@@ -1539,12 +1591,16 @@ window.classInfo = {
 			"passive3": {
 				"name": "Quick Hands",
 				"desc": "Firearms +10% Reload Speed. DOUBLED if mag is empty.",
-				"stats": {}
+				"stats": {
+					"ReloadSpeed": 0.20,
+				}
 			},
 			"passive4": {
 				"name": "Sleight of Hand",
 				"desc": "Using a Relic reloads equipped firearm and increases Ranged Damage by 15% for 10s.",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.15,
+				}
 			}
 		}
 	},
@@ -1568,14 +1624,18 @@ window.classInfo = {
 				"desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
 				"image": "./brotherLibrary/abilitiesImages/Support Dog.png",
 				"stats": {
-					"HP/S%": 0.02
+					"HP/S%": 0.0025, //passive
+					"HP/S%": 0.02, //active use
+					"MovementSpeed": 0.25
 				}
 			},
 			"Attack Dog": {
 				"name": "Attack Dog",
 				"desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
 				"image": "./brotherLibrary/abilitiesImages/Attack Dog.png",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.20
+				}
 			}
 		},
 		"classTrait": "Kinship",
@@ -1588,12 +1648,22 @@ window.classInfo = {
 			"passive1": {
 				"name": "Pack Hunter",
 				"desc": "Gain +30% Ranged/Skill/Melee Damage, +5% Ranged/Skill/Melee CC while Companion is within 40m.",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.30,
+					"SkillDamage": 0.30,
+					"MeleeDamage": 0.30,
+					"RangedCritChance": 0.05,
+					"SkillCritChance": 0.05,
+					"MeleeCritChance": 0.05,
+				}
 			},
 			"passive2": {
 				"name": "Spirit of the Wolf",
 				"desc": "Move Speed +10%. Allies within 10m gain your MS(if faster). Team Stamina Cost -15%.",
-				"stats": {}
+				"stats": {
+					"MovementSpeed": 0.10,
+					"StaminaCost": -0.15,
+				}
 			},
 			"passive3": {
 				"name": "Teamwork",
@@ -1616,21 +1686,36 @@ window.classInfo = {
 		"abilities": {
 			"Hunter's Mark": {
 				"name": "Hunter's Mark",
-				"desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s.",
+				"desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s. MARK: CC +15% for team on marked enemies.",
 				"image": "./brotherLibrary/abilitiesImages/Hunter's Mark.png",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.15,
+					"MeleeDamage": 0.15,
+					"AllCritChance": 0.15
+				}
 			},
 			"Hunter's Focus": {
 				"name": "Hunter's Focus",
-				"desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, +25% Ranged/Weakspot DMG, +10% Ranged CCC. While active, aiming applies MARK. Lasts 20s.",
+				"desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, +25% Ranged/Weakspot DMG, +10% Ranged CC. While active, aiming applies MARK. Lasts 20s. MARK: CC +15% for team on marked enemies.",
 				"image": "./brotherLibrary/abilitiesImages/Hunter's Focus.png",
-				"stats": {}
+				"stats": {
+					"Spread": -0.55,
+					"Recoil": -0.55,
+					"Sway": -0.55,
+					"RangedDamage": 0.25,
+					"RangedWeakspot": 0.25,
+					"AllCritChance": 0.15
+				}
 			},
 			"Hunter's Shroud": {
 				"name": "Hunter's Shroud",
-				"desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken.",
+				"desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken. MARK: CC +15% for team on marked enemies.",
 				"image": "./brotherLibrary/abilitiesImages/Hunter's Shroud.png",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.50,
+					"MeleeDamage": 0.50,
+					"AllCritChancE": 0.15
+				}
 			}
 		},
 		"classTrait": "Longshot",
@@ -1643,7 +1728,11 @@ window.classInfo = {
 			"passive1": {
 				"name": "Deadeye",
 				"desc": "Gain 40% Ranged Damage, 15% Weakspot Damage and 5% Ranged Critical Chance.",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.40,
+					"AllWeakspot": 0.15,
+					"RangedCritChance": 0.05
+				}
 			},
 			"passive2": {
 				"name": "Return to Sender",
@@ -1653,7 +1742,10 @@ window.classInfo = {
 			"passive3": {
 				"name": "Urgency",
 				"desc": "Firearms +15% Reload Speed +15% Movement Speed after Kill. Lasts 5s.",
-				"stats": {}
+				"stats": {
+					"ReloadSpeed": 0.15,
+					"MovementSpeed": 0.15
+				}
 			},
 			"passive4": {
 				"name": "Intuition",
@@ -1667,7 +1759,9 @@ window.classInfo = {
 		"primePerk": "SHADOW",
 		"primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
 		"primePerkImage": "./brotherLibrary/primePerkImages/Shadow.png",
-		"primeStats": {},
+		"primeStats": {
+			"AllDamage": 0.15
+		},
 		"abilities": {
 			"Void Cloak": {
 				"name": "Void Cloak",
@@ -1679,13 +1773,17 @@ window.classInfo = {
 				"name": "Worm Hole",
 				"desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location.",
 				"image": "./brotherLibrary/abilitiesImages/Worm Hole.png",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 3.0,
+					"MeleeDamage": 3.0
+				}
 			},
 			"Reboot": {
 				"name": "Reboot",
 				"desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
 				"image": "./brotherLibrary/abilitiesImages/Reboot.png",
 				"stats": {
+					"MovementSpeed": 0.15,
 					"FlatDR": 0.1
 				}
 			}
@@ -1700,19 +1798,27 @@ window.classInfo = {
 			"passive1": {
 				"name": "S.H.A.R.K.",
 				"desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 10s. Max 5 stacks. Perfect Evade grants 5 stacks.",
-				"stats": {}
+				"stats": {
+					"RangedDamage": 0.35,
+					"MeleeDamage": 0.35,
+					"RangedCritChance": 0.05,
+					"MeleeCritChance": 0.05
+				}
 			},
 			"passive2": {
 				"name": "Loophole",
 				"desc": "Ally Ranged/Melee DMG against enemies distracted by Decoy grants 7.5% base damage as Lifesteal.",
 				"stats": {
-					"Lifesteal": 0.075
+					"RLifesteal": 0.075,
+					"MLifesteal": 0.075
 				}
 			},
 			"passive3": {
 				"name": "Circumvent",
 				"desc": "Evade/Combat Slide cost -15%. Perfect Dodges gain an additional -15%.",
-				"stats": {}
+				"stats": {
+					"EvadeCost": -0.15
+				}
 			},
 			"passive4": {
 				"name": "Override",
@@ -1764,7 +1870,10 @@ window.classInfo = {
 			"passive1": {
 				"name": "Invigorated",
 				"desc": "Grants +25% All Damage and +5% CC",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.25,
+					"AllCritChance": 0.05
+				}
 			},
 			"passive2": {
 				"name": "Benevolence",
@@ -1776,7 +1885,9 @@ window.classInfo = {
 			"passive3": {
 				"name": "Backbone",
 				"desc": "Increases the hits Medic can take before losing Grey Health by 2.",
-				"stats": {}
+				"stats": {
+					"GreyHPHitThreshold": 2,
+				}
 			},
 			"passive4": {
 				"name": "Benefactor",
@@ -1792,7 +1903,9 @@ window.classInfo = {
 		"primePerk": "VILE",
 		"primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
 		"primePerkImage": "./brotherLibrary/primePerkImages/Vile.png",
-		"primeStats": {},
+		"primeStats": {
+			"StatusDamage": 0.15,
+		},
 		"abilities": {
 			"Eruption": {
 				"name": "Eruption",
@@ -1808,9 +1921,12 @@ window.classInfo = {
 			},
 			"Death Wish": {
 				"name": "Death Wish",
-				"desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health reduction is minimized by Kinship.",
+				"desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 35% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health drain is minimized by Kinship trait.",
 				"image": "./brotherLibrary/abilitiesImages/Death Wish.png",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.35,
+					"Lifesteal": 0.10
+				}
 			}
 		},
 		"classTrait": "Affliction",
@@ -1823,7 +1939,10 @@ window.classInfo = {
 			"passive1": {
 				"name": "Wrath",
 				"desc": " +20% DMG and +10% CC to enemies with negative status effects.",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.20,
+					"AllCritChance": 0.10
+				}
 			},
 			"passive2": {
 				"name": "Terrify",
@@ -1880,7 +1999,14 @@ window.classInfo = {
 			"passive1": {
 				"name": "Dominator",
 				"desc": "Mod/Skill/Explosive (+35%DMG, +5%CC) with active minion.",
-				"stats": {}
+				"stats": {
+					"ModDamage": 0.35,
+					"SkillDamage": 0.35,
+					"ExplosiveDamage": 0.35,
+					"ModCritChance": 0.05,
+					"SkillCritChance": 0.05,
+					"ExplosiveCritChance": 0.05
+				}
 			},
 			"passive2": {
 				"name": "Residue",
@@ -1894,12 +2020,13 @@ window.classInfo = {
 				"name": "Outrage",
 				"desc": "Sacrifice grants 3% Lifesteal/Minion Sacrificed, +15% Move Speed. Lasts 10s.",
 				"stats": {
-					"Lifesteal": 0.06
+					"Lifesteal": 0.06,
+					"MovementSpeed": 0.15
 				}
 			},
 			"passive4": {
 				"name": "Incite",
-				"desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC. Lasts 30s.",
+				"desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC). Lasts 30s.",
 				"stats": {}
 			}
 		}
@@ -2226,7 +2353,7 @@ window.amulets = {
 		"desc": "Increases Explosion damage by 25%. Explosions apply 405 BURNING damage over 5s.",
 		"custom": null,
 		"stats": {
-			"ExplosionDamage": 0.25,
+			"ExplosiveDamage": 0.25,
 		}
 	},
 	"Difference Engine": {
@@ -4035,7 +4162,7 @@ window.rings = {
 		"name": "Ring of Infinite Damage",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Infinite Damage.png",
-		"desc": "Increases Fire-Rate by 8%.",
+		"desc": "Increases Fire Rate by 8%.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.08,
@@ -8775,6 +8902,8 @@ window.substatColorMods = [
 	"root rot",
 	"suppression"
 ]
+// "fire__ is used here as all : get converted into __ witin the description, specifically so it can be read correctly. : throws issues otherwise."
+window.substatColorExclusions = `fire__|fire rate`;
 /* ----------------------------------------------------------------------------------------*/
 /* ----------------------------------- GLOBAL RECORDS -------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/

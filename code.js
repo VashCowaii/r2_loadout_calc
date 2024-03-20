@@ -43,8 +43,9 @@ const greatTableKnowerOfAll = {
   "BurningDamage": 0,"FireDamage": 0,
   "UniqueMulti": [0],
   "AllCritChance": 0,"MeleeCritChance": 0,"RangedCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,"ExplosiveCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,
+  "PrimaryCritChance": 0,"SecondaryCritChance": 0,
   "AllCritDamage": 0,"MeleeCritDamage": 0,"RangedCritDamage": 0,
-  "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,
+  "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,"RangedWeakspot": 0,"MeleeWeakspot": 0,
   "HASTE": 0,"SLOW": 0,
   "AttackSpeed": 0,"ChargeSpeed": 0,"ChargeCost": 0,"ChargeCritChance": 0,"ChargeDamage": 0,
   "FireRate": 0,"ReloadSpeed": 0,"WeaponSwapSpeed": 0,
@@ -53,7 +54,7 @@ const greatTableKnowerOfAll = {
   "ModPowerGen/s": 0,"ModPowerGen": 0,"ModCost": 0,
   "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,"ModPowerGenElemental": 0,
   "ModDuration": 0,"SkillDuration": 0,
-  "Recoil": 0,"Range": 0,"Range%": 0,"Spread": 0,"SpreadRecovery": 0,
+  "Recoil": 0,"Range": 0,"Range%": 0,"Spread": 0,"SpreadRecovery": 0,"Sway": 0,
   "ProjectileSpeed": 0,"WeaponChargeTime": 0,
   "MovementSpeed": 0,"EnvMovementSpeed": 0,"AimMovementSpeed": 0,
   "Reserves": 0,"ReservesMulti": 0,
@@ -1060,7 +1061,7 @@ let userTrigger = {
       readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
       readSelection("meleeModDesc").innerHTML = userTrigger.updateSubstatColor(builtInMelee[weaponObjectReference.builtIN].desc);
       // userTrigger.updateMod('meleeMod');
-      // console.log(weaponObjectReference.builtIN)
+      // console.log(weaponObjectReference.builtIN);
     }
     updateFormulas();
   },
@@ -1242,14 +1243,20 @@ let userTrigger = {
   },
   //Used to modify the description of any given item, using substat color specifications from substatColorMods{}
   updateSubstatColor(description) {
+    //Start by swapping all : to __, else the exclusion values will not be read properly if they involve a :
+    description = description.replace(/:/g, "__");
+    //Then loop through all substat names
     for (let substat of substatColorMods) {
+      //And if the description contains the looped substat ANYWHERE within it, proceed
       if (description.toLowerCase().includes(substat) === true) {
-        //b = word boundary, g = global, i = case insensitive, \\ bc \ itself is an escape in js
-        //(?![-:]) look ahead and see - or a :, and if there is, exclude the entry. This way, fire-rate is excluded, and others.
-        let regEx = new RegExp('\\b' + substat + '(?![-:])\\b', 'gi');
+        //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped.
+        //\s = whitespace, (?!) = lookahead is not [whatever you don't want to be next]
+        let regEx = new RegExp(`\\b(?!(${substatColorExclusions.replace(/\s+/g, "\\s+")})\\b\\s+)(${substat})\\b`,"gi");
+        // let regEx = new RegExp('\\b' + substat + '(?![-:])\\b', 'gi'); //Old way
         description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
       }
     }
+    description = description.replace(/__/g, ":");
     return description;
   }
 }
@@ -1609,7 +1616,7 @@ let formulasValues = {
       if (readSelection("USEtoggledRelic").checked != true) {
         if (relics[readSelection(`relic`).value].custom != null) {
           readSelection("complexInput").disabled = false;
-          relicComplexArray = customItemFunctions[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
+          relicComplexArray = customItemFunctions.relic[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
         }
         else { //clear complex effect
           readSelection("complexInput").disabled = true;
@@ -1918,50 +1925,52 @@ let customItemFunctions = {
       greatTableKnowerOfAll.AllDamage += modifier * minionCount;
     },
   },
-  resonatingHeart(relicHPscaled,totalHealth) {
-    let path = relics["Resonating Heart"]
-    //Healing/Relic EFF already factored before this function even starts
-    readSelection("complexDesc").innerHTML = path.complex;
-    readSelection("complexInputHeader").innerHTML = "Input:";
-    let inputValue = readSelection("complexInput").value * 2;
-  
-  
-    let relicPercHPpSec = 0;
-    let relicHPpSec = 0;
-    let avgPercHPpSec = 0;
-    let avgHPpSec = 0;
-    //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
-    //we will first check if the input is blank/0 before pulling either basic or complex stats.
-    if (inputValue != null && inputValue > 0) {
-      relicPercHPpSec = inputValue/20;
-      relicHPpSec = (relicPercHPpSec/100) * totalHealth
-      avgPercHPpSec = (relicHPscaled + inputValue)/25
-      avgHPpSec = (avgPercHPpSec/100) * totalHealth;
-    }
-  
-    readSelection("complexLeftHalf").innerHTML = `
-    <div class="complexHalfHeader">2x over 20s</div>
-    <div class="complexHalfHalfBox">
-      <div class="complexHalfHalfHeader">%/s</div>
-      <div class="complexHalfHalfHeader">HP/s</div>
-    </div>
-    <div class="complexHalfValueBox">
-      <div class="complexHalfValue">${relicPercHPpSec.toFixed(2)}%</div>
-      <div class="complexHalfValue">${relicHPpSec.toFixed(2)}</div>
-    </div>
-    `;
-    readSelection("complexRightHalf").innerHTML = `
-    <div class="complexHalfHeader">AVG over 25s</div>
-    <div class="complexHalfHalfBox">
-      <div class="complexHalfHalfHeader">%/s</div>
-      <div class="complexHalfHalfHeader">HP/s</div>
-    </div>
-    <div class="complexHalfValueBox">
-      <div class="complexHalfValue">${avgPercHPpSec.toFixed(2)}%</div>
-      <div class="complexHalfValue">${avgHPpSec.toFixed(2)}</div>
-    </div>
-    `;
-   return [avgPercHPpSec,avgHPpSec]
+  "relic": {
+    resonatingHeart(relicHPscaled,totalHealth) {
+      let path = relics["Resonating Heart"]
+      //Healing/Relic EFF already factored before this function even starts
+      readSelection("complexDesc").innerHTML = path.complex;
+      readSelection("complexInputHeader").innerHTML = "Input:";
+      let inputValue = readSelection("complexInput").value * 2;
+    
+    
+      let relicPercHPpSec = 0;
+      let relicHPpSec = 0;
+      let avgPercHPpSec = 0;
+      let avgHPpSec = 0;
+      //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
+      //we will first check if the input is blank/0 before pulling either basic or complex stats.
+      if (inputValue != null && inputValue > 0) {
+        relicPercHPpSec = inputValue/20;
+        relicHPpSec = (relicPercHPpSec/100) * totalHealth
+        avgPercHPpSec = (relicHPscaled + inputValue)/25
+        avgHPpSec = (avgPercHPpSec/100) * totalHealth;
+      }
+    
+      readSelection("complexLeftHalf").innerHTML = `
+      <div class="complexHalfHeader">2x over 20s</div>
+      <div class="complexHalfHalfBox">
+        <div class="complexHalfHalfHeader">%/s</div>
+        <div class="complexHalfHalfHeader">HP/s</div>
+      </div>
+      <div class="complexHalfValueBox">
+        <div class="complexHalfValue">${relicPercHPpSec.toFixed(2)}%</div>
+        <div class="complexHalfValue">${relicHPpSec.toFixed(2)}</div>
+      </div>
+      `;
+      readSelection("complexRightHalf").innerHTML = `
+      <div class="complexHalfHeader">AVG over 25s</div>
+      <div class="complexHalfHalfBox">
+        <div class="complexHalfHalfHeader">%/s</div>
+        <div class="complexHalfHalfHeader">HP/s</div>
+      </div>
+      <div class="complexHalfValueBox">
+        <div class="complexHalfValue">${avgPercHPpSec.toFixed(2)}%</div>
+        <div class="complexHalfValue">${avgHPpSec.toFixed(2)}</div>
+      </div>
+      `;
+    return [avgPercHPpSec,avgHPpSec]
+    },
   },
   "mutators": {
     shieldedStrike() {
