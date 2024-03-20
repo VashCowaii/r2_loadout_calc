@@ -8902,8 +8902,12 @@ window.substatColorMods = [
 	"root rot",
 	"suppression"
 ]
-// "fire__ is used here as all : get converted into __ witin the description, specifically so it can be read correctly. : throws issues otherwise."
-window.substatColorExclusions = `fire__|fire rate`;
+// window.substatColorExclusions = `fire:|fire rate`;
+// \s = any whitespace character
+window.substatColorExclusions = {
+	"fire": ":|\\srate",
+    // "status": "\\seffect" //Use this if for whatever reason, a need to differentiate between STATUS and STATUS EFFECT arises.
+}
 /* ----------------------------------------------------------------------------------------*/
 /* ----------------------------------- GLOBAL RECORDS -------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/

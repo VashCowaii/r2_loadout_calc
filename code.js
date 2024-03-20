@@ -1243,20 +1243,22 @@ let userTrigger = {
   },
   //Used to modify the description of any given item, using substat color specifications from substatColorMods{}
   updateSubstatColor(description) {
-    //Start by swapping all : to __, else the exclusion values will not be read properly if they involve a :
-    description = description.replace(/:/g, "__");
-    //Then loop through all substat names
     for (let substat of substatColorMods) {
       //And if the description contains the looped substat ANYWHERE within it, proceed
       if (description.toLowerCase().includes(substat) === true) {
-        //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped.
-        //\s = whitespace, (?!) = lookahead is not [whatever you don't want to be next]
-        let regEx = new RegExp(`\\b(?!(${substatColorExclusions.replace(/\s+/g, "\\s+")})\\b\\s+)(${substat})\\b`,"gi");
-        // let regEx = new RegExp('\\b' + substat + '(?![-:])\\b', 'gi'); //Old way
+        let substatExclusion = "";
+        if (substatColorExclusions[substat] != undefined) {
+          //(?!) = lookahead is not [whatever you don't want to be next]
+          substatExclusion = `(?!${substatColorExclusions[substat]})`;
+          //This is to only find exclusion values based upon the specified substat. So fire = rate, status = effect, etc.
+        }
+        //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped. \s = whitespace character
+        let regEx = new RegExp(`\\b(${substat})${substatExclusion}\\b`, "gi");
+        // let regEx = new RegExp(`\\b(?!${substatColorExclusions})(${substat})\\b`,"gi");  //Old way
+        // let regEx = new RegExp('\\b' + substat + '(?![-:])\\b', 'gi');                   //Older way
         description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
       }
     }
-    description = description.replace(/__/g, ":");
     return description;
   }
 }
