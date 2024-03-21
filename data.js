@@ -1203,7 +1203,7 @@ window.classInfo = {
 				"image": "./brotherLibrary/abilitiesImages/Vial_ Stone Mist.png",
 				"stats": {
 					"FlatDR": 0.25
-				}
+				},
 			},
 			"Vial: Frenzy Dust": {
 				"name": "Vial: Frenzy Dust",
@@ -5940,7 +5940,7 @@ window.primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Alpha _ Omega.png",
 		"desc": "",
-		"custom": null,
+		"custom": "",
 		"builtIN": "Beta Ray",
 		"stats": {}
 	},
@@ -9266,11 +9266,10 @@ window.globalRecords = {
 	},
 	"scaledRelicBaseRecords": 0,
 	"emptyTraitBoxHeader": `<div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div>`,
-	"activeTraits": 0,
 	"traitPointCount": 0,
 	"traitPointCap": 85,
 	"totalConcLimit": 0,
-	"greatTraitRecords": {},
+	"greatTraitRecords": [],
 	"urlObject": {}
 }
 globalRecords.generateRecords("archetype",2);

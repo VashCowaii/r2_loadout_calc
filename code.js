@@ -71,11 +71,11 @@ let createHTML = {
   //Defines the traitbox elements that get put into traitsMegaBox
   traitBox(elemID) {
     return `<div class="traitContainer">
-              <button type="button" class="traitButton" onclick="userTrigger.updateTrait('trait',${elemID},'-')" id="traitButtonMinus${elemID}">-</button>
+              <button type="button" class="traitButton" onclick="userTrigger.updateTrait(${elemID},'-')" id="traitButtonMinus${elemID}">-</button>
               <div class="traitLineHolder">
                   <div class="traitNameHolder">
-                      <select class="traitSelector" id="trait${elemID}" onchange="userTrigger.updateTrait('trait',${elemID})"></select>
-                      <div class="traitLevelDisplay" id="trait${elemID}Level">${globalRecords.greatTraitRecords[`trait${elemID}`].level}</div> 
+                      <select class="traitSelector" id="trait${elemID}" onchange="userTrigger.updateTrait(${elemID})"></select>
+                      <div class="traitLevelDisplay" id="trait${elemID}Level">${globalRecords.greatTraitRecords[elemID-1].level}</div> 
                       </div>
                   <div class="traitLevelContainer">
                       <div class="pointsSpent" id="trait${elemID}Spent"></div>
@@ -94,7 +94,7 @@ let createHTML = {
                       </div>
                   </div>
               </div>
-              <button type="button" class="traitButton" onclick="userTrigger.updateTrait('trait',${elemID},'+')" id="traitButtonPlus${elemID}">+</button>
+              <button type="button" class="traitButton" onclick="userTrigger.updateTrait(${elemID},'+')" id="traitButtonPlus${elemID}">+</button>
           </div>`
   },
   //Defines the trait toggle row that gets put into the toggles menu
@@ -122,8 +122,8 @@ let createHTML = {
       for (const gear in collection) {
         if (collection.hasOwnProperty(gear)) {
             let matchFound = false;
-            for (let i=1;i<=globalRecords.activeTraits;i++) {
-              if (gear === globalRecords.greatTraitRecords[`trait${i}`].name && gear != "" && `trait${i}` != elemID) {
+            for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+              if (gear === globalRecords.greatTraitRecords[i-1].name && gear && `trait${i}` != elemID) {
                 matchFound = true;
                 break;
               }
@@ -150,292 +150,67 @@ let manipulateTrait = {
   //Handles all trait math to be identical to how the game functions.
   updateTraitCollection(archetype1Old,archetype2Old) {
     //The old arch 1 and 2
-    let archetype1Olds = "";
-    let archetype2Olds = "";
-    if (archetype1Old!=null) {archetype1Olds=archetype1Old}
-    if (archetype2Old!=null) {archetype2Olds=archetype2Old}
-    let updateAgain = false;
-  
-    // <div class="traitsBox" id="traitsMegaBox"></div>  //this is the overall traits box
+    archetype1Old = archetype1Old ?? "";
+    archetype2Old = archetype2Old ?? "";
+    // <div class="traitsBox" id="traitsMegaBox"></div>  //this is the overall traits box html
     let megaBox = readSelection("traitsMegaBox");
-    if (globalRecords.activeTraits>=1) {
+    if (globalRecords.greatTraitRecords.length>=1) {
       megaBox.innerHTML = globalRecords.emptyTraitBoxHeader;
       //Used for determining if class traits should autopopulate
-      let class1Active = (readSelection("archetype1").value != null && readSelection("archetype1").value != "");
-      let class2Active = (readSelection("archetype2").value != null && readSelection("archetype2").value != "");
-      let trait1Path = classInfo[readSelection("archetype1").value].classTrait;
-      let trait2Path = classInfo[readSelection("archetype2").value].classTrait;
-      //Used in identifying if another trait slot has the trait that might be autopopulated
-      let otherTrait = 0;
-      //Path to intrinsic trait values
-      let endurancePath = classInfo[readSelection("archetype1").value].Endurance;
-      let expertisePath = classInfo[readSelection("archetype1").value].Expertise;
-      let spiritPath = classInfo[readSelection("archetype1").value].Spirit;
-      let vigorPath = classInfo[readSelection("archetype1").value].Vigor;
+      let arch1path = readSelection("archetype1");
+      let arch2path = readSelection("archetype2");
+      let class1Active = !!arch1path.value;
+      let class2Active = !!arch2path.value;
+      let trait1Path = classInfo[arch1path.value].classTrait;
+      let trait2Path = classInfo[arch2path.value].classTrait;
       //Check if the intrinsic traits even have a bonus
-      let useEndurance = endurancePath > 0;
-      let useExpertise = expertisePath > 0;
-      let useSpirit = spiritPath > 0;
-      let useVigor = vigorPath > 0;
+      let useEndurance = classInfo[arch1path.value].Endurance > 0;
+      let useExpertise = classInfo[arch1path.value].Expertise > 0;
+      let useSpirit = classInfo[arch1path.value].Spirit > 0;
+      let useVigor = classInfo[arch1path.value].Vigor > 0;
       //If so, trigger autopopulation checks for whichever ones do.
       //All the following checks are done in reverse order, as the display scheme is first in last out
-      //Vigor Trait Checks
-      if (useVigor === true) {
-        let foundClassTrait = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName==="Vigor" && i != 1){foundClassTrait=true;otherTrait=i;}
+      manipulateTrait.bumpTrait(useVigor,"Vigor");
+      manipulateTrait.bumpTrait(useSpirit,"Spirit");
+      manipulateTrait.bumpTrait(useExpertise,"Expertise");
+      manipulateTrait.bumpTrait(useEndurance,"Endurance");
+      manipulateTrait.bumpTrait(class2Active,trait2Path);
+      manipulateTrait.bumpTrait(class1Active,trait1Path);
+      //Sort/create/delete trait entries accordingly.
+      for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+        let recordPath = globalRecords.greatTraitRecords[i-1];
+        //If it matches a class trait that was in the slot just before then.
+        if (recordPath.default > 0) {
+          if (recordPath.name===classInfo[archetype1Old].classTrait && classInfo[archetype1Old].classTrait && archetype1Old != arch1path.value && archetype1Old != arch2path.value) {
+              manipulateTrait.modifyTraitRecord("delete",i);
+          }
+          else if (recordPath.name===classInfo[archetype2Old].classTrait && classInfo[archetype2Old].classTrait && archetype2Old != arch2path.value && archetype2Old != arch1path.value) {
+              manipulateTrait.modifyTraitRecord("delete",i);
+          }
         }
-        if (globalRecords.greatTraitRecords[`trait1`].name != "Vigor" && foundClassTrait === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Vigor",0,0);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != "Vigor" && foundClassTrait === true) {
-          let totalLevel = globalRecords.greatTraitRecords[`trait${otherTrait}`].level;
-          let totalDefault = globalRecords.greatTraitRecords[`trait${otherTrait}`].default
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Vigor",totalLevel,totalDefault);
-          otherTrait=0;
-        }
-      }
-      //Spirit Trait Checks
-      if (useSpirit === true) {
-        let foundClassTrait = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName==="Spirit" && i != 1){foundClassTrait=true;otherTrait=i;}
-        }
-        if (globalRecords.greatTraitRecords[`trait1`].name != "Spirit" && foundClassTrait === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Spirit",0,0);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != "Spirit" && foundClassTrait === true) {
-          let totalLevel = globalRecords.greatTraitRecords[`trait${otherTrait}`].level;
-          let totalDefault = globalRecords.greatTraitRecords[`trait${otherTrait}`].default
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Spirit",totalLevel,totalDefault);
-          otherTrait=0;
-        }
-      }
-      //Expertise Trait Checks
-      if (useExpertise === true) {
-        let foundClassTrait = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName==="Expertise" && i != 1){foundClassTrait=true;otherTrait=i;}
-        }
-        if (globalRecords.greatTraitRecords[`trait1`].name != "Expertise" && foundClassTrait === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Expertise",0,0);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != "Expertise" && foundClassTrait === true) {
-          let totalLevel = globalRecords.greatTraitRecords[`trait${otherTrait}`].level;
-          let totalDefault = globalRecords.greatTraitRecords[`trait${otherTrait}`].default
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Expertise",totalLevel,totalDefault);
-          otherTrait=0;
-        }
-      }
-      //Endurance Trait Checks
-      if (useEndurance === true) {
-        let foundClassTrait = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName==="Endurance" && i != 1){foundClassTrait=true;otherTrait=i;}
-        }
-        if (globalRecords.greatTraitRecords[`trait1`].name != "Endurance" && foundClassTrait === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Endurance",0,0);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != "Endurance" && foundClassTrait === true) {
-          let totalLevel = globalRecords.greatTraitRecords[`trait${otherTrait}`].level;
-          let totalDefault = globalRecords.greatTraitRecords[`trait${otherTrait}`].default
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait("Endurance",totalLevel,totalDefault);
-          otherTrait=0;
-        }
-      }
-      //Archetype2 Trait Checks
-      if (class2Active === true) {
-        let foundClassTrait2 = false;
-        // let foundClassTrait2 = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName===trait2Path && i != 1){foundClassTrait2=true;otherTrait=i;}
-        }
-        if (globalRecords.greatTraitRecords[`trait1`].name != trait2Path && foundClassTrait2 === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait(trait2Path,10,10);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != trait2Path && foundClassTrait2 === true) {
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait(trait2Path,10,10);
-          otherTrait=0;
-        }
-      }
-      //Archetype1 Trait Checks
-      if (class1Active === true) {
-        let foundClassTrait1 = false;
-        // let foundClassTrait2 = false;
-        for (let i=1;i<=globalRecords.activeTraits;i++) {
-          let checkName = globalRecords.greatTraitRecords[`trait${i}`].name;
-          if (checkName===trait1Path && i != 1){foundClassTrait1=true;otherTrait=i;}
-          // else if (checkName===trait2Path){foundClassTrait2=true}
-        }
-        if (globalRecords.greatTraitRecords[`trait1`].name != trait1Path && foundClassTrait1 === false) {
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait(trait1Path,10,10);
-        }
-        else if (globalRecords.greatTraitRecords[`trait1`].name != trait1Path && foundClassTrait1 === true) {
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].name = "";
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].level = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].default = 0;
-          globalRecords.greatTraitRecords[`trait${otherTrait}`].spent = 0;
-          manipulateTrait.modifyTraitRecord("create",globalRecords.activeTraits+1);
-          manipulateTrait.insertTrait(trait1Path,10,10);
-          otherTrait=0;
-        }
-      }
-  
-  
-  
-      for (let i=1;i<=globalRecords.activeTraits;i++) { //Sort trait records and create/delete accordingly.
         //If the last trait is not blank, make a new blank trait slot.
-        if (i===globalRecords.activeTraits && globalRecords.greatTraitRecords[`trait${i}`].name != "") {
-          manipulateTrait.modifyTraitRecord("create",i+1);
+        else if (i === globalRecords.greatTraitRecords.length && recordPath.name) {
+          manipulateTrait.modifyTraitRecord("create");
         }
-        //If the current is filled and +1 is blank
-        else if (i < (globalRecords.activeTraits-1) && globalRecords.greatTraitRecords[`trait${i}`].name != "" && globalRecords.greatTraitRecords[`trait${i+1}`].name === "") {
-          //And then +2 is not, move the +2 into +1 
-          if (globalRecords.greatTraitRecords[`trait${i+1}`].name === "" && globalRecords.greatTraitRecords[`trait${i+2}`].name != "") {
-            globalRecords.greatTraitRecords[`trait${i+1}`] = globalRecords.greatTraitRecords[`trait${i+2}`];
-            globalRecords.greatTraitRecords[`trait${i+2}`] = {"name": "","level": 0,"default": 0,"spent": 0}
-          }
-          //Else if both +1 and +2 are blank, keep adding until you find one to move into +1
-          else if (globalRecords.greatTraitRecords[`trait${i+1}`].name === "" && globalRecords.greatTraitRecords[`trait${i+2}`].name === "") {
-            let nextTrait = 0;
-            for (let x=i+2;x<=globalRecords.activeTraits;x++) {
-              if (globalRecords.greatTraitRecords[`trait${x}`].name != "") {nextTrait=x;break;}
-            }
-            if (nextTrait != 0) {
-              globalRecords.greatTraitRecords[`trait${i+1}`] = globalRecords.greatTraitRecords[`trait${nextTrait}`];
-              globalRecords.greatTraitRecords[`trait${nextTrait}`] = {"name": "","level": 0,"default": 0,"spent": 0}
-            }
-          }
+        //If the current slot is blank, and is not the last slot, delete the slot
+        else if (i != globalRecords.greatTraitRecords.length && !recordPath.name){
+          manipulateTrait.modifyTraitRecord("delete",i);
         }
-        else if (i < globalRecords.activeTraits && globalRecords.greatTraitRecords[`trait${i}`].name === "" && globalRecords.greatTraitRecords[`trait${i+1}`].name != "") {
-          globalRecords.greatTraitRecords[`trait${i}`] = globalRecords.greatTraitRecords[`trait${i+1}`];
-          globalRecords.greatTraitRecords[`trait${i+1}`] = {"name": "","level": 0,"default": 0,"spent": 0}
-        }
-        else if (i < globalRecords.activeTraits && globalRecords.greatTraitRecords[`trait${i}`].name === "" && globalRecords.greatTraitRecords[`trait${i+1}`].name === "") {
-          for (let z=globalRecords.activeTraits;z>1;z-=1) {
-            if (globalRecords.greatTraitRecords[`trait${z}`].name === "" && globalRecords.greatTraitRecords[`trait${z-1}`].name === "") {
-              manipulateTrait.modifyTraitRecord("delete",z);
-            }
-          }
-        }
+        //Correct/store trait levels, create the trait box, and then populate it with trait options
+        manipulateTrait.modifyTraitLevels(i,trait1Path,trait2Path);
         megaBox.innerHTML += createHTML.traitBox(i);
         createHTML.populateGear(`trait${i}`,traits);
-        // readSelection(`trait${i}`).value = globalRecords.greatTraitRecords[`trait${i}`].name; //this might not work how I hope
-  
       }
-      for (let i=1;i<globalRecords.activeTraits;i++) { //Now that boxes are generated, fix their assigned values
-        //can't seem to save .value while actively modifying the innerHTML, else I'd call it in the earlier loop
-        readSelection(`trait${i}`).value = globalRecords.greatTraitRecords[`trait${i}`].name;
-        let traitName = globalRecords.greatTraitRecords[`trait${i}`].name;
-        let elemID = `trait${i}`;
-        let defaultPoints = 0;
-  
-        if (greatTableKnowerOfAll[traitName] > 0) { //If the selected trait IS intrinsic
-          defaultPoints = greatTableKnowerOfAll[traitName];
-          if (globalRecords.greatTraitRecords[elemID].default === 0) { //If it wasn't before
-            globalRecords.greatTraitRecords[elemID].default = defaultPoints;
-          }
-          else { //If it WAS
-            let intrinsicAdjustment = defaultPoints - globalRecords.greatTraitRecords[elemID].default;
-            if (intrinsicAdjustment<0){intrinsicAdjustment=0}
-            globalRecords.greatTraitRecords[elemID].level -= intrinsicAdjustment;
-          }
-        }
-        else { //If the trait is not intrinsic
-          defaultPoints = 0; //Then there is obv no default value
-          if (globalRecords.greatTraitRecords[elemID].default != defaultPoints) {//If used to be
-            globalRecords.greatTraitRecords[elemID].level -= globalRecords.greatTraitRecords[elemID].default; //Subtract old default to reduce level correctly
-            // globalRecords.greatTraitRecords[elemID].default = defaultPoints;
-            if (globalRecords.greatTraitRecords[elemID].level < 0) {globalRecords.greatTraitRecords[elemID].level = 0;} //Ensure level does not go negative
-          }
-        }
-        //Make sure the level is not lower than the default, if we do then it makes sure Spent can't be negative as well.
-        if (globalRecords.greatTraitRecords[elemID].level < defaultPoints) {globalRecords.greatTraitRecords[elemID].level = defaultPoints;}
-        //Assign default, spent, and level to the trait records.
-        globalRecords.greatTraitRecords[elemID].default = defaultPoints; //Assign w/e the resulting default value was
-        globalRecords.greatTraitRecords[elemID].spent = globalRecords.greatTraitRecords[elemID].level - globalRecords.greatTraitRecords[elemID].default;
-        globalRecords.greatTraitRecords[elemID].level = globalRecords.greatTraitRecords[elemID].spent + globalRecords.greatTraitRecords[elemID].default
-  
-        //If it matches a currently selected class trait
-        if ((globalRecords.greatTraitRecords[elemID].name===trait1Path && trait1Path != "") || (globalRecords.greatTraitRecords[elemID].name===trait2Path && trait2Path != "")) {
-          globalRecords.greatTraitRecords[elemID].default = 10;
-          globalRecords.greatTraitRecords[elemID].spent = 0;
-          globalRecords.greatTraitRecords[elemID].level = 10;
-        }
-        //If it matches the class trait that was in the slot just before then.
-        else if ((globalRecords.greatTraitRecords[elemID].name===classInfo[archetype1Olds].classTrait && classInfo[archetype1Olds].classTrait != "") || (globalRecords.greatTraitRecords[elemID].name===classInfo[archetype2Olds].classTrait && classInfo[archetype2Olds].classTrait != "")) {
-          if (globalRecords.greatTraitRecords[elemID].level===0 && (i===1 || i===2)) {
-            globalRecords.greatTraitRecords[elemID].name = "";
-            readSelection(elemID).value = "";
-            updateAgain = true;
-          }
-        }
-  
-        if (globalRecords.greatTraitRecords[elemID].name != "" && globalRecords.greatTraitRecords[elemID].level === 0) {
-          readSelection(`traitButtonMinus${i}`).innerHTML = `<img src="images/TrashIcon.png" class="traitButtonImage" alt="trash icon">`;
-        }
-        else if (globalRecords.greatTraitRecords[elemID].name != "" && globalRecords.greatTraitRecords[elemID].level === 10) {
-          readSelection(`traitButtonPlus${i}`).innerHTML = "";
-          readSelection(`traitButtonPlus${i}`).disabled = true;
-        }
-        if (globalRecords.greatTraitRecords[elemID].name != "" && globalRecords.greatTraitRecords[elemID].level === globalRecords.greatTraitRecords[elemID].default && globalRecords.greatTraitRecords[elemID].level != 0) {
-          readSelection(`traitButtonMinus${i}`).innerHTML = "";
-          readSelection(`traitButtonMinus${i}`).disabled = true;
-        }
-        if (globalRecords.greatTraitRecords[elemID].default > 0) {
-          readSelection(`trait${i}`).disabled = true;
-        }
-        //Then adjust bar width and level display.
-        readSelection(`trait${i}Intrinsic`).style.width = `${globalRecords.greatTraitRecords[elemID].default * 10}%`
-        readSelection(`trait${i}Spent`).style.width = `${globalRecords.greatTraitRecords[elemID].level * 10}%`
-        readSelection(`${elemID}Level`).innerHTML = globalRecords.greatTraitRecords[elemID].level
-      }
+      //Adjust traitbox html displays based on everything done thus far
+      manipulateTrait.modifyTraitHTML();
     }
-    else if (globalRecords.activeTraits===0) { //If we just loaded the page, make the first trait box.
-      manipulateTrait.modifyTraitRecord("create",1);
+    else if (globalRecords.greatTraitRecords.length===0) { //If we just loaded the page, make the first trait box.
+      manipulateTrait.modifyTraitRecord("create");
       megaBox.innerHTML = globalRecords.emptyTraitBoxHeader;
       megaBox.innerHTML += createHTML.traitBox(1);
       createHTML.populateGear("trait1",traits);
       //
     }
-  
-  if (updateAgain===true) {manipulateTrait.updateTraitCollection();} //Repeat if there would be multiple blank slots not handled this late
   manipulateTrait.generateTraitToggles();
   manipulateTrait.updateTraitPoints();
   },
@@ -443,7 +218,7 @@ let manipulateTrait = {
   generateTraitToggles() {
     let megaBox = readSelection("traitTogglesMegaBox");
     megaBox.innerHTML = "";
-    for (let i=1;i<=globalRecords.activeTraits;i++) {
+    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
       megaBox.innerHTML += createHTML.traitToggle(i);
     }
   },
@@ -452,46 +227,162 @@ let manipulateTrait = {
     let traitPoints = readSelection("traitCount");
     let traitCap = readSelection("traitCap");
     globalRecords.traitPointCount = 0;
-    for (let i=1;i<=globalRecords.activeTraits;i++) {
-      globalRecords.traitPointCount += globalRecords.greatTraitRecords[`trait${i}`].spent
+    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+      globalRecords.traitPointCount += globalRecords.greatTraitRecords[i-1].spent
     }
     traitPoints.innerHTML = globalRecords.traitPointCount;
     traitCap.innerHTML = globalRecords.traitPointCap;
   },
   //Used to either create, or delete an entry within greatTraitRecords
   modifyTraitRecord(action,ID,name,level,defaultPoints,spentPoints) {
+    //ID only used for deletion, can be put as anything during creation if custom values are passed
     if (action==="create") {
-      if (name==null) {name=""}
-      if (level==null) {level=0;}
-      if (defaultPoints==null) {defaultPoints=0}
-      if (spentPoints==null) {spentPoints=0}
-      globalRecords.greatTraitRecords[`trait${ID}`] = {
-        "name": name,
-        "level": level,
-        "default": defaultPoints,
-        "spent": spentPoints
-      }
-      globalRecords.activeTraits += 1;
+      globalRecords.greatTraitRecords.push({
+      "name": name = name ?? "",
+      "level": level = level ?? 0,
+      "default": defaultPoints = defaultPoints ?? 0,
+      "spent": spentPoints = spentPoints ?? 0})
     }
     else if (action==="delete") {
-      delete globalRecords.greatTraitRecords[`trait${ID}`];
-      globalRecords.activeTraits -= 1;
+      globalRecords.greatTraitRecords.splice(ID-1,1);
     }
     else {
       alert("modifyTraitRecord(): The action type was not specified.");
     }
   },
-  //Used within updateTraitCollection to shift trait entries up by one to make room for the newly inserted trait
-  insertTrait(traitName,traitLevel,defaultPoints) {
-    for (let i=globalRecords.activeTraits;i>1;i--) {
-      globalRecords.greatTraitRecords[`trait${i}`].name = globalRecords.greatTraitRecords[`trait${i-1}`].name;
-      globalRecords.greatTraitRecords[`trait${i}`].level = globalRecords.greatTraitRecords[`trait${i-1}`].level;
-      globalRecords.greatTraitRecords[`trait${i}`].spent = globalRecords.greatTraitRecords[`trait${i-1}`].spent;
-      globalRecords.greatTraitRecords[`trait${i}`].default = globalRecords.greatTraitRecords[`trait${i-1}`].default;
+  //Used in updateTraitCollection to prepend/move class specific traits, if they exist, to greatTraitRecords[0]
+  bumpTrait(check,trait) {
+    // check is a boolean for whether that trait should even be used or not.
+      if (check) {
+        let foundClassTrait = false;
+        let otherTrait = 0;
+        //Search the records and if we find a match that isn't the first, record what trait it is for later
+        for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+          let checkName = globalRecords.greatTraitRecords[i-1].name;
+          if (checkName===trait && i != 1){foundClassTrait=true;otherTrait=i-1;}
+        }
+        //If the first value isn't a match, and we didn't find it anywhere, then make it
+        if (globalRecords.greatTraitRecords[0].name != trait && !foundClassTrait) {
+          globalRecords.greatTraitRecords.unshift({"name": trait,"level": 0,"default": 0,"spent": 0});
+        }
+        //Else if the first value isn't a match, but we DID find it elsewhere, move it
+        else if (globalRecords.greatTraitRecords[0].name != trait && foundClassTrait) {
+          globalRecords.greatTraitRecords.unshift({
+            "name": trait,
+            "level": globalRecords.greatTraitRecords[otherTrait].level,
+            "default": globalRecords.greatTraitRecords[otherTrait].default,
+            "spent": globalRecords.greatTraitRecords[otherTrait].spent});
+          //+2 here as modifyTraitRecord already -1, else this would just be +1
+          manipulateTrait.modifyTraitRecord("delete",otherTrait+2);  
+        }
+      }
+  },
+  //Used in updateTraitCollection to modify/fill the html of traitboxes after they have been generated
+  modifyTraitHTML() {
+    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+      let recordPath = globalRecords.greatTraitRecords[i-1];
+      //can't seem to save .value while actively modifying the innerHTML, else I'd call it when the boxes were generated
+      readSelection(`trait${i}`).value = recordPath.name;
+      //If a name is filled but the level is 0, change - button to a trashcan icon
+      if (recordPath.name && recordPath.level === 0) {
+        readSelection(`traitButtonMinus${i}`).innerHTML = `<img src="images/TrashIcon.png" class="traitButtonImage" alt="trash icon">`;
+      }
+      //If a name is filled and the level is 10, disable the + button
+      else if (recordPath.name && recordPath.level === 10) {
+        readSelection(`traitButtonPlus${i}`).innerHTML = "";
+        readSelection(`traitButtonPlus${i}`).disabled = true;
+      }
+      //If a name is blank, disable both adjustment buttons.
+      else if (!recordPath.name) {
+        readSelection(`traitButtonPlus${i}`).innerHTML = "";
+        readSelection(`traitButtonPlus${i}`).disabled = true;
+        readSelection(`traitButtonMinus${i}`).innerHTML = "";
+        readSelection(`traitButtonMinus${i}`).disabled = true;
+      }
+      //If a name is filled, and the level is equal to the default level, disable the - button
+      if (recordPath.name && recordPath.level === recordPath.default && recordPath.level != 0) {
+        readSelection(`traitButtonMinus${i}`).innerHTML = "";
+        readSelection(`traitButtonMinus${i}`).disabled = true;
+      }
+      //If the default value of any given trait is greater than 0, lock the selector element
+      if (recordPath.default > 0) {
+        readSelection(`trait${i}`).disabled = true;
+      }
+      //Then adjust bar width and level display.
+      readSelection(`trait${i}Intrinsic`).style.width = `${recordPath.default * 10}%`
+      readSelection(`trait${i}Spent`).style.width = `${recordPath.level * 10}%`
+      readSelection(`trait${i}Level`).innerHTML = recordPath.level
     }
-    globalRecords.greatTraitRecords[`trait1`].name = traitName;
-    globalRecords.greatTraitRecords[`trait1`].level = traitLevel;
-    globalRecords.greatTraitRecords[`trait1`].default = defaultPoints;
+  },
+  //Used in updateTraitCollection to calculate the adjusted trait levels, accounting for archetype-provided levels.
+  modifyTraitLevels(entry,trait1Path,trait2Path) {
+    let recordPath = globalRecords.greatTraitRecords[entry-1];
+    let traitName = recordPath.name;
+    let defaultPoints = 0;
+
+    if (greatTableKnowerOfAll[traitName] > 0) { //If the selected trait IS intrinsic
+      defaultPoints = greatTableKnowerOfAll[traitName];
+      if (recordPath.default === 0) { //If it wasn't before
+        recordPath.default = defaultPoints;
+      }
+      else { //If it WAS
+        let intrinsicAdjustment = recordPath.default - defaultPoints;
+        if (intrinsicAdjustment < 0){
+          intrinsicAdjustment = 0;
+        }
+        recordPath.level -= intrinsicAdjustment;
+      }
+    }
+    else { //If the trait is not intrinsic
+      defaultPoints = 0; //Then there is obv no default value
+      if (recordPath.default != defaultPoints) {//If used to be
+        recordPath.level -= recordPath.default; //Subtract old default to reduce level correctly
+        recordPath.default = defaultPoints;
+        if (recordPath.level < 0) {recordPath.level = 0;} //Ensure level does not go negative
+      }
+    }
+    //Make sure the level is not lower than the default, if we do then it makes sure Spent can't be negative as well.
+    if (recordPath.level < defaultPoints) {recordPath.level = defaultPoints;}
+    //Assign default, spent, and level to the trait records.
+    recordPath.default = defaultPoints; //Assign w/e the resulting default value was
+    recordPath.spent = recordPath.level - recordPath.default;
+    recordPath.level = recordPath.spent + recordPath.default;
+    //If it matches a currently selected class trait
+    if ((recordPath.name===trait1Path && trait1Path) || (recordPath.name===trait2Path && trait2Path)) {
+      recordPath.default = 10;
+      recordPath.spent = 0;
+      recordPath.level = 10;
+    }
+  },
+  //Used in to handle any instance where the traits spent exceed the cap.
+  //Only used in imports at the moment as it's impossible to exceed it without modifying the URL
+  pointsOverLimit() {
+    //If the total spent points are over the trait, then go backwards, cutting off points
+    //Currently this is only used in imports, but since it is trait related I moved it here
+    if (globalRecords.traitPointCount > globalRecords.traitPointCap) {
+      let traitsOverCap = globalRecords.traitPointCount - globalRecords.traitPointCap;
+      let notifCount = globalRecords.traitPointCount;
+      let notifDiff = traitsOverCap;
+      if (traitsOverCap > 0) {
+        for (let i=globalRecords.greatTraitRecords.length;i>0;i-=1) {
+          let path = globalRecords.greatTraitRecords[i-1];
+          let currentLevel = path.level;
+          if (currentLevel >= traitsOverCap && currentLevel != 0 && traitsOverCap != 0) {
+            //Example: if the current level of 10 is greater than the diff over the cap 8
+            //then 10-8=2, the level is now 2 and the diff is now 0
+            path.level = currentLevel - traitsOverCap;
+            traitsOverCap = 0;
+          }
+          //But if the current level of 2 is less than the diff of 8, 8-2=6 the new diff, and current now 0
+          else if (currentLevel < traitsOverCap && traitsOverCap > 0 && currentLevel != 0 && traitsOverCap != 0) {
+            traitsOverCap -= currentLevel;
+            path.level = 0;
+          }
+        }
+        manipulateTrait.updateTraitCollection();//Update needed to adjust everything again based on what just happened
+        alert(`Traits spent(${notifCount}) EXCEEDED the cap(${globalRecords.traitPointCap}) by ${notifDiff} points.\nPoints have been REMOVED to bring you in line with the limit.\n\nThis can happen for one of two reasons:\n- You manually modified the URL. Don't.\n- You imported this build here from somewhere that does not enforce the trait cap.\n\nSOURCE: pointsOverLimit()`)
+      }
+      }
   }
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -515,43 +406,44 @@ let manipulateURL = {
       "adv": [],
       "s": ["s"]
     }
-    for (i=1;i<globalRecords.activeTraits;i++) {
-      let traitName = globalRecords.greatTraitRecords[`trait${i}`].name;
-      let traitLevel = globalRecords.greatTraitRecords[`trait${i}`].level;
+    let urlObject = globalRecords.urlObject;
+    for (i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+      let traitName = globalRecords.greatTraitRecords[i-1].name || "";
+      let traitLevel = globalRecords.greatTraitRecords[i-1].level || "";
       let concatenated = `${traitName}${traitLevel}`;
       globalRecords.urlObject.trait.push(concatenated)
     }
-    globalRecords.urlObject.archetype.push(readSelection("archetype1").value);
-    globalRecords.urlObject.archetype.push(readSelection("archetype2").value);
-    globalRecords.urlObject.archetype.push(readSelection("archetype1ability").value);
-    globalRecords.urlObject.archetype.push(readSelection("archetype2ability").value);
-    globalRecords.urlObject.armor.push(readSelection("helmetChoice").value);
-    globalRecords.urlObject.armor.push(readSelection("chestChoice").value);
-    globalRecords.urlObject.armor.push(readSelection("legChoice").value);
-    globalRecords.urlObject.armor.push(readSelection("handChoice").value);
-    globalRecords.urlObject.primary.push(readSelection("primary").value);
-    globalRecords.urlObject.primary.push(readSelection("rangedMutator1").value);
-    globalRecords.urlObject.primary.push(readSelection("rangedMod1").value);
-    globalRecords.urlObject.melee.push(readSelection("melee").value);
-    globalRecords.urlObject.melee.push(readSelection("meleeMutator").value);
+    urlObject.archetype.push(readSelection("archetype1").value);
+    urlObject.archetype.push(readSelection("archetype2").value);
+    urlObject.archetype.push(readSelection("archetype1ability").value);
+    urlObject.archetype.push(readSelection("archetype2ability").value);
+    urlObject.armor.push(readSelection("helmetChoice").value);
+    urlObject.armor.push(readSelection("chestChoice").value);
+    urlObject.armor.push(readSelection("legChoice").value);
+    urlObject.armor.push(readSelection("handChoice").value);
+    urlObject.primary.push(readSelection("primary").value);
+    urlObject.primary.push(readSelection("rangedMutator1").value);
+    urlObject.primary.push(readSelection("rangedMod1").value);
+    urlObject.melee.push(readSelection("melee").value);
+    urlObject.melee.push(readSelection("meleeMutator").value);
     // globalRecords.urlObject.melee.push(readSelection("meleeMod").value);
-    globalRecords.urlObject.secondary.push(readSelection("secondary").value);
-    globalRecords.urlObject.secondary.push(readSelection("rangedMutator2").value);
-    globalRecords.urlObject.secondary.push(readSelection("rangedMod2").value);
+    urlObject.secondary.push(readSelection("secondary").value);
+    urlObject.secondary.push(readSelection("rangedMutator2").value);
+    urlObject.secondary.push(readSelection("rangedMod2").value);
     for (i=1;i<=7;i++) {
-      globalRecords.urlObject.consumable.push(readSelection(`concoction${i}`).value)
+      urlObject.consumable.push(readSelection(`concoction${i}`).value)
     }
-    globalRecords.urlObject.consumable.push(readSelection("quickUse1").value);
-    globalRecords.urlObject.consumable.push(readSelection("quickUse2").value);
-    globalRecords.urlObject.consumable.push("");//For later when I add 2 more quickuse
-    globalRecords.urlObject.consumable.push("");
-    globalRecords.urlObject.accessory.push(readSelection("amulet").value);
+    urlObject.consumable.push(readSelection("quickUse1").value);
+    urlObject.consumable.push(readSelection("quickUse2").value);
+    urlObject.consumable.push("");//For later when I add 2 more quickuse
+    urlObject.consumable.push("");
+    urlObject.accessory.push(readSelection("amulet").value);
     for (i=1;i<=4;i++) {
-      globalRecords.urlObject.accessory.push(readSelection(`ring${i}`).value);
+      urlObject.accessory.push(readSelection(`ring${i}`).value);
     }
-    globalRecords.urlObject.relic.push(readSelection("relic").value);
+    urlObject.relic.push(readSelection("relic").value);
     for (i=1;i<=3;i++) {
-      globalRecords.urlObject.relic.push(readSelection(`fragment${i}`).value);
+      urlObject.relic.push(readSelection(`fragment${i}`).value);
     }
     manipulateURL.exportURLsetting("USEtoggledHead","settings");
     manipulateURL.exportURLsetting("USEtoggledChest","settings");
@@ -597,38 +489,38 @@ let manipulateURL = {
     manipulateURL.exportURLsetting("USEtoggledQuick2","settings");
     manipulateURL.exportURLsetting("USEtoggledQuick3","settings");
     manipulateURL.exportURLsetting("USEtoggledQuick4","settings");
-    for (let i=1;i<globalRecords.activeTraits;i++) {
+    for (let i=1;i<globalRecords.greatTraitRecords.length;i++) {
       manipulateURL.exportURLsetting(`USEtoggledTrait${i}`,"settings")
     }
-    globalRecords.urlObject.settings = globalRecords.urlObject.settings.replace(/\.?0+$/, '');
+    urlObject.settings = globalRecords.urlObject.settings.replace(/\.?0+$/, '');
   //Advanced Stats Settings
-    if (readSelection("complexInput").value != null && readSelection("complexInput").value != 0) {
-      globalRecords.urlObject.adv.push(readSelection("complexInput").value);
+    if (readSelection("complexInput").value) {
+      urlObject.adv.push(readSelection("complexInput").value);
     }
     else {globalRecords.urlObject.adv.push("")}
-    if (readSelection("isCoop").value != null && readSelection("isCoop").value != "Solo") {
-      globalRecords.urlObject.adv.push(readSelection("isCoop").value);
+    if (readSelection("isCoop").value && readSelection("isCoop").value != "Solo") {
+      urlObject.adv.push(readSelection("isCoop").value);
     }
     else {globalRecords.urlObject.adv.push("")}
-    if (readSelection("teamCount").value != null && readSelection("teamCount").value != 1) {
-      globalRecords.urlObject.adv.push(readSelection("teamCount").value);
+    if (readSelection("teamCount").value && readSelection("teamCount").value != 1) {
+      urlObject.adv.push(readSelection("teamCount").value);
     }
     else {globalRecords.urlObject.adv.push("")}
-    if (readSelection("minionCount").value != null && readSelection("minionCount").value != 0) {
-      globalRecords.urlObject.adv.push(readSelection("minionCount").value);
+    if (+readSelection("minionCount").value) {
+      urlObject.adv.push(readSelection("minionCount").value);
     }
     else {globalRecords.urlObject.adv.push("")}
-    if (readSelection("spiritHealerStacks").value != null && readSelection("spiritHealerStacks").value != 0) {
-      globalRecords.urlObject.adv.push(readSelection("spiritHealerStacks").value);
+    if (+readSelection("spiritHealerStacks").value) {
+      urlObject.adv.push(readSelection("spiritHealerStacks").value);
     }
     else {globalRecords.urlObject.adv.push("")}
-    globalRecords.urlObject.adv.push("");
+    urlObject.adv.push("");
     manipulateURL.exportURLsetting("includeREdamage","adv");
     manipulateURL.exportURLsetting("includeDMGKept","adv");
     manipulateURL.exportURLsetting("includeRelicHealing","adv");
     manipulateURL.exportURLsetting("includeShields","adv");
     //remove trailing 0's from the last parameter, helps clear the URL if no adv settings are active
-    globalRecords.urlObject.adv[5] = globalRecords.urlObject.adv[5].replace(/\.?0+$/, '');
+    urlObject.adv[5] = urlObject.adv[5].replace(/\.?0+$/, '');
 
   //Delete a given parameter if it stores no values, to reduce URL length
     manipulateURL.urlParamIsEmpty("trait");
@@ -644,7 +536,7 @@ let manipulateURL = {
     manipulateURL.urlParamIsEmpty("adv");
 
     if (isExported != true) {
-      const params = new URLSearchParams(globalRecords.urlObject);
+      const params = new URLSearchParams(urlObject);
       decoded = params.toString();
       decoded = decoded.replace(/%2C/g, ',');
       const newUrl = `${window.location.origin}/index.html?${decoded}`;
@@ -654,7 +546,7 @@ let manipulateURL = {
   //Used in updateURLparameters for shorthand checks when generating binary settings to the URL
   exportURLsetting(checkBoxID,objElement) {
     if (objElement != "adv") {
-      if (readSelection(checkBoxID) != null && readSelection(checkBoxID).checked === true) {
+      if (readSelection(checkBoxID)?.checked === true) {
         globalRecords.urlObject[objElement] += "1";
       }
       else if (readSelection(checkBoxID) === null || readSelection(checkBoxID).checked === false) {
@@ -662,7 +554,7 @@ let manipulateURL = {
       }
     }
     else {
-      if (readSelection(checkBoxID) != null && readSelection(checkBoxID).checked === true) {
+      if (readSelection(checkBoxID)?.checked === true) {
         globalRecords.urlObject.adv[5] += "1";
       }
       else if (readSelection(checkBoxID) === null || readSelection(checkBoxID).checked === false) {
@@ -672,13 +564,14 @@ let manipulateURL = {
   },
   //Used in updateURLparameters() to delete a given parameter if it is empty, to reduce URL length
   urlParamIsEmpty(objElement) {
-    if (globalRecords.urlObject[objElement] === null || globalRecords.urlObject[objElement] === "" || globalRecords.urlObject[objElement].length === 0) {
+    if (!globalRecords.urlObject[objElement]) {
+      console.log("hi: " + objElement)
       delete globalRecords.urlObject[objElement];
     }
     else{
       let foundValue = false;
       for (i=0;i<globalRecords.urlObject[objElement].length;i++) {
-        if (globalRecords.urlObject[objElement][i] != null && globalRecords.urlObject[objElement][i] != ``) {foundValue=true;break;}
+        if (globalRecords.urlObject[objElement][i]) {foundValue=true;break;}
       }
       if (foundValue===false) {
         delete globalRecords.urlObject[objElement];
@@ -722,205 +615,183 @@ let manipulateURL = {
     let urlSource = feed.get("s");
     let invalidEntries = [];
   //TRAITS
-    if (urlTraits != null) {
+    if (urlTraits) {
         urlTraits = urlTraits.split(",")
-        let traitCounter = 1;
         for (traitors of urlTraits) {
             let traitLevel = traitors.replace(/[^0-9]/g,"");
             let traitName = traitors.replace(/[0-9]/g,"");
             //If the trait name was read invalid, push the name to invalidEntries to display later
-            if (traits[traitName] === undefined) {
+            if (!traits[traitName]) {
               invalidEntries.push(traitName);
             }
-            else if (traitName != "" && traitName != null){
+            else if (traitName){
               //If an import level is greater than 10, reduce to 10
-              if (traitLevel > 10) {traitLevel=10;}
+              traitLevel = Math.min(traitLevel, 10);
               //Don't need to check for less than 0, or round. A decimal or a - would be invalid.
-              manipulateTrait.modifyTraitRecord("create",traitCounter,traitName,traitLevel);
-              traitCounter += 1;
+              manipulateTrait.modifyTraitRecord("create",0,traitName,traitLevel);
             }
         }
     }
     manipulateTrait.updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
-    //Also, for the sake of imports with more than the trait cap, need to establish default points now for later
+    //We call it before archs so when archs ARE called, they can factor default points into the trait math.
     //ARCHETYPES AND ABILITIES
-    if (urlArchs != null) {
+    if (urlArchs) {
       urlArchs = urlArchs.split(",");
       //Check arch1 and ability
       if (classInfo[urlArchs[0]] === undefined) {invalidEntries.push(urlArchs[0]);}
-      else if (urlArchs[0] != "" && urlArchs[0] != null) {
+      else if (urlArchs[0]) {
         readSelection("archetype1").value = urlArchs[0];
         userTrigger.updateArchetype('archetype','1');
         if (classInfo[urlArchs[0]].abilities[urlArchs[2]] === undefined) {invalidEntries.push(urlArchs[2]);}
-        else if (urlArchs[2] != "" && urlArchs[2] != null) {
+        else if (urlArchs[2]) {
           readSelection("archetype1ability").value = urlArchs[2];
           userTrigger.updateAbility('archetype1');
         }
       }
       //Check arch2 and ability
       if (classInfo[urlArchs[1]] === undefined) {invalidEntries.push(urlArchs[1]);}
-      else if (urlArchs[1] != "" && urlArchs[1] != null) {
+      else if (urlArchs[1]) {
         readSelection("archetype2").value = urlArchs[1];
         userTrigger.updateArchetype('archetype','2');
         if (classInfo[urlArchs[1]].abilities[urlArchs[3]] === undefined) {invalidEntries.push(urlArchs[3]);}
-        else if (urlArchs[3] != "" && urlArchs[3] != null) {
+        else if (urlArchs[3]) {
           readSelection("archetype2ability").value = urlArchs[3];
           userTrigger.updateAbility('archetype2');
         }
       }
     }
-    //If an import has over the trait cap in points spent
-    if (urlTraits != null && globalRecords.traitPointCount > globalRecords.traitPointCap) {
-    let traitsOverCap = globalRecords.traitPointCount - globalRecords.traitPointCap;
-    if (traitsOverCap > 0) {
-      for (let i=globalRecords.activeTraits;i>0;i-=1) {
-        let currentImportLevel = globalRecords.greatTraitRecords[`trait${i}`].level;
-        if (currentImportLevel >= traitsOverCap && currentImportLevel != 0 && traitsOverCap != 0) {
-          //Example: if the current level of 10 is greater than the diff over the cap 8
-          // then 10-8=2, the level is now 2 and the diff is now 0
-          let importAdjustmentValue = currentImportLevel - traitsOverCap;
-          globalRecords.greatTraitRecords[`trait${i}`].level = importAdjustmentValue;
-          traitsOverCap = 0;
-        }
-        //But if the current level of 2 is less than the diff of 8, 8-2=6 the new diff, and current now 0
-        else if (currentImportLevel < traitsOverCap && traitsOverCap > 0 && currentImportLevel != 0 && traitsOverCap != 0) {
-          traitsOverCap -= currentImportLevel;
-          globalRecords.greatTraitRecords[`trait${i}`].level = 0;
-        }
-      }
-      manipulateTrait.updateTraitCollection();//Update needed to adjust everything again based on what just happened
-    }
-    }
+    // manipulateTrait.updateTraitCollection();
+    manipulateTrait.pointsOverLimit();//Trim points if cap exceeded
   //ARMOR
-    if (urlArmor != null) {
+    if (urlArmor) {
       urlArmor = urlArmor.split(",");
       if (helmets[urlArmor[0]] === undefined) {invalidEntries.push(urlArmor[0]);}
-      else if (urlArmor[0] != "" && urlArmor[0] != null) {
+      else if (urlArmor[0]) {
         readSelection("helmetChoice").value = urlArmor[0];
         userTrigger.updateArmor('helmet');
       }
       if (chests[urlArmor[1]] === undefined) {invalidEntries.push(urlArmor[1]);}
-      else if (urlArmor[1] != "" && urlArmor[1] != null) {
+      else if (urlArmor[1]) {
         readSelection("chestChoice").value = urlArmor[1];
         userTrigger.updateArmor('chest');
       }
       if (legs[urlArmor[2]] === undefined) {invalidEntries.push(urlArmor[2]);}
-      else if (urlArmor[2] != "" && urlArmor[2] != null) {
+      else if (urlArmor[2]) {
         readSelection("legChoice").value = urlArmor[2];
         userTrigger.updateArmor('leg');
       }
       if (hands[urlArmor[3]] === undefined) {invalidEntries.push(urlArmor[3]);}
-      else if (urlArmor[3] != "" && urlArmor[3] != null) {
+      else if (urlArmor[3]) {
         readSelection("handChoice").value = urlArmor[3];
         userTrigger.updateArmor('hand');
       }
     }
   //WEAPONS
-    if (urlPrimary != null) {
+    if (urlPrimary) {
       urlPrimary = urlPrimary.split(",");
       if (primary[urlPrimary[0]] === undefined) {invalidEntries.push(urlPrimary[0]);}
-      else if (urlPrimary[0] != "" && urlPrimary[0] != null) {
+      else if (urlPrimary[0]) {
         readSelection("primary").value = urlPrimary[0];
         userTrigger.updateWeapon('primary');
       }
       if (rangedMutators[urlPrimary[1]] === undefined) {invalidEntries.push(urlPrimary[1]);}
-      else if (urlPrimary[1] != "" && urlPrimary[1] != null) {
+      else if (urlPrimary[1]) {
         readSelection("rangedMutator1").value = urlPrimary[1];
         userTrigger.updateMutator('rangedMutator','1');
       }
       if (rangedMods[urlPrimary[2]] === undefined && primary[urlPrimary[0]].builtIN === "") {invalidEntries.push(urlPrimary[2]);}
-      else if (urlPrimary[2] != "" && urlPrimary[2] != null) {
+      else if (urlPrimary[2]) {
         readSelection("rangedMod1").value = urlPrimary[2];
         userTrigger.updateMod('rangedMod','1');
       }
     }
-    if (urlMelee != null) {
+    if (urlMelee) {
       urlMelee = urlMelee.split(",");
       if (melee[urlMelee[0]] === undefined) {invalidEntries.push(urlMelee[0]);}
-      else if (urlMelee[0] != "" && urlMelee[0] != null) {
+      else if (urlMelee[0]) {
         readSelection("melee").value = urlMelee[0];
         userTrigger.updateWeapon('melee');
       }
       if (meleeMutators[urlMelee[1]] === undefined) {invalidEntries.push(urlMelee[1]);}
-      else if (urlMelee[1] != "" && urlMelee[1] != null) {
+      else if (urlMelee[1]) {
         readSelection("meleeMutator").value = urlMelee[1];
         userTrigger.updateMutator('meleeMutator');
       }
     }
-    if (urlSecondary != null) {
+    if (urlSecondary) {
       urlSecondary = urlSecondary.split(",");
       if (secondary[urlSecondary[0]] === undefined) {invalidEntries.push(urlSecondary[0]);}
-      else if (urlSecondary[0] != "" && urlSecondary[0] != null) {
+      else if (urlSecondary[0]) {
         readSelection("secondary").value = urlSecondary[0];
         userTrigger.updateWeapon('secondary');
       }
       if (rangedMutators[urlSecondary[1]] === undefined) {invalidEntries.push(urlSecondary[1]);}
-      else if (urlSecondary[1] != "" && urlSecondary[1] != null) {
+      else if (urlSecondary[1]) {
         readSelection("rangedMutator2").value = urlSecondary[1];
         userTrigger.updateMutator('rangedMutator','2');
       }
       if (rangedMods[urlSecondary[2]] === undefined && secondary[urlSecondary[0]].builtIN === "") {invalidEntries.push(urlSecondary[2]);}
-      else if (urlSecondary[2] != "" && urlSecondary[2] != null) {
+      else if (urlSecondary[2]) {
         readSelection("rangedMod2").value = urlSecondary[2];
         userTrigger.updateMod('rangedMod','2');
       }
     }
   //AMULET AND RINGS
-    if (urlAccessory != null) {
+    if (urlAccessory) {
       urlAccessory = urlAccessory.split(",");
       if (amulets[urlAccessory[0]] === undefined) {invalidEntries.push(urlAccessory[0]);}
-      else if (urlAccessory[0] != "" && urlAccessory[0] != null) {
+      else if (urlAccessory[0]) {
         readSelection("amulet").value = urlAccessory[0];
         userTrigger.updateAccessory('amulet');
       }
       for (let i=1;i<=4;i++) {
         if (rings[urlAccessory[i]] === undefined) {invalidEntries.push(urlAccessory[i]);}
-        else if (urlAccessory[i] != "" && urlAccessory[i] != null) {
+        else if (urlAccessory[i]) {
           readSelection(`ring${i}`).value = urlAccessory[i];
           userTrigger.updateAccessory('ring',i);
         }
       }
     }
   //CONCOCTIONS AND QUICK USE CONSUMABLES
-    if (urlConcoctions != null) {
+    if (urlConcoctions) {
       updateFormulas();
       urlConcoctions = urlConcoctions.split(",");
       for (let i=0;i<globalRecords.totalConcLimit;i++) {
         if (concoctions[urlConcoctions[i]] === undefined) {invalidEntries.push(urlConcoctions[i]);}
-        else if (urlConcoctions[i] != "" && urlConcoctions[i] != null) {
+        else if (urlConcoctions[i]) {
           readSelection(`concoction${i+1}`).value = urlConcoctions[i];
           userTrigger.updateConsumable('concoction',i+1);
         }
       }
       if (quickUses[urlConcoctions[7]] === undefined) {invalidEntries.push(urlConcoctions[7]);}
-      else if (urlConcoctions[7] != "" && urlConcoctions[7] != null) {
+      else if (urlConcoctions[7]) {
         readSelection(`quickUse1`).value = urlConcoctions[7];
         userTrigger.updateConsumable('quickUse',1);
       }
       if (quickUses[urlConcoctions[8]] === undefined) {invalidEntries.push(urlConcoctions[8]);}
-      else if (urlConcoctions[8] != "" && urlConcoctions[8] != null) {
+      else if (urlConcoctions[8]) {
         readSelection(`quickUse2`).value = urlConcoctions[8];
         userTrigger.updateConsumable('quickUse',2);
       }
     }
   //RELIC AND FRAGMENTS
-    if (urlRelic != null) {
+    if (urlRelic) {
       urlRelic = urlRelic.split(",");
       if (relics[urlRelic[0]] === undefined) {invalidEntries.push(urlRelic[0]);}
-      else if (urlRelic[0] != "" && urlRelic[0] != null) {
+      else if (urlRelic[0]) {
         readSelection("relic").value = urlRelic[0];
         userTrigger.updateAccessory('relic');
       }
       for (let i=1;i<=3;i++) {
         if (fragments[urlRelic[i]] === undefined) {invalidEntries.push(urlRelic[i]);}
-        else if (urlRelic[i] != "" && urlRelic[i] != null) {
+        else if (urlRelic[i]) {
           readSelection(`fragment${i}`).value = urlRelic[i];
           userTrigger.updateFragment('fragment',i);
         }
       }
     }
   //SETTINGS
-    if (urlSettings != null) {
+    if (urlSettings) {
       manipulateURL.importURLsetting("USEtoggledHead",urlSettings[0]);
       manipulateURL.importURLsetting("USEtoggledChest",urlSettings[1]);
       manipulateURL.importURLsetting("USEtoggledLegs",urlSettings[2]);
@@ -965,27 +836,27 @@ let manipulateURL = {
       manipulateURL.importURLsetting("USEtoggledQuick2",urlSettings[41]);
       //42
       //43 for the other two quick use that I don't have yet
-      for (let i=1;i<globalRecords.activeTraits;i++) {
+      for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
         manipulateURL.importURLsetting(`USEtoggledTrait${i}`,urlSettings[43+i]);
       }
       updateFormulas();
     }
   //ADVANCED STATS LOGGING
-    if (urlAdvanced != null) {
+    if (urlAdvanced) {
       urlAdvanced = urlAdvanced.split(",");
-      if (urlAdvanced[0] != null && urlAdvanced[0] != "") {
+      if (urlAdvanced[0]) {
         readSelection("complexInput").value = urlAdvanced[0];
       }
-      if (urlAdvanced[1] != null && urlAdvanced[1] != "") {
+      if (urlAdvanced[1]) {
         readSelection("isCoop").value = urlAdvanced[1];
       }
-      if (urlAdvanced[2] != null && urlAdvanced[2] != "") {
+      if (urlAdvanced[2]) {
         readSelection("teamCount").value = urlAdvanced[2];
       }
-      if (urlAdvanced[3] != null && urlAdvanced[3] != "") {
+      if (urlAdvanced[3]) {
         readSelection("minionCount").value = urlAdvanced[3];
       }
-      if (urlAdvanced[4] != null && urlAdvanced[4] != "") {
+      if (urlAdvanced[4]) {
         readSelection("spiritHealerStacks").value = urlAdvanced[4];
       }
       manipulateURL.importURLsetting("includeREdamage",urlAdvanced[5][0]);
@@ -995,20 +866,21 @@ let manipulateURL = {
       updateFormulas();
     }
   //Last updateFormulas for good measure, if feed exists and isn't just the source
-    if (feed != null && feed != "s=s") {
+    if (feed && feed != "s=s") {
       updateFormulas();
     }
   //CHECK SOURCE PARAM IS MISSING, SO WE CAN NOTIFY PEEPS COMING FROM R2TK
-    if (urlSource != "s" && feed != null && feed != "") {
+  console.log(urlSource)
+    if (urlSource != "s" && feed) {
       alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
     }
-    if (invalidEntries != "" && invalidEntries != null) {
+    if (invalidEntries.length) {
       manipulateURL.excludeAlert(invalidEntries);
     }
   },
   //Used in importURLparameters for shorthand checks
   importURLsetting(checkBoxID,arrayIDvalue) {
-    if (arrayIDvalue != null && arrayIDvalue === "1") {
+    if (arrayIDvalue && arrayIDvalue === "1") {
       readSelection(checkBoxID).checked = true;
     }
   },
@@ -1057,19 +929,24 @@ let userTrigger = {
       readSelection("meleeStat8").innerHTML = weaponObjectReference.critChance;
       readSelection("meleeStat9").innerHTML = weaponObjectReference.weakSpot;
       readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
-      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
-      readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
-      readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
-      readSelection("meleeModDesc").innerHTML = userTrigger.updateSubstatColor(builtInMelee[weaponObjectReference.builtIN].desc);
+      if (weaponObjectReference.builtIN) {
+        readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
+        readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
+        readSelection("meleeModDesc").innerHTML = userTrigger.updateSubstatColor(builtInMelee[weaponObjectReference.builtIN].desc);
+      }
+      else {
+        readSelection("meleeMod").innerHTML = "";
+        readSelection("meleeModImage").src = builtInMelee[""].image;
+        readSelection("meleeModDesc").innerHTML = "";
       }
     }
     else if (type==="primary") {
       let path = readSelection("rangedMod1");
-      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
+      if (weaponObjectReference.builtIN) {
         if (path.length > Object.keys(rangedMods).length) {
           //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
           for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
-            if (builtInPrimary[path.options[i].innerHTML] != "" && builtInPrimary[path.options[i].innerHTML] != null) {
+            if (builtInPrimary[path.options[i].innerHTML]) {
               path.remove(i);
               break;
             }
@@ -1090,7 +967,7 @@ let userTrigger = {
         path.disabled = false;
         if (path.length > Object.keys(rangedMods).length) {
           for (i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
-            if (builtInPrimary[path.options[i].innerHTML] != "" && builtInPrimary[path.options[i].innerHTML] != null) {
+            if (builtInPrimary[path.options[i].innerHTML]) {
               path.remove(i);
               break;
             }
@@ -1104,11 +981,11 @@ let userTrigger = {
     }
     else if (type==="secondary") {
       let path = readSelection("rangedMod2");
-      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
+      if (weaponObjectReference.builtIN) {
         if (path.length > Object.keys(rangedMods).length) {
           //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
           for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
-            if (builtInSecondary[path.options[i].innerHTML] != "" && builtInSecondary[path.options[i].innerHTML] != null) {
+            if (builtInSecondary[path.options[i].innerHTML]) {
               path.remove(i);
               break;
             }
@@ -1129,7 +1006,7 @@ let userTrigger = {
         path.disabled = false;
         if (path.length > Object.keys(rangedMods).length) {
           for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
-            if (builtInSecondary[path.options[i].innerHTML] != "" && builtInSecondary[path.options[i].innerHTML] != null) {
+            if (builtInSecondary[path.options[i].innerHTML]) {
               path.remove(i);
               break;
             }
@@ -1191,8 +1068,7 @@ let userTrigger = {
   //Triggers whenever a new amu/ring/relic is selected
   updateAccessory(type,place) {
     let jsonID = `${type}s`;
-    let modifier = "";
-    if (place!=null){modifier=place;}
+    let modifier = place ?? "";
     let selectedValue = readSelection(`${type}${modifier}`).value;
     //Update accessory image, description, and then refresh formulas.
     readSelection(`${type}${modifier}Image`).src=gear[jsonID][selectedValue].image;
@@ -1221,15 +1097,16 @@ let userTrigger = {
     //needed to populate info on first ability that populates selection by default
     userTrigger.updateAbility(overArchetype);
     //Populate passive names
-    readSelection(`${overArchetype}passive1`).innerHTML=classInfo[selectedArchetype].passives.passive1.name;
-    readSelection(`${overArchetype}passive2`).innerHTML=classInfo[selectedArchetype].passives.passive2.name;
-    readSelection(`${overArchetype}passive3`).innerHTML=classInfo[selectedArchetype].passives.passive3.name;
-    readSelection(`${overArchetype}passive4`).innerHTML=classInfo[selectedArchetype].passives.passive4.name;
+    let classPassivePath = classInfo[selectedArchetype].passives;
+    readSelection(`${overArchetype}passive1`).innerHTML=classPassivePath.passive1.name;
+    readSelection(`${overArchetype}passive2`).innerHTML=classPassivePath.passive2.name;
+    readSelection(`${overArchetype}passive3`).innerHTML=classPassivePath.passive3.name;
+    readSelection(`${overArchetype}passive4`).innerHTML=classPassivePath.passive4.name;
     //Populate passive descriptions
-    readSelection(`${overArchetype}passive1desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive1.desc);
-    readSelection(`${overArchetype}passive2desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive2.desc);
-    readSelection(`${overArchetype}passive3desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive3.desc);
-    readSelection(`${overArchetype}passive4desc`).innerHTML=userTrigger.updateSubstatColor(classInfo[selectedArchetype].passives.passive4.desc);
+    readSelection(`${overArchetype}passive1desc`).innerHTML=userTrigger.updateSubstatColor(classPassivePath.passive1.desc);
+    readSelection(`${overArchetype}passive2desc`).innerHTML=userTrigger.updateSubstatColor(classPassivePath.passive2.desc);
+    readSelection(`${overArchetype}passive3desc`).innerHTML=userTrigger.updateSubstatColor(classPassivePath.passive3.desc);
+    readSelection(`${overArchetype}passive4desc`).innerHTML=userTrigger.updateSubstatColor(classPassivePath.passive4.desc);
     //Update traits based on class selection
     manipulateTrait.updateTraitCollection(globalRecords.archetype1Old,globalRecords.archetype2Old);
     //Check if this selection was a duplicate, and if it was, swap places with the old info.
@@ -1256,11 +1133,11 @@ let userTrigger = {
   },
   //Triggers trait updates based on newly selected trait and associate level.
   //Also prevents items from going above 85 total points spent.
-  updateTrait(collection,elemID,adjustment) {
-    let traitName = readSelection(`${collection}${elemID}`).value;
-    let totalPoints = globalRecords.greatTraitRecords[`${collection}${elemID}`].level
+  updateTrait(elemID,adjustment) {
+    let traitName = readSelection(`trait${elemID}`).value;
+    let totalPoints = globalRecords.greatTraitRecords[elemID-1].level
   //Checks if trait selected is blank. If it is, skip pretty much everything.
-  if (traitName!=""){
+  if (traitName){
     let change = adjustment != null;
     //If a button was used, adjust values accordingly
     if (change===true) {
@@ -1268,13 +1145,13 @@ let userTrigger = {
         if (totalPoints != 10 && globalRecords.traitPointCount != globalRecords.traitPointCap) {totalPoints += 1};
       } else if (adjustment==="-") {
         if (totalPoints != 0) {totalPoints -= 1}
-        else {readSelection(`${collection}${elemID}`).value = "";}
+        else {readSelection(`trait${elemID}`).value = "";}
       }
     if (totalPoints>=10) {totalPoints = 10}
     }
   }
-  globalRecords.greatTraitRecords[`${collection}${elemID}`].name = readSelection(`${collection}${elemID}`).value;
-  globalRecords.greatTraitRecords[`${collection}${elemID}`].level = totalPoints;
+  globalRecords.greatTraitRecords[elemID-1].name = readSelection(`trait${elemID}`).value;
+  globalRecords.greatTraitRecords[elemID-1].level = totalPoints;
   //Dupe/swaps are not needed for traits as the dropdowns for them decrease with selections
   //Finally, update formulas based on the newly displayed values for this trait
   manipulateTrait.updateTraitCollection()
@@ -1293,7 +1170,7 @@ let userTrigger = {
         if (option1===`${collection}1`) {option2=`${collection}2`;oppositeValue = `2`;}
         else {option2=`${collection}1`;oppositeValue = `1`;}
         //If the selection matches the opposing selection, swap places like in game
-        if (selectedOption===readSelection(option2).value && readSelection(option2).value!="") {
+        if (selectedOption===readSelection(option2).value && readSelection(option2).value) {
           globalRecords[`${option2}Old`]=globalRecords[`${option1}Old`];
           readSelection(option2).value=globalRecords[`${option1}Old`];
           updateOpposing = true;
@@ -1304,7 +1181,7 @@ let userTrigger = {
             let current = readSelection(`${collection}${i}`).value;
             //Checks ID's on ACTIVE selections for a dupe, non-matching ID, that isn't blank.
             //If criteria met, swap places like in game.
-            if ((current===selectedOption) && ((`${collection}${i}`)!=(`${collection}${value}`)) && (current!="")) {
+            if ((current===selectedOption) && ((`${collection}${i}`)!=(`${collection}${value}`)) && current) {
               globalRecords[`${collection}${i}Old`]=globalRecords[`${collection}${value}Old`];
               readSelection(`${collection}${i}`).value=globalRecords[`${collection}${value}Old`];
               oppositeValue = i;
@@ -1399,10 +1276,10 @@ let formulasValues = {
     readSelection("toggledQuick1").innerHTML = readSelection("quickUse1").value
     readSelection("toggledQuick2").innerHTML = readSelection("quickUse2").value
     //Only check as many traits are generated
-    for (let i=1;i<=globalRecords.activeTraits;i++) {
-      let traitLevel = globalRecords.greatTraitRecords[`trait${i}`].level;
-      if (traitLevel === 0) {traitLevel=""}
-      readSelection(`toggledTrait${i}`).innerHTML = `${globalRecords.greatTraitRecords[`trait${i}`].name} ${traitLevel}`
+    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+      let traitLevel = globalRecords.greatTraitRecords[i-1].level;
+      if (!traitLevel) {traitLevel=""}
+      readSelection(`toggledTrait${i}`).innerHTML = `${globalRecords.greatTraitRecords[i-1].name} ${traitLevel}`
     }
   },
   //Used in updateFormulas() to fill consumable values on the master table
@@ -1425,7 +1302,7 @@ let formulasValues = {
         concoction.style.backgroundColor = "#d9d9d9";
         if (readSelection(`USEtoggledConc${i}`).checked != true) {
           formulasValues.pullStats(concoctions[concoction.value].stats);
-          if (concoctions[concoction.value].custom != null) {
+          if (concoctions[concoction.value].custom) {
             customItemFunctions[concoctions[concoction.value].custom]();
           }
         }
@@ -1442,13 +1319,13 @@ let formulasValues = {
   //Quick-Use Consumables
     if (readSelection(`USEtoggledQuick1`).checked != true) {
       formulasValues.pullStats(quickUses[quickUse1.value].stats);
-      if (quickUses[readSelection(`quickUse1`).value].custom != null) {
+      if (quickUses[readSelection(`quickUse1`).value].custom) {
         customItemFunctions[quickUses[readSelection(`quickUse1`).value].custom]();
       }
     }
     if (readSelection(`USEtoggledQuick2`).checked != true) {
       formulasValues.pullStats(quickUses[quickUse2.value].stats);
-      if (quickUses[readSelection(`quickUse2`).value].custom != null) {
+      if (quickUses[readSelection(`quickUse2`).value].custom) {
         customItemFunctions[quickUses[readSelection(`quickUse2`).value].custom]();
       }
     }
@@ -1468,19 +1345,19 @@ let formulasValues = {
   //Weapons
     if (readSelection(`USEtoggledPrimary`).checked != true) {
       formulasValues.pullStats(weapons.primary[primaryWeapon.value].stats);
-      if (primary[readSelection(`primary`).value].custom != null) {
+      if (primary[readSelection(`primary`).value].custom) {
         customItemFunctions[primary[readSelection(`primary`).value].custom]();
       }
     }
     if (readSelection(`USEtoggledMelee`).checked != true) {
       formulasValues.pullStats(weapons.melee[meleeWeapon.value].stats);
-      if (melee[readSelection(`melee`).value].custom != null) {
+      if (melee[readSelection(`melee`).value].custom) {
         customItemFunctions[melee[readSelection(`melee`).value].custom]();
       }
     }
     if (readSelection(`USEtoggledSecondary`).checked != true) {
       formulasValues.pullStats(weapons.secondary[secondaryWeapon.value].stats);
-      if (secondary[readSelection(`secondary`).value].custom != null) {
+      if (secondary[readSelection(`secondary`).value].custom) {
         customItemFunctions[secondary[readSelection(`secondary`).value].custom]();
       }
     }
@@ -1500,14 +1377,14 @@ let formulasValues = {
     if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
       formulasValues.pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
     }
-    else if (checkWeaponPath.builtIN != ""){
+    else if (checkWeaponPath.builtIN){
       formulasValues.pullStats(mods.builtInPrimaryMods[primaryWeaponMod.value].stats);
     }
   }
   if (readSelection(`USEtoggledmMod`).checked != true) {
     let checkWeaponPath = weapons.melee[meleeWeapon.value]
     //melee have no optional mods, all built-in
-    if (checkWeaponPath.builtIN != ""){
+    if (checkWeaponPath.builtIN){
       formulasValues.pullStats(mods.builtInMeleeMods[meleeWeaponMod.innerHTML].stats);
     }
   }
@@ -1516,7 +1393,7 @@ let formulasValues = {
     if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
       formulasValues.pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
     }
-    else if (checkWeaponPath.builtIN != ""){
+    else if (checkWeaponPath.builtIN){
       formulasValues.pullStats(mods.builtInSecondaryMods[secondaryWeaponMod.value].stats);
     }
   }
@@ -1525,9 +1402,9 @@ let formulasValues = {
   //Utilizes toggle states
   pullTraits () {
     //Yoink all active trait values
-    for (let i=1;i<=globalRecords.activeTraits;i++) {
-      let traitLevel = globalRecords.greatTraitRecords[`trait${i}`].level;
-      let traitPath = traits[globalRecords.greatTraitRecords[`trait${i}`].name];
+    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+      let traitLevel = globalRecords.greatTraitRecords[i-1].level;
+      let traitPath = traits[globalRecords.greatTraitRecords[i-1].name];
       let propertyArray = Array.isArray(traitPath.property);
       if (traitPath != undefined && readSelection(`USEtoggledTrait${i}`).checked != true) {
         if (traitPath.property != "REdamage" && traitPath.property != "DMGKept" && propertyArray === false) {
@@ -1538,11 +1415,12 @@ let formulasValues = {
           //put these two types into their respective multiplicative arrays
         }
         else if (propertyArray === true) {
-          for (i=0;i<=traitPath.property.length;i++)
+          for (i=0;i<=traitPath.property.length;i++) {
           greatTableKnowerOfAll[traitPath.property[i]] += traitPath.level[traitLevel];
+          }
         }
-        if (traitPath.custom != null) {
-          customItemFunctions[traits[globalRecords.greatTraitRecords[`trait${i}`].name].custom]();
+        if (traitPath.custom) {
+          customItemFunctions[traits[globalRecords.greatTraitRecords[i-1].name].custom]();
         }
       }
     }
@@ -1685,7 +1563,7 @@ let formulasValues = {
     //relicHPscaled and totalHealth are only used for when item is "relic"
     if (item==="amulet") {
       if (readSelection("USEtoggledAmulet").checked != true) {
-        if (amulets[readSelection(`amulet`).value].custom != null) {
+        if (amulets[readSelection(`amulet`).value].custom) {
           customItemFunctions.amulets[amulets[readSelection(`amulet`).value].custom]();
         }
       }
@@ -1693,7 +1571,7 @@ let formulasValues = {
     else if (item==="ring") {
       for (let i=1;i<=4;i++) {
         if (readSelection(`USEtoggledRing${i}`).checked != true) {
-        if (rings[readSelection(`ring${i}`).value].custom != null) {
+        if (rings[readSelection(`ring${i}`).value].custom) {
           customItemFunctions.rings[rings[readSelection(`ring${i}`).value].custom]();
         }
         }
@@ -1702,7 +1580,7 @@ let formulasValues = {
     else if (item==="relic") {
       let relicComplexArray;
       if (readSelection("USEtoggledRelic").checked != true) {
-        if (relics[readSelection(`relic`).value].custom != null) {
+        if (relics[readSelection(`relic`).value].custom) {
           readSelection("complexInput").disabled = false;
           relicComplexArray = customItemFunctions.relic[relics[readSelection(`relic`).value].custom](relicHPscaled,totalHealth);
         }
@@ -1726,7 +1604,7 @@ let formulasValues = {
       //Fragments
       for (let i=1;i<=3;i++) {
         if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
-        if (fragments[readSelection(`fragment${i}`).value].custom != null) {
+        if (fragments[readSelection(`fragment${i}`).value].custom) {
           customItemFunctions[fragments[readSelection(`fragment${i}`).value].custom]();
         }
         }
@@ -1740,32 +1618,32 @@ let formulasValues = {
       let ability2 = readSelection("archetype2ability").value;
       //Prime Perk
       if (readSelection(`USEtoggledPrimeP`).checked != true) {
-        if (path1.custom != null) {
-          path1["custom"]();
+        if (path1.custom) {
+        customItemFunctions[path1.custom]();
         }
       }
       //Archetype1
       if (readSelection(`USEtoggledAbility1`).checked != true) {
-        if (path1.abilities[ability1].custom != null) {
-          path1.abilities[ability1]["custom"]();
+        if (path1.abilities[ability1].custom) {
+          customItemFunctions[path1.abilities[ability1].custom]();
         }
       }
       for (let i=1;i<=4;i++) {
         if (readSelection(`USEtoggledPassive${i}`).checked != true) {
-          if (path1.passives[`passive${i}`].custom != null) {
+          if (path1.passives[`passive${i}`].custom) {
             customItemFunctions[path1.passives[`passive${i}`].custom]();
           }
         }
       }
       //Archetype2
       if (readSelection(`USEtoggledAbility2`).checked != true) {
-        if (path2.abilities[ability2].custom != null) {
-          path2.abilities[ability2]["custom"]();
+        if (path2.abilities[ability2].custom) {
+          customItemFunctions[path2.abilities[ability2].custom]();
         }
       }
       for (let i=1;i<=4;i++) {
         if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
-          if (path2.passives[`passive${i}`].custom != null) {
+          if (path2.passives[`passive${i}`].custom) {
             customItemFunctions[path2.passives[`passive${i}`].custom]();
           }
         }
@@ -1773,17 +1651,17 @@ let formulasValues = {
     }
     else if (item==="mutators") {
       if (readSelection(`USEtoggledpMutator`).checked != true) {
-        if (mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom != null) {
+        if (mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom) {
           customItemFunctions.mutators[mutators.primaryMutators[readSelection(`rangedMutator1`).value].custom]();
         }
       }
       if (readSelection(`USEtoggledmMutator`).checked != true) {
-        if (mutators.meleeMutators[readSelection(`meleeMutator`).value].custom != null) {
+        if (mutators.meleeMutators[readSelection(`meleeMutator`).value].custom) {
           customItemFunctions.mutators[mutators.meleeMutators[readSelection(`meleeMutator`).value].custom]();
         }
       }
       if (readSelection(`USEtoggledsMutator`).checked != true) {
-        if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom != null) {
+        if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom) {
           customItemFunctions.mutators[mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom]();
         }
       }
@@ -1795,13 +1673,13 @@ let formulasValues = {
         let primaryWeaponMod = readSelection(`rangedMod1`);
         let checkWeaponPath = weapons.primary[primaryWeapon.value];
         if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
-          if (mods.primaryMods[primaryWeaponMod.value].custom != null) {
+          if (mods.primaryMods[primaryWeaponMod.value].custom) {
             customItemFunctions[mods.primaryMods[primaryWeaponMod.value].custom]();
           }
         }
         //If the Primary weapon has a built-in mod
-        else if (checkWeaponPath.builtIN != ""){
-          if (mods.builtInPrimaryMods[primaryWeaponMod.value].custom != null) {
+        else if (checkWeaponPath.builtIN){
+          if (mods.builtInPrimaryMods[primaryWeaponMod.value].custom) {
             customItemFunctions[mods.builtInPrimaryMods[primaryWeaponMod.value].custom]();
           }
         }
@@ -1812,13 +1690,13 @@ let formulasValues = {
         let meleeWeaponMod = readSelection(`meleeMod`); //not yet
         let checkWeaponPath = weapons.melee[meleeWeapon.value];
         if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
-          if (mods.meleeMods[meleeWeaponMod.value].custom != null) {
+          if (mods.meleeMods[meleeWeaponMod.value].custom) {
             customItemFunctions[mods.meleeMods[meleeWeaponMod.value].custom]();
           }
         }
         //If the Melee weapon has a built-in mod
-        else if (checkWeaponPath.builtIN != ""){
-          if (mods.builtInMeleeMods[meleeWeaponMod.innerHTML].custom != null) {
+        else if (checkWeaponPath.builtIN){
+          if (mods.builtInMeleeMods[meleeWeaponMod.innerHTML].custom) {
             customItemFunctions[mods.builtInMeleeMods[meleeWeaponMod.innerHTML].custom]();
           }
         }
@@ -1829,13 +1707,13 @@ let formulasValues = {
         let secondaryWeaponMod = readSelection(`rangedMod2`);
         let checkWeaponPath = weapons.secondary[secondaryWeapon.value];
         if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
-          if (mods.secondaryMods[secondaryWeaponMod.value].custom != null) {
+          if (mods.secondaryMods[secondaryWeaponMod.value].custom) {
             customItemFunctions[mods.secondaryMods[secondaryWeaponMod.value].custom]();
           }
         }
         //If the Secondary weapon has a built-in mod
-        else if (checkWeaponPath.builtIN != ""){
-          if (mods.secondaryMods[secondaryWeaponMod.value].custom != null) {
+        else if (checkWeaponPath.builtIN){
+          if (mods.secondaryMods[secondaryWeaponMod.value].custom) {
             customItemFunctions[mods.builtInSecondaryMods[secondaryWeaponMod.value].custom]();
           }
         }
@@ -1843,6 +1721,7 @@ let formulasValues = {
     }
   },
 }
+
 /* ---------------------------------------------------------------------------------------- */
 /* ---------------------- Custom, item-specific functions --------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
@@ -1852,7 +1731,7 @@ let customItemFunctions = {
     brewMasters() {
       for (let i=1;i<=7;i++) {
         let activeConcoction = readSelection(`concoction${i}`).value;
-        if (activeConcoction != null && activeConcoction != "") {
+        if (activeConcoction) {
           greatTableKnowerOfAll.FlatDR += 0.02;
         }
       }
@@ -1862,10 +1741,10 @@ let customItemFunctions = {
     },
     daredevil() {
       let armorMissing = 4;
-      if (readSelection("helmetChoice").value != "") {armorMissing -= 1;}
-      if (readSelection("chestChoice").value != "") {armorMissing -= 1;}
-      if (readSelection("legChoice").value != "") {armorMissing -= 1;}
-      if (readSelection("handChoice").value != "") {armorMissing -= 1;}
+      if (readSelection("helmetChoice").value) {armorMissing -= 1;}
+      if (readSelection("chestChoice").value) {armorMissing -= 1;}
+      if (readSelection("legChoice").value) {armorMissing -= 1;}
+      if (readSelection("handChoice").value) {armorMissing -= 1;}
       greatTableKnowerOfAll.AllDamage += 0.075 * armorMissing;
       greatTableKnowerOfAll.MovementSpeed += 0.03 * armorMissing;
       greatTableKnowerOfAll.FlatDR -= 0.05 * armorMissing;
@@ -2081,7 +1960,7 @@ let customItemFunctions = {
       let avgHPpSec = 0;
       //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
       //we will first check if the input is blank/0 before pulling either basic or complex stats.
-      if (inputValue != null && inputValue > 0) {
+      if (inputValue && inputValue > 0) {
         relicPercHPpSec = inputValue/20;
         relicHPpSec = (relicPercHPpSec/100) * totalHealth
         avgPercHPpSec = (relicHPscaled + inputValue)/25
@@ -2324,7 +2203,7 @@ else {//if null
 //for the sake of complex relic effects
 let relicComplexArray = formulasValues.callUniqueFunctions("relic",relicHPscaled,totalHealth);
 let useComplexValues = false;
-if (relicComplexArray != null && relicComplexArray != 0) {
+if (relicComplexArray) {
   if (relicComplexArray[0] > 0) {useComplexValues = true;}
 }
 
