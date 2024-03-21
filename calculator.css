@@ -1620,6 +1620,10 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     white-space: normal;
 }
+.modSelector:disabled {
+    color: black;
+    appearance: none;
+}
 .modHeader {
     width: 60%;
     height: 100%;

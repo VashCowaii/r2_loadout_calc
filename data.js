@@ -5932,14 +5932,7 @@ window.primary = {
 		"image": "images/Remnant/clear.png",
 		"desc": "",
 		"custom": null,
-		"stats": {}
-	},
-	"AS-10 \"Bulldog\"": {
-		"name": "AS-10 \"Bulldog\"",
-		"slot": "Primary",
-		"image": `./brotherLibrary/primaryImages/AS-10 _Bulldog_.png`,
-		"desc": "",
-		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Alpha / Omega": {
@@ -5948,6 +5941,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Alpha _ Omega.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Beta Ray",
 		"stats": {}
 	},
 	"Aphelion": {
@@ -5956,6 +5950,16 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Aphelion.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Supernova",
+		"stats": {}
+	},
+	"AS-10 \"Bulldog\"": {
+		"name": "AS-10 \"Bulldog\"",
+		"slot": "Primary",
+		"image": `./brotherLibrary/primaryImages/AS-10 _Bulldog_.png`,
+		"desc": "",
+		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Blackmaw AR-47": {
@@ -5964,6 +5968,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Blackmaw AR-47.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Chicago Typewriter": {
@@ -5972,6 +5977,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Chicago Typewriter.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Coach Gun": {
@@ -5980,6 +5986,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Coach Gun.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Corrupted Aphelion": {
@@ -5988,6 +5995,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Corrupted Aphelion.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Micronova",
 		"stats": {}
 	},
 	"Corrupted Arbalest": {
@@ -5996,6 +6004,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Corrupted Arbalest.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Guardian's Fury",
 		"stats": {}
 	},
 	"Corrupted Deceit": {
@@ -6004,6 +6013,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Corrupted Deceit.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Windfall",
 		"stats": {}
 	},
 	"Corrupted Merciless": {
@@ -6012,6 +6022,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Corrupted Merciless.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Bloodshot",
 		"stats": {}
 	},
 	"Corrupted Savior": {
@@ -6020,6 +6031,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Corrupted Savior.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Fusion Cannon",
 		"stats": {}
 	},
 	"Crescent Moon": {
@@ -6028,6 +6040,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Crescent Moon.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Moonlight Barrage",
 		"stats": {}
 	},
 	"Crossbow": {
@@ -6036,6 +6049,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Crossbow.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Deceit": {
@@ -6044,6 +6058,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Deceit.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Ouroboros",
 		"stats": {}
 	},
 	"Ford's Scattergun": {
@@ -6052,6 +6067,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Ford's Scattergun.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Huntmaster M1": {
@@ -6060,6 +6076,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Huntmaster M1.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Merciless": {
@@ -6068,6 +6085,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Merciless.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Bloodline",
 		"stats": {}
 	},
 	"Monarch": {
@@ -6076,6 +6094,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Monarch.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Chain of Command",
 		"stats": {}
 	},
 	"Nightfall": {
@@ -6084,6 +6103,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Nightfall.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Dreadwalker",
 		"stats": {}
 	},
 	"Plasma Cutter": {
@@ -6092,6 +6112,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Plasma Cutter.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Heat Sink",
 		"stats": {}
 	},
 	"Pulse Rifle": {
@@ -6108,6 +6129,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Repulsor.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Banish",
 		"stats": {}
 	},
 	"Royal Hunting Bow": {
@@ -6116,6 +6138,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Royal Hunting Bow.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Rusty Lever Action": {
@@ -6124,6 +6147,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Rusty Lever Action.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Sagittarius": {
@@ -6132,6 +6156,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Sagittarius.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Starfall",
 		"stats": {}
 	},
 	"Savior": {
@@ -6140,6 +6165,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Savior.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Shatterstar",
 		"stats": {}
 	},
 	"Sparkfire Shotgun": {
@@ -6148,6 +6174,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Sparkfire Shotgun.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Sporebloom": {
@@ -6156,6 +6183,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Sporebloom.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Spore Shot",
 		"stats": {}
 	},
 	"Starkiller": {
@@ -6164,6 +6192,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Starkiller.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Gravity Core",
 		"stats": {}
 	},
 	"Twisted Arbalest": {
@@ -6172,6 +6201,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Twisted Arbalest.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Guardian's Call",
 		"stats": {}
 	},
 	"Widowmaker": {
@@ -6180,6 +6210,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Widowmaker.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Wrangler 1860": {
@@ -6188,6 +6219,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/Wrangler 1860.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"XMG57 \"Bonesaw\"": {
@@ -6196,6 +6228,7 @@ window.primary = {
 		"image": "./brotherLibrary/primaryImages/XMG57 _Bonesaw_.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	}
 }
@@ -7110,6 +7143,7 @@ window.secondary = {
 		"image": "images/Remnant/clear.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Anguish": {
@@ -7118,6 +7152,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Anguish.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Loathe The Weak",
 		"stats": {}
 	},
 	"Bolt Driver": {
@@ -7126,6 +7161,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Bolt Driver.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Corrupted Cube Gun": {
@@ -7134,6 +7170,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Corrupted Cube Gun.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Cube Room",
 		"stats": {}
 	},
 	"Corrupted Meridian": {
@@ -7142,6 +7179,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Corrupted Meridian.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Deadpoint",
 		"stats": {}
 	},
 	"Corrupted Nebula": {
@@ -7150,6 +7188,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Corrupted Nebula.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Nano Phase",
 		"stats": {}
 	},
 	"Corrupted Rune Pistol": {
@@ -7158,6 +7197,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Corrupted Rune Pistol.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Death Brand",
 		"stats": {}
 	},
 	"Corrupted Sorrow": {
@@ -7166,6 +7206,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Corrupted Sorrow.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Will of the Wisp",
 		"stats": {}
 	},
 	"Cube Gun": {
@@ -7174,6 +7215,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Cube Gun.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Cube Shield",
 		"stats": {}
 	},
 	"Double Barrel": {
@@ -7182,6 +7224,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Double Barrel.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Enigma": {
@@ -7190,6 +7233,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Enigma.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Chaos Driver",
 		"stats": {}
 	},
 	"Hellfire": {
@@ -7198,6 +7242,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Hellfire.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Explosive Shot",
 		"stats": {}
 	},
 	"MP60-R": {
@@ -7206,6 +7251,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/MP60-R.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Meridian": {
@@ -7214,6 +7260,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Meridian.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Screamer",
 		"stats": {}
 	},
 	"Nebula": {
@@ -7222,6 +7269,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Nebula.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Nano Swarm",
 		"stats": {}
 	},
 	"Repeater Pistol": {
@@ -7230,6 +7278,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Repeater Pistol.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Rune Pistol": {
@@ -7238,6 +7287,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Rune Pistol.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Soul Brand",
 		"stats": {}
 	},
 	"Rupture Cannon": {
@@ -7246,6 +7296,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Rupture Cannon.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Rusty Repeater": {
@@ -7254,6 +7305,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Rusty Repeater.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Service Pistol": {
@@ -7262,6 +7314,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Service Pistol.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Silverback Model 500": {
@@ -7270,6 +7323,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Silverback Model 500.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Sorrow": {
@@ -7278,6 +7332,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Sorrow.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Eulogy",
 		"stats": {}
 	},
 	"Star Shot": {
@@ -7286,6 +7341,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Star Shot.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "Big Bang",
 		"stats": {}
 	},
 	"Sureshot": {
@@ -7294,6 +7350,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Sureshot.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Tech 22": {
@@ -7302,6 +7359,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Tech 22.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	},
 	"Western Classic": {
@@ -7310,6 +7368,7 @@ window.secondary = {
 		"image": "./brotherLibrary/secondaryImages/Western Classic.png",
 		"desc": "",
 		"custom": null,
+		"builtIN": "",
 		"stats": {}
 	}
 }
@@ -8044,6 +8103,168 @@ window.rangedMods = {
 		"stats": {}
 	}
 }
+window.builtInPrimary = {
+	"": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "images/Remnant/clear.png",
+		"desc": "",
+		"stats": {}
+	},
+	"Beta Ray": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Beta Ray.png",
+		"desc": "Brands a target for 30s. Branded enemies that die leave a Brand at their location. Reloading or Swapping detonates Brands dealing 675 damage. (Additional Brands 3 Max) on the same target deal 50% damage. Slain enemies return 15% of Ammo and Mod Power to the weapon.",
+		"stats": {}
+	},
+	"Supernova": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Supernova.png",
+		"desc": "Fires the compressed remains of a dying star. On contact or hit with the primary fire, Supernova explodes for 450 FIRE damage, and 1,050 BURNING damage over 10s to all targets within 4m. Striking the Supernova with Aphelion's primary fire increases its explosion radius by 25%, damage by 50%, and spawns a massive shockwave that deals 900 FIRE damage and also applies the initial BURNING amount.",
+		"stats": {}
+	},
+	"Micronova": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Micronova.png",
+		"desc": "Fires 5 shattered compressed remains of a dying star. On contact or when hit with the primary fire, Micronova explodes for 150 FIRE damage, and 1,050 BURNING damage over 10s to all targets within 2m. Striking the Micronova with Corrupted Aphelion's primary fire increases its explosion radius by 25%, damage by 50%, and spawns a shockwave that deals 300 FIRE damage, detonates any nearby Micronovas and applies the initial BURNING amount.",
+		"stats": {}
+	},
+	"Guardian's Fury": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Guardian's Fury.png",
+		"desc": "Imbues the Arbalest with the power of Yaesha's corrupted guardian, increases Fire Rate by 20%, reduces Recoil and Sway by 25% and each disc impact with an enemy explodes over 3.5m for 207 damage. Lasts 15s.",
+		"stats": {}
+	},
+	"Windfall": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Windfall.png",
+		"desc": "Fires a ring of spinning blades which penetrates targets as it travels up to 20m before returning to the weapon. While traveling, activating Windfall again causes the projectile to spin in place for up to 3s. Activating it once more will recall it. Enemies struck by the Windfall obtain Tainted Blood for 3s causing all attacks from Deceit to trigger as Weakspot hits.",
+		"stats": {}
+	},
+	"Bloodshot": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Bloodshot.png",
+		"desc": "While active, grants unlimited Reserve Ammo, increases Reload Speed by 50%, and shots apply 750 BLEEDING damage over 10s. If the entire magazine hits a Weakspot, Merciless will automatically perform a quick Reload. Lasts 13s.",
+		"stats": {}
+	},
+	"Fusion Cannon": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Fusion Cannon.png",
+		"desc": "Funnels all current Mod Charges into a powerful penetrating beam. The beam deals 300 damage and increases damage dealt, recoil, and beam thickness per Charge consumed. Max 5 Charges.",
+		"stats": {}
+	},
+	"Moonlight Barrage": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Moonlight Barrage.png",
+		"desc": "Empowers the Bow for 15s. Arrows apply Moonlight to enemies for 3s. Enemies struck by Crescent Moon while Moonlit release a Moon Essence which returns 1 arrow, heals 5% of Max Health, and grants 15% Fire and Reload Speed for 5s.Basic Shots automatically become Charged Shots. Perfect Shots fire two arrows.",
+		"stats": {}
+	},
+	"Ouroboros": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Ouroboros.png",
+		"desc": "Conjures 3 sword fragments that encircle the wielder for 30s. Performing a Melee Attack lets loose a Fragment which taints the blood of targets, causing all attacks from Deceit to register as Weakspot hits for a short period of time. Charge Melee Attacks fire all remaining Fragments at once.",
+		"stats": {}
+	},
+	"Bloodline": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Bloodline.png",
+		"desc": "Fires a devastating blast with penetrates through all enemies in its path. Dels 150 - 450 damage with a 25% Critical damage bonus, and 3x additional stagger. Bloodline damage increases by 50% for each enemy penetrated.",
+		"stats": {}
+	},
+	"Chain of Command": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Chain of Command.png",
+		"desc": "Harpoon Mode: Fire Harpoon to mark target causing primary fire to become Homing Rounds dealing 15% reduced damage. Enemies hit by Homing Rounds build Influence. Recasting exits Mode.<br>When Influence fills, Monarch automatically reloads and creates a shockwave, and wielder becomes a Tyrant, gaining 20% Increased Damage and Infinite Reserves. Lasts 20s.",
+		"stats": {}
+	},
+	"Dreadwalker": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Dreadwalker.png",
+		"desc": "Enter the Nightmare Realm. Nightfall gains infinite Ammo, a 25% Fire Rate increase, 10% Lifesteal, and becomes fully automatic. The wielder becomes significantly harder to hit while moving. Disables other weapons and Skills for the duration, or until Dreadwalker is deactivated. Lasts 10s.",
+		"stats": {}
+	},
+	"Heat Sink": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Heat Sink.png",
+		"desc": "Forces open Plasma Cutter's heat vents dispersing all heat. While active, Plasma Cutter generates 50% less heat, and ramping damage cap is increased to 3x Damage. Overheats automatically when deactivated. Lasts 20s.",
+		"stats": {}
+	},
+	"Banish": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Banish.png",
+		"desc": "Banishes enemies or allies into another dimension for 4s. When Banish ends, enemies take 1.5x the damage from the Repulsor's primary fire for 8s. Powerful enemies won't be banished, but will take increased damage from any Repulster while debuffed.",
+		"stats": {}
+	},
+	"Starfall": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Starfall.png",
+		"desc": "Fires a powerful arrow which deals 90 damage and opens a 7m portal that rains down star fragments. Each fragment deals 150 damage within 2m. Last 6s.",
+		"stats": {}
+	},
+	"Shatterstar": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Shatterstar.png",
+		"desc": "Imbues shots with white hot FIRE. Hits apply BURNING, dealing 750 FIRE damage over 10 seconds. Lasts 20s. Weakspot Hits and Kills cause shots to fragment, automatically targeting nearby enemies. Fragments strike for 30% of the initial damage dealt and apply BURNING.",
+		"stats": {}
+	},
+	"Spore Shot": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Spore Shot.png",
+		"desc": "Fires a rotten spore that explodes dealing 375 damage within 6m and leaves a deadly gas cloud that applies SLOW while dealing 45 damage per second for 7s.",
+		"stats": {}
+	},
+	"Gravity Core": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Gravity Core.png",
+		"desc": "Fires a highly compressed sphere which draws in objects and deals 150 damage on impact. When colliding with a target, a large Gravity Well opens and draws in objects for 5s. When the Gravity Well expires, it deals 750 damage within 10m. Adds 600 damage per enemy and divides total damage among all enemies.",
+		"stats": {}
+	},
+	"Guardian's Call": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/primaryModsImages/Guardian's Call.png",
+		"desc": "When Mod Power is full, Primary Fire becomes Empowered and highlights enemies it strikes. Activating the mod calls down a Guardian Sword on enemies struck by an Empowered Energy Disc. Swords deal 300 damage and 3x stagger within 3m.",
+		"stats": {}
+	},
+}
 window.builtInMelee = {
 	"": {
 		"custom": null,
@@ -8205,6 +8426,128 @@ window.builtInMelee = {
 		"custom": null,
 		"stats": {}
 	}
+}
+window.builtInSecondary = {
+	"": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "images/Remnant/clear.png",
+		"desc": "",
+		"stats": {}
+	},
+	"Loathe The Weak": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Loathe The Weak.png",
+		"desc": "Rapidly fires volatile needles that explode after 1.5s dealing 90 explosive damage.",
+		"stats": {}
+	},
+	"Cube Room": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Cube Room.png",
+		"desc": "Conjures a 5m anomalous Cube Room which grants allies an increase of 50% Heat Decay Rate, reduces Heat Generation per round when firing weapons that Overheat by 15% and automatically generates missing reserve ammo per second. Lasts 15s.",
+		"stats": {}
+	},
+	"Deadpoint": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Deadpoint.png",
+		"desc": "Fires a cluster bomb which detonates on impact across 2.5m. Each cluster deals up to 150 damage per explosion within 3.5m.",
+		"stats": {}
+	},
+	"Nano Phase": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Nano Phase.png",
+		"desc": "Detonate active Nano-bots, each dealing 200 ACID damage plus an additional 50 ACID damage per Nano-bot detonated to enemies within 2m and applies CORRODED, dealing 100 damage over 10s per Nano-bot detonated.",
+		"stats": {}
+	},
+	"Death Brand": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Death Brand.png",
+		"desc": "Applies Death Brand to all non-allies within 25m, increasing incoming damage by 10%. Enemies killed while bearing the Death Brand leave behind an Echo which lasts 10s before returning to the Nightmare Realm. Echoes are drawn to any survivor who walks within 3m, increasing Weakspot Damage dealt by 10% for 10s.",
+		"stats": {}
+	},
+	"Will of the Wisp": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Will of the Wisp.png",
+		"desc": "Launches a Wisp that uniquely seeks to one anchored primary fire bolt location. Bolts anchored to enemies deal 300 damage per Wisp. Bolds anchored to allies heal 10% Max Health per Wisp. Bolts are consumed when impacted by a Wisp.",
+		"stats": {}
+	},
+	"Cube Shield": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Cube Shield.png",
+		"desc": "Generates a Cube Shield with absorbs up to 1,500 damage from incoming enemy projectiles. Lasts 15s. Reactivating fires the Cube Shield with damages enemies as it travels. Damage is increased if the Cube Shield has absorbed enemy projectile damage before firing.",
+		"stats": {}
+	},
+	"Chaos Driver": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Chaos Driver.png",
+		"desc": "Drives electrified rods which tether to other rods within 10m. Tethers last 10s and deal 60 SHOCK damage per second. Targets take 150 SHOCK damage per second, and 25% damage per extra rod. Increases 1.5x if linked to another rod. Rods in the same target will not link.",
+		"stats": {}
+	},
+	"Explosive Shot": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Explosive Shot.png",
+		"desc": "Fires an explosive round that deals up to 465 FIRE damage within 9m and applies BURNING, dealing 300 FIRE damage over 5s.",
+		"stats": {}
+	},
+	"Screamer": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Screamer.png",
+		"desc": "Fires a high-powered rocket that deals up to 600 damage within 2.5m.",
+		"stats": {}
+	},
+	"Nano Swarm": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Nano Swarm.png",
+		"desc": "Unleash a swarm of Nanomachines that seek after enemies within 20 meters and repeatedly attack dealing 6 ACID damage per hit. Lasts 15 seconds.",
+		"stats": {}
+	},
+	"Soul Brand": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Soul Brand.png",
+		"desc": "Applies Soul Brand to all enemies within 25m which lasts 25s. Enemies killed while bearing the Soul Brand leave behind an Echo which lasts 10s before returning to the Nightmare Realm. Echoes are drawn to any survivor who walks within 3m, granting 20% of Max Health on contact.",
+		"stats": {}
+	},
+	"Eulogy": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Eulogy.png",
+		"desc": "Recalls bolts which deal 90 damage when pulled from a target and when striking targets on their return. Recalled bolts grant 2% of Max Health. Recalled bolts can also overfill Sorrow up to +5. Any additional bolts will be returned to reserves.",
+		"stats": {}
+	},
+	"Big Bang": {
+		"custom": null,
+		"name": "",
+		"slot": "Mod",
+		"image": "./brotherLibrary/secondaryModsImages/Big Bang.png",
+		"desc": "Funnels all current Mod Charges into the next shot. Projectile deals 195 direct damage and 195 Explosive damage per Charge consumed in a 5m radius. Explosion applies 225 BURNING damage over 10s per Charge consumed. Additional Charges consumed increase all damage by 5%. Max 5 Charges.",
+		"stats": {}
+	},
 }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------------- CONSUMABLES --------------------------------------------*/
@@ -8880,8 +9223,12 @@ window.mutators = {
 //const meleeMods = {} we don't have any melee mods set up yet bc they're all built-in
 window.mods = {
   "primaryMods": rangedMods,
-  "meleeMods": "meleeMods",//Later, remove quotes obv
-  "secondaryMods": rangedMods
+  "meleeMods": "meleeMods",//Melee have no selectable mods, they are all built-in
+  "secondaryMods": rangedMods,
+  "builtInPrimaryMods": builtInPrimary,
+  "builtInMeleeMods": builtInMelee,
+  "builtInSecondaryMods": builtInSecondary,
+
 }
 window.consumables = {
   "concoctions": concoctions,
@@ -8902,7 +9249,7 @@ window.substatColorMods = [
 	"root rot",
 	"suppression"
 ]
-// window.substatColorExclusions = `fire:|fire rate`;
+// List all exclusion cases here
 // \s = any whitespace character
 window.substatColorExclusions = {
 	"fire": ":|\\srate",

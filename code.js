@@ -828,7 +828,7 @@ let manipulateURL = {
         readSelection("rangedMutator1").value = urlPrimary[1];
         userTrigger.updateMutator('rangedMutator','1');
       }
-      if (rangedMods[urlPrimary[2]] === undefined) {invalidEntries.push(urlPrimary[2]);}
+      if (rangedMods[urlPrimary[2]] === undefined && primary[urlPrimary[0]].builtIN === "") {invalidEntries.push(urlPrimary[2]);}
       else if (urlPrimary[2] != "" && urlPrimary[2] != null) {
         readSelection("rangedMod1").value = urlPrimary[2];
         userTrigger.updateMod('rangedMod','1');
@@ -859,7 +859,7 @@ let manipulateURL = {
         readSelection("rangedMutator2").value = urlSecondary[1];
         userTrigger.updateMutator('rangedMutator','2');
       }
-      if (rangedMods[urlSecondary[2]] === undefined) {invalidEntries.push(urlSecondary[2]);}
+      if (rangedMods[urlSecondary[2]] === undefined && secondary[urlSecondary[0]].builtIN === "") {invalidEntries.push(urlSecondary[2]);}
       else if (urlSecondary[2] != "" && urlSecondary[2] != null) {
         readSelection("rangedMod2").value = urlSecondary[2];
         userTrigger.updateMod('rangedMod','2');
@@ -1057,11 +1057,89 @@ let userTrigger = {
       readSelection("meleeStat8").innerHTML = weaponObjectReference.critChance;
       readSelection("meleeStat9").innerHTML = weaponObjectReference.weakSpot;
       readSelection("meleeStat10").innerHTML = weaponObjectReference.stagger;
+      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
       readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
       readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
       readSelection("meleeModDesc").innerHTML = userTrigger.updateSubstatColor(builtInMelee[weaponObjectReference.builtIN].desc);
-      // userTrigger.updateMod('meleeMod');
-      // console.log(weaponObjectReference.builtIN);
+      }
+    }
+    else if (type==="primary") {
+      let path = readSelection("rangedMod1");
+      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
+        if (path.length > Object.keys(rangedMods).length) {
+          //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
+          for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
+            if (builtInPrimary[path.options[i].innerHTML] != "" && builtInPrimary[path.options[i].innerHTML] != null) {
+              path.remove(i);
+              break;
+            }
+          }
+        }
+        //Add the built-in mod to the dropdown so it can be assigned to .value
+        const select = readSelection("rangedMod1");
+        const option = document.createElement("option");
+        option.text = weaponObjectReference.builtIN;
+        select.appendChild(option);
+        //-----------------------------------------------
+      readSelection("rangedMod1").disabled = true;
+      readSelection("rangedMod1").value = weaponObjectReference.builtIN;
+      readSelection("primaryModImage").src = builtInPrimary[weaponObjectReference.builtIN].image;
+      readSelection("primaryModDesc").innerHTML = userTrigger.updateSubstatColor(builtInPrimary[weaponObjectReference.builtIN].desc);
+      }
+      else {
+        path.disabled = false;
+        if (path.length > Object.keys(rangedMods).length) {
+          for (i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
+            if (builtInPrimary[path.options[i].innerHTML] != "" && builtInPrimary[path.options[i].innerHTML] != null) {
+              path.remove(i);
+              break;
+            }
+          }
+          path.value = "";
+          readSelection(`primaryModDesc`).innerHTML=mods.primaryMods[""].desc;
+          readSelection(`primaryModImage`).src=mods.primaryMods[""].image;
+          userTrigger.updateMod("rangedMod","1");
+        }
+      }
+    }
+    else if (type==="secondary") {
+      let path = readSelection("rangedMod2");
+      if (weaponObjectReference.builtIN != "" && weaponObjectReference.builtIN != null) {
+        if (path.length > Object.keys(rangedMods).length) {
+          //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
+          for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
+            if (builtInSecondary[path.options[i].innerHTML] != "" && builtInSecondary[path.options[i].innerHTML] != null) {
+              path.remove(i);
+              break;
+            }
+          }
+        }
+        //Add the built-in mod to the dropdown so it can be assigned to .value
+        const select = readSelection("rangedMod2");
+        const option = document.createElement("option");
+        option.text = weaponObjectReference.builtIN;
+        select.appendChild(option);
+        //-----------------------------------------------
+      readSelection("rangedMod2").disabled = true;
+      readSelection("rangedMod2").value = weaponObjectReference.builtIN;
+      readSelection("secondaryModImage").src = builtInSecondary[weaponObjectReference.builtIN].image;
+      readSelection("secondaryModDesc").innerHTML = userTrigger.updateSubstatColor(builtInSecondary[weaponObjectReference.builtIN].desc);
+      }
+      else {
+        path.disabled = false;
+        if (path.length > Object.keys(rangedMods).length) {
+          for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
+            if (builtInSecondary[path.options[i].innerHTML] != "" && builtInSecondary[path.options[i].innerHTML] != null) {
+              path.remove(i);
+              break;
+            }
+          }
+          path.value = "";
+          readSelection(`secondaryModDesc`).innerHTML=mods.secondaryMods[""].desc;
+          readSelection(`secondaryModImage`).src=mods.secondaryMods[""].image;
+          userTrigger.updateMod("rangedMod","2");
+        }
+      }
     }
     updateFormulas();
   },
@@ -1084,16 +1162,17 @@ let userTrigger = {
   updateMod(type,value) {
     let collection = 'melee';
     let modifier = ``;
-    let builtIN = false;
     if (value===`1`) {collection = 'primary';modifier=value}
     else if (value===`2`) {collection = `secondary`;modifier=value}
     let selectedMod = readSelection(`${type}${modifier}`);
+    let builtIN = weapons[collection][readSelection(collection).value].builtIN;
     //Update accessory image, description, and then refresh formulas.
-    
+    if (builtIN === "" || builtIN === undefined) {
     readSelection(`${collection}ModDesc`).innerHTML=userTrigger.updateSubstatColor(mods[`${collection}Mods`][selectedMod.value].desc);
     readSelection(`${collection}ModImage`).src=mods[`${collection}Mods`][selectedMod.value].image;
     if (type==="rangedMod") { //Melee obv needs no dupe checks. ranged1 is primary, ranged2 secondary.
       userTrigger.checkDuplicateSelection(type,value,`updateMod`,`duo`);
+    }
     }
     updateFormulas();
   },
@@ -1382,7 +1461,7 @@ let formulasValues = {
     let primaryWeaponMod = readSelection("rangedMod1");
     let meleeWeapon = readSelection("melee");
     let meleeWeaponMutator = readSelection("meleeMutator");
-    // let meleeWeaponMod = readSelection("meleeMod"); //not yet
+    let meleeWeaponMod = readSelection("meleeMod"); //not yet
     let secondaryWeapon = readSelection("secondary");
     let secondaryWeaponMutator = readSelection("rangedMutator2");
     let secondaryWeaponMod = readSelection("rangedMod2");
@@ -1417,21 +1496,28 @@ let formulasValues = {
     }
   //Mods
   if (readSelection(`USEtoggledpMod`).checked != true) {
-    formulasValues.pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
-    if (mods.primaryMods[readSelection(`rangedMod1`).value].custom != null) {
-      customItemFunctions[mods.primaryMods[readSelection(`rangedMod1`).value].custom]();
+    let checkWeaponPath = weapons.primary[primaryWeapon.value]
+    if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
+      formulasValues.pullStats(mods.primaryMods[primaryWeaponMod.value].stats);
+    }
+    else if (checkWeaponPath.builtIN != ""){
+      formulasValues.pullStats(mods.builtInPrimaryMods[primaryWeaponMod.value].stats);
     }
   }
-  // if (readSelection(`USEtoggledmMod`).checked != true) { //----------------NOT YET BUT WE WILL USE THIS LATER--------------
-  //   formulasValues.pullStats(mods.meleeMods[meleeWeaponMod.value].stats);
-  //   if (mods.meleeMods[readSelection(`meleeMod`).value].custom != null) {
-  //     customItemFunctions[mods.meleeMods[readSelection(`meleeMod`).value].custom]();
-  //   }
-  // }
+  if (readSelection(`USEtoggledmMod`).checked != true) {
+    let checkWeaponPath = weapons.melee[meleeWeapon.value]
+    //melee have no optional mods, all built-in
+    if (checkWeaponPath.builtIN != ""){
+      formulasValues.pullStats(mods.builtInMeleeMods[meleeWeaponMod.innerHTML].stats);
+    }
+  }
   if (readSelection(`USEtoggledsMod`).checked != true) {
-    formulasValues.pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
-    if (mods.secondaryMods[readSelection(`rangedMod2`).value].custom != null) {
-      customItemFunctions[mods.secondaryMods[readSelection(`rangedMod2`).value].custom]();
+    let checkWeaponPath = weapons.secondary[secondaryWeapon.value]
+    if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
+      formulasValues.pullStats(mods.secondaryMods[secondaryWeaponMod.value].stats);
+    }
+    else if (checkWeaponPath.builtIN != ""){
+      formulasValues.pullStats(mods.builtInSecondaryMods[secondaryWeaponMod.value].stats);
     }
   }
   },
@@ -1699,6 +1785,59 @@ let formulasValues = {
       if (readSelection(`USEtoggledsMutator`).checked != true) {
         if (mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom != null) {
           customItemFunctions.mutators[mutators.secondaryMutators[readSelection(`rangedMutator2`).value].custom]();
+        }
+      }
+    }
+    else if (item==="mods") {
+      //PRIMARY
+      if (readSelection(`USEtoggledpMod`).checked != true) {
+        let primaryWeapon = readSelection("primary");
+        let primaryWeaponMod = readSelection(`rangedMod1`);
+        let checkWeaponPath = weapons.primary[primaryWeapon.value];
+        if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
+          if (mods.primaryMods[primaryWeaponMod.value].custom != null) {
+            customItemFunctions[mods.primaryMods[primaryWeaponMod.value].custom]();
+          }
+        }
+        //If the Primary weapon has a built-in mod
+        else if (checkWeaponPath.builtIN != ""){
+          if (mods.builtInPrimaryMods[primaryWeaponMod.value].custom != null) {
+            customItemFunctions[mods.builtInPrimaryMods[primaryWeaponMod.value].custom]();
+          }
+        }
+      }
+      //MELEE
+      if (readSelection(`USEtoggledmMod`).checked != true) {
+        let meleeWeapon = readSelection("melee");
+        let meleeWeaponMod = readSelection(`meleeMod`); //not yet
+        let checkWeaponPath = weapons.melee[meleeWeapon.value];
+        if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
+          if (mods.meleeMods[meleeWeaponMod.value].custom != null) {
+            customItemFunctions[mods.meleeMods[meleeWeaponMod.value].custom]();
+          }
+        }
+        //If the Melee weapon has a built-in mod
+        else if (checkWeaponPath.builtIN != ""){
+          if (mods.builtInMeleeMods[meleeWeaponMod.innerHTML].custom != null) {
+            customItemFunctions[mods.builtInMeleeMods[meleeWeaponMod.innerHTML].custom]();
+          }
+        }
+      }
+      //SECONDARY
+      if (readSelection(`USEtoggledsMod`).checked != true) {
+        let secondaryWeapon = readSelection("secondary");
+        let secondaryWeaponMod = readSelection(`rangedMod2`);
+        let checkWeaponPath = weapons.secondary[secondaryWeapon.value];
+        if (checkWeaponPath.builtIN === "" || checkWeaponPath.builtIN === null) {
+          if (mods.secondaryMods[secondaryWeaponMod.value].custom != null) {
+            customItemFunctions[mods.secondaryMods[secondaryWeaponMod.value].custom]();
+          }
+        }
+        //If the Secondary weapon has a built-in mod
+        else if (checkWeaponPath.builtIN != ""){
+          if (mods.secondaryMods[secondaryWeaponMod.value].custom != null) {
+            customItemFunctions[mods.builtInSecondaryMods[secondaryWeaponMod.value].custom]();
+          }
         }
       }
     }
