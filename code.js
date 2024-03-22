@@ -1430,19 +1430,19 @@ let formulasValues = {
   pullArmorStats() {
     let armorTotalWeight = 0;
     let armorTotalArmor = 0;
-    if (readSelection(`USEtoggledHead`).checked != true) {
+    if (!readSelection(`USEtoggledHead`).checked) {
       armorTotalWeight += +readSelection("helmetWeight").innerHTML;
       armorTotalArmor += +readSelection("helmetArmor").innerHTML;
     }
-    if (readSelection(`USEtoggledChest`).checked != true) {
+    if (!readSelection(`USEtoggledChest`).checked) {
       armorTotalWeight += +readSelection("chestWeight").innerHTML;
       armorTotalArmor += +readSelection("chestArmor").innerHTML;
     }
-    if (readSelection(`USEtoggledLegs`).checked != true) {
+    if (!readSelection(`USEtoggledLegs`).checked) {
       armorTotalWeight += +readSelection("legWeight").innerHTML;
       armorTotalArmor += +readSelection("legArmor").innerHTML;
     }
-    if (readSelection(`USEtoggledHands`).checked != true) {
+    if (!readSelection(`USEtoggledHands`).checked) {
       armorTotalWeight += +readSelection("handWeight").innerHTML;
       armorTotalArmor += +readSelection("handArmor").innerHTML;
     }
@@ -1457,16 +1457,16 @@ let formulasValues = {
   //Used in pullArmorStats() to fill resistance values on the master table
   //Utilizes toggle states separately from pullArmorStats(). Look into how to manage this otherwise in the future
   readArmorResistance(resistance) {
-    if (readSelection(`USEtoggledHead`).checked != true) {
+    if (!readSelection(`USEtoggledHead`).checked) {
       greatTableKnowerOfAll[resistance] += +helmets[readSelection("helmetChoice").value][resistance];
     }
-    if (readSelection(`USEtoggledChest`).checked != true) {
+    if (!readSelection(`USEtoggledChest`).checked) {
       greatTableKnowerOfAll[resistance] += +chests[readSelection("chestChoice").value][resistance];
     }
-    if (readSelection(`USEtoggledLegs`).checked != true) {
+    if (!readSelection(`USEtoggledLegs`).checked) {
       greatTableKnowerOfAll[resistance] += +legs[readSelection("legChoice").value][resistance];
     }
-    if (readSelection(`USEtoggledHands`).checked != true) {
+    if (!readSelection(`USEtoggledHands`).checked) {
       greatTableKnowerOfAll[resistance] += +hands[readSelection("handChoice").value][resistance];
     }
   },
@@ -1480,15 +1480,15 @@ let formulasValues = {
     let path2 = classInfo[readSelection("archetype2").value];
     let ability2 = readSelection("archetype2ability").value;
   //Prime Perk
-    if (readSelection(`USEtoggledPrimeP`).checked != true) {
+    if (!readSelection(`USEtoggledPrimeP`).checked) {
       formulasValues.pullStats(path1.primeStats);
     }
   //Archetype1
-    if (readSelection(`USEtoggledAbility1`).checked != true) {
+    if (!readSelection(`USEtoggledAbility1`).checked) {
       formulasValues.pullStats(path1.abilities[ability1].stats);
     }
     for (let i=1;i<=4;i++) {
-      if (readSelection(`USEtoggledPassive${i}`).checked != true) {
+      if (!readSelection(`USEtoggledPassive${i}`).checked) {
         formulasValues.pullStats(path1.passives[`passive${i}`].stats);
       }
     }
@@ -1499,11 +1499,11 @@ let formulasValues = {
       greatTableKnowerOfAll.Spirit = path1.Spirit;
       greatTableKnowerOfAll.Vigor = path1.Vigor;
   //Archetype2
-    if (readSelection(`USEtoggledAbility2`).checked != true) {
+    if (!readSelection(`USEtoggledAbility2`).checked) {
       formulasValues.pullStats(path2.abilities[ability2].stats);
     }
     for (let i=1;i<=4;i++) {
-      if (readSelection(`USEtoggledPassive${i+4}`).checked != true) {
+      if (!readSelection(`USEtoggledPassive${i+4}`).checked) {
         formulasValues.pullStats(path2.passives[`passive${i}`].stats);
       }
     }
@@ -1513,22 +1513,22 @@ let formulasValues = {
   //Utilizes toggle states
   pullGearStats() {
     //Amulet
-    if (readSelection("USEtoggledAmulet").checked != true) {
+    if (!readSelection("USEtoggledAmulet").checked) {
       formulasValues.pullStats(amulets[readSelection("amulet").value].stats);
     }
     //Rings
     for (let i=1;i<=4;i++) {
-      if (readSelection(`USEtoggledRing${i}`).checked != true) {
+      if (!readSelection(`USEtoggledRing${i}`).checked) {
       formulasValues.pullStats(rings[readSelection(`ring${i}`).value].stats);
       }
     }
     //Relic
-    if (readSelection("USEtoggledRelic").checked != true) {
+    if (!readSelection("USEtoggledRelic").checked) {
       formulasValues.pullStats(relics[readSelection("relic").value].stats);
     }
     //Fragments
     for (let i=1;i<=3;i++) {
-      if (readSelection(`USEtoggledrFrag${i}`).checked != true) {
+      if (!readSelection(`USEtoggledrFrag${i}`).checked) {
       formulasValues.pullStats(fragments[readSelection(`fragment${i}`).value].stats);
       }
     }
@@ -1721,7 +1721,6 @@ let formulasValues = {
     }
   },
 }
-
 /* ---------------------------------------------------------------------------------------- */
 /* ---------------------- Custom, item-specific functions --------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
@@ -2149,7 +2148,7 @@ formulasValues.callUniqueFunctions("mutators");
   let lifestealALL = greatTableKnowerOfAll.Lifesteal;
   let lifestealMelee = greatTableKnowerOfAll.MLifesteal;
   let lifestealRange = greatTableKnowerOfAll.RLifesteal;
-  readSelection("lifesteal").innerHTML = `${(lifestealALL).toFixed(1)}/${(lifestealMelee).toFixed(1)}/${(lifestealRange).toFixed(1)}`;
+  readSelection("lifesteal").innerHTML = `${(lifestealALL).toFixed(2)}/${(lifestealMelee).toFixed(2)}/${(lifestealRange).toFixed(2)}`;
 //REGENERATION---
   let flatHPperSec = greatTableKnowerOfAll["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
   formulasValues.updateDisplay("flatHP/s",flatHPperSec,1);
