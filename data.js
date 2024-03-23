@@ -1207,7 +1207,7 @@ window.classInfo = {
 			},
 			"Vial: Frenzy Dust": {
 				"name": "Vial: Frenzy Dust",
-				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire-Rate, Reload Speed, and Melee Speed by 20%, and then Movement Speed by 15%. Lasts 15s.",
+				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and then Movement Speed by 15%. Lasts 15s.",
 				"image": "./brotherLibrary/abilitiesImages/Vial_ Frenzy Dust.png",
 				"stats": {
 					"FireRate": 0.20,
@@ -1364,7 +1364,7 @@ window.classInfo = {
 			},
 			"Rampage": {
 				"name": "Rampage",
-				"desc": "Fire-Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
+				"desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
 				"image": "./brotherLibrary/abilitiesImages/Rampage.png",
 				"stats": {
 					"FireRate": 0.15,
@@ -1561,7 +1561,7 @@ window.classInfo = {
 			},
 			"Bulletstorm": {
 				"name": "Bulletstorm",
-				"desc": "Fire-Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
+				"desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
 				"image": "./brotherLibrary/abilitiesImages/Bulletstorm.png",
 				"stats": {
 					"FireRate": 0.20,
@@ -1580,7 +1580,7 @@ window.classInfo = {
 		"passives": {
 			"passive1": {
 				"name": "Swift Shot",
-				"desc": "Gain 15% Fire-Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
+				"desc": "Gain 15% Fire Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
 				"stats": {
 					"FireRate": 0.15,
 					"RangedDamage": 0.25,
@@ -2373,7 +2373,7 @@ window.amulets = {
 		"name": "Downward Spiral",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Downward Spiral.png",
-		"desc": "Increase Fire-Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
+		"desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 3% Ranged Damage (Max 15%) and 4% Melee Damage (Max 20%).",
 		"custom": null,
 		"stats": {
 			"AttackSpeed": 0.15,
@@ -2505,7 +2505,7 @@ window.amulets = {
 		"name": "Gunslinger's Charm",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gunslinger's Charm.png",
-		"desc": "Increases Fire-Rate by 15% and Reload Speed by 20%.",
+		"desc": "Increases Fire Rate by 15% and Reload Speed by 20%.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.15,
@@ -2559,7 +2559,7 @@ window.amulets = {
 		"name": "Inert Overcharger",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Inert Overcharger.png",
-		"desc": "Standing still increases Fire-Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
+		"desc": "Standing still increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 1.5s after moving.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.20,
@@ -3299,7 +3299,7 @@ window.rings = {
 		"name": "Burden of the Follower",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Follower.png",
-		"desc": "Reduces Fire-Rate by 15%. Increases Mod Power Generation by 50%.",
+		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 50%.",
 		"custom": null,
 		"stats": {
 			"FireRate": -0.15,
@@ -3402,7 +3402,7 @@ window.rings = {
 		"name": "Compulsion Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Compulsion Loop.png",
-		"desc": "After killing an enemy, gain 5% Fire-Rate and Melee Attack Speed for 7s. Stacks 3x.",
+		"desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 7s. Stacks 3x.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.15,
@@ -3762,7 +3762,7 @@ window.rings = {
 		"name": "Frivolous Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Frivolous Band.png",
-		"desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire-Rate by 10% and Melee Speed by 10% for 10s.",
+		"desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 10s.",
 		"custom": null,
 		"stats": {
 			"EvadeSpeed": 0.10,
@@ -7393,7 +7393,7 @@ window.rangedMutators = {
 		"name": "Bandit",
 		"slot": "RMutator",
 		"image": "",
-		"desc": "On hit, grants 30% chanche to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire-Rate for 3s. Duration can increase up to 10s",
+		"desc": "On hit, grants 30% chanche to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
 		"custom": null,
 		"stats": {}
 	},
@@ -7417,7 +7417,7 @@ window.rangedMutators = {
 		"name": "Bottom Heavy",
 		"slot": "RMutator",
 		"image": "",
-		"desc": "Increases Fire-Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
+		"desc": "Increases Fire Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
 		"custom": null,
 		"stats": {}
 	},
@@ -7425,7 +7425,7 @@ window.rangedMutators = {
 		"name": "Bulletweaver",
 		"slot": "RMutator",
 		"image": "",
-		"desc": "Mod use increases Fire-Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
+		"desc": "Mod use increases Fire Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
 		"custom": null,
 		"stats": {}
 	},
@@ -7989,7 +7989,7 @@ window.rangedMods = {
 		"name": "Overflow",
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Overflow.png",
-		"desc": "Imbues ammunition with SHOCK and increases Fire-Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
+		"desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
 		"custom": null,
 		"stats": {}
 	},
@@ -8953,7 +8953,7 @@ window.quickUses = {
 		"name": "Rocket Fuel",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Rocket Fuel.png",
-		"desc": "Increases Fire-Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
+		"desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
 		"custom": null,
 		"stats": {
 			"FireRate": 0.10,
