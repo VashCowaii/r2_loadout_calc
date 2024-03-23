@@ -565,7 +565,6 @@ let manipulateURL = {
   //Used in updateURLparameters() to delete a given parameter if it is empty, to reduce URL length
   urlParamIsEmpty(objElement) {
     if (!globalRecords.urlObject[objElement]) {
-      console.log("hi: " + objElement)
       delete globalRecords.urlObject[objElement];
     }
     else{
@@ -870,8 +869,7 @@ let manipulateURL = {
       updateFormulas();
     }
   //CHECK SOURCE PARAM IS MISSING, SO WE CAN NOTIFY PEEPS COMING FROM R2TK
-  console.log(urlSource)
-    if (urlSource != "s" && feed) {
+    if (urlSource != "s" && feed != "") {
       alert("This build was imported from R2ToolKit, PLEASE READ.\n\nThis calculator extracts precise complex values to help you better understand how a given build works. BUT, by default, everything is calculated: passives you forgot about, mutators you didn't think mattered, etc.\n\nYou MUST turn off anything you don't want factored in, in settings(gear icon), and adjust settings in advanced stats down below, to get accurate numbers. See Help menu(? icon) for info.")
     }
     if (invalidEntries.length) {
@@ -1415,8 +1413,8 @@ let formulasValues = {
           //put these two types into their respective multiplicative arrays
         }
         else if (propertyArray === true) {
-          for (i=0;i<=traitPath.property.length;i++) {
-          greatTableKnowerOfAll[traitPath.property[i]] += traitPath.level[traitLevel];
+          for (let i=1;i<=traitPath.property.length;i++) {
+          greatTableKnowerOfAll[traitPath.property[i-1]] += traitPath.level[traitLevel];
           }
         }
         if (traitPath.custom) {
