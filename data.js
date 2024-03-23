@@ -1494,7 +1494,12 @@ window.classInfo = {
 				"name": "Gold Digger",
 				"desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
 				"image": "./brotherLibrary/abilitiesImages/Gold Digger.png",
-				"stats": {}
+				"stats": {
+					"AllDamage": 0.10,
+					"FlatDR": 0.15,
+					"HP/S+": 2,
+					"HASTE": 1
+				}
 			},
 			"Fortune Hunter": {
 				"name": "Fortune Hunter",
