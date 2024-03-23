@@ -964,7 +964,7 @@ let userTrigger = {
       else {
         path.disabled = false;
         if (path.length > Object.keys(rangedMods).length) {
-          for (i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
+          for (let i=Object.keys(rangedMods).length - 2; i<=path.length; i++) {
             if (builtInPrimary[path.options[i].innerHTML]) {
               path.remove(i);
               break;
@@ -1175,7 +1175,7 @@ let userTrigger = {
         }
       }
       else if (handling==="several") { //For use with concoctions, rings, and things with more than 2.
-        for (i=1;i<=limits;i++) {
+        for (let i=1;i<=limits;i++) {
             let current = readSelection(`${collection}${i}`).value;
             //Checks ID's on ACTIVE selections for a dupe, non-matching ID, that isn't blank.
             //If criteria met, swap places like in game.
@@ -1293,7 +1293,7 @@ let formulasValues = {
     let quickUse1 = readSelection("quickUse1");
     let quickUse2 = readSelection("quickUse2");
   //Concoctions
-    for (i=1;i<=7;i++) {
+    for (let i=1;i<=7;i++) {
       let concoction = readSelection(`concoction${i}`);
       if (i<=concLimit) {
         concoction.disabled = false;
@@ -1761,7 +1761,7 @@ let customItemFunctions = {
     giftOfTheUnbound() {
       let activeBurdens = 0;
       let healthModifier = 0.20
-      for (i=1;i<=4;i++) {
+      for (let i=1;i<=4;i++) {
         let ringPath = readSelection(`ring${i}`).value
         if (ringPath.includes("Burden") === true) {
           activeBurdens += 1;
@@ -1822,7 +1822,7 @@ let customItemFunctions = {
       let faerinActive = false;
       let faelinActive = false;
       let imposterRings = 0;
-      for (i=1;i<=4;i++) {
+      for (let i=1;i<=4;i++) {
         if (readSelection(`ring${i}`).value.includes("Faerin's Sigil") === true) {
           faerinActive = true;
           imposterRings += 1;
