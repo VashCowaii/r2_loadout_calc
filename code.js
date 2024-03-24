@@ -2335,5 +2335,4 @@ function pagePopulation() {
 
 //Must be last, fill the page
 pagePopulation();
-readSelection("calcLastUpdated").innerHTML = lastCalcUpdate;
-// readSelection("calcLastUpdated").innerHTML = "2024-03-24 23:00MST";
+//buildTime.js script call is injected into the HTML of the deployment, never the actual files here.

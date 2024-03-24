@@ -1,1 +1,2 @@
-const lastCalcUpdate = 'Sunday, March 24, 14:34:MDT';
+readSelection("calcLastUpdated").innerHTML = LAST_CALC_UPDATE;
+//See .github/workflows/deploy.yml
