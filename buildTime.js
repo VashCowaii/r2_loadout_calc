@@ -1,5 +1,1 @@
-let currentTime = new Date();
-let utcTime = currentTime.getTime();
-let mstOffset = currentTime.getTimezoneOffset() * 60 * 1000 - 6 * 60 * 60 * 1000;
-let mountainTime = new Date(utcTime + mstOffset);
-const lastCalcUpdate = mountainTime.toISOString().split('T')[0] + ' ' + mountainTime.getHours() + ':00MST';
+const lastCalcUpdate = 'Sun Mar 24 19:52:00 UTC 2024';
