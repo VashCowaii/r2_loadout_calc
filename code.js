@@ -70,7 +70,6 @@ function readSelection(elemID) {
 function gameLastUpdated() {
   let steamFeed = "https://steamcommunity.com/games/1282100/rss/";
   let lastLinkedDate,lastLinkedLink,lastLinkedTitle;
-
   fetch(steamFeed)
   .then(response => response.text())
   .then(xmlData => {
@@ -78,8 +77,10 @@ function gameLastUpdated() {
     let moreParsyParser = parser.parseFromString(xmlData, `text/xml`);
     //Every entry is enclosed in <item></item>
     let greatRSSMess = moreParsyParser.querySelectorAll(`item`);
+    console.log(greatRSSMess.length)
 
     for (items of greatRSSMess) {
+
       console.log("for entered")
       let titleCheck = items.querySelector(`title`).textContent;
       if (titleCheck.toLowerCase().includes(`patch`) || titleCheck.toLowerCase().includes(`fix`)) {
