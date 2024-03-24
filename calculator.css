@@ -293,7 +293,7 @@
     display: flex;
     white-space: nowrap;
     grid-column: 2 / span 1;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 
@@ -304,6 +304,19 @@ div {
 * {
 /* outline: 2px solid red; */
 font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    border: 1px solid #434343;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: normal;
 }
 
 
@@ -1889,7 +1902,7 @@ font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
     box-sizing: border-box;
     grid-column: 1 / span 3;
-    grid-row: 3;
+    grid-row: 4;
 }
 .advancedStatsTitleHeader {
     font-size: 30px;
@@ -2302,7 +2315,7 @@ font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
     box-sizing: border-box;
     grid-column: 1 / span 3;
-    grid-row: 4;
+    grid-row: 5;
 }
 .advancedStatsDamageHeader {
     font-size: 30px;

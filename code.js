@@ -1,13 +1,13 @@
-const greatTableKnowerOfAll = {
-  "Health": 0,"Health%": 0,"GlobalHealthModifier": 0,
+const starterTable = {
+  "Health": 0,"Health%": 0,"GlobalHealthModifier": 1,
   "SummonHealth%": 0,
   "Armor": 0,"Armor%": 0,
   "FlatDR": 0,
   "Bulwark": 0,
-  "REdamage": [0],"DMGKept": [0],
+  "REdamage": [],"DMGKept": [],
   "SelfDamageModifier": 0,
   "RelicSpeed": 0,"RelicEFF": 0,
-  "HealingEFF": 0,"GlobalHealingEff": 0,
+  "HealingEFF": 0,"GlobalHealingEff": 1,
   "HP/S+": 0,
   "HP/S%": 0,
   "RelicHPbase": 0,"RelicHPtype": 0,"RelicHPtime": 0,
@@ -41,7 +41,7 @@ const greatTableKnowerOfAll = {
   "StatusDuration": 0,
   "MeleeStatusDamage": 0,
   "BurningDamage": 0,"FireDamage": 0,
-  "UniqueMulti": [0],
+  "UniqueMulti": [],
   "AllCritChance": 0,"MeleeCritChance": 0,"RangedCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,"ExplosiveCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,
   "PrimaryCritChance": 0,"SecondaryCritChance": 0,
   "AllCritDamage": 0,"MeleeCritDamage": 0,"RangedCritDamage": 0,
@@ -59,10 +59,44 @@ const greatTableKnowerOfAll = {
   "MovementSpeed": 0,"EnvMovementSpeed": 0,"AimMovementSpeed": 0,
   "Reserves": 0,"ReservesMulti": 0,
 }
+const tableReset = JSON.stringify(starterTable);
+let greatTableKnowerOfAll = JSON.parse(tableReset);
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
 function readSelection(elemID) {
   let selectedValue = document.getElementById(elemID);
   return selectedValue;
+}
+
+function gameLastUpdated() {
+  let steamFeed = "https://steamcommunity.com/games/1282100/rss/";
+  let lastLinkedDate,lastLinkedLink,lastLinkedTitle;
+
+  fetch(steamFeed)
+  .then(response => response.text())
+  .then(xmlData => {
+    let parser = new DOMParser();
+    let moreParsyParser = parser.parseFromString(xmlData, `text/xml`);
+    //Every entry is enclosed in <item></item>
+    let greatRSSMess = moreParsyParser.querySelectorAll(`item`);
+
+    for (items of greatRSSMess) {
+      console.log("for entered")
+      let titleCheck = items.querySelector(`title`).textContent;
+      if (titleCheck.toLowerCase().includes(`patch`) || titleCheck.toLowerCase().includes(`fix`)) {
+        console.log("hi");
+        break;
+      }
+    }
+    // //Post title
+    // lastLinkedTitle = greatRSSMess.querySelector('title').textContent;
+    // //Post date
+    // lastLinkedDate = greatRSSMess.querySelector('pubDate').textContent;
+    // //Post link
+    // lastLinkedLink = greatRSSMess.querySelector('guid').textContent;
+  })
+  .catch(error => {
+    console.error(`Failed to yoink Steam's RSS feed for the game`, error);
+  });
 }
 /* ---------------------------------------------------------------------------------------- */
 /* ------ Shorthand functions used to actually define the HTML to be injected ------------- */
@@ -2009,18 +2043,7 @@ function updateFormulas() {
   //Fill the Toggles table
   formulasValues.pullToggles();
   //Reset the table
-  for(let elements in greatTableKnowerOfAll) {
-    if (elements!="REdamage" && elements!="DMGKept" && elements!="GlobalHealthModifier" && elements!="GlobalHealingEff" && elements!="UniqueMulti") {
-      greatTableKnowerOfAll[elements]=0;
-    }
-    else if (elements==="GlobalHealthModifier"||elements==="GlobalHealingEff") {
-      greatTableKnowerOfAll[elements]=1;
-    }
-    else {
-      greatTableKnowerOfAll[elements]=[];
-    }
-  }
-
+  greatTableKnowerOfAll = JSON.parse(tableReset);
 //MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST-------------------------
 let isCoop = readSelection("isCoop");
 let teamCount = readSelection("teamCount");
@@ -2081,12 +2104,12 @@ formulasValues.callUniqueFunctions("mutators");
     readSelection("summaryWeight").style.color = "#e06666";
     staminaPenalty = .75;
   }
-  else if ((totalWeight>(50+WeightThreshold))&&(totalWeight<=(75+WeightThreshold))) {
+  else if (totalWeight>(50+WeightThreshold)) {
     dodgeClass = "Heavy";
     readSelection("summaryWeight").style.color = "orange";
     staminaPenalty = .5;
   }
-  else if ((totalWeight>(25+WeightThreshold))&&(totalWeight<=(50+WeightThreshold))) {
+  else if (totalWeight>(25+WeightThreshold)) {
     dodgeClass = "Medium";
     readSelection("summaryWeight").style.color = "#90ee90";
     staminaPenalty = .25;
@@ -2340,6 +2363,7 @@ function pagePopulation() {
   createHTML.populateGear("quickUse1",quickUses);
   createHTML.populateGear("quickUse2",quickUses);
   manipulateURL.importURLparameters();
+  gameLastUpdated();
 }
 //Must be last, fill the page
 pagePopulation();

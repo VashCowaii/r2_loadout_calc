@@ -95,7 +95,7 @@ html,body {
     white-space: nowrap;
 
     grid-template-columns: [first] 25% [line2] 40% [line3] 35% [end];
-    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [end-line];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [end-line];
 }
 
 .sidenav {
