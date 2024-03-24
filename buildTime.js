@@ -1,1 +1,1 @@
-const lastCalcUpdate = 'Sun Mar 24 20:16:20 UTC 2024';
+const lastCalcUpdate = 'Sunday, March 24, 14:21:MDT';
