@@ -2363,7 +2363,7 @@ function pagePopulation() {
   createHTML.populateGear("quickUse1",quickUses);
   createHTML.populateGear("quickUse2",quickUses);
   manipulateURL.importURLparameters();
-  gameLastUpdated();
+  // gameLastUpdated();
 }
 //Must be last, fill the page
 pagePopulation();
