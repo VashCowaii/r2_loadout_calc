@@ -309,14 +309,28 @@ font-family: Arial, Helvetica, sans-serif;
 
 .updateBannerMegaBox {
     background-color: #111;
-    grid-column: 1 / span 3;
+    grid-column: 2;
     grid-row: 1;
     border: 1px solid #434343;
+    font-size: 15px;
     border-radius: 10px;
     box-sizing: border-box;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.updateBannerBufferLeft {
+    grid-column: 1;
+    grid-row: 1;
+}
+.updateBannerBufferLeft {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 

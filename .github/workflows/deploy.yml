@@ -1,0 +1,25 @@
+name: Update Deployment Time
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-deploy-time:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Update Deployment Time
+        run: echo "const deploymentTime = '$(date -u)';" > buildTime.js
+
+      - name: Commit changes
+        run: |
+          git config user.name 'GitHub Actions'
+          git config user.email '<>'
+          git add buildTime.js
+          git commit -m "Update deployment time [skip ci]"
+          git push

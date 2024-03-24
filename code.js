@@ -66,39 +66,6 @@ function readSelection(elemID) {
   let selectedValue = document.getElementById(elemID);
   return selectedValue;
 }
-
-function gameLastUpdated() {
-  let steamFeed = "https://steamcommunity.com/games/1282100/rss/";
-  let lastLinkedDate,lastLinkedLink,lastLinkedTitle;
-  fetch(steamFeed)
-  .then(response => response.text())
-  .then(xmlData => {
-    let parser = new DOMParser();
-    let moreParsyParser = parser.parseFromString(xmlData, `text/xml`);
-    //Every entry is enclosed in <item></item>
-    let greatRSSMess = moreParsyParser.querySelectorAll(`item`);
-    console.log(greatRSSMess.length)
-
-    for (items of greatRSSMess) {
-
-      console.log("for entered")
-      let titleCheck = items.querySelector(`title`).textContent;
-      if (titleCheck.toLowerCase().includes(`patch`) || titleCheck.toLowerCase().includes(`fix`)) {
-        console.log("hi");
-        break;
-      }
-    }
-    // //Post title
-    // lastLinkedTitle = greatRSSMess.querySelector('title').textContent;
-    // //Post date
-    // lastLinkedDate = greatRSSMess.querySelector('pubDate').textContent;
-    // //Post link
-    // lastLinkedLink = greatRSSMess.querySelector('guid').textContent;
-  })
-  .catch(error => {
-    console.error(`Failed to yoink Steam's RSS feed for the game`, error);
-  });
-}
 /* ---------------------------------------------------------------------------------------- */
 /* ------ Shorthand functions used to actually define the HTML to be injected ------------- */
 /* ---------------------------------------------------------------------------------------- */
@@ -2364,7 +2331,8 @@ function pagePopulation() {
   createHTML.populateGear("quickUse1",quickUses);
   createHTML.populateGear("quickUse2",quickUses);
   manipulateURL.importURLparameters();
-  // gameLastUpdated();
 }
+
 //Must be last, fill the page
 pagePopulation();
+readSelection("calcLastUpdated").innerHTML = lastCalcUpdate;
