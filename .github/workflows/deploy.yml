@@ -1,8 +1,9 @@
 name: Update Build Time
 
 on:
-  deployment:
-    types: [pages]
+  push:
+    branches:
+      - master
 
 jobs:
   update_last_calculation_time:
@@ -11,5 +12,4 @@ jobs:
       - name: Set LAST_CALC_UPDATE
         id: set_last_calc_update
         run: |
-          echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
-          echo "<script src='buildTime.js'></script>" >> index.html
+          echo "LAST_CALC_UPDATE='$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')'" >> $GITHUB_ENV
