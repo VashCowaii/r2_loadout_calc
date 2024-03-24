@@ -16,7 +16,7 @@ jobs:
       - name: Update buildTime.js
         run: |
           current_time=$(TZ=America/Denver date +"%A, %B %d, %H:%M:%Z")
-          echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
+          echo "const lastCalcUpdate = '$current_time';" > buildTime.js
 
       - name: Commit changes
         run: |
