@@ -28,6 +28,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Update Last Update Time
+        run: |
+          echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
+          echo "<script src='buildTime.js'></script>" >> index.html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
@@ -35,10 +39,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Update Last Update Time
-        run: |
-          echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
-          echo "<script src='buildTime.js'></script>" >> index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
