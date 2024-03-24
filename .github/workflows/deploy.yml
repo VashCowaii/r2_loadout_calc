@@ -1,25 +1,25 @@
-name: Update Deployment Time
+# name: Update Deployment Time
 
-on:
-  pull_request:
-    branches:
-      - master
+# on:
+#   pull_request:
+#     branches:
+#       - master
 
-jobs:
-  update-deploy-time:
-    runs-on: ubuntu-latest
+# jobs:
+#   update-deploy-time:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Set up Git repository
+#         uses: actions/checkout@v2
 
-      - name: Update Deployment Time
-        run: echo "const deploymentTime = '$(date -u)';" > buildTime.js
+#       - name: Update Deployment Time
+#         run: echo "const deploymentTime = '$(date -u)';" > buildTime.js
 
-      - name: Commit changes
-        run: |
-          git config user.name 'GitHub Actions'
-          git config user.email 'actions@github.com'
-          git add buildTime.js
-          git commit -m "Updated deployment time [skip ci]"
-          git push origin HEAD:refs/heads/$GITHUB_HEAD_REF
+#       - name: Commit changes
+#         run: |
+#           git config user.name 'GitHub Actions'
+#           git config user.email 'actions@github.com'
+#           git add buildTime.js
+#           git commit -m "Updated deployment time [skip ci]"
+#           git push origin HEAD:refs/heads/$GITHUB_HEAD_REF
