@@ -1,15 +1,15 @@
-name: Update Build Time
+# name: Update Build Time
 
-on:
-  deployment:
-    types: [pages]
+# on:
+#   deployment:
+#     types: [pages]
 
-jobs:
-  update_last_calculation_time:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set Last Calculation Update Time
-        id: set_last_calc_update
-        run: |
-          echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
-          echo "<script src='buildTime.js'></script>" >> index.html
+# jobs:
+#   update_last_calculation_time:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Set Last Calculation Update Time
+#         id: set_last_calc_update
+#         run: |
+#           echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
+#           echo "<script src='buildTime.js'></script>" >> index.html

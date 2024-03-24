@@ -35,6 +35,10 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Update Last Update Time
+        run: |
+          echo "<script>const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';</script>" >> index.html
+          echo "<script src='buildTime.js'></script>" >> index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
