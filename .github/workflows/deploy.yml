@@ -14,7 +14,7 @@
 #         uses: actions/checkout@v2
 
 #       - name: Update Deployment Time
-#         run: echo "const deploymentTime = '$(date -u)';" > buildTime.js
+#         run: echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
 
 #       - name: Commit changes
 #         run: |
