@@ -7,7 +7,6 @@ on:
 
 jobs:
   update-deploy-time:
-    # what VM the workflow will execute on
     runs-on: ubuntu-latest
 
     steps:
@@ -15,15 +14,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update buildTime.js
-        # echo=print, $()=${}, date -u=UTC time
         run: |
-        current_time=$(TZ=America/Denver date +"%A, %B %d, %H:%M:%Z")
-        echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
+          current_time=$(TZ=America/Denver date +"%A, %B %d, %H:%M:%Z")
+          echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
 
       - name: Commit changes
-        # [skip ci]=actions ignores this push, so workflows do not repeat
-        # supposedly frowned upon to not specify that it is Actions doing the commit, so clarify that
-        # "add ." moves all changes to staging for commital
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "action@github.com"
