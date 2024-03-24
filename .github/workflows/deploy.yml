@@ -1,25 +1,30 @@
-# name: Update Deployment Time
+name: Update Deployment Time
 
-# on:
-#   pull_request:
-#     branches:
-#       - master
+on:
+  push:
+    branches:
+      - master
 
-# jobs:
-#   update-deploy-time:
-#     runs-on: ubuntu-latest
+jobs:
+  update-deploy-time:
+    # what VM the workflow will execute on
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: Set up Git repository
-#         uses: actions/checkout@v2
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-#       - name: Update Deployment Time
-#         run: echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
+      - name: Update buildTime.js
+        # echo=print, $()=${}, date -u=UTC time, can't find a way to specify mountain here
+        run: echo "const lastCalcUpdate = '$(date -u)';" > buildTime.js
 
-#       - name: Commit changes
-#         run: |
-#           git config user.name 'GitHub Actions'
-#           git config user.email 'actions@github.com'
-#           git add buildTime.js
-#           git commit -m "Updated deployment time [skip ci]"
-#           git push origin HEAD:refs/heads/$GITHUB_HEAD_REF
+        # [skip ci]=actions to ignore this push, so workflows do not repeat
+        # supposedly frowned upon to not specify that it is Actions doing the commit, so clarify that
+        # "add ." moves all changes to staging for commital
+      - name: Commit changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "action@github.com"
+          git add .
+          git commit -m "Updated buildTime [skip ci]"
+          git push
