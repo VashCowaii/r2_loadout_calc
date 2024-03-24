@@ -20,6 +20,8 @@ jobs:
 
       - name: Commit changes
         run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "action@github.com"
           git add buildTime.js
           git commit -m "Update buildTime.js"
           git push origin master
