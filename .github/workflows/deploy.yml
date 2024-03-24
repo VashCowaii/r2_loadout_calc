@@ -1,7 +1,7 @@
 name: Update Deployment Time
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -19,7 +19,7 @@ jobs:
       - name: Commit changes
         run: |
           git config user.name 'GitHub Actions'
-          git config user.email '<>'
+          git config user.email 'actions@github.com'
           git add buildTime.js
           git commit -m "Updated deployment time [skip ci]"
-          git push
+          git push origin HEAD:refs/heads/$GITHUB_HEAD_REF
