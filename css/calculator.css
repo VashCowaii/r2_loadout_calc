@@ -3605,4 +3605,8 @@ div {
         width: auto;
         white-space: normal;
     }
+
+    .selectSelector {
+        font-size: 14px;
+    }
 }
