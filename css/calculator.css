@@ -2981,6 +2981,10 @@ div {
     width: 100%;
     box-sizing: border-box;
     color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
     /* border: 1px solid red; */
     font-size: 18px;
 }
