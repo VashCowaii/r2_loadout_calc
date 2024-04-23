@@ -2,54 +2,76 @@
 /* #181818 */
 /* #5d5d5d for thin lines */
 
+/* Descriptions */
+.classAbilityDescription,.classPassiveDescription,.classPerkDescription,.accessoryDescription,
+.relicDescription,.relicComplexDesc,.consumableDesc,.weaponDescriptionBox,.mutatorDesc,
+.filtersQuarterDescription,.comboDebugWindow,.settingsImportDesc,.settingsImportedList,.selectItemDesc,
+.weaponDisplayDamageHeader,.helpBoxText {
+    font-family: "Montserrat-Light";
+}
+
+
+
+
+
 .exportBar {
-    width: 100%;
-    height: 11.5%;
+    width: 80%;
+    height: 40px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     /* border: 1px solid red; */
     /* border-radius: 5%; */
 }
 .exportButton {
     width: 100%;
     height: 100%;
-    background-color: #434343;
+    /* background-color: #434343; */
+    background-color: transparent;
     color: white;
     box-sizing: border-box;
-    border: 1px solid #d9d9d9;
+    /* border: 1px solid #d9d9d9; */
+    border: 2px solid #434343;
     padding: 0;
     margin: 0;
     border-radius: 12px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 .exportButton:hover {
-    background-color: #1a1a1a;
+    background-color: #4b4b4b;
     color: black;
 }
 .exportText {
-    height: 100%;
-    width: 65%;
+    height: auto;
+    width: auto;
     font-size: 15px;
     display: flex;
     align-items: center;
-    justify-content: right;
-    text-align: right;
+    box-sizing: border-box;
+    padding-right: 2px;
+    /* justify-content: right; */
+    /* text-align: right; */
     white-space: wrap;
+    /* border: 1px solid red; */
 }
 .exportIconBox {
-    height: 100%;
-    width: 35%;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    /* border: 1px solid green; */
 }
 .exportIcon {
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -74,12 +96,19 @@
 /* Navbar container */
 .iconsBar {
     width: 100%;
+    height: 40px;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
     box-sizing: border-box;
     padding: 0%;
+    z-index: 999;
+    padding-bottom: 4px;
   }
   .dropdown {
-    width: 33.3333%;
+    width: 50px;
+    height: 40px;
     position: relative;
     /* overflow: visible; */
     border-radius: 20%;
@@ -110,45 +139,47 @@
     box-sizing: border-box;
   }
   /* Dropdown content (hidden by default) */
-  .dropdown-content {
+  .dropdownContentFromLeft,.dropdownContentFromRight {
     display: none;
-    background-color: #d9d9d9;
     position: absolute;
     top: 100%;
-    left: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    /* position: fixed;
-    top: 0;
-    right: 0; */
     width: 260px;
-    z-index: 1;
+    z-index: 1000;
     box-sizing: border-box;
   }
+  .dropdownContentFromLeft {
+    left: 0;
+  }
+  .dropdownContentFromRight {
+    right: 0;
+  }
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdownContentFromLeft,.dropdown:hover .dropdownContentFromRight {
     display: block;
   }
 
 .helpBox {
     width: 100%;
-    height: 200px;
+    height: auto;
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    border: 2px solid #666666;
-    overflow-y: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
     white-space: normal;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.8);
 }
 .helpBoxHeader {
     width: 100%;
-    height: 20%;
-    font-size: 20px;
-    background-color: #434343;
-    border-bottom: 1px solid black;
+    height: auto;
+    font-size: 16px;
+    border: 2px solid #434343;
+    border-radius: 10px;
     box-sizing: border-box;
+    white-space: normal;
     display: flex;
     text-align: center;
     align-items: center;
@@ -156,8 +187,13 @@
 }
 .helpBoxText {
     width: 100%;
-    height: 30%;
-    font-size: 15px;
+    height: auto;
+    font-size: 14px;
+    padding: 2px;
+    /* display: flex; */
+    justify-content: left;
+    align-items: center;
+    text-align: left;
 }
 
 
@@ -214,7 +250,6 @@
     box-sizing: border-box;
 }
 .togglesRowBox {
-    height: 18px;
     box-sizing: border-box;
     border-bottom: 1px solid #434343;
     display: flex;
@@ -249,19 +284,18 @@
     box-sizing: border-box;
 }
 .togglesValue {
-    width: 60%;
+    width: 55%;
     height: 100%;
     font-size: 12px;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    white-space: nowrap;
     box-sizing: border-box;
     border-left: 1px solid black;
 }
 .togglesUse {
-    width: 15%;
+    width: 20%;
     height: 100%;
     font-size: 12px;
     display: flex;
@@ -288,22 +322,32 @@
 /* this is for archselects and armor columns */
 .classAndArmor {
     display: flex;
-    width: 100%;
+    width: 50%;
     height: auto;
     display: flex;
     white-space: nowrap;
     grid-column: 2 / span 1;
     grid-row: 2;
+    background-color: none;
 }
+.newCenterMegaBox {
+    width: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
 
 
 div {
     color: white;
-}
-
-* {
-/* outline: 2px solid red; */
-font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -334,18 +378,72 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
+.helpBarMegaBox {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    height: auto;
+}
+.updateWarningBar {
+    border: 3px solid white;
+    color: #e06666;
+    /* height: 80px; */
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.mainGridRow {
+    display: flex;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------- BASIC STATS Column -------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .basicsBox {
-    width: 100%;
+    width: 25%;
     height: 800px;
     max-height: 800px;
-    background-color: #666666;
+    overflow-y: auto;
+    background-color: none;
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* white-space: normal; */
+    box-sizing: border-box;
+}
+.basicsInnerBox {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    /* border: 1px solid red; */
     box-sizing: border-box;
 }
 .basicsTitleHeader {
@@ -379,7 +477,7 @@ font-family: Arial, Helvetica, sans-serif;
     padding: 0;
 }
 .basicsSummaryBox {
-    height: 16%;
+    height: auto;
     width: 100%;
     box-sizing: border-box;
 }
@@ -391,25 +489,22 @@ font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
 }
 .basicsDRheaderTitle {
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
-    height: 20%;
-    background-color: #434343;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    height: auto;
     display: flex;
     text-align: center;
     justify-content: center;
-    white-space: nowrap;
+    white-space: normal;
     align-items: center;
     box-sizing: border-box;
 }
 .basicsDRheaderSmall {
     font-size: 15px;
-    height: 7%;
+    height: auto;
     padding: 0%;
     width: 100%;
-    background-color: #434343;
+    /* background-color: #434343; */
     display: flex;
     text-align: left;
     justify-content: left;
@@ -419,8 +514,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .basicsDRContainer {
     width: 100%;
-    height: 7%;
-    border-bottom: 1px solid #434343;
+    height: auto;
+    /* border-bottom: 1px solid #434343; */
     padding: 0;
     display: flex;
     align-items: center;
@@ -429,7 +524,7 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .basicsDRStat {
-    width: 66%;
+    width: auto;
     height: 100%;
     font-size: 14px;
     display: flex;
@@ -439,8 +534,16 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     box-sizing: border-box;
 }
+.rowTraceLine {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-left: 5px;
+}
 .basicsDRValue {
-    width: 30%;
+    width: auto;
     height: 100%;
     font-size: 14px;
     display: flex;
@@ -452,7 +555,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .basicsDRsumContainer {
     width: 100%;
-    height: 10%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-items: center;
@@ -462,9 +565,9 @@ font-family: Arial, Helvetica, sans-serif;
 .basicsTotalDR {
     width: 60%;
     padding-right: 2%;
-    background-color: #434343;
+    /* background-color: #434343; */
     height: 100%;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     white-space: nowrap;
     justify-content: right;
@@ -475,9 +578,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 40%;
     padding-right: 2%;
     height: 100%;
-    font-size: 20px;
-    background-color: black;
-    border-right: 1px solid #434343;
+    font-size: 16px;
     display: flex;
     white-space: nowrap;
     justify-content: right;
@@ -486,8 +587,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .basicsSummaryContainer {
     width: 100%;
-    height: 18.75%;
-    border-bottom: 1px solid #434343;
+    height: 23px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -496,7 +596,7 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .basicsSummaryStat {
-    width: 66%;
+    width: auto;
     height: 100%;
     padding-left: 1%;
     display: flex;
@@ -507,7 +607,7 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .basicsSummaryValue {
-    width: 30%;
+    width: auto;
     height: 100%;
     display: flex;
     text-align: right;
@@ -517,9 +617,11 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .basicsResistanceBox {
-    height: 13.5%;
+    height: auto;
     width: 100%;
     box-sizing: border-box;
+    padding: 10px;
+    /* border-bottom: 1px solid #434343; */
     /* white-space: nowrap; */
     /* display: block; */
     display: flex;
@@ -542,9 +644,9 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .resistanceContainer {
-    height: 38%;
+    height: auto;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     padding: 0%;
     display: flex;
     box-sizing: border-box;
@@ -558,15 +660,24 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .resistanceValues {
     width: 20%;
-    height: 100%;
+    height: 40px;
     font-size: 25px;
-    border: 1px solid #434343;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
     box-sizing: border-box;
 }
+.basicsDamageRows {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
 .basicsHealingBox {
     height: 25.5%;
     width: 100%;
@@ -679,9 +790,9 @@ font-family: Arial, Helvetica, sans-serif;
 .classThinHeader {
     font-size: 15px;
     padding: 0%;
-    height: 4%;
+    /* height: 4%; */
     width: 100%;
-    background-color: #434343;
+    /* background-color: #434343; */
     text-align: left;
     box-sizing: border-box;
 }
@@ -765,7 +876,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .classAbilityDescription {
     text-align: left;
-    font-size:10.5px;
+    font-size:12px;
     height: 30%;   
     white-space: normal;
     overflow-y: auto;
@@ -780,24 +891,32 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     padding: 0%;
     height: 8%;
-    background-color: #666666;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
     box-sizing: border-box;
     white-space: normal;
 }
 .classPassiveDescription {
     width: 100%;
-    height: 20%;
+    height: auto;
     text-align: left;
-    font-size: clamp(9.5px, 0.8vw, 11px);
+    font-size: 12px;
     padding-top: 2px;
     box-sizing: border-box;
     white-space: normal;
+    border-bottom: 2px solid #434343;
     /* overflow-wrap: break-word; */
-    overflow-y: auto;
+    /* overflow-y: auto; */
+}
+.weaponModMutatorDescAdjustment {
+    font-size: 10px;
+    width: 100%;
+    height: auto;
+    position: static;
+    border: none;
 }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------- PrimePerk/Armor Column ---------------------------------------*/
@@ -841,14 +960,21 @@ font-family: Arial, Helvetica, sans-serif;
 .classPerkName {
     font-size: 15px;
     width: 100%;
-    height: 30%;
+    height: auto;
     padding: 0%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    word-wrap: break-word;
+    white-space: nowrap;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .classPerkIconHolder {
     width: 100%;
@@ -865,13 +991,16 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .classPerkDescription{
     width: 100%;
-    height: 27%;
-    border-bottom: 1px solid #434343;
+    height: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    text-align: left;
+    border-bottom: 2px solid #434343;
     font-size: 12px;
-    text-align: center;
     white-space: normal;
     box-sizing: border-box;
-    overflow-y: auto;
 }
 .armorHeaderBig{
     width: 100%;
@@ -981,19 +1110,17 @@ font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
 }
 .armorValueDisplay {
-    font-size: 10px;
-    width: 100%;
-    height: 25%;
-    padding: 0%;
+    font-size: 14px;
+    width: auto;
+    height: auto;
     color: white;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-left: 1px solid #434343;
-    border-right: 1px solid #434343;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    /* border: 1px solid red; */
 }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------- Accessory Column ---------------------------------------------*/
@@ -1093,13 +1220,13 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     white-space: normal;
 }
-.accessoryDescription {
+.accessoryDescription { 
     width: 100%;
     /* min-width: 120px; */
     height: 70%;
     text-align: left;
     /* font-size:10px; */
-    font-size: clamp(9px, 0.8vw, 11px);
+    font-size: 12px;
     padding-left: 0.5%;
     background-color: black;
     border-right: 1px solid #434343;
@@ -1107,48 +1234,10 @@ font-family: Arial, Helvetica, sans-serif;
     white-space: normal;
     overflow-y: auto;
 }
-.fragmentsContainer{
-    width: 100%;
-    height: 7%;
-    font-size: 15px;
-    padding: 0%;
-    background-color: #d9d9d9;
-    display: flex;
-    flex-direction: column;
-}
-.fragmentsSelectorBox {
-    width: 100%;
-    height: 33.33%;
-    padding: 0%;
-    border-left: 1px solid #666666;
-    border-right: 1px solid #434343;
-    display: flex;
-    box-sizing: border-box;
-    white-space: nowrap;
-    /* overflow: ; */
-}
-.fragmentsSelector {
-    width: 100%;
-    height: 100%;
-    font-size: 10px;
-    padding: 0%;
-    background-color: #d9d9d9;
-    color: black;
-    display: flex;
-    text-align: left;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    white-space: nowrap;
-}
-.fragmentsSelector + .fragmentsSelector {
-    border-top: 1px solid #666666;
-}
 .relicDescription {
     background-color: black;
     text-align: left;
-    font-size:11px;
+    font-size:12px;
     height: 7%;
     padding-top: 2px;
     display: flex;
@@ -1159,17 +1248,20 @@ font-family: Arial, Helvetica, sans-serif;
     overflow-y: auto;
 }
 .relicEffectsContainer {
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    width: auto;
+    height: auto;
     display: flex;
+    flex-direction: column;
     padding: 0%;
-    height: 25%;
-    background-color: black;
     white-space: normal;
 }
 .relicHealingContainer {
-    width: 40%;
+    width: 120px;
     height: 100%;
-    background-color: #666666;
+    background-color: none;
     display: flex;
     flex-direction: column;
 }
@@ -1185,7 +1277,7 @@ font-family: Arial, Helvetica, sans-serif;
 .relicComplexDesc {
     width: 100%;
     height: 30%;
-    font-size: 11px;
+    font-size: 12px;
     text-align: left;
     align-items: center;
     justify-content: left;
@@ -1322,8 +1414,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .complexRowContainer {
     width: 100%;
-    height: 10%;
-    border-bottom: 1px solid #434343;
+    height: auto;
+    /* border: 1px solid red; */
     padding: 0;
     display: flex;
     align-items: center;
@@ -1465,7 +1557,7 @@ font-family: Arial, Helvetica, sans-serif;
     height: 78%;
     text-align: left;
     white-space: normal;
-    font-size:10px;
+    font-size:12px;
     color: white;
     box-sizing: border-box;
     border-bottom: 1px solid #434343;
@@ -1554,7 +1646,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 8%;
     box-sizing: border-box;
-    font-size: clamp(10px, 1vw, 11px);
+    font-size: 12px;
 }
 .mutatorHeaderBox {
     width: 100%;
@@ -1608,7 +1700,7 @@ font-family: Arial, Helvetica, sans-serif;
     height: 15%;
     text-align: left;
     white-space: normal;
-    font-size:10px;
+    font-size:12px;
     color: white;
     box-sizing: border-box;
     border-bottom: 1px solid #434343;
@@ -1678,14 +1770,25 @@ font-family: Arial, Helvetica, sans-serif;
     object-fit: contain;
 }
 .weaponStatsHolder {
-    height: 32%;
-    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+    bottom: 0;
+    height: 240px;
+    width: 140px;
     overflow-y: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weaponDisplayDamageHeader {
+    font-size: 16px;
 }
 .weaponRowContainer {
     width: 100%;
-    height: 10%;
-    background-color: #666666;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -1694,27 +1797,23 @@ font-family: Arial, Helvetica, sans-serif;
     /* border: 1px solid #434343; */
 }
 
-.weaponRowContainer+.weaponRowContainer{
-    border-top: 1px solid black;
-}
 .weaponStat {
-    width: 50%;
+    width: auto;
     height: 100%;
     /* font-size: clamp(10px, 0.6vw, 11px); */
     font-size: 9px;
     display: flex;
     text-align: left;
     justify-content: left;
-    white-space: normal;
+    white-space: nowrap;
     align-items: center;
     box-sizing: border-box;
     padding-left: 2%;
-    background-color: #434343;
     /* border-top: 1px solid black;
     border-bottom: 1px solid black; */
 }
 .weaponValue {
-    width: 50%;
+    width: auto;
     height: 100%;
     font-size: 12px;
     display: flex;
@@ -1730,61 +1829,42 @@ font-family: Arial, Helvetica, sans-serif;
 /* ----------------------------------------------------------------------------------------*/
 .traitsBox {
     /* width: 350px; */
-    width: 100%;
+    width: 25%;
     /* min-width: 280px; */
     /* min-width: none; */
+    box-sizing: border-box;
+    padding: 4px;
     height: 800px;
-    background-color: #666666;
+    background-color: none;
     color: white;
     box-sizing: border-box;
-    border-top: 1px solid black;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-y: auto;
 }
 .traitContainer {
     width: 100%;
-    height: 4.8%;
-    min-height: 40px;
-    border-bottom: 1px solid #434343;
+    max-width: 260px;
+    height: 40px;
+    /* border-bottom: 1px solid #434343; */
     padding: 0;
     display: flex;
     align-items: center;
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
-}
-.traitButton {
-    width: 10%;
-    height: 100%;
-    border-bottom: 1px solid #434343;
-    background-color: black;
-    color: white;
-    font-size: clamp(26px, 2vw, 35px);
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-.traitButton:disabled {
-    border: 2px solid #434343;
-    background-color: #272727;
-    color: black;
-    appearance: none;
-    box-sizing: border-box;
+    padding-bottom: 3px;
 }
 .traitLineHolder {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    border-bottom: 1px solid #434343;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
-    justify-content: center;
+    justify-content: left;
     box-sizing: border-box;
 }
 .traitNameHolder {
@@ -1792,14 +1872,13 @@ font-family: Arial, Helvetica, sans-serif;
     height: 50%;
     display: flex;
     align-items: center;
-    justify-items: center;
-    justify-content: center;
+    justify-content: left;
     box-sizing: border-box;
 }
 .traitSelector {
     width: 70%;
     height: 100%;
-    font-size: clamp(10px, 1vw, 14px);
+    font-size: 12px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -1812,7 +1891,7 @@ font-family: Arial, Helvetica, sans-serif;
     appearance: none;
 }
 .traitLevelDisplay {
-    width: 30%;
+    width: 40%;
     height: 100%;
     font-size: clamp(13px, 1vw, 15px);
     display: flex;
@@ -1820,70 +1899,74 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     justify-items: center;
     justify-content: center;
+    background-color: none;
+    color: white;
     
 }
+.traitLevelInput {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    appearance: none;
+    color: white;
+    background-color: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: right;
+    padding-right: 4px;
+    border: none;
+    /* border-radius: 10px; */
+    
+    background: transparent;
+}
+
 .traitLevelContainer {
     width: 100%;
     height: 50%;
-    background-color: black;
     display: flex;
-    /* display: inline-flex; */
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    text-align: center;
     box-sizing: border-box;
-    border: 1px solid #434343;
     position: relative;
-    /* overflow: visible; */
 }
 .traitLevelBar {
     width: 100%;
     height: 100%;
     position: absolute;
-    /* left: 1px; */
-    top: 1px;
+    top: 0;
+    left: 0;
+    padding-top: 2px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     box-sizing: border-box;
-    border: 1px solid #434343;
-    /* overflow: visible; */
 }
 .traitLevelCircle {
-    /* These used to be circles and I'm too lazy to change the name */
-    /* border-radius: 50%; */
-    outline: 1px solid white;
-    width: 10%;
-    height: 95%;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
     box-sizing: border-box;
+    border: 1px solid #2d2d2d;
+    box-shadow: inset 0px 0px 2px 4.5px rgba(0, 0, 0, 1);
+
     /* #93CCEA for the blue, just "orange" will work for the core traits */
 }
-.pointsSpent {
-    background-color: #93CCEA;
-    height: 100%;
-    width: 0%;
-    border-top: 2px solid #434343;
-    position: absolute;
-}
-.intrinsicPoints {
-    background-color: orange;
-    height: 100%;
-    width: 0%;
-    /* box-sizing: border-box; */
-    border-top: 2px solid #434343;
-    position: absolute;
 
-}
 .traitMegaTitleHeader {
-    font-size: clamp(24px, 2vw, 30px);
+    font-size: 25px;
     height: 35px;
     width: 100%;
+    max-width: 240px;
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
     box-sizing: border-box;
 }
 /* USED IN ALL MIDDLE LEVEL TITLE HEADERS */
@@ -1905,14 +1988,14 @@ font-family: Arial, Helvetica, sans-serif;
 /* ------------------------- ADVANCED STATS -----------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .advancedStatsBox {
-    background-color: #666666;
+    /* background-color: #666666; */
     color: white;
     display: flex;
     flex-direction: column;
     width: 100%;
     /* min-width: 930px; */
     max-width: 1280px;
-    height: 500px;
+    height: auto;
     white-space: nowrap;
     box-sizing: border-box;
     grid-column: 1 / span 3;
@@ -1920,54 +2003,69 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .advancedStatsTitleHeader {
     font-size: 30px;
-    height: 8%;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
+}
+.survivabilityContainer {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    overflow: hidden;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }
 .advancedStatsHeader {
-    font-size: 18px;
-    height: 4%;
+    font-size: 25px;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
+    /* background-color: #434343; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
     box-sizing: border-box;
 }
+.advancedStatsHeaderRow {
+    display: flex;
+}
 .advancedSummaryContainer {
-    height: 8%;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     box-sizing: border-box;
 }
 .advancedSummaryThirds {
-    height: 100%;
+    height: auto;
     width: 33.3333%;
     /* min-width: 300px; */
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
     display: flex;
     white-space: nowrap;
     align-items: center;
@@ -1993,8 +2091,7 @@ font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     display: flex;
     text-align: right;
-    justify-content: right;
-    background-color: #666666;
+    justify-content: left;
     white-space: nowrap;
     align-items: center;
     box-sizing: border-box;
@@ -2002,26 +2099,63 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .advancedCategoryBoxHolder {
     width: 100%;
-    height: 80%;
+    height: auto;
     box-sizing: border-box;
     /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     white-space: nowrap;
 }
-.advancedCategoryBox {
+.advancedCategoryBoxBaseMeleeStats {
     width: 25%;
+    max-width: 25%;
+}
+
+/* MELEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+.meleeDamageBox {
+    width: 100%;
+    height: auto;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+.advancedStatsShowToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    border: 1px solid #434343;
+    width: auto;
+    border-radius: 5px;
+}
+.advancedCategoryBox {
+    width: 33.3333%;
     /* min-width: 232.5px; */
     /* height: 100%;*/
     height: auto;
     box-sizing: border-box;
-    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #434343;
+    margin: 2px;
+    /* border: 1px solid black; */
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
 }
 .advancedCategoryHeader {
     font-size: 20px;
-    height: 40px;
+    min-height: 30px;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
@@ -2031,8 +2165,6 @@ font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     text-align: center;
     /* border-bottom: 1px solid black; */
-    border-right: 1px solid #434343;
-    border-left: 1px solid #434343;
     box-sizing: border-box;
 }
 
@@ -2150,17 +2282,15 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .totalHealingBox {
     width: 100%;
-    height: 20%;
+    height: auto;
     display: flex;
     white-space: nowrap;
     box-sizing: border-box;
 }
 .totalHealingBoxHalf {
     width: 100%;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
-    border-right: 1px solid black;
-    border: 0.1px solid black;
 }
 .totalHealingBigHeader {
     font-size: 20px;
@@ -2168,7 +2298,6 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
-    background-color: #434343;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2177,23 +2306,22 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .totalHealingHeader {
-    height: 40%;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
     font-size: 16px;
-    /* background-color: #666666; */
-    background-color: #434343;
+    border-bottom: 1px solid #434343;
+    border-top: 1px solid #434343;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid black;
     box-sizing: border-box;
 }
 .totalHealingValue {
-    height: 63%;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
@@ -2223,15 +2351,16 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 .advancedDRBoxThin {
-    height: 10%;
+    height: auto;
     width: 100%;
     white-space: nowrap;
     padding: 0%;
     font-size: 14px;
-    background-color: #434343;
+    padding-left: 2px;
     display: flex;
-    border-bottom: 1px solid black;
+    justify-content: space-between;
     box-sizing: border-box;
+    /* border: 1px solid green; */
 }
 .advancedDRStat {
     width: 40%;
@@ -2281,35 +2410,29 @@ font-family: Arial, Helvetica, sans-serif;
     white-space: normal;
 }
 .totalBonusDRHeader {
-    height: 10%;
-    width: 100%;
+    height: auto;
+    width: auto;
     white-space: nowrap;
     padding: 0%;
     font-size: 16px;
-    /* background-color: #666666; */
-    background-color: #434343;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid black;
     box-sizing: border-box;
 }
 .totalBonusDR {
     height: 20%;
-    width: 100%;
+    width: auto;
     white-space: nowrap;
     padding: 0%;
     font-size: 25px;
-    /* background-color: #666666; */
-    background-color: #666666;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid black;
     box-sizing: border-box;
 }
 
@@ -2318,7 +2441,31 @@ font-family: Arial, Helvetica, sans-serif;
 /* -------------------------- DAMAGE CALCS ------------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 .damageStatsBox {
-    background-color: #666666;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    overflow: hidden;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* -------------------------- FILTERS CALCS -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.filtersMegaBox {
+    /* background-color: #666666; */
+    background-color: none;
     color: white;
     display: flex;
     flex-direction: column;
@@ -2329,22 +2476,992 @@ font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
     box-sizing: border-box;
     grid-column: 1 / span 3;
-    grid-row: 5;
-}
-.advancedStatsDamageHeader {
-    font-size: 30px;
-    height: 30px;
-    width: 100%;
-    white-space: nowrap;
-    padding: 0%;
-    background-color: #434343;
+    grid-row: 6;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.filtersConstraintsBox {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #666666;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.filtersMegaHeader {
+    width: 100%;
+    font-size: 30px;
+    background-color: #434343;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.filtersInstructionsBox {
+    font-size: 12px;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #93CCEA;
+}
+.filtersBoxHolder {
+    width: 100%;
+    display: flex;
+}
+.filtersOuterHeader {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.filtersBoxQuarters {
+    width: 25%;
+    height: 400px;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 5px;
+}
+.filtersQuarterHeader {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    border-bottom: 1px solid #666666;
+}
+.filtersQuarterDescription {
+    background-color: #434343;
+    height: 56px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    font-size: 12px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-bottom: 1px solid #666666;
+}
+.statFiltersRowContainer {
+    height: 20px;
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.statFiltersRowHeader {
+    height: 20px;
+    /* background-color: #434343; */
+    border: 1px solid #434343;
+    border-radius: 15px;
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.statFiltersRowMiniHeader {
+    height: 20px;
+    /* background-color: #434343; */
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+.presetsTitle {
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+.presetsSelectorBox {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+.weaponModMutatorAdjustment {
+    position: static;
+    height: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.presetsSelector {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
     box-sizing: border-box;
 }
+.tagInput {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #d9d9d9;
+}
+.clearInput {
+    width: 80%;
+    min-width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #434343;
+    color: #93CCEA;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.filterTagsContainer {
+    width: 100%;
+    height: 254px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.filtersTagsRowContainer {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid #666666;
+    display: flex;
+    flex-direction: row;
+}
+.filtersTagName {
+    /* width: calc(100%-20px); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-left: 10px;
+    white-space: normal;
+}
+.filtersTagDelete {
+    width: 40px;
+    height: 100%;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    appearance: none;
+    border: none;
+    border-left: 1px solid #666666;
+    /* border-left: 1px solid #666666; */
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.filterLocksContainer {
+    width: 100%;
+    height: 294px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.locksBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* EXCLUSIONS AND INCLUSIONS */
+.filtersBoxHalf {
+    width: 50%;
+    height: 400px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+}
+.occlusionsToggleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px;
+}
+.occlusionOption {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.comboDebugContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.comboDebugWindow{
+    width: 80%;
+    max-width: 600px;
+    background-color: black;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: left;
+    overflow-y: auto;
+    border-radius: 10px;
+    white-space: normal;
+    display: none;
+}
+
+.debugToggleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid #666666;
+}
+
+
+
+
+
+
+
+.cyclesSettingsHeader {
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    border-bottom: 1px solid #434343;
+}
+
+.resultsBoxHalf {
+    width: 100%;
+    max-width: 600px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+}
+.queryProgressBarBox {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "Montserrat-Light";
+}
+.counterDisplay {
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+}
+.progressBar {
+    background-color: #93CCEA;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat-Light";
+}
+.progressInfo {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    mix-blend-mode: difference;
+    font-family: "Montserrat-Light";
+}
+
+.cyclesControlBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.cyclesControl {
+    width: 33%;
+    border-radius: 15px;
+}
+/* ------------------------- COMBO IMAGE DISPLAYS ------------------------------------ */
+.comboDisplay {
+    width: 100%;
+    white-space: normal;
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comboDisplayImageBox {
+    width: 100%;
+    height: 625px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+}
+.comboDisplayMAIN {
+    height: 500px;
+    border-top: none;
+    border-bottom: none;
+}
+.mainSelectionsMegaBox {
+    width: 98%;
+    height: 295px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionsInfoContainer {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeHeader {
+    width: 100%;
+    height: 10%;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeFooter {
+    width: 100%;
+    height: 8%;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeBody {
+    width: 100%;
+    height: 82%;
+    font-size: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.seletionBackgroundBox {
+    position: relative;
+    top: 60px;
+    height: 60%;
+    width: 100%;
+    z-index: 0;
+}
+.seletionBackgroundWeaponAdjustment {
+    width: calc(100% - 140px);
+    top: 0;
+    height: 150px;
+    /* border: 1px solid red; */
+
+}
+.selectionBackgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* margin: auto; #666666 */
+    /* rotate: -15deg; */
+}
+.selectionBackgroundClassAdjustment {
+    position: absolute;
+    width: 100px;
+    height: 300px;
+    right: 0;
+    top: -60px;
+    /* bottom: 0px; */
+    overflow: hidden;
+    /* border: 1px solid white; */
+    /* translate: 500%; */
+}
+
+.selectionSelectorBox {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    box-sizing: border-box;
+    top: 2px;
+}
+.selectSelectorTitle {
+    width: 75px;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.selectSelector {
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent);
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    /* border: 1px solid red; */
+    font-size: 18px;
+}
+.traitNameAdjustment {
+    font-size: 14px;
+    /* border-radius: 10px; */
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent);
+}
+.revertCursor {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    cursor: default;
+    overflow: hidden;
+}
+.selectWeaponModMutatorAdjustment {
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: static;
+}
+.selectMiniSelectorAdjustment {
+    font-size: 14px;
+}
+.selectItemDesc {
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+    /* max-width: 400px; */
+    border-left: 5px solid #474747;
+    padding-left: 3px;
+
+    white-space: normal;
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    background: linear-gradient(to right, #222222,transparent,transparent,transparent);
+}
+
+.resoBonusHeader {
+    font-size: 14px;
+}
+.fragmentsContainer{
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    height: auto;
+    font-size: 15px;
+    bottom: 0%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+.adjustedSpacingSelector {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.classDescriptionsAdjustment {
+    height: 75%;
+    max-width: 100%;
+    white-space: normal;
+    /* width: calc(100% - 110px); */
+    width: 99%;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+.weaponDescriptionsAdjustment {
+    height: 100%;
+    max-height: 110px;
+    max-width: 100%;
+    white-space: normal;
+    width: calc(100% - 140px);
+    /* border: 1px solid green; */
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+.weaponModifierRow {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    /* border: 1px solid green; */
+    position: static;
+    height: 50px;
+}
+.weaponModifierRowDescBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: static;
+    padding: 0;
+    padding-left: 2px;
+    margin: 0;
+    overflow-y: auto;
+}
+.selectionClassToggle {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    font-size: 12px;
+}
+.selectionWeaponToggle {
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+
+
+
+
+
+
+.comboBackgroundContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+.backgroundHalvesLeft,.backgroundHalvesRight {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.backgroundHalvesLeft {
+    margin-right: 5px;
+    background: linear-gradient(225deg, rgb(26, 26, 26), black);
+}
+.backgroundHalvesRight {
+    margin-left: 5px;
+    background: linear-gradient(135deg, rgb(26, 26, 26), black);
+}
+
+.backgroundLeftImage,.backgroundRightImage {
+  /* position: absolute; */
+  /* top: 0; */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  transform: scale(2.3) translateY(21%);
+}
+.backgroundLeftImage {
+    right: 0;
+    translate: 50%;
+}
+.backgroundRightImage {
+    left: 0;
+    translate: -50%;
+}
+.classContainerDarken {
+    filter: brightness(0.3);
+}
+
+
+
+.comboArmorRow,.comboAccessoryRow,.comboAbilityRow,.comboStatsRow,.comboHeadsUpMessage,.comboWeaponPiecesRow {
+    position: absolute;
+    top: 2%;
+    height: 380px;
+    /* max-height: 350px; */
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+.comboHeadsUpMessage {
+    color: #e06666;
+    background-color: #434343;
+    box-sizing: border-box;
+    border: 1px solid #666666;
+    height: auto;
+    width: 200px;
+    top: 170px;
+    display: none;
+}
+.comboAbilityRow {
+    flex-direction: row;
+    height: auto;
+    width: 160px;
+    top: 220px;
+    /* border: 1px solid red; */
+}
+.comboStatsRow {
+    top: 295px;
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+}
+#comboTitle {
+    top: 290px;
+    width: 180px;
+    /* border: 1px solid red; */
+}
+.comboArmorRow {left: 8%;}
+.comboAccessoryRow {right: 8%;}
+.curvedLineUIright {
+    position: absolute;
+    top: 0;
+    right: -130%;
+    width: 290px;
+    height: 90px;
+    border: solid 2px #000;
+    border-color: transparent transparent #434343 transparent;
+    border-radius: 0 0 240px 60%/50px;
+    rotate: -90deg;
+    transform: translateX(-110px);
+    z-index: -1;
+}
+.curvedLineUIleft {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 290px;
+    height: 90px;
+    border: solid 2px #000;
+    border-color: transparent transparent #434343 transparent;
+    border-radius: 0 0 240px 50%/50px;
+    rotate: 92deg;
+    transform: translateX(110px);
+    z-index: -1;
+}
+
+
+
+
+
+.comboAccessoryRowMAIN {height: 320px;}
+/* #181818 */
+.comboArmorImageBox,.comboWeaponImageBox,.comboConsumableImageBox,.comboWeaponPiecesHolder {
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #161616;
+    border: 1px solid #434343;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+.mainUIcombo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 0;
+}
+.comboArmorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* margin: auto; #666666 */
+}
+.comboWeaponImageBox,.comboWeaponPiecesHolder {
+    width: 150px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.comboWeaponPiecesHolder {
+    border: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.mainPiecesAdjustment {
+    background-color: transparent;
+    box-shadow: none;
+}
+.comboMutatorName {
+    /* border-bottom: 1px solid #666666; */
+    width: 80%;
+    font-size: 12px;
+}
+.comboModName {
+    width: 80%;
+    font-size: 12px;
+}
+.comboModName + .comboMutatorName {
+    border-top: 2px solid #666666;
+}
+
+.comboConsumableImageBox {
+    width: 40px;
+    height: 40px;
+}
+.comboConsumableImageBoxMAIN {
+    width: 35px;
+    height: 35px;
+}
+.comboWeaponRow,.comboConcoctionRow,.comboFragmentsRow,.comboWeaponPiecesRow {
+    position: absolute;
+    top: 400px;
+    height: auto;
+    /* max-height: 350px; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+.comboWeaponRowMAIN {
+    top: 340px;
+}
+.comboWeaponPiecesRow {
+    top: 470px;
+}
+.comboWeaponPiecesRowMAIN {
+    top: 410px;
+}
+.comboConcoctionRow {
+    top: 525px;
+    width: 100%;
+    /* height: 200px; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+}
+.comboConcoctionRowMAIN {
+    top: 92%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comboFragmentsRow {
+    top: 610px;
+}
+.comboConcoctionsBox,.comboQuickUseBox {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    justify-content: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.comboQuickUseBox {
+    width: 170px;
+    justify-content: right;
+}
+
+.cyclesSettingsBox {
+    width: 100%;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 50px; */
+}
+.statisticChoiceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.statisticInputBox {
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.statisticSettingsContainer {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* border: 1px solid red; */
+}
+.statisticSettingsRow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+.statsRowName {
+    width: calc(100% - 150px);
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.statsRowToggle {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.settingsImportDesc {
+    white-space: normal;
+    height: 50px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.settingsImportedList {
+    width: 100%;
+}
+.settingsResoOverheal {
+    width: 80%;
+}
+.bestOptionsLink {
+    color: #93CCEA;
+    margin: 0;
+}
+.bestOptionsRow {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -2355,7 +3472,7 @@ font-family: Arial, Helvetica, sans-serif;
         width: 100%;
         min-width: 100%;
     }
-    .advancedStatsBox,.damageStatsBox {
+    .advancedStatsBox {
         height: auto;
     }
     .advancedCategoryBoxHolder {
@@ -2375,6 +3492,7 @@ font-family: Arial, Helvetica, sans-serif;
 
     .traitContainer {
         height: 40px;
+        max-width: 100%;
     }
     .traitButtonImage {
         width: 100%;
@@ -2383,13 +3501,14 @@ font-family: Arial, Helvetica, sans-serif;
         object-fit: contain;
     }
 
+    .mainGridRow{flex-direction: column;}
+
     .classAndArmor{order: 0;}
-    .accessoriesBox {order: 1;}
-    .weaponsBox {order: 2;}
-    .traitsBox {order: 3;height: auto;}
-    .consumablesBox {order: 4;}
-    .basicsBox {order: 5;}
-    .advancedStatsBox {order: 6;}
+    .traitsBox {order: 1;height: auto;}
+    .basicsBox {order: 2;}
+    .advancedStatsBox {order: 3;}
+    .damageStatsBox {order: 4;}
+    .filtersMegaBox {order: 5;}
 
     .advancedCategoryBox.advStatsMobileAdjustment {
         height: auto;
@@ -2446,36 +3565,35 @@ font-family: Arial, Helvetica, sans-serif;
     .exportText {
         font-size: 13px;
     }
-}
 
-/* Font recolors */
-.corrosive,.corroded,.acid,.toxic {
-    color: #5db55d;
-}
-.bleed,.bleeding {
-    color: #9a3535;
-}
-.shock,.shocked,.overload,.overloaded {
-    color: #7171a7;
-}
-.slow,.bulwark,.haste,.status,.tarred,.spiritofthereddoe {
-    color: #f9ebb8;
-}
-.fire,.burn,.burning {
-    color: #ae592f;
-}
-.shield,.shields {
-    color: #b4e6f3;
-}
-.blight,.madness,.fragmented {
-    color: white;
-}
-.curse {
-    color: #a900d9;
-}
-.rootrot {
-    color: #d6a019;
-}
-.suppression {
-    color: #485683;
+    .filtersBoxHolder {
+        flex-direction: column;
+    }
+    .filtersBoxQuarters,.filtersBoxHalf {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        max-height: 400px;
+    }
+    .resultsBoxHalf {
+        width: 100%;
+        margin: 0;
+        /* height: auto;
+        max-height: 400px; */
+    }
+
+    .filtersTagsRowContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+    .filtersTagName {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .comboConcoctionsBox,.comboQuickUseBox {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }

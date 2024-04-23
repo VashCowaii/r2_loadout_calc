@@ -1,0 +1,31 @@
+/* Font substat recolors */
+.corrosive,.corroded,.acid,.toxic {
+    color: #5db55d;
+}
+.bleed,.bleeding {
+    color: #9a3535;
+}
+.shock,.shocked,.overload,.overloaded {
+    color: #7171a7;
+}
+.slow,.bulwark,.haste,.status,.tarred,.spiritofthereddoe {
+    color: #f9ebb8;
+}
+.fire,.burn,.burning {
+    color: #ae592f;
+}
+.shield,.shields {
+    color: #b4e6f3;
+}
+.blight,.madness,.fragmented,.numberTag,.level10 {
+    color: white;
+}
+.curse {
+    color: #a900d9;
+}
+.rootrot {
+    color: #d6a019;
+}
+.suppression {
+    color: #485683;
+}

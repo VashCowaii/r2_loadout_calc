@@ -59,6 +59,9 @@
     overflow-y: auto;
     white-space: normal;
 }
+li {
+    font-family: "Montserrat-Light";
+}
 .changeLogMegaHalves h1 {
     padding: 0;
     margin: 0;
