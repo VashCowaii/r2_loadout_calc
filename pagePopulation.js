@@ -40,9 +40,6 @@ function pagePopulation() {
     createHTML.populateGear("quickUse4List",quickUses);
     manipulateURL.importURLparameters();
   
-    //Tag filter selections
-    // createHTML.populateGear("tagPresets",cycles.presets);
-    createHTML.populateGear("filterTagList",referenceTable);
   
     //Occlusions filter selections
     createHTML.populateGear("amuletOcclusionsList",amulets);
@@ -76,11 +73,20 @@ function pagePopulation() {
     createHTML.populateGear("secondaryMutatorList",rangedMutators);
     createHTML.populateGear("secondaryModList",rangedMods);
 
-
-
+    if (stopQueryFractures) {
+      // readSelection("calcLastUpdated").innerHTML != ""
+      readSelection("queryBox").style.display = "none";
+      readSelection("dmgVisibilityToggle").style.display = "none";
+      readSelection("damageStatsContainer").style.display = "none";
+    }
+    else {
+        //Tag filter selections
+    createHTML.populateGear("tagPresets",cycles.presets);
+    createHTML.populateGear("filterTagList",referenceTable);
     createHTML.populateGear("statInputList",playerDerivedStatistics);
+    }
   }
-  
+  let stopQueryFractures = true;
   //Must be last, fill the page
   pagePopulation();
   //buildTime.js script call is injected into the HTML of the deployment, never the actual files here.

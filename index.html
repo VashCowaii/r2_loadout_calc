@@ -1518,14 +1518,14 @@
                 <div class="advancedStatsHeader">DAMAGE (soonTM)</div>
                 <div class="advancedStatsShowToggle" style="z-index: 0;position: absolute;right: 5px;">
                     <div style="padding-right: 5px;">Hide</div>
-                    <label class="toggleContainer">
-                        <!-- <input type="checkbox" class="toggleCheckbox" id="damageStatsContainerToggle" onchange="advancedUpdates.toggleDamageStats()"><span class="toggleSlider"></span> -->
+                    <label class="toggleContainer" id="dmgVisibilityToggle">
+                        <input type="checkbox" class="toggleCheckbox" id="damageStatsContainerToggle" onchange="advancedUpdates.toggleDamageStats()"><span class="toggleSlider"></span>
                     </label>
                 </div>
             </div>
 
 
-            <div class="advancedCategoryBoxHolder" id="damageStatsContainer" style="display: none;">
+            <div class="advancedCategoryBoxHolder" id="damageStatsContainer">
 
                 <!-- <div class="meleeDamageBox">asdf</div> -->
 
@@ -1569,7 +1569,7 @@
     </div>
 
 
-    <div class="filtersMegaBox" style="display: none;"> <!-- if you unhide this, it's gonna break the site. The files needed to work aren't on github yetBUILD QUERIES CONTAINER -->
+    <div class="filtersMegaBox" id="queryBox"> <!-- if you unhide this, it's gonna break the site. The files needed to work aren't on github yetBUILD QUERIES CONTAINER -->
         <div class="filtersConstraintsBox">
             <div class="filtersMegaHeader">BUILD QUERIES</div>
             <div class="filtersInstructionsBox">Build Filters and Queries can be used to find and GENERATE whatever build you might be after!</div>
@@ -2394,10 +2394,10 @@
 <!-- script/data calls -->
 <script src="data.js"></script>
 <script src="postData.js"></script>
-<!-- <script src="./dpsModules/melee.js"></script> -->
-<!-- <script src="combinations.js"></script> -->
+<script src="./dpsModules/melee.js"></script>
+<script src="combinations.js"></script>
 <script src="formulas.js"></script>
-<!-- <script src="attacks_Male.js"></script> -->
+<script src="attacks_Male.js"></script>
 <script src="code.js"></script>
 <script src="pagePopulation.js"></script>
 </body>

@@ -7631,7 +7631,6 @@ melee = {
 		"stats": {},
 		"tags": [],
 
-		"desc": "",
 		"builtIN": "Reaver",
 		"DMG": 153,
 		"atkSpeed": 0,
@@ -9518,7 +9517,7 @@ builtInMelee = {
 		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
 		"desc": "Increases Melee Damage by 10% if the target is suffering from a Negative Status Effect.",
 		"custom": "reaver",
-		"stats": {},//TODO: status checks
+		"stats": {},
 		"tags": ["MeleeDamage"]
 	},
 	"Blaze": {

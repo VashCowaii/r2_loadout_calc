@@ -1867,10 +1867,10 @@ let formulasValues = {
         let primaryWeaponMod = !isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
         let checkWeaponPath = weapons.primary[primaryWeapon];
         if (!checkWeaponPath.builtIN) {
-          if (mods.primaryMods[primaryWeaponMod].custom) {customItemFunctions[mods.primaryMods[primaryWeaponMod].custom](index);}
+          if (mods.primaryMods[primaryWeaponMod].custom) {customItemFunctions.primaryMods[mods.primaryMods[primaryWeaponMod].custom](index);}
         }
         else {//If the Primary weapon has a built-in mod
-          if (mods.builtInPrimaryMods[primaryWeaponMod].custom) {customItemFunctions[mods.builtInPrimaryMods[primaryWeaponMod].custom](index);}
+          if (mods.builtInPrimaryMods[primaryWeaponMod].custom) {customItemFunctions.primaryMods[mods.builtInPrimaryMods[primaryWeaponMod].custom](index);}
         }
       }
       //MELEE
@@ -1880,7 +1880,7 @@ let formulasValues = {
         let checkWeaponPath = weapons.melee[meleeWeapon];
         if (checkWeaponPath.builtIN){//If the Melee weapon has a built-in mod
           if (mods.builtInMeleeMods[checkWeaponPath.builtIN].custom) {
-            customItemFunctions[mods.builtInMeleeMods[checkWeaponPath.builtIN].custom](index);
+            customItemFunctions.meleeMods[mods.builtInMeleeMods[checkWeaponPath.builtIN].custom](index);
           }
         }
       }
@@ -1892,13 +1892,12 @@ let formulasValues = {
         let checkWeaponPath = weapons.secondary[secondaryWeapon];
         if (!checkWeaponPath.builtIN) {
           if (mods.secondaryMods[secondaryWeaponMod].custom) {
-            customItemFunctions[mods.secondaryMods[secondaryWeaponMod].custom](index);
+            customItemFunctions.secondaryMods[mods.secondaryMods[secondaryWeaponMod].custom](index);
           }
         }
         else {//If the Secondary weapon has a built-in mod
-          console.log(secondaryWeaponMod)
           if (mods.builtInSecondaryMods[secondaryWeaponMod].custom) {
-            customItemFunctions[mods.builtInSecondaryMods[secondaryWeaponMod].custom](index);
+            customItemFunctions.secondaryMods[mods.builtInSecondaryMods[secondaryWeaponMod].custom](index);
           }
         }
       }
@@ -2370,7 +2369,7 @@ let customItemFunctions = {
       valueTables[index].MLifesteal += globalRecords.meleeFactors.isEvade ? 0.05 : 0;
     },
     reaver(index) {
-        valueTables[index].MeleeDamage += reference.outgoingStatus ? 0.10 : 0;
+        valueTables[index].MeleeDamage += valueTables[index].outgoingStatus ? 0.10 : 0;
     }
   }
 }
@@ -2515,7 +2514,7 @@ function updateFormulas(index,ping) {
     // console.log("test")
     basicsUpdates.updateMainFromFormulas(returnStats);
     manipulateURL.updateURLparameters();
-    // window.updateConsole(index);//don't uncomment, it'll break the site bc you're missing the files, if you're peeking around my code
+    if (!stopQueryFractures) {window.updateConsole(index);}
   }
 }
 

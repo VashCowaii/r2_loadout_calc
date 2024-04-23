@@ -92,6 +92,7 @@
                         <li>Fixed an issue where <span class="shield">SHIELD</span> EHP did not properly calculate when Restriction Cord was selected. This was because Restriction Cord does not actually cut your HP in half for the purposes of shielding, it only prevents you from healing past half.</li>
                         <li>Fixed a typo with A'Taerii Booster where the T was not capitalized. As lower case this caused some exclusion flags when importing from Remnant2Toolkit.</li>
                         <li>Fixed an issue where weight summary display values did not properly reflect their weight class color when they rested exactly on the cusp of a threshold.</li>
+                        <li>Fixed an issue where if a melee was selected that utilized a custom functcion for conditionial stats, it would prevent imports from working correclty from R2TK</li>
                         
                         <h3>OPTIMIZATION</h3>
                         <li>Optimized code to reduce redundant formula calls. You won't even be able to notice this on the main calculator, but for Build Queries when you get them, a lot happened here. Still more to do though, this has been a learning project for me.</li>
@@ -279,6 +280,8 @@
                         <li>Make melee mod slots hide when a melee is selected with no built-in mod. On that same note, I'll eventually add the ability to remove mod/mutator slots from Rusted guns, as they have none in game.</li>
                         <li>Change Spirit Healer Stacks to a number input, instead of a number slider.</li>
                         <li>Get better images, now that we are displaying them in a larger size with the new UI.</li>
+                        <li>Add enemy count as a factor for Challenger perks.</li>
+                        <li>Adjust basics stats column to only display healing/DR related statistics if they exist. Those sections display everything as a remnant from when this was a spreadsheet, but it can be dynamic now.</li>
                     </ul>
                 </div>
                 <div>
