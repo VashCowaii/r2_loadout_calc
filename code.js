@@ -1414,6 +1414,7 @@ let userTrigger = {
     //Update accessory image, description, and then refresh formulas.
     readSelection(`${type}${modifier}Image`).src=gear[jsonID][selectedValue.value].image;
     readSelection(`${type}${modifier}MAIN`).src=gear[jsonID][selectedValue.value].image;
+    console.log(gear[jsonID][selectedValue.value].image)
     readSelection(`${type}${modifier}Desc`).innerHTML=userTrigger.updateSubstatColor(gear[jsonID][selectedValue.value].desc);
     if (type==="ring") {
       userTrigger.checkDuplicateSelection(type,place,`updateAccessory`,`several`,4);

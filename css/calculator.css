@@ -3596,4 +3596,9 @@ div {
         padding-left: 0px;
         padding-right: 0px;
     }
+
+    .updateWarningBar {
+        width: auto;
+        white-space: normal;
+    }
 }
