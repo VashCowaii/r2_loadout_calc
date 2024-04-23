@@ -3559,7 +3559,7 @@ rings = {
 	"A'Taerii Booster": {//done
 		"name": "A'Taerii Booster",
 		"slot": "Ring",
-		"image": "./brotherLibrary/ringsImages/A'Taerii Booster.png",
+		"image": "./brotherLibrary/ringsImages/A_Taerii Booster.png",
 		"desc": "While a turret is deployed or while carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance. Bonus assumed active at all times if ENGINEER is a selected archetype.",
 		"custom": "ataeriiBooster",
 		"stats": {},
