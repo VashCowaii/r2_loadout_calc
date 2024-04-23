@@ -450,14 +450,6 @@ let manipulateTrait = {
   // manipulateTrait.updateTraitPoints();//Moved this within the first IF so that way we could track points correctly during modifyTraitHTML
   //we don't call updateFormulas from here, that would be bad lol
   },
-  //Used in updateTraitCollection to generate the trait toggles rows in traitTogglesMegaBox, based on active traits
-  generateTraitToggles() {
-    let megaBox = readSelection("traitTogglesMegaBox");
-    megaBox.innerHTML = "";
-    for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
-      megaBox.innerHTML += createHTML.traitToggle(i);
-    }
-  },
   //Used in updateTraitCollection to update and define the currently spent trait points, as well as the trait point limit
   updateTraitPoints() {
     let traitPoints = readSelection("traitCount");
