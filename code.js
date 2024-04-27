@@ -2211,10 +2211,8 @@ let customItemFunctions = {
       valueTables[index].AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
     },
     driedClayRing(index) {//50
-      console.log(valueTables[index].Bulwark,valueTables[index].BulwarkCap)
       let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
       
-
       let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
       valueTables[index].AllDamage += 0.5 * bulwarkDR;
     },
