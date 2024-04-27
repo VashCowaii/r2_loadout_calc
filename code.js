@@ -2211,7 +2211,9 @@ let customItemFunctions = {
       valueTables[index].AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
     },
     driedClayRing(index) {//50
+      console.log(valueTables[index].Bulwark,valueTables[index].BulwarkCap)
       let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
+      
 
       let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
       valueTables[index].AllDamage += 0.5 * bulwarkDR;
@@ -2367,10 +2369,11 @@ let customItemFunctions = {
       valueTables[index].AllDamage += valueTables[index].outBURN ? 0.12 : 0;
     },
     soulGuard(index) {//0 user input
+      
       let isUIcalcs = index != "greatTableKnowerOfAll";
       let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
 
-      valueTables[index].Bulwark += customPath;
+      valueTables[index].Bulwark += +customPath;
     },
     soulShard(index) {//0 user input
       let isUIcalcs = index != "greatTableKnowerOfAll";
@@ -2504,6 +2507,7 @@ function updateFormulas(index,ping) {
   index = index ?? `greatTableKnowerOfAll`;
   //Reset the table
   valueTables[index] = {...starterTable}
+
   valueTables[index].REdamage = [];//Reset arrays, lest we modify original
   valueTables[index].DMGKept = [];
   valueTables[index].UniqueMulti = [];
@@ -2511,6 +2515,7 @@ function updateFormulas(index,ping) {
   formulasValues.pullTraits(index);//Traits
   formulasValues.pullWeapons(index);//Weapons/mods/mutators
   formulasValues.pullGearStats(index,ping);//Accessories/class/frags/etc
+  
 
   globalRecords.totalConcLimit = 1 + valueTables[index].ConcLimit;
   formulasValues.pullConsumables(index,globalRecords.totalConcLimit);//Concoctions, after defining the conc limit using everything else
@@ -2685,6 +2690,7 @@ let basicsUpdates = {
     globalRecords.meleeFactors.isPerfectDodge = readSelection("perfectDodge").checked;
 
     globalRecords.meleeFactors.greyHealthActive = readSelection("greyActive").checked;
+
 
   },
   updateMainFromFormulas(returnObject) {
