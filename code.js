@@ -2292,7 +2292,7 @@ let customItemFunctions = {
     kolketEyelet(index) {//PostWeightClass
       let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
 
-      valueTables[index]["HP/S+"] += 0.03 * bulwarkStacks;
+      valueTables[index]["HP/S+"] += 0.3 * bulwarkStacks;
     },
     lodestoneRing(index) {//0 user input
       let isUIcalcs = index != "greatTableKnowerOfAll";

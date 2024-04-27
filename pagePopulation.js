@@ -86,7 +86,7 @@ function pagePopulation() {
     createHTML.populateGear("statInputList",playerDerivedStatistics);
     }
   }
-  let stopQueryFractures = true;
+  let stopQueryFractures = false;
   //Must be last, fill the page
   pagePopulation();
   //buildTime.js script call is injected into the HTML of the deployment, never the actual files here.
