@@ -2117,7 +2117,7 @@ let customItemFunctions = {
       let isUIcalcs = index != "greatTableKnowerOfAll";
       let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
 
-      let minionCount = customPath;
+      let minionCount = +customPath;
       let modifier = -0.10;
       valueTables[index].FlatDR += modifier * minionCount;
     },
