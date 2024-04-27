@@ -2377,7 +2377,7 @@ let customItemFunctions = {
       let isUIcalcs = index != "greatTableKnowerOfAll";
       let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
 
-      let minionCount = customPath;
+      let minionCount = +customPath;
       if (minionCount > 3) {minionCount = 3;}
       let modifier = 0.05;
       valueTables[index].AllDamage += modifier * minionCount;
