@@ -48,7 +48,7 @@
                     <div class="helpBox">
                         <div class="helpBoxHeader">Need Help?</div>
                         <div class="helpBoxText">
-                            <a href="https://youtu.be/btHjKA9s10c" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Watch this video guide</a>, on using the calculator.
+                            <a href="https://youtu.be/G4pH4WonlHM" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Watch this video guide</a>, on using the calculator.
                         </div>
                         <div class="helpBoxHeader">Have a suggestion or bug?</div>
                         <div class="helpBoxText">
@@ -74,10 +74,12 @@
                     <div class="helpBox">
                         <div class="helpBoxHeader">If you made this calc, what builds do you use?</div>
                         <div class="helpBoxText">
-                            My currently up-to-date builds are as follows:
+                            My builds are as follows:
                             <ul style="padding: 2%; text-align: left;">
-                                <li>- <a href="https://youtu.be/1Xk7eFZG36s" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Masochist Tank</a></li>
-                                <li>- <a href="https://youtu.be/FIO-lZeVgHE" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Melee Tank</a> (my fav)</li>
+                                <li>- <a href="https://youtu.be/8uNXsvHY0bU" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Crystal Staff Tank</a></li>
+                                <br>
+                                <li>- <a href="https://youtu.be/1Xk7eFZG36s" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Masochist Tank</a> (Old, will update)</li>
+                                <li>- <a href="https://youtu.be/FIO-lZeVgHE" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Steadfast Tank</a> (Old, will update)</li>
                                 <li>- <a href="https://youtu.be/HGIhacjr_ro" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Co-op God Mode</a> (Old, but more a hilarious CONCEPT than a build)</li>
                             </ul>
                         </div>
@@ -86,11 +88,9 @@
             </div>
         </div>
         
-        <div class="updateWarningBar">DLC RELEASE CHANGES ARE IN PROGRESS.
-            <br> DO NOT FULLY TRUST VALUES PROVIDED UNTIL THEY ARE DONE. EVERYTHING IS SUBJECT TO CHANGE.
-            <br> QUERIES AND MELEE DMG WILL COME AFTER MY DLC PLAYTHROUGHS.
-            <br> REPORT BUGS IN THE DISCORD LINKED AT THE BOTTOM OF THE PAGE.
+        <div class="updateWarningBar" style="color: #93CCEA;border: none;">DLC ITEMS HAVE BEEN ADDED. REPORT BUGS IN THE DISCORD LINKED AT THE BOTTOM OF ANY PAGE.
         </div>
+        <div class="updateWarningBar" style="border: none;">QUERIES ARE NEXT, BUT NOT OUT YET.</div>
         <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS FOR INFO ON CALC CHANGES</a>
     </div>
 
@@ -1348,7 +1348,7 @@
                 <div class="advancedSummaryThirds" title="EHPperSecond = baseEHP * (%HP/s), where baseEHP is the totalEHP without shields.">
                     <span class="advancedSummaryStat">EHP/s</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="EHP/s">0.00</span>
                 </div>
-                <div class="advancedSummaryThirds" title="effectiveDR = 1 - (1-totalDR) * (1-reducedEnemyDamage) * (1-damageKept), assuming that REdmg and DMGkept are always negative numbers when used.">
+                <div class="advancedSummaryThirds" title="effectiveDR = 1 - (1-totalDR) * (1-reducedEnemyDamage) * (1-damageKept)">
                     <span class="advancedSummaryStat">Effective DR</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="effectiveDR">0.00%</span>
                 </div>
             </div>
@@ -1569,8 +1569,9 @@
     </div>
 
 
-    <div class="filtersMegaBox" id="queryBox"> <!-- if you unhide this, it's gonna break the site. The files needed to work aren't on github yetBUILD QUERIES CONTAINER -->
-        <div class="filtersConstraintsBox">
+    <div class="filtersMegaBox"> <!-- if you unhide this, it's gonna break the site. The files needed to work aren't on github yetBUILD QUERIES CONTAINER -->
+        <div class="filtersMegaHeader">BUILD QUERIES</div>
+        <div class="filtersConstraintsBox" id="queryBox">
             <div class="filtersMegaHeader">BUILD QUERIES</div>
             <div class="filtersInstructionsBox">Build Filters and Queries can be used to find and GENERATE whatever build you might be after!</div>
             <div class="filtersOuterHeader">ITEM FILTERS</div>

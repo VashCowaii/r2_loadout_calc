@@ -43,7 +43,7 @@ let calcs = {
         //Armor DR
         let armorDR = totalArmor/(totalArmor+200);
         //Flat DR
-        let bulwarkStacks = Math.min(5,valueTables[index].Bulwark);
+        let bulwarkStacks = Math.min(valueTables[index].BulwarkCap,valueTables[index].Bulwark);
         let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
         let otherFlat = valueTables[index].FlatDR;
         let totalFlat = bulwarkDR+otherFlat;
@@ -65,9 +65,7 @@ let calcs = {
         //this is for shit like game master's pride, it's a global multi modifier
         let globalHealingMod = valueTables[index].GlobalHealingEff;
         //BOOSTS---
-        let relicEffectiveness = valueTables[index].RelicEFF;
         let healingEffectiveness = valueTables[index].HealingEFF;
-        let relicUseTime = valueTables[index].RelicSpeed;
         //REGENERATION---
         let flatHPperSec = valueTables[index]["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
         let percHPperSec = valueTables[index]["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
@@ -76,12 +74,13 @@ let calcs = {
         let greyPercHPperSec = valueTables[index]["GreyHP/S%"];
         let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
 
-        return [globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec]
+        return [globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec]
     },
     getLifesteal(index) {
-        let lifestealALL = valueTables[index].Lifesteal;
-        let lifestealMelee = valueTables[index].MLifesteal;
-        let lifestealRange = valueTables[index].RLifesteal;
+        let lifestealEFF = valueTables[index].LifestealEFF;
+        let lifestealALL = valueTables[index].Lifesteal * (1 + lifestealEFF);
+        let lifestealMelee = valueTables[index].MLifesteal * (1 + lifestealEFF);
+        let lifestealRange = valueTables[index].RLifesteal * (1 + lifestealEFF);
 
         return [lifestealALL,lifestealMelee,lifestealRange]
     },
@@ -98,12 +97,14 @@ let calcs = {
 
         return [staminaPerSec,staminaCost]
     },
-    getRelicHealing(index,totalHealth,globalHealingMod,relicEffectiveness,healingEffectiveness) {
+    getRelicHealing(index,totalHealth,globalHealingMod,healingEffectiveness) {
         //RELIC HEALING
         //We're taking noGlobal on total health as that is the value that persists with shit like Restriction Cord.
         let relicHPbase = valueTables[index].RelicHPbase * globalHealingMod;
         let relicHPtype = valueTables[index].RelicHPtype;
         let relicHPtime = valueTables[index].RelicHPtime;
+        let relicUseTime = valueTables[index].RelicSpeed;
+        let relicEffectiveness = valueTables[index].RelicEFF;
 
         let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
 
@@ -126,7 +127,7 @@ let calcs = {
         }
         let relicComplexArray = formulasValues.callUniqueFunctions(index,"relic",relicHPscaled,totalHealth);
 
-        return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray]
+        return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness]
     },
     getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal) {
         //REDUCED ENEMY DAMAGE

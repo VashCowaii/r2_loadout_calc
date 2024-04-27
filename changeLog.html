@@ -45,16 +45,21 @@
                 <!-- <div>
                     <h1>March X, 2024</h1>
                     <ul>
-                        <li>asdf</li>
+                        <li>asdf</li> <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
                     </ul>
                 </div> -->
-                <!-- <div>
-                    <h1>March X, 2024</h1>
+                <div>
+                    <h1>April 27, 2024 - THE DLC2 ITEMS UPDATE</h1>
+                    Queries are my next update. They'll release in a limited beta capacity, puretly for tank searches, for now, but that will be later and hopefully today as well but we'll see.
                     <ul>
-                        <li>asdf</li>
-                        <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
+                        <li>Added all DLC items(barring the Polygun, for now). If you notice anything weird with the calculations, let me know in my discord.</li>
+                        <li>Added a hierarchy system to items that have conditionals to ensure they apply in the correct order. In theory this shouldn't change anything as it worked before, this was only necessary so things that had conditionals based on what were normally "final" stats, like Total DR, will calculate properly. As before, if you notice anything jank, let me know.</li>
+                        <li>Changed incoming bleed to now be a multiplicative reduction to Healing Effectiveness, instead of additive like it was before. This is a patch change I forgot to make.</li>
+                        <li>Fixed an issue where the movement speed granted by Gift of the Unbound was calculating based on the health reduction modifier from its old effect, instead of the new movement speed bonus(so it was granting 20%MS per burden instead of 5% lol)</li>
+                        <li>Fixed an issue where relic use speed wasn't displayed due to an error.</li>
+                        <li>Fixed an issue where imports from R2TK could break when an item(specifically ranged weapons) was imported that utilized a custom function.</li>
                     </ul>
-                </div> -->
+                </div>
                 <div>
                     <h1>April 23, 2024 - THE PRE-DLC PATCHNOTES PREP UPDATE</h1>
                     Build Queries and Melee DMG are not included in this update. That will be after I do my DLC playthroughs.
