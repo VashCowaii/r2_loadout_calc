@@ -5538,11 +5538,11 @@ rings = {
 		},
 		"tags": []
 	},
-	"Ring of Ordnance": {//done
+	"Ring Of Ordnance": {//done
 		"customBase": null,
-		"name": "Ring of Ordnance",
+		"name": "Ring Of Ordnance",
 		"slot": "Ring",
-		"image": "./brotherLibrary/ringsImages/Ring of Ordnance.png",
+		"image": "./brotherLibrary/ringsImages/Ring Of Ordnance.png",
 		"desc": "Allows Heavy Weapon Ammo to gradually regenerate while in both Heavy Carry or Turret mods. Doubles the stowed Ammo Regeneration Rate of Heavy Weapons.",
 		"stats": {},
 		"tags": []
