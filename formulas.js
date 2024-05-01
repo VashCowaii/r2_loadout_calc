@@ -82,7 +82,26 @@ let calcs = {
         let lifestealMelee = valueTables[index].MLifesteal * (1 + lifestealEFF);
         let lifestealRange = valueTables[index].RLifesteal * (1 + lifestealEFF);
 
-        return [lifestealALL,lifestealMelee,lifestealRange]
+        // let lifestealEFF = valueTables[index].LifestealEFF;
+        // let lifestealALL = valueTables[index].Lifesteal * (1 + lifestealEFF);
+        // let lifestealMelee = valueTables[index].MLifesteal * (1 + lifestealEFF);
+        // let lifestealMeleeCharged = valueTables[index].MChargedLifeSteal * (1 + lifestealEFF);
+        // let lifestealRange = valueTables[index].RLifesteal * (1 + lifestealEFF);
+
+        // let newLifestealAll = lifestealALL;
+        // let newLifestealMelee = lifestealALL + lifestealMelee;
+        // let newLifestealMeleeCharged = lifestealALL + lifestealMelee + lifestealMeleeCharged;
+        // let newLifestealRanged = lifestealALL + lifestealRange;
+
+        // let peakLifesteal = newLifestealAll;
+        // peakLifesteal = newLifestealMelee > peakLifesteal ? newLifestealMelee : peakLifesteal;
+        // peakLifesteal = newLifestealMeleeCharged > peakLifesteal ? newLifestealMeleeCharged : peakLifesteal;
+        // peakLifesteal = newLifestealRanged > peakLifesteal ? newLifestealRanged : peakLifesteal;
+
+        let peakLifesteal;
+
+
+        return [lifestealALL,lifestealMelee,lifestealRange,peakLifesteal]
     },
     getStaminaValues(index,staminaPenalty) {
         //STAMINA
@@ -221,5 +240,6 @@ let calcs = {
         let EHPpSec = baseEHP * (advancedTotalPercHP/100);
 
         return [advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec]
-    }
+    },
+
 }

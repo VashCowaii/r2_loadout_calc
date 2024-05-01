@@ -121,6 +121,7 @@ const referenceTable = {
   "Corrosive Resistance-%": "Corrosive%",
   "Critical Chance-All": "AllCritChance",
   "Critical Chance-Bow": "BowCritChance",
+  "Critical Chance-Elemental": "ElementalCritChance",
   "Critical Chance-Explosive": "ExplosiveCritChance",
   "Critical Chance-Firearm": "FirearmCritChance",
   "Critical Chance-Melee": "MeleeCritChance",
@@ -155,6 +156,7 @@ const referenceTable = {
   "Damage-Mod": "ModDamage",
   "Damage-Overloaded": "OverloadedDamage",
   "Damage-Shock": "ShockDamage",
+  "Damage-Skill": "SkillDamage",
   "Damage-Stagger": "StaggerDamage",
   "Damage-Status": "StatusDamage",
   "Damage-Status: Melee": "MeleeStatusDamage",
@@ -179,6 +181,7 @@ const referenceTable = {
   "Health-Flat": "Health",
   "Health-Global Modifier": "GlobalHealthModifier",
   "Health-%": "Health%",
+  "Lifesteal Effectiveness": "LifestealEFF",
   "Lifesteal-All": "Lifesteal",
   "Lifesteal-Melee": "MLifesteal",
   "Lifesteal-Melee Charged": "MChargedLifeSteal",
@@ -225,7 +228,20 @@ const referenceTable = {
   "Stamina-Recovery % Modifier": "Stamina/S+Multi",
   "Stamina-%": "Stamina%",
   "Status-Duration": "StatusDuration",
-  "Status-Slow": "SLOW",
+
+  "Status-Bleed": "outBLEED",
+  "Status-Burn": "outBURN",
+  "Status-Corroded": "outCORRODED",
+  "Status-Exposed": "outEXPOSED",
+  "Status-Overloaded": "outOVERLOADED",
+  "Status-Slow": "outSLOW",
+  "Status-Outgoing Statuses": "outgoingStatus",
+
+  "Status-Self-Bleed": "inBLEED",
+  "Status-Incomng Statuses": "inBLEED",
+
+
+
   "Weakspot-All": "AllWeakspot",
   "Weakspot-Melee": "MeleeWeakspot",
   "Weakspot-Melee Charge": "ChargeWeakspot",
@@ -275,6 +291,9 @@ const playerDerivedStatistics = {
   "EHP/s": "EHPpSec",
   "Health/s": "advancedTotalFlatHP",
   "Effective DR": "effectiveDR",
+  // "Havoc - DPS": "havocTrueDPS",
+  // "Havoc - Total Damage": "havocTotalDamage",
+  // "Peak Lifesteal": "peakLifesteal"
 }
 
 let valueTables = {
@@ -1649,8 +1668,14 @@ let formulasValues = {
   toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledpMod`).checked : false;
   if (!toggleCheck) {
     let checkWeaponPath = weapons.primary[path.primary]
-    if (!checkWeaponPath.builtIN) {formulasValues.pullStats(index,mods.primaryMods[path.primaryMod].stats);}
-    else {formulasValues.pullStats(index,mods.builtInPrimaryMods[checkWeaponPath.builtIN].stats);}
+    // console.log(checkWeaponPath)
+    if (checkWeaponPath.builtIN) {
+      // console.log(path.primaryMod)
+      formulasValues.pullStats(index,mods.builtInPrimaryMods[checkWeaponPath.builtIN].stats);
+    }
+    else if (path.primaryMod) {
+      // console.log(path.primaryMod)
+      formulasValues.pullStats(index,mods.primaryMods[path.primaryMod].stats);}
   }
   toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledmMod`).checked : false;
   if (!toggleCheck) {
@@ -1873,7 +1898,7 @@ let formulasValues = {
           if (mods.primaryMods[primaryWeaponMod][`custom${tier}`]) {customItemFunctions.primaryMods[mods.primaryMods[primaryWeaponMod][`custom${tier}`]](index,insertedStatistic);}
         }
         else {//If the Primary weapon has a built-in mod
-          if (mods.builtInPrimaryMods[primaryWeaponMod][`custom${tier}`]) {customItemFunctions.primaryMods[mods.builtInPrimaryMods[primaryWeaponMod][`custom${tier}`]](index,insertedStatistic);}
+          if (mods.builtInPrimaryMods[checkWeaponPath.builtIN][`custom${tier}`]) {customItemFunctions.primaryMods[mods.builtInPrimaryMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);}
         }
       }
       //MELEE
@@ -1899,8 +1924,8 @@ let formulasValues = {
           }
         }
         else {//If the Secondary weapon has a built-in mod
-          if (mods.builtInSecondaryMods[secondaryWeaponMod][`custom${tier}`]) {
-            customItemFunctions.secondaryMods[mods.builtInSecondaryMods[secondaryWeaponMod][`custom${tier}`]](index,insertedStatistic);
+          if (mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]) {
+            customItemFunctions.secondaryMods[mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);
           }
         }
       }
@@ -2122,7 +2147,7 @@ let customItemFunctions = {
       valueTables[index].FlatDR += modifier * minionCount;
     },
     ravagersMark(index) {//50
-      valueTables[index].AllDamage += outBLEED ? 0.3 : 0;
+      valueTables[index].AllDamage += valueTables[index].outBLEED ? 0.3 : 0;
     },
     soulAnchor(index) {//0 user input
       let isUIcalcs = index != "greatTableKnowerOfAll";
@@ -2632,8 +2657,13 @@ function updateFormulas(index,ping) {
   let lifestealALL = lifestealQuery[0];
   let lifestealMelee = lifestealQuery[1];
   let lifestealRange = lifestealQuery[2];
+  // let peakLifesteal = lifestealQuery[3];
 
-
+  // let havocBreakdown = calcs.havocDamage(index);//[minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+  // let havocMinDamage = havocBreakdown[0];
+  // let havocMaxDamage = havocBreakdown[1];
+  // let havocTrueDPS = havocBreakdown[2];
+  // let havocTotalDamage = havocBreakdown[3];
 
   let returnStats = {
     totalHealth,totalHealthNoGlobal,
@@ -2642,13 +2672,14 @@ function updateFormulas(index,ping) {
     staminaPerSec,staminaCost,
     bleed,burn,shock,corrosive,blight,
     globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec,
-    lifestealALL,lifestealMelee,lifestealRange,
+    lifestealALL,lifestealMelee,lifestealRange,//peakLifesteal,
     relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,
     baseArmor,armorEff,totalArmor,
     armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR,
     reducedEnemyDamage,damageKept,totalBonusMitigation,effectiveDR,baseEHP,
     percShields,shieldEff,totalPercShields,shieldEHP,totalEHP,
-    advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec
+    advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec,
+    // havocMinDamage,havocMaxDamage,havocTrueDPS,havocTotalDamage
   }
   //----------RETURN VALUES-----------------------
   if (isUIcalcs) {

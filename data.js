@@ -1813,6 +1813,12 @@ classInfo = {
 				"stats": {
 					"FlatDR": 0.5
 				},
+				"customStats": {
+					"duration": 30,
+					"entryDuration": 1.2,
+					"trueBaseDPS": 480,
+					"baseDamage": 168
+				},
 				"tags": []
 			}
 		},
@@ -6206,7 +6212,8 @@ relics = {
 		"image": "./brotherLibrary/relicsImages/Profane Heart.png",
 		"desc": "Innate 3% Lifesteal bonus. On use, increases all Lifesteal Efficacy by 50% for 15s. Efficacy bonus does not calculate here.",
 		"stats": {
-			"Lifesteal": 0.03
+			"Lifesteal": 0.03,
+			"lifestealEFF": 0.50
 		},
 		"tags": []
 	},
@@ -7687,8 +7694,10 @@ primary = {
 		"desc": "",
 		"customBase": null,
 		"builtIN": "Dreadwalker",
-		"stats": {},
-		"tags": []
+		"stats": {
+			"RLifesteal":0.10
+		},
+		"tags": ["RLifesteal"]
 	},
 	"Plasma Cutter": {
 		"name": "Plasma Cutter",
@@ -8347,8 +8356,10 @@ melee = {
 		"image": "./brotherLibrary/meleeImages/Nightshade.png",
 		"desc": "",
 		"customBase": null,
-		"stats": {},
-		"tags": [],
+		"stats": {
+			"MLifesteal": 0.05
+		},
+		"tags": ["MLifesteal"],
 
 		"desc": "Neutral Dodge grants the power of Lifesteal",
 		"builtIN": "Beyond The Veil",
@@ -10270,7 +10281,9 @@ builtInPrimary = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Dreadwalker.png",
 		"desc": "Enter the Nightmare Realm. Nightfall gains infinite Ammo, a 25% Fire Rate increase, 10% Lifesteal, and becomes fully automatic. The wielder becomes significantly harder to hit while moving. Disables other weapons and Skills for the duration, or until Dreadwalker is deactivated. Lasts 10s.",
-		"stats": {},
+		"stats": {
+			// "RLifesteal":0.10
+		},
 		"tags": []
 	},
 	"Heat Sink": {
@@ -10475,7 +10488,9 @@ builtInMelee = {
 		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
 		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration. Requires EVADE setting for bonus.",
 		"customTier0": "beyondTheVeil",
-		"stats": {},
+		"stats": {
+			// "MLifesteal": 0.05
+		},
 		"tags": ["MLifesteal"]
 	},
 	"Lifeline": {

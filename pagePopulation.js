@@ -75,16 +75,14 @@ function pagePopulation() {
 
     if (stopQueryFractures) {
       // readSelection("calcLastUpdated").innerHTML != ""
-      readSelection("queryBox").style.display = "none";
+      // readSelection("queryBox").style.display = "none";
       readSelection("dmgVisibilityToggle").style.display = "none";
       readSelection("damageStatsContainer").style.display = "none";
     }
-    else {
         //Tag filter selections
-    createHTML.populateGear("tagPresets",cycles.presets);
-    createHTML.populateGear("filterTagList",referenceTable);
-    createHTML.populateGear("statInputList",playerDerivedStatistics);
-    }
+        createHTML.populateGear("tagPresets",cycles.presets);
+        createHTML.populateGear("filterTagList",referenceTable);
+        createHTML.populateGear("statInputList",playerDerivedStatistics);
   }
   let stopQueryFractures = true;
   //Must be last, fill the page
