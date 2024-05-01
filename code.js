@@ -2624,9 +2624,10 @@ function updateFormulas(index,ping) {
   let totalBonusMitigation = advancedDrQuery[2];
   let effectiveDR = advancedDrQuery[3];
   let baseEHP = advancedDrQuery[4];
+  let baseEHPforShieldsAndHealing = advancedDrQuery[5];
 //----------SHIELDS----------------------------------------------------------------------------
 //----------EHP----------------------------------------------------------------------------
-  let shieldQuery = calcs.getShields(index,baseEHP);
+  let shieldQuery = calcs.getShields(index,baseEHPforShieldsAndHealing);
   let percShields = shieldQuery[0];
   let shieldEff = shieldQuery[1];
   let totalPercShields = shieldQuery[2];
