@@ -1,5 +1,5 @@
 postMessage({command: `pushDebugLine`, data: "INITIATING CYCLEWORKER"});
-importScripts(`data.js`, `../dpsModules/melee.js`,`combinations.js`,`formulas.js`,`code.js`);
+importScripts(`data.js`,`combinations.js`,`formulas.js`,`code.js`);//`../dpsModules/melee.js`,
 postMessage({command: `pushDebugLine`, data: "Worker: Imported scripts"});
 
 self.onmessage = function(event) {
