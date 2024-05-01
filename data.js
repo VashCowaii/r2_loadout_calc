@@ -6213,7 +6213,7 @@ relics = {
 		"desc": "Innate 3% Lifesteal bonus. On use, increases all Lifesteal Efficacy by 50% for 15s. Efficacy bonus does not calculate here.",
 		"stats": {
 			"Lifesteal": 0.03,
-			"lifestealEFF": 0.50
+			// "lifestealEFF": 0.50
 		},
 		"tags": []
 	},
@@ -7694,9 +7694,7 @@ primary = {
 		"desc": "",
 		"customBase": null,
 		"builtIN": "Dreadwalker",
-		"stats": {
-			"RLifesteal":0.10
-		},
+		"stats": {},
 		"tags": ["RLifesteal"]
 	},
 	"Plasma Cutter": {
@@ -10282,7 +10280,7 @@ builtInPrimary = {
 		"image": "./brotherLibrary/primaryModsImages/Dreadwalker.png",
 		"desc": "Enter the Nightmare Realm. Nightfall gains infinite Ammo, a 25% Fire Rate increase, 10% Lifesteal, and becomes fully automatic. The wielder becomes significantly harder to hit while moving. Disables other weapons and Skills for the duration, or until Dreadwalker is deactivated. Lasts 10s.",
 		"stats": {
-			// "RLifesteal":0.10
+			"RLifesteal":0.10
 		},
 		"tags": []
 	},
@@ -10489,7 +10487,7 @@ builtInMelee = {
 		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration. Requires EVADE setting for bonus.",
 		"customTier0": "beyondTheVeil",
 		"stats": {
-			// "MLifesteal": 0.05
+			"MLifesteal": 0.05
 		},
 		"tags": ["MLifesteal"]
 	},
