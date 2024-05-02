@@ -122,46 +122,7 @@
             </div>
 
             <br>
-            <div class="basicsInnerBox">
-                <div class="basicsDRheaderTitle">DAMAGE REDUCTION</div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Base Armor</span><span class="rowTraceLine"></span><span class="basicsDRValue"id="baseArmor">0.0</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Armor Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="armorEff">100.00%</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Total Armor</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="totalArmor">0.0</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Armor DR%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="armorDR">0.00%</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Bulwark Stacks</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="bulwarkStacks">0</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Bul. Flat Equivalent</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="bulwarkDR">0.00%</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Other Flat</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="otherFlat">0.00%</span></div>
-                    <div class="basicsDRContainer"><span class="basicsDRStat">Total Flat DR%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="totalFlat">0.00%</span></div>
-                <div class="basicsDRsumContainer">
-                    <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">0.00%</span>
-                </div>
-
-                <br>
-                <div class="basicsDRheaderTitle">HEALING</div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Healing Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="healingEFF">0.00%</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Relic Use Time</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicUseTime">0.00%</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Lifesteal (A/M/R)</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="lifesteal">0.0/0.0/0.0</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Flat HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="flatHP/s">0.0</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">% HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="%HP/s">0.00%</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Grey Health/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="greyHP/s">0.2</span></div>
-                
-                <div class="basicsDRheaderTitle">STAMINA</div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Regen/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="stamina/s">33.0</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Cost</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="staminaCost">100.00%</span></div>
-                <div class="basicsDRContainer"><span class="basicsDRStat">Dodge Class</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="dodgeClass">Light</span></div>
-
-                <div class="basicsDamageRows" id="basicsDamageRows"></div>
-                <div class="basicsDamageRows" id="basicsCritChance"></div>
-                <div class="basicsDamageRows" id="basicsCritDamage"></div>
-                <div class="basicsDamageRows" id="basicsWeakspot"></div>
-                <div class="basicsDamageRows" id="basicsActionSpeed"></div>
-
-                <div class="basicsDamageRows" id="basicsStatusOut"></div>
-                <div class="basicsDamageRows" id="basicsStatusIn"></div>
-
-                <div class="basicsDamageRows" id="basicsMisc"></div>
-            </div>
+            <div class="basicsInnerBox" id="basicsInnerBox"></div> <!-- populated via updateMainFromFormulas() -->
         </div>
 
         <div class="classAndArmor"> <!--Loadout slot selections-->

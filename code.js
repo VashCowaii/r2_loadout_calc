@@ -2655,10 +2655,12 @@ function updateFormulas(index,ping) {
 
   //---------- LIFESTEAL --------------Can be last bc no other statistics depend on lifesteal values, yet
   let lifestealQuery = calcs.getLifesteal(index);
-  let lifestealALL = lifestealQuery[0];
-  let lifestealMelee = lifestealQuery[1];
-  let lifestealRange = lifestealQuery[2];
-  // let peakLifesteal = lifestealQuery[3];
+  let lifestealEFF = lifestealQuery[0];
+  let lifestealALL = lifestealQuery[1];
+  let lifestealMelee = lifestealQuery[2];
+  let lifestealMeleeCharged = lifestealQuery[3];
+  let lifestealRange = lifestealQuery[4];
+  // let peakLifesteal = lifestealQuery[5];
 
   // let havocBreakdown = calcs.havocDamage(index);//[minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
   // let havocMinDamage = havocBreakdown[0];
@@ -2673,7 +2675,7 @@ function updateFormulas(index,ping) {
     staminaPerSec,staminaCost,
     bleed,burn,shock,corrosive,blight,
     globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec,
-    lifestealALL,lifestealMelee,lifestealRange,//peakLifesteal,
+    lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,//peakLifesteal,
     relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,
     baseArmor,armorEff,totalArmor,
     armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR,
@@ -2727,39 +2729,83 @@ let basicsUpdates = {
       formulasValues.updateDisplay("summaryHealth",returnObject.totalHealth,1);
       formulasValues.updateDisplay("summaryStamina",returnObject.totalStamina,1);
       formulasValues.updateDisplay("summaryArmor",returnObject.totalArmor,1);
-      formulasValues.updateDisplay("baseArmor",returnObject.baseArmor,1);
-      formulasValues.updateDisplay("armorEff",returnObject.armorEff*100,2,"%");
-      formulasValues.updateDisplay("totalArmor",returnObject.totalArmor,1);
       formulasValues.updateDisplay("summaryWeight",returnObject.totalWeight,1);
-      if (returnObject.dodgeClass === "Flop") {readSelection("summaryWeight").style.color = "#e06666";}
-      else if (returnObject.dodgeClass === "Heavy") {readSelection("summaryWeight").style.color = "orange";}
-      else if (returnObject.dodgeClass === "Medium") {readSelection("summaryWeight").style.color = "#90ee90";}
-      else {readSelection("summaryWeight").style.color = "#93CCEA";}
-      formulasValues.updateDisplay("armorDR",returnObject.armorDR*100,2,"%");
-      formulasValues.updateDisplay("bulwarkStacks",returnObject.bulwarkStacks,0);
-      formulasValues.updateDisplay("bulwarkDR",returnObject.bulwarkDR*100,2,"%");
-      formulasValues.updateDisplay("otherFlat",returnObject.otherFlat*100,2,"%");
-      formulasValues.updateDisplay("totalFlat",returnObject.totalFlat*100,2,"%");
-      formulasValues.updateDisplay("totalDR",returnObject.totalDR*100,2,"%");
-      //Adjust total DR color based on amount.
-      if (returnObject.totalDR>0.8){readSelection("totalDR").style.color = "#e06666"}
-      else {readSelection("totalDR").style.color = "white"}
-      //TODO: add a check here later to show people that they're going over cap, tooltip or something
       formulasValues.updateDisplay("summaryBleed",returnObject.bleed,0);
       formulasValues.updateDisplay("summaryBurn",returnObject.burn,0);
       formulasValues.updateDisplay("summaryShock",returnObject.shock,0);
       formulasValues.updateDisplay("summaryCorrosive",returnObject.corrosive,0);
       formulasValues.updateDisplay("summaryBlight",returnObject.blight,0);
-      formulasValues.updateDisplay("relicEFF",returnObject.relicEffectiveness*100,2,"%");
-      formulasValues.updateDisplay("healingEFF",returnObject.healingEffectiveness*100,2,"%");
-      formulasValues.updateDisplay("relicUseTime",returnObject.relicUseTime*100,2,"%");
-      readSelection("lifesteal").innerHTML = `${(returnObject.lifestealALL).toFixed(2)}/${(returnObject.lifestealMelee).toFixed(2)}/${(returnObject.lifestealRange).toFixed(2)}`;
-      formulasValues.updateDisplay("flatHP/s",returnObject.flatHPperSec,1);
-      formulasValues.updateDisplay("%HP/s",returnObject.percHPperSec*100,2,"%");
-      formulasValues.updateDisplay("greyHP/s",returnObject.totalGreyHPperSec,1);
-      formulasValues.updateDisplay("stamina/s",returnObject.staminaPerSec,1);
-      formulasValues.updateDisplay("staminaCost",returnObject.staminaCost*100,2,"%");
-      readSelection("dodgeClass").innerHTML = returnObject.dodgeClass;
+
+      if (returnObject.dodgeClass === "Flop") {readSelection("summaryWeight").style.color = "#e06666";}
+      else if (returnObject.dodgeClass === "Heavy") {readSelection("summaryWeight").style.color = "orange";}
+      else if (returnObject.dodgeClass === "Medium") {readSelection("summaryWeight").style.color = "#90ee90";}
+      else {readSelection("summaryWeight").style.color = "#93CCEA";}
+
+      readSelection("basicsInnerBox").innerHTML = "";
+      let drHTML = "<div class='basicsDRheaderTitle'>DAMAGE REDUCTION</div>";
+      let drRowsHTML = '';
+
+      drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("Base Armor",returnObject.baseArmor,true) : "";
+      drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("Armor Effectiveness",returnObject.armorEff,true,"%") : "";
+      drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("Total Armor",returnObject.totalArmor,true) : "";
+      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("Armor DR%",returnObject.armorDR,true) : "";
+      drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
+      drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
+      drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
+      drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+      let drSumHTML = `<div class="basicsDRsumContainer">
+           <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">${(returnObject.totalDR*100).toFixed(2)}%</span>
+       </div>
+       <br>`
+      readSelection("basicsInnerBox").innerHTML += drRowsHTML ? drHTML + drRowsHTML + drSumHTML : "";
+      if (drRowsHTML) {
+        //Adjust total DR color based on amount.
+      if (returnObject.totalDR>0.8){readSelection("totalDR").style.color = "#e06666"}
+      else {readSelection("totalDR").style.color = "white"}
+      }
+
+ 
+      let healingHTML = "<div class='basicsDRheaderTitle'>HEALING</div>";
+      let healingHTMLRowsHTML = '';
+      healingHTMLRowsHTML += returnObject.relicEffectiveness ? createHTML.basicsRow("Relic Effectiveness",returnObject.relicEffectiveness,true,"%") : "";
+      healingHTMLRowsHTML += returnObject.healingEffectiveness ? createHTML.basicsRow("Healing Effectiveness",returnObject.healingEffectiveness,true,"%") : "";
+      healingHTMLRowsHTML += returnObject.relicUseTime ? createHTML.basicsRow("Relic Use Time",returnObject.relicUseTime,true,"%") : "";
+      healingHTMLRowsHTML += returnObject.flatHPperSec ? createHTML.basicsRow("Flat HP/s",returnObject.flatHPperSec,true) : "";
+      healingHTMLRowsHTML += returnObject.percHPperSec ? createHTML.basicsRow("% HP/s",returnObject.percHPperSec,true,"%") : "";
+      healingHTMLRowsHTML += returnObject.totalGreyHPperSec != 0.20 ? createHTML.basicsRow("Grey Health/s",returnObject.totalGreyHPperSec,true) : "";
+      readSelection("basicsInnerBox").innerHTML += healingHTMLRowsHTML ? healingHTML + healingHTMLRowsHTML + "<br>" : "";
+
+
+      let lifestealHTML = "<div class='basicsDRheaderTitle'>LIFESTEAL</div>";
+      let lifestealHTMLRowsHTML = '';
+      lifestealHTMLRowsHTML += returnObject.lifestealEFF ? createHTML.basicsRow("Effectiveness",returnObject.lifestealEFF,true,"%") : "";
+      lifestealHTMLRowsHTML += returnObject.lifestealALL ? createHTML.basicsRow("All",returnObject.lifestealALL,true,"%") : "";
+      lifestealHTMLRowsHTML += returnObject.lifestealMelee ? createHTML.basicsRow("Melee",returnObject.lifestealMelee,true,"%") : "";
+      lifestealHTMLRowsHTML += returnObject.lifestealMeleeCharged ? createHTML.basicsRow("Melee (Charged)",returnObject.lifestealMeleeCharged,true,"%") : "";
+      lifestealHTMLRowsHTML += returnObject.lifestealRange ? createHTML.basicsRow("Ranged",returnObject.lifestealRange,true,"%") : "";
+      readSelection("basicsInnerBox").innerHTML += lifestealHTMLRowsHTML ? lifestealHTML + lifestealHTMLRowsHTML + "<br>" : "";
+
+
+      let staminaHTML = "<div class='basicsDRheaderTitle'>STAMINA</div>";
+      let staminaHTMLRowsHTML = '';
+      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("Regen/s",returnObject.staminaPerSec,true,"%") : "";
+      staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("Cost",returnObject.staminaCost,true,"%") : "";
+      staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("Dodge Class",returnObject.dodgeClass,false) : "";
+      readSelection("basicsInnerBox").innerHTML += staminaHTMLRowsHTML ? staminaHTML + staminaHTMLRowsHTML + "<br>" : "";
+
+
+      readSelection("basicsInnerBox").innerHTML += `<div class="basicsDamageRows" id="basicsDamageRows"></div>
+      <div class="basicsDamageRows" id="basicsCritChance"></div>
+      <div class="basicsDamageRows" id="basicsCritDamage"></div>
+      <div class="basicsDamageRows" id="basicsWeakspot"></div>
+      <div class="basicsDamageRows" id="basicsActionSpeed"></div>
+      <div class="basicsDamageRows" id="basicsStatusOut"></div>
+      <div class="basicsDamageRows" id="basicsStatusIn"></div>
+      <div class="basicsDamageRows" id="basicsMisc"></div>`
+
+
+
+      
       // formulasValues.updateDisplay("relicBase",relicHPbase,2);//We only show scaled now, base no longer visible
       readSelection("relicType").innerHTML = returnObject.relicHPtype;
       formulasValues.updateDisplay("relicTime",returnObject.relicHPtime,0);

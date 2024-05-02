@@ -80,6 +80,7 @@ let calcs = {
         let lifestealEFF = valueTables[index].LifestealEFF;
         let lifestealALL = valueTables[index].Lifesteal * (1 + lifestealEFF);
         let lifestealMelee = valueTables[index].MLifesteal * (1 + lifestealEFF);
+        let lifestealMeleeCharged = valueTables[index].MChargedLifeSteal * (1 + lifestealEFF);
         let lifestealRange = valueTables[index].RLifesteal * (1 + lifestealEFF);
 
         // let lifestealEFF = valueTables[index].LifestealEFF;
@@ -101,7 +102,7 @@ let calcs = {
         let peakLifesteal;
 
 
-        return [lifestealALL,lifestealMelee,lifestealRange,peakLifesteal]
+        return [lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal]
     },
     getStaminaValues(index,staminaPenalty) {
         //STAMINA

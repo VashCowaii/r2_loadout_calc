@@ -410,10 +410,10 @@ let cycles = {
         for (let i=0;i<path.length;i++) {
             let innerPath = path[i];
             const armorValue = +innerPath[4];
-            const weightKey = innerPath[5];
+            const weightKey = +innerPath[5];
 
             // If the weight is encountered for the first time or if the current combination has better armor
-            if (valueStorage[weightKey] === undefined || valueStorage[weightKey].armorValue < armorValue) {
+            if (valueStorage[weightKey] === undefined || valueStorage[weightKey].armorValue <= armorValue) {
                 valueStorage[weightKey] = {slot1:innerPath[0],slot2:innerPath[1],slot3:innerPath[2],slot4:innerPath[3],armorValue};
             }
         }
@@ -427,7 +427,7 @@ let cycles = {
             const currentEntry = objectArray[i][currentKey];
             const previousEntry = objectArray[i-1][Object.keys(objectArray[i-1])[0]];
             //If the armor value of the previous weight is higher than the current armor value, use the prior armor combo instead
-            if (currentEntry.armorValue < previousEntry.armorValue) {objectArray[i][currentKey] = previousEntry;}
+            if (currentEntry.armorValue <= previousEntry.armorValue) {objectArray[i][currentKey] = previousEntry;}
         }
 
         return objectArray;
@@ -560,7 +560,7 @@ let cycles = {
                                     totalArmor = armor.helmets[slot1].stats.Armor + armor.chests[slot2].stats.Armor + armor.legs[slot3].stats.Armor + armor.hands[slotNames[i]].stats.Armor;
                                     totalWeight = armor.helmets[slot1].stats.Encumbrance + armor.chests[slot2].stats.Encumbrance + armor.legs[slot3].stats.Encumbrance + armor.hands[slotNames[i]].stats.Encumbrance;
                                     
-                                    totalArmor = totalArmor.toFixed(2);totalWeight = totalWeight.toFixed(2);
+                                    totalArmor = totalArmor.toFixed(3);totalWeight = totalWeight.toFixed(3);
                                     // totalArmor = totalArmor;totalWeight = totalWeight;
 
                                     combinations.push([slot1,slot2,slot3,slotNames[i],totalArmor,totalWeight]);
@@ -1063,13 +1063,15 @@ let cyclesLoop = {
         let threshold = 0;let bestArmorSet; 
 
         switch(targetWeightClass) {
-            case 1: threshold = 25 + weightThreshold;break;
-            case 2: threshold = 50 + weightThreshold;break;
-            case 3: threshold = 75 + weightThreshold;break;
+            case 1: threshold = 25.00 + weightThreshold;break;
+            case 2: threshold = 50.00 + weightThreshold;break;
+            case 3: threshold = 75.00 + weightThreshold;break;
             case 4: threshold = 10000 + weightThreshold;break;//This just needs to be a really big number, bigger than an possible weight, doesn't actually matter what it is.
         }
+
         
         let targetWeight = ((threshold/weightModifier)-existingWeight).toFixed(2);
+        console.log(threshold,targetWeight)
 
         let isPossible = isExact ?? true;//Find exact values if specified, otherwise maximize armor per the given weight category
         // let isPossible = false;
@@ -1086,7 +1088,7 @@ let cyclesLoop = {
         }
         if (!isPossible) {
             //If the target armor or closest approx armor, had no weight options under the target weight, check weight table instead.
-            weightSearch = cyclesLoop.binarySearch(cycles.vars.weightFirst.Table, targetWeight,true,false);
+            weightSearch = cyclesLoop.binarySearch(cycles.vars.weightFirst.Table, +targetWeight,true,false);
 
             if (weightSearch != -1) {
                 bestArmorSet = cycles.vars.weightFirst.Table[weightSearch.indexID][weightSearch.keyID];
