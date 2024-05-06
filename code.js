@@ -22,7 +22,7 @@ const starterTable = {
   //GREY HEALTH
   "GreyHP/S%": 0,"GreyHP/S+": 0,"GreyHPHitThreshold": 0,"GreyHealthConversion": 0,
   //LIFESTEAL
-  "Lifesteal": 0,"MLifesteal": 0,"RLifesteal": 0,"MChargedLifeSteal": 0,
+  "Lifesteal": 0,"MLifesteal": 0,"RLifesteal": 0,"MChargedLifeSteal": 0,"RelicLifesteal": 0,
   "LifestealEFF": 0,
   //RELICS
   "RelicSpeed": 0,"RelicEFF": 0,
@@ -173,6 +173,7 @@ const referenceTable = {
   "Grey Health-Flat/second": "GreyHP/S+",
   "Grey Health-Hit Threshold": "GreyHPHitThreshold",
   "Grey Health-% Recovery Modifier": "GreyHP/S%",
+  "Grey Health Conversion": "GreyHealthConversion",
   "Healing Effectiveness": "HealingEFF",
   "Healing-Flat/second": "HP/S+",
   "Healing-Global Effectiveness": "GlobalHealingEff",
@@ -291,9 +292,10 @@ const playerDerivedStatistics = {
   "EHP/s": "EHPpSec",
   "Health/s": "advancedTotalFlatHP",
   "Effective DR": "effectiveDR",
-  // "Havoc - DPS": "havocTrueDPS",
-  // "Havoc - Total Damage": "havocTotalDamage",
-  // "Peak Lifesteal": "peakLifesteal"
+  "Grey Health Regen": "totalGreyHPperSec",
+  "Havoc - DPS": ["Havoc Form",3,"DPS"],
+  "Havoc - Total Damage": ["Havoc Form",4,"Total DMG"],
+  "Peak Lifesteal": "peakLifesteal"
 }
 
 let valueTables = {
@@ -769,7 +771,7 @@ let manipulateURL = {
     urlObject.settings = globalRecords.urlObject.settings.replace(/\.?0+$/, '');
 
   //Advanced Stats Settings
-    settingsPath = !isOverride ? readSelection("enemyCount").value : globalRecords.meleeFactors.enemyCount;
+    settingsPath = !isOverride ? readSelection("enemyCount").value : globalRecords.ALTmeleeFactors.enemyCount;
     if (+settingsPath) {
       urlObject.adv.push(settingsPath);
     }
@@ -802,10 +804,10 @@ let manipulateURL = {
     manipulateURL.exportURLsetting("includeRelicHealing","adv",isOverride,globalRecords.RECORDEDuseRelicHealing);
     manipulateURL.exportURLsetting("includeShields","adv",isOverride,globalRecords.RECORDEDuseShields);
 
-    manipulateURL.exportURLsetting("greyActive","adv",isOverride,globalRecords.meleeFactors.greyHealthActive);
-    manipulateURL.exportURLsetting("perfectDodge","adv",isOverride,globalRecords.meleeFactors.isPerfectDodge);
-    manipulateURL.exportURLsetting("isEvade","adv",isOverride,globalRecords.meleeFactors.isEvade);
-    manipulateURL.exportURLsetting("disableWeakspot","adv",isOverride,globalRecords.meleeFactors.weakspotOverride);
+    manipulateURL.exportURLsetting("greyActive","adv",isOverride,globalRecords.ALTmeleeFactors.greyHealthActive);
+    manipulateURL.exportURLsetting("perfectDodge","adv",isOverride,globalRecords.ALTmeleeFactors.isPerfectDodge);
+    manipulateURL.exportURLsetting("isEvade","adv",isOverride,globalRecords.ALTmeleeFactors.isEvade);
+    manipulateURL.exportURLsetting("disableWeakspot","adv",isOverride,globalRecords.ALTmeleeFactors.weakspotOverride);
     
     //remove trailing 0's from the last parameter, helps clear the URL if no adv settings are active
     urlObject.adv[urlObject.adv.length-1] = urlObject.adv[urlObject.adv.length-1].replace(/\.?0+$/, '');
@@ -1674,7 +1676,6 @@ let formulasValues = {
       formulasValues.pullStats(index,mods.builtInPrimaryMods[checkWeaponPath.builtIN].stats);
     }
     else if (path.primaryMod) {
-      // console.log(path.primaryMod)
       formulasValues.pullStats(index,mods.primaryMods[path.primaryMod].stats);}
   }
   toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledmMod`).checked : false;
@@ -2432,7 +2433,6 @@ let customItemFunctions = {
       //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
       //we will first check if the input is blank/0 before pulling either basic or complex stats.
       relicPercHPpSec = inputValue/20;
-      console.log()
       relicHPpSec = (relicPercHPpSec/100) * totalHealth;
       avgPercHPpSec = (relicHPscaled + inputValue)/25;
       avgHPpSec = (avgPercHPpSec/100) * totalHealth;
@@ -2548,9 +2548,7 @@ function updateFormulas(index,ping) {
 
   // formulasValues.callUniqueFunctions(index,null,0,0,"Tier1");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
 
-  if (valueTables[index].HASTE > 0) {
-    for (let bonuses in hasteTable) {valueTables[index][bonuses] += hasteTable[bonuses];}//If haste exists, add relevant speed stats
-  }
+  
 //SUMMARY STATS
 //HEALTH
   healthQuery = calcs.getHealth(index);
@@ -2590,7 +2588,11 @@ function updateFormulas(index,ping) {
   let flatHPperSec = healingQuery[2];
   let percHPperSec = healingQuery[3];
   let totalGreyHPperSec = healingQuery[4];
+
   formulasValues.callUniqueFunctions(index,null,0,0,"PostHealing");//anastasijasInspiration, stuff like that
+  if (valueTables[index].HASTE > 0) {
+    for (let bonuses in hasteTable) {valueTables[index][bonuses] += hasteTable[bonuses];}//If haste exists, add relevant speed stats
+  }
 //----------RELIC HEALING---------------------------------------------------
   let relicHealingQuery = calcs.getRelicHealing(index,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
   let relicHPbase = relicHealingQuery[0];
@@ -2616,6 +2618,19 @@ function updateFormulas(index,ping) {
   let otherFlat = drQuery[3];
   let totalFlat = drQuery[4];
   let totalDR = drQuery[5];
+
+  if (ping) {
+    if (totalFlat < 0.80) {
+      let flatDR = Math.max(0, totalFlat);
+      //Work backwards to find the total base armor we're after, if flat DR is less than the DR cap
+      let targetArmorDR = Math.max(0, Math.min(0.8, 1-((1-0.8)/((1-flatDR))) ) );//0.8 being the DR cap
+      let targetArmor = Math.max(0, (((targetArmorDR*200)/(1-targetArmorDR)) / armorEff) - baseArmor);
+      let armorPing = cyclesLoop.pingArmorCombos(targetArmor.toFixed(2),baseWeight,weightThreshold,weightBoost)
+      return armorPing;
+    }
+  }
+
+
   formulasValues.callUniqueFunctions(index,null,0,0,"PostDR",totalDR);//Burden of the Mason, etc
   //----------ADVANCED DR-------------
   let advancedDrQuery = calcs.getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal);
@@ -2643,26 +2658,31 @@ function updateFormulas(index,ping) {
   let advancedRelicTotalPerc = advancedHealingQuery[3];
   let advancedTotalFlatHP = advancedHealingQuery[4];
   let advancedTotalPercHP = advancedHealingQuery[5];
-  let EHPpSec = advancedHealingQuery[6];
+  let EHPpSec = advancedHealingQuery[6] || 0;
 
   //TIER 50 CALLS PURELY FOR DMG RELATED CONDITIONALS + DMG CONDITIONALS THAT NEED TO BE DONE AFTER REG STATS
   formulasValues.callUniqueFunctions(index,null,0,0,"Tier50");//50 is just where I chose to start for dmg functions
-
-
-
-
-
-
   //---------- LIFESTEAL --------------Can be last bc no other statistics depend on lifesteal values, yet
-  let lifestealQuery = calcs.getLifesteal(index);
+  let lifestealQuery = calcs.getLifesteal(index,relicEffectiveness);
   let lifestealEFF = lifestealQuery[0];
   let lifestealALL = lifestealQuery[1];
   let lifestealMelee = lifestealQuery[2];
   let lifestealMeleeCharged = lifestealQuery[3];
   let lifestealRange = lifestealQuery[4];
-  // let peakLifesteal = lifestealQuery[5];
+  let peakLifesteal = lifestealQuery[5];
+  // console.log(peakLifesteal)
 
-  // let havocBreakdown = calcs.havocDamage(index);//[minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+
+  if (!isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
+  let abilityPath1 = !isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
+  let abilityPath2 = !isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
+  let ability1 = !isUIcalcs && abilityPath1 ? classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats : classInfo[globalRecords.ALTarchs.one.class].abilities[abilityPath1].customStats;
+  let ability2 = !isUIcalcs && abilityPath2 ? classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats : classInfo[globalRecords.ALTarchs.two.class].abilities[abilityPath2].customStats;
+
+    // classInfo[globalRecords.archs.two.class].abilities[ability2].customStats
+  let ability1Breakdown = ability1 ? (ability1.customDPS ? abilityDamage[ability1.customDPS](1,index) : -1) : -1;
+  let ability2Breakdown = ability2 ? (ability2.customDPS ? abilityDamage[ability2.customDPS](2,index) : -1) : -1;
+
   // let havocMinDamage = havocBreakdown[0];
   // let havocMaxDamage = havocBreakdown[1];
   // let havocTrueDPS = havocBreakdown[2];
@@ -2675,24 +2695,23 @@ function updateFormulas(index,ping) {
     staminaPerSec,staminaCost,
     bleed,burn,shock,corrosive,blight,
     globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec,
-    lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,//peakLifesteal,
+    lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal,
     relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,
     baseArmor,armorEff,totalArmor,
     armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR,
     reducedEnemyDamage,damageKept,totalBonusMitigation,effectiveDR,baseEHP,
     percShields,shieldEff,totalPercShields,shieldEHP,totalEHP,
     advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec,
-    // havocMinDamage,havocMaxDamage,havocTrueDPS,havocTotalDamage
+    ability1Breakdown,ability2Breakdown
   }
   //----------RETURN VALUES-----------------------
   if (isUIcalcs) {
     return returnStats;
   }
   else {
-    // console.log("test")
     basicsUpdates.updateMainFromFormulas(returnStats);
     manipulateURL.updateURLparameters();
-    if (!stopQueryFractures) {window.updateConsole(index);}
+    if (!stopQueryFractures) {window.updateConsole(index,dodgeClass);}
   }
 }
 

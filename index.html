@@ -93,6 +93,7 @@
         <div class="updateWarningBar" style="color: #93CCEA;border: none;">DLC ITEMS HAVE BEEN ADDED. REPORT BUGS IN THE DISCORD LINKED AT THE BOTTOM OF ANY PAGE.
         </div>
         <div class="updateWarningBar" style="border: none;">QUERIES BETA IS LIVE NOW.</div>
+        <div class="updateWarningBar" style="border: none;">HAVOC FORM DPS/DMG CALCS & QUERIES LIVE</div>
         <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS FOR INFO ON CALC CHANGES</a>
     </div>
 
@@ -1487,6 +1488,42 @@
                 </div>
             </div>
 
+            <div class="advancedAbilityBoxHolder" id="havocFormBoxHolder">
+
+
+
+                <div class="havocInfoContainer" id="HavocFormTab"> <!--archetypes-->
+                    <div class="seletionBackgroundAbilityBox">
+                        <div class="selectionBackgroundAbilityAdjustment">
+                            <img class="abilityDPSbackgroundImage" src="/brotherLibrary/abilitiesImages/Havoc Form.png" id="archetype1Icon" alt="Class 1 Icon">
+                        </div>
+                    </div>
+                    
+                    <div class="selectionAbilityDPSBody">
+                        <div class="selectionAbilityDPSTitleHeader">HAVOC FORM</div>
+
+
+                        <div class="selectionAbilityDPSHeader" style="white-space: normal;">
+                            <!-- <div class="advancedSummaryThirds">
+                                <span class="advancedSummaryStat">HAVOC FORM</span>
+                            </div> -->
+                            <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
+                                <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability1DPS">0.00</span>
+                            </div>
+                            <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
+                                <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability1TotalDamage">0.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="abilityFactorsList" id="havocFactors"></div>
+                        
+
+                    </div>
+                </div>
+
+
+
+            </div>
 
             <div class="advancedCategoryBoxHolder" id="damageStatsContainer">
 
@@ -1942,7 +1979,7 @@
                         <br>Why lock classes too? Because they provide and remove traits based on what class is selected, otherwise I'd be fine with adding them to the pool in the right conditions. Tricky task, possibly for the future.</div>
                     
                     <div class="cyclesControlBox">
-                        <button type="button" onclick="filters.importNonIterables()" class="cyclesControl" style="width: auto;background-color: orange;">Import Archs/Traits</button>
+                        <button type="button" onclick="filters.importNonIterables()" class="cyclesControl" style="width: auto;background-color: orange;" id="searchImportButton">Import Archs/Traits</button>
                     </div>
 
                     <div class="settingsImportDesc">

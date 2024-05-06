@@ -1813,11 +1813,14 @@ classInfo = {
 				"stats": {
 					"FlatDR": 0.5
 				},
-				"customStats": {
+				"customStats": {///Game/World_Base/Items/Archetypes/Archon/Skills/HavocForm/Skill_HavocForm.Skill_HavocForm_C'
+					"customDPS": "HavocForm",
 					"duration": 30,
-					"entryDuration": 1.2,
+					"entryDuration": 1.02,
 					"trueBaseDPS": 480,
-					"baseDamage": 168
+					"baseDamage": 168,
+					"frequency": 0.35,
+					"drain": 0.15
 				},
 				"tags": []
 			}
@@ -3191,7 +3194,7 @@ amulets = {
 		"image": "./brotherLibrary/amuletsImages/Decayed Margin.png",
 		"desc": "Melee hits gain 3% base damage dealt as Lifesteal. For each 25% missing Health, gain 3% additional Melee Lifesteal. When Health is full, gain 35% Melee Damage. Bonus assumed active at all times when selected.",
 		"stats": {
-			"MLifesteal": 0.06,
+			"MLifesteal": 0.09,
 			"MeleeDamage": 0.35,
 		},
 		"tags": []
@@ -4025,12 +4028,15 @@ rings = {
 		"tags": ["AllCritChance","AllCritDamage"]
 	},
 	"Alchemy Stone": {//done
-		"customBase": "alchemyStone",
+		// "customBase": "alchemyStone",
+		"customBase": null,
 		"name": "Alchemy Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Alchemy Stone.png",
 		"desc": "Increases base Lifesteal by 6% while suffering from a negative STATUS or BLIGHT Effect.",
-		"stats": {},
+		"stats": {
+			"Lifesteal": 0.06
+		},
 		"tags": ["Lifesteal"]
 	},
 	"Alumni Ring": {//done
@@ -4060,7 +4066,7 @@ rings = {
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Anastasija's Inspiration.png",
 		"desc": "When receiving healing effects, gain HASTE for 10s. Bonus assumed active at all times when any base healing statistic is greater than 0, or if INCLUDE RELIC HEALING is toggled on when a relic is used that offers healing over a duration greater than 1 second.",
-		"customTier40": "anastasijasInspiration",
+		"customPostHealing": "anastasijasInspiration",
 		"stats": {},
 		"tags": ["HASTE"]
 	},
@@ -4525,7 +4531,7 @@ rings = {
 		"image": "./brotherLibrary/ringsImages/Conservation Seal.png",
 		"desc": "For every 10% of Health missing (Max 50%) gain 10% chance to not consume Relic and 5% increased Relic Efficacy on next use. Bonus assumed active at all times when selected.",
 		"stats": {
-			"RelicEFF": 0.50
+			"RelicEFF": 0.25
 		},
 		"tags": []
 	},
@@ -6213,7 +6219,7 @@ relics = {
 		"desc": "Innate 3% Lifesteal bonus. On use, increases all Lifesteal Efficacy by 50% for 15s. Efficacy bonus does not calculate here.",
 		"stats": {
 			"Lifesteal": 0.03,
-			// "lifestealEFF": 0.50
+			"lifestealEFF": 0.50
 		},
 		"tags": []
 	},
@@ -6315,7 +6321,7 @@ relics = {
 		"image": "./brotherLibrary/relicsImages/Siphon Heart.png",
 		"desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
 		"stats": {
-			"Lifesteal": 0.1
+			"RelicLifesteal": 0.1
 		},
 		"tags": []
 	},
@@ -8354,9 +8360,7 @@ melee = {
 		"image": "./brotherLibrary/meleeImages/Nightshade.png",
 		"desc": "",
 		"customBase": null,
-		"stats": {
-			"MLifesteal": 0.05
-		},
+		"stats": {},
 		"tags": ["MLifesteal"],
 
 		"desc": "Neutral Dodge grants the power of Lifesteal",
@@ -10203,7 +10207,8 @@ builtInPrimary = {
 		"desc": "Launch a sphere of loam. Impact creates a 5m swirling storm of sand which seeks to center itself on an enemy and deals 75 elemental damage per second. When Sandstorm's focused target dies, it will seek a new enemy.",
 		"stats": {
 			"ReloadSpeed": 0.15,
-			"FireRate": 0.15
+			"FireRate": 0.15,
+			"outEXPOSED": 1
 		},
 		"tags": []
 	},
@@ -10487,7 +10492,7 @@ builtInMelee = {
 		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration. Requires EVADE setting for bonus.",
 		"customTier0": "beyondTheVeil",
 		"stats": {
-			"MLifesteal": 0.05
+			// "MLifesteal": 0.05
 		},
 		"tags": ["MLifesteal"]
 	},

@@ -37,25 +37,29 @@ let cycles = {
         "Shields": [
             "Shield-Flat","Shield Effectiveness","Shield-%/second"
         ],
-        // "Lifesteal Peak": [
-        //     "Lifesteal Effectiveness","Lifesteal-All","Lifesteal-Melee","Lifesteal-Melee Charged","Lifesteal-Ranged","Status-Outgoing Statuses","Status-Self-Bleed"
-        // ],
-        // "HavocDPS": [
-        //     "Critical Chance-All","Critical Chance-Elemental","Critical Chance-Skill",
-        //     "Critical Damage-All",
-        //     "Damage-All","Damage-Elemental","Damage-Shock","Damage-Skill",
-        //     "Skill-Duration","Speed-Cast","Speed-HASTE",
+        "Grey Health Regen": [
+            "Grey Health-Flat/second", "Grey Health-Hit Threshold", "Grey Health-% Recovery Modifier", "Grey Health Conversion",
+        ],
+        "Lifesteal Peak": [
+            "Lifesteal Effectiveness","RelicLifesteal","Lifesteal-All","Lifesteal-Melee","Lifesteal-Melee Charged","Lifesteal-Ranged","Status-Outgoing Statuses","Status-Self-Bleed","Relic Effectiveness"
+        ],
+        "Havoc Form": [
+            "Critical Chance-All","Critical Chance-Elemental","Critical Chance-Skill",
+            "Critical Damage-All",
+            "Damage-All","Damage-Elemental","Damage-Shock","Damage-Skill",
+            "Skill-Duration","Speed-Cast","Speed-HASTE",
 
-        //     "Status-Bleed","Status-Burn","Status-Corroded","Status-Exposed","Status-Overloaded","Status-Slow","Status-Outgoing Statuses",
-        //     "Status-Self-Bleed","Status-Incomng Statuses",
+            "Status-Bleed","Status-Burn","Status-Corroded","Status-Exposed","Status-Overloaded","Status-Slow","Status-Outgoing Statuses",
+            "Status-Self-Bleed","Status-Incomng Statuses",
 
-        //     "Armor-Flat","Armor Effectiveness","DR-Flat","DR-Bulwark","DR-Bulwark Limit",
-        //     "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
+            // "Armor-Flat","Armor Effectiveness","DR-Flat",
+            "DR-Bulwark","DR-Bulwark Limit",
+            "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
 
-        //     "Healing-Flat/second","Healing-%/second",
+            "Healing-Flat/second","Healing-%/second","Consumable-Concoction Limit",
 
-        //     "Shield-Flat",
-        // ]
+            "Shield-Flat",
+        ]
     },
     "vars": {
         //ARMOR
@@ -432,7 +436,7 @@ let cycles = {
 
         return objectArray;
     },
-    generateAnyCombinations(specified,tables,slots,isArmor) {
+    generateAnyCombinations(specified,tables,slots,isArmor,hasConcoctions) {
         if (!tables) {alert(`ERROR: PREGENERATION ABORTED\n\nNo table references passed to combination pregeneration.\n\nSpecified: ${specified}\nSlots: ${slots}`);return [];}
         if (!slots) {alert(`ERROR: PREGENERATION ABORTED\n\nNo slot count passed to combination pregeneration.\n\nSpecified: ${specified}\nTables: ${tables}`);return [];}
 
@@ -459,8 +463,13 @@ let cycles = {
                 if (specified[0]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===1) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,specified[0]);
-                        combinations.push([specified[0],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,specified[0]);
+                            combinations.push([specified[0],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([specified[0]]);
+                        }
                     }//Unless only 1 slot exists, then push the combo
                     else {loopSlot2(iteration,specified[0]);}//Otherwise head to slot 2 loops
                 }
@@ -472,8 +481,13 @@ let cycles = {
                         //No dupe check needed here as it's the first slot
                         if (!iterateSeparately) {iteration = i+1;}
                         if (slots===1) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slotNamesStarter[i]);
-                            combinations.push([slotNamesStarter[i],concoctionLimit]);
+                            if (hasConcoctions) {
+                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slotNamesStarter[i]);
+                                combinations.push([slotNamesStarter[i],concoctionLimit]);
+                            }
+                            else {
+                                combinations.push([slotNamesStarter[i]]);
+                            }
                         }//If only 1 slot exists, push combo
                         else {loopSlot2(iteration,slotNamesStarter[i]);}//Otherwise continue to the next slot's loops
                     }
@@ -487,8 +501,13 @@ let cycles = {
                 if (specified[1]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===2) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,specified[1]);
-                        combinations.push([slot1,specified[1],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,specified[1]);
+                            combinations.push([slot1,specified[1],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,specified[1]]);
+                        }
                     }
                     else {loopSlot3(iteration,slot1,specified[1]);}
                 }
@@ -498,8 +517,13 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===2) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slotNames[i]);
-                                combinations.push([slot1,slotNames[i],concoctionLimit]);
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slotNames[i]);
+                                    combinations.push([slot1,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slotNames[i]]);
+                                }
                             }
                             else {loopSlot3(iteration,slot1,slotNames[i]);}
                         }
@@ -514,8 +538,13 @@ let cycles = {
                 if (specified[2]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===3) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,specified[2]);
-                        combinations.push([slot1,slot2,specified[2],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,specified[2]);
+                            combinations.push([slot1,slot2,specified[2],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,specified[2]]);
+                        }
                     }
                     else {loopSlot4(iteration,slot1,slot2,specified[2]);}
                 }
@@ -525,8 +554,13 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===3) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slotNames[i]);
-                                combinations.push([slot1,slot2,slotNames[i],concoctionLimit]);
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slotNames[i]);
+                                    combinations.push([slot1,slot2,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slot2,slotNames[i]]);
+                                }
                             }
                             else {loopSlot4(iteration,slot1,slot2,slotNames[i]);}
                         }
@@ -541,8 +575,13 @@ let cycles = {
                 if (specified[3]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===4) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,specified[3]);
-                        combinations.push([slot1,slot2,slot3,specified[3],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,specified[3]);
+                            combinations.push([slot1,slot2,slot3,specified[3],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,slot3,specified[3]]);
+                        }
                     }
                     else {loopSlot5(iteration,slot1,slot2,slot3,specified[3]);}
                 }
@@ -553,8 +592,13 @@ let cycles = {
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===4) {
                                 if (!isArmor) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slotNames[i]);
-                                    combinations.push([slot1,slot2,slot3,slotNames[i],concoctionLimit]);
+                                    if (hasConcoctions) {
+                                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slotNames[i]);
+                                        combinations.push([slot1,slot2,slot3,slotNames[i],concoctionLimit]);
+                                    }
+                                    else {
+                                        combinations.push([slot1,slot2,slot3,slotNames[i]]);
+                                    }
                                 }
                                 else if (isArmor) {
                                     totalArmor = armor.helmets[slot1].stats.Armor + armor.chests[slot2].stats.Armor + armor.legs[slot3].stats.Armor + armor.hands[slotNames[i]].stats.Armor;
@@ -582,8 +626,13 @@ let cycles = {
                 if (specified[4]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===5) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,specified[4]);
-                        combinations.push([slot1,slot2,slot3,slot4,specified[4],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,specified[4]);
+                            combinations.push([slot1,slot2,slot3,slot4,specified[4],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,slot3,slot4,specified[4]]);
+                        }
                     }
                     else {loopSlot6(iteration,slot1,slot2,slot3,slot4,specified[4]);}
                 }
@@ -593,8 +642,13 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===5) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slotNames[i]);
-                                combinations.push([slot1,slot2,slot3,slot4,slotNames[i],concoctionLimit]);
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slotNames[i]);
+                                    combinations.push([slot1,slot2,slot3,slot4,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slot2,slot3,slot4,slotNames[i]]);
+                                }
                             }
                             else {loopSlot6(iteration,slot1,slot2,slot3,slot4,slotNames[i]);}
                         }
@@ -609,8 +663,13 @@ let cycles = {
                 if (specified[5]) {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===6) {
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,specified[5]);
-                        combinations.push([slot1,slot2,slot3,slot4,slot5,specified[5],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,specified[5]);
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,specified[5],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,specified[5]]);
+                        }
                     }
                     else {loopSlot7(iteration,slot1,slot2,slot3,slot4,slot5,specified[5]);}
                 }
@@ -620,8 +679,13 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===6) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slotNames[i]);
-                                combinations.push([slot1,slot2,slot3,slot4,slot5,slotNames[i],concoctionLimit]);
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slotNames[i]);
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slotNames[i]]);
+                                }
                             }
                             else {loopSlot7(iteration,slot1,slot2,slot3,slot4,slot5,slotNames[i]);}
                         }
@@ -636,14 +700,24 @@ let cycles = {
                 if (specified[6]) {
                     if (slots===7) {
                         if (!iterateSeparately) {iteration = index;}
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
-                        combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6]]);
+                        }
                     }
                     //Notify me if I end up passing more than 4 slots, will remind me to expand from here if needed.
                     else {
                         alert(`Too many slots passed. Only 7 will be adhered to.`);
-                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
-                        combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        if (hasConcoctions) {
+                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        }
+                        else {
+                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6]]);
+                        }
                     }
                 }
                 else {
@@ -651,12 +725,24 @@ let cycles = {
                         if (slotNames[i]!=slot1 && slotNames[i]!=slot2 && slotNames[i]!=slot3 && slotNames[i]!=slot4 && slotNames[i]!=slot5 && slotNames[i]!=slot6) {
                             if (!slotNames[i]) {continue;}
                             if (slots===7) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
-                                combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);}
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]]);
+                                }
+                            }
                             else {
                                 alert(`Too many slots passed. Only 7 will be adhered to.`);
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
-                                combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);}
+                                if (hasConcoctions) {
+                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);
+                                }
+                                else {
+                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]]);
+                                }
+                            }
                         }
                     }
                 }
@@ -685,6 +771,7 @@ let cyclesLoop = {
         cycles.vars.stopCycles = true;
         readSelection("cycleSTOP").disabled = true;
         readSelection("cycleSTART").disabled = false;
+        readSelection("searchImportButton").disabled = false;
         cycles.debugPushLine(`Worker: BUILD GENERATION ABORTED<br>`);
         workers.cycleWorker.terminate();
         if (!endType) {alert("Cycles were terminated");}
@@ -704,7 +791,10 @@ let cyclesLoop = {
     },
     //Start the cycles
     generationStart() {
-        if (cycles.vars.stopCycles && filters.types.vars.targetStatistic != "") {
+        if (filters.types.vars.targetStatistic.includes("Havoc") && filters.types.vars.importedAbility1 != "Havoc Form" && filters.types.vars.importedAbility2 != "Havoc Form") {
+            alert(`ERROR: You don't even have Havoc Form selected in your imported classes. Why are you trying to target it.`);
+        }
+        else if (cycles.vars.stopCycles && filters.types.vars.targetStatistic) {
             cycles.vars.stopCycles = false;
             if (cycles.vars.debug) {readSelection("comboDebug").innerHTML = ".DEBUG VIEW";}
 
@@ -724,7 +814,6 @@ let cyclesLoop = {
         globalRecords.RECORDEDteamCount = +globalRecords.ALTteamCount.toString();
         globalRecords.RECORDEDminionCount = +globalRecords.ALTminionCount.toString();
         globalRecords.RECORDEDcomplexInput = +globalRecords.ALTcomplexInput.toString();
-        console.log("Recorded: " + globalRecords.RECORDEDcomplexInput)
         globalRecords.RECORDEDspiritHealterStacks = +globalRecords.ALTspiritHealterStacks.toString();
         globalRecords.RECORDEDuseShields = globalRecords.ALTuseShields ? true : false;
         globalRecords.RECORDEDuseRelicHealing = globalRecords.ALTuseRelicHealing ? true : false;
@@ -732,10 +821,16 @@ let cyclesLoop = {
 
 
 
-        filters.types.vars.oldTarget =  `${filters.types.vars.targetStatistic}`;//This is purely for tracking what the statistic is for display purposes, if it is changed while running
+        if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic])) {
+            filters.types.vars.oldTarget = [...playerDerivedStatistics[filters.types.vars.targetStatistic]];
+        }
+        else {
+            filters.types.vars.oldTarget = `${filters.types.vars.targetStatistic}`;//This is purely for tracking what the statistic is for display purposes, if it is changed while running
+        }
 
             readSelection("cycleSTOP").disabled = false;
             readSelection("cycleSTART").disabled = true;
+            readSelection("searchImportButton").disabled = true;
             const iterator = cycles.reinstanceVars();
             function processVars() {
                 const { done } = iterator.next();
@@ -750,7 +845,7 @@ let cyclesLoop = {
             cycles.debugPushLine("UI LOCK END");
         }
         else {
-            alert('ERROR: No Targeted Statistic found. Query aborted.')
+            alert('ERROR: No Targeted Statistic found. Query aborted.');
         }
     },
     updateSetupStep(stepString,start) {
@@ -874,8 +969,10 @@ let cyclesLoop = {
                     readSelection(`cyclesTimeRemaining`).innerHTML = `${newEst.toFixed(0)}${units}${remainderString}`;
                 }
                 if (data.isUpdated) {
-                    let newTable = data.data.newTable;
+                    let preArmor = data.data.preArmor;
                     let cycleObject = data.data.cycleObject;
+
+                    // console.log(cycleObject)
 
                     cycleObject.bestArmorSet = cycleObject.bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""}
 
@@ -883,13 +980,14 @@ let cyclesLoop = {
                     readSelection("comboArmorChest").src = armor.chests[cycleObject.bestArmorSet.slot2].image;
                     readSelection("comboArmorLeg").src = armor.legs[cycleObject.bestArmorSet.slot3].image;
                     readSelection("comboArmorHand").src = armor.hands[cycleObject.bestArmorSet.slot4].image;
-                    readSelection("comboRelic").src = gear.relics[cycleObject.relic[0]].image;
 
-                    readSelection("comboAmulet").src = gear.amulets[cycleObject.amulet[0]].image;
-                    readSelection("comboRing1").src = gear.rings[cycleObject.ringSet[0]].image;
-                    readSelection("comboRing2").src = gear.rings[cycleObject.ringSet[1]].image;
-                    readSelection("comboRing3").src = gear.rings[cycleObject.ringSet[2]].image;
-                    readSelection("comboRing4").src = gear.rings[cycleObject.ringSet[3]].image;
+                    readSelection("comboRelic").src = cycleObject.relic[0] ? gear.relics[cycleObject.relic[0]].image : gear.relics[""].image;
+
+                    readSelection("comboAmulet").src = cycleObject.amulet[0] ? gear.amulets[cycleObject.amulet[0]].image : gear.amulets[""].image;
+                    readSelection("comboRing1").src = cycleObject.ringSet[0] ? gear.rings[cycleObject.ringSet[0]].image : gear.rings[""].image;
+                    readSelection("comboRing2").src = cycleObject.ringSet[1] ? gear.rings[cycleObject.ringSet[1]].image : gear.rings[""].image;
+                    readSelection("comboRing3").src = cycleObject.ringSet[2] ? gear.rings[cycleObject.ringSet[2]].image : gear.rings[""].image;
+                    readSelection("comboRing4").src = cycleObject.ringSet[3] ? gear.rings[cycleObject.ringSet[3]].image : gear.rings[""].image;
 
                     cycleObject.gun1[0] = cycleObject.gun1[0] ?? "";
                     cycleObject.stick[0] = cycleObject.stick[0] ?? "";
@@ -937,20 +1035,31 @@ let cyclesLoop = {
 
                     cyclesLoop.bestCombos.third = cyclesLoop.bestCombos.second ? {...cyclesLoop.bestCombos.second} : {"bestValue":0,"link":""};
                     cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
-                    cyclesLoop.bestCombos.first = {
-                        "bestValue": newTable[playerDerivedStatistics[filters.types.vars.oldTarget]].toFixed(2),
+
+                    let targetDamageCategory;
+                    if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.one.ability) {targetDamageCategory = "ability1Breakdown"}
+                    else if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.two.ability) {targetDamageCategory = "ability2Breakdown"}
+
+                    cyclesLoop.bestCombos.first = !Array.isArray(filters.types.vars.oldTarget) ? {
+                        "bestValue": (preArmor[playerDerivedStatistics[filters.types.vars.oldTarget]]).toFixed(2),
+                        "link": manipulateURL.updateURLparameters(false,true)
+                    }
+                    :
+                    {
+                        "bestValue": (preArmor[targetDamageCategory][filters.types.vars.oldTarget[1]]).toFixed(2),
                         "link": manipulateURL.updateURLparameters(false,true)
                     }
 
                     comboPath = cyclesLoop.bestCombos
+                    let targetName = Array.isArray(filters.types.vars.oldTarget) ? filters.types.vars.oldTarget[0] + " " + filters.types.vars.oldTarget[2] : filters.types.vars.oldTarget;
                     readSelection("comboTargetDisplay").innerHTML = `
-                    <div class="bestOptionsRow">Target Statistic: ${filters.types.vars.oldTarget}</div>
+                    <div class="bestOptionsRow">Target Statistic: ${targetName}</div>
                     <div class="bestOptionsRow">Current Best: <a href="${comboPath.first.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.first.bestValue}</a></div>
                     <div class="bestOptionsRow">Second: <a href="${comboPath.second.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.second.bestValue}</a></div>
                     <div class="bestOptionsRow">Third: <a href="${comboPath.third.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.third.bestValue}</a></div>
                     `
 
-                    filters.types.vars.oldTarget
+                    
                         
 
                     readSelection(`lastFound`).innerHTML = `Current Best Loadout at #${counterInt.toLocaleString()}`
@@ -1071,7 +1180,6 @@ let cyclesLoop = {
 
         
         let targetWeight = ((threshold/weightModifier)-existingWeight).toFixed(2);
-        console.log(threshold,targetWeight)
 
         let isPossible = isExact ?? true;//Find exact values if specified, otherwise maximize armor per the given weight category
         // let isPossible = false;
@@ -1099,7 +1207,7 @@ let cyclesLoop = {
         bestArmorSet = bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""};
         globalRecords.ALTarmor.helmet = bestArmorSet.slot1;globalRecords.ALTarmor.chest = bestArmorSet.slot2;
         globalRecords.ALTarmor.leg = bestArmorSet.slot3;globalRecords.ALTarmor.hand = bestArmorSet.slot4;
-        return {bestArmorSet};
+        return bestArmorSet;
     },
     // No longer a generator function to yield combinations including fragment combinations
     //This is now only used within the worker cycleWorker
@@ -1109,22 +1217,25 @@ let cyclesLoop = {
         postMessage({command: `pushDebugLine`, data: "Worker: START COMBO GENERATION..."});
         postMessage({command: `pushDebugLine`, data: "Worker: - Starting Amulets"});postMessage({command: `updateStep`, data: "Amulet Tables"});
 
-        const amuletCombos = cycles.generateAnyCombinations(filters.types.amulet.filter[0],[cycles.vars.amulets.Table],1);
+        const amuletCombos = cycles.generateAnyCombinations(filters.types.amulet.filter[0],[cycles.vars.amulets.Table],1,false,true);
         postMessage({command: `pushDebugLine`, data: "Worker: - Amulets completed<br>- Starting Rings"});postMessage({command: `updateStep`, data: "Ring Tables"});
         //Generate Rings combos, will take a sec if no filters are in play on this one
-        const ringCombos = cycles.generateAnyCombinations(filters.types.ring.filter[0],[cycles.vars.rings.Table],4);
+        const ringCombos = cycles.generateAnyCombinations(filters.types.ring.filter[0],[cycles.vars.rings.Table],4,false,true);
         postMessage({command: `pushDebugLine`, data: "Worker: - Rings completed<br>- Starting Relics"});postMessage({command: `updateStep`, data: "Relic Tables"});
-        const relicCombos = cycles.generateAnyCombinations(filters.types.relic.filter[0],[cycles.vars.relics.Table],1);
+        //Only amulets and rings need to be evaluated for concoction limit, for now
+
+
+        const relicCombos = cycles.generateAnyCombinations(filters.types.relic.filter[0],[cycles.vars.relics.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Relics completed<br>- Starting Fragments"});postMessage({command: `updateStep`, data: "Fragment Tables"});
-        const fragmentCombos = cycles.generateAnyCombinations(filters.types.fragment.filter[0],[cycles.vars.fragments.Table],3);
+        const fragmentCombos = cycles.generateAnyCombinations(filters.types.fragment.filter[0],[cycles.vars.fragments.Table],3,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Fragments completed<br>- Starting Consumables"});postMessage({command: `updateStep`, data: "Consumable Tables"});
-        const consumableCombos = cycles.generateAnyCombinations(filters.types.consumable.filter[0],[cycles.vars.consumables.Table],4); //Change to 4 slots later once I rework consumables
+        const consumableCombos = cycles.generateAnyCombinations(filters.types.consumable.filter[0],[cycles.vars.consumables.Table],4,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Consumables completed<br>- Starting Primaries"});postMessage({command: `updateStep`, data: "Primary Tables"});
-        const primaryCombos = cycles.generateAnyCombinations(filters.types.primary.filter[0],[cycles.vars.primaries.Table],1);
+        const primaryCombos = cycles.generateAnyCombinations(filters.types.primary.filter[0],[cycles.vars.primaries.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Primaries completed<br>- Starting Melee"});postMessage({command: `updateStep`, data: "Melee Tables"});
-        const meleeCombos = cycles.generateAnyCombinations(filters.types.melee.filter[0],[cycles.vars.melee.Table],1);
+        const meleeCombos = cycles.generateAnyCombinations(filters.types.melee.filter[0],[cycles.vars.melee.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Melee completed<br>- Starting Secondaries"});postMessage({command: `updateStep`, data: "Secondary Tables"});
-        const secondaryCombos = cycles.generateAnyCombinations(filters.types.secondary.filter[0],[cycles.vars.secondaries.Table],1);
+        const secondaryCombos = cycles.generateAnyCombinations(filters.types.secondary.filter[0],[cycles.vars.secondaries.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Secondaries completed<br>- Starting Ranged Mutators"});postMessage({command: `updateStep`, data: "Ranged Mutator Tables"});
         let rangedMutatorLocks = [];
         //Combine lock filters for primary/secondary mutators
@@ -1138,10 +1249,10 @@ let cyclesLoop = {
             rangedMutatorLocks.push();
             rangedMutatorLocks.push(filters.types.secondaryMutator.filter[0]);
         }
-        const rangedMutatorCombos = cycles.generateAnyCombinations(rangedMutatorLocks,[cycles.vars.primaryMutators.Table],2);
+        const rangedMutatorCombos = cycles.generateAnyCombinations(rangedMutatorLocks,[cycles.vars.primaryMutators.Table],2,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Ranged Mutators completed<br>- Starting Melee Mutators"});postMessage({command: `updateStep`, data: "Melee Mutator Tables"});
         //Generate Melee Mutators combos
-        const meleeMutatorCombos = cycles.generateAnyCombinations(filters.types.meleeMutator.filter[0],[cycles.vars.meleeMutators.Table],1);
+        const meleeMutatorCombos = cycles.generateAnyCombinations(filters.types.meleeMutator.filter[0],[cycles.vars.meleeMutators.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Melee Mutators completed<br>- Starting Ranged Mods"});postMessage({command: `updateStep`, data: "Mod Tables"});
         //Generate Primary Mods combos
         let rangedModLocks = [];
@@ -1157,24 +1268,24 @@ let cyclesLoop = {
         // else {
         //     rangedMutatorLocks.push();rangedMutatorLocks.push();
         // }
-        const rangedModCombos = cycles.generateAnyCombinations(rangedModLocks,[cycles.vars.primaryMods.Table],2);
+        const rangedModCombos = cycles.generateAnyCombinations(rangedModLocks,[cycles.vars.primaryMods.Table],2,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Ranged Mods completed"});
         //concoctions
         postMessage({command: `pushDebugLine`, data: "Worker: - Starting Concoctions 1-7"});postMessage({command: `updateStep`, data: "Concoction Tables"});
         let concMegaTable = {};
-        concMegaTable.concoctionCombos1 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],1);
+        concMegaTable.concoctionCombos1 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 1 completed"});
-        concMegaTable.concoctionCombos2 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],2);
+        concMegaTable.concoctionCombos2 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],2,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 2 completed"});
-        concMegaTable.concoctionCombos3 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],3);
+        concMegaTable.concoctionCombos3 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],3,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 3 completed"});
-        concMegaTable.concoctionCombos4 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],4);
+        concMegaTable.concoctionCombos4 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],4,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 4 completed"});
-        concMegaTable.concoctionCombos5 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],5);
+        concMegaTable.concoctionCombos5 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],5,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 5 completed"});
-        concMegaTable.concoctionCombos6 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],6);
+        concMegaTable.concoctionCombos6 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],6,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 6 completed"});
-        concMegaTable.concoctionCombos7 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],7);
+        concMegaTable.concoctionCombos7 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],7,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 7 completed"});
         postMessage({command: `pushDebugLine`, data: "Worker: - Concoctions completed"});
 
@@ -1241,6 +1352,12 @@ let cyclesLoop = {
         let recordedStats = {};
         const drCAP = 0.8;
         let targetStatistic = playerDerivedStatistics[filters.types.vars.targetStatistic];
+        let recordedStatistic = 0;
+
+        let targetDamageCategory;
+
+        if (targetStatistic[0] === abilitySet[0]) {targetDamageCategory = "ability1Breakdown"}
+        else if (targetStatistic[0] === abilitySet[1]) {targetDamageCategory = "ability2Breakdown"}
 
 
         for (const ringSet of ringCombos) {
@@ -1258,32 +1375,40 @@ let cyclesLoop = {
                                                 for (const rMutator1 of rangedMutatorCombos) {
 
                                                     for (let conc=0;conc<concMegaTable[`concoctionCombos${currentLimit}`].length;conc++) {
-                                                        // console.log("PreObject: ",rangedModCombos)
                                                         cycleObject = {
                                                             ringSet,relic,fragmentSet,amulet,classSet,abilitySet,concoction:concMegaTable[`concoctionCombos${currentLimit}`][conc],quickUse,
                                                             gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1};
 
                                                         cyclesLoop.updateCycleRecord(cycleObject);//Assigns cycle items to records so updateFormulas can work
-                                                        let preArmor = updateFormulas(`cycleTableKnowerOfAll`,true);//Now call updateforms to get values without armor
+                                                        let preArmor = updateFormulas(`cycleTableKnowerOfAll`,true);//If armor is needed, it will return it. Otherwise it will return stats.
                                         
-                                                        let newTable = preArmor;
-                                                        if (preArmor.totalFlat < 0.80) {
-                                                            let flatDR = Math.max(0, preArmor.totalFlat);
-                                                            //Work backwards to find the total base armor we're after, if flat DR is less than the DR cap
-                                                            let targetArmorDR = Math.max(0, Math.min(drCAP, 1-((1-drCAP)/((1-flatDR))) ) );
-                                                            let targetArmor = Math.max(0, (((targetArmorDR*200)/(1-targetArmorDR)) / preArmor.armorEff) - preArmor.baseArmor);
-
-                                                            let armorPing = cyclesLoop.pingArmorCombos(targetArmor.toFixed(2),preArmor.baseWeight,preArmor.weightThreshold,preArmor.weightBoost)
-                                                            cycleObject.bestArmorSet = armorPing.bestArmorSet;
-                                                            newTable = updateFormulas(`cycleTableKnowerOfAll`);//Then redo the updateforms, this time turning ping off, so armor pieces are now factored
+                                                        if (preArmor.slot1) {//if an armor ping returned anything
+                                                            cycleObject.bestArmorSet = {...preArmor};
+                                                            preArmor = updateFormulas(`cycleTableKnowerOfAll`);//Then redo the updateforms, this time turning ping off, so armor pieces are now factored
                                                         }
-                                                        
-                                                        if (newTable[targetStatistic] > recordedStats[targetStatistic] || !recordedStats[targetStatistic]) {
-                                                            recordedStats = {...newTable};
-                                                            postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,newTable}});
+
+                                                        if (!Array.isArray(targetStatistic)) {
+                                                            if (((preArmor[targetStatistic] > recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
+                                                                recordedStatistic = +`${preArmor[targetStatistic]}`;
+                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
+                                                            }
+                                                            else {
+                                                                postMessage({command: `yieldCombination`, isUpdated: false});
+                                                            }
                                                         }
                                                         else {
-                                                            postMessage({command: `yieldCombination`, isUpdated: false});
+
+
+                                                            // ability1Breakdown,ability2Breakdown
+                                                            // console.log(preArmor[targetDamageCategory][targetStatistic[1]])
+
+                                                            if (((preArmor[targetDamageCategory][targetStatistic[1]] > recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
+                                                                recordedStatistic = +`${preArmor[targetDamageCategory][targetStatistic[1]]}`;
+                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
+                                                            }
+                                                            else {
+                                                                postMessage({command: `yieldCombination`, isUpdated: false});
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -1309,10 +1434,10 @@ let cyclesLoop = {
         globalRecords.ALTaccessories.ring4 = value.ringSet[3] || "";
 
         globalRecords.ALTaccessories.relic = value.relic[0] || "";
+
         globalRecords.ALTaccessories.fragment1 = value.fragmentSet[0] || "";
         globalRecords.ALTaccessories.fragment2 = value.fragmentSet[1] || "";
         globalRecords.ALTaccessories.fragment3 = value.fragmentSet[2] || "";
-
 
         globalRecords.ALTconsumables.concoction1 = value.concoction[0] || "";
         globalRecords.ALTconsumables.concoction2 = value.concoction[1] || "";
@@ -1321,6 +1446,7 @@ let cyclesLoop = {
         globalRecords.ALTconsumables.concoction5 = value.concoction[4] || "";
         globalRecords.ALTconsumables.concoction6 = value.concoction[5] || "";
         globalRecords.ALTconsumables.concoction7 = value.concoction[6] || "";
+        
         globalRecords.ALTconsumables.quickUse1 = value.quickUse[0] || "";
         globalRecords.ALTconsumables.quickUse2 = value.quickUse[1] || "";
         globalRecords.ALTconsumables.quickUse3 = value.quickUse[2] || "";
@@ -1334,7 +1460,7 @@ let cyclesLoop = {
         globalRecords.ALTweapons.meleeMutator = value.meleeMutators[0] || "";
 
         globalRecords.ALTweapons.secondary = value.gun2[0] || "";
-        globalRecords.ALTweapons.secondaryMutator = value.rangedMutators[1] || "";
+        globalRecords.ALTweapons.secondaryMutator = value.rangedMutators[1] || "" ;
         globalRecords.ALTweapons.secondaryMod = value.rangedMods[1] || "";
 
         if (addArmor) {

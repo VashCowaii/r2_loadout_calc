@@ -48,13 +48,33 @@
                         <li>asdf</li> <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
                     </ul>
                 </div> -->
-                <!-- <div>
-                    <h1>May 2, 2024</h1>
+                <div>
+                    <h1>May 6, 2024 - HAVOC DPS UPDATE</h1>
+                    KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states, it'll break the query when the lock is iterated on.
                     <ul>
+                        <li>Added Archon's Havoc Form calculations to the DMG section of the calculator. This will only display if havoc form is a selected ability.</li>
+                        <li>Added the following query target statistics:
+                            <ul>
+                                <li>Havoc Form DPS (will abort if havoc is not imported)</li>
+                                <li>Havoc Form Total Damage (will abort if havoc is not imported)</li>
+                                <li>Grey Health Regen/s</li>
+                                <li>Peak Lifesteal. This evaluates total % lifesteal possible, and will return the highest possible lifesteal even if it might be ranged or melee at any given build.</li>
+                            </ul>
+                        </li>
+                        <li>Added the following stat presets:
+                            <ul>
+                                <li>Grey Health Regen</li>
+                                <li>Lifesteal Peak</li>
+                                <li>Havoc Form. Please note that damage has to cast a very large net due to things like Ahanae, or Mesmer, etc. This preset is not enough to bring you under the 300 million limit. You WILL need to filter much, much harder to get realistic query lengths. It's not a bug that you keep getting the "too many" error.</li>
+                            </ul>
+                        </li>
+                        <li>Made changes to queries logic that can, in some cases, make them go 20% faster(this doesn't apply to every type of query)</li>
                         <li>Fixed an issue where in some cases, queries would not find the peak armor set available due to a rounding error. We're talking a difference of 0.2 base armor at the most, so thankfully this really doesn't change anything math-wise.</li>
+                        <li>Fixed an issue where Anastasija's Inspiration was not calculating the haste benefit at the correct time in queries.</li>
+                        <li>Disabled the ability to import a new class set while a query is already active. This is a limitation I'll remove later, but for now it is needed.</li>
                         <li>Changed the basic statistics display column to only display statistics if they were present in a given build. It technically already worked like this, but any DR related rows always populated no matter what, as did Healing or Stamina rows. Now they only show up if the user actually has a bonus in those rows that needs showing.</li>
                     </ul>
-                </div> -->
+                </div>
                 <div>
                     <h1>May 1, 2024 - THE QUERIES UPDATE: BETA</h1>
                     These are releasing in a limited capacity to start with, specific to tank-based searches.
