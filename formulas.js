@@ -290,7 +290,7 @@ let abilityDamage = {
             drRowsHTML += reference.CastSpeed ? createHTML.basicsRow("Cast Speed",reference.CastSpeed,true,"%") : "";
             drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
             drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
-            drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonues, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
+            drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
             drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
             drRowsHTML += reference.SkillDamage ? createHTML.basicsRow("Skill Damage",reference.SkillDamage,true,"%") : "";
             drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";

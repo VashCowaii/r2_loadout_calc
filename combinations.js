@@ -1337,7 +1337,7 @@ let cyclesLoop = {
         comboCounter *= staticSets; //Get the number of combos possible via variable concoction limits, and multi it by the static set precalc number for total combos possible.
         //If this is going to take way too long, then quit and let the user know.
         if (comboCounter > 300000000 && !cycles.vars.bypassLimit) {
-            postMessage({command: `pushAlert`, data: "Possible combinations exceeds the limit of 300 MILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue."});
+            postMessage({command: `pushAlert`, data: `Possible combinations (${comboCounter}) exceeds the limit of 300 MILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue.`});
             cyclesLoop.selfGenerationStop();
             return;
         }
