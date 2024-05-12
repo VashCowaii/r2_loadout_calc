@@ -43,14 +43,29 @@
             <div class="changeLogMegaBody">
                 <!-- template -->
                 <!-- <div>
-                    <h1>March X, 2024</h1>
+                    <h1>May X, 2024</h1>
                     <ul>
                         <li>asdf</li> <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
                     </ul>
                 </div> -->
                 <div>
+                    <h1>May 12, 2024</h1>
+                    KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
+                    <ul>
+                        <li>Adjusted Havoc Form drain rate and base damage calculations to match up with the latest game patch.</li>
+                        <li>Added a disclaimer in the queries section that some browser extensions may cause queries to be slower than they should be, or cause memory leaks. This is not inherent to queries themselves (I promise I didn't code any memory leaks. Yet.), the user that reported this issue narrowed it down to a very specific extension. Just be aware of that and maybe run queries in an incognito window.</li>
+                        <li>Slight code overhaul. This changes nothing on your end, it only serves to clean up some code on my end that relates to how queries are handled. Changed how some statistics are extracted from a given loadout in the middle of a query, for example traits never change in a query and because of that I can statically evaluate their bonuses outside of the cycles instead of evaluating them every time within. It might make things faster, I personally didn't see any difference. I am working on many things to try and speed up queries, though.</li>
+                        <li>Fixed an issue where Havoc Form Damage box would display by default even without havoc selected on page load assuming no imports forced any calcs to occur, but would immediately be hidden like it should be as soon as any changes were made to the initial display.</li>
+                        <li>Fixed an issue where stamina regen displayed as a percentage multiplied by 100. This is not indicative of the actual value calculated, it only did this because on the display function that inserts stamina regen as a statistic, I accidentally left "percentage" as true which would multiply the value by 100 and add a % sign.</li>
+                        <li>Fixed an issue where kinda like stamina regen, armor DR displayed incorrectly(in format only, the number was right still don't worry), this time it was meant to be a % but wasn't displayed as such. Both of these bugs only occured because I overhauled how part of the displays work, that's my bad for not catching it sooner.</li>
+                        <li>Fixed an issue where when Invoker was the only selected class, the class combo title would display as "undefined" instead of empty like it should have.</li>
+                        <li>Fixed an incorrect description for Shielded Strike.</li>
+                        <li>Updated descriptions for Brawler's Pride and Berserker's Crest, as well as their newly changed/added statistics from the latest update. Note that melee attack speed and melee charge speed are now a unified statistic in terms of how the game handles it on most items which is why you won't see "charge speed" in most descriptions anymore. Edgelord being an exception.</li>
+                        <li>Various other item/ability/passive adjustments from the latest game patch.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>May 6, 2024 - HAVOC DPS UPDATE</h1>
-                    KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states, it'll break the query when the lock is iterated on.
                     <ul>
                         <li>Added Archon's Havoc Form calculations to the DMG section of the calculator. This will only display if havoc form is a selected ability.</li>
                         <li>Added the following query target statistics:

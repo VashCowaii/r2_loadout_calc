@@ -1,34 +1,33 @@
 let calcs = {
     getHealth(index) {
-        let baseHealth = 100 + valueTables[index].Health;
-        let healthBoost = 1 + valueTables[index]["Health%"];
-        let globalHealth = valueTables[index].GlobalHealthModifier;
+        let baseHealth = 100 + index.Health;
+        let healthBoost = 1 + index["Health%"];
+        let globalHealth = index.GlobalHealthModifier;
         let totalHealth = baseHealth * healthBoost * globalHealth; 
         let totalHealthNoGlobal = baseHealth * healthBoost;
 
         return [totalHealth,totalHealthNoGlobal]
     },
     getStamina(index) {
-        // let statTable = valueTables[index];
-        let baseStamina = 100 + valueTables[index].Stamina;
-        let staminaBoost = 1 + valueTables[index]["Stamina%"];
-        let totalStamina = baseStamina * staminaBoost; 
+        let baseStamina = 100 + index.Stamina;
+        let staminaBoost = 1 + index["Stamina%"];
+        let totalStamina = baseStamina * staminaBoost;
         return [totalStamina];
     },
     getArmor(index) {
-        let baseArmor = valueTables[index].Armor;
-        let armorEff = 1 + valueTables[index]["Armor%"];
+        let baseArmor = index.Armor;
+        let armorEff = 1 + index["Armor%"];
         let totalArmor = baseArmor * armorEff;
 
         return [baseArmor,armorEff,totalArmor]
     },
     getWeight(index) {
-        let baseWeight = valueTables[index].Encumbrance;
+        let baseWeight = index.Encumbrance;
         //Stuff that reduces weight can technically put us negative. We need the negative for armor pings, but not for displays
         let adjustedBaseWeight = Math.max(0,baseWeight);
-        let weightBoost = 1 + valueTables[index]["Encumbrance%"];
+        let weightBoost = 1 + index["Encumbrance%"];
         let totalWeight = +(adjustedBaseWeight * weightBoost).toFixed(2);
-        let weightThreshold = +(valueTables[index].WeightThreshold).toFixed(2);
+        let weightThreshold = +(index.WeightThreshold).toFixed(2);
         let dodgeClass = "";
         let staminaPenalty = 0;
         //Define the current dodge class and stamina penalty
@@ -43,9 +42,9 @@ let calcs = {
         //Armor DR
         let armorDR = totalArmor/(totalArmor+200);
         //Flat DR
-        let bulwarkStacks = Math.min(valueTables[index].BulwarkCap,valueTables[index].Bulwark);
+        let bulwarkStacks = Math.min(index.BulwarkCap,index.Bulwark);
         let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
-        let otherFlat = valueTables[index].FlatDR;
+        let otherFlat = index.FlatDR;
         let totalFlat = bulwarkDR+otherFlat;
         //Total DR
         let totalDR = 1-(1-armorDR)*(1-totalFlat);
@@ -53,72 +52,73 @@ let calcs = {
         return [armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR]
     },
     getResistance(index) {
-        let bleed = valueTables[index].Bleed * (1+valueTables[index]["Bleed%"]);
-        let burn = valueTables[index].Burn * (1+valueTables[index]["Burn%"]);
-        let shock = valueTables[index].Shock * (1+valueTables[index]["Shock%"]);
-        let corrosive = valueTables[index].Corrosive * (1+valueTables[index]["Corrosive%"]);
-        let blight = valueTables[index].Blight * (1+valueTables[index]["Blight%"]);
+        let bleed = index.Bleed * (1+index["Bleed%"]);
+        let burn = index.Burn * (1+index["Burn%"]);
+        let shock = index.Shock * (1+index["Shock%"]);
+        let corrosive = index.Corrosive * (1+index["Corrosive%"]);
+        let blight = index.Blight * (1+index["Blight%"]);
 
         return [bleed,burn,shock,corrosive,blight]
     },
     getHealing(index) {
         //this is for shit like game master's pride, it's a global multi modifier
-        let globalHealingMod = valueTables[index].GlobalHealingEff;
+        let globalHealingMod = index.GlobalHealingEff;
         //BOOSTS---
-        let healingEffectiveness = valueTables[index].HealingEFF;
+        let healingEffectiveness = index.HealingEFF;
         //REGENERATION---
-        let flatHPperSec = valueTables[index]["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
-        let percHPperSec = valueTables[index]["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
+        let flatHPperSec = index["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
+        let percHPperSec = index["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
         //GREY HEALTH
-        let greyHPperSec = 0.2 + valueTables[index]["GreyHP/S+"];
-        let greyPercHPperSec = valueTables[index]["GreyHP/S%"];
+        let greyHPperSec = 0.2 + index["GreyHP/S+"];
+        let greyPercHPperSec = index["GreyHP/S%"];
         let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
 
         return [globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec]
     },
     getLifesteal(index,relicEffectiveness) {
-        let lifestealEFF = valueTables[index].LifestealEFF;
-        let relicLifesteal = valueTables[index].RelicLifesteal * (1 + (relicEffectiveness || 0));
-        let lifestealALL = (valueTables[index].Lifesteal + relicLifesteal) * (1 + lifestealEFF);
-        let lifestealMelee = valueTables[index].MLifesteal * (1 + lifestealEFF);
-        let lifestealMeleeCharged = valueTables[index].MChargedLifeSteal * (1 + lifestealEFF);
-        let lifestealRange = valueTables[index].RLifesteal * (1 + lifestealEFF);
+        let lifestealEFF = index.LifestealEFF;
+        let relicLifesteal = index.RelicLifesteal * (1 + (relicEffectiveness || 0));
+        let lifestealALL = (index.Lifesteal + relicLifesteal) * (1 + lifestealEFF);
+        let lifestealMelee = index.MLifesteal * (1 + lifestealEFF);
+        let lifestealMeleeCharged = index.MChargedLifeSteal * (1 + lifestealEFF);
+        let lifestealRange = index.RLifesteal * (1 + lifestealEFF);
+        let peakLifesteal;
 
+        if (filters.types.vars.targetStatistic && playerDerivedStatistics[filters.types.vars.targetStatistic].includes("Lifesteal")) {
         let newLifestealAll = lifestealALL;
         let newLifestealMelee = lifestealALL + lifestealMelee;
         let newLifestealMeleeCharged = lifestealALL + lifestealMelee + lifestealMeleeCharged;
         let newLifestealRanged = lifestealALL + lifestealRange;
 
-        let peakLifesteal = newLifestealAll;
+        peakLifesteal = newLifestealAll;
         peakLifesteal = newLifestealMelee > peakLifesteal ? newLifestealMelee : peakLifesteal;
         peakLifesteal = newLifestealMeleeCharged > peakLifesteal ? newLifestealMeleeCharged : peakLifesteal;
         peakLifesteal = newLifestealRanged > peakLifesteal ? newLifestealRanged : peakLifesteal;
-
-        // console.log(peakLifesteal)
+        }
 
         return [lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal]
     },
     getStaminaValues(index,staminaPenalty) {
         //STAMINA
-        let regenMulti = valueTables[index]["Stamina/S+Multi"] ? valueTables[index]["Stamina/S+Multi"] : 1;
-        let staminaPerSec = (33 + valueTables[index]["Stamina/S+"]) * regenMulti;
+        let regenMulti = index["Stamina/S+Multi"] ? index["Stamina/S+Multi"] : 1;
+        let staminaPerSec = (33 + index["Stamina/S+"]) * regenMulti;
 
-        let staminaPenaltyAdjustment = Math.max(0,valueTables[index].StaminaPenaltyAdjustment);
+        let staminaPenaltyAdjustment = Math.max(0,index.StaminaPenaltyAdjustment);
 
-        let staminaCost = valueTables[index].StaminaCost + (staminaPenalty * (1-staminaPenaltyAdjustment));
+        let staminaCost = index.StaminaCost + (staminaPenalty * (1-staminaPenaltyAdjustment));
         //If something like bisected it on, or if we go under 0% costs, turn off stamina costs.
-        if (valueTables[index].StaminaNegation > 0 || staminaCost < 0) {staminaCost = 0}
+        if (index.StaminaNegation > 0 || staminaCost < 0) {staminaCost = 0}
 
         return [staminaPerSec,staminaCost]
     },
-    getRelicHealing(index,totalHealth,globalHealingMod,healingEffectiveness) {
+    getRelicHealing(index,isUIcalcs,totalHealth,globalHealingMod,healingEffectiveness) {
         //RELIC HEALING
         //We're taking noGlobal on total health as that is the value that persists with shit like Restriction Cord.
-        let relicHPbase = valueTables[index].RelicHPbase * globalHealingMod;
-        let relicHPtype = valueTables[index].RelicHPtype;
-        let relicHPtime = valueTables[index].RelicHPtime;
-        let relicUseTime = valueTables[index].RelicSpeed;
-        let relicEffectiveness = valueTables[index].RelicEFF;
+        let relicHPbase = index.RelicHPbase * globalHealingMod;
+        let relicHPtype = index.RelicHPtype;
+        let relicHPtime = index.RelicHPtime;
+        let relicUseTime = index.RelicSpeed;
+        let relicEffectiveness = index.RelicEFF;
 
         let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
 
@@ -139,22 +139,21 @@ let calcs = {
         relicPercPerSecond = null;
         relicFlatPerSecond = null;
         }
-        let relicComplexArray = formulasValues.callUniqueFunctions(index,"relic",relicHPscaled,totalHealth);
+        let relicComplexArray = formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealth);
 
         return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness]
     },
-    getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal) {
+    getAdvancedDR(index,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal) {
         //REDUCED ENEMY DAMAGE
-        let isUIcalcs = index != "greatTableKnowerOfAll"
         let reducedEnemyDamage = 1;
-        for (let i=0;i<=valueTables[index].REdamage.length-1;i++) {
-        reducedEnemyDamage = reducedEnemyDamage * (1+valueTables[index].REdamage[i]);
+        for (let i=0;i<=index.REdamage.length-1;i++) {
+        reducedEnemyDamage = reducedEnemyDamage * (1+index.REdamage[i]);
         }
         reducedEnemyDamage += -1;
         //DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
         let damageKept = 1;
-        for (let i=0;i<=valueTables[index].DMGKept.length-1;i++) { //ADD GAMEMASTER'S CHECK HERE LATER
-            damageKept = damageKept * (1+valueTables[index].DMGKept[i]);
+        for (let i=0;i<=index.DMGKept.length-1;i++) { //ADD GAMEMASTER'S CHECK HERE LATER
+            damageKept = damageKept * (1+index.DMGKept[i]);
         }
         damageKept += -1;
 
@@ -162,9 +161,9 @@ let calcs = {
         let MODreducedEnemyDamage = reducedEnemyDamage;
         let MODdamageKept = damageKept;
         //Modify the original values to give proper amounts to bonus mitigation and EHP after.
-        let useREdamage = !isUIcalcs ? readSelection("includeREdamage").checked : globalRecords.ALTuseNonStandardDR;
+        let useREdamage = isUIcalcs ? readSelection("includeREdamage").checked : globalRecords.ALTuseNonStandardDR;
         if (!useREdamage){reducedEnemyDamage=1} else {reducedEnemyDamage += 1;}
-        let useDMGKept = !isUIcalcs ? readSelection("includeDMGKept").checked : globalRecords.ALTuseNonStandardDR;
+        let useDMGKept = isUIcalcs ? readSelection("includeDMGKept").checked : globalRecords.ALTuseNonStandardDR;
         if (!useDMGKept){damageKept=1} else {damageKept += 1;}
         //TOTAL BONUS TO EFFECTIVE DR, BASED ON REDMG AND DMGKEPT
         let totalBonusMitigation = (damageKept*reducedEnemyDamage)-1;
@@ -182,26 +181,23 @@ let calcs = {
     },
     getShields(index,baseEHP) {
         //----------SHIELDS----------------------------------------------------------------------------
-        let percShields = valueTables[index].Shield;
-        let shieldEff = valueTables[index].ShieldEFF;
+        let percShields = index.Shield;
+        let shieldEff = index.ShieldEFF;
         let totalPercShields = percShields * (1+shieldEff);
         //noGlobal on HP here, as stuff like restriction cord does not reduce max hp, it only prevents you from HEALING past 50%
         let shieldEHP = baseEHP * totalPercShields;
 
         return [percShields,shieldEff,totalPercShields,shieldEHP]
     },
-    getEHP(index,shieldEHP,baseEHP) {
-        let isUIcalcs = index != `greatTableKnowerOfAll`;
-
-        let toggleCheck = !isUIcalcs ? readSelection(`includeShields`).checked : globalRecords.ALTuseShields;
+    getEHP(isUIcalcs,shieldEHP,baseEHP) {
+        let toggleCheck = isUIcalcs ? readSelection(`includeShields`).checked : globalRecords.ALTuseShields;
         shieldEHP = toggleCheck ? shieldEHP : 0;
         //----------TOTAL EHP----------------------------------------------------------------------------
         let totalEHP = baseEHP + shieldEHP;
 
         return [totalEHP]
     },
-    getAdvancedHealing(index,baseEHP,regHealing,relicHealing,totalHealthNoGlobal) {
-        let isUIcalcs = index != "greatTableKnowerOfAll";
+    getAdvancedHealing(isUIcalcs,baseEHP,regHealing,relicHealing,totalHealthNoGlobal) {
         let toggleCheck;
         let advancedRelicFlat,advancedRelicPerc;
 
@@ -229,7 +225,7 @@ let calcs = {
 
         let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
         let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
-        toggleCheck = !isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
+        toggleCheck = isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
         if (toggleCheck) {advancedTotalFlatHP += advancedRelicTotalFlat;advancedTotalPercHP += advancedRelicTotalPerc;}
 
         let EHPpSec = baseEHP * (advancedTotalPercHP/100);

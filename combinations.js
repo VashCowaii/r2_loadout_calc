@@ -413,8 +413,8 @@ let cycles = {
         //Would also allow us to skip storing the base 370k table, and condense functions bc this is all done between 3 when it could be one
         for (let i=0;i<path.length;i++) {
             let innerPath = path[i];
-            const armorValue = +innerPath[4];
-            const weightKey = +innerPath[5];
+            const armorValue = innerPath[4];
+            const weightKey = innerPath[5];
 
             // If the weight is encountered for the first time or if the current combination has better armor
             if (valueStorage[weightKey] === undefined || valueStorage[weightKey].armorValue <= armorValue) {
@@ -604,7 +604,7 @@ let cycles = {
                                     totalArmor = armor.helmets[slot1].stats.Armor + armor.chests[slot2].stats.Armor + armor.legs[slot3].stats.Armor + armor.hands[slotNames[i]].stats.Armor;
                                     totalWeight = armor.helmets[slot1].stats.Encumbrance + armor.chests[slot2].stats.Encumbrance + armor.legs[slot3].stats.Encumbrance + armor.hands[slotNames[i]].stats.Encumbrance;
                                     
-                                    totalArmor = totalArmor.toFixed(3);totalWeight = totalWeight.toFixed(3);
+                                    totalArmor = +totalArmor.toFixed(2);totalWeight = +totalWeight.toFixed(2);
                                     // totalArmor = totalArmor;totalWeight = totalWeight;
 
                                     combinations.push([slot1,slot2,slot3,slotNames[i],totalArmor,totalWeight]);
@@ -1179,24 +1179,24 @@ let cyclesLoop = {
         }
 
         
-        let targetWeight = ((threshold/weightModifier)-existingWeight).toFixed(2);
+        let targetWeight = ((threshold/weightModifier)-existingWeight);
 
         let isPossible = isExact ?? true;//Find exact values if specified, otherwise maximize armor per the given weight category
         // let isPossible = false;
         let armorSearch,weightSearch;
         if (isPossible) {
-            armorSearch = cyclesLoop.binarySearch(cycles.vars.armorCombos.Table,targetArmor.toString(),true,true);
+            armorSearch = cyclesLoop.binarySearch(cycles.vars.armorCombos.Table,targetArmor,true,true);
             if (armorSearch != -1) {
                 let path = cycles.vars.armorCombos.Table[armorSearch.indexID][armorSearch.keyID];
-                const weights = Object.keys(path[0])[0];
+                const weights = +Object.keys(path[0])[0];
 
-                if (+weights <= +targetWeight) {bestArmorSet = path[0][weights];}
+                if (weights <= targetWeight) {bestArmorSet = path[0][weights];}
                 else {isPossible=false;}
             }
         }
         if (!isPossible) {
             //If the target armor or closest approx armor, had no weight options under the target weight, check weight table instead.
-            weightSearch = cyclesLoop.binarySearch(cycles.vars.weightFirst.Table, +targetWeight,true,false);
+            weightSearch = cyclesLoop.binarySearch(cycles.vars.weightFirst.Table, targetWeight,true,false);
 
             if (weightSearch != -1) {
                 bestArmorSet = cycles.vars.weightFirst.Table[weightSearch.indexID][weightSearch.keyID];
@@ -1205,8 +1205,9 @@ let cyclesLoop = {
         }
 
         bestArmorSet = bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""};
-        globalRecords.ALTarmor.helmet = bestArmorSet.slot1;globalRecords.ALTarmor.chest = bestArmorSet.slot2;
-        globalRecords.ALTarmor.leg = bestArmorSet.slot3;globalRecords.ALTarmor.hand = bestArmorSet.slot4;
+        let armorReference = globalRecords.ALTarmor
+        armorReference.helmet = bestArmorSet.slot1;armorReference.chest = bestArmorSet.slot2;
+        armorReference.leg = bestArmorSet.slot3;armorReference.hand = bestArmorSet.slot4;
         return bestArmorSet;
     },
     // No longer a generator function to yield combinations including fragment combinations
@@ -1309,6 +1310,7 @@ let cyclesLoop = {
         
         let classSet = [globalRecords.ALTarchs.one.class,globalRecords.ALTarchs.two.class];
         let abilitySet = [globalRecords.ALTarchs.one.ability,globalRecords.ALTarchs.two.ability];
+        formulasValues.pullTraits(false);//Assign trait value to the cycles starter table
 
         let comboCounter = 0;
 
@@ -1364,6 +1366,7 @@ let cyclesLoop = {
             for (const amulet of amuletCombos) {
                 //Needed to extract the current concoction limit.
                 let currentLimit = cyclesLoop.combineConcoctionLimit(ringSet,amulet,classSet);//TODO: Add more item types if they add concLimit
+                let currentTable = concMegaTable[`concoctionCombos${currentLimit}`];
                 for (const relic of relicCombos) {
                     for (const stick of meleeCombos) {
                         for (const gun2 of secondaryCombos) {
@@ -1374,14 +1377,14 @@ let cyclesLoop = {
                                             for (const mMutator1 of meleeMutatorCombos) {
                                                 for (const rMutator1 of rangedMutatorCombos) {
 
-                                                    for (let conc=0;conc<concMegaTable[`concoctionCombos${currentLimit}`].length;conc++) {
+                                                    for (let conc=0;conc<currentTable.length;conc++) {
                                                         cycleObject = {
-                                                            ringSet,relic,fragmentSet,amulet,classSet,abilitySet,concoction:concMegaTable[`concoctionCombos${currentLimit}`][conc],quickUse,
+                                                            ringSet,relic,fragmentSet,amulet,classSet,abilitySet,concoction:currentTable[conc],quickUse,
                                                             gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1};
 
                                                         cyclesLoop.updateCycleRecord(cycleObject);//Assigns cycle items to records so updateFormulas can work
                                                         let preArmor = updateFormulas(`cycleTableKnowerOfAll`,true);//If armor is needed, it will return it. Otherwise it will return stats.
-                                        
+
                                                         if (preArmor.slot1) {//if an armor ping returned anything
                                                             cycleObject.bestArmorSet = {...preArmor};
                                                             preArmor = updateFormulas(`cycleTableKnowerOfAll`);//Then redo the updateforms, this time turning ping off, so armor pieces are now factored
@@ -1389,27 +1392,19 @@ let cyclesLoop = {
 
                                                         if (!Array.isArray(targetStatistic)) {
                                                             if (((preArmor[targetStatistic] > recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
-                                                                recordedStatistic = +`${preArmor[targetStatistic]}`;
+                                                                recordedStatistic = preArmor[targetStatistic];
                                                                 postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
-                                                            }
-                                                            else {
-                                                                postMessage({command: `yieldCombination`, isUpdated: false});
+                                                                continue;
                                                             }
                                                         }
                                                         else {
-
-
-                                                            // ability1Breakdown,ability2Breakdown
-                                                            // console.log(preArmor[targetDamageCategory][targetStatistic[1]])
-
                                                             if (((preArmor[targetDamageCategory][targetStatistic[1]] > recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
                                                                 recordedStatistic = +`${preArmor[targetDamageCategory][targetStatistic[1]]}`;
                                                                 postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
-                                                            }
-                                                            else {
-                                                                postMessage({command: `yieldCombination`, isUpdated: false});
+                                                                continue;
                                                             }
                                                         }
+                                                        postMessage({command: `yieldCombination`});
                                                     }
                                                 }
                                             }
@@ -1427,47 +1422,45 @@ let cyclesLoop = {
     },
     updateCycleRecord(value,addArmor) {
 
-        globalRecords.ALTaccessories.amulet = value.amulet[0] || "";
-        globalRecords.ALTaccessories.ring1 = value.ringSet[0] || "";
-        globalRecords.ALTaccessories.ring2 = value.ringSet[1] || "";
-        globalRecords.ALTaccessories.ring3 = value.ringSet[2] || "";
-        globalRecords.ALTaccessories.ring4 = value.ringSet[3] || "";
+        let accessoryReference = globalRecords.ALTaccessories;
+        accessoryReference.amulet = value.amulet[0] ?? "";
+        accessoryReference.ring1 = value.ringSet[0] ?? "";
+        accessoryReference.ring2 = value.ringSet[1] ?? "";
+        accessoryReference.ring3 = value.ringSet[2] ?? "";
+        accessoryReference.ring4 = value.ringSet[3] ?? "";
+        accessoryReference.relic = value.relic[0] ?? "";
+        accessoryReference.fragment1 = value.fragmentSet[0] ?? "";
+        accessoryReference.fragment2 = value.fragmentSet[1] ?? "";
+        accessoryReference.fragment3 = value.fragmentSet[2] ?? "";
 
-        globalRecords.ALTaccessories.relic = value.relic[0] || "";
+        let consumableReference = globalRecords.ALTconsumables;
+        consumableReference.concoction1 = value.concoction[0] ?? "";
+        consumableReference.concoction2 = value.concoction[1] ?? "";
+        consumableReference.concoction3 = value.concoction[2] ?? "";
+        consumableReference.concoction4 = value.concoction[3] ?? "";
+        consumableReference.concoction5 = value.concoction[4] ?? "";
+        consumableReference.concoction6 = value.concoction[5] ?? "";
+        consumableReference.concoction7 = value.concoction[6] ?? "";
+        consumableReference.quickUse1 = value.quickUse[0] ?? "";
+        consumableReference.quickUse2 = value.quickUse[1] ?? "";
+        consumableReference.quickUse3 = value.quickUse[2] ?? "";
+        consumableReference.quickUse4 = value.quickUse[3] ?? "";
 
-        globalRecords.ALTaccessories.fragment1 = value.fragmentSet[0] || "";
-        globalRecords.ALTaccessories.fragment2 = value.fragmentSet[1] || "";
-        globalRecords.ALTaccessories.fragment3 = value.fragmentSet[2] || "";
-
-        globalRecords.ALTconsumables.concoction1 = value.concoction[0] || "";
-        globalRecords.ALTconsumables.concoction2 = value.concoction[1] || "";
-        globalRecords.ALTconsumables.concoction3 = value.concoction[2] || "";
-        globalRecords.ALTconsumables.concoction4 = value.concoction[3] || "";
-        globalRecords.ALTconsumables.concoction5 = value.concoction[4] || "";
-        globalRecords.ALTconsumables.concoction6 = value.concoction[5] || "";
-        globalRecords.ALTconsumables.concoction7 = value.concoction[6] || "";
-        
-        globalRecords.ALTconsumables.quickUse1 = value.quickUse[0] || "";
-        globalRecords.ALTconsumables.quickUse2 = value.quickUse[1] || "";
-        globalRecords.ALTconsumables.quickUse3 = value.quickUse[2] || "";
-        globalRecords.ALTconsumables.quickUse4 = value.quickUse[3] || "";
-
-        globalRecords.ALTweapons.primary = value.gun1[0] || "";
-        globalRecords.ALTweapons.primaryMutator = value.rangedMutators[0] || "";
-        globalRecords.ALTweapons.primaryMod = value.rangedMods[0] || "";
-
-        globalRecords.ALTweapons.melee = value.stick[0] || "";
-        globalRecords.ALTweapons.meleeMutator = value.meleeMutators[0] || "";
-
-        globalRecords.ALTweapons.secondary = value.gun2[0] || "";
-        globalRecords.ALTweapons.secondaryMutator = value.rangedMutators[1] || "" ;
-        globalRecords.ALTweapons.secondaryMod = value.rangedMods[1] || "";
+        let weaponReference = globalRecords.ALTweapons;
+        weaponReference.primary = value.gun1[0] ?? "";
+        weaponReference.primaryMutator = value.rangedMutators[0] ?? "";
+        weaponReference.primaryMod = value.rangedMods[0] ?? "";
+        weaponReference.melee = value.stick[0] ?? "";
+        weaponReference.meleeMutator = value.meleeMutators[0] ?? "";
+        weaponReference.secondary = value.gun2[0] ?? "";
+        weaponReference.secondaryMutator = value.rangedMutators[1] ?? "" ;
+        weaponReference.secondaryMod = value.rangedMods[1] ?? "";
 
         if (addArmor) {
-            globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 || "";
-            globalRecords.ALTarmor.chest = value.bestArmorSet.slot2 || "";
-            globalRecords.ALTarmor.leg = value.bestArmorSet.slot3 || "";
-            globalRecords.ALTarmor.hand = value.bestArmorSet.slot4 || "";
+            globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 ?? "";
+            globalRecords.ALTarmor.chest = value.bestArmorSet.slot2 ?? "";
+            globalRecords.ALTarmor.leg = value.bestArmorSet.slot3 ?? "";
+            globalRecords.ALTarmor.hand = value.bestArmorSet.slot4 ?? "";
         }
     },
 }

@@ -1608,94 +1608,28 @@ let userTrigger = {
 /* ------------------ Everything used in updateFormulas() --------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
 let formulasValues = {
-  //Used in updateFormulas() to fill consumable values on the master table
-  //Utilizes toggle states
-  pullConsumables (index,concLimit) {
-    let isUIcalcs = index != "greatTableKnowerOfAll";
-    let recordPath = !isUIcalcs ? globalRecords[`consumables`] : globalRecords[`ALTconsumables`];
-
-    let toggleCheck;
-  //Concoctions
-    for (let i=1;i<=7;i++) {
-      let concoction = recordPath[`concoction${i}`];
-      if (i<=concLimit) {
-        if (!isUIcalcs) { readSelection(`concoction${i}MAINbox`).style.display = "flex";}
-        toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledConc${i}`).checked : false;
-        if (!toggleCheck) {formulasValues.pullStats(index,concoctions[concoction].stats);}
+  pullIfActive (toggleId,itemPath,itemType,category,modPath,toggleModId) {
+    let toggleCheck = toggleId[0] ? readSelection(toggleId[2]).checked : toggleId[3];
+    if (!toggleCheck) {
+      if (itemPath && itemType != "Prime") {formulasValues.pullStats(toggleId[1], itemPath.stats);}
+      else {formulasValues.pullStats(toggleId[1], itemPath);}
+    }
+    if (category != 'Weapon') {return;}
+    else {
+      let statsPath;
+      toggleCheck = toggleId[0] ? readSelection(toggleModId[0]).checked : toggleModId[1];
+      if (!toggleCheck) {
+        if (itemPath && itemPath.builtIN) {statsPath = mods[`builtIn${itemType}Mods`][itemPath.builtIN];}
+        else if (modPath) {statsPath = mods[`${itemType.toLowerCase()}Mods`][modPath];}
       }
-      else {
-        if (!isUIcalcs) {
-          //Only do this stuff if we're not looping.
-          //Generated combos already account for the limit on as they are generated.
-          concoction = "";
-          readSelection(`concoction${i}`).value = "";
-          readSelection(`concoction${i}Icon`).src = "images/Remnant/clear.png";
-          readSelection(`concoction${i}IconMAIN`).src = "images/Remnant/clear.png";
-          readSelection(`concoction${i}Desc`).innerHTML = "";
-          globalRecords[`concoction${i}old`]="";
-          readSelection(`concoction${i}MAINbox`).style.display = "none";
-        }
-      }
+      if (statsPath) {formulasValues.pullStats(toggleId[1], statsPath.stats);}
     }
-  //Quick-Use Consumables
-  for (let i=1;i<=4;i++) {
-    if (!!quickUses[recordPath[`quickUse${i}`]]) {
-      toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledQuick${i}`).checked : false;
-      if (!toggleCheck) {formulasValues.pullStats(index,quickUses[recordPath[`quickUse${i}`]].stats);}
-    }
-  }
-  },
-  //Used in updateFormulas() to fill weapon/mod/mutator values on the master table
-  //Utilizes toggle states
-  pullWeapons (index) {
-    let isUIcalcs = index != "greatTableKnowerOfAll";
-    let path = !isUIcalcs ? globalRecords[`weapons`] : globalRecords[`ALTweapons`];
-    let toggleCheck;
-
-  //Weapons
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledPrimary`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,weapons.primary[path.primary].stats);}
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledMelee`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,weapons.melee[path.melee].stats);}
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledSecondary`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,weapons.secondary[path.secondary].stats);}
-  //Mutators
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledpMutator`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,mutators.primaryMutators[path.primaryMutator].stats);}
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledmMutator`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,mutators.meleeMutators[path.meleeMutator].stats);}
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledsMutator`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,mutators.secondaryMutators[path.secondaryMutator].stats);}
-  //Mods
-  toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledpMod`).checked : false;
-  if (!toggleCheck) {
-    let checkWeaponPath = weapons.primary[path.primary]
-    // console.log(checkWeaponPath)
-    if (checkWeaponPath.builtIN) {
-      // console.log(path.primaryMod)
-      formulasValues.pullStats(index,mods.builtInPrimaryMods[checkWeaponPath.builtIN].stats);
-    }
-    else if (path.primaryMod) {
-      formulasValues.pullStats(index,mods.primaryMods[path.primaryMod].stats);}
-  }
-  toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledmMod`).checked : false;
-  if (!toggleCheck) {
-    let checkWeaponPath = weapons.melee[path.melee]
-    if (checkWeaponPath.builtIN){formulasValues.pullStats(index,mods.builtInMeleeMods[checkWeaponPath.builtIN].stats);}//melee have no optional mods, all built-in
-  }
-  toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledsMod`).checked : false;
-  if (!toggleCheck) {
-    let checkWeaponPath = weapons.secondary[path.secondary]
-    if (!checkWeaponPath.builtIN) {formulasValues.pullStats(index,mods.secondaryMods[path.secondaryMod].stats);}
-    else {formulasValues.pullStats(index,mods.builtInSecondaryMods[checkWeaponPath.builtIN].stats);}
-  }
   },
   //Used in updateFormulas() to fill trait property values on the master table
   //Utilizes toggle states
-  pullTraits (index) {
-    const isUIcalcs = index != "greatTableKnowerOfAll";
-    const recordReference = globalRecords[isUIcalcs ? "ALTgreatTraitRecords" : "greatTraitRecords"]; //Yoink all active trait values
-    const tableReference = valueTables[index];
+  pullTraits (isUIcalcs,index) {
+    const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
+    const tableReference = isUIcalcs ? valueTables[index] : starterTable;
 
     for (const trait of recordReference) {
       const traitLevel = trait.level;
@@ -1733,60 +1667,70 @@ let formulasValues = {
   },
   //Used in updateFormulas() to read gear/accessory specific statistics and add them to the master table
   //Utilizes toggle states
-  pullGearStats(index,ping) {
-    let isUIcalcs = index != "greatTableKnowerOfAll";
-    let toggleCheck;
+  pullGearStats(isUIcalcs,index,ping) {
+    const path = isUIcalcs ? globalRecords.weapons : globalRecords.ALTweapons;
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimary',false],weapons.primary[path.primary],'Primary','Weapon',path.primaryMod,['USEtoggledpMod',false]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledMelee',false],weapons.melee[path.melee],'Melee','Weapon',undefined,['USEtoggledmMod',false]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledSecondary',false],weapons.secondary[path.secondary],'Secondary','Weapon',path.secondaryMod,['USEtoggledsMod',false]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledpMutator',false],mutators.primaryMutators[path.primaryMutator]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledmMutator',false],mutators.meleeMutators[path.meleeMutator]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledsMutator',false],mutators.secondaryMutators[path.secondaryMutator]);
 
-    let archsTableName = !isUIcalcs ? `archs` : `ALTarchs`;
+    let archsTableName = isUIcalcs ? `archs` : `ALTarchs`;
     let path1 = classInfo[globalRecords[archsTableName].one.class];
     let path2 = classInfo[globalRecords[archsTableName].two.class];
-    let ability1 = globalRecords[archsTableName].one.ability;
-    let ability2 = globalRecords[archsTableName].two.ability;
     let pathALT = globalRecords.searchSettingsToggles;
 
-    //If this is just a quick stat pull so can we can look at armor after, then skip armor here
-    if (!ping) {
-      let armorRecordPath = !isUIcalcs ? globalRecords[`armor`] : globalRecords[`ALTarmor`];
-      let head = armor.helmets[armorRecordPath.helmet].stats;
-      let chest = armor.chests[armorRecordPath.chest].stats;
-      let leg = armor.legs[armorRecordPath.leg].stats;
-      let hand = armor.hands[armorRecordPath.hand].stats;
-      //ARMOR
-      toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledHead`).checked : false;
-      if (!toggleCheck) {formulasValues.pullStats(index,head);}
-      toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledChest`).checked : false;
-      if (!toggleCheck) {formulasValues.pullStats(index,chest);}
-      toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledLegs`).checked : false;
-      if (!toggleCheck) {formulasValues.pullStats(index,leg);}
-      toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledHands`).checked : false;
-      if (!toggleCheck) {formulasValues.pullStats(index,hand);}
+    if (!ping) {//If this is just a quick stat pull so can we can look at armor after, then skip armor here
+      let armorRecordPath = isUIcalcs ? globalRecords[`armor`] : globalRecords[`ALTarmor`];
+      formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledHead',false],armor.helmets[armorRecordPath.helmet]);
+      formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledChest',false],armor.chests[armorRecordPath.chest]);
+      formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledLegs',false],armor.legs[armorRecordPath.leg]);
+      formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledHands',false],armor.hands[armorRecordPath.hand]);
     }
     //AMULET
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledAmulet`).checked : false;
-    let tableName = !isUIcalcs ? `accessories` : `ALTaccessories`;//---
-    if (!toggleCheck) {formulasValues.pullStats(index,amulets[globalRecords[tableName].amulet].stats);}
+    let tableName = isUIcalcs ? `accessories` : `ALTaccessories`;
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAmulet',false],amulets[globalRecords[tableName].amulet]);
     //RINGS, PASSIVES, and FRAGMENTS
     for (let i=1;i<=4;i++) {
-      if (!(!isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false))
-        {formulasValues.pullStats(index,rings[globalRecords[tableName][`ring${i}`]].stats);}
-      if (!(!isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : pathALT[`usePassive${i}`]))
-        {formulasValues.pullStats(index,path1.passives[`passive${i}`].stats);}
-      if (!(!isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : pathALT[`usePassive${i+4}`]))
-        {formulasValues.pullStats(index,path2.passives[`passive${i}`].stats);}
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledRing${i}`,false],rings[globalRecords[tableName][`ring${i}`]]);
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i}`,pathALT[`usePassive${i}`]],path1.passives[`passive${i}`]);
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i+4}`,pathALT[`usePassive${i+4}`]],path2.passives[`passive${i}`]);
       if (i<=3)
-        {formulasValues.pullStats(index,fragments[globalRecords[tableName][`fragment${i}`]].stats)}
+        {formulasValues.pullStats(index,fragments[globalRecords[tableName][`fragment${i}`]].stats)}//frags have no toggles.
     }
     //RELIC
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledRelic`).checked : false;
-    if (!toggleCheck) {formulasValues.pullStats(index,relics[globalRecords[tableName].relic].stats);}
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledRelic',false],relics[globalRecords[tableName].relic]);
     //PRIME PERK
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledPrimeP`).checked : pathALT.usePrimePerk;
-    if (!toggleCheck) {formulasValues.pullStats(index,path1.primeStats);}
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimeP',pathALT.usePrimePerk],path1.primeStats,"Prime");
     //ABILITIES
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledAbility1`).checked : pathALT.useAbility1;
-    if (!toggleCheck) {formulasValues.pullStats(index,path1.abilities[ability1].stats);}
-    toggleCheck = (!isUIcalcs) ? readSelection(`USEtoggledAbility2`).checked : pathALT.useAbility2;
-    if (!toggleCheck) {formulasValues.pullStats(index,path2.abilities[ability2].stats);}
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility1',pathALT.useAbility1],path1.abilities[globalRecords[archsTableName].one.ability]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility2',pathALT.useAbility2],path2.abilities[globalRecords[archsTableName].two.ability]);
+
+  //Concoctions
+    globalRecords.totalConcLimit = 1 + valueTables[index].ConcLimit;
+    let recordPath = isUIcalcs ? globalRecords[`consumables`] : globalRecords[`ALTconsumables`];
+    for (let i=1;i<=7;i++) {
+      if (i<=globalRecords.totalConcLimit) {
+        if (isUIcalcs) {readSelection(`concoction${i}MAINbox`).style.display = "flex";}
+        formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledConc${i}`,false],concoctions[recordPath[`concoction${i}`]]);
+      }
+      else if (isUIcalcs){
+          concoction = "";//Clear selections on the UI calc if beyond the conc limit.
+          readSelection(`concoction${i}`).value = "";
+          readSelection(`concoction${i}Icon`).src = "images/Remnant/clear.png";
+          readSelection(`concoction${i}IconMAIN`).src = "images/Remnant/clear.png";
+          readSelection(`concoction${i}Desc`).innerHTML = "";
+          globalRecords[`concoction${i}old`]="";
+          readSelection(`concoction${i}MAINbox`).style.display = "none";
+      }
+    }
+  //Quick-Use Consumables
+  for (let i=1;i<=4;i++) {
+    if (quickUses[recordPath[`quickUse${i}`]]) {
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledQuick${i}`,false],quickUses[recordPath[`quickUse${i}`]]);
+    }
+  }
   },
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
   pullStats(index,path) {
@@ -1802,27 +1746,25 @@ let formulasValues = {
     readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
   },
   //Used to call unique item functions AFTER the base statistics have populated greatTableKnowerOfAll
-  callUniqueFunctions(index,item,relicHPscaled,totalHealth,tier,insertedStatistic) {
+  callUniqueFunctions(isUIcalcs,index,item,relicHPscaled,totalHealth,tier,insertedStatistic) {
     //relicHPscaled and totalHealth are only used for when item is "relic"
-    let isUIcalcs = index != "greatTableKnowerOfAll";
     let toggleCheck,customPath;
-
 
     if (item==="relic") {//relics do not use an inserted statistic currently
       let relicComplexArray;
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
       if (!toggleCheck) {
-        customPath = !isUIcalcs ? globalRecords.accessories.relic : globalRecords.ALTaccessories.relic;
-        if (!isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
+        customPath = isUIcalcs ? globalRecords.accessories.relic : globalRecords.ALTaccessories.relic;
+        if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
         
         if (relics[customPath][`custom${tier}`]) {
-          // if (!isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
+          // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
           relicComplexArray = customItemFunctions.relic[relics[customPath][`custom${tier}`]](index,relicHPscaled,totalHealth);
         }
       }
       //Fragments
       for (let i=1;i<=3;i++) {
-        customPath = !isUIcalcs ? globalRecords.accessories[`fragment${i}`] : globalRecords.ALTaccessories[`fragment${i}`];
+        customPath = isUIcalcs ? globalRecords.accessories[`fragment${i}`] : globalRecords.ALTaccessories[`fragment${i}`];
         if (fragments[customPath][`custom${tier}`]) {
           customItemFunctions[fragments[customPath][`custom${tier}`]]();
         }
@@ -1832,8 +1774,8 @@ let formulasValues = {
     else {
       //rings
       for (let i=1;i<=4;i++) {
-        toggleCheck = !isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
-        customPath = !isUIcalcs ? globalRecords.accessories[`ring${i}`] : globalRecords.ALTaccessories[`ring${i}`];
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
+        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] : globalRecords.ALTaccessories[`ring${i}`];
         if (!toggleCheck) {
           if (rings[customPath][`custom${tier}`]) {
             customItemFunctions.rings[rings[customPath][`custom${tier}`]](index,insertedStatistic);
@@ -1841,59 +1783,59 @@ let formulasValues = {
         }
       }
       //Amulet
-      toggleCheck = !isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
+      toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
       if (!toggleCheck) {
-        customPath = !isUIcalcs ? globalRecords.accessories.amulet : globalRecords.ALTaccessories.amulet;
+        customPath = isUIcalcs ? globalRecords.accessories.amulet : globalRecords.ALTaccessories.amulet;
         if (amulets[customPath][`custom${tier}`]) {
           customItemFunctions.amulets[amulets[customPath][`custom${tier}`]](index,insertedStatistic);
         }
       }
       //Class
-      let path1 = classInfo[!isUIcalcs ? globalRecords.archs.one.class : globalRecords.ALTarchs.one.class];
-      let path2 = classInfo[!isUIcalcs ? globalRecords.archs.two.class : globalRecords.ALTarchs.two.class];
-      let ability1 = !isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
-      let ability2 = !isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
+      let path1 = classInfo[isUIcalcs ? globalRecords.archs.one.class : globalRecords.ALTarchs.one.class];
+      let path2 = classInfo[isUIcalcs ? globalRecords.archs.two.class : globalRecords.ALTarchs.two.class];
+      let ability1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
+      let ability2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
       //Prime Perk
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
       if (!toggleCheck) {if (path1[`custom${tier}`]) {customItemFunctions[path1[`custom${tier}`]](index,insertedStatistic);}}
       //Archetype1
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
       if (!toggleCheck) {if (path1.abilities[ability1][`custom${tier}`]) {customItemFunctions[path1.abilities[ability1[`custom${tier}`]]](index,insertedStatistic);}}
       for (let i=1;i<=4;i++) {
-        toggleCheck = !isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
         if (!toggleCheck) {if (path1.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path1.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
       }
       //Archetype2
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
       if (!toggleCheck) {if (path2.abilities[ability2][`custom${tier}`]) {customItemFunctions[path2.abilities[ability2][`custom${tier}`]](index,insertedStatistic);}}
       for (let i=1;i<=4;i++) {
-        toggleCheck = !isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
         if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
       }
 
       //Mutators
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
       if (!toggleCheck) {
-        customPath = !isUIcalcs ? globalRecords.weapons.primaryMutator : globalRecords.ALTweapons.primaryMutator;
+        customPath = isUIcalcs ? globalRecords.weapons.primaryMutator : globalRecords.ALTweapons.primaryMutator;
         if (mutators.primaryMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.primaryMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
       }
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
       if (!toggleCheck) {
-        customPath = !isUIcalcs ? globalRecords.weapons.meleeMutator : globalRecords.ALTweapons.meleeMutator;
+        customPath = isUIcalcs ? globalRecords.weapons.meleeMutator : globalRecords.ALTweapons.meleeMutator;
         if (mutators.meleeMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.meleeMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
       }
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
       if (!toggleCheck) {
-        customPath = !isUIcalcs ? globalRecords.weapons.secondaryMutator : globalRecords.ALTweapons.secondaryMutator;
+        customPath = isUIcalcs ? globalRecords.weapons.secondaryMutator : globalRecords.ALTweapons.secondaryMutator;
         if (mutators.secondaryMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.secondaryMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
       }
 
       //MODS
       //PRIMARY
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
       if (!toggleCheck) {
-        let primaryWeapon = !isUIcalcs ? globalRecords.weapons.primary : globalRecords.ALTweapons.primary;
-        let primaryWeaponMod = !isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
+        let primaryWeapon = isUIcalcs ? globalRecords.weapons.primary : globalRecords.ALTweapons.primary;
+        let primaryWeaponMod = isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
         let checkWeaponPath = weapons.primary[primaryWeapon];
         if (!checkWeaponPath.builtIN) {
           if (mods.primaryMods[primaryWeaponMod][`custom${tier}`]) {customItemFunctions.primaryMods[mods.primaryMods[primaryWeaponMod][`custom${tier}`]](index,insertedStatistic);}
@@ -1903,9 +1845,9 @@ let formulasValues = {
         }
       }
       //MELEE
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
       if (!toggleCheck) {
-        let meleeWeapon = !isUIcalcs ? globalRecords.weapons.melee : globalRecords.ALTweapons.melee;
+        let meleeWeapon = isUIcalcs ? globalRecords.weapons.melee : globalRecords.ALTweapons.melee;
         let checkWeaponPath = weapons.melee[meleeWeapon];
         if (checkWeaponPath.builtIN){//If the Melee weapon has a built-in mod
           if (mods.builtInMeleeMods[checkWeaponPath.builtIN][`custom${tier}`]) {
@@ -1914,10 +1856,10 @@ let formulasValues = {
         }
       }
       //SECONDARY
-      toggleCheck = !isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
       if (!toggleCheck) {
-        let secondaryWeapon = !isUIcalcs ? globalRecords.weapons.secondary : globalRecords.ALTweapons.secondary;
-        let secondaryWeaponMod = !isUIcalcs ? globalRecords.weapons.secondaryMod : globalRecords.ALTweapons.secondaryMod;
+        let secondaryWeapon = isUIcalcs ? globalRecords.weapons.secondary : globalRecords.ALTweapons.secondary;
+        let secondaryWeaponMod = isUIcalcs ? globalRecords.weapons.secondaryMod : globalRecords.ALTweapons.secondaryMod;
         let checkWeaponPath = weapons.secondary[secondaryWeapon];
         if (!checkWeaponPath.builtIN) {
           if (mods.secondaryMods[secondaryWeaponMod][`custom${tier}`]) {
@@ -2190,7 +2132,7 @@ let customItemFunctions = {
         activeStatus += reference.outBURN ? 1 : 0;
         activeStatus += reference.outOVERLOADED ? 1 : 0;
         activeStatus += reference.outCORRODED ? 1 : 0;
-        reference.AllDamage += (0.04 * activeStatus);
+        reference.AllDamage += (0.05 * activeStatus);
       }
     },
     akariWarBand(index) {//0 user input
@@ -2229,7 +2171,7 @@ let customItemFunctions = {
       valueTables[index].MeleeDamage += Math.min(0.80,totalDR) * 0.35
     },
     burdenOfTheMesmer1(index) {//base
-      valueTables[index].GlobalHealthModifier *= 0.75;//health modification
+      valueTables[index].GlobalHealthModifier *= 0.80;//health modification
     },
     burdenOfTheMesmer2(index,totalDR) {//postDR
       let floorIncrement = 0.05
@@ -2526,50 +2468,46 @@ let customItemFunctions = {
 //The big cheese, the great clusterfuck, where all the formulas refresh.
 function updateFormulas(index,ping) { 
   //If we're not iterating
-  let isUIcalcs = !!index;
   index = index ?? `greatTableKnowerOfAll`;
+  let isUIcalcs = index === `greatTableKnowerOfAll`;
   //Reset the table
   valueTables[index] = {...starterTable}
+  let tableReference = valueTables[index];
 
-  valueTables[index].REdamage = [];//Reset arrays, lest we modify original
-  valueTables[index].DMGKept = [];
-  valueTables[index].UniqueMulti = [];
-  if (!isUIcalcs) {basicsUpdates.updateMainTeamSettings();}//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
-  formulasValues.pullTraits(index);//Traits
-  formulasValues.pullWeapons(index);//Weapons/mods/mutators
-  formulasValues.pullGearStats(index,ping);//Accessories/class/frags/etc
+  tableReference.REdamage = [];//Reset arrays, lest we modify original
+  tableReference.DMGKept = [];
+  tableReference.UniqueMulti = [];
+  if (isUIcalcs) {
+    basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
+    formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
+  }
   
+  formulasValues.pullGearStats(isUIcalcs,index,ping);//Weapons/Accessories/class/frags/etc
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Tier0");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Base");//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
 
-  globalRecords.totalConcLimit = 1 + valueTables[index].ConcLimit;
-  formulasValues.pullConsumables(index,globalRecords.totalConcLimit);//Concoctions, after defining the conc limit using everything else
-
-  formulasValues.callUniqueFunctions(index,null,0,0,"Tier0");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
-  formulasValues.callUniqueFunctions(index,null,0,0,"Base");//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
-
-  // formulasValues.callUniqueFunctions(index,null,0,0,"Tier1");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
-
-  
 //SUMMARY STATS
 //HEALTH
-  healthQuery = calcs.getHealth(index);
+  healthQuery = calcs.getHealth(tableReference);
   let totalHealth = healthQuery[0];
   let totalHealthNoGlobal = healthQuery[1]; //Stuff like restriction cord. Not used outside of calcs.functions yet
+  // let time6 = performance.now(); console.log("getHealth: ",time6-time5)
 //---------- STAMINA ---------------------------------------------------
-  let totalStamina = calcs.getStamina(index)[0]; 
-
-  let weightQuery = calcs.getWeight(index);
+  let totalStamina = calcs.getStamina(tableReference)[0]; 
+  let weightQuery = calcs.getWeight(tableReference);
   let totalWeight = weightQuery[0];
   let dodgeClass = weightQuery[1];
   let staminaPenalty = weightQuery[2];
   let baseWeight = weightQuery[3];
   let weightBoost = weightQuery[4];
   let weightThreshold = weightQuery[5];
-  formulasValues.callUniqueFunctions(index,null,0,0,"PostWeightClass",dodgeClass);//Gul Signet, etc
-  let staminaValuesQuery = calcs.getStaminaValues(index,staminaPenalty);
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostWeightClass",dodgeClass);//Gul Signet, etc
+  let staminaValuesQuery = calcs.getStaminaValues(tableReference,staminaPenalty);
   let staminaPerSec = staminaValuesQuery[0];
   let staminaCost = staminaValuesQuery[1];
+  
 //---------- RESISTANCES ---------------------------------------------------
-  let resistanceQuery = calcs.getResistance(index);
+  let resistanceQuery = calcs.getResistance(tableReference);
   let bleed = resistanceQuery[0];
   let burn = resistanceQuery[1];
   let shock = resistanceQuery[2];
@@ -2577,24 +2515,26 @@ function updateFormulas(index,ping) {
   let blight = resistanceQuery[4];
 //---------- HEALING ---------------------------------------------------
 
-  valueTables[index].AllDamage += valueTables[index].outEXPOSED ? 0.15 : 0;
-  valueTables[index].AllDamage += valueTables[index].outCORRODED ? 0.10 : 0;
-  valueTables[index].HealingEFF *= valueTables[index].inBLEED ? 0.5 : 1;
 
-  formulasValues.callUniqueFunctions(index,null,0,0,"PreHealing");//generating band, etc
-  let healingQuery = calcs.getHealing(index);
+  if (tableReference.outEXPOSED) {tableReference.AllDamage += 0.15}
+  tableReference.AllDamage += tableReference.outEXPOSED ? 0.15 : 0;
+  tableReference.AllDamage += tableReference.outCORRODED ? 0.10 : 0;
+  tableReference.HealingEFF *= tableReference.inBLEED ? 0.5 : 1;
+
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PreHealing");//generating band, etc
+  let healingQuery = calcs.getHealing(tableReference);
   let globalHealingMod = healingQuery[0]; //Example: game master's pride. Not used outside of calcs.functions yet
   let healingEffectiveness = healingQuery[1];
   let flatHPperSec = healingQuery[2];
   let percHPperSec = healingQuery[3];
   let totalGreyHPperSec = healingQuery[4];
 
-  formulasValues.callUniqueFunctions(index,null,0,0,"PostHealing");//anastasijasInspiration, stuff like that
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostHealing");//anastasijasInspiration, stuff like that
   if (valueTables[index].HASTE > 0) {
     for (let bonuses in hasteTable) {valueTables[index][bonuses] += hasteTable[bonuses];}//If haste exists, add relevant speed stats
   }
 //----------RELIC HEALING---------------------------------------------------
-  let relicHealingQuery = calcs.getRelicHealing(index,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
+  let relicHealingQuery = calcs.getRelicHealing(tableReference,isUIcalcs,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
   let relicHPbase = relicHealingQuery[0];
   let relicHPtype = relicHealingQuery[1];
   let relicHPtime = relicHealingQuery[2];
@@ -2606,12 +2546,12 @@ function updateFormulas(index,ping) {
   let relicEffectiveness = relicHealingQuery[8];
   let useComplexValues = !!relicComplexArray;
 //---------- DAMAGE REDUCTION ---------------------------------------------------
-  let armorQuery = calcs.getArmor(index);
+  let armorQuery = calcs.getArmor(tableReference);
   let baseArmor = armorQuery[0];
   let armorEff = armorQuery[1];
   let totalArmor = armorQuery[2];
 
-  let drQuery = calcs.getDR(index,totalArmor);
+  let drQuery = calcs.getDR(tableReference,totalArmor);
   let armorDR = drQuery[0];
   let bulwarkStacks = drQuery[1];
   let bulwarkDR = drQuery[2];
@@ -2630,10 +2570,9 @@ function updateFormulas(index,ping) {
     }
   }
 
-
-  formulasValues.callUniqueFunctions(index,null,0,0,"PostDR",totalDR);//Burden of the Mason, etc
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostDR",totalDR);//Burden of the Mason, etc
   //----------ADVANCED DR-------------
-  let advancedDrQuery = calcs.getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal);
+  let advancedDrQuery = calcs.getAdvancedDR(tableReference,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal);
   let reducedEnemyDamage = advancedDrQuery[0];
   let damageKept = advancedDrQuery[1];
   let totalBonusMitigation = advancedDrQuery[2];
@@ -2642,16 +2581,16 @@ function updateFormulas(index,ping) {
   let baseEHPforShieldsAndHealing = advancedDrQuery[5];
 //----------SHIELDS----------------------------------------------------------------------------
 //----------EHP----------------------------------------------------------------------------
-  let shieldQuery = calcs.getShields(index,baseEHPforShieldsAndHealing);
+  let shieldQuery = calcs.getShields(tableReference,baseEHPforShieldsAndHealing);
   let percShields = shieldQuery[0];
   let shieldEff = shieldQuery[1];
   let totalPercShields = shieldQuery[2];
   let shieldEHP = shieldQuery[3];
-  let totalEHP = calcs.getEHP(index,shieldEHP,baseEHP)[0];
+  let totalEHP = calcs.getEHP(isUIcalcs,shieldEHP,baseEHP)[0];
 //---------- ADVANCED HEALING----------------------------------------------------------------------------
   let regHealing = [flatHPperSec,percHPperSec];
   let passedRelicHealing = [relicHPtype,relicHPtime,relicHPscaled,useComplexValues,relicComplexArray];
-  let advancedHealingQuery = calcs.getAdvancedHealing(index,baseEHP,regHealing,passedRelicHealing,totalHealthNoGlobal);
+  let advancedHealingQuery = calcs.getAdvancedHealing(isUIcalcs,baseEHP,regHealing,passedRelicHealing,totalHealthNoGlobal);
   let advancedRelicFlat = advancedHealingQuery[0];
   let advancedRelicPerc = advancedHealingQuery[1];
   let advancedRelicTotalFlat = advancedHealingQuery[2];
@@ -2661,32 +2600,28 @@ function updateFormulas(index,ping) {
   let EHPpSec = advancedHealingQuery[6] || 0;
 
   //TIER 50 CALLS PURELY FOR DMG RELATED CONDITIONALS + DMG CONDITIONALS THAT NEED TO BE DONE AFTER REG STATS
-  formulasValues.callUniqueFunctions(index,null,0,0,"Tier50");//50 is just where I chose to start for dmg functions
+  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Tier50");//50 is just where I chose to start for dmg functions
   //---------- LIFESTEAL --------------Can be last bc no other statistics depend on lifesteal values, yet
-  let lifestealQuery = calcs.getLifesteal(index,relicEffectiveness);
+  let lifestealQuery = calcs.getLifesteal(tableReference,relicEffectiveness);
   let lifestealEFF = lifestealQuery[0];
   let lifestealALL = lifestealQuery[1];
   let lifestealMelee = lifestealQuery[2];
   let lifestealMeleeCharged = lifestealQuery[3];
   let lifestealRange = lifestealQuery[4];
   let peakLifesteal = lifestealQuery[5];
-  // console.log(peakLifesteal)
 
+  let ability1Breakdown,ability2Breakdown;
 
-  if (!isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
-  let abilityPath1 = !isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
-  let abilityPath2 = !isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
-  let ability1 = !isUIcalcs && abilityPath1 ? classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats : classInfo[globalRecords.ALTarchs.one.class].abilities[abilityPath1].customStats;
-  let ability2 = !isUIcalcs && abilityPath2 ? classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats : classInfo[globalRecords.ALTarchs.two.class].abilities[abilityPath2].customStats;
+  if (isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
+  if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs) {
+  let abilityPath1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
+  let abilityPath2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
+  let ability1 = isUIcalcs && abilityPath1 ? classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats : classInfo[globalRecords.ALTarchs.one.class].abilities[abilityPath1].customStats;
+  let ability2 = isUIcalcs && abilityPath2 ? classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats : classInfo[globalRecords.ALTarchs.two.class].abilities[abilityPath2].customStats;
 
-    // classInfo[globalRecords.archs.two.class].abilities[ability2].customStats
-  let ability1Breakdown = ability1 ? (ability1.customDPS ? abilityDamage[ability1.customDPS](1,index) : -1) : -1;
-  let ability2Breakdown = ability2 ? (ability2.customDPS ? abilityDamage[ability2.customDPS](2,index) : -1) : -1;
-
-  // let havocMinDamage = havocBreakdown[0];
-  // let havocMaxDamage = havocBreakdown[1];
-  // let havocTrueDPS = havocBreakdown[2];
-  // let havocTotalDamage = havocBreakdown[3];
+  ability1Breakdown = ability1 ? (ability1.customDPS ? abilityDamage[ability1.customDPS](1,index) : -1) : -1;
+  ability2Breakdown = ability2 ? (ability2.customDPS ? abilityDamage[ability2.customDPS](2,index) : -1) : -1;
+  }
 
   let returnStats = {
     totalHealth,totalHealthNoGlobal,
@@ -2705,7 +2640,7 @@ function updateFormulas(index,ping) {
     ability1Breakdown,ability2Breakdown
   }
   //----------RETURN VALUES-----------------------
-  if (isUIcalcs) {
+  if (!isUIcalcs) {
     return returnStats;
   }
   else {
@@ -2767,7 +2702,7 @@ let basicsUpdates = {
       drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("Base Armor",returnObject.baseArmor,true) : "";
       drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("Armor Effectiveness",returnObject.armorEff,true,"%") : "";
       drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("Total Armor",returnObject.totalArmor,true) : "";
-      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("Armor DR%",returnObject.armorDR,true) : "";
+      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("Armor DR%",returnObject.armorDR,true,"%") : "";
       drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
       drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
       drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
@@ -2807,7 +2742,7 @@ let basicsUpdates = {
 
       let staminaHTML = "<div class='basicsDRheaderTitle'>STAMINA</div>";
       let staminaHTMLRowsHTML = '';
-      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("Regen/s",returnObject.staminaPerSec,true,"%") : "";
+      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("Regen/s",returnObject.staminaPerSec,true) : "";
       staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("Cost",returnObject.staminaCost,true,"%") : "";
       staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("Dodge Class",returnObject.dodgeClass,false) : "";
       readSelection("basicsInnerBox").innerHTML += staminaHTMLRowsHTML ? staminaHTML + staminaHTMLRowsHTML + "<br>" : "";

@@ -1797,18 +1797,18 @@ classInfo = {
 			},
 			"Chaos Gate": {
 				"name": "Chaos Gate",
-				"desc": "Conjures a 7m unstable zone which grants allies 35% increased All damage dealt, 5% incread Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
+				"desc": "Conjures a 7m unstable zone which grants allies 35% increased All damage dealt, 10% increased Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
 				"image": "./brotherLibrary/abilitiesImages/Chaos Gate.png",
 				"stats": {
 					"AllDamage": 0.35,
-					"ModPowerGen": 0.05,
+					"ModPowerGen": 0.1,
 					"FlatDR": -0.15
 				},
 				"tags": []
 			},
 			"Havoc Form": {
 				"name": "Havoc Form",
-				"desc": "Gain new abilities for 30s. Duration reduced on ability use. FIRE: 720 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
+				"desc": "Gain new abilities for 30s. Duration reduced on ability use. FIRE: 411.4 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
 				"image": "./brotherLibrary/abilitiesImages/Havoc Form.png",
 				"stats": {
 					"FlatDR": 0.5
@@ -1817,10 +1817,10 @@ classInfo = {
 					"customDPS": "HavocForm",
 					"duration": 30,
 					"entryDuration": 1.02,
-					"trueBaseDPS": 480,
-					"baseDamage": 168,
+					"trueBaseDPS": 411.4,
+					"baseDamage": 144,//was 168
 					"frequency": 0.35,
-					"drain": 0.15
+					"drain": 0.2125//was 0.15
 				},
 				"tags": []
 			}
@@ -1843,9 +1843,9 @@ classInfo = {
 			},
 			"passive2": {
 				"name": "Power Creep",
-				"desc": "Mod use: 5% mod power spent regened by team over 10s. While active, allies gain 5% Mod Power Generation.",
+				"desc": "Mod use: 10% mod power spent regened by team over 10s. While active, allies gain 10% Mod Power Generation.",
 				"stats": {
-					"ModPowerGen": 0.05
+					"ModPowerGen": 0.1
 				},
 				"tags": []
 			},
@@ -2144,7 +2144,7 @@ classInfo = {
 			},
 			"Sidewinder": {
 				"name": "Sidewinder",
-				"desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 35%. Cycling weapons will automatically reload incoming Firearms. Lasts 60s. Ammo pickups reduce duration by 10s.",
+				"desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 35%. Cycling weapons will automatically reload incoming Firearms. Lasts 60s. Swaps that provide ammo reduce duration by 6s.",
 				"image": "./brotherLibrary/abilitiesImages/Sidewinder.png",
 				"stats": {},
 				"tags": []
@@ -2521,10 +2521,10 @@ classInfo = {
 			},
 			"Way of Lydusa": {
 				"name": "Way of Lydusa",
-				"desc": "Invoke Lydusa to infuse Ranged and Melee Damage with the power to apply BRITTLE, allowing the Invoker to generate Sand Devils through damage or kills. Lasts 15s. Reactivating the skill consumes all Sand Devils generated and casts a 15m Sand Blast dealing 100 Elemental Damage per charge. Max 10 charges. BRITTLE: Increases incoming Critical Chance by 5% and Critical Damage by 15%.",
+				"desc": "Invoke Lydusa to infuse Ranged and Melee Damage with the power to apply BRITTLE, allowing the Invoker to generate Sand Devils through damage or kills. Lasts 15s. Reactivating the skill consumes all Sand Devils generated and casts a 15m Sand Blast dealing 100 Elemental Damage per charge. Max 10 charges. BRITTLE: Increases incoming Critical Chance by 10% and Critical Damage by 15%.",
 				"image": "./brotherLibrary/abilitiesImages/Way of Lydusa.png",
 				"stats": {
-					"AllCritChance": 0.05,
+					"AllCritChance": 0.1,
 					"AllCritDamage": 0.15
 				},
 				"tags": []
@@ -2716,7 +2716,7 @@ classInfo = {
 				"name": "Wrath",
 				"desc": " +20% DMG and +5% CC to enemies with negative status effects.",
 				"stats": {
-					"AllDamage": 0.20,
+					"AllDamage": 0.25,
 					"AllCritChance": 0.05
 				},
 				"tags": []
@@ -2842,6 +2842,7 @@ titleCombos = {
 	"Medic": "",
 	"Ritualist": "",
 	"Summoner": "",
+	"Invoker": "",
 	"AlchemistAlchemist": "If you see this, report to Vash exactly how you did it",
 	"ArchonArchon": "If you see this, report to Vash exactly how you did it",
 	"ChallengerChallenger": "If you see this, report to Vash exactly how you did it",
@@ -3061,7 +3062,7 @@ amulets = {
 		"name": "Birthright of the Lost",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Birthright of the Lost.png",
-		"desc": "Grants 10% All Damage. On perfect dodge, apply EXPOSED on the attacker for 10s. EXPOSED: Target receives 15% additional damage from all sources.",
+		"desc": "Grants 10% All Damage. On perfect dodge, apply EXPOSED to enemies in a 3m AOE for 10s. EXPOSED: Target receives 15% additional damage from all sources.",
 		"customTier0": "birthrightOfTheLost",
 		"stats": {
 			"AllDamage": 0.10
@@ -3256,10 +3257,10 @@ amulets = {
 		"name": "Effluvium Enhancer",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Effluvium Enhancer.png",
-		"desc": "Increases ACID damage by 20% and CORROSIVE damage by 50%.",
+		"desc": "Increases ACID damage by 25% and CORROSIVE damage by 50%.",
 		"customBase": null,
 		"stats": {
-			"AcidDamage": 0.2,
+			"AcidDamage": 0.25,
 			"CorrosiveDamage": 0.5,
 		},
 		"tags": []
@@ -3463,7 +3464,7 @@ amulets = {
 		"name": "Jester's Bell",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Jester's Bell.png",
-		"desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 15% for 15s. Bonus assumed active at all times when selected.",
+		"desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 15% for 20s. Bonus assumed active at all times when selected.",
 		"customBase": null,
 		"stats": {
 			"CastSpeed": 0.35,
@@ -3475,7 +3476,7 @@ amulets = {
 		"name": "Kinetic Shield Exchanger",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Kinetic Shield Exchanger.png",
-		"desc": "While a SHIELD is active, gain 25% Mod damage and generate 20% additional Mod power.",
+		"desc": "While a SHIELD is active, gain 25% Mod damage and generate 30% additional Mod power.",
 		"customTier50": "kineticShieldExchanger",
 		"stats": {},
 		"tags": ["ModDamage","ModPowerGen"]
@@ -3791,10 +3792,10 @@ amulets = {
 		"name": "Shock Device",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Shock Device.png",
-		"desc": "Increases SHOCK damage by 20% and OVERLOADED damage by 50%.",
+		"desc": "Increases SHOCK damage by 25% and OVERLOADED damage by 50%.",
 		"customBase": null,
 		"stats": {
-			"ShockDamage": 0.20,
+			"ShockDamage": 0.25,
 			"OverloadedDamage": 0.50,
 		},
 		"tags": []
@@ -3878,10 +3879,10 @@ amulets = {
 		"name": "Talisman of the Sun",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Talisman of the Sun.png",
-		"desc": "Increases FIRE damage by 20% and BURNING damage by 50%.",
+		"desc": "Increases FIRE damage by 25% and BURNING damage by 50%.",
 		"customBase": null,
 		"stats": {
-			"FireDamage": 0.20,
+			"FireDamage": 0.25,
 			"BurningDamage": 0.50,
 		},
 		"tags": []
@@ -4013,7 +4014,7 @@ rings = {
 		"name": "Ahanae Crystal",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ahanae Crystal.png",
-		"desc": "Deal 4% additional damage for each Status Effect the target is suffering from",
+		"desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
 		"customTier50": "ahanaeCrystal",
 		"stats": {},
 		"tags": ["AllDamage"]
@@ -4128,11 +4129,11 @@ rings = {
 		"name": "Band of the Fanatic",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Band of the Fanatic.png",
-		"desc": "Increases Status Effect Damage by 25% and reduces Status Effect Duration by 65%.",
+		"desc": "Increases Status Effect Damage by 30% and reduces Status Effect Duration by 50%.",
 		"customBase": null,
 		"stats": {
-			"StatusDamage": 0.25,
-			"StatusDuration": -0.65,
+			"StatusDamage": 0.30,
+			"StatusDuration": -0.50,
 		},
 		"tags": []
 	},
@@ -4141,10 +4142,11 @@ rings = {
 		"name": "Berserker's Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Berserker's Crest.png",
-		"desc": "Increases Melee Charge Speed by 20% and reduces Melee Charge Stamina Cost by 25%.",
+		"desc": "Increases Melee Speed by 10% and reduces Melee Stamina Cost by 30%.",
 		"stats": {
-			"ChargeCost": -0.25,
-			"ChargeSpeed": 0.20,
+			"ChargeCost": -0.3,
+			"ChargeSpeed": 0.1,
+			"AttackSpeed": 0.1,
 		},
 		"tags": []
 	},
@@ -4293,10 +4295,12 @@ rings = {
 		"name": "Brawler's Pride",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Brawler's Pride.png",
-		"desc": "Increases Melee Attack Speed by 15%.",
+		"desc": "Increases Melee Speed by 15%.",
 		"customBase": null,
 		"stats": {
 			"AttackSpeed": 0.15,
+			"ChargeSpeed": 0.15,
+			"MeleeCritChance": 0.05
 		},
 		"tags": []
 	},
@@ -4359,11 +4363,11 @@ rings = {
 		"name": "Burden of the Follower",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Follower.png",
-		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 25%.",
+		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 30%.",
 		"customBase": null,
 		"stats": {
 			"FireRate": -0.15,
-			"ModPowerGen": 0.25,
+			"ModPowerGen": 0.30,
 		},
 		"tags": []
 	},
@@ -4406,7 +4410,7 @@ rings = {
 		"name": "Burden of the Mesmer",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Mesmer.png",
-		"desc": "Reduces Max Health by 25%. Increases All Damage by 1% for every 5% of the wearer's total Damage Reduction.",
+		"desc": "Reduces Max Health by 20%. Increases All Damage by 1% for every 5% of the wearer's total Damage Reduction.",
 		"customBase": "burdenOfTheMesmer1",
 		"customPostDR": "burdenOfTheMesmer2",
 		"stats": {},
@@ -5178,7 +5182,7 @@ rings = {
 		"name": "Matriarch's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Matriarch's Ring.png",
-		"desc": "Perfect Dodge reduces Charge Melee Stamina Cost by 100% for 5s.",
+		"desc": "Perfect Dodge reduces Charge Melee Stamina Cost by 100% for 7s.",
 		"customTier0": "matriarchsRing",
 		"stats": {},
 		"tags": ["ChargeCost"]
@@ -5649,10 +5653,10 @@ rings = {
 		"name": "Shadow of Misery",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Shadow of Misery.png",
-		"desc": "Increase Status Effect Damage by 15%",
+		"desc": "Increase Status Effect Damage by 20%",
 		"customBase": null,
 		"stats": {
-			"StatusDamage": 0.15,
+			"StatusDamage": 0.20,
 		},
 		"tags": []
 	},
@@ -9401,7 +9405,7 @@ rangedMutators = {
 		"name": "Slayer",
 		"slot": "RMutator",
 		"image": "",
-		"desc": "Reloading increases the damage of this weapon's next shot by 20%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
+		"desc": "Reloading increases the damage of this weapon's next shot by 25%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
 		"customBase": null,
 		"stats": {},
 		"tags": []
@@ -9655,7 +9659,7 @@ meleeMutators = {
 		"name": "Shielded Strike",
 		"slot": "MMutator",
 		"image": "",
-		"desc": "Melee Attacks grant a Shield for 5% of Max Health. Max 50%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
+		"desc": "Melee Attacks grant a Shield for 10% of Max Health. Max 50%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
 		"stats": {
 			"Shield": 0.5
 		},
