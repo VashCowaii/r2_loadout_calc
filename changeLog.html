@@ -49,6 +49,12 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>May 13, 2024</h1>
+                    <ul>
+                        <li>Queries in progress will now only update the counter progress bar if either a new best build is found, or if the current iteration is an increment of 10,000. This helps reduce communication overhead between the web worker and the main thread, increasing query speeds by up to 25% in some cases. THAT is def gonna help on speeds, but I understand some people won't feel like it's faster since the numbers won't flick by anymore. Also note it is not guaranteed to make things any faster depending on the type of query initiated. Calculation-intensive queries might still take a little bit longer.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>May 12, 2024</h1>
                     KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
                     <ul>

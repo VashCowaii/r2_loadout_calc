@@ -888,8 +888,9 @@ let cyclesLoop = {
             }
             if (data.command === `yieldCombination`) {
                 let increments = 50000;//Determines how frequently the est time calculates, in terms of how many combos have passed
-                cycles.vars.counterInt += 1;
-                let counterInt = cycles.vars.counterInt;
+                // cycles.vars.counterInt += 1;
+                cycles.vars.counterInt = data.data.cycleCounter;
+                let counterInt = data.data.cycleCounter;
                 if (counterInt>cycles.vars.totalDisplayCombinations) {cyclesLoop.generationStop("`ERROR: MISMATCHED COMBO COUNT\n\nIf you ever see this, take note of your filters then join the discord linked at the bottom of any page, and ping Vash with the filter info.`");}
                 else if (counterInt === cycles.vars.totalDisplayCombinations) {
                     let endTotalTime = performance.now();
@@ -1356,6 +1357,10 @@ let cyclesLoop = {
         let targetStatistic = playerDerivedStatistics[filters.types.vars.targetStatistic];
         let recordedStatistic = 0;
 
+        let cycleCounter = 0;
+        let currentSet = {};
+        let lastSentSet = 0;
+
         let targetDamageCategory;
 
         if (targetStatistic[0] === abilitySet[0]) {targetDamageCategory = "ability1Breakdown"}
@@ -1378,6 +1383,8 @@ let cyclesLoop = {
                                                 for (const rMutator1 of rangedMutatorCombos) {
 
                                                     for (let conc=0;conc<currentTable.length;conc++) {
+                                                        cycleCounter++;
+
                                                         cycleObject = {
                                                             ringSet,relic,fragmentSet,amulet,classSet,abilitySet,concoction:currentTable[conc],quickUse,
                                                             gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1};
@@ -1392,19 +1399,22 @@ let cyclesLoop = {
 
                                                         if (!Array.isArray(targetStatistic)) {
                                                             if (((preArmor[targetStatistic] > recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
-                                                                recordedStatistic = preArmor[targetStatistic];
-                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
+                                                                recordedStatistic = +preArmor[targetStatistic];
+                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor,cycleCounter}});
                                                                 continue;
                                                             }
                                                         }
                                                         else {
                                                             if (((preArmor[targetDamageCategory][targetStatistic[1]] > recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
-                                                                recordedStatistic = +`${preArmor[targetDamageCategory][targetStatistic[1]]}`;
-                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor}});
+                                                                recordedStatistic = +preArmor[targetDamageCategory][targetStatistic[1]];
+                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor,cycleCounter}});
                                                                 continue;
                                                             }
                                                         }
-                                                        postMessage({command: `yieldCombination`});
+                                                        if (!(cycleCounter%10000) || cycleCounter === comboCounter) {
+                                                            postMessage({command: `yieldCombination`, data: {cycleCounter}});
+                                                        }
+                                                        // postMessage({command: `yieldCombination`});
                                                     }
                                                 }
                                             }
