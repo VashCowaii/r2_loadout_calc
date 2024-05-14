@@ -6,7 +6,7 @@
 .classAbilityDescription,.classPassiveDescription,.classPerkDescription,.accessoryDescription,
 .relicDescription,.relicComplexDesc,.consumableDesc,.weaponDescriptionBox,.mutatorDesc,
 .filtersQuarterDescription,.comboDebugWindow,.settingsImportDesc,.settingsImportedList,.selectItemDesc,
-.weaponDisplayDamageHeader,.helpBoxText {
+.weaponDisplayDamageHeader,.helpBoxText,.tooltip {
     font-family: "Montserrat-Light";
 }
 
@@ -3567,6 +3567,25 @@ div {
 .abilityFactorsList {
     max-height: 300px;
     overflow-y: auto;
+}
+
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #666666;
+    font-size: 14px;
+    z-index: 10000000;
+    box-sizing: border-box;
+}
+
+.tooltipColor {
+    color: #93CCEA;
 }
 
 

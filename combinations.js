@@ -129,6 +129,9 @@ let cycles = {
         "cycleCounter": 0,
         "counterInt": 0,
         "printedSubObjects": false,
+        "threadCount": 0,
+        "workersRunning": 0,
+        "lastTimerEvaluation": 0,
     },
     debugPushLine(string) {
         readSelection("comboDebug").innerHTML += `<br>${string}`;
@@ -178,7 +181,8 @@ let cycles = {
         let filterPath = filters.types;
         
         //Convert from user-friendly stat names, to the names I use in the backend.
-        cycles.debugPushLine("FIND STAT TAG FILTERS");cyclesLoop.updateSetupStep("Converting stat tag filters",true);
+        cycles.debugPushLine("FIND STAT TAG FILTERS");
+        cyclesLoop.updateSetupStep("Converting stat tag filters",true,1);
         if (conversionTable.length) {
             cycles.debugPushLine("- Converting to back-end names");
             for (let tags in tagsFilter) {
@@ -191,7 +195,8 @@ let cycles = {
         //Needed. If no tag filtering is in place, I need it to be null or an undefined array for everything else to work
         else {tagsFilter = null;cycles.debugPushLine("- None found");}
 
-        cycles.debugPushLine("APPLYING FILTERS TO TABLES...");cyclesLoop.updateSetupStep("Applying Filters to Item Tables");
+        cycles.debugPushLine("APPLYING FILTERS TO TABLES...");
+        cyclesLoop.updateSetupStep("Applying Filters to Item Tables",false,1);
         cycles.debugPushLine("- Starting Amulets");
         yield;
         path.amulets.Table = cycles.applyTableFilter(cycles.applyTagFilter(amulets,tagsFilter,"Amulets"),filterPath.amulet.filter[1],filterPath.amulet.filter[2][0],"Amulets");
@@ -767,19 +772,33 @@ let cyclesLoop = {
         "third": {},
     },
     //Stop the cycles
-    generationStop(endType) {
+    generationStop(endType,cycleWorker,endedWithoutIssue) {
+
+        if (!cycleWorker || cycles.vars.workersRunning === 0) {
         cycles.vars.stopCycles = true;
         readSelection("cycleSTOP").disabled = true;
         readSelection("cycleSTART").disabled = false;
+        readSelection("settingsOpenThreads").disabled = false;
         readSelection("searchImportButton").disabled = false;
         cycles.debugPushLine(`Worker: BUILD GENERATION ABORTED<br>`);
-        workers.cycleWorker.terminate();
-        if (!endType) {alert("Cycles were terminated");}
-        else (alert(endType))
+        cycles.vars.workersRunning = 0;
+        globalRecords.currentBestStatistic = 0;
+        readSelection("openThreadsDisplay").innerHTML = 0;
+        }
+
+        if (!cycleWorker) {
+            for (let i=1;i<=cycles.vars.threadCount;i++) {
+                workers[`cycleWorker${i}`].terminate();
+            }
+        }
+        else {workers[cycleWorker].terminate();}
+
+        if (!endType && !endedWithoutIssue) {alert("Cycles were terminated");}
+        else if (!endedWithoutIssue) {alert(endType + `\n\n${cycleWorker}`)}
     },
     selfGenerationStop(endType) {
-        cycles.vars.stopCycles = true;
-        postMessage({command: `resetButtons`});
+        // cycles.vars.stopCycles = true;
+        // postMessage({command: `resetButtons`});
         postMessage({command: `pushDebugLine`, data: "Worker: BUILD GENERATION ABORTED<br>"});
         if (endType===`Mismatched Combo Count`) {
             postMessage({command: `pushAlert`, data: endType});
@@ -820,7 +839,6 @@ let cyclesLoop = {
         globalRecords.RECORDEDuseNonStandardDR = globalRecords.ALTuseNonStandardDR ? true : false;
 
 
-
         if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic])) {
             filters.types.vars.oldTarget = [...playerDerivedStatistics[filters.types.vars.targetStatistic]];
         }
@@ -830,13 +848,22 @@ let cyclesLoop = {
 
             readSelection("cycleSTOP").disabled = false;
             readSelection("cycleSTART").disabled = true;
+            readSelection("settingsOpenThreads").disabled = true;
             readSelection("searchImportButton").disabled = true;
             const iterator = cycles.reinstanceVars();
             function processVars() {
                 const { done } = iterator.next();
                 if (done) {
-                    cyclesLoop.startCycleWorker();
-                    cyclesLoop.updateSetupStep("Initiating Web Worker");
+                    cycles.vars.counterInt = 0;//console.log(navigator.hardwareConcurrency)
+                    cycles.vars.workersRunning = cycles.vars.threadCount;
+                    globalRecords.currentBestStatistic = 0;
+                    cycles.vars.lastTimerEvaluation = 0;
+
+                    cyclesLoop.updateSetupStep(`Initiating Web Workers ${i}-${cycles.vars.threadCount}`,false,1);
+                    for (let i=1;i<=cycles.vars.threadCount;i++) {
+                        cyclesLoop.startCycleWorker(i,cycles.vars.threadCount);
+                        cycles.debugPushLine(`Initiating Web Worker #${i}`);
+                    }
                     return;
                 }
                 setTimeout(processVars, 0);
@@ -848,51 +875,49 @@ let cyclesLoop = {
             alert('ERROR: No Targeted Statistic found. Query aborted.');
         }
     },
-    updateSetupStep(stepString,start) {
-        let stepCount = readSelection("counterInt");
-        if (start) {
-            stepCount.innerHTML = 0;
-            readSelection("comboCount").innerHTML = 18;
-            readSelection(`combinationsDisplayCount`).style.width = `${0}%`;
-            readSelection(`cycleProgressType`).innerHTML = "SETUP:"
-            readSelection(`lastFound`).innerHTML = ""
-        }
-        else {stepCount.innerHTML = +stepCount.innerHTML + 1;}
+    updateSetupStep(stepString,start,moduloFactor) {
+        readSelection("maxThreadsDisplay").innerHTML = cycles.vars.threadCount.toFixed(0);
 
-        readSelection("cyclesTimeRemaining").innerHTML = stepString;//The step name display
-        //18 total steps at the moment to reach cycle iterations, 19 technically with "completed setup"
-        let percentWidth = (stepCount.innerHTML)/18;
-        readSelection(`combinationsDisplayCount`).style.width = `${percentWidth*100}%`;
+        if (moduloFactor === 1) {
+            let stepCount = readSelection("counterInt");
+            if (start) {
+                stepCount.innerHTML = 0;
+                readSelection("comboCount").innerHTML = 18;
+                readSelection(`combinationsDisplayCount`).style.width = `${0}%`;
+                readSelection(`cycleProgressType`).innerHTML = "SETUP:"
+                readSelection(`lastFound`).innerHTML = ""
+            }
+            else {stepCount.innerHTML = +stepCount.innerHTML + 1;}
+
+            readSelection("cyclesTimeRemaining").innerHTML = stepString;//The step name display
+            //18 total steps at the moment to reach cycle iterations, 19 technically with "completed setup"
+            let percentWidth = (stepCount.innerHTML)/18;
+            readSelection(`combinationsDisplayCount`).style.width = `${percentWidth*100}%`;
+        }
+
+        if (stepString === "Completed Setup") {
+            readSelection("openThreadsDisplay").innerHTML = +readSelection("openThreadsDisplay").innerHTML + 1;
+
+        }
     },
-    startCycleWorker() {
-        cycles.vars.counterInt = 0;
-        workers.cycleWorker = new Worker('cycleWorker.js');
-        workers.cycleWorker.onmessage = function(event) {
+    startCycleWorker(identifier,threadCount) {
+        let cycleWorker = `cycleWorker${identifier}`
+        
+        // cycles.vars.counterInt = 0;
+        workers[cycleWorker] = new Worker(`cycleWorker.js`);
+        workers[cycleWorker].onmessage = function(event) {
             const data = event.data;
-            if (data.command === `pushDebugLine`) {
-                cycles.debugPushLine(data.data);
-            }
-            if (data.command === `pushAlert`) {
-                alert(data.data);
-            }
-            if (data.command === `pushInnerHTML`) {
-                if (data.ID === "comboCount") {
-                    //Store the total combo count so we don't have to replace commas every time
-                    cycles.vars.totalDisplayCombinations = data.data;
-                    data.data = data.data.toLocaleString();
+            if (!data || data.command === `yieldCombination`) {
+                if (data.isClosed) {
+                    cycles.vars.workersRunning -= 1;
+                    readSelection("openThreadsDisplay").innerHTML = +readSelection("openThreadsDisplay").innerHTML - 1;
                 }
-                readSelection(data.ID).innerHTML = data.data;
-            }
-            if (data.command === `updateStep`) {
-                cyclesLoop.updateSetupStep(data.data);
-            }
-            if (data.command === `yieldCombination`) {
-                let increments = 50000;//Determines how frequently the est time calculates, in terms of how many combos have passed
-                // cycles.vars.counterInt += 1;
-                cycles.vars.counterInt = data.data.cycleCounter;
-                let counterInt = data.data.cycleCounter;
-                if (counterInt>cycles.vars.totalDisplayCombinations) {cyclesLoop.generationStop("`ERROR: MISMATCHED COMBO COUNT\n\nIf you ever see this, take note of your filters then join the discord linked at the bottom of any page, and ping Vash with the filter info.`");}
-                else if (counterInt === cycles.vars.totalDisplayCombinations) {
+                let increments = 200000;//Determines how frequently the est time calculates, in terms of how many combos have passed
+                cycles.vars.counterInt += data.lastSent;
+                let counterInt = cycles.vars.counterInt;
+                let totalCombos = cycles.vars.totalDisplayCombinations;
+                if (counterInt>totalCombos) {cyclesLoop.generationStop(`ERROR: MISMATCHED COMBO COUNT\n${counterInt} > ${totalCombos}\n\nIf you ever see this, take note of your filters then join the discord linked at the bottom of any page, and ping Vash with the filter info.`)}
+                else if (counterInt === totalCombos && cycles.vars.workersRunning === 0 ) {
                     let endTotalTime = performance.now();
                     endTotalTime -= cycles.vars.cycleTotalTimer;
 
@@ -910,188 +935,203 @@ let cyclesLoop = {
                         units = `hr`;
                     }
                     readSelection(`cyclesTimeRemaining`).innerHTML = `Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`;
+                    cycles.vars.stopCycles = true;
+                    readSelection("cycleSTOP").disabled = true;
+                    readSelection("cycleSTART").disabled = false;
                 }
-                let percentWidth = (counterInt)/cycles.vars.totalDisplayCombinations;
-                readSelection(`counterInt`).innerHTML = counterInt.toLocaleString();
-                readSelection(`combinationsDisplayCount`).style.width = `${percentWidth*100}%`;
 
-                if (counterInt === 1) {
-                    //If this is the first iteration, set things up. 1 is technically the start.
-                    cycles.vars.cycleTimer = performance.now();
-                    cycles.vars.cycleTotalTimer = performance.now();
-                    cycles.vars.cycleCounter = 0;
-                    readSelection(`cycleProgressType`).innerHTML = "BUILD TESTS:"
-                    readSelection(`cyclesTimeRemaining`).innerHTML = `Calculating...`
+                    let percentWidth = (counterInt)/totalCombos;
+                    readSelection(`counterInt`).innerHTML = counterInt.toLocaleString();
+                    readSelection(`combinationsDisplayCount`).style.width = `${percentWidth*100}%`;
 
-                    let classPath1 = classInfo[globalRecords.ALTarchs.one.class]
-                    let classPath2 = classInfo[globalRecords.ALTarchs.two.class]
+                    let timerChecker = Math.floor(counterInt/increments) * increments;
+                
+                    if (counterInt === 1) {
+                        //If this is the first iteration, set things up. 1 is technically the start.
+                        cycles.vars.cycleTimer = performance.now();
+                        cycles.vars.cycleTotalTimer = performance.now();
+                        cycles.vars.cycleCounter = 0;
+                        readSelection(`cycleProgressType`).innerHTML = "BUILD TESTS:"
+                        readSelection(`cyclesTimeRemaining`).innerHTML = `Calculating...`
 
-                    readSelection("comboBackgroundLeftImage").src = classPath1.classIcon;
-                    readSelection("comboHeadsUpMessage").style.display = "none";
-                    if (globalRecords.ALTarchs.one.class === "") {
-                        readSelection("comboBackgroundLeftImage").src = "images/bufferCat.png"
-                        readSelection("comboHeadsUpMessage").textContent  = "Who the actual fuck only uses a secondary archetype with no primary.";
-                        readSelection("comboHeadsUpMessage").style.display = "block";
-                    }
-                    readSelection("comboAbility1").src = classPath1.abilities[globalRecords.ALTarchs.one.ability].image;
-                    readSelection("backgroundHalvesLeft").style.background = `linear-gradient(225deg, ${classPath1.gradient[0]}, ${classPath1.gradient[1]},black)`;
+                        let classPath1 = classInfo[globalRecords.ALTarchs.one.class]
+                        let classPath2 = classInfo[globalRecords.ALTarchs.two.class]
 
-                    readSelection("comboBackgroundRightImage").src = classPath2.classIcon;
-                    if (globalRecords.ALTarchs.two.class === "" && globalRecords.ALTarchs.one.class === "") {
-                        readSelection("comboBackgroundLeftImage").src = "images/swagCat.png"
-                        readSelection("comboBackgroundRightImage").src = "images/swagCat.png"
-                        readSelection("comboHeadsUpMessage").textContent  = "Did you forget to import your archetypes and traits, above?";
-                    }
-                    readSelection("comboAbility2").src = classPath2.abilities[globalRecords.ALTarchs.two.ability].image;
-                    readSelection("backgroundHalvesRight").style.background = `linear-gradient(135deg, ${classPath2.gradient[0]}, ${classPath2.gradient[1]},black)`;
-                }
-                //If the counter matches an increment level
-                else if (!(counterInt%increments)) {
-                    const newCycleTime = performance.now();
-                    const timeDiff = newCycleTime - cycles.vars.cycleTimer;
-                    cycles.vars.cycleTimer = newCycleTime;
-
-                    const remainingCombos = cycles.vars.totalDisplayCombinations - counterInt;
-                    cycles.vars.cycleCounter = counterInt;
-                    const timePerCycles = timeDiff/increments;
-                    const estTime = ((timePerCycles*remainingCombos)/1000);
-                    const adjustedTime = estTime>60 ? 60 : 1;
-                    let units = adjustedTime > 1 ? "m" : "s";
-                    let newEst = estTime/adjustedTime;
-
-                    let remainder = 0;
-                    remainderString = ``;
-                    if (units===`m` && newEst>60) {
-                        remainder = newEst%60;
-                        remainderString = ` ${remainder.toFixed(0)}m`;
-                        newEst = (newEst-remainder)/60;
-                        units = `hr`;
-                    }
-                    readSelection(`cyclesTimeRemaining`).innerHTML = `${newEst.toFixed(0)}${units}${remainderString}`;
-                }
-                if (data.isUpdated) {
-                    let preArmor = data.data.preArmor;
-                    let cycleObject = data.data.cycleObject;
-
-                    // console.log(cycleObject)
-
-                    cycleObject.bestArmorSet = cycleObject.bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""}
-
-                    readSelection("comboArmorHelmet").src = armor.helmets[cycleObject.bestArmorSet.slot1].image;
-                    readSelection("comboArmorChest").src = armor.chests[cycleObject.bestArmorSet.slot2].image;
-                    readSelection("comboArmorLeg").src = armor.legs[cycleObject.bestArmorSet.slot3].image;
-                    readSelection("comboArmorHand").src = armor.hands[cycleObject.bestArmorSet.slot4].image;
-
-                    readSelection("comboRelic").src = cycleObject.relic[0] ? gear.relics[cycleObject.relic[0]].image : gear.relics[""].image;
-
-                    readSelection("comboAmulet").src = cycleObject.amulet[0] ? gear.amulets[cycleObject.amulet[0]].image : gear.amulets[""].image;
-                    readSelection("comboRing1").src = cycleObject.ringSet[0] ? gear.rings[cycleObject.ringSet[0]].image : gear.rings[""].image;
-                    readSelection("comboRing2").src = cycleObject.ringSet[1] ? gear.rings[cycleObject.ringSet[1]].image : gear.rings[""].image;
-                    readSelection("comboRing3").src = cycleObject.ringSet[2] ? gear.rings[cycleObject.ringSet[2]].image : gear.rings[""].image;
-                    readSelection("comboRing4").src = cycleObject.ringSet[3] ? gear.rings[cycleObject.ringSet[3]].image : gear.rings[""].image;
-
-                    cycleObject.gun1[0] = cycleObject.gun1[0] ?? "";
-                    cycleObject.stick[0] = cycleObject.stick[0] ?? "";
-                    cycleObject.gun2[0] = cycleObject.gun2[0] ?? "";
-                    readSelection("comboWeapon1").src = primary[cycleObject.gun1[0]].image;
-                    readSelection("comboWeapon2").src = melee[cycleObject.stick[0]].image;
-                    readSelection("comboWeapon3").src = secondary[cycleObject.gun2[0]].image;
-
-                    readSelection("comboPrimaryMutator").innerHTML = cycleObject.rangedMutators[0] || "";
-                    readSelection("comboPrimaryMod").innerHTML = primary[cycleObject.gun1[0]].builtIN || cycleObject.rangedMods[0] || "";
-
-                    readSelection("comboMeleeMutator").innerHTML = cycleObject.meleeMutators[0] || "";
-                    readSelection("comboMeleeMod").innerHTML = melee[cycleObject.stick[0]].builtIN;
-
-                    readSelection("comboSecondaryMutator").innerHTML = cycleObject.rangedMutators[1] || "";
-                    readSelection("comboSecondaryMod").innerHTML = secondary[cycleObject.gun2[0]].builtIN || cycleObject.rangedMods[1] || "";
-
-
-
-                    for (let i=0;i<7;i++) {
-                        let concReference = cycleObject.concoction[i] ?? "";
-                        if (concReference===0 || concReference==="") {
-                            concReference="";
-                            readSelection(`comboConcoction${i+1}Holder`).style.display = "none";
+                        readSelection("comboBackgroundLeftImage").src = classPath1.classIcon;
+                        readSelection("comboHeadsUpMessage").style.display = "none";
+                        if (globalRecords.ALTarchs.one.class === "") {
+                            readSelection("comboBackgroundLeftImage").src = "images/bufferCat.png"
+                            readSelection("comboHeadsUpMessage").textContent  = "Who the actual fuck only uses a secondary archetype with no primary.";
+                            readSelection("comboHeadsUpMessage").style.display = "block";
                         }
-                        else {
-                            readSelection(`comboConcoction${i+1}Holder`).style.display = "block";
-                            readSelection(`comboConcoction${i+1}`).src = concoctions[concReference].image;
+                        readSelection("comboAbility1").src = classPath1.abilities[globalRecords.ALTarchs.one.ability].image;
+                        readSelection("backgroundHalvesLeft").style.background = `linear-gradient(225deg, ${classPath1.gradient[0]}, ${classPath1.gradient[1]},black)`;
+
+                        readSelection("comboBackgroundRightImage").src = classPath2.classIcon;
+                        if (globalRecords.ALTarchs.two.class === "" && globalRecords.ALTarchs.one.class === "") {
+                            readSelection("comboBackgroundLeftImage").src = "images/swagCat.png"
+                            readSelection("comboBackgroundRightImage").src = "images/swagCat.png"
+                            readSelection("comboHeadsUpMessage").textContent  = "Did you forget to import your archetypes and traits, above?";
+                        }
+                        readSelection("comboAbility2").src = classPath2.abilities[globalRecords.ALTarchs.two.ability].image;
+                        readSelection("backgroundHalvesRight").style.background = `linear-gradient(135deg, ${classPath2.gradient[0]}, ${classPath2.gradient[1]},black)`;
+                    }
+                    //If the counter matches an increment level
+                    else if (timerChecker > cycles.vars.lastTimerEvaluation) {
+                        const newCycleTime = performance.now();
+                        const timeDiff = newCycleTime - cycles.vars.cycleTimer;
+                        cycles.vars.cycleTimer = newCycleTime;
+
+                        const remainingCombos = totalCombos - counterInt;
+                        cycles.vars.cycleCounter = counterInt;
+                        const timePerCycles = timeDiff/increments;
+                        const estTime = ((timePerCycles*remainingCombos)/1000);
+                        const adjustedTime = estTime>60 ? 60 : 1;
+                        let units = adjustedTime > 1 ? "m" : "s";
+                        let newEst = estTime/adjustedTime;
+
+                        let remainder = 0;
+                        remainderString = ``;
+                        if (units===`m` && newEst>60) {
+                            remainder = newEst%60;
+                            remainderString = ` ${remainder.toFixed(0)}m`;
+                            newEst = (newEst-remainder)/60;
+                            units = `hr`;
+                        }
+                        readSelection(`cyclesTimeRemaining`).innerHTML = `${newEst.toFixed(0)}${units}${remainderString}`;
+                        cycles.vars.lastTimerEvaluation = timerChecker;
+                    }
+                    if (data.isUpdated) {
+                        let preArmor = data.preArmor;
+                        let cycleObject = data.cycleObject;
+
+
+                        if (preArmor >= globalRecords.currentBestStatistic) {
+                            globalRecords.currentBestStatistic = preArmor;
+                            // console.log(cycleObject)
+
+                            cycleObject.bestArmorSet = cycleObject.bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""}
+
+                            readSelection("comboArmorHelmet").src = armor.helmets[cycleObject.bestArmorSet.slot1].image;
+                            readSelection("comboArmorChest").src = armor.chests[cycleObject.bestArmorSet.slot2].image;
+                            readSelection("comboArmorLeg").src = armor.legs[cycleObject.bestArmorSet.slot3].image;
+                            readSelection("comboArmorHand").src = armor.hands[cycleObject.bestArmorSet.slot4].image;
+
+                            readSelection("comboRelic").src = cycleObject.relic[0] ? gear.relics[cycleObject.relic[0]].image : gear.relics[""].image;
+
+                            readSelection("comboAmulet").src = cycleObject.amulet[0] ? gear.amulets[cycleObject.amulet[0]].image : gear.amulets[""].image;
+                            readSelection("comboRing1").src = cycleObject.ringSet[0] ? gear.rings[cycleObject.ringSet[0]].image : gear.rings[""].image;
+                            readSelection("comboRing2").src = cycleObject.ringSet[1] ? gear.rings[cycleObject.ringSet[1]].image : gear.rings[""].image;
+                            readSelection("comboRing3").src = cycleObject.ringSet[2] ? gear.rings[cycleObject.ringSet[2]].image : gear.rings[""].image;
+                            readSelection("comboRing4").src = cycleObject.ringSet[3] ? gear.rings[cycleObject.ringSet[3]].image : gear.rings[""].image;
+
+                            cycleObject.gun1[0] = cycleObject.gun1[0] ?? "";
+                            cycleObject.stick[0] = cycleObject.stick[0] ?? "";
+                            cycleObject.gun2[0] = cycleObject.gun2[0] ?? "";
+                            readSelection("comboWeapon1").src = primary[cycleObject.gun1[0]].image;
+                            readSelection("comboWeapon2").src = melee[cycleObject.stick[0]].image;
+                            readSelection("comboWeapon3").src = secondary[cycleObject.gun2[0]].image;
+
+                            readSelection("comboPrimaryMutator").innerHTML = cycleObject.rangedMutators[0] || "";
+                            readSelection("comboPrimaryMod").innerHTML = primary[cycleObject.gun1[0]].builtIN || cycleObject.rangedMods[0] || "";
+
+                            readSelection("comboMeleeMutator").innerHTML = cycleObject.meleeMutators[0] || "";
+                            readSelection("comboMeleeMod").innerHTML = melee[cycleObject.stick[0]].builtIN;
+
+                            readSelection("comboSecondaryMutator").innerHTML = cycleObject.rangedMutators[1] || "";
+                            readSelection("comboSecondaryMod").innerHTML = secondary[cycleObject.gun2[0]].builtIN || cycleObject.rangedMods[1] || "";
+
+
+                            for (let i=0;i<7;i++) {
+                                let concReference = cycleObject.concoction[i] ?? "";
+                                if (concReference===0 || concReference==="") {
+                                    concReference="";
+                                    readSelection(`comboConcoction${i+1}Holder`).style.display = "none";
+                                }
+                                else {
+                                    readSelection(`comboConcoction${i+1}Holder`).style.display = "block";
+                                    readSelection(`comboConcoction${i+1}`).src = concoctions[concReference].image;
+                                }
+                            }
+
+                            for (let i=0;i<4;i++) {
+                                let consReference = cycleObject.quickUse[i] ?? "";
+                                if (consReference===0 || consReference==="") {
+                                    consReference=""
+                                    readSelection(`comboQuickUse${i+1}Holder`).style.display = "none";
+                                }
+                                else {
+                                    readSelection(`comboQuickUse${i+1}Holder`).style.display = "block";
+                                    readSelection(`comboConsumable${i+1}`).src = quickUses[consReference].image;
+                                }
+                            }
+
+                            cyclesLoop.updateCycleRecord(cycleObject,true);//Updates the ALT records with everything from the cycle object
+
+                            cyclesLoop.bestCombos.third = cyclesLoop.bestCombos.second ? {...cyclesLoop.bestCombos.second} : {"bestValue":0,"link":""};
+                            cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
+
+                            let targetDamageCategory;
+                            if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.one.ability) {targetDamageCategory = "ability1Breakdown"}
+                            else if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.two.ability) {targetDamageCategory = "ability2Breakdown"}
+
+                            cyclesLoop.bestCombos.first = {
+                                "bestValue": preArmor.toFixed(2),
+                                "link": manipulateURL.updateURLparameters(false,true)
+                            }
+
+                            comboPath = cyclesLoop.bestCombos
+                            let targetName = Array.isArray(filters.types.vars.oldTarget) ? filters.types.vars.oldTarget[0] + " " + filters.types.vars.oldTarget[2] : filters.types.vars.oldTarget;
+                            readSelection("comboTargetDisplay").innerHTML = `
+                            <div class="bestOptionsRow">Target Statistic: ${targetName}</div>
+                            <div class="bestOptionsRow">Current Best: <a href="${comboPath.first.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.first.bestValue}</a></div>
+                            <div class="bestOptionsRow">Second: <a href="${comboPath.second.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.second.bestValue}</a></div>
+                            <div class="bestOptionsRow">Third: <a href="${comboPath.third.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.third.bestValue}</a></div>
+                            `
+
+                            readSelection(`lastFound`).innerHTML = `Last Loadout Found at #${counterInt.toLocaleString()}`
+
+                            readSelection(`comboDisplay`).innerHTML = `
+                                ${cycleObject.fragmentSet[0]}, ${cycleObject.fragmentSet[1]}, ${cycleObject.fragmentSet[2]}
+                            `;
                         }
                     }
 
-                    for (let i=0;i<4;i++) {
-                        let consReference = cycleObject.quickUse[i] ?? "";
-                        if (consReference===0 || consReference==="") {
-                            consReference=""
-                            readSelection(`comboQuickUse${i+1}Holder`).style.display = "none";
-                        }
-                        else {
-                            readSelection(`comboQuickUse${i+1}Holder`).style.display = "block";
-                            readSelection(`comboConsumable${i+1}`).src = quickUses[consReference].image;
-                        }
+                    if (counterInt === totalCombos && cycles.vars.workersRunning === 0 ) {
+                    cyclesLoop.generationStop("",null,true); 
                     }
-
-                    cyclesLoop.updateCycleRecord(cycleObject,true);//Updates the ALT records with everything from the cycle object
-
-                    cyclesLoop.bestCombos.third = cyclesLoop.bestCombos.second ? {...cyclesLoop.bestCombos.second} : {"bestValue":0,"link":""};
-                    cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
-
-                    let targetDamageCategory;
-                    if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.one.ability) {targetDamageCategory = "ability1Breakdown"}
-                    else if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.two.ability) {targetDamageCategory = "ability2Breakdown"}
-
-                    cyclesLoop.bestCombos.first = !Array.isArray(filters.types.vars.oldTarget) ? {
-                        "bestValue": (preArmor[playerDerivedStatistics[filters.types.vars.oldTarget]]).toFixed(2),
-                        "link": manipulateURL.updateURLparameters(false,true)
-                    }
-                    :
-                    {
-                        "bestValue": (preArmor[targetDamageCategory][filters.types.vars.oldTarget[1]]).toFixed(2),
-                        "link": manipulateURL.updateURLparameters(false,true)
-                    }
-
-                    comboPath = cyclesLoop.bestCombos
-                    let targetName = Array.isArray(filters.types.vars.oldTarget) ? filters.types.vars.oldTarget[0] + " " + filters.types.vars.oldTarget[2] : filters.types.vars.oldTarget;
-                    readSelection("comboTargetDisplay").innerHTML = `
-                    <div class="bestOptionsRow">Target Statistic: ${targetName}</div>
-                    <div class="bestOptionsRow">Current Best: <a href="${comboPath.first.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.first.bestValue}</a></div>
-                    <div class="bestOptionsRow">Second: <a href="${comboPath.second.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.second.bestValue}</a></div>
-                    <div class="bestOptionsRow">Third: <a href="${comboPath.third.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.third.bestValue}</a></div>
-                    `
-
-                    
-                        
-
-                    readSelection(`lastFound`).innerHTML = `Current Best Loadout at #${counterInt.toLocaleString()}`
-
-                    readSelection(`comboDisplay`).innerHTML = `
-                        ${cycleObject.fragmentSet[0]}, ${cycleObject.fragmentSet[1]}, ${cycleObject.fragmentSet[2]}
-                    `;
-                }
             }
-            if (data.command === `resetButtons`) {
-                cycles.vars.stopCycles = true;
-                readSelection("cycleSTOP").disabled = true;
-                readSelection("cycleSTART").disabled = false;
-            }
-            if (data.command === `passBackArmor`) {
-                cycles.vars.armorCombos.Table = data.data[0];
-                cycles.vars.weightFirst.Table = data.data[1];
-                cycles.vars.armorIsGenerated = true;
+            else {
+                switch (data.command) {
+                    case `pushDebugLine`: cycles.debugPushLine(data.data); break;
+                    case `pushAlert`: alert(data.data); break
+                    case `pushInnerHTML`:
+                        if (data.ID === "comboCount") {
+                            //Store the total combo count so we don't have to replace commas every time
+                            cycles.vars.totalDisplayCombinations = data.data;
+                            data.data = data.data.toLocaleString();
+                        }
+                        readSelection(data.ID).innerHTML = data.data;
+                        break;
+                    case `updateStep`: cyclesLoop.updateSetupStep(data.data,false,data.moduloFactor); break;
+                    case `passBackArmor`:
+                        cycles.vars.armorCombos.Table = data.data[0];
+                        cycles.vars.weightFirst.Table = data.data[1];
+                        cycles.vars.armorIsGenerated = true;
+                        break;
+                }
             }
         };
-        workers.cycleWorker.onerror = function(error) {
+        workers[cycleWorker].onerror = function(error) {
             console.error('Worker error:', error);
             cyclesLoop.generationStop(`${error.message} LINE:${error.lineno}`);
         };
 
-        cyclesLoop.updateSetupStep("Exporting data to Web Worker");
-        workers.cycleWorker.postMessage({command:`copyFilteredTables`,data:cycles.vars});
-        workers.cycleWorker.postMessage({command:`copyTableFilters`,data:filters.types});
-        workers.cycleWorker.postMessage({command:`copyDataTables`,data:globalRecords});
-
-        workers.cycleWorker.postMessage({command:`startCycles`});
+        cyclesLoop.updateSetupStep("Exporting data to Web Worker",false,identifier);
+        workers[cycleWorker].postMessage({command:`copyFilteredTables`,data:cycles.vars});
+        workers[cycleWorker].postMessage({command:`copyTableFilters`,data:filters.types});
+        workers[cycleWorker].postMessage({command:`copyDataTables`,data:globalRecords});
+        workers[cycleWorker].postMessage({command:`startCycles`,data:{threadCount,identifier}});
     },
     combineConcoctionLimit(ringCombo,amulet,classSet) {
         let returnLimit = 1;
@@ -1105,7 +1145,9 @@ let cyclesLoop = {
         }
         for (let item5 of classSet) {
             if (item5 === classSet[classSet.length-1]) {continue;}
-            returnLimit += classInfo[item5].primeStats.ConcLimit || 0;
+            else if (classInfo[item5].primeStats.ConcLimit) {
+                returnLimit += classInfo[item5].primeStats.ConcLimit;
+            }
         }
         return returnLimit;
     },
@@ -1211,34 +1253,42 @@ let cyclesLoop = {
         armorReference.leg = bestArmorSet.slot3;armorReference.hand = bestArmorSet.slot4;
         return bestArmorSet;
     },
-    // No longer a generator function to yield combinations including fragment combinations
     //This is now only used within the worker cycleWorker
-    generateCombinations() {
+    generateCombinations(isShared,moduloFactor,threadCount) {
         cycles.setupCompleted = false;
         globalRecords.meleeFactors = {...globalRecords.ALTmeleeFactors}//Shift what are normally the search settings factors, to the main factors so the cycles can calculate properly.
         postMessage({command: `pushDebugLine`, data: "Worker: START COMBO GENERATION..."});
-        postMessage({command: `pushDebugLine`, data: "Worker: - Starting Amulets"});postMessage({command: `updateStep`, data: "Amulet Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Starting Amulets"});
+        postMessage({command: `updateStep`, data: "Amulet Tables", moduloFactor, threadCount});
 
         const amuletCombos = cycles.generateAnyCombinations(filters.types.amulet.filter[0],[cycles.vars.amulets.Table],1,false,true);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Amulets completed<br>- Starting Rings"});postMessage({command: `updateStep`, data: "Ring Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Amulets completed<br>- Starting Rings"});
+        postMessage({command: `updateStep`, data: "Ring Tables", moduloFactor});
         //Generate Rings combos, will take a sec if no filters are in play on this one
         const ringCombos = cycles.generateAnyCombinations(filters.types.ring.filter[0],[cycles.vars.rings.Table],4,false,true);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Rings completed<br>- Starting Relics"});postMessage({command: `updateStep`, data: "Relic Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Rings completed<br>- Starting Relics"});
+        postMessage({command: `updateStep`, data: "Relic Tables", moduloFactor});
         //Only amulets and rings need to be evaluated for concoction limit, for now
 
 
         const relicCombos = cycles.generateAnyCombinations(filters.types.relic.filter[0],[cycles.vars.relics.Table],1,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Relics completed<br>- Starting Fragments"});postMessage({command: `updateStep`, data: "Fragment Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Relics completed<br>- Starting Fragments"});
+        postMessage({command: `updateStep`, data: "Fragment Tables", moduloFactor});
         const fragmentCombos = cycles.generateAnyCombinations(filters.types.fragment.filter[0],[cycles.vars.fragments.Table],3,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Fragments completed<br>- Starting Consumables"});postMessage({command: `updateStep`, data: "Consumable Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Fragments completed<br>- Starting Consumables"});
+        postMessage({command: `updateStep`, data: "Consumable Tables", moduloFactor});
         const consumableCombos = cycles.generateAnyCombinations(filters.types.consumable.filter[0],[cycles.vars.consumables.Table],4,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Consumables completed<br>- Starting Primaries"});postMessage({command: `updateStep`, data: "Primary Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Consumables completed<br>- Starting Primaries"});
+        postMessage({command: `updateStep`, data: "Primary Tables", moduloFactor});
         const primaryCombos = cycles.generateAnyCombinations(filters.types.primary.filter[0],[cycles.vars.primaries.Table],1,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Primaries completed<br>- Starting Melee"});postMessage({command: `updateStep`, data: "Melee Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Primaries completed<br>- Starting Melee"});
+        postMessage({command: `updateStep`, data: "Melee Tables", moduloFactor});
         const meleeCombos = cycles.generateAnyCombinations(filters.types.melee.filter[0],[cycles.vars.melee.Table],1,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Melee completed<br>- Starting Secondaries"});postMessage({command: `updateStep`, data: "Secondary Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Melee completed<br>- Starting Secondaries"});
+        postMessage({command: `updateStep`, data: "Secondary Tables", moduloFactor});
         const secondaryCombos = cycles.generateAnyCombinations(filters.types.secondary.filter[0],[cycles.vars.secondaries.Table],1,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Secondaries completed<br>- Starting Ranged Mutators"});postMessage({command: `updateStep`, data: "Ranged Mutator Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Secondaries completed<br>- Starting Ranged Mutators"});
+        postMessage({command: `updateStep`, data: "Ranged Mutator Tables", moduloFactor});
         let rangedMutatorLocks = [];
         //Combine lock filters for primary/secondary mutators
         if (filters.types.primaryMutator.filter[0].length) {
@@ -1252,10 +1302,12 @@ let cyclesLoop = {
             rangedMutatorLocks.push(filters.types.secondaryMutator.filter[0]);
         }
         const rangedMutatorCombos = cycles.generateAnyCombinations(rangedMutatorLocks,[cycles.vars.primaryMutators.Table],2,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Ranged Mutators completed<br>- Starting Melee Mutators"});postMessage({command: `updateStep`, data: "Melee Mutator Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Ranged Mutators completed<br>- Starting Melee Mutators"});
+        postMessage({command: `updateStep`, data: "Melee Mutator Tables", moduloFactor});
         //Generate Melee Mutators combos
         const meleeMutatorCombos = cycles.generateAnyCombinations(filters.types.meleeMutator.filter[0],[cycles.vars.meleeMutators.Table],1,false,false);
-        postMessage({command: `pushDebugLine`, data: "Worker: - Melee Mutators completed<br>- Starting Ranged Mods"});postMessage({command: `updateStep`, data: "Mod Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Melee Mutators completed<br>- Starting Ranged Mods"});
+        postMessage({command: `updateStep`, data: "Mod Tables", moduloFactor});
         //Generate Primary Mods combos
         let rangedModLocks = [];
         //Combine lock filters for primary/secondary mods
@@ -1273,7 +1325,8 @@ let cyclesLoop = {
         const rangedModCombos = cycles.generateAnyCombinations(rangedModLocks,[cycles.vars.primaryMods.Table],2,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: - Ranged Mods completed"});
         //concoctions
-        postMessage({command: `pushDebugLine`, data: "Worker: - Starting Concoctions 1-7"});postMessage({command: `updateStep`, data: "Concoction Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: - Starting Concoctions 1-7"});
+        postMessage({command: `updateStep`, data: "Concoction Tables", moduloFactor});
         let concMegaTable = {};
         concMegaTable.concoctionCombos1 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],1,false,false);
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 1 completed"});
@@ -1291,7 +1344,8 @@ let cyclesLoop = {
         postMessage({command: `pushDebugLine`, data: "Worker: -- Table 7 completed"});
         postMessage({command: `pushDebugLine`, data: "Worker: - Concoctions completed"});
 
-        postMessage({command: `pushDebugLine`, data: "Worker: GENERATING ARMOR TABLES..."});postMessage({command: `updateStep`, data: "Armor Tables"});
+        postMessage({command: `pushDebugLine`, data: "Worker: GENERATING ARMOR TABLES..."});
+        postMessage({command: `updateStep`, data: "Armor Tables", moduloFactor});
         //Only generate the armor table once, it is never modified, only referenced. Make it on first query, but never do it again.
         if (!cycles.vars.armorIsGenerated) {
             cycles.vars.baseArmorCombos.Table = cycles.generateAnyCombinations([],[armor.helmets,armor.chests,armor.legs,armor.hands],4,true,false);
@@ -1306,12 +1360,13 @@ let cyclesLoop = {
         }
         else {postMessage({command: `pushDebugLine`, data: "Worker: ARMOR ALREADY GENERATED"});}
 
-        postMessage({command: `pushDebugLine`, data: "Worker: COMBO GENERATION COMPLETED<br>CALCULATING TOTAL COMBOS..."});postMessage({command: `updateStep`, data: "Calculating Total Combos..."});
+        postMessage({command: `pushDebugLine`, data: "Worker: COMBO GENERATION COMPLETED<br>CALCULATING TOTAL COMBOS..."});
+        postMessage({command: `updateStep`, data: "Calculating Total Combos...", moduloFactor});
 
         
-        let classSet = [globalRecords.ALTarchs.one.class,globalRecords.ALTarchs.two.class];
-        let abilitySet = [globalRecords.ALTarchs.one.ability,globalRecords.ALTarchs.two.ability];
-        formulasValues.pullTraits(false);//Assign trait value to the cycles starter table
+        let classSet = [`${globalRecords.ALTarchs.one.class}`,`${globalRecords.ALTarchs.two.class}`];
+        let abilitySet = [`${globalRecords.ALTarchs.one.ability}`,`${globalRecords.ALTarchs.two.ability}`];
+        // formulasValues.pullTraits();//Assign trait value to the cycles starter table
 
         let comboCounter = 0;
 
@@ -1339,27 +1394,30 @@ let cyclesLoop = {
 
         comboCounter *= staticSets; //Get the number of combos possible via variable concoction limits, and multi it by the static set precalc number for total combos possible.
         //If this is going to take way too long, then quit and let the user know.
-        if (comboCounter > 300000000 && !cycles.vars.bypassLimit) {
-            postMessage({command: `pushAlert`, data: `Possible combinations (${comboCounter.toLocaleString()}) exceeds the limit of 300 MILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue.`});
+        if (comboCounter > 10000000000 && !cycles.vars.bypassLimit) {
+            if (moduloFactor === 1) {
+                postMessage({command: `pushAlert`, data: `Possible combinations (${comboCounter.toLocaleString()}) exceeds the limit of 10 BILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue.`});
+            }
             cyclesLoop.selfGenerationStop();
             return;
         }
         
-        cycles.vars.totalDisplayCombinations = comboCounter;postMessage({command: `updateStep`, data: "Completed Setup"});
+        cycles.vars.totalDisplayCombinations = comboCounter;
+        postMessage({command: `updateStep`, data: "Completed Setup", moduloFactor});
         postMessage({command: `pushDebugLine`, data: `Worker: - TOTAL COMBOS: ${cycles.vars.totalDisplayCombinations.toLocaleString()}`});
         postMessage({command: `pushInnerHTML`, ID: "comboCount", data: cycles.vars.totalDisplayCombinations});
         postMessage({command: `pushDebugLine`, data: "Worker: - BEGIN CALCULATION CYCLES..."});
 
         cycles.setupCompleted = true;
         let cycleObject;
-        let recordedStats = {};
-        const drCAP = 0.8;
         let targetStatistic = playerDerivedStatistics[filters.types.vars.targetStatistic];
+        let targetIsArray = Array.isArray(targetStatistic);
         let recordedStatistic = 0;
 
         let cycleCounter = 0;
-        let currentSet = {};
-        let lastSentSet = 0;
+        let lastCalculated = 0 - threadCount + moduloFactor;
+        let lastSent = 0;
+        let isClosed = false;
 
         let targetDamageCategory;
 
@@ -1385,8 +1443,17 @@ let cyclesLoop = {
                                                     for (let conc=0;conc<currentTable.length;conc++) {
                                                         cycleCounter++;
 
+                                                        if (cycleCounter === cycles.vars.totalDisplayCombinations) {
+                                                            isClosed = true;
+                                                            if (isShared && cycleCounter != lastCalculated + threadCount) {lastSent -= 1;}
+                                                            lastCalculated = cycleCounter;
+                                                        }
+                                                        else if (isShared && cycleCounter != lastCalculated + threadCount) {continue}
+                                                        else {lastCalculated = cycleCounter;}
+                                                        lastSent++;
+
                                                         cycleObject = {
-                                                            ringSet,relic,fragmentSet,amulet,classSet,abilitySet,concoction:currentTable[conc],quickUse,
+                                                            ringSet,relic,fragmentSet,amulet,concoction:currentTable[conc],quickUse,
                                                             gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1};
 
                                                         cyclesLoop.updateCycleRecord(cycleObject);//Assigns cycle items to records so updateFormulas can work
@@ -1397,24 +1464,26 @@ let cyclesLoop = {
                                                             preArmor = updateFormulas(`cycleTableKnowerOfAll`);//Then redo the updateforms, this time turning ping off, so armor pieces are now factored
                                                         }
 
-                                                        if (!Array.isArray(targetStatistic)) {
+                                                        if (!targetIsArray) {
                                                             if (((preArmor[targetStatistic] > recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
                                                                 recordedStatistic = +preArmor[targetStatistic];
-                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor,cycleCounter}});
+                                                                postMessage({command: `yieldCombination`,isUpdated:true,cycleObject,preArmor:preArmor[targetStatistic],lastSent,isClosed});
+                                                                lastSent = 0;
                                                                 continue;
                                                             }
-                                                        }
+                                                        } 
                                                         else {
                                                             if (((preArmor[targetDamageCategory][targetStatistic[1]] > recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
                                                                 recordedStatistic = +preArmor[targetDamageCategory][targetStatistic[1]];
-                                                                postMessage({command: `yieldCombination`, isUpdated: true, data: {cycleObject,preArmor,cycleCounter}});
+                                                                postMessage({command:`yieldCombination`,isUpdated:true,cycleObject,preArmor:preArmor[targetDamageCategory][targetStatistic[1]],lastSent,isClosed});
+                                                                lastSent = 0;
                                                                 continue;
                                                             }
                                                         }
-                                                        if (!(cycleCounter%10000) || cycleCounter === comboCounter) {
-                                                            postMessage({command: `yieldCombination`, data: {cycleCounter}});
+                                                        if (lastSent >= 10000 || cycleCounter === cycles.vars.totalDisplayCombinations) {
+                                                            postMessage({command:`yieldCombination`,lastSent,isClosed});
+                                                            lastSent = 0;
                                                         }
-                                                        // postMessage({command: `yieldCombination`});
                                                     }
                                                 }
                                             }
@@ -1428,7 +1497,9 @@ let cyclesLoop = {
             }  
         }
         postMessage({command: `pushDebugLine`, data: "Worker: COMPLETED CALCULATION CYCLES"});
-        cyclesLoop.selfGenerationStop(); //Set things back to normal once completed
+        postMessage({command: `pushDebugLine`, data: `Worker: Closing Worker #${moduloFactor}`});
+        postMessage({command: `notifyWorkerClosed`});
+        cyclesLoop.selfGenerationStop(null,moduloFactor); //Set things back to normal once completed
     },
     updateCycleRecord(value,addArmor) {
 
@@ -1637,8 +1708,8 @@ let filters = {
     },
     updateDodgeClass() {
         let dodgeClass = readSelection("dodgeSlider").value;
-        let teamCount = readSelection("teamCountSlider").value;
-        let summonCount = readSelection("summonCountSlider").value;
+        let teamCount = +readSelection("teamCountSlider").value;
+        let summonCount = +readSelection("summonCountSlider").value;
 
         let dodgeLable,hex;
         switch (dodgeClass) {
@@ -1657,7 +1728,7 @@ let filters = {
         globalRecords.ALTminionCount = summonCount;
         readSelection("selectedSummonCount").innerHTML = summonCount;
 
-        globalRecords.ALTspiritHealterStacks = readSelection("spiritCountSlider").value;
+        globalRecords.ALTspiritHealterStacks = +readSelection("spiritCountSlider").value;
         readSelection("selectedSpiritCount").innerHTML = readSelection("spiritCountSlider").value;
 
         globalRecords.ALTuseShields = readSelection("settingsUseShields").checked;
@@ -1711,7 +1782,12 @@ let filters = {
         path.weakspotOverride = readSelection("settingsNeverWeakspot").checked;
 
         
+        // <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+        // <span id="selectedThreadCount">0</span>
 
+        let selectedThreads = +readSelection("settingsOpenThreads").value
+        readSelection("selectedThreadCount").innerHTML = selectedThreads;
+        cycles.vars.threadCount = selectedThreads;
 
     },
     updateTargetStat() {

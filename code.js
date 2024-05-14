@@ -311,12 +311,29 @@ let createHTML = {
     // <select class="traitSelector" id="trait${elemID}" onchange="userTrigger.updateTrait(${elemID})"></select>
     // <button type="button" class="traitButton" onclick="userTrigger.updateTrait(${elemID},'-')" id="traitButtonMinus${elemID}">-</button>//button
     // <div class="traitLevelDisplay" id="trait${elemID}Level"></div>
-    return `<div class="traitContainer" id="traitContainer${elemID}">
+
+    let greatTraitRecords = globalRecords.greatTraitRecords;
+    let traitName = greatTraitRecords[elemID-1].name;
+    let traitLevel = greatTraitRecords[elemID-1].level;
+    let traitDescription = traits[traitName].desc
+    let levelValue = traits[traitName].level[traitLevel];
+    if (traitDescription.includes("%")) {levelValue *= 100;}
+    let adjustedDescription = traitDescription.replace("VALUE1.1",levelValue.toFixed(2));
+
+    if (traits[traitName].level2) {
+      let levelValue2 = traits[traitName].level2[traitLevel];
+      if (traitDescription.includes("%")) {levelValue2 *= 100;}
+      adjustedDescription = traitDescription.replace("VALUE2.1",levelValue2.toFixed(2));
+    }
+
+    tooltipStorage[`traitContainer${elemID}`] = adjustedDescription.replace("VALUE1.1",levelValue.toFixed(2));
+
+    return `<div class="traitContainer" id="traitContainer${elemID}" onmouseover="showTooltip('traitContainer${elemID}')" onmouseout="hideTooltip()">
               <div class="traitLineHolder">
                   <div class="traitNameHolder">
 
                       <div class="presetsSelectorBox">
-                          <input class="selectSelector traitNameAdjustment" id="trait${elemID}" list="trait${elemID}List" onchange="userTrigger.updateTrait(${elemID})"> <!--selector-->
+                          <input class="selectSelector traitNameAdjustment hasHoverTooltip" id="trait${elemID}" list="trait${elemID}List" onchange="userTrigger.updateTrait(${elemID})"> <!--selector-->
                           <datalist id="trait${elemID}List"></datalist>
                       </div>
 
@@ -1452,7 +1469,16 @@ let userTrigger = {
     userTrigger.checkDuplicateSelection(elem,ID,`updateFragment`,`several`,3);
     let selectedValue = readSelection(`fragment${ID}`);
     selectedValue.value = !gear.fragments[selectedValue.value] ? "" : selectedValue.value;//clear invalid selections.
-    globalRecords.accessories[`fragment${ID}`] = selectedValue.value
+    let fragmentName = selectedValue.value;
+    globalRecords.accessories[`fragment${ID}`] = fragmentName
+
+    let fragDescription = fragments[fragmentName].desc
+    let levelValue = fragments[fragmentName].value;
+    if (fragDescription.includes("%")) {levelValue *= 100;}
+    let adjustedDescription = fragDescription.replace("VALUE1.1",levelValue.toFixed(2));
+
+    tooltipStorage[`fragment${ID}`] = adjustedDescription.replace("VALUE1.1",levelValue.toFixed(2));
+
     if (!parent) {
       updateFormulas();
     }
@@ -1629,7 +1655,7 @@ let formulasValues = {
   //Utilizes toggle states
   pullTraits (isUIcalcs,index) {
     const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
-    const tableReference = isUIcalcs ? valueTables[index] : starterTable;
+    const tableReference = valueTables[index];
 
     for (const trait of recordReference) {
       const traitLevel = trait.level;
@@ -1676,10 +1702,7 @@ let formulasValues = {
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledmMutator',false],mutators.meleeMutators[path.meleeMutator]);
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledsMutator',false],mutators.secondaryMutators[path.secondaryMutator]);
 
-    let archsTableName = isUIcalcs ? `archs` : `ALTarchs`;
-    let path1 = classInfo[globalRecords[archsTableName].one.class];
-    let path2 = classInfo[globalRecords[archsTableName].two.class];
-    let pathALT = globalRecords.searchSettingsToggles;
+    let archsTableName = isUIcalcs ? globalRecords[`archs`] : globalRecords[`ALTarchs`];
 
     if (!ping) {//If this is just a quick stat pull so can we can look at armor after, then skip armor here
       let armorRecordPath = isUIcalcs ? globalRecords[`armor`] : globalRecords[`ALTarmor`];
@@ -1694,18 +1717,20 @@ let formulasValues = {
     //RINGS, PASSIVES, and FRAGMENTS
     for (let i=1;i<=4;i++) {
       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledRing${i}`,false],rings[globalRecords[tableName][`ring${i}`]]);
-      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i}`,pathALT[`usePassive${i}`]],path1.passives[`passive${i}`]);
-      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i+4}`,pathALT[`usePassive${i+4}`]],path2.passives[`passive${i}`]);
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i}`,globalRecords.searchSettingsToggles[`usePassive${i}`]],classInfo[archsTableName.one.class].passives[`passive${i}`]);
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i+4}`,globalRecords.searchSettingsToggles[`usePassive${i+4}`]],classInfo[archsTableName.two.class].passives[`passive${i}`]);
+      
       if (i<=3)
         {formulasValues.pullStats(index,fragments[globalRecords[tableName][`fragment${i}`]].stats)}//frags have no toggles.
     }
     //RELIC
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledRelic',false],relics[globalRecords[tableName].relic]);
+
     //PRIME PERK
-    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimeP',pathALT.usePrimePerk],path1.primeStats,"Prime");
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimeP',globalRecords.searchSettingsToggles.usePrimePerk],classInfo[archsTableName.one.class].primeStats,"Prime");
     //ABILITIES
-    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility1',pathALT.useAbility1],path1.abilities[globalRecords[archsTableName].one.ability]);
-    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility2',pathALT.useAbility2],path2.abilities[globalRecords[archsTableName].two.ability]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility1',globalRecords.searchSettingsToggles.useAbility1],classInfo[archsTableName.one.class].abilities[archsTableName.one.ability]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility2',globalRecords.searchSettingsToggles.useAbility2],classInfo[archsTableName.two.class].abilities[archsTableName.two.ability]);
 
   //Concoctions
     globalRecords.totalConcLimit = 1 + valueTables[index].ConcLimit;
@@ -1790,28 +1815,28 @@ let formulasValues = {
           customItemFunctions.amulets[amulets[customPath][`custom${tier}`]](index,insertedStatistic);
         }
       }
-      //Class
-      let path1 = classInfo[isUIcalcs ? globalRecords.archs.one.class : globalRecords.ALTarchs.one.class];
-      let path2 = classInfo[isUIcalcs ? globalRecords.archs.two.class : globalRecords.ALTarchs.two.class];
-      let ability1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
-      let ability2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
-      //Prime Perk
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
-      if (!toggleCheck) {if (path1[`custom${tier}`]) {customItemFunctions[path1[`custom${tier}`]](index,insertedStatistic);}}
-      //Archetype1
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
-      if (!toggleCheck) {if (path1.abilities[ability1][`custom${tier}`]) {customItemFunctions[path1.abilities[ability1[`custom${tier}`]]](index,insertedStatistic);}}
-      for (let i=1;i<=4;i++) {
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
-        if (!toggleCheck) {if (path1.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path1.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
-      }
-      //Archetype2
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
-      if (!toggleCheck) {if (path2.abilities[ability2][`custom${tier}`]) {customItemFunctions[path2.abilities[ability2][`custom${tier}`]](index,insertedStatistic);}}
-      for (let i=1;i<=4;i++) {
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
-        if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
-      }
+      // //Class
+      // let path1 = classInfo[isUIcalcs ? globalRecords.archs.one.class : globalRecords.ALTarchs.one.class];
+      // let path2 = classInfo[isUIcalcs ? globalRecords.archs.two.class : globalRecords.ALTarchs.two.class];
+      // let ability1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
+      // let ability2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
+      // //Prime Perk
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
+      // if (!toggleCheck) {if (path1[`custom${tier}`]) {customItemFunctions[path1[`custom${tier}`]](index,insertedStatistic);}}
+      // //Archetype1
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
+      // if (!toggleCheck) {if (path1.abilities[ability1][`custom${tier}`]) {customItemFunctions[path1.abilities[ability1[`custom${tier}`]]](index,insertedStatistic);}}
+      // for (let i=1;i<=4;i++) {
+      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
+      //   if (!toggleCheck) {if (path1.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path1.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
+      // }
+      // //Archetype2
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
+      // if (!toggleCheck) {if (path2.abilities[ability2][`custom${tier}`]) {customItemFunctions[path2.abilities[ability2][`custom${tier}`]](index,insertedStatistic);}}
+      // for (let i=1;i<=4;i++) {
+      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
+      //   if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
+      // }
 
       //Mutators
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
@@ -2462,6 +2487,7 @@ let customItemFunctions = {
     }
   }
 }
+
 /* ---------------------------------------------------------------------------------------- */
 /* -------------------------------------- PAGE LOADED ------------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
@@ -2472,6 +2498,7 @@ function updateFormulas(index,ping) {
   let isUIcalcs = index === `greatTableKnowerOfAll`;
   //Reset the table
   valueTables[index] = {...starterTable}
+  // console.log(valueTables[index].FlatDR)
   let tableReference = valueTables[index];
 
   tableReference.REdamage = [];//Reset arrays, lest we modify original
@@ -2479,8 +2506,9 @@ function updateFormulas(index,ping) {
   tableReference.UniqueMulti = [];
   if (isUIcalcs) {
     basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
-    formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
+    // formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
   }
+  formulasValues.pullTraits(isUIcalcs,index);
   
   formulasValues.pullGearStats(isUIcalcs,index,ping);//Weapons/Accessories/class/frags/etc
   formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Tier0");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
@@ -2491,7 +2519,6 @@ function updateFormulas(index,ping) {
   healthQuery = calcs.getHealth(tableReference);
   let totalHealth = healthQuery[0];
   let totalHealthNoGlobal = healthQuery[1]; //Stuff like restriction cord. Not used outside of calcs.functions yet
-  // let time6 = performance.now(); console.log("getHealth: ",time6-time5)
 //---------- STAMINA ---------------------------------------------------
   let totalStamina = calcs.getStamina(tableReference)[0]; 
   let weightQuery = calcs.getWeight(tableReference);

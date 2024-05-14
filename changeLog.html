@@ -48,6 +48,26 @@
                         <li>asdf</li> <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
                     </ul>
                 </div> -->
+                KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
+                <div>
+                    <h1>May 14, 2024 - <h3><span class="haste">THE QUERY SPEED UPDATE</span> (Up to 90% faster)</h1>
+                    <ul>
+                        <li>Queries now offer an option to increase the number of threads on your CPU that queries can operate on. This will DRASTICALLY increase query speeds, but be sure to monitor CPU and RAM usage to make sure you didn't open too many, as while it does speed things up it also comes at a cost. Refer to your CPU's Core Count as a general rule of thumb.</li>
+                        <li>Given that queries can now be much faster, I've bumped the query length limit from 300 Milllion, to 10 Billion.</li>
+                        <li>Fixed an issue where if a user duplicated a browser tab with a target statistic selected in query settings, sometimes the target query statistic would copy over but wouldn't actually apply, resulting in the user needing to delete it and add it back before it would register again.</li>
+                        <li>Fixed a typo in Twisted Idol's description.</li>
+                        <li>Updated Dark Pact's bonuses, it still reflected the preDLC2 bonuses.</li>
+                        <li>Updated a few straggler Fragment bonuses I missed, like Ranged Crit Chance (10% -> 7.5%)</li>
+                        <li>Blood bond no longer works on anything other than summoner minions, in-game. The calculator does not reflect this in terms of calculations, but I did update Blood Bond's description to make that explicitly clear.</li>
+                        <li>Added tooltips to the following. Forgot what a given trait did, or even what its bonus was at a given level? Wonder no longer, they will show!
+                            <ul>
+                                <li>Traits</li>
+                                <li>Fragments</li>
+                            </ul>
+                        </li>
+                        <li>Added regex color filtering for GLOOM, BRITTLE, and DRENCHED from invoker abilities. Added blank(white) filtering for EXPOSED and GIFT OF THE FOREST.</li>
+                    </ul>
+                </div>
                 <div>
                     <h1>May 13, 2024</h1>
                     <ul>
@@ -56,7 +76,6 @@
                 </div>
                 <div>
                     <h1>May 12, 2024</h1>
-                    KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
                     <ul>
                         <li>Adjusted Havoc Form drain rate and base damage calculations to match up with the latest game patch.</li>
                         <li>Added a disclaimer in the queries section that some browser extensions may cause queries to be slower than they should be, or cause memory leaks. This is not inherent to queries themselves (I promise I didn't code any memory leaks. Yet.), the user that reported this issue narrowed it down to a very specific extension. Just be aware of that and maybe run queries in an incognito window.</li>

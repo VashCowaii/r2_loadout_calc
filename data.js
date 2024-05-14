@@ -3899,12 +3899,12 @@ amulets = {
 		},
 		"tags": []
 	},
-	"Twisted Idol": {//done
+	"Twisted Idol": {
 		"customBase": null,
 		"name": "Twisted Idol",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Twisted Idol.png",
-		"desc": "Increases Armor Effectiveness by 30% and reduces Encumbrance by 20.",
+		"desc": "Increases Armor Effectiveness by 35% and reduces Encumbrance by 20.",
 		"stats": {
 			"Armor%": 0.35,
 			"Encumbrance": -20
@@ -6377,23 +6377,26 @@ fragments = {
 		"slot": "",
 		"image": "",
 		"desc": "",
+		"value": 0,
 		"stats": {},
 		"tags": []
 	},
 	"Ammo Pickups": {
 		"name": "Ammo Pickups",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
+		"value": 0.30,
 		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Ammo Reserves": {
 		"name": "Ammo Reserves",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
+		"value": 0.20,
 		"customBase": null,
 		"stats": {
 			"Reserves": 0.20,
@@ -6403,9 +6406,10 @@ fragments = {
 	"Armor Effectiveness": {
 		"customBase": null,
 		"name": "Armor Effectiveness",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Armor Effectiveness [MYTHIC]",
+		"value": 0.10,
 		"stats": {
 			"Armor%": 0.10
 		},
@@ -6413,9 +6417,10 @@ fragments = {
 	},
 	"Blight Resistance": {
 		"name": "Blight Resistance",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1 Blight Resistance [MYTHIC]",
+		"value": 30,
 		"customBase": null,
 		"stats": {
 			"Blight": 30,
@@ -6424,9 +6429,10 @@ fragments = {
 	},
 	"Casting Speed": {
 		"name": "Casting Speed",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Casting Speed [MYTHIC]",
+		"value": 0.20,
 		"customBase": null,
 		"stats": {
 			"CastSpeed": 0.20,
@@ -6435,9 +6441,10 @@ fragments = {
 	},
 	"Charge Melee Cost": {
 		"name": "Charge Melee Cost",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
+		"value": -0.30,
 		"customBase": null,
 		"stats": {
 			"ChargeCost": -0.30,
@@ -6446,9 +6453,10 @@ fragments = {
 	},
 	"Consumable Duration": {
 		"name": "Consumable Duration",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Consumable Duration [MYTHIC]",
+		"value": 0.20,
 		"customBase": null,
 		"stats": {
 			"ConsumableDuration": 0.20,
@@ -6457,9 +6465,10 @@ fragments = {
 	},
 	"Consumable Speed": {
 		"name": "Consumable Speed",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
+		"value": -0.15,
 		"customBase": null,
 		"stats": {
 			"RelicSpeed": -0.15
@@ -6469,9 +6478,10 @@ fragments = {
 	"Damage Reduction": {
 		"customBase": null,
 		"name": "Damage Reduction",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Damage Reduction [MYTHIC]",
+		"value": 0.05,
 		"stats": {
 			"FlatDR": 0.05,
 		},
@@ -6479,9 +6489,10 @@ fragments = {
 	},
 	"Elemental Damage": {
 		"name": "Elemental Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Elemental Damage [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"ElementalDamage": 0.10,
@@ -6491,9 +6502,10 @@ fragments = {
 	"Elemental Resistance": {
 		"customBase": null,
 		"name": "Elemental Resistance",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1 Elemental Damage Resistance [MYTHIC]",
+		"value": 10,
 		"stats": {
 			"Burn": 10,
 			"Shock": 10,
@@ -6503,19 +6515,23 @@ fragments = {
 	},
 	"Grey Health Rate": {
 		"name": "Grey Health Rate",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
+		"value": 0.20,
 		"customBase": null,
-		"stats": {},
+		"stats": {
+			"GreyHealthConversion": 0.20,
+		},
 		"tags": [] //this is legit ONLY the CONVERSION rate btw
 	},
 	"Healing Effectiveness": {
 		"customBase": null,
 		"name": "Healing Effectiveness",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Healing Effectiveness [MYTHIC]",
+		"value": 0.2,
 		"stats": {
 			"HealingEFF": 0.2
 		},
@@ -6524,30 +6540,20 @@ fragments = {
 	"Health": {
 		"customBase": null,
 		"name": "Health",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Health [MYTHIC]",
+		"value": 0.15,
 		"stats": {
 			"Health%": 0.15
 		},
 		"tags": []
 	},
-	"Melee Attack Speed": {
-		"name": "Melee Attack Speed",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
-		"customBase": null,
-		"stats": {
-			"AttackSpeed": 0.15,
-		},
-		"tags": []
-	},
 	"Melee Critical Chance": {
 		"name": "Melee Critical Chance",
-		"slot": "RFrag",
-		"image": "",
-		"desc": "",
+		"slot": "RFragRed",
+		"image": 0.10,
+		"desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
 		"customBase": null,
 		"stats": {
 			"MeleeCritChance": 0.10,
@@ -6556,9 +6562,10 @@ fragments = {
 	},
 	"Melee Critical Damage": {
 		"name": "Melee Critical Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
+		"value": 0.15,
 		"customBase": null,
 		"stats": {
 			"MeleeCritDamage": 0.15,
@@ -6567,20 +6574,35 @@ fragments = {
 	},
 	"Melee Damage": {
 		"name": "Melee Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Melee Damage [MYTHIC]",
+		"value": 0.15,
 		"customBase": null,
 		"stats": {
 			"MeleeDamage": 0.15,
 		},
 		"tags": []
 	},
+	"Melee Speed": {
+		"name": "Melee Speed",
+		"slot": "RFragRed",
+		"image": "",
+		"desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
+		"value": 0.15,
+		"customBase": null,
+		"stats": {
+			"AttackSpeed": 0.15,
+			"ChargeSpeed": 0.15,
+		},
+		"tags": []
+	},
 	"Mod Cost": {
 		"name": "Mod Cost",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Mod Cost [MYTHIC]",
+		"value": -0.10,
 		"customBase": null,
 		"stats": {
 			"ModCost": -0.10,
@@ -6589,9 +6611,10 @@ fragments = {
 	},
 	"Mod Damage": {
 		"name": "Mod Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Mod Damage [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"ModDamage": 0.10,
@@ -6600,9 +6623,10 @@ fragments = {
 	},
 	"Mod Duration": {
 		"name": "Mod Duration",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Mod Duration [MYTHIC]",
+		"value": 0.15,
 		"customBase": null,
 		"stats": {
 			"ModDuration": 0.15,
@@ -6611,20 +6635,22 @@ fragments = {
 	},
 	"Ranged Critical Chance": {
 		"name": "Ranged Critical Chance",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
+		"value": 0.075,
 		"customBase": null,
 		"stats": {
-			"RangedCritChance": 0.10,
+			"RangedCritChance": 0.075,
 		},
 		"tags": []
 	},
 	"Ranged Critical Damage": {
 		"name": "Ranged Critical Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
+		"value": 0.15,
 		"customBase": null,
 		"stats": {
 			"RangedCritDamage": 0.15,
@@ -6633,9 +6659,10 @@ fragments = {
 	},
 	"Ranged Damage": {
 		"name": "Ranged Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Ranged Damage [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"RangedDamage": 0.10,
@@ -6644,9 +6671,10 @@ fragments = {
 	},
 	"Ranged Fire Rate": {
 		"name": "Ranged Fire Rate",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Fire Rate [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"FireRate": 0.10,
@@ -6655,9 +6683,10 @@ fragments = {
 	},
 	"Recoil": {
 		"name": "Recoil",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Recoil [MYTHIC]",
+		"value": -0.30,
 		"customBase": null,
 		"stats": {
 			"Recoil": -0.30,
@@ -6666,9 +6695,10 @@ fragments = {
 	},
 	"Revive Speed": {
 		"name": "Revive Speed",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Revive Speed [MYTHIC]",
+		"value": 0.25,
 		"customBase": null,
 		"stats": {},
 		"tags": []
@@ -6676,9 +6706,10 @@ fragments = {
 	"Shield Effectiveness": {
 		"customBase": null,
 		"name": "Shield Effectiveness",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Shield Amount [MYTHIC]",
+		"value": 0.2,
 		"stats": {
 			"ShieldEFF": 0.2
 		},
@@ -6686,9 +6717,10 @@ fragments = {
 	},
 	"Skill Cooldown": {
 		"name": "Skill Cooldown",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
+		"value": -0.10,
 		"customBase": null,
 		"stats": {
 			"CDR": -0.10,
@@ -6697,9 +6729,10 @@ fragments = {
 	},
 	"Skill Damage": {
 		"name": "Skill Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Skill Damage [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"SkillDamage": 0.10,
@@ -6708,9 +6741,10 @@ fragments = {
 	},
 	"Skill Duration": {
 		"name": "Skill Duration",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Skill Duration [MYTHIC]",
+		"value": 0.10,
 		"customBase": null,
 		"stats": {
 			"SkillDuration": 0.10,
@@ -6719,9 +6753,10 @@ fragments = {
 	},
 	"Spread Recovery": {
 		"name": "Spread Recovery",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
+		"value": -0.30,
 		"customBase": null,
 		"stats": {
 			"SpreadRecovery": -0.30,
@@ -6730,9 +6765,10 @@ fragments = {
 	},
 	"Stagger Damage": {
 		"name": "Stagger Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Stagger Damage [MYTHIC]",
+		"value": 0.20,
 		"customBase": null,
 		"stats": {
 			"StaggerDamage": 0.20,
@@ -6742,9 +6778,10 @@ fragments = {
 	"Stamina": {
 		"customBase": null,
 		"name": "Stamina",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Stamina [MYTHIC]",
+		"value": 0.15,
 		"stats": {
 			"Stamina%": 0.15
 		},
@@ -6753,9 +6790,10 @@ fragments = {
 	"Stamina Cost": {
 		"customBase": null,
 		"name": "Stamina Cost",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Reduced Stamina Cost [MYTHIC]",
+		"value": -0.2,
 		"stats": {
 			"StaminaCost": -0.2
 		},
@@ -6763,18 +6801,20 @@ fragments = {
 	},
 	"Stamina Recovery Delay": {
 		"name": "Stamina Recovery Delay",
-		"slot": "RFrag",
+		"slot": "RFragBlue",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
+		"value": -0.30,
 		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Weakspot Damage": {
 		"name": "Weakspot Damage",
-		"slot": "RFrag",
+		"slot": "RFragRed",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
+		"value": 0.15,
 		"customBase": null,
 		"stats": {
 			"AllWeakspot": 0.15,
@@ -6783,9 +6823,10 @@ fragments = {
 	},
 	"Weapon Spread": {
 		"name": "Weapon Spread",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Weapon Spread [MYTHIC]",
+		"value": -0.15,
 		"customBase": null,
 		"stats": {
 			"Spread": -0.15,
@@ -6794,12 +6835,13 @@ fragments = {
 	},
 	"Weapon Swap": {
 		"name": "Weapon Swap",
-		"slot": "RFrag",
+		"slot": "RFragYellow",
 		"image": "",
-		"desc": "",
+		"desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
+		"value": 0.35,
 		"customBase": null,
 		"stats": {
-			"WeaponSwapSpeed": 0.20,
+			"WeaponSwapSpeed": 0.35,
 		},
 		"tags": []
 	}
@@ -6812,6 +6854,7 @@ traits = {
 		"name": "",
 		"property": "",
 		"customBase": null,
+		"desc": "",
 		"level": {
 			"0": 0,
 			"1": 0,
@@ -6830,6 +6873,7 @@ traits = {
 		"name": "Affliction",
 		"property": "StatusDuration",
 		"customBase": null,
+		"desc": "Increases STATUS EFFECT duration against enemies by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.10,
@@ -6848,6 +6892,7 @@ traits = {
 		"name": "Ammo Reserves",
 		"property": "Reserves",
 		"customBase": null,
+		"desc": "Increases Ammo Reserves by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.05,
@@ -6866,6 +6911,7 @@ traits = {
 		"name": "Amplitude",
 		"property": "auraAOE",
 		"customBase": null,
+		"desc": "Increases AOE and AURA Size by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.05,
@@ -6884,6 +6930,7 @@ traits = {
 		"name": "Arcane Strike",
 		"property": "ModPowerGenMelee",
 		"customBase": null,
+		"desc": "Increases Mod Power Generation from Melee Damage by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.05,
@@ -6902,6 +6949,7 @@ traits = {
 		"name": "Barkskin",
 		"property": "FlatDR",
 		"customBase": null,
+		"desc": "Reduces all incoming damage by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.01,
@@ -6920,6 +6968,7 @@ traits = {
 		"name": "Blood Bond",
 		"property": "DMGKept",
 		"customBase": null,
+		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Populates as a "Damage Kept" bonus in Advanced Stats regardless of SUMMON COUNT settings.`,
 		"level": {
 			"0": 0,
 			"1": -0.01,
@@ -6938,6 +6987,7 @@ traits = {
 		"name": "Bloodstream",
 		"property": "GreyHP/S+",
 		"customBase": null,
+		"desc": "Increases Grey Health Regeneration by VALUE1.1/s.",
 		"level": {
 			"0": 0,
 			"1": 0.3,
@@ -6956,6 +7006,7 @@ traits = {
 		"name": "Chakra",
 		"property": "ModDuration",
 		"customBase": null,
+		"desc": "Increases Mod Duration by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.03,
@@ -6972,26 +7023,28 @@ traits = {
 	},
 	"Dark Pact": {
 		"name": "Dark Pact",
-		"property": "GreyHP/S%",
+		"property": "GreyHealthConversion",
 		"customBase": null,
+		"desc": "Increases Grey Health Conversion Rate by VALUE1.1%.<br><br>Conversion Rate is how much HP is converted to GHP when you take damage, not your regen rate.",
 		"level": {
-			"0": 0,
-			"1": -0.09,
-			"2": -0.18,
-			"3": -0.27,
-			"4": -0.36,
-			"5": -0.45,
-			"6": -0.54,
-			"7": -0.63,
-			"8": -0.72,
-			"9": -0.81,
-			"10": -0.9
+			"0": 0.00,
+			"1": 0.03,
+			"2": 0.06,
+			"3": 0.09,
+			"4": 0.12,
+			"5": 0.15,
+			"6": 0.18,
+			"7": 0.21,
+			"8": 0.24,
+			"9": 0.27,
+			"10": 0.3
 		}
 	},
 	"Endurance": {
 		"name": "Endurance",
 		"property": "Stamina",
 		"customBase": null,
+		"desc": "Increases Max Stamina by VALUE1.1.",
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -7010,6 +7063,7 @@ traits = {
 		"name": "Expertise",
 		"property": "CDR",
 		"customBase": null,
+		"desc": "Reduces Skill Cooldowns by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
 			"1": -0.02,
@@ -7028,6 +7082,7 @@ traits = {
 		"name": "Fitness",
 		"property": "EvadeDistance",
 		"customBase": null,
+		"desc": "Increases Evade Distance by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.03,
@@ -7046,6 +7101,7 @@ traits = {
 		"name": "Flash Caster",
 		"property": "CastSpeed",
 		"customBase": null,
+		"desc": "Increases Casting Speed by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.05,
@@ -7064,6 +7120,7 @@ traits = {
 		"name": "Footwork",
 		"property": "AimMovementSpeed",
 		"customBase": null,
+		"desc": "Increases Movement Speed while Aiming by VALUE1.1%.",
 		"level": {
 			"0": 0.0,
 			"1": 0.05,
@@ -7082,6 +7139,7 @@ traits = {
 		"name": "Fortify",
 		"property": "Armor%",
 		"customBase": null,
+		"desc": "Increases Armor Effectiveness by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.05,
@@ -7100,6 +7158,7 @@ traits = {
 		"name": "Gifted",
 		"property": "SkillDuration",
 		"customBase": null,
+		"desc": "Increases Skill Duration by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.03,
@@ -7118,6 +7177,7 @@ traits = {
 		"name": "Glutton",
 		"property": "RelicSpeed",
 		"customBase": null,
+		"desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": -0.035,
@@ -7136,6 +7196,7 @@ traits = {
 		"name": "Handling",
 		"property": ["Spread","Recoil"],
 		"customBase": null,
+		"desc": "Reduces Weapon Spread and Recoil by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
 			"1": -0.03,
@@ -7154,6 +7215,7 @@ traits = {
 		"name": "Kinship",
 		"property": "SelfDamageModifier",
 		"customBase": null,
+		"desc": "Reduces FriendlyFire Damage Dealt and Received by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
 			"1": -0.08,
@@ -7172,6 +7234,7 @@ traits = {
 		"name": "Leech",
 		"property": "LifestealEFF",
 		"customBase": null,
+		"desc": "Increases Lifesteal Efficacy by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.05,
@@ -7190,6 +7253,7 @@ traits = {
 		"name": "Longshot",
 		"property": "Range",
 		"customBase": null,
+		"desc": "Increases Weapon Ideal Range by VALUE1.1m.",
 		"level": {
 			"0": 0.00,
 			"1": 0.60,
@@ -7208,6 +7272,7 @@ traits = {
 		"name": "Potency",
 		"property": "ConsumableDuration",
 		"customBase": null,
+		"desc": "Increases Consumable Duration by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.10,
@@ -7226,6 +7291,7 @@ traits = {
 		"name": "Recovery",
 		"property": "Stamina/S+",
 		"customBase": null,
+		"desc": "Increases Stamina Regen by VALUE1.1/s.",
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -7244,6 +7310,7 @@ traits = {
 		"name": "Regrowth",
 		"property": "HP/S+",
 		"customBase": null,
+		"desc": "Increases Health Regeneration by VALUE1.1/s.",
 		"level": {
 			"0": 0,
 			"1": 0.15,
@@ -7262,42 +7329,45 @@ traits = {
 		"name": "Resolute",
 		"property": null,
 		"customBase": null,
+		"desc": "Reduces Hit Reaction Time by VALUE1.1%",
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.025,
+			"2": 0.05,
+			"3": 0.075,
+			"4": 0.10,
+			"5": 0.125,
+			"6": 0.15,
+			"7": 0.175,
+			"8": 0.20,
+			"9": 0.225,
+			"10": 0.25
 		}
 	},
 	"Revivalist": {
 		"name": "Revivalist",
 		"property": null,
 		"customBase": null,
+		"desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.05,
+			"2": 0.10,
+			"3": 0.15,
+			"4": 0.20,
+			"5": 0.25,
+			"6": 0.30,
+			"7": 0.35,
+			"8": 0.40,
+			"9": 0.45,
+			"10": 0.50
 		}
 	},
 	"Rugged": {
 		"name": "Rugged",
 		"property": "SummonHealth",
 		"customBase": null,
+		"desc": "Increases the Health of Archetype Summons by a VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.10,
@@ -7316,24 +7386,26 @@ traits = {
 		"name": "Scholar",
 		"property": null,
 		"customBase": null,
+		"desc": "Increases Experience Gain by VALUE1.1%.",
 		"level": {
-			"0": null,
-			"1": null,
-			"2": null,
-			"3": null,
-			"4": null,
-			"5": null,
-			"6": null,
-			"7": null,
-			"8": null,
-			"9": null,
-			"10": null
+			"0": 0.00,
+			"1": 0.01,
+			"2": 0.02,
+			"3": 0.03,
+			"4": 0.05,
+			"5": 0.06,
+			"6": 0.07,
+			"7": 0.10,
+			"8": 0.12,
+			"9": 0.12,
+			"10": 0.15
 		}
 	},
 	"Shadeskin": {
 		"name": "Shadeskin",
 		"property": ["Burn","Shock","Corrosive"],
 		"customBase": null,
+		"desc": "Increases Elemental Damage Resistance by VALUE1.1.",
 		"level": {
 			"0": 0,
 			"1": 2,
@@ -7352,6 +7424,7 @@ traits = {
 		"name": "Siphoner",
 		"property": "Lifesteal",
 		"customBase": null,
+		"desc": "Grants VALUE1.1% base damage as Lifesteal.",
 		"level": {
 			"0": 0,
 			"1": 0.003,
@@ -7370,6 +7443,7 @@ traits = {
 		"name": "Spirit",
 		"property": "ModPowerGen",
 		"customBase": null,
+		"desc": "Increases Mod Power Generation by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.02,
@@ -7388,6 +7462,7 @@ traits = {
 		"name": "Strong Back",
 		"property": "WeightThreshold",
 		"customBase": null,
+		"desc": "Increases Dodge Weight Threshold by VALUE1.1.",
 		"level": {
 			"0": 0,
 			"1": 1.5,
@@ -7406,6 +7481,7 @@ traits = {
 		"name": "Swiftness",
 		"property": "MovementSpeed",
 		"customBase": null,
+		"desc": "Increases Movement Speed by VALUE1.1%.<br>Increases Environmental Movement Speed by VALUE2.1%.<br>(Vaulting, Ladders, Wading)",
 		"level": {
 			"0": 0.00,
 			"1": 0.01,
@@ -7439,6 +7515,7 @@ traits = {
 		"name": "Triage",
 		"property": "HealingEFF",
 		"customBase": null,
+		"desc": "Increases Healing by VALUE1.1%.",
 		"level": {
 			"0": 0,
 			"1": 0.05,
@@ -7457,6 +7534,7 @@ traits = {
 		"name": "Untouchable",
 		"property": "iFrameWindow",
 		"customBase": null,
+		"desc": "Increases Evade Window by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
 			"1": 0.03,
@@ -7475,6 +7553,7 @@ traits = {
 		"name": "Vigor",
 		"property": "Health",
 		"customBase": null,
+		"desc": `Increases Max Health by VALUE1.1.`,
 		"level": {
 			"0": 0,
 			"1": 3,
@@ -11280,10 +11359,10 @@ substatColorMods = [
 	"corrosive","corroded","acid","toxic",
 	"bleed","bleeding",
 	"shock","shocked","overload","overloaded",
-	"slow","bulwark","haste","status","tarred","spirit of the red doe",
+	"slow","bulwark","haste","status","tarred","spirit of the red doe","drenched","gloom","brittle",
 	"fire","burn","burning",
 	"shield","shields",
-	"blight","madness","fragmented","level 10",
+	"blight","madness","fragmented","level 10","exposed", "gift of the forest",
 	"curse",
 	"root rot",
 	"suppression"
@@ -11429,6 +11508,8 @@ globalRecords = {
 	"RECORDEDuseRelicHealing": false,
 	"ALTuseNonStandardDR": false,
 	"RECORDEDuseNonStandardDR": false,
+
+	"currentBestStatistic": 0,
 
 	"searchSettingsToggles": {
 		"usePrimePerk": true,

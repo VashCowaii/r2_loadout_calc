@@ -1,6 +1,6 @@
-postMessage({command: `pushDebugLine`, data: "INITIATING CYCLEWORKER"});
-importScripts(`data.js`,`combinations.js`,`formulas.js`,`code.js`);//`../dpsModules/melee.js`,
-postMessage({command: `pushDebugLine`, data: "Worker: Imported scripts"});
+// postMessage({command: 'pushDebugLine', data: "INITIATING CYCLEWORKER"});
+importScripts('data.js','combinations.js','formulas.js','code.js');//`../dpsModules/melee.js`,
+postMessage({command: 'pushDebugLine', data: "Worker: Imported scripts"});
 
 self.onmessage = function(event) {
     const data = event.data;
@@ -8,21 +8,20 @@ self.onmessage = function(event) {
     //Data copy calls
     if (data.command === 'copyFilteredTables') {
         cycles.vars = data.data;
-        postMessage({command: `pushDebugLine`, data: "Worker: Copied filtered item tables"});
+        postMessage({command: 'pushDebugLine', data: "Worker: Copied filtered item tables"});
     }
     if (data.command === 'copyTableFilters') {
         filters.types = data.data;
-        postMessage({command: `pushDebugLine`, data: "Worker: Copied filters"});
+        postMessage({command: 'pushDebugLine', data: "Worker: Copied filters"});
     }
     if (data.command === 'copyDataTables') {
         globalRecords = data.data;
-        postMessage({command: `pushDebugLine`, data: "Worker: Copied data tables"});
+        postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
     }
 
     //Initiation call
     if (data.command === 'startCycles') {
-        postMessage({command: `pushDebugLine`, data: "Worker: Starting Build Cycles"});
-        // cyclesLoop.processCombinations(cyclesLoop.generateCombinations);
-        cyclesLoop.generateCombinations();
+        postMessage({command: 'pushDebugLine', data: "Worker: Starting Build Cycles"});
+        cyclesLoop.generateCombinations(true,data.data.identifier,data.data.threadCount);
     }
 };

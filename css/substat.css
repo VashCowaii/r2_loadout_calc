@@ -8,7 +8,7 @@
 .shock,.shocked,.overload,.overloaded {
     color: #7171a7;
 }
-.slow,.bulwark,.haste,.status,.tarred,.spiritofthereddoe {
+.slow,.bulwark,.haste,.status,.tarred,.spiritofthereddoe,.drenched,.gloom,.brittle {
     color: #f9ebb8;
 }
 .fire,.burn,.burning {
@@ -17,7 +17,7 @@
 .shield,.shields {
     color: #b4e6f3;
 }
-.blight,.madness,.fragmented,.numberTag,.level10 {
+.blight,.madness,.fragmented,.numberTag,.level10,.exposed,.giftofteforest {
     color: white;
 }
 .curse {

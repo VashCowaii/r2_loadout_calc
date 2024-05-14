@@ -22,6 +22,8 @@
 </script>
 
 <body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+
     <div id="gameNav" class="sidenav"> <!-- Sidenav -->
         <a href="homePage.html" rel="noopener noreferrer"><img class="roundedIcon" src="images/Cowaii.png" alt="Home Icon" style="border-radius: 50%;"></a>
         <a href="index.html?s=s" rel="noopener noreferrer"><img class="roundedIcon" src="images/Remnant/R2icon.png" alt="Remnant 2 Icon"></a>
@@ -77,6 +79,7 @@
                             My builds are as follows:
                             <ul style="padding: 2%; text-align: left;">
                                 <li>- <a href="https://youtu.be/8uNXsvHY0bU" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Crystal Staff Tank</a></li>
+                                <li>- <a href="https://youtu.be/EnjZwWYwKkg" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">AFK Flail-Tank</a></li>
                                 <li>- <a href="https://youtu.be/TUrBo71q71E" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">30sec Boss Kills - Havoc Form</a></li>
                                 <li>- <a href="https://youtu.be/TVjI7TXgjIE" style="color: #93CCEA;" target="_blank" rel="noopener noreferrer">Left-Click-Only Melee Tank</a></li>
                                 <br>
@@ -391,15 +394,15 @@
                             <div class="fragmentsContainer">
                                 <div>Fragments:</div>
                                 <div class="presetsSelectorBox adjustedSpacingSelector">
-                                    <input class="selectSelector selectMiniSelectorAdjustment" id="fragment1" list="fragment1List" onchange="userTrigger.updateFragment('fragment','1')"> <!--selector-->
+                                    <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment1" list="fragment1List" onchange="userTrigger.updateFragment('fragment','1')"> <!--selector-->
                                     <datalist id="fragment1List"></datalist>
                                 </div>
                                 <div class="presetsSelectorBox adjustedSpacingSelector">
-                                    <input class="selectSelector selectMiniSelectorAdjustment" id="fragment2" list="fragment2List" onchange="userTrigger.updateFragment('fragment','2')"> <!--selector-->
+                                    <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment2" list="fragment2List" onchange="userTrigger.updateFragment('fragment','2')"> <!--selector-->
                                     <datalist id="fragment2List"></datalist>
                                 </div>
                                 <div class="presetsSelectorBox adjustedSpacingSelector">
-                                    <input class="selectSelector selectMiniSelectorAdjustment" id="fragment3" list="fragment3List" onchange="userTrigger.updateFragment('fragment','3')"> <!--selector-->
+                                    <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment3" list="fragment3List" onchange="userTrigger.updateFragment('fragment','3')"> <!--selector-->
                                     <datalist id="fragment3List"></datalist>
                                 </div>
                             </div>
@@ -2209,6 +2212,16 @@
                         </div>
                     </div>
 
+                    <div class="statisticSettingsRow hasHoverTooltip" id="threadCountTooltip">
+                        <!-- <div class="statsRowName">Enemy Count:&nbsp;<span id="selectedEnemyCount">0</span></div> -->
+                        <!-- <div class="statsRowToggle"> -->
+                            <span>Open CPU Threads:</span>
+                            <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                            <span id="selectedThreadCount">0</span>
+                            <span>/16&nbsp;[?]</span>
+                        <!-- </div> -->
+                    </div>
+
                     <div class="cyclesControlBox">
                         <button type="button" onclick="cyclesLoop.generationStart()" id="cycleSTART" class="cyclesControl" style="background-color: #90ee90;">START</button>
                         <button type="button" onclick="cyclesLoop.generationStop()" id="cycleSTOP" disabled class="cyclesControl">ABORT</button>
@@ -2222,7 +2235,8 @@
                             <span id="counterInt" class="counterDisplay">0</span> / <span id="comboCount" class="counterDisplay">0</span>
                         </div>
                     </div>
-                    <span id="lastFound"></span>
+                    <span>Currently Open Threads: <span id="openThreadsDisplay">0</span>/<span id="maxThreadsDisplay">0</span></span>
+                    <span class="hasHoverTooltip" id="lastFound"></span>
                     <div class="comboDisplay"> <!-- The visual display for best current build in queries -->
                         <div class="comboDisplayImageBox">
                             <!-- BACKGROUND BANNERS -->
@@ -2402,6 +2416,7 @@
 <script src="formulas.js"></script>
 <script src="attacks_Male.js"></script>
 <script src="code.js"></script>
+<script src="tooltips.js"></script>
 <script src="pagePopulation.js"></script>
 </body>
 
