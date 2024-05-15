@@ -1069,7 +1069,7 @@ let cyclesLoop = {
 
                             cyclesLoop.updateCycleRecord(cycleObject,true);//Updates the ALT records with everything from the cycle object
 
-                            for (let i=30;i>1;i--) {
+                            for (let i=50;i>1;i--) {
                                 cyclesLoop.bestCombos[i] = cyclesLoop.bestCombos[i-1] ? {...cyclesLoop.bestCombos[i-1]} : {"bestValue":0,"link":""};
                             }
 
@@ -1090,7 +1090,7 @@ let cyclesLoop = {
                             
                             
                             readSelection("comboTargetDisplay").innerHTML = `<div class="bestOptionsRow">Target Statistic: ${targetName}</div>`
-                            for (let i=1;i<=30;i++) {
+                            for (let i=1;i<=50;i++) {
                                 let textPrefix = `${i}`
                                 if (i===1) {textPrefix = `Current Best`;}
                                 if (comboPath[i].bestValue) {
