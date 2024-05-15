@@ -1394,6 +1394,7 @@ let userTrigger = {
 
     //Assign the value to the general storage
     globalRecords.weapons[`${collection}Mutator`] = selectedMutator.value;
+    readSelection(`${type}${modifier}Image`).src = mutators[`${collection}Mutators`][selectedMutator.value].image;
     readSelection(`${collection}MutatorMAIN`).innerHTML = selectedMutator.value;
     //Update accessory image, description, and then refresh formulas.
     readSelection(`${collection}MutatorDesc`).innerHTML = userTrigger.updateSubstatColor(mutators[`${collection}Mutators`][selectedMutator.value].desc);

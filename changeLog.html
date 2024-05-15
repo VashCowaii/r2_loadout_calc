@@ -50,6 +50,15 @@
                 </div> -->
                 KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
                 <div>
+                    <h1>May 15, 2024</h1>
+                    <ul>
+                        <li>Added images to all mutators, they'll now display in the formerly empty box in a weapon's display tab.</li>
+                        <li>Query results now store the top 30 builds, instead of the top 3. This was added because with the change I brought yesterday I forgot to mention that repeat value results will now show where they didn't before. I don't mean repeat builds, I mean repeat target values, so if two entirely different builds result in exactly 800 EHP on an EHP query, they'll both show up now, and stuff like that happens WAY more than you think it would lol. Before, if an equivalent target value was found, it was skipped because it wasn't greater than the target value already found.</li>
+                        <li>Fixed an issue where if a query was forcibly aborted due to excessive possible combos, it didn't fully reset some UI elements necessary to modify or restart further queries. The user could still get around it by clicking "abort" as the button is attached to code that would reset it properly, but now it's fixed anyways.</li>
+                        <li>Changed Bottom Feeder's name to Spirit Feeder like in game</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>May 14, 2024 - <h3><span class="haste">THE QUERY SPEED UPDATE</span> (Up to 90% faster)</h1>
                     <ul>
                         <li>Queries now offer an option to increase the number of threads on your CPU that queries can operate on. This will DRASTICALLY increase query speeds, but be sure to monitor CPU and RAM usage to make sure you didn't open too many, as while it does speed things up it also comes at a cost. Refer to your CPU's Core Count as a general rule of thumb.</li>

@@ -858,6 +858,7 @@ let cyclesLoop = {
                     cycles.vars.workersRunning = cycles.vars.threadCount;
                     globalRecords.currentBestStatistic = 0;
                     cycles.vars.lastTimerEvaluation = 0;
+                    cyclesLoop.bestCombos = {};
 
                     cyclesLoop.updateSetupStep(`Initiating Web Workers ${i}-${cycles.vars.threadCount}`,false,1);
                     for (let i=1;i<=cycles.vars.threadCount;i++) {
@@ -1068,26 +1069,35 @@ let cyclesLoop = {
 
                             cyclesLoop.updateCycleRecord(cycleObject,true);//Updates the ALT records with everything from the cycle object
 
-                            cyclesLoop.bestCombos.third = cyclesLoop.bestCombos.second ? {...cyclesLoop.bestCombos.second} : {"bestValue":0,"link":""};
-                            cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
+                            for (let i=30;i>1;i--) {
+                                cyclesLoop.bestCombos[i] = cyclesLoop.bestCombos[i-1] ? {...cyclesLoop.bestCombos[i-1]} : {"bestValue":0,"link":""};
+                            }
+
+                            // cyclesLoop.bestCombos.third = cyclesLoop.bestCombos.second ? {...cyclesLoop.bestCombos.second} : {"bestValue":0,"link":""};
+                            // cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
 
                             let targetDamageCategory;
                             if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.one.ability) {targetDamageCategory = "ability1Breakdown"}
                             else if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.two.ability) {targetDamageCategory = "ability2Breakdown"}
 
-                            cyclesLoop.bestCombos.first = {
+                            cyclesLoop.bestCombos[1] = {
                                 "bestValue": preArmor.toFixed(2),
                                 "link": manipulateURL.updateURLparameters(false,true)
                             }
 
                             comboPath = cyclesLoop.bestCombos
                             let targetName = Array.isArray(filters.types.vars.oldTarget) ? filters.types.vars.oldTarget[0] + " " + filters.types.vars.oldTarget[2] : filters.types.vars.oldTarget;
-                            readSelection("comboTargetDisplay").innerHTML = `
-                            <div class="bestOptionsRow">Target Statistic: ${targetName}</div>
-                            <div class="bestOptionsRow">Current Best: <a href="${comboPath.first.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.first.bestValue}</a></div>
-                            <div class="bestOptionsRow">Second: <a href="${comboPath.second.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.second.bestValue}</a></div>
-                            <div class="bestOptionsRow">Third: <a href="${comboPath.third.link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath.third.bestValue}</a></div>
-                            `
+                            
+                            
+                            readSelection("comboTargetDisplay").innerHTML = `<div class="bestOptionsRow">Target Statistic: ${targetName}</div>`
+                            for (let i=1;i<=30;i++) {
+                                let textPrefix = `${i}`
+                                if (i===1) {textPrefix = `Current Best`;}
+                                if (comboPath[i].bestValue) {
+                                readSelection("comboTargetDisplay").innerHTML += `
+                                <div class="bestOptionsRow">${textPrefix}: <a href="${comboPath[i].link}" rel="noopener noreferrer" target="_blank" class="bestOptionsLink">${comboPath[i].bestValue}</a></div>
+                                `}
+                            }
 
                             readSelection(`lastFound`).innerHTML = `Last Loadout Found at #${counterInt.toLocaleString()}`
 
@@ -1104,7 +1114,10 @@ let cyclesLoop = {
             else {
                 switch (data.command) {
                     case `pushDebugLine`: cycles.debugPushLine(data.data); break;
-                    case `pushAlert`: alert(data.data); break
+                    case `pushAlert`: 
+                        if (data.isAborted) {cyclesLoop.generationStop("","",true)}
+                        alert(data.data); 
+                        break
                     case `pushInnerHTML`:
                         if (data.ID === "comboCount") {
                             //Store the total combo count so we don't have to replace commas every time
@@ -1396,7 +1409,7 @@ let cyclesLoop = {
         //If this is going to take way too long, then quit and let the user know.
         if (comboCounter > 10000000000 && !cycles.vars.bypassLimit) {
             if (moduloFactor === 1) {
-                postMessage({command: `pushAlert`, data: `Possible combinations (${comboCounter.toLocaleString()}) exceeds the limit of 10 BILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue.`});
+                postMessage({command: `pushAlert`, data: `Possible combinations (${comboCounter.toLocaleString()}) exceeds the limit of 10 BILLION.\nAdjust your filters and try again as there is no feasible way in hell you're getting the answer you need by the time you need it, if we let this query continue.`, isAborted: true});
             }
             cyclesLoop.selfGenerationStop();
             return;
