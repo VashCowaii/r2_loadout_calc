@@ -1478,7 +1478,7 @@ let cyclesLoop = {
                                                         }
 
                                                         if (!targetIsArray) {
-                                                            if (((preArmor[targetStatistic] > recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
+                                                            if (((preArmor[targetStatistic] >= recordedStatistic) && !!preArmor[targetStatistic]) || (!recordedStatistic)) {
                                                                 recordedStatistic = +preArmor[targetStatistic];
                                                                 postMessage({command: `yieldCombination`,isUpdated:true,cycleObject,preArmor:preArmor[targetStatistic],lastSent,isClosed});
                                                                 lastSent = 0;
@@ -1486,7 +1486,7 @@ let cyclesLoop = {
                                                             }
                                                         } 
                                                         else {
-                                                            if (((preArmor[targetDamageCategory][targetStatistic[1]] > recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
+                                                            if (((preArmor[targetDamageCategory][targetStatistic[1]] >= recordedStatistic) && !!preArmor[targetDamageCategory][targetStatistic[1]]) || (!recordedStatistic)) {
                                                                 recordedStatistic = +preArmor[targetDamageCategory][targetStatistic[1]];
                                                                 postMessage({command:`yieldCombination`,isUpdated:true,cycleObject,preArmor:preArmor[targetDamageCategory][targetStatistic[1]],lastSent,isClosed});
                                                                 lastSent = 0;
