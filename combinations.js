@@ -40,10 +40,10 @@ let cycles = {
         "Grey Health Regen": [
             "Grey Health-Flat/second", "Grey Health-Hit Threshold", "Grey Health-% Recovery Modifier", "Grey Health Conversion",
         ],
-        "Lifesteal Peak": [
+        "Lifesteal (All forms)": [
             "Lifesteal Effectiveness","RelicLifesteal","Lifesteal-All","Lifesteal-Melee","Lifesteal-Melee Charged","Lifesteal-Ranged","Status-Outgoing Statuses","Status-Self-Bleed","Relic Effectiveness"
         ],
-        "Havoc Form": [
+        "Havoc Form Damage": [
             "Critical Chance-All","Critical Chance-Elemental","Critical Chance-Skill",
             "Critical Damage-All",
             "Damage-All","Damage-Elemental","Damage-Shock","Damage-Skill",
@@ -59,6 +59,10 @@ let cycles = {
             "Healing-Flat/second","Healing-%/second","Consumable-Concoction Limit",
 
             "Shield-Flat",
+        ],
+        "Movement Speed": [
+            "Speed-Movement",
+            "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
         ]
     },
     "vars": {
@@ -278,42 +282,19 @@ let cycles = {
         return returnTable;
     },
     extractTableEntry(item) {
-        for (let entry in amulets) {
-            if (item===entry) {return amulets[item];}
-        }
-        for (let entry in rings ) {
-            if (item===entry) {return rings[item];}
-        }
-        for (let entry in relics ) {
-            if (item===entry) {return relics[item];}
-        }
-        for (let entry in fragments) {
-            if (item===entry) {return fragments[item];}
-        }
-        for (let entry in primary) {
-            if (item===entry) {return primary[item];}
-        }
-        for (let entry in melee) {
-            if (item===entry) {return melee[item];}
-        }
-        for (let entry in secondary) {
-            if (item===entry) {return secondary[item];}
-        }
-        for (let entry in rangedMutators) {
-            if (item===entry) {return rangedMutators[item];}
-        }
-        for (let entry in meleeMutators) {
-            if (item===entry) {return meleeMutators[item];}
-        }
-        for (let entry in rangedMods) {
-            if (item===entry) {return rangedMods[item];}
-        }
-        for (let entry in concoctions) {
-            if (item===entry) {return concoctions[item];}
-        }
-        for (let entry in quickUses) {
-            if (item===entry) {return quickUses[item];}
-        }
+        if (amulets[item]) {return amulets[item];}
+        if (rings[item]) {return rings[item];}
+        if (relics[item]) {return relics[item];}
+        if (fragments[item]) {return fragments[item];}
+        if (primary[item]) {return primary[item];}
+        if (melee[item]) {return melee[item];}
+        if (secondary[item]) {return secondary[item];}
+        if (rangedMutators[item]) {return rangedMutators[item];}
+        if (meleeMutators[item]) {return meleeMutators[item];}
+        if (rangedMods[item]) {return rangedMods[item];}
+        if (concoctions[item]) {return concoctions[item];}
+        if (rings[item]) {return rings[item];}
+        if (quickUses[item]) {return quickUses[item];}
         postMessage({command: `pushAlert`, data: `cycles.extractTableEntry(${item}) failed to find an valid item entry.`});
     },
     checkConcoctionLimit(table,slots,item1,item2,item3,item4,item5,item6,item7) {
@@ -465,7 +446,7 @@ let cycles = {
             if (slots>=1) {
                 let iteration = 0;
                 //if slot 1 is locked/dedicated
-                if (specified[0]) {
+                if (specified[0] || specified[0] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===1) {
                         if (hasConcoctions) {
@@ -503,7 +484,7 @@ let cycles = {
             if (slots>=2) {
                 const slotNames = tables.length>=2 ? Object.keys(tables[1]) : slotNamesStarter;
                 let iteration = 0;
-                if (specified[1]) {
+                if (specified[1] || specified[1] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===2) {
                         if (hasConcoctions) {
@@ -540,7 +521,7 @@ let cycles = {
             if (slots>=3) {
                 const slotNames = tables.length>=3 ? Object.keys(tables[2]) : slotNamesStarter;
                 let iteration = 0;
-                if (specified[2]) {
+                if (specified[2] || specified[2] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===3) {
                         if (hasConcoctions) {
@@ -577,7 +558,7 @@ let cycles = {
             if (slots>=4) {
                 const slotNames = tables.length>=4 ? Object.keys(tables[3]) : slotNamesStarter;
                 let iteration = 0;
-                if (specified[3]) {
+                if (specified[3] || specified[3] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===4) {
                         if (hasConcoctions) {
@@ -628,7 +609,7 @@ let cycles = {
             if (slots>=5) {
                 const slotNames = tables.length>=5 ? Object.keys(tables[4]) : slotNamesStarter;
                 let iteration = 0;
-                if (specified[4]) {
+                if (specified[4] || specified[4] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===5) {
                         if (hasConcoctions) {
@@ -665,7 +646,7 @@ let cycles = {
             if (slots>=6) {
                 const slotNames = tables.length>=6 ? Object.keys(tables[5]) : slotNamesStarter;
                 let iteration = 0;
-                if (specified[5]) {
+                if (specified[5] || specified[5] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===6) {
                         if (hasConcoctions) {
@@ -702,7 +683,7 @@ let cycles = {
             if (slots>=7) {
                 const slotNames = tables.length>=7 ? Object.keys(tables[6]) : slotNamesStarter;
                 // let iteration = 0; //Not needed for the final rotation
-                if (specified[6]) {
+                if (specified[6] || specified[6] === "") {
                     if (slots===7) {
                         if (!iterateSeparately) {iteration = index;}
                         if (hasConcoctions) {
@@ -1544,11 +1525,13 @@ let cyclesLoop = {
         weaponReference.primary = value.gun1[0] ?? "";
         weaponReference.primaryMutator = value.rangedMutators[0] ?? "";
         weaponReference.primaryMod = value.rangedMods[0] ?? "";
+        if (weaponReference.primary === "Rusty Lever Action") {weaponReference.primaryMod = "";weaponReference.primaryMutator = "";}
         weaponReference.melee = value.stick[0] ?? "";
         weaponReference.meleeMutator = value.meleeMutators[0] ?? "";
         weaponReference.secondary = value.gun2[0] ?? "";
         weaponReference.secondaryMutator = value.rangedMutators[1] ?? "" ;
         weaponReference.secondaryMod = value.rangedMods[1] ?? "";
+        if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
 
         if (addArmor) {
             globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 ?? "";
@@ -1604,10 +1587,12 @@ let filters = {
         if (table.length>=limit) {filterName.value = "";return;}
 
         if ((!compareTable[filterName.value] && filterName.value && filterName.value != "--")) {filterName.value = "";return;}
+        
         let found = false;
         for (let entry in table) {
             if (table[entry]===filterName.value) {found=true;}
         }
+        if (filterName.value === "--") {filterName.value = "";}//if the user WANTS an empty filter
         if (!found) {filters.types[filterTable].filter[filterIndex].push(filterName.value)}
         filterName.value = "";
         filters.populateFilters(filterBox,filterTable,filterIndex);

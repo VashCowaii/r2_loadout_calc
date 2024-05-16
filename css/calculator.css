@@ -3071,7 +3071,8 @@ div {
     white-space: normal;
     width: calc(100% - 140px);
     /* border: 1px solid green; */
-    justify-content: flex-start;
+    flex-direction: column;
+    
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -3087,6 +3088,8 @@ div {
     /* border: 1px solid green; */
     position: static;
     height: 50px;
+    margin-top: auto;
+    margin-bottom: 2px;
 }
 .weaponModifierRowDescBox {
     display: flex;

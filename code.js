@@ -286,16 +286,22 @@ const inGameStatistics = {
   "Regen - Grey Health": "totalHealth",
 }
 
+//These are named based on the variable names within updateFormulas(), not the names of base stats on any valueTable
 const playerDerivedStatistics = {
   "EHP": "totalEHP",
-  "Health": "totalHealth",
   "EHP/s": "EHPpSec",
+  "Health": "totalHealth",
   "Health/s": "advancedTotalFlatHP",
   "Effective DR": "effectiveDR",
   "Grey Health Regen": "totalGreyHPperSec",
   "Havoc - DPS": ["Havoc Form",3,"DPS"],
   "Havoc - Total Damage": ["Havoc Form",4,"Total DMG"],
-  "Peak Lifesteal": "peakLifesteal"
+  "Lifesteal - All": "lifestealALL",
+  "Lifesteal - Melee": "lifestealMelee",
+  "Lifesteal - Melee (Charged)": "lifestealMeleeCharged",
+  "Lifesteal - Ranged": "lifestealRange",
+  "Lifesteal - Peak (Any type)": "peakLifesteal",
+  "Movement Speed": "movementSpeed"
 }
 
 let valueTables = {
@@ -1277,7 +1283,9 @@ let userTrigger = {
 
     let weaponObjectReference = weapons[type][selectedWeapon.value]
     if (type==="melee") {
+      readSelection("meleeModBox").style.display = "none";
       if (weaponObjectReference.builtIN) {
+        readSelection("meleeModBox").style.display = "flex";
         readSelection("meleeMod").innerHTML = weaponObjectReference.builtIN;
         readSelection("meleeModImage").src = builtInMelee[weaponObjectReference.builtIN].image;
         readSelection("meleeModMAIN").innerHTML = weaponObjectReference.builtIN;
@@ -1294,6 +1302,11 @@ let userTrigger = {
       let path = readSelection("rangedMod1");
       const selector = readSelection("rangedMod1List");
       const entries = selector.querySelectorAll('option');
+
+      readSelection("primaryModBox").style.display = "flex";
+      readSelection("primaryMutatorBox").style.display = "flex";
+      readSelection("primaryAttachmentsMAIN").style.display = "flex";
+
       if (weaponObjectReference.builtIN) {
         if (entries.length > Object.keys(rangedMods).length) {
           //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
@@ -1332,12 +1345,33 @@ let userTrigger = {
           readSelection(`primaryModImage`).src=mods.primaryMods[""].image;
           userTrigger.updateMod("rangedMod","1",true);
         }
+
+        if (selectedWeapon.value === "Rusty Lever Action") {
+          path.value = "";
+          // readSelection(`primaryModDesc`).innerHTML=mods.primaryMods[""].desc;
+          readSelection("primaryModMAIN").innerHTML = "";
+          readSelection("primaryMutatorMAIN").innerHTML = "";
+          // readSelection(`primaryModImage`).src=mods.primaryMods[""].image;
+
+          readSelection("primaryAttachmentsMAIN").style.display = "none";
+          readSelection("primaryModBox").style.display = "none";
+          readSelection("primaryMutatorBox").style.display = "none";
+
+          userTrigger.updateMod("rangedMod","1",true);
+          readSelection("rangedMutator1").value = "";
+          userTrigger.updateMutator('rangedMutator','1',true)
+        }
       }
     }
     else if (type==="secondary") {
       let path = readSelection("rangedMod2");
       const selector = readSelection("rangedMod2List");
       const entries = selector.querySelectorAll('option');
+
+      readSelection("secondaryModBox").style.display = "flex";
+      readSelection("secondaryMutatorBox").style.display = "flex";
+      readSelection("secondaryAttachmentsMAIN").style.display = "flex";
+
       if (weaponObjectReference.builtIN) {
         if (entries.length > Object.keys(rangedMods).length) {
           //-2 on the index bc the mods will never stack up with more than 2 custom values in a select element at once
@@ -1376,6 +1410,21 @@ let userTrigger = {
           readSelection("secondaryModMAIN").innerHTML = "";
           readSelection(`secondaryModImage`).src=mods.secondaryMods[""].image;
           userTrigger.updateMod("rangedMod","2",true);
+        }
+        if (selectedWeapon.value === "Rusty Repeater") {
+          path.value = "";
+          // readSelection(`secondaryModDesc`).innerHTML=mods.secondaryMods[""].desc;
+          readSelection("secondaryModMAIN").innerHTML = "";
+          readSelection("secondaryMutatorMAIN").innerHTML = "";
+          readSelection("secondaryAttachmentsMAIN").style.display = "none"
+          // readSelection(`secondaryModImage`).src=mods.secondaryMods[""].image;
+
+          readSelection("secondaryModBox").style.display = "none";
+          readSelection("secondaryMutatorBox").style.display = "none";
+
+          userTrigger.updateMod("rangedMod","2",true);
+          readSelection("rangedMutator2").value = "";
+          userTrigger.updateMutator('rangedMutator','2',true)
         }
       }
     }
@@ -2651,6 +2700,9 @@ function updateFormulas(index,ping) {
   ability2Breakdown = ability2 ? (ability2.customDPS ? abilityDamage[ability2.customDPS](2,index) : -1) : -1;
   }
 
+  //MISC STATS
+  let movementSpeed = valueTables[index].MovementSpeed;
+
   let returnStats = {
     totalHealth,totalHealthNoGlobal,
     totalStamina,
@@ -2665,7 +2717,8 @@ function updateFormulas(index,ping) {
     reducedEnemyDamage,damageKept,totalBonusMitigation,effectiveDR,baseEHP,
     percShields,shieldEff,totalPercShields,shieldEHP,totalEHP,
     advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec,
-    ability1Breakdown,ability2Breakdown
+    ability1Breakdown,ability2Breakdown,
+    movementSpeed
   }
   //----------RETURN VALUES-----------------------
   if (!isUIcalcs) {

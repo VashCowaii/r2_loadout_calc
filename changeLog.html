@@ -48,7 +48,17 @@
                         <li>asdf</li> <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li>
                     </ul>
                 </div> -->
-                KNOWN ISSUE: if you lock a blank slot via "--" as the locks description states you can, it'll break the query when the lock is iterated on.
+                <div>
+                    <h1>May 16, 2024</h1>
+                    <ul>
+                        <li>Added movement speed as a query target, and stats filter preset.</li>
+                        <li>Added more lifesteal target statistics to queries so that way you aren't stuck with lifesteal peak. Peak assumed you didn't care what kind of lifesteal it was, and only wanted to see the highest lifesteal possible, but now you can target what type you want (all, ranged, melee, charged melee, etc)</li>
+                        <li>Added handling for "Rusty" prefix weapons within the main UI and within cycles calculations. Rusty weapons cannot use a mod or mutator, this is specific to Rusty Lever Action primary, and Rusty Repeater secondary.</li>
+                        <li>Added a heads-up display to the Damage Section to notify users of supported Damage Calculations. Later I'll change this to a hover-tooltip when we have more supported types.</li>
+                        <li>Fixed an issue where if you locked a blank slot into the locks filters of a given category via entering "--" as the locks filters section states you can, it would break when the lock was iterated upon. Now you can lock as many slots as you want, with an empty item that neither has stats or uses. This may sound weird, but there are definitely uses for this, but only on locks.</li>
+                        <li>Slight back-end code cleaning. Changes nothing performance related.</li>
+                    </ul>
+                </div>
                 <div>
                     <h1>May 15, 2024</h1>
                     <ul>
@@ -378,7 +388,6 @@
                         <li>Change Spirit Healer Stacks to a number input, instead of a number slider.</li>
                         <li>Get better images, now that we are displaying them in a larger size with the new UI.</li>
                         <li>Add enemy count as a factor for Challenger perks.</li>
-                        <li>Adjust basics stats column to only display healing/DR related statistics if they exist. Those sections display everything as a remnant from when this was a spreadsheet, but it can be dynamic now.</li>
                     </ul>
                 </div>
                 <div>

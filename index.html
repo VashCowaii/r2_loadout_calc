@@ -93,11 +93,10 @@
             </div>
         </div>
         
-        <div class="updateWarningBar" style="color: #93CCEA;border: none;">DLC ITEMS HAVE BEEN ADDED. REPORT BUGS IN THE DISCORD LINKED AT THE BOTTOM OF ANY PAGE.
-        </div>
-        <div class="updateWarningBar" style="border: none;">QUERIES BETA IS LIVE NOW.</div>
-        <div class="updateWarningBar" style="border: none;">HAVOC FORM DPS/DMG CALCS & QUERIES LIVE</div>
-        <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS FOR INFO ON CALC CHANGES</a>
+        <!-- <div class="updateWarningBar" style="color: #93CCEA;border: none;">DLC ITEMS HAVE BEEN ADDED. REPORT BUGS IN THE DISCORD LINKED AT THE BOTTOM OF ANY PAGE.</div> -->
+        <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div>
+        <!-- <div class="updateWarningBar" style="border: none;">HAVOC FORM DPS/DMG CALCS & QUERIES LIVE</div> -->
+        <!-- <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS FOR INFO ON CALC CHANGES</a> -->
     </div>
 
     <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
@@ -209,7 +208,7 @@
                         </div>
                         <!-- WEAPON MUTS/MODS ROW -->
                         <div class="comboWeaponPiecesRow comboWeaponPiecesRowMAIN"> 
-                            <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`primaryTab`)">
+                            <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`primaryTab`)" id="primaryAttachmentsMAIN">
                                 <div class="comboModName" id="primaryModMAIN"></div>
                                 <div class="comboMutatorName" id="primaryMutatorMAIN"></div>
                             </button>
@@ -217,7 +216,7 @@
                                 <div class="comboModName" id="meleeModMAIN"></div>
                                 <div class="comboMutatorName"id="meleeMutatorMAIN"></div>
                             </button>
-                            <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`secondaryTab`)">
+                            <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`secondaryTab`)" id="secondaryAttachmentsMAIN">
                                 <div class="comboModName" id="secondaryModMAIN"></div>
                                 <div class="comboMutatorName"id="secondaryMutatorMAIN"></div>
                             </button>
@@ -744,7 +743,7 @@
 
                             <div class="fragmentsContainer weaponDescriptionsAdjustment">
 
-                                <div class="selectItemDesc weaponModifierRow"><!--mod-->
+                                <div class="selectItemDesc weaponModifierRow" id="primaryModBox"><!--mod-->
                                     <div class="comboArmorImageBox revertCursor">
                                         <img class="comboArmorImage" src="images/Remnant/clear.png" id="primaryModImage" alt="Primary Mod Icon">
                                     </div>
@@ -762,7 +761,7 @@
                                     </div>
                                 </div>
 
-                                <div class="selectItemDesc weaponModifierRow"><!--mutator-->
+                                <div class="selectItemDesc weaponModifierRow" id="primaryMutatorBox"><!--mutator-->
                                     <div class="comboArmorImageBox mainUIcombo revertCursor">
                                         <img class="comboArmorImage" src="images/Remnant/clear.png" id="rangedMutator1Image" alt="Primary Mutator Icon">
                                     </div>
@@ -838,7 +837,7 @@
 
                             <div class="fragmentsContainer weaponDescriptionsAdjustment">
 
-                                <div class="selectItemDesc weaponModifierRow"><!--mod-->
+                                <div class="selectItemDesc weaponModifierRow" id="secondaryModBox"><!--mod-->
                                     <div class="comboArmorImageBox revertCursor">
                                         <img class="comboArmorImage" src="images/Remnant/clear.png" id="secondaryModImage" alt="Secondary Mod Icon">
                                     </div>
@@ -856,7 +855,7 @@
                                     </div>
                                 </div>
 
-                                <div class="selectItemDesc weaponModifierRow"><!--mutator-->
+                                <div class="selectItemDesc weaponModifierRow" id="secondaryMutatorBox"><!--mutator-->
                                     <div class="comboArmorImageBox mainUIcombo revertCursor">
                                         <img class="comboArmorImage" src="images/Remnant/clear.png" id="rangedMutator2Image" alt="Secondary Mutator Icon">
                                     </div>
@@ -932,7 +931,7 @@
 
                             <div class="fragmentsContainer weaponDescriptionsAdjustment">
 
-                                <div class="selectItemDesc weaponModifierRow"><!--mod-->
+                                <div class="selectItemDesc weaponModifierRow" id="meleeModBox" style="display: none;"><!--mod-->
                                     <div class="comboArmorImageBox revertCursor">
                                         <img class="comboArmorImage" src="images/Remnant/clear.png" id="meleeModImage" alt="Melee Mod Icon">
                                     </div>
@@ -1482,7 +1481,7 @@
 
         <div class="damageStatsBox">
             <div class="advancedStatsHeaderRow"> <!--damage title header-->
-                <div class="advancedStatsHeader">DAMAGE (soonTM)</div>
+                <div class="advancedStatsHeader">DAMAGE</div>
                 <div class="advancedStatsShowToggle" style="z-index: 0;position: absolute;right: 5px;">
                     <div style="padding-right: 5px;">Hide</div>
                     <label class="toggleContainer" id="dmgVisibilityToggle">
@@ -1490,6 +1489,7 @@
                     </label>
                 </div>
             </div>
+            <div>Currently supported damage calculations: Havoc Form</div>
 
             <div class="advancedAbilityBoxHolder" id="havocFormBoxHolder" style="display: none;">
 
@@ -1576,8 +1576,8 @@
         <!-- <div class="filtersMegaHeader">BUILD QUERIES [BETA]</div> -->
         <div class="filtersConstraintsBox" id="queryBox">
             <div class="filtersMegaHeader">BUILD QUERIES [BETA]</div>
-            <div class="filtersInstructionsBox">Build Filters and Queries can be used to find and GENERATE whatever build you might be after!</div>
-            <div class="filtersInstructionsBox" style="color: #e06666;">Please note that queries are in BETA with a limited capacity specific to tank-based or Havoc Form searches FOR NOW, and you guys are likely to find bugs that I did not. Please report bugs or suggestions in the discord linked at the bottom of any page.<br>Also note that queries currently have a combo limit of 10 billion. Any query that exceeds that will be forcibly aborted and the user will be encouraged to use more strict filters. Browser extensions CAN slow queries down.</div>
+            <div class="filtersInstructionsBox">Build Filters and Queries can be used to find and GENERATE whatever build you might be after! If speeds seem slow, try increasing the number of threads used below, and disabling browser extensions!</div>
+            <div class="filtersInstructionsBox" style="color: #e06666;">CURRENT COMBO LIMIT: 10 BILLION</div>
             <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS VID FOR A GUIDE TO QUERIES</a>
             <div class="filtersOuterHeader">ITEM FILTERS</div>
             <div class="filtersBoxHolder"> <!-- Filters whole box -->

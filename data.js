@@ -7829,7 +7829,7 @@ primary = {
 		"name": "Rusty Lever Action",
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Rusty Lever Action.png",
-		"desc": "",
+		"desc": "Cannot equip a Mod or Mutator.",
 		"customBase": null,
 		"builtIN": "",
 		"stats": {},
@@ -8121,7 +8121,7 @@ melee = {
 
 		"desc": "",
 		"builtIN": "Power Stone",
-		"DMG": 116,
+		"DMG": 174,
 		"atkSpeed": 0,
 
 		"chargeDMG": 0,
@@ -9159,7 +9159,7 @@ secondary = {
 		"name": "Rusty Repeater",
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Rusty Repeater.png",
-		"desc": "",
+		"desc": "Cannot equip a Mod or Mutator.",
 		"customBase": null,
 		"builtIN": "",
 		"stats": {},
