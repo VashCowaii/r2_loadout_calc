@@ -60,6 +60,23 @@ let cycles = {
 
             "Shield-Flat",
         ],
+        "Darude - Sandstorm": [
+            "Critical Chance-All","Critical Chance-Elemental","Critical Chance-Mod",
+            "Critical Damage-All",
+            "Damage-All","Damage-Elemental","Damage-Mod",
+            "Mod-Duration",
+
+            "Status-Bleed","Status-Burn","Status-Corroded","Status-Exposed","Status-Overloaded","Status-Slow","Status-Outgoing Statuses",
+            "Status-Self-Bleed","Status-Incomng Statuses",
+
+            // "Armor-Flat","Armor Effectiveness","DR-Flat",
+            "DR-Bulwark","DR-Bulwark Limit",
+            "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
+
+            "Healing-Flat/second","Healing-%/second","Consumable-Concoction Limit",
+
+            "Shield-Flat",
+        ],
         "Movement Speed": [
             "Speed-Movement",
             "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",

@@ -6259,11 +6259,11 @@ relics = {
 		"tags": []
 	},
 	"Resonating Heart": {
-		"customBase": "resonatingHeart",
+		"customRelicFunctions": "resonatingHeart",
 		"name": "Resonating Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Resonating Heart.png",
-		"desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health is Doubled and awarded over the next 20s. Total healing given assumes all healing done within 5 seconds is overhealed, and then averaged between the 5 seconds and the 20 seconds. Team-based overheal does NOT count, even in-game.",
+		"desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health to self is Doubled and awarded over the next 20s.",
 		"complex": "Resonating applies healing modifiers to base, then doubles overheal and applies Healing Effectiveness alone, again.",
 		"stats": {
 			"RelicHPbase": 50,
@@ -6966,9 +6966,10 @@ traits = {
 	},
 	"Blood Bond": {
 		"name": "Blood Bond",
-		"property": "DMGKept",
-		"customBase": null,
-		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Populates as a "Damage Kept" bonus in Advanced Stats regardless of SUMMON COUNT settings.`,
+		"property": "",
+		"tags": ["DMGKept"],//the property is left blank else the bonus will populate in spite of the custom function. Added it to the tags array to store the property type anyways.
+		"customTier0": "bloodBond",
+		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in "Damage Kept" bonuses under Advanced Stats.`,
 		"level": {
 			"0": 0,
 			"1": -0.01,
@@ -7770,7 +7771,7 @@ primary = {
 		"name": "Monolith",
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Monolith.png",
-		"desc": "Sustained primary fire and Sandstorm hits apply EXPOSED for 1s. MAX 15s. EXPOSED: Target receives 15% additional damage from all sources.",
+		"desc": "Sustained primary hits and Sandstorm hits apply EXPOSED for 1s. MAX 15s. EXPOSED: Target receives 15% additional damage from all sources.",
 		"customBase": null,
 		"builtIN": "Sandstorm",
 		"stats": {},
@@ -10287,11 +10288,15 @@ builtInPrimary = {
 		"name": "Sandstorm",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Sandstorm.png",
-		"desc": "Launch a sphere of loam. Impact creates a 5m swirling storm of sand which seeks to center itself on an enemy and deals 75 elemental damage per second. When Sandstorm's focused target dies, it will seek a new enemy.",
+		"desc": "Launch a sphere of loam. Impact creates a 5m swirling storm of sand which seeks to center itself on an enemy and deals 225 elemental damage per second. When Sandstorm's focused target dies, it will seek a new enemy.",
 		"stats": {
-			"ReloadSpeed": 0.15,
-			"FireRate": 0.15,
 			"outEXPOSED": 1
+		},
+		"customStats": {
+			"customDPS": "MonolithSandstorm",
+			"frequency": 0.5,
+			"baseDamage": 112.5,
+			"duration": 15,
 		},
 		"tags": []
 	},

@@ -3607,6 +3607,9 @@ div {
         width: 100%;
         min-width: 100%;
     }
+    .basicsBox {
+        height: auto;
+    }
     .advancedStatsBox {
         height: auto;
     }

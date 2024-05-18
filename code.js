@@ -296,6 +296,9 @@ const playerDerivedStatistics = {
   "Grey Health Regen": "totalGreyHPperSec",
   "Havoc - DPS": ["Havoc Form",3,"DPS"],
   "Havoc - Total Damage": ["Havoc Form",4,"Total DMG"],
+  // "Sandstorm - DPS": ["Sandstorm",3,"DPS"],//do not uncomment, it WILL break if you run this query type right now
+  // "Sandstorm - Total Damage": ["Sandstorm",4,"Total DMG"],
+  // "Total DPS(Havoc+Mod)": "totalDPS",
   "Lifesteal - All": "lifestealALL",
   "Lifesteal - Melee": "lifestealMelee",
   "Lifesteal - Melee (Charged)": "lifestealMeleeCharged",
@@ -1834,7 +1837,7 @@ let formulasValues = {
         
         if (relics[customPath][`custom${tier}`]) {
           // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
-          relicComplexArray = customItemFunctions.relic[relics[customPath][`custom${tier}`]](index,relicHPscaled,totalHealth);
+          relicComplexArray = customItemFunctions.relic[relics[customPath][`custom${tier}`]](isUIcalcs,index,relicHPscaled,totalHealth);
         }
       }
       //Fragments
@@ -1945,6 +1948,20 @@ let formulasValues = {
           if (mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]) {
             customItemFunctions.secondaryMods[mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);
           }
+        }
+      }
+
+
+      const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
+
+      for (const trait of recordReference) {
+        const traitLevel = trait.level;
+        const traitPath = traits[trait.name];
+
+        if (traitPath) {
+          if (traitPath[`custom${tier}`]) {customItemFunctions.traits[traitPath[`custom${tier}`]](index,traitLevel);}//If a custom function exists, call it
+          if (traitPath[`custom2${tier}`]) {customItemFunctions.traits[traitPath[`custom2${tier}`]](index,traitLevel);}//If a custom function exists, call it
+
         }
       }
     }
@@ -2437,11 +2454,10 @@ let customItemFunctions = {
     },
   },
   "relic": {//DONE relics are currently tierless
-    resonatingHeart(index,relicHPscaled,totalHealth) {
-      let isUIcalcs = index != "greatTableKnowerOfAll";
+    resonatingHeart(isUIcalcs,index,relicHPscaled,totalHealth) {
       let path = relics["Resonating Heart"]
       //Healing/Relic EFF already factored before this function even starts
-      let inputValue = relicHPscaled * 2 * (1+valueTables[index].HealingEFF);
+      let inputValue = relicHPscaled * 2 * (1+index.HealingEFF);
 
       let relicPercHPpSec = 0;
       let relicHPpSec = 0;
@@ -2454,7 +2470,7 @@ let customItemFunctions = {
       avgPercHPpSec = (relicHPscaled + inputValue)/25;
       avgHPpSec = (avgPercHPpSec/100) * totalHealth;
     
-      if (!isUIcalcs) {
+      if (isUIcalcs) {
         readSelection("relicComplexEffect").innerHTML += `
         <div class="resoBonusHeader">Avg over 25s</div>
         <div class="complexRowContainer"><span class="basicsDRStat">As HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue">${avgHPpSec.toFixed(2)}</span></div>
@@ -2535,6 +2551,15 @@ let customItemFunctions = {
     reaver(index) {//base
         valueTables[index].MeleeDamage += valueTables[index].outgoingStatus ? 0.10 : 0;
     }
+  },
+  "traits": {
+    bloodBond(index,traitLevel) {//0 user input
+      let isUIcalcs = index != "greatTableKnowerOfAll";
+      let referenceTable = !isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+      if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
+        valueTables[index].DMGKept.push(-0.01 * traitLevel);
+      }
+    },
   }
 }
 
@@ -2593,7 +2618,7 @@ function updateFormulas(index,ping) {
 //---------- HEALING ---------------------------------------------------
 
 
-  if (tableReference.outEXPOSED) {tableReference.AllDamage += 0.15}
+  // if (tableReference.outEXPOSED) {tableReference.AllDamage += 0.15}
   tableReference.AllDamage += tableReference.outEXPOSED ? 0.15 : 0;
   tableReference.AllDamage += tableReference.outCORRODED ? 0.10 : 0;
   tableReference.HealingEFF *= tableReference.inBLEED ? 0.5 : 1;
@@ -2622,6 +2647,9 @@ function updateFormulas(index,ping) {
   let relicUseTime = relicHealingQuery[7];
   let relicEffectiveness = relicHealingQuery[8];
   let useComplexValues = !!relicComplexArray;
+
+  // formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealthNoGlobal,"RelicFunctions");//resonating heart, etc
+  // (isUIcalcs,index,item,relicHPscaled,totalHealth,tier,insertedStatistic)
 //---------- DAMAGE REDUCTION ---------------------------------------------------
   let armorQuery = calcs.getArmor(tableReference);
   let baseArmor = armorQuery[0];
@@ -2688,16 +2716,27 @@ function updateFormulas(index,ping) {
   let peakLifesteal = lifestealQuery[5];
 
   let ability1Breakdown,ability2Breakdown;
+  let mod1Breakdown,mod2Breakdown;
+  // let totalDPS;
 
   if (isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
-  if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs) {
+  if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs || playerDerivedStatistics[filters.types.vars.targetStatistic] === "totalDPS") {
   let abilityPath1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
   let abilityPath2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
   let ability1 = isUIcalcs && abilityPath1 ? classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats : classInfo[globalRecords.ALTarchs.one.class].abilities[abilityPath1].customStats;
   let ability2 = isUIcalcs && abilityPath2 ? classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats : classInfo[globalRecords.ALTarchs.two.class].abilities[abilityPath2].customStats;
+  ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
+  ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
 
-  ability1Breakdown = ability1 ? (ability1.customDPS ? abilityDamage[ability1.customDPS](1,index) : -1) : -1;
-  ability2Breakdown = ability2 ? (ability2.customDPS ? abilityDamage[ability2.customDPS](2,index) : -1) : -1;
+  let weaponPath = isUIcalcs ? globalRecords.weapons : globalRecords.ALTweapons;
+
+  let modPath1 = primary[weaponPath.primary].builtIN ? builtInPrimary[primary[weaponPath.primary].builtIN].customStats : rangedMods[weaponPath.primaryMod].customStats;
+  let modPath2 = secondary[weaponPath.secondary].builtIN ? builtInSecondary[secondary[weaponPath.secondary].builtIN].customStats : rangedMods[weaponPath.secondaryMod].customStats;
+
+  mod1Breakdown = modPath1 ? (modPath1.customDPS ? customDamage[modPath1.customDPS](1,index) : -1) : -1;
+  mod2Breakdown = modPath2 ? (modPath2.customDPS ? customDamage[modPath2.customDPS](2,index) : -1) : -1;
+
+  // totalDPS = (ability1Breakdown[3] ?? 0) + (ability2Breakdown[3] ?? 0) + (mod1Breakdown[3] ?? 0) + (mod2Breakdown[3] ?? 0)
   }
 
   //MISC STATS
@@ -2718,6 +2757,8 @@ function updateFormulas(index,ping) {
     percShields,shieldEff,totalPercShields,shieldEHP,totalEHP,
     advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec,
     ability1Breakdown,ability2Breakdown,
+    mod1Breakdown,mod2Breakdown,
+    // totalDPS,
     movementSpeed
   }
   //----------RETURN VALUES-----------------------

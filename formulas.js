@@ -139,7 +139,7 @@ let calcs = {
         relicPercPerSecond = null;
         relicFlatPerSecond = null;
         }
-        let relicComplexArray = formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealth);
+        let relicComplexArray = formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealth,"RelicFunctions");
 
         return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness]
     },
@@ -233,7 +233,7 @@ let calcs = {
         return [advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec]
     },
 }
-let abilityDamage = {
+let customDamage = {
     HavocForm(abilityPlacement,index) {
         let reference = valueTables[index];
         let isUIcalcs = index != "greatTableKnowerOfAll";
@@ -261,7 +261,7 @@ let abilityDamage = {
         let avgCritDamage = (baseCritDamage + totalCritDamage) * totalCritChance;
 
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
-        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) + (1 + baseCritDamage + totalCritDamage);
+        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + baseCritDamage + totalCritDamage);
 
 
         let trueDPS = trueBaseDPS * (1 + reference.CastSpeed) * (1 + totalDamageBonus) * (1 + avgCritDamage);
@@ -314,5 +314,85 @@ let abilityDamage = {
         }
 
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+    },
+    MonolithSandstorm(modPlacement,index) {//wip do not touch
+        let reference = valueTables[index];
+        let isUIcalcs = index != "greatTableKnowerOfAll";
+
+        let customStats = builtInPrimary.Sandstorm.customStats;
+        let duration = customStats.duration;
+        let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
+        let frequency = customStats.frequency;//the rate at which the mod hits enemies
+
+        let modifiedDuration = duration * (1 + reference.ModDuration);
+        let totalHits = Math.floor(modifiedDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
+        // console.log("Total Hits: " + totalHits)
+
+        let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
+
+        let baseCritDamage = 0.5;
+        let totalDamageBonus = reference.AllDamage + reference.ModDamage + reference.ElementalDamage;
+        let totalCritDamage = reference.AllCritDamage;
+        let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.ModCritChance;
+        totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
+        let avgCritDamage = (baseCritDamage + totalCritDamage) * totalCritChance;
+
+        let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
+        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + baseCritDamage + totalCritDamage);
+
+        // console.log("DMG%: " + totalDamageBonus)
+        let firstHitModifier = reference.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
+        let firstHitDamage = baseDamage * (1 + totalDamageBonus + firstHitModifier) * (1 + avgCritDamage);
+        let trueTotalDamage = baseDamage * (totalHits-1) * (1 + totalDamageBonus) * (1 + avgCritDamage) + firstHitDamage;
+        let trueDPS = trueTotalDamage/trueDuration;
+
+        if (!isUIcalcs) {
+            // console.log(minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage)
+            // readSelection("havocFormBoxHolder").style.display = "flex"
+            // modPlacement = modPlacement === 1 ? "ability1" : "ability2";
+
+            // readSelection(`ability1DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
+            // readSelection(`ability1TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+
+
+            // (modifiedDuration + entryDuration)
+            // readSelection("havocFactors").innerHTML = "";
+            // let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            // drRowsHTML += (modifiedDuration + entryDuration) ? createHTML.basicsRow("Duration",(modifiedDuration + entryDuration),false) : "";
+            // drRowsHTML += entryDuration ? createHTML.basicsRow("Entry Duration",entryDuration.toFixed(2),false) : "";
+            // drRowsHTML += modifiedDuration ? createHTML.basicsRow("Usable Duration",modifiedDuration.toFixed(2),false) : "";
+            // drRowsHTML += trueDuration ? createHTML.basicsRow("True Duration",trueDuration.toFixed(2),false) : "";
+            // drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
+            // drRowsHTML += reference.CastSpeed ? createHTML.basicsRow("Cast Speed",reference.CastSpeed,true,"%") : "";
+            // drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
+            // drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
+            // drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
+            // drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
+            // drRowsHTML += reference.SkillDamage ? createHTML.basicsRow("Skill Damage",reference.SkillDamage,true,"%") : "";
+            // drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";
+            // drRowsHTML += reference.ShockDamage ? createHTML.basicsRow("Bulwark Stacks",reference.ShockDamage,true,"%") : "";
+            // drRowsHTML += totalDamageBonus ? createHTML.basicsRow("Total Damage Bonus",totalDamageBonus,true,"%") : "";
+            // drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
+            // drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
+            // drRowsHTML += reference.outBURN ? createHTML.basicsRow("","BURN",false) : "";
+            // drRowsHTML += reference.outCORRODED ? createHTML.basicsRow("","CORRODED",false) : "";
+            // drRowsHTML += reference.outOVERLOADED ? createHTML.basicsRow("","OVERLOADED",false) : "";
+            // drRowsHTML += reference.outEXPOSED ? createHTML.basicsRow("","EXPOSED",false) : "";
+            // drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
+            // drRowsHTML += reference.AllCritChance ? createHTML.basicsRow("All Crit Chance",reference.AllCritChance,true,"%") : "";
+            // drRowsHTML += reference.ElementalCritChance ? createHTML.basicsRow("Elemental Crit Chance",reference.ElementalCritChance,true,"%") : "";
+            // drRowsHTML += reference.SkillCritChance ? createHTML.basicsRow("Skill Crit Chance",reference.SkillCritChance,true,"%") : "";
+            // drRowsHTML += totalCritChance ? createHTML.basicsRow("Total Crit Chance",totalCritChance,true,"%") : "";
+            // drRowsHTML += baseCritDamage ? createHTML.basicsRow("Base Crit Damage",baseCritDamage,true,"%") : "";
+            // drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("All Crit Damage",reference.AllCritDamage,true,"%") : "";
+            // drRowsHTML += (baseCritDamage + totalCritDamage) ? createHTML.basicsRow("Total Crit Damage",(baseCritDamage + totalCritDamage),true,"%") : "";
+            // drRowsHTML += avgCritDamage ? createHTML.basicsRow("Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
+            // // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
+            // // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+            // drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            // readSelection("havocFactors").innerHTML += drRowsHTML;
+        }
+
+        return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     }
 }

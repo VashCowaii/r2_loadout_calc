@@ -49,6 +49,17 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>May 18, 2024</h1>
+                    <ul>
+                        <li>Changed Blood Bond's trait bonus to only populate when Summoner is a selected archetype. We had discussed doing this before in light of the recent game change, but I didn't have anything set up for traits to allow custom conditionals yet, I added that today.</li>
+                        <li>Added custom function call handling for traits. Right now Blood Bond is the only one that uses it(All other item types already use this), but it'll be nice to have for the future since traits were designed to be static bonuses when I started this and that may not always hold true.</li>
+                        <li>Fixed an issue where Resonating Heart's custom UI elements for the overheal effect did not display in some circumstances.</li>
+                        <li>Fixed an issue where Monolith's Sandstorm mod was giving extra stats it should not be.</li>
+                        <li>Fixed an issue where Sandstorm's EXPOSED effect could apply twice within the UI.</li>
+                        <li>Fixed an issue where the basic statistics column(armor, stamina, weight, etc) took up too much space on mobile. Simply forgot to set the height to auto on mobile devices and it still tried to take up desktop height, my b.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>May 16, 2024</h1>
                     <ul>
                         <li>Added movement speed as a query target, and stats filter preset.</li>
