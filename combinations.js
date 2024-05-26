@@ -1516,46 +1516,46 @@ let cyclesLoop = {
     },
     updateCycleRecord(value,addArmor) {
         let accessoryReference = globalRecords.ALTaccessories;
-        accessoryReference.amulet = value.amulet[0] ?? "";
-        accessoryReference.ring1 = value.ringSet[0] ?? "";
-        accessoryReference.ring2 = value.ringSet[1] ?? "";
-        accessoryReference.ring3 = value.ringSet[2] ?? "";
-        accessoryReference.ring4 = value.ringSet[3] ?? "";
-        accessoryReference.relic = value.relic[0] ?? "";
-        accessoryReference.fragment1 = value.fragmentSet[0] ?? "";
-        accessoryReference.fragment2 = value.fragmentSet[1] ?? "";
-        accessoryReference.fragment3 = value.fragmentSet[2] ?? "";
+        accessoryReference.amulet = value.amulet[0] || "";
+        accessoryReference.ring1 = value.ringSet[0] || "";
+        accessoryReference.ring2 = value.ringSet[1] || "";
+        accessoryReference.ring3 = value.ringSet[2] || "";
+        accessoryReference.ring4 = value.ringSet[3] || "";
+        accessoryReference.relic = value.relic[0] || "";
+        accessoryReference.fragment1 = value.fragmentSet[0] || "";
+        accessoryReference.fragment2 = value.fragmentSet[1] || "";
+        accessoryReference.fragment3 = value.fragmentSet[2] || "";
 
         let consumableReference = globalRecords.ALTconsumables;
-        consumableReference.concoction1 = value.concoction[0] ?? "";
-        consumableReference.concoction2 = value.concoction[1] ?? "";
-        consumableReference.concoction3 = value.concoction[2] ?? "";
-        consumableReference.concoction4 = value.concoction[3] ?? "";
-        consumableReference.concoction5 = value.concoction[4] ?? "";
-        consumableReference.concoction6 = value.concoction[5] ?? "";
-        consumableReference.concoction7 = value.concoction[6] ?? "";
-        consumableReference.quickUse1 = value.quickUse[0] ?? "";
-        consumableReference.quickUse2 = value.quickUse[1] ?? "";
-        consumableReference.quickUse3 = value.quickUse[2] ?? "";
-        consumableReference.quickUse4 = value.quickUse[3] ?? "";
+        consumableReference.concoction1 = value.concoction[0] || "";
+        consumableReference.concoction2 = value.concoction[1] || "";
+        consumableReference.concoction3 = value.concoction[2] || "";
+        consumableReference.concoction4 = value.concoction[3] || "";
+        consumableReference.concoction5 = value.concoction[4] || "";
+        consumableReference.concoction6 = value.concoction[5] || "";
+        consumableReference.concoction7 = value.concoction[6] || "";
+        consumableReference.quickUse1 = value.quickUse[0] || "";
+        consumableReference.quickUse2 = value.quickUse[1] || "";
+        consumableReference.quickUse3 = value.quickUse[2] || "";
+        consumableReference.quickUse4 = value.quickUse[3] || "";
 
         let weaponReference = globalRecords.ALTweapons;
-        weaponReference.primary = value.gun1[0] ?? "";
-        weaponReference.primaryMutator = value.rangedMutators[0] ?? "";
-        weaponReference.primaryMod = value.rangedMods[0] ?? "";
+        weaponReference.primary = value.gun1[0] || "";
+        weaponReference.primaryMutator = value.rangedMutators[0] || "";
+        weaponReference.primaryMod = value.rangedMods[0] || "";
         if (weaponReference.primary === "Rusty Lever Action") {weaponReference.primaryMod = "";weaponReference.primaryMutator = "";}
-        weaponReference.melee = value.stick[0] ?? "";
-        weaponReference.meleeMutator = value.meleeMutators[0] ?? "";
-        weaponReference.secondary = value.gun2[0] ?? "";
-        weaponReference.secondaryMutator = value.rangedMutators[1] ?? "" ;
-        weaponReference.secondaryMod = value.rangedMods[1] ?? "";
+        weaponReference.melee = value.stick[0] || "";
+        weaponReference.meleeMutator = value.meleeMutators[0] || "";
+        weaponReference.secondary = value.gun2[0] || "";
+        weaponReference.secondaryMutator = value.rangedMutators[1] || "" ;
+        weaponReference.secondaryMod = value.rangedMods[1] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
 
         if (addArmor) {
-            globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 ?? "";
-            globalRecords.ALTarmor.chest = value.bestArmorSet.slot2 ?? "";
-            globalRecords.ALTarmor.leg = value.bestArmorSet.slot3 ?? "";
-            globalRecords.ALTarmor.hand = value.bestArmorSet.slot4 ?? "";
+            globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 || "";
+            globalRecords.ALTarmor.chest = value.bestArmorSet.slot2 || "";
+            globalRecords.ALTarmor.leg = value.bestArmorSet.slot3 || "";
+            globalRecords.ALTarmor.hand = value.bestArmorSet.slot4 || "";
         }
     },
 }

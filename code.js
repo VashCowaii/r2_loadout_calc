@@ -2021,7 +2021,7 @@ let formulasValues = {
       //rings
       for (let i=1;i<=4;i++) {
         toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
-        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] : globalRecords.ALTaccessories[`ring${i}`];
+        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] || "" : globalRecords.ALTaccessories[`ring${i}`] || "";
         let conditionalPath = rings[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       }
