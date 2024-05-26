@@ -307,6 +307,17 @@ const playerDerivedStatistics = {
   "Movement Speed": "movementSpeed"
 }
 
+const existingTierList =  [//this is for my own personal record, but it might be used later.
+    "customTier0",
+    "customBase",
+    "customPostWeightClass",
+    "customPreHealing",
+    "customPostHealing",
+    // "customRelicFunctions",
+    "customPostDR",
+    "customTier50",
+  ]
+
 let valueTables = {
   "greatTableKnowerOfAll": {},
   "cycleTableKnowerOfAll": {},
@@ -1824,32 +1835,9 @@ let formulasValues = {
     readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
   },
   //Used to call unique item functions AFTER the base statistics have populated greatTableKnowerOfAll
-  callUniqueFunctions(isUIcalcs,index,item,relicHPscaled,totalHealth,tier,insertedStatistic) {
+  callUniqueFunctions(isUIcalcs,index,tier,insertedStatistic) {
     //relicHPscaled and totalHealth are only used for when item is "relic"
     let toggleCheck,customPath;
-
-    if (item==="relic") {//relics do not use an inserted statistic currently
-      let relicComplexArray;
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
-      if (!toggleCheck) {
-        customPath = isUIcalcs ? globalRecords.accessories.relic : globalRecords.ALTaccessories.relic;
-        if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
-        
-        if (relics[customPath][`custom${tier}`]) {
-          // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
-          relicComplexArray = customItemFunctions.relic[relics[customPath][`custom${tier}`]](isUIcalcs,index,relicHPscaled,totalHealth);
-        }
-      }
-      //Fragments
-      for (let i=1;i<=3;i++) {
-        customPath = isUIcalcs ? globalRecords.accessories[`fragment${i}`] : globalRecords.ALTaccessories[`fragment${i}`];
-        if (fragments[customPath][`custom${tier}`]) {
-          customItemFunctions[fragments[customPath][`custom${tier}`]]();
-        }
-      }
-      return relicComplexArray;
-    }
-    else {
       //rings
       for (let i=1;i<=4;i++) {
         toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
@@ -1964,7 +1952,129 @@ let formulasValues = {
 
         }
       }
+  },
+  //Used specifically for relic functions
+  callUniqueRelicFunctions(isUIcalcs,index,relicHPscaled,totalHealth) {
+    //relicHPscaled and totalHealth are only used for when item is "relic"
+    let toggleCheck,customPath;
+
+    let relicComplexArray;
+    toggleCheck = isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
+    if (!toggleCheck) {
+      customPath = isUIcalcs ? globalRecords.accessories.relic : globalRecords.ALTaccessories.relic;
+      conditionalPath = relics[customPath].usesConditional;
+      if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
+      
+      if (conditionalPath[`customRelicFunctions`]) {
+        // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
+        relicComplexArray = customItemFunctions[conditionalPath[`customRelicFunctions`]](isUIcalcs,index,relicHPscaled,totalHealth);
+      }
     }
+    else if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
+    //Fragments //NOT CURRENTLY USED
+    // for (let i=1;i<=3;i++) {
+    //   customPath = isUIcalcs ? globalRecords.accessories[`fragment${i}`] : globalRecords.ALTaccessories[`fragment${i}`];
+    //   if (fragments[customPath][`customRelicFunctions`]) {
+    //     customItemFunctions[fragments[customPath][`customRelicFunctions`]]();
+    //   }
+    // }
+    return relicComplexArray;
+  },
+  readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath) {
+    if (!toggleCheck && conditionalPath) {
+        let names = Object.keys(conditionalPath);
+
+        for (let i=0;i<names.length;i++) {
+          let currentConditional = names[i];
+          if (!tieredFunctionStorage[currentConditional]) {tieredFunctionStorage[currentConditional] = [];}
+          tieredFunctionStorage[currentConditional].push(customItemFunctions[conditionalPath[currentConditional]])
+        }
+    }
+  },
+  readActiveConditionalsTraits(tieredFunctionStorage,conditionalPath,traitLevel) {//Pushes an array so we can track the trait level as well as the function used
+    if (conditionalPath) {
+        let names = Object.keys(conditionalPath);
+
+        for (let i=0;i<names.length;i++) {
+          let currentConditional = names[i];
+          if (!tieredFunctionStorage[currentConditional]) {tieredFunctionStorage[currentConditional] = [];}
+          tieredFunctionStorage[currentConditional].push([customItemFunctions[conditionalPath[currentConditional]],traitLevel])
+        }
+    }
+  },
+  callStoredFunctions(tieredFunctionStorage,tierName,index,insertedStatistic) {
+    let targetStorage = tieredFunctionStorage[tierName];
+    if (targetStorage) {
+      for (let storedFunction in targetStorage) {
+        if (Array.isArray(targetStorage[storedFunction]) && targetStorage[storedFunction][0]) {
+          targetStorage[storedFunction][0](isUIcalcs,index,targetStorage[storedFunction][1]);//traits are pushed as arrays with a level as the inserted stat
+        }
+        else if (storedFunction) {
+          targetStorage[storedFunction](isUIcalcs,index,insertedStatistic);
+        }
+      }
+    }
+  },
+  storeActiveConditionals(isUIcalcs) {
+    let tieredFunctionStorage = {};
+    let toggleCheck,customPath,conditionalPath;
+      //rings
+      for (let i=1;i<=4;i++) {
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
+        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] : globalRecords.ALTaccessories[`ring${i}`];
+        let conditionalPath = rings[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      }
+      //Amulet
+      toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
+      customPath = isUIcalcs ? globalRecords.accessories.amulet : globalRecords.ALTaccessories.amulet;
+      conditionalPath = amulets[customPath].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      //Mutators
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
+      customPath = isUIcalcs ? globalRecords.weapons.primaryMutator : globalRecords.ALTweapons.primaryMutator;
+      conditionalPath = rangedMutators[customPath].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
+      customPath = isUIcalcs ? globalRecords.weapons.meleeMutator : globalRecords.ALTweapons.meleeMutator;
+      conditionalPath = meleeMutators[customPath].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
+      customPath = isUIcalcs ? globalRecords.weapons.secondaryMutator : globalRecords.ALTweapons.secondaryMutator;
+      conditionalPath = rangedMutators[customPath].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+
+      //MODS
+      //PRIMARY
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
+      let primaryWeapon = isUIcalcs ? globalRecords.weapons.primary : globalRecords.ALTweapons.primary;
+      let primaryWeaponMod = isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
+      let checkWeaponPath = weapons.primary[primaryWeapon];
+      conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      //MELEE
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
+      let meleeWeapon = isUIcalcs ? globalRecords.weapons.melee : globalRecords.ALTweapons.melee;
+      checkWeaponPath = weapons.melee[meleeWeapon];
+      conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+      //SECONDARY
+      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
+      let secondaryWeapon = isUIcalcs ? globalRecords.weapons.secondary : globalRecords.ALTweapons.secondary;
+      let secondaryWeaponMod = isUIcalcs ? globalRecords.weapons.secondaryMod : globalRecords.ALTweapons.secondaryMod;
+      checkWeaponPath = weapons.secondary[secondaryWeapon];
+      conditionalPath = checkWeaponPath.builtIN ? mods.builtInSecondaryMods[checkWeaponPath.builtIN].usesConditional : mods.secondaryMods[secondaryWeaponMod].usesConditional;
+      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+
+      const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
+      for (const trait of recordReference) {
+        const traitLevel = trait.level;
+        const traitPath = traits[trait.name];
+        const conditionalPath = traitPath.usesConditional;
+        formulasValues.readActiveConditionalsTraits(tieredFunctionStorage,conditionalPath,traitLevel);
+      }
+
+      return tieredFunctionStorage;
   },
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -1974,25 +2084,22 @@ let customItemFunctions = {
   //Function names are specified in data.js under a given entry's "custom" key.
   //Remember to add stats to tags array in data.js whenever making one of these
   // valueTables[index].anyStatHere += 1;
-  "amulets": {
-    abrasiveWhetstone(index) {//50
-      if (valueTables[index].outBLEED>0) {
-        valueTables[index].AllCritChance += 0.15;
-        valueTables[index].AllCritDamage += 0.15;
+  // "amulets": {
+    abrasiveWhetstone(isUIcalcs,index) {//50
+      if (index.outBLEED>0) {
+        index.AllCritChance += 0.15;
+        index.AllCritDamage += 0.15;
       }
     },
-    birthrightOfTheLost(index) {//0 user input
-        valueTables[index].outEXPOSED += globalRecords.meleeFactors.isPerfectDodge ? 1 : 0;
+    birthrightOfTheLost(isUIcalcs,index) {//0 user input
+      index.outEXPOSED += globalRecords.meleeFactors.isPerfectDodge ? 1 : 0;
     },
-    brewMasters(index) {//0 user selection
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath;
-
-      if (!isUIcalcs) {
+    brewMasters(isUIcalcs,index) {//0 user selection
+      if (isUIcalcs) {
         for (let i=1;i<=7;i++) {
-          customPath = !isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
+          let customPath = isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
           if (customPath) {
-            valueTables[index].FlatDR += 0.02;
+            index.FlatDR += 0.02;
           }
         }
       }
@@ -2001,12 +2108,11 @@ let customItemFunctions = {
         valueTables[index].FlatDR += 0.02 * valueTables[index].ConcLimit;
       }
     },
-    chainsOfAmplification(index) {//50
-      valueTables[index].AllDamage += valueTables[index].outgoingStatus ? 0.20 : 0;
+    chainsOfAmplification(isUIcalcs,index) {//50
+      index.AllDamage += index.outgoingStatus ? 0.20 : 0;
     },
-    daredevil(index) {//50
+    daredevil(isUIcalcs,index) {//50
       let armorMissing = 4;
-      let isUIcalcs = index === "greatTableKnowerOfAll";
       let customPath = isUIcalcs ? globalRecords.armor : globalRecords.ALTarmor;
       if (!isUIcalcs) {
         //For now, we assume if Daredevil ever shows up in the cycles, the player should always be naked
@@ -2019,92 +2125,90 @@ let customItemFunctions = {
       if (customPath.chest) {armorMissing -= 1;}
       if (customPath.leg) {armorMissing -= 1;}
       if (customPath.hand) {armorMissing -= 1;}
-      valueTables[index].AllDamage += 0.075 * armorMissing;
-      valueTables[index].MovementSpeed += 0.03 * armorMissing;
+      index.AllDamage += 0.075 * armorMissing;
+      index.MovementSpeed += 0.03 * armorMissing;
     },
-    deathSoakedIdol(index) {//50
-      if (valueTables[index].outgoingStatus) {
+    deathSoakedIdol(isUIcalcs,index) {//50
+      if (index.outgoingStatus) {
         let maxStacks = 5;
         let count = globalRecords.meleeFactors.enemyCount;
-        count += valueTables[index].incomingStatus ? 1 : 0;
-        valueTables[index].AllDamage += Math.min(maxStacks,count) * 0.06;
+        count += index.incomingStatus ? 1 : 0;
+        index.AllDamage += Math.min(maxStacks,count) * 0.06;
       }
     },
-    differenceEngine(index) {//50
-      if (valueTables[index].Shield > 0) {
-        valueTables[index].Lifesteal += 0.045;
-        valueTables[index].AllDamage += 0.20;
+    differenceEngine(isUIcalcs,index) {//50
+      if (index.Shield > 0) {
+        index.Lifesteal += 0.045;
+        index.AllDamage += 0.20;
       }
     },
-    effigyPendant(index) {//0 user input
+    effigyPendant(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
-        valueTables[index].FlatDR += 0.1;
-        valueTables[index].AllDamage += 0.15;
-        valueTables[index].GreyHPHitThreshold += 1;
+        index.FlatDR += 0.1;
+        index.AllDamage += 0.15;
+        index.GreyHPHitThreshold += 1;
       }
     },
-    energyDiverter(index) {//50
-      if (valueTables[index].Shield > 0) {
-        valueTables[index].AllCritChance += 0.10;
-        valueTables[index].AllDamage += 0.15;
+    energyDiverter(isUIcalcs,index) {//50
+      if (index.Shield > 0) {
+        index.AllCritChance += 0.10;
+        index.AllDamage += 0.15;
       }
     },
-    fragrantThorn(index) {//0. Not user input, but needs to happen first.
+    fragrantThorn(isUIcalcs,index) {//0. Not user input, but needs to happen first.
       let activeStatus = 0;
-      let reference = valueTables[index];
 
-      if (reference.outgoingStatus) {
+      if (index.outgoingStatus) {
         //Slow, bleed, burn, overloaded, corroded
-        activeStatus += reference.outSLOW ? 1 : 0;
-        activeStatus += reference.outBLEED ? 1 : 0;
-        activeStatus += reference.outBURN ? 1 : 0;
-        activeStatus += reference.outOVERLOADED ? 1 : 0;
-        activeStatus += reference.outCORRODED ? 1 : 0;
+        activeStatus += index.outSLOW ? 1 : 0;
+        activeStatus += index.outBLEED ? 1 : 0;
+        activeStatus += index.outBURN ? 1 : 0;
+        activeStatus += index.outOVERLOADED ? 1 : 0;
+        activeStatus += index.outCORRODED ? 1 : 0;
       }
-      reference.outEXPOSED += activeStatus>4 ? 1 : 0;
+      index.outEXPOSED += activeStatus>4 ? 1 : 0;
     },
-    giftOfTheUnbound(index) {//0, based on item selections not stats.
+    giftOfTheUnbound(isUIcalcs,index) {//0, based on item selections not stats.
       let activeBurdens = 0;
       let movementModifier = 0.05
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
+      let customPath = isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
       for (let i=1;i<=4;i++) {
         let ringPath = customPath[`ring${i}`]
         if (ringPath.includes("Burden") === true) {
           activeBurdens += 1;
           //Negate all negative effects of any equipped burdens.
           if (ringPath.includes("Audacious")) {
-            valueTables[index].HealingEFF += -rings[`Burden of the Audacious`].stats.HealingEFF;
+            index.HealingEFF += -rings[`Burden of the Audacious`].stats.HealingEFF;
           }
           else if (ringPath.includes("Departed")) {
-            valueTables[index][`RelicCharges%`] += -rings[`Burden of the Departed`].stats[`RelicCharges%`];
+            index[`RelicCharges%`] += -rings[`Burden of the Departed`].stats[`RelicCharges%`];
           }
           else if (ringPath.includes("Destroyer")) {
-            valueTables[index][`Range%`] += -rings[`Burden of the Destroyer`].stats[`Range%`];
+            index[`Range%`] += -rings[`Burden of the Destroyer`].stats[`Range%`];
           }
           else if (ringPath.includes("Divine")) {
-            valueTables[index].AllDamage += -rings[`Burden of the Divine`].stats.AllDamage;
+            index.AllDamage += -rings[`Burden of the Divine`].stats.AllDamage;
           }
           else if (ringPath.includes("Follower")) {
-            valueTables[index].FireRate += -rings[`Burden of the Follower`].stats.FireRate;
+            index.FireRate += -rings[`Burden of the Follower`].stats.FireRate;
           }
           else if (ringPath.includes("Gambler")) {
-            valueTables[index].WeakspotDisable += -rings[`Burden of the Gambler`].stats.WeakspotDisable;
+            index.WeakspotDisable += -rings[`Burden of the Gambler`].stats.WeakspotDisable;
           }
           else if (ringPath.includes("Mariner")) {
-            valueTables[index].CDR += -rings[`Burden of the Mariner`].stats.CDR;
+            index.CDR += -rings[`Burden of the Mariner`].stats.CDR;
           }
           else if (ringPath.includes("Mason")) {
-            valueTables[index].WeightThreshold += -rings[`Burden of the Mason`].stats.WeightThreshold;
+            index.WeightThreshold += -rings[`Burden of the Mason`].stats.WeightThreshold;
           }
           else if (ringPath.includes("Mesmer")) {
-            valueTables[index].GlobalHealthModifier *= 1 + (1/3);//Counteract the 25% reduction
+            index.GlobalHealthModifier *= 1 + (1/3);//Counteract the 25% reduction
           }
           else if (ringPath.includes("Rebel")) {
-            valueTables[index].RelicSpeed += -rings[`Burden of the Rebel`].stats.RelicSpeed;
+            index.RelicSpeed += -rings[`Burden of the Rebel`].stats.RelicSpeed;
           }
           else if (ringPath.includes("Sciolist")) {
-            valueTables[index].Reserves += -rings[`Burden of the Sciolist`].stats.Reserves;
+            index.Reserves += -rings[`Burden of the Sciolist`].stats.Reserves;
           }
           else if (ringPath.includes("Stargazer")) {
             continue//Negate health cost on skill activation.
@@ -2115,40 +2219,39 @@ let customItemFunctions = {
         }
       }
       if (activeBurdens > 0) {
-        valueTables[index].MovementSpeed += movementModifier * activeBurdens;
+        index.MovementSpeed += movementModifier * activeBurdens;
       }
       //Remember to add checks for the negative effects later, on burden rings, to negate them.
     },
-    insulationDriver(index) {//50
-      if (valueTables[index].Bulwark > 0) {
-        valueTables[index].AllDamage += 0.15;
-        valueTables[index].HASTE += 1;
+    insulationDriver(isUIcalcs,index) {//50
+      if (index.Bulwark > 0) {
+        index.AllDamage += 0.15;
+        index.HASTE += 1;
       }
     },
-    kineticShieldExchanger(index) {//50
-      if (valueTables[index].Shield > 0) {
-        valueTables[index].ModDamage += 0.25;
-        valueTables[index].ModPowerGen += 0.20;
+    kineticShieldExchanger(isUIcalcs,index) {//50
+      if (index.Shield > 0) {
+        index.ModDamage += 0.25;
+        index.ModPowerGen += 0.20;
       }
     },
-    neckboneNecklace(index) {//50
-      valueTables[index].AllDamage += valueTables[index].incomingStatus ? 0.25 : 0;
+    neckboneNecklace(isUIcalcs,index) {//50
+      index.AllDamage += index.incomingStatus ? 0.25 : 0;
     },
-    nightweaversGrudge(index) {//50
-      if (valueTables[index].incomingStatus || valueTables[index].outgoingStatus) {
-        valueTables[index].AllCritChance += 0.15;
-        valueTables[index].HASTE += 1;
+    nightweaversGrudge(isUIcalcs,index) {//50
+      if (index.incomingStatus || index.outgoingStatus) {
+        index.AllCritChance += 0.15;
+        index.HASTE += 1;
       }
     },
-    oneEyedJokerIdol(index) {//0 user input
-      valueTables[index].AllCritChance += globalRecords.meleeFactors.isEvade ? 0.25 : 0;
+    oneEyedJokerIdol(isUIcalcs,index) {//0 user input
+      index.AllCritChance += globalRecords.meleeFactors.isEvade ? 0.25 : 0;
     },
-    oneTrueKingSigil(index) {//base, modifies based on equip, not existing stats.
+    oneTrueKingSigil(isUIcalcs,index) {//base, modifies based on equip, not existing stats.
       let faerinActive = false;
       let faelinActive = false;
       let imposterRings = 0;
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
+      let customPath = isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
       for (let i=1;i<=4;i++) {
         if (customPath[`ring${i}`].includes("Faerin's Sigil") === true) {
           faerinActive = true;
@@ -2164,298 +2267,281 @@ let customItemFunctions = {
         if (faerinActive === true) {
           let faeRpath1 = rings[`Faerin's Sigil`].stats.ModPowerGenCrit;
           let faeRpath2 = rings[`Faerin's Sigil`].stats.ModPowerGenWeakspot;
-          valueTables[index].ModPowerGenCrit += faeRpath1 * (modifier * imposterRings);
-          valueTables[index].ModPowerGenWeakspot += faeRpath2 * (modifier * imposterRings);
+          index.ModPowerGenCrit += faeRpath1 * (modifier * imposterRings);
+          index.ModPowerGenWeakspot += faeRpath2 * (modifier * imposterRings);
         }
         if (faelinActive === true) {
           let faeLpath = rings[`Faelin's Sigil`].stats.ModPowerGenCrit;
-          valueTables[index].ModPowerGenMelee += faeLpath * (modifier * imposterRings);
+          index.ModPowerGenMelee += faeLpath * (modifier * imposterRings);
         }
       }
     },
-    profaneSoulStone(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+    profaneSoulStone(isUIcalcs,index) {//0 user input
+      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
 
       let minionCount = +customPath;
       let modifier = -0.10;
-      valueTables[index].FlatDR += modifier * minionCount;
+      index.FlatDR += modifier * minionCount;
     },
-    ravagersMark(index) {//50
-      valueTables[index].AllDamage += valueTables[index].outBLEED ? 0.3 : 0;
+    ravagersMark(isUIcalcs,index) {//50
+      index.AllDamage += index.outBLEED ? 0.3 : 0;
     },
-    soulAnchor(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
-      valueTables[index].AllDamage += customPath ? 0.2 : 0;
+    soulAnchor(isUIcalcs,index) {//0 user input
+      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+      index.AllDamage += customPath ? 0.2 : 0;
     },
-    spiritWisp(index) {//N/A
+    spiritWisp(isUIcalcs,index) {//N/A
       //Add mod stuff later
     },
-    weightlessWeight(index) {//PostWeightClass
-      let weight = valueTables[index].Encumbrance * (1+valueTables[index]["Encumbrance%"]);
+    weightlessWeight(isUIcalcs,index) {//PostWeightClass
+      let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       if (weight < 0) {weight = 0;}
       let multi = Math.floor(weight/5);
-      valueTables[index].StaminaCost += -0.0075 * multi;
-      valueTables[index].MovementSpeed += 0.0075 * multi;
+      index.StaminaCost += -0.0075 * multi;
+      index.MovementSpeed += 0.0075 * multi;
     },
-    whisperingMarble(index) {//50
-      let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
-      valueTables[index].AllDamage += 0.02 * bulwarkStacks;
+    whisperingMarble(isUIcalcs,index) {//50
+      let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
+      index.AllDamage += 0.02 * bulwarkStacks;
     },
-  },
-  "rings": {//I... I think I'm done...?
-    ataeriiBooster(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let referenceTable = !isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+  // },
+  // "rings": {//I... I think I'm done...?
+    ataeriiBooster(isUIcalcs,index) {//0 user input
+      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
-        valueTables[index].AllDamage += 0.10;
-        valueTables[index].AllCritChance += 0.10;
+        index.AllDamage += 0.10;
+        index.AllCritChance += 0.10;
       }
     },
-    ahanaeCrystal(index) {//50
+    ahanaeCrystal(isUIcalcs,index) {//50
       let activeStatus = 0;
-      let reference = valueTables[index];
 
-      if (reference.outgoingStatus) {
+      if (index.outgoingStatus) {
         //Slow, bleed, burn, overloaded, corroded
-        activeStatus += reference.outSLOW ? 1 : 0;
-        activeStatus += reference.outBLEED ? 1 : 0;
-        activeStatus += reference.outBURN ? 1 : 0;
-        activeStatus += reference.outOVERLOADED ? 1 : 0;
-        activeStatus += reference.outCORRODED ? 1 : 0;
-        reference.AllDamage += (0.05 * activeStatus);
+        activeStatus += index.outSLOW ? 1 : 0;
+        activeStatus += index.outBLEED ? 1 : 0;
+        activeStatus += index.outBURN ? 1 : 0;
+        activeStatus += index.outOVERLOADED ? 1 : 0;
+        activeStatus += index.outCORRODED ? 1 : 0;
+        index.AllDamage += (0.05 * activeStatus);
       }
     },
-    akariWarBand(index) {//0 user input
+    akariWarBand(isUIcalcs,index) {//0 user input
       let perfectDodge = globalRecords.meleeFactors.isPerfectDodge;
       if (perfectDodge === true) {
-        valueTables[index].AllCritChance += 0.10;
-        valueTables[index].AllCritDamage += 0.10;
+        index.AllCritChance += 0.10;
+        index.AllCritDamage += 0.10;
       }
     },
-    alchemyStone(index) {//base
-      valueTables[index].Lifesteal += valueTables[index].incomingStatus ? 0.06 : 0;
+    alchemyStone(isUIcalcs,index) {//base
+      index.Lifesteal += index.incomingStatus ? 0.06 : 0;
     },
-    anastasijasInspiration(index) {//PostHealing
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let toggleCheck = !isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
-      if (valueTables[index]["HP/S+"] || valueTables[index]["HP/S%"] || (toggleCheck && valueTables[index].RelicHPtime > 1)) {
-        valueTables[index].HASTE += 1;
+    anastasijasInspiration(isUIcalcs,index) {//PostHealing
+      let toggleCheck = isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
+      if (index["HP/S+"] || index["HP/S%"] || (toggleCheck && index.RelicHPtime > 1)) {
+        index.HASTE += 1;
       }
     },
-    blackSpinel(index) {//base
-      valueTables[index]["HP/S%"] += valueTables[index].outgoingStatus ? 0.02 : 0;
+    blackSpinel(isUIcalcs,index) {//base
+      index["HP/S%"] += index.outgoingStatus ? 0.02 : 0;
     },
-    bloodTingedRing(index) {//base
-      if (valueTables[index].outBLEED || valueTables[index].inBLEED) {
-        valueTables[index]["HP/S+"] += 2;
+    bloodTingedRing(isUIcalcs,index) {//base
+      if (index.outBLEED || index.inBLEED) {
+        index["HP/S+"] += 2;
       }
     },
-    bridgeWardensCrest(index) {//0 user input
+    bridgeWardensCrest(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge) {
-        valueTables[index].MeleeDamage += 0.20;
+        index.MeleeDamage += 0.20;
         let weightClass = calcs.getWeight(index)[1];
-        valueTables[index].FlatDR += globalRecords.meleeFactors.isEvade && weightClass === "Flop" ? 0.1 : 0;
+        index.FlatDR += globalRecords.meleeFactors.isEvade && weightClass === "Flop" ? 0.1 : 0;
       }
     },
-    burdenOfTheMason(index,totalDR) {//postDR
-      valueTables[index].MeleeDamage += Math.min(0.80,totalDR) * 0.35
+    burdenOfTheMason(isUIcalcs,index,totalDR) {//postDR
+      index.MeleeDamage += Math.min(0.80,totalDR) * 0.35
     },
-    burdenOfTheMesmer1(index) {//base
-      valueTables[index].GlobalHealthModifier *= 0.80;//health modification
+    burdenOfTheMesmer1(isUIcalcs,index) {//base
+      index.GlobalHealthModifier *= 0.80;//health modification
     },
-    burdenOfTheMesmer2(index,totalDR) {//postDR
+    burdenOfTheMesmer2(isUIcalcs,index,totalDR) {//postDR
       let floorIncrement = 0.05
       let dmgScaling = 0.01
-      valueTables[index].AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
+      index.AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
     },
-    driedClayRing(index) {//50
-      let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
+    driedClayRing(isUIcalcs,index) {//50
+      let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
       
       let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
-      valueTables[index].AllDamage += 0.5 * bulwarkDR;
+      index.AllDamage += 0.5 * bulwarkDR;
     },
-    embraceOfShahala(index) {//base
+    embraceOfShahala(isUIcalcs,index) {//base
       let activeStatus = 0;
-      let reference = valueTables[index];
 
-      if (reference.incomingStatus) {
+      if (index.incomingStatus) {
         //Slow, bleed, burn, overloaded, corroded
         //Shahala probably counts more statuses than Ahanae does, in terms of player debuffs.
         //Probably needs more work later, to figure out what.
-        activeStatus += reference.inSLOW ? 1 : 0;
-        activeStatus += reference.inBLEED ? 1 : 0;
-        activeStatus += reference.inBURN ? 1 : 0;
-        activeStatus += reference.inOVERLOADED ? 1 : 0;
-        activeStatus += reference.inCORRODED ? 1 : 0;
-        reference.FlatDR += (0.075 * Math.min(2,activeStatus));
+        activeStatus += index.inSLOW ? 1 : 0;
+        activeStatus += index.inBLEED ? 1 : 0;
+        activeStatus += index.inBURN ? 1 : 0;
+        activeStatus += index.inOVERLOADED ? 1 : 0;
+        activeStatus += index.inCORRODED ? 1 : 0;
+        index.FlatDR += (0.075 * Math.min(2,activeStatus));
       }
     },
-    featheryBinding(index) {//50 after haste at 40
-      if (valueTables[index].HASTE) {
-        valueTables[index].ProjectileSpeed += 0.15;
-        valueTables[index].WeaponChargeTime += 0.10;
+    featheryBinding(isUIcalcs,index) {//50 after haste at 40
+      if (index.HASTE) {
+        index.ProjectileSpeed += 0.15;
+        index.WeaponChargeTime += 0.10;
       }
     },
-    floodlitDiamond(index) {//50
-      valueTables[index].AllWeakspot += valueTables[index].outEXPOSED ? 0.12 : 0;
+    floodlitDiamond(isUIcalcs,index) {//50
+      index.AllWeakspot += index.outEXPOSED ? 0.12 : 0;
     },
-    flyweightsSting(index) {//50
-      let weight = valueTables[index].Encumbrance * (1+valueTables[index]["Encumbrance%"]);
+    flyweightsSting(isUIcalcs,index) {//50
+      let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       if (weight < 0) {weight = 0;}
       if (weight < 50) {
-        valueTables[index].MeleeDamage += (1 - (weight/49)) * 0.25;
+        index.MeleeDamage += (1 - (weight/49)) * 0.25;
       }
     },
-    frivolousBand(index) {//0 user input
+    frivolousBand(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge && globalRecords.meleeFactors.isEvade) {
-        valueTables[index].FireRate += 0.10;
-        valueTables[index].AttackSpeed += 0.10;
+        index.FireRate += 0.10;
+        index.AttackSpeed += 0.10;
       }
     },
-    gameMasters1(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let teamCount = !isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    gameMasters1(isUIcalcs,index) {//0 user input
+      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
       if (teamCount>1) {
-        valueTables[index].DMGKept.push((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
+        index.DMGKept.push((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
       }
     },
-    gameMasters2(index) {//PreHealing
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let teamCount = !isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    gameMasters2(isUIcalcs,index) {//PreHealing
+      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
 
-      valueTables[index].GlobalHealingEff = valueTables[index].GlobalHealingEff * 0.5;//Cut healing in half
+      index.GlobalHealingEff = index.GlobalHealingEff * 0.5;//Cut healing in half
       if (teamCount>1) {
-        valueTables[index].GlobalHealingEff *= 1/teamCount;//Further divide the healing by team members
+        index.GlobalHealingEff *= 1/teamCount;//Further divide the healing by team members
       }
     },
-    generatingBand(index) {//PreHealing
-      if (valueTables[index].Shield > 0) {
-        valueTables[index]["HP/S%"] += 0.03;
+    generatingBand(isUIcalcs,index) {//PreHealing
+      if (index.Shield > 0) {
+        index["HP/S%"] += 0.03;
       }
     },
-    gulSignet(index,dodgeClass) {//PostWeightClass
+    gulSignet(isUIcalcs,index,dodgeClass) {//PostWeightClass
       let currentClass = 0;
       switch (dodgeClass) {
         case "Flop": currentClass = 3;break;
         case "Heavy": currentClass = 2;break;
         case "Medium": currentClass = 1;break;
       }
-      valueTables[index].FlatDR -= 0.025 * currentClass
+      index.FlatDR -= 0.025 * currentClass
     },
-    haymakersRing(index) {//50
-      let weight = valueTables[index].Encumbrance * (1+valueTables[index]["Encumbrance%"]);
+    haymakersRing(isUIcalcs,index) {//50
+      let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       let modifier = 0.002;
-      valueTables[index].MeleeDamage += weight * modifier;
+      index.MeleeDamage += weight * modifier;
     },
-    kolketEyelet(index) {//PostWeightClass
-      let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
+    kolketEyelet(isUIcalcs,index) {//PostWeightClass
+      let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
 
-      valueTables[index]["HP/S+"] += 0.3 * bulwarkStacks;
+      index["HP/S+"] += 0.3 * bulwarkStacks;
     },
-    lodestoneRing(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.armor.helmet : globalRecords.ALTarmor.helmet;
+    lodestoneRing(isUIcalcs,index) {//0 user input
+      let customPath = isUIcalcs ? globalRecords.armor.helmet : globalRecords.ALTarmor.helmet;
 
       let helmetPath = customPath;
-      if (helmetPath.includes("Lodestone Crown") === true) {
-        valueTables[index].AllDamage += 0.05;
+      if (helmetPath.includes("Lodestone Crown")) {
+        index.AllDamage += 0.05;
       }
     },
-    matriarchsRing(index) {//0 user input
+    matriarchsRing(isUIcalcs,index) {//0 user input
       let perfectDodge = globalRecords.meleeFactors.isPerfectDodge;
-      valueTables[index].ChargeCost += perfectDodge ? -1 : 0;
+      index.ChargeCost += perfectDodge ? -1 : 0;
     },
-    mechanicsCog(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let referenceTable = !isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+    mechanicsCog(isUIcalcs,index) {//0 user input
+      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
-        valueTables[index].Bulwark += 1;
-        valueTables[index].MovementSpeed += 0.15;
+        index.Bulwark += 1;
+        index.MovementSpeed += 0.15;
       }
     },
-    painlessObsidian(index) {//0 user input
-      valueTables[index].HASTE += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
-      valueTables[index].Bulwark += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
+    painlessObsidian(isUIcalcs,index) {//0 user input
+      index.HASTE += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
+      index.Bulwark += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
     },
-    panWarBand(index) {// 0 team count user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let teamCount = !isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    panWarBand(isUIcalcs,index) {// 0 team count user input
+      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
 
-      valueTables[index].MovementSpeed += 0.03 * teamCount;
-      valueTables[index].ReloadSpeed += 0.03 * teamCount;
-      valueTables[index].FireRate += 0.02 * teamCount;
+      index.MovementSpeed += 0.03 * teamCount;
+      index.ReloadSpeed += 0.03 * teamCount;
+      index.FireRate += 0.02 * teamCount;
     },
-    ravagersBargain(index) {//base
-      let isBleeding = valueTables[index].inBLEED;
-      valueTables[index].AllDamage += isBleeding ? 0.05 : 0;
-      valueTables[index].AllCritChance += isBleeding ? 0.05 : 0;
+    ravagersBargain(isUIcalcs,index) {//base
+      let isBleeding = index.inBLEED;
+      index.AllDamage += isBleeding ? 0.05 : 0;
+      index.AllCritChance += isBleeding ? 0.05 : 0;
     },
-    restrictionCord(index) {//base
-      valueTables[index].GlobalHealthModifier *= 0.5;
+    restrictionCord(isUIcalcs,index) {//base
+      index.GlobalHealthModifier *= 0.5;
     },
-    ringOfSpirits(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
+    ringOfSpirits(isUIcalcs,index) {//0 user input
       let totalActive = 0;
 
-      if (!isUIcalcs) {
+      if (isUIcalcs) {
         for (let i=1;i<=7;i++) {
-          let customPath = !isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
+          let customPath = isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
           if (customPath) {
             totalActive += 1;
           }
           if (i<=4) {
-            customPath = !isUIcalcs ? globalRecords.consumables[`quickUse${i}`] : globalRecords.ALTconsumables[`quickUse${i}`];
+            customPath = isUIcalcs ? globalRecords.consumables[`quickUse${i}`] : globalRecords.ALTconsumables[`quickUse${i}`];
             if (customPath) {
               totalActive += 1;
             }
           }
         }
-        valueTables[index].ModPowerGen += 0.03 * Math.min(5,totalActive);//enforce the cap of 5.
+        index.ModPowerGen += 0.03 * Math.min(5,totalActive);//enforce the cap of 5.
       }
       else {
         //If we are in the middle of cycles loops, and maybe the filtered concoctions are less than the limit, always apply the limit amount of Mod Gen so we don't skip a possible build
-        valueTables[index].ModPowerGen += 0.03 * 5;
+        index.ModPowerGen += 0.03 * 5;
       }
     },
-    ringOfTheDamned(index) {//0 user input
-      valueTables[index].AllDamage += globalRecords.meleeFactors.greyHealthActive ? 0.004*50 : 0;
-      valueTables[index].AllCritChance += globalRecords.meleeFactors.greyHealthActive ? 0.05 : 0;
+    ringOfTheDamned(isUIcalcs,index) {//0 user input
+      index.AllDamage += globalRecords.meleeFactors.greyHealthActive ? 0.004*50 : 0;
+      index.AllCritChance += globalRecords.meleeFactors.greyHealthActive ? 0.05 : 0;
     },
-    singedRing(index) {//50
-      valueTables[index].AllDamage += valueTables[index].outBURN ? 0.12 : 0;
+    singedRing(isUIcalcs,index) {//50
+      index.AllDamage += index.outBURN ? 0.12 : 0;
     },
-    soulGuard(index) {//0 user input
-      
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
-
-      valueTables[index].Bulwark += +customPath;
+    soulGuard(isUIcalcs,index) {//0 user input
+      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+      index.Bulwark += +customPath;
     },
-    soulShard(index) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let customPath = !isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+    soulShard(isUIcalcs,index) {//0 user input
+      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
 
       let minionCount = +customPath;
       if (minionCount > 3) {minionCount = 3;}
       let modifier = 0.05;
-      valueTables[index].AllDamage += modifier * minionCount;
+      index.AllDamage += modifier * minionCount;
     },
-    tokenOfFavor(index) {//50
-      valueTables[index].AllCritChance += valueTables[index].outEXPOSED ? 0.10 : 0;
+    tokenOfFavor(isUIcalcs,index) {//50
+      index.AllCritChance += index.outEXPOSED ? 0.10 : 0;
     },
-    thalosEyelet(index) {//PostWeightClass
-      let bulwarkStacks = Math.min(valueTables[index].Bulwark,valueTables[index].BulwarkCap);
-      valueTables[index]["Stamina/S+"] += 2 * bulwarkStacks;
+    thalosEyelet(isUIcalcs,index) {//PostWeightClass
+      let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
+      index["Stamina/S+"] += 2 * bulwarkStacks;
     },
-    whiteGlassBead(index) {//0 user input
-      valueTables[index].Shield += globalRecords.meleeFactors.isPerfectDodge ? 0.15 : 0;
+    whiteGlassBead(isUIcalcs,index) {//0 user input
+      index.Shield += globalRecords.meleeFactors.isPerfectDodge ? 0.15 : 0;
     },
-  },
-  "relic": {//DONE relics are currently tierless
+  // },
+  // "relic": {//DONE relics are currently tierless
     resonatingHeart(isUIcalcs,index,relicHPscaled,totalHealth) {
-      let path = relics["Resonating Heart"]
       //Healing/Relic EFF already factored before this function even starts
       let inputValue = relicHPscaled * 2 * (1+index.HealingEFF);
 
@@ -2479,88 +2565,83 @@ let customItemFunctions = {
       }
     return [avgPercHPpSec,avgHPpSec]
     },
-  },
-  "mutators": {//DONE
-    executor(index) {//base
-      let reference = valueTables[index];
-
-      if (reference.outgoingStatus) {
+  // },
+  // "mutators": {//DONE
+    executor(isUIcalcs,index) {//base
+      if (index.outgoingStatus) {
         let count = globalRecords.meleeFactors.enemyCount;
-        count += reference.incomingStatus ? 1 : 0
+        count += index.incomingStatus ? 1 : 0
         count = Math.min(4,count);
-        reference.AttackSpeed += (0.05 * count);
-        reference.ChargeSpeed += (0.05 * count);
+        index.AttackSpeed += (0.05 * count);
+        index.ChargeSpeed += (0.05 * count);
       }
     },
-    guts(index) {//0 user input
+    guts(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
-        valueTables[index].MeleeCritChance += 0.25;
-        valueTables[index].MeleeCritDamage += 0.25;//we don't have any %GHP specifications yet, this assume 50% GHP
+        index.MeleeCritChance += 0.25;
+        index.MeleeCritDamage += 0.25;//we don't have any %GHP specifications yet, this assume 50% GHP
       }
     },
-    misfortune(index) {//base
+    misfortune(isUIcalcs,index) {//base
       let activeStatus = 0;
-      let reference = valueTables[index];
 
-      if (reference.outgoingStatus) {
+      if (index.outgoingStatus) {
         //Slow, bleed, burn, overloaded, corroded
-        activeStatus += reference.outSLOW ? 1 : 0;
-        activeStatus += reference.outBLEED ? 1 : 0;
-        activeStatus += reference.outBURN ? 1 : 0;
-        activeStatus += reference.outOVERLOADED ? 1 : 0;
-        activeStatus += reference.outCORRODED ? 1 : 0;
-        reference.MeleeDamage += (0.10 * activeStatus);
+        activeStatus += index.outSLOW ? 1 : 0;
+        activeStatus += index.outBLEED ? 1 : 0;
+        activeStatus += index.outBURN ? 1 : 0;
+        activeStatus += index.outOVERLOADED ? 1 : 0;
+        activeStatus += index.outCORRODED ? 1 : 0;
+        index.MeleeDamage += (0.10 * activeStatus);
       }
     },
-    opportunist(index) {//0 user input
+    opportunist(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge) {
-        valueTables[index].MeleeCritChance += 1;
+        index.MeleeCritChance += 1;
       }
     },
-    resentment(index) {//0 user input
+    resentment(isUIcalcs,index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
-        valueTables[index].MeleeDamage += 0.30
+        index.MeleeDamage += 0.30
       }
     },
-    shieldedStrike(index) {//50
-      let shieldAmount = valueTables[index].Shield;
+    shieldedStrike(isUIcalcs,index) {//50
+      let shieldAmount = index.Shield;
       let cap = 0.50;
       let dmgCap = 0.25;
       if (shieldAmount > 0) {
         if (shieldAmount > cap) {shieldAmount = cap;}
-        valueTables[index].ChargeDamage += (shieldAmount/cap) * dmgCap;
+        index.ChargeDamage += (shieldAmount/cap) * dmgCap;
       }
     },
-    vampireBlade(index) {//base
-      let reference = valueTables[index];
-      if (reference.outBLEED) {
-        reference.MeleeDamage += 0.30;
-        reference.MLifesteal += 0.03;
+    vampireBlade(isUIcalcs,index) {//base
+      if (index.outBLEED) {
+        index.MeleeDamage += 0.30;
+        index.MLifesteal += 0.03;
       }
-    }
-  },
-  "meleeMods": {//DONE
-    dreamwave(index) {//0 user input
+    },
+  // },
+  // "meleeMods": {//DONE
+    dreamwave(isUIcalcs,index) {//0 user input
       let count = globalRecords.meleeFactors.enemyCount;
-      valueTables[index].AllDamage += 0.02 * count;
-      valueTables[index].MovementSpeed += 0.02 * count;
+      index.AllDamage += 0.02 * count;
+      index.MovementSpeed += 0.02 * count;
     },
-    beyondTheVeil(index) {//0 user input
-      valueTables[index].MLifesteal += globalRecords.meleeFactors.isEvade ? 0.05 : 0;
+    beyondTheVeil(isUIcalcs,index) {//0 user input
+      index.MLifesteal += globalRecords.meleeFactors.isEvade ? 0.05 : 0;
     },
-    reaver(index) {//base
-        valueTables[index].MeleeDamage += valueTables[index].outgoingStatus ? 0.10 : 0;
-    }
-  },
-  "traits": {
-    bloodBond(index,traitLevel) {//0 user input
-      let isUIcalcs = index != "greatTableKnowerOfAll";
-      let referenceTable = !isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+    reaver(isUIcalcs,index) {//base
+        index.MeleeDamage += index.outgoingStatus ? 0.10 : 0;
+    },
+  // },
+  // "traits": {
+    bloodBond(isUIcalcs,index,traitLevel) {//0 user input
+      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
       if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
-        valueTables[index].DMGKept.push(-0.01 * traitLevel);
+        index.DMGKept.push(-0.01 * traitLevel);
       }
     },
-  }
+  // }
 }
 
 /* ---------------------------------------------------------------------------------------- */
@@ -2571,9 +2652,8 @@ function updateFormulas(index,ping) {
   //If we're not iterating
   index = index ?? `greatTableKnowerOfAll`;
   let isUIcalcs = index === `greatTableKnowerOfAll`;
-  //Reset the table
-  valueTables[index] = {...starterTable}
-  // console.log(valueTables[index].FlatDR)
+  
+  valueTables[index] = {...starterTable}//Reset the table
   let tableReference = valueTables[index];
 
   tableReference.REdamage = [];//Reset arrays, lest we modify original
@@ -2584,10 +2664,12 @@ function updateFormulas(index,ping) {
     // formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
   }
   formulasValues.pullTraits(isUIcalcs,index);
+
+  let tieredFunctionStorage = formulasValues.storeActiveConditionals(isUIcalcs);
   
   formulasValues.pullGearStats(isUIcalcs,index,ping);//Weapons/Accessories/class/frags/etc
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Tier0");//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Base");//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customTier0",tableReference);//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customBase",tableReference);//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
 
 //SUMMARY STATS
 //HEALTH
@@ -2603,7 +2685,7 @@ function updateFormulas(index,ping) {
   let baseWeight = weightQuery[3];
   let weightBoost = weightQuery[4];
   let weightThreshold = weightQuery[5];
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostWeightClass",dodgeClass);//Gul Signet, etc
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostWeightClass",tableReference,dodgeClass);//Gul Signet, etc
   let staminaValuesQuery = calcs.getStaminaValues(tableReference,staminaPenalty);
   let staminaPerSec = staminaValuesQuery[0];
   let staminaCost = staminaValuesQuery[1];
@@ -2623,7 +2705,7 @@ function updateFormulas(index,ping) {
   tableReference.AllDamage += tableReference.outCORRODED ? 0.10 : 0;
   tableReference.HealingEFF *= tableReference.inBLEED ? 0.5 : 1;
 
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PreHealing");//generating band, etc
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPreHealing",tableReference);//generating band, etc
   let healingQuery = calcs.getHealing(tableReference);
   let globalHealingMod = healingQuery[0]; //Example: game master's pride. Not used outside of calcs.functions yet
   let healingEffectiveness = healingQuery[1];
@@ -2631,7 +2713,7 @@ function updateFormulas(index,ping) {
   let percHPperSec = healingQuery[3];
   let totalGreyHPperSec = healingQuery[4];
 
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostHealing");//anastasijasInspiration, stuff like that
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostHealing",tableReference);//anastasijasInspiration, stuff like that
   if (valueTables[index].HASTE > 0) {
     for (let bonuses in hasteTable) {valueTables[index][bonuses] += hasteTable[bonuses];}//If haste exists, add relevant speed stats
   }
@@ -2649,6 +2731,7 @@ function updateFormulas(index,ping) {
   let useComplexValues = !!relicComplexArray;
 
   // formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealthNoGlobal,"RelicFunctions");//resonating heart, etc
+  // formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customRelicFunctions",index);
   // (isUIcalcs,index,item,relicHPscaled,totalHealth,tier,insertedStatistic)
 //---------- DAMAGE REDUCTION ---------------------------------------------------
   let armorQuery = calcs.getArmor(tableReference);
@@ -2675,7 +2758,7 @@ function updateFormulas(index,ping) {
     }
   }
 
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"PostDR",totalDR);//Burden of the Mason, etc
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostDR",tableReference,totalDR);//Burden of the Mason, etc
   //----------ADVANCED DR-------------
   let advancedDrQuery = calcs.getAdvancedDR(tableReference,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal);
   let reducedEnemyDamage = advancedDrQuery[0];
@@ -2705,7 +2788,7 @@ function updateFormulas(index,ping) {
   let EHPpSec = advancedHealingQuery[6] || 0;
 
   //TIER 50 CALLS PURELY FOR DMG RELATED CONDITIONALS + DMG CONDITIONALS THAT NEED TO BE DONE AFTER REG STATS
-  formulasValues.callUniqueFunctions(isUIcalcs,index,null,0,0,"Tier50");//50 is just where I chose to start for dmg functions
+  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customTier50",tableReference);//50 is just where I chose to start for dmg functions
   //---------- LIFESTEAL --------------Can be last bc no other statistics depend on lifesteal values, yet
   let lifestealQuery = calcs.getLifesteal(tableReference,relicEffectiveness);
   let lifestealEFF = lifestealQuery[0];

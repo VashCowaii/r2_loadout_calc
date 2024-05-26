@@ -139,7 +139,7 @@ let calcs = {
         relicPercPerSecond = null;
         relicFlatPerSecond = null;
         }
-        let relicComplexArray = formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealth,"RelicFunctions");
+        let relicComplexArray = formulasValues.callUniqueRelicFunctions(isUIcalcs,index,relicHPscaled,totalHealth);
 
         return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness]
     },

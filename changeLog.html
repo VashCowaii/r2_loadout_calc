@@ -49,6 +49,19 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>May 25, 2024 - SPEED UPDATE #2</h1>
+                    <ul>
+                        <li>Reworked entirely how the conditional hierarchy works. This is the stuff that lets something like Generating Band see if there is a shield active in order to determine whether to give healing or not. This is purely a back-end change and you guys shouldn't see anything different other than queries are about 38% faster than they were yesterday.
+                            <ul>
+                                <li>As with all major reworks, I may have missed something jank. If you see anything that doesn't make sense that might have slipped past my testing, let me know.</li>
+                            </ul>
+                        </li>
+                        <li>Fixed an issue where if the user arrived at the site without interacting with literally anything and goes straight to the queries and pops in a target and hits start without putting in any filters, it could crash the calculator.</li>
+                        <li>Fixed an issue where Alchemy Stone's lifesteal was provided regardless of whether the player was suffering from a status effect(like Atonement Fold's bleed effect). Not a huge deal since it still displayed the bonus correctly, just not always in the right context.</li>
+                        <li>Resonating Heart's overheal effect UI element will now only display when the relic is not disabled. When disabled before, the numbers in overall calculations would adjust as they should, but the overheal UI element didn't have any resets in place and would linger when it wasn't relevant to the display.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>May 18, 2024</h1>
                     <ul>
                         <li>Changed Blood Bond's trait bonus to only populate when Summoner is a selected archetype. We had discussed doing this before in light of the recent game change, but I didn't have anything set up for traits to allow custom conditionals yet, I added that today.</li>

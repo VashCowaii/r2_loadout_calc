@@ -858,7 +858,7 @@ let cyclesLoop = {
                     cycles.vars.lastTimerEvaluation = 0;
                     cyclesLoop.bestCombos = {};
 
-                    cyclesLoop.updateSetupStep(`Initiating Web Workers ${i}-${cycles.vars.threadCount}`,false,1);
+                    // cyclesLoop.updateSetupStep(`Initiating Web Workers ${i}-${cycles.vars.threadCount}`,false,1);
                     for (let i=1;i<=cycles.vars.threadCount;i++) {
                         cyclesLoop.startCycleWorker(i,cycles.vars.threadCount);
                         cycles.debugPushLine(`Initiating Web Worker #${i}`);
@@ -921,6 +921,7 @@ let cyclesLoop = {
                     endTotalTime -= cycles.vars.cycleTotalTimer;
 
                     endTotalTime = endTotalTime/1000;
+                    console.log(endTotalTime);
                     const adjustedTime = endTotalTime>60 ? 60 : 1;
                     let units = adjustedTime > 1 ? "m" : "s";
                     let newEst = endTotalTime/adjustedTime;
@@ -934,6 +935,7 @@ let cyclesLoop = {
                         units = `hr`;
                     }
                     readSelection(`cyclesTimeRemaining`).innerHTML = `Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`;
+                    console.log(`Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`)
                     cycles.vars.stopCycles = true;
                     readSelection("cycleSTOP").disabled = true;
                     readSelection("cycleSTART").disabled = false;
@@ -976,7 +978,7 @@ let cyclesLoop = {
                         readSelection("backgroundHalvesRight").style.background = `linear-gradient(135deg, ${classPath2.gradient[0]}, ${classPath2.gradient[1]},black)`;
                     }
                     //If the counter matches an increment level
-                    else if (timerChecker > cycles.vars.lastTimerEvaluation) {
+                    else if (timerChecker > cycles.vars.lastTimerEvaluation && cycles.vars.workersRunning > 0) {
                         const newCycleTime = performance.now();
                         const timeDiff = newCycleTime - cycles.vars.cycleTimer;
                         cycles.vars.cycleTimer = newCycleTime;
@@ -1513,7 +1515,6 @@ let cyclesLoop = {
         cyclesLoop.selfGenerationStop(null,moduloFactor); //Set things back to normal once completed
     },
     updateCycleRecord(value,addArmor) {
-
         let accessoryReference = globalRecords.ALTaccessories;
         accessoryReference.amulet = value.amulet[0] ?? "";
         accessoryReference.ring1 = value.ringSet[0] ?? "";

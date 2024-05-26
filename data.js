@@ -3018,7 +3018,7 @@ titleCombos = {
 /* ----------------------------------------------------------------------------------------*/
 amulets = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "",
 		"image": "images/Remnant/clear.png",
@@ -3031,23 +3031,25 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Abrasive Whetstone.png",
 		"desc": "When attacking a BLEEDING enemy, Crit Chance is increased by 15% and Crit Damage is increased by 15%.",
-		"customTier50": "abrasiveWhetstone",
+		"usesConditional": {
+			"customTier50": "abrasiveWhetstone",
+		},
 		"stats": {},
 		"tags": ["AllCritChance","AllCritDamage"]
 	},
 	"Ankh of Power": {//TODO: Add a relic usage factor, low priority
+		"usesConditional": {},
 		"name": "Ankh of Power",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Ankh of Power.png",
 		"desc": "Grants a 15% increase to all damage. Consuming a Relic increases the bonus to 25% for 15s. Currently the bonus is assumed active.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.25,
 		},
 		"tags": []
 	},
 	"Beads of the Valorous": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Beads of the Valorous",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Beads of the Valorous.png",
@@ -3063,14 +3065,18 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Birthright of the Lost.png",
 		"desc": "Grants 10% All Damage. On perfect dodge, apply EXPOSED to enemies in a 3m AOE for 10s. EXPOSED: Target receives 15% additional damage from all sources.",
-		"customTier0": "birthrightOfTheLost",
+		"usesConditional": {
+			"customTier0": "birthrightOfTheLost",
+		},
 		"stats": {
 			"AllDamage": 0.10
 		},
 		"tags": ["outEXPOSED"]
 	},
 	"Brewmaster's Cork": {//done
-		"customTier0": "brewMasters",
+		"usesConditional": {
+			"customTier0": "brewMasters",
+		},
 		"name": "Brewmaster's Cork",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Brewmaster's Cork.png",
@@ -3081,7 +3087,7 @@ amulets = {
 		"tags": ["FlatDR"]
 	},
 	"Broken Pocket Watch": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Broken Pocket Watch",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Broken Pocket Watch.png",
@@ -3097,7 +3103,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Butcher's Fetish.png",
 		"desc": "Increases Critical Chance by 15% and Critical Damage by 25% for 5s after striking enemy with a Charged Melee Attack. Bonus assumed to be active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllCritChance": 0.15,
 			"AllCritDamage": 0.25,
@@ -3105,7 +3111,7 @@ amulets = {
 		"tags": []
 	},
 	"Cervine Keepsake": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Cervine Keepsake",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Cervine Keepsake.png",
@@ -3120,7 +3126,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Chains of Amplification.png",
 		"desc": "Increases all damage dealt to targets suffering from a Status Effect by 20%.",
-		"customTier50": "chainsOfAmplification",
+		"usesConditional": {
+			"customTier50": "chainsOfAmplification",
+		},
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
@@ -3129,7 +3137,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Cleansing Stone.png",
 		"desc": "Reduces Duration of Elemental Status Effects against wearer by 50%. Relic use cleanses Elemental Status effects and grants 25% of wearers Max Health to all allies within 20m when cleansed.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -3138,7 +3146,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Core Booster.png",
 		"desc": "Increases weakspot damage by 50% for 10s after killing an enemy. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllWeakspot": 0.5,
 		},
@@ -3150,7 +3158,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Cost of Betrayal.png",
 		"desc": "Reduces Max Relic Charges to 1. Increases All Damage by 25% when wearer has 1 Relic Charge. Increases incoming damage by 25% when wearer has no Relic Charges and after 15s, regain 1 Relic Charge. Negative is not calculated.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.25,
 			"RelicChargesOverride": 1
@@ -3158,7 +3166,9 @@ amulets = {
 		"tags": []
 	},
 	"Daredevil's Charm": {//done
-		"customTier50": "daredevil",
+		"usesConditional": {
+			"customTier50": "daredevil",
+		},
 		"name": "Daredevil's Charm",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Daredevil's Charm.png",
@@ -3171,7 +3181,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Death's Embrace.png",
 		"desc": "Gain 15% to all damage when Health is below 100%. Gain HASTE and 10% All Damage when below 50% Health. Bonus currently assumed active at all times. HP settings might be added later.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.15,
 			"AllDamage": 0.10,//bonus
@@ -3184,12 +3194,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Death-Soaked Idol.png",
 		"desc": "Increases All Damage by 6% for each entity within 20m suffering from a unique Negative Status Effect. Max 5 stacks. Requires incoming/outgoing status effects, and the ENEMY COUNT setting.",
-		"customTier50": "deathSoakedIdol",
+		"usesConditional": {
+			"customTier50": "deathSoakedIdol",
+		},
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Decayed Margin": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Decayed Margin",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Decayed Margin.png",
@@ -3205,7 +3217,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Detonation Trigger.png",
 		"desc": "Increases Explosion damage by 25%. Explosions apply 210 BURNING damage over 5s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ExplosiveDamage": 0.25,
 			"outBURN": 210,
@@ -3214,7 +3226,9 @@ amulets = {
 		"tags": []
 	},
 	"Difference Engine": {//done
-		"customTier50": "differenceEngine",
+		"usesConditional": {
+			"customTier50": "differenceEngine",
+		},
 		"name": "Difference Engine",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Difference Engine.png",
@@ -3227,7 +3241,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Downward Spiral.png",
 		"desc": "Increase Fire Rate by 10% and Melee Attack Speed by 15%. For every missing 10% of Max Health, gain 4% Ranged Damage (Max 20%) and 5% Melee Damage (Max 25%). Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AttackSpeed": 0.15,
 			"MeleeDamage": 0.25,
@@ -3236,7 +3250,7 @@ amulets = {
 		"tags": []
 	},
 	"Echo of the Forest": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Echo of the Forest",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Echo of the Forest.png",
@@ -3245,7 +3259,9 @@ amulets = {
 		"tags": []
 	},
 	"Effigy Pendant": {//done
-		"customTier0": "effigyPendant",
+		"usesConditional": {
+			"customTier0": "effigyPendant",
+		},
 		"name": "Effigy Pendant",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Effigy Pendant.png",
@@ -3258,7 +3274,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Effluvium Enhancer.png",
 		"desc": "Increases ACID damage by 25% and CORROSIVE damage by 50%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AcidDamage": 0.25,
 			"CorrosiveDamage": 0.5,
@@ -3270,7 +3286,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Emergency Switch.png",
 		"desc": "When below 50% health, chance to consume Relic on use is reduced by 50%. Final Relic Charge is not consumed on use, but effect cannot be triggered again for 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -3279,7 +3295,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Energized Neck Coil.png",
 		"desc": "Increases Status Effect damage by 20%. Applying a damaging Status Effect creates a 5m Explosion for 20% of the Status Effects full damage. Each target can be affected once every 5 seconds.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StatusDamage": 0.20,
 		},
@@ -3290,7 +3306,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Energy Diverter.png",
 		"desc": "While a SHIELD is active, gain 10 Critical Chance and 15% to all damage dealt.",
-		"customTier50": "energyDiverter",
+		"usesConditional": {
+			"customTier50": "energyDiverter",
+		},
 		"stats": {},
 		"tags": ["AllDamage","AllCritChance"]
 	},
@@ -3299,14 +3317,16 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Escalation Protocol.png",
 		"desc": "Increases all damage dealt by 2.5% for 10s after killing an enemy. Stacks 10x. Dealing damage refreshes the timer. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.25,
 		},
 		"tags": []
 	},
 	"Fragrant Thorn": {//done
-		"customTier0": "fragrantThorn",
+		"usesConditional": {
+			"customTier0": "fragrantThorn",
+		},
 		"name": "Fragrant Thorn",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Fragrant Thorn.png",
@@ -3317,7 +3337,7 @@ amulets = {
 		"tags": ["outEXPOSED"]
 	},
 	"Full Moon Circlet": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Full Moon Circlet",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Full Moon Circlet.png",
@@ -3333,7 +3353,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gift of Euphoria.png",
 		"desc": "Spending 20 Stamina grants 5% Critical Chance for 7s. Max 5 stacks, stacks decay. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllCritChance": 0.25,
 		},
@@ -3344,7 +3364,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gift of Melancholy.png",
 		"desc": "Increases All Damage dealt by 25% when Stamina is at 100% for 7s. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.25,
 		},
@@ -3355,7 +3375,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gift of the Unbound.png",
 		"desc": "Disables negative effects of Burden Rings. Increases movement speed by 5% per effect disabled.",
-		"customTier0": "giftOfTheUnbound",
+		"usesConditional": {
+			"customTier0": "giftOfTheUnbound",
+		},
 		"stats": {},
 		"tags": ["MovementSpeed","HealingEFF",`RelicCharges%`,`Range%`,"AllDamage","FireRate","CDR","RelicSpeed","Reserves","WeakspotDisable"]
 	},
@@ -3364,7 +3386,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Golden Ribbon.png",
 		"desc": "Increases Mod damage by 25%. Activating a MOD grants HASTE for 15s. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModDamage": 0.25,
 			"HASTE": 1,
@@ -3376,7 +3398,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gunfire Security Lanyard.png",
 		"desc": "Automatically reloads Magazine over time. Does not work for single shot weapons.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -3385,7 +3407,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Gunslinger's Charm.png",
 		"desc": "Increases Fire Rate by 15% and Reload Speed by 25%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireRate": 0.15,
 			"ReloadSpeed": 0.25,
@@ -3397,7 +3419,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Hallowed Egg.png",
 		"desc": "Spending at least 30% of Firearms magazine to deal damage increases Melee damage by 10% for 7s. Stacks 5x. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.5,
 		},
@@ -3408,7 +3430,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Hyperconductor.png",
 		"desc": "Gain double Skill Charges. Increases Skill Cooldowns by 25%.\nFor Heavy Weapons, doubles Heavy Weapon Ammo instead.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CDR": 0.25,
 		},
@@ -3419,7 +3441,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Index of the Scribe.png",
 		"desc": "Increases Mod and Skill Weakspot Damage by 35%",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModWeakspot": 0.35,
 			"SkillWeakspot": 0.35,
@@ -3427,7 +3449,7 @@ amulets = {
 		"tags": []
 	},
 	"Indignant Fetish": {//done //TODO: taking damage, toggle? This seems like feature creep tho.
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Indignant Fetish",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Indignant Fetish.png",
@@ -3443,7 +3465,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Inert Overcharger.png",
 		"desc": "Standing still for 0.5s increases Fire Rate by 20%, Reload Speed by 15%, and reduces Recoil by 50%. Lasts 2s after moving. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireRate": 0.20,
 			"ReloadSpeed": 0.15,
@@ -3456,7 +3478,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Insulation Driver.png",
 		"desc": "While BULWARK is active, gain 15% to all damage dealt and HASTE.",
-		"customTier50": "insulationDriver",
+		"usesConditional": {
+			"customTier50": "insulationDriver",
+		},
 		"stats": {},
 		"tags": ["AllDamage","HASTE"]
 	},
@@ -3465,7 +3489,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Jester's Bell.png",
 		"desc": "Increases Mod and Skill Cast Speed by 35%. Casting a Skill or Mod increases all damage by 15% for 20s. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CastSpeed": 0.35,
 			"AllDamage": 0.15,
@@ -3477,12 +3501,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Kinetic Shield Exchanger.png",
 		"desc": "While a SHIELD is active, gain 25% Mod damage and generate 30% additional Mod power.",
-		"customTier50": "kineticShieldExchanger",
+		"usesConditional": {
+			"customTier50": "kineticShieldExchanger",
+		},
 		"stats": {},
 		"tags": ["ModDamage","ModPowerGen"]
 	},
 	"Kuri Kuri Charm": { //TODO: Relic use chance as a statistic? Currently not a thing
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Kuri Kuri Charm",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Kuri Kuri Charm.png",
@@ -3497,7 +3523,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Laemir Censer.png",
 		"desc": "Increases Mod Duration by 50%. Increases Mod Cost by 10%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModDuration": 0.5,
 			"ModCost": 0.10,
@@ -3509,7 +3535,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Legacy Protocol.png",
 		"desc": "Lowers skill cooldown by 20% and increased skill duration by 15%",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CDR": -0.2,
 			"SkillDuration": 0.15,
@@ -3517,7 +3543,7 @@ amulets = {
 		"tags": []
 	},
 	"Leto's Amulet": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Leto's Amulet",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Leto's Amulet.png",
@@ -3529,7 +3555,7 @@ amulets = {
 		"tags": []
 	},
 	"Matriarch's Insignia": {//done for now maybe //TODO: make the stamina depend on attack speed/frequency
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Matriarch's Insignia",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Matriarch's Insignia.png",
@@ -3541,7 +3567,7 @@ amulets = {
 		"tags": []
 	},
 	"Magnifying Glass": {//done for now maybe //TODO: make the stamina depend on attack speed/frequency
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Magnifying Glass",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Magnifying Glass.png",
@@ -3554,7 +3580,7 @@ amulets = {
 		"tags": []
 	},
 	"Moon Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Moon Stone",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Moon Stone.png",
@@ -3566,7 +3592,7 @@ amulets = {
 		"tags": []
 	},
 	"Navigator's Pendant": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Navigator's Pendant",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Navigator's Pendant.png",
@@ -3583,7 +3609,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Neckbone Necklace.png",
 		"desc": "Reduces the Damage of Status Effects applied to wearer by 50%. Gain 25% increased Damage when suffering from a Status Effect or Blight.",
-		"customTier50": "neckboneNecklace",
+		"usesConditional": {
+			"customTier50": "neckboneNecklace",
+		},
 		"stats": {
 			"inStatusDamage": -0.5,
 		},
@@ -3594,7 +3622,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Necklace of Flowing Life.png",
 		"desc": "Increases Grey Health conversion by an additional 100%. When Grey Health Conversion triggers, gain 5x the amount as Mod Power.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"GreyHealthConversion": 1,
 		},
@@ -3605,14 +3633,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Necklace of Supremacy.png",
 		"desc": "After 5s of not being damaged, increases all damage dealt by 15%. Increases to 30% if Health is full. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.30,
 		},
 		"tags": []
 	},
 	"Nightmare Spiral": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Nightmare Spiral",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Nightmare Spiral.png",
@@ -3628,12 +3656,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Nightweaver's Grudge.png",
 		"desc": "Gain 15% Critical Chance and HASTE when within 20m of an entity suffering from a Status Effect.",
-		"customTier50": "nightweaversGrudge",
+		"usesConditional": {
+			"customTier50": "nightweaversGrudge",
+		},
 		"stats": {},
 		"tags": ["AllCritChance","HASTE"]
 	},
 	"Nimue's Ribbon": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Nimue's Ribbon",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Nimue's Ribbon.png",
@@ -3649,7 +3679,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/One True King Sigil.png",
 		"desc": "Increases Mod damage by 20%. Enhances the effect of Faerin's Sigil and Faelin's Sigil by 50% per Sigil equipped.",
-		"customBase": "oneTrueKingSigil",
+		"usesConditional": {
+			"customBase": "oneTrueKingSigil",
+		},
 		"stats": {
 			"ModDamage": 0.2,
 		},
@@ -3660,7 +3692,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/One-Eyed Joker Idol.png",
 		"desc": "Neutral Backdash creates a Magic Card lasting 1s. If Card absorbs enemy damage gain 25% Critical Chance for 5s. Neutral Backdash cost 15% additional Stamina. Bonus assumed active when DODGE USED setting is 'Evade'.",
-		"customTier0": "oneEyedJokerIdol",
+		"usesConditional": {
+			"customTier0": "oneEyedJokerIdol",
+		},
 		"stats": {
 			"BackstepCost": 0.15,
 		},
@@ -3671,14 +3705,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Onyx Pendulum.png",
 		"desc": "Firearm damage (100 base) adds stacks which increase the damage of stowed firearm by 2% for 15s. Stacks 10x. Multiplicative. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"UniqueMulti": 1.2,
 		},
 		"tags": []
 	},
 	"Participation Medal": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Participation Medal",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Participation Medal.png",
@@ -3696,7 +3730,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Profane Soul Stone.png",
 		"desc": "Increases Summon Damage by 30% and Summon Movement Speed by 15. Reduces total Damage Reduction by 10% per active Summon. Requires SUMMON COUNT setting.",
-		"customTier0": "profaneSoulStone",
+		"usesConditional": {
+			"customTier0": "profaneSoulStone",
+		},
 		"stats": {
 			"SummonDamage": 0.30
 		},
@@ -3707,7 +3743,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Range Finder.png",
 		"desc": "After killing an enemy, gain 10% Ranged damage and 2m Firearm Range. Stacks 3x Lasts 10s. Ranged Weakspot Hits will refresh duration. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedDamage": 0.30,
 			"Range": 2,
@@ -3719,12 +3755,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Ravager's Mark.png",
 		"desc": "Increases all damage dealt to BLEEDING targets by 20%. Bonus increases to 30% for targets with 50% or lower Health. Maxmimum bonus assumed active at all times when the build can apply BLEED.",
-		"customTier50": "ravagersMark",
+		"usesConditional": {
+			"customTier50": "ravagersMark",
+		},
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Red Doe Sigil": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Red Doe Sigil",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Red Doe Sigil.png",
@@ -3735,7 +3773,7 @@ amulets = {
 		"tags": []
 	},
 	"Reed of the Vaunnt": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Reed of the Vaunnt",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Reed of the Vaunnt.png",
@@ -3746,7 +3784,7 @@ amulets = {
 		"tags": []
 	},
 	"Rusted Navigator's Pendant": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Rusted Navigator's Pendant",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Rusted Navigator's Pendant.png",
@@ -3763,7 +3801,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Samoflange.png",
 		"desc": "Direct damage taken from enemies, and any additional damage within 5s, is reduced by 60%. Once the defensive buff expires, all incoming damage to wearer is increased by 15% for 10s. Neither positive nor negative is currently calculated. Even if we averaged, you'd still be slightly negative on added DR.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": ["FlatDR"]
 	},
@@ -3772,7 +3810,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Scavenger's Bauble.png",
 		"desc": "Increases Scrap pickups by 50%, Automatically pick up any nearby crafting materials.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -3781,7 +3819,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Shaed Bloom Crystal.png",
 		"desc": "Gain a 35% damage bonus. Every 5s, the bonus switches between Physical and Elemental damage. Bonus is averaged between the two stats, and grants 17.5% to both at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.175,
 			"ElementalDamage": 0.175,
@@ -3793,7 +3831,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Shock Device.png",
 		"desc": "Increases SHOCK damage by 25% and OVERLOADED damage by 50%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ShockDamage": 0.25,
 			"OverloadedDamage": 0.50,
@@ -3805,7 +3843,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Silver Ribbon.png",
 		"desc": "Increases Skill damage by 25%.\nActivating a SKILL grants HASTE for 15s. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"SkillDamage": 0.25,
 			"HASTE": 1,
@@ -3817,7 +3855,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Sinister Totem.png",
 		"desc": "Applying or refreshing a Negative Status Effect to an enemy increases Status Damage by 1% for 15s. Max 50 stacks. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StatusDamage": 0.5,
 		},
@@ -3828,7 +3866,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Soul Anchor.png",
 		"desc": "Increases all damage dealt by 20% while at least one summon is active. Bonus assumed active at all times when SUMMON COUNT setting is greater than 0",
-		"customTier0": "soulAnchor",
+		"usesConditional": {
+			"customTier0": "soulAnchor",
+		},
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
@@ -3837,7 +3877,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Soul Stone.png",
 		"desc": "Increases Summons Damage by 30% and Summon Movement Speed by 30%",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"SummonDamage": 0.30
 		},
@@ -3848,7 +3888,9 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Spirit Wisp Amulet.png",
 		"desc": "Activating a Mod reduces current Skill Cooldowns by 3% for every 300 Mod Power spent.",
-		"customBase": "spiritWisp",
+		"usesConditional": {
+			"customBase": "spiritWisp",
+		},
 		"stats": {},
 		"tags": [] //add tags after custom function
 	},
@@ -3857,7 +3899,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Stalker's Brand.png",
 		"desc": "Gain 12.5% Ranged and 15% Melee damage. Bonus double versus enemies not targeting wearer. Doubled bonus assumed to never be active when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedDamage": 0.1,
 			"MeleeDamage": 0.15,
@@ -3865,7 +3907,7 @@ amulets = {
 		"tags": []
 	},
 	"Stoneshaper's Chisel": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Stoneshaper's Chisel",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Stoneshaper's Chisel.png",
@@ -3880,7 +3922,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Talisman of the Sun.png",
 		"desc": "Increases FIRE damage by 25% and BURNING damage by 50%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireDamage": 0.25,
 			"BurningDamage": 0.50,
@@ -3892,7 +3934,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Toxic Release Valve.png",
 		"desc": "Swapping Firearms releases a Toxic Cloud, which deals 170.5 ACID Damage to all enemies within 7m. and applies CORROSION dealing 280 ACID damage over 7s. \nCan only happen once every 3s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outCORRODED": 280,
@@ -3900,7 +3942,7 @@ amulets = {
 		"tags": []
 	},
 	"Twisted Idol": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Twisted Idol",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Twisted Idol.png",
@@ -3916,7 +3958,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Vengeance Idol.png",
 		"desc": "Increases all damage dealt by 30% when the wearer's Health is below 50%. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.30,
 		},
@@ -3927,7 +3969,7 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Void Idol.png",
 		"desc": "Increases Reload Speed by 30%. Reloads only require 50% of magazine from reserves to fully reload.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ReloadSpeed": 0.3,
 			"ReservesMulti": 2,
@@ -3939,12 +3981,14 @@ amulets = {
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Weightless Weight.png",
 		"desc": "Increases Movement Speed by 0.75% and Reduces Stamina Costs of all actions by 0.75% for each 5 point of Armor Encumbrance.",
-		"customPostWeightClass": "weightlessWeight",
+		"usesConditional": {
+			"customPostWeightClass": "weightlessWeight",
+		},
 		"stats": {},
 		"tags": ["StaminaCost","MovementSpeed"]
 	},
 	"Worn Dog Tags": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Worn Dog Tags",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Worn Dog Tags.png",
@@ -3957,7 +4001,9 @@ amulets = {
 		"tags": []
 	},
 	"Whispering Marble": {//done
-		"customTier50": "whisperingMarble",
+		"usesConditional": {
+			"customTier50": "whisperingMarble",
+		},
 		"name": "Whispering Marble",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Whispering Marble.png",
@@ -3968,7 +4014,7 @@ amulets = {
 		"tags": ["AllDamage"]
 	},
 	"Zero Divide": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Zero Divide",
 		"slot": "Amulet",
 		"image": "./brotherLibrary/amuletsImages/Zero Divide.png",
@@ -3981,8 +4027,8 @@ amulets = {
 }
 rings = {
 	"": {
-		"customBase": null,
-		"name": "",
+		"usesConditional": {},
+        "name": "",
 		"slot": "Ring",
 		"image": "images/Remnant/clear.png",
 		"desc": "",
@@ -3990,16 +4036,18 @@ rings = {
 		"tags": []
 	},
 	"A'Taerii Booster": {//done
+		"usesConditional": {
+			"customTier0": "ataeriiBooster",
+		},
 		"name": "A'Taerii Booster",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/ATaerii Booster.png",
 		"desc": "While a turret is deployed or while carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance. Bonus assumed active at all times if ENGINEER is a selected archetype.",
-		"customTier0": "ataeriiBooster",
 		"stats": {},
 		"tags": ["AllDamage","AllCritChance"]
 	},
 	"Acid Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Acid Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Acid Stone.png",
@@ -4011,26 +4059,31 @@ rings = {
 		"tags": []
 	},
 	"Ahanae Crystal": {//done
+		"usesConditional": {
+			"customTier50": "ahanaeCrystal",
+		},
 		"name": "Ahanae Crystal",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ahanae Crystal.png",
 		"desc": "Deal 5% additional damage for each Status Effect the target is suffering from",
-		"customTier50": "ahanaeCrystal",
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Akari War Band": {//done
+		"usesConditional": {
+			"customTier0": "akariWarBand",
+		},
 		"name": "Akari War Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Akari War Band.png",
 		"desc": "Perfect Dodges increase Critical Chance by 10% and Critical Damage by 10% for 15s. Bonus assumed active at all times when PERFECT DODGE is toggled on.",
-		"customTier0": "akariWarBand",
 		"stats": {},
 		"tags": ["AllCritChance","AllCritDamage"]
 	},
 	"Alchemy Stone": {//done
-		// "customBase": "alchemyStone",
-		"customBase": null,
+		"usesConditional": {
+			"customBase": "alchemyStone",
+		},
 		"name": "Alchemy Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Alchemy Stone.png",
@@ -4041,18 +4094,18 @@ rings = {
 		"tags": ["Lifesteal"]
 	},
 	"Alumni Ring": {//done
+		"usesConditional": {},
 		"name": "Alumni Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Alumni Ring.png",
 		"desc": "Increases all Elemental damage dealt by 10%.",
-		"customBase": null,
 		"stats": {
 			"ElementalDamage": 0.10,
 		},
 		"tags": []
 	},
 	"Amber Moonstone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Amber Moonstone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Amber Moonstone.png",
@@ -4063,20 +4116,22 @@ rings = {
 		"tags": []
 	},
 	"Anastasija's Inspiration": {//done
+		"usesConditional": {
+			"customPostHealing": "anastasijasInspiration",
+		},
 		"name": "Anastasija's Inspiration",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Anastasija's Inspiration.png",
 		"desc": "When receiving healing effects, gain HASTE for 10s. Bonus assumed active at all times when any base healing statistic is greater than 0, or if INCLUDE RELIC HEALING is toggled on when a relic is used that offers healing over a duration greater than 1 second.",
-		"customPostHealing": "anastasijasInspiration",
 		"stats": {},
 		"tags": ["HASTE"]
 	},
 	"Archer's Crest": {//done
+		"usesConditional": {},
 		"name": "Archer's Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Archer's Crest.png",
 		"desc": "Increases Projectile Speed by 20% and Decreases Weapon Charge Time by 25%.",
-		"customBase": null,
 		"stats": {
 			"ProjectileSpeed": -0.20,
 			"WeaponChargeTime": -0.25,
@@ -4084,18 +4139,18 @@ rings = {
 		"tags": []
 	},
 	"Assassin's Seal": {//done
+		"usesConditional": {},
 		"name": "Assassin's Seal",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Assassin's Seal.png",
 		"desc": "Reduces enemy Awareness Range by 25%. Increases all damage dealt to enemies not targeting wearer by 10%. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.10,
 		},
 		"tags": []
 	},
 	"Atonement Fold": {//TODO: STATUS CHECKS
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Atonement Fold",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Atonement Fold.png",
@@ -4108,29 +4163,29 @@ rings = {
 		"tags": []
 	},
 	"Band Band": {//skipped
+		"usesConditional": {},
 		"name": "Band Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Band Band.png",
 		"desc": "Increases Speed of Revive and being Revived by 35%. Increases Downed Health and Downed Movement Speed by 100%.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Band of Accord": {//skipped
+		"usesConditional": {},
 		"name": "Band of Accord",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Band of Accord.png",
 		"desc": "Ammo acquired on pickup is increased by 30% per ally also wearing this ring and is shared with other allies.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Band of the Fanatic": {//done
+		"usesConditional": {},
 		"name": "Band of the Fanatic",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Band of the Fanatic.png",
 		"desc": "Increases Status Effect Damage by 30% and reduces Status Effect Duration by 50%.",
-		"customBase": null,
 		"stats": {
 			"StatusDamage": 0.30,
 			"StatusDuration": -0.50,
@@ -4138,7 +4193,7 @@ rings = {
 		"tags": []
 	},
 	"Berserker's Crest": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Berserker's Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Berserker's Crest.png",
@@ -4151,7 +4206,7 @@ rings = {
 		"tags": []
 	},
 	"Bisected Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Bisected Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Bisected Ring.png",
@@ -4163,36 +4218,38 @@ rings = {
 		"tags": []
 	},
 	"Bitter Memento": {//done for now, this is supposedly reworked though? Come back after patch notes.
+		"usesConditional": {},
 		"name": "Bitter Memento",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Bitter Memento.png",
 		"desc": "Sets 1% of wearer's Max Health as Grey Health. Converts 33.5% of HP to Grey Health on skill use. Does NOT forcibly toggle GREY HEALTH ACTIVE setting, it must still be selected to trigger grey health based effects.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Black Cat Band": {//skipped
+		"usesConditional": {},
 		"name": "Black Cat Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Black Cat Band.png",
 		"desc": "When taking fatal damage, instead of dying, the wearer's Health will drop to 1, and Movement Speed will increase by 25% for 10s. 2m cooldown. Does not currently calculate.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Black Pawn Stamp": {//done
+		"usesConditional": {},
 		"name": "Black Pawn Stamp",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Black Pawn Stamp.png",
 		"desc": "Reduces Cooldowns of Skills by 10%.",
-		"customBase": null,
 		"stats": {
 			"CDR": -0.10,
 		},
 		"tags": []
 	},
 	"Black Spinel": {//done
-		"customBase": "blackSpinel",
+		"usesConditional": {
+			"customBase": "blackSpinel",
+		},
 		"name": "Black Spinel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Black Spinel.png",
@@ -4201,29 +4258,29 @@ rings = {
 		"tags": ["HP/S%"]
 	},
 	"Blackout Ring": {//done
+		"usesConditional": {},
 		"name": "Blackout Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Blackout Ring.png",
 		"desc": "For every 20% magazine missing, increases Reload Speed by 3%. Stacks 5x Cleared on Reload. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ReloadSpeed": 0.15,
 		},
 		"tags": []
 	},
 	"Blasting Cap Ring": {//done
+		"usesConditional": {},
 		"name": "Blasting Cap Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Blasting Cap Ring.png",
 		"desc": "Increases Explosive damage by 15%.",
-		"customBase": null,
 		"stats": {
 			"ExplosiveDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Blessed Ring": {//done //TODO: possible relic based custom function
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Blessed Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Blessed Ring.png",
@@ -4234,7 +4291,7 @@ rings = {
 		"tags": []
 	},
 	"Bloodless King's Vow": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Bloodless King's Vow",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Bloodless King's Vow.png",
@@ -4245,11 +4302,11 @@ rings = {
 		"tags": []
 	},
 	"Blood Jewel": {//done
+		"usesConditional": {},
 		"name": "Blood Jewel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Blood Jewel.png",
 		"desc": "Charged Melee Attacks apply BLEEDING, dealing 520 BLEED damage over 20s.",
-		"customBase": null,
 		"stats": {
 			"outgoingStatus": 1,
 			"outBLEED": 520,
@@ -4257,7 +4314,9 @@ rings = {
 		"tags": []
 	},
 	"Blood Tinged Ring": {//done
-		"customBase": "bloodTingedRing",
+		"usesConditional": {
+			"customBase": "bloodTingedRing",
+		},
 		"name": "Blood Tinged Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Blood Tinged Ring.png",
@@ -4266,7 +4325,7 @@ rings = {
 		"tags": ["HP/S+"]
 	},
 	"Booster Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Booster Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Booster Ring.png",
@@ -4281,22 +4340,22 @@ rings = {
 		"tags": []
 	},
 	"Braided Thorns": {//done
+		"usesConditional": {},
 		"name": "Braided Thorns",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Braided Thorns.png",
 		"desc": "Grants 10% Critical Chance.",
-		"customBase": null,
 		"stats": {
 			"AllCritChance": 0.10,
 		},
 		"tags": []
 	},
 	"Brawler's Pride": {//done
+		"usesConditional": {},
 		"name": "Brawler's Pride",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Brawler's Pride.png",
 		"desc": "Increases Melee Speed by 15%.",
-		"customBase": null,
 		"stats": {
 			"AttackSpeed": 0.15,
 			"ChargeSpeed": 0.15,
@@ -4305,7 +4364,9 @@ rings = {
 		"tags": []
 	},
 	"Bridge Warden's Crest": {//done
-		"customTier0": "bridgeWardensCrest",
+		"usesConditional": {
+			"customTier0": "bridgeWardensCrest",
+		},
 		"name": "Bridge Warden's Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Bridge Warden's Crest.png",
@@ -4314,7 +4375,7 @@ rings = {
 		"tags": ["FlatDR","MeleeDamage"]
 	},
 	"Burden of the Audacious": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Burden of the Audacious",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Audacious.png",
@@ -4325,11 +4386,11 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Departed": {//done
+		"usesConditional": {},
 		"name": "Burden of the Departed",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Departed.png",
 		"desc": "Reduces Total Relic Charges by 33%. Increases all damage dealt by 10%",
-		"customBase": null,
 		"stats": {
 			"RelicCharges%": -0.33,
 			"AllDamage": 0.10,
@@ -4337,11 +4398,11 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Destroyer": {//done
+		"usesConditional": {},
 		"name": "Burden of the Destroyer",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Destroyer.png",
 		"desc": "Decreases Ideal Range of all Firearms by 35%. Increases all damage dealt by 15%.",
-		"customBase": null,
 		"stats": {
 			"Range%": -0.35,
 			"AllDamage": 0.15,
@@ -4349,22 +4410,22 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Divine": {//done
+		"usesConditional": {},
 		"name": "Burden of the Divine",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Divine.png",
 		"desc": "All damage dealt by wearer is reduced by 15%. 30% of self healing applies to allies. Allied healing not calculated.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": -0.15,
 		},
 		"tags": []
 	},
 	"Burden of the Follower": {//done
+		"usesConditional": {},
 		"name": "Burden of the Follower",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Follower.png",
 		"desc": "Reduces Fire Rate by 15%. Increases Mod Power Generation by 30%.",
-		"customBase": null,
 		"stats": {
 			"FireRate": -0.15,
 			"ModPowerGen": 0.30,
@@ -4372,11 +4433,11 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Gambler": {//done weakspot disable added
+		"usesConditional": {},
 		"name": "Burden of the Gambler",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Gambler.png",
 		"desc": "Disables Weakspots. Increases Critical Chance by 10% and Critical Damage by 15%.\nForcibly disables weakspot calculations with or without DISABLE WEAKSPOT setting active.",
-		"customBase": null,
 		"stats": {
 			"AllCritChance": 0.10,
 			"AllCritDamage": 0.15,
@@ -4385,18 +4446,20 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Mariner": {//done
+		"usesConditional": {},
 		"name": "Burden of the Mariner",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Mariner.png",
 		"desc": "Increases Skill Cooldowns by 15%. Generate 15% additional Mod Power for each Skill on Cooldown. Mod Power bonus not calculated from this item.",
-		"customBase": null,
 		"stats": {
 			"CDR": 0.15,
 		},
 		"tags": []
 	},
 	"Burden of the Mason": {//done
-		"customPostDR": "burdenOfTheMason",
+		"usesConditional": {
+			"customPostDR": "burdenOfTheMason",
+		},
 		"name": "Burden of the Mason",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Mason.png",
@@ -4407,17 +4470,19 @@ rings = {
 		"tags": ["MeleeDamage"]
 	},
 	"Burden of the Mesmer": {//Done, has 2 custom functions though
+		"usesConditional": {
+			"customBase": "burdenOfTheMesmer1",
+			"customPostDR": "burdenOfTheMesmer2",
+		},
 		"name": "Burden of the Mesmer",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Mesmer.png",
 		"desc": "Reduces Max Health by 20%. Increases All Damage by 1% for every 5% of the wearer's total Damage Reduction.",
-		"customBase": "burdenOfTheMesmer1",
-		"customPostDR": "burdenOfTheMesmer2",
 		"stats": {},
 		"tags": ["GlobalHealthModifier","AllDamage"]
 	},
 	"Burden of the Rebel": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Burden of the Rebel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Rebel.png",
@@ -4429,11 +4494,11 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Sciolist": {//done
+		"usesConditional": {},
 		"name": "Burden of the Sciolist",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Sciolist.png",
 		"desc": "Reduces Ammo Reserves by 20%. Increases Mod and Skill Damage by 15%.",
-		"customBase": null,
 		"stats": {
 			"Reserves": -0.20,
 			"ModDamage": 0.15,
@@ -4442,49 +4507,49 @@ rings = {
 		"tags": []
 	},
 	"Burden of the Stargazer": {//done
+		"usesConditional": {},
 		"name": "Burden of the Stargazer",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Stargazer.png",
 		"desc": "Reduces Skill Cooldowns by 15%. Activating a Skill costs 15% Health. Health cost not calculated.",
-		"customBase": null,
 		"stats": {
 			"CDR": -0.15,
 		},
 		"tags": []
 	},
 	"Burden of the Warlock": {//done
+		"usesConditional": {},
 		"name": "Burden of the Warlock",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Burden of the Warlock.png",
 		"desc": "Reduces Mod Power Requirement by 15%. Activating a Mod costs 15% Health as Grey Health. Activation cannot kill wearer. Health cost not calculated.",
-		"customBase": null,
 		"stats": {
 			"ModCost": -0.15,
 		},
 		"tags": []
 	},
 	"Captain's Insignia": {//skipped
+		"usesConditional": {},
 		"name": "Captain's Insignia",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Captain's Insignia.png",
 		"desc": "Increases Revive Speed and Relic Consume Speed by 25% per downed or dead ally. Max 2 stacks. Bonuses not calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Cataloger's Jewel": {//done
+		"usesConditional": {},
 		"name": "Cataloger's Jewel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Cataloger's Jewel.png",
 		"desc": "Automatically generates 10 Mod Power per second.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGen/s": 10,
 		},
 		"tags": []
 	},
 	"Celerity Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Celerity Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Celerity Stone.png",
@@ -4495,7 +4560,7 @@ rings = {
 		"tags": []
 	},
 	"Closed Loop": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Closed Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Closed Loop.png",
@@ -4506,11 +4571,11 @@ rings = {
 		"tags": []
 	},
 	"Compulsion Loop": {//done
+		"usesConditional": {},
 		"name": "Compulsion Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Compulsion Loop.png",
 		"desc": "After killing an enemy, gain 5% Fire Rate and Melee Attack Speed for 10s. Stacks 3x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"FireRate": 0.15,
 			"AttackSpeed": .015,
@@ -4518,7 +4583,7 @@ rings = {
 		"tags": []
 	},
 	"Conjurer's Circle": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Conjurer's Circle",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Conjurer's Circle.png",
@@ -4529,7 +4594,7 @@ rings = {
 		"tags": []
 	},
 	"Conservation Seal": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Conservation Seal",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Conservation Seal.png",
@@ -4540,27 +4605,27 @@ rings = {
 		"tags": []
 	},
 	"Constant Variable Ring": {//skipped
+		"usesConditional": {},
 		"name": "Constant Variable Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Constant Variable Ring.png",
 		"desc": "Increases Ranged damage up to 20% based on current Weapon's Overheat value. Bonus not calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Crimson Dreamstone": {//done
+		"usesConditional": {},
 		"name": "Crimson Dreamstone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Crimson Dreamstone.png",
 		"desc": "Crit hits increase Skill Damage 2% for 5s. Max stack 10, stacks decay. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"SkillDamage": 0.20,
 		},
 		"tags": []
 	},
 	"Dark Sea Armada Crest": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dark Sea Armada Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dark Sea Armada Crest.png",
@@ -4571,7 +4636,7 @@ rings = {
 		"tags": []
 	},
 	"Dead King's Memento": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dead King's Memento",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dead King's Memento.png",
@@ -4582,11 +4647,11 @@ rings = {
 		"tags": []
 	},
 	"Deceiver's Band": {//done
+		"usesConditional": {},
 		"name": "Deceiver's Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Deceiver's Band.png",
 		"desc": "After performing a Slide, gain 15% Evade Speed and 10% Movement Speed for 12s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"EvadeSpeed": 0.15,
 			"MovementSpeed": 0.10,
@@ -4594,18 +4659,18 @@ rings = {
 		"tags": []
 	},
 	"Deep Pocket Ring": {//done
+		"usesConditional": {},
 		"name": "Deep Pocket Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Deep Pocket Ring.png",
 		"desc": "Increases Ammo Reserves by 35%.",
-		"customBase": null,
 		"stats": {
 			"Reserves": 0.35,
 		},
 		"tags": []
 	},
 	"Defensive Action Loop": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Defensive Action Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Defensive Action Loop.png",
@@ -4616,38 +4681,38 @@ rings = {
 		"tags": []
 	},
 	"Dense Silicon Ring": {//done for now //TODO: convert total healing into mod power later? Not quite realistic.
+		"usesConditional": {},
 		"name": "Dense Silicon Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dense Silicon Ring.png",
 		"desc": "Gain 200% of Health Regenerated as Mod Power. Not presently calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Devoured Loop": {//done
+		"usesConditional": {},
 		"name": "Devoured Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Devoured Loop.png",
 		"desc": "Critical Hits have 1% chance to reset refund 1 skill charge. Can only occur once every 10s. Increases all incoming damage by 10%.",
-		"customBase": null,
 		"stats": {
 			"FlatDR": -0.10,
 		},
 		"tags": ["CDR"]
 	},
 	"Digested Hog Lure": {//done
+		"usesConditional": {},
 		"name": "Digested Hog Lure",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Digested Hog Lure.png",
 		"desc": "Reloading increases Mod Damage by 15% for 7s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ModDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Drakestone Pearl": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Drakestone Pearl",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Drakestone Pearl.png",
@@ -4658,7 +4723,7 @@ rings = {
 		"tags": []
 	},
 	"Dran Memento": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dran Memento",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dran Memento.png",
@@ -4670,7 +4735,7 @@ rings = {
 		"tags": []
 	},
 	"Dran Scavenger Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dran Scavenger Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dran Scavenger Ring.png",
@@ -4682,7 +4747,7 @@ rings = {
 		"tags": []
 	},
 	"Dread Font": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dread Font",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dread Font.png",
@@ -4693,7 +4758,9 @@ rings = {
 		"tags": []
 	},
 	"Dried Clay Ring": {//done
-		"customTier50": "driedClayRing",
+		"usesConditional": {
+			"customTier50": "driedClayRing",
+		},
 		"name": "Dried Clay Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dried Clay Ring.png",
@@ -4704,16 +4771,16 @@ rings = {
 		"tags": ["AllDamage"]
 	},
 	"Drzyr Sniper Sigil": {//done
+		"usesConditional": {},
 		"name": "Drzyr Sniper Sigil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Drzyr Sniper Sigil.png",
 		"desc": "Increases the minimum damage at Max Falloff Range from 20% to 40%. Not presently calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Dull Steel Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dull Steel Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dull Steel Ring.png",
@@ -4724,7 +4791,7 @@ rings = {
 		"tags": []
 	},
 	"Dying Ember": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dying Ember",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Dying Ember.png",
@@ -4735,7 +4802,7 @@ rings = {
 		"tags": []
 	},
 	"Elevated Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Elevated Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Elevated Ring.png",
@@ -4747,7 +4814,9 @@ rings = {
 		"tags": []
 	},
 	"Embrace of Sha'Hala": {//done
-		"customBase": "embraceOfShahala",
+		"usesConditional": {
+			"customBase": "embraceOfShahala",
+		},
 		"name": "Embrace of Sha'Hala",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Embrace of Sha'Hala.png",
@@ -4756,7 +4825,7 @@ rings = {
 		"tags": ["FlatDR"]
 	},
 	"Encrypted Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Encrypted Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Encrypted Ring.png",
@@ -4767,7 +4836,7 @@ rings = {
 		"tags": []
 	},
 	"Endaira's Endless Loop": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Endaira's Endless Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Endaira's Endless Loop.png",
@@ -4778,7 +4847,7 @@ rings = {
 		"tags": []
 	},
 	"Excess Coil": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Excess Coil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Excess Coil.png",
@@ -4789,7 +4858,7 @@ rings = {
 		"tags": []
 	},
 	"Fae Bruiser Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Fae Bruiser Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fae Bruiser Ring.png",
@@ -4800,18 +4869,18 @@ rings = {
 		"tags": []
 	},
 	"Fae Hunter Ring": {//done
+		"usesConditional": {},
 		"name": "Fae Hunter Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fae Hunter Ring.png",
 		"desc": "Increases Range of Firearms by 35%.",
-		"customBase": null,
 		"stats": {
 			"Range%": 0.35,
 		},
 		"tags": []
 	},
 	"Fae Protector Signet": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Fae Protector Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fae Protector Signet.png",
@@ -4824,7 +4893,7 @@ rings = {
 		"tags": []
 	},
 	"Fae Shaman Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Fae Shaman Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fae Shaman Ring.png",
@@ -4836,33 +4905,33 @@ rings = {
 		"tags": []
 	},
 	"Fae Warrior Ring": {//done
+		"usesConditional": {},
 		"name": "Fae Warrior Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fae Warrior Ring.png",
 		"desc": "Increases Melee Damage by 15%.",
-		"customBase": null,
 		"stats": {
 			"MeleeDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Faelin's Sigil": {//done
+		"usesConditional": {},
 		"name": "Faelin's Sigil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Faelin's Sigil.png",
 		"desc": "Melee Damage generates 15% additional Mod Power.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGenMelee": 0.15
 		},
 		"tags": []
 	},
 	"Faerin's Sigil": {//done
+		"usesConditional": {},
 		"name": "Faerin's Sigil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Faerin's Sigil.png",
 		"desc": "Critical and Weakspot Hits generates 12.5% additional Mod Power.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGenCrit": 0.125,
 			"ModPowerGenWeakspot": 0.125
@@ -4870,11 +4939,13 @@ rings = {
 		"tags": []
 	},
 	"Feathery Binding": {//done
+		"usesConditional": {
+			"customTier50": "featheryBinding",
+		},
 		"name": "Feathery Binding",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Feathery Binding.png",
 		"desc": "Increases Projectile Speed by 15% and Decreases Weapon Charge Time by 10%. Bonus is doubled when HASTE is active.",
-		"customTier50": "featheryBinding",
 		"stats": {
 			"ProjectileSpeed": 0.15,
 			"WeaponChargeTime": 0.10
@@ -4882,7 +4953,7 @@ rings = {
 		"tags": []//no extra tags needed bc the bonus is the same in terms of stats
 	},
 	"Feastmaster's Signet": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Feastmaster's Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Feastmaster's Signet.png",
@@ -4893,11 +4964,11 @@ rings = {
 		"tags": []
 	},
 	"Feedback Loop": {//done
+		"usesConditional": {},
 		"name": "Feedback Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Feedback Loop.png",
 		"desc": "Perfect Dodge triggers a 3m AOE blast that deal 130 SHOCK Damage and applies OVERLOADED. Outgoing status assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"outgoingStatus": 1,
 			"outOVERLOADED": 130,
@@ -4905,7 +4976,7 @@ rings = {
 		"tags": []
 	},
 	"Fire Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Fire Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Fire Stone.png",
@@ -4917,7 +4988,9 @@ rings = {
 		"tags": []
 	},
 	"Floodlit Diamond": {//done
-		"customTier50": "floodlitDiamond",
+		"usesConditional": {
+			"customTier50": "floodlitDiamond",
+		},
 		"name": "Floodlit Diamond",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Floodlit Diamond.png",
@@ -4928,20 +5001,22 @@ rings = {
 		"tags": []//no tags since bonus is the same stat
 	},
 	"Flyweight's Sting": {//done
+		"usesConditional": {
+			"customTier50": "flyweightsSting",
+		},
 		"name": "Flyweight's Sting",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Flyweight's Sting.png",
 		"desc": "Increases Melee damage while Armor Encumbrance is below 50. Damage bonus increases with lower Encumbrance, up to 25% at 0 Weight.",
-		"customTier50": "flyweightsSting",
 		"stats": {},
 		"tags": ["MeleeDamage"]
 	},
 	"Focusing Shard": {//done
+		"usesConditional": {},
 		"name": "Focusing Shard",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Focusing Shard.png",
 		"desc": "Reduce Recoil by 50%. Aiming Down Sights gradually reduces Spread by 70% over 4s",
-		"customBase": null,
 		"stats": {
 			"Recoil": -0.50,
 			"Spread": -0.70,
@@ -4949,28 +5024,32 @@ rings = {
 		"tags": []
 	},
 	"Frivolous Band": {//done
+		"usesConditional": {
+			"customTier0": "frivolousBand",
+		},
 		"name": "Frivolous Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Frivolous Band.png",
 		"desc": "Increases Evade Speed by 10%. Perfect Evades increase Fire Rate by 10% and Melee Speed by 10% for 7s. Bonus requires EVADE and PERFECT DODGE settings.",
-		"customTier0": "frivolousBand",
 		"stats": {
 			"EvadeSpeed": 0.10,
 		},
 		"tags": ["FireRate","AttackSpeed"]
 	},
 	"Galvanized Resupply Band": {//skipped
+		"usesConditional": {},
 		"name": "Galvanized Resupply Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Galvanized Resupply Band.png",
 		"desc": "Increases Ammo Pickups by 100%.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Game Master's Pride": {//done
-		"customTier0": "gameMasters1",
-		"customPreHealing": "gameMasters2",
+		"usesConditional": {
+			"customTier0": "gameMasters1",
+			"customPreHealing": "gameMasters2",
+		},
 		"name": "Game Master's Pride",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Game Master's Pride.png",
@@ -4979,7 +5058,9 @@ rings = {
 		"tags": ["DMGKept","GlobalHealingEff"]
 	},
 	"Generating Band": {//done
-		"customPreHealing": "generatingBand",
+		"usesConditional": {
+			"customPreHealing": "generatingBand",
+		},
 		"name": "Generating Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Generating Band.png",
@@ -4988,7 +5069,7 @@ rings = {
 		"tags": ["HP/S%"]
 	},
 	"Grounding Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Grounding Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Grounding Stone.png",
@@ -5000,7 +5081,7 @@ rings = {
 		"tags": []
 	},
 	"Guardian's Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Guardian's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Guardian's Ring.png",
@@ -5011,7 +5092,9 @@ rings = {
 		"tags": []
 	},
 	"Gul Signet": {//done
-		"customPostWeightClass": "gulSignet",
+		"usesConditional": {
+			"customPostWeightClass": "gulSignet",
+		},
 		"name": "Gul Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Gul Signet.png",
@@ -5022,11 +5105,11 @@ rings = {
 		"tags": []
 	},
 	"Gunslinger's Ring": {//done
+		"usesConditional": {},
 		"name": "Gunslinger's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Gunslinger's Ring.png",
 		"desc": "Increases Firearm Swap Speed by 30% and Reload Speed by 10%.",
-		"customBase": null,
 		"stats": {
 			"WeaponSwapSpeed": 0.30,
 			"ReloadSpeed": 0.10,
@@ -5034,7 +5117,7 @@ rings = {
 		"tags": []
 	},
 	"Hardcore Metal Band": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Hardcore Metal Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Hardcore Metal Band.png",
@@ -5045,7 +5128,7 @@ rings = {
 		"tags": []
 	},
 	"Hardened Coil": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Hardened Coil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Hardened Coil.png",
@@ -5056,16 +5139,18 @@ rings = {
 		"tags": []
 	},
 	"Haymaker's Ring": {//done
+		"usesConditional": {
+			"customTier50": "haymakersRing",
+		},
 		"name": "Haymaker's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Haymaker's Ring.png",
 		"desc": "Increase Melee damage by 0.2% for every 1 points of Armor Encumbrance.",
-		"customTier50": "haymakersRing",
 		"stats": {},
 		"tags": ["MeleeDamage"]
 	},
 	"Heart of the Wolf": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Heart of the Wolf",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Heart of the Wolf.png",
@@ -5077,38 +5162,40 @@ rings = {
 		"tags": []
 	},
 	"Hex Ward": {//done
+		"usesConditional": {},
 		"name": "Hex Ward",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Hex Ward.png",
 		"desc": "Prevents CURSE Blight.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Jewel of the Beholden": {//done
+		"usesConditional": {},
 		"name": "Jewel of the Beholden",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Jewel of the Beholden.png",
 		"desc": "On Relic Use, increase Mod Damage by 15% for 15s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ModDamage": 0.10,
 		},
 		"tags": []
 	},
 	"Kinetic Cycle Stone": {//done
+		"usesConditional": {},
 		"name": "Kinetic Cycle Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Kinetic Cycle Stone.png",
 		"desc": "Increases Mod and Skill Cast Speed by 20%.",
-		"customBase": null,
 		"stats": {
 			"CastSpeed": 0.20,
 		},
 		"tags": []
 	},
 	"Kolket Eyelet": {//done
-		"customBase": "kolketEyelet",
+		"usesConditional": {
+			"customBase": "kolketEyelet",
+		},
 		"name": "Kolket Eyelet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Kolket Eyelet.png",
@@ -5119,7 +5206,7 @@ rings = {
 		"tags": ["HP/S+"]
 	},
 	"Leaking Gemstone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Leaking Gemstone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Leaking Gemstone.png",
@@ -5128,18 +5215,18 @@ rings = {
 		"tags": []
 	},
 	"Lighthouse Keeper's Ring": {//done
+		"usesConditional": {},
 		"name": "Lighthouse Keeper's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Lighthouse Keeper's Ring.png",
 		"desc": "Automatically generate 4 Mod Power per second for each entity within 15m suffering from a Negative Status Effect. Max 5 stacks. Not currently calculated.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGen/s": 20,
 		},
 		"tags": []
 	},
 	"Lithic Signet": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Lithic Signet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Lithic Signet.png",
@@ -5150,16 +5237,18 @@ rings = {
 		"tags": []
 	},
 	"Lodestone Ring": {//done
+		"usesConditional": {
+			"customTier0": "lodestoneRing",
+		},
 		"name": "Lodestone Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Lodestone Ring.png",
 		"desc": "Increases all damage dealt against illuminated enemies by 5%. Requires Lodestone Crown to take effect.",
-		"customTier0": "lodestoneRing",
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Low Yield Recovery Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Low Yield Recovery Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Low Yield Recovery Ring.png",
@@ -5170,7 +5259,7 @@ rings = {
 		"tags": []
 	},
 	"Mark of the Destroyer": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Mark of the Destroyer",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Mark of the Destroyer.png",
@@ -5179,16 +5268,20 @@ rings = {
 		"tags": []
 	},
 	"Matriarch's Ring": {//done
+		"usesConditional": {
+			"customTier0": "matriarchsRing",
+		},
 		"name": "Matriarch's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Matriarch's Ring.png",
 		"desc": "Perfect Dodge reduces Charge Melee Stamina Cost by 100% for 7s.",
-		"customTier0": "matriarchsRing",
 		"stats": {},
 		"tags": ["ChargeCost"]
 	},
 	"Mechanic's Cog": {//done
-		"customTier0": "mechanicsCog",
+		"usesConditional": {
+			"customTier0": "mechanicsCog",
+		},
 		"name": "Mechanic's Cog",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Mechanic's Cog.png",
@@ -5197,18 +5290,18 @@ rings = {
 		"tags": ["MovementSpeed","Bulwark"]
 	},
 	"Metal Driver": {//done
+		"usesConditional": {},
 		"name": "Metal Driver",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Metal Driver.png",
 		"desc": "Killing Blows increase Reload Speed by 10% for 15s. Stacks 3x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ReloadSpeed": 0.30,
 		},
 		"tags": []
 	},
 	"Meteorite Shard Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Meteorite Shard Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Meteorite Shard Ring.png",
@@ -5220,71 +5313,75 @@ rings = {
 		"tags": []
 	},
 	"Microcompressor": {//done
+		"usesConditional": {},
 		"name": "Microcompressor",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Microcompressor.png",
 		"desc": "Reduces Heat Generation when firing weapons that Overheat by -30%. Increases Heat Reduction Rate by 30%.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Momentum Driver": {//done
+		"usesConditional": {},
 		"name": "Momentum Driver",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Momentum Driver.png",
 		"desc": "After Sprinting for 1.5s, Movement Speed is increased by 15% and Stagger Level reduced by 1. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"MovementSpeed": 0.15,
 		},
 		"tags": []
 	},
 	"Offering Stone": {//done
+		"usesConditional": {},
 		"name": "Offering Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Offering Stone.png",
 		"desc": "Dealing Ranged Damage increases all Damage by 1% for 1s. Stacks 15x. After killing an enemy, extends the duration to 10s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Outcast Ring": {//done
+		"usesConditional": {},
 		"name": "Outcast Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Outcast Ring.png",
 		"desc": "Increases Reload Speed by 5% for 10s after reloading. Stacks 5x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ReloadSpeed": 0.25,
 		},
 		"tags": []
 	},
 	"Painless Obsidian": {//done
+		"usesConditional": {
+			"customTier0": "painlessObsidian",
+		},
 		"name": "Painless Obsidian",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Painless Obsidian.png",
 		"desc": "When Grey Health is present, gain Haste and 1 stack of BULWARK. Requires GREY HEALTH ACTIVE setting.",
-		"customTier0": "painlessObsidian",
 		"stats": {},
 		"tags": ["HASTE","Bulwark"]
 	},
 	"Pan War Band": {//done
+		"usesConditional": {
+			"customTier0": "panWarBand",
+		},
 		"name": "Pan War Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Pan War Band.png",
 		"desc": "Increases Movement Speed and Reload Speed by 3% and Fire Rate by 2% for each ally wearing this ring.",
-		"customTier0": "panWarBand",
 		"stats": {},
 		"tags": ["MovementSpeed","ReloadSpeed","FireRate"]
 	},
 	"Point Focus Ring": {//done
+		"usesConditional": {},
 		"name": "Point Focus Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Point Focus Ring.png",
 		"desc": "Reduces Initial Spread and Recoil by 30%.",
-		"customBase": null,
 		"stats": {
 			"Spread": -0.30,
 			"Recoil": -0.30,
@@ -5292,42 +5389,41 @@ rings = {
 		"tags": []
 	},
 	"Power Complex": {//done
+		"usesConditional": {},
 		"name": "Power Complex",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Power Complex.png",
 		"desc": "Increases All Damage dealt by 1% per second to a maximum of 15%. Dodging resets Power Complex to 0%. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Power Saver": {//done
+		"usesConditional": {},
 		"name": "Power Saver",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Power Saver.png",
-		"desc": "At Max Health, gain a 30% chance to not use a Relic charge.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Probability Cord": {//done
+		"usesConditional": {},
 		"name": "Probability Cord",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Probability Cord.png",
 		"desc": "Increases Crit Damage by 20%.",
-		"customBase": null,
 		"stats": {
 			"AllCritDamage": 0.20,
 		},
 		"tags": []
 	},
 	"Propulsion Loop": {//done
+		"usesConditional": {},
 		"name": "Propulsion Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Propulsion Loop.png",
 		"desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"MovementSpeed": 0.15,
 			"RelicSpeed": -0.30,
@@ -5335,16 +5431,16 @@ rings = {
 		"tags": []
 	},
 	"Provisioner Ring": {//done
+		"usesConditional": {},
 		"name": "Provisioner Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Provisioner Ring.png",
 		"desc": "Firearms reload over time while stowed.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Rally Band": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Rally Band",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Rally Band.png",
@@ -5353,16 +5449,18 @@ rings = {
 		"tags": []
 	},
 	"Ravager's Bargain": {//done
+		"usesConditional": {
+			"customBase": "ravagersBargain",
+		},
 		"name": "Ravager's Bargain",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ravager's Bargain.png",
 		"desc": "Increases All Damage and All Critical Chance by 5% while BLEEDING.",
-		"customBase": "ravagersBargain",
 		"stats": {},
 		"tags": ["AllDamage","AllCritChance"]
 	},
 	"Reaping Stone": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Reaping Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Reaping Stone.png",
@@ -5373,18 +5471,18 @@ rings = {
 		"tags": []
 	},
 	"Red Ring of Death": {//done
+		"usesConditional": {},
 		"name": "Red Ring of Death",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Red Ring of Death.png",
 		"desc": "Duplicates the last damaging Negative Status applied to target. Reduces outgoing Status Effect Damage by 10%.",
-		"customBase": null,
 		"stats": {
 			"StatusDamage": -0.10,
 		},
 		"tags": []
 	},
 	"Rerouting Cable": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Rerouting Cable",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Rerouting Cable.png",
@@ -5395,7 +5493,7 @@ rings = {
 		"tags": []
 	},
 	"Reserve Boosting Gem": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Reserve Boosting Gem",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Reserve Boosting Gem.png",
@@ -5406,7 +5504,9 @@ rings = {
 		"tags": []
 	},
 	"Restriction Cord": {//done
-		"customBase": "restrictionCord",
+		"usesConditional": {
+			"customBase": "restrictionCord",
+		},
 		"name": "Restriction Cord",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Restriction Cord.png",
@@ -5417,7 +5517,7 @@ rings = {
 		"tags": ["GlobalHealthModifier"]
 	},
 	"Ring of Crisis": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ring of Crisis",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Crisis.png",
@@ -5428,36 +5528,36 @@ rings = {
 		"tags": []
 	},
 	"Ring of Deflection": {//done
+		"usesConditional": {},
 		"name": "Ring of Deflection",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Deflection.png",
 		"desc": "Direct Damage against wearer has a 50% Chance to be converted entirely to Grey Health. Does NOT forcibly toggle GREY HEALTH ACTIVE setting.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Ring of Diversion": {//done
+		"usesConditional": {},
 		"name": "Ring of Diversion",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Diversion.png",
 		"desc": "Increases invulnerability window while evading and sliding.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Ring of Flawed Beauty": {//done
+		"usesConditional": {},
 		"name": "Ring of Flawed Beauty",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Flawed Beauty.png",
 		"desc": "Ranged Weakspot damage is increased by 25%. Ranged damage is reduced by 15% when failing to hit a Weakspot. Negative not currently calculated.",
-		"customBase": null,
 		"stats": {
 			"RangedWeakspot": 0.25,
 		},
 		"tags": []
 	},
 	"Ring of Grace": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ring of Grace",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Grace.png",
@@ -5468,40 +5568,40 @@ rings = {
 		"tags": []
 	},
 	"Ring of Infinite Damage": {//done
+		"usesConditional": {},
 		"name": "Ring of Infinite Damage",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Infinite Damage.png",
 		"desc": "Increases Fire Rate by 8%.",
-		"customBase": null,
 		"stats": {
 			"FireRate": 0.08,
 		},
 		"tags": []
 	},
 	"Ring of Omens": {//done
+		"usesConditional": {},
 		"name": "Ring of Omens",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Omens.png",
 		"desc": "Evades cost 15% Max Health as Grey Health instead of Stamina. Misty Step dodge factors not currently calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Ring of Restocking": {//done
+		"usesConditional": {},
 		"name": "Ring of Restocking",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Restocking.png",
 		"desc": "Reloads within 5s of a Critical Hit or Weakspot Kill are 20% faster. Not currently calculated.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Ring of Retribution": {//done
+		"usesConditional": {},
 		"name": "Ring of Retribution",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Retribution.png",
 		"desc": "Incoming enemy damage increases Reload Speed and all outgoing damage by 15%. Lasts 15s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"ReloadSpeed": 0.15,
 			"AllDamage": 0.15,
@@ -5509,36 +5609,40 @@ rings = {
 		"tags": []
 	},
 	"Ring of Spirits": {//done
+		"usesConditional": {
+			"customTier0": "ringOfSpirits",
+		},
 		"name": "Ring of Spirits",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of Spirits.png",
 		"desc": "Increases Mod Generation by 3% for each active consumable. Max 5 stacks.",
-		"customTier0": "ringOfSpirits",
 		"stats": {},
 		"tags": ["ModPowerGen"]
 	},
 	"Ring of the Castaway": {//done
+		"usesConditional": {},
 		"name": "Ring of the Castaway",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of the Castaway.png",
 		"desc": "Increases base Consumable Duration by 50%.",
-		"customBase": null,
 		"stats": {
 			"ConsumableDuration": 0.50,
 		},
 		"tags": []
 	},
 	"Ring of the Damned": {//done
+		"usesConditional": {
+			"customTier0": "ringOfTheDamned",
+		},
 		"name": "Ring of the Damned",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of the Damned.png",
 		"desc": "Increases all damage dealt by 0.4% for every 1% Grey Health present. Adds 5% Critical Chance when the wearer has 50% or more Grey Health. Requires GREY HEALTH ACTIVE setting, assumed 50% GHP present.",
-		"customTier0": "ringOfTheDamned",
 		"stats": {},
 		"tags": ["AllDamage","AllCritChance"]
 	},
 	"Ring of the Forest Spirit": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ring of the Forest Spirit",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of the Forest Spirit.png",
@@ -5549,7 +5653,7 @@ rings = {
 		"tags": []
 	},
 	"Ring Of Ordnance": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ring Of Ordnance",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring Of Ordnance.png",
@@ -5558,7 +5662,7 @@ rings = {
 		"tags": []
 	},
 	"Ring of the Robust": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ring of the Robust",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of the Robust.png",
@@ -5570,20 +5674,20 @@ rings = {
 		"tags": []
 	},
 	"Ring of the Vain": {//skipped
+		"usesConditional": {},
 		"name": "Ring of the Vain",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Ring of the Vain.png",
 		"desc": "Reduces Invulnerability Window on Evade and Combat Slide by 35%. Increases Movement Speed while aiming by 35%",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Rock of Anguish": {//done
+		"usesConditional": {},
 		"name": "Rock of Anguish",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Rock of Anguish.png",
 		"desc": "Gain 5% Movement Speed and 7.5% Reload Speed for every 25% of Max Health missing. Bonus assumes 50%HP is missing at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"MovementSpeed": 0.10,
 			"ReloadSpeed": 0.15,
@@ -5591,16 +5695,16 @@ rings = {
 		"tags": []
 	},
 	"Rotward": {//done
+		"usesConditional": {},
 		"name": "Rotward",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Rotward.png",
 		"desc": "Prevents ROOT ROT Blight.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Rusted Heirloom": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Rusted Heirloom",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Rusted Heirloom.png",
@@ -5611,25 +5715,25 @@ rings = {
 		"tags": []
 	},
 	"Sagestone": {//done
+		"usesConditional": {},
 		"name": "Sagestone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Sagestone.png",
 		"desc": "Increases earned Experience by 10%.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Sapphire Dreamstone": {//skipped
+		"usesConditional": {},
 		"name": "Sapphire Dreamstone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Sapphire Dreamstone.png",
 		"desc": "Critical Hits reduce Skill Cooldowns by 4%. Can only happen once every 2s.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Seal of the Empress": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Seal of the Empress",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Seal of the Empress.png",
@@ -5641,7 +5745,7 @@ rings = {
 		"tags": []
 	},
 	"Sealed Resin Loop": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Sealed Resin Loop",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Sealed Resin Loop.png",
@@ -5650,69 +5754,71 @@ rings = {
 		"tags": []
 	},
 	"Shadow of Misery": {//done
+		"usesConditional": {},
 		"name": "Shadow of Misery",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Shadow of Misery.png",
 		"desc": "Increase Status Effect Damage by 20%",
-		"customBase": null,
 		"stats": {
 			"StatusDamage": 0.20,
 		},
 		"tags": []
 	},
 	"Shaed Stone": {//done
+		"usesConditional": {},
 		"name": "Shaed Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Shaed Stone.png",
 		"desc": "Increases Skill damage by 15%",
-		"customBase": null,
 		"stats": {
 			"SkillDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Shard Banded Ring": {//done
+		"usesConditional": {},
 		"name": "Shard Banded Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Shard Banded Ring.png",
 		"desc": "Increases Mod damage by 12%.",
-		"customBase": null,
 		"stats": {
 			"ModDamage": 0.12,
 		},
 		"tags": []
 	},
 	"Shiny Hog Lure": {//skipped
+		"usesConditional": {},
 		"name": "Shiny Hog Lure",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Shiny Hog Lure.png",
 		"desc": "Reloading grants 25-50 Mod Power to both weapons based on percentage of Magazine reloaded.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Singed Ring": {//done
+		"usesConditional": {
+			"customTier50": "singedRing",
+		},
 		"name": "Singed Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Singed Ring.png",
 		"desc": "Increases all damage dealt to BURNING enemies by 12%.",
-		"customTier50": "singedRing",
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Slayer's Crest": {//done
+		"usesConditional": {},
 		"name": "Slayer's Crest",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Slayer's Crest.png",
 		"desc": "Increases Melee damage by 25% when attacking enemies from behind. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"MeleeDamage": 0.25,
 		},
 		"tags": []
 	},
 	"Soul Feast": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Soul Feast",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Soul Feast.png",
@@ -5721,7 +5827,9 @@ rings = {
 		"tags": []
 	},
 	"Soul Guard": {//done
-		"customTier0": "soulGuard",
+		"usesConditional": {
+			"customTier0": "soulGuard",
+		},
 		"name": "Soul Guard",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Soul Guard.png",
@@ -5730,71 +5838,73 @@ rings = {
 		"tags": ["Bulwark"]
 	},
 	"Soul Link": {//skipped
+		"usesConditional": {},
 		"name": "Soul Link",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Soul Link.png",
 		"desc": "Summons Lifesteal 5% of base damage dealt which returns to the wearer as Health.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Soul Shard": {//done
+		"usesConditional": {
+			"customTier0": "soulShard",
+		},
 		"name": "Soul Shard",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Soul Shard.png",
 		"desc": "Increase all damage dealt by 5% for each summon. Max 15%. Requires SUMMON COUNT setting.",
-		"customTier0": "soulShard",
 		"stats": {},
 		"tags": ["AllDamage"]
 	},
 	"Spirit Stone": {//done
+		"usesConditional": {},
 		"name": "Spirit Stone",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Spirit Stone.png",
 		"desc": "Increases Mod Power generation by 10%.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGen": 0.10,
 		},
 		"tags": []
 	},
 	"Stockpile Charger": {//done
+		"usesConditional": {},
 		"name": "Stockpile Charger",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stockpile Charger.png",
 		"desc": "After picking up ammo, increases the damage of that Ammo Type by 15% for 20s.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Stone of Balance": {//done
+		"usesConditional": {},
 		"name": "Stone of Balance",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stone of Balance.png",
 		"desc": "Increases all damage by 7%.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.07,
 		},
 		"tags": []
 	},
 	"Stone of Continuance": {//done
+		"usesConditional": {},
 		"name": "Stone of Continuance",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stone of Continuance.png",
 		"desc": "Increases Skill Duration by 15%.",
-		"customBase": null,
 		"stats": {
 			"SkillDuration": 0.15,
 		},
 		"tags": []
 	},
 	"Stone of Expanse": {//done
+		"usesConditional": {},
 		"name": "Stone of Expanse",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stone of Expanse.png",
 		"desc": "Increases Ranged damage by 12%. Reduces all other damage dealt by 5%. This will display 17% Ranged in statistics, but that is because it also grants -5% All Damage",
-		"customBase": null,
 		"stats": {
 			"RangedDamage": 0.17,
 			"AllDamage": -0.05,
@@ -5802,18 +5912,18 @@ rings = {
 		"tags": []
 	},
 	"Stone of Malevolence": {//done
+		"usesConditional": {},
 		"name": "Stone of Malevolence",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stone of Malevolence.png",
 		"desc": "Elemental damage generates 15% additional Mod Power.",
-		"customBase": null,
 		"stats": {
 			"ModPowerGenElemental": 0.15,
 		},
 		"tags": []
 	},
 	"Stream Coupler": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Stream Coupler",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Stream Coupler.png",
@@ -5824,31 +5934,31 @@ rings = {
 		"tags": []
 	},
 	"Subterfuge Link": {//done
+		"usesConditional": {},
 		"name": "Subterfuge Link",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Subterfuge Link.png",
 		"desc": "After killing an enemy, increases the Cast Speed of the next Mod or Skill Cast by 35%. Lasts 15s or until consumed. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"CastSpeed": 0.35,
 		},
 		"tags": []
 	},
 	"Suppression Ward": {//done
+		"usesConditional": {},
 		"name": "Suppression Ward",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Suppression Ward.png",
 		"desc": "Prevents SUPPRESSION Blight.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Targeting Jewel": {//done
+		"usesConditional": {},
 		"name": "Targeting Jewel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Targeting Jewel.png",
 		"desc": "Increases Range on all Firearms by 4m. Reduces Spread by 15%.",
-		"customBase": null,
 		"stats": {
 			"Range": 4,
 			"Spread": -0.15,
@@ -5856,33 +5966,33 @@ rings = {
 		"tags": []
 	},
 	"Tarnished Ring": {//done
+		"usesConditional": {},
 		"name": "Tarnished Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tarnished Ring.png",
 		"desc": "Increases damage of Unarmed Attacks by 30%.",
-		"customBase": null,
 		"stats": {
 			"FistDamage": 0.30,
 		},
 		"tags": []
 	},
 	"Tear of Kaeula": {//done
+		"usesConditional": {},
 		"name": "Tear of Kaeula",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tear of Kaeula.png",
 		"desc": "Increases Relic capacity by 2 while equipped",
-		"customBase": null,
 		"stats": {
 			"RelicCharges": 2,
 		},
 		"tags": []
 	},
 	"Tear of Lydusa": {//done
+		"usesConditional": {},
 		"name": "Tear of Lydusa",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tear of Lydusa.png",
 		"desc": "Increases Healing and Lifesteal Efficacy by 20%. Reduces Healing Efficacy bonus by 1.5% for each 10% of missing Relic Capacity. Bonus assumes full capacity at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"HealingEFF": 0.20,
 			"LifestealEFF": 0.20
@@ -5890,22 +6000,24 @@ rings = {
 		"tags": []
 	},
 	"Tempest Conduit": {//done
+		"usesConditional": {},
 		"name": "Tempest Conduit",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tempest Conduit.png",
 		"desc": "After receiving Elemental Damage, increases all damage dealt by 15% and Resistance to the received Element by 20 for 15s. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"AllDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Thalos Eyelet": {//done
+		"usesConditional": {
+			"customPostWeightClass": "thalosEyelet",
+		},
 		"name": "Thalos Eyelet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Thalos Eyelet.png",
 		"desc": "Grants 1 stack of BULWARK and 2 Stamina Regen per second for each BULWARK stack. Increases maximum stacks to 6.",
-		"customPostWeightClass": "thalosEyelet",
 		"stats": {
 			"Bulwark": 1,
 			"BulwarkCap": 1
@@ -5913,7 +6025,7 @@ rings = {
 		"tags": ["Stamina/S+"]
 	},
 	"Tightly Wound Coil": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Tightly Wound Coil",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tightly Wound Coil.png",
@@ -5924,40 +6036,42 @@ rings = {
 		"tags": []
 	},
 	"Timekeeper's Jewel": {//skipped
+		"usesConditional": {},
 		"name": "Timekeeper's Jewel",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Timekeeper's Jewel.png",
 		"desc": "Increases the duration of all Status Effects applied by wearer. Durations varies per status.",
-		"customBase": null,
 		"stats": {
 			"StatusDuration": 1,
 		}, //TODO: work this out later
 		"tags": []
 	},
 	"Token of Favor": {//done
+		"usesConditional": {
+			"customTier50": "tokenOfFavor",
+		},
 		"name": "Token of Favor",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Token of Favor.png",
 		"desc": "Increases All Damage by 5%. Gain 10% Critical Chance against EXPOSED targets.",
-		"customTier50": "tokenOfFavor",
 		"stats": {
 			"AllDamage": 0.05
 		},
 		"tags": ["AllCritChance"]
 	},
 	"Tomb Dweller's Ring": {//done
+		"usesConditional": {},
 		"name": "Tomb Dweller's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Tomb Dweller's Ring.png",
 		"desc": "Increases Movement Speed by 10% for 15s after Vaulting, Climbing, Leaping, and entering Water, stacks 3x. Reduces Fall Damage by 50%. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"MovementSpeed": 0.10,
 		},
 		"tags": []
 	},
 	"Vacuum Seal": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Vacuum Seal",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Vacuum Seal.png",
@@ -5968,11 +6082,11 @@ rings = {
 		"tags": []
 	},
 	"Vestige of Power": {//done
+		"usesConditional": {},
 		"name": "Vestige of Power",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Vestige of Power.png",
 		"desc": "After 5s of not being damaged, increases Ranged and Melee Damage by 10%. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"RangedDamage": 0.10,
 			"MeleeDamage": 0.10,
@@ -5980,11 +6094,11 @@ rings = {
 		"tags": []
 	},
 	"Wax Sealed Ring": {//done
+		"usesConditional": {},
 		"name": "Wax Sealed Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Wax Sealed Ring.png",
 		"desc": "Killing blows increase Ranged and Melee Damage by 4% for 15s. Stacks 3x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"RangedDamage": 0.12,
 			"MeleeDamage": 0.12,
@@ -5992,7 +6106,9 @@ rings = {
 		"tags": []
 	},
 	"White Glass Bead": {
-		"customTier0": "whiteGlassBead",
+		"usesConditional": {
+			"customTier0": "whiteGlassBead",
+		},
 		"name": "White Glass Bead",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/White Glass Bead.png",
@@ -6001,38 +6117,38 @@ rings = {
 		"tags": ["Shield"]
 	},
 	"White Pawn Stamp": {//skipped
+		"usesConditional": {},
 		"name": "White Pawn Stamp",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/White Pawn Stamp.png",
 		"desc": "Reduces Mod Power Requirement by 10%.",
-		"customBase": null,
 		"stats": {},
 		"tags": []
 	},
 	"Wind Hollow Circlet": {//done
+		"usesConditional": {},
 		"name": "Wind Hollow Circlet",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Wind Hollow Circlet.png",
 		"desc": "Increases Reload Speed by 12%.",
-		"customBase": null,
 		"stats": {
 			"ReloadSpeed": 0.12,
 		},
 		"tags": []
 	},
 	"Wood Ring": {//done
+		"usesConditional": {},
 		"name": "Wood Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Wood Ring.png",
 		"desc": "Increases Stagger Damage by 15%",
-		"customBase": null,
 		"stats": {
 			"StaggerDamage": 0.15,
 		},
 		"tags": []
 	},
 	"Worn Admiral's Ring": {//done
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Worn Admiral's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Worn Admiral's Ring.png",
@@ -6044,22 +6160,22 @@ rings = {
 		"tags": []
 	},
 	"Zania's Malice": {//done
+		"usesConditional": {},
 		"name": "Zania's Malice",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Zania's Malice.png",
 		"desc": "Dealing Weakspot damage increases Weakspot damage by 5% for 5s. Stacks 4x. Bonus assumed active at all times when selected.",
-		"customBase": null,
 		"stats": {
 			"AllWeakspot": 0.20,
 		},
 		"tags": []
 	},
 	"Zohee's Ring": {//done
+		"usesConditional": {},
 		"name": "Zohee's Ring",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Zohee's Ring.png",
 		"desc": "Increases Mod Duration by 20%.",
-		"customBase": null,
 		"stats": {
 			"ModDuration": 0.20,
 		},
@@ -6068,7 +6184,7 @@ rings = {
 }
 relics = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Relic",
 		"image": "images/Remnant/clear.png",
@@ -6077,7 +6193,7 @@ relics = {
 		"tags": []
 	},
 	"Bloodless Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Bloodless Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Bloodless Heart.png",
@@ -6086,7 +6202,7 @@ relics = {
 		"tags": []
 	},
 	"Blooming Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Blooming Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Blooming Heart.png",
@@ -6099,7 +6215,7 @@ relics = {
 		"tags": []
 	},
 	"Broken Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Broken Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Broken Heart.png",
@@ -6113,7 +6229,7 @@ relics = {
 		"tags": []
 	},
 	"Constrained Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Constrained Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Constrained Heart.png",
@@ -6127,7 +6243,7 @@ relics = {
 		"tags": []
 	},
 	"Crystal Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Crystal Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Crystal Heart.png",
@@ -6141,7 +6257,7 @@ relics = {
 		"tags": []
 	},
 	"Decayed Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Decayed Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Decayed Heart.png",
@@ -6158,12 +6274,12 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Diverting Heart.png",
 		"desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Dragon Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dragon Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Dragon Heart.png",
@@ -6176,7 +6292,7 @@ relics = {
 		"tags": []
 	},
 	"Enlarged Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Enlarged Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Enlarged Heart.png",
@@ -6190,7 +6306,7 @@ relics = {
 		"tags": []
 	},
 	"Lifeless Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Lifeless Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Lifeless Heart.png",
@@ -6203,7 +6319,7 @@ relics = {
 		"tags": []
 	},
 	"Paper Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Paper Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Paper Heart.png",
@@ -6216,7 +6332,7 @@ relics = {
 		"tags": []
 	},
 	"Profane Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Profane Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Profane Heart.png",
@@ -6228,7 +6344,7 @@ relics = {
 		"tags": []
 	},
 	"Pulsing Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Pulsing Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Pulsing Heart.png",
@@ -6245,7 +6361,7 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Quilted Heart.png",
 		"desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -6254,12 +6370,14 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Reprocessed Heart.png",
 		"desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Resonating Heart": {
-		"customRelicFunctions": "resonatingHeart",
+		"usesConditional": {
+			"customRelicFunctions": "resonatingHeart",
+		},
 		"name": "Resonating Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Resonating Heart.png",
@@ -6273,7 +6391,7 @@ relics = {
 		"tags": []
 	},
 	"Ripened Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Ripened Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Ripened Heart.png",
@@ -6286,7 +6404,7 @@ relics = {
 		"tags": []
 	},
 	"Runed Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Runed Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Runed Heart.png",
@@ -6303,12 +6421,12 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Salvaged Heart.png",
 		"desc": "Innate 25% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Shielded Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Shielded Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Shielded Heart.png",
@@ -6319,7 +6437,7 @@ relics = {
 		"tags": []
 	},
 	"Siphon Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Siphon Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Siphon Heart.png",
@@ -6334,12 +6452,12 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Tormented Heart.png",
 		"desc": "Innate 25% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 20% of damage dealt. ",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Tranquil Heart": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Tranquil Heart",
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Tranquil Heart.png",
@@ -6356,7 +6474,7 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Unsullied Heart.png",
 		"desc": "On use, heals for 100% of Current Health over 0.5s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -6365,14 +6483,14 @@ relics = {
 		"slot": "Relic",
 		"image": "./brotherLibrary/relicsImages/Void Heart.png",
 		"desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	}
 }
 fragments = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "",
 		"image": "",
@@ -6387,7 +6505,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
 		"value": 0.30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -6397,14 +6515,14 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
 		"value": 0.20,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Reserves": 0.20,
 		},
 		"tags": []
 	},
 	"Armor Effectiveness": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Armor Effectiveness",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6421,7 +6539,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1 Blight Resistance [MYTHIC]",
 		"value": 30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Blight": 30,
 		},
@@ -6433,7 +6551,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Casting Speed [MYTHIC]",
 		"value": 0.20,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CastSpeed": 0.20,
 		},
@@ -6445,7 +6563,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
 		"value": -0.30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ChargeCost": -0.30,
 		},
@@ -6457,7 +6575,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Consumable Duration [MYTHIC]",
 		"value": 0.20,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ConsumableDuration": 0.20,
 		},
@@ -6469,14 +6587,14 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
 		"value": -0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RelicSpeed": -0.15
 		},
 		"tags": []
 	},
 	"Damage Reduction": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Damage Reduction",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6493,14 +6611,14 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Elemental Damage [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ElementalDamage": 0.10,
 		},
 		"tags": []
 	},
 	"Elemental Resistance": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Elemental Resistance",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6519,14 +6637,14 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
 		"value": 0.20,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"GreyHealthConversion": 0.20,
 		},
 		"tags": [] //this is legit ONLY the CONVERSION rate btw
 	},
 	"Healing Effectiveness": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Healing Effectiveness",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6538,7 +6656,7 @@ fragments = {
 		"tags": []
 	},
 	"Health": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Health",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6554,7 +6672,7 @@ fragments = {
 		"slot": "RFragRed",
 		"image": 0.10,
 		"desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeCritChance": 0.10,
 		},
@@ -6566,7 +6684,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeCritDamage": 0.15,
 		},
@@ -6578,7 +6696,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Melee Damage [MYTHIC]",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.15,
 		},
@@ -6590,7 +6708,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AttackSpeed": 0.15,
 			"ChargeSpeed": 0.15,
@@ -6603,7 +6721,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Mod Cost [MYTHIC]",
 		"value": -0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModCost": -0.10,
 		},
@@ -6615,7 +6733,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Mod Damage [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModDamage": 0.10,
 		},
@@ -6627,7 +6745,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Mod Duration [MYTHIC]",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModDuration": 0.15,
 		},
@@ -6639,7 +6757,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
 		"value": 0.075,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedCritChance": 0.075,
 		},
@@ -6651,7 +6769,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedCritDamage": 0.15,
 		},
@@ -6663,7 +6781,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Ranged Damage [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedDamage": 0.10,
 		},
@@ -6675,7 +6793,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Fire Rate [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireRate": 0.10,
 		},
@@ -6687,7 +6805,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Recoil [MYTHIC]",
 		"value": -0.30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Recoil": -0.30,
 		},
@@ -6699,12 +6817,12 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Revive Speed [MYTHIC]",
 		"value": 0.25,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Shield Effectiveness": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Shield Effectiveness",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6721,7 +6839,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
 		"value": -0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CDR": -0.10,
 		},
@@ -6733,7 +6851,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Skill Damage [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"SkillDamage": 0.10,
 		},
@@ -6745,7 +6863,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Skill Duration [MYTHIC]",
 		"value": 0.10,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"SkillDuration": 0.10,
 		},
@@ -6757,7 +6875,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
 		"value": -0.30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"SpreadRecovery": -0.30,
 		},
@@ -6769,14 +6887,14 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Stagger Damage [MYTHIC]",
 		"value": 0.20,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StaggerDamage": 0.20,
 		},
 		"tags": []
 	},
 	"Stamina": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Stamina",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6788,7 +6906,7 @@ fragments = {
 		"tags": []
 	},
 	"Stamina Cost": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Stamina Cost",
 		"slot": "RFragBlue",
 		"image": "",
@@ -6805,7 +6923,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
 		"value": -0.30,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -6815,7 +6933,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
 		"value": 0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllWeakspot": 0.15,
 		},
@@ -6827,7 +6945,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Weapon Spread [MYTHIC]",
 		"value": -0.15,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Spread": -0.15,
 		},
@@ -6839,7 +6957,7 @@ fragments = {
 		"image": "",
 		"desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
 		"value": 0.35,
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"WeaponSwapSpeed": 0.35,
 		},
@@ -6853,7 +6971,7 @@ traits = {
 	"": {
 		"name": "",
 		"property": "",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "",
 		"level": {
 			"0": 0,
@@ -6872,7 +6990,7 @@ traits = {
 	"Affliction": {
 		"name": "Affliction",
 		"property": "StatusDuration",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases STATUS EFFECT duration against enemies by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -6891,7 +7009,7 @@ traits = {
 	"Ammo Reserves": {
 		"name": "Ammo Reserves",
 		"property": "Reserves",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Ammo Reserves by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -6910,7 +7028,7 @@ traits = {
 	"Amplitude": {
 		"name": "Amplitude",
 		"property": "auraAOE",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases AOE and AURA Size by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -6929,7 +7047,7 @@ traits = {
 	"Arcane Strike": {
 		"name": "Arcane Strike",
 		"property": "ModPowerGenMelee",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Mod Power Generation from Melee Damage by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -6948,7 +7066,7 @@ traits = {
 	"Barkskin": {
 		"name": "Barkskin",
 		"property": "FlatDR",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Reduces all incoming damage by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -6968,7 +7086,9 @@ traits = {
 		"name": "Blood Bond",
 		"property": "",
 		"tags": ["DMGKept"],//the property is left blank else the bonus will populate in spite of the custom function. Added it to the tags array to store the property type anyways.
-		"customTier0": "bloodBond",
+		"usesConditional": {
+			"customTier0": "bloodBond",
+		},
 		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in "Damage Kept" bonuses under Advanced Stats.`,
 		"level": {
 			"0": 0,
@@ -6987,7 +7107,7 @@ traits = {
 	"Bloodstream": {
 		"name": "Bloodstream",
 		"property": "GreyHP/S+",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Grey Health Regeneration by VALUE1.1/s.",
 		"level": {
 			"0": 0,
@@ -7006,7 +7126,7 @@ traits = {
 	"Chakra": {
 		"name": "Chakra",
 		"property": "ModDuration",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Mod Duration by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7025,7 +7145,7 @@ traits = {
 	"Dark Pact": {
 		"name": "Dark Pact",
 		"property": "GreyHealthConversion",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Grey Health Conversion Rate by VALUE1.1%.<br><br>Conversion Rate is how much HP is converted to GHP when you take damage, not your regen rate.",
 		"level": {
 			"0": 0.00,
@@ -7044,7 +7164,7 @@ traits = {
 	"Endurance": {
 		"name": "Endurance",
 		"property": "Stamina",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Max Stamina by VALUE1.1.",
 		"level": {
 			"0": 0,
@@ -7063,7 +7183,7 @@ traits = {
 	"Expertise": {
 		"name": "Expertise",
 		"property": "CDR",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Reduces Skill Cooldowns by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
@@ -7082,7 +7202,7 @@ traits = {
 	"Fitness": {
 		"name": "Fitness",
 		"property": "EvadeDistance",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Evade Distance by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7101,7 +7221,7 @@ traits = {
 	"Flash Caster": {
 		"name": "Flash Caster",
 		"property": "CastSpeed",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Casting Speed by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7120,7 +7240,7 @@ traits = {
 	"Footwork": {
 		"name": "Footwork",
 		"property": "AimMovementSpeed",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Movement Speed while Aiming by VALUE1.1%.",
 		"level": {
 			"0": 0.0,
@@ -7139,7 +7259,7 @@ traits = {
 	"Fortify": {
 		"name": "Fortify",
 		"property": "Armor%",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Armor Effectiveness by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7158,7 +7278,7 @@ traits = {
 	"Gifted": {
 		"name": "Gifted",
 		"property": "SkillDuration",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Skill Duration by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7177,7 +7297,7 @@ traits = {
 	"Glutton": {
 		"name": "Glutton",
 		"property": "RelicSpeed",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7196,7 +7316,7 @@ traits = {
 	"Handling": {
 		"name": "Handling",
 		"property": ["Spread","Recoil"],
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Reduces Weapon Spread and Recoil by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
@@ -7215,7 +7335,7 @@ traits = {
 	"Kinship": {
 		"name": "Kinship",
 		"property": "SelfDamageModifier",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Reduces FriendlyFire Damage Dealt and Received by VALUE1.1%.",
 		"level": {
 			"0": -0.00,
@@ -7234,7 +7354,7 @@ traits = {
 	"Leech": {
 		"name": "Leech",
 		"property": "LifestealEFF",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Lifesteal Efficacy by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7253,7 +7373,7 @@ traits = {
 	"Longshot": {
 		"name": "Longshot",
 		"property": "Range",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Weapon Ideal Range by VALUE1.1m.",
 		"level": {
 			"0": 0.00,
@@ -7272,7 +7392,7 @@ traits = {
 	"Potency": {
 		"name": "Potency",
 		"property": "ConsumableDuration",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Consumable Duration by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7291,7 +7411,7 @@ traits = {
 	"Recovery": {
 		"name": "Recovery",
 		"property": "Stamina/S+",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Stamina Regen by VALUE1.1/s.",
 		"level": {
 			"0": 0,
@@ -7310,7 +7430,7 @@ traits = {
 	"Regrowth": {
 		"name": "Regrowth",
 		"property": "HP/S+",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Health Regeneration by VALUE1.1/s.",
 		"level": {
 			"0": 0,
@@ -7329,7 +7449,7 @@ traits = {
 	"Resolute": {
 		"name": "Resolute",
 		"property": null,
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Reduces Hit Reaction Time by VALUE1.1%",
 		"level": {
 			"0": 0.00,
@@ -7348,7 +7468,7 @@ traits = {
 	"Revivalist": {
 		"name": "Revivalist",
 		"property": null,
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7367,7 +7487,7 @@ traits = {
 	"Rugged": {
 		"name": "Rugged",
 		"property": "SummonHealth",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases the Health of Archetype Summons by a VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7386,7 +7506,7 @@ traits = {
 	"Scholar": {
 		"name": "Scholar",
 		"property": null,
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Experience Gain by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7405,7 +7525,7 @@ traits = {
 	"Shadeskin": {
 		"name": "Shadeskin",
 		"property": ["Burn","Shock","Corrosive"],
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Elemental Damage Resistance by VALUE1.1.",
 		"level": {
 			"0": 0,
@@ -7424,7 +7544,7 @@ traits = {
 	"Siphoner": {
 		"name": "Siphoner",
 		"property": "Lifesteal",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Grants VALUE1.1% base damage as Lifesteal.",
 		"level": {
 			"0": 0,
@@ -7443,7 +7563,7 @@ traits = {
 	"Spirit": {
 		"name": "Spirit",
 		"property": "ModPowerGen",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Mod Power Generation by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7462,7 +7582,7 @@ traits = {
 	"Strong Back": {
 		"name": "Strong Back",
 		"property": "WeightThreshold",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Dodge Weight Threshold by VALUE1.1.",
 		"level": {
 			"0": 0,
@@ -7481,7 +7601,7 @@ traits = {
 	"Swiftness": {
 		"name": "Swiftness",
 		"property": "MovementSpeed",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Movement Speed by VALUE1.1%.<br>Increases Environmental Movement Speed by VALUE2.1%.<br>(Vaulting, Ladders, Wading)",
 		"level": {
 			"0": 0.00,
@@ -7497,7 +7617,6 @@ traits = {
 			"10": 0.15
 		},
 		"property2": "EnvMovementSpeed",
-		"custom2": null,
 		"level2": {
 			"0": 0.00,
 			"1": 0.05,
@@ -7515,7 +7634,7 @@ traits = {
 	"Triage": {
 		"name": "Triage",
 		"property": "HealingEFF",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Healing by VALUE1.1%.",
 		"level": {
 			"0": 0,
@@ -7534,7 +7653,7 @@ traits = {
 	"Untouchable": {
 		"name": "Untouchable",
 		"property": "iFrameWindow",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": "Increases Evade Window by VALUE1.1%.",
 		"level": {
 			"0": 0.00,
@@ -7553,7 +7672,7 @@ traits = {
 	"Vigor": {
 		"name": "Vigor",
 		"property": "Health",
-		"customBase": null,
+		"usesConditional": {},
 		"desc": `Increases Max Health by VALUE1.1.`,
 		"level": {
 			"0": 0,
@@ -7579,7 +7698,7 @@ primary = {
 		"slot": "Primary",
 		"image": "images/Remnant/clear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7589,7 +7708,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Alpha _ Omega.png",
 		"desc": "",
-		"customBase": "",
+		"usesConditional": {},
 		"builtIN": "Beta Ray",
 		"stats": {},
 		"tags": []
@@ -7599,7 +7718,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Aphelion.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Supernova",
 		"stats": {},
 		"tags": []
@@ -7609,7 +7728,7 @@ primary = {
 		"slot": "Primary",
 		"image": `./brotherLibrary/primaryImages/AS-10 _Bulldog_.png`,
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7619,7 +7738,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Blackmaw AR-47.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7629,7 +7748,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Chicago Typewriter.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7639,7 +7758,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Coach Gun.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7649,7 +7768,7 @@ primary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/primaryImages/Corrupted Aphelion.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Micronova",
 		"stats": {},
 		"tags": []
@@ -7659,7 +7778,7 @@ primary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/primaryImages/Corrupted Arbalest.png",
 		"desc": "testy tester testing",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Guardian's Fury",
 		"stats": {},
 		"tags": []
@@ -7669,7 +7788,7 @@ primary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/primaryImages/Corrupted Deceit.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Windfall",
 		"stats": {},
 		"tags": []
@@ -7679,7 +7798,7 @@ primary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/primaryImages/Corrupted Merciless.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Bloodshot",
 		"stats": {},
 		"tags": []
@@ -7689,7 +7808,7 @@ primary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/primaryImages/Corrupted Savior.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Fusion Cannon",
 		"stats": {},
 		"tags": []
@@ -7699,7 +7818,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Crescent Moon.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Moonlight Barrage",
 		"stats": {},
 		"tags": []
@@ -7709,7 +7828,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Crossbow.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7719,7 +7838,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Deceit.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Ouroboros",
 		"stats": {},
 		"tags": []
@@ -7729,7 +7848,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Ford's Scattergun.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7739,7 +7858,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Huntmaster M1.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7749,7 +7868,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Merciless.png",
 		"desc": "Applies BLEED.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Bloodline",
 		"stats": {
 			"outgoingStatus": 1,
@@ -7762,7 +7881,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Monarch.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Chain of Command",
 		"stats": {},
 		"tags": []
@@ -7772,7 +7891,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Monolith.png",
 		"desc": "Sustained primary hits and Sandstorm hits apply EXPOSED for 1s. MAX 15s. EXPOSED: Target receives 15% additional damage from all sources.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Sandstorm",
 		"stats": {},
 		"tags": []
@@ -7782,7 +7901,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Nightfall.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Dreadwalker",
 		"stats": {},
 		"tags": ["RLifesteal"]
@@ -7792,7 +7911,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Plasma Cutter.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Heat Sink",
 		"stats": {},
 		"tags": []
@@ -7802,7 +7921,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Pulse Rifle.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -7811,7 +7930,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Repulsor.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Banish",
 		"stats": {},
 		"tags": []
@@ -7821,7 +7940,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Royal Hunting Bow.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7831,7 +7950,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Rusty Lever Action.png",
 		"desc": "Cannot equip a Mod or Mutator.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7841,7 +7960,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Sagittarius.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Starfall",
 		"stats": {},
 		"tags": []
@@ -7851,7 +7970,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Savior.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Shatterstar",
 		"stats": {},
 		"tags": []
@@ -7861,7 +7980,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Sparkfire Shotgun.png",
 		"desc": "Applies BURNING on hit.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {
 			"outgoingStatus": 1,
@@ -7874,7 +7993,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Sporebloom.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Spore Shot",
 		"stats": {},
 		"tags": []
@@ -7884,7 +8003,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Starkiller.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Gravity Core",
 		"stats": {},
 		"tags": []
@@ -7894,7 +8013,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Thorn.png",
 		"desc": "Fires homing needles dealing 15 explosive damage after sticking for 2s. When 5 needles are stuck in a target at once, BLOWBACK triggers dealing 150 explosive damage as well.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Deadwood",
 		"stats": {},
 		"tags": []
@@ -7904,7 +8023,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Trinity Crossbow.png",
 		"desc": "Fires 3 bolts at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7914,7 +8033,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Twisted Arbalest.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Guardian's Call",
 		"stats": {},
 		"tags": []
@@ -7924,7 +8043,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Widowmaker.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7934,7 +8053,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/Wrangler 1860.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7944,7 +8063,7 @@ primary = {
 		"slot": "Primary",
 		"image": "./brotherLibrary/primaryImages/XMG57 _Bonesaw_.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -7956,7 +8075,7 @@ melee = {
 		"slot": "Melee",
 		"image": "images/Remnant/clear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -7979,7 +8098,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Abyssal Hook.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8002,7 +8121,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Assassin's Dagger.png",
 		"desc": "Back-attacks are guaranteed weakspot hits.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8024,7 +8143,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Atom Smasher.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8047,7 +8166,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Atom Splitter.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8070,7 +8189,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Blade of Gul.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8093,7 +8212,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Bone Chopper.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8116,7 +8235,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Crystal Staff.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8139,7 +8258,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Decayed Claws.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8162,7 +8281,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Dreamcatcher.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8185,7 +8304,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Edge of the Forest.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8208,7 +8327,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Feral Judgement.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8231,7 +8350,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Gas Giant.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outCORRODED": 1
@@ -8257,7 +8376,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Godsplitter.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8280,7 +8399,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Hero's Sword.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8303,7 +8422,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Huntress Spear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outCORRODED": 1
@@ -8329,7 +8448,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Iron Greatsword.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8352,7 +8471,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Knuckle Dusters.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8375,7 +8494,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Krell Axe.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8398,7 +8517,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Labyrinth Staff.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8421,7 +8540,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Mirage.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8443,7 +8562,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Nightshade.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": ["MLifesteal"],
 
@@ -8466,7 +8585,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Ornate Blade.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8489,7 +8608,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Ornate Flail.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8512,7 +8631,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Rebellion Spear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8535,7 +8654,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Red Doe Staff.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8558,7 +8677,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Ritualist Scythe.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8580,7 +8699,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Royal Broadsword.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8603,7 +8722,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Rusted Claws.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8626,7 +8745,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Scrap Hammer.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8649,7 +8768,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Scrap Hatchet.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8672,7 +8791,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Scrap Staff.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8695,7 +8814,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./images/swagCat.png",
 		"desc": "It's a shovel.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8717,7 +8836,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Smolder.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8740,7 +8859,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Spectral Blade.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8763,7 +8882,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Steel Flail.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8786,7 +8905,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Steel Katana.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8809,7 +8928,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Steel Scythe.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8832,7 +8951,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Steel Spear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8855,7 +8974,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Steel Sword.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8878,7 +8997,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Stonebreaker.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8901,7 +9020,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Vice Grips.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8924,7 +9043,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/World's Edge.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8947,7 +9066,7 @@ melee = {
 		"slot": "Melee",
 		"image": "./brotherLibrary/meleeImages/Wrathbringer.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": [],
 
@@ -8972,7 +9091,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "images/Remnant/clear.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -8982,7 +9101,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Anguish.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Loathe The Weak",
 		"stats": {},
 		"tags": []
@@ -8992,7 +9111,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Bolt Driver.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9002,7 +9121,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Corrupted Cube Gun.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Cube Room",
 		"stats": {},
 		"tags": []
@@ -9012,7 +9131,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Corrupted Meridian.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Deadpoint",
 		"stats": {},
 		"tags": []
@@ -9022,7 +9141,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Corrupted Nebula.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Nano Phase",
 		"stats": {},
 		"tags": []
@@ -9032,7 +9151,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Corrupted Rune Pistol.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Death Brand",
 		"stats": {},
 		"tags": []
@@ -9042,7 +9161,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Corrupted Sorrow.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Will of the Wisp",
 		"stats": {},
 		"tags": []
@@ -9052,7 +9171,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Cube Gun.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Cube Shield",
 		"stats": {},
 		"tags": []
@@ -9062,7 +9181,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Double Barrel.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9072,7 +9191,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Enigma.png",
 		"desc": "Applies OVERLOADED on hit.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Chaos Driver",
 		"stats": {
 			"outgoingStatus": 1,
@@ -9085,7 +9204,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Hellfire.png",
 		"desc": "Applies BURNING on hit.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Explosive Shot",
 		"stats": {
 			"outgoingStatus": 1,
@@ -9098,7 +9217,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/MP60-R.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9108,7 +9227,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Meridian.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Screamer",
 		"stats": {},
 		"tags": []
@@ -9118,7 +9237,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Nebula.png",
 		"desc": "Applies CORRODED on hit.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Nano Swarm",
 		"stats": {
 			"outgoingStatus": 1,
@@ -9131,7 +9250,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Repeater Pistol.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9141,7 +9260,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Rune Pistol.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Soul Brand",
 		"stats": {},
 		"tags": []
@@ -9151,7 +9270,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Rupture Cannon.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9161,7 +9280,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Rusty Repeater.png",
 		"desc": "Cannot equip a Mod or Mutator.",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9171,7 +9290,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Service Pistol.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9181,7 +9300,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Silverback Model 500.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9191,7 +9310,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Sorrow.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Eulogy",
 		"stats": {},
 		"tags": []
@@ -9201,7 +9320,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Star Shot.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "Big Bang",
 		"stats": {},
 		"tags": []
@@ -9211,7 +9330,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Sureshot.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9221,7 +9340,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Tech 22.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9231,7 +9350,7 @@ secondary = {
 		"slot": "Secondary",
 		"image": "./brotherLibrary/secondaryImages/Western Classic.png",
 		"desc": "",
-		"customBase": null,
+		"usesConditional": {},
 		"builtIN": "",
 		"stats": {},
 		"tags": []
@@ -9242,7 +9361,7 @@ secondary = {
 /* ----------------------------------------------------------------------------------------*/
 rangedMutators = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "RMutator",
 		"image": "images/Remnant/clear.png",
@@ -9255,7 +9374,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Bandit.png",
 		"desc": "On hit, grants 30% chance to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9264,7 +9383,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Battery.png",
 		"desc": "Increases Weakspot Damage by 20% for every 400 Mod Power Spent by the attached weapon's mod. Max 3 stacks. Lasts 10s.<br>Level 10: At Max Stacks, gain 10% Critical Chance on Weakspot Hits",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9273,7 +9392,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Bottom Heavy.png",
 		"desc": "Increases Fire Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9282,7 +9401,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Bulletweaver.png",
 		"desc": "Mod use increases Fire Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9291,7 +9410,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Deadly Calm.png",
 		"desc": "Continuosly Aiming increases Ranged Damage by up to 20% over 3s.<br>Level 10: Ranged Critical Hit Chance increased by 10%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9300,7 +9419,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Dreadful.png",
 		"desc": "Increases Ranged Damage by 4% for every 10% of total Health present as Grey Health. Max 20% increase.<br>Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9309,7 +9428,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Extender.png",
 		"desc": "Increases Magazine Capacity of this weapon by 40%.<br>Level 10: Increases Reload Speed of this weapon by 15%",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9318,7 +9437,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Failsafe.png",
 		"desc": "Attached Mod deals 20% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9327,7 +9446,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Far-Sighted.png",
 		"desc": "Increases Ranged Damage of this weapon by x% for every xm from the shooter to the target. Max 25%.<br>Level 10: Increases this weapon's Ideal, Falloff, and Max Range by 5m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9336,7 +9455,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Feedback.png",
 		"desc": "Using this weapon's Mod generates 20% of single charge value as passive Mod Power over 10s. Does not stack.<br>Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9345,7 +9464,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Fetid Wounds.png",
 		"desc": "Increases Critical Chance of this weapon by 5% per unique Negative Status Effect on the enemy. Max 15% increase.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outCORRODED": 200
@@ -9357,7 +9476,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Ghost Shell.png",
 		"desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 40%.<br>Level 10: Increases Weakspot Critical Chance by 15%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9366,7 +9485,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Harmonizer.png",
 		"desc": "Increases Mod Damage by 20%.<br>Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9375,7 +9494,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Ingenuity.png",
 		"desc": "Reduces the Heat Generation of this weapon by 50%.<br>Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9384,7 +9503,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Kill Switch.png",
 		"desc": "Switching to this weapon creates an Explosive Burst which deals 250 Damage to all enemies within 7m. Can only happen once every 10s.<br>Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9393,7 +9512,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Lithely.png",
 		"desc": "Increase this weapon's Reload Speed by 7% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks.<br>Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9402,7 +9521,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Maelstrom.png",
 		"desc": "Increases this weapon's Elemental Damage by 10% for each unique Elemental Status Effect on the target.<br>Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9411,7 +9530,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Momentum.png",
 		"desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 2% for 3s. Max 10 stacks.<br>Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9420,7 +9539,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Near-Sighted.png",
 		"desc": "Increases Ranged Damage of this weapon by 10% to enemies within 7m.<br>Level 10: Increases Ranged Critical Chance of this weapon by 10% to enemies within 7m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9429,7 +9548,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Pressure Point.png",
 		"desc": "Increases this weapon's Ranged and Mod Damage by 5% to enemies within 7m.<br>Level 10: Activating this weapon's Mod triggers a fixed 7m blast, dealing 50 Explosive Damage per 100 Mod Power spent in a single cast. Inflicts 1.5 Stagger Damage.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9438,7 +9557,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Prophecy.png",
 		"desc": "Using this weapon's mod increases Mod Power Generation by 6% for 10s. Max 5 stacks.<br>Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9447,7 +9566,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Refunder.png",
 		"desc": "Shots from this weapon have 35% chance to return spent Ammo to reserves.<br>Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9456,7 +9575,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Searing Wounds.png",
 		"desc": "Increases Ranged Damage of this weapon by 1% to BURNING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BURNING, dealing 50 FIRE damage over 5s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBURN": 1
@@ -9468,7 +9587,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Sequenced Shot.png",
 		"desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 35% for 3s.<br>Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9477,7 +9596,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Slayer.png",
 		"desc": "Reloading increases the damage of this weapon's next shot by 25%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9486,7 +9605,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Sleeper.png",
 		"desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 5 seconds after it is drawn.<br>Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9495,7 +9614,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Spellweaver.png",
 		"desc": "Increases this weapon's Mod Damage and Mod Generation by 15% for 10s when activating a Skill.<br>Level 10: Activating this weapon's Mod reduces Skill Cooldowns by 1% for every 100 Mod Power spent.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9504,12 +9623,12 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Spirit Feeder.png",
 		"desc": "Increases this weapon's Ranged Damage by 7.5% for every 20% reserve ammo missing.<br>Level 10: When the weapon runs out of ammo, it gains infinite ammo for 5s. Can only happen once every 60s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Spirit Healer": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Spirit Healer",
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Spirit Healer.png",
@@ -9524,7 +9643,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Supercharger.png",
 		"desc": "Increases Charge Speed of Bows and Fusion Rifles by 30%.<br>Level 10: Charged Primary Shots of Bows and Fusion Rifles gain 15% Critical Chance.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9533,7 +9652,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Thousand Cuts.png",
 		"desc": "Increases this weapon's Critical Chance and Critical Damage by 0.1% for each shot fired. Lasts 0.125s. Max 50 stacks.<br>Level 10: Increases this weapon's Reload Speed by 1% per stack.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9542,7 +9661,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Timewave.png",
 		"desc": "Mod Use applies SLOW status on all enemies within 7.5m for 7s.<br>Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -9554,7 +9673,7 @@ rangedMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Top Heavy.png",
 		"desc": "Increases this weapon's Ranged Damage by up to 15% based on how close the magazine capacity is to full.<br>Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9563,7 +9682,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Transpose.png",
 		"desc": "Picking up Ammo increases Ranged damage by 20% for 20s.<br>Level 10: Ammo pickups are added directly to the magazine.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9572,7 +9691,7 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Twisting Wounds.png",
 		"desc": "Increases Ranged damage of this weapon by 20% to BLEEDING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 200 BLEED damage over 20s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBLEED": 200,
@@ -9582,7 +9701,7 @@ rangedMutators = {
 }
 meleeMutators = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "MMutator",
 		"image": "images/Remnant/clear.png",
@@ -9591,7 +9710,7 @@ meleeMutators = {
 		"tags": []
 	},
 	"Battle Mage": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Battle Mage",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Battle Mage.png",
@@ -9603,7 +9722,7 @@ meleeMutators = {
 		"tags": []
 	},
 	"Dervish": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dervish",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Dervish.png",
@@ -9618,14 +9737,14 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Disengage.png",
 		"desc": "Melee Strikes(3) increase the damage of the next Backdash Evade Attack by 15%. Max 5 Stacks. Lasts 7.5s.<br>Level 10: Perfect Neutral Evades grants 5 stacks",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"BackstepDamage": 0.75,
 		},
 		"tags": []
 	},
 	"Edgelord": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Edgelord",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Edgelord.png",
@@ -9642,12 +9761,14 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Executor.png",
 		"desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 30% of the original duration. Cannot exceed original max duration.<br>Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 20m with a Negative Status Effect. Max 4 stacks.",
-		"customBase": "executor",
+		"usesConditional": {
+			"customBase": "executor",
+		},
 		"stats": {},
 		"tags": ["AttackSpeed","ChargeSpeed"]
 	},
 	"Gladiator": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Gladiator",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Gladiator.png",
@@ -9663,7 +9784,9 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Guts.png",
 		"desc": "Increases Melee Critical Chance by 25% when Grey Health is present.<br>Level 10: Increases Melee Critical Damage by 0.5% for every 1% of Grey Health. Requires GREY HEALTH ACTIVE setting. Bonus assumes 50% GHP present.",
-		"customTier0": "guts",
+		"usesConditional": {
+			"customTier0": "guts",
+		},
 		"stats": {},
 		"tags": ["MeleeCritChance","MeleeCritDamage"]
 	},
@@ -9672,7 +9795,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Latency.png",
 		"desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 35% less damage to charge.<br>Level 10: Increase the potency of readied Melee Special abilities by 25%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeSpecialAbilityCharge": -0.35,
 			"MeleeSpecialAbilityDamage": 0.25,
@@ -9684,7 +9807,9 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Misfortune.png",
 		"desc": "Increase Melee damage by 10% for each unique Negative Status the target is suffering from.<br>Level 10: Melee Attacks apply SLOW for 3s.",
-		"customBase": "misfortune",
+		"usesConditional": {
+			"customBase": "misfortune",
+		},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -9696,7 +9821,9 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Opportunist.png",
 		"desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance by 100% for 2s.<br>Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
-		"customTier0": "opportunist",
+		"usesConditional": {
+			"customTier0": "opportunist",
+		},
 		"stats": {},
 		"tags": ["MeleeCritChance"]
 	},
@@ -9705,7 +9832,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Overdrive.png",
 		"desc": "Melee Critical Hits increase Melee Critical Chance 5% for 15s. Stacking up to 5 times.<br>Level 10: Increases Melee Crit Damage by 20%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeCritChance": 0.25,
 			"MeleeCritDamage": 0.20,
@@ -9717,7 +9844,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Reinvigorate.png",
 		"desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 20% additional damage and 10% Critical Chance.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ChargeCost": -0.50,
 			"ChargeDamage": 0.20,
@@ -9730,12 +9857,16 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Resentment.png",
 		"desc": "Gain 30% Melee Damage when Grey Health is present.<br>Level 10: Reduces Stagger by 1 when using any Melee Attack.",
-		"customTier0": "resentment",
+		"usesConditional": {
+			"customTier0": "resentment",
+		},
 		"stats": {},
 		"tags": ["MeleeDamage"]
 	},
 	"Shielded Strike": {
-		"customTier50": "shieldedStrike",
+		"usesConditional": {
+			"customTier50": "shieldedStrike",
+		},
 		"name": "Shielded Strike",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Shielded Strike.png",
@@ -9750,7 +9881,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Shocker.png",
 		"desc": "Empowers weapon after 3 hits. While empowered, the next Charged Melee hit strikes all enemies within 7m with 100 SHOCK Damage.<br>Level 10: The SHOCK Damage now applies OVERLOADED dealing 125 damage every 5s for 25s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outOVERLOADED": 125
@@ -9758,7 +9889,7 @@ meleeMutators = {
 		"tags": []
 	},
 	"Steadfast": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Steadfast",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Steadfast.png",
@@ -9773,7 +9904,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Stormbringer.png",
 		"desc": "Increases the Status Effect Damage applied by Melee Attacks by 50%.<br>Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeStatusDamage": 0.50,//the res reduction might be a multi, check that later.
 		},
@@ -9784,7 +9915,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Striker.png",
 		"desc": "Melee Hits increase Melee Damage by 6% for 10s. Max 5 Stacks, stacks decay.<br>Level 10: Increases Movement Speed by 3% per stack. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.30,
 			"MovementSpeed": 0.15,
@@ -9796,7 +9927,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Tainted Blade.png",
 		"desc": "Increases Melee Damage by 8% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 250 ACID Damage over 10s. Bonus assumes maximum stacks.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.40,
 			"outgoingStatus": 1,
@@ -9809,7 +9940,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Transference.png",
 		"desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 5s.<br>Level 10: Increases Reload Speed by 50% after an ammo transfer.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModPowerGenMelee": 0.25,
 			"ReloadSpeed": 0.50
@@ -9817,7 +9948,9 @@ meleeMutators = {
 		"tags": []
 	},
 	"Vampire Blade": {
-		"customBase": "vampireBlade",
+		"usesConditional": {
+			"customBase": "vampireBlade",
+		},
 		"name": "Vampire Blade",
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Vampire Blade.png",
@@ -9830,7 +9963,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Vengeful Strike.png",
 		"desc": "Increases Melee damage by 50% when below 50% Max Health. Level 10:<br>Increases Melee Critical Chance by 15% when below 50% Max Health. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.50,
 			"MeleeCritChance": 0.15,
@@ -9842,7 +9975,7 @@ meleeMutators = {
 		"slot": "MMutator",
 		"image": "./brotherLibrary/mutatorsImages/Weaponlord.png",
 		"desc": "Basic Melee Attack increase the next Charge Attack by 15%. Max 5 Stacks.<br>Level 10: At 3+ Stacks, the next Charge Attack gains 100% Critical Chance. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ChargeDamage": 0.75,
 			"ChargeCritChance": 1.0,
@@ -9855,7 +9988,7 @@ meleeMutators = {
 /* ----------------------------------------------------------------------------------------*/
 rangedMods = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "images/Remnant/clear.png",
@@ -9868,7 +10001,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Abrasive Rounds.png",
 		"desc": "Imbues ammunition with BLEED and increases lifesteal by 5% for 20s. Shots also apply BLEEDING, dealing 200 damage over 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RLifesteal": 0.05,
 			"outBLEED": 1,
@@ -9881,7 +10014,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Astral Burst.png",
 		"desc": "Fires a short range burst of 7 star fragments which deal 90 damage each. Fragments bounce off walls up to 3 times, dealing 25% additional damage per bounce. Weakspot hits deal reduced damage.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9890,7 +10023,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Blood Draw.png",
 		"desc": "Shoots out razor-sharp Chain Shards which impale up to 5 targets within 15m, dealing X30 damage. On hit, chains are pulled towards the caster, dealing 750 damage split equally among enemies and applying 825 BLEEDING damage over 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBLEED": 1
@@ -9902,7 +10035,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Bore.png",
 		"desc": "Fires a drill projectile which bores into enemies on contact, dealing 240 damage. After fully burrowing into an enemy, creates a Weakspot which grants 65% of normal Weakspot Damage on hit. If attached to an existing Weakspot, Ranged Crit Chance is increased by 15% when attacking the drill. Lasts 10s. Crit Chance bonus not currently calculated.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllWeakspot": 0.65
 		},
@@ -9913,7 +10046,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Concussive Shot.png",
 		"desc": "Fires a focused blast of air through all targets within 8m, dealing 465 damage and 5x impact.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9922,7 +10055,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Corrosive Rounds.png",
 		"desc": "Imbues ammunition with TOXIC and increases Range Crit Chance by 15% for 20s. Shots also apply CORRODED, dealing 300 damage over 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedCritChance": 0.15,
 			"outgoingStatus": 1,
@@ -9935,7 +10068,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Creeping Mist.png",
 		"desc": "Shoots a cannister out that shatters on impact to reveal an expanding mist, starting at 7.5m and growing to 15m over 5s. The mist lasts 20s. While affected, enemies receive 25% additional Status Effect Damage and are 5% more likely to be struck with a critical hit from any source. The mists debuff persists for 10s after target exits the mist.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StatusDamage": 0.25,
 			"AllCritChance": 0.05
@@ -9947,7 +10080,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Defrag.png",
 		"desc": "Infects weapon with Malware for 30s, causing shots to apply FRAGMENTED for 5s. When a FRAGMENTED enemy dies, they create a Glitch that lasts 15s.\n\nPicking up a Glitch increases All damage by 20% for 15s.\n\nDestroying a Glitch causes it to destabilize, creating a 5m Virus Pool which deals 75 damage per second and applies the FRAGMENTED debuff to enemies inside. Virus Pools last 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AllDamage": 0.20
 		},
@@ -9958,7 +10091,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Energy Wall.png",
 		"desc": "Deploys an energy barrier on impact with ground. Allies can shoot through Energy Wall but enemy projectiles are absorbed (up to 1000 damage\nreceived). Max 1 Wall at a time. Lasts 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9967,7 +10100,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Familiar.png",
 		"desc": "Summons Faerie Familiar to aid in combat. The Familiar selects a random enemy within 10m and slashes through them for 75 damage each attack. Familiar will select a new target when the previous one dies. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -9976,7 +10109,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Fargazer.png",
 		"desc": "Calls forth an eye of Legion to gaze at player's AIM target. For every 0.25s Fargazer focuses on a target within 25m, a stack of MADNESS Status is applied for 5s. Each stack deals 9 Damage per second. Max 10 stacks. Lasts 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			// "outgoingStatus": 1,
 			"outMADNESS": 1
@@ -9988,7 +10121,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Firestorm.png",
 		"desc": "Creates a whirling cyclone that sucks in nearby targets and applies BURNING for 10s. The center of the cyclone deals 225 FIRE damage per second. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBURN": 1
@@ -10000,7 +10133,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Flying Bomb Trap.png",
 		"desc": "Fires a projectile that deploys up to 5 traps after contacting the ground. Each trap can launch a flask of deadly liquid up to 10m when an enemy travels above and will rearm once every 3s. Flask detonatations release a 5m shockwave which deals 50 Damage and splashes targets within 3m of the center for 125 ACID Damage applying CORRODED for 125 damage over 10s. Lasts 20s or until 10 total flask launches.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outCORRODED": 1,
 			"outgoingStatus": 1
@@ -10012,7 +10145,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Healing Shot.png",
 		"desc": "Launches a payload that explodes on contact with allies, healing 30% of their max health. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s, slowly losing healing potency over time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10021,7 +10154,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Heatwave.png",
 		"desc": "Activates a 10m aura of sweltering heat, causing enemies inside the aura for 3s to begin BURNING for 50 FIRE Damage per second for 5s. Lasts 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outBURN": 1,
 			"outgoingStatus": 1
@@ -10033,7 +10166,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Helix.png",
 		"desc": "Shoots a helix of missiles, dealing 170 damage. On contact, divides into 6 smaller rockets which seek additional targets, dealing 90 damage on contact.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10042,7 +10175,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Hot Shot.png",
 		"desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"RangedDamage": 0.15,
 			"outgoingStatus": 1,
@@ -10055,7 +10188,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Knight Guard.png",
 		"desc": "Summons Knight Guard to aid in combat. The Guards hurl penetrating slashes at a random enemy dealing 15 damage. The Guards will melee enemies if close enough for 15 damage. Lasts 20s",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10064,7 +10197,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Overflow.png",
 		"desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireRate": 0.15,
 			"ReloadSpeed": 0.15,
@@ -10078,7 +10211,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Prismatic Driver.png",
 		"desc": "Fires a superheated beam which deals 75 Mod Damage per second. Sustaining the beam on a target causes an explosion which deals 450 Mod damage in a 3m AOE.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10087,7 +10220,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Ring of Spears.png",
 		"desc": "Calls forth 7 phantom spears to encircle the wielder for 25 seconds. This ring will deal up to 35 damage per second to nearby enemies, based on the number of spears remaining in the ring. While the mod is active, these spears can be thrown by tapping the mod button, dealing 100 damage to the first enemy hit. Spears will remain at their impact point for the duration of the mod or until recalled by holding the mod button. When recalled, spears will return to the wielder, dealing 50 damage to enemies along their path. When all recalled spears have reached the wielder, they cause an explosion dealing up to 350 damage based on the number of spears recalled.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10096,7 +10229,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Rootlash.png",
 		"desc": "Launches a projectile which summons a Root Tentacle. Tentacles deal 90 damage and steal 1.5% of the hero's Max Health per hit. Lasts 20s. (Max 2)",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10105,7 +10238,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Rotted Arrow.png",
 		"desc": "Fires a rotten arrow that deals 56 damage and detonates for another 180 damage within 4m. A deadly gas cloud is left behind that deals 600 damage over 5s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10114,7 +10247,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Scrap Shot.png",
 		"desc": "Fires a caltrops grenade that explodes to cover an area of 6m. Caltrops deal 60 damage per second and SLOW to enemies that walk over them. Lasts 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -10126,12 +10259,12 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Skewer.png",
 		"desc": "Fires a Wretched Spear which embeds itself on contact. Spears deal 470 damage on hit, rapidly dividing inside the target until bursting, dealing 420 damage to all targets within 3m. Spears embedded in the environment remain in place for 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
 	"Song of Eafir": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Song of Eafir",
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Song of Eafir.png",
@@ -10148,7 +10281,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Soulbinder.png",
 		"desc": "Fires a projectile that attaches to the enemy dealing 120 damage. Enemies within 7m become bound to the primary target after impact and share 60% of damage dealt to them. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10157,7 +10290,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Space Crabs.png",
 		"desc": "Launch an alien egg that bursts on impact, releasing 5 Space Crabs. Crabs follow the caster, leaping towards enemies within 4m, and exploding, dealing 180 Damage each.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10166,7 +10299,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Stasis Beam.png",
 		"desc": "Fires a beam which deals X45 damage per second, and applies SLOW Debuff. After 3s of application to a target, SLOW becomes STASIS, freezing the target in place for 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -10178,7 +10311,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Time Lapse.png",
 		"desc": "Creates a 6m blast which freezes all standard enemies for 7s.\nDealing damage to frozen enemies immediately breaks the Time Lapse effect, applying SLOW for the remaining duration",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -10190,7 +10323,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Tremor.png",
 		"desc": "Fires a projectile that cracks the ground and spawns shockwaves that deal X225 damage Within 9m for 6s. Shockwaves inflict 3x impact.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10199,7 +10332,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Voltaic Rondure.png",
 		"desc": "Launches a slow-moving orb that pulses every 0.5s, striking enemies within 3m for 60 SHOCK damage and applying OVERLOADED for 15s. The orb lasts 20s. The orb can be overcharged by striking it with additional damage.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outOVERLOADED": 1
@@ -10211,7 +10344,7 @@ rangedMods = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/modsImages/Witchfire.png",
 		"desc": "Fires a highly volatile projectile that explodes to leave a line of flaming terrain. Deals 165 FIRE Damage per second, and applies BURNING, dealing 600 damage over 10s. Lasts 5s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBURN": 1
@@ -10221,7 +10354,7 @@ rangedMods = {
 }
 builtInPrimary = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "images/Remnant/clear.png",
@@ -10230,7 +10363,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Beta Ray": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Beta Ray.png",
@@ -10239,7 +10372,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Supernova": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Supernova.png",
@@ -10251,7 +10384,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Micronova": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Micronova.png",
@@ -10263,7 +10396,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Guardian's Fury": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Guardian's Fury.png",
@@ -10272,7 +10405,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Deadwood": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Deadwood",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Deadwood.png",
@@ -10284,7 +10417,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Sandstorm": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Sandstorm",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Sandstorm.png",
@@ -10301,7 +10434,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Windfall": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Windfall.png",
@@ -10310,7 +10443,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Bloodshot": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Bloodshot.png",
@@ -10322,7 +10455,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Fusion Cannon": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Fusion Cannon.png",
@@ -10331,7 +10464,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Moonlight Barrage": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Moonlight Barrage.png",
@@ -10340,7 +10473,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Ouroboros": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Ouroboros.png",
@@ -10349,7 +10482,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Bloodline": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Bloodline.png",
@@ -10358,7 +10491,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Chain of Command": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Chain of Command.png",
@@ -10367,7 +10500,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Dreadwalker": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Dreadwalker.png",
@@ -10378,7 +10511,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Heat Sink": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Heat Sink.png",
@@ -10387,7 +10520,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Banish": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Banish.png",
@@ -10398,7 +10531,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Starfall": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Starfall.png",
@@ -10407,7 +10540,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Shatterstar": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Shatterstar.png",
@@ -10419,7 +10552,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Spore Shot": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Spore Shot.png",
@@ -10432,7 +10565,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Gravity Core": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Gravity Core.png",
@@ -10441,7 +10574,7 @@ builtInPrimary = {
 		"tags": []
 	},
 	"Guardian's Call": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/primaryModsImages/Guardian's Call.png",
@@ -10452,7 +10585,7 @@ builtInPrimary = {
 }
 builtInMelee = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "images/Remnant/clear.png",
@@ -10465,7 +10598,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fathomless Deep.png",
 		"desc": "Charged Melee Hits grant Fathomless Deep which increases Melee Stagger by 10% per stack for 5s. Max 3 stacks. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StaggerDamage": 0.50,
 		},
@@ -10476,7 +10609,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Bloodthirst.png",
 		"desc": "Damage increases by 25% when attacking from behind. Charge Attacks deal 200 BLEEDING damage over 10s. Back-attack bonus is NOT calculated. Show me a good example of when this can apply remotely consistently and I'll change this.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBLEED": 1,
@@ -10489,7 +10622,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Accelerator.png",
 		"desc": "Charge Melee Attacks increase the speed of all Melee Attacks by 10% for 5s. Bonus assumed actived at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"AttackSpeed": 0.10
 		},
@@ -10500,7 +10633,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fission Strike.png",
 		"desc": "On Neutral Evade Attacks Atom Splitter achieves Nuclear Fission releasing a wave of charged particles which deals 450 damage to targets within 20m. Charged Neutral Evade Attacks increase range by 3x and damage by 25%.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10509,7 +10642,9 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Dreamwave.png",
 		"desc": "After dealing 750 damage, Charge Attack will release a Dreamwave, flowing outwards 20m and returning to caster. Dreamwave applies SLOW to all enemies for 10s and grants a Stack of Reverie for each enemy affected. Each Stack grants +2% to All Damage and +2% Movement Speed, which lasts 15s. Requires ENEMY COUNT setting for stack bonuses.",
-		"customTier0": "dreamwave",
+		"usesConditional": {
+			"customTier0": "dreamwave",
+		},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1
@@ -10521,7 +10656,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Death Sentence.png",
 		"desc": "Dealing Melee Damage 6 times over 10s empowers Feral Judgement. When empowered, Neutral Backdash Charge Attacks apply Death Sentence. After 1.5s of being sentenced, the enemy will suffer 10 Phantom Strikes dealing 75 Damage each. Deals 25% additional damage to BLEEDING enemies.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},//TODO: bleed check for the bonus dmg dealt
 		"tags": []
 	},
@@ -10530,7 +10665,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Dying Breath.png",
 		"desc": "When Infused, Neutral Backdash Charge Attack explodes in a 3m AOE and leaves an ACID Cloud which lasts for 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10539,7 +10674,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Fracture.png",
 		"desc": "Charge Attacks taint the blood of the targets, causing all attacks from Godsplitter to register as Weakspot hits for 2s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10548,7 +10683,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Energy Wave.png",
 		"desc": "Charge Attacks use Stamina to release an energy wave projectile allowing the wielder to strike enemies from much farther away.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10557,7 +10692,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Javelin.png",
 		"desc": "Charge attacks use 25 stamina to throw the spear, which returns to the wielder's hand.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10566,7 +10701,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Krell Edge.png",
 		"desc": "Charge to throw the Krell Axe which applies OVERLOADED on hit, dealing 150 SHOCK damage every 5s for 10s. Shortly after throwing, another will appear in the wielder's hand.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outOVERLOADED": 1
@@ -10578,7 +10713,9 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Beyond The Veil.png",
 		"desc": "Neutral Evade turns to mist, granting Nightshade 5% base damage as Lifesteal for 5s. Perfect Dodge doubles duration. Requires EVADE setting for bonus.",
-		"customTier0": "beyondTheVeil",
+		"usesConditional": {
+			"customTier0": "beyondTheVeil",
+		},
 		"stats": {
 			// "MLifesteal": 0.05
 		},
@@ -10589,7 +10726,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Lifeline.png",
 		"desc": "After dealing 750 damage, the next Charge Attack causes the Spirit of the Red Doe to stampede forward, dealing 480 damage to enemies and regenerating 10% Health to allies.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10598,7 +10735,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Power Stone.png",
 		"desc": "Charged Melee empowers the staff for 10s, causing Melee Attacks to launch an energy bolt that seeks enemies within 30m, dealing 100 SHOCK Damage and grants 1 stack of POWER STONE. Max 10 stacks. While empowered, Charged Melee calls a 6m shockwave dealing 150 SHOCK Damage and ends POWER STONE. For each POWER STONE stack built when ended, release 1 energy bolt that seeks a random enemy and applies OVERLOADED to 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outOVERLOADED": 1
@@ -10610,7 +10747,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Cyclone.png",
 		"desc": "Maintaining an overhread Charged Melee forms a 5m sand cyclone, dealing 165 damage per second and pulls enemies toward the wielder. Each cyclone hit applies EXPOSED for 3s. Max 15s. EXPOSED: Target receives 15% additional damage from all sources.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outEXPOSED": 1
 		},
@@ -10621,7 +10758,9 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Reaver.png",
 		"desc": "Increases Melee Damage by 10% if the target is suffering from a Negative Status Effect.",
-		"customBase": "reaver",
+		"usesConditional": {
+			"customBase": "reaver",
+		},
 		"stats": {},
 		"tags": ["MeleeDamage"]
 	},
@@ -10630,7 +10769,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Blaze.png",
 		"desc": "Charge Melee Attacks apply BURNING which deals 150 FIRE damage over 5s",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBURN": 1
@@ -10642,7 +10781,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Whirlwind.png",
 		"desc": "Performing a Charge Melee Attack during a Neutral Backdash creates a Whirlwind of slashes which strike all enemies within 8m for 273 damage.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10651,7 +10790,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Faultline.png",
 		"desc": "Melee Charge attacks fire off ground-based shockwaves which deal 345 damage. Costs 35 Stamina.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10660,7 +10799,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Horizon Strike.png",
 		"desc": "Charge Attacks release a wide horizontal projectile that penetrates through multiple enemies dealing 348 damage. Only 1 stamina is actually required to use, but will consume up to 35 if available.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -10669,7 +10808,7 @@ builtInMelee = {
 		"slot": "Mod",
 		"image": "./brotherLibrary/meleeModsImages/Awakening.png",
 		"desc": "Incoming damage grants Awakening which increases Melee Damage by % per stack for 10s. Max 10 stacks. Bonus assumed active at all times when selected.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MeleeDamage": 0.5,
 		},
@@ -10678,7 +10817,7 @@ builtInMelee = {
 }
 builtInSecondary = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "images/Remnant/clear.png",
@@ -10687,7 +10826,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Loathe The Weak": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Loathe The Weak.png",
@@ -10696,7 +10835,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Cube Room": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Cube Room.png",
@@ -10705,7 +10844,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Deadpoint": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Deadpoint.png",
@@ -10714,7 +10853,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Nano Phase": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Nano Phase.png",
@@ -10726,7 +10865,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Death Brand": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Death Brand.png",
@@ -10737,7 +10876,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Will of the Wisp": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Will of the Wisp.png",
@@ -10746,7 +10885,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Cube Shield": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Cube Shield.png",
@@ -10755,7 +10894,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Chaos Driver": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Chaos Driver.png",
@@ -10764,7 +10903,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Explosive Shot": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Explosive Shot.png",
@@ -10776,7 +10915,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Screamer": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Screamer.png",
@@ -10785,7 +10924,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Nano Swarm": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Nano Swarm.png",
@@ -10797,7 +10936,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Soul Brand": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Soul Brand.png",
@@ -10806,7 +10945,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Eulogy": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Eulogy.png",
@@ -10815,7 +10954,7 @@ builtInSecondary = {
 		"tags": []
 	},
 	"Big Bang": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Mod",
 		"image": "./brotherLibrary/secondaryModsImages/Big Bang.png",
@@ -10832,7 +10971,7 @@ builtInSecondary = {
 /* ----------------------------------------------------------------------------------------*/
 concoctions = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Conc",
 		"image": "images/Remnant/clear.png",
@@ -10841,7 +10980,7 @@ concoctions = {
 		"tags": []
 	},
 	"Bark Extract": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Bark Extract",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Bark Extract.png",
@@ -10856,7 +10995,7 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Bottled Shaedberry.png",
 		"desc": "Increases Mod Power Generation by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModPowerGen": 0.10,
 		},
@@ -10867,14 +11006,14 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Chilled Steam.png",
 		"desc": "Increases Movement Speed by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"MovementSpeed": 0.10,
 		},
 		"tags": []
 	},
 	"Dark Cider": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Dark Cider",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Dark Cider.png",
@@ -10891,7 +11030,7 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Dark Fluid.png",
 		"desc": "Increases Distance of Evade and Combat Slide by 15% and reduces the cost by 20%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"EvadeDistance": 0.15,
 			"EvadeCost": 0.20,
@@ -10903,14 +11042,14 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Egg Drink.png",
 		"desc": "Increases Dodge Weight Threshold by 10. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"WeightThreshold": 10
 		},
 		"tags": []
 	},
 	"Meat Shake": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Meat Shake",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Meat Shake.png",
@@ -10925,14 +11064,14 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Elixir.png",
 		"desc": "Increases Experience Gains by 15%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Experience": 0.15
 		},
 		"tags": []
 	},
 	"Mudtooth's Stew": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Mudtooth's Stew",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Stew.png",
@@ -10943,7 +11082,7 @@ concoctions = {
 		"tags": []
 	},
 	"Mudtooth's Tonic": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Mudtooth's Tonic",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Mudtooth's Tonic.png",
@@ -10954,7 +11093,7 @@ concoctions = {
 		"tags": []
 	},
 	"Root Water": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Root Water",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Root Water.png",
@@ -10965,7 +11104,7 @@ concoctions = {
 		"tags": []
 	},
 	"Sacred Lakewater": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Sacred Lakewater",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Sacred Lakewater.png",
@@ -10976,7 +11115,7 @@ concoctions = {
 		"tags": []
 	},
 	"Sanguine Vapor": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Sanguine Vapor",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Sanguine Vapor.png",
@@ -10987,7 +11126,7 @@ concoctions = {
 		"tags": []
 	},
 	"Strong Drink": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Strong Drink",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Strong Drink.png",
@@ -11002,7 +11141,7 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Tranquility Font.png",
 		"desc": "Reduces Reticle Sway, Spread, and Gun Recoil by 20%. Lasts 60m and will stay ineffect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Spread": -0.20,
 			"Recoil": -0.20,
@@ -11010,7 +11149,7 @@ concoctions = {
 		"tags": []
 	},
 	"Verdant Tea": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Verdant Tea",
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Verdant Tea.png",
@@ -11026,7 +11165,7 @@ concoctions = {
 		"slot": "Conc",
 		"image": "./brotherLibrary/concoctionsImages/Xenoplasm.png",
 		"desc": "Reduces Skill Cooldowns by 10%. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"CDR": -0.10
 		},
@@ -11035,7 +11174,7 @@ concoctions = {
 }
 quickUses = {
 	"": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "",
 		"slot": "Cons",
 		"image": "images/Remnant/clear.png",
@@ -11048,7 +11187,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Ambit Ember.png",
 		"desc": "Slightly increases Evade Window and Evade Speed by 15%. Lasts 60s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			// "iFrameWindow": ???,
 			"EvadeSpeed": 0.15,
@@ -11060,7 +11199,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Ammo Box.png",
 		"desc": "Repleneshes all reserve ammo.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11069,7 +11208,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Antidote.png",
 		"desc": "Removes CORRODED effect and increases ACID resistance by 15%. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Corrosive": 15,
 		},
@@ -11080,7 +11219,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Bandage.png",
 		"desc": "Stops BLEEDING and restores all grey health.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11089,7 +11228,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Binding Orb.png",
 		"desc": "When thrown, Device becomes an anchor and applies SLOW to all enemies within 4m. Lasts 20s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outSLOW": 1,
@@ -11101,7 +11240,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Black Tar.png",
 		"desc": "When thrown, explodes in a 4m radius dealing 30 damage and creating a puddle lasting 15s which applies TARRED for 30s to creatures inside. Ranged damage and other FIRE sources ignite TARRED entities, dealing 250 BURNING damage over 10s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBURN": 1,
@@ -11109,7 +11248,7 @@ quickUses = {
 		"tags": []
 	},
 	"Blood Root": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Blood Root",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Blood Root.png",
@@ -11124,14 +11263,14 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Brightstone.png",
 		"desc": "When thrown, explodes in a 4m radius dealing 50 damage and leaving a mysterious Mist which causes enemies to receive 10% additional damage. Multiplicative. Debuff lasts 10s after enemies leave the Mist. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"UniqueMulti": 1.10,
 		},
 		"tags": []
 	},
 	"Confidence Booster": {
-		"customBase": null,
+		"usesConditional": {},
 		"name": "Confidence Booster",
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Confidence Booster.png",
@@ -11146,7 +11285,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Dried Fruit.png",
 		"desc": "Regenerates 5% Health instantly.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11155,7 +11294,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Ethereal Orb.png",
 		"desc": "Removes OVERLOADED effect and increases SHOCK resistance by 15%. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Shock": 15,
 		},
@@ -11166,7 +11305,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Faerie Needle.png",
 		"desc": "Increases Mod Power Regen by 10 MP per second. Lasts 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"ModPowerGen/s": 10,
 		},
@@ -11177,7 +11316,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Gul Serum.png",
 		"desc": "Reduces Stamina Consumption by 50%. Lasts 60s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"StaminaCost": -0.50,
 		},
@@ -11188,7 +11327,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Koara Pellet.png",
 		"desc": "Consume to restore 10% of Max Health instantly.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11197,7 +11336,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Liquid Escape.png",
 		"desc": "Kills the character and returns them to the last used checkpoint.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11206,7 +11345,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Mud Rub.png",
 		"desc": "Extinguishes BURNING effect and increases FIRE resistance by 15. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Burn": 15,
 		},
@@ -11217,7 +11356,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Mystery Jerky.png",
 		"desc": "Converts 6.66 Health into Grey Health per second. Lasts 15s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11226,7 +11365,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Oilskin Balm.png",
 		"desc": "Cures ROOT ROT Blight and increases Blight Resistance by 25%. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Blight": 25,
 		},
@@ -11237,7 +11376,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Orb of Undoing.png",
 		"desc": "Reset all spent Trait Points",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11246,7 +11385,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Pipe Bomb.png",
 		"desc": "When thrown, explodes in a 4m radius dealing 250 damage and applying BLEEDING, which deals an additional 1,350 BLEED damage over 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"outgoingStatus": 1,
 			"outBLEED": 1
@@ -11258,7 +11397,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Poisoned Ambit Ember Capsule.png",
 		"desc": "Use to equip the capsule which can be thrown by pressing FIRE. The capsule will detonate after 2s or upon hitting an enemy, releasing a chemical agent which dampens the psionic abilities of long-term Ambit Ember users.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11267,7 +11406,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Processed Koara.png",
 		"desc": "Decreases Stamina Recovery delay by 75% and Stamina Regen Penalty by 50%. Lasts 60s. Unconfirmed, not calculated presently.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {},
 		"tags": []
 	},
@@ -11276,7 +11415,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Purified Salve.png",
 		"desc": "Cures CURSE and increases Blight Resistance by 25%. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Blight": 25,
 		},
@@ -11287,7 +11426,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Rocket Fuel.png",
 		"desc": "Increases Fire Rate by 10% and Melee Attack Speed by 15%. Lasts 20s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"FireRate": 0.10,
 			"AttackSpeed": 0.15,
@@ -11299,7 +11438,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Sweet Leaf.png",
 		"desc": "Grants 1 stack of BULWARK. Lasts 30s.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Bulwark": 1,
 		},
@@ -11310,7 +11449,7 @@ quickUses = {
 		"slot": "Cons",
 		"image": "./brotherLibrary/consumablesImages/Timeworn Unguent.png",
 		"desc": "Cures SUPPRESSION Blight and increases Blight Resistance by 25%. Lasts 10m.",
-		"customBase": null,
+		"usesConditional": {},
 		"stats": {
 			"Blight": 25,
 		},
