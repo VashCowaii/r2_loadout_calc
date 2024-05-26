@@ -52,7 +52,8 @@
                 <div>
                     <h1>May 26, 2024</h1>
                     <ul>
-                        <li>Fixed an issue that could cause queries to crash in scenarios where the user filtered so strictly the queries couldn't return enough items to complete a loadout.</li>
+                        <li>Modified query results to go back to showing greater than the last target. I didn't want to do this but because damage-related queries in particular cast such a huge net, it is possible to have millions of duplicate equivalent results. Duplicate results found by multiple threads will still show, but duplicate results found within each thread will no longer be shared to the main thread that handles it all. TLDR: Less dulicate results will be shown now, in order to speed things up.</li>
+                        <li>Fixed an issue that could cause queries to crash in scenarios where the user filtered so strictly the queries couldn't return enough rings to complete a loadout, resulting in the concoction limit boost sum of a ring set to be read as a ring itself.</li>
                     </ul>
                 </div>
                 <div>
