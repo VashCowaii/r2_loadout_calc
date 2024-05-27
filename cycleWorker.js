@@ -16,6 +16,14 @@ self.onmessage = function(event) {
     }
     if (data.command === 'copyDataTables') {
         globalRecords = data.data;
+
+        globalRecords.archs = globalRecords.ALTarchs;
+        globalRecords.armor = globalRecords.ALTarmor;
+        globalRecords.accessories = globalRecords.ALTaccessories;
+        globalRecords.consumables = globalRecords.ALTconsumables;
+        globalRecords.weapons = globalRecords.ALTweapons;
+
+
         postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
     }
 

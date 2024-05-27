@@ -10526,7 +10526,7 @@ builtInPrimary = {
 		"image": "./brotherLibrary/primaryModsImages/Banish.png",
 		"desc": "Banishes enemies or allies into another dimension for 4s. When Banish ends, enemies take 1.5x the damage from the Repulsor's primary fire for 8s. Powerful enemies won't be banished, but will take increased damage from any Repulsor while debuffed.",
 		"stats": {
-			"UniqueMulti": 1.5
+			// "UniqueMulti": 1.5
 		},
 		"tags": []
 	},
@@ -11526,7 +11526,7 @@ globalRecords = {
 	"traitPointCount": 0,
 	"traitPointCap": 85,
 	"totalConcLimit": 0,
-	"ALTtotalConcLimit": 0,
+	// "ALTtotalConcLimit": 0,
 	"greatTraitRecords": [],
 	"ALTgreatTraitRecords": [],
 	"urlObject": {},

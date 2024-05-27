@@ -5,7 +5,7 @@ const starterTable = {
   //ARMOR
   "Armor": 0,"Armor%": 0,
   //DR
-  "FlatDR": 0,"Bulwark": 0,"BulwarkCap": 5,"REdamage": [],"DMGKept": [],"SelfDamageModifier": 1,
+  "FlatDR": 0,"Bulwark": 0,"BulwarkCap": 5,"REdamage": 1,"DMGKept": 1,"SelfDamageModifier": 1,
   //SHIELDS
   "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,
   //RESISTANCES
@@ -44,7 +44,7 @@ const starterTable = {
   "ElementalDamage": 0,"ShockDamage": 0,"OverloadedDamage": 0,"ExplosiveDamage": 0,
   "StatusDamage": 0,"MeleeStatusDamage": 0,"SummonDamage": 0,
   "ModDamage": 0,
-  "UniqueMulti": [],
+  "UniqueMulti": 1,
   //CRIT CHANCE
   "AllCritChance": 0,"RangedCritChance": 0,"MeleeCritChance": 0,"ChargeCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,
   "ExplosiveCritChance": 0,"ElementalCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,"PrimaryCritChance": 0,"SecondaryCritChance": 0,
@@ -1758,7 +1758,7 @@ let formulasValues = {
   //Used in updateFormulas() to read gear/accessory specific statistics and add them to the master table
   //Utilizes toggle states
   pullGearStats(isUIcalcs,index,ping) {
-    const path = isUIcalcs ? globalRecords.weapons : globalRecords.ALTweapons;
+    const path = globalRecords.weapons;
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimary',false],weapons.primary[path.primary],'Primary','Weapon',path.primaryMod,['USEtoggledpMod',false]);
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledMelee',false],weapons.melee[path.melee],'Melee','Weapon',undefined,['USEtoggledmMod',false]);
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledSecondary',false],weapons.secondary[path.secondary],'Secondary','Weapon',path.secondaryMod,['USEtoggledsMod',false]);
@@ -1766,29 +1766,29 @@ let formulasValues = {
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledmMutator',false],mutators.meleeMutators[path.meleeMutator]);
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledsMutator',false],mutators.secondaryMutators[path.secondaryMutator]);
 
-    let archsTableName = isUIcalcs ? globalRecords[`archs`] : globalRecords[`ALTarchs`];
+    let archsTableName = globalRecords.archs;
 
     if (!ping) {//If this is just a quick stat pull so can we can look at armor after, then skip armor here
-      let armorRecordPath = isUIcalcs ? globalRecords[`armor`] : globalRecords[`ALTarmor`];
+      let armorRecordPath = globalRecords.armor;
       formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledHead',false],armor.helmets[armorRecordPath.helmet]);
       formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledChest',false],armor.chests[armorRecordPath.chest]);
       formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledLegs',false],armor.legs[armorRecordPath.leg]);
       formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledHands',false],armor.hands[armorRecordPath.hand]);
     }
     //AMULET
-    let tableName = isUIcalcs ? `accessories` : `ALTaccessories`;
-    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAmulet',false],amulets[globalRecords[tableName].amulet]);
+    let tableName = globalRecords.accessories;
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAmulet',false],amulets[tableName.amulet]);
     //RINGS, PASSIVES, and FRAGMENTS
     for (let i=1;i<=4;i++) {
-      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledRing${i}`,false],rings[globalRecords[tableName][`ring${i}`]]);
+      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledRing${i}`,false],rings[tableName[`ring${i}`]]);
       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i}`,globalRecords.searchSettingsToggles[`usePassive${i}`]],classInfo[archsTableName.one.class].passives[`passive${i}`]);
       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledPassive${i+4}`,globalRecords.searchSettingsToggles[`usePassive${i+4}`]],classInfo[archsTableName.two.class].passives[`passive${i}`]);
       
       if (i<=3)
-        {formulasValues.pullStats(index,fragments[globalRecords[tableName][`fragment${i}`]].stats)}//frags have no toggles.
+        {formulasValues.pullStats(index,fragments[tableName[`fragment${i}`]].stats)}//frags have no toggles.
     }
     //RELIC
-    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledRelic',false],relics[globalRecords[tableName].relic]);
+    formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledRelic',false],relics[tableName.relic]);
 
     //PRIME PERK
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimeP',globalRecords.searchSettingsToggles.usePrimePerk],classInfo[archsTableName.one.class].primeStats,"Prime");
@@ -1797,8 +1797,8 @@ let formulasValues = {
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledAbility2',globalRecords.searchSettingsToggles.useAbility2],classInfo[archsTableName.two.class].abilities[archsTableName.two.ability]);
 
   //Concoctions
-    globalRecords.totalConcLimit = 1 + valueTables[index].ConcLimit;
-    let recordPath = isUIcalcs ? globalRecords[`consumables`] : globalRecords[`ALTconsumables`];
+    globalRecords.totalConcLimit = 1 + index.ConcLimit;
+    let recordPath = globalRecords[`consumables`];
     for (let i=1;i<=7;i++) {
       if (i<=globalRecords.totalConcLimit) {
         if (isUIcalcs) {readSelection(`concoction${i}MAINbox`).style.display = "flex";}
@@ -1822,136 +1822,18 @@ let formulasValues = {
   }
   },
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
+  // if (Array.isArray(index[elements])) {index[elements].push(path[elements]);}//If the greatTable type is an array, like DMGKept or REDamage
   pullStats(index,path) {
-    let valueTable = valueTables[index];
     for (let elements in path) {
-      if (Array.isArray(valueTable[elements])) {valueTable[elements].push(path[elements]);}//If the greatTable type is an array, like DMGKept or REDamage
-      else {valueTable[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
+      // "REdamage": 1,"DMGKept": 1
+      if (elements === "REdamage" || elements === "DMGKept" || elements === "UniqueMulti") {index[elements] *= (1 + path[elements]);}//If the greatTable type is an array, like DMGKept or REDamage
+      else {index[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
     }
   },
   //Shorthand for shit I got tired of typing every god damn time.
   updateDisplay(elemID,statistic,rounding,percent) {
     let percentage = percent ?? "";
     readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
-  },
-  //Used to call unique item functions AFTER the base statistics have populated greatTableKnowerOfAll
-  callUniqueFunctions(isUIcalcs,index,tier,insertedStatistic) {
-    //relicHPscaled and totalHealth are only used for when item is "relic"
-    let toggleCheck,customPath;
-      //rings
-      for (let i=1;i<=4;i++) {
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
-        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] : globalRecords.ALTaccessories[`ring${i}`];
-        if (!toggleCheck) {
-          if (rings[customPath][`custom${tier}`]) {
-            customItemFunctions.rings[rings[customPath][`custom${tier}`]](index,insertedStatistic);
-          }
-        }
-      }
-      //Amulet
-      toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
-      if (!toggleCheck) {
-        customPath = isUIcalcs ? globalRecords.accessories.amulet : globalRecords.ALTaccessories.amulet;
-        if (amulets[customPath][`custom${tier}`]) {
-          customItemFunctions.amulets[amulets[customPath][`custom${tier}`]](index,insertedStatistic);
-        }
-      }
-      // //Class
-      // let path1 = classInfo[isUIcalcs ? globalRecords.archs.one.class : globalRecords.ALTarchs.one.class];
-      // let path2 = classInfo[isUIcalcs ? globalRecords.archs.two.class : globalRecords.ALTarchs.two.class];
-      // let ability1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
-      // let ability2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
-      // //Prime Perk
-      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
-      // if (!toggleCheck) {if (path1[`custom${tier}`]) {customItemFunctions[path1[`custom${tier}`]](index,insertedStatistic);}}
-      // //Archetype1
-      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
-      // if (!toggleCheck) {if (path1.abilities[ability1][`custom${tier}`]) {customItemFunctions[path1.abilities[ability1[`custom${tier}`]]](index,insertedStatistic);}}
-      // for (let i=1;i<=4;i++) {
-      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
-      //   if (!toggleCheck) {if (path1.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path1.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
-      // }
-      // //Archetype2
-      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
-      // if (!toggleCheck) {if (path2.abilities[ability2][`custom${tier}`]) {customItemFunctions[path2.abilities[ability2][`custom${tier}`]](index,insertedStatistic);}}
-      // for (let i=1;i<=4;i++) {
-      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
-      //   if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
-      // }
-
-      //Mutators
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
-      if (!toggleCheck) {
-        customPath = isUIcalcs ? globalRecords.weapons.primaryMutator : globalRecords.ALTweapons.primaryMutator;
-        if (mutators.primaryMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.primaryMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
-      }
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
-      if (!toggleCheck) {
-        customPath = isUIcalcs ? globalRecords.weapons.meleeMutator : globalRecords.ALTweapons.meleeMutator;
-        if (mutators.meleeMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.meleeMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
-      }
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
-      if (!toggleCheck) {
-        customPath = isUIcalcs ? globalRecords.weapons.secondaryMutator : globalRecords.ALTweapons.secondaryMutator;
-        if (mutators.secondaryMutators[customPath][`custom${tier}`]) {customItemFunctions.mutators[mutators.secondaryMutators[customPath][`custom${tier}`]](index,insertedStatistic);}
-      }
-
-      //MODS
-      //PRIMARY
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
-      if (!toggleCheck) {
-        let primaryWeapon = isUIcalcs ? globalRecords.weapons.primary : globalRecords.ALTweapons.primary;
-        let primaryWeaponMod = isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
-        let checkWeaponPath = weapons.primary[primaryWeapon];
-        if (!checkWeaponPath.builtIN) {
-          if (mods.primaryMods[primaryWeaponMod][`custom${tier}`]) {customItemFunctions.primaryMods[mods.primaryMods[primaryWeaponMod][`custom${tier}`]](index,insertedStatistic);}
-        }
-        else {//If the Primary weapon has a built-in mod
-          if (mods.builtInPrimaryMods[checkWeaponPath.builtIN][`custom${tier}`]) {customItemFunctions.primaryMods[mods.builtInPrimaryMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);}
-        }
-      }
-      //MELEE
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
-      if (!toggleCheck) {
-        let meleeWeapon = isUIcalcs ? globalRecords.weapons.melee : globalRecords.ALTweapons.melee;
-        let checkWeaponPath = weapons.melee[meleeWeapon];
-        if (checkWeaponPath.builtIN){//If the Melee weapon has a built-in mod
-          if (mods.builtInMeleeMods[checkWeaponPath.builtIN][`custom${tier}`]) {
-            customItemFunctions.meleeMods[mods.builtInMeleeMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);
-          }
-        }
-      }
-      //SECONDARY
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
-      if (!toggleCheck) {
-        let secondaryWeapon = isUIcalcs ? globalRecords.weapons.secondary : globalRecords.ALTweapons.secondary;
-        let secondaryWeaponMod = isUIcalcs ? globalRecords.weapons.secondaryMod : globalRecords.ALTweapons.secondaryMod;
-        let checkWeaponPath = weapons.secondary[secondaryWeapon];
-        if (!checkWeaponPath.builtIN) {
-          if (mods.secondaryMods[secondaryWeaponMod][`custom${tier}`]) {
-            customItemFunctions.secondaryMods[mods.secondaryMods[secondaryWeaponMod][`custom${tier}`]](index,insertedStatistic);
-          }
-        }
-        else {//If the Secondary weapon has a built-in mod
-          if (mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]) {
-            customItemFunctions.secondaryMods[mods.builtInSecondaryMods[checkWeaponPath.builtIN][`custom${tier}`]](index,insertedStatistic);
-          }
-        }
-      }
-
-
-      const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
-
-      for (const trait of recordReference) {
-        const traitLevel = trait.level;
-        const traitPath = traits[trait.name];
-
-        if (traitPath) {
-          if (traitPath[`custom${tier}`]) {customItemFunctions.traits[traitPath[`custom${tier}`]](index,traitLevel);}//If a custom function exists, call it
-          if (traitPath[`custom2${tier}`]) {customItemFunctions.traits[traitPath[`custom2${tier}`]](index,traitLevel);}//If a custom function exists, call it
-
-        }
-      }
   },
   //Used specifically for relic functions
   callUniqueRelicFunctions(isUIcalcs,index,relicHPscaled,totalHealth) {
@@ -1961,19 +1843,19 @@ let formulasValues = {
     let relicComplexArray;
     toggleCheck = isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
     if (!toggleCheck) {
-      customPath = isUIcalcs ? globalRecords.accessories.relic : globalRecords.ALTaccessories.relic;
+      customPath = globalRecords.accessories.relic;
       conditionalPath = relics[customPath].usesConditional;
       if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
       
-      if (conditionalPath[`customRelicFunctions`]) {
+      if (conditionalPath.customRelicFunctions) {
         // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
-        relicComplexArray = customItemFunctions[conditionalPath[`customRelicFunctions`]](isUIcalcs,index,relicHPscaled,totalHealth);
+        relicComplexArray = customItemFunctions[conditionalPath.customRelicFunctions](isUIcalcs,index,relicHPscaled,totalHealth);
       }
     }
     else if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
     //Fragments //NOT CURRENTLY USED
     // for (let i=1;i<=3;i++) {
-    //   customPath = isUIcalcs ? globalRecords.accessories[`fragment${i}`] : globalRecords.ALTaccessories[`fragment${i}`];
+    //   customPath = globalRecords.accessories[`fragment${i}`];
     //   if (fragments[customPath][`customRelicFunctions`]) {
     //     customItemFunctions[fragments[customPath][`customRelicFunctions`]]();
     //   }
@@ -2002,7 +1884,7 @@ let formulasValues = {
         }
     }
   },
-  callStoredFunctions(tieredFunctionStorage,tierName,index,insertedStatistic) {
+  callStoredFunctions(isUIcalcs,tieredFunctionStorage,tierName,index,insertedStatistic) {
     let targetStorage = tieredFunctionStorage[tierName];
     if (targetStorage) {
       for (let storedFunction in targetStorage) {
@@ -2021,47 +1903,70 @@ let formulasValues = {
       //rings
       for (let i=1;i<=4;i++) {
         toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
-        customPath = isUIcalcs ? globalRecords.accessories[`ring${i}`] || "" : globalRecords.ALTaccessories[`ring${i}`] || "";
+        customPath = globalRecords.accessories[`ring${i}`] || "";
         let conditionalPath = rings[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       }
       //Amulet
       toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
-      customPath = isUIcalcs ? globalRecords.accessories.amulet : globalRecords.ALTaccessories.amulet;
+      customPath = globalRecords.accessories.amulet;
       conditionalPath = amulets[customPath].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       //Mutators
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
-      customPath = isUIcalcs ? globalRecords.weapons.primaryMutator : globalRecords.ALTweapons.primaryMutator;
+      customPath = globalRecords.weapons.primaryMutator;
       conditionalPath = rangedMutators[customPath].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
-      customPath = isUIcalcs ? globalRecords.weapons.meleeMutator : globalRecords.ALTweapons.meleeMutator;
+      customPath = globalRecords.weapons.meleeMutator;
       conditionalPath = meleeMutators[customPath].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
-      customPath = isUIcalcs ? globalRecords.weapons.secondaryMutator : globalRecords.ALTweapons.secondaryMutator;
+      customPath = globalRecords.weapons.secondaryMutator;
       conditionalPath = rangedMutators[customPath].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+
+      // //Class
+      // let path1 = classInfo[globalRecords.archs.one.class];
+      // let path2 = classInfo[globalRecords.archs.two.class];
+      // let ability1 = globalRecords.archs.one.ability;
+      // let ability2 = globalRecords.archs.two.ability;
+      // //Prime Perk
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledPrimeP`).checked : false;
+      // if (!toggleCheck) {if (path1[`custom${tier}`]) {customItemFunctions[path1[`custom${tier}`]](index,insertedStatistic);}}
+      // //Archetype1
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility1`).checked : false;
+      // if (!toggleCheck) {if (path1.abilities[ability1][`custom${tier}`]) {customItemFunctions[path1.abilities[ability1[`custom${tier}`]]](index,insertedStatistic);}}
+      // for (let i=1;i<=4;i++) {
+      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i}`).checked : false;
+      //   if (!toggleCheck) {if (path1.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path1.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
+      // }
+      // //Archetype2
+      // toggleCheck = isUIcalcs ? readSelection(`USEtoggledAbility2`).checked : false;
+      // if (!toggleCheck) {if (path2.abilities[ability2][`custom${tier}`]) {customItemFunctions[path2.abilities[ability2][`custom${tier}`]](index,insertedStatistic);}}
+      // for (let i=1;i<=4;i++) {
+      //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
+      //   if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
+      // }
 
       //MODS
       //PRIMARY
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
-      let primaryWeapon = isUIcalcs ? globalRecords.weapons.primary : globalRecords.ALTweapons.primary;
-      let primaryWeaponMod = isUIcalcs ? globalRecords.weapons.primaryMod : globalRecords.ALTweapons.primaryMod;
+      let primaryWeapon = globalRecords.weapons.primary;
+      let primaryWeaponMod = globalRecords.weapons.primaryMod;
       let checkWeaponPath = weapons.primary[primaryWeapon];
       conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       //MELEE
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
-      let meleeWeapon = isUIcalcs ? globalRecords.weapons.melee : globalRecords.ALTweapons.melee;
+      let meleeWeapon = globalRecords.weapons.melee;
       checkWeaponPath = weapons.melee[meleeWeapon];
       conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
       //SECONDARY
       toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
-      let secondaryWeapon = isUIcalcs ? globalRecords.weapons.secondary : globalRecords.ALTweapons.secondary;
-      let secondaryWeaponMod = isUIcalcs ? globalRecords.weapons.secondaryMod : globalRecords.ALTweapons.secondaryMod;
+      let secondaryWeapon = globalRecords.weapons.secondary;
+      let secondaryWeaponMod = globalRecords.weapons.secondaryMod;
       checkWeaponPath = weapons.secondary[secondaryWeapon];
       conditionalPath = checkWeaponPath.builtIN ? mods.builtInSecondaryMods[checkWeaponPath.builtIN].usesConditional : mods.secondaryMods[secondaryWeaponMod].usesConditional;
       formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
@@ -2097,7 +2002,7 @@ let customItemFunctions = {
     brewMasters(isUIcalcs,index) {//0 user selection
       if (isUIcalcs) {
         for (let i=1;i<=7;i++) {
-          let customPath = isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
+          let customPath = globalRecords.consumables[`concoction${i}`];
           if (customPath) {
             index.FlatDR += 0.02;
           }
@@ -2105,7 +2010,7 @@ let customItemFunctions = {
       }
       else {
         //If we are in the middle of cycles loops, and maybe the filtered concoctions are less than the limit, always apply the limit amount of DR so we don't skip a possible build
-        valueTables[index].FlatDR += 0.02 * valueTables[index].ConcLimit;
+        index.FlatDR += 0.02 * index.ConcLimit;
       }
     },
     chainsOfAmplification(isUIcalcs,index) {//50
@@ -2113,13 +2018,13 @@ let customItemFunctions = {
     },
     daredevil(isUIcalcs,index) {//50
       let armorMissing = 4;
-      let customPath = isUIcalcs ? globalRecords.armor : globalRecords.ALTarmor;
+      let customPath = globalRecords.armor;
       if (!isUIcalcs) {
         //For now, we assume if Daredevil ever shows up in the cycles, the player should always be naked
-        globalRecords.ALTarmor.helmet = "";
-        globalRecords.ALTarmor.chest = "";
-        globalRecords.ALTarmor.leg = "";
-        globalRecords.ALTarmor.hand = "";
+        customPath.helmet = "";
+        customPath.chest = "";
+        customPath.leg = "";
+        customPath.hand = "";
       }
       if (customPath.helmet) {armorMissing -= 1;}
       if (customPath.chest) {armorMissing -= 1;}
@@ -2171,7 +2076,7 @@ let customItemFunctions = {
     giftOfTheUnbound(isUIcalcs,index) {//0, based on item selections not stats.
       let activeBurdens = 0;
       let movementModifier = 0.05
-      let customPath = isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
+      let customPath = globalRecords.accessories;
       for (let i=1;i<=4;i++) {
         let ringPath = customPath[`ring${i}`]
         if (ringPath.includes("Burden") === true) {
@@ -2251,7 +2156,7 @@ let customItemFunctions = {
       let faerinActive = false;
       let faelinActive = false;
       let imposterRings = 0;
-      let customPath = isUIcalcs ? globalRecords.accessories : globalRecords.ALTaccessories;
+      let customPath = globalRecords.accessories;
       for (let i=1;i<=4;i++) {
         if (customPath[`ring${i}`].includes("Faerin's Sigil") === true) {
           faerinActive = true;
@@ -2307,7 +2212,7 @@ let customItemFunctions = {
   // },
   // "rings": {//I... I think I'm done...?
     ataeriiBooster(isUIcalcs,index) {//0 user input
-      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+      let referenceTable = globalRecords.archs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
         index.AllDamage += 0.10;
         index.AllCritChance += 0.10;
@@ -2450,7 +2355,7 @@ let customItemFunctions = {
       index["HP/S+"] += 0.3 * bulwarkStacks;
     },
     lodestoneRing(isUIcalcs,index) {//0 user input
-      let customPath = isUIcalcs ? globalRecords.armor.helmet : globalRecords.ALTarmor.helmet;
+      let customPath = globalRecords.armor.helmet;
 
       let helmetPath = customPath;
       if (helmetPath.includes("Lodestone Crown")) {
@@ -2462,7 +2367,7 @@ let customItemFunctions = {
       index.ChargeCost += perfectDodge ? -1 : 0;
     },
     mechanicsCog(isUIcalcs,index) {//0 user input
-      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+      let referenceTable = globalRecords.archs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
         index.Bulwark += 1;
         index.MovementSpeed += 0.15;
@@ -2492,12 +2397,12 @@ let customItemFunctions = {
 
       if (isUIcalcs) {
         for (let i=1;i<=7;i++) {
-          let customPath = isUIcalcs ? globalRecords.consumables[`concoction${i}`] : globalRecords.ALTconsumables[`concoction${i}`];
+          let customPath = globalRecords.consumables[`concoction${i}`];
           if (customPath) {
             totalActive += 1;
           }
           if (i<=4) {
-            customPath = isUIcalcs ? globalRecords.consumables[`quickUse${i}`] : globalRecords.ALTconsumables[`quickUse${i}`];
+            customPath = globalRecords.consumables[`quickUse${i}`];
             if (customPath) {
               totalActive += 1;
             }
@@ -2636,9 +2541,11 @@ let customItemFunctions = {
   // },
   // "traits": {
     bloodBond(isUIcalcs,index,traitLevel) {//0 user input
-      let referenceTable = isUIcalcs ? globalRecords.archs : globalRecords.ALTarchs;
+      let referenceTable = globalRecords.archs;
+      console.log("hi")
       if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
-        index.DMGKept.push(-0.01 * traitLevel);
+        index.DMGKept *= 1 + (-0.01 * traitLevel);
+        console.log(index.DMGKept)
       }
     },
   // }
@@ -2656,9 +2563,9 @@ function updateFormulas(index,ping) {
   valueTables[index] = {...starterTable}//Reset the table
   let tableReference = valueTables[index];
 
-  tableReference.REdamage = [];//Reset arrays, lest we modify original
-  tableReference.DMGKept = [];
-  tableReference.UniqueMulti = [];
+  // tableReference.REdamage = [];//Reset arrays, lest we modify original
+  // tableReference.DMGKept = [];
+  // tableReference.UniqueMulti = [];
   if (isUIcalcs) {
     basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
     // formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
@@ -2667,7 +2574,7 @@ function updateFormulas(index,ping) {
 
   let tieredFunctionStorage = formulasValues.storeActiveConditionals(isUIcalcs);
   
-  formulasValues.pullGearStats(isUIcalcs,index,ping);//Weapons/Accessories/class/frags/etc
+  formulasValues.pullGearStats(isUIcalcs,tableReference,ping);//Weapons/Accessories/class/frags/etc
   formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customTier0",tableReference);//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
   formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customBase",tableReference);//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
 
@@ -2804,15 +2711,14 @@ function updateFormulas(index,ping) {
 
   if (isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
   if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs || playerDerivedStatistics[filters.types.vars.targetStatistic] === "totalDPS") {
-  let abilityPath1 = isUIcalcs ? globalRecords.archs.one.ability : globalRecords.ALTarchs.one.ability;
-  let abilityPath2 = isUIcalcs ? globalRecords.archs.two.ability : globalRecords.ALTarchs.two.ability;
-  let ability1 = isUIcalcs && abilityPath1 ? classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats : classInfo[globalRecords.ALTarchs.one.class].abilities[abilityPath1].customStats;
-  let ability2 = isUIcalcs && abilityPath2 ? classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats : classInfo[globalRecords.ALTarchs.two.class].abilities[abilityPath2].customStats;
+  let abilityPath1 = globalRecords.archs.one.ability;
+  let abilityPath2 = globalRecords.archs.two.ability;
+  let ability1 = isUIcalcs && classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
+  let ability2 = isUIcalcs && classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
   ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
   ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
 
-  let weaponPath = isUIcalcs ? globalRecords.weapons : globalRecords.ALTweapons;
-
+  let weaponPath = globalRecords.weapons;
   let modPath1 = primary[weaponPath.primary].builtIN ? builtInPrimary[primary[weaponPath.primary].builtIN].customStats : rangedMods[weaponPath.primaryMod].customStats;
   let modPath2 = secondary[weaponPath.secondary].builtIN ? builtInSecondary[secondary[weaponPath.secondary].builtIN].customStats : rangedMods[weaponPath.secondaryMod].customStats;
 
@@ -3039,15 +2945,15 @@ let basicsUpdates = {
     list += table.ModDamage ? createHTML.basicsRow("Mod",table.ModDamage,true,"%") : "";
     list += table.StaggerDamage ? createHTML.basicsRow("Stagger",table.StaggerDamage,true,"%") : "";
     list += table.SummonDamage ? createHTML.basicsRow("Summon",table.StaggerDamage,true,"%") : "";
-    let uniqueMulti = 0;
-    for (let i=0;i<table.UniqueMulti.length;i++) {
-      let currentMulti = table.UniqueMulti[i];
-      if (i===0) {uniqueMulti = currentMulti}
-      else {
-        uniqueMulti *= currentMulti;
-      }
-    }
-    list += uniqueMulti ? createHTML.basicsRow("Multiplier",uniqueMulti,true,"%") : "";//This one needs work later, it's an array
+    // let uniqueMulti = 0;
+    // for (let i=0;i<table.UniqueMulti.length;i++) {
+    //   let currentMulti = table.UniqueMulti[i];
+    //   if (i===0) {uniqueMulti = currentMulti}
+    //   else {
+    //     uniqueMulti *= currentMulti;
+    //   }
+    // }
+    list += table.UniqueMulti ? createHTML.basicsRow("Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}

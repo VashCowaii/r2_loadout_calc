@@ -822,7 +822,6 @@ let cyclesLoop = {
         globalRecords.ALTarchs.two.class = `${filters.types.vars.importedArch2}`;
         globalRecords.ALTarchs.one.ability = `${filters.types.vars.importedAbility1}`;
         globalRecords.ALTarchs.two.ability = `${filters.types.vars.importedAbility2}`;
-        //Like the archs/abilities, need to do the same thing with traits before passing them to the worker
         globalRecords.ALTgreatTraitRecords = [...filters.types.vars.importedTraitRecords];
 
         globalRecords.ALTsearchSettingsToggles = {...globalRecords.searchSettingsToggles};
@@ -1067,7 +1066,7 @@ let cyclesLoop = {
                                 }
                             }
 
-                            cyclesLoop.updateCycleRecord(cycleObject,true);//Updates the ALT records with everything from the cycle object
+                            cyclesLoop.updateCycleRecordMainUI(cycleObject);//Updates the ALT records with everything from the cycle object
 
                             for (let i=50;i>1;i--) {
                                 cyclesLoop.bestCombos[i] = cyclesLoop.bestCombos[i-1] ? {...cyclesLoop.bestCombos[i-1]} : {"bestValue":0,"link":""};
@@ -1261,7 +1260,7 @@ let cyclesLoop = {
         }
 
         bestArmorSet = bestArmorSet ?? {slot1:"",slot2:"",slot3:"",slot4:""};
-        let armorReference = globalRecords.ALTarmor
+        let armorReference = globalRecords.armor
         armorReference.helmet = bestArmorSet.slot1;armorReference.chest = bestArmorSet.slot2;
         armorReference.leg = bestArmorSet.slot3;armorReference.hand = bestArmorSet.slot4;
         return bestArmorSet;
@@ -1377,8 +1376,8 @@ let cyclesLoop = {
         postMessage({command: `updateStep`, data: "Calculating Total Combos...", moduloFactor});
 
         
-        let classSet = [`${globalRecords.ALTarchs.one.class}`,`${globalRecords.ALTarchs.two.class}`];
-        let abilitySet = [`${globalRecords.ALTarchs.one.ability}`,`${globalRecords.ALTarchs.two.ability}`];
+        let classSet = [`${globalRecords.archs.one.class}`,`${globalRecords.archs.two.class}`];
+        let abilitySet = [`${globalRecords.archs.one.ability}`,`${globalRecords.archs.two.ability}`];
         // formulasValues.pullTraits();//Assign trait value to the cycles starter table
 
         let comboCounter = 0;
@@ -1514,8 +1513,9 @@ let cyclesLoop = {
         postMessage({command: `notifyWorkerClosed`});
         cyclesLoop.selfGenerationStop(null,moduloFactor); //Set things back to normal once completed
     },
-    updateCycleRecord(value,addArmor) {
-        let accessoryReference = globalRecords.ALTaccessories;
+    updateCycleRecord(value) {
+        let globalReference = globalRecords;
+        let accessoryReference = globalReference.accessories;
         accessoryReference.amulet = value.amulet[0] || "";
         accessoryReference.ring1 = value.ringSet[0] || "";
         accessoryReference.ring2 = value.ringSet[1] || "";
@@ -1526,7 +1526,7 @@ let cyclesLoop = {
         accessoryReference.fragment2 = value.fragmentSet[1] || "";
         accessoryReference.fragment3 = value.fragmentSet[2] || "";
 
-        let consumableReference = globalRecords.ALTconsumables;
+        let consumableReference = globalReference.consumables;
         consumableReference.concoction1 = value.concoction[0] || "";
         consumableReference.concoction2 = value.concoction[1] || "";
         consumableReference.concoction3 = value.concoction[2] || "";
@@ -1539,7 +1539,45 @@ let cyclesLoop = {
         consumableReference.quickUse3 = value.quickUse[2] || "";
         consumableReference.quickUse4 = value.quickUse[3] || "";
 
-        let weaponReference = globalRecords.ALTweapons;
+        let weaponReference = globalReference.weapons;
+        weaponReference.primary = value.gun1[0] || "";
+        weaponReference.primaryMutator = value.rangedMutators[0] || "";
+        weaponReference.primaryMod = value.rangedMods[0] || "";
+        if (weaponReference.primary === "Rusty Lever Action") {weaponReference.primaryMod = "";weaponReference.primaryMutator = "";}
+        weaponReference.melee = value.stick[0] || "";
+        weaponReference.meleeMutator = value.meleeMutators[0] || "";
+        weaponReference.secondary = value.gun2[0] || "";
+        weaponReference.secondaryMutator = value.rangedMutators[1] || "" ;
+        weaponReference.secondaryMod = value.rangedMods[1] || "";
+        if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
+    },
+    updateCycleRecordMainUI(value) {//this HAS to be the ALT record variants, because this is only called within the main thread and CAN mess up the user's main UI calc values otherwise
+        let globalReference = globalRecords;
+        let accessoryReference = globalReference.ALTaccessories;
+        accessoryReference.amulet = value.amulet[0] || "";
+        accessoryReference.ring1 = value.ringSet[0] || "";
+        accessoryReference.ring2 = value.ringSet[1] || "";
+        accessoryReference.ring3 = value.ringSet[2] || "";
+        accessoryReference.ring4 = value.ringSet[3] || "";
+        accessoryReference.relic = value.relic[0] || "";
+        accessoryReference.fragment1 = value.fragmentSet[0] || "";
+        accessoryReference.fragment2 = value.fragmentSet[1] || "";
+        accessoryReference.fragment3 = value.fragmentSet[2] || "";
+
+        let consumableReference = globalReference.ALTconsumables;
+        consumableReference.concoction1 = value.concoction[0] || "";
+        consumableReference.concoction2 = value.concoction[1] || "";
+        consumableReference.concoction3 = value.concoction[2] || "";
+        consumableReference.concoction4 = value.concoction[3] || "";
+        consumableReference.concoction5 = value.concoction[4] || "";
+        consumableReference.concoction6 = value.concoction[5] || "";
+        consumableReference.concoction7 = value.concoction[6] || "";
+        consumableReference.quickUse1 = value.quickUse[0] || "";
+        consumableReference.quickUse2 = value.quickUse[1] || "";
+        consumableReference.quickUse3 = value.quickUse[2] || "";
+        consumableReference.quickUse4 = value.quickUse[3] || "";
+
+        let weaponReference = globalReference.ALTweapons;
         weaponReference.primary = value.gun1[0] || "";
         weaponReference.primaryMutator = value.rangedMutators[0] || "";
         weaponReference.primaryMod = value.rangedMods[0] || "";
@@ -1551,12 +1589,10 @@ let cyclesLoop = {
         weaponReference.secondaryMod = value.rangedMods[1] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
 
-        if (addArmor) {
-            globalRecords.ALTarmor.helmet = value.bestArmorSet.slot1 || "";
-            globalRecords.ALTarmor.chest = value.bestArmorSet.slot2 || "";
-            globalRecords.ALTarmor.leg = value.bestArmorSet.slot3 || "";
-            globalRecords.ALTarmor.hand = value.bestArmorSet.slot4 || "";
-        }
+        globalReference.ALTarmor.helmet = value.bestArmorSet.slot1 || "";
+        globalReference.ALTarmor.chest = value.bestArmorSet.slot2 || "";
+        globalReference.ALTarmor.leg = value.bestArmorSet.slot3 || "";
+        globalReference.ALTarmor.hand = value.bestArmorSet.slot4 || "";
     },
 }
 
