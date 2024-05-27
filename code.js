@@ -2701,8 +2701,8 @@ function updateFormulas(index,ping) {
   if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs || playerDerivedStatistics[filters.types.vars.targetStatistic] === "totalDPS") {
   let abilityPath1 = globalRecords.archs.one.ability;
   let abilityPath2 = globalRecords.archs.two.ability;
-  let ability1 = isUIcalcs && classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
-  let ability2 = isUIcalcs && classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
+  let ability1 = classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
+  let ability2 = classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
   ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
   ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
 
