@@ -52,8 +52,13 @@
                 <div>
                     <h1>May 27, 2024</h1>
                     <ul>
-                        <li>More back-end code changes made to both streamline and simplify code, as well as help speed up queries.</li>
                         <li>Fixed an issue where item conditional-based stats didn't always populate correctly, due to some changes I made yesterday.</li>
+                        <li>More back-end code changes made to both streamline and simplify code, as well as help speed up queries.
+                            <ul>
+                                <li>Multiplicative statistics(Reduced enemy damage, damage shared, etc.) are no longer handled as arrays with each source inside, and rather are now multiplied against eachother as they read from each item to be stored as a single value like most other statistics.</li>
+                                <li>Query threads no longer distinguish between what are normally main UI variables, and thread specific variables, while in the middle of cycles. This is because threads have their own unique scope, and it wasn't necessary other than to keep things separate in my own head.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div>

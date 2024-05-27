@@ -1822,11 +1822,9 @@ let formulasValues = {
   }
   },
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
-  // if (Array.isArray(index[elements])) {index[elements].push(path[elements]);}//If the greatTable type is an array, like DMGKept or REDamage
   pullStats(index,path) {
     for (let elements in path) {
-      // "REdamage": 1,"DMGKept": 1
-      if (elements === "REdamage" || elements === "DMGKept" || elements === "UniqueMulti") {index[elements] *= (1 + path[elements]);}//If the greatTable type is an array, like DMGKept or REDamage
+      if (Array.isArray(path[elements])) {index[elements] *= 1 + path[elements][0];}//If the greatTable type is an array, like DMGKept or REDamage
       else {index[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
     }
   },
@@ -2319,7 +2317,7 @@ let customItemFunctions = {
     gameMasters1(isUIcalcs,index) {//0 user input
       let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
       if (teamCount>1) {
-        index.DMGKept.push((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
+        index.DMGKept *= 1 + ((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
       }
     },
     gameMasters2(isUIcalcs,index) {//PreHealing
@@ -2542,10 +2540,8 @@ let customItemFunctions = {
   // "traits": {
     bloodBond(isUIcalcs,index,traitLevel) {//0 user input
       let referenceTable = globalRecords.archs;
-      console.log("hi")
       if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
         index.DMGKept *= 1 + (-0.01 * traitLevel);
-        console.log(index.DMGKept)
       }
     },
   // }
@@ -2563,12 +2559,8 @@ function updateFormulas(index,ping) {
   valueTables[index] = {...starterTable}//Reset the table
   let tableReference = valueTables[index];
 
-  // tableReference.REdamage = [];//Reset arrays, lest we modify original
-  // tableReference.DMGKept = [];
-  // tableReference.UniqueMulti = [];
   if (isUIcalcs) {
     basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
-    // formulasValues.pullTraits(isUIcalcs,index);//Traits only called here during main UI calcs, they are fixed and therefore static in the cycles.
   }
   formulasValues.pullTraits(isUIcalcs,index);
 
@@ -2636,10 +2628,6 @@ function updateFormulas(index,ping) {
   let relicUseTime = relicHealingQuery[7];
   let relicEffectiveness = relicHealingQuery[8];
   let useComplexValues = !!relicComplexArray;
-
-  // formulasValues.callUniqueFunctions(isUIcalcs,index,"relic",relicHPscaled,totalHealthNoGlobal,"RelicFunctions");//resonating heart, etc
-  // formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customRelicFunctions",index);
-  // (isUIcalcs,index,item,relicHPscaled,totalHealth,tier,insertedStatistic)
 //---------- DAMAGE REDUCTION ---------------------------------------------------
   let armorQuery = calcs.getArmor(tableReference);
   let baseArmor = armorQuery[0];

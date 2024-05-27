@@ -145,17 +145,9 @@ let calcs = {
     },
     getAdvancedDR(index,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal) {
         //REDUCED ENEMY DAMAGE
-        let reducedEnemyDamage = index.REdamage;
-        // for (let i=0;i<=index.REdamage.length-1;i++) {
-        // reducedEnemyDamage = reducedEnemyDamage * (1+index.REdamage[i]);
-        // }
-        reducedEnemyDamage += -1;
+        let reducedEnemyDamage = index.REdamage - 1;
         //DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
-        let damageKept = index.DMGKept;
-        // for (let i=0;i<=index.DMGKept.length-1;i++) { //ADD GAMEMASTER'S CHECK HERE LATER
-        //     damageKept = damageKept * (1+index.DMGKept[i]);
-        // }
-        damageKept += -1;
+        let damageKept = index.DMGKept - 1;
 
         //Save the current values to be used in the switch case returns, as we're going to modify the original values after this
         let MODreducedEnemyDamage = reducedEnemyDamage;

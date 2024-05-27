@@ -1935,7 +1935,7 @@ classInfo = {
 				"name": "Intimidating Presence",
 				"desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%)",
 				"stats": {
-					"REdamage": -0.1
+					"REdamage": [-0.1]
 				},
 				"tags": []
 			},
@@ -2228,7 +2228,7 @@ classInfo = {
 				"desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
 				"image": "./brotherLibrary/abilitiesImages/Guard Dog.png",
 				"stats": {
-					"REdamage": -0.15
+					"REdamage": [-0.15]
 				},
 				"tags": []
 			},
@@ -2725,7 +2725,7 @@ classInfo = {
 				"name": "Terrify",
 				"desc": "Killing applies TERRIFIED within 5m for 20s. Enemies deal -5% damage and are more likely to drop ammo.",
 				"stats": {
-					"REdamage": -0.05
+					"REdamage": [-0.05]
 				},
 				"tags": []
 			},
@@ -10270,7 +10270,7 @@ rangedMods = {
 		"image": "./brotherLibrary/modsImages/Song of Eafir.png",
 		"desc": "Fires a shot infused with the binding power of the Song of Eafir. Staggers most ground enemies within 10m and deals 450 damage to Flying enemies within the same range.\nThe song continues for 15s, afflicting targets within 15m with SLOW, and a 10% decrease to damage dealt.",
 		"stats": {
-			"REdamage": -0.10,
+			"REdamage": [-0.10],
 			"outgoingStatus": 1,
 			"outSLOW": 1,
 		},
