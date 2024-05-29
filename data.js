@@ -3707,7 +3707,7 @@ amulets = {
 		"desc": "Firearm damage (100 base) adds stacks which increase the damage of stowed firearm by 2% for 15s. Stacks 10x. Multiplicative. Bonus assumed active at all times when selected.",
 		"usesConditional": {},
 		"stats": {
-			"UniqueMulti": 1.2,
+			"UniqueMulti": [0.2],
 		},
 		"tags": []
 	},
@@ -7091,17 +7091,17 @@ traits = {
 		},
 		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in "Damage Kept" bonuses under Advanced Stats.`,
 		"level": {
-			"0": 0,
-			"1": -0.01,
-			"2": -0.02,
-			"3": -0.03,
-			"4": -0.04,
-			"5": -0.05,
-			"6": -0.06,
-			"7": -0.07,
-			"8": -0.08,
-			"9": -0.09,
-			"10": -0.1
+			"0": [0],
+			"1": [-0.01],
+			"2": [-0.02],
+			"3": [-0.03],
+			"4": [-0.04],
+			"5": [-0.05],
+			"6": [-0.06],
+			"7": [-0.07],
+			"8": [-0.08],
+			"9": [-0.09],
+			"10": [-0.1]
 		}
 	},
 	"Bloodstream": {
@@ -11265,7 +11265,7 @@ quickUses = {
 		"desc": "When thrown, explodes in a 4m radius dealing 50 damage and leaving a mysterious Mist which causes enemies to receive 10% additional damage. Multiplicative. Debuff lasts 10s after enemies leave the Mist. Lasts 15s.",
 		"usesConditional": {},
 		"stats": {
-			"UniqueMulti": 1.10,
+			"UniqueMulti": [0.10],
 		},
 		"tags": []
 	},

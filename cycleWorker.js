@@ -23,6 +23,9 @@ self.onmessage = function(event) {
         globalRecords.consumables = globalRecords.ALTconsumables;
         globalRecords.weapons = globalRecords.ALTweapons;
 
+        globalRecords.greatTraitRecords = {};
+        globalRecords.greatTraitRecords = globalRecords.ALTgreatTraitRecords
+
 
         postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
     }

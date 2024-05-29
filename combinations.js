@@ -1378,7 +1378,28 @@ let cyclesLoop = {
         
         let classSet = [`${globalRecords.archs.one.class}`,`${globalRecords.archs.two.class}`];
         let abilitySet = [`${globalRecords.archs.one.ability}`,`${globalRecords.archs.two.ability}`];
-        // formulasValues.pullTraits();//Assign trait value to the cycles starter table
+
+
+        if (moduloFactor === 1) {
+            for (let thing in starterTable) {
+                console.log(thing,starterTable[thing])
+            }
+        }
+
+        formulasValues.pullTraits(starterTable);//Assign trait value to the cycles starter table
+        console.log("----------------------------")
+        if (moduloFactor === 1) {
+            for (let thing in starterTable) {
+                console.log(thing,starterTable[thing])
+            }
+        }
+        starterTable = {...starterTable};//Why is this even necessary, I don't get it
+        console.log("----------------------------2")
+        if (moduloFactor === 1) {
+            for (let thing in starterTable) {
+                console.log(thing,starterTable[thing])
+            }
+        }
 
         let comboCounter = 0;
 

@@ -1,5 +1,5 @@
 //This is the actual table for starter values, but we reuse it to clean (cycles/great)TableKnowerOfAll on updateFormulas() calls
-const starterTable = {
+let starterTable = {
   //HEALTH
   "Health": 0,"Health%": 0,"GlobalHealthModifier": 1,
   //ARMOR
@@ -1717,39 +1717,38 @@ let formulasValues = {
   },
   //Used in updateFormulas() to fill trait property values on the master table
   //Utilizes toggle states
-  pullTraits (isUIcalcs,index) {
-    const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
-    const tableReference = valueTables[index];
+  pullTraits (index) {
+    const recordReference = globalRecords.greatTraitRecords; //Yoink all active trait values
 
     for (const trait of recordReference) {
+      if (trait.name === "") {continue;}
       const traitLevel = trait.level;
       const traitPath = traits[trait.name];
       const propertyArray = Array.isArray(traitPath.property);
       const secondProperty = traitPath.property2;
       const secondPropertyArray = Array.isArray(traitPath.property);
 
+      if (traitPath.property === "") {continue;}
+
       if (traitPath) {
         if (!propertyArray) {
-          if (traitPath.property !== "REdamage" && traitPath.property !== "DMGKept") {tableReference[traitPath.property] += traitPath.level[traitLevel];}
-          else {tableReference[traitPath.property].push(traitPath.level[traitLevel]);} //put these two types into their respective multiplicative arrays
+          if (Array.isArray(traitPath.level[traitLevel])) {index[traitPath.property] *= 1 + traitPath.level[traitLevel][0];}//times multiplicative values
+          else {index[traitPath.property] += traitPath.level[traitLevel];}
         }
         else {
-          for (const attribute of traitPath.property) {tableReference[attribute] += traitPath.level[traitLevel];//Otherwise just add the shit
+          for (const attribute of traitPath.property) {index[attribute] += traitPath.level[traitLevel];//Otherwise just add the shit
         }
         }
-        if (traitPath.custom) {customItemFunctions[traitPath.custom]();}//If a custom function exists, call it
-
 
         if (secondProperty) {
           if (!secondPropertyArray) {
-            if (traitPath.property2 !== "REdamage" && traitPath.property2 !== "DMGKept") {tableReference[traitPath.property2] += traitPath.level2[traitLevel];}
-            else {tableReference[traitPath.property2].push(traitPath.level2[traitLevel]);} //put these two types into their respective multiplicative arrays
+            if (Array.isArray(traitPath.level2[traitLevel])) {index[traitPath.property2] *= 1 + traitPath.level2[traitLevel][0];}//times multiplicative values
+            else {index[traitPath.property2] += traitPath.level2[traitLevel];}
           }
           else {
-            for (const attribute of traitPath.property2) {tableReference[attribute] += traitPath.level2[traitLevel];//Otherwise just add the shit
+            for (const attribute of traitPath.property2) {index[attribute] += traitPath.level2[traitLevel];//Otherwise just add the shit
           }
           }
-          if (traitPath.custom2) {customItemFunctions[traitPath.custom2]();}//If a custom function exists, call it
         }
 
       }
@@ -1860,7 +1859,18 @@ let formulasValues = {
     // }
     return relicComplexArray;
   },
-  readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath) {
+  readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath) {//cycle specific version
+    if (conditionalPath) {
+        let names = Object.keys(conditionalPath);
+
+        for (let i=0;i<names.length;i++) {
+          let currentConditional = names[i];
+          if (!tieredFunctionStorage[currentConditional]) {tieredFunctionStorage[currentConditional] = [];}
+          tieredFunctionStorage[currentConditional].push(customItemFunctions[conditionalPath[currentConditional]])
+        }
+    }
+  },
+  readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath) {//main UI version
     if (!toggleCheck && conditionalPath) {
         let names = Object.keys(conditionalPath);
 
@@ -1897,33 +1907,115 @@ let formulasValues = {
   },
   storeActiveConditionals(isUIcalcs) {
     let tieredFunctionStorage = {};
-    let toggleCheck,customPath,conditionalPath;
-      //rings
-      for (let i=1;i<=4;i++) {
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
-        customPath = globalRecords.accessories[`ring${i}`] || "";
-        let conditionalPath = rings[customPath].usesConditional;
-        formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      }
-      //Amulet
-      toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
-      customPath = globalRecords.accessories.amulet;
-      conditionalPath = amulets[customPath].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      //Mutators
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
-      customPath = globalRecords.weapons.primaryMutator;
-      conditionalPath = rangedMutators[customPath].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
-      customPath = globalRecords.weapons.meleeMutator;
-      conditionalPath = meleeMutators[customPath].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
-      customPath = globalRecords.weapons.secondaryMutator;
-      conditionalPath = rangedMutators[customPath].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
+    let customPath,conditionalPath;
 
+      if (isUIcalcs) {
+        let toggleCheck
+        //rings
+        for (let i=1;i<=4;i++) {
+          toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
+          customPath = globalRecords.accessories[`ring${i}`] || "";
+          let conditionalPath = rings[customPath].usesConditional;
+          formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        }
+        //Amulet
+        toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
+        customPath = globalRecords.accessories.amulet;
+        conditionalPath = amulets[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        //Mutators
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
+        customPath = globalRecords.weapons.primaryMutator;
+        conditionalPath = rangedMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
+        customPath = globalRecords.weapons.meleeMutator;
+        conditionalPath = meleeMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
+        customPath = globalRecords.weapons.secondaryMutator;
+        conditionalPath = rangedMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        //MODS
+        //PRIMARY
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
+        let primaryWeapon = globalRecords.weapons.primary;
+        let primaryWeaponMod = globalRecords.weapons.primaryMod;
+        let checkWeaponPath = weapons.primary[primaryWeapon];
+        conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        //MELEE
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
+        let meleeWeapon = globalRecords.weapons.melee;
+        checkWeaponPath = weapons.melee[meleeWeapon];
+        conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        //SECONDARY
+        toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
+        let secondaryWeapon = globalRecords.weapons.secondary;
+        let secondaryWeaponMod = globalRecords.weapons.secondaryMod;
+        checkWeaponPath = weapons.secondary[secondaryWeapon];
+        conditionalPath = checkWeaponPath.builtIN ? mods.builtInSecondaryMods[checkWeaponPath.builtIN].usesConditional : mods.secondaryMods[secondaryWeaponMod].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+
+        const recordReference = globalRecords.greatTraitRecords; //Yoink all active trait values
+        for (const trait of recordReference) {
+          const traitLevel = trait.level;
+          const traitPath = traits[trait.name];
+          const conditionalPath = traitPath.usesConditional;
+          formulasValues.readActiveConditionalsTraits(tieredFunctionStorage,conditionalPath,traitLevel);
+        }
+      }
+      else {
+        //rings
+        for (let i=1;i<=4;i++) {
+          customPath = globalRecords.accessories[`ring${i}`] || "";
+          let conditionalPath = rings[customPath].usesConditional;
+          formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        }
+        //Amulet
+        customPath = globalRecords.accessories.amulet;
+        conditionalPath = amulets[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        //Mutators
+        customPath = globalRecords.weapons.primaryMutator;
+        conditionalPath = rangedMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        customPath = globalRecords.weapons.meleeMutator;
+        conditionalPath = meleeMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        customPath = globalRecords.weapons.secondaryMutator;
+        conditionalPath = rangedMutators[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        //MODS
+        //PRIMARY
+        let primaryWeapon = globalRecords.weapons.primary;
+        let primaryWeaponMod = globalRecords.weapons.primaryMod;
+        let checkWeaponPath = weapons.primary[primaryWeapon];
+        conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        //MELEE
+        let meleeWeapon = globalRecords.weapons.melee;
+        checkWeaponPath = weapons.melee[meleeWeapon];
+        conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+        //SECONDARY
+        let secondaryWeapon = globalRecords.weapons.secondary;
+        let secondaryWeaponMod = globalRecords.weapons.secondaryMod;
+        checkWeaponPath = weapons.secondary[secondaryWeapon];
+        conditionalPath = checkWeaponPath.builtIN ? mods.builtInSecondaryMods[checkWeaponPath.builtIN].usesConditional : mods.secondaryMods[secondaryWeaponMod].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+
+        const recordReference = globalRecords.greatTraitRecords; //Yoink all active trait values
+        for (const trait of recordReference) {
+          const traitLevel = trait.level;
+          const traitPath = traits[trait.name];
+          const conditionalPath = traitPath.usesConditional;
+          formulasValues.readActiveConditionalsTraits(tieredFunctionStorage,conditionalPath,traitLevel);
+        }
+      }
+
+      return tieredFunctionStorage;
       // //Class
       // let path1 = classInfo[globalRecords.archs.one.class];
       // let path2 = classInfo[globalRecords.archs.two.class];
@@ -1946,38 +2038,6 @@ let formulasValues = {
       //   toggleCheck = isUIcalcs ? readSelection(`USEtoggledPassive${i+4}`).checked : false;
       //   if (!toggleCheck) {if (path2.passives[`passive${i}`][`custom${tier}`]) {customItemFunctions[path2.passives[`passive${i}`][`custom${tier}`]](index,insertedStatistic);}}
       // }
-
-      //MODS
-      //PRIMARY
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
-      let primaryWeapon = globalRecords.weapons.primary;
-      let primaryWeaponMod = globalRecords.weapons.primaryMod;
-      let checkWeaponPath = weapons.primary[primaryWeapon];
-      conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      //MELEE
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
-      let meleeWeapon = globalRecords.weapons.melee;
-      checkWeaponPath = weapons.melee[meleeWeapon];
-      conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-      //SECONDARY
-      toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
-      let secondaryWeapon = globalRecords.weapons.secondary;
-      let secondaryWeaponMod = globalRecords.weapons.secondaryMod;
-      checkWeaponPath = weapons.secondary[secondaryWeapon];
-      conditionalPath = checkWeaponPath.builtIN ? mods.builtInSecondaryMods[checkWeaponPath.builtIN].usesConditional : mods.secondaryMods[secondaryWeaponMod].usesConditional;
-      formulasValues.readActiveConditionalsGeneral(tieredFunctionStorage,toggleCheck,conditionalPath);
-
-      const recordReference = globalRecords[isUIcalcs ? "greatTraitRecords" : "ALTgreatTraitRecords"]; //Yoink all active trait values
-      for (const trait of recordReference) {
-        const traitLevel = trait.level;
-        const traitPath = traits[trait.name];
-        const conditionalPath = traitPath.usesConditional;
-        formulasValues.readActiveConditionalsTraits(tieredFunctionStorage,conditionalPath,traitLevel);
-      }
-
-      return tieredFunctionStorage;
   },
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -2561,8 +2621,8 @@ function updateFormulas(index,ping) {
 
   if (isUIcalcs) {
     basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
+    formulasValues.pullTraits(tableReference);
   }
-  formulasValues.pullTraits(isUIcalcs,index);
 
   let tieredFunctionStorage = formulasValues.storeActiveConditionals(isUIcalcs);
   
@@ -2941,7 +3001,7 @@ let basicsUpdates = {
     //     uniqueMulti *= currentMulti;
     //   }
     // }
-    list += table.UniqueMulti ? createHTML.basicsRow("Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
+    list += table.UniqueMulti != 1 ? createHTML.basicsRow("Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
