@@ -26,6 +26,9 @@ self.onmessage = function(event) {
         globalRecords.greatTraitRecords = {};
         globalRecords.greatTraitRecords = globalRecords.ALTgreatTraitRecords
 
+        globalRecords.teamCount = globalRecords.ALTteamCount;
+        globalRecords.minionCount = globalRecords.ALTminionCount;
+
 
         postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
     }

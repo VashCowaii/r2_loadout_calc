@@ -1387,19 +1387,8 @@ let cyclesLoop = {
         }
 
         formulasValues.pullTraits(starterTable);//Assign trait value to the cycles starter table
-        console.log("----------------------------")
-        if (moduloFactor === 1) {
-            for (let thing in starterTable) {
-                console.log(thing,starterTable[thing])
-            }
-        }
-        starterTable = {...starterTable};//Why is this even necessary, I don't get it
-        console.log("----------------------------2")
-        if (moduloFactor === 1) {
-            for (let thing in starterTable) {
-                console.log(thing,starterTable[thing])
-            }
-        }
+        starterTable = {...starterTable};//Why is this even necessary
+        starterTable.thisIsAQuery = 1;
 
         let comboCounter = 0;
 

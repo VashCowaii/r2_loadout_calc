@@ -1755,7 +1755,67 @@ let formulasValues = {
     }
   },
   //Used in updateFormulas() to read gear/accessory specific statistics and add them to the master table
-  //Utilizes toggle states
+  //Utilizes toggle states on the main UI version
+  pullGearStatsCycles(index,ping) {
+    let path1 = classInfo[globalRecords.archs.one.class];
+    let path2 = classInfo[globalRecords.archs.two.class];
+    let ability1 = globalRecords.archs.one.ability;
+    let ability2 = globalRecords.archs.two.ability;
+    let pathALT = globalRecords.searchSettingsToggles;
+
+    if (!ping) {//ARMOR
+      let armorRecordPath = globalRecords.armor;
+      formulasValues.pullStats(index,armor.helmets[armorRecordPath.helmet].stats);
+      formulasValues.pullStats(index,armor.chests[armorRecordPath.chest].stats);
+      formulasValues.pullStats(index,armor.legs[armorRecordPath.leg].stats);
+      formulasValues.pullStats(index,armor.hands[armorRecordPath.hand].stats);
+    }
+
+    let tableName = globalRecords.accessories;//---
+    formulasValues.pullStats(index,amulets[tableName.amulet].stats);
+    //RINGS, PASSIVES, and FRAGMENTS
+    for (let i=1;i<=4;i++) {
+      formulasValues.pullStats(index,rings[tableName[`ring${i}`]].stats);
+      if (!pathALT[`usePassive${i}`])
+        {formulasValues.pullStats(index,path1.passives[`passive${i}`].stats);}
+      if (!pathALT[`usePassive${i+4}`])
+        {formulasValues.pullStats(index,path2.passives[`passive${i}`].stats);}
+      if (i<=3)
+        {formulasValues.pullStats(index,fragments[tableName[`fragment${i}`]].stats)}
+    }
+    formulasValues.pullStats(index,relics[tableName.relic].stats);//RELIC
+    if (!pathALT.usePrimePerk) {formulasValues.pullStats(index,path1.primeStats);}//PRIME PERK
+    if (!pathALT.useAbility1) {formulasValues.pullStats(index,path1.abilities[ability1].stats);}//ABILITIES
+    if (!pathALT.useAbility2) {formulasValues.pullStats(index,path2.abilities[ability2].stats);}
+
+    let path = globalRecords.weapons;
+    //Weapons
+    formulasValues.pullStats(index,weapons.primary[path.primary].stats);
+    formulasValues.pullStats(index,weapons.melee[path.melee].stats);
+    formulasValues.pullStats(index,weapons.secondary[path.secondary].stats);
+    //Mutators
+    formulasValues.pullStats(index,mutators.primaryMutators[path.primaryMutator].stats);
+    formulasValues.pullStats(index,mutators.meleeMutators[path.meleeMutator].stats);
+    formulasValues.pullStats(index,mutators.secondaryMutators[path.secondaryMutator].stats);
+    //Mods
+    let checkWeaponPath = weapons.primary[path.primary];
+    if (checkWeaponPath.builtIN) {formulasValues.pullStats(index,mods.builtInPrimaryMods[checkWeaponPath.builtIN].stats);}
+    else if (path.primaryMod) {formulasValues.pullStats(index,mods.primaryMods[path.primaryMod].stats);}
+    checkWeaponPath = weapons.melee[path.melee]
+    if (checkWeaponPath.builtIN){formulasValues.pullStats(index,mods.builtInMeleeMods[checkWeaponPath.builtIN].stats);}//melee have no optional mods, all built-in
+    checkWeaponPath = weapons.secondary[path.secondary]
+    if (!checkWeaponPath.builtIN) {formulasValues.pullStats(index,mods.secondaryMods[path.secondaryMod].stats);}
+    else {formulasValues.pullStats(index,mods.builtInSecondaryMods[checkWeaponPath.builtIN].stats);}
+
+    //Consumables
+    let recordPath = globalRecords.consumables;
+    globalRecords.totalConcLimit = 1 + index.ConcLimit;
+    for (let i=1;i<=7;i++) {
+      let concoction = recordPath[`concoction${i}`];
+      if (i<=globalRecords.totalConcLimit) {formulasValues.pullStats(index,concoctions[concoction].stats);}//Concoctions
+      if (i<=4 && !!quickUses[recordPath[`quickUse${i}`]]) {formulasValues.pullStats(index,quickUses[recordPath[`quickUse${i}`]].stats);}//Quick-Use Consumables
+    }
+  },
   pullGearStats(isUIcalcs,index,ping) {
     const path = globalRecords.weapons;
     formulasValues.pullIfActive([isUIcalcs,index,'USEtoggledPrimary',false],weapons.primary[path.primary],'Primary','Weapon',path.primaryMod,['USEtoggledpMod',false]);
@@ -1823,7 +1883,7 @@ let formulasValues = {
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
   pullStats(index,path) {
     for (let elements in path) {
-      if (Array.isArray(path[elements])) {index[elements] *= 1 + path[elements][0];}//If the greatTable type is an array, like DMGKept or REDamage
+      if (Array.isArray(path[elements])) {index[elements] *= 1 + path[elements][0];}//If the statistic is multiplicative, like REDmg or DMGKept, etc.
       else {index[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
     }
   },
@@ -1831,33 +1891,6 @@ let formulasValues = {
   updateDisplay(elemID,statistic,rounding,percent) {
     let percentage = percent ?? "";
     readSelection(elemID).innerHTML = `${statistic.toFixed(rounding)}${percentage}`;
-  },
-  //Used specifically for relic functions
-  callUniqueRelicFunctions(isUIcalcs,index,relicHPscaled,totalHealth) {
-    //relicHPscaled and totalHealth are only used for when item is "relic"
-    let toggleCheck,customPath;
-
-    let relicComplexArray;
-    toggleCheck = isUIcalcs ? readSelection(`USEtoggledRelic`).checked : false;
-    if (!toggleCheck) {
-      customPath = globalRecords.accessories.relic;
-      conditionalPath = relics[customPath].usesConditional;
-      if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
-      
-      if (conditionalPath.customRelicFunctions) {
-        // if (isUIcalcs) {readSelection("complexInput").disabled = true;}//Right now there is no more need for user input on relics. Might use again later.
-        relicComplexArray = customItemFunctions[conditionalPath.customRelicFunctions](isUIcalcs,index,relicHPscaled,totalHealth);
-      }
-    }
-    else if (isUIcalcs) {readSelection("relicComplexEffect").innerHTML = "";}
-    //Fragments //NOT CURRENTLY USED
-    // for (let i=1;i<=3;i++) {
-    //   customPath = globalRecords.accessories[`fragment${i}`];
-    //   if (fragments[customPath][`customRelicFunctions`]) {
-    //     customItemFunctions[fragments[customPath][`customRelicFunctions`]]();
-    //   }
-    // }
-    return relicComplexArray;
   },
   readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath) {//cycle specific version
     if (conditionalPath) {
@@ -1892,15 +1925,15 @@ let formulasValues = {
         }
     }
   },
-  callStoredFunctions(isUIcalcs,tieredFunctionStorage,tierName,index,insertedStatistic) {
+  callStoredFunctions(tieredFunctionStorage,tierName,index,insertedStatistic) {
     let targetStorage = tieredFunctionStorage[tierName];
     if (targetStorage) {
       for (let storedFunction in targetStorage) {
         if (Array.isArray(targetStorage[storedFunction]) && targetStorage[storedFunction][0]) {
-          targetStorage[storedFunction][0](isUIcalcs,index,targetStorage[storedFunction][1]);//traits are pushed as arrays with a level as the inserted stat
+          targetStorage[storedFunction][0](index,targetStorage[storedFunction][1]);//traits are pushed as arrays with a level as the inserted stat
         }
         else if (storedFunction) {
-          targetStorage[storedFunction](isUIcalcs,index,insertedStatistic);
+          targetStorage[storedFunction](index,insertedStatistic);
         }
       }
     }
@@ -1913,45 +1946,50 @@ let formulasValues = {
         let toggleCheck
         //rings
         for (let i=1;i<=4;i++) {
-          toggleCheck = isUIcalcs ? readSelection(`USEtoggledRing${i}`).checked : false;
+          toggleCheck = readSelection(`USEtoggledRing${i}`).checked;
           customPath = globalRecords.accessories[`ring${i}`] || "";
           let conditionalPath = rings[customPath].usesConditional;
           formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         }
+        //Relic
+        toggleCheck = readSelection(`USEtoggledRelic`).checked;
+        customPath = globalRecords.accessories.relic;
+        conditionalPath = relics[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         //Amulet
-        toggleCheck = isUIcalcs ? readSelection("USEtoggledAmulet").checked : false;
+        toggleCheck = readSelection("USEtoggledAmulet").checked;
         customPath = globalRecords.accessories.amulet;
         conditionalPath = amulets[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         //Mutators
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMutator`).checked : false;
+        toggleCheck = readSelection(`USEtoggledpMutator`).checked;
         customPath = globalRecords.weapons.primaryMutator;
         conditionalPath = rangedMutators[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMutator`).checked : false;
+        toggleCheck = readSelection(`USEtoggledmMutator`).checked;
         customPath = globalRecords.weapons.meleeMutator;
         conditionalPath = meleeMutators[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMutator`).checked : false;
+        toggleCheck = readSelection(`USEtoggledsMutator`).checked;
         customPath = globalRecords.weapons.secondaryMutator;
         conditionalPath = rangedMutators[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         //MODS
         //PRIMARY
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledpMod`).checked : false;
+        toggleCheck = readSelection(`USEtoggledpMod`).checked;
         let primaryWeapon = globalRecords.weapons.primary;
         let primaryWeaponMod = globalRecords.weapons.primaryMod;
         let checkWeaponPath = weapons.primary[primaryWeapon];
         conditionalPath = checkWeaponPath.builtIN ? mods.builtInPrimaryMods[checkWeaponPath.builtIN].usesConditional : mods.primaryMods[primaryWeaponMod].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         //MELEE
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledmMod`).checked : false;
+        toggleCheck = readSelection(`USEtoggledmMod`).checked;
         let meleeWeapon = globalRecords.weapons.melee;
         checkWeaponPath = weapons.melee[meleeWeapon];
         conditionalPath = mods.builtInMeleeMods[checkWeaponPath.builtIN].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
         //SECONDARY
-        toggleCheck = isUIcalcs ? readSelection(`USEtoggledsMod`).checked : false;
+        toggleCheck = readSelection(`USEtoggledsMod`).checked;
         let secondaryWeapon = globalRecords.weapons.secondary;
         let secondaryWeaponMod = globalRecords.weapons.secondaryMod;
         checkWeaponPath = weapons.secondary[secondaryWeapon];
@@ -1973,6 +2011,10 @@ let formulasValues = {
           let conditionalPath = rings[customPath].usesConditional;
           formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
         }
+        //Relic
+        customPath = globalRecords.accessories.relic;
+        conditionalPath = relics[customPath].usesConditional;
+        formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
         //Amulet
         customPath = globalRecords.accessories.amulet;
         conditionalPath = amulets[customPath].usesConditional;
@@ -2048,17 +2090,17 @@ let customItemFunctions = {
   //Remember to add stats to tags array in data.js whenever making one of these
   // valueTables[index].anyStatHere += 1;
   // "amulets": {
-    abrasiveWhetstone(isUIcalcs,index) {//50
+    abrasiveWhetstone(index) {//50
       if (index.outBLEED>0) {
         index.AllCritChance += 0.15;
         index.AllCritDamage += 0.15;
       }
     },
-    birthrightOfTheLost(isUIcalcs,index) {//0 user input
+    birthrightOfTheLost(index) {//0 user input
       index.outEXPOSED += globalRecords.meleeFactors.isPerfectDodge ? 1 : 0;
     },
-    brewMasters(isUIcalcs,index) {//0 user selection
-      if (isUIcalcs) {
+    brewMasters(index) {//0 user selection
+      if (!index.thisIsAQuery) {
         for (let i=1;i<=7;i++) {
           let customPath = globalRecords.consumables[`concoction${i}`];
           if (customPath) {
@@ -2071,13 +2113,13 @@ let customItemFunctions = {
         index.FlatDR += 0.02 * index.ConcLimit;
       }
     },
-    chainsOfAmplification(isUIcalcs,index) {//50
+    chainsOfAmplification(index) {//50
       index.AllDamage += index.outgoingStatus ? 0.20 : 0;
     },
-    daredevil(isUIcalcs,index) {//50
+    daredevil(index) {//50
       let armorMissing = 4;
       let customPath = globalRecords.armor;
-      if (!isUIcalcs) {
+      if (index.thisIsAQuery) {
         //For now, we assume if Daredevil ever shows up in the cycles, the player should always be naked
         customPath.helmet = "";
         customPath.chest = "";
@@ -2091,7 +2133,7 @@ let customItemFunctions = {
       index.AllDamage += 0.075 * armorMissing;
       index.MovementSpeed += 0.03 * armorMissing;
     },
-    deathSoakedIdol(isUIcalcs,index) {//50
+    deathSoakedIdol(index) {//50
       if (index.outgoingStatus) {
         let maxStacks = 5;
         let count = globalRecords.meleeFactors.enemyCount;
@@ -2099,26 +2141,26 @@ let customItemFunctions = {
         index.AllDamage += Math.min(maxStacks,count) * 0.06;
       }
     },
-    differenceEngine(isUIcalcs,index) {//50
+    differenceEngine(index) {//50
       if (index.Shield > 0) {
         index.Lifesteal += 0.045;
         index.AllDamage += 0.20;
       }
     },
-    effigyPendant(isUIcalcs,index) {//0 user input
+    effigyPendant(index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
         index.FlatDR += 0.1;
         index.AllDamage += 0.15;
         index.GreyHPHitThreshold += 1;
       }
     },
-    energyDiverter(isUIcalcs,index) {//50
+    energyDiverter(index) {//50
       if (index.Shield > 0) {
         index.AllCritChance += 0.10;
         index.AllDamage += 0.15;
       }
     },
-    fragrantThorn(isUIcalcs,index) {//0. Not user input, but needs to happen first.
+    fragrantThorn(index) {//0. Not user input, but needs to happen first.
       let activeStatus = 0;
 
       if (index.outgoingStatus) {
@@ -2131,7 +2173,7 @@ let customItemFunctions = {
       }
       index.outEXPOSED += activeStatus>4 ? 1 : 0;
     },
-    giftOfTheUnbound(isUIcalcs,index) {//0, based on item selections not stats.
+    giftOfTheUnbound(index) {//0, based on item selections not stats.
       let activeBurdens = 0;
       let movementModifier = 0.05
       let customPath = globalRecords.accessories;
@@ -2186,31 +2228,31 @@ let customItemFunctions = {
       }
       //Remember to add checks for the negative effects later, on burden rings, to negate them.
     },
-    insulationDriver(isUIcalcs,index) {//50
+    insulationDriver(index) {//50
       if (index.Bulwark > 0) {
         index.AllDamage += 0.15;
         index.HASTE += 1;
       }
     },
-    kineticShieldExchanger(isUIcalcs,index) {//50
+    kineticShieldExchanger(index) {//50
       if (index.Shield > 0) {
         index.ModDamage += 0.25;
         index.ModPowerGen += 0.20;
       }
     },
-    neckboneNecklace(isUIcalcs,index) {//50
+    neckboneNecklace(index) {//50
       index.AllDamage += index.incomingStatus ? 0.25 : 0;
     },
-    nightweaversGrudge(isUIcalcs,index) {//50
+    nightweaversGrudge(index) {//50
       if (index.incomingStatus || index.outgoingStatus) {
         index.AllCritChance += 0.15;
         index.HASTE += 1;
       }
     },
-    oneEyedJokerIdol(isUIcalcs,index) {//0 user input
+    oneEyedJokerIdol(index) {//0 user input
       index.AllCritChance += globalRecords.meleeFactors.isEvade ? 0.25 : 0;
     },
-    oneTrueKingSigil(isUIcalcs,index) {//base, modifies based on equip, not existing stats.
+    oneTrueKingSigil(index) {//base, modifies based on equip, not existing stats.
       let faerinActive = false;
       let faelinActive = false;
       let imposterRings = 0;
@@ -2239,44 +2281,44 @@ let customItemFunctions = {
         }
       }
     },
-    profaneSoulStone(isUIcalcs,index) {//0 user input
-      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+    profaneSoulStone(index) {//0 user input
+      let customPath = globalRecords.minionCount;
 
       let minionCount = +customPath;
       let modifier = -0.10;
       index.FlatDR += modifier * minionCount;
     },
-    ravagersMark(isUIcalcs,index) {//50
+    ravagersMark(index) {//50
       index.AllDamage += index.outBLEED ? 0.3 : 0;
     },
-    soulAnchor(isUIcalcs,index) {//0 user input
-      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
+    soulAnchor(index) {//0 user input
+      let customPath = globalRecords.minionCount;
       index.AllDamage += customPath ? 0.2 : 0;
     },
-    spiritWisp(isUIcalcs,index) {//N/A
+    spiritWisp(index) {//N/A
       //Add mod stuff later
     },
-    weightlessWeight(isUIcalcs,index) {//PostWeightClass
+    weightlessWeight(index) {//PostWeightClass
       let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       if (weight < 0) {weight = 0;}
       let multi = Math.floor(weight/5);
       index.StaminaCost += -0.0075 * multi;
       index.MovementSpeed += 0.0075 * multi;
     },
-    whisperingMarble(isUIcalcs,index) {//50
+    whisperingMarble(index) {//50
       let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
       index.AllDamage += 0.02 * bulwarkStacks;
     },
   // },
   // "rings": {//I... I think I'm done...?
-    ataeriiBooster(isUIcalcs,index) {//0 user input
+    ataeriiBooster(index) {//0 user input
       let referenceTable = globalRecords.archs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
         index.AllDamage += 0.10;
         index.AllCritChance += 0.10;
       }
     },
-    ahanaeCrystal(isUIcalcs,index) {//50
+    ahanaeCrystal(index) {//50
       let activeStatus = 0;
 
       if (index.outgoingStatus) {
@@ -2289,55 +2331,54 @@ let customItemFunctions = {
         index.AllDamage += (0.05 * activeStatus);
       }
     },
-    akariWarBand(isUIcalcs,index) {//0 user input
+    akariWarBand(index) {//0 user input
       let perfectDodge = globalRecords.meleeFactors.isPerfectDodge;
       if (perfectDodge === true) {
         index.AllCritChance += 0.10;
         index.AllCritDamage += 0.10;
       }
     },
-    alchemyStone(isUIcalcs,index) {//base
+    alchemyStone(index) {//base
       index.Lifesteal += index.incomingStatus ? 0.06 : 0;
     },
-    anastasijasInspiration(isUIcalcs,index) {//PostHealing
-      let toggleCheck = isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
-      if (index["HP/S+"] || index["HP/S%"] || (toggleCheck && index.RelicHPtime > 1)) {
+    anastasijasInspiration(index) {//PostHealing
+      if (index["HP/S+"] || index["HP/S%"] || (RelicHPbase && index.RelicHPtime > 1)) {
         index.HASTE += 1;
       }
     },
-    blackSpinel(isUIcalcs,index) {//base
+    blackSpinel(index) {//base
       index["HP/S%"] += index.outgoingStatus ? 0.02 : 0;
     },
-    bloodTingedRing(isUIcalcs,index) {//base
+    bloodTingedRing(index) {//base
       if (index.outBLEED || index.inBLEED) {
         index["HP/S+"] += 2;
       }
     },
-    bridgeWardensCrest(isUIcalcs,index) {//0 user input
+    bridgeWardensCrest(index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge) {
         index.MeleeDamage += 0.20;
         let weightClass = calcs.getWeight(index)[1];
         index.FlatDR += globalRecords.meleeFactors.isEvade && weightClass === "Flop" ? 0.1 : 0;
       }
     },
-    burdenOfTheMason(isUIcalcs,index,totalDR) {//postDR
+    burdenOfTheMason(index,totalDR) {//postDR
       index.MeleeDamage += Math.min(0.80,totalDR) * 0.35
     },
-    burdenOfTheMesmer1(isUIcalcs,index) {//base
+    burdenOfTheMesmer1(index) {//base
       index.GlobalHealthModifier *= 0.80;//health modification
     },
-    burdenOfTheMesmer2(isUIcalcs,index,totalDR) {//postDR
+    burdenOfTheMesmer2(index,totalDR) {//postDR
       let floorIncrement = 0.05
       let dmgScaling = 0.01
       index.AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
     },
-    driedClayRing(isUIcalcs,index) {//50
+    driedClayRing(index) {//50
       let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
       
       let bulwarkDR = -.005*(bulwarkStacks**2) + .075*bulwarkStacks;
       index.AllDamage += 0.5 * bulwarkDR;
     },
-    embraceOfShahala(isUIcalcs,index) {//base
+    embraceOfShahala(index) {//base
       let activeStatus = 0;
 
       if (index.incomingStatus) {
@@ -2352,48 +2393,48 @@ let customItemFunctions = {
         index.FlatDR += (0.075 * Math.min(2,activeStatus));
       }
     },
-    featheryBinding(isUIcalcs,index) {//50 after haste at 40
+    featheryBinding(index) {//50 after haste at 40
       if (index.HASTE) {
         index.ProjectileSpeed += 0.15;
         index.WeaponChargeTime += 0.10;
       }
     },
-    floodlitDiamond(isUIcalcs,index) {//50
+    floodlitDiamond(index) {//50
       index.AllWeakspot += index.outEXPOSED ? 0.12 : 0;
     },
-    flyweightsSting(isUIcalcs,index) {//50
+    flyweightsSting(index) {//50
       let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       if (weight < 0) {weight = 0;}
       if (weight < 50) {
         index.MeleeDamage += (1 - (weight/49)) * 0.25;
       }
     },
-    frivolousBand(isUIcalcs,index) {//0 user input
+    frivolousBand(index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge && globalRecords.meleeFactors.isEvade) {
         index.FireRate += 0.10;
         index.AttackSpeed += 0.10;
       }
     },
-    gameMasters1(isUIcalcs,index) {//0 user input
-      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    gameMasters1(index) {//0 user input
+      let teamCount = globalRecords.ALTteamCount;
       if (teamCount>1) {
         index.DMGKept *= 1 + ((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
       }
     },
-    gameMasters2(isUIcalcs,index) {//PreHealing
-      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    gameMasters2(index) {//PreHealing
+      let teamCount = globalRecords.teamCount;
 
       index.GlobalHealingEff = index.GlobalHealingEff * 0.5;//Cut healing in half
       if (teamCount>1) {
         index.GlobalHealingEff *= 1/teamCount;//Further divide the healing by team members
       }
     },
-    generatingBand(isUIcalcs,index) {//PreHealing
+    generatingBand(index) {//PreHealing
       if (index.Shield > 0) {
         index["HP/S%"] += 0.03;
       }
     },
-    gulSignet(isUIcalcs,index,dodgeClass) {//PostWeightClass
+    gulSignet(index,dodgeClass) {//PostWeightClass
       let currentClass = 0;
       switch (dodgeClass) {
         case "Flop": currentClass = 3;break;
@@ -2402,17 +2443,17 @@ let customItemFunctions = {
       }
       index.FlatDR -= 0.025 * currentClass
     },
-    haymakersRing(isUIcalcs,index) {//50
+    haymakersRing(index) {//50
       let weight = index.Encumbrance * (1+index["Encumbrance%"]);
       let modifier = 0.002;
       index.MeleeDamage += weight * modifier;
     },
-    kolketEyelet(isUIcalcs,index) {//PostWeightClass
+    kolketEyelet(index) {//PostWeightClass
       let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
 
       index["HP/S+"] += 0.3 * bulwarkStacks;
     },
-    lodestoneRing(isUIcalcs,index) {//0 user input
+    lodestoneRing(index) {//0 user input
       let customPath = globalRecords.armor.helmet;
 
       let helmetPath = customPath;
@@ -2420,40 +2461,40 @@ let customItemFunctions = {
         index.AllDamage += 0.05;
       }
     },
-    matriarchsRing(isUIcalcs,index) {//0 user input
+    matriarchsRing(index) {//0 user input
       let perfectDodge = globalRecords.meleeFactors.isPerfectDodge;
       index.ChargeCost += perfectDodge ? -1 : 0;
     },
-    mechanicsCog(isUIcalcs,index) {//0 user input
+    mechanicsCog(index) {//0 user input
       let referenceTable = globalRecords.archs;
       if (referenceTable.one.class === "Engineer" || referenceTable.two.class === "Engineer" ) {
         index.Bulwark += 1;
         index.MovementSpeed += 0.15;
       }
     },
-    painlessObsidian(isUIcalcs,index) {//0 user input
+    painlessObsidian(index) {//0 user input
       index.HASTE += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
       index.Bulwark += globalRecords.meleeFactors.greyHealthActive ? 1 : 0;
     },
-    panWarBand(isUIcalcs,index) {// 0 team count user input
-      let teamCount = isUIcalcs ? globalRecords.teamCount : globalRecords.ALTteamCount;
+    panWarBand(index) {// 0 team count user input
+      let teamCount = globalRecords.teamCount;
 
       index.MovementSpeed += 0.03 * teamCount;
       index.ReloadSpeed += 0.03 * teamCount;
       index.FireRate += 0.02 * teamCount;
     },
-    ravagersBargain(isUIcalcs,index) {//base
+    ravagersBargain(index) {//base
       let isBleeding = index.inBLEED;
       index.AllDamage += isBleeding ? 0.05 : 0;
       index.AllCritChance += isBleeding ? 0.05 : 0;
     },
-    restrictionCord(isUIcalcs,index) {//base
+    restrictionCord(index) {//base
       index.GlobalHealthModifier *= 0.5;
     },
-    ringOfSpirits(isUIcalcs,index) {//0 user input
+    ringOfSpirits(index) {//0 user input
       let totalActive = 0;
 
-      if (isUIcalcs) {
+      if (!index.thisIsAQuery) {
         for (let i=1;i<=7;i++) {
           let customPath = globalRecords.consumables[`concoction${i}`];
           if (customPath) {
@@ -2473,64 +2514,56 @@ let customItemFunctions = {
         index.ModPowerGen += 0.03 * 5;
       }
     },
-    ringOfTheDamned(isUIcalcs,index) {//0 user input
+    ringOfTheDamned(index) {//0 user input
       index.AllDamage += globalRecords.meleeFactors.greyHealthActive ? 0.004*50 : 0;
       index.AllCritChance += globalRecords.meleeFactors.greyHealthActive ? 0.05 : 0;
     },
-    singedRing(isUIcalcs,index) {//50
+    singedRing(index) {//50
       index.AllDamage += index.outBURN ? 0.12 : 0;
     },
-    soulGuard(isUIcalcs,index) {//0 user input
-      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
-      index.Bulwark += +customPath;
+    soulGuard(index) {//0 user input
+      index.Bulwark += +globalRecords.minionCount;
     },
-    soulShard(isUIcalcs,index) {//0 user input
-      let customPath = isUIcalcs ? globalRecords.minionCount : globalRecords.ALTminionCount;
-
-      let minionCount = +customPath;
+    soulShard(index) {//0 user input
+      let minionCount = +globalRecords.minionCount;
       if (minionCount > 3) {minionCount = 3;}
       let modifier = 0.05;
       index.AllDamage += modifier * minionCount;
     },
-    tokenOfFavor(isUIcalcs,index) {//50
+    tokenOfFavor(index) {//50
       index.AllCritChance += index.outEXPOSED ? 0.10 : 0;
     },
-    thalosEyelet(isUIcalcs,index) {//PostWeightClass
+    thalosEyelet(index) {//PostWeightClass
       let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
       index["Stamina/S+"] += 2 * bulwarkStacks;
     },
-    whiteGlassBead(isUIcalcs,index) {//0 user input
+    whiteGlassBead(index) {//0 user input
       index.Shield += globalRecords.meleeFactors.isPerfectDodge ? 0.15 : 0;
     },
   // },
   // "relic": {//DONE relics are currently tierless
-    resonatingHeart(isUIcalcs,index,relicHPscaled,totalHealth) {
+    resonatingHeart(index,[relicHPscaled,totalHealth]) {
       //Healing/Relic EFF already factored before this function even starts
       let inputValue = relicHPscaled * 2 * (1+index.HealingEFF);
-
-      let relicPercHPpSec = 0;
-      let relicHPpSec = 0;
-      let avgPercHPpSec = 0;
-      let avgHPpSec = 0;
       //If input is blank or 0, all values will BE 0, but that's ok because in our check to pull relic healing
       //we will first check if the input is blank/0 before pulling either basic or complex stats.
-      relicPercHPpSec = inputValue/20;
-      relicHPpSec = (relicPercHPpSec/100) * totalHealth;
-      avgPercHPpSec = (relicHPscaled + inputValue)/25;
-      avgHPpSec = (avgPercHPpSec/100) * totalHealth;
+      let relicPercHPpSec = inputValue/20;
+      let relicHPpSec = (relicPercHPpSec/100) * totalHealth;
+      let avgPercHPpSec = (relicHPscaled + inputValue)/25;
+      let avgHPpSec = (avgPercHPpSec/100) * totalHealth;
     
-      if (isUIcalcs) {
+      if (!index.thisIsAQuery) {
         readSelection("relicComplexEffect").innerHTML += `
         <div class="resoBonusHeader">Avg over 25s</div>
         <div class="complexRowContainer"><span class="basicsDRStat">As HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue">${avgHPpSec.toFixed(2)}</span></div>
         <div class="complexRowContainer"><span class="basicsDRStat">As %HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue">${avgPercHPpSec.toFixed(2)}%</span></div>
         `
       }
-    return [avgPercHPpSec,avgHPpSec]
+      globalRecords.relicComplexArray = [avgPercHPpSec,avgHPpSec];
     },
   // },
   // "mutators": {//DONE
-    executor(isUIcalcs,index) {//base
+    executor(index) {//base
       if (index.outgoingStatus) {
         let count = globalRecords.meleeFactors.enemyCount;
         count += index.incomingStatus ? 1 : 0
@@ -2539,13 +2572,13 @@ let customItemFunctions = {
         index.ChargeSpeed += (0.05 * count);
       }
     },
-    guts(isUIcalcs,index) {//0 user input
+    guts(index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
         index.MeleeCritChance += 0.25;
         index.MeleeCritDamage += 0.25;//we don't have any %GHP specifications yet, this assume 50% GHP
       }
     },
-    misfortune(isUIcalcs,index) {//base
+    misfortune(index) {//base
       let activeStatus = 0;
 
       if (index.outgoingStatus) {
@@ -2558,17 +2591,17 @@ let customItemFunctions = {
         index.MeleeDamage += (0.10 * activeStatus);
       }
     },
-    opportunist(isUIcalcs,index) {//0 user input
+    opportunist(index) {//0 user input
       if (globalRecords.meleeFactors.isPerfectDodge) {
         index.MeleeCritChance += 1;
       }
     },
-    resentment(isUIcalcs,index) {//0 user input
+    resentment(index) {//0 user input
       if (globalRecords.meleeFactors.greyHealthActive) {
         index.MeleeDamage += 0.30
       }
     },
-    shieldedStrike(isUIcalcs,index) {//50
+    shieldedStrike(index) {//50
       let shieldAmount = index.Shield;
       let cap = 0.50;
       let dmgCap = 0.25;
@@ -2577,7 +2610,7 @@ let customItemFunctions = {
         index.ChargeDamage += (shieldAmount/cap) * dmgCap;
       }
     },
-    vampireBlade(isUIcalcs,index) {//base
+    vampireBlade(index) {//base
       if (index.outBLEED) {
         index.MeleeDamage += 0.30;
         index.MLifesteal += 0.03;
@@ -2585,20 +2618,20 @@ let customItemFunctions = {
     },
   // },
   // "meleeMods": {//DONE
-    dreamwave(isUIcalcs,index) {//0 user input
+    dreamwave(index) {//0 user input
       let count = globalRecords.meleeFactors.enemyCount;
       index.AllDamage += 0.02 * count;
       index.MovementSpeed += 0.02 * count;
     },
-    beyondTheVeil(isUIcalcs,index) {//0 user input
+    beyondTheVeil(index) {//0 user input
       index.MLifesteal += globalRecords.meleeFactors.isEvade ? 0.05 : 0;
     },
-    reaver(isUIcalcs,index) {//base
+    reaver(index) {//base
         index.MeleeDamage += index.outgoingStatus ? 0.10 : 0;
     },
   // },
   // "traits": {
-    bloodBond(isUIcalcs,index,traitLevel) {//0 user input
+    bloodBond(index,traitLevel) {//0 user input
       let referenceTable = globalRecords.archs;
       if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
         index.DMGKept *= 1 + (-0.01 * traitLevel);
@@ -2622,13 +2655,14 @@ function updateFormulas(index,ping) {
   if (isUIcalcs) {
     basicsUpdates.updateMainTeamSettings();//MISC STATS THAT NEED TO BE PULLED FROM DISPLAYS FIRST
     formulasValues.pullTraits(tableReference);
+    formulasValues.pullGearStats(isUIcalcs,tableReference,ping);//Weapons/Accessories/class/frags/etc
   }
+  else {formulasValues.pullGearStatsCycles(tableReference,ping);}
 
   let tieredFunctionStorage = formulasValues.storeActiveConditionals(isUIcalcs);
   
-  formulasValues.pullGearStats(isUIcalcs,tableReference,ping);//Weapons/Accessories/class/frags/etc
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customTier0",tableReference);//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customBase",tableReference);//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customTier0",tableReference);//Has conditionals based upon user settings, or other things that do not need to wait for other conditionals.
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customBase",tableReference);//Standard conditionals. They might rely on Tier0 calcs, but nothing else.
 
 //SUMMARY STATS
 //HEALTH
@@ -2644,7 +2678,7 @@ function updateFormulas(index,ping) {
   let baseWeight = weightQuery[3];
   let weightBoost = weightQuery[4];
   let weightThreshold = weightQuery[5];
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostWeightClass",tableReference,dodgeClass);//Gul Signet, etc
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customPostWeightClass",tableReference,dodgeClass);//Gul Signet, etc
   let staminaValuesQuery = calcs.getStaminaValues(tableReference,staminaPenalty);
   let staminaPerSec = staminaValuesQuery[0];
   let staminaCost = staminaValuesQuery[1];
@@ -2664,7 +2698,7 @@ function updateFormulas(index,ping) {
   tableReference.AllDamage += tableReference.outCORRODED ? 0.10 : 0;
   tableReference.HealingEFF *= tableReference.inBLEED ? 0.5 : 1;
 
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPreHealing",tableReference);//generating band, etc
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customPreHealing",tableReference);//generating band, etc
   let healingQuery = calcs.getHealing(tableReference);
   let globalHealingMod = healingQuery[0]; //Example: game master's pride. Not used outside of calcs.functions yet
   let healingEffectiveness = healingQuery[1];
@@ -2672,12 +2706,12 @@ function updateFormulas(index,ping) {
   let percHPperSec = healingQuery[3];
   let totalGreyHPperSec = healingQuery[4];
 
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostHealing",tableReference);//anastasijasInspiration, stuff like that
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customPostHealing",tableReference);//anastasijasInspiration, stuff like that
   if (valueTables[index].HASTE > 0) {
     for (let bonuses in hasteTable) {valueTables[index][bonuses] += hasteTable[bonuses];}//If haste exists, add relevant speed stats
   }
 //----------RELIC HEALING---------------------------------------------------
-  let relicHealingQuery = calcs.getRelicHealing(tableReference,isUIcalcs,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
+  let relicHealingQuery = calcs.getRelicHealing(tieredFunctionStorage,tableReference,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
   let relicHPbase = relicHealingQuery[0];
   let relicHPtype = relicHealingQuery[1];
   let relicHPtime = relicHealingQuery[2];
@@ -2713,7 +2747,7 @@ function updateFormulas(index,ping) {
     }
   }
 
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customPostDR",tableReference,totalDR);//Burden of the Mason, etc
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customPostDR",tableReference,totalDR);//Burden of the Mason, etc
   //----------ADVANCED DR-------------
   let advancedDrQuery = calcs.getAdvancedDR(tableReference,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal);
   let reducedEnemyDamage = advancedDrQuery[0];
@@ -2743,7 +2777,7 @@ function updateFormulas(index,ping) {
   let EHPpSec = advancedHealingQuery[6] || 0;
 
   //TIER 50 CALLS PURELY FOR DMG RELATED CONDITIONALS + DMG CONDITIONALS THAT NEED TO BE DONE AFTER REG STATS
-  formulasValues.callStoredFunctions(isUIcalcs,tieredFunctionStorage,"customTier50",tableReference);//50 is just where I chose to start for dmg functions
+  formulasValues.callStoredFunctions(tieredFunctionStorage,"customTier50",tableReference);//50 is just where I chose to start for dmg functions
   //---------- LIFESTEAL --------------Can be last bc no other statistics depend on lifesteal values, yet
   let lifestealQuery = calcs.getLifesteal(tableReference,relicEffectiveness);
   let lifestealEFF = lifestealQuery[0];

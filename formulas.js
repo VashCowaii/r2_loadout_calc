@@ -111,7 +111,7 @@ let calcs = {
 
         return [staminaPerSec,staminaCost]
     },
-    getRelicHealing(index,isUIcalcs,totalHealth,globalHealingMod,healingEffectiveness) {
+    getRelicHealing(tieredFunctionStorage,index,totalHealth,globalHealingMod,healingEffectiveness) {
         //RELIC HEALING
         //We're taking noGlobal on total health as that is the value that persists with shit like Restriction Cord.
         let relicHPbase = index.RelicHPbase * globalHealingMod;
@@ -122,26 +122,43 @@ let calcs = {
 
         let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
 
-        let relicPercPerSecond;
-        let relicFlatPerSecond;
+        let relicPercPerSecond,relicFlatPerSecond;
+        globalRecords.relicComplexArray = null;
+        let relicComplexArray
 
-        if (relicHPtype==="%"){
-        relicPercPerSecond = (relicHPscaled/relicHPtime);
-        relicFlatPerSecond = ((relicHPscaled/relicHPtime)/100)*totalHealth;
+        switch (relicHPtype) {
+            case "%":
+                relicPercPerSecond = (relicHPscaled/relicHPtime);
+                relicFlatPerSecond = ((relicHPscaled/relicHPtime)/100)*totalHealth;
+                break;
+            case "P":
+                relicPercPerSecond = null;
+                relicFlatPerSecond = (relicHPscaled/relicHPtime);
+                break;
+            case "F":
+                relicPercPerSecond = null;
+                relicFlatPerSecond = (relicHPscaled/relicHPtime);
+                break;
+            default:
+                relicHPscaled = 0;
+                relicHPtime = 0;
+                relicPercPerSecond = null;
+                relicFlatPerSecond = null;
+                break;
         }
-        else if (relicHPtype==="P"||relicHPtype==="F") {
-        relicPercPerSecond = null;
-        relicFlatPerSecond = (relicHPscaled/relicHPtime);
-        }
-        else {//if null
-        relicHPscaled = 0;
-        relicHPtime = 0;
-        relicPercPerSecond = null;
-        relicFlatPerSecond = null;
-        }
-        let relicComplexArray = formulasValues.callUniqueRelicFunctions(isUIcalcs,index,relicHPscaled,totalHealth);
 
-        return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness]
+        if (index.thisIsAQuery) {
+            relicComplexArray = formulasValues.callStoredFunctions(tieredFunctionStorage,"customRelicFunctions",index,[relicHPscaled,totalHealth]);//resonating heart, stuff like that
+        }
+        else {
+            let toggleCheck = readSelection(`USEtoggledRelic`).checked;
+            readSelection("relicComplexEffect").innerHTML = "";
+            if (!toggleCheck) {
+                relicComplexArray = formulasValues.callStoredFunctions(tieredFunctionStorage,"customRelicFunctions",index,[relicHPscaled,totalHealth]);
+            }
+        }
+
+        return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,globalRecords.relicComplexArray,relicUseTime,relicEffectiveness]
     },
     getAdvancedDR(index,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal) {
         //REDUCED ENEMY DAMAGE
