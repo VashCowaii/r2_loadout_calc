@@ -76,7 +76,7 @@ function pagePopulation() {
     if (stopQueryFractures) {
       // readSelection("calcLastUpdated").innerHTML != ""
       // readSelection("queryBox").style.display = "none";
-      readSelection("dmgVisibilityToggle").style.display = "none";
+      // readSelection("dmgVisibilityToggle").style.display = "none";
       readSelection("damageStatsContainer").style.display = "none";
     }
         //Tag filter selections

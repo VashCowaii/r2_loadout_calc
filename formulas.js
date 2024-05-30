@@ -216,10 +216,20 @@ let calcs = {
 
         if (useComplexValues===true) {advancedRelicPerc = relicComplexArray[0];advancedRelicFlat = 0;}
         else {
-            if (relicHPtype==="P"||relicHPtype==="F") {advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;}
-            else if (relicHPtype==="%") {advancedRelicPerc = relicHPscaled/relicHPtime;advancedRelicFlat = 0;}
-            //If there is no healing type(unique relic like Shielded Heart)
-            else {advancedRelicPerc = 0;advancedRelicFlat = 0;}
+            switch (relicHPtype) {
+                case "%":
+                    advancedRelicPerc = relicHPscaled/relicHPtime;advancedRelicFlat = 0;
+                    break;
+                case "P":
+                    advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;
+                    break;
+                case "F":
+                    advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;
+                    break;
+                default:
+                    advancedRelicPerc = 0;advancedRelicFlat = 0;//If there is no healing type(unique relic like Shielded Heart)
+                    break;
+            }
         }
 
         let totalHealth = totalHealthNoGlobal;//noGlobal hp here
@@ -240,7 +250,8 @@ let customDamage = {
         let reference = valueTables[index];
         let isUIcalcs = index != "greatTableKnowerOfAll";
 
-        let customStats = classInfo.Archon.abilities["Havoc Form"].customStats//path to havoc relevant stats
+        let abilityPath = classInfo.Archon.abilities["Havoc Form"];
+        let customStats = abilityPath.customStats//path to havoc relevant stats
         let duration = customStats.duration;
         let entryDuration = customStats.entryDuration;//the amount of time you spend locked in the entry animation
         let trueBaseDPS = customStats.trueBaseDPS;//base dps without cast speed
@@ -270,15 +281,42 @@ let customDamage = {
         let trueTotalDamage = baseDamage * totalHits * (1 + totalDamageBonus) * (1 + avgCritDamage);
 
         if (!isUIcalcs) {
-            readSelection("havocFormBoxHolder").style.display = "flex"
-            abilityPlacement = abilityPlacement === 1 ? "ability1" : "ability2";
+            let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
+            let factorID = `ability${abilityPlacement}Factors`
 
-            readSelection(`ability1DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
-            readSelection(`ability1TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
+            let insertedHTML = `
+            <div class="seletionBackgroundAbilityBox">
+                <div class="selectionBackgroundAbilityAdjustment">
+                    <img class="abilityDPSbackgroundImage" src='${abilityPath.image}' alt="Ability ${abilityPlacement} breakdown icon">
+                </div>
+            </div>
+            
+            <div class="selectionAbilityDPSBody">
+                <div class="selectionAbilityDPSTitleHeader">${abilityPath.name.toUpperCase()}</div>
+
+                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
+                    <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
+                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${abilityPlacement}DPS">0.00</span>
+                    </div>
+                    <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
+                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${abilityPlacement}TotalDamage">0.00</span>
+                    </div>
+                </div>
+                
+                <div class="abilityFactorsList" id="${factorID}"></div>
+            </div>`
+
+            readSelection(breakdownDomID).innerHTML = insertedHTML
+
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(`ability${abilityPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
+            readSelection(`ability${abilityPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
 
 
             (modifiedDuration + entryDuration)
-            readSelection("havocFactors").innerHTML = "";
+            readSelection(factorID).innerHTML = "";
             let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
             drRowsHTML += (modifiedDuration + entryDuration) ? createHTML.basicsRow("Duration",(modifiedDuration + entryDuration),false) : "";
             drRowsHTML += entryDuration ? createHTML.basicsRow("Entry Duration",entryDuration.toFixed(2),false) : "";
@@ -292,7 +330,7 @@ let customDamage = {
             drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
             drRowsHTML += reference.SkillDamage ? createHTML.basicsRow("Skill Damage",reference.SkillDamage,true,"%") : "";
             drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";
-            drRowsHTML += reference.ShockDamage ? createHTML.basicsRow("Bulwark Stacks",reference.ShockDamage,true,"%") : "";
+            drRowsHTML += reference.ShockDamage ? createHTML.basicsRow("Shock Damage",reference.ShockDamage,true,"%") : "";
             drRowsHTML += totalDamageBonus ? createHTML.basicsRow("Total Damage Bonus",totalDamageBonus,true,"%") : "";
             drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
             drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
@@ -312,7 +350,7 @@ let customDamage = {
             // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
             // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
-            readSelection("havocFactors").innerHTML += drRowsHTML;
+            readSelection(factorID).innerHTML += drRowsHTML;
         }
 
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
@@ -321,7 +359,8 @@ let customDamage = {
         let reference = valueTables[index];
         let isUIcalcs = index != "greatTableKnowerOfAll";
 
-        let customStats = builtInPrimary.Sandstorm.customStats;
+        let modPath = builtInPrimary.Sandstorm;
+        let customStats = modPath.customStats;
         let duration = customStats.duration;
         let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
         let frequency = customStats.frequency;//the rate at which the mod hits enemies
@@ -349,52 +388,77 @@ let customDamage = {
         let trueDPS = trueTotalDamage/trueDuration;
 
         if (!isUIcalcs) {
-            // console.log(minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage)
-            // readSelection("havocFormBoxHolder").style.display = "flex"
-            // modPlacement = modPlacement === 1 ? "ability1" : "ability2";
+            let breakdownDomID = `mod${modPlacement}BreakdownTab`;
+            let factorID = `mod${modPlacement}Factors`
 
-            // readSelection(`ability1DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
-            // readSelection(`ability1TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(modPath.name,modPath.image,breakdownDomID);
+            let insertedHTML = `
+            <div class="seletionBackgroundAbilityBox">
+                <div class="selectionBackgroundAbilityAdjustment">
+                    <img class="abilityDPSbackgroundImage" src='${modPath.image}' alt="Ability ${modPlacement} breakdown icon">
+                </div>
+            </div>
+            
+            <div class="selectionAbilityDPSBody">
+                <div class="selectionAbilityDPSTitleHeader">${modPath.name.toUpperCase()}</div>
+
+                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
+                    <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
+                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${modPlacement}DPS">0.00</span>
+                    </div>
+                    <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
+                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${modPlacement}TotalDamage">0.00</span>
+                    </div>
+                </div>
+                
+                <div class="abilityFactorsList" id="${factorID}"></div>
+            </div>`
+
+            readSelection(breakdownDomID).innerHTML = insertedHTML
+
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(`ability${modPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
+            readSelection(`ability${modPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
 
 
-            // (modifiedDuration + entryDuration)
-            // readSelection("havocFactors").innerHTML = "";
-            // let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
-            // drRowsHTML += (modifiedDuration + entryDuration) ? createHTML.basicsRow("Duration",(modifiedDuration + entryDuration),false) : "";
-            // drRowsHTML += entryDuration ? createHTML.basicsRow("Entry Duration",entryDuration.toFixed(2),false) : "";
-            // drRowsHTML += modifiedDuration ? createHTML.basicsRow("Usable Duration",modifiedDuration.toFixed(2),false) : "";
-            // drRowsHTML += trueDuration ? createHTML.basicsRow("True Duration",trueDuration.toFixed(2),false) : "";
-            // drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
-            // drRowsHTML += reference.CastSpeed ? createHTML.basicsRow("Cast Speed",reference.CastSpeed,true,"%") : "";
-            // drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
-            // drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
-            // drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
-            // drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
-            // drRowsHTML += reference.SkillDamage ? createHTML.basicsRow("Skill Damage",reference.SkillDamage,true,"%") : "";
-            // drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";
-            // drRowsHTML += reference.ShockDamage ? createHTML.basicsRow("Bulwark Stacks",reference.ShockDamage,true,"%") : "";
-            // drRowsHTML += totalDamageBonus ? createHTML.basicsRow("Total Damage Bonus",totalDamageBonus,true,"%") : "";
-            // drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
-            // drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
-            // drRowsHTML += reference.outBURN ? createHTML.basicsRow("","BURN",false) : "";
-            // drRowsHTML += reference.outCORRODED ? createHTML.basicsRow("","CORRODED",false) : "";
-            // drRowsHTML += reference.outOVERLOADED ? createHTML.basicsRow("","OVERLOADED",false) : "";
-            // drRowsHTML += reference.outEXPOSED ? createHTML.basicsRow("","EXPOSED",false) : "";
-            // drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
-            // drRowsHTML += reference.AllCritChance ? createHTML.basicsRow("All Crit Chance",reference.AllCritChance,true,"%") : "";
-            // drRowsHTML += reference.ElementalCritChance ? createHTML.basicsRow("Elemental Crit Chance",reference.ElementalCritChance,true,"%") : "";
-            // drRowsHTML += reference.SkillCritChance ? createHTML.basicsRow("Skill Crit Chance",reference.SkillCritChance,true,"%") : "";
-            // drRowsHTML += totalCritChance ? createHTML.basicsRow("Total Crit Chance",totalCritChance,true,"%") : "";
-            // drRowsHTML += baseCritDamage ? createHTML.basicsRow("Base Crit Damage",baseCritDamage,true,"%") : "";
-            // drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("All Crit Damage",reference.AllCritDamage,true,"%") : "";
-            // drRowsHTML += (baseCritDamage + totalCritDamage) ? createHTML.basicsRow("Total Crit Damage",(baseCritDamage + totalCritDamage),true,"%") : "";
-            // drRowsHTML += avgCritDamage ? createHTML.basicsRow("Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
-            // // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
-            // // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
-            // drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
-            // readSelection("havocFactors").innerHTML += drRowsHTML;
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            drRowsHTML += "<div class='dpsFactorDisclaimer' style='color: red;'>The calc does not currently support mutators that boost the damage of the specific weapon's mod. I'll add that tomorrow.<div>"
+            drRowsHTML += duration ? createHTML.basicsRow("Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += modifiedDuration ? createHTML.basicsRow("Actual Duration",modifiedDuration.toFixed(2),false) : "";
+            drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
+            drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
+            drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
+            drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
+            drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";
+            drRowsHTML += reference.ModDamage ? createHTML.basicsRow("Mod Damage",reference.ModDamage,true,"%") : "";
+            drRowsHTML += totalDamageBonus ? createHTML.basicsRow("Total Damage Bonus",totalDamageBonus,true,"%") : "";
+            drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
+            drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
+            drRowsHTML += reference.outBURN ? createHTML.basicsRow("","BURN",false) : "";
+            drRowsHTML += reference.outCORRODED ? createHTML.basicsRow("","CORRODED",false) : "";
+            drRowsHTML += reference.outOVERLOADED ? createHTML.basicsRow("","OVERLOADED",false) : "";
+            drRowsHTML += reference.outEXPOSED ? createHTML.basicsRow("","EXPOSED",false) : "";
+            drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
+            drRowsHTML += reference.AllCritChance ? createHTML.basicsRow("All Crit Chance",reference.AllCritChance,true,"%") : "";
+            drRowsHTML += reference.ElementalCritChance ? createHTML.basicsRow("Elemental Crit Chance",reference.ElementalCritChance,true,"%") : "";
+            drRowsHTML += reference.ModCritChance ? createHTML.basicsRow("Mod Crit Chance",reference.ModCritChance,true,"%") : "";
+            drRowsHTML += totalCritChance ? createHTML.basicsRow("Total Crit Chance",totalCritChance,true,"%") : "";
+            drRowsHTML += baseCritDamage ? createHTML.basicsRow("Base Crit Damage",baseCritDamage,true,"%") : "";
+            drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("All Crit Damage",reference.AllCritDamage,true,"%") : "";
+            drRowsHTML += (baseCritDamage + totalCritDamage) ? createHTML.basicsRow("Total Crit Damage",(baseCritDamage + totalCritDamage),true,"%") : "";
+            drRowsHTML += avgCritDamage ? createHTML.basicsRow("Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
+            // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
+            // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
         }
 
         return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
-    }
+    },
+    sumTotalDamage(index) {
+
+    },
 }

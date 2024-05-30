@@ -294,10 +294,10 @@ const playerDerivedStatistics = {
   "Health/s": "advancedTotalFlatHP",
   "Effective DR": "effectiveDR",
   "Grey Health Regen": "totalGreyHPperSec",
-  "Havoc - DPS": ["Havoc Form",3,"DPS"],
-  "Havoc - Total Damage": ["Havoc Form",4,"Total DMG"],
-  // "Sandstorm - DPS": ["Sandstorm",3,"DPS"],//do not uncomment, it WILL break if you run this query type right now
-  // "Sandstorm - Total Damage": ["Sandstorm",4,"Total DMG"],
+  "Havoc - DPS": ["Havoc Form",3,"DPS","Ability"],
+  "Havoc - Total Damage": ["Havoc Form",4,"Total DMG","Ability"],
+  // "Sandstorm - DPS": ["Sandstorm",3,"DPS","Mod"], //DO NOT UNCOMMENT THIS YOU WILL BREAK IT IF YOU QUERY IT
+  // "Sandstorm - Total Damage": ["Sandstorm",4,"Total DMG","Mod"],
   // "Total DPS(Havoc+Mod)": "totalDPS",
   "Lifesteal - All": "lifestealALL",
   "Lifesteal - Melee": "lifestealMelee",
@@ -400,8 +400,7 @@ let createHTML = {
       <span class="basicsDRStat">${name}</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="">${value}</span>
     ${unit}</div>`
   },
-  //Generalized select <option> population. *should* be able to be used for any gear selection,
-  //provided there is a distinct json format to pull from
+  //Generalized select <option> population. *should* be able to be used for any gear selection,provided there is a distinct json format to pull from
   populateGear(elemID,collection) {
     const select = readSelection(elemID);
     if (collection != traits) {
@@ -431,6 +430,16 @@ let createHTML = {
         }
       }
     }
+  },
+  damageBreakdownSelectorButton(breakdownName,imagePath,breakdownDomID) {
+    return `
+    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedDamageBreakdown('${breakdownDomID}')">
+      <div class="exportText">${breakdownName}</div>
+      <div class="exportIconBox">
+          <img class="exportIcon" src="${imagePath}" alt="R2TK Icon">
+      </div>
+    </button>
+    `
   }
 }
 /* ---------------------------------------------------------------------------------------- */
@@ -2786,25 +2795,44 @@ function updateFormulas(index,ping) {
 
   let ability1Breakdown,ability2Breakdown;
   let mod1Breakdown,mod2Breakdown;
-  // let totalDPS;
+  let totalDPS;
+  let targetStat,isSumOrCustom;
 
-  if (isUIcalcs) {readSelection("havocFormBoxHolder").style.display = "none"}
-  if (Array.isArray(playerDerivedStatistics[filters.types.vars.targetStatistic]) || isUIcalcs || playerDerivedStatistics[filters.types.vars.targetStatistic] === "totalDPS") {
-  let abilityPath1 = globalRecords.archs.one.ability;
-  let abilityPath2 = globalRecords.archs.two.ability;
-  let ability1 = classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
-  let ability2 = classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
-  ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
-  ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
+  if (isUIcalcs) {
+    readSelection("havocFormBoxHolder").style.display = "none"
+    readSelection("damageBreakdownSelectorHolder").innerHTML = "";
+  }
+  else {
+    targetStat = playerDerivedStatistics[filters.types.vars.targetStatistic];
+    isSumOrCustom = targetStat === "totalDPS";
+  }
+  if (Array.isArray(targetStat) || isUIcalcs || isSumOrCustom) {
+    let abilityPath1,abilityPath2,ability1,ability2,modPath1,modPath2;
 
-  let weaponPath = globalRecords.weapons;
-  let modPath1 = primary[weaponPath.primary].builtIN ? builtInPrimary[primary[weaponPath.primary].builtIN].customStats : rangedMods[weaponPath.primaryMod].customStats;
-  let modPath2 = secondary[weaponPath.secondary].builtIN ? builtInSecondary[secondary[weaponPath.secondary].builtIN].customStats : rangedMods[weaponPath.secondaryMod].customStats;
-
-  mod1Breakdown = modPath1 ? (modPath1.customDPS ? customDamage[modPath1.customDPS](1,index) : -1) : -1;
-  mod2Breakdown = modPath2 ? (modPath2.customDPS ? customDamage[modPath2.customDPS](2,index) : -1) : -1;
-
-  // totalDPS = (ability1Breakdown[3] ?? 0) + (ability2Breakdown[3] ?? 0) + (mod1Breakdown[3] ?? 0) + (mod2Breakdown[3] ?? 0)
+    if (isUIcalcs || targetStat[3] === "Ability" || isSumOrCustom) {
+      abilityPath1 = globalRecords.archs.one.ability;
+      abilityPath2 = globalRecords.archs.two.ability;
+      ability1 = classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
+      ability2 = classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
+      ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
+      ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
+    }
+    if (isUIcalcs || targetStat[3] === "Mod" || isSumOrCustom) {
+      let weaponPath = globalRecords.weapons;
+      modPath1 = primary[weaponPath.primary].builtIN ? builtInPrimary[primary[weaponPath.primary].builtIN].customStats : rangedMods[weaponPath.primaryMod].customStats;
+      modPath2 = secondary[weaponPath.secondary].builtIN ? builtInSecondary[secondary[weaponPath.secondary].builtIN].customStats : rangedMods[weaponPath.secondaryMod].customStats;
+      mod1Breakdown = modPath1 ? (modPath1.customDPS ? customDamage[modPath1.customDPS](1,index) : -1) : -1;
+      mod2Breakdown = modPath2 ? (modPath2.customDPS ? customDamage[modPath2.customDPS](2,index) : -1) : -1;
+    }
+    if (isUIcalcs || isSumOrCustom) {
+      totalDPS = (ability1Breakdown[3] ?? 0) + (ability2Breakdown[3] ?? 0) + (mod1Breakdown[3] ?? 0) + (mod2Breakdown[3] ?? 0)
+    }
+    if (isUIcalcs) {
+      if (!ability1 && readSelection("ability1BreakdownTab").style.display === "flex") {advancedUpdates.updateSelectedDamageBreakdown("clear")}
+      if (!ability2 && readSelection("ability2BreakdownTab").style.display === "flex") {advancedUpdates.updateSelectedDamageBreakdown("clear")}
+      if (!modPath1 && readSelection("mod1BreakdownTab").style.display === "flex") {advancedUpdates.updateSelectedDamageBreakdown("clear")}
+      if (!modPath2 && readSelection("mod2BreakdownTab").style.display === "flex") {advancedUpdates.updateSelectedDamageBreakdown("clear")}
+    }
   }
 
   //MISC STATS
@@ -3227,8 +3255,30 @@ let advancedUpdates = {
     survivabilityStats.style.display = statsToggle.checked ? "none" : "flex";
   },
   toggleDamageStats() {
-    let damageStats = readSelection(`damageStatsContainer`);
+    let damageStats = readSelection(`hideBreakdownBoxes`);
     let statsToggle = readSelection("damageStatsContainerToggle");
     damageStats.style.display = statsToggle.checked ? "none" : "flex";
+  },
+  toggleQueryVisibility() {
+    let damageStats = readSelection(`queryBox`);
+    let statsToggle = readSelection("queryVisibilityToggle");
+    damageStats.style.display = statsToggle.checked ? "none" : "block";
+  },
+  updateSelectedDamageBreakdown(breakdownClicked) {
+
+    readSelection("ability1BreakdownTab").style.display = "none";
+    readSelection("ability2BreakdownTab").style.display = "none";
+    readSelection("mod1BreakdownTab").style.display = "none";
+    readSelection("mod1BreakdownTab").style.display = "none";
+
+    if (breakdownClicked === "clear") {
+      readSelection("breakdownSelectorMain").style.display = "flex";
+      readSelection("breakdownSelectorReturn").style.display = "none"
+    }
+    else {
+      readSelection("breakdownSelectorMain").style.display = "none";
+      readSelection("breakdownSelectorReturn").style.display = "flex";
+      readSelection(`${breakdownClicked}`).style.display = "flex";
+    }
   }
 }

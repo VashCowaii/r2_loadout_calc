@@ -2491,6 +2491,7 @@ div {
     border: 2px solid #666666;
     box-sizing: border-box;
     font-size: 12px;
+    overflow: hidden;
 }
 .filtersMegaHeader {
     width: 100%;
@@ -3466,6 +3467,61 @@ div {
 
 
 
+.damageBreakdownSelectorBox {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: col;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #434343;
+    /* border-radius: 10px; */
+    margin: 2px;
+    /* max-width: 800px; */
+    /* overflow-y: auto; */
+    /* position: relative; */
+    /* border: 1px solid red; */
+}
+
+.damageBreakdownSelectorHolder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.breakdownSelectorButton {
+    width: auto;
+    /* min-width: 100%; */
+    height: auto;
+    white-space: normal;
+    /* background-color: #434343; */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+    /* border: 1px solid #d9d9d9; */
+    border: 2px solid #434343;
+    padding: 0;
+     padding-right: 4px;
+     padding-left: 4px;
+    margin: 2px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.breakdownSelectorButton:hover {
+    background-color: #434343;
+}
+
+
 
 
 
@@ -3540,6 +3596,19 @@ div {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
+    /* flex-basis: start; */
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.hideBreakdownBoxes {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: start; */
     justify-content: center;
     align-items: center;
     white-space: nowrap;
