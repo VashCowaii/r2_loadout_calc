@@ -404,10 +404,10 @@ let customDamage = {
 
                 <div class="selectionAbilityDPSHeader" style="white-space: normal;">
                     <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
-                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${modPlacement}DPS">0.00</span>
+                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="mod${modPlacement}DPS">0.00</span>
                     </div>
                     <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
-                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${modPlacement}TotalDamage">0.00</span>
+                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="mod${modPlacement}TotalDamage">0.00</span>
                     </div>
                 </div>
                 
@@ -418,8 +418,8 @@ let customDamage = {
 
             readSelection("havocFormBoxHolder").style.display = "flex"
 
-            readSelection(`ability${modPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
-            readSelection(`ability${modPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+            readSelection(`mod${modPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
+            readSelection(`mod${modPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
 
 
             readSelection(factorID).innerHTML = "";
@@ -456,6 +456,7 @@ let customDamage = {
             readSelection(factorID).innerHTML += drRowsHTML;
         }
 
+        console.log(trueDPS,trueTotalDamage)
         return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
     sumTotalDamage(index) {
