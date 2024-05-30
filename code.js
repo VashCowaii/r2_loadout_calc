@@ -2691,9 +2691,6 @@ function updateFormulas(index,ping) {
   let corrosive = resistanceQuery[3];
   let blight = resistanceQuery[4];
 //---------- HEALING ---------------------------------------------------
-
-
-  // if (tableReference.outEXPOSED) {tableReference.AllDamage += 0.15}
   tableReference.AllDamage += tableReference.outEXPOSED ? 0.15 : 0;
   tableReference.AllDamage += tableReference.outCORRODED ? 0.10 : 0;
   tableReference.HealingEFF *= tableReference.inBLEED ? 0.5 : 1;
@@ -2749,7 +2746,7 @@ function updateFormulas(index,ping) {
 
   formulasValues.callStoredFunctions(tieredFunctionStorage,"customPostDR",tableReference,totalDR);//Burden of the Mason, etc
   //----------ADVANCED DR-------------
-  let advancedDrQuery = calcs.getAdvancedDR(tableReference,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal);
+  let advancedDrQuery = calcs.getAdvancedDR(tableReference,totalDR,totalHealth,totalHealthNoGlobal);
   let reducedEnemyDamage = advancedDrQuery[0];
   let damageKept = advancedDrQuery[1];
   let totalBonusMitigation = advancedDrQuery[2];
@@ -2763,11 +2760,11 @@ function updateFormulas(index,ping) {
   let shieldEff = shieldQuery[1];
   let totalPercShields = shieldQuery[2];
   let shieldEHP = shieldQuery[3];
-  let totalEHP = calcs.getEHP(isUIcalcs,shieldEHP,baseEHP)[0];
+  let totalEHP = calcs.getEHP(shieldEHP,baseEHP)[0];
 //---------- ADVANCED HEALING----------------------------------------------------------------------------
   let regHealing = [flatHPperSec,percHPperSec];
   let passedRelicHealing = [relicHPtype,relicHPtime,relicHPscaled,useComplexValues,relicComplexArray];
-  let advancedHealingQuery = calcs.getAdvancedHealing(isUIcalcs,baseEHP,regHealing,passedRelicHealing,totalHealthNoGlobal);
+  let advancedHealingQuery = calcs.getAdvancedHealing(baseEHP,regHealing,passedRelicHealing,totalHealthNoGlobal);
   let advancedRelicFlat = advancedHealingQuery[0];
   let advancedRelicPerc = advancedHealingQuery[1];
   let advancedRelicTotalFlat = advancedHealingQuery[2];
@@ -2861,6 +2858,11 @@ let basicsUpdates = {
     readSelection("spiritHealerStacksMAIN").innerHTML = spiritHealerStacks;
     globalRecords.minionCount = minionCount;
     globalRecords.spiritHealerStacks = spiritHealerStacks;
+
+    globalRecords.useREdamage = readSelection("includeREdamage").checked;
+    globalRecords.useDMGKept = readSelection("includeDMGKept").checked;
+    globalRecords.useRelicHealing = readSelection(`includeRelicHealing`).checked;
+    globalRecords.useShields = readSelection(`includeShields`).checked;
 
 
     globalRecords.meleeFactors.enemyCount = readSelection("enemyCount").value;

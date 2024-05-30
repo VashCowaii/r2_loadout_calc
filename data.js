@@ -11646,10 +11646,14 @@ globalRecords = {
 	"ALTspiritHealterStacks": 0,
 	"RECORDEDspiritHealterStacks": 0,
 
+	"useShields": false,
 	"ALTuseShields": false,
 	"RECORDEDuseShields": false,
+	"useRelicHealing": false,
 	"ALTuseRelicHealing": false,
 	"RECORDEDuseRelicHealing": false,
+	"useREdamage": false,
+	"useDMGKept": false,
 	"ALTuseNonStandardDR": false,
 	"RECORDEDuseNonStandardDR": false,
 
@@ -11682,5 +11686,6 @@ globalRecords = {
 
 		"enemyCount": 0,
 	},
-	"ALTmeleeFactors": {}
+	"ALTmeleeFactors": {},
+	"relicComplexArray": []
 }

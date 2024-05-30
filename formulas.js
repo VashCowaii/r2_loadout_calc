@@ -123,8 +123,7 @@ let calcs = {
         let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
 
         let relicPercPerSecond,relicFlatPerSecond;
-        globalRecords.relicComplexArray = null;
-        let relicComplexArray
+        globalRecords.relicComplexArray = null;//Need to clear the complex array in case it persists
 
         switch (relicHPtype) {
             case "%":
@@ -160,7 +159,7 @@ let calcs = {
 
         return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,globalRecords.relicComplexArray,relicUseTime,relicEffectiveness]
     },
-    getAdvancedDR(index,isUIcalcs,totalDR,totalHealth,totalHealthNoGlobal) {
+    getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal) {
         //REDUCED ENEMY DAMAGE
         let reducedEnemyDamage = index.REdamage - 1;
         //DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
@@ -170,10 +169,8 @@ let calcs = {
         let MODreducedEnemyDamage = reducedEnemyDamage;
         let MODdamageKept = damageKept;
         //Modify the original values to give proper amounts to bonus mitigation and EHP after.
-        let useREdamage = isUIcalcs ? readSelection("includeREdamage").checked : globalRecords.ALTuseNonStandardDR;
-        if (!useREdamage){reducedEnemyDamage=1} else {reducedEnemyDamage += 1;}
-        let useDMGKept = isUIcalcs ? readSelection("includeDMGKept").checked : globalRecords.ALTuseNonStandardDR;
-        if (!useDMGKept){damageKept=1} else {damageKept += 1;}
+        if (!globalRecords.useREdamage){reducedEnemyDamage=1} else {reducedEnemyDamage += 1;}
+        if (!globalRecords.useDMGKept){damageKept=1} else {damageKept += 1;}
         //TOTAL BONUS TO EFFECTIVE DR, BASED ON REDMG AND DMGKEPT
         let totalBonusMitigation = (damageKept*reducedEnemyDamage)-1;
         //TOTAL EFFECTIVE DAMAGE REDUCTION INCLUDING REDMG AND DMGKEPT
@@ -198,16 +195,13 @@ let calcs = {
 
         return [percShields,shieldEff,totalPercShields,shieldEHP]
     },
-    getEHP(isUIcalcs,shieldEHP,baseEHP) {
-        let toggleCheck = isUIcalcs ? readSelection(`includeShields`).checked : globalRecords.ALTuseShields;
-        shieldEHP = toggleCheck ? shieldEHP : 0;
-        //----------TOTAL EHP----------------------------------------------------------------------------
+    getEHP(shieldEHP,baseEHP) {
+        shieldEHP = globalRecords.useShields ? shieldEHP : 0;
         let totalEHP = baseEHP + shieldEHP;
 
         return [totalEHP]
     },
-    getAdvancedHealing(isUIcalcs,baseEHP,regHealing,relicHealing,totalHealthNoGlobal) {
-        let toggleCheck;
+    getAdvancedHealing(baseEHP,regHealing,relicHealing,totalHealthNoGlobal) {
         let advancedRelicFlat,advancedRelicPerc;
 
         let flatHPperSec = regHealing[0];
@@ -234,8 +228,7 @@ let calcs = {
 
         let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
         let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
-        toggleCheck = isUIcalcs ? readSelection(`includeRelicHealing`).checked : globalRecords.ALTuseRelicHealing;
-        if (toggleCheck) {advancedTotalFlatHP += advancedRelicTotalFlat;advancedTotalPercHP += advancedRelicTotalPerc;}
+        if (globalRecords.useRelicHealing) {advancedTotalFlatHP += advancedRelicTotalFlat;advancedTotalPercHP += advancedRelicTotalPerc;}
 
         let EHPpSec = baseEHP * (advancedTotalPercHP/100);
 

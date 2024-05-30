@@ -29,6 +29,13 @@ self.onmessage = function(event) {
         globalRecords.teamCount = globalRecords.ALTteamCount;
         globalRecords.minionCount = globalRecords.ALTminionCount;
 
+        globalRecords.useREdamage = globalRecords.ALTuseNonStandardDR;
+        globalRecords.useDMGKept = globalRecords.ALTuseNonStandardDR;
+
+        globalRecords.useRelicHealing = globalRecords.ALTuseRelicHealing;
+
+        globalRecords.useShields = globalRecords.ALTuseShields;
+
 
         postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
     }

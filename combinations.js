@@ -1388,7 +1388,7 @@ let cyclesLoop = {
 
         formulasValues.pullTraits(starterTable);//Assign trait value to the cycles starter table
         starterTable = {...starterTable};//Why is this even necessary
-        starterTable.thisIsAQuery = 1;
+        starterTable.thisIsAQuery = 1;//Designate this as a query table for the functions that need that info
 
         let comboCounter = 0;
 
