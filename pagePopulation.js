@@ -77,7 +77,7 @@ function pagePopulation() {
       // readSelection("calcLastUpdated").innerHTML != ""
       // readSelection("queryBox").style.display = "none";
       // readSelection("dmgVisibilityToggle").style.display = "none";
-      readSelection("damageStatsContainer").style.display = "none";
+      // readSelection("damageStatsContainer").style.display = "none";
     }
         //Tag filter selections
         createHTML.populateGear("tagPresets",cycles.presets);
