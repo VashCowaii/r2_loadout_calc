@@ -456,7 +456,6 @@ let customDamage = {
             readSelection(factorID).innerHTML += drRowsHTML;
         }
 
-        console.log(trueDPS,trueTotalDamage)
         return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
     sumTotalDamage(index) {
