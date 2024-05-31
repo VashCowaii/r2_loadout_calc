@@ -9436,10 +9436,13 @@ rangedMutators = {
 		"name": "Failsafe",
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Failsafe.png",
-		"desc": "Attached Mod deals 20% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+		"desc": "Attached Mod deals 25% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
+		"usesConditional": {
+			"customTier0": "failsafe"
+		},
+		"stats": {
+		},
+		"tags": ["ModDamage"]
 	},
 	"Far-Sighted": {
 		"name": "Far-Sighted",
@@ -9485,9 +9488,11 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Harmonizer.png",
 		"desc": "Increases Mod Damage by 20%.<br>Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
-		"usesConditional": {},
+		"usesConditional": {
+			"customTier0": "harmonizer"
+		},
 		"stats": {},
-		"tags": []
+		"tags": ["ModDamage"]
 	},
 	"Ingenuity": {
 		"name": "Ingenuity",
@@ -9521,9 +9526,11 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Maelstrom.png",
 		"desc": "Increases this weapon's Elemental Damage by 10% for each unique Elemental Status Effect on the target.<br>Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
-		"usesConditional": {},
+		"usesConditional": {
+			"customTier0": "maelstrom"
+		},
 		"stats": {},
-		"tags": []
+		"tags": ["ElementalDamage"]
 	},
 	"Momentum": {
 		"name": "Momentum",
@@ -9614,18 +9621,24 @@ rangedMutators = {
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Spellweaver.png",
 		"desc": "Increases this weapon's Mod Damage and Mod Generation by 15% for 10s when activating a Skill.<br>Level 10: Activating this weapon's Mod reduces Skill Cooldowns by 1% for every 100 Mod Power spent.",
-		"usesConditional": {},
+		"usesConditional": {
+			"customTier0": "spellweaver"
+		},
 		"stats": {},
-		"tags": []
+		"tags": ["ModDamage"]
 	},
 	"Spirit Feeder": {
 		"name": "Spirit Feeder",
 		"slot": "RMutator",
 		"image": "./brotherLibrary/mutatorsImages/Spirit Feeder.png",
-		"desc": "Increases this weapon's Ranged Damage by 7.5% for every 20% reserve ammo missing.<br>Level 10: When the weapon runs out of ammo, it gains infinite ammo for 5s. Can only happen once every 60s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+		"desc": "Reloading this weapon increases the damage of the Attached Mod by 25%. Lasts 5s.<br>Level 10: Casting Attached Mod increases Reload Speed by 25%. Lasts 5s.",
+		"usesConditional": {
+			"customTier0": "spiritFeeder"
+		},
+		"stats": {
+			"ReloadSpeed": 0.25,
+		},
+		"tags": ["ModDamage"]
 	},
 	"Spirit Healer": {
 		"usesConditional": {},

@@ -44,6 +44,8 @@ let starterTable = {
   "ElementalDamage": 0,"ShockDamage": 0,"OverloadedDamage": 0,"ExplosiveDamage": 0,
   "StatusDamage": 0,"MeleeStatusDamage": 0,"SummonDamage": 0,
   "ModDamage": 0,
+  "PrimaryModDamage": 0,"SecondaryModDamage": 0,
+  "PrimaryElementalDamage": 0,"SecondaryElementalDamage": 0,
   "UniqueMulti": 1,
   //CRIT CHANCE
   "AllCritChance": 0,"RangedCritChance": 0,"MeleeCritChance": 0,"ChargeCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,
@@ -2170,17 +2172,11 @@ let customItemFunctions = {
       }
     },
     fragrantThorn(index) {//0. Not user input, but needs to happen first.
-      let activeStatus = 0;
 
       if (index.outgoingStatus) {
-        //Slow, bleed, burn, overloaded, corroded
-        activeStatus += index.outSLOW ? 1 : 0;
-        activeStatus += index.outBLEED ? 1 : 0;
-        activeStatus += index.outBURN ? 1 : 0;
-        activeStatus += index.outOVERLOADED ? 1 : 0;
-        activeStatus += index.outCORRODED ? 1 : 0;
+        let activeStatus = conditionalHelpers.getActiveUniqueStatuses(index);
+        index.outEXPOSED += activeStatus>4 ? 1 : 0;
       }
-      index.outEXPOSED += activeStatus>4 ? 1 : 0;
     },
     giftOfTheUnbound(index) {//0, based on item selections not stats.
       let activeBurdens = 0;
@@ -2328,15 +2324,8 @@ let customItemFunctions = {
       }
     },
     ahanaeCrystal(index) {//50
-      let activeStatus = 0;
-
       if (index.outgoingStatus) {
-        //Slow, bleed, burn, overloaded, corroded
-        activeStatus += index.outSLOW ? 1 : 0;
-        activeStatus += index.outBLEED ? 1 : 0;
-        activeStatus += index.outBURN ? 1 : 0;
-        activeStatus += index.outOVERLOADED ? 1 : 0;
-        activeStatus += index.outCORRODED ? 1 : 0;
+        let activeStatus = conditionalHelpers.getActiveUniqueStatuses(index);
         index.AllDamage += (0.05 * activeStatus);
       }
     },
@@ -2571,6 +2560,32 @@ let customItemFunctions = {
       globalRecords.relicComplexArray = [avgPercHPpSec,avgHPpSec];
     },
   // },
+  //Ranged Mutators
+    failsafe(index) {
+      let modDamageBonus = 0.25;
+      conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Failsafe");
+    },
+    harmonizer(index) {
+      let modDamageBonus = 0.20;
+      conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Harmonizer");
+    },
+    maelstrom(index) {
+      let elementalDamageBonus = 0.10;
+
+      if (index.outgoingStatus) {
+        let activeStatus = conditionalHelpers.getActiveUniqueStatuses(index);
+        let outgoingDmgBonus = elementalDamageBonus * activeStatus;
+        conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ElementalDamage",outgoingDmgBonus,"Maelstrom");
+      }
+    },
+    spellweaver(index) {
+      let modDamageBonus = 0.15;
+      conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Spellweaver");
+    },
+    spiritFeeder(index) {
+      let modDamageBonus = 0.25;
+      conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Spirit Feeder");
+    },
   // "mutators": {//DONE
     executor(index) {//base
       if (index.outgoingStatus) {
@@ -2588,15 +2603,8 @@ let customItemFunctions = {
       }
     },
     misfortune(index) {//base
-      let activeStatus = 0;
-
       if (index.outgoingStatus) {
-        //Slow, bleed, burn, overloaded, corroded
-        activeStatus += index.outSLOW ? 1 : 0;
-        activeStatus += index.outBLEED ? 1 : 0;
-        activeStatus += index.outBURN ? 1 : 0;
-        activeStatus += index.outOVERLOADED ? 1 : 0;
-        activeStatus += index.outCORRODED ? 1 : 0;
+        let activeStatus = conditionalHelpers.getActiveUniqueStatuses(index);
         index.MeleeDamage += (0.10 * activeStatus);
       }
     },
@@ -3049,12 +3057,16 @@ let basicsUpdates = {
     list += table.BurningDamage ? createHTML.basicsRow("Burning",table.BurningDamage,true,"%") : "";
     list += table.FireDamage ? createHTML.basicsRow("Fire",table.FireDamage,true,"%") : "";
     list += table.ElementalDamage ? createHTML.basicsRow("Elemental",table.ElementalDamage,true,"%") : "";
+    list += table.PrimaryElementalDamage ? createHTML.basicsRow("Primary Elemental",table.PrimaryElementalDamage,true,"%") : "";
+    list += table.SecondaryElementalDamage ? createHTML.basicsRow("Secondary Elemental",table.SecondaryElementalDamage,true,"%") : "";
     list += table.ShockDamage ? createHTML.basicsRow("Shock",table.ShockDamage,true,"%") : "";
     list += table.OverloadedDamage ? createHTML.basicsRow("Overloaded",table.OverloadedDamage,true,"%") : "";
     list += table.ExplosiveDamage ? createHTML.basicsRow("Explosive",table.ExplosiveDamage,true,"%") : "";
     list += table.StatusDamage ? createHTML.basicsRow("Status",table.StatusDamage,true,"%") : "";
     list += table.MeleeStatusDamage ? createHTML.basicsRow("Melee Status",table.MeleeStatusDamage,true,"%") : "";
     list += table.ModDamage ? createHTML.basicsRow("Mod",table.ModDamage,true,"%") : "";
+    list += table.PrimaryModDamage ? createHTML.basicsRow("Primary Mod",table.PrimaryModDamage,true,"%") : "";
+    list += table.SecondaryModDamage ? createHTML.basicsRow("Secondary Mod",table.SecondaryModDamage,true,"%") : "";
     list += table.StaggerDamage ? createHTML.basicsRow("Stagger",table.StaggerDamage,true,"%") : "";
     list += table.SummonDamage ? createHTML.basicsRow("Summon",table.StaggerDamage,true,"%") : "";
     // let uniqueMulti = 0;

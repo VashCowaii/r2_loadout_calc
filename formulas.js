@@ -372,7 +372,7 @@ let customDamage = {
         let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
 
         let baseCritDamage = 0.5;
-        let totalDamageBonus = reference.AllDamage + reference.ModDamage + reference.ElementalDamage;
+        let totalDamageBonus = reference.AllDamage + reference.ModDamage + reference.PrimaryModDamage + reference.ElementalDamage + reference.PrimaryElementalDamage;
         let totalCritDamage = reference.AllCritDamage;
         let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.ModCritChance;
         totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
@@ -424,8 +424,6 @@ let customDamage = {
 
             readSelection(factorID).innerHTML = "";
             let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
-            drRowsHTML += "<div class='dpsFactorDisclaimer' style='color: red;'>The calc does not currently support mutators that boost the damage of the specific weapon's mod. I'll add that tomorrow.<div>"
-            drRowsHTML += duration ? createHTML.basicsRow("Base Duration",duration.toFixed(2),false) : "";
             drRowsHTML += modifiedDuration ? createHTML.basicsRow("Actual Duration",modifiedDuration.toFixed(2),false) : "";
             drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
             drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
@@ -433,7 +431,9 @@ let customDamage = {
             drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
             drRowsHTML += reference.AllDamage ? createHTML.basicsRow("All Damage",reference.AllDamage,true,"%") : "";
             drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("Elemental Damage",reference.ElementalDamage,true,"%") : "";
+            drRowsHTML += reference.PrimaryElementalDamage ? createHTML.basicsRow("Primary Elemental Damage",reference.PrimaryElementalDamage,true,"%") : "";
             drRowsHTML += reference.ModDamage ? createHTML.basicsRow("Mod Damage",reference.ModDamage,true,"%") : "";
+            drRowsHTML += reference.PrimaryModDamage ? createHTML.basicsRow("Primary Mod Damage",reference.PrimaryModDamage,true,"%") : "";
             drRowsHTML += totalDamageBonus ? createHTML.basicsRow("Total Damage Bonus",totalDamageBonus,true,"%") : "";
             drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
             drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
@@ -461,4 +461,23 @@ let customDamage = {
     sumTotalDamage(index) {
 
     },
+}
+
+let conditionalHelpers = {
+    //Check what weapon a mutator is equipped on, and apply the bonus of the mutator to that given weapon's specific bonus keys
+    applySpecifiedMutatorBaseBonus(index,bonusType,bonusAmount,mutatorName) {
+        let weaponPath = globalRecords.weapons;
+
+        if (weaponPath.primaryMutator === mutatorName) {index[`Primary${bonusType}`] += bonusAmount;}
+        else if (weaponPath.secondaryMutator === mutatorName) {index[`Secondary${bonusType}`] += bonusAmount;}
+    },
+    getActiveUniqueStatuses(index) {
+        let activeStatus = 0;
+        activeStatus += index.outSLOW ? 1 : 0;
+        activeStatus += index.outBLEED ? 1 : 0;
+        activeStatus += index.outBURN ? 1 : 0;
+        activeStatus += index.outOVERLOADED ? 1 : 0;
+        activeStatus += index.outCORRODED ? 1 : 0;
+        return activeStatus;
+    }
 }
