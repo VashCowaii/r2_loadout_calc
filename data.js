@@ -4044,7 +4044,8 @@ rings = {
 		"image": "./brotherLibrary/ringsImages/ATaerii Booster.png",
 		"desc": "While a turret is deployed or while carrying a Heavy Weapon, gain 10% Damage and 10% Critical Chance. Bonus assumed active at all times if ENGINEER is a selected archetype.",
 		"stats": {},
-		"tags": ["AllDamage","AllCritChance"]
+		"tags": ["AllDamage","AllCritChance"],
+		"classTags": "Engineer"
 	},
 	"Acid Stone": {//done
 		"usesConditional": {},
@@ -4587,11 +4588,12 @@ rings = {
 		"name": "Conjurer's Circle",
 		"slot": "Ring",
 		"image": "./brotherLibrary/ringsImages/Conjurer's Circle.png",
-		"desc": "When the wearer's Summon enters the battlefield, conjure a 5m Summoning Circle. Allies in the Summoning Circle have their Stagger Level reduced by 1 and regenerate 5 Grey Health per second. Lasts 10s. Can only happen once every 10s after expiring. Bonus assumed active at all times when selected.",
+		"desc": "When the wearer's Summon enters the battlefield, conjure a 5m Summoning Circle. Allies in the Summoning Circle have their Stagger Level reduced by 1 and regenerate 5 Grey Health per second. Lasts 10s. Can only happen once every 10s after expiring. Bonus assumed active at all times when selected. Only applies to SUMMONER minions.",
 		"stats": {
 			"GreyHP/S+": 5
 		},
-		"tags": []
+		"tags": [],
+		"classTags": "Summoner"
 	},
 	"Conservation Seal": {//done
 		"usesConditional": {},
@@ -5287,7 +5289,8 @@ rings = {
 		"image": "./brotherLibrary/ringsImages/Mechanic's Cog.png",
 		"desc": "While carrying an Engineer Heavy Weapon, gain 15% Movement Speed and 1 Stack of BULWARK. Bonus assumed active at all times if ENGINEER is a selected archetype.",
 		"stats": {},
-		"tags": ["MovementSpeed","Bulwark"]
+		"tags": ["MovementSpeed","Bulwark"],
+		"classTags": "Engineer"
 	},
 	"Metal Driver": {//done
 		"usesConditional": {},
@@ -5659,7 +5662,8 @@ rings = {
 		"image": "./brotherLibrary/ringsImages/Ring Of Ordnance.png",
 		"desc": "Allows Heavy Weapon Ammo to gradually regenerate while in both Heavy Carry or Turret mods. Doubles the stowed Ammo Regeneration Rate of Heavy Weapons.",
 		"stats": {},
-		"tags": []
+		"tags": [],
+		"classTags": "Engineer"
 	},
 	"Ring of the Robust": {//done
 		"usesConditional": {},

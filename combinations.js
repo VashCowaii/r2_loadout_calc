@@ -162,6 +162,15 @@ let cycles = {
         if (filter) {
             for (let item in returnTable) {
                 let itemKey = returnTable[item];
+
+                if (itemKey.classTags) {
+                    let classPath = globalRecords.ALTarchs;
+                    if (itemKey.classTags != classPath.one.class && itemKey.classTags != classPath.two.class) {
+                        delete returnTable[item];
+                        continue;
+                    }
+                }
+
                 //Merge .stats object, into .tags array
                 for (let statistic in itemKey.stats) {
                     if (statistic) {itemKey.tags.push(statistic);}
