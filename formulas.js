@@ -268,13 +268,14 @@ let customDamage = {
 
         let baseCritDamage = 0.5;
         let totalDamageBonus = reference.AllDamage + reference.SkillDamage + reference.ElementalDamage + reference.ShockDamage;
-        let totalCritDamage = reference.AllCritDamage;
+        let totalCritDamageBonus = reference.AllCritDamage;
+        let finalCritDamage = baseCritDamage + totalCritDamageBonus;
         let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.SkillCritChance;
         totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
-        let avgCritDamage = (baseCritDamage + totalCritDamage) * totalCritChance;
+        let avgCritDamage = finalCritDamage * totalCritChance;
 
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
-        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + baseCritDamage + totalCritDamage);
+        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
 
 
         let trueDPS = trueBaseDPS * (1 + reference.CastSpeed) * (1 + totalDamageBonus) * (1 + avgCritDamage);
@@ -345,7 +346,7 @@ let customDamage = {
             drRowsHTML += totalCritChance ? createHTML.basicsRow("Total Crit Chance",totalCritChance,true,"%") : "";
             drRowsHTML += baseCritDamage ? createHTML.basicsRow("Base Crit Damage",baseCritDamage,true,"%") : "";
             drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("All Crit Damage",reference.AllCritDamage,true,"%") : "";
-            drRowsHTML += (baseCritDamage + totalCritDamage) ? createHTML.basicsRow("Total Crit Damage",(baseCritDamage + totalCritDamage),true,"%") : "";
+            drRowsHTML += finalCritDamage ? createHTML.basicsRow("Total Crit Damage",finalCritDamage,true,"%") : "";
             drRowsHTML += avgCritDamage ? createHTML.basicsRow("Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
             // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
             // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
@@ -362,24 +363,26 @@ let customDamage = {
         let modPath = builtInPrimary.Sandstorm;
         let customStats = modPath.customStats;
         let duration = customStats.duration;
+        let modDurationBonus = 1 + reference.ModDuration;
         let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
         let frequency = customStats.frequency;//the rate at which the mod hits enemies
 
-        let modifiedDuration = duration * (1 + reference.ModDuration);
+        let modifiedDuration = duration * modDurationBonus;
         let totalHits = Math.floor(modifiedDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
         // console.log("Total Hits: " + totalHits)
 
         let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
 
-        let baseCritDamage = 0.5;
         let totalDamageBonus = reference.AllDamage + reference.ModDamage + reference.PrimaryModDamage + reference.ElementalDamage + reference.PrimaryElementalDamage;
-        let totalCritDamage = reference.AllCritDamage;
+        let baseCritDamage = 0.5;
+        let totalCritDamageBonus = reference.AllCritDamage;
+        let finalCritDamage = baseCritDamage + totalCritDamageBonus
         let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.ModCritChance;
         totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
-        let avgCritDamage = (baseCritDamage + totalCritDamage) * totalCritChance;
+        let avgCritDamage = finalCritDamage * totalCritChance;
 
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
-        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + baseCritDamage + totalCritDamage);
+        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
 
         // console.log("DMG%: " + totalDamageBonus)
         let firstHitModifier = reference.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
@@ -423,7 +426,10 @@ let customDamage = {
 
 
             readSelection(factorID).innerHTML = "";
-            let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            let drRowsHTML = "<div class='dpsFactorDisclaimer'>Sandstorm assumes the first hit is not EXPOSED, but every hit thereafter is.</div>"
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            drRowsHTML += duration ? createHTML.basicsRow("Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += reference.ModDuration ? createHTML.basicsRow("Duration Bonus",reference.ModDuration.toFixed(2),true,"%") : "";
             drRowsHTML += modifiedDuration ? createHTML.basicsRow("Actual Duration",modifiedDuration.toFixed(2),false) : "";
             drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
             drRowsHTML += totalHits ? createHTML.basicsRow("Total Hits",totalHits,false) : "";
@@ -448,7 +454,7 @@ let customDamage = {
             drRowsHTML += totalCritChance ? createHTML.basicsRow("Total Crit Chance",totalCritChance,true,"%") : "";
             drRowsHTML += baseCritDamage ? createHTML.basicsRow("Base Crit Damage",baseCritDamage,true,"%") : "";
             drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("All Crit Damage",reference.AllCritDamage,true,"%") : "";
-            drRowsHTML += (baseCritDamage + totalCritDamage) ? createHTML.basicsRow("Total Crit Damage",(baseCritDamage + totalCritDamage),true,"%") : "";
+            drRowsHTML += finalCritDamage ? createHTML.basicsRow("Total Crit Damage",finalCritDamage,true,"%") : "";
             drRowsHTML += avgCritDamage ? createHTML.basicsRow("Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
             // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
             // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
