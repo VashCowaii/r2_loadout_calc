@@ -280,16 +280,16 @@ let cycles = {
         path.concoctions.Table = cycles.applyTableFilter(cycles.applyTagFilter(concoctions,tagsFilter,"Concoctions"),filterPath.concoction.filter[1],filterPath.concoction.filter[2][0],"Concoctions");
         cycles.debugPushLine("- Concoctions Completed<br>- Starting Armor - Helmets");
         yield;
-        path.helmets.Table = cycles.applyTableFilter(cycles.applyTagFilter(helmets,tagsFilter,"Helmets"),filterPath.helmets.filter[1],filterPath.helmets.filter[2][0],"Helmets");
+        path.helmets.Table = cycles.applyTableFilter(cycles.applyTagFilter(helmets,["Armor"],"Helmets"),filterPath.helmets.filter[1],filterPath.helmets.filter[2][0],"Helmets");
         cycles.debugPushLine("- Armor - Helmets Completed<br>- Starting Armor - Chests");
         yield;
-        path.chests.Table = cycles.applyTableFilter(cycles.applyTagFilter(chests,tagsFilter,"Chests"),filterPath.chests.filter[1],filterPath.chests.filter[2][0],"Chests");
+        path.chests.Table = cycles.applyTableFilter(cycles.applyTagFilter(chests,["Armor"],"Chests"),filterPath.chests.filter[1],filterPath.chests.filter[2][0],"Chests");
         cycles.debugPushLine("- Armor - Chests Completed<br>- Starting Armor - Hands");
         yield;
-        path.hands.Table = cycles.applyTableFilter(cycles.applyTagFilter(hands,tagsFilter,"Hands"),filterPath.hands.filter[1],filterPath.hands.filter[2][0],"Hands");
+        path.hands.Table = cycles.applyTableFilter(cycles.applyTagFilter(hands,["Armor"],"Hands"),filterPath.hands.filter[1],filterPath.hands.filter[2][0],"Hands");
         cycles.debugPushLine("- Armor - Hands Completed<br>- Starting Armor - Legs");
         yield;
-        path.legs.Table = cycles.applyTableFilter(cycles.applyTagFilter(legs,tagsFilter,"Legs"),filterPath.legs.filter[1],filterPath.legs.filter[2][0],"Legs");
+        path.legs.Table = cycles.applyTableFilter(cycles.applyTagFilter(legs,["Armor"],"Legs"),filterPath.legs.filter[1],filterPath.legs.filter[2][0],"Legs");
         cycles.debugPushLine("- Armor - Hands Completed");
         yield;
 
