@@ -1649,7 +1649,8 @@
                             <!-- ALL ITEM OCCLUSION UI ELEMENTS -->
                             <div class="filterLocksContainer">
                                 <!-- ACCESSORY OCCLUSION -->
-                                <div class="statFiltersRowHeader">AMULET</div>
+                                <div class="statFiltersRowHeader">ACCESSORIES</div>
+                                <div class="statFiltersRowMiniHeader">AMULET</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1666,7 +1667,7 @@
                                     </div>
                                 </div>
                                 <div id="amuletsOcclusionsContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">RINGS</div>
+                                <div class="statFiltersRowMiniHeader">RINGS</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1685,6 +1686,7 @@
                                 <div id="ringsOcclusionsContainer" class="locksBox"></div>
                                 <!-- RELIC OCCLUSION -->
                                 <div class="statFiltersRowHeader">RELIC</div>
+                                <div class="statFiltersRowMiniHeader">HEART</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1701,7 +1703,7 @@
                                     </div>
                                 </div>
                                 <div id="relicsOcclusionsContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">FRAGMENTS</div>
+                                <div class="statFiltersRowMiniHeader">FRAGMENTS</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1719,7 +1721,9 @@
                                 </div>
                                 <div id="fragmentsOcclusionsContainer" class="locksBox"></div>
                                 <!-- CONSUMABLES OCCLUSION -->
-                                <div class="statFiltersRowHeader">CONCOCTIONS</div>
+                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                <!-- ARMOR OCCLUSION -->
+                                <div class="statFiltersRowMiniHeader">CONCOCTIONS</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1736,7 +1740,7 @@
                                     </div>
                                 </div>
                                 <div id="concoctionsOcclusionsContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                <div class="statFiltersRowHeader">QUICK-USE</div>
                                 <div class="occlusionsToggleBox">
                                     <span class="occlusionOption">Exclusion</span>
                                     <label class="toggleContainer">
@@ -1753,6 +1757,8 @@
                                     </div>
                                 </div>
                                 <div id="consumablesOcclusionsContainer" class="locksBox"></div>
+
+
                                 <!-- PRIMARY WEAPON OCCLUSION -->
                                 <div class="statFiltersRowHeader">PRIMARY</div>
                                 <div class="occlusionsToggleBox">
@@ -1858,6 +1864,82 @@
                                     </div>
                                 </div>
                                 <div id="secondaryOcclusionsContainer" class="locksBox"></div>
+
+
+
+                                <div class="statFiltersRowHeader">ARMOR</div>
+                                <!-- ARMOR OCCLUSION -->
+                                <div class="statFiltersRowMiniHeader">HELMETS</div>
+                                <div class="occlusionsToggleBox">
+                                    <span class="occlusionOption">Exclusion</span>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="helmetsOcclusion" onchange="filters.updateOcclusion(`helmets`,`helmetsOcclusion`)">
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                    <span class="occlusionOption">Inclusion</span>
+                                </div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="helmetsOcclusionsInput" list="helmetsOcclusionsList" onchange="filters.addFilter(`helmetsOcclusionsInput`,`helmetsOcclusionsContainer`,`helmets`,1,helmets)" >
+                                        <datalist id="helmetsOcclusionsList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="helmetsOcclusionsContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">CHESTS</div>
+                                <div class="occlusionsToggleBox">
+                                    <span class="occlusionOption">Exclusion</span>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="chestsOcclusion" onchange="filters.updateOcclusion(`chests`,`chestsOcclusion`)">
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                    <span class="occlusionOption">Inclusion</span>
+                                </div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="chestsOcclusionsInput" list="chestsOcclusionsList" onchange="filters.addFilter(`chestsOcclusionsInput`,`chestsOcclusionsContainer`,`chests`,1,chests)" >
+                                        <datalist id="chestsOcclusionsList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="chestsOcclusionsContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">LEGS</div>
+                                <div class="occlusionsToggleBox">
+                                    <span class="occlusionOption">Exclusion</span>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="legsOcclusion" onchange="filters.updateOcclusion(`legs`,`legsOcclusion`)">
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                    <span class="occlusionOption">Inclusion</span>
+                                </div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="legsOcclusionsInput" list="legsOcclusionsList" onchange="filters.addFilter(`legsOcclusionsInput`,`legsOcclusionsContainer`,`legs`,1,legs)" >
+                                        <datalist id="legsOcclusionsList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="legsOcclusionsContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">HANDS</div>
+                                <div class="occlusionsToggleBox">
+                                    <span class="occlusionOption">Exclusion</span>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="handsOcclusion" onchange="filters.updateOcclusion(`hands`,`handsOcclusion`)">
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                    <span class="occlusionOption">Inclusion</span>
+                                </div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="handsOcclusionsInput" list="handsOcclusionsList" onchange="filters.addFilter(`handsOcclusionsInput`,`handsOcclusionsContainer`,`hands`,1,hands)" >
+                                        <datalist id="handsOcclusionsList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="handsOcclusionsContainer" class="locksBox"></div>
                             </div>
                         </div>
 
@@ -1872,7 +1954,8 @@
                             <!-- ALL ITEM LOCK UI ELEMENTS -->
                             <div class="filterLocksContainer">
                                 <!-- ACCESSORY LOCKS -->
-                                <div class="statFiltersRowHeader">AMULET</div>
+                                <div class="statFiltersRowHeader">ACCESSORIES</div>
+                                <div class="statFiltersRowMiniHeader">AMULET</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT:</div>
                                     <div class="presetsSelectorBox">
@@ -1881,7 +1964,7 @@
                                     </div>
                                 </div>
                                 <div id="amuletsLocksContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">RINGS</div>
+                                <div class="statFiltersRowMiniHeader">RINGS</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT:</div>
                                     <div class="presetsSelectorBox">
@@ -1892,6 +1975,7 @@
                                 <div id="ringsLocksContainer" class="locksBox"></div>
                                 <!-- RELIC LOCKS -->
                                 <div class="statFiltersRowHeader">RELIC</div>
+                                <div class="statFiltersRowMiniHeader">HEART</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT:</div>
                                     <div class="presetsSelectorBox">
@@ -1900,7 +1984,7 @@
                                     </div>
                                 </div>
                                 <div id="relicsLocksContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">FRAGMENTS</div>
+                                <div class="statFiltersRowMiniHeader">FRAGMENTS</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT:</div>
                                     <div class="presetsSelectorBox">
@@ -1910,7 +1994,8 @@
                                 </div>
                                 <div id="fragmentsLocksContainer" class="locksBox"></div>
                                 <!-- CONSUMABLES LOCKS -->
-                                <div class="statFiltersRowHeader">CONCOCTIONS</div>
+                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                <div class="statFiltersRowMiniHeader">CONCOCTIONS</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT: </div>
                                     <div class="presetsSelectorBox">
@@ -1919,7 +2004,7 @@
                                     </div>
                                 </div>
                                 <div id="concoctionsLocksContainer" class="locksBox"></div>
-                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                <div class="statFiltersRowMiniHeader">QUICK-USE</div>
                                 <div class="statFiltersRowContainer">
                                     <div class="presetsTitle">INPUT:</div>
                                     <div class="presetsSelectorBox">
@@ -2003,11 +2088,52 @@
                                     </div>
                                 </div>
                                 <div id="secondaryModLocksContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowHeader">ARMOR</div>
+                                <div class="statFiltersRowMiniHeader">HELMETS</div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="helmetsInput" list="helmetsLocksList" onchange="filters.addFilter(`helmetsInput`,`helmetsLocksContainer`,`helmets`,0,helmets,1)" >
+                                        <datalist id="helmetsLocksList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="helmetsLocksContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">CHESTS</div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="chestsInput" list="chestsLocksList" onchange="filters.addFilter(`chestsInput`,`chestsLocksContainer`,`chests`,0,chests,1)" >
+                                        <datalist id="chestsLocksList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="chestsLocksContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">LEGS</div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="legsInput" list="legsLocksList" onchange="filters.addFilter(`legsInput`,`legsLocksContainer`,`legs`,0,legs,1)" >
+                                        <datalist id="legsLocksList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="legsLocksContainer" class="locksBox"></div>
+
+                                <div class="statFiltersRowMiniHeader">HANDS</div>
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="handsInput" list="handsLocksList" onchange="filters.addFilter(`handsInput`,`handsLocksContainer`,`hands`,0,hands,1)" >
+                                        <datalist id="handsLocksList"></datalist>
+                                    </div>
+                                </div>
+                                <div id="handsLocksContainer" class="locksBox"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="filtersInstructionsBox">Armor Combinations are calculated automatically, filtering armor will not reduce query length, it will only serve to exclude armor you do not wish to see.</div>
+                    <div class="filtersInstructionsBox">Armor Combinations are calculated automatically and do not need to be filtered unless you simply want to forcibly include or exclude a given piece.</div>
 
                     <div class="filtersMegaBox"> <!-- Imports Box -->
                         <div class="resultsBoxHalf">
@@ -2455,6 +2581,8 @@
 <script src="code.js"></script>
 <script src="tooltips.js"></script>
 <script src="pagePopulation.js"></script>
+<script src="scaling.js"></script>
+
 </body>
 
 </html> 

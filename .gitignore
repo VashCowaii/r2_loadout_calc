@@ -6,6 +6,7 @@
 /dpsModules
 # combinations.js
 melee.js
+scaling.js
 
 attacks_Male.js
 attacks_Female.js

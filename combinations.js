@@ -138,6 +138,18 @@ let cycles = {
         "primaryMods": { //ranged, in general
             "Table": {},
         },
+        "helmets": {
+            "Table": {},
+        },
+        "chests": {
+            "Table": {},
+        },
+        "hands": {
+            "Table": {},
+        },
+        "legs": {
+            "Table": {},
+        },
         // "asdf": {},
         "totalDisplayCombinations": 0,
         "stopCycles": true,
@@ -266,7 +278,20 @@ let cycles = {
         cycles.debugPushLine("- Starting Concoctions");
         yield;
         path.concoctions.Table = cycles.applyTableFilter(cycles.applyTagFilter(concoctions,tagsFilter,"Concoctions"),filterPath.concoction.filter[1],filterPath.concoction.filter[2][0],"Concoctions");
-        cycles.debugPushLine("- Concoctions Completed");
+        cycles.debugPushLine("- Concoctions Completed<br>- Starting Armor - Helmets");
+        yield;
+        path.helmets.Table = cycles.applyTableFilter(cycles.applyTagFilter(helmets,tagsFilter,"Helmets"),filterPath.helmets.filter[1],filterPath.helmets.filter[2][0],"Helmets");
+        cycles.debugPushLine("- Armor - Helmets Completed<br>- Starting Armor - Chests");
+        yield;
+        path.chests.Table = cycles.applyTableFilter(cycles.applyTagFilter(chests,tagsFilter,"Chests"),filterPath.chests.filter[1],filterPath.chests.filter[2][0],"Chests");
+        cycles.debugPushLine("- Armor - Chests Completed<br>- Starting Armor - Hands");
+        yield;
+        path.hands.Table = cycles.applyTableFilter(cycles.applyTagFilter(hands,tagsFilter,"Hands"),filterPath.hands.filter[1],filterPath.hands.filter[2][0],"Hands");
+        cycles.debugPushLine("- Armor - Hands Completed<br>- Starting Armor - Legs");
+        yield;
+        path.legs.Table = cycles.applyTableFilter(cycles.applyTagFilter(legs,tagsFilter,"Legs"),filterPath.legs.filter[1],filterPath.legs.filter[2][0],"Legs");
+        cycles.debugPushLine("- Armor - Hands Completed");
+        yield;
 
         cycles.debugPushLine("FILTERS COMPLETED");
         yield;
@@ -1368,18 +1393,29 @@ let cyclesLoop = {
         postMessage({command: `pushDebugLine`, data: "Worker: GENERATING ARMOR TABLES..."});
         postMessage({command: `updateStep`, data: "Armor Tables", moduloFactor});
         //Only generate the armor table once, it is never modified, only referenced. Make it on first query, but never do it again.
-        if (!cycles.vars.armorIsGenerated) {
-            cycles.vars.baseArmorCombos.Table = cycles.generateAnyCombinations([],[armor.helmets,armor.chests,armor.legs,armor.hands],4,true,false);
-            cycles.vars.armorCombos.Table = [...cycles.vars.baseArmorCombos.Table];
-            cycles.vars.weightFirst.Table = [...cycles.vars.baseArmorCombos.Table].sort((a, b) => +a[5] - +b[5]);
+        // if (!cycles.vars.armorIsGenerated) {
 
-            cycles.vars.weightFirst.Table = cycles.createCustomWeightTable(cycles.vars.weightFirst.Table);
-            let armorFirst = cycles.createSortedArmorTable(false);//TODO:Shift the armor to the same function as weight, later. Not a priority, still fast. Remember to look at armor pings when I do this.
-            cycles.vars.armorCombos.Table = [...armorFirst];
-            postMessage({command: `pushDebugLine`, data: "Worker: COMPLETED ARMOR GENERATION"});
-            postMessage({command: `passBackArmor`, data: [armorFirst,cycles.vars.weightFirst.Table]});//TODO: Remove this later. It's fast enough now that we can gen it every time after the prior TODO
-        }
-        else {postMessage({command: `pushDebugLine`, data: "Worker: ARMOR ALREADY GENERATED"});}
+
+
+        let armorLocksArray = [];
+        armorLocksArray.push(filters.types.helmets.filter[0].length ? filters.types.helmets.filter[0] :  null);
+        armorLocksArray.push(filters.types.chests.filter[0].length ? filters.types.chests.filter[0] : null);
+        armorLocksArray.push(filters.types.legs.filter[0].length ? filters.types.legs.filter[0] : null);
+        armorLocksArray.push(filters.types.hands.filter[0].length ? filters.types.hands.filter[0] : null);
+
+        let armorTablesArray = [cycles.vars.helmets.Table,cycles.vars.chests.Table,cycles.vars.legs.Table,cycles.vars.hands.Table,]
+        // cycles.vars.baseArmorCombos.Table = cycles.generateAnyCombinations([],[armor.helmets,armor.chests,armor.legs,armor.hands],4,true,false);
+        cycles.vars.baseArmorCombos.Table = cycles.generateAnyCombinations(armorLocksArray,armorTablesArray,4,true,false);
+        cycles.vars.armorCombos.Table = [...cycles.vars.baseArmorCombos.Table];
+        cycles.vars.weightFirst.Table = [...cycles.vars.baseArmorCombos.Table].sort((a, b) => +a[5] - +b[5]);
+
+        cycles.vars.weightFirst.Table = cycles.createCustomWeightTable(cycles.vars.weightFirst.Table);
+        let armorFirst = cycles.createSortedArmorTable(false);//TODO:Shift the armor to the same function as weight, later. Not a priority, still fast. Remember to look at armor pings when I do this.
+        cycles.vars.armorCombos.Table = [...armorFirst];
+        postMessage({command: `pushDebugLine`, data: "Worker: COMPLETED ARMOR GENERATION"});
+        postMessage({command: `passBackArmor`, data: [armorFirst,cycles.vars.weightFirst.Table]});//TODO: Remove this later. It's fast enough now that we can gen it every time after the prior TODO
+        // }
+        // else {postMessage({command: `pushDebugLine`, data: "Worker: ARMOR ALREADY GENERATED"});}
 
         postMessage({command: `pushDebugLine`, data: "Worker: COMBO GENERATION COMPLETED<br>CALCULATING TOTAL COMBOS..."});
         postMessage({command: `updateStep`, data: "Calculating Total Combos...", moduloFactor});
@@ -1643,6 +1679,11 @@ let filters = {
         "secondary": {"filter": [[],[],[]]},
         "secondaryMutator": {"filter": [[],[],[]]},
         "secondaryMod": {"filter": [[],[],[]]},
+
+        "helmets": {"filter": [[],[],[]]},
+        "chests": {"filter": [[],[],[]]},
+        "hands": {"filter": [[],[],[]]},
+        "legs": {"filter": [[],[],[]]},
     },
     populateFilters(filterBox,filterTable,filterIndex) {
         let pathHTML = readSelection(filterBox);

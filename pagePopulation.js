@@ -54,6 +54,11 @@ function pagePopulation() {
     createHTML.populateGear("meleeOcclusionsList",melee);
     createHTML.populateGear("meleeMutatorOcclusionsList",meleeMutators);
     createHTML.populateGear("secondaryOcclusionsList",secondary);
+
+    createHTML.populateGear("helmetsOcclusionsList",helmets);
+    createHTML.populateGear("chestsOcclusionsList",chests);
+    createHTML.populateGear("legsOcclusionsList",legs);
+    createHTML.populateGear("handsOcclusionsList",hands);
     // createHTML.populateGear("secondaryMutatorOcclusionsList",rangedMutators); //we disabled occlusions so they were bundled into ranged. Locks still possible on each.
     // createHTML.populateGear("secondaryModOcclusionsList",rangedMods);
   
@@ -72,6 +77,11 @@ function pagePopulation() {
     createHTML.populateGear("secondaryList",secondary);
     createHTML.populateGear("secondaryMutatorList",rangedMutators);
     createHTML.populateGear("secondaryModList",rangedMods);
+
+    createHTML.populateGear("helmetsLocksList",helmets);
+    createHTML.populateGear("chestsLocksList",chests);
+    createHTML.populateGear("legsLocksList",legs);
+    createHTML.populateGear("handsLocksList",hands);
 
     if (stopQueryFractures) {
       // readSelection("calcLastUpdated").innerHTML != ""
