@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Update Last Update Time
         run: |
-          echo "const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';" >> /htmlTemplates/injectMainHTML.js
+          echo "const LAST_CALC_UPDATE = '$(TZ=America/Denver date +'%A, %B %d, %H:%M:%Z')';" >> htmlTemplates/injectMainHTML.js
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
