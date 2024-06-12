@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>R2 Build Calculator</title> <!-- Browser Tab title -->
+
+
+    <meta property="og:title" content="R2 Build Calculator & Optimizer">
+    <meta
+      property="og:description"
+      content="A detailed calculator and optimizer for your Remnant 2 builds."
+    />
+    <meta
+      property="description"
+      content="A detailed calculator and optimizer for your Remnant 2 builds."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="Remnant 2 Build Calculator & Optimizer" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Remnant 2 Build Calculator & Optimizer" />
+    <meta
+      name="twitter:description"
+      content="A detailed calculator and optimizer for your Remnant 2 builds."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div> -->
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+            <div class="filtersConstraintsBox">
+                <div class="advancedStatsHeaderRow">
+                    <div class="filtersMegaHeader">OPTIMIZER</div>
+                </div>
+                <div id="queryBox">
+                    <div class="filtersInstructionsBox">Build Filters and Queries can be used to find and GENERATE whatever build you might be after! If speeds seem slow, try increasing the number of threads used below, and disabling browser extensions!</div>
+                    <div class="filtersInstructionsBox" style="color: #e06666;">CURRENT COMBO LIMIT: 10 BILLION</div>
+                    <a href="https://youtu.be/G4pH4WonlHM" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;"> WATCH THIS VID FOR A GUIDE TO QUERIES</a>
+
+                    <div class="filtersInstructionsBox" style="color: #e06666;">THE OPTIMIZER NOW HAS ITS OWN PAGE, which was mildly annoying to set up, but it'll be better in the long run. Given that it took a drastic shift to separate it from the calculator, let me know if you guys see anything wrong or different from before that you might have feedback on. This also means that soon, we can store query settings within the URL just like we do the calc.</div>
+
+                    <div class="filtersMegaMegaBox">
+
+                        <div class="filtersMegaBox" id="settingsBoxHolderVisibility"> <!-- Cycles Controls/Settings Box -->
+
+                            <div class="filtersBoxHolder"> <!-- Filters whole box -->
+                                <div class="filtersOuterHeader">FILTERS & SETTINGS</div>
+
+                                <div id="queryActiveSettings" style="display: none;font-size: 20px;">Settings cannot be modified while a query is active.</div>
+    
+                                <div class="filterSelectorHolder" id="filterSelectorHolder">
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('statsFiltersHolder')">
+                                        <div class="filterSelectionTitleText">STATS</div>
+                                    </button>
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('occlusionsFiltersHolder')">
+                                        <div class="filterSelectionTitleText">OCCLUSIONS</div>
+                                    </button>
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('locksFiltersHolder')">
+                                        <div class="filterSelectionTitleText">LOCKS</div>
+                                    </button>
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('searchSettingsHolder')">
+                                        <div class="filterSelectionTitleText">ARCHS & SETTINGS</div>
+                                    </button>
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('traitsSettingsHolder')">
+                                        <div class="filterSelectionTitleText">TRAITS</div>
+                                    </button>
+                                </div>
+    
+                                <div class="filterRowHolder" id="filterRowHolder">
+                                    <div class="filtersBoxHalf" id="statsFiltersHolder"> <!-- Stats filters box -->
+                                        <div class="filtersQuarterHeader">STATS</div>
+                                        <div class="filtersQuarterDescription">Stat Filters are used to retrieve any and all items that ever use the stats you specify here. These apply first. Enter manually, or use presets.<br>Or both. Both is good.</div>
+                                        <div class="statFiltersRowContainer">
+                                            <div class="presetsTitle">Presets:</div>
+                                            <div class="presetsSelectorBox"><select class="presetsSelector" id="tagPresets" onchange="filters.addPresets(`tagPresets`,`tagsBox`,`tags`,0)"></select></div>
+                                        </div>
+                                        <div class="statFiltersRowContainer">
+                                            <div class="presetsTitle">INPUT:</div>
+                                            <div class="presetsSelectorBox">
+                                                <input class="tagInput" id="tagInput" list="filterTagList" onchange="filters.addFilter(`tagInput`,`tagsBox`,`tags`,0,referenceTable)" >
+                                                <datalist id="filterTagList"></datalist>
+                                            </div>
+                                        </div>
+                                        <div class="statFiltersRowContainer">
+                                            <input type="button" class="clearInput" onclick="filters.clearTagsFilter()" value="Clear All Stats">
+                                        </div>
+                                        <div class="filterLocksContainerHolder">
+                                            <div class="filterTagsContainer" id="tagsBox">No stats selected yet</div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="filtersBoxHalf" id="occlusionsFiltersHolder" style="display: none;"> <!-- Occlusions filters box -->
+                                        <div class="filtersQuarterHeader">EXCLUSIONS & INCLUSIONS</div>
+                                        <div class="filtersQuarterDescription">These filters are used to forcibly exclude or include specified items from generation.
+                                            <br>Exclusions are used when you do not want to see an item(s) from a category in your results.
+                                            <br>Inclusions are used when you ONLY want to see an item(s) from a category in your results.
+                                            <br>Example: you're running a Hardcore character, and you want to provide the only items you have, as the list for that category.</div>
+                                        <div class="statFiltersRowContainer">
+                                            <input type="button" class="clearInput" onclick="filters.clearOcclusionsFilter()" value="Clear All Occlusions">
+                                        </div>
+                                        <!-- ALL ITEM OCCLUSION UI ELEMENTS -->
+                                        <div class="filterLocksContainerHolder">
+                                            <div class="filterLocksContainer">
+                                                <!-- ACCESSORY OCCLUSION -->
+                                                <div class="statFiltersRowHeader">ACCESSORIES</div>
+                                                <div class="statFiltersRowMiniHeader">AMULET</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="amuletOcclusion" onchange="filters.updateOcclusion(`amulet`,`amuletOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="amuletsOcclusionsInput" list="amuletOcclusionsList" onchange="filters.addFilter(`amuletsOcclusionsInput`,`amuletsOcclusionsContainer`,`amulet`,1,amulets)" >
+                                                        <datalist id="amuletOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="amuletsOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">RINGS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="ringOcclusion" onchange="filters.updateOcclusion(`ring`,`ringOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="ringsOcclusionsInput" list="ringOcclusionsList" onchange="filters.addFilter(`ringsOcclusionsInput`,`ringsOcclusionsContainer`,`ring`,1,rings)" >
+                                                        <datalist id="ringOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="ringsOcclusionsContainer" class="locksBox"></div>
+                                                <!-- RELIC OCCLUSION -->
+                                                <div class="statFiltersRowHeader">RELIC</div>
+                                                <div class="statFiltersRowMiniHeader">HEART</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="relicOcclusion" onchange="filters.updateOcclusion(`relic`,`relicOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="relicsOcclusionsInput" list="relicOcclusionsList" onchange="filters.addFilter(`relicsOcclusionsInput`,`relicsOcclusionsContainer`,`relic`,1,relics)" >
+                                                        <datalist id="relicOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="relicsOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">FRAGMENTS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="fragmentOcclusion" onchange="filters.updateOcclusion(`fragment`,`fragmentOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="fragmentsOcclusionsInput" list="fragmentOcclusionsList" onchange="filters.addFilter(`fragmentsOcclusionsInput`,`fragmentsOcclusionsContainer`,`fragment`,1,fragments)" >
+                                                        <datalist id="fragmentOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="fragmentsOcclusionsContainer" class="locksBox"></div>
+                                                <!-- CONSUMABLES OCCLUSION -->
+                                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                                <!-- ARMOR OCCLUSION -->
+                                                <div class="statFiltersRowMiniHeader">CONCOCTIONS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="concoctionOcclusion" onchange="filters.updateOcclusion(`concoction`,`concoctionOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="concoctionsOcclusionsInput" list="concoctionOcclusionsList" onchange="filters.addFilter(`concoctionsOcclusionsInput`,`concoctionsOcclusionsContainer`,`concoction`,1,concoctions)" >
+                                                        <datalist id="concoctionOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="concoctionsOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowHeader">QUICK-USE</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="consumableOcclusion" onchange="filters.updateOcclusion(`consumable`,`consumableOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="consumablesOcclusionsInput" list="consumableOcclusionsList" onchange="filters.addFilter(`consumablesOcclusionsInput`,`consumablesOcclusionsContainer`,`consumable`,1,quickUses)" >
+                                                        <datalist id="consumableOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="consumablesOcclusionsContainer" class="locksBox"></div>
+    
+    
+                                                <!-- PRIMARY WEAPON OCCLUSION -->
+                                                <div class="statFiltersRowHeader">PRIMARY</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="primaryOcclusion" onchange="filters.updateOcclusion(`primary`,`primaryOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryOcclusionsInput" list="primaryOcclusionsList" onchange="filters.addFilter(`primaryOcclusionsInput`,`primaryOcclusionsContainer`,`primary`,1,primary)" >
+                                                        <datalist id="primaryOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">RANGED MUTATORS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="primaryMutatorOcclusion" onchange="filters.updateOcclusion(`primaryMutator`,`primaryMutatorOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryMutatorOcclusionsInput" list="primaryMutatorOcclusionsList" onchange="filters.addFilter(`primaryMutatorOcclusionsInput`,`primaryMutatorOcclusionsContainer`,`primaryMutator`,1,rangedMutators)" >
+                                                        <datalist id="primaryMutatorOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryMutatorOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">RANGED MODS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="primaryModOcclusion" onchange="filters.updateOcclusion(`primaryMod`,`primaryModOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryModOcclusionsInput" list="primaryModOcclusionsList" onchange="filters.addFilter(`primaryModOcclusionsInput`,`primaryModOcclusionsContainer`,`primaryMod`,1,rangedMods)" >
+                                                        <datalist id="primaryModOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryModOcclusionsContainer" class="locksBox"></div>
+                                                <!-- MELEE WEAPON OCCLUSION -->
+                                                <div class="statFiltersRowHeader">MELEE</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="meleeOcclusion" onchange="filters.updateOcclusion(`melee`,`meleeOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="meleeOcclusionsInput" list="meleeOcclusionsList" onchange="filters.addFilter(`meleeOcclusionsInput`,`meleeOcclusionsContainer`,`melee`,1,melee)" >
+                                                        <datalist id="meleeOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="meleeOcclusionsContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MUTATOR</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="meleeMutatorOcclusion" onchange="filters.updateOcclusion(`meleeMutator`,`meleeMutatorOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="meleeMutatorOcclusionsInput" list="meleeMutatorOcclusionsList" onchange="filters.addFilter(`meleeMutatorOcclusionsInput`,`meleeMutatorOcclusionsContainer`,`meleeMutator`,1,meleeMutators)" >
+                                                        <datalist id="meleeMutatorOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="meleeMutatorOcclusionsContainer" class="locksBox"></div>
+                                                <!-- SECONDARY WEAPON OCCLUSION -->
+                                                <div class="statFiltersRowHeader">SECONDARY</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="secondaryOcclusion" onchange="filters.updateOcclusion(`secondary`,`secondaryOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="secondaryOcclusionsInput" list="secondaryOcclusionsList" onchange="filters.addFilter(`secondaryOcclusionsInput`,`secondaryOcclusionsContainer`,`secondary`,1,secondary)" >
+                                                        <datalist id="secondaryOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="secondaryOcclusionsContainer" class="locksBox"></div>
+    
+    
+    
+                                                <div class="statFiltersRowHeader">ARMOR</div>
+                                                <!-- ARMOR OCCLUSION -->
+                                                <div class="statFiltersRowMiniHeader">HELMETS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="helmetsOcclusion" onchange="filters.updateOcclusion(`helmets`,`helmetsOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="helmetsOcclusionsInput" list="helmetsOcclusionsList" onchange="filters.addFilter(`helmetsOcclusionsInput`,`helmetsOcclusionsContainer`,`helmets`,1,helmets)" >
+                                                        <datalist id="helmetsOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="helmetsOcclusionsContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">CHESTS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="chestsOcclusion" onchange="filters.updateOcclusion(`chests`,`chestsOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="chestsOcclusionsInput" list="chestsOcclusionsList" onchange="filters.addFilter(`chestsOcclusionsInput`,`chestsOcclusionsContainer`,`chests`,1,chests)" >
+                                                        <datalist id="chestsOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="chestsOcclusionsContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">LEGS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="legsOcclusion" onchange="filters.updateOcclusion(`legs`,`legsOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="legsOcclusionsInput" list="legsOcclusionsList" onchange="filters.addFilter(`legsOcclusionsInput`,`legsOcclusionsContainer`,`legs`,1,legs)" >
+                                                        <datalist id="legsOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="legsOcclusionsContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">HANDS</div>
+                                                <div class="occlusionsToggleBox">
+                                                    <span class="occlusionOption">Exclusion</span>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="handsOcclusion" onchange="filters.updateOcclusion(`hands`,`handsOcclusion`)">
+                                                        <span class="toggleSlider"></span>
+                                                    </label>
+                                                    <span class="occlusionOption">Inclusion</span>
+                                                </div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="handsOcclusionsInput" list="handsOcclusionsList" onchange="filters.addFilter(`handsOcclusionsInput`,`handsOcclusionsContainer`,`hands`,1,hands)" >
+                                                        <datalist id="handsOcclusionsList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="handsOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="filtersBoxHalf" id="locksFiltersHolder" style="display: none;"> <!-- Locks filters box -->
+                                        <div class="filtersQuarterHeader">LOCKS</div>
+                                        <div class="filtersQuarterDescription">Lock Filters are used to "lock" a slot into a given item. Say a ring slot, you want ring 1 to be Seal of the Empress.
+                                            Ring 1 will lock as such, and for the purposes of generating combinations, only 3 slots will iterate. The more things you can lock, the faster this will go.
+                                            Locks CAN be blank, just type two hypens(--) and then hit enter.</div>
+                                        <div class="statFiltersRowContainer">
+                                            <input type="button" class="clearInput" onclick="filters.clearLocksFilter()" value="Clear All Locks">
+                                        </div>
+                                        <!-- ALL ITEM LOCK UI ELEMENTS -->
+                                        <div class="filterLocksContainerHolder">
+                                            <div class="filterLocksContainer">
+                                                <!-- ACCESSORY LOCKS -->
+                                                <div class="statFiltersRowHeader">ACCESSORIES</div>
+                                                <div class="statFiltersRowMiniHeader">AMULET</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="amuletsInput" list="amuletList" onchange="filters.addFilter(`amuletsInput`,`amuletsLocksContainer`,`amulet`,0,amulets,1)" >
+                                                        <datalist id="amuletList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="amuletsLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">RINGS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="ringsInput" list="ringList" onchange="filters.addFilter(`ringsInput`,`ringsLocksContainer`,`ring`,0,rings,4)" >
+                                                        <datalist id="ringList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="ringsLocksContainer" class="locksBox"></div>
+                                                <!-- RELIC LOCKS -->
+                                                <div class="statFiltersRowHeader">RELIC</div>
+                                                <div class="statFiltersRowMiniHeader">HEART</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="relicsInput" list="relicList" onchange="filters.addFilter(`relicsInput`,`relicsLocksContainer`,`relic`,0,relics,1)" >
+                                                        <datalist id="relicList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="relicsLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">FRAGMENTS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="fragmentsInput" list="fragmentList" onchange="filters.addFilter(`fragmentsInput`,`fragmentsLocksContainer`,`fragment`,0,fragments,3)" >
+                                                        <datalist id="fragmentList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="fragmentsLocksContainer" class="locksBox"></div>
+                                                <!-- CONSUMABLES LOCKS -->
+                                                <div class="statFiltersRowHeader">CONSUMABLES</div>
+                                                <div class="statFiltersRowMiniHeader">CONCOCTIONS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT: </div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="concoctionsInput" list="concoctionList" onchange="filters.addFilter(`concoctionsInput`,`concoctionsLocksContainer`,`concoction`,0,concoctions,7)" >
+                                                        <datalist id="concoctionList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="concoctionsLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">QUICK-USE</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="consumablesInput" list="consumableList" onchange="filters.addFilter(`consumablesInput`,`consumablesLocksContainer`,`consumable`,0,quickUses,4)" >
+                                                        <datalist id="consumableList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="consumablesLocksContainer" class="locksBox"></div>
+                                                <!-- PRIMARY WEAPON LOCKS -->
+                                                <div class="statFiltersRowHeader">PRIMARY</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryInput" list="primaryList" onchange="filters.addFilter(`primaryInput`,`primaryLocksContainer`,`primary`,0,primary,1)" >
+                                                        <datalist id="primaryList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MUTATOR</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryMutatorInput" list="primaryMutatorList" onchange="filters.addFilter(`primaryMutatorInput`,`primaryMutatorLocksContainer`,`primaryMutator`,0,rangedMutators,1)" >
+                                                        <datalist id="primaryMutatorList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryMutatorLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MOD</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="primaryModInput" list="primaryModList" onchange="filters.addFilter(`primaryModInput`,`primaryModLocksContainer`,`primaryMod`,0,rangedMods,1)" >
+                                                        <datalist id="primaryModList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="primaryModLocksContainer" class="locksBox"></div>
+                                                <!-- MELEE WEAPON LOCKS -->
+                                                <div class="statFiltersRowHeader">MELEE</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="meleeInput" list="meleeList" onchange="filters.addFilter(`meleeInput`,`meleeLocksContainer`,`melee`,0,melee,1)" >
+                                                        <datalist id="meleeList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="meleeLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MUTATOR</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="meleeMutatorInput" list="meleeMutatorList" onchange="filters.addFilter(`meleeMutatorInput`,`meleeMutatorLocksContainer`,`meleeMutator`,0,meleeMutators,1)" >
+                                                        <datalist id="meleeMutatorList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="meleeMutatorLocksContainer" class="locksBox"></div>
+                                                <!-- SECONDARY WEAPON LOCKS -->
+                                                <div class="statFiltersRowHeader">SECONDARY</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="secondaryInput" list="secondaryList" onchange="filters.addFilter(`secondaryInput`,`secondaryLocksContainer`,`secondary`,0,secondary,1)" >
+                                                        <datalist id="secondaryList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="secondaryLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MUTATOR</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="secondaryMutatorInput" list="secondaryMutatorList" onchange="filters.addFilter(`secondaryMutatorInput`,`secondaryMutatorLocksContainer`,`secondaryMutator`,0,rangedMutators,1)" >
+                                                        <datalist id="secondaryMutatorList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="secondaryMutatorLocksContainer" class="locksBox"></div>
+                                                <div class="statFiltersRowMiniHeader">MOD</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="secondaryModInput" list="secondaryModList" onchange="filters.addFilter(`secondaryModInput`,`secondaryModLocksContainer`,`secondaryMod`,0,rangedMods,1)" >
+                                                        <datalist id="secondaryModList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="secondaryModLocksContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowHeader">ARMOR</div>
+                                                <div class="statFiltersRowMiniHeader">HELMETS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="helmetsInput" list="helmetsLocksList" onchange="filters.addFilter(`helmetsInput`,`helmetsLocksContainer`,`helmets`,0,helmets,1)" >
+                                                        <datalist id="helmetsLocksList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="helmetsLocksContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">CHESTS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="chestsInput" list="chestsLocksList" onchange="filters.addFilter(`chestsInput`,`chestsLocksContainer`,`chests`,0,chests,1)" >
+                                                        <datalist id="chestsLocksList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="chestsLocksContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">LEGS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="legsInput" list="legsLocksList" onchange="filters.addFilter(`legsInput`,`legsLocksContainer`,`legs`,0,legs,1)" >
+                                                        <datalist id="legsLocksList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="legsLocksContainer" class="locksBox"></div>
+    
+                                                <div class="statFiltersRowMiniHeader">HANDS</div>
+                                                <div class="statFiltersRowContainer">
+                                                    <div class="presetsTitle">INPUT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="tagInput" id="handsInput" list="handsLocksList" onchange="filters.addFilter(`handsInput`,`handsLocksContainer`,`hands`,0,hands,1)" >
+                                                        <datalist id="handsLocksList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div id="handsLocksContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="filtersBoxHalf" id="searchSettingsHolder" style="display: none;">
+                                        <!-- <div class="cyclesSettingsHeader">Search Settings</div> -->
+                                        <div class="cyclesSettingsBox">
+                                            <div class="statisticSettingsContainer"> <!-- Search Settings Box -->
+                                                <div class="cyclesSettingsHeader">Search Settings</div>
+                                                <div>Weight Settings</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Maximum Dodge Class:&nbsp;<span id="selectedDodgeType" style="color: #e06666;">Flop</span></div>
+                                                    <div class="statsRowToggle">
+                                                        <input type="range" id="dodgeSlider" name="slider" min="1" max="4" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                                    </div>
+                                                </div>
+                                                <div>ARCHETYPE SELECTION</div>
+                                                <div class="selectionSelectorBoxQuery1">
+                                                    <div class="selectSelectorTitle">SELECT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype1" list="archs1List" onchange="userTrigger.updateArchetypeQuery('archetype','1')"> <!--selector-->
+                                                        <datalist id="archs1List"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div class="selectionSelectorBoxQuery1" style="bottom: 68px;">
+                                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype1ability" list="archetype1abilityList" onchange="userTrigger.updateAbilityQuery('archetype1')"> <!--selector-->
+                                                        <datalist id="archetype1abilityList"></datalist>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="selectionSelectorBoxQuery2">
+                                                    <div class="selectSelectorTitle">SELECT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype2" list="archs2List" onchange="userTrigger.updateArchetypeQuery('archetype','2')"> <!--selector-->
+                                                        <datalist id="archs2List"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div class="selectionSelectorBoxQuery2" style="bottom: 18px;">
+                                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype2ability" list="archetype2abilityList" onchange="userTrigger.updateAbilityQuery('archetype2')"> <!--selector-->
+                                                        <datalist id="archetype2abilityList"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div>Team Settings</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Team Count:&nbsp;<span id="selectedTeamCount">1</span></div>
+                                                    <div class="statsRowToggle">
+                                                        <input type="range" id="teamCountSlider" name="slider" min="1" max="3" value="1" step="1" onchange="filters.updateDodgeClass()">
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Summon Count:&nbsp;<span id="selectedSummonCount">0</span></div>
+                                                    <div class="statsRowToggle">
+                                                        <input type="range" id="summonCountSlider" name="slider" min="0" max="10" value="0" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Enemy Count:&nbsp;<span id="selectedEnemyCount">0</span></div>
+                                                    <div class="statsRowToggle">
+                                                        <input type="range" id="enemyCountSlider" name="slider" min="0" max="9" value="0" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                                    </div>
+                                                </div>
+            
+                                                <div>Important Factors - General</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Grey Health Active?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseGreyHealth" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Perfect Dodge?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePerfectDodge" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Evade/Backstep?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseEvades" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+            
+                                                <div>Important Factors - Survival</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Use Shields in EHP?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseShields" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Use Relic Healing?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseRelicHealing" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Include Non-Standard DR?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseNonStandardDR" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+            
+                                                <div>Important Factors - Damage</div>
+                                                <div class="statisticSettingsRow" title="This is a forced override to turn off weakspot hits in damage calculations no matter what is equipped. So if Burden of the Gambler turned off weakspot, and Gift of the Unbound turned it back on, this setting would still disable weakspots.">
+                                                    <div class="statsRowName">Disable Weakspot?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsNeverWeakspot" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+            
+            
+            
+            
+            
+            
+                                                <div>Assumptions</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Spirit Healer Stacks:&nbsp;<span id="selectedSpiritCount">0</span></div>
+                                                    <div class="statsRowToggle">
+                                                        <input type="range" id="spiritCountSlider" name="slider" min="0" max="10" value="0" step="1" onchange="filters.updateDodgeClass()">
+                                                    </div>
+                                                </div>
+            
+                                                <div>Disable Archetype Calculations</div>
+                                                <div style="text-align: left;">Archetype 1:&nbsp;<span id="settingsArch1">No Archetype Imported</span></div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Prime Perk:&nbsp;<span id="settingsPrimePerk"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePrimePerk" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Ability 1:&nbsp;<span id="settingsAbility1"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseAbility1" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 1:&nbsp;<span id="archetype1Passive1"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive1" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 2:&nbsp;<span id="archetype1Passive2"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive2" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 3:&nbsp;<span id="archetype1Passive3"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive3" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 4:&nbsp;<span id="archetype1Passive4"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive4" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+            
+                                                <div style="text-align: left;">Archetype 2:&nbsp;<span id="settingsArch2">No Archetype Imported</span></div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Ability 2:&nbsp;<span id="settingsAbility2"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseAbility2" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 5:&nbsp;<span id="archetype2Passive1"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive5" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 6:&nbsp;<span id="archetype2Passive2"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive6" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 7:&nbsp;<span id="archetype2Passive3"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive7" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Passive 8:&nbsp;<span id="archetype2Passive4"></span></div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUsePassive8" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div style="white-space: normal;">Unlike the main calculator, we don't give the option to disable item calculations. If you want to stop an item from calculating, simply exclude it in the filters.</div>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Debug Mode(DO NOT)</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="bypassLimit" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="filtersBoxHalf" id="traitsSettingsHolder" style="display: none;">
+                                        <div class="traitsBoxQueries" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
+                                        <!-- traitsMegaBox gets filled in automatically using the trait code -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="resultsBoxHalf">
+                            <div class="cyclesSettingsHeader">BUILD GENERATION</div>
+                            <div class="cyclesSettingsBox">
+                                <div class="cyclesControlBox">
+                                    <!-- <span>Statistics Input:</span> -->
+                                    <span>Choose your target statistic:</span>
+                                    <input class="statisticInputBox" id="statisticInput" list="statInputList" onchange="filters.updateTargetStat()">
+                                    <datalist id="statInputList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="statisticSettingsRow hasHoverTooltip" id="threadCountTooltip">
+                                <!-- <div class="statsRowName">Enemy Count:&nbsp;<span id="selectedEnemyCount">0</span></div> -->
+                                <!-- <div class="statsRowToggle"> -->
+                                    <span>Open CPU Threads:</span>
+                                    <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                    <span id="selectedThreadCount">0</span>
+                                    <span>/16&nbsp;[?]</span>
+                                <!-- </div> -->
+                            </div>
+
+                            <div class="cyclesControlBox">
+                                <button type="button" onclick="cyclesLoop.generationStart()" id="cycleSTART" class="cyclesControl" style="background-color: #90ee90;">START</button>
+                                <button type="button" onclick="cyclesLoop.generationStop()" id="cycleSTOP" disabled class="cyclesControl">ABORT</button>
+                            </div>
+
+                            <span id="cycleProgressType">SETUP:</span> <!-- Both the setup steps and the cycle progress use this bar/UI -->
+                            <span id="cyclesTimeRemaining"></span>
+                            <div class="queryProgressBarBox">
+                                <div class="progressBar" id="combinationsDisplayCount"></div>
+                                <div class="progressInfo">
+                                    <span id="counterInt" class="counterDisplay">0</span> / <span id="comboCount" class="counterDisplay">0</span>
+                                </div>
+                            </div>
+                            <span>Currently Open Threads: <span id="openThreadsDisplay">0</span>/<span id="maxThreadsDisplay">0</span></span>
+                            <span>Distributed Combos: <span id="distributedCounter">0</span></span>
+                            <span class="hasHoverTooltip" id="lastFound"></span>
+                            <div class="comboDisplay"> <!-- The visual display for best current build in queries -->
+                                <div class="comboDisplayImageBox">
+                                    <!-- BACKGROUND BANNERS -->
+                                    <div class="comboBackgroundContainer">
+                                        <div class="backgroundHalvesLeft" id="archetype1MAINbg">
+                                            <img class="backgroundLeftImage" src="/images/Remnant/clear.png" id="archetype1MAIN" alt="Combo Class1">
+                                        </div>
+                                        <div class="backgroundHalvesRight" id="archetype2MAINbg">
+                                            <img class="backgroundRightImage" src="/images/Remnant/clear.png" id="archetype2MAIN" alt="Combo Class2">
+                                        </div>
+                                    </div>
+                                    <div class="comboHeadsUpMessage" id="comboHeadsUpMessage"></div>
+
+                                    <!-- ARMOR DISPLAY COLUMN -->
+                                    <div class="comboArmorRow"> 
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorHelmet" alt="Combo Helmet">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: -15%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorChest" alt="Combo Chest">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: -30%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorLeg" alt="Combo Leg">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: -15%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorHand" alt="Combo Hand">
+                                        </div>
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRelic" alt="Combo Relic">
+                                        </div>
+                                    </div>
+                                    <!-- ABILITY DISPLAY ROW -->
+                                    <div class="comboAbilityRow"> 
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1abilityIcon" alt="Combo Ability1">
+                                        </div>
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2abilityIcon" alt="Combo Ability2">
+                                        </div>
+                                    </div>
+                                    <!-- STAT DISPLAY COLUMN -->
+                                    <div class="comboStatsRow" id="comboTargetDisplay"> 
+                                        Target Statistic:
+                                    </div>
+                                    <!-- ACCESSORY DISPLAY COLUMN -->
+                                    <div class="comboAccessoryRow"> 
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboAmulet" alt="Combo Helmet">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: 15%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing1" alt="Combo Chest">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: 30%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing2" alt="Combo Leg">
+                                        </div>
+                                        <div class="comboArmorImageBox" style="translate: 15%;">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing3" alt="Combo Hand">
+                                        </div>
+                                        <div class="comboArmorImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing4" alt="Combo Relic">
+                                        </div>
+                                    </div>
+                                    <!-- WEAPON DISPLAY ROW -->
+                                    <div class="comboWeaponRow"> 
+                                        <div class="comboWeaponImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon1" alt="Combo Weapon1">
+                                        </div>
+                                        <div class="comboWeaponImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon2" alt="Combo Weapon2">
+                                        </div>
+                                        <div class="comboWeaponImageBox">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon3" alt="Combo Weapon3">
+                                        </div>
+                                    </div>
+                                    <!-- WEAPON MUTS/MODS ROW -->
+                                    <div class="comboWeaponPiecesRow"> 
+                                        <div class="comboWeaponPiecesHolder">
+                                            <div class="comboMutatorName" id="comboPrimaryMutator"></div>
+                                            <div class="comboModName" id="comboPrimaryMod"></div>
+                                        </div>
+                                        <div class="comboWeaponPiecesHolder">
+                                            <div class="comboMutatorName"id="comboMeleeMutator"></div>
+                                            <div class="comboModName" id="comboMeleeMod"></div>
+                                        </div>
+                                        <div class="comboWeaponPiecesHolder">
+                                            <div class="comboMutatorName"id="comboSecondaryMutator"></div>
+                                            <div class="comboModName" id="comboSecondaryMod"></div>
+                                        </div>
+                                    </div>
+                                    <!-- CONCOCTION DISPLAY ROW -->
+                                    <div class="comboConcoctionRow"> 
+                                        <div class="comboConcoctionsBox" style="justify-content: center;">
+                                            <div class="comboConsumableImageBox" id="comboConcoction1Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction1" alt="Combo Concoction1">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction2Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction2" alt="Combo Concoction2">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction3Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction3" alt="Combo Concoction3">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction4Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction4" alt="Combo Concoction4">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction5Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction5" alt="Combo Concoction5">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction6Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction6" alt="Combo Concoction6">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboConcoction7Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction7" alt="Combo Concoction7">
+                                            </div>
+                                        </div>
+                                    <!-- QUICKUSE DISPLAY ROW -->
+                                        <div class="comboQuickUseBox" style="justify-content: center;">
+                                            <div class="comboConsumableImageBox" id="comboQuickUse1Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable1" alt="Combo Consumable1">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboQuickUse2Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable2" alt="Combo Consumable2">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboQuickUse3Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable3" alt="Combo Consumable3">
+                                            </div>
+                                            <div class="comboConsumableImageBox" id="comboQuickUse4Holder">
+                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable4" alt="Combo Consumable4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comboFragmentsRow">
+                                        <span id="comboDisplay"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Debug console Toggle -->
+                    <div class="debugToggleBox">
+                        <div style="padding-right: 5px;">Show Debug Console</div>
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="debugShow" onchange="cycles.debugView()">
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                    <!-- Debug console box -->
+                    <div class="comboDebugContainer">
+                        <div class="comboDebugWindow" id="comboDebug">.DEBUG VIEW</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+<!-- script/data calls -->
+<script src="/htmlTemplates/injectMainHTML.js"></script>
+<script src="/htmlTemplates/injectR2HTML.js"></script>
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/Remnant2/Calculator/data.js"></script>
+<script src="/Remnant2/Calculator/postData.js"></script>
+<script src="/buildTime.js"></script>
+<script src="/Remnant2/dpsModules/melee.js"></script>
+<script src="/Remnant2/Optimizer/combinations.js"></script>
+<script src="/Remnant2/Calculator/formulas.js"></script>
+<script src="/Remnant2/Resources/attacks_Male.js"></script>
+<script src="/Remnant2/Calculator/code.js"></script>
+<script src="/Remnant2/Calculator/tooltips.js"></script>
+<script src="/Remnant2/Calculator/pagePopulation.js"></script>
+<script src="/Remnant2/Optimizer/optimizerIntro.js"></script>
+
+</body>
+
+</html> 

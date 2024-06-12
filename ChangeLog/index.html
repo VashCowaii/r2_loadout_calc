@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/changeLog.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>Changelog / To-Do List</title> <!-- Browser Tab title -->
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+<div class="theGreatBox">
+    <div class="changeLogMegaBox">
+        <div class="changeLogHeaderIconHolder">
+            <img class="honkaiWaitImage" src="/images/madPrince.png" alt="Home Page MadPrince">
+        </div>
+        <div class="changeLogMegaHalves"> <!-- Changelog -->
+            <div class="changeLogMegaHeader">ChangeLog</div>
+            <div class="changeLogMegaBody">
+                <!-- template -->
+                <!-- <li>Summary melee statistics (the ones listed under the weapon) are now fully hooked up and should display all stats correctly. These are not the melee damage calcs, these are just summary statistics within the item's selection display box.</li> -->
+                <!-- <div>
+                    <h1>June X, 2024</h1>
+                    <ul>
+                        <li>asdf</li>
+                    </ul>
+                </div> -->
+                <div>
+                    <h1>June X, 2024 SITE RESTRUCTURE</h1>
+                    <ul>
+                        <li>Added a Remnant 2 specific navbar that will display on remnant related pages.</li>
+                        <li>Added a Remnant 2 home page that can link to all other remnant pages aside from the r2 navbar. This is the page you will land on if you click the r2 icon on the side-nav.</li>
+                        <li>Split the build calculator from the build optimizer. These now have their own separate webpages accessible from the r2 home or r2 header navbar on any r2 page.</li>
+                        <li>Added R2 boss damage listing. I have info for more bosses handy and ready to enter, but that will be data entry for another day. For now I'd rather get this out and get feedback and bugs on everything I just changed, before I worry about finishing the data entry for that.</li>
+                        <li>Remnant specific pages now follow a /Remnant2/ addition in the URL. This does mean that technically old links will break, especially since some pages were renamed, but ideally I added redirect handling to resolve that. We'll see if it actually works though.</li>
+                        <li>Overhauled how queries function:
+                            <ul>
+                                <li>Queries subthreads now receive batch combos from the main thread instead of having a perfectly even split in terms of the # of combos that each thread had to handle. The idea initially was to try and divide the work evenly, but that doesn't make too much sense from a numbers standpoint since not all calculations are equally intensive, meaning some threads could finish well ahead of other threads. The way it is now makes sure that all threads stay open until there is no more work left to do, then they'll close.</li>
+                                <li>The aforementioned change also makes it so since the main thread handles combo iteration, the sub threads no longer need to store some information, helping cut down on memory usage by a LOT. 
+                                    <ul>
+                                        <li>Individual threads still have to calculate armor combos by themselves and there are still gonna be some memory issues if you run a massive and I mean MASSIVE query, but the query limit prevents you from even reaching that issue right now so it's not something you need to worry about. Just know that I am working towards trying to remove all memory issues period so we can remove the query limit as a whole if you want.</li>
+                                    </ul>
+                                </li>
+                                <li>Another slight change and benefit(or at least I believe it is a benefit), is that if you pushed too many threads on your query and your computer can't keep up, when a query thread asks for a batch from the main thread and there isn't one to take, the thread will close to try and relieve some of the pressure your computer is facing.</li>
+                                <li>The changes implemented today should have no change on query speeds whether large or small queries are run. The only thing we've changed is how queries are handled, and the memory cost involved with running them. Ideally this will let me make it faster in the future though, we'll see.</li>
+                            </ul>
+                        </li>
+                        <li>Made changes to various html blocks so I could insert a uniform source for commonly used sections like the sidenav and footer, etc.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>June 2, 2024</h1>
+                    <ul>
+                        <li>Added Armor occlusions/locks to the query filters. To all you goobers who care about fashion, you can now restrict or lock whatever you'd like into your queries.
+                            <ul>
+                                <li>Fixed an issue where if the user didn't include "Armor" as a desired stat within stat tags, armor pieces were excluded entirely from queries. Forced a mandatory "Armor" tag to be present when filtering armor tables specifically so this won't happen again.</li>
+                            </ul>
+                        </li>
+                        <li>Fixed a missing image for Burden of the Mesmer</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 31, 2024</h1>
+                    <ul>
+                        <li>Removed warning in Sandstorm breakdown letting users know mutators weren't factored. They are factored now.</li>
+                        <li>Added Primary and Secondary variants of Mod Damage and Elemental Damage as weapon specific Damage Statistics, these will populate under the basics column or under a relevant damage breakdown.</li>
+                        <li>Added conditional statistics to the following Ranged Mutators:
+                            <ul>
+                                <li>Failsafe</li>
+                                <li>Harmonizer</li>
+                                <li>Maelstrom</li>
+                                <li>Spellweaver</li>
+                                <li>Spirit Feeder</li>
+                            </ul>
+                        </li>
+                        <li>Updated Failsafe's description</li>
+                        <li>Slight change to how unique-status count conditionals were handled (Ahanae, Maelstrom, etc.)</li>
+                        <li>Added handling to pre-exclude items from queries that would require a specific archetype to function, that isn't equipped. This simply serves to save you time from having to filter shit you would never use in that query. Examples would be:
+                            <ul>
+                                <li>A'Taerii Booster (Engineer)</li>
+                                <li>Conjurer's Circle (Summoner)</li>
+                                <li>Mechanic's Cog (Engineer)</li>
+                                <li>Ring Of Ordnance (Engineer)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 30, 2024</h1>
+                    <ul>
+                        <li>Added support for Sandstorm Damage Breakdowns. Note that sandstorm breakdowns do not yet factor in gun mutators that boost the mod damage of that specific weapon it is equipped on. That's something I'll add tomorrow.
+                            <ul>
+                                <li>This shipped with a bug that could result in the DMG and DPS not displaying at all, but that has been fixed.</li>
+                            </ul>
+                        </li>
+                        <li>The damage section will display buttons for each available breakdown supported. Clicking the button will expand the desired breakdown and its statistics/dps/total dmg etc. To return to the breakdown selection, click the "return to breakdown selection" button that takes the selection's place.</li>
+                        <li>Unhid the option to hide the damage section. Now that we're actually adding support for more than one thing, maybe you guys wanna hide that sometimes idk.</li>
+                        <li>Retitled the Build Queries section to be called Optimizer instead. I've had to explain to one too many people what "query" means, so hopefully for the people that struggle with that, "optimizer" will trigger that monkey neuron activation and you'll understand now. I hate people.</li>
+                        <li>Added the option to Hide the queries/optimizer section</li>
+                        <li>Fixed an issue where the Havoc Form damage breakdown listed "Bulwark Stacks" as a damage factor. This was mislabled and should have been listed as Shock Damage, which the number already reflected, it was simply the title that was wrong.</li>
+                        <li>Added the HTML base file for EHP & Boss Damage thresholds, which will get expanded upon later. It is accessed via the Resources icon(book) at the top of the calc page.</li>
+                        <li>Added more info to the My Builds section under the Resources Icon, mainly adding past builds for the sake of record. Also retitled that section to "My Builds"</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 29, 2024</h1>
+                    <ul> 
+                        <li>Query micro-optimizations:
+                            <ul>
+                                <li>Optimized relic specific function handling and calls during overall calls and during query cycles, this also brings them in line with how custom item functions overall work. For the longest time relics have always been a little anomalous in that regard.</li>
+                                <li>Made changes to cut down on the parameters necessary for custom item function calls, this is just an extension of a prior work regarding the removal of the need to distinguish between UI and query specific variables when it wasn't necessary.</li>
+                                <li>Condensed additional global-type variables that used to distinguish in the middle of a query, between UI or Cycles, such as useShields, useRelicHealing, etc.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 28, 2024</h1>
+                    <ul>
+                        <li>Started on the groundwork for link embeds. Much more needs to be done on this front, but I'm working to make it so it's not just a fat ass link that shows up if you post this somewhere, like say Discord.</li>
+                        <li>Optimized trait calls within query cycles. A slightly noticeable speed increase, but only on queries where you've imported your traits/classes(which ideally, is the only kind of query you ever do).</li>
+                        <li>Fixed an issue where unique multipliers such as Brightstone wouldn't populate within the basic stats column properly. Unique multipliers only display in the basics column, they are not factored into any damage calculations. Yet.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 27, 2024</h1>
+                    <ul>
+                        <li>Fixed an issue where item conditional-based stats didn't always populate correctly, due to some changes I made yesterday.</li>
+                        <li>Fixed an issue where a havoc-specific query was not always functional under specific user settings.</li>
+                        <li>More back-end code changes made to both streamline and simplify code, as well as help speed up queries.
+                            <ul>
+                                <li>Multiplicative statistics(Reduced enemy damage, damage shared, etc.) are no longer handled as arrays with each source inside, and rather are now multiplied against eachother as they read from each item to be stored as a single value like most other statistics.</li>
+                                <li>Query threads no longer distinguish between what are normally main UI variables, and thread specific variables, while in the middle of cycles. This is because threads have their own unique scope, and it wasn't necessary other than to keep things separate in my own head.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 26, 2024</h1>
+                    <ul>
+                        <li>Modified query results to go back to showing greater than the last target. I didn't want to do this but because damage-related queries in particular cast such a huge net, it is possible to have millions of duplicate equivalent results. Duplicate results found by multiple threads will still show, but duplicate results found within each thread will no longer be shared to the main thread that handles it all. TLDR: Less dulicate results will be shown now, in order to speed things up.
+                            <ul>
+                                <li>I believe there is a way I can still handle this without killing the speed, but it's something I'll have to add at a later time, for now this needs to be done in order to make sure queries are even usable for damage related things.</li>
+                            </ul>
+                        </li>
+                        <li>Fixed an issue that could cause queries to crash in scenarios where the user filtered so strictly the queries couldn't return enough rings to complete a loadout, resulting in the concoction limit boost sum of a ring set to be read as a ring itself.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 25, 2024 - SPEED UPDATE #2</h1>
+                    <ul>
+                        <li>Reworked entirely how the conditional hierarchy works. This is the stuff that lets something like Generating Band see if there is a shield active in order to determine whether to give healing or not. This is purely a back-end change and you guys shouldn't see anything different other than queries are about 38% faster than they were yesterday.
+                            <ul>
+                                <li>As with all major reworks, I may have missed something jank. If you see anything that doesn't make sense that might have slipped past my testing, let me know.</li>
+                            </ul>
+                        </li>
+                        <li>Fixed an issue where if the user arrived at the site without interacting with literally anything and goes straight to the queries and pops in a target and hits start without putting in any filters, it could crash the calculator.</li>
+                        <li>Fixed an issue where Alchemy Stone's lifesteal was provided regardless of whether the player was suffering from a status effect(like Atonement Fold's bleed effect). Not a huge deal since it still displayed the bonus correctly, just not always in the right context.</li>
+                        <li>Resonating Heart's overheal effect UI element will now only display when the relic is not disabled. When disabled before, the numbers in overall calculations would adjust as they should, but the overheal UI element didn't have any resets in place and would linger when it wasn't relevant to the display.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 18, 2024</h1>
+                    <ul>
+                        <li>Changed Blood Bond's trait bonus to only populate when Summoner is a selected archetype. We had discussed doing this before in light of the recent game change, but I didn't have anything set up for traits to allow custom conditionals yet, I added that today.</li>
+                        <li>Added custom function call handling for traits. Right now Blood Bond is the only one that uses it(All other item types already use this), but it'll be nice to have for the future since traits were designed to be static bonuses when I started this and that may not always hold true.</li>
+                        <li>Fixed an issue where Resonating Heart's custom UI elements for the overheal effect did not display in some circumstances.</li>
+                        <li>Fixed an issue where Monolith's Sandstorm mod was giving extra stats it should not be.</li>
+                        <li>Fixed an issue where Sandstorm's EXPOSED effect could apply twice within the UI.</li>
+                        <li>Fixed an issue where the basic statistics column(armor, stamina, weight, etc) took up too much space on mobile. Simply forgot to set the height to auto on mobile devices and it still tried to take up desktop height, my b.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 16, 2024</h1>
+                    <ul>
+                        <li>Added movement speed as a query target, and stats filter preset.</li>
+                        <li>Added more lifesteal target statistics to queries so that way you aren't stuck with lifesteal peak. Peak assumed you didn't care what kind of lifesteal it was, and only wanted to see the highest lifesteal possible, but now you can target what type you want (all, ranged, melee, charged melee, etc)</li>
+                        <li>Added handling for "Rusty" prefix weapons within the main UI and within cycles calculations. Rusty weapons cannot use a mod or mutator, this is specific to Rusty Lever Action primary, and Rusty Repeater secondary.</li>
+                        <li>Added a heads-up display to the Damage Section to notify users of supported Damage Calculations. Later I'll change this to a hover-tooltip when we have more supported types.</li>
+                        <li>Fixed an issue where if you locked a blank slot into the locks filters of a given category via entering "--" as the locks filters section states you can, it would break when the lock was iterated upon. Now you can lock as many slots as you want, with an empty item that neither has stats or uses. This may sound weird, but there are definitely uses for this, but only on locks.</li>
+                        <li>Slight back-end code cleaning. Changes nothing performance related.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 15, 2024</h1>
+                    <ul>
+                        <li>Added images to all mutators, they'll now display in the formerly empty box in a weapon's display tab.</li>
+                        <li>Query results now store the top 50 builds, instead of the top 3. This was added because with the change I brought yesterday I forgot to mention that repeat value results will now show where they didn't before. I don't mean repeat builds, I mean repeat target values, so if two entirely different builds result in exactly 800 EHP on an EHP query, they'll both show up now, and stuff like that happens WAY more than you think it would lol. Before, if an equivalent target value was found, it was skipped because it wasn't greater than the target value already found.</li>
+                        <li>Fixed an issue where if a query was forcibly aborted due to excessive possible combos, it didn't fully reset some UI elements necessary to modify or restart further queries. The user could still get around it by clicking "abort" as the button is attached to code that would reset it properly, but now it's fixed anyways.</li>
+                        <li>Changed Bottom Feeder's name to Spirit Feeder like in game</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 14, 2024 - <h3><span class="haste">THE QUERY SPEED UPDATE</span> (Up to 90% faster)</h1>
+                    <ul>
+                        <li>Queries now offer an option to increase the number of threads on your CPU that queries can operate on. This will DRASTICALLY increase query speeds, but be sure to monitor CPU and RAM usage to make sure you didn't open too many, as while it does speed things up it also comes at a cost. Refer to your CPU's Core Count as a general rule of thumb.</li>
+                        <li>Given that queries can now be much faster, I've bumped the query length limit from 300 Milllion, to 10 Billion.</li>
+                        <li>Fixed an issue where if a user duplicated a browser tab with a target statistic selected in query settings, sometimes the target query statistic would copy over but wouldn't actually apply, resulting in the user needing to delete it and add it back before it would register again.</li>
+                        <li>Fixed a typo in Twisted Idol's description.</li>
+                        <li>Updated Dark Pact's bonuses, it still reflected the preDLC2 bonuses.</li>
+                        <li>Updated a few straggler Fragment bonuses I missed, like Ranged Crit Chance (10% -> 7.5%)</li>
+                        <li>Blood bond no longer works on anything other than summoner minions, in-game. The calculator does not reflect this in terms of calculations, but I did update Blood Bond's description to make that explicitly clear.</li>
+                        <li>Added tooltips to the following. Forgot what a given trait did, or even what its bonus was at a given level? Wonder no longer, they will show!
+                            <ul>
+                                <li>Traits</li>
+                                <li>Fragments</li>
+                            </ul>
+                        </li>
+                        <li>Added regex color filtering for GLOOM, BRITTLE, and DRENCHED from invoker abilities. Added blank(white) filtering for EXPOSED and GIFT OF THE FOREST.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 13, 2024</h1>
+                    <ul>
+                        <li>Queries in progress will now only update the counter progress bar if either a new best build is found, or if the current iteration is an increment of 10,000. This helps reduce communication overhead between the web worker and the main thread, increasing query speeds by up to 25% in some cases. THAT is def gonna help on speeds, but I understand some people won't feel like it's faster since the numbers won't flick by anymore. Also note it is not guaranteed to make things any faster depending on the type of query initiated. Calculation-intensive queries might still take a little bit longer.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 12, 2024</h1>
+                    <ul>
+                        <li>Adjusted Havoc Form drain rate and base damage calculations to match up with the latest game patch.</li>
+                        <li>Added a disclaimer in the queries section that some browser extensions may cause queries to be slower than they should be, or cause memory leaks. This is not inherent to queries themselves (I promise I didn't code any memory leaks. Yet.), the user that reported this issue narrowed it down to a very specific extension. Just be aware of that and maybe run queries in an incognito window.</li>
+                        <li>Slight code overhaul. This changes nothing on your end, it only serves to clean up some code on my end that relates to how queries are handled. Changed how some statistics are extracted from a given loadout in the middle of a query, for example traits never change in a query and because of that I can statically evaluate their bonuses outside of the cycles instead of evaluating them every time within. It might make things faster, I personally didn't see any difference. I am working on many things to try and speed up queries, though.</li>
+                        <li>Fixed an issue where Havoc Form Damage box would display by default even without havoc selected on page load assuming no imports forced any calcs to occur, but would immediately be hidden like it should be as soon as any changes were made to the initial display.</li>
+                        <li>Fixed an issue where stamina regen displayed as a percentage multiplied by 100. This is not indicative of the actual value calculated, it only did this because on the display function that inserts stamina regen as a statistic, I accidentally left "percentage" as true which would multiply the value by 100 and add a % sign.</li>
+                        <li>Fixed an issue where kinda like stamina regen, armor DR displayed incorrectly(in format only, the number was right still don't worry), this time it was meant to be a % but wasn't displayed as such. Both of these bugs only occured because I overhauled how part of the displays work, that's my bad for not catching it sooner.</li>
+                        <li>Fixed an issue where when Invoker was the only selected class, the class combo title would display as "undefined" instead of empty like it should have.</li>
+                        <li>Fixed an incorrect description for Shielded Strike.</li>
+                        <li>Updated descriptions for Brawler's Pride and Berserker's Crest, as well as their newly changed/added statistics from the latest update. Note that melee attack speed and melee charge speed are now a unified statistic in terms of how the game handles it on most items which is why you won't see "charge speed" in most descriptions anymore. Edgelord being an exception.</li>
+                        <li>Various other item/ability/passive adjustments from the latest game patch.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 6, 2024 - HAVOC DPS UPDATE</h1>
+                    <ul>
+                        <li>Added Archon's Havoc Form calculations to the DMG section of the calculator. This will only display if havoc form is a selected ability.</li>
+                        <li>Added the following query target statistics:
+                            <ul>
+                                <li>Havoc Form DPS (will abort if havoc is not imported)</li>
+                                <li>Havoc Form Total Damage (will abort if havoc is not imported)</li>
+                                <li>Grey Health Regen/s</li>
+                                <li>Peak Lifesteal. This evaluates total % lifesteal possible, and will return the highest possible lifesteal even if it might be ranged or melee at any given build.</li>
+                            </ul>
+                        </li>
+                        <li>Added the following stat presets:
+                            <ul>
+                                <li>Grey Health Regen</li>
+                                <li>Lifesteal Peak</li>
+                                <li>Havoc Form. Please note that damage has to cast a very large net due to things like Ahanae, or Mesmer, etc. This preset is not enough to bring you under the 300 million limit. You WILL need to filter much, much harder to get realistic query lengths. It's not a bug that you keep getting the "too many" error.</li>
+                            </ul>
+                        </li>
+                        <li>Added a value to the "Query Limit Exceeded" popup so you can see just how far over 300 million you are.</li>
+                        <li>Made changes to queries logic that can, in some cases, make them go 20% faster(this doesn't apply to every type of query)</li>
+                        <li>Fixed an issue where in some cases, queries would not find the peak armor set available due to a rounding error. We're talking a difference of 0.2 base armor at the most, so thankfully this really doesn't change anything math-wise.</li>
+                        <li>Fixed an issue where Anastasija's Inspiration was not calculating the haste benefit at the correct time in queries.</li>
+                        <li>Disabled the ability to import a new class set while a query is already active. This is a limitation I'll remove later, but for now it is needed.</li>
+                        <li>Changed the basic statistics display column to only display statistics if they were present in a given build. It technically already worked like this, but any DR related rows always populated no matter what, as did Healing or Stamina rows. Now they only show up if the user actually has a bonus in those rows that needs showing.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>May 1, 2024 - THE QUERIES UPDATE: BETA</h1>
+                    These are releasing in a limited capacity to start with, specific to tank-based searches.
+                    <ul>
+                        <li>Added Build Queries Beta to the live site. Please report any and all bugs you find in the discord linked at the bottom of any page.</li>
+                        <li>Fixed an issue where the live site was missing a file needed in order to initiate queries, so they didn't work until I patched that in. That was my bad.</li>
+                        <li>Fixed a typo on Ring of Ordnance where it should be Ring Of Ordnance, this prevented the item from being imported from R2TK</li>
+                        <li>Fixed an issue where Shield EHP did not calculate properly for Restriction Cord. I'd actually fixed this before, but made an additional change that inadvertently reverted it.</li>
+                        <li>Updated the "Vash's Builds" dropdown tab to include recent videos.</li>
+                        <li>Fixed an issue where in some cases, queries would not find the peak armor set available due to a rounding error. We're talking a difference of 0.2 base armor at the most, so thankfully this really doesn't change anything math-wise.</li>
+                        <li>Changed the basic statistics display column to only display statistics if they were present in a given build. It technically already worked like this, but any DR related rows always populated no matter what, as did Healing or Stamina rows. Now they only show up if the user actually has a bonus in those rows that needs showing.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>April 27, 2024 - THE DLC2 ITEMS UPDATE</h1>
+                    Queries are my next update. They'll release in a limited beta capacity, puretly for tank searches, for now, but that will be later and hopefully today as well but we'll see.
+                    <ul>
+                        <li>Added all DLC items(barring the Polygun, for now). If you notice anything weird with the calculations, let me know in my discord.</li>
+                        <li>Added a hierarchy system to items that have conditionals to ensure they apply in the correct order. In theory this shouldn't change anything as it worked before, this was only necessary so things that had conditionals based on what were normally "final" stats, like Total DR, will calculate properly. As before, if you notice anything jank, let me know.</li>
+                        <li>Changed incoming bleed to now be a multiplicative reduction to Healing Effectiveness, instead of additive like it was before. This is a patch change I forgot to make.</li>
+                        <li>Fixed an issue where the movement speed granted by Gift of the Unbound was calculating based on the health reduction modifier from its old effect, instead of the new movement speed bonus(so it was granting 20%MS per burden instead of 5% lol)</li>
+                        <li>Fixed an issue where relic use speed wasn't displayed due to an error.</li>
+                        <li>Fixed an issue where imports from R2TK could break when an item(specifically ranged weapons) was imported that utilized a custom function.</li>
+                        <li>Fixed an issue where Kolket Eyelet was giving 0.03 instead of 0.3 per Bulwark.</li>
+                        <li>Fixed an issue where Soul Guard/Shard gave the incorrect bonus amounts in relation to summon count settings.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>April 23, 2024 - THE PRE-DLC PATCHNOTES PREP UPDATE</h1>
+                    Build Queries and Melee DMG are not included in this update. That will be after I do my DLC playthroughs.
+                    <ul>
+                        <h3><span class="haste">INTERFACE REWORK</span></h3>
+                        <li>Main calc UI overhaul: Condensed accessories, consumables, weapons, and all item selections into one zone which used to be only for archetype selections. This allows us to bump trait selection up to the main UI row, and delete the 2nd UI row entirely.</li>
+                        <li>Item toggles are now displayed within each item's "selected" state. This is when the item's loadout slot is clicked or tapped.</li>
+                        <li>Trait section now displays circles just like in game instead of a segmented progress bar. Trait level can be assigned through manual input, or through clicking/tapping the circle that corresponds to the desired level.</li>
+                        <li>Changed all Checkboxes, to Toggled Sliders. This is far more mobile friendly.</li>
+                        <li>Changed the site to follow the "Montserrat" Font to closer follow the game's UI</li>
+                        <li>Added regex filtering to include numbers within descriptions. No matter the units used(seconds, meters, %, etc) they will now be emboldened like the game UI.</li>
+
+                        <h3>CALCULATIONS & ADJUSTMENTS</h3>
+                        <li>Modified all item statistics and custom functions as best I could, to match pre-release patch notes. I say best I could as the patchnotes were not incredibly specific on every change that happened, some mention value changes but not how much. As such, many values remain unchained until we can get the DLC update to see what the new values are.</li>
+                        <li><span class="haste">HASTE</span> is now calculated and its bonuses displayed where relevant</li>
+                        <li>Added support for up to 4 quick-use consumables. Before I only supported 2 because I firmly believed there were never more than 2 that related to tanking, but now that we're moving beyond tanking I obviously need to change that. Rejoice, anyone who imported builds with more than 4 quick-use from R2TK.</li>
+                        <li>Added conditional calculations for over 40 items. If I was able to make it conditional without being too excessive, then I did it. Stuff like Alchemy Stone or even Embrace of Sha'hala no longer provide their bonuses implicitly. I tried to specify within item descriptions if the condition was assumed to always be true, so if you don't see that then you can generally assume that there is a conditional associated, but I might have forgotten a few so let me know.</li>
+                        <li>Added outgoing/incoming status effects, based on what your build is, for the sake of conditional calculations mentioned above. An example: Atonement Fold provides <span class="bleed">BLEEDING</span> as an incoming status to the player. The player now counts as an entity afflicted with both a negative <span class="status">STATUS</span> effect, and a <span class="bleed">BLEEDING</span> status effect.</li>
+                        <li>Added advanced stats settings for: Enemy Count, Grey Health Active, Perfect Dodge, Evade dodge override(otherwise it assumes it is a normal dodge/roll, not an evade/backstep)</li>
+                        <li>Added the distinction between stamina cost and action cost, as not all stamina cost reductions are the same thing
+                            <ul>So as an example:
+                                <li>Evades cost 25 stamina at base. Say you have 20% reduced evade cost, this is an action cost reduction, and applies to the base cost of the action BEFORE stamina cost penalties or bonuses are applied.</li>
+                                This logic applies to all stamina-related actions and their associated action-cost specific stats.
+                            </ul>
+                        </li>
+                        <li>Removed stats from Samoflange. It used to only show the negative DR gained in the downtime, but I agree that isn't fair to do since it does have a positive. However, even if we average the DR gained over time using the bonus and the negative, you're still a hair under 0% DR gained and negative. As such, it is simplest to just stop the item from adding anything anymore. Why in the hell would you be using that thing anyways.</li>
+                        <li>Removed the ability to toggle calculations for relic fragments, and traits. These were mainly there for when this was still a spreadsheet so you could verify the source was providing what it should be, but for fragments all you need to do to do that is remove the fragment, and for traits just unrank them. I may add this back later if I find a good way to incorporate it into the UI that isn't pointless, but for now they go.</li>
+                        <li>Removed Wayfarer and Resonance, and merged them with Swiftness and Amplitude, respecitvely. Added support for multi-benefit, separately-scaling traits in the calculations.</li>
+                        <li>Adjusted stamina penalty calculations for Verdant Tea. It doesn't list it as such within the game, but it does reduce the weight-cost penalty. Upddated the description on my end to reflect that.</li>
+                        <li>Made slight changes to the overall save structure of the URL parameters. If you notice anything weird let me know immediately. It will probably screw with people who had a complex relic input saved in the URL for Resonating Heart, as that setting is now fully calculated without user input and the save slot has been replaced by enemyCount</li>
+
+                        <h3>FIXES</h3>
+                        <li>Fixed an issue where the trait "Bloodstream" didn't have a level 0 value defined, and as such would break the GHP/s display when selected at level 0</li>
+                        <li>Fixed an issue where Game Master's Pride was not calculating shared damage correctly. I'm amazed nobody noticed before frankly, but that was a mistake on my part.</li>
+                        <li>Fixed an issue where <span class="shield">SHIELD</span> EHP did not properly calculate when Restriction Cord was selected. This was because Restriction Cord does not actually cut your HP in half for the purposes of shielding, it only prevents you from healing past half.</li>
+                        <li>Fixed a typo with A'Taerii Booster where the T was not capitalized. As lower case this caused some exclusion flags when importing from Remnant2Toolkit.</li>
+                        <li>Fixed an issue where weight summary display values did not properly reflect their weight class color when they rested exactly on the cusp of a threshold.</li>
+                        <li>Fixed an issue where if a melee was selected that utilized a custom functcion for conditionial stats, it would prevent imports from working correclty from R2TK</li>
+                        
+                        <h3>OPTIMIZATION</h3>
+                        <li>Optimized code to reduce redundant formula calls. You won't even be able to notice this on the main calculator, but for Build Queries when you get them, a lot happened here. Still more to do though, this has been a learning project for me.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 24, 2024</h1>
+                    <ul>
+                        <li>Added a small banner that displays when the calc was last updated, based on the last push made to the github master branch. This is just so if an update comes to the game, and you guys are curious if I've added something, you can 1) see this changelog anyways, but 2) you can now see when the last time I touched it, was.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 23, 2024</h1>
+                    <ul>
+                        <li>Fixed an issue where traits with multiple benefits could freeze the calculator(Shadeskin, Handling, etc)</li>
+                        <li>Added missing stats for Explorer's Gold Digger ability. Note though that this means all bonuses granted by any Fountain will be considered active at all times while the ability is left toggled as on. I do not intend to add ability-bonus individual substat toggles, ability toggles themselves are already enough, use your head when abilities have more than one benefit that may not be guaranteed active at all times during ability use.</li>
+                        <li>Fixed descriptions still having a hyphen in "Fire-Rate", this was leftover from the old regex filter I used in substat color tagging, but is no longer necessary. </li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 22, 2024</h1>
+                    <ul>Barring any crazy bugs you find that need immediate fixing, this is probably the last set of minor fixes to come, before I get damage calculations set up and rolling for at least melee.<br>
+                        <li>Fixed an issue where lifesteal's display values were rounding off one digit too soon. This didn't actually change the values, only the displays(not that lifesteal is even used in any calculations front-end yet, idk why I'm even clarifying)</li>
+                        <li>Fixed an issue where the calculator would not recognize if it was opened from another section of the site, causing it to notify you of an import when there obviously was none</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 21, 2024</h1>
+                    <ul>
+                        <li>Fixed built-in melee mods not getting cleared when the weapon was no longer selected</li>
+                        <li>Major code overhaul: rewrote trait logic, cut out a lot of code in the process. Nothing should change on the user end, just think of it as housecleaning.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 20, 2024</h1>
+                    <ul>
+                        <li>Added built-in gun mods. As such, imports from R2TK using these will no longer flag an exclusion notification</li>
+                        <li>Fixed image for Dull Steel Ring</li>
+                        <li>Finalized regex filter used for substat color tagging. I can now add to a list of exclusions specific to substat tags, for better and more efficient handling.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 19, 2024</h1>
+                    <ul>
+                        <li>Added substat color tagging. So stuff like <span style="color: #f9ebb8;">BULWARK</span> or <span style="color: #7171a7;">OVERLOADED</span>, that kind of stuff now will adjust color accordingly within descriptions.</li>
+                        <li>Improved regex filter used in the aforementioned point, to exclude compounded words or words with ":" or "-". This way fire-rate does not get modified just because it has fire in it and the hyphen wasn't recognized.</li>
+                        <li>Added all backend statistics and custom item functions(if applicable) for the following categories. These were previously partially ignored as the skipped stats had nothing to do with tanking, EHP, or survivability in general.
+                            <br>Some of these additions will reflect right now, such as Shadeskin, but a lot of these don't have displays hooked up yet.
+                        </li>
+                        <ul>
+                            <li>Relic Fragments</li>
+                            <li>Traits</li>
+                            <li>Concoctions/Consumables</li>
+                            <li>Melee Mutators</li>
+                        </ul>
+                        <li>Added array handling for traits with multiple benefits, such as Shadeskin, or Handling. This is unique to Traits as they have levels as well as properties.</li>
+                        <li>Added missing image for Onyx Pendulum</li>
+                        <li>Added missing consumable descriptions, for the items that were added yesterday</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 18, 2024</h1>
+                    <ul>
+                        <li>Added custom, dynamic item functions for amulets AND rings. So like Daredevil's Charm, Gift of the Unbound, etc. Not everything will be perfect, not everything this does is even visible right now, but it's there for later.</li>
+                        <li>Added missing consumables, even if they don't have a place yet.</li>
+                        <li>Change settings Toggles icon to orange because people are blind and didn't know it existed. TELL ME YOU CAN'T SEE IT NOW.</li>
+                        <li>Fixed spelling errors that did not conform to exports.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 17, 2024</h1>
+                    <ul>
+                        <li>Fixed incorrect spelling "Hotshot" to "Hot Shot", along with its image name/path</li>
+                        <li>Added mobile formatting to the homepage and honkai homepage</li>
+                        <li>Added the changelog/to-do list page, which you are viewing now</li>
+                        <li>Added changelog/to-do list page to the navbar with a clipboard icon</li>
+                        <li>Added various backend statistics, not in use yet. These mean nothing without their respective calculations, which will come in a future update</li>
+                        <li>Shifted repeating key CSS declarations to a new file main.css. Things like navbar/footer have been moved there for uniformity in adjustments, between all pages that use these elements.</li>
+                        <li>Major code overhaul. Bundled functions by type, moved global vars to data.js under globalRecords</li>
+                        <li>Added a notification that checks the query string in an import for any invalid items, and lists them so the user will know if an import error occurs that is related to spelling, or lack of an item in my data sets.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 13, 2024</h1>
+                    <ul>
+                        <li>Reformat for the skills areas</li>
+                        <li>Added missing ":" on mod header</li>
+                        <li>Fixed font-size on mod/mutator selector elements</li>
+                        <li>Fixed an issue where advanced stats relic healing was not displayed properly</li>
+                        <li>Fixed an issue where EHP/s was not factoring in relic healing properly</li>
+                        <li>Added basic melee statistics to data.js</li>
+                        <li>Added display handling for the aforementioned statistics, which will now display on the rows underneath the weapon</li>
+                        <li>Added images and descriptions for all built-in melee mods. These will now populate when the associated melee weapon is selected</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 12, 2024</h1>
+                    <ul>
+                        <li>Reformat for: Armor, Weapons, Relic, Accessory, and Prime Perk sections</li>
+                        <li>Fixed an issue where the main body wasn't centering properly relative to the space leftover from the navbar</li>
+                        <li>Added a tremendous amount of mobile formatting adjustments</li>
+                        <li>Fixed an issue where mobile dropdown menus were not centering properly</li>
+                        <li>Shifted to a fixed height on the mobile navbar, so it wouldn't constantly adjust depending on the scroll state of the page</li>
+                        <li>Fixed an issue where the class title was too big for its container depending on the combination in use</li>
+                        <li>Fixed "Devoured Loop" spelling, was "Devourer Loop"</li>
+                        <li>Added handling/logic if an import was read to have higher traits spent than the 85 point limit. When such an import is received, it will read backwards up the trait list, and remove points until we reach the 85 point limit</li>
+                        <li>Fixed an incorrect image path for Singed Ring</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 11, 2024</h1>
+                    <ul>
+                        <li>1.0 Export Feature Collaboration with remnant2toolkit.com</li>
+                        <li>Changed most image filepaths away from imgur links. We crutched pretty hard on imgur when the calc was just a spreadsheet, but now that we're hosting our own service, and since it was technically against imgur TOS to do what we were doing, this marks the shift towards removing all imgur links in use</li>
+                        <li>Added the images for armor, and adjusted the filepaths away from imgur links. This <i>should</i> be the last of the imgur links</li>
+                        <li>Fixed minor width issues with Firefox. Firefox is hellscape that breaks all my formatting, and there's still lots to do here in the future</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 10, 2024</h1>
+                    <ul>
+                        <li>Added the ability for external sources to import builds</li>
+                        <li>Fixed an issue where traits were not populated correctly</li>
+                        <li>Fixed an issue where imported build notifications were shown when not relevant.</li>
+                        <li>Added URL item logging. Now, all selections are stored in and actively modify the URL. This means that the link can be used to "share" the build if needed.</li>
+                        <li>Fixed an issue where URL logging did not actively modify the URL correctly</li>
+                        <li>Fixed an issue where concoction limit was not being honored by URL logging</li>
+                        <li>Decoded %2C back to commas within the URL logging, to reduce query string length</li>
+                        <li>Added URL logging for toggles, and advanced stat settings. Now EVERYTHING is saved in a URL if sharing is needed in its current state, settings and all, settings no longer have to be rechecked upon pageload</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 9, 2024</h1>
+                    <ul>
+                        <li>Mobile friendly formatting v0.1. Hardly perfect, but better than nothing until I can improve it</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 8, 2024</h1>
+                    <ul>
+                        <li>Trait dropdowns now exclude what has already been selected in other boxes</li>
+                        <li>Fixed an error that would occur if the user generated more than 20 traits. This was due to the toggles being generated based on the prior limit of 20 traits, toggles are now generated automatically according to the current amount of active traits</li>
+                        <li>Added the trait cap functionality, matching it to the limit of 85 points like the game</li>
+                        <li>Added smol qol feature to delete a trait if it were level 0 and the "-" adjustment was clicked. Traits at this stage will display a trash can icon instead of a "-" symbol on the button</li>
+                        <li>Added styling and additional logic to autopopulated traits</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 7, 2024</h1>
+                    <ul>
+                        <li>Added trait autopopulation based on selected archetypes, as well as the ability to delete traits.</li>
+                        <li>Fixed an issue when certain browser extensions modified html with injections/parse, the trait generation box would not populate correctly.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 5, 2024</h1>
+                    <ul>
+                        <li>Updated Mutator information</li>
+                        <li>Added corrupted weapons</li>
+                        <li>Alphabetized selector element lists</li>
+                        <li>Fixed an issue for when relics were selected that did not provide direct healing(eg: Lifesteal, Shields)</li>
+                        <li>Optimized dupe/swap handling, added the same logic to quickuse, mods, and mutators</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>March 3, 2024 - 1.0 Publication</h1>
+                    <ul>
+                        <li>1.0 Release. Lots happened before this point, but if you REALLY care about that then go look at github.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changeLogMegaFooterBuffer"></div>
+        </div>
+        <div class="changeLogMegaHalves"> <!-- To-Do List -->
+            <div class="changeLogMegaHeader">To-Do List</div>
+            <div class="changeLogMegaBody">
+                <div>
+                    <h1>Will Do:</h1>
+                    <ul>
+                        <li>Calculation tooltips. It'd be best if you guys can see exactly how I'm getting that number, so you can stop asking me how I'm getting it. Kinda low priority at the moment though, I've started on some of these and added handling for tooltips in general, but there are more important things that need to be done right now.</li>
+                        <li>Damage Calculations: <b>Monster Task</b>. Almost done with melee calcs</li>
+                        <li>Loadouts - Not entirely positive how I want to do this yet, but I do know that a build calculator without the ability to compare one build to another, is kinda sad</li>
+                        <li>Change Spirit Healer Stacks to a number input, instead of a number slider.</li>
+                        <li>Get better images, now that we are displaying them in a larger size with the new UI.</li>
+                        <li>Add enemy count as a factor for Challenger perks.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Might Do:</h1>
+                    <ul>
+                        <li>Add fragment level specification so people aren't forced into Mythic level assumptions. This is kind of a cancerous task though, and not really worth it. If I do end up doing this, and can't find the values for all levels, I might have to allow user input to specify level values but it just seems like a pedantic amount of customization, and if I do that then what next? Allowing weapon level specification? Blegh, no</li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Will Not Do:</h1>
+                    <ul>
+                        <li>Expanded builds sharing logic</li>
+                        <li>Accounts/sign-ins(with the singular exception of allowing loadout saves later, possibly, but likely no)</li>
+                        <li>Anything that far exceeds the bounds of a <i><b>calculator</b></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="changeLogMegaFooterBuffer"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+
+<script src="/htmlTemplates/injectMainHTML.js"></script>
+
+</body>
+</html> 

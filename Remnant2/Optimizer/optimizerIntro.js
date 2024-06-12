@@ -1,0 +1,1 @@
+starterTable.thisIsAQuery = 1;

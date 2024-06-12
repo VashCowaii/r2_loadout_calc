@@ -1,0 +1,106 @@
+<!-- uses r2Navbar.css -->
+
+<div class="iconsBar">
+    <div class="dropdown" id="r2MainNavStretch">
+        <button class="dropbtn">
+            <a class="headerBarTitleBox" href="/Remnant2/Home/" rel="noopener noreferrer">
+                Remnant 2
+                <img class="headerBarIcon" src="/images/Remnant/R2icon.png" alt="Remnant 2 Icon">
+            </a>
+            <span class="tripleBarIcon" id="tripleBarIcon" onclick="adjustMobileNavHeader()">&equiv;</span>&nbsp;
+        </button>
+
+        <button class="dropbtnHidden">
+            <span class="headerBarTitleBox">
+                Builds
+            </span>
+            <div class="dropdownContentFromLeft">
+                <div class="helpBox">
+                    <a href="/Remnant2/Calculator/" rel="noopener noreferrer" class="headerDropdownLink">Calculator</a>
+                    <a href="/Remnant2/Optimizer/" rel="noopener noreferrer" class="headerDropdownLink">Optimizer</a>
+                    <a href="/Remnant2/VashBuilds/" rel="noopener noreferrer" class="headerDropdownLink">Vash's Builds</a>
+                </div>
+            </div>
+        </button>
+        <button class="dropbtnHidden">
+            <span class="headerBarTitleBox">
+                Resources
+            </span>
+            <div class="dropdownContentFromLeft">
+                <div class="helpBox">
+                    <a href="/Remnant2/BossDamage/" rel="noopener noreferrer" class="headerDropdownLink">Boss Attacks</a>
+                    <a href="https://remnant.wiki/" rel="noopener noreferrer" class="headerDropdownLink" target="_blank">Wiki</a>
+                    <a href="https://www.remnant2toolkit.com/" rel="noopener noreferrer" class="headerDropdownLink" target="_blank">R2TK</a>
+                </div>
+            </div>
+        </button>
+        <button class="dropbtnHidden">
+            <span class="headerBarTitleBox">
+                <a href="/ChangeLog/" rel="noopener noreferrer" class="headerDropdownLink">ChangeLog</a>
+            </span>
+        </button>
+        <button class="dropbtnHidden">
+            <span class="headerBarTitleBox">
+                Help
+            </span>
+            <div class="dropdownContentFromLeft">
+                <div class="helpBox">
+                    <a href="https://discord.gg/45BkqHZ" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Reports &<br>Suggestions</a>
+                    <a href="https://youtu.be/G4pH4WonlHM" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Calculator Guide</a>
+                    <a href="https://youtu.be/0BqHNkViEFI" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">EHP Breakdown</a>
+                </div>
+            </div>
+        </button>
+
+
+
+
+        <!-- MOBILE ONLY VERSION -->
+        <div class="mobileHiddenHolder">
+            <button class="dropbtnHiddenMobile" id="hiddenButton1" onclick="toggleDropdown('dropdown1')">
+                <span class="headerBarTitleBox">
+                    Builds
+                </span>
+                <div class="dropdownContentFromLeftMobile" id="dropdown1">
+                    <div class="helpBox">
+                        <a href="/Remnant2/Calculator/" rel="noopener noreferrer" class="headerDropdownLink">Calculator</a>
+                        <a href="/Remnant2/Optimizer/" rel="noopener noreferrer" class="headerDropdownLink">Optimizer</a>
+                        <a href="/Remnant2/VashBuilds/" rel="noopener noreferrer" class="headerDropdownLink">Vash's Builds</a>
+                    </div>
+                </div>
+            </button>
+            <button class="dropbtnHiddenMobile" id="hiddenButton2" onclick="toggleDropdown('dropdown2')">
+                <span class="headerBarTitleBox">
+                    Resources
+                </span>
+                <div class="dropdownContentFromLeftMobile" id="dropdown2">
+                    <div class="helpBox">
+                        <a href="/Remnant2/BossDamage/" rel="noopener noreferrer" class="headerDropdownLink">Boss Attacks</a>
+                        <a href="https://remnant.wiki/" rel="noopener noreferrer" class="headerDropdownLink" target="_blank">Wiki</a>
+                        <a href="https://www.remnant2toolkit.com/" rel="noopener noreferrer" class="headerDropdownLink" target="_blank">R2TK</a>
+                    </div>
+                </div>
+            </button>
+            <button class="dropbtnHiddenMobile" id="hiddenButton3">
+                <span class="headerBarTitleBox">
+                    <a href="/ChangeLog/" rel="noopener noreferrer" class="headerDropdownLink">ChangeLog</a>
+                </span>
+            </button>
+            <button class="dropbtnHiddenMobile" id="hiddenButton4" onclick="toggleDropdown('dropdown4')">
+                <span class="headerBarTitleBox">
+                    Help
+                </span>
+                <div class="dropdownContentFromLeftMobile" id="dropdown4">
+                    <div class="helpBox">
+                        <a href="https://discord.gg/45BkqHZ" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Reports &<br>Suggestions</a>
+                        <a href="https://youtu.be/G4pH4WonlHM" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Calculator Guide</a>
+                        <a href="https://youtu.be/G4pH4WonlHM" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">EHP Breakdown</a>
+                    </div>
+                </div>
+            </button>
+        </div>
+        
+    </div>
+
+
+</div>

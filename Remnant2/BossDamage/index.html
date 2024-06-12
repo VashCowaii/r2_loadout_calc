@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/bossDamage.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>R2 Boss Attacks</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="R2 Boss Attacks">
+    <meta
+      property="og:description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      property="description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="R2 Boss Attacks" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="R2 Boss Attacks" />
+    <meta
+      name="twitter:description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+    <div class="theGreatBox">
+        <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <!-- <div><img src="images/madPrince.png" alt="Home Page MadPrince"></div> -->
+        <!-- <div class="siteTitleHeader">Boss Damage [WIP]<br>
+            <div class="filtersInstructionsBox">I have the info for more bosses, but that is data entry I will do later. For now I'd rather publish this little bit and get feedback on UI and functionality.</div>
+        </div> -->
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+            <div class="settingsBoxHolder">
+
+                <div class="playerSettingsBox" style="width: auto;"><!--Boss settings-->
+                    <div>Boss Selection [WIP]</div>
+
+                    <div class="statisticSettingsRow">
+                        <!-- <span class="statsRowName">Select:</span>
+                        <span class="rowTraceLine"></span> -->
+                        <div class="statsRowToggle" style="width: 100%;">
+                            <select id="bossList" class="bossSelector" onchange="tableGeneration.generateInitialTable()"></select>
+                        </div>
+                    </div>
+
+                    <div class="selectedBossImageContainer">
+                        <img src="/brotherLibrary/bossImages/Venom.jpg" class="selectedBossImage" alt="Selected Boss Image" id="selectedBossImage">
+                    </div>
+                </div>
+
+                <div class="playerSettingsBox"><!--Boss/Player settings-->
+                    <div style="font-size: 20px;">GAME SETTINGS</div>
+                    <div>Boss Settings</div>
+                    <!-- <div style="display: flex;"> -->
+                    <div class="statisticSettingsRow">
+                        <span class="statsRowName">Vicious (15%)</span>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <label class="toggleContainer">
+                                <input type="checkbox" class="toggleCheckbox" id="isVicious" onchange="userSettings.updateUserInputs()">
+                                <span class="toggleSlider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="statisticSettingsRow">
+                        <span class="statsRowName">Spiteful&nbsp;(<span id="spitefulDisplay">0</span>%)</span>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <label class="toggleContainer">
+                                <input type="checkbox" class="toggleCheckbox" id="isSpiteful" onchange="userSettings.updateUserInputs()">
+                                <span class="toggleSlider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Boss HP:&nbsp;<span id="bossHPDisplay">100</span>%</div>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <input type="range" id="bossHPSlider" name="slider" min="10" max="100" value="100" step="10" onchange="userSettings.updateUserInputs()" disabled>
+                        </div>
+                    </div>
+                    <div class="statisticSettingsRow">
+                        <span class="statsRowName">Include Boss-Buffs</span>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <label class="toggleContainer">
+                                <input type="checkbox" class="toggleCheckbox" id="useBuffs" onchange="userSettings.updateUserInputs()">
+                                <span class="toggleSlider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">World Level:&nbsp;<span id="worldLevelDisplay">21</span></div>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <input type="range" id="worldLevelSlider" name="slider" min="1" max="21" value="21" step="1" onchange="userSettings.updateUserInputs()">
+                        </div>
+                    </div>
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Difficulty:<br><span id="difficultyDisplay">Apocalypse</span></div>
+                        <span class="rowTraceLine"></span><span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <input type="range" id="difficultySlider" name="slider" min="1" max="4" value="4" step="1" onchange="userSettings.updateUserInputs()" disabled>
+                        </div>
+                    </div>
+
+                    <div>Player Settings</div>
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Max Health:</div>
+                        <span class="rowTraceLine"></span>
+                        <input type="number" class="playerInputNumber" id="playerHealthValue" min="1" max="1000" value="100" onchange="userSettings.updateUserInputs()">
+                    </div> 
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Effective DR:</div>
+                        <span class="rowTraceLine"></span>
+                        <input type="number" class="playerInputNumber" id="playerDRValue" min="0" max="99.99" value="0.00" onchange="userSettings.updateUserInputs()">%
+                    </div> 
+
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Players:&nbsp;<span id="playerCountDisplay">1</span></div>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <input type="range" id="playerCountSlider" name="slider" min="1" max="3" value="1" step="1" onchange="userSettings.updateUserInputs()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="tableHolder">
+            <table class="attacksTable">
+                <!-- <caption>Sample Table</caption> -->
+                <thead id="mainListHeaders">
+                    <tr>
+                        <th class="tableHeader">Name</th>
+                        <th class="tableHeader">Damage</th>
+                        <th class="tableHeader">Ignores DR?</th>
+                        <th class="tableHeader">Lethal</th>
+                        <th class="tableHeader">Type</th>
+                        <th class="tableHeader">Frequency</th>
+                        <th class="tableHeader">DPS</th>
+                        <th class="tableHeader">Duration</th>
+                        <th class="tableHeader">Total Damage</th>
+                    </tr>
+                </thead>
+
+                <tbody id="attackListDisplay"></tbody>
+            </table>
+            </div>
+
+        </div>
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+<script src="/htmlTemplates/injectMainHTML.js"></script>
+<script src="/htmlTemplates/injectR2HTML.js"></script>
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/Remnant2/BossDamage/bossData.js"></script>
+<script src="/Remnant2/BossDamage/scaling.js"></script>
+<script src="/buildTime.js"></script>
+
+</body>
+</html> 

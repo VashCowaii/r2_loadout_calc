@@ -1,0 +1,483 @@
+.attackDescription {
+    font-family: "Montserrat-Light";
+}
+
+.mainGridRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    /* border: 1px solid red; */
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 2;
+    grid-row: 5;
+    border: 1px solid #434343;
+    font-size: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.updateWarningBar {
+    border: 3px solid white;
+    color: #e06666;
+    /* height: 80px; */
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+option {
+    color: black;
+}
+.siteTitleHeader {
+
+    grid-column: 1 / span 3;
+    grid-row: 3;
+
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.filtersInstructionsBox {
+    font-size: 12px;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #93CCEA;
+}
+.settingsBoxHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.bossSelector {
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.selectedBossImageContainer {
+    min-width: 30%;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    box-sizing: border-box;
+    padding: 3px;
+}
+.selectedBossImage {
+    border: 2px solid #434343;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+.playerSettingsBox {
+    width: 75%;
+    min-width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #434343;
+    margin: 2px;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.playerInputNumber {
+    color: black;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.statisticSettingsRow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #434343; */
+}
+.rowTraceLine {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.statsRowName {
+    /* width: calc(100% - 150px);
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left; */
+}
+.tableHolder {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+}
+.attacksTable {
+    width: 100%;
+    overflow-x: auto;
+}
+.descriptionButton {
+text-align: left;
+width: 100%;
+background-color: transparent;
+border: none;
+/* border-right: 1px solid #434343; */
+display: flex;
+}
+.buttonTitle {
+    white-space: normal;
+    width: 100%;
+}
+
+
+.attackArrow {
+    width: auto;
+    text-align: right;
+    /* border: 1px solid green; */
+    /* font-size: 14px; */
+}
+
+.attackName {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+}
+.attackDescription {
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+    padding-left: 8px;
+    /* column-span: 3; */
+}
+.attackRow td {
+    border-top: 1px solid #434343;
+}
+.tableHeader {
+    font-size: 16px;
+    white-space: normal;
+}
+
+* {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .settingsBoxHolder {
+        flex-direction: column;
+    }
+    .playerSettingsBox {
+        width: 100%;
+    }
+    .tripleBarIcon {
+        display: flex;
+    }
+    .dropbtnHidden {
+        display: none;
+    }
+
+
+    table thead {
+        display: none;
+    }
+    
+    table tbody {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 0;
+        flex: 1; /* Take full width */
+        box-sizing: border-box;
+    }
+    table tbody td {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        border: 0;
+        flex: 1; /* Take full width */
+        box-sizing: border-box;
+    }
+    
+    table tbody td:before {
+        content: attr(data-name);
+        width: 100%;
+        display: flex;
+        text-align: left;
+        padding-right: 1px;
+        box-sizing: border-box;
+    }
+    
+    table tbody td:not(:before) {
+        text-align: right; /* Right align cell data */
+        /* padding-left: auto; */
+    }
+    
+    .attackArrow {
+        display: none;
+    }
+    /* .attackDescription {
+        display: none;
+    } */
+    
+    table tbody td[data-name=""]::before {
+        display: none; /* Hide empty data-name */
+    }
+    
+    td {
+        font-size: 13px;
+    }
+    
+    tr td {
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .attackRow td {
+        border: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    table tbody .attackName {
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+    
+    .attackName {
+        font-size: 18px;
+    }
+    
+    table tbody td.status {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        box-sizing: border-box;
+    }
+    
+    table tbody tr {
+        position: relative;
+        width: 100%;
+        border: 1px solid #E7E7E7;
+        border-radius: 10px;
+        padding: 8px;
+        /* margin: 2px; */
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+
+    .basicsBox,.classAndArmor,.accessoriesBox,.consumablesBox,.weaponsBox,.traitsBox,.advancedStatsBox {
+        width: 100%;
+        min-width: 100%;
+    }
+    .basicsBox {
+        height: auto;
+    }
+    .advancedStatsBox {
+        height: auto;
+    }
+    .advancedCategoryBoxHolder {
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+    }
+    .advancedCategoryBox {
+        width: 100%;
+        min-width: 100%;
+        height: 350px;
+    }
+
+    .shieldsFiller,.miscFiller {
+        height: 0%;
+    }
+
+    .traitContainer {
+        height: 40px;
+        max-width: 100%;
+    }
+    .traitButtonImage {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        object-fit: contain;
+    }
+
+    .mainGridRow{flex-direction: column;}
+
+    .classAndArmor{order: 0;}
+    .traitsBox {order: 1;height: auto;}
+    .basicsBox {order: 2;}
+    .advancedStatsBox {order: 3;}
+    .damageStatsBox {order: 4;}
+    .filtersMegaBox {order: 5;}
+
+    .advancedCategoryBox.advStatsMobileAdjustment {
+        height: auto;
+        min-height: 0;
+    }
+
+    .advancedHealingBox {
+        height: 10%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0%;
+        font-size: 15px;
+        /* background-color: #666666; */
+        background-color: #434343;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .theGreatBox {
+        padding-left: 0px;
+        /* padding-top: 6%; */
+        box-sizing: border-box;
+    }
+    .togglesRowBox {
+        height: 23px;
+    }
+    .togglesCheckBox,.advancedDRCheckBox,.shieldsCheckBox {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+    }
+
+
+    .advancedSummaryThirds {
+        flex-direction: column;
+    }
+    .advancedSummaryStat {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        justify-content: left;
+    }
+    .advancedSummaryValue {
+        width: 100%;
+        font-size: 20px;
+        padding-right: 1%;
+    }
+
+    .exportText {
+        font-size: 13px;
+    }
+
+    .filtersBoxHolder {
+        flex-direction: column;
+    }
+    .filtersBoxQuarters,.filtersBoxHalf {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        max-height: 400px;
+    }
+    .resultsBoxHalf {
+        width: 100%;
+        margin: 0;
+        /* height: auto;
+        max-height: 400px; */
+    }
+
+    .filtersTagsRowContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+    .filtersTagName {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .comboConcoctionsBox,.comboQuickUseBox {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .updateWarningBar {
+        width: auto;
+        white-space: normal;
+    }
+
+    .selectSelector {
+        font-size: 14px;
+    }
+
+    .havocInfoContainer {
+        min-width: 100%;
+    }
+}
