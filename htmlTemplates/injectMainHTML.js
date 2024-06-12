@@ -6,7 +6,7 @@ function injectHTMLTemplate(filePath,placeholderElemID) {
         });
 }
 
-injectHTMLTemplate('/htmlTemplates/mainSidebar.html','gameNav')
-injectHTMLTemplate('/htmlTemplates/r2Footer.html','footerPlaceholder')
 // console.log("r2nav")
 // injectHTMLTemplate('/htmlTemplates/r2Navbar.html','r2Navbar')
+injectHTMLTemplate('/htmlTemplates/mainSidebar.html','gameNav')
+injectHTMLTemplate('/htmlTemplates/r2Footer.html','footerPlaceholder')
