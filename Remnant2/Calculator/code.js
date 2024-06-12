@@ -3291,7 +3291,7 @@ let basicsUpdates = {
     else {damageHeader = ""}
     damageRows.innerHTML = damageHeader;
   },
-  updateFocus(type) {
+  updateFocus(type,fieldToFocus) {
     readSelection("amuletTab").style.display = "none";
     readSelection("ring1Tab").style.display = "none";
     readSelection("ring2Tab").style.display = "none";
@@ -3325,6 +3325,7 @@ let basicsUpdates = {
     readSelection("quickUse4Tab").style.display = "none";
 
     readSelection(type).style.display = "flex";
+    readSelection(fieldToFocus).focus();
   }
 }
 let advancedUpdates = {
