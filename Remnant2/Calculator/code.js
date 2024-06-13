@@ -2432,7 +2432,8 @@ let customItemFunctions = {
     burdenOfTheMesmer2(index,totalDR) {//postDR
       let floorIncrement = 0.05
       let dmgScaling = 0.01
-      index.AllDamage += dmgScaling * Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement;//postDR damage calcs
+      console.log(totalDR)
+      index.AllDamage += dmgScaling * (Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement)/floorIncrement;//postDR damage calcs
     },
     driedClayRing(index) {//50
       let bulwarkStacks = Math.min(index.Bulwark,index.BulwarkCap);
