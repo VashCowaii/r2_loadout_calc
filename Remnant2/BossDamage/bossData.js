@@ -296,7 +296,8 @@ let bosses = {
                 "canBeLethal": false,
                 "lethalCondition": "",
                 "isBuffed": false,
-                "attackType": "Player",
+                "attackType": "Hit",
+                "damageType": "Player",
                 "frequency": 0,
             },
         ]
