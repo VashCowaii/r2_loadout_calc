@@ -2025,7 +2025,7 @@ let bosses = {
         "attacks": [
             {
                 "name":"Bleed",
-                "description": "Ravager can apply Bleed to you. This is the damage it deals per tick. Not buffed by Ravager's Mist-Roar buff.",
+                "description": "Ravager's Bite-type attacks can apply Bleed to you. This is the damage it deals per tick. Not buffed by Ravager's Mist-Roar buff.",
                 "damage": 1.203,
                 "stagger": 0,
                 "hpBased": false,
