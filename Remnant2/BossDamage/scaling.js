@@ -184,11 +184,13 @@ let tableGeneration = {
                     </button>
                 </td>
                 <td data-name="Damage:">${damage.toFixed(3)}</td>
+                <td data-name="Stagger:" ${currentAttack.stagger>2 ? "style='color: red'" : ""}>${currentAttack.stagger || ""}</td>
                 <td data-name="${currentAttack.drBypass ? "Ignores DR:" : ""}" ${currentAttack.drBypass ? "style='color: red'" : ""}>${currentAttack.drBypass ? "Yes" : ""}</td>
                 <td data-name="${currentAttack.canBeLethal ? "Lethal:" : ""}" ${currentAttack.canBeLethal ? "style='color: red'" : ""}>${currentAttack.lethalCondition ? "Conditional" :
                     currentAttack.canBeLethal ? "Yes" : ""
                 }</td>
-                <td data-name="Type:" ${currentAttack.attackType != "Hit" ? "style='color: red'" : ""}>${currentAttack.attackType}</td>
+                <td data-name="Attack Type:" ${currentAttack.attackType != "Hit" ? "style='color: red'" : ""}>${currentAttack.attackType}</td>
+                <td data-name="DMG Type:" ${currentAttack.damageType ? "style='color: red'" : ""}>${currentAttack.damageType || ""}</td>
                 <td data-name="${currentAttack.frequency ? "Frequency:" : ""}">${currentAttack.frequency ? currentAttack.frequency.toFixed(3) + "s" : ""}</td>
                 <td data-name="${currentAttack.frequency ? "DPS:" : ""}">${dps}</td>
                 <td data-name="${currentAttack.frequency ? "Duration:" : ""}">${(currentAttack.attackType === "Hit" && currentAttack.frequency === 0) ? "" : 
