@@ -982,6 +982,7 @@ let bosses = {
                 "lethalCondition": "",
                 "isBuffed": false,
                 "attackType": "Hit",
+                "damageType": "Shock",
                 "frequency": 0,
             },
             {
@@ -996,6 +997,7 @@ let bosses = {
                 "lethalCondition": "",
                 "isBuffed": false,
                 "attackType": "DOT",
+                "damageType": "Shock",
                 "frequency": 1,
                 "duration": 3,
             },
@@ -1067,6 +1069,7 @@ let bosses = {
                 "lethalCondition": "",
                 "isBuffed": false,
                 "attackType": "Hit",
+                "damageType": "Shock",
                 "frequency": 0,
             },
         ]
@@ -2031,6 +2034,7 @@ let bosses = {
                 "lethalCondition": "",
                 "isBuffed": false,
                 "attackType": "DOT",
+                "damageType": "Bleed",
                 "frequency": 0.5,
             },
             {
