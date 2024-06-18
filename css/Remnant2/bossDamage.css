@@ -121,7 +121,9 @@
     align-items: center;
     display: flex;
     box-sizing: border-box;
-    color: black;
+    color: white;
+    border-radius: 5px;
+    margin: 3px;
 }
 .resistanceIcon {
     width: 100%;
