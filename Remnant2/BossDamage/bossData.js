@@ -3485,7 +3485,7 @@ let bosses = {
                 "canBeLethal": false,
                 "lethalCondition": "",
                 "isBuffed": false,
-                "attackType": "Hit",
+                "attackType": "DOT",
                 "frequency": 0.75,
                 "duration": 3,
             },
@@ -4634,7 +4634,7 @@ let bosses = {
                 "canBeLethal": false,
                 "lethalCondition": "",
                 "isBuffed": false,
-                "attackType": "Hit",
+                "attackType": "DOT",
                 "frequency": 1,
             },
             {
