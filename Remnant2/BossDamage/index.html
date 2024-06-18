@@ -273,6 +273,25 @@
                             <input type="range" id="playerCountSlider" name="slider" min="1" max="3" value="1" step="1" onchange="userSettings.updateUserInputs()">
                         </div>
                     </div>
+
+                    <div class="resistanceRowBox">
+                        <div class="basicsResistanceBox">
+                            <div class="resistanceContainer"> <!-- Resistance Icons -->
+                                <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/bleed.png" alt="Bleed icon"></div>
+                                <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/fire.png" alt="Burn icon"></div>
+                                <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/shock.png" alt="Shock icon"></div>
+                                <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/corrosive.png" alt="Corrosive icon"></div>
+                                <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/blight.png" alt="Blight icon"></div>
+                            </div>
+                            <div class="resistanceContainer"> <!-- Resistance Values -->
+                                <input type="number" class="resistanceValues" id="playerBleedRes" min="1" max="80" value="0" onchange="userSettings.updateUserInputs()">
+                                <input type="number" class="resistanceValues" id="playerBurnRes" min="1" max="80" value="0" onchange="userSettings.updateUserInputs()">
+                                <input type="number" class="resistanceValues" id="playerShockRes" min="1" max="80" value="0" onchange="userSettings.updateUserInputs()">
+                                <input type="number" class="resistanceValues" id="playerAcidRes" min="1" max="80" value="0" onchange="userSettings.updateUserInputs()">
+                                <input type="number" class="resistanceValues" id="playerBlightRes" min="1" max="80" value="0" onchange="userSettings.updateUserInputs()">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -114,6 +114,12 @@ let userSettings = {
 
         "includeWorldBoss": true,
         "includeMiniBoss": true,
+
+        "playerBleedRes": 0,
+        "playerBurnRes": 0,
+        "playerShockRes": 0,
+        "playerAcidRes": 0,
+        "playerBlightRes": 0,
     },
     updateUserInputs() {
         let HPvalue = Math.max(1,Math.min(+readSelection("playerHealthValue").value,1000));
@@ -174,6 +180,17 @@ let userSettings = {
 
         userSettings.vars.includeWorldBoss = readSelection("includeWorldBoss").checked;
         userSettings.vars.includeMiniBoss = readSelection("includeMiniBoss").checked;
+
+        readSelection("playerBleedRes").value = Math.min(80,readSelection("playerBleedRes").value)
+        userSettings.vars.playerBleedRes = readSelection("playerBleedRes").value;
+        readSelection("playerBurnRes").value = Math.min(80,readSelection("playerBurnRes").value)
+        userSettings.vars.playerBurnRes = readSelection("playerBurnRes").value;
+        readSelection("playerShockRes").value = Math.min(80,readSelection("playerShockRes").value)
+        userSettings.vars.playerShockRes = readSelection("playerShockRes").value;
+        readSelection("playerAcidRes").value = Math.min(80,readSelection("playerAcidRes").value)
+        userSettings.vars.playerAcidRes = readSelection("playerAcidRes").value;
+        readSelection("playerBlightRes").value = Math.min(80,readSelection("playerBlightRes").value)
+        userSettings.vars.playerBlightRes = readSelection("playerBlightRes").value;
 
 
         tableGeneration.generateInitialTable();
@@ -243,7 +260,24 @@ let tableGeneration = {
         let playerCountScalar = 1 + (scalingInfo.DamageScalarPerPlayer * (userSettings.vars.playerCount-1));
         let bossBuffScalar = (userSettings.vars.useBuffs && currentAttack.isBuffed) ? (1 + boss.buffs) : 1;
         damage *= worldLevelScalar * viciousScalar * spitefulScalar * playerCountScalar * bossBuffScalar;//Apply all scalar values to the main damage value
-        if (!currentAttack.drBypass) {damage *= (1-(userSettings.vars.effectiveDR/100))}//If the attack does not ignore DR, reduce by DR
+
+        let element = currentAttack.damageType;
+        let resistanceValue = 0;
+
+        switch (element) {
+            case "Bleed": resistanceValue = userSettings.vars.playerBleedRes; break;
+            case "Fire": resistanceValue = userSettings.vars.playerBurnRes; break;
+            case "Shock": resistanceValue = userSettings.vars.playerShockRes; break;
+            case "Acid": resistanceValue = userSettings.vars.playerAcidRes; break;
+            case "Blight": resistanceValue = userSettings.vars.playerBlightRes; break;
+        }
+
+        if (!currentAttack.drBypass) {
+            damage *= (1-(userSettings.vars.effectiveDR/100)) * (1-(resistanceValue/100));
+        }//If the attack does not ignore DR, reduce by DR
+        else {
+            damage *= (1-resistanceValue); //still apply elem resistances
+        }
         let dps = currentAttack.frequency ? ((1/currentAttack.frequency)*damage) : 0;//If the attack does continuous damage, calculate its DPS
         return {
             bossName: boss.shortName,
@@ -255,7 +289,7 @@ let tableGeneration = {
             lethal: currentAttack.canBeLethal,
             isKillConditional: currentAttack.lethalCondition,
             attackType: currentAttack.attackType,
-            damageType: currentAttack.damageType,
+            damageType: element,
             frequency: currentAttack.frequency,
             dps,
             duration: currentAttack.duration,
