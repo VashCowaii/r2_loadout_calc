@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/Remnant2/bossDamage.css">
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
     <link rel="Icon" href="/images/Cowaii.png">
     <!-- <script src="code.js"></script> -->
     <title>R2 Boss Attacks</title> <!-- Browser Tab title -->
@@ -73,18 +74,126 @@
             <div class="settingsBoxHolder">
 
                 <div class="playerSettingsBox" style="width: auto;"><!--Boss settings-->
-                    <div>Boss Selection [WIP]</div>
-
-                    <div class="statisticSettingsRow">
-                        <!-- <span class="statsRowName">Select:</span>
-                        <span class="rowTraceLine"></span> -->
-                        <div class="statsRowToggle" style="width: 100%;">
-                            <select id="bossList" class="bossSelector" onchange="tableGeneration.generateInitialTable()"></select>
+                    <div class="statisticSettingsRow" style="display: flex;align-items: center;justify-content: center;">
+                        <span class="statsRowName" id="toggledToBoss">Boss&nbsp;</span>
+                        <div class="statsRowToggle">
+                            <label class="toggleContainer" style="display: flex;align-items: center;justify-content: center;">
+                                <input type="checkbox" class="toggleCheckbox" id="listAllAttacks" onchange="userSettings.updateUserInputs()">
+                                <span class="toggleSlider"></span>
+                            </label>
                         </div>
+                        <span class="statsRowName" id="toggledToList">&nbsp;Full List</span>
                     </div>
 
-                    <div class="selectedBossImageContainer">
-                        <img src="/brotherLibrary/bossImages/Venom.jpg" class="selectedBossImage" alt="Selected Boss Image" id="selectedBossImage" title="Boss Images by ConRaven">
+                    <div class="bossSelectionOverviewBox" id="listingSettingsBox">
+                        <div class="inclusionsHeader">INCLUDE ATTACKS:</div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">Standard</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeStandard" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">%HP</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includePercentHP" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">Continuous</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeDOT" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">DR Ignored</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeDRBypass" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">One-Shots</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeLethal" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">Elemental</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeElemental" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="inclusionsHeader">BOSS TYPES:</div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">World Boss</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeWorldBoss" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <span class="statsRowName">Mini-Boss</span>
+                            <span class="rowTraceLine"></span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeMiniBoss" onchange="userSettings.updateUserInputs()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="sortingContainer">
+                            <div class="inclusionsHeader">SORT ATTACKS BY:</div>
+                            <select id="sortByKey" class="sortBySelector" onchange="userSettings.updateUserInputs()">
+                                <option>Damage</option>
+                                <option>Stagger</option>
+                                <option>DPS</option>
+                                <option>Total DMG</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox">
+                        <div>Boss Selection</div>
+                        <div class="statisticSettingsRow">
+                            <div class="statsRowToggle" style="width: 100%;">
+                                <select id="bossList" class="bossSelector" onchange="tableGeneration.generateInitialTable()"></select>
+                            </div>
+                        </div>
+                        <div class="selectedBossImageContainer">
+                            <img src="/brotherLibrary/bossImages/Venom.jpg" class="selectedBossImage" alt="Selected Boss Image" id="selectedBossImage" title="Boss Images by ConRaven">
+                        </div>
                     </div>
                 </div>
 
@@ -167,40 +276,15 @@
                 </div>
             </div>
 
-
+            <div class="filtersInstructionsBox">Click any attack name to expand a description and additional info</div>
             
             <div class="tableHolder">
-                <div style="white-space: normal;">Missing boss data:</div>
-                <div style="white-space: normal;color: red;">Cinderclad Forge, Magister Dullain, Mother Mind, Primogenitor</div>
-            <div style="white-space: normal;">Missing stagger levels:</div>
-                <div style="white-space: normal;color: red;">Lydusa, Tal'Ratha (Meta/Phys), Venom</div>
-                <div style="white-space: normal;">See ChangeLog for data-entry progress. If you see anything jank, let me know.</div>
-                <br>
             <table class="attacksTable">
                 <!-- <caption>Sample Table</caption> -->
-                <thead id="mainListHeaders">
-                    <tr>
-                        <th class="tableHeader">Name</th>
-                        <th class="tableHeader">Damage</th>
-                        <th class="tableHeader">Stagger</th>
-                        <th class="tableHeader">Ignores DR?</th>
-                        <th class="tableHeader">Lethal</th>
-                        <th class="tableHeader">Attack Type</th>
-                        <th class="tableHeader">DMG Type</th>
-                        <th class="tableHeader">Frequency</th>
-                        <th class="tableHeader">DPS</th>
-                        <th class="tableHeader">Duration</th>
-                        <th class="tableHeader">Total Damage</th>
-                    </tr>
-                </thead>
+                <thead id="mainListHeaders"></thead>
 
                 <tbody id="attackListDisplay"></tbody>
             </table>
-            <!-- <div style="white-space: normal;">Missing boss data:</div>
-                <div style="white-space: normal;color: red;">Cinderclad Forge, Magister Dullain, Mother Mind, Primogenitor</div>
-            <div style="white-space: normal;">Missing stagger levels:</div>
-                <div style="white-space: normal;color: red;">Lydusa, Tal'Ratha (Meta/Phys), Venom</div>
-                <div style="white-space: normal;">See ChangeLog for data-entry progress</div> -->
             </div>
         </div>
 

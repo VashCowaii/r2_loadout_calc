@@ -53,16 +53,50 @@
 }
 
 
+.filtersInstructionsBox {
+    font-size: 16px;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #93CCEA;
+}
 
 
+.bossSelectionOverviewBox {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #434343;
+    margin-top: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.statsRowToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-
-
-
+select {
+    color: black;
+}
 
 option {
     color: black;
+}
+
+.sortingContainer {
+    width: 100%;
+}
+.sortBySelector {
+    width: 100%;
+}
+.inclusionsHeader {
+    box-sizing: border-box;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 20px
 }
 .siteTitleHeader {
 
@@ -75,13 +109,6 @@ option {
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
-}
-.filtersInstructionsBox {
-    font-size: 12px;
-    white-space: normal;
-    box-sizing: border-box;
-    padding: 5px;
-    color: #93CCEA;
 }
 .settingsBoxHolder {
     width: 100%;

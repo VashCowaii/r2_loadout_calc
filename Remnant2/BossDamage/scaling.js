@@ -1,3 +1,25 @@
+substatColorMods = [
+	"corrosive","corroded","acid","toxic",
+	"bleed","bleeding",
+	"shock","shocked","overload","overloaded",
+	"slow","bulwark","haste","status","tarred","spirit of the red doe","drenched","gloom","brittle",
+	"fire","burn","burning",
+	"shield","shields",
+	"blight","madness","fragmented","level 10","exposed", "gift of the forest",
+	"curse",
+	"root rot",
+	"suppression"
+]
+// List all exclusion cases here
+// \s = any whitespace character
+substatColorExclusions = {
+	"fire": ":|\\srate|\\sall",
+    // "status": "\\seffect" //Use this if for whatever reason, a need to differentiate between STATUS and STATUS EFFECT arises.
+}
+
+
+
+
 function readSelection(elemID) {
 	let selectedValue = document.getElementById(elemID);
 	return selectedValue;
@@ -83,6 +105,15 @@ let userSettings = {
         "useBuffs": false,
         "effectiveDR": 0,
         "playerCount": 1,
+        "includeStandard": true,
+        "includePercentHP": true,
+        "includeDOT": true,
+        "includeDRBypass": true,
+        "includeLethal": true,
+        "includeElemental": true,
+
+        "includeWorldBoss": true,
+        "includeMiniBoss": true,
     },
     updateUserInputs() {
         let HPvalue = Math.max(1,Math.min(+readSelection("playerHealthValue").value,1000));
@@ -134,6 +165,17 @@ let userSettings = {
         let effectiveDR = +readSelection("playerDRValue").value;
         userSettings.vars.effectiveDR = effectiveDR || 0.00;
 
+        userSettings.vars.includeStandard = readSelection("includeStandard").checked;
+        userSettings.vars.includePercentHP = readSelection("includePercentHP").checked;
+        userSettings.vars.includeDOT = readSelection("includeDOT").checked;
+        userSettings.vars.includeDRBypass = readSelection("includeDRBypass").checked;
+        userSettings.vars.includeLethal = readSelection("includeLethal").checked;
+        userSettings.vars.includeElemental = readSelection("includeElemental").checked;
+
+        userSettings.vars.includeWorldBoss = readSelection("includeWorldBoss").checked;
+        userSettings.vars.includeMiniBoss = readSelection("includeMiniBoss").checked;
+
+
         tableGeneration.generateInitialTable();
     }
 }
@@ -153,60 +195,212 @@ let tableGeneration = {
         let baseMulti = 0.0277;
 
         return count*baseMulti;
+    }, 
+    generateAttacksArray(isAllAttacks) {
+
+        let attacksArray = [];
+
+        if (!isAllAttacks) {
+            let boss = bosses[readSelection("bossList").value]
+            let bossAttacks = boss.attacks;
+            readSelection("selectedBossImage").src = boss.image;
+
+            for (let i=0;i<bossAttacks.length;i++) {
+                let currentAttack = bossAttacks[i];
+                attacksArray.push(tableGeneration.createAttackEntry(currentAttack,boss));
+            }
+            return attacksArray;
+        }
+        else {
+            let bossNamesArray = Object.keys(bosses);
+            for (let name of bossNamesArray) {
+                let boss = bosses[name];
+                let bossAttacks = boss.attacks;
+
+                for (let i=0;i<bossAttacks.length;i++) {
+                    let currentAttack = bossAttacks[i];
+                    attacksArray.push(tableGeneration.createAttackEntry(currentAttack,boss));
+                }
+            }
+            return attacksArray
+        }
+
+    },
+    createAttackEntry(currentAttack,boss) {
+        let scaling21 = tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevel,1);
+        let worldLevel = userSettings.vars.worldLevel;
+        //Calculate the world level scalar
+        let compositeWorldScalar = tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevel,1);
+
+        //Determine if this is health based damage or not. If it is, apply the correct percentage.
+        let damage = currentAttack.attackType === "%HP" ? userSettings.vars.maxHealth * (currentAttack.hpPercent/100) : currentAttack.damage;
+        //If the world level is 21, then leave the values as they are. This is because all damage values were obtained in Apocalypse difficulty, with world level 21.
+        //However if the world level is NOT 21, then work backwards to find the values for the current world level.
+        let worldLevelScalar = worldLevel===21 ? 1 : (damage/scaling21)*compositeWorldScalar;
+        //Establish if the boss has damage affixes, how many players are active in the world, and if the boss has a buff to apply if selected
+        let viciousScalar = 1 + (userSettings.vars.isVicious ? 0.15 : 0);
+        let spitefulScalar = 1 + (userSettings.vars.isSpiteful ? tableGeneration.getSpitefulModifier() : 0);
+        let playerCountScalar = 1 + (scalingInfo.DamageScalarPerPlayer * (userSettings.vars.playerCount-1));
+        let bossBuffScalar = (userSettings.vars.useBuffs && currentAttack.isBuffed) ? (1 + boss.buffs) : 1;
+        damage *= worldLevelScalar * viciousScalar * spitefulScalar * playerCountScalar * bossBuffScalar;//Apply all scalar values to the main damage value
+        if (!currentAttack.drBypass) {damage *= (1-(userSettings.vars.effectiveDR/100))}//If the attack does not ignore DR, reduce by DR
+        let dps = currentAttack.frequency ? ((1/currentAttack.frequency)*damage) : 0;//If the attack does continuous damage, calculate its DPS
+        return {
+            bossName: boss.shortName,
+            bossType: boss.bossType,
+            attackName: currentAttack.name,
+            damage,
+            stagger: currentAttack.stagger,
+            usesDR: currentAttack.drBypass,
+            lethal: currentAttack.canBeLethal,
+            isKillConditional: currentAttack.lethalCondition,
+            attackType: currentAttack.attackType,
+            damageType: currentAttack.damageType,
+            frequency: currentAttack.frequency,
+            dps,
+            duration: currentAttack.duration,
+            totalDamage: (currentAttack.duration && currentAttack.frequency) ? (currentAttack.duration/currentAttack.frequency)*damage : 0,
+            description: currentAttack.description,
+        }
+    },
+    shouldIncludeEntry(current) {
+        const vars = userSettings.vars;
+    
+        // Check individual settings
+        const conditions = [
+            {condition: current.damageType, setting: vars.includeElemental},
+            {condition: current.lethal, setting: vars.includeLethal},
+            {condition: current.usesDR, setting: vars.includeDRBypass},
+            {condition: current.frequency, setting: vars.includeDOT},
+            {condition: current.attackType === "%HP", setting: vars.includePercentHP},
+            { 
+                condition: !current.damageType && !current.lethal && !current.usesDR && !current.frequency && current.attackType === "Hit", 
+                setting: vars.includeStandard 
+            }
+        ];
+    
+        //Loop through any conditions to see if they are met, and if so include them
+        for (let i = 0; i < conditions.length; i++) {
+            if (conditions[i].condition && conditions[i].setting) {
+                return true;
+            }
+        }
+    
+        return false;// If no conditions are met, skip the entry
+    },
+    updateSubstatColor(description) {
+        for (let substat of substatColorMods) {
+          //And if the description contains the looped substat ANYWHERE within it, proceed
+          if (description.toLowerCase().includes(substat) === true) {
+            let substatExclusion = "";
+            if (substatColorExclusions[substat] != undefined) {
+              //(?!) = lookahead is not [whatever you don't want to be next]
+              substatExclusion = `(?!${substatColorExclusions[substat]})`;
+              //This is to only find exclusion values based upon the specified substat. So fire = rate, status = effect, etc.
+            }
+            //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped. \s = whitespace character
+            let regEx = new RegExp(`\\b(${substat})${substatExclusion}\\b`, "gi");
+            description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
+          }
+        }
+        //d= digit character, w = word character
+        let regExNumbers = new RegExp(`\\b(\\d[%\\w]*)`, "gi");
+        description = description.replace(regExNumbers, `<span class="numberTag">$&</span>`);
+        return description;
     },
     generateInitialTable() {
+        let isAllAttacks = readSelection("listAllAttacks").checked;
+
+
+        let attacksArray = tableGeneration.generateAttacksArray(isAllAttacks);
+        let tableHeaders = `
+        <tr>
+            ${isAllAttacks ? '<th class="tableHeader">Boss</th>' : ""}
+            <th class="tableHeader">Name</th>
+            <th class="tableHeader">Damage</th>
+            <th class="tableHeader">Stagger</th>
+            <th class="tableHeader">Ignores DR?</th>
+            <th class="tableHeader">Lethal</th>
+            <th class="tableHeader">Attack Type</th>
+            <th class="tableHeader">DMG Type</th>
+            <th class="tableHeader">Frequency</th>
+            <th class="tableHeader">DPS</th>
+            <th class="tableHeader">Duration</th>
+            <th class="tableHeader">Total Damage</th>
+        </tr>`;
+        if (isAllAttacks) {
+            readSelection("bossSelectionOverviewBox").style.display = "none"
+            readSelection("listingSettingsBox").style.display = "flex";
+
+            let sortingKey = "";
+            let selectedKey = readSelection("sortByKey").value;
+
+            switch (selectedKey) {
+                case "Damage": sortingKey = "damage"; break;
+                case "Stagger": sortingKey = "stagger"; break;
+                case "DPS": sortingKey = "dps"; break;
+                case "Total DMG": sortingKey = "totalDamage"; break;
+            }
+
+            attacksArray.sort((a, b) => b[sortingKey] - a[sortingKey]);
+
+            readSelection("toggledToList").style.color = "#e06666";
+            readSelection("toggledToBoss").style.color = "gray";
+
+        }
+        else {
+            readSelection("bossSelectionOverviewBox").style.display = "flex"
+            readSelection("listingSettingsBox").style.display = "none";
+
+            readSelection("toggledToList").style.color = "gray";
+            readSelection("toggledToBoss").style.color = "#e06666";
+        }
+        readSelection("mainListHeaders").innerHTML = tableHeaders;
         readSelection("attackListDisplay").innerHTML = "";
-        let boss = bosses[readSelection("bossList").value]
-        let bossAttacks = boss.attacks;
-        readSelection("selectedBossImage").src = boss.image;
-        let scaling21 = tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevel,1);
-        let htmlString = "";
+
         let attackID = 0;
-        for (let i=0;i<bossAttacks.length;i++) {
+        let htmlString = "";
+        for (let i=0;i<attacksArray.length;i++) {
+            let current = attacksArray[i];
+
+            //Skip any entries that don't meet our attack toggles
+            if (!tableGeneration.shouldIncludeEntry(current)) {continue;}
+
+
+            if (!userSettings.vars.includeWorldBoss && current.bossType ==="worldBoss") {continue}
+            else if (!userSettings.vars.includeMiniBoss && current.bossType ==="miniBoss") {continue}
+
+
             attackID++;
-            let currentAttack = bossAttacks[i];
-            let damage = currentAttack.attackType === "%HP" ? userSettings.vars.maxHealth * (currentAttack.hpPercent/100) : currentAttack.damage;
-            let worldLevel = userSettings.vars.worldLevel;
-            let compositeWorldScalar = tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevel,1);
-            damage = worldLevel===21 ? damage : (damage/scaling21)*compositeWorldScalar;
-            let affixScalars = ((1 + (userSettings.vars.isVicious ? 0.15 : 0)) 
-            * (1 + (userSettings.vars.isSpiteful ? tableGeneration.getSpitefulModifier() : 0)) 
-            * (1 + (scalingInfo.DamageScalarPerPlayer * (userSettings.vars.playerCount-1))));
-            damage *= affixScalars;
-            if (userSettings.vars.useBuffs && currentAttack.isBuffed) {damage *= (1 + boss.buffs);}//If the attack is buffed by a boss's self-buff, buff it
-            if (!currentAttack.drBypass) {damage *= (1-(userSettings.vars.effectiveDR/100))}//If the attack does not ignore DR, reduce by DR
-            let dps = currentAttack.frequency ? ((1/currentAttack.frequency)*damage).toFixed(3) + "/s" : "";
             htmlString += `
             <tr class="attackRow">
+                ${isAllAttacks ? `<td data-name="Boss:">${current.bossName}</td>` : ""}
                 <td class="attackName" data-name="Attack Name:">
                     <button class="descriptionButton" onclick="showOrHideDescription(${attackID})">
-                        <div class="buttonTitle">${currentAttack.name}</div><div id="attackArrow${attackID}" class="attackArrow">&#9664;</div>
+                        <div class="buttonTitle">${current.attackName}</div><div id="attackArrow${attackID}" class="attackArrow">&#9664;</div>
                     </button>
                 </td>
-                <td data-name="Damage:">${damage.toFixed(3)}</td>
-                <td data-name="Stagger:" ${currentAttack.stagger>2 ? "style='color: red'" : ""}>${currentAttack.stagger || ""}</td>
-                <td data-name="${currentAttack.drBypass ? "Ignores DR:" : ""}" ${currentAttack.drBypass ? "style='color: red'" : ""}>${currentAttack.drBypass ? "Yes" : ""}</td>
-                <td data-name="${currentAttack.canBeLethal ? "Lethal:" : ""}" ${currentAttack.canBeLethal ? "style='color: red'" : ""}>${currentAttack.lethalCondition ? "Conditional" :
-                    currentAttack.canBeLethal ? "Yes" : ""
+                <td data-name="Damage:">${current.damage.toFixed(3)}</td>
+                <td data-name="Stagger:" ${current.stagger>2 ? "style='color: #e06666'" : ""}>${current.stagger || ""}</td>
+                <td data-name="${current.usesDR ? "Ignores DR:" : ""}" ${current.usesDR ? "style='color: #e06666'" : ""}>${current.usesDR ? "Yes" : ""}</td>
+                <td data-name="${current.lethal ? "Lethal:" : ""}" ${current.lethal ? "style='color: #e06666'" : ""}>${current.isKillConditional ? "Conditional" :
+                    current.lethal ? "Yes" : ""
                 }</td>
-                <td data-name="Attack Type:" ${currentAttack.attackType != "Hit" ? "style='color: red'" : ""}>${currentAttack.attackType}</td>
-                <td data-name="DMG Type:" ${currentAttack.damageType ? "style='color: red'" : ""}>${currentAttack.damageType || ""}</td>
-                <td data-name="${currentAttack.frequency ? "Frequency:" : ""}">${currentAttack.frequency ? currentAttack.frequency.toFixed(3) + "s" : ""}</td>
-                <td data-name="${currentAttack.frequency ? "DPS:" : ""}">${dps}</td>
-                <td data-name="${currentAttack.frequency ? "Duration:" : ""}">${(currentAttack.attackType === "Hit" && currentAttack.frequency === 0) ? "" : 
-                    !currentAttack.duration ? "&infin;" : currentAttack.duration + "s"}</td>
-                <td data-name="${currentAttack.duration ? "Total DMG:" : ""}">${(currentAttack.duration && currentAttack.frequency) ? ((currentAttack.duration/currentAttack.frequency)*damage).toFixed(3) : ""}</td>
+                <td data-name="Attack Type:" ${current.attackType != "Hit" ? "style='color: #e06666'" : ""}>${current.attackType}</td>
+                <td data-name="${current.damageType ? "DMG Type:" : ""}" ${current.damageType ? "style='color: red'" : ""}>${current.damageType ? tableGeneration.updateSubstatColor(current.damageType) : ""}</td>
+                <td data-name="${current.frequency ? "Frequency:" : ""}">${current.frequency ? current.frequency.toFixed(3) + "s" : ""}</td>
+                <td data-name="${current.dps ? "DPS:" : ""}">${current.dps ? current.dps.toFixed(3) : ""}</td>
+                <td data-name="${current.frequency ? "Duration:" : ""}">${(current.frequency === 0) ? "" : 
+                    !current.duration ? "&infin;" : current.duration + "s"}</td>
+                <td data-name="${current.duration ? "Total DMG:" : ""}">${current.totalDamage ? current.totalDamage.toFixed(3) : ""}</td>
             </tr>
             <tr id="attack${attackID}" style="display: none;">
-                <td colspan="9" class="attackDescription" data-name="">${currentAttack.description}</td>
+                <td colspan="9" class="attackDescription" data-name="">${current.description}</td>
             </tr>
             `;
-            // <td colspan="3" class="attackDescription">${currentAttack.description}</td>
-            
-            
-            // `<div>${currentAttack.name}: ${currentAttack.damage}</div>`
         }
         readSelection("attackListDisplay").innerHTML = htmlString;
+        
     }
 }
 
