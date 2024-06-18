@@ -2992,7 +2992,7 @@ let bosses = {
             },
             {
                 "name":"Tongue Lash (Long)",
-                "description": "Dullain will take several steps forward while leaning back, and then he will launch his tongue out in a skewering attack. If Dullain doesn't have a direct, unobstructed line of site to the player, it will simply deal the damage listed, otherwise it will impale the player and kill them. Pillars, other enemies, being extremely close to him, and various factors can prevent the kill from taking place.",
+                "description": "Dullain will take several steps forward while leaning back, and then he will launch his tongue out in a skewering attack. If Dullain doesn't have a direct, unobstructed line of sight to the player, it will simply deal the damage listed, otherwise it will impale the player and kill them. Pillars, other enemies, being extremely close to him, and various factors can prevent the kill from taking place.",
                 "damage": 148.839,
                 "stagger": 2,
                 "hpBased": false,
