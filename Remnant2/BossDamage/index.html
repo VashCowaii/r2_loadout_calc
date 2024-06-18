@@ -56,6 +56,7 @@
 
 <body>
     
+    <div id="tooltip" class="tooltip"></div>
     <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
 
 <div class="main">
@@ -192,7 +193,7 @@
                             </div>
                         </div>
                         <div class="selectedBossImageContainer">
-                            <img src="/brotherLibrary/bossImages/Venom.jpg" class="selectedBossImage" alt="Selected Boss Image" id="selectedBossImage" title="Boss Images by ConRaven">
+                            <img src="/brotherLibrary/bossImages/Venom.jpg" class="selectedBossImage hasHoverTooltip" alt="Selected Boss Image" id="selectedBossImage">
                         </div>
                     </div>
                 </div>
@@ -211,7 +212,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="statisticSettingsRow">
+                    <div class="statisticSettingsRow hasHoverTooltip" id="spitefulExplainer">
                         <span class="statsRowName">Spiteful&nbsp;(<span id="spitefulDisplay">0</span>%)</span>
                         <span class="rowTraceLine"></span>
                         <div class="statsRowToggle">
@@ -229,7 +230,7 @@
                             <input type="range" id="bossHPSlider" name="slider" min="10" max="100" value="100" step="10" onchange="userSettings.updateUserInputs()" disabled>
                         </div>
                     </div>
-                    <div class="statisticSettingsRow">
+                    <div class="statisticSettingsRow hasHoverTooltip" id="bossBuffExplainer">
                         <span class="statsRowName">Include Boss-Buffs</span>
                         <span class="rowTraceLine"></span>
                         <div class="statsRowToggle">
@@ -239,6 +240,8 @@
                             </label>
                         </div>
                     </div>
+                    <div>Difficulty Settings</div>
+                    <div class="filtersInstructionsBox hasHoverTooltip" style="font-size: 10;display: flex;justify-content: center;" id="difficultyDisclaimer">Not all attacks scale with WL or standard difficulty modifiers.&nbsp;<div>[?]</div></div>
                     <div class="statisticSettingsRow">
                         <div class="statsRowName">World Level:&nbsp;<span id="worldLevelDisplay">21</span></div>
                         <span class="rowTraceLine"></span>
