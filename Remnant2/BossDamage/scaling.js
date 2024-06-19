@@ -397,12 +397,12 @@ let tableGeneration = {
         for (let i=0;i<attacksArray.length;i++) {
             let current = attacksArray[i];
 
-            //Skip any entries that don't meet our attack toggles
-            if (!tableGeneration.shouldIncludeEntry(current)) {continue;}
-
-
-            if (!userSettings.vars.includeWorldBoss && current.bossType ==="worldBoss") {continue}
-            else if (!userSettings.vars.includeMiniBoss && current.bossType ==="miniBoss") {continue}
+            if (isAllAttacks) {
+                //Skip any entries that don't meet our attack toggles if we are in full list mode
+                if (!tableGeneration.shouldIncludeEntry(current)) {continue;}
+                if (!userSettings.vars.includeWorldBoss && current.bossType ==="worldBoss") {continue}
+                else if (!userSettings.vars.includeMiniBoss && current.bossType ==="miniBoss") {continue}
+            }
 
 
             attackID++;
