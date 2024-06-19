@@ -48,7 +48,7 @@
                     <ul>
                         <li>Fixed an issue where a console logger for debug purposes was slowing down queries quite a lot whenever Burden of the Mesmer was iterated upon, I simply forgot to take it out before when I was using it to fix a bug, that's my bad.</li>
                         <li>Fixed Spirit Healer's custom function. This was something I was aware wasn't working properly, but kept putting off as it just wasn't important to me.</li>
-                        <li>Added handling for enemy count within Challenger's "Intimidating Presence" perk. It will now added Reduced Enemy Damage per enemy counted, up to a maximum of 4 enemies.
+                        <li>Added handling for enemy count within Challenger's "Intimidating Presence" perk. It will now add Reduced Enemy Damage per enemy counted, up to a maximum of 4 enemies.
                             <ul>
                                 <li>Unfortunately this does mean queries will be a TINY bit slower, since they now check for passives. We're talking a difference of like a single second though, in terms of total completion time.</li>
                             </ul>
