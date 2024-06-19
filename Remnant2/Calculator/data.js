@@ -4,15 +4,7 @@
 helmets = {
 	"": {
 	  "SLOT": "Head",
-	  "stats": {
-		"Armor": 0,
-	    "Encumbrance": 0,
-	    "Bleed": 0,
-	    "Burn": 0,
-	    "Shock": 0,
-	    "Corrosive": 0,
-	    "Blight": 0
-	  },
+	  "stats": {},
 	  "image": "/images/Remnant/clear.png",
 	  "tags": []
 	},
@@ -482,15 +474,7 @@ helmets = {
 chests = {
 	"": {
 	  "SLOT": "Chest",
-	  "stats": {
-	    "Armor": 0,
-	    "Encumbrance": 0,
-	    "Bleed": 0,
-	    "Burn": 0,
-	    "Shock": 0,
-	    "Corrosive": 0,
-	    "Blight": 0
-	  },
+	  "stats": {},
 	  "image": "/images/Remnant/clear.png",
 	  "tags": []
 	},
@@ -862,15 +846,7 @@ chests = {
 legs = {
 	"": {
 	  "SLOT": "Leg",
-	  "stats": {
-	    "Armor": 0,
-	    "Encumbrance": 0,
-	    "Bleed": 0,
-	    "Burn": 0,
-	    "Shock": 0,
-	    "Corrosive": 0,
-	    "Blight": 0
-	  },
+	  "stats": {},
 	  "image": "/images/Remnant/clear.png",
 	  "tags": []
 	},
@@ -1242,15 +1218,7 @@ legs = {
 hands = {
 	"": {
 	  "SLOT": "Hand",
-	  "stats": {
-	    "Armor": 0,
-	    "Encumbrance": 0,
-	    "Bleed": 0,
-	    "Burn": 0,
-	    "Shock": 0,
-	    "Corrosive": 0,
-	    "Blight": 0
-	  },
+	  "stats": {},
 	  "image": "/images/Remnant/clear.png",
 	  "tags": []
 	},
@@ -6976,6 +6944,7 @@ traits = {
 	"": {
 		"name": "",
 		"property": "",
+		"tags": [],
 		"usesConditional": {},
 		"desc": "",
 		"level": {
@@ -6995,6 +6964,7 @@ traits = {
 	"Affliction": {
 		"name": "Affliction",
 		"property": "StatusDuration",
+		"tags": ["StatusDuration"],
 		"usesConditional": {},
 		"desc": "Increases STATUS EFFECT duration against enemies by VALUE1.1%.",
 		"level": {
@@ -7014,6 +6984,7 @@ traits = {
 	"Ammo Reserves": {
 		"name": "Ammo Reserves",
 		"property": "Reserves",
+		"tags": ["Reserves"],
 		"usesConditional": {},
 		"desc": "Increases Ammo Reserves by VALUE1.1%.",
 		"level": {
@@ -7033,6 +7004,7 @@ traits = {
 	"Amplitude": {
 		"name": "Amplitude",
 		"property": "auraAOE",
+		"tags": ["auraAOE"],
 		"usesConditional": {},
 		"desc": "Increases AOE and AURA Size by VALUE1.1%.",
 		"level": {
@@ -7052,6 +7024,7 @@ traits = {
 	"Arcane Strike": {
 		"name": "Arcane Strike",
 		"property": "ModPowerGenMelee",
+		"tags": ["ModPowerGenMelee"],
 		"usesConditional": {},
 		"desc": "Increases Mod Power Generation from Melee Damage by VALUE1.1%.",
 		"level": {
@@ -7071,6 +7044,7 @@ traits = {
 	"Barkskin": {
 		"name": "Barkskin",
 		"property": "FlatDR",
+		"tags": ["FlatDR"],
 		"usesConditional": {},
 		"desc": "Reduces all incoming damage by VALUE1.1%.",
 		"level": {
@@ -7112,6 +7086,7 @@ traits = {
 	"Bloodstream": {
 		"name": "Bloodstream",
 		"property": "GreyHP/S+",
+		"tags": ["GreyHP/S+"],
 		"usesConditional": {},
 		"desc": "Increases Grey Health Regeneration by VALUE1.1/s.",
 		"level": {
@@ -7131,6 +7106,7 @@ traits = {
 	"Chakra": {
 		"name": "Chakra",
 		"property": "ModDuration",
+		"tags": ["ModDuration"],
 		"usesConditional": {},
 		"desc": "Increases Mod Duration by VALUE1.1%.",
 		"level": {
@@ -7150,6 +7126,7 @@ traits = {
 	"Dark Pact": {
 		"name": "Dark Pact",
 		"property": "GreyHealthConversion",
+		"tags": ["GreyHealthConversion"],
 		"usesConditional": {},
 		"desc": "Increases Grey Health Conversion Rate by VALUE1.1%.<br><br>Conversion Rate is how much HP is converted to GHP when you take damage, not your regen rate.",
 		"level": {
@@ -7169,6 +7146,7 @@ traits = {
 	"Endurance": {
 		"name": "Endurance",
 		"property": "Stamina",
+		"tags": ["Stamina"],
 		"usesConditional": {},
 		"desc": "Increases Max Stamina by VALUE1.1.",
 		"level": {
@@ -7188,6 +7166,7 @@ traits = {
 	"Expertise": {
 		"name": "Expertise",
 		"property": "CDR",
+		"tags": ["CDR"],
 		"usesConditional": {},
 		"desc": "Reduces Skill Cooldowns by VALUE1.1%.",
 		"level": {
@@ -7207,6 +7186,7 @@ traits = {
 	"Fitness": {
 		"name": "Fitness",
 		"property": "EvadeDistance",
+		"tags": ["EvadeDistance"],
 		"usesConditional": {},
 		"desc": "Increases Evade Distance by VALUE1.1%.",
 		"level": {
@@ -7226,6 +7206,7 @@ traits = {
 	"Flash Caster": {
 		"name": "Flash Caster",
 		"property": "CastSpeed",
+		"tags": ["CastSpeed"],
 		"usesConditional": {},
 		"desc": "Increases Casting Speed by VALUE1.1%.",
 		"level": {
@@ -7245,6 +7226,7 @@ traits = {
 	"Footwork": {
 		"name": "Footwork",
 		"property": "AimMovementSpeed",
+		"tags": ["AimMovementSpeed"],
 		"usesConditional": {},
 		"desc": "Increases Movement Speed while Aiming by VALUE1.1%.",
 		"level": {
@@ -7264,6 +7246,7 @@ traits = {
 	"Fortify": {
 		"name": "Fortify",
 		"property": "Armor%",
+		"tags": ["Armor%"],
 		"usesConditional": {},
 		"desc": "Increases Armor Effectiveness by VALUE1.1%.",
 		"level": {
@@ -7283,6 +7266,7 @@ traits = {
 	"Gifted": {
 		"name": "Gifted",
 		"property": "SkillDuration",
+		"tags": ["SkillDuration"],
 		"usesConditional": {},
 		"desc": "Increases Skill Duration by VALUE1.1%.",
 		"level": {
@@ -7302,6 +7286,7 @@ traits = {
 	"Glutton": {
 		"name": "Glutton",
 		"property": "RelicSpeed",
+		"tags": ["RelicSpeed"],
 		"usesConditional": {},
 		"desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
 		"level": {
@@ -7321,6 +7306,7 @@ traits = {
 	"Handling": {
 		"name": "Handling",
 		"property": ["Spread","Recoil"],
+		"tags": ["Spread","Recoil"],
 		"usesConditional": {},
 		"desc": "Reduces Weapon Spread and Recoil by VALUE1.1%.",
 		"level": {
@@ -7340,6 +7326,7 @@ traits = {
 	"Kinship": {
 		"name": "Kinship",
 		"property": "SelfDamageModifier",
+		"tags": ["SelfDamageModifier"],
 		"usesConditional": {},
 		"desc": "Reduces FriendlyFire Damage Dealt and Received by VALUE1.1%.",
 		"level": {
@@ -7359,6 +7346,7 @@ traits = {
 	"Leech": {
 		"name": "Leech",
 		"property": "LifestealEFF",
+		"tags": ["LifestealEFF"],
 		"usesConditional": {},
 		"desc": "Increases Lifesteal Efficacy by VALUE1.1%.",
 		"level": {
@@ -7378,6 +7366,7 @@ traits = {
 	"Longshot": {
 		"name": "Longshot",
 		"property": "Range",
+		"tags": ["Range"],
 		"usesConditional": {},
 		"desc": "Increases Weapon Ideal Range by VALUE1.1m.",
 		"level": {
@@ -7397,6 +7386,7 @@ traits = {
 	"Potency": {
 		"name": "Potency",
 		"property": "ConsumableDuration",
+		"tags": ["ConsumableDuration"],
 		"usesConditional": {},
 		"desc": "Increases Consumable Duration by VALUE1.1%.",
 		"level": {
@@ -7416,6 +7406,7 @@ traits = {
 	"Recovery": {
 		"name": "Recovery",
 		"property": "Stamina/S+",
+		"tags": ["Stamina/S+"],
 		"usesConditional": {},
 		"desc": "Increases Stamina Regen by VALUE1.1/s.",
 		"level": {
@@ -7435,6 +7426,7 @@ traits = {
 	"Regrowth": {
 		"name": "Regrowth",
 		"property": "HP/S+",
+		"tags": ["HP/S+"],
 		"usesConditional": {},
 		"desc": "Increases Health Regeneration by VALUE1.1/s.",
 		"level": {
@@ -7454,6 +7446,7 @@ traits = {
 	"Resolute": {
 		"name": "Resolute",
 		"property": null,
+		"tags": [],
 		"usesConditional": {},
 		"desc": "Reduces Hit Reaction Time by VALUE1.1%",
 		"level": {
@@ -7473,6 +7466,7 @@ traits = {
 	"Revivalist": {
 		"name": "Revivalist",
 		"property": null,
+		"tags": [],
 		"usesConditional": {},
 		"desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
 		"level": {
@@ -7492,6 +7486,7 @@ traits = {
 	"Rugged": {
 		"name": "Rugged",
 		"property": "SummonHealth",
+		"tags": ["SummonHealth"],
 		"usesConditional": {},
 		"desc": "Increases the Health of Archetype Summons by a VALUE1.1%.",
 		"level": {
@@ -7511,6 +7506,7 @@ traits = {
 	"Scholar": {
 		"name": "Scholar",
 		"property": null,
+		"tags": [],
 		"usesConditional": {},
 		"desc": "Increases Experience Gain by VALUE1.1%.",
 		"level": {
@@ -7530,6 +7526,7 @@ traits = {
 	"Shadeskin": {
 		"name": "Shadeskin",
 		"property": ["Burn","Shock","Corrosive"],
+		"tags": ["Burn","Shock","Corrosive"],
 		"usesConditional": {},
 		"desc": "Increases Elemental Damage Resistance by VALUE1.1.",
 		"level": {
@@ -7549,6 +7546,7 @@ traits = {
 	"Siphoner": {
 		"name": "Siphoner",
 		"property": "Lifesteal",
+		"tags": ["Lifesteal"],
 		"usesConditional": {},
 		"desc": "Grants VALUE1.1% base damage as Lifesteal.",
 		"level": {
@@ -7568,6 +7566,7 @@ traits = {
 	"Spirit": {
 		"name": "Spirit",
 		"property": "ModPowerGen",
+		"tags": ["ModPowerGen"],
 		"usesConditional": {},
 		"desc": "Increases Mod Power Generation by VALUE1.1%.",
 		"level": {
@@ -7587,6 +7586,7 @@ traits = {
 	"Strong Back": {
 		"name": "Strong Back",
 		"property": "WeightThreshold",
+		"tags": ["WeightThreshold"],
 		"usesConditional": {},
 		"desc": "Increases Dodge Weight Threshold by VALUE1.1.",
 		"level": {
@@ -7606,6 +7606,7 @@ traits = {
 	"Swiftness": {
 		"name": "Swiftness",
 		"property": "MovementSpeed",
+		"tags": ["MovementSpeed","EnvMovementSpeed"],
 		"usesConditional": {},
 		"desc": "Increases Movement Speed by VALUE1.1%.<br>Increases Environmental Movement Speed by VALUE2.1%.<br>(Vaulting, Ladders, Wading)",
 		"level": {
@@ -7639,6 +7640,7 @@ traits = {
 	"Triage": {
 		"name": "Triage",
 		"property": "HealingEFF",
+		"tags": ["HealingEFF"],
 		"usesConditional": {},
 		"desc": "Increases Healing by VALUE1.1%.",
 		"level": {
@@ -7658,6 +7660,7 @@ traits = {
 	"Untouchable": {
 		"name": "Untouchable",
 		"property": "iFrameWindow",
+		"tags": ["iFrameWindow"],
 		"usesConditional": {},
 		"desc": "Increases Evade Window by VALUE1.1%.",
 		"level": {
@@ -7677,6 +7680,7 @@ traits = {
 	"Vigor": {
 		"name": "Vigor",
 		"property": "Health",
+		"tags": ["Health"],
 		"usesConditional": {},
 		"desc": `Increases Max Health by VALUE1.1.`,
 		"level": {

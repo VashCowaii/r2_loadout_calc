@@ -394,11 +394,11 @@ let createHTML = {
               </div>
             </div>`
   },
-  basicsRow(name,value,isRounded,unit) {
+  basicsRow(tooltipID,name,value,isRounded,unit) {
     unit = unit ?? "";
     value = unit==="%" ? value*100 : value;
     value = !isRounded ? value : value.toFixed(2)
-    return `<div class="basicsDRContainer">
+    return `<div class="basicsDRContainer" id="${tooltipID}" onmouseenter="showTooltip('${tooltipID}')" onmouseleave="hideTooltip()">
       <span class="basicsDRStat">${name}</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="">${value}</span>
     ${unit}</div>`
   },
@@ -2510,7 +2510,7 @@ let customItemFunctions = {
       }
     },
     gameMasters1(index) {//0 user input
-      let teamCount = globalRecords.ALTteamCount;
+      let teamCount = globalRecords.teamCount;
       if (teamCount>1) {
         index.DMGKept *= 1 + ((1/teamCount)-1); //dmgshared adjustments, healing is done in 2
       }
@@ -3040,18 +3040,30 @@ let basicsUpdates = {
       let drHTML = "<div class='basicsDRheaderTitle'>DAMAGE REDUCTION</div>";
       let drRowsHTML = '';
 
-      drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("Base Armor",returnObject.baseArmor,true) : "";
-      drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("Armor Effectiveness",returnObject.armorEff,true,"%") : "";
-      drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("Total Armor",returnObject.totalArmor,true) : "";
-      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("Armor DR%",returnObject.armorDR,true,"%") : "";
-      drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
-      drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
-      drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
-      drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
-      let drSumHTML = `<div class="basicsDRsumContainer">
+      let listItemsHeader = "The following selections can contribute to this statistic:<br><br>"
+
+      drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("baseArmor","Base Armor",returnObject.baseArmor,true) : "";
+      tooltipStorage.baseArmor = listItemsHeader + returnItemsWithStat("Armor");
+      drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("armorEff","Armor Effectiveness",returnObject.armorEff,true,"%") : "";
+      tooltipStorage.armorEff = listItemsHeader + returnItemsWithStat("Armor%");
+      drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("totalArmor","Total Armor",returnObject.totalArmor,true) : "";
+      tooltipStorage.totalArmor = "TotalArmor = Armor * (1 + ArmorEffectiveness)";
+      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("armorDR","Armor DR%",returnObject.armorDR,true,"%") : "";
+      tooltipStorage.armorDR = "ArmorDR = TotalArmor / (TotalArmor + 200)";
+      drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("bulwarkStacks","Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
+      tooltipStorage.bulwarkStacks = listItemsHeader + returnItemsWithStat("Bulwark");
+      drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("bulwarkDR","Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
+      tooltipStorage.bulwarkDR = "BulwarkDR = -0.005 * (BulwarkStacks^2) + 0.075 * BulwarkStacks";
+
+      drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("otherFlat","Other Flat",returnObject.otherFlat,true,"%") : "";
+      tooltipStorage.otherFlat = listItemsHeader + returnItemsWithStat("FlatDR");
+      drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("totalFlat","Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+      tooltipStorage.totalFlat = listItemsHeader + returnItemsWithStat("FlatDR") + returnItemsWithStat("Bulwark");
+      let drSumHTML = `<div class="basicsDRsumContainer" id="totalDRRow" onmouseenter="showTooltip('totalDRRow')" onmouseleave="hideTooltip()">
            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">${(returnObject.totalDR*100).toFixed(2)}%</span>
        </div>
        <br>`
+      tooltipStorage.totalDRRow = "TotalDR = 1 - (1 - ArmorDR) * (1 - FlatDR)<br><br>TotalDR caps at 80%";
       readSelection("basicsInnerBox").innerHTML += drRowsHTML ? drHTML + drRowsHTML + drSumHTML : "";
       if (drRowsHTML) {
         //Adjust total DR color based on amount.
@@ -3062,30 +3074,44 @@ let basicsUpdates = {
  
       let healingHTML = "<div class='basicsDRheaderTitle'>HEALING</div>";
       let healingHTMLRowsHTML = '';
-      healingHTMLRowsHTML += returnObject.relicEffectiveness ? createHTML.basicsRow("Relic Effectiveness",returnObject.relicEffectiveness,true,"%") : "";
-      healingHTMLRowsHTML += returnObject.healingEffectiveness ? createHTML.basicsRow("Healing Effectiveness",returnObject.healingEffectiveness,true,"%") : "";
-      healingHTMLRowsHTML += returnObject.relicUseTime ? createHTML.basicsRow("Relic Use Time",returnObject.relicUseTime,true,"%") : "";
-      healingHTMLRowsHTML += returnObject.flatHPperSec ? createHTML.basicsRow("Flat HP/s",returnObject.flatHPperSec,true) : "";
-      healingHTMLRowsHTML += returnObject.percHPperSec ? createHTML.basicsRow("% HP/s",returnObject.percHPperSec,true,"%") : "";
-      healingHTMLRowsHTML += returnObject.totalGreyHPperSec != 0.20 ? createHTML.basicsRow("Grey Health/s",returnObject.totalGreyHPperSec,true) : "";
+      healingHTMLRowsHTML += returnObject.relicEffectiveness ? createHTML.basicsRow("relicEffectiveness","Relic Effectiveness",returnObject.relicEffectiveness,true,"%") : "";
+      tooltipStorage.relicEffectiveness = "This is a boost to all relic-based healing and/or some relic specific effects.<br>" + listItemsHeader + returnItemsWithStat("RelicEFF");
+      healingHTMLRowsHTML += returnObject.healingEffectiveness ? createHTML.basicsRow("healingEffectiveness","Healing Effectiveness",returnObject.healingEffectiveness,true,"%") : "";
+      tooltipStorage.healingEffectiveness = "This is a boost to all healing done of any kind. Grey Health regen and lifesteal do not count as healing.<br>" + listItemsHeader + returnItemsWithStat("HealingEFF");
+      healingHTMLRowsHTML += returnObject.relicUseTime ? createHTML.basicsRow("relicUseTime","Relic Use Time",returnObject.relicUseTime,true,"%") : "";
+      tooltipStorage.relicUseTime = listItemsHeader + returnItemsWithStat("RelicSpeed") + returnItemsWithStat("HASTE");
+      healingHTMLRowsHTML += returnObject.flatHPperSec ? createHTML.basicsRow("flatHPperSec","Flat HP/s",returnObject.flatHPperSec,true) : "";
+      tooltipStorage.flatHPperSec = listItemsHeader + returnItemsWithStat("HP/S+");
+      healingHTMLRowsHTML += returnObject.percHPperSec ? createHTML.basicsRow("percHPperSec","% HP/s",returnObject.percHPperSec,true,"%") : "";
+      tooltipStorage.percHPperSec = listItemsHeader + returnItemsWithStat("HP/S%");
+      healingHTMLRowsHTML += returnObject.totalGreyHPperSec != 0.20 ? createHTML.basicsRow("totalGreyHPperSec","Grey Health/s",returnObject.totalGreyHPperSec,true) : "";
+      tooltipStorage.totalGreyHPperSec = "Grey Health Regen has a base value of 0.20/s<br>" + listItemsHeader + returnItemsWithStat("GreyHP/S%") + returnItemsWithStat("GreyHP/S+");
       readSelection("basicsInnerBox").innerHTML += healingHTMLRowsHTML ? healingHTML + healingHTMLRowsHTML + "<br>" : "";
 
 
       let lifestealHTML = "<div class='basicsDRheaderTitle'>LIFESTEAL</div>";
       let lifestealHTMLRowsHTML = '';
-      lifestealHTMLRowsHTML += returnObject.lifestealEFF ? createHTML.basicsRow("Effectiveness",returnObject.lifestealEFF,true,"%") : "";
-      lifestealHTMLRowsHTML += returnObject.lifestealALL ? createHTML.basicsRow("All",returnObject.lifestealALL,true,"%") : "";
-      lifestealHTMLRowsHTML += returnObject.lifestealMelee ? createHTML.basicsRow("Melee",returnObject.lifestealMelee,true,"%") : "";
-      lifestealHTMLRowsHTML += returnObject.lifestealMeleeCharged ? createHTML.basicsRow("Melee (Charged)",returnObject.lifestealMeleeCharged,true,"%") : "";
-      lifestealHTMLRowsHTML += returnObject.lifestealRange ? createHTML.basicsRow("Ranged",returnObject.lifestealRange,true,"%") : "";
+      lifestealHTMLRowsHTML += returnObject.lifestealEFF ? createHTML.basicsRow("lifestealEFF","Effectiveness",returnObject.lifestealEFF,true,"%") : "";
+      tooltipStorage.lifestealEFF = listItemsHeader + returnItemsWithStat("LifestealEFF");
+      lifestealHTMLRowsHTML += returnObject.lifestealALL ? createHTML.basicsRow("lifestealALL","All",returnObject.lifestealALL,true,"%") : "";
+      tooltipStorage.lifestealALL = listItemsHeader + returnItemsWithStat("Lifesteal");
+      lifestealHTMLRowsHTML += returnObject.lifestealMelee ? createHTML.basicsRow("lifestealMelee","Melee",returnObject.lifestealMelee,true,"%") : "";
+      tooltipStorage.lifestealMelee = listItemsHeader + returnItemsWithStat("MLifesteal");
+      lifestealHTMLRowsHTML += returnObject.lifestealMeleeCharged ? createHTML.basicsRow("lifestealMeleeCharged","Melee (Charged)",returnObject.lifestealMeleeCharged,true,"%") : "";
+      tooltipStorage.lifestealMeleeCharged = listItemsHeader + returnItemsWithStat("MChargedLifesteal");
+      lifestealHTMLRowsHTML += returnObject.lifestealRange ? createHTML.basicsRow("lifestealRange","Ranged",returnObject.lifestealRange,true,"%") : "";
+      tooltipStorage.lifestealRange = listItemsHeader + returnItemsWithStat("RLifesteal");
       readSelection("basicsInnerBox").innerHTML += lifestealHTMLRowsHTML ? lifestealHTML + lifestealHTMLRowsHTML + "<br>" : "";
 
 
       let staminaHTML = "<div class='basicsDRheaderTitle'>STAMINA</div>";
       let staminaHTMLRowsHTML = '';
-      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("Regen/s",returnObject.staminaPerSec,true) : "";
-      staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("Cost",returnObject.staminaCost,true,"%") : "";
-      staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("Dodge Class",returnObject.dodgeClass,false) : "";
+      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("staminaPerSec","Regen/s",returnObject.staminaPerSec,true) : "";
+      tooltipStorage.staminaPerSec = listItemsHeader + returnItemsWithStat("Stamina/S+") + returnItemsWithStat("Stamina/S+Multi");
+      staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("staminaCost","Cost",returnObject.staminaCost,true,"%") : "";
+      tooltipStorage.staminaCost = listItemsHeader + returnItemsWithStat("StaminaCost") + returnItemsWithStat("StaminaPenaltyAdjustment") + returnItemsWithStat("Encumbrance") + returnItemsWithStat("Encumbrance%") + returnItemsWithStat("weightThreshold");
+      staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("staminaHTMLRowsHTML","Dodge Class",returnObject.dodgeClass,false) : "";
+      tooltipStorage.staminaHTMLRowsHTML = listItemsHeader + returnItemsWithStat("Encumbrance") + returnItemsWithStat("Encumbrance%") + returnItemsWithStat("weightThreshold");
       readSelection("basicsInnerBox").innerHTML += staminaHTMLRowsHTML ? staminaHTML + staminaHTMLRowsHTML + "<br>" : "";
 
 
@@ -3122,7 +3148,12 @@ let basicsUpdates = {
       formulasValues.updateDisplay("effectiveDR",returnObject.effectiveDR*100,2,"%");
       formulasValues.updateDisplay("totalBonusMitigation",returnObject.totalBonusMitigation*100,2,"%");
       formulasValues.updateDisplay("REdamage",returnObject.reducedEnemyDamage*100,2,"%");
+      tooltipStorage.REdamageRow = "REDamage = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much the enemy damage gets reduced, separate from damage reduction. These are considered enemy debuffs most of the time.<br><br>" + listItemsHeader + returnItemsWithStat("REdamage");
       formulasValues.updateDisplay("DMGKept",returnObject.damageKept*100,2,"%");
+      tooltipStorage.DMGKeptRow = "DMGKept = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much damage you keep, based on effects that share damage to other friendly entities.<br><br>" + listItemsHeader + returnItemsWithStat("DMGKept");
+      tooltipStorage.totalNonstandardDRRow = "BonusMitigation = 1 - (1 - REDamage) * (1 - DMGKept)<br>This is how much the enemy damage gets reduced, separate from damage reduction. These are considered enemy debuffs most of the time.";
+      // totalNonstandardDRRow
+
       formulasValues.updateDisplay("shield%",returnObject.percShields*100,2,"%");
       formulasValues.updateDisplay("shieldEff",returnObject.shieldEff*100,2,"%");
       formulasValues.updateDisplay("totalShield%",returnObject.totalPercShields*100,2,"%");
@@ -3154,31 +3185,31 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">DAMAGE</div>`;
     let list = ``;
 
-    list += table.AllDamage ? createHTML.basicsRow("All",table.AllDamage,true,"%") : "";
-    list += table.RangedDamage ? createHTML.basicsRow("Ranged",table.RangedDamage,true,"%") : "";
-    list += table.SkillDamage ? createHTML.basicsRow("Skill",table.SkillDamage,true,"%") : "";
-    list += table.MeleeDamage ? createHTML.basicsRow("Melee",table.MeleeDamage,true,"%") : "";
-    list += table.ChargeDamage ? createHTML.basicsRow("Charged",table.ChargeDamage,true,"%") : "";
-    list += table.BackstepDamage ? createHTML.basicsRow("Evade",table.BackstepDamage,true,"%") : "";
-    list += table.FistDamage ? createHTML.basicsRow("Unarmed",table.FistDamage,true,"%") : "";
-    list += table.MeleeSpecialAbilityDamage ? createHTML.basicsRow("Melee Threshold",table.MeleeSpecialAbilityDamage,true,"%") : "";
-    list += table.CorrosiveDamage ? createHTML.basicsRow("Corrosive",table.CorrosiveDamage,true,"%") : "";
-    list += table.AcidDamage ? createHTML.basicsRow("Acid",table.AcidDamage,true,"%") : "";
-    list += table.BurningDamage ? createHTML.basicsRow("Burning",table.BurningDamage,true,"%") : "";
-    list += table.FireDamage ? createHTML.basicsRow("Fire",table.FireDamage,true,"%") : "";
-    list += table.ElementalDamage ? createHTML.basicsRow("Elemental",table.ElementalDamage,true,"%") : "";
-    list += table.PrimaryElementalDamage ? createHTML.basicsRow("Primary Elemental",table.PrimaryElementalDamage,true,"%") : "";
-    list += table.SecondaryElementalDamage ? createHTML.basicsRow("Secondary Elemental",table.SecondaryElementalDamage,true,"%") : "";
-    list += table.ShockDamage ? createHTML.basicsRow("Shock",table.ShockDamage,true,"%") : "";
-    list += table.OverloadedDamage ? createHTML.basicsRow("Overloaded",table.OverloadedDamage,true,"%") : "";
-    list += table.ExplosiveDamage ? createHTML.basicsRow("Explosive",table.ExplosiveDamage,true,"%") : "";
-    list += table.StatusDamage ? createHTML.basicsRow("Status",table.StatusDamage,true,"%") : "";
-    list += table.MeleeStatusDamage ? createHTML.basicsRow("Melee Status",table.MeleeStatusDamage,true,"%") : "";
-    list += table.ModDamage ? createHTML.basicsRow("Mod",table.ModDamage,true,"%") : "";
-    list += table.PrimaryModDamage ? createHTML.basicsRow("Primary Mod",table.PrimaryModDamage,true,"%") : "";
-    list += table.SecondaryModDamage ? createHTML.basicsRow("Secondary Mod",table.SecondaryModDamage,true,"%") : "";
-    list += table.StaggerDamage ? createHTML.basicsRow("Stagger",table.StaggerDamage,true,"%") : "";
-    list += table.SummonDamage ? createHTML.basicsRow("Summon",table.StaggerDamage,true,"%") : "";
+    list += table.AllDamage ? createHTML.basicsRow("","All",table.AllDamage,true,"%") : "";
+    list += table.RangedDamage ? createHTML.basicsRow("","Ranged",table.RangedDamage,true,"%") : "";
+    list += table.SkillDamage ? createHTML.basicsRow("","Skill",table.SkillDamage,true,"%") : "";
+    list += table.MeleeDamage ? createHTML.basicsRow("","Melee",table.MeleeDamage,true,"%") : "";
+    list += table.ChargeDamage ? createHTML.basicsRow("","Charged",table.ChargeDamage,true,"%") : "";
+    list += table.BackstepDamage ? createHTML.basicsRow("","Evade",table.BackstepDamage,true,"%") : "";
+    list += table.FistDamage ? createHTML.basicsRow("","Unarmed",table.FistDamage,true,"%") : "";
+    list += table.MeleeSpecialAbilityDamage ? createHTML.basicsRow("","Melee Threshold",table.MeleeSpecialAbilityDamage,true,"%") : "";
+    list += table.CorrosiveDamage ? createHTML.basicsRow("","Corrosive",table.CorrosiveDamage,true,"%") : "";
+    list += table.AcidDamage ? createHTML.basicsRow("","Acid",table.AcidDamage,true,"%") : "";
+    list += table.BurningDamage ? createHTML.basicsRow("","Burning",table.BurningDamage,true,"%") : "";
+    list += table.FireDamage ? createHTML.basicsRow("","Fire",table.FireDamage,true,"%") : "";
+    list += table.ElementalDamage ? createHTML.basicsRow("","Elemental",table.ElementalDamage,true,"%") : "";
+    list += table.PrimaryElementalDamage ? createHTML.basicsRow("","Primary Elemental",table.PrimaryElementalDamage,true,"%") : "";
+    list += table.SecondaryElementalDamage ? createHTML.basicsRow("","Secondary Elemental",table.SecondaryElementalDamage,true,"%") : "";
+    list += table.ShockDamage ? createHTML.basicsRow("","Shock",table.ShockDamage,true,"%") : "";
+    list += table.OverloadedDamage ? createHTML.basicsRow("","Overloaded",table.OverloadedDamage,true,"%") : "";
+    list += table.ExplosiveDamage ? createHTML.basicsRow("","Explosive",table.ExplosiveDamage,true,"%") : "";
+    list += table.StatusDamage ? createHTML.basicsRow("","Status",table.StatusDamage,true,"%") : "";
+    list += table.MeleeStatusDamage ? createHTML.basicsRow("","Melee Status",table.MeleeStatusDamage,true,"%") : "";
+    list += table.ModDamage ? createHTML.basicsRow("","Mod",table.ModDamage,true,"%") : "";
+    list += table.PrimaryModDamage ? createHTML.basicsRow("","Primary Mod",table.PrimaryModDamage,true,"%") : "";
+    list += table.SecondaryModDamage ? createHTML.basicsRow("","Secondary Mod",table.SecondaryModDamage,true,"%") : "";
+    list += table.StaggerDamage ? createHTML.basicsRow("","Stagger",table.StaggerDamage,true,"%") : "";
+    list += table.SummonDamage ? createHTML.basicsRow("","Summon",table.StaggerDamage,true,"%") : "";
     // let uniqueMulti = 0;
     // for (let i=0;i<table.UniqueMulti.length;i++) {
     //   let currentMulti = table.UniqueMulti[i];
@@ -3187,7 +3218,7 @@ let basicsUpdates = {
     //     uniqueMulti *= currentMulti;
     //   }
     // }
-    list += table.UniqueMulti != 1 ? createHTML.basicsRow("Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
+    list += table.UniqueMulti != 1 ? createHTML.basicsRow("","Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -3199,18 +3230,18 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">CRIT CHANCE</div>`;
     let list = ``;
 
-    list += table.AllCritChance ? createHTML.basicsRow("All",table.AllCritChance,true,"%") : "";
-    list += table.RangedCritChance ? createHTML.basicsRow("Ranged",table.RangedCritChance,true,"%") : "";
-    list += table.MeleeCritChance ? createHTML.basicsRow("Melee",table.MeleeCritChance,true,"%") : "";
-    list += table.ChargeCritChance ? createHTML.basicsRow("Charged",table.ChargeCritChance,true,"%") : "";
-    list += table.SkillCritChance ? createHTML.basicsRow("Skill",table.SkillCritChance,true,"%") : "";
-    list += table.ElementalCritChance ? createHTML.basicsRow("Elemental",table.SkillCritChance,true,"%") : "";
-    list += table.ModCritChance ? createHTML.basicsRow("Mod",table.ModCritChance,true,"%") : "";
-    list += table.ExplosiveCritChance ? createHTML.basicsRow("Explosive",table.ExplosiveCritChance,true,"%") : "";
-    list += table.FirearmCritChance ? createHTML.basicsRow("Firearm",table.FirearmCritChance,true,"%") : "";
-    list += table.BowCritChance ? createHTML.basicsRow("Bow",table.BowCritChance,true,"%") : "";
-    list += table.PrimaryCritChance ? createHTML.basicsRow("Primary",table.PrimaryCritChance,true,"%") : "";
-    list += table.SecondaryCritChance ? createHTML.basicsRow("Secondary",table.SecondaryCritChance,true,"%") : "";
+    list += table.AllCritChance ? createHTML.basicsRow("","All",table.AllCritChance,true,"%") : "";
+    list += table.RangedCritChance ? createHTML.basicsRow("","Ranged",table.RangedCritChance,true,"%") : "";
+    list += table.MeleeCritChance ? createHTML.basicsRow("","Melee",table.MeleeCritChance,true,"%") : "";
+    list += table.ChargeCritChance ? createHTML.basicsRow("","Charged",table.ChargeCritChance,true,"%") : "";
+    list += table.SkillCritChance ? createHTML.basicsRow("","Skill",table.SkillCritChance,true,"%") : "";
+    list += table.ElementalCritChance ? createHTML.basicsRow("","Elemental",table.SkillCritChance,true,"%") : "";
+    list += table.ModCritChance ? createHTML.basicsRow("","Mod",table.ModCritChance,true,"%") : "";
+    list += table.ExplosiveCritChance ? createHTML.basicsRow("","Explosive",table.ExplosiveCritChance,true,"%") : "";
+    list += table.FirearmCritChance ? createHTML.basicsRow("","Firearm",table.FirearmCritChance,true,"%") : "";
+    list += table.BowCritChance ? createHTML.basicsRow("","Bow",table.BowCritChance,true,"%") : "";
+    list += table.PrimaryCritChance ? createHTML.basicsRow("","Primary",table.PrimaryCritChance,true,"%") : "";
+    list += table.SecondaryCritChance ? createHTML.basicsRow("","Secondary",table.SecondaryCritChance,true,"%") : "";
     // list += table.UniqueMulti ? createHTML.basicsRow("Multiplier",table.AllDUniqueMultiamage,false) : "";//This one needs work later, it's an array
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
@@ -3223,11 +3254,11 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">CRIT DAMAGE</div>`;
     let list = ``;
 
-    damageHeader += createHTML.basicsRow("Base Bonus",0.50,true,"%")
-    list += table.AllCritDamage ? createHTML.basicsRow("All",table.AllCritDamage,true,"%") : "";
-    list += table.RangedCritDamage ? createHTML.basicsRow("Ranged",table.RangedCritDamage,true,"%") : "";
-    list += table.MeleeCritDamage ? createHTML.basicsRow("Melee",table.MeleeCritDamage,true,"%") : "";
-    list += table.ChargeCritDamage ? createHTML.basicsRow("Charged",table.ChargeCritDamage,true,"%") : "";
+    damageHeader += createHTML.basicsRow("","Base Bonus",0.50,true,"%")
+    list += table.AllCritDamage ? createHTML.basicsRow("","All",table.AllCritDamage,true,"%") : "";
+    list += table.RangedCritDamage ? createHTML.basicsRow("","Ranged",table.RangedCritDamage,true,"%") : "";
+    list += table.MeleeCritDamage ? createHTML.basicsRow("","Melee",table.MeleeCritDamage,true,"%") : "";
+    list += table.ChargeCritDamage ? createHTML.basicsRow("","Charged",table.ChargeCritDamage,true,"%") : "";
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -3239,12 +3270,12 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">WEAKSPOT</div>`;
     let list = ``;
 
-    damageHeader += createHTML.basicsRow("Base Bonus",1,true,"%")
-    list += table.AllWeakspot ? createHTML.basicsRow("All",table.AllWeakspot,true,"%") : "";
-    list += table.SkillWeakspot ? createHTML.basicsRow("Skill",table.SkillWeakspot,true,"%") : "";
-    list += table.RangedWeakspot ? createHTML.basicsRow("Ranged",table.RangedWeakspot,true,"%") : "";
-    list += table.MeleeWeakspot ? createHTML.basicsRow("Melee",table.MeleeWeakspot,true,"%") : "";
-    list += table.ChargeWeakspot ? createHTML.basicsRow("Charged",table.ChargeWeakspot,true,"%") : "";
+    damageHeader += createHTML.basicsRow("","Base Bonus",1,true,"%")
+    list += table.AllWeakspot ? createHTML.basicsRow("","All",table.AllWeakspot,true,"%") : "";
+    list += table.SkillWeakspot ? createHTML.basicsRow("","Skill",table.SkillWeakspot,true,"%") : "";
+    list += table.RangedWeakspot ? createHTML.basicsRow("","Ranged",table.RangedWeakspot,true,"%") : "";
+    list += table.MeleeWeakspot ? createHTML.basicsRow("","Melee",table.MeleeWeakspot,true,"%") : "";
+    list += table.ChargeWeakspot ? createHTML.basicsRow("","Charged",table.ChargeWeakspot,true,"%") : "";
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -3256,18 +3287,18 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">ACTION SPEED</div>`;
     let list = ``;
 
-    list += table.MovementSpeed ? createHTML.basicsRow("Movement",table.MovementSpeed,true,"%") : "";
-    list += table.SprintSpeed ? createHTML.basicsRow("Sprint",table.SprintSpeed,true,"%") : "";
-    list += table.EnvMovementSpeed ? createHTML.basicsRow("Vaulting",table.EnvMovementSpeed,true,"%") : "";
-    list += table.AimMovementSpeed ? createHTML.basicsRow("Aiming",table.AimMovementSpeed,true,"%") : "";
-    list += table.FireRate ? createHTML.basicsRow("Fire Rate",table.FireRate,true,"%") : "";
-    list += table.ReloadSpeed ? createHTML.basicsRow("Reload",table.ReloadSpeed,true,"%") : "";
-    list += table.WeaponSwapSpeed ? createHTML.basicsRow("Swap",table.WeaponSwapSpeed,true,"%") : "";
+    list += table.MovementSpeed ? createHTML.basicsRow("","Movement",table.MovementSpeed,true,"%") : "";
+    list += table.SprintSpeed ? createHTML.basicsRow("","Sprint",table.SprintSpeed,true,"%") : "";
+    list += table.EnvMovementSpeed ? createHTML.basicsRow("","Vaulting",table.EnvMovementSpeed,true,"%") : "";
+    list += table.AimMovementSpeed ? createHTML.basicsRow("","Aiming",table.AimMovementSpeed,true,"%") : "";
+    list += table.FireRate ? createHTML.basicsRow("","Fire Rate",table.FireRate,true,"%") : "";
+    list += table.ReloadSpeed ? createHTML.basicsRow("","Reload",table.ReloadSpeed,true,"%") : "";
+    list += table.WeaponSwapSpeed ? createHTML.basicsRow("","Swap",table.WeaponSwapSpeed,true,"%") : "";
 
-    list += table.AttackSpeed ? createHTML.basicsRow("Melee",table.AttackSpeed,true,"%") : "";
-    list += table.ChargeSpeed ? createHTML.basicsRow("Charged Attack",table.ChargeSpeed,true,"%") : "";
+    list += table.AttackSpeed ? createHTML.basicsRow("","Melee",table.AttackSpeed,true,"%") : "";
+    list += table.ChargeSpeed ? createHTML.basicsRow("","Charged Attack",table.ChargeSpeed,true,"%") : "";
 
-    list += table.CastSpeed ? createHTML.basicsRow("Cast",table.CastSpeed,true,"%") : "";
+    list += table.CastSpeed ? createHTML.basicsRow("","Cast",table.CastSpeed,true,"%") : "";
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -3279,13 +3310,13 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">STATUS: OUTBOUND</div>`;
     let list = ``;
 
-    list += table.StatusDuration ? createHTML.basicsRow("Duration",table.StatusDuration,true,"%") : "";
-    list += table.outSLOW ? createHTML.basicsRow("","SLOW",false) : "";
-    list += table.outBLEED ? createHTML.basicsRow("","BLEED",false) : "";
-    list += table.outBURN ? createHTML.basicsRow("","BURN",false) : "";
-    list += table.outCORRODED ? createHTML.basicsRow("","CORRODED",false) : "";
-    list += table.outOVERLOADED ? createHTML.basicsRow("","OVERLOADED",false) : "";
-    list += table.outEXPOSED ? createHTML.basicsRow("","EXPOSED",false) : "";
+    list += table.StatusDuration ? createHTML.basicsRow("","Duration",table.StatusDuration,true,"%") : "";
+    list += table.outSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
+    list += table.outBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
+    list += table.outBURN ? createHTML.basicsRow("","","BURN",false) : "";
+    list += table.outCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
+    list += table.outOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
+    list += table.outEXPOSED ? createHTML.basicsRow("","","EXPOSED",false) : "";
     // list += table.outMADNESS ? createHTML.basicsRow("","MADNESS",false) : "";
 
 
@@ -3303,16 +3334,16 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">STATUS: INBOUND</div>`;
     let list = ``;
 
-    list += table.HASTE ? createHTML.basicsRow("","HASTE",false) : "";
-    list += table.inBLEED ? createHTML.basicsRow("","BLEED",false) : "";
-    list += table.inSLOW ? createHTML.basicsRow("","SLOW",false) : "";
-    list += table.inBURN ? createHTML.basicsRow("","BURN",false) : "";
-    list += table.inCORRODED ? createHTML.basicsRow("","CORRODED",false) : "";
-    list += table.inOVERLOADED ? createHTML.basicsRow("","OVERLOADED",false) : "";
-    list += table.inCURSE ? createHTML.basicsRow("","CURSE",false) : "";
-    list += table.inMADNESS ? createHTML.basicsRow("","MADNESS",false) : "";
-    list += table.inROOTROT ? createHTML.basicsRow("","ROOT ROT",false) : "";
-    list += table.inDATACORRUPTION ? createHTML.basicsRow("","DATA CORRUPTION",false) : "";
+    list += table.HASTE ? createHTML.basicsRow("","","HASTE",false) : "";
+    list += table.inBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
+    list += table.inSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
+    list += table.inBURN ? createHTML.basicsRow("","","BURN",false) : "";
+    list += table.inCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
+    list += table.inOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
+    list += table.inCURSE ? createHTML.basicsRow("","","CURSE",false) : "";
+    list += table.inMADNESS ? createHTML.basicsRow("","","MADNESS",false) : "";
+    list += table.inROOTROT ? createHTML.basicsRow("","","ROOT ROT",false) : "";
+    list += table.inDATACORRUPTION ? createHTML.basicsRow("","","DATA CORRUPTION",false) : "";
 
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list;}
@@ -3327,8 +3358,8 @@ let basicsUpdates = {
     let list = ``;
 
 
-    list += table.MeleeSpecialAbilityCharge ? createHTML.basicsRow("Melee Threshold",table.MeleeSpecialAbilityCharge,true,"%") : "";
-    list += table.SummonHealth ? createHTML.basicsRow("Summon Health",table.SummonHealth,true,"%") : "";
+    list += table.MeleeSpecialAbilityCharge ? createHTML.basicsRow("","Melee Threshold",table.MeleeSpecialAbilityCharge,true,"%") : "";
+    list += table.SummonHealth ? createHTML.basicsRow("","Summon Health",table.SummonHealth,true,"%") : "";
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}

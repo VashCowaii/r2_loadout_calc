@@ -1305,7 +1305,7 @@
 
                         <div class="totalBonusDRHeader">Bonus Damage Mitigation</div>
                         <!-- <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div> -->
-                        <div class="basicsDRContainer"> <!--RE DMG-->
+                        <div class="basicsDRContainer" id="REdamageRow" onmouseenter="showTooltip('REdamageRow')" onmouseleave="hideTooltip()"> <!--RE DMG-->
                             <span class="basicsDRStat">Reduced Enemy Damage</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="REdamage">0.00%</span>
@@ -1316,7 +1316,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="basicsDRContainer"> <!--DMG kept-->
+                        <div class="basicsDRContainer" id="DMGKeptRow" onmouseenter="showTooltip('DMGKeptRow')" onmouseleave="hideTooltip()"> <!--DMG kept-->
                             <span class="basicsDRStat">Damage Kept</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="DMGKept">0.00%</span>
@@ -1327,7 +1327,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="totalBonusDRHeader">
+                        <div class="totalBonusDRHeader" id="totalNonstandardDRRow" onmouseenter="showTooltip('totalNonstandardDRRow')" onmouseleave="hideTooltip()">
                             <div>Total Bonus%</div><span class="rowTraceLine"></span><div class="totalBonusDR" id="totalBonusMitigation">0.00%</div>
                         </div>
 

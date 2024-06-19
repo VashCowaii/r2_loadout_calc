@@ -5,8 +5,6 @@ const tooltipStorage = {
     "currentlySupportedDamageCalcs": "Breakdowns will not display unless the item is equipped<br><ul><li>Havoc Form (ability)</li><li>Sandstorm (mod)</li></ul>Someone will probably ask me to let you add the DPS breakdowns together - I will, but I made an insane number of changes just getting things to the point they are now, gimme a day or two.",
 
 
-    //BossDamage tooltips
-    "difficultyDisclaimer": "All values shown are gained from Apocalypse, WL21. We've mathed out how world level changes enemy damage, as well as how difficulty scales it as well, but not all attacks here to these alone. A good example would be Bruin's impale since it has distinct difficulty scalars separate from the general difficulty scalars.<br><br> TLDR: The values shown are only perfectly accurate on apoc WL21, if you lower the difficulty or WL, values may not always be 100% correct but will be in most cases."
 };
 
 function showTooltip(elementId) {
@@ -35,3 +33,104 @@ document.querySelectorAll('.hasHoverTooltip').forEach(element => {
     element.addEventListener('mouseenter', () => showTooltip(element.id));
     element.addEventListener('mouseleave', hideTooltip);
 });
+
+function checkItemForStat(path,name,statistic,type) {
+    let tags = path.tags
+
+    let newTagArray = [];
+
+    if (!type) {
+        let stats = Object.keys(path.stats);
+        for (entry of stats) {
+            newTagArray.push(entry);
+        }
+    }
+    if (type != "prime") {
+        let tags = path.tags
+        for (entry of tags) {
+            newTagArray.push(entry);
+        }
+    }
+    else {
+        let stats = Object.keys(path.primeStats);
+        for (entry of stats) {
+            newTagArray.push(entry);
+        }
+    }
+    // }
+    // else {
+    //     if (path.property)
+    // }
+
+    let itemFound = false;
+
+    for (entry of newTagArray) {
+        if (entry === statistic) {itemFound = true;}
+    }
+
+    return itemFound ? `${name}<br>` : "";
+}
+
+function returnItemsWithStat(statistic) {
+    let htmlString = "";
+    let globalReference = globalRecords;
+    let accessoryReference = globalReference.accessories;
+    let consumableReference = globalReference.consumables;
+    let weaponReference = globalReference.weapons;
+    let armorReference = globalReference.armor;
+    let traitReference = globalReference.greatTraitRecords
+    let classReference = globalReference.archs;
+
+    htmlString += checkItemForStat(amulets[accessoryReference.amulet],accessoryReference.amulet,statistic);
+    for (let i=1;i<=4;i++) {
+        htmlString += checkItemForStat(rings[accessoryReference[`ring${i}`]],accessoryReference[`ring${i}`],statistic);
+    }
+    htmlString += checkItemForStat(relics[accessoryReference.relic],accessoryReference.relic,statistic);
+    for (let i=1;i<=3;i++) {
+        htmlString += checkItemForStat(fragments[accessoryReference[`fragment${i}`]],accessoryReference[`fragment${i}`],statistic);
+    }
+
+    for (let i=1;i<=7;i++) {
+        htmlString += checkItemForStat(concoctions[consumableReference[`concoction${i}`]],consumableReference[`concoction${i}`],statistic);
+    }
+    for (let i=1;i<=4;i++) {
+        htmlString += checkItemForStat(quickUses[consumableReference[`quickUse${i}`]],consumableReference[`quickUse${i}`],statistic);
+    }
+    htmlString += checkItemForStat(primary[weaponReference.primary],weaponReference.primary,statistic);
+    htmlString += checkItemForStat(rangedMutators[weaponReference.primaryMutator],weaponReference.primaryMutator,statistic);
+    htmlString += primary[weaponReference.primary].builtIN ? checkItemForStat(builtInPrimary[primary[weaponReference.primary].builtIN],primary[weaponReference.primary].builtIN,statistic)
+    : checkItemForStat(rangedMods[weaponReference.primaryMod],weaponReference.primaryMod,statistic);
+    htmlString += checkItemForStat(melee[weaponReference.melee],weaponReference.melee,statistic);
+    htmlString += checkItemForStat(meleeMutators[weaponReference.meleeMutator],weaponReference.meleeMutator,statistic);
+    htmlString += melee[weaponReference.melee].builtIN ? checkItemForStat(builtInMelee[melee[weaponReference.melee].builtIN],melee[weaponReference.melee].builtIN,statistic)
+    : "";
+    htmlString += checkItemForStat(secondary[weaponReference.secondary],weaponReference.secondary,statistic);
+    htmlString += checkItemForStat(rangedMutators[weaponReference.secondaryMutator],weaponReference.secondaryMutator,statistic);
+    htmlString += secondary[weaponReference.secondary].builtIN ? checkItemForStat(builtInSecondary[secondary[weaponReference.secondary].builtIN],secondary[weaponReference.secondary].builtIN,statistic)
+    : checkItemForStat(rangedMods[weaponReference.secondaryMod],weaponReference.secondaryMod,statistic);
+    htmlString += checkItemForStat(helmets[armorReference.helmet],armorReference.helmet,statistic);
+    htmlString += checkItemForStat(chests[armorReference.chest],armorReference.chest,statistic);
+    htmlString += checkItemForStat(legs[armorReference.leg],armorReference.leg,statistic);
+    htmlString += checkItemForStat(hands[armorReference.hand],armorReference.hand,statistic);
+
+    for (let i=0;i<traitReference.length;i++) {
+        htmlString += checkItemForStat(traits[traitReference[i].name],traitReference[i].name,statistic,"trait");
+    }
+
+
+    htmlString += checkItemForStat(classInfo[classReference.one.class],classInfo[classReference.one.class].primePerk,statistic,"prime");
+    htmlString += checkItemForStat(classInfo[classReference.one.class].abilities[classReference.one.ability],classReference.one.ability,statistic);
+    for (let i=1;i<=4;i++) {
+        htmlString += checkItemForStat(classInfo[classReference.one.class].passives[`passive${i}`],classInfo[classReference.one.class].passives[`passive${i}`].name,statistic);
+    }
+
+    htmlString += checkItemForStat(classInfo[classReference.two.class].abilities[classReference.two.ability],classReference.two.ability,statistic);
+    for (let i=1;i<=4;i++) {
+        htmlString += checkItemForStat(classInfo[classReference.two.class].passives[`passive${i}`],classInfo[classReference.two.class].passives[`passive${i}`].name,statistic);
+    }
+
+    // classReference
+
+
+    return htmlString;
+}
