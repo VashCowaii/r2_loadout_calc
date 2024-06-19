@@ -1933,11 +1933,12 @@ classInfo = {
 			},
 			"passive2": {
 				"name": "Intimidating Presence",
-				"desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%)",
-				"stats": {
-					"REdamage": [-0.1]
+				"desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%). Requires ENEMY COUNT setting to give more than the base amount.",
+				"usesConditional": {
+					"customTier0": "intimidatingPresence"
 				},
-				"tags": []
+				"stats": {},
+				"tags": ["REdamage"]
 			},
 			"passive3": {
 				"name": "Powerlifter",
@@ -9645,15 +9646,15 @@ rangedMutators = {
 		"tags": ["ModDamage"]
 	},
 	"Spirit Healer": {
-		"usesConditional": {},
+		"usesConditional": {
+			"customTier0": "spiritHealer",
+		},
 		"name": "Spirit Healer",
 		"slot": "RMutator",
 		"image": "/brotherLibrary/mutatorsImages/Spirit Healer.png",
 		"desc": "Regenerate 2% Health over 10s for every 50 Mod Power spent.<br>Level 10: Allies within 15m are healed for 50% of the primary effect.",
-		"stats": {
-			"HP/S%": 0.004
-		},
-		"tags": []
+		"stats": {},
+		"tags": ["HP/S%"]
 	},
 	"Supercharger": {
 		"name": "Supercharger",

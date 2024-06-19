@@ -840,7 +840,7 @@ let manipulateURL = {
       urlObject.adv.push(settingsPath);
     }
     else {globalRecords.urlObject.adv.push("")}
-    settingsPath = !isOverride ? readSelection("spiritHealerStacks").value : globalRecords.RECORDEDspiritHealterStacks;
+    settingsPath = !isOverride ? readSelection("spiritHealerStacks").value : globalRecords.RECORDEDspiritHealerStacks;
     if (+settingsPath) {
       urlObject.adv.push(settingsPath);
     }
@@ -2049,6 +2049,21 @@ let formulasValues = {
         customPath = globalRecords.weapons.secondaryMutator;
         conditionalPath = rangedMutators[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+
+        //Passives
+        customPath = globalRecords.archs.one.class;
+        for (let i=1;i<=4;i++) {
+          toggleCheck = readSelection(`USEtoggledPassive${i}`).checked;
+          conditionalPath = classInfo[customPath].passives[`passive${i}`].usesConditional;
+          formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        }
+        customPath = globalRecords.archs.two.class;
+        for (let i=1;i<=4;i++) {
+          toggleCheck = readSelection(`USEtoggledPassive${i+4}`).checked;
+          conditionalPath = classInfo[customPath].passives[`passive${i}`].usesConditional;
+          formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        }
+
         //MODS
         //PRIMARY
         toggleCheck = readSelection(`USEtoggledpMod`).checked;
@@ -2104,6 +2119,23 @@ let formulasValues = {
         customPath = globalRecords.weapons.secondaryMutator;
         conditionalPath = rangedMutators[customPath].usesConditional;
         formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,conditionalPath);
+
+
+        //Passives
+        customPath = globalRecords.archs.one.class;
+        for (let i=1;i<=4;i++) {
+          toggleCheck = globalRecords.searchSettingsToggles[`settingsUsePassive${i}`];
+          conditionalPath = classInfo[customPath].passives[`passive${i}`].usesConditional;
+          formulasValues.readActiveConditionalsGeneralMAINUI(tieredFunctionStorage,toggleCheck,conditionalPath);
+        }
+        customPath = globalRecords.archs.two.class;
+        for (let i=1;i<=4;i++) {
+          toggleCheck = globalRecords.searchSettingsToggles[`settingsUsePassive${i+4}`];
+          conditionalPath = classInfo[customPath].passives[`passive${i}`].usesConditional;
+          formulasValues.readActiveConditionalsGeneralCYCLES(tieredFunctionStorage,toggleCheck,conditionalPath);
+        }
+
+
         //MODS
         //PRIMARY
         let primaryWeapon = globalRecords.weapons.primary;
@@ -2432,7 +2464,6 @@ let customItemFunctions = {
     burdenOfTheMesmer2(index,totalDR) {//postDR
       let floorIncrement = 0.05
       let dmgScaling = 0.01
-      console.log(totalDR)
       index.AllDamage += dmgScaling * (Math.floor(Math.min(0.80,totalDR)/floorIncrement) * floorIncrement)/floorIncrement;//postDR damage calcs
     },
     driedClayRing(index) {//50
@@ -2651,6 +2682,10 @@ let customItemFunctions = {
       let modDamageBonus = 0.25;
       conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Spirit Feeder");
     },
+    spiritHealer(index) {
+      let healingPerSecond = 0.02/10;
+      index["HP/S%"] += globalRecords.spiritHealerStacks * healingPerSecond;
+    },
   // "mutators": {//DONE
     executor(index) {//base
       if (index.outgoingStatus) {
@@ -2720,6 +2755,13 @@ let customItemFunctions = {
       }
     },
   // }
+  // PASSIVES
+    intimidatingPresence(index) {
+      let baseReduction = 0.10;
+      let maxAdditionalReduction = 0.10;
+      let reductionPerEnemy = 0.025;
+      index.REdamage *= (1 - (baseReduction + Math.min(maxAdditionalReduction,(reductionPerEnemy * globalRecords.meleeFactors.enemyCount))));
+    },
 }
 
 /* ---------------------------------------------------------------------------------------- */

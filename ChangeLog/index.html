@@ -44,6 +44,19 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>June 19, 2024</h1>
+                    <ul>
+                        <li>Fixed an issue where a console logger for debug purposes was slowing down queries quite a lot whenever Burden of the Mesmer was iterated upon, I simply forgot to take it out before when I was using it to fix a bug, that's my bad.</li>
+                        <li>Fixed Spirit Healer's custom function. This was something I was aware wasn't working properly, but kept putting off as it just wasn't important to me.</li>
+                        <li>Added handling for enemy count within Challenger's "Intimidating Presence" perk. It will now added Reduced Enemy Damage per enemy counted, up to a maximum of 4 enemies.
+                            <ul>
+                                <li>Unfortunately this does mean queries will be a TINY bit slower, since they now check for passives. We're talking a difference of like a single second though, in terms of total completion time.</li>
+                            </ul>
+                        </li>
+                        <li>Increased the Spirit Healer stack slider maximum to 30.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>June 18, 2024 THE COMPLETED BOSS DATA UPDATE</h1>
                     <ul>
                         <li>Added an option to display all attacks for all bosses.</li>
@@ -624,9 +637,7 @@
                         <li>Calculation tooltips. It'd be best if you guys can see exactly how I'm getting that number, so you can stop asking me how I'm getting it. Kinda low priority at the moment though, I've started on some of these and added handling for tooltips in general, but there are more important things that need to be done right now.</li>
                         <li>Damage Calculations: <b>Monster Task</b>. Almost done with melee calcs</li>
                         <li>Loadouts - Not entirely positive how I want to do this yet, but I do know that a build calculator without the ability to compare one build to another, is kinda sad</li>
-                        <li>Change Spirit Healer Stacks to a number input, instead of a number slider.</li>
                         <li>Get better images, now that we are displaying them in a larger size with the new UI.</li>
-                        <li>Add enemy count as a factor for Challenger perks.</li>
                     </ul>
                 </div>
                 <div>
