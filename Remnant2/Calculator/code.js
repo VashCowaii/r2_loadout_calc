@@ -3151,7 +3151,7 @@ let basicsUpdates = {
       tooltipStorage.REdamageRow = "REDamage = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much the enemy damage gets reduced, separate from damage reduction. These are considered enemy debuffs most of the time.<br><br>" + listItemsHeader + returnItemsWithStat("REdamage");
       formulasValues.updateDisplay("DMGKept",returnObject.damageKept*100,2,"%");
       tooltipStorage.DMGKeptRow = "DMGKept = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much damage you keep, based on effects that share damage to other friendly entities.<br><br>" + listItemsHeader + returnItemsWithStat("DMGKept");
-      tooltipStorage.totalNonstandardDRRow = "BonusMitigation = 1 - (1 - REDamage) * (1 - DMGKept)<br>This is how much the enemy damage gets reduced, separate from damage reduction. These are considered enemy debuffs most of the time.";
+      tooltipStorage.totalNonstandardDRRow = "BonusMitigation = 1 - (1 - REDamage) * (1 - DMGKept)";
       // totalNonstandardDRRow
 
       formulasValues.updateDisplay("shield%",returnObject.percShields*100,2,"%");
