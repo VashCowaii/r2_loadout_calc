@@ -125,10 +125,10 @@ let userSettings = {
         let difficulty = +readSelection("difficultySlider").value;
         let diffName = ""
         switch (difficulty) {
-            case 1: diffName = "Survivor"; break;
-            case 2: diffName = "Veteran"; break;
-            case 3: diffName = "Nightmare"; break;
-            case 4: diffName = "Apocalypse"; break;
+            case 1: diffName = "Survivor";readSelection("difficultyDisplay").style.color = "#93CCEA"; break;
+            case 2: diffName = "Veteran";readSelection("difficultyDisplay").style.color = "#90ee90"; break;
+            case 3: diffName = "Nightmare";readSelection("difficultyDisplay").style.color = "orange"; break;
+            case 4: diffName = "Apocalypse";readSelection("difficultyDisplay").style.color = "#e06666"; break;
         }
         userSettings.vars.difficulty = difficulty;
         readSelection("difficultyDisplay").innerHTML = diffName;
@@ -510,6 +510,8 @@ document.querySelectorAll('.hasHoverTooltip').forEach(element => {
     element.addEventListener('mouseenter', () => showTooltip(element.id));
     element.addEventListener('mouseleave', hideTooltip);
 });
+
+userSettings.updateUserInputs();
 
 
 
