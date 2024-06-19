@@ -63,35 +63,27 @@ let scalingInfo = {
     "HealthScalarPerPlayer": 0.25,
 
     "difficulty": {
-        "survivor": {
+        "Survivor": {
             "enemyDamage": 1,
             "miniBossDamage": 1,
             "worldBossDamage": 1,
         },
-        "veteran": {
+        "Veteran": {
             "enemyDamage": 1.25,
             "miniBossDamage": 1.1,
             "worldBossDamage": 1.1,
         },
-        "nightmare": {
+        "Nightmare": {
             "enemyDamage": 2.15,
             "miniBossDamage": 0.9,
             "worldBossDamage": 0.9,
         },
-        "apocalypse": {
+        "Apocalypse": {
             "enemyDamage": 2.75,
             "miniBossDamage": 1,
             "worldBossDamage": 0.95,
         },
     }
-    //1.25, 1.275, 1.5, 2.2 BRUIN
-
-    // bruin survivor WL1 = 82.5 dmg //
-
-    // Apoc WL21 or PL20
-// 279.072
-// Surv WL21 or PL20
-// 178.606
 }
 
 let userSettings = {
@@ -253,13 +245,29 @@ let tableGeneration = {
         let damage = currentAttack.attackType === "%HP" ? userSettings.vars.maxHealth * (currentAttack.hpPercent/100) : currentAttack.damage;
         //If the world level is 21, then leave the values as they are. This is because all damage values were obtained in Apocalypse difficulty, with world level 21.
         //However if the world level is NOT 21, then work backwards to find the values for the current world level.
-        let worldLevelScalar = worldLevel===21 ? 1 : (damage/scaling21)*compositeWorldScalar;
+        damage = worldLevel===21 ? damage : (damage/scaling21)*compositeWorldScalar;
+
+        let diffName = ""
+        switch (userSettings.vars.difficulty) {
+            case 1: diffName = "Survivor"; break;
+            case 2: diffName = "Veteran"; break;
+            case 3: diffName = "Nightmare"; break;
+            case 4: diffName = "Apocalypse"; break;
+        }
+
+        let apocEnemyScalar = scalingInfo.difficulty.Apocalypse.enemyDamage;
+        let apocMiniBossScalar = scalingInfo.difficulty.Apocalypse.miniBossDamage * apocEnemyScalar;
+        let apocWorldBossScalar = scalingInfo.difficulty.Apocalypse.worldBossDamage * apocEnemyScalar;
+        let currentApocBossScalar = boss.bossType==="worldBoss" ? apocWorldBossScalar : apocMiniBossScalar;
+        let currentDiffBossScalar = scalingInfo.difficulty[diffName][`${boss.bossType}Damage`];
+
+        damage = diffName==="Apocalypse" ? damage : (damage/currentApocBossScalar)*currentDiffBossScalar;
         //Establish if the boss has damage affixes, how many players are active in the world, and if the boss has a buff to apply if selected
         let viciousScalar = 1 + (userSettings.vars.isVicious ? 0.15 : 0);
         let spitefulScalar = 1 + (userSettings.vars.isSpiteful ? tableGeneration.getSpitefulModifier() : 0);
         let playerCountScalar = 1 + (scalingInfo.DamageScalarPerPlayer * (userSettings.vars.playerCount-1));
         let bossBuffScalar = (userSettings.vars.useBuffs && currentAttack.isBuffed) ? (1 + boss.buffs) : 1;
-        damage *= worldLevelScalar * viciousScalar * spitefulScalar * playerCountScalar * bossBuffScalar;//Apply all scalar values to the main damage value
+        damage *= viciousScalar * spitefulScalar * playerCountScalar * bossBuffScalar;//Apply all scalar values to the main damage value
 
         let element = currentAttack.damageType;
         let resistanceValue = 0;
@@ -473,7 +481,7 @@ const tooltipStorage = {
     "spitefulExplainer": "Spiteful increases boss damage for every 10%HP they are missing. It doesn't actually reach a 25% buff, but rather just beneath it. Use the boss HP slider after toggling spiteful on, to change the spiteful bonus.",
     "bossBuffExplainer": "Right now the only boss that actually buffs himself is Ravager with a multiplicative 10% bonus, granted it doesn't actually buff every single one of his attacks.",
     "selectedBossImage": "Boss images provided by ConRaven",
-    "difficultyDisclaimer": "All values shown are gained from Apocalypse, WL21. We've mathed out how world level changes enemy damage, as well as how difficulty scales it as well, but not all attacks adhere to these alone. A good example would be Bruin's impale since it has distinct difficulty scalars separate from the general difficulty scalars.<br><br> TLDR: The values shown are only perfectly accurate on apoc WL21, if you lower the difficulty or WL, values may not always be 100% correct but will be in most cases.",
+    "difficultyDisclaimer": "All values shown are gained from Apocalypse, WL21. We've mathed out how world level changes enemy damage, as well as how difficulty scales it as well, but not all attacks adhere to these alone. A good example would be Bruin's impale since it has distinct difficulty scalars separate from the general difficulty scalars and I don't account for those less than Apoc level, not yet at least.<br><br> TLDR: The values shown are only perfectly accurate on apoc WL21, if you lower the difficulty or WL, values may not always be 100% correct but will be in most cases.",
 };
 
 function showTooltip(elementId) {

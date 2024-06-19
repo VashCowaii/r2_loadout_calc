@@ -74,8 +74,8 @@
 
             <div class="settingsBoxHolder">
 
-                <div class="playerSettingsBox" style="width: auto;"><!--Boss settings-->
-                    <div class="statisticSettingsRow" style="display: flex;align-items: center;justify-content: center;">
+                <div class="playerSettingsBox" style="width: auto;"><!--Mode Toggles/Boss Selection/List Settings-->
+                    <div class="statisticSettingsRow" style="display: flex;align-items: center;justify-content: center;"><!--toggle modes-->
                         <span class="statsRowName" id="toggledToBoss">Boss&nbsp;</span>
                         <div class="statsRowToggle">
                             <label class="toggleContainer" style="display: flex;align-items: center;justify-content: center;">
@@ -86,7 +86,7 @@
                         <span class="statsRowName" id="toggledToList">&nbsp;Full List</span>
                     </div>
 
-                    <div class="bossSelectionOverviewBox" id="listingSettingsBox">
+                    <div class="bossSelectionOverviewBox" id="listingSettingsBox"><!--List mode settings-->
                         <div class="inclusionsHeader">INCLUDE ATTACKS:</div>
                         <div class="statisticSettingsRow">
                             <span class="statsRowName">Standard</span>
@@ -185,7 +185,7 @@
 
                     </div>
 
-                    <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox">
+                    <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox"><!--Boss mode selection-->
                         <div>Boss Selection</div>
                         <div class="statisticSettingsRow">
                             <div class="statsRowToggle" style="width: 100%;">
@@ -253,7 +253,7 @@
                         <div class="statsRowName">Difficulty:<br><span id="difficultyDisplay">Apocalypse</span></div>
                         <span class="rowTraceLine"></span><span class="rowTraceLine"></span>
                         <div class="statsRowToggle">
-                            <input type="range" id="difficultySlider" name="slider" min="1" max="4" value="4" step="1" onchange="userSettings.updateUserInputs()" disabled>
+                            <input type="range" id="difficultySlider" name="slider" min="1" max="4" value="4" step="1" onchange="userSettings.updateUserInputs()">
                         </div>
                     </div>
 
