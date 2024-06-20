@@ -28,19 +28,39 @@ let tooltips = {
                 tooltip.style.left = '10px';//Center it horizontally with some margin
                 const rect = element.getBoundingClientRect();
                 tooltip.style.top = window.scrollY + rect.bottom + 10 + 'px';//Position it below the element with some margin
-    
+
                 //Add event listener to close tooltip if tapping outside
-                document.addEventListener('click', function outsideClickListener(event) {
+                function outsideClickListener(event) {
                     if (!tooltip.contains(event.target) && !element.contains(event.target)) {
                         tooltips.hideTooltip();
                         document.removeEventListener('click', outsideClickListener);
                     }
-                });
-            } else {
-                //On desktop view, position according to the mouse cursor
-                element.addEventListener('mousemove', function (event) {
-                    tooltip.style.left = event.pageX + 10 + 'px';
-                    tooltip.style.top = event.pageY + 10 + 'px';
+                }
+                document.addEventListener('click', outsideClickListener);
+            }
+            else {
+                // On desktop view, position according to the mouse cursor
+                function mouseMoveListener(event) {
+                    const windowHeight = window.innerHeight;
+                    const windowWidth = window.innerWidth;
+                    const cursorY = event.clientY;
+                    const cursorX = event.clientX;
+                    const isBottomHalf = cursorY > windowHeight / 2;
+                    const isRightHalf = cursorX > windowWidth / 2;
+
+                    if (isRightHalf) {tooltip.style.left = event.pageX - tooltip.offsetWidth - 10 + 'px';}//Left
+                    else {tooltip.style.left = event.pageX + 10 + 'px';}//Right
+
+                    if (isBottomHalf) {tooltip.style.top = event.pageY - tooltip.offsetHeight - 10 + 'px';}//Above
+                    else {tooltip.style.top = event.pageY + 10 + 'px';}//Below
+                }
+
+                element.addEventListener('mousemove', mouseMoveListener);
+
+                // Remove the mousemove listener when the tooltip is hidden
+                element.addEventListener('mouseleave', () => {
+                    element.removeEventListener('mousemove', mouseMoveListener);
+                    tooltips.hideTooltip();
                 });
             }
         }
@@ -50,7 +70,9 @@ let tooltips = {
         element.addEventListener('mouseleave', tooltips.hideTooltip);
     },
     addMobileListeners(element) {
-        element.addEventListener('click', () => {
+        let touchStartTime = 0;
+        element.addEventListener('touchstart', (event) => {
+            touchStartTime = new Date().getTime();
             const isVisible = element.getAttribute('data-tooltip-visible') === 'true';
             if (isVisible) {
                 tooltips.hideTooltip();
@@ -58,6 +80,16 @@ let tooltips = {
             } else {
                 tooltips.showTooltip(element.id);
                 element.setAttribute('data-tooltip-visible', 'true');
+            }
+            event.stopPropagation();
+        });
+        element.addEventListener('click', (event) => {
+            const currentTime = new Date().getTime();
+            if (currentTime - touchStartTime < 500) {
+                // Ignore click event if it is fired within 500ms of touchstart
+                event.preventDefault();
+                event.stopPropagation();
+                return;
             }
         });
     },
@@ -67,25 +99,21 @@ let tooltips = {
             if (isMobile) {
                 // Check if mobile listeners are already added
                 if (!element.hasMobileListeners) {
+                    element.removeEventListener('mouseenter', tooltips.showTooltip);
+                    element.removeEventListener('mouseleave', tooltips.hideTooltip);
+                    element.hasDesktopListeners = false;
+
                     tooltips.addMobileListeners(element);
                     element.hasMobileListeners = true;
-                    // Remove desktop listeners if present
-                    if (element.hasDesktopListeners) {
-                        element.removeEventListener('mouseenter', tooltips.showTooltip);
-                        element.removeEventListener('mouseleave', tooltips.hideTooltip);
-                        element.hasDesktopListeners = false;
-                    }
                 }
             } else {
                 // Check if desktop listeners are already added
                 if (!element.hasDesktopListeners) {
+                    element.removeEventListener('touchstart', tooltips.showTooltip);
+                    element.hasMobileListeners = false;
+
                     tooltips.addDesktopListeners(element);
                     element.hasDesktopListeners = true;
-                    // Remove mobile listeners if present
-                    if (element.hasMobileListeners) {
-                        element.removeEventListener('click', showTooltip);
-                        element.hasMobileListeners = false;
-                    }
                 }
             }
         });
