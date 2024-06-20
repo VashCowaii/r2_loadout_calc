@@ -44,9 +44,12 @@
                     </ul>
                 </div> -->
                 <div>
-                    <h1>June 19, 2024</h1>
+                    <h1>June 19, 2024 - THE TOOLTIPS UPDATE</h1>
                     <ul>
-                        <li>Added another batch of tooltips to various statistics and their display values.</li>
+                        <li>Added tooltips to most everything now. Hover on desktop, tap on mobile. If you think I missed anything or have suggestions on things I could add tooltips to, or things I can add to the tooltips themselves, let me know.</li>
+                        <li>Added item listing to tooltips to display relevant selections within the loadout to that statistic. Say you have Lithic Signet equipped as a ring and you hover over Flat DR, it'll show that Lithic contributes to that stat.</li>
+                        <li>Added positional handling to desktop's tooltips, so they will adjust their orientation based on mouse position (Such as: displaying to the left when mouse is on the right side of the screen, or displaying above when on the bottom half, helping resolve issues where a tooltip at the bottom of the screen would extend the screen length)</li>
+                        <li>Added mobile adjustments to tooltips, since desktop can display on mouse position, but that doesn't work very well on mobile. Mobile tooltips will down display along the full width of the screen, and just below whatever you tapped. Tap the element again to make it go away, or tap another element elsewhere.</li>
                         <li>Added handling for enemy count within Challenger's "Intimidating Presence" perk. It will now add Reduced Enemy Damage per enemy counted, up to a maximum of 4 enemies.
                             <ul>
                                 <li>Unfortunately this does mean queries will be a TINY bit slower, since they now check for passives. We're talking a difference of like a single second though, in terms of total completion time.</li>
