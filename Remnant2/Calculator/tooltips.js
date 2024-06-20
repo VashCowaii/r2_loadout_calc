@@ -29,10 +29,29 @@ function hideTooltip() {
     tooltip.style.display = 'none';
 }
 
-document.querySelectorAll('.hasHoverTooltip').forEach(element => {
-    element.addEventListener('mouseenter', () => showTooltip(element.id));
-    element.addEventListener('mouseleave', hideTooltip);
-});
+function addTooltipListeners() {
+    document.querySelectorAll('.hasHoverTooltip').forEach(element => {
+        // Check for custom data attributes that indicate the presence of listeners
+        const hasMouseEnterListener = element.getAttribute('data-mouseenter-listener') === 'true';
+        const hasMouseLeaveListener = element.getAttribute('data-mouseleave-listener') === 'true';
+    
+        if (!hasMouseEnterListener) {
+            element.addEventListener('mouseenter', () => showTooltip(element.id));
+            element.setAttribute('data-mouseenter-listener', 'true'); // Mark that mouseenter listener has been added
+        }
+    
+        if (!hasMouseLeaveListener) {
+            element.addEventListener('mouseleave', hideTooltip);
+            element.setAttribute('data-mouseleave-listener', 'true'); // Mark that mouseleave listener has been added
+        }
+    });
+}
+addTooltipListeners();
+
+// document.querySelectorAll('.hasHoverTooltip').forEach(element => {
+//     element.addEventListener('mouseenter', () => showTooltip(element.id));
+//     element.addEventListener('mouseleave', hideTooltip);
+// });
 
 function checkItemForStat(path,name,statistic,type) {
     let tags = path.tags
@@ -133,4 +152,21 @@ function returnItemsWithStat(statistic) {
 
 
     return htmlString;
+}
+
+let tooltips = {
+    updateTooltipDisplay(elemID,breakdownString,statArray) {
+        let listItemsHeader = "<div>The following selections can contribute to this statistic:</div>"
+        let statsString = "";
+
+        for (let i=0;i<statArray.length;i++) {
+            statsString += returnItemsWithStat(statArray[i])
+        }
+
+
+        tooltipStorage[elemID] =
+        (breakdownString ? breakdownString : "")
+        + (breakdownString && statsString ? "<br><br>" : "")
+        + (statsString ? listItemsHeader + statsString : "");
+    },
 }

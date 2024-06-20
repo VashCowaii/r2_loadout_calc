@@ -77,18 +77,18 @@
                         <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/blight.png" alt="Blight icon"></div>
                     </div>
                     <div class="resistanceContainer"> <!-- Resistance Values -->
-                        <div class="resistanceValues" id="summaryBleed">0</div>
-                        <div class="resistanceValues" id="summaryBurn">0</div>
-                        <div class="resistanceValues" id="summaryShock">0</div>
-                        <div class="resistanceValues" id="summaryCorrosive">0</div>
-                        <div class="resistanceValues" id="summaryBlight">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBleed">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBurn">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryShock">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryCorrosive">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBlight">0</div>
                     </div>
                 </div>
                 <div class="basicsSummaryBox">
-                        <div class="basicsSummaryContainer"><span class="basicsSummaryStat">HEALTH</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
-                        <div class="basicsSummaryContainer"><span class="basicsSummaryStat">STAMINA</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
-                        <div class="basicsSummaryContainer"><span class="basicsSummaryStat">ARMOR</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
-                        <div class="basicsSummaryContainer"><span class="basicsSummaryStat">WEIGHT</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryHealthRow"><span class="basicsSummaryStat">HEALTH</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryStaminaRow"><span class="basicsSummaryStat">STAMINA</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryArmorRow"><span class="basicsSummaryStat">ARMOR</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryWeightRow"><span class="basicsSummaryStat">WEIGHT</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
                 </div>
 
                 <br>
@@ -389,8 +389,8 @@
                                 <div class="relicEffectsContainer">
                                     <div class="relicHealingContainer">
                                         <div>Healing</div>
-                                        <div class="complexRowContainer"><span class="basicsDRStat">Scaled</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicScaled">0</span></div>
-                                        <div class="complexRowContainer"><span class="basicsDRStat">Type</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicType">0</span></div>
+                                        <div class="complexRowContainer hasHoverTooltip" id="relicScaledRow"><span class="basicsDRStat">Scaled</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicScaled">0</span></div>
+                                        <div class="complexRowContainer hasHoverTooltip" id="relicTypeRow"><span class="basicsDRStat">Type</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicType">0</span></div>
                                         <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relic%HP/s">0</span></div>
                                         <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicHP/s">0</span></div>
                                         <div class="complexRowContainer"><span class="basicsDRStat">Over (s)</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicTime">0</span></div>
@@ -1288,13 +1288,13 @@
                     </div>
                 </div>
                 <div class="advancedSummaryContainer">
-                    <div class="advancedSummaryThirds" title="totalEHP = (totalHP/(1-effectiveDR)) * (1+shieldPercent)">
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EHPDisplayRow">
                         <span class="advancedSummaryStat">EHP</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="EHP">100.00</span>
                     </div>
-                    <div class="advancedSummaryThirds" title="EHPperSecond = baseEHP * (%HP/s), where baseEHP is the totalEHP without shields.">
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EHPPerSecDisplayRow">
                         <span class="advancedSummaryStat">EHP/s</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="EHP/s">0.00</span>
                     </div>
-                    <div class="advancedSummaryThirds" title="effectiveDR = 1 - (1-totalDR) * (1-reducedEnemyDamage) * (1-damageKept)">
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EffectiveDRDisplayRow">
                         <span class="advancedSummaryStat">Effective DR</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="effectiveDR">0.00%</span>
                     </div>
                 </div>
@@ -1305,7 +1305,7 @@
 
                         <div class="totalBonusDRHeader">Bonus Damage Mitigation</div>
                         <!-- <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div> -->
-                        <div class="basicsDRContainer" id="REdamageRow" onmouseenter="showTooltip('REdamageRow')" onmouseleave="hideTooltip()"> <!--RE DMG-->
+                        <div class="basicsDRContainer hasHoverTooltip" id="REdamageRow"> <!--RE DMG-->
                             <span class="basicsDRStat">Reduced Enemy Damage</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="REdamage">0.00%</span>
@@ -1316,7 +1316,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="basicsDRContainer" id="DMGKeptRow" onmouseenter="showTooltip('DMGKeptRow')" onmouseleave="hideTooltip()"> <!--DMG kept-->
+                        <div class="basicsDRContainer hasHoverTooltip" id="DMGKeptRow"> <!--DMG kept-->
                             <span class="basicsDRStat">Damage Kept</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="DMGKept">0.00%</span>
@@ -1327,16 +1327,16 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="totalBonusDRHeader" id="totalNonstandardDRRow" onmouseenter="showTooltip('totalNonstandardDRRow')" onmouseleave="hideTooltip()">
+                        <div class="totalBonusDRHeader hasHoverTooltip" id="totalNonstandardDRRow">
                             <div>Total Bonus%</div><span class="rowTraceLine"></span><div class="totalBonusDR" id="totalBonusMitigation">0.00%</div>
                         </div>
 
                         <div class="totalBonusDRHeader">Shields</div>
 
-                        <div class="basicsDRContainer"><span class="basicsDRStat">Shields%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shield%">0.00%</span></div>
-                        <div class="basicsDRContainer" title="This is a % bonus to all shields"><span class="basicsDRStat">Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shieldEff">0.00%</span></div>
-                        <div class="basicsDRContainer" title="totalPercent = basePercent * (1+shieldEffectiveness)"><span class="basicsDRStat">Total%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="totalShield%">0.00%</span></div>
-                        <div class="basicsDRContainer" title="shieldEHP = (totalHP/(1-effectiveDR)) * shieldPercent">
+                        <div class="basicsDRContainer hasHoverTooltip" id="shield%Row"><span class="basicsDRStat">Shields%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shield%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="shieldEffRow"><span class="basicsDRStat">Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shieldEff">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="totalShield%Row"><span class="basicsDRStat">Total%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="totalShield%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="shieldEHPRow">
                             <span class="basicsDRStat">Shield EHP</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="shieldEHP">0.00%</span>
@@ -1355,13 +1355,13 @@
                         <!-- <div class="advancedDRBoxThin">Passive + Abilities</div> -->
                         <div class="totalBonusDRHeader">Passive + Abilities</div>
                         <!-- <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div> -->
-                        <div class="basicsDRContainer"><span class="basicsDRStat">Flat only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedFlat">0.00%</span></div>
-                        <div class="basicsDRContainer"><span class="basicsDRStat">% only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advanced%">0.00%</span></div>
-                        <div class="basicsDRContainer"><span class="basicsDRStat">Total HP/s as Flat</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotalFlat">0.00%</span></div>
-                        <div class="basicsDRContainer"><span class="basicsDRStat">Total HP/s as %</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotal%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedFlatRow"><span class="basicsDRStat">Flat only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedFlat">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advanced%Row"><span class="basicsDRStat">% only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advanced%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedTotalFlatRow"><span class="basicsDRStat">Total HP/s as Flat</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotalFlat">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedTotal%Row"><span class="basicsDRStat">Total HP/s as %</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotal%">0.00%</span></div>
 
                         <div class="totalBonusDRHeader">Relic</div>
-                        <div class="basicsDRContainer">
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedRelicTotal%Row">
                             <span class="basicsDRStat">Total HP/s as %</span>
                             <span class="rowTraceLine"></span>
                             <span class="basicsDRValue" id="advancedRelicTotal%">0.00%</span>
@@ -1375,11 +1375,11 @@
                         
                         <div class="totalBonusDRHeader" style="font-size: 18px;">Total Healing/s</div>
                         <div class="totalHealingBox">
-                            <div class="totalHealingBoxHalf">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
                                 <div class="totalHealingHeader">As flat HP/s</div>
                                 <div class="totalHealingValue" id="totalHealingFlat">0.00</div>
                             </div>
-                            <div class="totalHealingBoxHalf">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
                                 <div class="totalHealingHeader">As % HP/s</div>
                                 <div class="totalHealingValue" id="totalHealing%">0.00%</div>
                             </div>
@@ -1411,7 +1411,7 @@
                         <div>Important Factors</div>
 
 
-                        <div class="statisticSettingsRow">
+                        <div class="statisticSettingsRow hasHoverTooltip" id="greyActiveRow">
                             <span class="statsRowName">Grey Health Active?</span>
                             <!-- <span class="rowTraceLine"></span> -->
                             <div class="statsRowToggle">
@@ -1421,7 +1421,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="statisticSettingsRow">
+                        <div class="statisticSettingsRow hasHoverTooltip" id="perfectDodgeRow">
                             <span class="statsRowName">Pefect Dodge?</span>
                             <!-- <span class="rowTraceLine"></span> -->
                             <div class="statsRowToggle">
@@ -1431,7 +1431,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="statisticSettingsRow">
+                        <div class="statisticSettingsRow hasHoverTooltip" id="isEvadeRow">
                             <span class="statsRowName">Backstep/Evade?</span>
                             <!-- <span class="rowTraceLine"></span> -->
                             <div class="statsRowToggle">
@@ -1448,7 +1448,7 @@
 
 
                         <div>Assumptions</div>
-                        <div class="statisticSettingsRow">
+                        <div class="statisticSettingsRow hasHoverTooltip" id="spiritHealerStacksRow">
                             <div class="statsRowName">Spirit Healer Stacks:&nbsp;<span id="spiritHealerStacksMAIN">1</span></div>
                             <div class="statsRowToggle">
                                 <input type="range" id="spiritHealerStacks" name="slider" min="0" max="20" value="0" step="1" onchange="updateFormulas()">
