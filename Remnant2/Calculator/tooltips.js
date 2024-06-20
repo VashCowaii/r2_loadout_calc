@@ -7,51 +7,24 @@ const tooltipStorage = {
 
 };
 
-function showTooltip(elementId) {
-    // console.log("triggered")
-    const tooltip = document.getElementById('tooltip');
-    const element = document.getElementById(elementId);
-    const tooltipText = tooltipStorage[elementId];
-
-    if (tooltipText) {
-        tooltip.innerHTML = userTrigger.updateSubstatColor(tooltipText);
-        tooltip.style.display = 'block';
-
-        element.addEventListener('mousemove', function (event) {
-            tooltip.style.left = event.pageX + 10 + 'px';
-            tooltip.style.top = event.pageY + 10 + 'px';
-        });
-    }
-}
-
-function hideTooltip() {
-    const tooltip = document.getElementById('tooltip');
-    tooltip.style.display = 'none';
-}
-
-function addTooltipListeners() {
-    document.querySelectorAll('.hasHoverTooltip').forEach(element => {
-        // Check for custom data attributes that indicate the presence of listeners
-        const hasMouseEnterListener = element.getAttribute('data-mouseenter-listener') === 'true';
-        const hasMouseLeaveListener = element.getAttribute('data-mouseleave-listener') === 'true';
+// function addTooltipListeners() {
+//     document.querySelectorAll('.hasHoverTooltip').forEach(element => {
+//         // Check for custom data attributes that indicate the presence of listeners
+//         const hasMouseEnterListener = element.getAttribute('data-mouseenter-listener') === 'true';
+//         const hasMouseLeaveListener = element.getAttribute('data-mouseleave-listener') === 'true';
     
-        if (!hasMouseEnterListener) {
-            element.addEventListener('mouseenter', () => showTooltip(element.id));
-            element.setAttribute('data-mouseenter-listener', 'true'); // Mark that mouseenter listener has been added
-        }
+//         if (!hasMouseEnterListener) {
+//             element.addEventListener('mouseenter', () => showTooltip(element.id));
+//             element.setAttribute('data-mouseenter-listener', 'true'); // Mark that mouseenter listener has been added
+//         }
     
-        if (!hasMouseLeaveListener) {
-            element.addEventListener('mouseleave', hideTooltip);
-            element.setAttribute('data-mouseleave-listener', 'true'); // Mark that mouseleave listener has been added
-        }
-    });
-}
-addTooltipListeners();
-
-// document.querySelectorAll('.hasHoverTooltip').forEach(element => {
-//     element.addEventListener('mouseenter', () => showTooltip(element.id));
-//     element.addEventListener('mouseleave', hideTooltip);
-// });
+//         if (!hasMouseLeaveListener) {
+//             element.addEventListener('mouseleave', hideTooltip);
+//             element.setAttribute('data-mouseleave-listener', 'true'); // Mark that mouseleave listener has been added
+//         }
+//     });
+// }
+// addTooltipListeners();
 
 function checkItemForStat(path,name,statistic,type) {
     let tags = path.tags
@@ -155,6 +128,81 @@ function returnItemsWithStat(statistic) {
 }
 
 let tooltips = {
+    hideTooltip() {
+        const tooltip = document.getElementById('tooltip');
+        tooltip.style.display = 'none';
+    },
+    showTooltip(elementId) {
+        // console.log("triggered")
+        const tooltip = document.getElementById('tooltip');
+        const element = document.getElementById(elementId);
+        const tooltipText = tooltipStorage[elementId];
+        const isMobile = window.matchMedia("(max-width: 768px)").matches; // Adjust the breakpoint as needed
+    
+        if (tooltipText) {
+            tooltip.innerHTML = userTrigger.updateSubstatColor(tooltipText);
+            tooltip.style.display = 'block';
+    
+            if (isMobile) {
+                // On mobile view, fit to screen width and position beneath the tapped element
+                tooltip.style.width = 'calc(100% - 20px)'; // Adjust as needed
+                tooltip.style.left = '10px'; // Center it horizontally with some margin
+                const rect = element.getBoundingClientRect();
+                tooltip.style.top = window.scrollY + rect.bottom + 10 + 'px'; // Position it below the element with some margin
+            } else {
+                // On desktop view, position according to the mouse cursor
+                element.addEventListener('mousemove', function (event) {
+                    tooltip.style.left = event.pageX + 10 + 'px';
+                    tooltip.style.top = event.pageY + 10 + 'px';
+                });
+            }
+        }
+    },
+    addDesktopListeners(element) {
+        element.addEventListener('mouseenter', () => tooltips.showTooltip(element.id));
+        element.addEventListener('mouseleave', tooltips.hideTooltip);
+    },
+    addMobileListeners(element) {
+        element.addEventListener('click', () => {
+            const isVisible = element.getAttribute('data-tooltip-visible') === 'true';
+            if (isVisible) {
+                tooltips.hideTooltip();
+                element.setAttribute('data-tooltip-visible', 'false');
+            } else {
+                tooltips.showTooltip(element.id);
+                element.setAttribute('data-tooltip-visible', 'true');
+            }
+        });
+    },
+    loadTooltips() {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches; // Adjust the breakpoint as needed
+        document.querySelectorAll('.hasHoverTooltip').forEach(element => {
+            if (isMobile) {
+                // Check if mobile listeners are already added
+                if (!element.hasMobileListeners) {
+                    tooltips.addMobileListeners(element);
+                    element.hasMobileListeners = true;
+                    // Remove desktop listeners if present
+                    if (element.hasDesktopListeners) {
+                        element.removeEventListener('mouseenter', tooltips.showTooltip);
+                        element.removeEventListener('mouseleave', tooltips.hideTooltip);
+                        element.hasDesktopListeners = false;
+                    }
+                }
+            } else {
+                // Check if desktop listeners are already added
+                if (!element.hasDesktopListeners) {
+                    tooltips.addDesktopListeners(element);
+                    element.hasDesktopListeners = true;
+                    // Remove mobile listeners if present
+                    if (element.hasMobileListeners) {
+                        element.removeEventListener('click', showTooltip);
+                        element.hasMobileListeners = false;
+                    }
+                }
+            }
+        });
+    },
     updateTooltipDisplay(elemID,breakdownString,statArray) {
         let listItemsHeader = "<div>The following selections can contribute to this statistic:</div>"
         let statsString = "";
@@ -163,10 +211,15 @@ let tooltips = {
             statsString += returnItemsWithStat(statArray[i])
         }
 
-
         tooltipStorage[elemID] =
         (breakdownString ? breakdownString : "")
         + (breakdownString && statsString ? "<br><br>" : "")
         + (statsString ? listItemsHeader + statsString : "");
     },
 }
+
+// Initialize tooltips on load
+tooltips.loadTooltips();
+// Reinitialize tooltips on window resize
+
+window.addEventListener('resize', tooltips.loadTooltips);

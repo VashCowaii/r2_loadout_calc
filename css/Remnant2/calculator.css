@@ -3676,6 +3676,12 @@ div {
 
 
 @media (max-width: 768px) {
+    .tooltip {
+        width: 100%;
+        max-width: none;
+    }
+
+
     .basicsBox,.classAndArmor,.accessoriesBox,.consumablesBox,.weaponsBox,.traitsBox,.advancedStatsBox {
         width: 100%;
         min-width: 100%;

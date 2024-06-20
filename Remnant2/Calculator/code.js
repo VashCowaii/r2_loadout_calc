@@ -350,7 +350,7 @@ let createHTML = {
 
     tooltipStorage[`traitContainer${elemID}`] = adjustedDescription.replace("VALUE1.1",levelValue.toFixed(2));
 
-    return `<div class="traitContainer" id="traitContainer${elemID}" onmouseover="showTooltip('traitContainer${elemID}')" onmouseout="hideTooltip()">
+    return `<div class="traitContainer hasHoverTooltip" id="traitContainer${elemID}">
               <div class="traitLineHolder">
                   <div class="traitNameHolder">
 
@@ -398,7 +398,7 @@ let createHTML = {
     unit = unit ?? "";
     value = unit==="%" ? value*100 : value;
     value = !isRounded ? value : value.toFixed(2)
-    return `<div class="basicsDRContainer" id="${tooltipID}" onmouseenter="showTooltip('${tooltipID}')" onmouseleave="hideTooltip()">
+    return `<div class="basicsDRContainer hasHoverTooltip" id="${tooltipID}">
       <span class="basicsDRStat">${name}</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="">${value}</span>
     ${unit}</div>`
   },
@@ -2980,9 +2980,10 @@ function updateFormulas(index,ping) {
     return returnStats;
   }
   else {
-    addTooltipListeners();
+    // addTooltipListeners();
     basicsUpdates.updateMainFromFormulas(returnStats);
     manipulateURL.updateURLparameters();
+    tooltips.loadTooltips();
     if (!stopQueryFractures) {window.updateConsole(index,dodgeClass);}
   }
 }
@@ -3147,7 +3148,7 @@ let basicsUpdates = {
         "",
         ["FlatDR","Bulwark"]
       )
-      let drSumHTML = `<div class="basicsDRsumContainer" id="totalDRRow" onmouseenter="showTooltip('totalDRRow')" onmouseleave="hideTooltip()">
+      let drSumHTML = `<div class="basicsDRsumContainer hasHoverTooltip" id="totalDRRow">
            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">${(returnObject.totalDR*100).toFixed(2)}%</span>
        </div>
        <br>`
