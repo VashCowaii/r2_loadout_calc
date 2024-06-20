@@ -3153,7 +3153,7 @@ let basicsUpdates = {
        <br>`
       tooltips.updateTooltipDisplay(
         "totalDRRow",
-        "TotalDR = 1 - (1 - ArmorDR) * (1 - FlatDR)<br><br>TotalDR caps at 80%<br>TotalDR is multiplicative against Resistance-based damage reduction when hit by an non-physical attack, but even together they still can't exceed an 80% sum.",
+        "TotalDR = 1 - (1 - ArmorDR) * (1 - FlatDR)<br><br>TotalDR caps at 80%<br>TotalDR is multiplicative against Resistance-based damage reduction when hit by a non-physical attack, but even together they still can't exceed an 80% sum.",
         ["FlatDR","Bulwark","Armor","Armor%"]
       )
       readSelection("basicsInnerBox").innerHTML += drRowsHTML ? drHTML + drRowsHTML + drSumHTML : "";
