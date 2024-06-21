@@ -8250,7 +8250,7 @@ melee = {
 
 		"desc": "",
 		"builtIN": "Power Stone",
-		"DMG": 174,
+		"DMG": 126,
 		"atkSpeed": 0,
 
 		"chargeDMG": 0,
