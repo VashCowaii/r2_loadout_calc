@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Home</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the current URL
+            var url = window.location.href;
+            // Check if there is a query string
+            if (url.indexOf('?') !== -1) {
+                // Extract the query string
+                var queryString = window.location.search;
+                // Perform the redirect and append the query string
+                window.location.href = document.location.origin + '/Remnant2/Calculator/' + queryString + '&redirect=true';
+            }
+            else {
+                window.location.href = document.location.origin + '/Remnant2/Home/';
+            }
+        });
+    </script>
+</head>
+<body>
+    You should have been redirected to the homepage or the Remnant2 calculator if you were using an old link, but somehow you're seeing this. That is not good, let me know, because this page only exists to redirect you if necessary but is never used otherwise.
+</body>
+</html>
