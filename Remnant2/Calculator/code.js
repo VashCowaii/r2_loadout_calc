@@ -1310,6 +1310,14 @@ let userTrigger = {
 
     let weaponObjectReference = weapons[type][selectedWeapon.value]
     if (type==="melee") {
+      readSelection("meleeStat1").innerHTML = weaponObjectReference.DMG;
+      readSelection("meleeStat2").innerHTML = (weaponObjectReference.critChance*100).toFixed(2)+"%";
+      readSelection("meleeStat3").innerHTML = (weaponObjectReference.weakSpot*100).toFixed(2)+"%";
+      readSelection("meleeStat4").innerHTML = (weaponObjectReference.stagger*100).toFixed(2)+"%";
+      readSelection("meleeStat5").innerHTML = weaponObjectReference.weaponClass;
+
+
+
       readSelection("meleeModBox").style.display = "none";
       if (weaponObjectReference.builtIN) {
         readSelection("meleeModBox").style.display = "flex";
@@ -1687,6 +1695,20 @@ let userTrigger = {
   //Also prevents items from going above 85 total points spent.
   updateTrait(elemID,adjustment) {
     let traitName = readSelection(`trait${elemID}`).value;
+
+    if (!traits[traitName]) {
+      readSelection(`trait${elemID}`).value = "";
+      return;
+    }
+    else {
+      for (trait of globalRecords.greatTraitRecords) {
+        if (trait.name === traitName && traitName != "") {
+          readSelection(`trait${elemID}`).value = "";
+          return;
+        }
+      }
+    }
+
     let traitLevel = +readSelection(`trait${elemID}Level`).value <= 10 ? +readSelection(`trait${elemID}Level`).value : 10;
     traitLevel = traitLevel>=0 ? traitLevel : 0;
     traitLevel = adjustment ?? traitLevel;

@@ -43,12 +43,14 @@
                         <li>asdf</li>
                     </ul>
                 </div> -->
-                <!-- <div>
+                <div>
                     <h1>June 20, 2024</h1>
                     <ul>
-                        <li>asdf</li>
+                        <li>Base melee weapon stats will now display under the melee weapon expanded view. This is just stuff like damage, crit chance, stagger, etc.</li>
+                        <li>Fixed an issue that allowed duplicate trait entries if a user was determined enough. This was possible because while the dropdowns would exclude already selected traits, if a user manually entered in a duplicate trait, because it was still a valid trait the calc would process it accordingly. This is no longer possible.</li>
+                        <li>Fixed an issue where if users entered in an invalid trait name, the calc would still try to process it like a valid one, causing some errors. Why tf weren't you just using valid traits anyhow...?</li>
                     </ul>
-                </div> -->
+                </div>
                 <div>
                     <h1>June 19, 2024 - THE TOOLTIPS UPDATE</h1>
                     <ul>
@@ -648,7 +650,7 @@
                         <li>Damage Calculations: <b>Monster Task</b>.
                             <ul>
                                 <li>Melee calcs are functionally done but parsing attack durations from the game files is an extremely difficult task. I've done my best but without help from a Dev most likely, I am not going to be able to get the durations to be as accurate as I want them to be. If I cannot get them to the level of precision I am after, I simply will not publish them.</li>
-                                <li>Think you can help me? Join my discord and ping me, you have my permission. I really don't wanna be doing this shit alone, it sucks.</li>
+                                <li><b>Think you can help me?</b> Join my discord and ping me, you have my permission. I really don't wanna be doing this shit alone, it sucks.</li>
                             </ul>
                         </li>
                         <li>Loadouts - Not entirely positive how I want to do this yet, but I do know that a build calculator without the ability to compare one build to another, is kinda sad</li>
