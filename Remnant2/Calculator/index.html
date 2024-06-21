@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>R2 Build Calculator</title> <!-- Browser Tab title -->
+
+
+    <meta property="og:title" content="R2 Build Calculator">
+    <meta
+      property="og:description"
+      content="A detailed calculator for your Remnant 2 builds."
+    />
+    <meta
+      property="description"
+      content="A detailed calculator for your Remnant 2 builds."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="Remnant 2 Build Calculator" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Remnant 2 Build Calculator" />
+    <meta
+      name="twitter:description"
+      content="A detailed calculator for your Remnant 2 builds."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div> -->
+
+        <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
+            <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
+                <div class="basicsResistanceBox">
+                    <div class="resistanceContainer"> <!-- Resistance Icons -->
+                        <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/bleed.png" alt="Bleed icon"></div>
+                        <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/fire.png" alt="Burn icon"></div>
+                        <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/shock.png" alt="Shock icon"></div>
+                        <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/corrosive.png" alt="Corrosive icon"></div>
+                        <div class="resistanceValues"><img class="resistanceIcon" src="/images/Remnant/Status/blight.png" alt="Blight icon"></div>
+                    </div>
+                    <div class="resistanceContainer"> <!-- Resistance Values -->
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBleed">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBurn">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryShock">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryCorrosive">0</div>
+                        <div class="resistanceValues hasHoverTooltip" id="summaryBlight">0</div>
+                    </div>
+                </div>
+                <div class="basicsSummaryBox">
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryHealthRow"><span class="basicsSummaryStat">HEALTH</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryHealth">100.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryStaminaRow"><span class="basicsSummaryStat">STAMINA</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryStamina">100.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryArmorRow"><span class="basicsSummaryStat">ARMOR</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryArmor">0.0</span></div>
+                        <div class="basicsSummaryContainer hasHoverTooltip" id="summaryWeightRow"><span class="basicsSummaryStat">WEIGHT</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryWeight" style="color: #93CCEA;">0.0</span></div>
+                </div>
+
+                <br>
+                <div class="basicsInnerBox" id="basicsInnerBox"></div> <!-- populated via updateMainFromFormulas() -->
+                <div class="exportBar">
+                    <button type="button" class="exportButton" onclick="manipulateURL.confirmExport()">
+                        <div class="exportText">Export build to R2TK</div>
+                        <div class="exportIconBox">
+                            <img class="exportIcon" src="/images/R2TK.png" alt="R2TK Icon">
+                        </div>
+                    </button>
+                </div>
+                <div class="exportBar">
+                    <button type="button" class="exportButton">
+                        <a href="/Remnant2/Optimizer/" rel="noopener noreferrer" class="exportText" style="text-decoration: none;color: white;" target="_blank">Build Optimizer</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="classAndArmor"> <!--Loadout slot selections-->
+
+                <div class="newCenterMegaBox">
+                    <div class="comboDisplay"> <!-- The visual display for the current MAIN UI build -->
+                        <div class="comboDisplayImageBox comboDisplayMAIN">
+                            <!-- CLASS BACKGROUND BANNERS -->
+                            <div class="comboBackgroundContainer">
+                                <div class="backgroundHalvesLeft" id="archetype1MAINbg" onclick="basicsUpdates.updateFocus(`arch1Tab`,`archetype1`)">
+                                    <img class="backgroundLeftImage" src="/images/Remnant/clear.png" id="archetype1MAIN" alt="Combo Class1">
+                                </div>
+                                <div class="backgroundHalvesRight" id="archetype2MAINbg" onclick="basicsUpdates.updateFocus(`arch2Tab`,`archetype2`)">
+                                    <img class="backgroundRightImage" src="/images/Remnant/clear.png" id="archetype2MAIN" alt="Combo Class2">
+                                </div>
+                            </div>
+                            <!-- ARMOR DISPLAY COLUMN -->
+                            <div class="comboArmorRow comboAccessoryRowMAIN"> 
+                                <div class="curvedLineUIleft"></div>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`helmetTab`,`helmetChoice`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="helmetMAIN" alt="Combo Helmet">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: -15%;" onclick="basicsUpdates.updateFocus(`chestTab`,`chestChoice`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="chestMAIN" alt="Combo Chest">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: -30%;" onclick="basicsUpdates.updateFocus(`legTab`,`legChoice`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="legMAIN" alt="Combo Leg">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: -15%;" onclick="basicsUpdates.updateFocus(`handTab`,`handChoice`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="handMAIN" alt="Combo Hand">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`relicTab`,`relic`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="relicMAIN" alt="Combo Relic">
+                                </button>
+                            </div>
+                            <!-- ABILITY DISPLAY ROW -->
+                            <div class="comboAbilityRow"> 
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`arch1Tab`,`archetype1ability`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1abilityIcon" alt="Combo Ability1">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`arch2Tab`,`archetype2ability`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2abilityIcon" alt="Combo Ability2">
+                                </button>
+                            </div>
+                            <!-- combo title -->
+                            <div class="comboStatsRow" id="comboTitle" style="white-space: wrap;"> 
+                                --
+                            </div>
+                            <!-- ACCESSORY DISPLAY COLUMN -->
+                            <div class="comboAccessoryRow comboAccessoryRowMAIN"> 
+                                <div class="curvedLineUIright"></div>
+                                
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`amuletTab`,`amulet`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="amuletMAIN" alt="Combo Helmet">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: 15%;" onclick="basicsUpdates.updateFocus(`ring1Tab`,`ring1`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="ring1MAIN" alt="Combo Chest">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: 30%;" onclick="basicsUpdates.updateFocus(`ring2Tab`,`ring2`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="ring2MAIN" alt="Combo Leg">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" style="translate: 15%;" onclick="basicsUpdates.updateFocus(`ring3Tab`,`ring3`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="ring3MAIN" alt="Combo Hand">
+                                </button>
+                                <button type="button" class="comboArmorImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`ring4Tab`,`ring4`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="ring4MAIN" alt="Combo Relic">
+                                </button>
+                            </div>
+                            <!-- WEAPON DISPLAY ROW -->
+                            <div class="comboWeaponRow comboWeaponRowMAIN"> 
+                                <button type="button" class="comboWeaponImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`primaryTab`,`primary`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="primaryImageMAIN" alt="Combo Weapon1">
+                                </button>
+                                <button type="button" class="comboWeaponImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`meleeTab`,`melee`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="meleeImageMAIN" alt="Combo Weapon2">
+                                </button>
+                                <button type="button" class="comboWeaponImageBox mainUIcombo" onclick="basicsUpdates.updateFocus(`secondaryTab`,`secondary`)">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="secondaryImageMAIN" alt="Combo Weapon3">
+                                </button>
+                            </div>
+                            <!-- WEAPON MUTS/MODS ROW -->
+                            <div class="comboWeaponPiecesRow comboWeaponPiecesRowMAIN"> 
+                                <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`primaryTab`,`rangedMutator1`)" id="primaryAttachmentsMAIN">
+                                    <div class="comboModName" id="primaryModMAIN"></div>
+                                    <div class="comboMutatorName" id="primaryMutatorMAIN"></div>
+                                </button>
+                                <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`meleeTab`,`meleeMutator`)">
+                                    <div class="comboModName" id="meleeModMAIN"></div>
+                                    <div class="comboMutatorName"id="meleeMutatorMAIN"></div>
+                                </button>
+                                <button type="button" class="comboWeaponPiecesHolder mainPiecesAdjustment" onclick="basicsUpdates.updateFocus(`secondaryTab`,`rangedMutator2`)" id="secondaryAttachmentsMAIN">
+                                    <div class="comboModName" id="secondaryModMAIN"></div>
+                                    <div class="comboMutatorName"id="secondaryMutatorMAIN"></div>
+                                </button>
+                            </div>
+                            <!-- CONCOCTION DISPLAY ROW -->
+                            <div class="comboConcoctionRow comboConcoctionRowMAIN"> 
+                                <div class="comboConcoctionsBox">
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction1MAINbox" onclick="basicsUpdates.updateFocus(`concoction1Tab`,`concoction1`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction1IconMAIN" alt="Combo Concoction1">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction2MAINbox" onclick="basicsUpdates.updateFocus(`concoction2Tab`,`concoction2`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction2IconMAIN" alt="Combo Concoction2">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction3MAINbox" onclick="basicsUpdates.updateFocus(`concoction3Tab`,`concoction3`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction3IconMAIN" alt="Combo Concoction3">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction4MAINbox" onclick="basicsUpdates.updateFocus(`concoction4Tab`,`concoction4`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction4IconMAIN" alt="Combo Concoction4">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction5MAINbox" onclick="basicsUpdates.updateFocus(`concoction5Tab`,`concoction5`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction5IconMAIN" alt="Combo Concoction5">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction6MAINbox" onclick="basicsUpdates.updateFocus(`concoction6Tab`,`concoction6`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction6IconMAIN" alt="Combo Concoction6">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="concoction7MAINbox" onclick="basicsUpdates.updateFocus(`concoction7Tab`,`concoction7`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="concoction7IconMAIN" alt="Combo Concoction7">
+                                    </button>
+                                </div>
+                                <!-- QUICKUSE DISPLAY ROW -->
+                                <div class="comboQuickUseBox">
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="" onclick="basicsUpdates.updateFocus(`quickUse1Tab`,`quickUse1`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="quickUse1IconMAIN" alt="Combo Consumable1">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="" onclick="basicsUpdates.updateFocus(`quickUse2Tab`,`quickUse2`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="quickUse2IconMAIN" alt="Combo Consumable2">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="" onclick="basicsUpdates.updateFocus(`quickUse3Tab`,`quickUse3`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="quickUse3IconMAIN" alt="Combo Consumable3">
+                                    </button>
+                                    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="" onclick="basicsUpdates.updateFocus(`quickUse4Tab`,`quickUse4`)">
+                                        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="quickUse4IconMAIN" alt="Combo Consumable4">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mainSelectionsMegaBox"> <!--compact item info/selection boxes-->
+                        <div class="selectionsInfoContainer" id="helmetTab"> <!--Armor-->
+                            <div class="selectionItemTypeHeader">Helmet</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="helmetImage" alt="Armor: Head Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="helmetChoice" list="helmetsList" onchange="userTrigger.updateArmor('helmet')"> <!--selector-->
+                                        <datalist id="helmetsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc">
+                                    <span class="armorValueDisplay">Armor:&nbsp;<span class="armorValueDisplay" id="helmetArmor">0</span></span>
+                                    <span class="armorValueDisplay">Weight:&nbsp;<span class="armorValueDisplay" id="helmetWeight">0</span></span>
+                                </div> <!--description-->
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledHead" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="chestTab">
+                            <div class="selectionItemTypeHeader">Chest</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="chestImage" alt="Armor: Chest Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="chestChoice" list="chestsList" onchange="userTrigger.updateArmor('chest')"> <!--selector-->
+                                        <datalist id="chestsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc">
+                                    <span class="armorValueDisplay">Armor:&nbsp;<span class="armorValueDisplay" id="chestArmor">0</span></span>
+                                    <span class="armorValueDisplay">Weight:&nbsp;<span class="armorValueDisplay" id="chestWeight">0</span></span>
+                                </div> <!--description-->
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledChest" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="legTab">
+                            <div class="selectionItemTypeHeader">Legs</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="legImage" alt="Armor: Legs Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="legChoice" list="legsList" onchange="userTrigger.updateArmor('leg')"> <!--selector-->
+                                        <datalist id="legsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc">
+                                    <span class="armorValueDisplay">Armor:&nbsp;<span class="armorValueDisplay" id="legArmor">0</span></span>
+                                    <span class="armorValueDisplay">Weight:&nbsp;<span class="armorValueDisplay" id="legWeight">0</span></span>
+                                </div> <!--description-->
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledLegs" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="handTab">
+                            <div class="selectionItemTypeHeader">Hands</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="handImage" alt="Armor: Hands Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="handChoice" list="handsList" onchange="userTrigger.updateArmor('hand')"> <!--selector-->
+                                        <datalist id="handsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc">
+                                    <span class="armorValueDisplay">Armor:&nbsp;<span class="armorValueDisplay" id="handArmor">0</span></span>
+                                    <span class="armorValueDisplay">Weight:&nbsp;<span class="armorValueDisplay" id="handWeight">0</span></span>
+                                </div> <!--description-->
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledHands" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="relicTab"> <!--Relic-->
+                            <div class="selectionItemTypeHeader">Relic</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="relicImage" alt="Relic Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="relic" list="relicsList" onchange="userTrigger.updateAccessory('relic')"> <!--selector-->
+                                        <datalist id="relicsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="relicDesc"></div> <!--description-->
+
+                                <div class="fragmentsContainer">
+                                    <div>Fragments:</div>
+                                    <div class="presetsSelectorBox adjustedSpacingSelector">
+                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment1" list="fragment1List" onchange="userTrigger.updateFragment('fragment','1')"> <!--selector-->
+                                        <datalist id="fragment1List"></datalist>
+                                    </div>
+                                    <div class="presetsSelectorBox adjustedSpacingSelector">
+                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment2" list="fragment2List" onchange="userTrigger.updateFragment('fragment','2')"> <!--selector-->
+                                        <datalist id="fragment2List"></datalist>
+                                    </div>
+                                    <div class="presetsSelectorBox adjustedSpacingSelector">
+                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment3" list="fragment3List" onchange="userTrigger.updateFragment('fragment','3')"> <!--selector-->
+                                        <datalist id="fragment3List"></datalist>
+                                    </div>
+                                </div>
+
+                                <div class="relicEffectsContainer">
+                                    <div class="relicHealingContainer">
+                                        <div>Healing</div>
+                                        <div class="complexRowContainer hasHoverTooltip" id="relicScaledRow"><span class="basicsDRStat">Scaled</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicScaled">0</span></div>
+                                        <div class="complexRowContainer hasHoverTooltip" id="relicTypeRow"><span class="basicsDRStat">Type</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicType">0</span></div>
+                                        <div class="complexRowContainer"><span class="basicsDRStat">%/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relic%HP/s">0</span></div>
+                                        <div class="complexRowContainer"><span class="basicsDRStat">HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicHP/s">0</span></div>
+                                        <div class="complexRowContainer"><span class="basicsDRStat">Over (s)</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicTime">0</span></div>
+                                        <div id="relicComplexEffect"></div> <!--possibly move this outside later-->
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledRelic" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selectionsInfoContainer" id="amuletTab" style="display: flex;"> <!--Amulet-->
+                            <div class="selectionItemTypeHeader">Amulet</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="amuletImage" alt="Amulet Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="amulet" list="amuletsList" onchange="userTrigger.updateAccessory('amulet')"> <!--selector-->
+                                        <datalist id="amuletsList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="amuletDesc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledAmulet" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="ring1Tab"> <!--rings-->
+                            <div class="selectionItemTypeHeader">Ring 1</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="ring1Image" alt="Ring 1 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="ring1" list="rings1List" onchange="userTrigger.updateAccessory('ring','1')"> <!--selector-->
+                                        <datalist id="rings1List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="ring1Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledRing1" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="ring2Tab">
+                            <div class="selectionItemTypeHeader">Ring 2</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="ring2Image" alt="Ring 2 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="ring2" list="rings2List" onchange="userTrigger.updateAccessory('ring','2')"> <!--selector-->
+                                        <datalist id="rings2List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="ring2Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledRing2" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="ring3Tab">
+                            <div class="selectionItemTypeHeader">Ring 3</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="ring3Image" alt="Ring 3 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="ring3" list="rings3List" onchange="userTrigger.updateAccessory('ring','3')"> <!--selector-->
+                                        <datalist id="rings3List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="ring3Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledRing3" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="ring4Tab">
+                            <div class="selectionItemTypeHeader">Ring 4</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="ring4Image" alt="Ring 4 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="ring4" list="rings4List" onchange="userTrigger.updateAccessory('ring','4')"> <!--selector-->
+                                        <datalist id="rings4List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="ring4Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledRing4" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selectionsInfoContainer" id="arch1Tab"> <!--archetypes-->
+                            <div class="selectionItemTypeHeader">Primary Archetype</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <div class="selectionBackgroundClassAdjustment">
+                                        <img class="backgroundLeftImage classContainerDarken" src="/images/Remnant/clear.png" id="archetype1Icon" alt="Class 1 Icon">
+                                    </div>
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="archetype1" list="archs1List" onchange="userTrigger.updateArchetype('archetype','1')"> <!--selector-->
+                                        <datalist id="archs1List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectionSelectorBox" style="top: 24px;">
+                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="archetype1ability" list="archetype1abilityList" onchange="userTrigger.updateAbility('archetype1')"> <!--selector-->
+                                        <datalist id="archetype1abilityList"></datalist>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="classAbilityIconHolder">
+                                    <img class="classAbilityIcon" src="/images/Remnant/clear.png" alt="Class 1 Icon" id="archetype1abilityIcon">
+                                </div> -->
+
+                                <div class="fragmentsContainer classDescriptionsAdjustment">
+                                <div class="classPerkName">PRIME PERK:&nbsp;<span class="classPerkName" id="primePerk" style="white-space: normal;"></span>
+                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPrimeP" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="classPerkDescription" id="primePerkDesc">---</div>
+
+                                <div class="flex">
+                                    <div class="classThinHeader">ABILITY:</div>
+                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility1" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype1abilityDesc">Select an ability above</div>
+
+                                <div class="classThinHeader">PASSIVES:</div>
+
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype1passive1"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive1" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype1passive2"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive2" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype1passive2desc"></div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype1passive3"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive3" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype1passive3desc"></div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype1passive4"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive4" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+                                </div>
+
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="arch2Tab">
+                            <div class="selectionItemTypeHeader">Secondary Archetype</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <div class="selectionBackgroundClassAdjustment">
+                                        <img class="backgroundLeftImage classContainerDarken" src="/images/Remnant/clear.png" id="archetype2Icon" alt="Class 2 Icon">
+                                    </div>
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="archetype2" list="archs2List" onchange="userTrigger.updateArchetype('archetype','2')"> <!--selector-->
+                                        <datalist id="archs2List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectionSelectorBox" style="top: 24px;">
+                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="archetype2ability" list="archetype2abilityList" onchange="userTrigger.updateAbility('archetype2')"> <!--selector-->
+                                        <datalist id="archetype2abilityList"></datalist>
+                                    </div>
+                                </div>
+
+                                <div class="fragmentsContainer classDescriptionsAdjustment">
+
+                                <div class="flex">
+                                    <div class="classThinHeader">ABILITY:</div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility2" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype2abilityDesc">Select an ability above</div>
+                                <div class="classThinHeader">PASSIVES:</div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype2passive1"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive5" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype2passive2"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive6" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype2passive2desc"></div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype2passive3"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive7" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype2passive3desc"></div>
+                                <div class="flex">
+                                    <div class="classPassiveHeader" id="archetype2passive4"></div>
+                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive8" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="classPassiveDescription" id="archetype2passive4desc"></div>
+                                </div>
+
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                            </div>
+                        </div>
+
+                        <div class="selectionsInfoContainer" id="primaryTab"> <!--primary-->
+                            <div class="selectionItemTypeHeader">Primary Weapon</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox seletionBackgroundWeaponAdjustment">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="primaryImage" alt="Primary Weapon Icon">
+                                </div>
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="primary" list="primariesList" onchange="userTrigger.updateWeapon('primary')"> <!--selector-->
+                                        <datalist id="primariesList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="primaryDescription"></div> <!--description-->
+
+
+                                <div class="fragmentsContainer weaponDescriptionsAdjustment">
+
+                                    <div class="selectItemDesc weaponModifierRow" id="primaryModBox"><!--mod-->
+                                        <div class="comboArmorImageBox revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="primaryModImage" alt="Primary Mod Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <input class="selectSelector selectWeaponModMutatorAdjustment" id="rangedMod1" list="rangedMod1List" onchange="userTrigger.updateMod('rangedMod','1')">
+                                                <datalist id="rangedMod1List"></datalist>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="primaryModDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledpMod" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="selectItemDesc weaponModifierRow" id="primaryMutatorBox"><!--mutator-->
+                                        <div class="comboArmorImageBox mainUIcombo revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="rangedMutator1Image" alt="Primary Mutator Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <input class="selectSelector selectWeaponModMutatorAdjustment" id="rangedMutator1" list="rangedMutator1List" onchange="userTrigger.updateMutator('rangedMutator','1')"> <!--selector-->
+                                                <datalist id="rangedMutator1List"></datalist>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="primaryMutatorDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledpMutator" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="weaponStatsHolder"><!--stats rows-->
+                                    <div>-</div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Reload:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledPrimary" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="secondaryTab"> <!--secondary-->
+                            <div class="selectionItemTypeHeader">Secondary Weapon</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox seletionBackgroundWeaponAdjustment">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="secondaryImage" alt="Secondary Weapon Icon">
+                                </div>
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="secondary" list="secondariesList" onchange="userTrigger.updateWeapon('secondary')"> <!--selector-->
+                                        <datalist id="secondariesList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="secondaryDescription"></div> <!--description-->
+
+
+                                <div class="fragmentsContainer weaponDescriptionsAdjustment">
+
+                                    <div class="selectItemDesc weaponModifierRow" id="secondaryModBox"><!--mod-->
+                                        <div class="comboArmorImageBox revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="secondaryModImage" alt="Secondary Mod Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <input class="selectSelector selectWeaponModMutatorAdjustment" id="rangedMod2" list="rangedMod2List" onchange="userTrigger.updateMod('rangedMod','2')">
+                                                <datalist id="rangedMod2List"></datalist>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="secondaryModDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledsMod" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="selectItemDesc weaponModifierRow" id="secondaryMutatorBox"><!--mutator-->
+                                        <div class="comboArmorImageBox mainUIcombo revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="rangedMutator2Image" alt="Secondary Mutator Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <input class="selectSelector selectWeaponModMutatorAdjustment" id="rangedMutator2" list="rangedMutator2List" onchange="userTrigger.updateMutator('rangedMutator','2')"> <!--selector-->
+                                                <datalist id="rangedMutator2List"></datalist>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="secondaryMutatorDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledsMutator" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="weaponStatsHolder"><!--stats rows-->
+                                    <div>-</div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Reload:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledSecondary" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="meleeTab"> <!--melee-->
+                            <div class="selectionItemTypeHeader">Melee Weapon</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox seletionBackgroundWeaponAdjustment">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="meleeImage" alt="Melee Weapon Icon">
+                                </div>
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="melee" list="meleesList" onchange="userTrigger.updateWeapon('melee')"> <!--selector-->
+                                        <datalist id="meleesList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="meleeDescription"></div> <!--description-->
+
+
+                                <div class="fragmentsContainer weaponDescriptionsAdjustment">
+
+                                    <div class="selectItemDesc weaponModifierRow" id="meleeModBox" style="display: none;"><!--mod-->
+                                        <div class="comboArmorImageBox revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="meleeModImage" alt="Melee Mod Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <div class="selectSelector selectWeaponModMutatorAdjustment" id="meleeMod"></div>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="meleeModDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledmMod" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="selectItemDesc weaponModifierRow"><!--mutator-->
+                                        <div class="comboArmorImageBox mainUIcombo revertCursor">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="meleeMutatorImage" alt="Melee Mutator Icon">
+                                        </div>
+                                        <div class="weaponModifierRowDescBox">
+                                            <div class="presetsSelectorBox weaponModMutatorAdjustment">
+                                                <input class="selectSelector selectWeaponModMutatorAdjustment" id="meleeMutator" list="meleeMutatorsList" onchange="userTrigger.updateMutator('meleeMutator')"> <!--selector-->
+                                                <datalist id="meleeMutatorsList"></datalist>
+                                            </div>
+                                            <div class="classPassiveDescription weaponModMutatorDescAdjustment" id="meleeMutatorDesc"></div>
+                                            <div class="selectionWeaponToggle"><div style="padding-right: 5px">Disable:</div>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledmMutator" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="weaponStatsHolder">
+                                    <span id="meleeStat1">0</span>
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">DMG% Bonus:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat2">0</span>
+                                    </div> -->
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">Combo Length:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat3">0</span>
+                                    </div> -->
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">Attack Speed:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat4">0</span>
+                                    </div> -->
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">Charge Speed:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat5">0</span>
+                                    </div> -->
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">Charge Cost:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat6">0</span>
+                                    </div> -->
+                                    <!-- <div class="weaponRowContainer">
+                                        <span class="weaponStat">Special Cost:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat7">0</span>
+                                    </div> -->
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat2">0</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat3">0</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat4">0</span>
+                                    </div>
+                                    <div class="weaponRowContainer">
+                                        <span class="weaponStat">Class:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat5">--</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledMelee" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selectionsInfoContainer" id="concoction1Tab"> <!--concoctions-->
+                            <div class="selectionItemTypeHeader">Concoction 1</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction1Icon" alt="concoction1 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction1" list="concoction1List" onchange="userTrigger.updateConsumable('concoction','1')"> <!--selector-->
+                                        <datalist id="concoction1List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction1Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc1" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction2Tab">
+                            <div class="selectionItemTypeHeader">Concoction 2</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction2Icon" alt="concoction2 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction2" list="concoction2List" onchange="userTrigger.updateConsumable('concoction','2')"> <!--selector-->
+                                        <datalist id="concoction2List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction2Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc2" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction3Tab">
+                            <div class="selectionItemTypeHeader">Concoction 3</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction3Icon" alt="concoction3 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction3" list="concoction3List" onchange="userTrigger.updateConsumable('concoction','3')"> <!--selector-->
+                                        <datalist id="concoction3List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction3Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc3" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction4Tab">
+                            <div class="selectionItemTypeHeader">Concoction 4</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction4Icon" alt="concoction4 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction4" list="concoction4List" onchange="userTrigger.updateConsumable('concoction','4')"> <!--selector-->
+                                        <datalist id="concoction4List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction4Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc4" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction5Tab">
+                            <div class="selectionItemTypeHeader">Concoction 5</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction5Icon" alt="concoction5 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction5" list="concoction5List" onchange="userTrigger.updateConsumable('concoction','5')"> <!--selector-->
+                                        <datalist id="concoction5List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction5Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc5" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction6Tab">
+                            <div class="selectionItemTypeHeader">Concoction 6</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction6Icon" alt="concoction6 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction6" list="concoction6List" onchange="userTrigger.updateConsumable('concoction','6')"> <!--selector-->
+                                        <datalist id="concoction6List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction6Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc6" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="concoction7Tab">
+                            <div class="selectionItemTypeHeader">Concoction 7</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="concoction7Icon" alt="concoction7 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="concoction7" list="concoction7List" onchange="userTrigger.updateConsumable('concoction','7')"> <!--selector-->
+                                        <datalist id="concoction7List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="concoction7Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledConc7" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="selectionsInfoContainer" id="quickUse1Tab"> <!--quick-use consuumables-->
+                            <div class="selectionItemTypeHeader">Quick-Use 1</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="quickUse1Icon" alt="Quick-Use 1 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="quickUse1" list="quickUse1List" onchange="userTrigger.updateConsumable('quickUse','1')"> <!--selector-->
+                                        <datalist id="quickUse1List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="quickUse1Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledQuick1" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="quickUse2Tab">
+                            <div class="selectionItemTypeHeader">Quick-Use 2</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="quickUse2Icon" alt="Quick-Use 2 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="quickUse2" list="quickUse2List" onchange="userTrigger.updateConsumable('quickUse','2')"> <!--selector-->
+                                        <datalist id="quickUse2List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="quickUse2Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledQuick2" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="quickUse3Tab">
+                            <div class="selectionItemTypeHeader">Quick-Use 3</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="quickUse3Icon" alt="Quick-Use 3 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="quickUse3" list="quickUse3List" onchange="userTrigger.updateConsumable('quickUse','3')"> <!--selector-->
+                                        <datalist id="quickUse3List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="quickUse3Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledQuick3" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selectionsInfoContainer" id="quickUse4Tab">
+                            <div class="selectionItemTypeHeader">Quick-Use 4</div>
+                            <div class="selectionItemTypeBody">
+                                <div class="seletionBackgroundBox">
+                                    <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="quickUse4Icon" alt="Quick-Use 4 Icon"> <!--image-->
+                                </div>
+
+                                <div class="selectionSelectorBox">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="quickUse4" list="quickUse4List" onchange="userTrigger.updateConsumable('quickUse','4')"> <!--selector-->
+                                        <datalist id="quickUse4List"></datalist>
+                                    </div>
+                                </div>
+                                <div class="selectItemDesc" id="quickUse4Desc"></div> <!--description-->
+                            </div>
+
+                            <div class="selectionItemTypeFooter">
+                                <div style="padding-right: 5px;">Disable item calculation:</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEtoggledQuick4" onchange="updateFormulas()"> <!--math toggle-->
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="traitsBox" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
+            <!-- traitsMegaBox gets filled in automatically using the trait code -->
+        </div>
+
+        <div class="advancedStatsBox">
+            <div class="advancedStatsTitleHeader">ADVANCED STATS</div>
+
+            <div class="survivabilityContainer"> <!-- tank stuff-->
+                <div class="advancedStatsHeaderRow">
+                    <div class="advancedStatsHeader">SURVIVABILITY</div>
+                    <div class="advancedStatsShowToggle" style="z-index: 0;position: absolute;right: 5px;">
+                        <div style="padding-right: 5px;">Hide</div>
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="tankStatsContainerToggle" onchange="advancedUpdates.toggleTankStats()">
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="advancedSummaryContainer">
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EHPDisplayRow">
+                        <span class="advancedSummaryStat">EHP</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="EHP">100.00</span>
+                    </div>
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EHPPerSecDisplayRow">
+                        <span class="advancedSummaryStat">EHP/s</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="EHP/s">0.00</span>
+                    </div>
+                    <div class="advancedSummaryThirds hasHoverTooltip" id="EffectiveDRDisplayRow">
+                        <span class="advancedSummaryStat">Effective DR</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="effectiveDR">0.00%</span>
+                    </div>
+                </div>
+                <div class="advancedCategoryBoxHolder" id="tankStatsContainer">
+
+                    <div class="advancedCategoryBox advStatsMobileAdjustment"> <!-- DR Factors -->
+                        <div class="advancedCategoryHeader">EHP FACTORS</div>
+
+                        <div class="totalBonusDRHeader">Bonus Damage Mitigation</div>
+                        <!-- <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div> -->
+                        <div class="basicsDRContainer hasHoverTooltip" id="REdamageRow"> <!--RE DMG-->
+                            <span class="basicsDRStat">Reduced Enemy Damage</span>
+                            <span class="rowTraceLine"></span>
+                            <span class="basicsDRValue" id="REdamage">0.00%</span>
+                            <div class="advancedStatsShowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeREdamage" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="DMGKeptRow"> <!--DMG kept-->
+                            <span class="basicsDRStat">Damage Kept</span>
+                            <span class="rowTraceLine"></span>
+                            <span class="basicsDRValue" id="DMGKept">0.00%</span>
+                            <div class="advancedStatsShowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeDMGKept" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="totalBonusDRHeader hasHoverTooltip" id="totalNonstandardDRRow">
+                            <div>Total Bonus%</div><span class="rowTraceLine"></span><div class="totalBonusDR" id="totalBonusMitigation">0.00%</div>
+                        </div>
+
+                        <div class="totalBonusDRHeader">Shields</div>
+
+                        <div class="basicsDRContainer hasHoverTooltip" id="shield%Row"><span class="basicsDRStat">Shields%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shield%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="shieldEffRow"><span class="basicsDRStat">Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="shieldEff">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="totalShield%Row"><span class="basicsDRStat">Total%</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="totalShield%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="shieldEHPRow">
+                            <span class="basicsDRStat">Shield EHP</span>
+                            <span class="rowTraceLine"></span>
+                            <span class="basicsDRValue" id="shieldEHP">0.00%</span>
+                            <div class="advancedStatsShowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeShields" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                                
+                    </div>
+
+                    <div class="advancedCategoryBox advStatsMobileAdjustment"> <!-- Healing Factors -->
+                        <div class="advancedCategoryHeader">HEALING</div>
+                        <!-- <div class="advancedDRBoxThin">Passive + Abilities</div> -->
+                        <div class="totalBonusDRHeader">Passive + Abilities</div>
+                        <!-- <div class="basicsDRContainer"><span class="basicsDRStat">Relic Effectiveness</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="relicEFF">0.00%</span></div> -->
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedFlatRow"><span class="basicsDRStat">Flat only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedFlat">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advanced%Row"><span class="basicsDRStat">% only HP/s</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advanced%">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedTotalFlatRow"><span class="basicsDRStat">Total HP/s as Flat</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotalFlat">0.00%</span></div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedTotal%Row"><span class="basicsDRStat">Total HP/s as %</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="advancedTotal%">0.00%</span></div>
+
+                        <div class="totalBonusDRHeader">Relic</div>
+                        <div class="basicsDRContainer hasHoverTooltip" id="advancedRelicTotal%Row">
+                            <span class="basicsDRStat">Total HP/s as %</span>
+                            <span class="rowTraceLine"></span>
+                            <span class="basicsDRValue" id="advancedRelicTotal%">0.00%</span>
+                            <div class="advancedStatsShowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="includeRelicHealing" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="totalBonusDRHeader" style="font-size: 18px;">Total Healing/s</div>
+                        <div class="totalHealingBox">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                <div class="totalHealingHeader">As flat HP/s</div>
+                                <div class="totalHealingValue" id="totalHealingFlat">0.00</div>
+                            </div>
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
+                                <div class="totalHealingHeader">As % HP/s</div>
+                                <div class="totalHealingValue" id="totalHealing%">0.00%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advancedCategoryBox advStatsMobileAdjustment"> <!-- Settings -->
+                        <div class="advancedCategoryHeader">SETTINGS</div>
+
+                        <div>Team Settings</div>
+                        <div class="statisticSettingsRow">
+                            <div class="statsRowName">Team Count:&nbsp;<span id="teamCountMAIN">1</span></div>
+                            <div class="statsRowToggle">
+                                <input type="range" id="teamCount" name="slider" min="1" max="3" value="1" step="1" onchange="updateFormulas()">
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <div class="statsRowName">Summon Count:&nbsp;<span id="minionCountMAIN">0</span></div>
+                            <div class="statsRowToggle">
+                                <input type="range" id="minionCount" name="slider" min="0" max="10" value="0" step="1" list="tickmarks" onchange="updateFormulas()">
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow">
+                            <div class="statsRowName">Enemy Count:&nbsp;<span id="enemyCountMAIN">0</span></div>
+                            <div class="statsRowToggle">
+                                <input type="range" id="enemyCount" name="slider" min="0" max="9" value="1" step="1" list="tickmarks" onchange="updateFormulas()">
+                            </div>
+                        </div>
+                        <div>Important Factors</div>
+
+
+                        <div class="statisticSettingsRow hasHoverTooltip" id="greyActiveRow">
+                            <span class="statsRowName">Grey Health Active?</span>
+                            <!-- <span class="rowTraceLine"></span> -->
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="greyActive" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow hasHoverTooltip" id="perfectDodgeRow">
+                            <span class="statsRowName">Pefect Dodge?</span>
+                            <!-- <span class="rowTraceLine"></span> -->
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="perfectDodge" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="statisticSettingsRow hasHoverTooltip" id="isEvadeRow">
+                            <span class="statsRowName">Backstep/Evade?</span>
+                            <!-- <span class="rowTraceLine"></span> -->
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="isEvade" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div>Assumptions</div>
+                        <div class="statisticSettingsRow hasHoverTooltip" id="spiritHealerStacksRow">
+                            <div class="statsRowName">Spirit Healer Stacks:&nbsp;<span id="spiritHealerStacksMAIN">1</span></div>
+                            <div class="statsRowToggle">
+                                <input type="range" id="spiritHealerStacks" name="slider" min="0" max="20" value="0" step="1" onchange="updateFormulas()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="damageStatsBox">
+                <div class="advancedStatsHeaderRow"> <!--damage title header-->
+                    <div class="advancedStatsHeader">DAMAGE</div>
+                    <div class="advancedStatsShowToggle" style="z-index: 0;position: absolute;right: 5px;">
+                        <div style="padding-right: 5px;">Hide</div>
+                        <label class="toggleContainer" id="dmgVisibilityToggle">
+                            <input type="checkbox" class="toggleCheckbox" id="damageStatsContainerToggle" onchange="advancedUpdates.toggleDamageStats()"><span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="hasHoverTooltip" id="currentlySupportedDamageCalcs">Currently supported damage calcs [?]</div>
+
+                <div class="advancedAbilityBoxHolder" id="havocFormBoxHolder" style="display: none;">
+
+
+                    <div class="hideBreakdownBoxes" id="hideBreakdownBoxes">
+                        <div class="damageBreakdownSelectorBox" id="breakdownSelectorMain">
+                            <div style="white-space: normal;">Select a Damage Breakdown</div>
+                            <div class="damageBreakdownSelectorHolder" id="damageBreakdownSelectorHolder"></div>
+                        </div>
+                        <div class="damageBreakdownSelectorBox" id="breakdownSelectorReturn" style="border: 0;display: none;">
+                            <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedDamageBreakdown('clear')" style="background-color: #2e2e2e;">
+                                <div class="exportText">Return to Breakdown Selection</div>
+                            </button>
+                        </div>
+
+
+                        <div class="havocInfoContainer" id="ability1BreakdownTab" style="display: none;"></div>
+                        <div class="havocInfoContainer" id="ability2BreakdownTab" style="display: none;"></div>
+                        <div class="havocInfoContainer" id="mod1BreakdownTab" style="display: none;"></div>
+                        <div class="havocInfoContainer" id="mod2BreakdownTab" style="display: none;"></div>
+
+                        <div class="havocInfoContainer" id="sumTotalBreakdownTab" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+<!-- script/data calls -->
+<script src="/htmlTemplates/injectMainHTML.js"></script>
+<script src="/htmlTemplates/injectR2HTML.js"></script>
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/Remnant2/Calculator/data.js"></script>
+<script src="/Remnant2/Calculator/postData.js"></script>
+<script src="/MainJS/buildTime.js"></script>
+<!-- <script src="/Remnant2/dpsModules/melee.js"></script> -->
+<script src="/Remnant2/Optimizer/combinations.js"></script>
+<script src="/Remnant2/Calculator/formulas.js"></script>
+<!-- <script src="/Remnant2/Resources/attacks_Male.js"></script> -->
+<script src="/Remnant2/Calculator/code.js"></script>
+<script src="/Remnant2/Calculator/tooltipStorage.js"></script>
+<script src="/Remnant2/Calculator/tooltipMath.js"></script>
+<script src="/MainJS/Tooltips/tooltips.js"></script>
+<script src="/Remnant2/Calculator/pagePopulation.js"></script>
+
+</body>
+
+</html> 

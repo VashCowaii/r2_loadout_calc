@@ -1,0 +1,3835 @@
+/* style.css */
+/* #181818 */
+/* #5d5d5d for thin lines */
+
+/* Descriptions */
+.classAbilityDescription,.classPassiveDescription,.classPerkDescription,.accessoryDescription,
+.relicDescription,.relicComplexDesc,.consumableDesc,.weaponDescriptionBox,.mutatorDesc,
+.filtersQuarterDescription,.comboDebugWindow,.settingsImportDesc,.settingsImportedList,.selectItemDesc,
+.weaponDisplayDamageHeader,.helpBoxText,.tooltip {
+    font-family: "Montserrat-Light";
+}
+
+
+
+
+
+.exportBar {
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 5px;
+    /* border: 1px solid red; */
+    /* border-radius: 5%; */
+}
+.exportButton {
+    width: 100%;
+    height: 100%;
+    /* background-color: #434343; */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+    /* border: 1px solid #d9d9d9; */
+    border: 2px solid #434343;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.exportButton:hover {
+    background-color: #4b4b4b;
+    color: black;
+}
+.exportText {
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 2px;
+    /* justify-content: right; */
+    /* text-align: right; */
+    white-space: wrap;
+    /* border: 1px solid red; */
+}
+.exportIconBox {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.exportIcon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.filterSelectionTitleText {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 2px;
+    /* justify-content: right; */
+    /* text-align: right; */
+    white-space: wrap;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+.togglesBox {
+    width: 100%;
+    height: 600px;
+    background-color: #666666;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid #666666;
+    overflow-y: auto;
+}
+.togglesHeader { 
+    width: 100%;
+    height: 5%;
+    background-color: #434343;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.togglesRowBox {
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+    display: flex;
+}
+.togglesTraitBox {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.traitButtonImage {
+    width: 100%;
+    height: 100%;
+    filter: brightness(2);
+    object-fit: contain;
+}
+
+
+
+
+.togglesStat {
+    width: 25%;
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #434343;
+    white-space: normal;
+    box-sizing: border-box;
+}
+.togglesValue {
+    width: 55%;
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+.togglesUse {
+    width: 20%;
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+.togglesCheckBox {
+    width: auto;
+    height: 100%;
+    /* font-size: 10px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+}
+
+
+/* this is for archselects and armor columns */
+.classAndArmor {
+    display: flex;
+    width: 50%;
+    height: auto;
+    display: flex;
+    white-space: nowrap;
+    grid-column: 2 / span 1;
+    grid-row: 2;
+    background-color: none;
+}
+.newCenterMegaBox {
+    width: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+div {
+    color: white;
+}
+
+
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid #434343;
+    font-size: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.updateBannerBufferLeft {
+    grid-column: 1;
+    grid-row: 1;
+}
+.updateBannerBufferLeft {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+.helpBarMegaBox {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    height: auto;
+}
+.updateWarningBar {
+    border: 3px solid white;
+    color: #e06666;
+    /* height: 80px; */
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.mainGridRow {
+    display: flex;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- BASIC STATS Column -------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.basicsBox {
+    width: 25%;
+    height: 800px;
+    max-height: 800px;
+    overflow-y: auto;
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* white-space: normal; */
+    box-sizing: border-box;
+}
+.basicsInnerBox {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.basicsTitleHeader {
+    font-size: 30px;
+    /* font-size: 200%; */
+    height: 25%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+.basicsHeaderBig {
+    font-size: 20px;
+    padding: 0%;
+    width: 100%;
+    background-color: #434343;
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+.basicsRows {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+.basicsSummaryBox {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.basicsDRBox {
+    height: 34%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.basicsDRheaderTitle {
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: normal;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRheaderSmall {
+    font-size: 15px;
+    height: auto;
+    padding: 0%;
+    width: 100%;
+    /* background-color: #434343; */
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRContainer {
+    width: 100%;
+    height: auto;
+    /* border-bottom: 1px solid #434343; */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsDRStat {
+    width: auto;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.rowTraceLine {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.basicsDRValue {
+    width: auto;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRsumContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsTotalDR {
+    width: 60%;
+    padding-right: 2%;
+    /* background-color: #434343; */
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsTotalDRsum {
+    width: 40%;
+    padding-right: 2%;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsSummaryContainer {
+    width: 100%;
+    height: 23px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsSummaryStat {
+    width: auto;
+    height: 100%;
+    padding-left: 1%;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsSummaryValue {
+    width: auto;
+    height: 100%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsResistanceBox {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    /* border-bottom: 1px solid #434343; */
+    /* white-space: nowrap; */
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.resistanceHeader {
+    width: 100%;
+    height: 24%;
+    font-size: 20px;
+    padding: 0;
+    background-color: #434343;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.resistanceContainer {
+    height: auto;
+    width: 100%;
+    /* background-color: black; */
+    padding: 0%;
+    display: flex;
+    box-sizing: border-box;
+}
+.resistanceIcon {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.resistanceValues {
+    width: 20%;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.basicsDamageRows {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+.basicsHealingBox {
+    height: 25.5%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.healingHeaderTitle {
+    font-size: 20px;
+    width: 100%;
+    height: 13%;
+    background-color: #434343;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.healingHeaderSmall {
+    font-size: 15px;
+    height: 8%;
+    padding: 0%;
+    width: 100%;
+    background-color: #434343;
+    text-align: left;
+    box-sizing: border-box;
+}
+.healingRowContainer {
+    width: 100%;
+    height: 10.1428571%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.basicsStaminaBox {
+    height: 11%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.staminaHeaderTitle {
+    font-size: 20px;
+    width: 100%;
+    height: 30%;
+    background-color: #434343;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.staminaRowContainer {
+    width: 100%;
+    height: 23.333333%;
+    border-bottom: 1px solid #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Archetype Columns --------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.classBox {
+    width: 30%;
+    /* min-width: 120px; */
+    height: 800px;
+    background-color: black;
+    color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.classAbilityBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.classIconContainer {
+    width: 100%;
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.classIconSelected {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.classThinHeader {
+    font-size: 15px;
+    padding: 0%;
+    /* height: 4%; */
+    width: 100%;
+    /* background-color: #434343; */
+    text-align: left;
+    box-sizing: border-box;
+}
+.classSelectorBox {
+    width: 100%;
+    height: 8%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.classSelector {
+    /* font-size: 23px; */
+    font-size: clamp(18px, 2vw, 23px);
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.classAbilityContainer {display: flex;height: 16%;box-sizing: border-box;background-color: #666666;}
+.classAbilitySelectorBox {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.classAbilitySelector {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    font-size: 12px;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.classAbilityHeader {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #434343;
+    font-size: 12px;
+}
+.classAbilityIconHolder {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #666666;
+}
+.classAbilityIcon {
+    width: 100%;
+    height: 100%;
+    /* padding: 0; */
+    /* text-align: right; */
+    /* margin-right: auto; */
+    object-fit: contain;
+}
+.classAbilityDescription {
+    text-align: left;
+    font-size:12px;
+    height: 30%;   
+    white-space: normal;
+    overflow-y: auto;
+}
+.classPassivesBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.classPassiveHeader {
+    font-size: 12px;
+    padding: 0%;
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.classPassiveDescription {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font-size: 12px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    white-space: normal;
+    border-bottom: 2px solid #434343;
+    /* overflow-wrap: break-word; */
+    /* overflow-y: auto; */
+}
+.weaponModMutatorDescAdjustment {
+    font-size: 10px;
+    width: 100%;
+    height: auto;
+    position: static;
+    border: none;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- PrimePerk/Armor Column ---------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.classArmorBox {
+    width: 40%;
+    /* min-width: 150px; */
+    /* min-width: none; */
+    height: 800px;
+    background-color: black;
+    color: white;
+}
+.primePerkBox {
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.classTitle {
+    width: 100%;
+    height: 21%;
+    font-size: clamp(15px, 1.0vw, 23px);
+    border-bottom: 1px solid #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.classPerkContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 25.5%;
+    align-items: center;
+    white-space: normal;
+}
+.classPerkName {
+    font-size: 15px;
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.classPerkIconHolder {
+    width: 100%;
+    height: 70%;
+    padding: 0;
+    display: flex;
+    text-align: center;
+}
+.classPerkIcon {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+.classPerkDescription{
+    width: 100%;
+    height: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    text-align: left;
+    border-bottom: 2px solid #434343;
+    font-size: 12px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+.armorHeaderBig{
+    width: 100%;
+    height: 3%;
+    font-size: 20px;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-bottom: 1px solid black;
+}
+.armorSelectionsBox {
+    width: 100%;
+    height: 57%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.armorSelector {
+    font-size: 15;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.armorHeader{
+    width: 100%;
+    height: 4%;
+    font-size: 15px;
+    padding: 0%;
+    background-color: #434343;
+    text-align: left;
+}
+.armorContainer {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.armorSelectorBox {
+    font-size: 15px;
+    width: 100%;
+    height: 30%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.armorIconToStatsBox {
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.armorIconHolder {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-left: 1px solid #434343;
+    
+    /* background-color: #666666; */
+}
+.armorIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+.armorValueContainer {width: 50%; height: 100%;text-align: center;}
+.armorValueHeader {
+    font-size: 10px;
+    width: 100%;
+    height: 25%;
+    padding: 0%;
+    background-color: #434343;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.armorValueDisplay {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    /* border: 1px solid red; */
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Accessory Column ---------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.accessoriesBox {
+    width: 100%;
+    /* min-width: 280px; */
+    height: 800px;
+    background-color: #666666;
+    color: white;
+    box-sizing: border-box;
+}
+.accessoriesTitleHeader {
+    font-size: 30px;
+    height: 4%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    box-sizing: border-box;
+}
+.accessoriesContainer {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    color: white;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.accessoryIconHolder {
+    width: 25%;
+    height: 100%;
+    /* min-width: 70px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.accessoryIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+    /* display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; */
+}
+.accessoryContainer{
+    font-size: 15px;
+    width: 75%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+}
+.accessoryHeader {
+    width: 100%;
+    height: 22%;
+    font-size: 15px;
+    padding-left: 2%;
+    background-color: #434343;
+    text-align: left;
+    box-sizing: border-box;
+}
+.accessorySelectorBox {
+    width: 100%;
+    height: 30%;
+    font-size: 15px;
+    padding: 0%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.accessorySelector {
+    width: 100%;
+    height: 100%;
+    /* min-width: 90px; */
+    font-size: clamp(12px, 1.1vw, 15px);
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.accessoryDescription { 
+    width: 100%;
+    /* min-width: 120px; */
+    height: 70%;
+    text-align: left;
+    /* font-size:10px; */
+    font-size: 12px;
+    padding-left: 0.5%;
+    background-color: black;
+    border-right: 1px solid #434343;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-y: auto;
+}
+.relicDescription {
+    background-color: black;
+    text-align: left;
+    font-size:12px;
+    height: 7%;
+    padding-top: 2px;
+    display: flex;
+    box-sizing: border-box;
+    border-left: 1px solid #434343;
+    border-right: 1px solid #434343;
+    white-space: normal;
+    overflow-y: auto;
+}
+.relicEffectsContainer {
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    white-space: normal;
+}
+.relicHealingContainer {
+    width: 120px;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+}
+.relicComplexContainer {
+    width: 60%;
+    height: 100%;
+    background-color: #434343;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.relicComplexDesc {
+    width: 100%;
+    height: 30%;
+    font-size: 12px;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.relicComplexInputRow {
+    width: 100%;
+    height: 10%;
+    font-size: 12px;
+    /* text-align: left;
+    align-items: center;
+    justify-content: left; */
+    display: flex;
+    box-sizing: border-box;
+    background-color: #666666;
+    color: white;
+}
+.complexInputHeader {
+    width: 50%;
+    height: 100%;
+    font: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.complexInput {
+    width: 40%;
+    height: 100%;
+    font: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.complexPercBox {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.relicComplexSummaryBox {
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    display: flex;
+}
+.relicComplexSummaryHalf {
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.complexHalfHeader {
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.complexHalfHalfBox {
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+.complexHalfHalfHeader {
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.complexHalfValueBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    font-size: 9px;
+}
+.complexHalfValue {
+    width: 50%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+.relicHeaderBig {
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    text-align: center;
+    /* font-size: clamp(12px, 1.1vw, 15px); */
+    padding-left: 1%;
+    background-color: #434343;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: left; */
+    white-space: normal;
+    box-sizing: border-box;
+}
+.relicHeader {
+    width: 100%;
+    height: 10%;
+    font-size: 15px;
+    /* font-size: clamp(12px, 1.1vw, 15px); */
+    padding-left: 1%;
+    background-color: #434343;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.complexRowContainer {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- Consumables Column -------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.consumablesBox {
+    /* width: 300px; */
+    width: 100%;
+    /* min-width: 200px; */
+    /* width: clamp(200px, 20vw, 300px); */
+    /* min-width: 190px; */
+    height: 800px;
+    max-height: 800px;
+    background-color: #666666;
+    color: white;
+    /* white-space: normal; */
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.consumablesWholeBox {
+    width: 100%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+}
+.consumablesHeader {
+    width: 100%;
+    height: 3%;
+    font-size: 20px;
+    padding-left: 1%;
+    border: 1px solid black;
+    background-color: #434343;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: left;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.concLimitHeader {
+    width: 66%;
+    height: 100%;
+    font-size: clamp(18px, 1.5vw, 20px);
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.concLimitValue {
+    width: 40%;
+    height: 100%;
+    font-size: 20px;
+    font-size: clamp(18px, 1.5vw, 20px);
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.consumableContainer {
+    width: 100%;
+    height: 10.4444%;
+    border: 1px solid #434343;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.consumableImageBox {
+    width: 30%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.consumableImage {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.consumableInfoBox {
+    width: 70%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.consumableSelectorBox {
+    width: 100%;
+    height: 22%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.consumableSelector {
+    /* font-size: 23px; */
+    font-size: clamp(10px, 1vw, 12px);
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.consumableDesc {
+    width: 100%;
+    height: 78%;
+    text-align: left;
+    white-space: normal;
+    font-size:12px;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+    overflow-y: auto;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- WEAPONS Column -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.weaponsBox {
+    /* width: 550px; */
+
+    width: 100%;
+    /* min-width: 450px; */
+    /* min-width: 190px; */
+    height: 800px;
+    max-height: 800px;
+    background-color: black;
+    color: white;
+    /* white-space: normal; */
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+.weaponsWholeBox {
+    width: 100%;
+    height: 96%;
+    display: flex;
+    flex-direction: row;
+}
+.weaponsThirdsBox {
+    width: 33.33%;
+    height: 100%;
+    border: 1px solid #666666;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.weaponImageBox {
+    width: 100%;
+    height: 10%;
+    background-color: #666666;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.weaponImage {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.weaponSelectorBox {
+    width: 100%;
+    height: 4%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.weaponSelector {
+    /* font-size: 23px; */
+    font-size: clamp(12px, 1vw, 14px);
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.weaponDescriptionBox {
+    background-color: black;
+    color: white;
+    overflow-y: auto;
+    white-space: normal;
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.mutatorHeaderBox {
+    width: 100%;
+    height: 4%;
+    /* border-bottom: 1px solid #434343; */
+    background-color: #434343;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.mutatorHeader {
+    width: 100%;
+    height: 100%;
+    /* font-size: clamp(10px, 1vw, 15px); */
+    background-color: #434343;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.mutatorSelectorBox {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    box-sizing: border-box;
+}
+.mutatorSelector {
+    /* font-size: clamp(10px, 1vw, 15px); */
+    font-size: clamp(12px, 1vw, 14px);
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.mutatorDesc {
+    width: 100%;
+    height: 15%;
+    text-align: left;
+    white-space: normal;
+    font-size:12px;
+    color: white;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+    overflow-y: auto;
+}
+.modSelectorBox {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    font-size: clamp(12px, 1vw, 14px);
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.modSelector {
+    /* font-size: clamp(10px, 1vw, 15px); */
+    font-size: clamp(12px, 1vw, 14px);
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.modSelector:disabled {
+    color: black;
+    appearance: none;
+}
+.modHeader {
+    width: 60%;
+    height: 100%;
+    background-color: #434343;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.modImageBox {
+    width: 40%;
+    height: 100%;
+    background-color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modImage {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.weaponStatsHolder {
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+    bottom: 0;
+    height: 240px;
+    width: 140px;
+    overflow-y: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weaponDisplayDamageHeader {
+    font-size: 16px;
+}
+.weaponRowContainer {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    /* border: 1px solid #434343; */
+}
+
+.weaponStat {
+    width: auto;
+    height: 100%;
+    /* font-size: clamp(10px, 0.6vw, 11px); */
+    font-size: 9px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2%;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+}
+.weaponValue {
+    width: auto;
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 2%;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- TRAITS Column ------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.traitsBox {
+    /* width: 350px; */
+    width: 25%;
+    /* min-width: 280px; */
+    /* min-width: none; */
+    box-sizing: border-box;
+    padding: 4px;
+    height: 800px;
+    background-color: none;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.traitsBoxQueries {
+    min-width: 250px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px;
+    min-height: 100%;
+    height: auto;
+    background-color: none;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+}
+.traitContainer {
+    width: 100%;
+    max-width: 260px;
+    height: 40px;
+    /* border-bottom: 1px solid #434343; */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+}
+.traitLineHolder {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    box-sizing: border-box;
+}
+.traitNameHolder {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-sizing: border-box;
+}
+.traitSelector {
+    width: 70%;
+    height: 100%;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+}
+.traitSelector:disabled {
+    color: black;
+    appearance: none;
+}
+.traitLevelDisplay {
+    width: 40%;
+    height: 100%;
+    font-size: clamp(13px, 1vw, 15px);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: none;
+    color: white;
+    
+}
+.traitLevelInput {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    color: white;
+    background-color: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: right;
+    padding-right: 4px;
+    border: none;
+    /* border-radius: 10px; */
+    
+    background: transparent;
+}
+
+.traitLevelContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.traitLevelBar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.traitLevelCircle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #2d2d2d;
+    box-shadow: inset 0px 0px 2px 4.5px rgba(0, 0, 0, 1);
+
+    /* #93CCEA for the blue, just "orange" will work for the core traits */
+}
+
+.traitMegaTitleHeader {
+    font-size: 25px;
+    height: 35px;
+    width: 100%;
+    max-width: 240px;
+    white-space: nowrap;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* USED IN ALL MIDDLE LEVEL TITLE HEADERS */
+.bottomTitleHeader {
+    font-size: clamp(24px, 2vw, 30px);
+    height: 4%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+/* ----------------------------------------------------------------------------------------*/
+/* ------------------------- ADVANCED STATS -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.advancedStatsBox {
+    /* background-color: #666666; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* min-width: 930px; */
+    max-width: 1280px;
+    height: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+}
+.advancedStatsTitleHeader {
+    font-size: 30px;
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+.survivabilityContainer {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    overflow: hidden;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.advancedStatsHeader {
+    font-size: 25px;
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    /* background-color: #434343; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.advancedStatsHeaderRow {
+    display: flex;
+}
+.advancedSummaryContainer {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.advancedSummaryThirds {
+    height: auto;
+    width: 33.3333%;
+    /* min-width: 300px; */
+    white-space: nowrap;
+    padding: 0%;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.advancedSummaryStat {
+    width: 50%;
+    height: 100%;
+    font-size: 22px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 1%;
+}
+.advancedSummaryValue {
+    width: 50%;
+    height: 100%;
+    font-size: 22px;
+    display: flex;
+    text-align: right;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 3%;
+}
+.advancedCategoryBoxHolder {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+.advancedCategoryBoxBaseMeleeStats {
+    width: 25%;
+    max-width: 25%;
+}
+
+/* MELEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+.meleeDamageBox {
+    width: 100%;
+    height: auto;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+.advancedStatsShowToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    border: 1px solid #434343;
+    width: auto;
+    border-radius: 5px;
+}
+.advancedCategoryBox {
+    width: 33.3333%;
+    /* min-width: 232.5px; */
+    /* height: 100%;*/
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #434343;
+    margin: 2px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.advancedCategoryHeader {
+    font-size: 20px;
+    min-height: 30px;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    box-sizing: border-box;
+}
+
+/* -----------------------------SHIELDS AND MISC------------------------*/
+.advancedShieldBox {
+    height: 40px;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #666666;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.advancedMiscBoxStat {
+    width: 60%;
+    height: 100%;
+    font-size: clamp(14px, 1vw, 16px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #434343;
+    white-space: normal;
+}
+.advancedMiscBoxValue {
+    width: 40%;
+    height: 100%;
+    font-size: clamp(14px, 1vw, 16px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+}
+.shieldsCheckBox {
+    width: 30%;
+    height: 60%;
+    /* font-size: 10px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+}
+.advancedMiscSelector {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    /* white-space: normal; */
+}
+.shieldsFiller {
+    width: 100%;
+    height: 40%;
+    background-color: black;
+}
+.miscFiller {
+    width: 100%;
+    height: 70%;
+    background-color: black;
+}
+/* -----------------------------HEALING------------------------*/
+.advancedHealingBox {
+    height: 5%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 15px;
+    /* background-color: #666666; */
+    background-color: #434343;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.advancedHealingBoxStat {
+    width: 60%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+    background-color: #434343;
+    white-space: normal;
+    box-sizing: border-box;
+    padding-left: 2%;
+}
+.advancedHealingBoxValue {
+    width: 40%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    background-color: #666666;
+    box-sizing: border-box;
+}
+.totalHealingBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.totalHealingBoxHalf {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.totalHealingBigHeader {
+    font-size: 20px;
+    height: 10%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    box-sizing: border-box;
+}
+.totalHealingHeader {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 16px;
+    border-bottom: 1px solid #434343;
+    border-top: 1px solid #434343;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.totalHealingValue {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: clamp(22px, 1vw, 25px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* -----------------------------DR FACTORS------------------------*/
+.advancedDRBox {
+    height: 10%;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    background-color: #666666;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.advancedDRBoxThin {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 14px;
+    padding-left: 2px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.advancedDRStat {
+    width: 40%;
+    height: 100%;
+    font-size: clamp(13px, 1vw, 16px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #434343;
+    white-space: normal;
+    box-sizing: border-box;
+}
+.advancedDRValue {
+    width: 40%;
+    height: 100%;
+    font-size: clamp(14px, 1vw, 16px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+.advancedDRHeaderUse {
+    width: 20%;
+    height: 100%;
+    font-size: clamp(14px, 1vw, 16px);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+.advancedDRCheckBox {
+    width: 30%;
+    height: 60%;
+    /* font-size: 10px; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+}
+.totalBonusDRHeader {
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.totalBonusDR {
+    height: 20%;
+    width: auto;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* -------------------------- DAMAGE CALCS ------------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.damageStatsBox {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    overflow: hidden;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+
+/* ----------------------------------------------------------------------------------------*/
+/* -------------------------- FILTERS CALCS -----------------------------------------------*/
+/* ----------------------------------------------------------------------------------------*/
+.filtersMegaBox {
+    /* background-color: #666666; */
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* min-width: 930px; */
+    max-width: 1280px;
+    height: 830px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.filtersMegaMegaBox {
+    /* background-color: #666666; */
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* min-width: 930px; */
+    max-width: 1280px;
+    height: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.filtersConstraintsBox {
+    width: 100%;
+    /* border-radius: 10px;
+    border: 2px solid #666666; */
+    box-sizing: border-box;
+    font-size: 12px;
+    overflow: hidden;
+}
+.filtersMegaHeader {
+    width: 100%;
+    font-size: 30px;
+    background-color: #434343;
+}
+.filtersInstructionsBox {
+    font-size: 12px;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #93CCEA;
+}
+.filtersBoxHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid green; */
+}
+.filtersAndTraitsHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.filtersOuterHeader {
+    width: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.filtersBoxQuarters {
+    width: 25%;
+    height: 400px;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 5px;
+}
+.filtersQuarterHeader {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    border-bottom: 1px solid #666666;
+}
+.filtersQuarterDescription {
+    background-color: #434343;
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    font-size: 12px;
+    box-sizing: border-box;
+    /* overflow-y: auto; */
+    border-bottom: 1px solid #666666;
+}
+.statFiltersRowContainer {
+    height: 20px;
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.statFiltersRowHeader {
+    height: 20px;
+    /* background-color: #434343; */
+    border: 1px solid #434343;
+    border-radius: 15px;
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.statFiltersRowMiniHeader {
+    height: 20px;
+    /* background-color: #434343; */
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+.presetsTitle {
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+.presetsSelectorBox {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+.weaponModMutatorAdjustment {
+    position: static;
+    height: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.presetsSelector {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.tagInput {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #d9d9d9;
+}
+.clearInput {
+    width: 80%;
+    min-width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #434343;
+    color: #93CCEA;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.filterTagsContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    /* overflow-y: auto; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.filtersTagsRowContainer {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid #666666;
+    display: flex;
+    flex-direction: row;
+}
+.filtersTagName {
+    /* width: calc(100%-20px); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-left: 10px;
+    white-space: normal;
+}
+.filtersTagDelete {
+    width: 40px;
+    height: 100%;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    appearance: none;
+    border: none;
+    border-left: 1px solid #666666;
+    /* border-left: 1px solid #666666; */
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.filterLocksContainerHolder {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* border: 1px solid red; */
+}
+.filterLocksContainer {
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    overflow: hidden;
+    /* min-height: 100%; */
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.locksBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* EXCLUSIONS AND INCLUSIONS */
+.filtersBoxHalf {
+    width: 100%;
+    /* max-width: 50%; */
+    height: 730px;
+    max-height: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 5px;
+    border-radius: 15px;
+    /* border: 1px solid blue; */
+    align-self: flex-start;
+    border: 2px solid #666666;
+    overflow: hidden;
+}
+.occlusionsToggleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px;
+}
+.occlusionOption {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.comboDebugContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.comboDebugWindow{
+    width: 80%;
+    max-width: 600px;
+    background-color: black;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: left;
+    overflow-y: auto;
+    border-radius: 10px;
+    white-space: normal;
+    display: none;
+}
+
+.debugToggleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid #666666;
+}
+
+
+
+
+
+
+
+.cyclesSettingsHeader {
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    border-bottom: 1px solid #434343;
+}
+
+.resultsBoxHalf {
+    width: 100%;
+    max-width: 600px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+}
+.queryProgressBarBox {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "Montserrat-Light";
+}
+.counterDisplay {
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+}
+.progressBar {
+    background-color: #93CCEA;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat-Light";
+}
+.progressInfo {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    mix-blend-mode: difference;
+    font-family: "Montserrat-Light";
+}
+
+.cyclesControlBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.cyclesControl {
+    width: 33%;
+    border-radius: 15px;
+}
+/* ------------------------- COMBO IMAGE DISPLAYS ------------------------------------ */
+.comboDisplay {
+    width: 100%;
+    white-space: normal;
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comboDisplayQueries {
+    width: 240px;
+    min-width: 240px;
+    white-space: normal;
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #666666;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2px;
+}
+.comboDisplayImageBox {
+    width: 100%;
+    height: 625px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+}
+.comboDisplayMAIN {
+    height: 500px;
+    border-top: none;
+    border-bottom: none;
+}
+.mainSelectionsMegaBox {
+    width: 98%;
+    height: 295px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionsInfoContainer {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeHeader {
+    width: 100%;
+    height: 10%;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeFooter {
+    width: 100%;
+    height: 8%;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.selectionItemTypeBody {
+    width: 100%;
+    height: 82%;
+    font-size: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.seletionBackgroundBox {
+    position: relative;
+    top: 60px;
+    height: 60%;
+    width: 100%;
+    z-index: 0;
+}
+.seletionBackgroundWeaponAdjustment {
+    width: calc(100% - 140px);
+    top: 0;
+    height: 150px;
+    /* border: 1px solid red; */
+
+}
+.selectionBackgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* margin: auto; #666666 */
+    /* rotate: -15deg; */
+}
+.selectionBackgroundClassAdjustment {
+    position: absolute;
+    width: 100px;
+    height: 300px;
+    right: 0;
+    top: -60px;
+    /* bottom: 0px; */
+    overflow: hidden;
+    /* border: 1px solid white; */
+    /* translate: 500%; */
+}
+
+.selectionSelectorBox {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    box-sizing: border-box;
+    top: 2px;
+}
+.selectionSelectorBoxQuery1 {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    /* position: absolute; */
+    box-sizing: border-box;
+    /* bottom: 90px; */
+    /* margin: 2px; */
+    margin-bottom: 2px;
+}
+.selectionSelectorBoxQuery2 {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    /* position: absolute; */
+    box-sizing: border-box;
+    /* bottom: 40px; */
+    /* margin: 2px; */
+    margin-bottom: 2px;
+}
+.selectSelectorTitle {
+    width: 75px;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.selectSelector {
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent);
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    /* border: 1px solid red; */
+    font-size: 18px;
+}
+.traitNameAdjustment {
+    font-size: 14px;
+    /* border-radius: 10px; */
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent,transparent,transparent,transparent,transparent,transparent);
+}
+.revertCursor {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    cursor: default;
+    overflow: hidden;
+}
+.selectWeaponModMutatorAdjustment {
+    font-size: 12px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: static;
+}
+.selectMiniSelectorAdjustment {
+    font-size: 14px;
+}
+.selectItemDesc {
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+    /* max-width: 400px; */
+    border-left: 5px solid #474747;
+    padding-left: 3px;
+
+    white-space: normal;
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    background: linear-gradient(to right, #222222,transparent,transparent,transparent);
+}
+
+.resoBonusHeader {
+    font-size: 14px;
+}
+.fragmentsContainer{
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    height: auto;
+    font-size: 15px;
+    bottom: 0%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+.adjustedSpacingSelector {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.classDescriptionsAdjustment {
+    height: 75%;
+    max-width: 100%;
+    white-space: normal;
+    /* width: calc(100% - 110px); */
+    width: 99%;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+.weaponDescriptionsAdjustment {
+    height: 100%;
+    max-height: 110px;
+    max-width: 100%;
+    white-space: normal;
+    width: calc(100% - 140px);
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+.weaponModifierRow {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    position: static;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: 2px;
+}
+.weaponModifierRowDescBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: static;
+    padding: 0;
+    padding-left: 2px;
+    margin: 0;
+    overflow-y: auto;
+}
+.selectionClassToggle {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    font-size: 12px;
+}
+.selectionWeaponToggle {
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+
+
+
+
+
+
+.comboBackgroundContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+.backgroundHalvesLeft,.backgroundHalvesRight {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.backgroundHalvesLeft {
+    margin-right: 5px;
+    background: linear-gradient(225deg, rgb(26, 26, 26), black);
+}
+.backgroundHalvesRight {
+    margin-left: 5px;
+    background: linear-gradient(135deg, rgb(26, 26, 26), black);
+}
+
+.backgroundLeftImage,.backgroundRightImage {
+  /* position: absolute; */
+  /* top: 0; */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  transform: scale(2.3) translateY(21%);
+}
+.backgroundLeftImage {
+    right: 0;
+    translate: 50%;
+}
+.backgroundRightImage {
+    left: 0;
+    translate: -50%;
+}
+.classContainerDarken {
+    filter: brightness(0.3);
+}
+
+
+
+.comboArmorRow,.comboAccessoryRow,.comboAbilityRow,.comboStatsRow,.comboHeadsUpMessage,.comboWeaponPiecesRow {
+    position: absolute;
+    top: 2%;
+    height: 380px;
+    /* max-height: 350px; */
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+.comboHeadsUpMessage {
+    color: #e06666;
+    background-color: #434343;
+    box-sizing: border-box;
+    border: 1px solid #666666;
+    height: auto;
+    width: 200px;
+    top: 170px;
+    display: none;
+}
+.comboAbilityRow {
+    flex-direction: row;
+    height: auto;
+    width: 160px;
+    top: 220px;
+    /* border: 1px solid red; */
+}
+.comboStatsRow {
+    top: 295px;
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+}
+#comboTitle {
+    top: 290px;
+    width: 180px;
+    /* border: 1px solid red; */
+}
+.comboArmorRow {left: 8%;}
+.comboAccessoryRow {right: 8%;}
+.curvedLineUIright {
+    position: absolute;
+    top: 0;
+    right: -130%;
+    width: 290px;
+    height: 90px;
+    border: solid 2px #000;
+    border-color: transparent transparent #434343 transparent;
+    border-radius: 0 0 240px 60%/50px;
+    rotate: -90deg;
+    transform: translateX(-110px);
+    z-index: -1;
+}
+.curvedLineUIleft {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 290px;
+    height: 90px;
+    border: solid 2px #000;
+    border-color: transparent transparent #434343 transparent;
+    border-radius: 0 0 240px 50%/50px;
+    rotate: 92deg;
+    transform: translateX(110px);
+    z-index: -1;
+}
+
+
+
+
+
+.comboAccessoryRowMAIN {height: 320px;}
+/* #181818 */
+.comboArmorImageBox,.comboWeaponImageBox,.comboConsumableImageBox,.comboWeaponPiecesHolder {
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #161616;
+    border: 1px solid #434343;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+.mainUIcombo {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 0;
+}
+.comboArmorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* margin: auto; #666666 */
+}
+.comboWeaponImageBox,.comboWeaponPiecesHolder {
+    width: 150px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.comboWeaponPiecesHolder {
+    border: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.mainPiecesAdjustment {
+    background-color: transparent;
+    box-shadow: none;
+}
+.comboMutatorName {
+    /* border-bottom: 1px solid #666666; */
+    width: 80%;
+    font-size: 12px;
+}
+.comboModName {
+    width: 80%;
+    font-size: 12px;
+}
+.comboModName + .comboMutatorName {
+    border-top: 2px solid #666666;
+}
+
+.comboConsumableImageBox {
+    width: 40px;
+    height: 40px;
+}
+.comboConsumableImageBoxMAIN {
+    width: 35px;
+    height: 35px;
+}
+.comboWeaponRow,.comboConcoctionRow,.comboFragmentsRow,.comboWeaponPiecesRow {
+    position: absolute;
+    top: 400px;
+    height: auto;
+    /* max-height: 350px; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+.comboWeaponRowMAIN {
+    top: 340px;
+}
+.comboWeaponPiecesRow {
+    top: 470px;
+}
+.comboWeaponPiecesRowMAIN {
+    top: 410px;
+}
+.comboConcoctionRow {
+    top: 525px;
+    width: 100%;
+    /* height: 200px; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+}
+.comboConcoctionRowMAIN {
+    top: 92%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.comboFragmentsRow {
+    top: 610px;
+}
+.comboConcoctionsBox,.comboQuickUseBox {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    justify-content: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.comboQuickUseBox {
+    width: 170px;
+    justify-content: right;
+}
+
+.cyclesSettingsBox {
+    width: 100%;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    /* height: 50px; */
+}
+.statisticChoiceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.statisticInputBox {
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.statisticSettingsContainer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    /* border: 1px solid red; */
+}
+.statisticSettingsRow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+.statsRowName {
+    width: calc(100% - 150px);
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.statsRowToggle {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.settingsImportDesc {
+    white-space: normal;
+    height: 50px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.settingsImportedList {
+    width: 100%;
+}
+.settingsResoOverheal {
+    width: 80%;
+}
+.bestOptionsLink {
+    color: #93CCEA;
+    margin: 0;
+}
+.bestOptionsRow {
+    margin: 0;
+}
+
+
+
+
+
+.damageBreakdownSelectorBox {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: col;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #434343;
+    /* border-radius: 10px; */
+    margin: 2px;
+    /* max-width: 800px; */
+    /* overflow-y: auto; */
+    /* position: relative; */
+    /* border: 1px solid red; */
+}
+
+.damageBreakdownSelectorHolder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.breakdownSelectorButton {
+    width: auto;
+    /* min-width: 100%; */
+    height: auto;
+    white-space: normal;
+    /* background-color: #434343; */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+    /* border: 1px solid #d9d9d9; */
+    border: 2px solid #434343;
+    padding: 0;
+     padding-right: 4px;
+     padding-left: 4px;
+    margin: 2px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.breakdownSelectorButton:hover {
+    background-color: #434343;
+}
+
+
+
+
+
+.havocInfoContainer {
+    min-width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #434343;
+    border-radius: 10px;
+    margin: 2px;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.selectionBackgroundAbilityAdjustment {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    /* right: 0; */
+    /* top: 0; */
+    /* bottom: 0px; */
+    overflow: hidden;
+    z-index: 0;
+}
+.abilityDPSbackgroundImage {
+    /* right: 0; */
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    filter: brightness(0.3);
+    scale: 1.2;
+    background: none;
+    overflow: hidden;
+    /* object-fit: contain; */
+    z-index: -10;
+}
+.selectionAbilityDPSHeader {
+    width: 100%;
+    height: 10%;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    /* position: absolute; */
+    /* padding-left: 20px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.selectionAbilityDPSTitleHeader {
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+.advancedAbilityBoxHolder {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: start; */
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.hideBreakdownBoxes {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: start; */
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.selectionAbilityDPSBody {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    /* border: 1px solid red; */
+}
+.seletionBackgroundAbilityBox {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    /* position: relative; */
+    /* top: 0; */
+    overflow: hidden;
+}
+.dpsFactorDisclaimer {
+    font-size: 14px;
+    white-space: normal;
+}
+.abilityFactorsList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    max-width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #666666;
+    font-size: 14px;
+    z-index: 10000000;
+    box-sizing: border-box;
+}
+
+.tooltipColor {
+    color: #93CCEA;
+}
+
+#comboTargetDisplay {
+    /* border: 1px solid red; */
+    height: 100px;
+    overflow-y: auto;
+}
+
+
+.filterSelectorHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.filterRowHolder {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .tooltip {
+        width: 100%;
+        max-width: none;
+    }
+
+
+    .basicsBox,.classAndArmor,.accessoriesBox,.consumablesBox,.weaponsBox,.traitsBox,.advancedStatsBox {
+        width: 100%;
+        min-width: 100%;
+    }
+    .basicsBox {
+        height: auto;
+    }
+    .advancedStatsBox {
+        height: auto;
+    }
+    .advancedCategoryBoxHolder {
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+    }
+    .advancedCategoryBox {
+        width: 100%;
+        min-width: 100%;
+        height: 350px;
+    }
+
+    .shieldsFiller,.miscFiller {
+        height: 0%;
+    }
+
+    .traitContainer {
+        height: 40px;
+        max-width: 100%;
+    }
+    .traitButtonImage {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        object-fit: contain;
+    }
+
+    .filtersMegaMegaBox {
+        flex-direction: column;
+    }
+
+    .mainGridRow{flex-direction: column;}
+
+    .classAndArmor{order: 0;}
+    .traitsBox {order: 1;height: auto;}
+    .basicsBox {order: 2;}
+    .advancedStatsBox {order: 3;}
+    .damageStatsBox {order: 4;}
+
+
+    .filtersMegaBox {height: auto;}
+
+    .advancedCategoryBox.advStatsMobileAdjustment {
+        height: auto;
+        min-height: 0;
+    }
+
+    .advancedHealingBox {
+        height: 10%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0%;
+        font-size: 15px;
+        /* background-color: #666666; */
+        background-color: #434343;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .theGreatBox {
+        padding-left: 0px;
+        /* padding-top: 6%; */
+        box-sizing: border-box;
+    }
+    .togglesRowBox {
+        height: 23px;
+    }
+    .togglesCheckBox,.advancedDRCheckBox,.shieldsCheckBox {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+    }
+
+
+    .advancedSummaryThirds {
+        flex-direction: column;
+    }
+    .advancedSummaryStat {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        justify-content: left;
+    }
+    .advancedSummaryValue {
+        width: 100%;
+        font-size: 20px;
+        padding-right: 1%;
+    }
+
+    .exportText {
+        font-size: 13px;
+    }
+
+    .filtersBoxHolder {
+        flex-direction: column;
+    }
+    .filtersBoxQuarters,.filtersBoxHalf {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        /* max-height: 400px; */
+    }
+    .resultsBoxHalf {
+        width: 100%;
+        margin: 0;
+        /* height: auto;
+        max-height: 400px; */
+    }
+
+    .filtersTagsRowContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+    .filtersTagName {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .comboConcoctionsBox,.comboQuickUseBox {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .updateWarningBar {
+        width: auto;
+        white-space: normal;
+    }
+
+    .selectSelector {
+        font-size: 14px;
+    }
+
+    .havocInfoContainer {
+        min-width: 100%;
+    }
+}

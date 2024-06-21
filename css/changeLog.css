@@ -1,0 +1,77 @@
+.changeLogHeaderIconHolder {
+    width: 100%;
+    height: 50px;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+.honkaiWaitImage {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+.changeLogMegaBox {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    color: white;
+    box-sizing: border-box;
+}
+.changeLogMegaHalves {
+    height: 400px;
+    width: 100%;
+    background-color: #111;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.changeLogMegaHeader {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 30px;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.changeLogMegaFooterBuffer {
+    width: 100%;
+    height: 3%;
+    box-sizing: border-box;
+    /* border-top: 1px solid #d9d9d9; */
+}
+.changeLogMegaBody {
+    width: 100%;
+    height: 87%;
+    box-sizing: border-box;
+    padding: 20px;
+    /* padding-top: 5px; */
+    text-align: left;
+    overflow-y: auto;
+    white-space: normal;
+}
+li {
+    font-family: "Montserrat-Light";
+}
+.changeLogMegaHalves h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+
+@media (max-width: 768px) {
+    /* .changeLogMegaBox {
+        width: 100%;
+        height: auto;
+    } */
+}

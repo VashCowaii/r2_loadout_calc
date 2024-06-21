@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2HomePage.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>R2 Home</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="R2 Boss Attacks">
+    <meta
+      property="og:description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      property="description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="R2 Boss Attacks" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="R2 Boss Attacks" />
+    <meta
+      name="twitter:description"
+      content="A breakdown on all bosses and their attacks. What ignores DR? What actually one-shots you? Find out here."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Get the current URL
+          var url = window.location.href;
+          // Check if there is a query string
+          if (url.indexOf('?') !== -1) {
+              // Extract the query string
+              var queryString = window.location.search;
+              // Perform the redirect and append the query string
+              window.location.href = document.location.origin + '/Remnant2/Calculator/' + queryString + '&redirect=true';
+          }
+      });
+  </script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+    <div class="theGreatBox">
+        <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+            <div class="displayBuffer"></div>
+
+            <div class="mainDisplayBox">
+
+                <div class="mainDisplayHalves">
+                    <div class="mainLastsRowTitles">
+                        <a class="mainSelectionHeader" href="/Remnant2/Calculator/" rel="noopener noreferrer">Calculator</a>
+                        <a class="mainSelectionHeader" href="/Remnant2/Optimizer/" rel="noopener noreferrer">Optimizer</a>
+                        <a class="mainSelectionHeader" href="/Remnant2/VashBuilds/" rel="noopener noreferrer">Vash's Builds</a>
+                        <a class="mainSelectionHeader" href="/Remnant2/BossDamage/" rel="noopener noreferrer">Boss Attacks</a>
+                    </div>
+                    <div class="mainLastsRow">
+                        <div>
+                            <div class="videoHeader">Latest DLC:</div>
+                            <a href="https://store.steampowered.com/app/2384074/Remnant_II__The_Forgotten_Kingdom/" rel="noopener noreferrer" target="_blank">The Forgotten Kingdom</a>
+                        </div>
+                        <div>
+                            <div class="videoHeader">Latest Game Patch:</div>
+                            <a href="https://gunfiregames.com/blog-five/2024/5/9/remnant-ii-patch-notes-420332nbsp-050924" rel="noopener noreferrer" target="_blank">Patch: 420,332 - 05/09/24</a>
+                        </div>
+                    </div>
+                    <div class="videoHeader">Latest R2 Video:</div>
+                    <iframe class="r2HomeYTEmbed" src="https://www.youtube.com/embed/EnjZwWYwKkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+<script src="/htmlTemplates/injectMainHTML.js"></script>
+<script src="/htmlTemplates/injectR2HTML.js"></script>
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/MainJS/buildTime.js"></script>
+
+</body>
+</html> 

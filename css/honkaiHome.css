@@ -1,0 +1,27 @@
+.honkaiWaitingBox {
+    width: 100%;
+    height: 500px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+.honkaiWaitImage {
+    width: 200px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+    .honkaiWaitingBox {
+        white-space: normal;
+    }
+}
