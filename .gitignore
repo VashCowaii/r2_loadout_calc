@@ -1,14 +1,3 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/Notes
 .env
-
-/Remnant2/dpsModules
-# combinations.js
-melee.js
-
-attacks_Male.js
-attacks_Female.js
-
-
-js.js

@@ -3055,25 +3055,25 @@ let basicsUpdates = {
       }
 
       formulasValues.updateDisplay("summaryHealth",returnObject.totalHealth,1);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryHealthRow",
         "TotalHealth = Health * (1 + Health%Bonus) * (1 - HPReduction1) * (1 - HPReduction2) * [...]",
         ["Health","Health%","GlobalHealthModifier"]
       )
       formulasValues.updateDisplay("summaryStamina",returnObject.totalStamina,1);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryStaminaRow",
         "TotalStamina = Stamina * (1 + Stamina%Bonus)",
         ["Stamina","Stamina%"]
       )
       formulasValues.updateDisplay("summaryArmor",returnObject.totalArmor,1);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryArmorRow",
         "TotalArmor = Armor * (1 + ArmorEffectiveness)",
         ["Armor","Armor%"]
       )
       formulasValues.updateDisplay("summaryWeight",returnObject.totalWeight,1);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryWeightRow",
         `Current Dodge Class: <span>${returnObject.dodgeClass}</span><br>TotalWeight = Encumbrance * (1 + Encumbrance%)<br><br>` +
       `Dodge Weight Thresholds:<br>                           
@@ -3084,31 +3084,31 @@ let basicsUpdates = {
         ["Encumbrance","Encumbrance%","WeightThreshold"]
       )
       formulasValues.updateDisplay("summaryBleed",returnObject.bleed,0);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryBleed",
         "Increases your damage reduction against attacks with a damage type of bleed. Multiplicative with TotalDR, but even together they still cannot exceed an 80% sum. Bleed is not considered elemental damage.",
         ["Bleed"]
       )
       formulasValues.updateDisplay("summaryBurn",returnObject.burn,0);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryBurn",
         "Increases your damage reduction against attacks with a damage type of fire. Multiplicative with TotalDR, but even together they still cannot exceed an 80% sum.",
         ["Burn"]
       )
       formulasValues.updateDisplay("summaryShock",returnObject.shock,0);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryShock",
         "Increases your damage reduction against attacks with a damage type of shock. Multiplicative with TotalDR, but even together they still cannot exceed an 80% sum.",
         ["Shock"]
       )
       formulasValues.updateDisplay("summaryCorrosive",returnObject.corrosive,0);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryCorrosive",
         "Increases your damage reduction against attacks with a damage type of acid. Multiplicative with TotalDR, but even together they still cannot exceed an 80% sum.",
         ["Corrosive"]
       )
       formulasValues.updateDisplay("summaryBlight",returnObject.blight,0);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "summaryBlight",
         "Increases your damage reduction against attacks with a damage type of blight. Multiplicative with TotalDR, but even together they still cannot exceed an 80% sum. Blight is not considered elemental damage.",
         ["Blight"]
@@ -3122,50 +3122,50 @@ let basicsUpdates = {
 
 
       drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("baseArmor","Base Armor",returnObject.baseArmor,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "baseArmor",
         "",
         ["Armor"]
       )
       drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("armorEff","Armor Effectiveness",returnObject.armorEff,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "armorEff",
         "",
         ["Armor%"]
       )
       drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("totalArmor","Total Armor",returnObject.totalArmor,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalArmor",
         "TotalArmor = Armor * (1 + ArmorEffectiveness)",
         []
       )
       drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("armorDR","Armor DR%",returnObject.armorDR,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "armorDR",
         "ArmorDR = TotalArmor / (TotalArmor + 200)",
         []
       )
       drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("bulwarkStacks","Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "bulwarkStacks",
         "",
         ["Bulwark"]
       )
       drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("bulwarkDR","Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "bulwarkDR",
         "BulwarkDR = -0.005 * (BulwarkStacks^2) + 0.075 * BulwarkStacks",
         []
       )
 
       drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("otherFlat","Other Flat",returnObject.otherFlat,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "otherFlat",
         "",
         ["FlatDR"]
       )
       drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("totalFlat","Total Flat DR%",returnObject.totalFlat,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalFlat",
         "",
         ["FlatDR","Bulwark"]
@@ -3174,7 +3174,7 @@ let basicsUpdates = {
            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">${(returnObject.totalDR*100).toFixed(2)}%</span>
        </div>
        <br>`
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalDRRow",
         "TotalDR = 1 - (1 - ArmorDR) * (1 - FlatDR)<br><br>TotalDR caps at 80%<br>TotalDR is multiplicative against Resistance-based damage reduction when hit by a non-physical attack, but even together they still can't exceed an 80% sum. Given the contextual nature of Resistance-based DR, it is not factored in this number.",
         ["FlatDR","Bulwark","Armor","Armor%"]
@@ -3190,37 +3190,37 @@ let basicsUpdates = {
       let healingHTML = "<div class='basicsDRheaderTitle'>HEALING</div>";
       let healingHTMLRowsHTML = '';
       healingHTMLRowsHTML += returnObject.relicEffectiveness ? createHTML.basicsRow("relicEffectiveness","Relic Effectiveness",returnObject.relicEffectiveness,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "relicEffectiveness",
         "This is a boost to all relic-based healing and/or some relic specific effects.",
         ["RelicEFF"]
       )
       healingHTMLRowsHTML += returnObject.healingEffectiveness ? createHTML.basicsRow("healingEffectiveness","Healing Effectiveness",returnObject.healingEffectiveness,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "healingEffectiveness",
         "This is a boost to all healing done of any kind. Grey Health regen and lifesteal do not count as healing.",
         ["HealingEFF"]
       )
       healingHTMLRowsHTML += returnObject.relicUseTime ? createHTML.basicsRow("relicUseTime","Relic Use Time",returnObject.relicUseTime,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "relicUseTime",
         "",
         ["RelicSpeed","HASTE"]
       )
       healingHTMLRowsHTML += returnObject.flatHPperSec ? createHTML.basicsRow("flatHPperSec","Flat HP/s",returnObject.flatHPperSec,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "flatHPperSec",
         "",
         ["HP/S+"]
       )
       healingHTMLRowsHTML += returnObject.percHPperSec ? createHTML.basicsRow("percHPperSec","% HP/s",returnObject.percHPperSec,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "percHPperSec",
         "",
         ["HP/S%"]
       )
       healingHTMLRowsHTML += returnObject.totalGreyHPperSec != 0.20 ? createHTML.basicsRow("totalGreyHPperSec","Grey Health/s",returnObject.totalGreyHPperSec,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalGreyHPperSec",
         "",
         ["GreyHP/S%","GreyHP/S+"]
@@ -3231,31 +3231,31 @@ let basicsUpdates = {
       let lifestealHTML = "<div class='basicsDRheaderTitle'>LIFESTEAL</div>";
       let lifestealHTMLRowsHTML = '';
       lifestealHTMLRowsHTML += returnObject.lifestealEFF ? createHTML.basicsRow("lifestealEFF","Effectiveness",returnObject.lifestealEFF,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "lifestealEFF",
         "",
         ["LifestealEFF"]
       )
       lifestealHTMLRowsHTML += returnObject.lifestealALL ? createHTML.basicsRow("lifestealALL","All",returnObject.lifestealALL,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "lifestealALL",
         "",
         ["Lifesteal"]
       )
       lifestealHTMLRowsHTML += returnObject.lifestealMelee ? createHTML.basicsRow("lifestealMelee","Melee",returnObject.lifestealMelee,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "lifestealMelee",
         "",
         ["MLifesteal"]
       )
       lifestealHTMLRowsHTML += returnObject.lifestealMeleeCharged ? createHTML.basicsRow("lifestealMeleeCharged","Melee (Charged)",returnObject.lifestealMeleeCharged,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "lifestealMeleeCharged",
         "",
         ["MChargedLifesteal"]
       )
       lifestealHTMLRowsHTML += returnObject.lifestealRange ? createHTML.basicsRow("lifestealRange","Ranged",returnObject.lifestealRange,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "lifestealRange",
         "",
         ["RLifesteal"]
@@ -3266,19 +3266,19 @@ let basicsUpdates = {
       let staminaHTML = "<div class='basicsDRheaderTitle'>STAMINA</div>";
       let staminaHTMLRowsHTML = '';
       staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("staminaPerSec","Regen/s",returnObject.staminaPerSec,true) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "staminaPerSec",
         "",
         ["Stamina/S+","Stamina/S+Multi"]
       )
       staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("staminaCost","Cost",returnObject.staminaCost,true,"%") : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "staminaCost",
         "",
         ["StaminaCost","StaStaminaPenaltyAdjustment","Encumbrance","Encumbrance%","WeightThreshold"]
       )
       staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("staminaHTMLRowsHTML","Dodge Class",returnObject.dodgeClass,false) : "";
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "staminaHTMLRowsHTML",
         "",
         ["Encumbrance","Encumbrance%","WeightThreshold"]
@@ -3299,7 +3299,7 @@ let basicsUpdates = {
 
       
       // formulasValues.updateDisplay("relicBase",relicHPbase,2);//We only show scaled now, base no longer visible
-      // tooltips.updateTooltipDisplay(
+      // tooltipMath.updateTooltipDisplay(
       //   "summaryHealthRow",
       //   "TotalHealth = Health * (1 + Health%Bonus) * (1 - HPReduction1) * (1 - HPReduction2) * [...]",
       //   ["Health","Health%","GlobalHealthModifier"]
@@ -3307,7 +3307,7 @@ let basicsUpdates = {
 
 
       readSelection("relicType").innerHTML = returnObject.relicHPtype;
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "relicTypeRow",
         `<span>%</span> = Percent healing over time<br>
         <span>P</span> = Passive healing over time<br>
@@ -3315,7 +3315,7 @@ let basicsUpdates = {
         <span>--</span> = Non-standard, and probably does not apply healing but rather some other effect.`,
         []
       )
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "relicScaledRow",
         `RelicScaledHealing = BaseRelicHealing * (1 + RelicEfficacy) * (1 + HealingEfficacy)`,
         []
@@ -3336,13 +3336,13 @@ let basicsUpdates = {
         readSelection("relic%HP/s").innerHTML = "---";
         readSelection("relicHP/s").innerHTML = "---";
       }
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "EffectiveDRDisplayRow",
         "EffectiveDR = 1 - (1 - TotalDR) * (1 - REDamage) * (1 - DMGKept) * [...]",
         []
       )
       formulasValues.updateDisplay("effectiveDR",returnObject.effectiveDR*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "EffectiveDRDisplayRow",
         "EffectiveDR = 1 - (1 - TotalDR) * (1 - REDamage) * (1 - DMGKept) * [...]",
         []
@@ -3350,18 +3350,18 @@ let basicsUpdates = {
       EffectiveDRDisplayRow
       formulasValues.updateDisplay("totalBonusMitigation",returnObject.totalBonusMitigation*100,2,"%");
       formulasValues.updateDisplay("REdamage",returnObject.reducedEnemyDamage*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "REdamageRow",
         "REDamage = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much the enemy damage gets reduced, separate from damage reduction. These are considered enemy debuffs most of the time.",
         ["REdamage"]
       )
       formulasValues.updateDisplay("DMGKept",returnObject.damageKept*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "DMGKeptRow",
         "DMGKept = 1 - (1 - source1) * (1 - source2) * [...]<br>This is how much damage you keep, based on effects that share damage to other friendly entities.",
         ["DMGKept"]
       )
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalNonstandardDRRow",
         "BonusMitigation = 1 - (1 - REDamage) * (1 - DMGKept)",
         []
@@ -3369,102 +3369,102 @@ let basicsUpdates = {
       // totalNonstandardDRRow
 
       formulasValues.updateDisplay("shield%",returnObject.percShields*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "shield%Row",
         ``,
         ["Shield","Shield%/S"]
       )
       formulasValues.updateDisplay("shieldEff",returnObject.shieldEff*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "shieldEffRow",
         ``,
         ["ShieldEFF"]
       )
       formulasValues.updateDisplay("totalShield%",returnObject.totalPercShields*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalShield%Row",
         "TotalShieldPercent = BaseShieldPercent * (1 + ShieldEffectiveness)",
         []
       )
       formulasValues.updateDisplay("shieldEHP",returnObject.shieldEHP,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "shieldEHPRow",
         "ShieldEHP = (TotalHP / (1 - EffectiveDR)) * TotalShieldPercent",
         []
       )
       formulasValues.updateDisplay("EHP",returnObject.totalEHP,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "EHPDisplayRow",
         "EHP = (TotalHP / (1 - EffectiveDR)) * (1 + TotalShieldPercent)",
         []
       )
 
       formulasValues.updateDisplay("advancedFlat",returnObject.flatHPperSec,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "advancedFlatRow",
         "The sum total of all flat-only HP recovery effects, excluding relics.",
         []
       )
       formulasValues.updateDisplay("advanced%",returnObject.percHPperSec*100,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "advanced%Row",
         "The sum total of all %-only HP recovery effects, excluding relics.",
         []
       )
       formulasValues.updateDisplay("advancedTotalFlat",returnObject.flatHPperSec + returnObject.percHPperSec*returnObject.totalHealth,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "advancedTotalFlatRow",
         "All healing whether flat or %, excluding relics, converted into <span>flat HP/s</span> representation",
         []
       )
       formulasValues.updateDisplay("advancedTotal%",(returnObject.percHPperSec + returnObject.flatHPperSec/returnObject.totalHealth)*100,2,"%"); 
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "advancedTotal%Row",
         "All healing whether flat or %, excluding relics, converted into <span>%HP/s</span> representation",
         []
       )
       formulasValues.updateDisplay("advancedRelicTotal%",returnObject.advancedRelicTotalPerc,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "advancedRelicTotal%Row",
         "Relic healing done of any kind, whether flat or %, converted into a <span>%HP/s</span> representation. Toggle this on to include it in calculations.",
         []
       )
       formulasValues.updateDisplay("totalHealingFlat",returnObject.advancedTotalFlatHP,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalHealingFlatRow",
         "All healing whether flat or %, including relics if the toggle is on, converted into <span>flat HP/s</span> representation",
         []
       )
       formulasValues.updateDisplay("totalHealing%",returnObject.advancedTotalPercHP,2,"%");
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "totalHealing%Row",
         "All healing whether flat or %, including relics if the toggle is on, converted into a <span>%HP/s</span> representation",
         []
       )
       formulasValues.updateDisplay("EHP/s",returnObject.EHPpSec,2);
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "EHPPerSecDisplayRow",
         "EHP/s = BaseEHP * %HP/s<br><br><div>%HP/s</div>The sum total of all healing received, even flat healing, converted into a percent of your max health.<br><div>BaseEHP</div>Is your total EHP without any shields.",
         []
       )
 
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "greyActiveRow",
         "Is Grey Health present on your healthbar, for the purposes of Grey Health effects?",
         []
       )
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "perfectDodgeRow",
         "When you dodge, are they pefect dodges? Toggling this also means that the calc assumes you are dodging all the time to keep up dodge-based effects.",
         []
       )
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "isEvadeRow",
         "When you dodge, are you doing a roll or are you doing a backstep evasion instead. When toggled on, it assumes the answer is always an evade, not a roll. This is important for some dodge-based effects.",
         []
       )
 
-      tooltips.updateTooltipDisplay(
+      tooltipMath.updateTooltipDisplay(
         "spiritHealerStacksRow",
         "When the Ranged Mutator: Spirit Healer is equipped, how many stacks do you want the calculator to assume that you will have up with 100% uptime, for the purposes of counting its healing?",
         []
@@ -3488,79 +3488,79 @@ let basicsUpdates = {
     let list = ``;
 
     list += table.AllDamage ? createHTML.basicsRow("AllDamage","All",table.AllDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AllDamage",
       "",
       ["AllDamage"]
     )
     list += table.RangedDamage ? createHTML.basicsRow("RangedDamage","Ranged",table.RangedDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "RangedDamage",
       "",
       ["RangedDamage"]
     )
     list += table.SkillDamage ? createHTML.basicsRow("SkillDamage","Skill",table.SkillDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SkillDamage",
       "",
       ["SkillDamage"]
     )
     list += table.MeleeDamage ? createHTML.basicsRow("MeleeDamage","Melee",table.MeleeDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeDamage",
       "",
       ["MeleeDamage"]
     )
     list += table.ChargeDamage ? createHTML.basicsRow("ChargeDamage","Charged",table.ChargeDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ChargeDamage",
       "",
       ["ChargeDamage"]
     )
     list += table.BackstepDamage ? createHTML.basicsRow("BackstepDamage","Evade",table.BackstepDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "BackstepDamage",
       "",
       ["BackstepDamage"]
     )
     list += table.FistDamage ? createHTML.basicsRow("FistDamage","Unarmed",table.FistDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "FistDamage",
       "",
       ["FistDamage"]
     )
     list += table.MeleeSpecialAbilityDamage ? createHTML.basicsRow("MeleeSpecialAbilityDamage","Melee Threshold",table.MeleeSpecialAbilityDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeSpecialAbilityDamage",
       "",
       ["MeleeSpecialAbilityDamage"]
     )
     list += table.CorrosiveDamage ? createHTML.basicsRow("CorrosiveDamage","Corrosive",table.CorrosiveDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "CorrosiveDamage",
       "",
       ["CorrosiveDamage"]
     )
     list += table.AcidDamage ? createHTML.basicsRow("AcidDamage","Acid",table.AcidDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AcidDamage",
       "",
       ["AcidDamage"]
     )
     list += table.BurningDamage ? createHTML.basicsRow("BurningDamage","Burning",table.BurningDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "BurningDamage",
       "",
       ["BurningDamage"]
     )
     list += table.FireDamage ? createHTML.basicsRow("FireDamage","Fire",table.FireDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "FireDamage",
       "",
       ["FireDamage"]
     )
     list += table.ElementalDamage ? createHTML.basicsRow("ElementalDamage","Elemental",table.ElementalDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ElementalDamage",
       "",
       ["ElementalDamage"]
@@ -3568,37 +3568,37 @@ let basicsUpdates = {
     list += table.PrimaryElementalDamage ? createHTML.basicsRow("PrimaryElementalDamage","Primary Elemental",table.PrimaryElementalDamage,true,"%") : "";
     list += table.SecondaryElementalDamage ? createHTML.basicsRow("","Secondary Elemental",table.SecondaryElementalDamage,true,"%") : "";
     list += table.ShockDamage ? createHTML.basicsRow("ShockDamage","Shock",table.ShockDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ShockDamage",
       "",
       ["ShockDamage"]
     )
     list += table.OverloadedDamage ? createHTML.basicsRow("OverloadedDamage","Overloaded",table.OverloadedDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "OverloadedDamage",
       "",
       ["OverloadedDamage"]
     )
     list += table.ExplosiveDamage ? createHTML.basicsRow("ExplosiveDamage","Explosive",table.ExplosiveDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ExplosiveDamage",
       "",
       ["ExplosiveDamage"]
     )
     list += table.StatusDamage ? createHTML.basicsRow("StatusDamage","Status",table.StatusDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "StatusDamage",
       "",
       ["StatusDamage"]
     )
     list += table.MeleeStatusDamage ? createHTML.basicsRow("MeleeStatusDamage","Melee Status",table.MeleeStatusDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeStatusDamage",
       "",
       ["MeleeStatusDamage"]
     )
     list += table.ModDamage ? createHTML.basicsRow("ModDamage","Mod",table.ModDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ModDamage",
       "",
       ["ModDamage"]
@@ -3606,13 +3606,13 @@ let basicsUpdates = {
     list += table.PrimaryModDamage ? createHTML.basicsRow("","Primary Mod",table.PrimaryModDamage,true,"%") : "";
     list += table.SecondaryModDamage ? createHTML.basicsRow("","Secondary Mod",table.SecondaryModDamage,true,"%") : "";
     list += table.StaggerDamage ? createHTML.basicsRow("StaggerDamage","Stagger",table.StaggerDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "StaggerDamage",
       "",
       ["StaggerDamage"]
     )
     list += table.SummonDamage ? createHTML.basicsRow("SummonDamage","Summon",table.StaggerDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SummonDamage",
       "",
       ["SummonDamage"]
@@ -3626,7 +3626,7 @@ let basicsUpdates = {
     //   }
     // }
     list += table.UniqueMulti != 1 ? createHTML.basicsRow("UniqueMulti","Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "UniqueMulti",
       "",
       ["UniqueMulti"]
@@ -3643,73 +3643,73 @@ let basicsUpdates = {
     let list = ``;
 
     list += table.AllCritChance ? createHTML.basicsRow("AllCritChance","All",table.AllCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AllCritChance",
       "",
       ["AllCritChance"]
     )
     list += table.RangedCritChance ? createHTML.basicsRow("RangedCritChance","Ranged",table.RangedCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "RangedCritChance",
       "",
       ["RangedCritChance"]
     )
     list += table.MeleeCritChance ? createHTML.basicsRow("MeleeCritChance","Melee",table.MeleeCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeCritChance",
       "",
       ["MeleeCritChance"]
     )
     list += table.ChargeCritChance ? createHTML.basicsRow("ChargeCritChance","Charged",table.ChargeCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ChargeCritChance",
       "",
       ["ChargeCritChance"]
     )
     list += table.SkillCritChance ? createHTML.basicsRow("SkillCritChance","Skill",table.SkillCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SkillCritChance",
       "",
       ["SkillCritChance"]
     )
     list += table.ElementalCritChance ? createHTML.basicsRow("ElementalCritChance","Elemental",table.SkillCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ElementalCritChance",
       "",
       ["ElementalCritChance"]
     )
     list += table.ModCritChance ? createHTML.basicsRow("ModCritChance","Mod",table.ModCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ModCritChance",
       "",
       ["ModCritChance"]
     )
     list += table.ExplosiveCritChance ? createHTML.basicsRow("ExplosiveCritChance","Explosive",table.ExplosiveCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ExplosiveCritChance",
       "",
       ["ExplosiveCritChance"]
     )
     list += table.FirearmCritChance ? createHTML.basicsRow("FirearmCritChance","Firearm",table.FirearmCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "FirearmCritChance",
       "",
       ["FirearmCritChance"]
     )
     list += table.BowCritChance ? createHTML.basicsRow("BowCritChance","Bow",table.BowCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "BowCritChance",
       "",
       ["BowCritChance"]
     )
     list += table.PrimaryCritChance ? createHTML.basicsRow("PrimaryCritChance","Primary",table.PrimaryCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "PrimaryCritChance",
       "",
       ["PrimaryCritChance"]
     )
     list += table.SecondaryCritChance ? createHTML.basicsRow("SecondaryCritChance","Secondary",table.SecondaryCritChance,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SecondaryCritChance",
       "",
       ["SecondaryCritChance"]
@@ -3727,31 +3727,31 @@ let basicsUpdates = {
     let list = ``;
 
     damageHeader += createHTML.basicsRow("baseCritDamageRow","Base Bonus",0.50,true,"%")
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "baseCritDamageRow",
       "Players have a base crit damage of 50%, or, 1.5x.",
       []
     )
     list += table.AllCritDamage ? createHTML.basicsRow("AllCritDamage","All",table.AllCritDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AllCritDamage",
       "",
       ["AllCritDamage"]
     )
     list += table.RangedCritDamage ? createHTML.basicsRow("RangedCritDamage","Ranged",table.RangedCritDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "RangedCritDamage",
       "",
       ["RangedCritDamage"]
     )
     list += table.MeleeCritDamage ? createHTML.basicsRow("MeleeCritDamage","Melee",table.MeleeCritDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeCritDamage",
       "",
       ["MeleeCritDamage"]
     )
     list += table.ChargeCritDamage ? createHTML.basicsRow("ChargeCritDamage","Charged",table.ChargeCritDamage,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ChargeCritDamage",
       "",
       ["ChargeCritDamage"]
@@ -3768,37 +3768,37 @@ let basicsUpdates = {
     let list = ``;
 
     damageHeader += createHTML.basicsRow("baseWeakspotRow","Base Bonus",1,true,"%")
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "baseWeakspotRow",
       "Players have a base weakspot damage bonus of 100%, or, 2x.",
       []
     )
     list += table.AllWeakspot ? createHTML.basicsRow("AllWeakspot","All",table.AllWeakspot,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AllWeakspot",
       "",
       ["AllWeakspot"]
     )
     list += table.SkillWeakspot ? createHTML.basicsRow("SkillWeakspot","Skill",table.SkillWeakspot,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SkillWeakspot",
       "",
       ["SkillWeakspot"]
     )
     list += table.RangedWeakspot ? createHTML.basicsRow("","Ranged",table.RangedWeakspot,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "RangedWeakspot",
       "",
       ["RangedWeakspot"]
     )
     list += table.MeleeWeakspot ? createHTML.basicsRow("MeleeWeakspot","Melee",table.MeleeWeakspot,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeWeakspot",
       "",
       ["MeleeWeakspot"]
     )
     list += table.ChargeWeakspot ? createHTML.basicsRow("ChargeWeakspot","Charged",table.ChargeWeakspot,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ChargeWeakspot",
       "",
       ["ChargeWeakspot"]
@@ -3815,63 +3815,63 @@ let basicsUpdates = {
     let list = ``;
 
     list += table.MovementSpeed ? createHTML.basicsRow("MovementSpeed","Movement",table.MovementSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MovementSpeed",
       "",
       ["MovementSpeed","HASTE"]
     )
     list += table.SprintSpeed ? createHTML.basicsRow("SprintSpeed","Sprint",table.SprintSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SprintSpeed",
       "",
       ["SprintSpeed","HASTE"]
     )
     list += table.EnvMovementSpeed ? createHTML.basicsRow("EnvMovementSpeed","Vaulting",table.EnvMovementSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "EnvMovementSpeed",
       "",
       ["EnvMovementSpeed","HASTE"]
     )
     list += table.AimMovementSpeed ? createHTML.basicsRow("AimMovementSpeed","Aiming",table.AimMovementSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AimMovementSpeed",
       "",
       ["AimMovementSpeed","HASTE"]
     )
     list += table.FireRate ? createHTML.basicsRow("FireRate","Fire Rate",table.FireRate,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "FireRate",
       "",
       ["FireRate","HASTE"]
     )
     list += table.ReloadSpeed ? createHTML.basicsRow("ReloadSpeed","Reload",table.ReloadSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ReloadSpeed",
       "",
       ["ReloadSpeed","HASTE"]
     )
     list += table.WeaponSwapSpeed ? createHTML.basicsRow("WeaponSwapSpeed","Swap",table.WeaponSwapSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "WeaponSwapSpeed",
       "",
       ["WeaponSwapSpeed","HASTE"]
     )
 
     list += table.AttackSpeed ? createHTML.basicsRow("AttackSpeed","Melee",table.AttackSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "AttackSpeed",
       "",
       ["AttackSpeed","HASTE"]
     )
     list += table.ChargeSpeed ? createHTML.basicsRow("ChargeSpeed","Charged Attack",table.ChargeSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "ChargeSpeed",
       "",
       ["ChargeSpeed","HASTE"]
     )
 
     list += table.CastSpeed ? createHTML.basicsRow("CastSpeed","Cast",table.CastSpeed,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "CastSpeed",
       "",
       ["CastSpeed","HASTE"]
@@ -3888,43 +3888,43 @@ let basicsUpdates = {
     let list = ``;
 
     list += table.StatusDuration ? createHTML.basicsRow("StatusDuration","Duration",table.StatusDuration,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "StatusDuration",
       "",
       ["StatusDuration"]
     )
     list += table.outSLOW ? createHTML.basicsRow("outSLOW","","SLOW",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outSLOW",
       "",
       ["outSLOW"]
     )
     list += table.outBLEED ? createHTML.basicsRow("outBLEED","","BLEED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outBLEED",
       "",
       ["outBLEED"]
     )
     list += table.outBURN ? createHTML.basicsRow("outBURN","","BURN",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outBURN",
       "",
       ["outBURN"]
     )
     list += table.outCORRODED ? createHTML.basicsRow("outCORRODED","","CORRODED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outCORRODED",
       "",
       ["outCORRODED"]
     )
     list += table.outOVERLOADED ? createHTML.basicsRow("outOVERLOADED","","OVERLOADED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outOVERLOADED",
       "",
       ["outOVERLOADED"]
     )
     list += table.outEXPOSED ? createHTML.basicsRow("outEXPOSED","","EXPOSED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "outEXPOSED",
       "",
       ["outEXPOSED"]
@@ -3947,61 +3947,61 @@ let basicsUpdates = {
     let list = ``;
 
     list += table.HASTE ? createHTML.basicsRow("HASTERow","","HASTE",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "HASTERow",
       "",
       ["HASTE"]
     )
     list += table.inBLEED ? createHTML.basicsRow("inBLEED","","BLEED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inBLEED",
       "",
       ["inBLEED"]
     )
     list += table.inSLOW ? createHTML.basicsRow("inSLOW","","SLOW",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inSLOW",
       "",
       ["inSLOW"]
     )
     list += table.inBURN ? createHTML.basicsRow("inBURN","","BURN",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inBURN",
       "",
       ["inBURN"]
     )
     list += table.inCORRODED ? createHTML.basicsRow("inCORRODED","","CORRODED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inCORRODED",
       "",
       ["inCORRODED"]
     )
     list += table.inOVERLOADED ? createHTML.basicsRow("inOVERLOADED","","OVERLOADED",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inOVERLOADED",
       "",
       ["inOVERLOADED"]
     )
     list += table.inCURSE ? createHTML.basicsRow("inCURSE","","CURSE",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inCURSE",
       "",
       ["inCURSE"]
     )
     list += table.inMADNESS ? createHTML.basicsRow("inMADNESS","","MADNESS",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inMADNESS",
       "",
       ["inMADNESS"]
     )
     list += table.inROOTROT ? createHTML.basicsRow("inROOTROT","","ROOT ROT",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inROOTROT",
       "",
       ["inROOTROT"]
     )
     list += table.inDATACORRUPTION ? createHTML.basicsRow("","","DATA CORRUPTION",false) : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "inDATACORRUPTION",
       "",
       ["inDATACORRUPTION"]
@@ -4021,13 +4021,13 @@ let basicsUpdates = {
 
 
     list += table.MeleeSpecialAbilityCharge ? createHTML.basicsRow("MeleeSpecialAbilityCharge","Melee Threshold",table.MeleeSpecialAbilityCharge,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "MeleeSpecialAbilityCharge",
       "",
       ["MeleeSpecialAbilityCharge"]
     )
     list += table.SummonHealth ? createHTML.basicsRow("SummonHealth","Summon Health",table.SummonHealth,true,"%") : "";
-    tooltips.updateTooltipDisplay(
+    tooltipMath.updateTooltipDisplay(
       "SummonHealth",
       "",
       ["SummonHealth"]
