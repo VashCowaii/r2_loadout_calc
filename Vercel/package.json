@@ -1,14 +1,13 @@
 {
-    "name": "cowaii_io",
+    "name": "vercel-serverless-functions",
+    "version": "1.0.0",
+    "description": "Serverless functions for Vercel",
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
+      "dev": "vercel dev",
+      "deploy": "vercel --prod"
     },
     "dependencies": {
-        "next": "^12.3.4"
+      "vercel": "^25.1.1"
     },
-    "engines": {
-        "node": ">=14.0.0"
-    }
-}
+    "devDependencies": {}
+  }
