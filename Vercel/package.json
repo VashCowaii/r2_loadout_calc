@@ -1,15 +1,14 @@
 {
     "name": "vercel-serverless-functions",
     "version": "1.0.0",
-    "description": "Serverless functions for Vercel",
+    "description": "Your Next.js project description",
     "scripts": {
-      "dev": "vercel dev",
-      "deploy": "vercel --prod",
-      "build": "next build"
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
     },
     "dependencies": {
-      "next": "^12.1.0",
-      "vercel": "^25.1.1"
+      "next": "^12.1.0"
     },
     "devDependencies": {}
-  }
+}
