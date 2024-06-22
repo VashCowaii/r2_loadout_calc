@@ -7,6 +7,7 @@
       "deploy": "vercel --prod"
     },
     "dependencies": {
+      "next": "^12.1.0",
       "vercel": "^25.1.1"
     },
     "devDependencies": {}
