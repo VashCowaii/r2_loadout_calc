@@ -4,7 +4,8 @@
     "description": "Serverless functions for Vercel",
     "scripts": {
       "dev": "vercel dev",
-      "deploy": "vercel --prod"
+      "deploy": "vercel --prod",
+      "build": "next build"
     },
     "dependencies": {
       "next": "^12.1.0",
