@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   
     const url = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${encodeURIComponent(scopes)}`;
   
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(302, { Location: url });
     res.end();
   }

@@ -8,6 +8,8 @@ export default async function handler(req, res) {
   const CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
   const REDIRECT_URI = 'https://r2-loadout-calc.vercel.app/api/discord/callback'; // Replace with your production URL
 
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   try {
     const tokenResponse = await axios.post('https://discord.com/api/oauth2/token', {
       client_id: CLIENT_ID,
