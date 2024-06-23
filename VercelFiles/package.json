@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "vercelfiles",
   "version": "1.0.0",
   "description": "",
