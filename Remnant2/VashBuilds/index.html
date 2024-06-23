@@ -108,12 +108,13 @@
 <script>
   function loginTester() {
     console.log("hi")
-    fetch('https://r2-loadout-calc.vercel.app/api/hello')
-      .then(response => response.json())
-      .then(data => {
-        console.log("success");
-      })
-      .catch(error => console.error('Error fetching data:', error));
+    window.location.href = 'https://r2-loadout-calc.vercel.app/api/discord/login';
+    // fetch('https://r2-loadout-calc.vercel.app/api/discord/login')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     console.log("success");
+    //   })
+    //   .catch(error => console.error('Error fetching data:', error));
   }
 </script>
 
