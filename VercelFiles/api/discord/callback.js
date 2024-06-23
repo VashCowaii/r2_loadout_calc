@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
   const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
   const CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
-  const REDIRECT_URI = 'https://your-vercel-app.vercel.app/api/discord/callback'; // Replace with your production URL
+  const REDIRECT_URI = 'https://r2-loadout-calc.vercel.app/api/discord/callback'; // Replace with your production URL
 
   try {
     const tokenResponse = await axios.post('https://discord.com/api/oauth2/token', {
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     // Here, you would typically create a user session or JWT token for the user
     // and redirect to a page in your application
     res.writeHead(302, {
-      Location: `https://your-app.com/dashboard?token=${accessToken}`
+      Location: `https://cowaii.io/?token=${accessToken}`
     });
     res.end();
   } catch (error) {
