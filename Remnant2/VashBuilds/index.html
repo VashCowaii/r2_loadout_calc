@@ -104,5 +104,16 @@
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 <script src="/MainJS/buildTime.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://r2-loadout-calc.vercel.app/api/hello')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  });
+</script>
+
 </body>
 </html> 
