@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  try { 
+  try {
     const code = req.query.code;
     const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
     const CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
@@ -49,7 +49,8 @@ export default async function handler(req, res) {
 
     const userData = await userResponse.json();
 
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // Allow requests from any part of cowaii.io
+    res.setHeader('Access-Control-Allow-Origin', 'https://cowaii.io');
     res.status(200).json(userData);
   } catch (error) {
     console.error('Unexpected error:', error);
