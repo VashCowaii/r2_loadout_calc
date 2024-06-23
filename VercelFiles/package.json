@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next-auth": "^4.24.7"
+    "next-auth": "^4.24.7",
+    "node-fetch": "^3.3.2"
   }
 }
