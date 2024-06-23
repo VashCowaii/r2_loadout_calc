@@ -1,14 +1,15 @@
 {
-    "name": "vercel-serverless-functions",
-    "version": "1.0.0",
-    "description": "Your Next.js project description",
-    "scripts": {
-      "dev": "next dev",
-      "build": "next build",
-      "start": "next start"
-    },
-    "dependencies": {
-      "next": "^12.1.0"
-    },
-    "devDependencies": {}
+  "name": "vercelfiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next-auth": "^4.24.7"
+  }
 }
