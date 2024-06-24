@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/blob": "^0.23.3",
     "next-auth": "^4.24.7",
     "node-fetch": "^3.3.2"
   }
