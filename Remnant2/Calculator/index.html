@@ -55,6 +55,20 @@
 
 <body style="background-color:#181818;padding: 0;" class="mainBody">
     <div id="tooltip" class="tooltip"></div>
+
+    <div class="loadoutOptionsBackgroundShutter" id="loadoutOptionsBackgroundShutter"></div>
+
+    <div id="loadoutOptionsBox" class="loadoutOptionsBox">
+        <div id="storedLoadoutNotifBox" class="storedLoadoutNotifBox">This text box will display if a loadout is found in the stored local data. If you see this text as it is without it being changed, I have done sometehing wrong and you should let me know.</div>
+        <br>
+        <div style="display: flex;">
+            Name:
+            <input class="selectSelector traitNameAdjustment" id="loadoutNameInput" maxlength="30">
+        </div>
+        <br>
+        <div class="loadoutControlsBox" id="loadoutControlsBox"></div>
+    </div>
+
     <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
 
 <div class="main">
@@ -65,6 +79,26 @@
         <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
 
         <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div> -->
+
+        <!-- <div class="loudoudHeaderbox">
+            <div class="loadout5BoxHolder">
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(1)">1</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(2)">2</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(3)">3</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(4)">4</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(5)">5</div>
+            </div>
+
+            <div class="loadoutTitleHeader">LOADOUTS</div>
+
+            <div class="loadout5BoxHolder">
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(6)">6</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(7)">7</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(8)">8</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(9)">9</div>
+                <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(10)">10</div>
+            </div>
+        </div> -->
 
         <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
             <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
@@ -108,9 +142,30 @@
                 </div>
             </div>
 
-            <div class="classAndArmor"> <!--Loadout slot selections-->
+            <div class="classAndArmor"> <!--slot selections-->
 
                 <div class="newCenterMegaBox">
+
+                    <div class="loudoutHeaderbox"><!--Loadout buttons-->
+                        <div class="loadout5BoxHolder">
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(1)">1</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(2)">2</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(3)">3</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(4)">4</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(5)">5</div>
+                        <!-- </div> -->
+            
+                        <!-- <div class="loadoutTitleHeader">LOADOUTS</div> -->
+            
+                        <!-- <div class="loadout5BoxHolder"> -->
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(6)">6</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(7)">7</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(8)">8</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(9)">9</div>
+                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(10)">10</div>
+                        </div>
+                    </div>
+                    
                     <div class="comboDisplay"> <!-- The visual display for the current MAIN UI build -->
                         <div class="comboDisplayImageBox comboDisplayMAIN">
                             <!-- CLASS BACKGROUND BANNERS -->

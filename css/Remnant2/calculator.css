@@ -269,13 +269,151 @@ div {
     align-items: center;
 }
 
+.loudoutHeaderbox {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    box-sizing: border-box;
+    /* background-color: white; */
+    border: 1px solid #434343;
+    border-top: 0;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: auto;
+}
+.loadoutTitleHeader {
+    padding: 5px;
+    white-space: normal;
+}
+.loadout5BoxHolder {
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.loadoutTenthButton {
+    /* padding: 5px; */
+    width: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 2px solid #434343; */
+    box-sizing: border-box;
+    /* border-radius: 5px; */
+    /* margin: 3px; */
+}
+.loadoutTenthButton + .loadoutTenthButton {
+    border-left: 1px solid #434343;
+}
+.loadoutTenthButton:hover {
+    background-color: #434343;
+    cursor: pointer;
+}
+.loadoutOptionsBackgroundShutter {
+    position: fixed;
+    display: none; 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 80%;
+    z-index: 10000000;
+}
+.loadoutOptionsBox {
+    display: none; 
+    /* Hidden by default */
+    position: fixed; /* Fixed position */
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: 98%;
+    max-width: 400px;
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    z-index: 10000000;
+    padding: 5px;
+    /* margin: 3px; */
+}
+
+.loadoutControlsBox {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid #434343; */
+
+}
+.loadoutSettingsButton {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    /* background-color: #434343; */
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+    /* border: 1px solid #d9d9d9; */
+    border: 2px solid #434343;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    white-space: normal;
+    text-decoration: none;
+}
+.loadoutSettingsButton:hover {
+    background-color: #4b4b4b;
+    /* color: black; */
+}
+.storedLoadoutNotifBox {
+    white-space: normal;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+}
+.loadoutStorageExplainer {
+    width: 100%;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
 
 
 .mainGridRow {
     display: flex;
     width: 100%;
     grid-column: 1 / span 3;
-    grid-row: 3;
+    grid-row: 4;
     border-radius: 10px;
     box-sizing: border-box;
     border: 2px solid #434343;
@@ -1889,7 +2027,7 @@ div {
     white-space: nowrap;
     box-sizing: border-box;
     grid-column: 1 / span 3;
-    grid-row: 4;
+    grid-row: 5;
 }
 .advancedStatsTitleHeader {
     font-size: 30px;
@@ -2784,7 +2922,7 @@ div {
     white-space: normal;
     font-family: "Montserrat-Light";
     box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3679,6 +3817,22 @@ div {
     .tooltip {
         width: 100%;
         max-width: none;
+    }
+    .loudoutHeaderbox {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .loadoutTitleHeader {
+        order: -1;
+    }
+    .loadoutTenthButton {
+        width: 10%;
+    }
+    .loadout5BoxHolder {
+        width: 100%;
     }
 
 
