@@ -515,7 +515,7 @@ let manipulateTrait = {
       manipulateTrait.modifyTraitRecord("create");
       megaBox.innerHTML = globalRecords.emptyTraitBoxHeader;
       megaBox.innerHTML += createHTML.traitBox(1);
-      createHTML.populateGear("trait1",traits);
+      createHTML.populateGear("trait1List",traits);
       //
     }
   // manipulateTrait.generateTraitToggles();//Trait toggles are no longer used
