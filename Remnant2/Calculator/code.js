@@ -70,7 +70,7 @@ let starterTable = {
   "ModDuration": 0,"ModPowerGen/s": 0,"ModPowerGen": 0,"ModCost": 0,
   "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,"ModPowerGenElemental": 0,
   //SKILLS
-  "CDR": 0,"SkillDuration": 0,
+  "CDR": 0,"SkillDuration": 0,"SkillCharges": 1,
   //AOE
   "auraAOE": 0,
   //GUNS
@@ -78,7 +78,7 @@ let starterTable = {
   //AMMO
   "Reserves": 0,"ReservesMulti": 0,
   //MINIONS/SUMMONS
-  "SummonHealth": 0,
+  "SummonHealth": 0,"HeavyAmmo": 1,
   //OUTBOUND STATUS EFFECTS
   "StatusDuration": 0,
   "outgoingStatus": 0,
@@ -90,6 +90,7 @@ let starterTable = {
   "outCURSE": 0,
   "outMADNESS": 0,
   "outEXPOSED": 0,
+  "outDRENCHED": 0,
   //INCOMING STATUS EFFECTS
   "HASTE": 0,
   "incomingStatus": 0,
@@ -382,6 +383,42 @@ let createHTML = {
           // <div class="pointsSpent" id="trait${elemID}Spent"></div>
           // <div class="intrinsicPoints" id="trait${elemID}Intrinsic"></div>
           // <button type="button" class="traitButton" onclick="userTrigger.updateTrait(${elemID},'+')" id="traitButtonPlus${elemID}">+</button>
+  },
+  consumableBox(consumableTable,elemID) {
+    return `
+      <div class="selectionsInfoContainer" id="${consumableTable}${elemID}Tab">
+          <div class="selectionItemTypeHeader">${consumableTable === 'concoction' ? 'Concoction' : "Quick-Use"} ${elemID}</div>
+          <div class="selectionItemTypeBody">
+              <div class="seletionBackgroundBox">
+                  <img class="selectionBackgroundImage" src="/images/Remnant/clear.png" id="${consumableTable}${elemID}Icon" alt="${consumableTable}${elemID} Icon"> <!--image-->
+              </div>
+
+              <div class="selectionSelectorBox">
+                  <div class="selectSelectorTitle">SELECT:</div>
+                  <div class="presetsSelectorBox">
+                      <input class="selectSelector" id="${consumableTable}${elemID}" list="${consumableTable}${elemID}List" onchange="userTrigger.updateConsumable('${consumableTable}','${elemID}')"> <!--selector-->
+                      <datalist id="${consumableTable}${elemID}List"></datalist>
+                  </div>
+              </div>
+              <div class="selectItemDesc" id="${consumableTable}${elemID}Desc"></div> <!--description-->
+          </div>
+
+          <div class="selectionItemTypeFooter">
+              <div style="padding-right: 5px;">Disable item calculation:</div>
+              <label class="toggleContainer">
+                  <input type="checkbox" class="toggleCheckbox" id="USEtoggled${consumableTable==="concoction" ? "Conc" : "Quick"}${elemID}" onchange="userTrigger.updateConsumableToggle(${elemID-1},'${consumableTable==="concoction" ? "concoctionsToggleArray" : "consumablesToggleArray"}');updateFormulas()"> <!--math toggle-->
+                  <span class="toggleSlider"></span>
+              </label>
+          </div>
+      </div>
+    `
+  },
+  consumableIconBox(consumableTable,elemID) {
+    return `
+    <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="${consumableTable}${elemID}MAINbox" onclick="basicsUpdates.updateFocus('${consumableTable}${elemID}Tab','${consumableTable}${elemID}')">
+        <img class="comboArmorImage" src="/images/Remnant/clear.png" id="${consumableTable}${elemID}IconMAIN" alt="Combo ${consumableTable}${elemID}">
+    </button>
+    `
   },
   //Defines the trait toggle row that gets put into the toggles menu
   traitToggle(elemID) {
@@ -692,6 +729,107 @@ let manipulateTrait = {
       }
   }
 }
+let manipulateConsumable = {
+  updateConsumableCollection(consumableTable) {
+    let megaBox = readSelection(`${consumableTable}sMegaBox`);
+    let displayRow = readSelection(`${consumableTable === "concoction" ? "comboConcoctionsBox" : "comboQuickUsesBox"}`);
+    megaBox.innerHTML = "";
+    displayRow.innerHTML = "";
+    let recordReference = consumableTable === "concoction" ? globalRecords.greatConcoctionRecords : globalRecords.greatConsumableRecords;
+
+
+    if (consumableTable === "concoction") {
+      let concLimit = globalRecords.totalConcLimit;
+      for (let i=1;i<=concLimit;i++) {
+        //create the box, and then populate it with cons options
+        megaBox.innerHTML += createHTML.consumableBox(consumableTable,i);
+        displayRow.innerHTML += createHTML.consumableIconBox(consumableTable,i);
+        createHTML.populateGear(`${consumableTable}${i}List`,concoctions);
+        userTrigger.consumableToggleStates.concoctionsToggleArray.push(false);
+      }
+      for (let i=0;i<recordReference.length;i++) {
+        if ((i+1)<=globalRecords.totalConcLimit) {
+          let recordPath = recordReference[i];
+          //If the current slot is blank, and is not the last slot, delete the slot
+          if (!recordPath){
+            manipulateConsumable.modifyConsumableRecord(recordReference,"delete",i+1);
+            userTrigger.consumableToggleStates.concoctionsToggleArray.splice(i,1);
+          }
+          readSelection(`concoction${i+1}`).value = recordPath;
+          readSelection(`${consumableTable}${i+1}Icon`).src=concoctions[recordPath].image;
+          readSelection(`${consumableTable}${i+1}IconMAIN`).src=concoctions[recordPath].image;
+          readSelection(`${consumableTable}${i+1}Desc`).innerHTML = userTrigger.updateSubstatColor(concoctions[recordPath].desc);
+          readSelection(`USEtoggledConc${i+1}`).checked = userTrigger.consumableToggleStates.concoctionsToggleArray[i] || false;
+          // id="USEtoggled${consumableTable==="concoction" ? "Conc" : "Quick"}${elemID}"
+        }
+        else {
+          manipulateConsumable.modifyConsumableRecord(recordReference,"delete",i+1);
+          userTrigger.consumableToggleStates.concoctionsToggleArray.splice(i,1);
+        }
+      }
+      for (let i=0;i<userTrigger.consumableToggleStates.concoctionsToggleArray.length;i++) {
+        if (i>=recordReference.length) {
+          userTrigger.consumableToggleStates.concoctionsToggleArray.splice(i,1);
+        }
+      }
+    }
+    else {
+      if (recordReference.length===0) { //If we just loaded the page, make the first cons box.
+        manipulateConsumable.modifyConsumableRecord(recordReference,"create");
+        megaBox.innerHTML += createHTML.consumableBox(consumableTable,1);
+        displayRow.innerHTML += createHTML.consumableIconBox(consumableTable,1);
+        createHTML.populateGear(`${consumableTable}${1}List`,quickUses);
+      }
+      else {
+        for (let i=0;i<recordReference.length;i++) {
+          let recordPath = recordReference[i];
+          //If the current slot is blank, and is not the last slot, delete the slot
+          if (i != recordReference.length-1 && !recordPath){
+            manipulateConsumable.modifyConsumableRecord(recordReference,"delete",i+1);
+            userTrigger.consumableToggleStates.consumablesToggleArray.splice(i,1);
+          }
+          //If the last cons is not blank, make a new blank cons slot.
+          else if (i === recordReference.length-1 && recordPath) {
+            manipulateConsumable.modifyConsumableRecord(recordReference,"create");
+            userTrigger.consumableToggleStates.consumablesToggleArray.push(false);
+          }
+
+          megaBox.innerHTML += createHTML.consumableBox(consumableTable,i+1);
+          displayRow.innerHTML += createHTML.consumableIconBox(consumableTable,i+1);
+          createHTML.populateGear(`${consumableTable}${i+1}List`,quickUses);
+        }
+
+        for (let i=0;i<recordReference.length;i++) {
+          let recordPath = recordReference[i];
+          readSelection(`${consumableTable}${i+1}`).value = recordPath;
+          readSelection(`${consumableTable}${i+1}Icon`).src = quickUses[recordPath].image;
+          readSelection(`${consumableTable}${i+1}IconMAIN`).src = quickUses[recordPath].image;
+          readSelection(`${consumableTable}${i+1}Desc`).innerHTML = userTrigger.updateSubstatColor(quickUses[recordPath].desc);
+          readSelection(`USEtoggledQuick${i+1}`).checked = userTrigger.consumableToggleStates.consumablesToggleArray[i] || false;
+        }
+
+        for (let i=0;i<userTrigger.consumableToggleStates.consumablesToggleArray.length;i++) {
+          if (i>=recordReference.length) {
+            userTrigger.consumableToggleStates.consumablesToggleArray.splice(i,1);
+          }
+        }
+      }
+
+    }
+  },
+  modifyConsumableRecord(recordReference,action,ID,name,) {
+    //ID only used for deletion, can be put as anything during creation if custom values are passed
+    if (action==="create") {
+      recordReference.push(name ?? "")//this might be wrong and needs a globalRecords param passed instead of a reference
+    }
+    else if (action==="delete") {
+      recordReference.splice(ID-1,1);
+    }
+    else {
+      alert("modifyConsumableRecord(): The action type was not specified.");
+    }
+  },
+}
 /* ---------------------------------------------------------------------------------------- */
 /* ------------------ URL import, export, and modification -------------------------------- */
 /* ---------------------------------------------------------------------------------------- */
@@ -714,7 +852,7 @@ let manipulateURL = {
       "s": ["s"]
     }
     let urlObject = globalRecords.urlObject;
-    let traitRecord = !isOverride ? globalRecords.greatTraitRecords : globalRecords.ALTgreatTraitRecords;
+    let traitRecord = globalRecords.greatTraitRecords;
 
     for (i=1;i<=traitRecord.length;i++) {
       let traitName = traitRecord[i-1].name || "";
@@ -723,19 +861,19 @@ let manipulateURL = {
       globalRecords.urlObject.trait.push(concatenated)
     }
 
-    let path = !isOverride ? globalRecords.archs : globalRecords.ALTarchs;
+    let path = globalRecords.archs;
     urlObject.archetype.push(path.one.class);
     urlObject.archetype.push(path.two.class);
     urlObject.archetype.push(path.one.ability);
     urlObject.archetype.push(path.two.ability);
 
-    path = !isOverride ? globalRecords.armor : globalRecords.ALTarmor;
+    path = globalRecords.armor;
     urlObject.armor.push(path.helmet);
     urlObject.armor.push(path.chest);
     urlObject.armor.push(path.leg);
     urlObject.armor.push(path.hand);
 
-    path = !isOverride ? globalRecords.weapons : globalRecords.ALTweapons;
+    path = globalRecords.weapons;
     urlObject.primary.push(path.primary);
     urlObject.primary.push(path.primaryMutator);
     urlObject.primary.push(path.primaryMod);
@@ -746,16 +884,20 @@ let manipulateURL = {
     urlObject.secondary.push(path.secondaryMutator);
     urlObject.secondary.push(path.secondaryMod);
 
-    path = !isOverride ? globalRecords.consumables : globalRecords.ALTconsumables;
-    for (i=1;i<=7;i++) {
-      urlObject.consumable.push(path[`concoction${i}`])
+    path = globalRecords.greatConcoctionRecords;
+    for (i=0;i<path.length;i++) {
+      urlObject.consumable.push(path[i])
     }
-    urlObject.consumable.push(path.quickUse1);
-    urlObject.consumable.push(path.quickUse2);
-    urlObject.consumable.push(path.quickUse3);//For later when I add 2 more quickuse
-    urlObject.consumable.push(path.quickUse4);
+    path = globalRecords.greatConsumableRecords;
+    for (i=0;i<path.length;i++) {
+      urlObject.consumable.push(path[i])
+    }
+    // urlObject.consumable.push(path.quickUse1);
+    // urlObject.consumable.push(path.quickUse2);
+    // urlObject.consumable.push(path.quickUse3);//For later when I add 2 more quickuse
+    // urlObject.consumable.push(path.quickUse4);
 
-    path = !isOverride ? globalRecords.accessories : globalRecords.ALTaccessories;
+    path = globalRecords.accessories;
     urlObject.accessory.push(path.amulet);
     for (i=1;i<=4;i++) {
       urlObject.accessory.push(path[`ring${i}`]);
@@ -764,6 +906,8 @@ let manipulateURL = {
     for (i=1;i<=3;i++) {
       urlObject.relic.push(path[`fragment${i}`]);
     }
+
+    urlObject.settings = ["","",""]
     manipulateURL.exportURLsetting("USEtoggledHead","settings",isOverride);
     manipulateURL.exportURLsetting("USEtoggledChest","settings",isOverride);
     manipulateURL.exportURLsetting("USEtoggledLegs","settings",isOverride);
@@ -802,21 +946,36 @@ let manipulateURL = {
     manipulateURL.exportURLsetting("USEtoggledSecondary","settings",isOverride);
     manipulateURL.exportURLsetting("USEtoggledsMutator","settings",isOverride);
     manipulateURL.exportURLsetting("USEtoggledsMod","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc1","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc2","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc3","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc4","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc5","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc6","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledConc7","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledQuick1","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledQuick2","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledQuick3","settings",isOverride);
-    manipulateURL.exportURLsetting("USEtoggledQuick4","settings",isOverride);
-    for (let i=1;i<globalRecords.greatTraitRecords.length;i++) {
-      manipulateURL.exportURLsetting(`USEtoggledTrait${i}`,"settings",isOverride)
+
+    console.log(urlObject.settings[0])
+
+    for (let i=1;i<=globalRecords.greatConcoctionRecords.length;i++) {
+      // manipulateURL.importURLsetting(`USEtoggledConc${i}`,urlSettings[1][i-1]);
+      manipulateURL.exportURLsetting(`USEtoggledConc${i}`,"settings",isOverride,false,1);
     }
-    urlObject.settings = globalRecords.urlObject.settings.replace(/\.?0+$/, '');
+
+    for (let i=1;i<=globalRecords.greatConsumableRecords.length;i++) {
+      // manipulateURL.importURLsetting(`USEtoggledQuick${i}`,urlSettings[1][i-1]);
+      manipulateURL.exportURLsetting(`USEtoggledQuick${i}`,"settings",isOverride,false,2);
+    }
+
+    // manipulateURL.exportURLsetting("USEtoggledConc1","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc2","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc3","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc4","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc5","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc6","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledConc7","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledQuick1","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledQuick2","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledQuick3","settings",isOverride);
+    // manipulateURL.exportURLsetting("USEtoggledQuick4","settings",isOverride);
+    // for (let i=1;i<globalRecords.greatTraitRecords.length;i++) {
+    //   manipulateURL.exportURLsetting(`USEtoggledTrait${i}`,"settings",isOverride)
+    // }
+    urlObject.settings[0] = globalRecords.urlObject.settings[0].replace(/\.?0+$/, '');
+    if (urlObject.settings[1]) {urlObject.settings[1] = globalRecords.urlObject.settings[1].replace(/\.?0+$/, '');}
+    if (urlObject.settings[2]) {urlObject.settings[2] = globalRecords.urlObject.settings[2].replace(/\.?0+$/, '');}
 
   //Advanced Stats Settings
     settingsPath = !isOverride ? readSelection("enemyCount").value : globalRecords.ALTmeleeFactors.enemyCount;
@@ -889,14 +1048,15 @@ let manipulateURL = {
     }
   },
   //Used in updateURLparameters for shorthand checks when generating binary settings to the URL
-  exportURLsetting(checkBoxID,objElement,isOverride,providedBoolean) {
+  exportURLsetting(checkBoxID,objElement,isOverride,providedBoolean,arrayEntry) {
+    arrayEntry = arrayEntry ?? 0;
     if (!isOverride) {
       if (objElement != "adv") {
         if (readSelection(checkBoxID)?.checked === true) {
-          globalRecords.urlObject[objElement] += "1";
+          globalRecords.urlObject[objElement][arrayEntry] += "1";
         }
         else if (readSelection(checkBoxID) === null || readSelection(checkBoxID).checked === false) {
-          globalRecords.urlObject[objElement] += "0";
+          globalRecords.urlObject[objElement][arrayEntry] += "0";
         }
       }
       else {
@@ -910,8 +1070,8 @@ let manipulateURL = {
     }
     else {
       if (objElement != "adv") {
-        if (providedBoolean) {globalRecords.urlObject[objElement] += "1";}
-        else {globalRecords.urlObject[objElement] += "0";}
+        if (providedBoolean) {globalRecords.urlObject[objElement][arrayEntry] += "1";}
+        else {globalRecords.urlObject[objElement][arrayEntry] += "0";}
       }
       else {
         if (providedBoolean) {globalRecords.urlObject.adv[globalRecords.urlObject.adv.length-1] += "1";}
@@ -951,6 +1111,7 @@ let manipulateURL = {
       decoded = params.toString();
       decoded = decoded.replace(/%2C/g, ',');
       const newUrl = `${R2TKprefix}?${decoded}`;
+      console.log(newUrl)
       window.open(newUrl, '_blank').focus();
     }
   },
@@ -1130,83 +1291,77 @@ let manipulateURL = {
   //CONCOCTIONS AND QUICK USE CONSUMABLES
     if (urlConcoctions) {
       updateFormulas();//Needed to update concoction limit
+      manipulateConsumable.updateConsumableCollection("concoction");//Needed to establish concoction boxes
       urlConcoctions = urlConcoctions.split(",");
-      for (let i=0;i<globalRecords.totalConcLimit;i++) {
-        if (concoctions[urlConcoctions[i]] === undefined) {invalidEntries.push(urlConcoctions[i]);}
-        else if (urlConcoctions[i]) {
-          readSelection(`concoction${i+1}`).value = urlConcoctions[i];
-          userTrigger.updateConsumable('concoction',i+1,true);
-        }
+      //Read the consumables param, and push to either concoctions or quick-use arrays, or invalid param notify
+      for (let i=0;i<urlConcoctions.length;i++) {
+        let current = urlConcoctions[i];
+        if (concoctions[current] && current) {globalRecords.greatConcoctionRecords.push(current)}
+        else if (quickUses[current] && current) {globalRecords.greatConsumableRecords.push(current)}
+        else if (current) {invalidEntries.push(current);}//Notify user if invalid
       }
-      if (quickUses[urlConcoctions[7]] === undefined) {invalidEntries.push(urlConcoctions[7]);}
-      else if (urlConcoctions[7]) {
-        readSelection(`quickUse1`).value = urlConcoctions[7];
-        userTrigger.updateConsumable('quickUse',1,true);
+      //Concoctions
+      for (let i=0;i<globalRecords.greatConcoctionRecords.length && i<=globalRecords.totalConcLimit;i++) {
+        readSelection(`concoction${i+1}`).value = globalRecords.greatConcoctionRecords[i];
+        userTrigger.updateConsumable('concoction',i+1,true);
       }
-      if (quickUses[urlConcoctions[8]] === undefined) {invalidEntries.push(urlConcoctions[8]);}
-      else if (urlConcoctions[8]) {
-        readSelection(`quickUse2`).value = urlConcoctions[8];
-        userTrigger.updateConsumable('quickUse',2,true);
-      }
-      if (quickUses[urlConcoctions[9]] === undefined) {invalidEntries.push(urlConcoctions[9]);}
-      else if (urlConcoctions[9]) {
-        readSelection(`quickUse3`).value = urlConcoctions[9];
-        userTrigger.updateConsumable('quickUse',3,true);
-      }
-      if (quickUses[urlConcoctions[10]] === undefined) {invalidEntries.push(urlConcoctions[10]);}
-      else if (urlConcoctions[10]) {
-        readSelection(`quickUse4`).value = urlConcoctions[10];
-        userTrigger.updateConsumable('quickUse',4,true);
+      //Quick-use consumables
+      manipulateConsumable.updateConsumableCollection("quickUse");//Needed to establish quick-use boxes
+      for (let i=0;i<globalRecords.greatConsumableRecords.length;i++) {
+        readSelection(`quickUse${i+1}`).value = globalRecords.greatConsumableRecords[i];
+        userTrigger.updateConsumable('quickUse',i+1,true);
       }
     }
   //SETTINGS
     if (urlSettings) {
-      manipulateURL.importURLsetting("USEtoggledHead",urlSettings[0]);
-      manipulateURL.importURLsetting("USEtoggledChest",urlSettings[1]);
-      manipulateURL.importURLsetting("USEtoggledLegs",urlSettings[2]);
-      manipulateURL.importURLsetting("USEtoggledHands",urlSettings[3]);
-      manipulateURL.importURLsetting("USEtoggledAmulet",urlSettings[4]);
-      manipulateURL.importURLsetting("USEtoggledRing1",urlSettings[5]);
-      manipulateURL.importURLsetting("USEtoggledRing2",urlSettings[6]);
-      manipulateURL.importURLsetting("USEtoggledRing3",urlSettings[7]);
-      manipulateURL.importURLsetting("USEtoggledRing4",urlSettings[8]);
-      manipulateURL.importURLsetting("USEtoggledRelic",urlSettings[9]);
-      manipulateURL.importURLsetting("USEtoggledrFrag1",urlSettings[10]);
-      manipulateURL.importURLsetting("USEtoggledrFrag2",urlSettings[11]);
-      manipulateURL.importURLsetting("USEtoggledrFrag3",urlSettings[12]);
-      manipulateURL.importURLsetting("USEtoggledPrimeP",urlSettings[13]);
-      manipulateURL.importURLsetting("USEtoggledAbility1",urlSettings[14]);
-      manipulateURL.importURLsetting("USEtoggledPassive1",urlSettings[15]);
-      manipulateURL.importURLsetting("USEtoggledPassive2",urlSettings[16]);
-      manipulateURL.importURLsetting("USEtoggledPassive3",urlSettings[17]);
-      manipulateURL.importURLsetting("USEtoggledPassive4",urlSettings[18]);
-      manipulateURL.importURLsetting("USEtoggledAbility2",urlSettings[19]);
-      manipulateURL.importURLsetting("USEtoggledPassive5",urlSettings[20]);
-      manipulateURL.importURLsetting("USEtoggledPassive6",urlSettings[21]);
-      manipulateURL.importURLsetting("USEtoggledPassive7",urlSettings[22]);
-      manipulateURL.importURLsetting("USEtoggledPassive8",urlSettings[23]);
-      manipulateURL.importURLsetting("USEtoggledPrimary",urlSettings[24]);
-      manipulateURL.importURLsetting("USEtoggledpMutator",urlSettings[25]);
-      manipulateURL.importURLsetting("USEtoggledpMod",urlSettings[26]);
-      manipulateURL.importURLsetting("USEtoggledMelee",urlSettings[27]);
-      manipulateURL.importURLsetting("USEtoggledmMutator",urlSettings[28]);
-      manipulateURL.importURLsetting("USEtoggledmMod",urlSettings[29]);
-      manipulateURL.importURLsetting("USEtoggledSecondary",urlSettings[30]);
-      manipulateURL.importURLsetting("USEtoggledsMutator",urlSettings[31]);
-      manipulateURL.importURLsetting("USEtoggledsMod",urlSettings[32]);
-      manipulateURL.importURLsetting("USEtoggledConc1",urlSettings[33]);
-      manipulateURL.importURLsetting("USEtoggledConc2",urlSettings[34]);
-      manipulateURL.importURLsetting("USEtoggledConc3",urlSettings[35]);
-      manipulateURL.importURLsetting("USEtoggledConc4",urlSettings[36]);
-      manipulateURL.importURLsetting("USEtoggledConc5",urlSettings[37]);
-      manipulateURL.importURLsetting("USEtoggledConc6",urlSettings[38]);
-      manipulateURL.importURLsetting("USEtoggledConc7",urlSettings[39]);
-      manipulateURL.importURLsetting("USEtoggledQuick1",urlSettings[40]);
-      manipulateURL.importURLsetting("USEtoggledQuick2",urlSettings[41]);
-      //42
-      //43 for the other two quick use that I don't have yet
-      for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
-        manipulateURL.importURLsetting(`USEtoggledTrait${i}`,urlSettings[43+i]);
+      urlSettings = urlSettings.split(",");
+      //General item toggles
+      manipulateURL.importURLsetting("USEtoggledHead",urlSettings[0][0]);
+      manipulateURL.importURLsetting("USEtoggledChest",urlSettings[0][1]);
+      manipulateURL.importURLsetting("USEtoggledLegs",urlSettings[0][2]);
+      manipulateURL.importURLsetting("USEtoggledHands",urlSettings[0][3]);
+      manipulateURL.importURLsetting("USEtoggledAmulet",urlSettings[0][4]);
+      manipulateURL.importURLsetting("USEtoggledRing1",urlSettings[0][5]);
+      manipulateURL.importURLsetting("USEtoggledRing2",urlSettings[0][6]);
+      manipulateURL.importURLsetting("USEtoggledRing3",urlSettings[0][7]);
+      manipulateURL.importURLsetting("USEtoggledRing4",urlSettings[0][8]);
+      manipulateURL.importURLsetting("USEtoggledRelic",urlSettings[0][9]);
+      manipulateURL.importURLsetting("USEtoggledrFrag1",urlSettings[0][10]);//Not used, placeholder
+      manipulateURL.importURLsetting("USEtoggledrFrag2",urlSettings[0][11]);//Not used, placeholder
+      manipulateURL.importURLsetting("USEtoggledrFrag3",urlSettings[0][12]);//Not used, placeholder
+      manipulateURL.importURLsetting("USEtoggledPrimeP",urlSettings[0][13]);
+      manipulateURL.importURLsetting("USEtoggledAbility1",urlSettings[0][14]);
+      manipulateURL.importURLsetting("USEtoggledPassive1",urlSettings[0][15]);
+      manipulateURL.importURLsetting("USEtoggledPassive2",urlSettings[0][16]);
+      manipulateURL.importURLsetting("USEtoggledPassive3",urlSettings[0][17]);
+      manipulateURL.importURLsetting("USEtoggledPassive4",urlSettings[0][18]);
+      manipulateURL.importURLsetting("USEtoggledAbility2",urlSettings[0][19]);
+      manipulateURL.importURLsetting("USEtoggledPassive5",urlSettings[0][20]);
+      manipulateURL.importURLsetting("USEtoggledPassive6",urlSettings[0][21]);
+      manipulateURL.importURLsetting("USEtoggledPassive7",urlSettings[0][22]);
+      manipulateURL.importURLsetting("USEtoggledPassive8",urlSettings[0][23]);
+      manipulateURL.importURLsetting("USEtoggledPrimary",urlSettings[0][24]);
+      manipulateURL.importURLsetting("USEtoggledpMutator",urlSettings[0][25]);
+      manipulateURL.importURLsetting("USEtoggledpMod",urlSettings[0][26]);
+      manipulateURL.importURLsetting("USEtoggledMelee",urlSettings[0][27]);
+      manipulateURL.importURLsetting("USEtoggledmMutator",urlSettings[0][28]);
+      manipulateURL.importURLsetting("USEtoggledmMod",urlSettings[0][29]);
+      manipulateURL.importURLsetting("USEtoggledSecondary",urlSettings[0][30]);
+      manipulateURL.importURLsetting("USEtoggledsMutator",urlSettings[0][31]);
+      manipulateURL.importURLsetting("USEtoggledsMod",urlSettings[0][32]);
+
+
+      //concoctions
+      if (urlSettings[1]) {
+        let toggleStates = [];
+        for (let i=1;i<=globalRecords.greatConcoctionRecords.length;i++) {toggleStates.push(urlSettings[1][i-1] === "1" ? true : false);}
+        userTrigger.consumableToggleStates.concoctionsToggleArray = [...toggleStates];
+      }
+      //quick-use consumables
+      if (urlSettings[2]) {
+        let toggleStates = [];
+        for (let i=1;i<=globalRecords.greatConsumableRecords.length;i++) {toggleStates.push(urlSettings[2][i-1] === "1" ? true : false);}
+        userTrigger.consumableToggleStates.consumablesToggleArray = [...toggleStates];
       }
     }
   //ADVANCED STATS LOGGING
@@ -1244,6 +1399,8 @@ let manipulateURL = {
   //Last updateFormulas for good measure, if feed exists, to update based on everything done and settings selected
     if (feed != "") {
       updateFormulas();
+      manipulateConsumable.updateConsumableCollection("concoction");
+      manipulateConsumable.updateConsumableCollection("quickUse");
     }
   //CHECK SOURCE PARAM IS MISSING, SO WE CAN NOTIFY PEEPS COMING FROM R2TK
     if (urlSource != "s" && feed != "") {
@@ -1268,32 +1425,53 @@ let manipulateURL = {
 /* ----------------- Everything that happens when a new selection is made ----------------- */
 /* ---------------------------------------------------------------------------------------- */
 let userTrigger = {
+  "consumableToggleStates": {
+    "concoctionsToggleArray": [],
+    "consumablesToggleArray": [],
+  },
   //Triggers whenever a concoction or quickuse consumable is selected
   updateConsumable(type,ID,parent) {
     let selectedConsumable = readSelection(`${type}${ID}`);
 
     if (!concoctions[selectedConsumable.value] && !quickUses[selectedConsumable.value]) {
-      console.log("checked")
       selectedConsumable.value = "";//If the selection/input doesn't exist, clear it to blank.
     }
 
     //Assign the value to the general storage, separate from the UI
-    globalRecords.consumables[`${type}${ID}`] = selectedConsumable.value;
-    //Update the UI with the selection
-    readSelection(`${type}${ID}Icon`).src=consumables[`${type}s`][selectedConsumable.value].image;
-    readSelection(`${type}${ID}IconMAIN`).src=consumables[`${type}s`][selectedConsumable.value].image;
-    readSelection(`${type}${ID}Desc`).innerHTML = userTrigger.updateSubstatColor(consumables[`${type}s`][selectedConsumable.value].desc);
+    // globalRecords.consumables[`${type}${ID}`] = selectedConsumable.value;
+
+    if (type === "concoction") {
+      globalRecords.greatConcoctionRecords[ID-1] = selectedConsumable.value;
+      if (userTrigger.consumableToggleStates.concoctionsToggleArray[ID-1] === undefined) {
+        userTrigger.consumableToggleStates.concoctionsToggleArray[ID-1] = (false);
+      }
+    }
+    else {
+      globalRecords.greatConsumableRecords[ID-1] = selectedConsumable.value;
+      if (userTrigger.consumableToggleStates.consumablesToggleArray[ID-1] === undefined) {
+        userTrigger.consumableToggleStates.consumablesToggleArray[ID-1] = (false);
+      }
+    }
+
     //Pass the selected value into duplicate checks, under the same function to repeat if swapped,
     //-using "several" handling to loop through more than 2 options, stopping the loop at the conc limit
     if (type==="concoction") {
+      manipulateConsumable.updateConsumableCollection("concoction");
       userTrigger.checkDuplicateSelection(type,ID,`updateConsumable`,`several`,globalRecords.totalConcLimit);
     }
     else if (type==="quickUse") {
-      userTrigger.checkDuplicateSelection(type,ID,`updateConsumable`,`several`,4);
+      manipulateConsumable.updateConsumableCollection("quickUse");
+      userTrigger.checkDuplicateSelection(type,ID,`updateConsumable`,`several`,globalRecords.greatConsumableRecords.length);
     }
     if (!parent) {
       updateFormulas();
     }
+  },
+  updateConsumableToggle(elemID,arrayType) {
+    console.log(elemID,arrayType)
+    console.log(userTrigger.consumableToggleStates[arrayType])
+    if (userTrigger.consumableToggleStates[arrayType][elemID]) {userTrigger.consumableToggleStates[arrayType][elemID] = false}
+    else {userTrigger.consumableToggleStates[arrayType][elemID] = true;}
   },
   //Triggers whenever a new weapon is selected
   updateWeapon(type,parent) {
@@ -1698,13 +1876,12 @@ let userTrigger = {
 
     if (!traits[traitName]) {
       readSelection(`trait${elemID}`).value = "";
-      return;
     }
     else {
       for (trait of globalRecords.greatTraitRecords) {
-        if (trait.name === traitName && traitName != "") {
+        if (trait.name === traitName && traitName != "" && !adjustment) {
           readSelection(`trait${elemID}`).value = "";
-          return;
+          break;
         }
       }
     }
@@ -1904,14 +2081,36 @@ let formulasValues = {
     if (!checkWeaponPath.builtIN) {formulasValues.pullStats(index,mods.secondaryMods[path.secondaryMod].stats);}
     else {formulasValues.pullStats(index,mods.builtInSecondaryMods[checkWeaponPath.builtIN].stats);}
 
-    //Consumables
-    let recordPath = globalRecords.consumables;
+    //Concoctions
+    recordPath = globalRecords.greatConcoctionRecords;
     globalRecords.totalConcLimit = 1 + index.ConcLimit;
-    for (let i=1;i<=7;i++) {
-      let concoction = recordPath[`concoction${i}`];
-      if (i<=globalRecords.totalConcLimit) {formulasValues.pullStats(index,concoctions[concoction].stats);}//Concoctions
-      if (i<=4 && !!quickUses[recordPath[`quickUse${i}`]]) {formulasValues.pullStats(index,quickUses[recordPath[`quickUse${i}`]].stats);}//Quick-Use Consumables
+    for (let i=1;i<=recordPath.length;i++) {
+      let concoction = recordPath[i-1];
+      if (i<=globalRecords.totalConcLimit) {formulasValues.pullStats(index,concoctions[concoction].stats);}
     }
+    //Quick-use consumables
+    recordPath = globalRecords.greatConsumableRecords;
+    for (let i=1;i<=recordPath.length;i++) {
+      let quickUse = recordPath[i-1];
+      if (quickUses[quickUse]) {formulasValues.pullStats(index,quickUses[quickUse].stats);}
+    }
+  //   //Concoctions
+  //   globalRecords.totalConcLimit = 1 + index.ConcLimit;
+  //   manipulateConsumable.updateConsumableCollection("concoction");
+  //   let recordPath = globalRecords.greatConcoctionRecords;
+  //   for (let i=1;i<=globalRecords.totalConcLimit;i++) {
+  //     if (i<=recordPath.length) {
+  //       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledConc${i}`,false],concoctions[recordPath[i-1]]);
+  //     }
+  //   }
+  // //Quick-Use Consumables
+  //   manipulateConsumable.updateConsumableCollection("quickUse");
+  //   recordPath = globalRecords.greatConsumableRecords;
+  //   for (let i=1;i<=recordPath.length;i++) {
+  //     if (quickUses[recordPath[i-1]]) {
+  //       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledQuick${i}`,false],quickUses[recordPath[i-1]]);
+  //     }
+  //   }
   },
   pullGearStats(isUIcalcs,index,ping) {
     const path = globalRecords.weapons;
@@ -1954,28 +2153,21 @@ let formulasValues = {
 
   //Concoctions
     globalRecords.totalConcLimit = 1 + index.ConcLimit;
-    let recordPath = globalRecords[`consumables`];
-    for (let i=1;i<=7;i++) {
-      if (i<=globalRecords.totalConcLimit) {
-        if (isUIcalcs) {readSelection(`concoction${i}MAINbox`).style.display = "flex";}
-        formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledConc${i}`,false],concoctions[recordPath[`concoction${i}`]]);
-      }
-      else if (isUIcalcs){
-          concoction = "";//Clear selections on the UI calc if beyond the conc limit.
-          readSelection(`concoction${i}`).value = "";
-          readSelection(`concoction${i}Icon`).src = "/images/Remnant/clear.png";
-          readSelection(`concoction${i}IconMAIN`).src = "/images/Remnant/clear.png";
-          readSelection(`concoction${i}Desc`).innerHTML = "";
-          globalRecords[`concoction${i}old`]="";
-          readSelection(`concoction${i}MAINbox`).style.display = "none";
+    manipulateConsumable.updateConsumableCollection("concoction");
+    let recordPath = globalRecords.greatConcoctionRecords;
+    for (let i=1;i<=globalRecords.totalConcLimit;i++) {
+      if (i<=recordPath.length) {
+        formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledConc${i}`,false],concoctions[recordPath[i-1]]);
       }
     }
   //Quick-Use Consumables
-  for (let i=1;i<=4;i++) {
-    if (quickUses[recordPath[`quickUse${i}`]]) {
-      formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledQuick${i}`,false],quickUses[recordPath[`quickUse${i}`]]);
+    manipulateConsumable.updateConsumableCollection("quickUse");
+    recordPath = globalRecords.greatConsumableRecords;
+    for (let i=1;i<=recordPath.length;i++) {
+      if (quickUses[recordPath[i-1]]) {
+        formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledQuick${i}`,false],quickUses[recordPath[i-1]]);
+      }
     }
-  }
   },
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
   pullStats(index,path) {
@@ -3003,7 +3195,9 @@ function updateFormulas(index,ping) {
   }
   else {
     // addTooltipListeners();
+    manipulateConsumable.updateConsumableCollection("concoction");
     basicsUpdates.updateMainFromFormulas(returnStats);
+    basicsUpdates.updateFocus();
     manipulateURL.updateURLparameters();
     tooltips.loadTooltips();
     if (!stopQueryFractures) {window.updateConsole(index,dodgeClass);}
@@ -4106,7 +4300,12 @@ let basicsUpdates = {
     else {damageHeader = ""}
     damageRows.innerHTML = damageHeader;
   },
-  updateFocus(type,fieldToFocus) {
+  "targetTab": "amuletTab",
+  "targetFocus": "amulet",
+  updateFocus(tab,fieldToFocus) {
+    basicsUpdates.targetTab = tab ?? basicsUpdates.targetTab
+    basicsUpdates.targetFocus = fieldToFocus ?? basicsUpdates.targetFocus;
+
     readSelection("amuletTab").style.display = "none";
     readSelection("ring1Tab").style.display = "none";
     readSelection("ring2Tab").style.display = "none";
@@ -4126,21 +4325,27 @@ let basicsUpdates = {
     readSelection("meleeTab").style.display = "none";
     readSelection("secondaryTab").style.display = "none";
 
-    readSelection("concoction1Tab").style.display = "none";
-    readSelection("concoction2Tab").style.display = "none";
-    readSelection("concoction3Tab").style.display = "none";
-    readSelection("concoction4Tab").style.display = "none";
-    readSelection("concoction5Tab").style.display = "none";
-    readSelection("concoction6Tab").style.display = "none";
-    readSelection("concoction7Tab").style.display = "none";
+    for (let i=1;i<=globalRecords.totalConcLimit;i++) {
+      readSelection(`concoction${i}Tab`).style.display = "none";
+    }
 
-    readSelection("quickUse1Tab").style.display = "none";
-    readSelection("quickUse2Tab").style.display = "none";
-    readSelection("quickUse3Tab").style.display = "none";
-    readSelection("quickUse4Tab").style.display = "none";
+    for (let i=1;i<=globalRecords.greatConsumableRecords.length;i++) {
+      readSelection(`quickUse${i}Tab`).style.display = "none";
+    }
 
-    readSelection(type).style.display = "flex";
-    readSelection(fieldToFocus).focus();
+    // readSelection("quickUse1Tab").style.display = "none";
+    // readSelection("quickUse2Tab").style.display = "none";
+    // readSelection("quickUse3Tab").style.display = "none";
+    // readSelection("quickUse4Tab").style.display = "none";
+
+    if (basicsUpdates.targetFocus.includes("concoction")) {readSelection("concoctionsMegaBox").style.display = "flex"}
+    else {readSelection("concoctionsMegaBox").style.display = "none"}
+
+    if (basicsUpdates.targetFocus.includes("quickUse")) {readSelection("quickUsesMegaBox").style.display = "flex"}
+    else {readSelection("quickUsesMegaBox").style.display = "none"}
+
+    readSelection(basicsUpdates.targetTab).style.display = "flex";
+    readSelection(basicsUpdates.targetFocus).focus();
   }
 }
 let advancedUpdates = {

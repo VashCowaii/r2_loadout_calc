@@ -28,17 +28,17 @@ function pagePopulation() {
     createHTML.populateGear("rangedMod1List",rangedMods);
     // populateGear("meleeMod",meleeMods); //not yet, if ever really? It's not like melee mods are even selected.
     createHTML.populateGear("rangedMod2List",rangedMods);
-    createHTML.populateGear("concoction1List",concoctions);
-    createHTML.populateGear("concoction2List",concoctions);
-    createHTML.populateGear("concoction3List",concoctions);
-    createHTML.populateGear("concoction4List",concoctions);
-    createHTML.populateGear("concoction5List",concoctions);
-    createHTML.populateGear("concoction6List",concoctions);
-    createHTML.populateGear("concoction7List",concoctions);
-    createHTML.populateGear("quickUse1List",quickUses);
-    createHTML.populateGear("quickUse2List",quickUses);
-    createHTML.populateGear("quickUse3List",quickUses);
-    createHTML.populateGear("quickUse4List",quickUses); 
+    // createHTML.populateGear("concoction1List",concoctions);
+    // createHTML.populateGear("concoction2List",concoctions);
+    // createHTML.populateGear("concoction3List",concoctions);
+    // createHTML.populateGear("concoction4List",concoctions);
+    // createHTML.populateGear("concoction5List",concoctions);
+    // createHTML.populateGear("concoction6List",concoctions);
+    // createHTML.populateGear("concoction7List",concoctions);
+    // createHTML.populateGear("quickUse1List",quickUses);
+    // createHTML.populateGear("quickUse2List",quickUses);
+    // createHTML.populateGear("quickUse3List",quickUses);
+    // createHTML.populateGear("quickUse4List",quickUses); 
     }
     manipulateURL.importURLparameters();
   

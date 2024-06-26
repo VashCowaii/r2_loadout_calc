@@ -177,7 +177,7 @@ let cycles = {
                 let itemKey = returnTable[item];
 
                 if (itemKey.classTags) {
-                    let classPath = globalRecords.ALTarchs;
+                    let classPath = globalRecords.archs;
                     if (itemKey.classTags != classPath.one.class && itemKey.classTags != classPath.two.class) {
                         delete returnTable[item];
                         continue;
@@ -385,8 +385,8 @@ let cycles = {
         let armorFirst = cycles.createSortedArmorTable(false);//TODO:Shift the armor to the same function as weight, later. Not a priority, still fast. Remember to look at armor pings when I do this.
         cycles.vars.armorCombos.Table = [...armorFirst];
 
-        let classSet = [`${globalRecords.ALTarchs.one.class}`,`${globalRecords.ALTarchs.two.class}`];
-        let abilitySet = [`${globalRecords.ALTarchs.one.ability}`,`${globalRecords.ALTarchs.two.ability}`];
+        let classSet = [`${globalRecords.archs.one.class}`,`${globalRecords.archs.two.class}`];
+        let abilitySet = [`${globalRecords.archs.one.ability}`,`${globalRecords.archs.two.ability}`];
 
 
         let comboCounter = 0;
@@ -1129,11 +1129,6 @@ let cyclesLoop = {
         cycles.debugPushLine("UI LOCK START");
         //Assign the selected classes/abilitiess/traits over to the Alt records so that way if people mess with the UI calc it won't mess up the background calc
         //The stored imported archs so the currently selected archs don't get used every time.
-        globalRecords.ALTarchs.one.class = `${globalRecords.archs.one.class}`;
-        globalRecords.ALTarchs.two.class = `${globalRecords.archs.two.class}`;
-        globalRecords.ALTarchs.one.ability = `${globalRecords.archs.one.ability}`;
-        globalRecords.ALTarchs.two.ability = `${globalRecords.archs.two.ability}`;
-        globalRecords.ALTgreatTraitRecords = [...globalRecords.greatTraitRecords];
 
         globalRecords.ALTsearchSettingsToggles = {...globalRecords.searchSettingsToggles};
 
@@ -1345,7 +1340,7 @@ let cyclesLoop = {
                             readSelection("comboSecondaryMod").innerHTML = secondary[cycleObject.gun2[0]].builtIN || cycleObject.rangedMods[1] || "";
 
 
-                            for (let i=0;i<7;i++) {
+                            for (let i=0;i<cycleObject.concoction.length;i++) {
                                 let concReference = cycleObject.concoction[i] ?? "";
                                 if (concReference===0 || concReference==="") {
                                     concReference="";
@@ -1357,7 +1352,7 @@ let cyclesLoop = {
                                 }
                             }
 
-                            for (let i=0;i<4;i++) {
+                            for (let i=0;i<cycleObject.quickUse.length;i++) {
                                 let consReference = cycleObject.quickUse[i] ?? "";
                                 if (consReference===0 || consReference==="") {
                                     consReference=""
@@ -1379,8 +1374,8 @@ let cyclesLoop = {
                             // cyclesLoop.bestCombos.second = cyclesLoop.bestCombos.first ? {...cyclesLoop.bestCombos.first} : {"bestValue":0,"link":""};
 
                             let targetDamageCategory;
-                            if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.one.ability) {targetDamageCategory = "ability1Breakdown"}
-                            else if (filters.types.vars.oldTarget[0] === globalRecords.ALTarchs.two.ability) {targetDamageCategory = "ability2Breakdown"}
+                            if (filters.types.vars.oldTarget[0] === globalRecords.archs.one.ability) {targetDamageCategory = "ability1Breakdown"}
+                            else if (filters.types.vars.oldTarget[0] === globalRecords.archs.two.ability) {targetDamageCategory = "ability2Breakdown"}
 
                             cyclesLoop.bestCombos[1] = {
                                 "bestValue": preArmor.toFixed(2),
@@ -1619,18 +1614,20 @@ let cyclesLoop = {
         accessoryReference.fragment2 = value.fragmentSet[1] || "";
         accessoryReference.fragment3 = value.fragmentSet[2] || "";
 
-        let consumableReference = globalReference.consumables;
-        consumableReference.concoction1 = value.concoction[0] || "";
-        consumableReference.concoction2 = value.concoction[1] || "";
-        consumableReference.concoction3 = value.concoction[2] || "";
-        consumableReference.concoction4 = value.concoction[3] || "";
-        consumableReference.concoction5 = value.concoction[4] || "";
-        consumableReference.concoction6 = value.concoction[5] || "";
-        consumableReference.concoction7 = value.concoction[6] || "";
-        consumableReference.quickUse1 = value.quickUse[0] || "";
-        consumableReference.quickUse2 = value.quickUse[1] || "";
-        consumableReference.quickUse3 = value.quickUse[2] || "";
-        consumableReference.quickUse4 = value.quickUse[3] || "";
+        // let consumableReference = globalReference.consumables;
+        globalRecords.greatConcoctionRecords = [...value.concoction];
+        globalRecords.greatConsumableRecords = [...value.quickUse];
+        // consumableReference.concoction1 = value.concoction[0] || "";
+        // consumableReference.concoction2 = value.concoction[1] || "";
+        // consumableReference.concoction3 = value.concoction[2] || "";
+        // consumableReference.concoction4 = value.concoction[3] || "";
+        // consumableReference.concoction5 = value.concoction[4] || "";
+        // consumableReference.concoction6 = value.concoction[5] || "";
+        // consumableReference.concoction7 = value.concoction[6] || "";
+        // consumableReference.quickUse1 = value.quickUse[0] || "";
+        // consumableReference.quickUse2 = value.quickUse[1] || "";
+        // consumableReference.quickUse3 = value.quickUse[2] || "";
+        // consumableReference.quickUse4 = value.quickUse[3] || "";
 
         let weaponReference = globalReference.weapons;
         weaponReference.primary = value.gun1[0] || "";
@@ -1644,9 +1641,9 @@ let cyclesLoop = {
         weaponReference.secondaryMod = value.rangedMods[1] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
     },
-    updateCycleRecordMainUI(value) {//this HAS to be the ALT record variants, because this is only called within the main thread and CAN mess up the user's main UI calc values otherwise
+    updateCycleRecordMainUI(value) {//No longer needs to be alt variants, this version is only used by the optimizer which is now separate from the calc
         let globalReference = globalRecords;
-        let accessoryReference = globalReference.ALTaccessories;
+        let accessoryReference = globalReference.accessories;
         accessoryReference.amulet = value.amulet[0] || "";
         accessoryReference.ring1 = value.ringSet[0] || "";
         accessoryReference.ring2 = value.ringSet[1] || "";
@@ -1657,20 +1654,22 @@ let cyclesLoop = {
         accessoryReference.fragment2 = value.fragmentSet[1] || "";
         accessoryReference.fragment3 = value.fragmentSet[2] || "";
 
-        let consumableReference = globalReference.ALTconsumables;
-        consumableReference.concoction1 = value.concoction[0] || "";
-        consumableReference.concoction2 = value.concoction[1] || "";
-        consumableReference.concoction3 = value.concoction[2] || "";
-        consumableReference.concoction4 = value.concoction[3] || "";
-        consumableReference.concoction5 = value.concoction[4] || "";
-        consumableReference.concoction6 = value.concoction[5] || "";
-        consumableReference.concoction7 = value.concoction[6] || "";
-        consumableReference.quickUse1 = value.quickUse[0] || "";
-        consumableReference.quickUse2 = value.quickUse[1] || "";
-        consumableReference.quickUse3 = value.quickUse[2] || "";
-        consumableReference.quickUse4 = value.quickUse[3] || "";
+        // let consumableReference = globalReference.consumables;
+        globalRecords.greatConcoctionRecords = [...value.concoction];
+        globalRecords.greatConsumableRecords = [...value.quickUse];
+        // consumableReference.concoction1 = value.concoction[0] || "";
+        // consumableReference.concoction2 = value.concoction[1] || "";
+        // consumableReference.concoction3 = value.concoction[2] || "";
+        // consumableReference.concoction4 = value.concoction[3] || "";
+        // consumableReference.concoction5 = value.concoction[4] || "";
+        // consumableReference.concoction6 = value.concoction[5] || "";
+        // consumableReference.concoction7 = value.concoction[6] || "";
+        // consumableReference.quickUse1 = value.quickUse[0] || "";
+        // consumableReference.quickUse2 = value.quickUse[1] || "";
+        // consumableReference.quickUse3 = value.quickUse[2] || "";
+        // consumableReference.quickUse4 = value.quickUse[3] || "";
 
-        let weaponReference = globalReference.ALTweapons;
+        let weaponReference = globalReference.weapons;
         weaponReference.primary = value.gun1[0] || "";
         weaponReference.primaryMutator = value.rangedMutators[0] || "";
         weaponReference.primaryMod = value.rangedMods[0] || "";
@@ -1682,10 +1681,10 @@ let cyclesLoop = {
         weaponReference.secondaryMod = value.rangedMods[1] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
 
-        globalReference.ALTarmor.helmet = value.bestArmorSet.helmet || "";
-        globalReference.ALTarmor.chest = value.bestArmorSet.chest || "";
-        globalReference.ALTarmor.leg = value.bestArmorSet.leg || "";
-        globalReference.ALTarmor.hand = value.bestArmorSet.hand || "";
+        globalReference.armor.helmet = value.bestArmorSet.helmet || "";
+        globalReference.armor.chest = value.bestArmorSet.chest || "";
+        globalReference.armor.leg = value.bestArmorSet.leg || "";
+        globalReference.armor.hand = value.bestArmorSet.hand || "";
     },
 }
 
@@ -1871,37 +1870,19 @@ let filters = {
         readSelection("selectedDodgeType").style.color = hex;
         filters.types.vars.dodgeClass = +dodgeClass;
         //Team and Summon counts
-        globalRecords.ALTisCoop = teamCount>1 ? `Co-op` : `Solo`;
-        globalRecords.ALTteamCount = teamCount;
+        globalRecords.isCoop = teamCount>1 ? `Co-op` : `Solo`;
+        globalRecords.teamCount = teamCount;
         readSelection("selectedTeamCount").innerHTML = teamCount;
-        globalRecords.ALTminionCount = summonCount;
+        globalRecords.minionCount = summonCount;
         readSelection("selectedSummonCount").innerHTML = summonCount;
 
-        globalRecords.ALTspiritHealterStacks = +readSelection("spiritCountSlider").value;
+        globalRecords.spiritHealterStacks = +readSelection("spiritCountSlider").value;
         readSelection("selectedSpiritCount").innerHTML = readSelection("spiritCountSlider").value;
 
-        globalRecords.ALTuseShields = readSelection("settingsUseShields").checked;
-        globalRecords.ALTuseRelicHealing = readSelection("settingsUseRelicHealing").checked;
-        globalRecords.ALTuseNonStandardDR = readSelection("settingsUseNonStandardDR").checked;
+        globalRecords.useShields = readSelection("settingsUseShields").checked;
+        globalRecords.useRelicHealing = readSelection("settingsUseRelicHealing").checked;
+        globalRecords.useNonStandardDR = readSelection("settingsUseNonStandardDR").checked;
 
-        let namePath = filters.types.vars;
-
-        // readSelection("settingsArch1").innerHTML = namePath.importedArch1;
-        // readSelection("settingsPrimePerk").innerHTML = classInfo[namePath.importedArch1].primePerk
-        // readSelection("settingsArch2").innerHTML = namePath.importedArch2;
-
-        // readSelection("settingsAbility1").innerHTML = namePath.importedAbility1;
-        // readSelection("settingsAbility2").innerHTML = namePath.importedAbility2;
-
-        // readSelection("settingsPassive1").innerHTML = classInfo[namePath.importedArch1].passives.passive1.name;
-        // readSelection("settingsPassive2").innerHTML = classInfo[namePath.importedArch1].passives.passive2.name;
-        // readSelection("settingsPassive3").innerHTML = classInfo[namePath.importedArch1].passives.passive3.name;
-        // readSelection("settingsPassive4").innerHTML = classInfo[namePath.importedArch1].passives.passive4.name;
-
-        // readSelection("settingsPassive5").innerHTML = classInfo[namePath.importedArch2].passives.passive1.name;
-        // readSelection("settingsPassive6").innerHTML = classInfo[namePath.importedArch2].passives.passive2.name;
-        // readSelection("settingsPassive7").innerHTML = classInfo[namePath.importedArch2].passives.passive3.name;
-        // readSelection("settingsPassive8").innerHTML = classInfo[namePath.importedArch2].passives.passive4.name;
 
         let path = globalRecords.searchSettingsToggles;
         path.usePrimePerk = readSelection("settingsUsePrimePerk").checked;
@@ -1920,7 +1901,7 @@ let filters = {
 
         cycles.vars.bypassLimit = readSelection("bypassLimit").checked;
 
-        path = globalRecords.ALTmeleeFactors;
+        path = globalRecords.meleeFactors;
         let enemyCount = readSelection("enemyCountSlider").value;
 
         path.enemyCount = enemyCount;

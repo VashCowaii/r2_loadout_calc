@@ -2474,8 +2474,7 @@ classInfo = {
 					"HASTE": 1,
 					"outDRENCHED": 1
 				},
-				"tags": [
-				]
+				"tags": []
 			},
 			"Way of Meidra": {
 				"name": "Way of Meidra",
@@ -2504,7 +2503,7 @@ classInfo = {
 		"Expertise": 3,
 		"Spirit": 0,
 		"Vigor": 2,
-		"name": "Hunter",
+		"name": "Invoker",
 		"passives": {
 			"passive1": {
 				"name": "Entranced",
@@ -2538,7 +2537,7 @@ classInfo = {
 				"name": "Soothsayer",
 				"desc": "On Relic use, extend the duration of active Invoker skills by 20% of the base duration. Cannot exceed base duration. Relic Use Speed increased by 25% while an Invoker Skill is active.",
 				"stats": {
-					"RelicSpeed": -0.25
+					"RelicSpeed": -0.25,
 				},
 				"tags": []
 			}
@@ -11550,7 +11549,8 @@ globalRecords = {
 	"totalConcLimit": 0,
 	// "ALTtotalConcLimit": 0,
 	"greatTraitRecords": [],
-	"ALTgreatTraitRecords": [],
+	"greatConcoctionRecords": [],
+	"greatConsumableRecords": [],
 	"urlObject": {},
 	"armor": {
 		"helmet": "",
