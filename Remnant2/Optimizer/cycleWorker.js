@@ -12,6 +12,9 @@ self.onmessage = function(event) {
         delete basicsUpdates;
         delete advancedUpdates;
         delete userTrigger;
+        delete manipulateConsumable;
+        delete manipulateTrait;
+        delete manipulateURL;
 
         delete titleCombos;
         delete substatColorMods;
@@ -29,19 +32,19 @@ self.onmessage = function(event) {
     if (data.command === 'copyDataTables') {
         globalRecords = data.data;
 
-        globalRecords.meleeFactors = {...globalRecords.ALTmeleeFactors}
-        globalRecords.archs = globalRecords.ALTarchs;
-        globalRecords.armor = globalRecords.ALTarmor;
-        globalRecords.accessories = globalRecords.ALTaccessories;
-        globalRecords.consumables = globalRecords.ALTconsumables;
-        globalRecords.weapons = globalRecords.ALTweapons;
-        globalRecords.greatTraitRecords = [...globalRecords.ALTgreatTraitRecords];
-        globalRecords.teamCount = globalRecords.ALTteamCount;
-        globalRecords.minionCount = globalRecords.ALTminionCount;
-        globalRecords.useREdamage = globalRecords.ALTuseNonStandardDR;
-        globalRecords.useDMGKept = globalRecords.ALTuseNonStandardDR;
-        globalRecords.useRelicHealing = globalRecords.ALTuseRelicHealing;
-        globalRecords.useShields = globalRecords.ALTuseShields;
+        // globalRecords.meleeFactors = {...globalRecords.ALTmeleeFactors}
+
+        // globalRecords.armor = globalRecords.ALTarmor;
+        // globalRecords.accessories = globalRecords.ALTaccessories;
+        // globalRecords.consumables = globalRecords.ALTconsumables;
+        // globalRecords.weapons = globalRecords.ALTweapons;
+        
+        // globalRecords.teamCount = globalRecords.ALTteamCount;
+        // globalRecords.minionCount = globalRecords.ALTminionCount;
+        // globalRecords.useREdamage = globalRecords.ALTuseNonStandardDR;
+        // globalRecords.useDMGKept = globalRecords.ALTuseNonStandardDR;
+        // globalRecords.useRelicHealing = globalRecords.ALTuseRelicHealing;
+        // globalRecords.useShields = globalRecords.ALTuseShields;
 
 
 

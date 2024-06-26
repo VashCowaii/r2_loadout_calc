@@ -43,6 +43,26 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>June 26, 2024</h1>
+                    <ul>
+                        <li>Added the ability to add more than 4 total quick-use consumables. You can now add as many as you would like.
+                            <ul>
+                                <li>Believe it or not this change extends to Build Queries as well. Being able to bundle as many consumables as we want, into one consumable combination, actually allows us to cut down on combinations if the given query would ever use more than 4 consumables possible. The reason for this is if 5 were usable but there were 4 slots, that meant there was more than one unique combo to be had, but if we can now fit as many as we want, that means there is now only one unique combo for consumables, ever. Not a huge deal, but for considerably more loose queries this is a hefty reduction in possible combos.</li>
+                            </ul>
+                        </li>
+                        <li>Like consumables, changed the structure for concoctions to allow for a potentially infinite amount, in case the game ever adds more items that would allow you to reach a limit higher than 7.
+                            <ul>
+                                <li>Both concoction and consumable changes, will modify the URL structure.</li>
+                                <li>Consumables in the URL will not be harmed by this change. Handling exists to parse even old links, when it comes to the items used.</li>
+                                <li>On the flip side, consumable usage toggle states WILL be erased on old links. This isn't a particularly huge deal imo, as all you need to do if you had a consumable equipped that you wanted disabled for whatever reason is just disable it again and it will be retained in the link going forward. Unlike consumable item storage, it's not particularly possible for me to add handling for old links on this due to the nature of how toggles were stored, so forgive me on that one.</li>
+                            </ul>
+                        </li>
+                        <li>Fixed a crazy memory leak that could happen during Build Queries when Invoker was a selected archetype. This would typically crash your browser tab whenever this happened, I have had a very hard time narrowing this one down lmao but holy shit I finally found the issue.</li>
+                        <li>Fixed an issue where trait levels could not be modified, due to a dupe prevention check I coded incorrectly a few days ago. That's my b.</li>
+                        <li>Fixed an issue where quick-use consumables 3 & 4 in the prior structure, did not save their usage toggle states to the URL. This obviously means you won't have that issue on consumable selections greater than 4 due to how we do things now as well.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>June 25, 2024</h1>
                     <ul>
                         <li>Fixed an issue where if no archetypes had been selected yet, the first Trait selector that displays by default, did not always populate with a trait list to choose from. Users could still technically type in a trait name and if it was valid then it would take, but otherwise that required users to know how to spell trait names correctly(god knows that could be a struggle for some of you)</li>

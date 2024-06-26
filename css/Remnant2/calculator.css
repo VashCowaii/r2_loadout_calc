@@ -2973,6 +2973,13 @@ div {
     align-items: center;
     text-align: center;
 }
+.consumablesMegaBox {
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 100%;
+    display: none;
+    box-sizing: border-box;
+}
 .selectionsInfoContainer {
     width: 100%;
     height: 100%;
