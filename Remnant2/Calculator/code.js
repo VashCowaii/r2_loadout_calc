@@ -947,8 +947,6 @@ let manipulateURL = {
     manipulateURL.exportURLsetting("USEtoggledsMutator","settings",isOverride);
     manipulateURL.exportURLsetting("USEtoggledsMod","settings",isOverride);
 
-    console.log(urlObject.settings[0])
-
     for (let i=1;i<=globalRecords.greatConcoctionRecords.length;i++) {
       // manipulateURL.importURLsetting(`USEtoggledConc${i}`,urlSettings[1][i-1]);
       manipulateURL.exportURLsetting(`USEtoggledConc${i}`,"settings",isOverride,false,1);
@@ -1111,7 +1109,6 @@ let manipulateURL = {
       decoded = params.toString();
       decoded = decoded.replace(/%2C/g, ',');
       const newUrl = `${R2TKprefix}?${decoded}`;
-      console.log(newUrl)
       window.open(newUrl, '_blank').focus();
     }
   },
@@ -1468,8 +1465,6 @@ let userTrigger = {
     }
   },
   updateConsumableToggle(elemID,arrayType) {
-    console.log(elemID,arrayType)
-    console.log(userTrigger.consumableToggleStates[arrayType])
     if (userTrigger.consumableToggleStates[arrayType][elemID]) {userTrigger.consumableToggleStates[arrayType][elemID] = false}
     else {userTrigger.consumableToggleStates[arrayType][elemID] = true;}
   },
