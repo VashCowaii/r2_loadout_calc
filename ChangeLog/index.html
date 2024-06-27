@@ -43,7 +43,7 @@
                     </ul>
                 </div> -->
                 <div>
-                    <h1>June 26, 2024</h1>
+                    <h1>June 26, 2024 - Many fixes, such wow</h1>
                     <ul>
                         <li>Added the ability to add more than 4 total quick-use consumables. You can now add as many as you would like.
                             <ul>
@@ -55,11 +55,18 @@
                                 <li>Both concoction and consumable changes, will modify the URL structure.</li>
                                 <li>Consumables in the URL will not be harmed by this change. Handling exists to parse even old links, when it comes to the items used.</li>
                                 <li>On the flip side, consumable usage toggle states WILL be erased on old links. This isn't a particularly huge deal imo, as all you need to do if you had a consumable equipped that you wanted disabled for whatever reason is just disable it again and it will be retained in the link going forward. Unlike consumable item storage, it's not particularly possible for me to add handling for old links on this due to the nature of how toggles were stored, so forgive me on that one.</li>
+                                <li>Fixed an issue where in the current setup, consumables could be read twice during queries, causing some weird numbers to show up that weren't realistic</li>
+                                <li>Fixed an issue where in the current setup, consumables did not push to the results link URLs when a query result was posted, meaning you'd click to open it and it wouldn't take the quick-use consumables with it that it should have.</li>
                             </ul>
                         </li>
+                        <li>Given the changes to quick-use consumables, I've removed the ability to "Lock" filter them. You can still do occlusion filters as normal, but locking just doesn't make sense anymore on those with how it works now.</li>
+                        <li>Changed the format, during queries, in which the main thread posts batches to the sub threads. In theory this should cut down on memory usage a little bit more, as the batches are now numbers instead of full string names, saving quite a lot of space.</li>
+                        <li>Fixed an issue where individual query threads could repeatedly post the same "best-so-far" loadout if they completed a batch without finding a loadout better than that individual thread's recorded loadout. This doesn't actually change how queries work at all and it doesn't mean any of the numbers weren't right either, this just means there won't be any dupe loadouts(note there can stil be dupe values from diff loadouts).</li>
                         <li>Fixed a crazy memory leak that could happen during Build Queries when Invoker was a selected archetype. This would typically crash your browser tab whenever this happened, I have had a very hard time narrowing this one down lmao but holy shit I finally found the issue.</li>
                         <li>Fixed an issue where trait levels could not be modified, due to a dupe prevention check I coded incorrectly a few days ago. That's my b.</li>
                         <li>Fixed an issue where quick-use consumables 3 & 4 in the prior structure, did not save their usage toggle states to the URL. This obviously means you won't have that issue on consumable selections greater than 4 due to how we do things now as well.</li>
+                        <li>Fixed an issue where armor could be incorrectly applied to a "new best" loadout that did not fit it, in query results, meaning you'd open a result's link and it would have armor that didn't match the result's displayed statistic value.</li>
+                        <li>Fixed an issue where Locked items in build queries could pop an error sometimes when an item was filtered out via stats or occlusions, but was not properly added back into the possible tables, making the query think the item didn't exist.</li>
                     </ul>
                 </div>
                 <div>

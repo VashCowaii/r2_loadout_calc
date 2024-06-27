@@ -2081,31 +2081,16 @@ let formulasValues = {
     globalRecords.totalConcLimit = 1 + index.ConcLimit;
     for (let i=1;i<=recordPath.length;i++) {
       let concoction = recordPath[i-1];
-      if (i<=globalRecords.totalConcLimit) {formulasValues.pullStats(index,concoctions[concoction].stats);}
+      // if (i<=globalRecords.totalConcLimit) {
+        formulasValues.pullStats(index,concoctions[concoction].stats);
+      // }
     }
-    //Quick-use consumables
-    recordPath = globalRecords.greatConsumableRecords;
-    for (let i=1;i<=recordPath.length;i++) {
-      let quickUse = recordPath[i-1];
-      if (quickUses[quickUse]) {formulasValues.pullStats(index,quickUses[quickUse].stats);}
-    }
-  //   //Concoctions
-  //   globalRecords.totalConcLimit = 1 + index.ConcLimit;
-  //   manipulateConsumable.updateConsumableCollection("concoction");
-  //   let recordPath = globalRecords.greatConcoctionRecords;
-  //   for (let i=1;i<=globalRecords.totalConcLimit;i++) {
-  //     if (i<=recordPath.length) {
-  //       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledConc${i}`,false],concoctions[recordPath[i-1]]);
-  //     }
-  //   }
-  // //Quick-Use Consumables
-  //   manipulateConsumable.updateConsumableCollection("quickUse");
-  //   recordPath = globalRecords.greatConsumableRecords;
-  //   for (let i=1;i<=recordPath.length;i++) {
-  //     if (quickUses[recordPath[i-1]]) {
-  //       formulasValues.pullIfActive([isUIcalcs,index,`USEtoggledQuick${i}`,false],quickUses[recordPath[i-1]]);
-  //     }
-  //   }
+    // Quick-use consumables
+    // recordPath = globalRecords.greatConsumableRecords;
+    // for (let i=1;i<=recordPath.length;i++) {
+    //   let quickUse = recordPath[i-1];
+    //   if (quickUses[quickUse]) {formulasValues.pullStats(index,quickUses[quickUse].stats);}
+    // }
   },
   pullGearStats(isUIcalcs,index,ping) {
     const path = globalRecords.weapons;
@@ -2167,8 +2152,10 @@ let formulasValues = {
   //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
   pullStats(index,path) {
     for (let elements in path) {
-      if (Array.isArray(path[elements])) {index[elements] *= 1 + path[elements][0];}//If the statistic is multiplicative, like REDmg or DMGKept, etc.
-      else {index[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
+      if (index[elements] != undefined) {
+        if (Array.isArray(path[elements])) {index[elements] *= 1 + path[elements][0];}//If the statistic is multiplicative, like REDmg or DMGKept, etc.
+        else {index[elements] += path[elements];}//If the value is a general value, simply add it to the existing value on greatTable
+      }
     }
   },
   //Shorthand for shit I got tired of typing every god damn time.
@@ -3141,8 +3128,8 @@ function updateFormulas(index,ping) {
       abilityPath2 = globalRecords.archs.two.ability;
       ability1 = classInfo[globalRecords.archs.one.class].abilities[abilityPath1].customStats;
       ability2 = classInfo[globalRecords.archs.two.class].abilities[abilityPath2].customStats;
-      ability1Breakdown = ability1 ? (ability1.customDPS ? customDamage[ability1.customDPS](1,index) : -1) : -1;
-      ability2Breakdown = ability2 ? (ability2.customDPS ? customDamage[ability2.customDPS](2,index) : -1) : -1;
+      ability1Breakdown = (ability1 && ability1.customDPS) ? customDamage[ability1.customDPS](1,tableReference) : -1;
+      ability2Breakdown = (ability2 && ability2.customDPS) ? customDamage[ability2.customDPS](2,tableReference) : -1;
     }
     if (isUIcalcs || targetStat[3] === "Mod" || isSumOrCustom) {
       let weaponPath = globalRecords.weapons;
@@ -3162,8 +3149,11 @@ function updateFormulas(index,ping) {
     }
   }
 
+
+  
+
   //MISC STATS
-  let movementSpeed = valueTables[index].MovementSpeed;
+  let movementSpeed = tableReference.MovementSpeed;
 
   let returnStats = {
     totalHealth,totalHealthNoGlobal,
@@ -3181,7 +3171,7 @@ function updateFormulas(index,ping) {
     advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec,
     ability1Breakdown,ability2Breakdown,
     mod1Breakdown,mod2Breakdown,
-    // totalDPS,
+    totalDPS,
     movementSpeed
   }
   //----------RETURN VALUES-----------------------

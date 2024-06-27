@@ -244,85 +244,94 @@ let cycles = {
         cyclesLoop.updateSetupStep("Filtering by Stat Tags",false,1);
         cycles.debugPushLine("- Starting Amulets");
         yield;
-        path.amulets.Table = cycles.applyTableFilter(cycles.applyTagFilter(amulets,tagsFilter,"Amulets"),filterPath.amulet.filter[1],filterPath.amulet.filter[2][0],"Amulets");
+        path.amulets.Table = cycles.applyTableFilter(amulets,cycles.applyTagFilter(amulets,tagsFilter,"Amulets"),filterPath.amulet.filter[1],filterPath.amulet.filter[2][0],"Amulets");
         cycles.debugPushLine("- Amulets Completed<br>- Starting Rings");
         yield;
-        path.rings.Table = cycles.applyTableFilter(cycles.applyTagFilter(rings,tagsFilter,"Rings"),filterPath.ring.filter[1],filterPath.ring.filter[2][0],"Rings");
+        path.rings.Table = cycles.applyTableFilter(rings,cycles.applyTagFilter(rings,tagsFilter,"Rings"),filterPath.ring.filter[1],filterPath.ring.filter[2][0],"Rings");
         cycles.debugPushLine("- Rings Completed<br>- Starting Relics");
         yield;
-        path.relics.Table = cycles.applyTableFilter(cycles.applyTagFilter(relics,tagsFilter,"Relics"),filterPath.relic.filter[1],filterPath.relic.filter[2][0],"Relics");
+        path.relics.Table = cycles.applyTableFilter(relics,cycles.applyTagFilter(relics,tagsFilter,"Relics"),filterPath.relic.filter[1],filterPath.relic.filter[2][0],"Relics");
         cycles.debugPushLine("- Relics Completed<br>- Starting Fragments");
         yield;
-        path.fragments.Table = cycles.applyTableFilter(cycles.applyTagFilter(fragments,tagsFilter,"Fragments"),filterPath.fragment.filter[1],filterPath.fragment.filter[2][0],"Fragments");
+        path.fragments.Table = cycles.applyTableFilter(fragments,cycles.applyTagFilter(fragments,tagsFilter,"Fragments"),filterPath.fragment.filter[1],filterPath.fragment.filter[2][0],"Fragments");
         cycles.debugPushLine("- Fragments Completed<br>- Starting Consumables");
         yield;
-        path.consumables.Table = cycles.applyTableFilter(cycles.applyTagFilter(quickUses,tagsFilter,"Consumables"),filterPath.consumable.filter[1],filterPath.consumable.filter[2][0],"Consumables");
+        path.consumables.Table = cycles.applyTableFilter(quickUses,cycles.applyTagFilter(quickUses,tagsFilter,"Consumables"),filterPath.consumable.filter[1],filterPath.consumable.filter[2][0],"Consumables");
         cycles.debugPushLine("- Consumables Completed<br>- Starting Primaries");
         yield;
-        path.primaries.Table = cycles.applyTableFilter(cycles.applyTagFilter(primary,tagsFilter,"Primaries"),filterPath.primary.filter[1],filterPath.primary.filter[2][0],"Primaries");
+        path.primaries.Table = cycles.applyTableFilter(primary,cycles.applyTagFilter(primary,tagsFilter,"Primaries"),filterPath.primary.filter[1],filterPath.primary.filter[2][0],"Primaries");
         cycles.debugPushLine("- Primaries Completed<br>- Starting Melee");
         yield;
-        path.melee.Table = cycles.applyTableFilter(cycles.applyTagFilter(melee,tagsFilter,"Melee"),filterPath.melee.filter[1],filterPath.melee.filter[2][0],"Melee");
+        path.melee.Table = cycles.applyTableFilter(melee,cycles.applyTagFilter(melee,tagsFilter,"Melee"),filterPath.melee.filter[1],filterPath.melee.filter[2][0],"Melee");
         cycles.debugPushLine("- Melee Completed<br>- Starting Secondaries");
         yield;
-        path.secondaries.Table = cycles.applyTableFilter(cycles.applyTagFilter(secondary,tagsFilter,"Secondaries"),filterPath.secondary.filter[1],filterPath.secondary.filter[2][0],"Secondaries");
+        path.secondaries.Table = cycles.applyTableFilter(secondary,cycles.applyTagFilter(secondary,tagsFilter,"Secondaries"),filterPath.secondary.filter[1],filterPath.secondary.filter[2][0],"Secondaries");
         cycles.debugPushLine("- Secondaries Completed<br>- Starting Ranged Mutators");
         yield;
-        path.primaryMutators.Table = cycles.applyTableFilter(cycles.applyTagFilter(rangedMutators,tagsFilter,"Ranged Mutators"),filterPath.primaryMutator.filter[1],filterPath.primaryMutator.filter[2][0],"Ranged Mutators");
+        path.primaryMutators.Table = cycles.applyTableFilter(rangedMutators,cycles.applyTagFilter(rangedMutators,tagsFilter,"Ranged Mutators"),filterPath.primaryMutator.filter[1],filterPath.primaryMutator.filter[2][0],"Ranged Mutators");
         cycles.debugPushLine("- Ranged Mutators Completed<br>- Starting Melee Mutators");
         yield;
-        path.meleeMutators.Table = cycles.applyTableFilter(cycles.applyTagFilter(meleeMutators,tagsFilter,"Melee Mutators"),filterPath.meleeMutator.filter[1],filterPath.meleeMutator.filter[2][0],"Melee Mutators");
+        path.meleeMutators.Table = cycles.applyTableFilter(meleeMutators,cycles.applyTagFilter(meleeMutators,tagsFilter,"Melee Mutators"),filterPath.meleeMutator.filter[1],filterPath.meleeMutator.filter[2][0],"Melee Mutators");
         cycles.debugPushLine("- Melee Mutators Completed<br>- Starting Primary Mods");
         yield;
-        path.primaryMods.Table = cycles.applyTableFilter(cycles.applyTagFilter(rangedMods,tagsFilter,"Ranged Mods"),filterPath.primaryMod.filter[1],filterPath.primaryMod.filter[2][0],"Ranged Mods");
+        path.primaryMods.Table = cycles.applyTableFilter(rangedMods,cycles.applyTagFilter(rangedMods,tagsFilter,"Ranged Mods"),filterPath.primaryMod.filter[1],filterPath.primaryMod.filter[2][0],"Ranged Mods");
         cycles.debugPushLine("- Ranged Mods Completed");
         yield;
 
         cycles.debugPushLine("- Starting Concoctions");
         yield;
-        path.concoctions.Table = cycles.applyTableFilter(cycles.applyTagFilter(concoctions,tagsFilter,"Concoctions"),filterPath.concoction.filter[1],filterPath.concoction.filter[2][0],"Concoctions");
+        path.concoctions.Table = cycles.applyTableFilter(concoctions,cycles.applyTagFilter(concoctions,tagsFilter,"Concoctions"),filterPath.concoction.filter[1],filterPath.concoction.filter[2][0],"Concoctions");
         cycles.debugPushLine("- Concoctions Completed<br>- Starting Armor - Helmets");
         yield;
-        path.helmets.Table = cycles.applyTableFilter(cycles.applyTagFilter(helmets,["Armor"],"Helmets"),filterPath.helmets.filter[1],filterPath.helmets.filter[2][0],"Helmets");
+        path.helmets.Table = cycles.applyTableFilter(helmets,cycles.applyTagFilter(helmets,["Armor"],"Helmets"),filterPath.helmets.filter[1],filterPath.helmets.filter[2][0],"Helmets");
         cycles.debugPushLine("- Armor - Helmets Completed<br>- Starting Armor - Chests");
         yield;
-        path.chests.Table = cycles.applyTableFilter(cycles.applyTagFilter(chests,["Armor"],"Chests"),filterPath.chests.filter[1],filterPath.chests.filter[2][0],"Chests");
+        path.chests.Table = cycles.applyTableFilter(chests,cycles.applyTagFilter(chests,["Armor"],"Chests"),filterPath.chests.filter[1],filterPath.chests.filter[2][0],"Chests");
         cycles.debugPushLine("- Armor - Chests Completed<br>- Starting Armor - Hands");
         yield;
-        path.hands.Table = cycles.applyTableFilter(cycles.applyTagFilter(hands,["Armor"],"Hands"),filterPath.hands.filter[1],filterPath.hands.filter[2][0],"Hands");
+        path.hands.Table = cycles.applyTableFilter(hands,cycles.applyTagFilter(hands,["Armor"],"Hands"),filterPath.hands.filter[1],filterPath.hands.filter[2][0],"Hands");
         cycles.debugPushLine("- Armor - Hands Completed<br>- Starting Armor - Legs");
         yield;
-        path.legs.Table = cycles.applyTableFilter(cycles.applyTagFilter(legs,["Armor"],"Legs"),filterPath.legs.filter[1],filterPath.legs.filter[2][0],"Legs");
+        path.legs.Table = cycles.applyTableFilter(legs,cycles.applyTagFilter(legs,["Armor"],"Legs"),filterPath.legs.filter[1],filterPath.legs.filter[2][0],"Legs");
         cycles.debugPushLine("- Armor - Hands Completed");
         yield;
         cycles.debugPushLine("FILTERS COMPLETED");
         yield;
 
+
+        //----------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
+
+
+
         cycles.debugPushLine("APPLYING ITEM FILTERS TO TABLES...");
         cyclesLoop.updateSetupStep("Applying Item Filters to Amulets",false,1);
         yield;
-        const amuletCombos = cycles.generateAnyCombinations(filters.types.amulet.filter[0],[cycles.vars.amulets.Table],1,false,true);
+        path.amuletCombos = cycles.generateAnyCombinations(filters.types.amulet.filter[0],[cycles.vars.amulets.Table],1,false,true);
         cyclesLoop.updateSetupStep("Applying Item Filters to Rings",false,1);
         yield;
-        const ringCombos = cycles.generateAnyCombinations(filters.types.ring.filter[0],[cycles.vars.rings.Table],4,false,true);
+        path.ringCombos = cycles.generateAnyCombinations(filters.types.ring.filter[0],[cycles.vars.rings.Table],4,false,true);
         cyclesLoop.updateSetupStep("Applying Item Filters to Relics",false,1);
         yield;
-        const relicCombos = cycles.generateAnyCombinations(filters.types.relic.filter[0],[cycles.vars.relics.Table],1,false,false);
+        path.relicCombos = cycles.generateAnyCombinations(filters.types.relic.filter[0],[cycles.vars.relics.Table],1,false,false);
         cyclesLoop.updateSetupStep("Applying Item Filters to Fragments",false,1);
         yield;
-        const fragmentCombos = cycles.generateAnyCombinations(filters.types.fragment.filter[0],[cycles.vars.fragments.Table],3,false,false);
+        path.fragmentCombos = cycles.generateAnyCombinations(filters.types.fragment.filter[0],[cycles.vars.fragments.Table],3,false,false);
         cyclesLoop.updateSetupStep("Applying Item Filters to Consumables",false,1);
         yield;
-        const consumableCombos = cycles.generateAnyCombinations(filters.types.consumable.filter[0],[cycles.vars.consumables.Table],4,false,false);
+        path.consumableCombos = cycles.generateAnyCombinations(filters.types.consumable.filter[0],[cycles.vars.consumables.Table],null,false,false);
         cyclesLoop.updateSetupStep("Applying Item Filters to Primaries",false,1);
         yield;
-        const primaryCombos = cycles.generateAnyCombinations(filters.types.primary.filter[0],[cycles.vars.primaries.Table],1,false,false);
+        path.primaryCombos = cycles.generateAnyCombinations(filters.types.primary.filter[0],[cycles.vars.primaries.Table],1,false,false);
         cyclesLoop.updateSetupStep("Applying Item Filters to Melee",false,1);
         yield;
-        const meleeCombos = cycles.generateAnyCombinations(filters.types.melee.filter[0],[cycles.vars.melee.Table],1,false,false);
+        path.meleeCombos = cycles.generateAnyCombinations(filters.types.melee.filter[0],[cycles.vars.melee.Table],1,false,false);
         cyclesLoop.updateSetupStep("Applying Item Filters to Secondaries",false,1);
         yield;
-        const secondaryCombos = cycles.generateAnyCombinations(filters.types.secondary.filter[0],[cycles.vars.secondaries.Table],1,false,false);
+        path.secondaryCombos = cycles.generateAnyCombinations(filters.types.secondary.filter[0],[cycles.vars.secondaries.Table],1,false,false);
         let rangedMutatorLocks = [];
         //Combine lock filters for primary/secondary mutators
         cyclesLoop.updateSetupStep("Applying Item Filters to Ranged Mutators",false,1);
@@ -337,11 +346,11 @@ let cycles = {
             rangedMutatorLocks.push();
             rangedMutatorLocks.push(filters.types.secondaryMutator.filter[0]);
         }
-        const rangedMutatorCombos = cycles.generateAnyCombinations(rangedMutatorLocks,[cycles.vars.primaryMutators.Table],2,false,false);
+        path.rangedMutatorCombos = cycles.generateAnyCombinations(rangedMutatorLocks,[cycles.vars.primaryMutators.Table],2,false,false);
         //Generate Melee Mutators combos
         cyclesLoop.updateSetupStep("Applying Item Filters to Melee Mutators",false,1);
         yield;
-        const meleeMutatorCombos = cycles.generateAnyCombinations(filters.types.meleeMutator.filter[0],[cycles.vars.meleeMutators.Table],1,false,false);
+        path.meleeMutatorCombos = cycles.generateAnyCombinations(filters.types.meleeMutator.filter[0],[cycles.vars.meleeMutators.Table],1,false,false);
         //Generate Primary Mods combos
         let rangedModLocks = [];
         //Combine lock filters for primary/secondary mods
@@ -355,21 +364,22 @@ let cycles = {
             rangedModLocks.push();
             rangedModLocks.push(filters.types.secondaryMod.filter[0]);
         }
-        const rangedModCombos = cycles.generateAnyCombinations(rangedModLocks,[cycles.vars.primaryMods.Table],2,false,false);
+        path.rangedModCombos = cycles.generateAnyCombinations(rangedModLocks,[cycles.vars.primaryMods.Table],2,false,false);
         // //concoctions
         cyclesLoop.updateSetupStep("Applying Item Filters to Variable Concoction Tables",false,1);
         yield;
-        let concMegaTable = {};
-        concMegaTable.concoctionCombos1 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],1,false,false);
-        concMegaTable.concoctionCombos2 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],2,false,false);
-        concMegaTable.concoctionCombos3 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],3,false,false);
-        concMegaTable.concoctionCombos4 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],4,false,false);
-        concMegaTable.concoctionCombos5 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],5,false,false);
-        concMegaTable.concoctionCombos6 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],6,false,false);
-        concMegaTable.concoctionCombos7 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],7,false,false);
+        path.concMegaTable = {};
+        path.concMegaTable.concoctionCombos1 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],1,false,false);
+        path.concMegaTable.concoctionCombos2 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],2,false,false);
+        path.concMegaTable.concoctionCombos3 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],3,false,false);
+        path.concMegaTable.concoctionCombos4 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],4,false,false);
+        path.concMegaTable.concoctionCombos5 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],5,false,false);
+        path.concMegaTable.concoctionCombos6 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],6,false,false);
+        path.concMegaTable.concoctionCombos7 = cycles.generateAnyCombinations(filters.types.concoction.filter[0],[cycles.vars.concoctions.Table],7,false,false);
 
         cyclesLoop.updateSetupStep("Defining Armor Tables",false,1);
         yield;
+    
         let armorLocksArray = [];
         armorLocksArray.push(filters.types.helmets.filter[0].length ? filters.types.helmets.filter[0] :  null);
         armorLocksArray.push(filters.types.chests.filter[0].length ? filters.types.chests.filter[0] : null);
@@ -393,22 +403,22 @@ let cycles = {
         cyclesLoop.updateSetupStep("Calculating Total Combinations...",false,1);
         yield;
         //These are all items that do NOT contribute to concoction limits, and as such can be calculated beforehand via easy multiplication
-        let staticSets = (relicCombos.length
-            * fragmentCombos.length
-            * consumableCombos.length
-            * primaryCombos.length
-            * secondaryCombos.length
-            * meleeCombos.length
-            * rangedMutatorCombos.length
-            * meleeMutatorCombos.length
-            * rangedModCombos.length);
+        let staticSets = (path.relicCombos.length
+            * path.fragmentCombos.length
+            // * path.consumableCombos.length
+            * path.primaryCombos.length
+            * path.secondaryCombos.length
+            * path.meleeCombos.length
+            * path.rangedMutatorCombos.length
+            * path.meleeMutatorCombos.length
+            * path.rangedModCombos.length);
         //Combinations counter loops
 
         let counterChecker = 0
-        for (const ringCombo of ringCombos) {
-            for (const amulet of amuletCombos) {
+        for (const ringCombo of path.ringCombos) {
+            for (const amulet of path.amuletCombos) {
                 let currentLimit = cyclesLoop.combineConcoctionLimit(ringCombo,amulet,classSet);//TODO: Add more here if more item types start adding concoction limits
-                let switchLength = concMegaTable[`concoctionCombos${currentLimit}`].length;
+                let switchLength = path.concMegaTable[`concoctionCombos${currentLimit}`].length;
 
                 if (switchLength<1) {switchLength=1;}
                 comboCounter += switchLength;
@@ -466,6 +476,8 @@ let cycles = {
 
             cyclesLoop.updateSetupStep("Exporting data to Web Workers",false,1);
 
+            globalRecords.consumableCombo = path.consumableCombos;
+
             for (let i=1;i<=threadCount;i++) {
                 cyclesLoop.startCycleWorker(i,threadCount);
                 cycles.debugPushLine(`Initiating Web Worker #${i}`);
@@ -474,7 +486,8 @@ let cycles = {
                 workers[cycleWorker].postMessage({command:`copyFilteredTables`,cyclesCustom});
                 workers[cycleWorker].postMessage({command:`copyTableFilters`,data:filters.types});
                 workers[cycleWorker].postMessage({command:`copyDataTables`,data:globalRecords});
-                readSelection("openThreadsDisplay").innerHTML = +readSelection("openThreadsDisplay").innerHTML + 1;
+                cycles.vars.workersRunning += 1;
+                readSelection("openThreadsDisplay").innerHTML = cycles.vars.workersRunning;
                 yield;
             }
             cyclesLoop.updateSetupStep("Completed Setup",false,1);
@@ -484,18 +497,18 @@ let cycles = {
             cycles.vars.baseArmorCombos = {};
             cycles.vars.armorCombos = {};
             cycles.vars.weightFirst = {};
-            cycles.vars.amulets = {};
-            cycles.vars.rings = {};
-            cycles.vars.relics = {};
-            cycles.vars.fragments = {};
-            cycles.vars.concoctions = {};
-            cycles.vars.consumables = {};
-            cycles.vars.primaries = {};
-            cycles.vars.melee = {};
-            cycles.vars.secondaries = {};
-            cycles.vars.primaryMutators = {};
-            cycles.vars.meleeMutators = {};
-            cycles.vars.primaryMods = {};
+            // cycles.vars.amulets = {};
+            // cycles.vars.rings = {};
+            // cycles.vars.relics = {};
+            // cycles.vars.fragments = {};
+            // cycles.vars.concoctions = {};
+            // cycles.vars.consumables = {};
+            // cycles.vars.primaries = {};
+            // cycles.vars.melee = {};
+            // cycles.vars.secondaries = {};
+            // cycles.vars.primaryMutators = {};
+            // cycles.vars.meleeMutators = {};
+            // cycles.vars.primaryMods = {};
             cycles.vars.helmets = {};
             cycles.vars.chests = {};
             cycles.vars.hands = {};
@@ -506,26 +519,37 @@ let cycles = {
 
             let firstRunPosts = 0;
             let maxStorageArrays = Math.floor(threadCount*1.2)
+            const quickUse = path.consumableCombos;
 
-            for (const ringSet of ringCombos) {
-                for (const amulet of amuletCombos) {
+            for (const ringSet of path.ringCombos) {
+                for (const amulet of path.amuletCombos) {
                     //Needed to extract the current concoction limit.
                     let currentLimit = cyclesLoop.combineConcoctionLimit(ringSet,amulet,classSet);//TODO: Add more item types if they add concLimit
-                    let currentTable = concMegaTable[`concoctionCombos${currentLimit}`];
-                    for (const relic of relicCombos) {
-                    for (const stick of meleeCombos) {
-                    for (const gun2 of secondaryCombos) {
-                    for (const gun1 of primaryCombos) {
-                    for (const quickUse of consumableCombos) {
-                    for (const rMod1 of rangedModCombos) {
-                    for (const fragmentSet of fragmentCombos) {
-                    for (const mMutator1 of meleeMutatorCombos) {
-                    for (const rMutator1 of rangedMutatorCombos) {
+                    let currentTable = path.concMegaTable[`concoctionCombos${currentLimit}`];
+                    for (const relic of path.relicCombos) {
+                    for (const stick of path.meleeCombos) {
+                    for (const gun2 of path.secondaryCombos) {
+                    for (const gun1 of path.primaryCombos) {
+                    for (const rMod1 of path.rangedModCombos) {
+                    for (const fragmentSet of path.fragmentCombos) {
+                    for (const mMutator1 of path.meleeMutatorCombos) {
+                    for (const rMutator1 of path.rangedMutatorCombos) {
                     for (let conc=0;conc<currentTable.length;conc++) {
                     cycleCounter++;
                     lastSent++;
 
-                    messageComboArray.push({ringSet,relic,fragmentSet,amulet,concoction:currentTable[conc],quickUse,
+
+                    // let refKeys = Object.keys(refTable);
+                    // for (let key in returnTable) {
+                    //     if (refKeys.includes(key)) {
+                    //         returnTable[key].ID = refKeys.indexOf(key);
+                    //     }
+                    // }
+                    // console.log(ringSet,relic,fragmentSet,amulet,currentTable[conc],quickUse,
+                    //     gun1,gun2,stick,rMutator1, mMutator1,rMod1)
+                    //     alert("test")
+
+                    messageComboArray.push({ringSet,relic,fragmentSet,amulet,concoction:currentTable[conc],
                         gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1});
 
                     if (lastSent === 100000 || cycleCounter === comboCounter) {
@@ -552,20 +576,47 @@ let cycles = {
                             yield;
                         }
                     }
-                    }}}}}}}}}}
+                    }}}}}}}}}
                 }  
             }
-            delete ringCombos;
-            delete amuletCombos;
-            delete concMegaTable;
-            delete relicCombos;
-            delete meleeCombos;
-            delete secondaryCombos;
-            delete primaryCombos;
-            delete consumableCombos;
+            // delete ringCombos;
+            // delete amuletCombos;
+            // delete concMegaTable;
+            // delete relicCombos;
+            // delete meleeCombos;
+            // delete secondaryCombos;
+            // delete primaryCombos;
+            // delete consumableCombos;
+            cycles.vars.baseArmorCombos = {};
+            cycles.vars.armorCombos = {};
+            cycles.vars.weightFirst = {};
+            cycles.vars.amulets = {};
+            cycles.vars.rings = {};
+            cycles.vars.relics = {};
+            cycles.vars.fragments = {};
+            cycles.vars.concoctions = {};
+            cycles.vars.consumables = {};
+            cycles.vars.primaries = {};
+            cycles.vars.melee = {};
+            cycles.vars.secondaries = {};
+            cycles.vars.primaryMutators = {};
+            cycles.vars.meleeMutators = {};
+            cycles.vars.primaryMods = {};
+            cycles.vars.helmets = {};
+            cycles.vars.chests = {};
+            cycles.vars.hands = {};
+            cycles.vars.legs = {};
+            delete cycles.vars.ringCombos;
+            delete cycles.vars.amuletCombos;
+            delete cycles.vars.concMegaTable;
+            delete cycles.vars.relicCombos;
+            delete cycles.vars.meleeCombos;
+            delete cycles.vars.secondaryCombos;
+            delete cycles.vars.primaryCombos;
+            delete cycles.vars.consumableCombos;
             console.log(`Completed distributing all ${sentSoFar.toLocaleString()} combos to ${threadCount} workers.`);
         }
-        return
+        return;
     },
     reinstanceJSON(table) {return JSON.parse(JSON.stringify(table));},
     removeExclusions(table,filter) {
@@ -583,7 +634,7 @@ let cycles = {
         }
         return tempTable;
     },
-    applyTableFilter(table,filterPath,occlusionType,debugTable) {
+    applyTableFilter(refTable,table,filterPath,occlusionType,debugTable) {
         let returnTable;
         if (filterPath.length && !occlusionType) {returnTable = cycles.removeExclusions(table,filterPath);}
         else if (filterPath.length && occlusionType) {returnTable = cycles.enforceInclusions(table,filterPath);}
@@ -601,22 +652,68 @@ let cycles = {
         if (occlusionType) {type = "INCLUSION";}
         cycles.debugPushLine(`-- Filters/Occlusions - ${applied} ${emptyOrNot}${type} on ${debugTable}${filterSample}`);
 
+        let refKeys = Object.keys(refTable);
+
+        for (let key in returnTable) {
+            if (refKeys.includes(key)) {
+                returnTable[key].ID = refKeys.indexOf(key);
+            }
+        }
+
         return returnTable;
     },
     extractTableEntry(item) {
-        if (amulets[item]) {return amulets[item];}
-        if (rings[item]) {return rings[item];}
-        if (relics[item]) {return relics[item];}
-        if (fragments[item]) {return fragments[item];}
-        if (primary[item]) {return primary[item];}
-        if (melee[item]) {return melee[item];}
-        if (secondary[item]) {return secondary[item];}
-        if (rangedMutators[item]) {return rangedMutators[item];}
-        if (meleeMutators[item]) {return meleeMutators[item];}
-        if (rangedMods[item]) {return rangedMods[item];}
-        if (concoctions[item]) {return concoctions[item];}
-        if (rings[item]) {return rings[item];}
-        if (quickUses[item]) {return quickUses[item];}
+        let ID;
+        if (amulets[item]) {
+            dataRef = Object.keys(amulets);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (rings[item]) {
+            dataRef = Object.keys(rings);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (relics[item]) {
+            dataRef = Object.keys(relics);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (fragments[item]) {
+            dataRef = Object.keys(fragments);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (primary[item]) {
+            dataRef = Object.keys(primary);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (melee[item]) {
+            dataRef = Object.keys(melee);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (secondary[item]) {
+            dataRef = Object.keys(secondary);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (rangedMutators[item]) {
+            dataRef = Object.keys(rangedMutators);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (meleeMutators[item]) {
+            dataRef = Object.keys(meleeMutators);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (rangedMods[item]) {
+            dataRef = Object.keys(rangedMods);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (concoctions[item]) {
+            dataRef = Object.keys(concoctions);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+        if (quickUses[item]) {
+            dataRef = Object.keys(quickUses);
+            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+        }
+
+        if (ID) {return {ID}}
         postMessage({command: `pushAlert`, data: `cycles.extractTableEntry(${item}) failed to find an valid item entry.`});
     },
     checkConcoctionLimit(table,slots,item1,item2,item3,item4,item5,item6,item7) {
@@ -746,10 +843,16 @@ let cycles = {
     },
     generateAnyCombinations(specified,tables,slots,isArmor,hasConcoctions) {
         if (!tables) {alert(`ERROR: PREGENERATION ABORTED\n\nNo table references passed to combination pregeneration.\n\nSpecified: ${specified}\nSlots: ${slots}`);return [];}
-        if (!slots) {alert(`ERROR: PREGENERATION ABORTED\n\nNo slot count passed to combination pregeneration.\n\nSpecified: ${specified}\nTables: ${tables}`);return [];}
+        if (!slots && slots != null) {alert(`ERROR: PREGENERATION ABORTED\n\nNo slot count passed to combination pregeneration.\n\nSpecified: ${specified}\nTables: ${tables}`);return [];}
 
         if (!specified) {specified=null;}
         const slotNamesStarter = Object.keys(tables[0]);
+        const combinations = [];
+
+        if (slots === null) {
+            for (entry of slotNamesStarter) {combinations.push(tables[0][entry].ID);}
+            return combinations || [""];
+        }
 
         //If the amount of slots exceeds the table length(so like if an inclusion of 1 ring applies) then cut the slots to match
         //If I ever feed multiple tables for each slot to iterate on like I made this for, I'll have to change how this part works
@@ -759,7 +862,6 @@ let cycles = {
             else {slots = specified.length;}
         }
 
-        const combinations = [];
         let iterateSeparately = tables.length>1;
         let concoctionLimit = 1;
         let totalArmor,totalWeight; //Only used in loopSlot4
@@ -767,17 +869,15 @@ let cycles = {
         function loopSlot1(index) {
             if (slots>=1) {
                 let iteration = 0;
+                const refTable = tables[0];
                 //if slot 1 is locked/dedicated
                 if (specified[0] || specified[0] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===1) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,specified[0]);
-                            combinations.push([specified[0],concoctionLimit]);
+                        if (!refTable[specified[0]]) {
+                            refTable[specified[0]] = cycles.extractTableEntry(specified[0])
                         }
-                        else {
-                            combinations.push([specified[0]]);
-                        }
+                        combinations.push([refTable[specified[0]].ID]);
                     }//Unless only 1 slot exists, then push the combo
                     else {loopSlot2(iteration,specified[0]);}//Otherwise head to slot 2 loops
                 }
@@ -789,13 +889,7 @@ let cycles = {
                         //No dupe check needed here as it's the first slot
                         if (!iterateSeparately) {iteration = i+1;}
                         if (slots===1) {
-                            if (hasConcoctions) {
-                                concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slotNamesStarter[i]);
-                                combinations.push([slotNamesStarter[i],concoctionLimit]);
-                            }
-                            else {
-                                combinations.push([slotNamesStarter[i]]);
-                            }
+                            combinations.push([refTable[slotNamesStarter[i]].ID]);
                         }//If only 1 slot exists, push combo
                         else {loopSlot2(iteration,slotNamesStarter[i]);}//Otherwise continue to the next slot's loops
                     }
@@ -805,17 +899,15 @@ let cycles = {
         function loopSlot2(index,slot1) {
             if (slots>=2) {
                 const slotNames = tables.length>=2 ? Object.keys(tables[1]) : slotNamesStarter;
+                const refTable = tables.length>=2 ? tables[1] : tables[0];
                 let iteration = 0;
                 if (specified[1] || specified[1] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===2) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,specified[1]);
-                            combinations.push([slot1,specified[1],concoctionLimit]);
+                        if (!refTable[specified[1]]) {
+                            refTable[specified[1]] = cycles.extractTableEntry(specified[1])
                         }
-                        else {
-                            combinations.push([slot1,specified[1]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[specified[1]].ID]);
                     }
                     else {loopSlot3(iteration,slot1,specified[1]);}
                 }
@@ -825,13 +917,7 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===2) {
-                                if (hasConcoctions) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slotNames[i]);
-                                    combinations.push([slot1,slotNames[i],concoctionLimit]);
-                                }
-                                else {
-                                    combinations.push([slot1,slotNames[i]]);
-                                }
+                                combinations.push([refTable[slot1].ID,refTable[slotNames[i]].ID]);
                             }
                             else {loopSlot3(iteration,slot1,slotNames[i]);}
                         }
@@ -842,17 +928,15 @@ let cycles = {
         function loopSlot3(index,slot1,slot2) {
             if (slots>=3) {
                 const slotNames = tables.length>=3 ? Object.keys(tables[2]) : slotNamesStarter;
+                const refTable = tables.length>=3 ? tables[2] : tables[0];
                 let iteration = 0;
                 if (specified[2] || specified[2] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===3) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,specified[2]);
-                            combinations.push([slot1,slot2,specified[2],concoctionLimit]);
+                            if (!refTable[specified[2]]) {
+                            refTable[specified[2]] = cycles.extractTableEntry(specified[2])
                         }
-                        else {
-                            combinations.push([slot1,slot2,specified[2]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[specified[2]].ID]);
                     }
                     else {loopSlot4(iteration,slot1,slot2,specified[2]);}
                 }
@@ -867,7 +951,7 @@ let cycles = {
                                     combinations.push([slot1,slot2,slotNames[i],concoctionLimit]);
                                 }
                                 else {
-                                    combinations.push([slot1,slot2,slotNames[i]]);
+                                    combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slotNames[i]].ID]);
                                 }
                             }
                             else {loopSlot4(iteration,slot1,slot2,slotNames[i]);}
@@ -879,17 +963,15 @@ let cycles = {
         function loopSlot4(index,slot1,slot2,slot3) {
             if (slots>=4) {
                 const slotNames = tables.length>=4 ? Object.keys(tables[3]) : slotNamesStarter;
+                const refTable = tables.length>=4 ? tables[3] : tables[0];
                 let iteration = 0;
                 if (specified[3] || specified[3] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===4) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,specified[3]);
-                            combinations.push([slot1,slot2,slot3,specified[3],concoctionLimit]);
+                        if (!refTable[specified[3]]) {
+                            refTable[specified[3]] = cycles.extractTableEntry(specified[3])
                         }
-                        else {
-                            combinations.push([slot1,slot2,slot3,specified[3]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[specified[3]].ID]);
                     }
                     else {loopSlot5(iteration,slot1,slot2,slot3,specified[3]);}
                 }
@@ -900,13 +982,7 @@ let cycles = {
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===4) {
                                 if (!isArmor) {
-                                    if (hasConcoctions) {
-                                        concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slotNames[i]);
-                                        combinations.push([slot1,slot2,slot3,slotNames[i],concoctionLimit]);
-                                    }
-                                    else {
-                                        combinations.push([slot1,slot2,slot3,slotNames[i]]);
-                                    }
+                                    combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slotNames[i]].ID]);
                                 }
                                 else if (isArmor) {
                                     totalArmor = armor.helmets[slot1].stats.Armor + armor.chests[slot2].stats.Armor + armor.legs[slot3].stats.Armor + armor.hands[slotNames[i]].stats.Armor;
@@ -930,17 +1006,15 @@ let cycles = {
         function loopSlot5(index,slot1,slot2,slot3,slot4) {
             if (slots>=5) {
                 const slotNames = tables.length>=5 ? Object.keys(tables[4]) : slotNamesStarter;
+                const refTable = tables.length>=5 ? tables[4] : tables[0];
                 let iteration = 0;
                 if (specified[4] || specified[4] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===5) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,specified[4]);
-                            combinations.push([slot1,slot2,slot3,slot4,specified[4],concoctionLimit]);
+                        if (!refTable[specified[4]]) {
+                            refTable[specified[4]] = cycles.extractTableEntry(specified[4])
                         }
-                        else {
-                            combinations.push([slot1,slot2,slot3,slot4,specified[4]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[specified[4]].ID]);
                     }
                     else {loopSlot6(iteration,slot1,slot2,slot3,slot4,specified[4]);}
                 }
@@ -950,13 +1024,7 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===5) {
-                                if (hasConcoctions) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slotNames[i]);
-                                    combinations.push([slot1,slot2,slot3,slot4,slotNames[i],concoctionLimit]);
-                                }
-                                else {
-                                    combinations.push([slot1,slot2,slot3,slot4,slotNames[i]]);
-                                }
+                                combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slotNames[i]].ID]);
                             }
                             else {loopSlot6(iteration,slot1,slot2,slot3,slot4,slotNames[i]);}
                         }
@@ -967,17 +1035,15 @@ let cycles = {
         function loopSlot6(index,slot1,slot2,slot3,slot4,slot5) {
             if (slots>=6) {
                 const slotNames = tables.length>=6 ? Object.keys(tables[5]) : slotNamesStarter;
+                const refTable = tables.length>=6 ? tables[5] : tables[0];
                 let iteration = 0;
                 if (specified[5] || specified[5] === "") {
                     if (!iterateSeparately) {iteration = index;}
                     if (slots===6) {
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,specified[5]);
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,specified[5],concoctionLimit]);
+                        if (!refTable[specified[5]]) {
+                            refTable[specified[5]] = cycles.extractTableEntry(specified[5])
                         }
-                        else {
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,specified[5]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[specified[5]].ID]);
                     }
                     else {loopSlot7(iteration,slot1,slot2,slot3,slot4,slot5,specified[5]);}
                 }
@@ -987,13 +1053,7 @@ let cycles = {
                             if (!slotNames[i]) {continue;}
                             if (!iterateSeparately) {iteration = i+1;}
                             if (slots===6) {
-                                if (hasConcoctions) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slotNames[i]);
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slotNames[i],concoctionLimit]);
-                                }
-                                else {
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slotNames[i]]);
-                                }
+                                combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[slotNames[i]].ID]);
                             }
                             else {loopSlot7(iteration,slot1,slot2,slot3,slot4,slot5,slotNames[i]);}
                         }
@@ -1004,28 +1064,23 @@ let cycles = {
         function loopSlot7(index,slot1,slot2,slot3,slot4,slot5,slot6) {
             if (slots>=7) {
                 const slotNames = tables.length>=7 ? Object.keys(tables[6]) : slotNamesStarter;
+                const refTable = tables.length>=7 ? tables[6] : tables[0];
                 // let iteration = 0; //Not needed for the final rotation
                 if (specified[6] || specified[6] === "") {
                     if (slots===7) {
                         if (!iterateSeparately) {iteration = index;}
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        if (!refTable[specified[6]]) {
+                            refTable[specified[6]] = cycles.extractTableEntry(specified[6])
                         }
-                        else {
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[slot6].ID,refTable[specified[6]].ID]);
                     }
                     //Notify me if I end up passing more than 4 slots, will remind me to expand from here if needed.
                     else {
                         alert(`Too many slots passed. Only 7 will be adhered to.`);
-                        if (hasConcoctions) {
-                            concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,specified[6]);
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6],concoctionLimit]);
+                        if (!refTable[specified[6]]) {
+                            refTable[specified[6]] = cycles.extractTableEntry(specified[6])
                         }
-                        else {
-                            combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,specified[6]]);
-                        }
+                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[slot6].ID,refTable[specified[6]].ID]);
                     }
                 }
                 else {
@@ -1033,23 +1088,11 @@ let cycles = {
                         if (slotNames[i]!=slot1 && slotNames[i]!=slot2 && slotNames[i]!=slot3 && slotNames[i]!=slot4 && slotNames[i]!=slot5 && slotNames[i]!=slot6) {
                             if (!slotNames[i]) {continue;}
                             if (slots===7) {
-                                if (hasConcoctions) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);
-                                }
-                                else {
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]]);
-                                }
+                                combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[slot6].ID,refTable[slotNames[i]].ID]);
                             }
                             else {
                                 alert(`Too many slots passed. Only 7 will be adhered to.`);
-                                if (hasConcoctions) {
-                                    concoctionLimit = cycles.checkConcoctionLimit(tables,slots,slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]);
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i],concoctionLimit]);
-                                }
-                                else {
-                                    combinations.push([slot1,slot2,slot3,slot4,slot5,slot6,slotNames[i]]);
-                                }
+                                combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[slot6].ID,refTable[slotNames[i]].ID]);
                             }
                         }
                     }
@@ -1077,7 +1120,40 @@ let cyclesLoop = {
     //Stop the cycles
     generationStop(endType,cycleWorker,endedWithoutIssue,endedBeforeWorkerCreation) {
 
-        cycles.iterator = null;
+        cycles.vars.baseArmorCombos = {};
+        cycles.vars.armorCombos = {};
+        cycles.vars.weightFirst = {};
+        cycles.vars.amulets = {};
+        cycles.vars.rings = {};
+        cycles.vars.relics = {};
+        cycles.vars.fragments = {};
+        cycles.vars.concoctions = {};
+        cycles.vars.consumables = {};
+        cycles.vars.primaries = {};
+        cycles.vars.melee = {};
+        cycles.vars.secondaries = {};
+        cycles.vars.primaryMutators = {};
+        cycles.vars.meleeMutators = {};
+        cycles.vars.primaryMods = {};
+        cycles.vars.helmets = {};
+        cycles.vars.chests = {};
+        cycles.vars.hands = {};
+        cycles.vars.legs = {};
+        delete cycles.vars.ringCombos;
+        delete cycles.vars.amuletCombos;
+        delete cycles.vars.concMegaTable;
+        delete cycles.vars.relicCombos;
+        delete cycles.vars.meleeCombos;
+        delete cycles.vars.secondaryCombos;
+        delete cycles.vars.primaryCombos;
+        delete cycles.vars.consumableCombos;
+
+        if (!cycleWorker && cycles.vars.workersRunning) {
+            for (let i=1;i<=cycles.vars.threadCount;i++) {
+                workers[`cycleWorker${i}`].terminate();
+            }
+        }
+        else if (cycles.vars.workersRunning) {workers[cycleWorker].terminate();}
 
         if (!cycleWorker) {
         cycles.vars.stopCycles = true;
@@ -1086,6 +1162,8 @@ let cyclesLoop = {
         readSelection("settingsOpenThreads").disabled = false;
         // readSelection("searchImportButton").disabled = false;
         readSelection("settingsBoxHolderVisibility").style.display = "flex";
+        readSelection("filtersDisplayMegaBox").style.maxWidth = "600px";
+        // readSelection("filtersDisplayMegaBox").style.width = "50%";
 
         cycles.debugPushLine(`Worker: BUILD GENERATION ABORTED<br>`);
         cycles.vars.workersRunning = 0;
@@ -1093,12 +1171,12 @@ let cyclesLoop = {
         readSelection("openThreadsDisplay").innerHTML = 0;
         }
 
-        if (!cycleWorker && !endedBeforeWorkerCreation) {
-            for (let i=1;i<=cycles.vars.threadCount;i++) {
-                workers[`cycleWorker${i}`].terminate();
-            }
-        }
-        else if (!endedBeforeWorkerCreation) {workers[cycleWorker].terminate();}
+        // if (!cycleWorker && !endedBeforeWorkerCreation) {
+        //     for (let i=1;i<=cycles.vars.threadCount;i++) {
+        //         workers[`cycleWorker${i}`].terminate();
+        //     }
+        // }
+        // else if (!endedBeforeWorkerCreation) {workers[cycleWorker].terminate();}
 
         if (!endType && !endedWithoutIssue) {alert("Cycles were terminated");}
         else if (!endedWithoutIssue) {alert(endType + `\n\n${cycleWorker}`)}
@@ -1117,7 +1195,7 @@ let cyclesLoop = {
     },
     //Start the cycles
     generationStart() {
-        if (filters.types.vars.targetStatistic.includes("Havoc") && filters.types.vars.importedAbility1 != "Havoc Form" && filters.types.vars.importedAbility2 != "Havoc Form") {
+        if (filters.types.vars.targetStatistic.includes("Havoc") && globalRecords.archs.one.ability != "Havoc Form" && globalRecords.archs.two.ability != "Havoc Form") {
             alert(`ERROR: You don't even have Havoc Form selected in your imported classes. Why are you trying to target it.`);
         }
         else if (cycles.vars.stopCycles && filters.types.vars.targetStatistic) {
@@ -1154,19 +1232,22 @@ let cyclesLoop = {
             readSelection("settingsOpenThreads").disabled = true;
 
             readSelection("settingsBoxHolderVisibility").style.display = "none";
+            readSelection("filtersDisplayMegaBox").style.maxWidth = "100%";
             // readSelection("searchImportButton").disabled = true;
             cycles.vars.counterInt = 0;//console.log(navigator.hardwareConcurrency)
-            cycles.vars.workersRunning = cycles.vars.threadCount;
+            // cycles.vars.workersRunning = cycles.vars.threadCount;
             globalRecords.currentBestStatistic = 0;
             cycles.vars.lastTimerEvaluation = 0;
             cyclesLoop.bestCombos = {};
 
             cycles.iterator = cycles.reinstanceVars();
             function processVars() {
-                const { done } = cycles.iterator.next();
-                if (done) {return;}
-                if (cycles.vars.finishedIteratorSetup) {return;}
-                setTimeout(processVars, 0);
+                if (cycles.iterator) {
+                    const { done } = cycles.iterator.next();
+                    if (done) {cycles.iterator = null;return;}
+                    else if (cycles.vars.finishedIteratorSetup) {return;}
+                    setTimeout(processVars, 0);
+                }
             }
             processVars();
             cycles.debugPushLine("UI LOCK END");
@@ -1211,7 +1292,7 @@ let cyclesLoop = {
                 let totalCombos = cycles.vars.totalDisplayCombinations;
                 if (counterInt>totalCombos) {cyclesLoop.generationStop(`ERROR: MISMATCHED COMBO COUNT\n${counterInt} > ${totalCombos}\n\nIf you ever see this, take note of your filters then join the discord linked at the bottom of any page, and ping Vash with the filter info.`)}
                 else if (counterInt === totalCombos) {
-                    cycles.vars.workersRunning = 0;
+                    // cycles.vars.workersRunning = 0;
                     // readSelection("openThreadsDisplay").innerHTML = 0;
                     let endTotalTime = performance.now();
                     endTotalTime -= cycles.vars.cycleTotalTimer;
@@ -1315,33 +1396,68 @@ let cyclesLoop = {
                             readSelection("comboArmorLeg").src = armor.legs[cycleObject.bestArmorSet.leg].image;
                             readSelection("comboArmorHand").src = armor.hands[cycleObject.bestArmorSet.hand].image;
 
-                            readSelection("comboRelic").src = cycleObject.relic[0] ? gear.relics[cycleObject.relic[0]].image : gear.relics[""].image;
+                            let ringRef = Object.keys(rings);
+                            let amuletRef = Object.keys(amulets);
+                            let relicRef = Object.keys(relics);
+                            let fragRef = Object.keys(fragments);
+                            let quickRef = Object.keys(quickUses);
+                            let concRef = Object.keys(concoctions);
+                            let primRef = Object.keys(primary);
+                            let meleeRef = Object.keys(melee);
+                            let secRef = Object.keys(secondary);
+                            let rangedModRef = Object.keys(rangedMods);
+                            let rangedMutRef = Object.keys(rangedMutators);
+                            let meleeMutRef = Object.keys(meleeMutators);
 
-                            readSelection("comboAmulet").src = cycleObject.amulet[0] ? gear.amulets[cycleObject.amulet[0]].image : gear.amulets[""].image;
-                            readSelection("comboRing1").src = cycleObject.ringSet[0] ? gear.rings[cycleObject.ringSet[0]].image : gear.rings[""].image;
-                            readSelection("comboRing2").src = cycleObject.ringSet[1] ? gear.rings[cycleObject.ringSet[1]].image : gear.rings[""].image;
-                            readSelection("comboRing3").src = cycleObject.ringSet[2] ? gear.rings[cycleObject.ringSet[2]].image : gear.rings[""].image;
-                            readSelection("comboRing4").src = cycleObject.ringSet[3] ? gear.rings[cycleObject.ringSet[3]].image : gear.rings[""].image;
+                            // accessoryReference.amulet = amuletRef[value.amulet[0]] || "";
+                            // accessoryReference.ring1 = ringRef[value.ringSet[0]] || "";
+                            // // console.log(accessoryReference.ring1)
+                            // accessoryReference.ring2 = ringRef[value.ringSet[1]] || "";
+                            // accessoryReference.ring3 = ringRef[value.ringSet[2]] || "";
+                            // accessoryReference.ring4 = ringRef[value.ringSet[3]] || "";
+                            // accessoryReference.relic = relicRef[value.relic[0]] || "";
+                            // accessoryReference.fragment1 = fragRef[value.fragmentSet[0]] || "";
+                            // accessoryReference.fragment2 = fragRef[value.fragmentSet[1]] || "";
+                            // accessoryReference.fragment3 = fragRef[value.fragmentSet[2]] || "";
 
-                            cycleObject.gun1[0] = cycleObject.gun1[0] ?? "";
-                            cycleObject.stick[0] = cycleObject.stick[0] ?? "";
-                            cycleObject.gun2[0] = cycleObject.gun2[0] ?? "";
-                            readSelection("comboWeapon1").src = primary[cycleObject.gun1[0]].image;
-                            readSelection("comboWeapon2").src = melee[cycleObject.stick[0]].image;
-                            readSelection("comboWeapon3").src = secondary[cycleObject.gun2[0]].image;
+                            // let consumableReference = globalReference.consumables;
+                            // globalRecords.greatConcoctionRecords = [...value.concoction];
+                            // globalRecords.greatConcoctionRecords = [...value.concoction.map(item => {
+                            //     return concRef[item];
+                            // })];
+                            // // globalRecords.greatConsumableRecords = [...value.quickUse];
+                            // globalRecords.greatConsumableRecords = [...value.quickUse.map(item => {
+                            //     return quickRef[item];
+                            // })];
 
-                            readSelection("comboPrimaryMutator").innerHTML = cycleObject.rangedMutators[0] || "";
-                            readSelection("comboPrimaryMod").innerHTML = primary[cycleObject.gun1[0]].builtIN || cycleObject.rangedMods[0] || "";
+                            readSelection("comboRelic").src = cycleObject.relic[0] ? gear.relics[relicRef[cycleObject.relic[0]]].image : gear.relics[""].image;
 
-                            readSelection("comboMeleeMutator").innerHTML = cycleObject.meleeMutators[0] || "";
-                            readSelection("comboMeleeMod").innerHTML = melee[cycleObject.stick[0]].builtIN;
+                            readSelection("comboAmulet").src = cycleObject.amulet[0] ? gear.amulets[amuletRef[cycleObject.amulet[0]]].image : gear.amulets[""].image;
+                            readSelection("comboRing1").src = cycleObject.ringSet[0] ? gear.rings[ringRef[cycleObject.ringSet[0]]].image : gear.rings[""].image;
+                            readSelection("comboRing2").src = cycleObject.ringSet[1] ? gear.rings[ringRef[cycleObject.ringSet[1]]].image : gear.rings[""].image;
+                            readSelection("comboRing3").src = cycleObject.ringSet[2] ? gear.rings[ringRef[cycleObject.ringSet[2]]].image : gear.rings[""].image;
+                            readSelection("comboRing4").src = cycleObject.ringSet[3] ? gear.rings[ringRef[cycleObject.ringSet[3]]].image : gear.rings[""].image;
 
-                            readSelection("comboSecondaryMutator").innerHTML = cycleObject.rangedMutators[1] || "";
-                            readSelection("comboSecondaryMod").innerHTML = secondary[cycleObject.gun2[0]].builtIN || cycleObject.rangedMods[1] || "";
+                            primaryHolder = primRef[cycleObject.gun1[0]] ?? "";
+                            meleeHolder = meleeRef[cycleObject.stick[0]] ?? "";
+                            secondaryHolder = secRef[cycleObject.gun2[0]] ?? "";
+                            readSelection("comboWeapon1").src = primary[primaryHolder].image;
+                            // console.log(cycleObject.gun1[0])
+                            readSelection("comboWeapon2").src = melee[meleeHolder].image;
+                            readSelection("comboWeapon3").src = secondary[secondaryHolder].image;
+
+                            readSelection("comboPrimaryMutator").innerHTML = rangedMutRef[cycleObject.rangedMutators[0]] || "";
+                            readSelection("comboPrimaryMod").innerHTML = primary[primaryHolder].builtIN || rangedModRef[cycleObject.rangedMods[0]] || "";
+
+                            readSelection("comboMeleeMutator").innerHTML = meleeMutRef[cycleObject.meleeMutators[0]] || "";
+                            readSelection("comboMeleeMod").innerHTML = melee[meleeHolder].builtIN;
+
+                            readSelection("comboSecondaryMutator").innerHTML = rangedMutRef[cycleObject.rangedMutators[1]] || "";
+                            readSelection("comboSecondaryMod").innerHTML = secondary[secondaryHolder].builtIN || rangedModRef[cycleObject.rangedMods[1]] || "";
 
 
                             for (let i=0;i<cycleObject.concoction.length;i++) {
-                                let concReference = cycleObject.concoction[i] ?? "";
+                                let concReference = concRef[cycleObject.concoction[i]] ?? "";
                                 if (concReference===0 || concReference==="") {
                                     concReference="";
                                     readSelection(`comboConcoction${i+1}Holder`).style.display = "none";
@@ -1352,16 +1468,22 @@ let cyclesLoop = {
                                 }
                             }
 
-                            for (let i=0;i<cycleObject.quickUse.length;i++) {
-                                let consReference = cycleObject.quickUse[i] ?? "";
-                                if (consReference===0 || consReference==="") {
-                                    consReference=""
-                                    readSelection(`comboQuickUse${i+1}Holder`).style.display = "none";
-                                }
-                                else {
-                                    readSelection(`comboQuickUse${i+1}Holder`).style.display = "block";
-                                    readSelection(`comboConsumable${i+1}`).src = quickUses[consReference].image;
-                                }
+
+                            let quickUseRow = readSelection("comboQuickUseBox");
+                            quickUseRow.innerHTML = "";
+                            // globalRecords.greatConsumableRecords = [...globalRecords.consumableCombo.map(item => {
+                            //     return globalRecords.dataKeys.quickRef[item];
+                            // })];
+                            for (let i=0;i<globalRecords.consumableCombo.length;i++) {let quickUseBox = `
+                                <div class="comboConsumableImageBox" id="comboQuickUse${i+1}Holder">
+                                    <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable${i+1}" alt="Combo Consumable1">
+                                </div>`;
+
+                                quickUseRow.innerHTML += quickUseBox;
+                            }
+                            for (let i=0;i<globalRecords.consumableCombo.length;i++) {
+                                let consReference = quickRef[globalRecords.consumableCombo[i]] ?? "";
+                                readSelection(`comboConsumable${i+1}`).src = quickUses[consReference].image;
                             }
 
                             cyclesLoop.updateCycleRecordMainUI(cycleObject);//Updates the ALT records with everything from the cycle object
@@ -1399,7 +1521,7 @@ let cyclesLoop = {
                             readSelection(`lastFound`).innerHTML = `Last Loadout Found at #${counterInt.toLocaleString()}`
 
                             readSelection(`comboDisplay`).innerHTML = `
-                                ${cycleObject.fragmentSet[0]}, ${cycleObject.fragmentSet[1]}, ${cycleObject.fragmentSet[2]}
+                                ${fragRef[cycleObject.fragmentSet[0]]}, ${fragRef[cycleObject.fragmentSet[1]]}, ${fragRef[cycleObject.fragmentSet[2]]}
                             `;
                         }
                     }
@@ -1421,7 +1543,8 @@ let cyclesLoop = {
                             cycles.vars.queueStorage.shift();
                         }
                         else {
-                            readSelection("openThreadsDisplay").innerHTML = +readSelection("openThreadsDisplay").innerHTML - 1;
+                            cycles.vars.workersRunning -= 1;
+                            readSelection("openThreadsDisplay").innerHTML = cycles.vars.workersRunning;
                         }
                         break;
                     case `pushDebugLine`: cycles.debugPushLine(data.data); break;
@@ -1442,19 +1565,29 @@ let cyclesLoop = {
         };
     },
     combineConcoctionLimit(ringCombo,amulet,classSet) {
+        // let refKeys = Object.keys(refTable);
+        // for (let key in returnTable) {
+        //     if (refKeys.includes(key)) {
+        //         returnTable[key].ID = refKeys.indexOf(key);
+        //     }
+        // }
         let returnLimit = 1;
+
+        let ringRef = Object.keys(rings);
+        let amuletRef = Object.keys(amulets);
+
         for (let item1 of ringCombo) {
-            if (item1 === ringCombo[ringCombo.length-1]) {continue;}
-            returnLimit += gear.rings[item1].stats.ConcLimit || 0;
+            // if (item1 === ringCombo[ringCombo.length-1]) {continue;}
+            returnLimit += gear.rings[ringRef[item1]].stats.ConcLimit || 0;
         }
         for (let item3 of amulet) {
-            if (item3 === amulet[amulet.length-1]) {continue;}
-            returnLimit += gear.amulets[item3].stats.ConcLimit || 0;
+            // if (item3 === amulet[amulet.length-1]) {continue;}
+            returnLimit += gear.amulets[amuletRef[item3]].stats.ConcLimit || 0;
         }
         for (let item5 of classSet) {
-            if (item5 === classSet[classSet.length-1]) {continue;}
-            else if (classInfo[item5].primeStats.ConcLimit) {
-                returnLimit += classInfo[item5].primeStats.ConcLimit;
+            // if (item5 === classSet[classSet.length-1]) {continue;}
+            if (classInfo[item5].primeStats.ConcLimit) {
+                returnLimit += classInfo[item5].primeStats.ConcLimit || 0;
             }
         }
         return returnLimit;
@@ -1564,10 +1697,13 @@ let cyclesLoop = {
     evaluateCombinationsInt(comboArray,midQuery,targetStatistic) {
         let cycleCounter = 0;
         let comboArrayLength = comboArray.length;
+        let betterFound = false;
 
-        for (let i=0;i<comboArrayLength;i++) {
+        for (let i=comboArrayLength-1;i>=0;i--) {
             cycleCounter++;
             let cycleObject = comboArray[i];
+
+            // if (!cycleObject) {console.log(i);alert(i);}
 
             cyclesLoop.updateCycleRecord(cycleObject);//Assigns cycle items to records so updateFormulas can work
             let preArmor = updateFormulas(`cycleTableKnowerOfAll`,true);//If armor is needed, it will return it. Otherwise it will return stats.
@@ -1575,15 +1711,19 @@ let cyclesLoop = {
             if (preArmor[targetStatistic] > midQuery.recordedStatistic) {
                 midQuery.recordedStatistic = +preArmor[targetStatistic];
                 midQuery.bestLoadout = cycleObject;
+                midQuery.bestLoadout.bestArmorSet = {...globalRecords.armor};
+                betterFound = true;
             }
+            // else if (preArmor[targetStatistic] === 0) {continue}
+            comboArray.splice(i,1);
         }
-        midQuery.bestLoadout.bestArmorSet = {...globalRecords.armor};
-        postMessage({command:`yieldCombination`,isUpdated:true,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
+        postMessage({command:`yieldCombination`,isUpdated:betterFound,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
     },
     evaluateCombinationsArray(comboArray,midQuery,targetStatistic) {
         let targetDamageCategory = midQuery.targetDamageCategory
         let cycleCounter = 0;
         let comboArrayLength = comboArray.length;
+        let betterFound = false;
 
         for (let i=0;i<comboArrayLength;i++) {
             cycleCounter++;
@@ -1595,90 +1735,112 @@ let cyclesLoop = {
             if (preArmor[targetDamageCategory][targetStatistic] > midQuery.recordedStatistic) {
                 midQuery.recordedStatistic = +preArmor[targetDamageCategory][targetStatistic];
                 midQuery.bestLoadout = cycleObject;
+                midQuery.bestLoadout.bestArmorSet = {...globalRecords.armor};
+                betterFound = true;
             }
         }
-        midQuery.bestLoadout.bestArmorSet = {...globalRecords.armor};
-        postMessage({command:`yieldCombination`,isUpdated:true,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
+        postMessage({command:`yieldCombination`,isUpdated:betterFound,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
         // postMessage({command:`yieldCombination`,cycleCounter});
     },
     updateCycleRecord(value) {
         let globalReference = globalRecords;
         let accessoryReference = globalReference.accessories;
-        accessoryReference.amulet = value.amulet[0] || "";
-        accessoryReference.ring1 = value.ringSet[0] || "";
-        accessoryReference.ring2 = value.ringSet[1] || "";
-        accessoryReference.ring3 = value.ringSet[2] || "";
-        accessoryReference.ring4 = value.ringSet[3] || "";
-        accessoryReference.relic = value.relic[0] || "";
-        accessoryReference.fragment1 = value.fragmentSet[0] || "";
-        accessoryReference.fragment2 = value.fragmentSet[1] || "";
-        accessoryReference.fragment3 = value.fragmentSet[2] || "";
+        let dataKeyReference = globalRecords.dataKeys;
+
+        let ringRef = dataKeyReference.ringRef;
+        let amuletRef = dataKeyReference.amuletRef;
+        let relicRef = dataKeyReference.relicRef;
+        let fragRef = dataKeyReference.fragRef;
+        let quickRef = dataKeyReference.quickRef;
+        let concRef = dataKeyReference.concRef;
+        let primRef = dataKeyReference.primRef;
+        let meleeRef = dataKeyReference.meleeRef;
+        let secRef = dataKeyReference.secRef;
+        let rangedModRef = dataKeyReference.rangedModRef;
+        let rangedMutRef = dataKeyReference.rangedMutRef;
+        let meleeMutRef = dataKeyReference.meleeMutRef;
+
+        accessoryReference.amulet = amuletRef[value.amulet[0]] || "";
+        accessoryReference.ring1 = ringRef[value.ringSet[0]] || "";
+        // console.log(accessoryReference.ring1)
+        accessoryReference.ring2 = ringRef[value.ringSet[1]] || "";
+        accessoryReference.ring3 = ringRef[value.ringSet[2]] || "";
+        accessoryReference.ring4 = ringRef[value.ringSet[3]] || "";
+        accessoryReference.relic = relicRef[value.relic[0]] || "";
+        accessoryReference.fragment1 = fragRef[value.fragmentSet[0]] || "";
+        accessoryReference.fragment2 = fragRef[value.fragmentSet[1]] || "";
+        accessoryReference.fragment3 = fragRef[value.fragmentSet[2]] || "";
 
         // let consumableReference = globalReference.consumables;
-        globalRecords.greatConcoctionRecords = [...value.concoction];
-        globalRecords.greatConsumableRecords = [...value.quickUse];
-        // consumableReference.concoction1 = value.concoction[0] || "";
-        // consumableReference.concoction2 = value.concoction[1] || "";
-        // consumableReference.concoction3 = value.concoction[2] || "";
-        // consumableReference.concoction4 = value.concoction[3] || "";
-        // consumableReference.concoction5 = value.concoction[4] || "";
-        // consumableReference.concoction6 = value.concoction[5] || "";
-        // consumableReference.concoction7 = value.concoction[6] || "";
-        // consumableReference.quickUse1 = value.quickUse[0] || "";
-        // consumableReference.quickUse2 = value.quickUse[1] || "";
-        // consumableReference.quickUse3 = value.quickUse[2] || "";
-        // consumableReference.quickUse4 = value.quickUse[3] || "";
+        // globalRecords.greatConcoctionRecords = [...value.concoction];
+        globalRecords.greatConcoctionRecords = [...value.concoction.map(item => {
+            return concRef[item];
+        })];
+        // globalRecords.greatConsumableRecords = [...value.quickUse];
+        // globalRecords.greatConsumableRecords = [...value.quickUse.map(item => {
+        //     return quickRef[item];
+        // })];
 
         let weaponReference = globalReference.weapons;
-        weaponReference.primary = value.gun1[0] || "";
-        weaponReference.primaryMutator = value.rangedMutators[0] || "";
-        weaponReference.primaryMod = value.rangedMods[0] || "";
+        weaponReference.primary = primRef[value.gun1[0]] || "";
+        weaponReference.primaryMutator = rangedMutRef[value.rangedMutators[0]] || "";
+        weaponReference.primaryMod = rangedModRef[value.rangedMods[0]] || "";
         if (weaponReference.primary === "Rusty Lever Action") {weaponReference.primaryMod = "";weaponReference.primaryMutator = "";}
-        weaponReference.melee = value.stick[0] || "";
-        weaponReference.meleeMutator = value.meleeMutators[0] || "";
-        weaponReference.secondary = value.gun2[0] || "";
-        weaponReference.secondaryMutator = value.rangedMutators[1] || "" ;
-        weaponReference.secondaryMod = value.rangedMods[1] || "";
+        weaponReference.melee = meleeRef[value.stick[0]] || "";
+        weaponReference.meleeMutator = meleeMutRef[value.meleeMutators[0]] || "";
+        weaponReference.secondary = secRef[value.gun2[0]] || "";
+        weaponReference.secondaryMutator = rangedMutRef[value.rangedMutators[1]] || "" ;
+        weaponReference.secondaryMod = rangedModRef[value.rangedMods[1]] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
     },
     updateCycleRecordMainUI(value) {//No longer needs to be alt variants, this version is only used by the optimizer which is now separate from the calc
         let globalReference = globalRecords;
         let accessoryReference = globalReference.accessories;
-        accessoryReference.amulet = value.amulet[0] || "";
-        accessoryReference.ring1 = value.ringSet[0] || "";
-        accessoryReference.ring2 = value.ringSet[1] || "";
-        accessoryReference.ring3 = value.ringSet[2] || "";
-        accessoryReference.ring4 = value.ringSet[3] || "";
-        accessoryReference.relic = value.relic[0] || "";
-        accessoryReference.fragment1 = value.fragmentSet[0] || "";
-        accessoryReference.fragment2 = value.fragmentSet[1] || "";
-        accessoryReference.fragment3 = value.fragmentSet[2] || "";
+
+        let ringRef = Object.keys(rings);
+        let amuletRef = Object.keys(amulets);
+        let relicRef = Object.keys(relics);
+        let fragRef = Object.keys(fragments);
+        let quickRef = Object.keys(quickUses);
+        let concRef = Object.keys(concoctions);
+        let primRef = Object.keys(primary);
+        let meleeRef = Object.keys(melee);
+        let secRef = Object.keys(secondary);
+        let rangedModRef = Object.keys(rangedMods);
+        let rangedMutRef = Object.keys(rangedMutators);
+        let meleeMutRef = Object.keys(meleeMutators);
+
+        accessoryReference.amulet = amuletRef[value.amulet[0]] || "";
+        accessoryReference.ring1 = ringRef[value.ringSet[0]] || "";
+        // console.log(accessoryReference.ring1)
+        accessoryReference.ring2 = ringRef[value.ringSet[1]] || "";
+        accessoryReference.ring3 = ringRef[value.ringSet[2]] || "";
+        accessoryReference.ring4 = ringRef[value.ringSet[3]] || "";
+        accessoryReference.relic = relicRef[value.relic[0]] || "";
+        accessoryReference.fragment1 = fragRef[value.fragmentSet[0]] || "";
+        accessoryReference.fragment2 = fragRef[value.fragmentSet[1]] || "";
+        accessoryReference.fragment3 = fragRef[value.fragmentSet[2]] || "";
 
         // let consumableReference = globalReference.consumables;
-        globalRecords.greatConcoctionRecords = [...value.concoction];
-        globalRecords.greatConsumableRecords = [...value.quickUse];
-        // consumableReference.concoction1 = value.concoction[0] || "";
-        // consumableReference.concoction2 = value.concoction[1] || "";
-        // consumableReference.concoction3 = value.concoction[2] || "";
-        // consumableReference.concoction4 = value.concoction[3] || "";
-        // consumableReference.concoction5 = value.concoction[4] || "";
-        // consumableReference.concoction6 = value.concoction[5] || "";
-        // consumableReference.concoction7 = value.concoction[6] || "";
-        // consumableReference.quickUse1 = value.quickUse[0] || "";
-        // consumableReference.quickUse2 = value.quickUse[1] || "";
-        // consumableReference.quickUse3 = value.quickUse[2] || "";
-        // consumableReference.quickUse4 = value.quickUse[3] || "";
+        // globalRecords.greatConcoctionRecords = [...value.concoction];
+        globalRecords.greatConcoctionRecords = [...value.concoction.map(item => {
+            return concRef[item];
+        })];
+        // globalRecords.greatConsumableRecords = [...value.quickUse];
+        globalRecords.greatConsumableRecords = [...globalRecords.consumableCombo.map(item => {
+            return quickRef[item];
+        })];
 
         let weaponReference = globalReference.weapons;
-        weaponReference.primary = value.gun1[0] || "";
-        weaponReference.primaryMutator = value.rangedMutators[0] || "";
-        weaponReference.primaryMod = value.rangedMods[0] || "";
+        weaponReference.primary = primRef[value.gun1[0]] || "";
+        weaponReference.primaryMutator = rangedMutRef[value.rangedMutators[0]] || "";
+        weaponReference.primaryMod = rangedModRef[value.rangedMods[0]] || "";
         if (weaponReference.primary === "Rusty Lever Action") {weaponReference.primaryMod = "";weaponReference.primaryMutator = "";}
-        weaponReference.melee = value.stick[0] || "";
-        weaponReference.meleeMutator = value.meleeMutators[0] || "";
-        weaponReference.secondary = value.gun2[0] || "";
-        weaponReference.secondaryMutator = value.rangedMutators[1] || "" ;
-        weaponReference.secondaryMod = value.rangedMods[1] || "";
+        weaponReference.melee = meleeRef[value.stick[0]] || "";
+        weaponReference.meleeMutator = meleeMutRef[value.meleeMutators[0]] || "";
+        weaponReference.secondary = secRef[value.gun2[0]] || "";
+        weaponReference.secondaryMutator = rangedMutRef[value.rangedMutators[1]] || "" ;
+        weaponReference.secondaryMod = rangedModRef[value.rangedMods[1]] || "";
         if (weaponReference.secondary === "Rusty Repeater") {weaponReference.secondaryMod = "";weaponReference.secondaryMutator = "";}
 
         globalReference.armor.helmet = value.bestArmorSet.helmet || "";
@@ -1929,24 +2091,5 @@ let filters = {
         else {
             filters.types.vars.targetStatistic = currentStatistic;
         }
-    },
-    importNonIterables() {
-        filters.types.vars.importedArch1 = `${globalRecords.archs.one.class}`;
-        filters.types.vars.importedArch2 = `${globalRecords.archs.two.class}`;
-        filters.types.vars.importedAbility1 = `${globalRecords.archs.one.ability}`;
-        filters.types.vars.importedAbility2 = `${globalRecords.archs.two.ability}`;
-        let displayString = `Archs: ${filters.types.vars.importedArch1},${filters.types.vars.importedArch2} --- Abilities:${filters.types.vars.importedAbility1},${filters.types.vars.importedAbility2}`
-        readSelection("settingsImportedArchs").innerHTML = displayString;
-
-
-        filters.types.vars.importedTraitRecords = [...globalRecords.greatTraitRecords]
-        let arrayReference = filters.types.vars.importedTraitRecords;
-        readSelection("settingsImportedTraits").innerHTML = "";
-        for (let entry of arrayReference) {
-            if (entry.name != "") {
-                readSelection("settingsImportedTraits").innerHTML += `${entry.name} ${entry.level}, `
-            }
-        }
-        filters.updateDodgeClass();
     }
 }

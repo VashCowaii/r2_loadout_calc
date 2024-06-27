@@ -71,7 +71,7 @@ function pagePopulation() {
     createHTML.populateGear("relicList",relics);
     createHTML.populateGear("fragmentList",fragments);
     createHTML.populateGear("concoctionList",concoctions);
-    createHTML.populateGear("consumableList",quickUses);
+    // createHTML.populateGear("consumableList",quickUses);
     createHTML.populateGear("primaryList",primary);
     createHTML.populateGear("primaryMutatorList",rangedMutators);
     createHTML.populateGear("primaryModList",rangedMods);
