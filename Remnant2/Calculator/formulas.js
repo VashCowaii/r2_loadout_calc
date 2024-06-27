@@ -247,8 +247,7 @@ let calcs = {
 }
 let customDamage = {
     HavocForm(abilityPlacement,index) {
-        let reference = valueTables[index];
-        let isUIcalcs = index != "greatTableKnowerOfAll";
+        let reference = index;
 
         let abilityPath = classInfo.Archon.abilities["Havoc Form"];
         let customStats = abilityPath.customStats//path to havoc relevant stats
@@ -281,7 +280,7 @@ let customDamage = {
         let trueDPS = trueBaseDPS * (1 + reference.CastSpeed) * (1 + totalDamageBonus) * (1 + avgCritDamage);
         let trueTotalDamage = baseDamage * totalHits * (1 + totalDamageBonus) * (1 + avgCritDamage);
 
-        if (!isUIcalcs) {
+        if (index.thisIsAQuery != 1) {
             let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
             let factorID = `ability${abilityPlacement}Factors`
 
@@ -314,9 +313,10 @@ let customDamage = {
 
             readSelection(`ability${abilityPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
             readSelection(`ability${abilityPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+            console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
 
 
-            (modifiedDuration + entryDuration)
+            // (modifiedDuration + entryDuration)
             readSelection(factorID).innerHTML = "";
             let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
             drRowsHTML += (modifiedDuration + entryDuration) ? createHTML.basicsRow("","Duration",(modifiedDuration + entryDuration),false) : "";
@@ -352,6 +352,7 @@ let customDamage = {
             // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
+            console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
         }
 
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]

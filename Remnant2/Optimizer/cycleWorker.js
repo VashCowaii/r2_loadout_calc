@@ -32,6 +32,23 @@ self.onmessage = function(event) {
     if (data.command === 'copyDataTables') {
         globalRecords = data.data;
 
+
+
+        globalRecords.dataKeys = {};
+        globalRecords.dataKeys.ringRef = Object.keys(rings);
+        globalRecords.dataKeys.amuletRef = Object.keys(amulets);
+        globalRecords.dataKeys.relicRef = Object.keys(relics);
+        globalRecords.dataKeys.fragRef = Object.keys(fragments);
+        globalRecords.dataKeys.quickRef = Object.keys(quickUses);
+        globalRecords.dataKeys.concRef = Object.keys(concoctions);
+        globalRecords.dataKeys.primRef = Object.keys(primary);
+        globalRecords.dataKeys.meleeRef = Object.keys(melee);
+        globalRecords.dataKeys.secRef = Object.keys(secondary);
+        globalRecords.dataKeys.rangedModRef = Object.keys(rangedMods);
+        globalRecords.dataKeys.rangedMutRef = Object.keys(rangedMutators);
+        globalRecords.dataKeys.meleeMutRef = Object.keys(meleeMutators);
+
+
         // globalRecords.meleeFactors = {...globalRecords.ALTmeleeFactors}
 
         // globalRecords.armor = globalRecords.ALTarmor;
@@ -50,6 +67,7 @@ self.onmessage = function(event) {
 
         let abilityPath = globalRecords.archs;
         let targetStatistic = playerDerivedStatistics[filters.types.vars.targetStatistic];
+        console.log(targetStatistic)
         let targetIsArray = Array.isArray(targetStatistic);
         let targetDamageCategory;
         if (targetStatistic[0] === abilityPath.one.ability) {targetDamageCategory = "ability1Breakdown"}
@@ -62,9 +80,26 @@ self.onmessage = function(event) {
         globalRecords.midQuery.targetIsArray = targetIsArray;
         globalRecords.midQuery.bestLoadout = {};
 
+        globalRecords.greatConsumableRecords = [...globalRecords.consumableCombo.map(item => {
+            return globalRecords.dataKeys.quickRef[item];
+        })];
+
 
 
         formulasValues.pullTraits(starterTable);//Assign trait value to the cycles starter table
+        //Then assign consumable statistics since they are also static like traits within the queries
+        // let recordPath = globalRecords.consumableCombo;
+        // for (let i=1;i<=recordPath.length;i++) {
+        // let quickUse = recordPath[i-1];
+        // if (quickUses[quickUse]) {formulasValues.pullStats(starterTable,quickUses[quickUse].stats);}
+        // }
+        recordPath = globalRecords.greatConsumableRecords;
+        for (let i=1;i<=recordPath.length;i++) {
+        let quickUse = recordPath[i-1];
+        if (quickUses[quickUse]) {formulasValues.pullStats(starterTable,quickUses[quickUse].stats);}
+        }
+        
+        
         starterTable = {...starterTable};//Why is this even necessary
         starterTable.thisIsAQuery = 1;//Designate this as a query table for the functions that need that info
         postMessage({command: 'pushDebugLine', data: "Worker: Copied data tables"});
@@ -76,12 +111,15 @@ self.onmessage = function(event) {
         let midQuery = globalRecords.midQuery;
         if (midQuery.targetIsArray) {
             let targetStatistic = midQuery.targetStatistic[1];
+            // console.log(targetStatistic)
             cyclesLoop.evaluateCombinationsArray(data.messageComboArray,midQuery,targetStatistic);
         }
         else {
             let targetStatistic = midQuery.targetStatistic;
+            // console.log(targetStatistic)
             cyclesLoop.evaluateCombinationsInt(data.messageComboArray,midQuery,targetStatistic);
         }
+        delete data.messageComboArray;
         workerIdentifier = data.workerIdentifier;
         postMessage({command: 'canIHaveSomeMore',workerIdentifier});
     }

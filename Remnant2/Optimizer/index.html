@@ -499,14 +499,14 @@
                                                     </div>
                                                 </div>
                                                 <div id="concoctionsLocksContainer" class="locksBox"></div>
-                                                <div class="statFiltersRowMiniHeader">QUICK-USE</div>
+                                                <!-- <div class="statFiltersRowMiniHeader">QUICK-USE</div>
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
                                                         <input class="tagInput" id="consumablesInput" list="consumableList" onchange="filters.addFilter(`consumablesInput`,`consumablesLocksContainer`,`consumable`,0,quickUses,4)" >
                                                         <datalist id="consumableList"></datalist>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div id="consumablesLocksContainer" class="locksBox"></div>
                                                 <!-- PRIMARY WEAPON LOCKS -->
                                                 <div class="statFiltersRowHeader">PRIMARY</div>
@@ -879,7 +879,7 @@
                         </div>
 
 
-                        <div class="resultsBoxHalf">
+                        <div class="resultsBoxHalf" id="filtersDisplayMegaBox">
                             <div class="cyclesSettingsHeader">BUILD GENERATION</div>
                             <div class="cyclesSettingsBox">
                                 <div class="cyclesControlBox">
@@ -1031,7 +1031,7 @@
                                             </div>
                                         </div>
                                     <!-- QUICKUSE DISPLAY ROW -->
-                                        <div class="comboQuickUseBox" style="justify-content: center;">
+                                        <div class="comboQuickUseBox" style="justify-content: center;" id="comboQuickUseBox">
                                             <div class="comboConsumableImageBox" id="comboQuickUse1Holder">
                                                 <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable1" alt="Combo Consumable1">
                                             </div>
