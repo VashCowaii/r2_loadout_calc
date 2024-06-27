@@ -97,6 +97,7 @@ function pagePopulation() {
         createHTML.populateGear("filterTagList",referenceTable);
         createHTML.populateGear("statInputList",playerDerivedStatistics);
     }
+    else {updateFormulas();}
 }
   let stopQueryFractures = true;
 

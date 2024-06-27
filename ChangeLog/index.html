@@ -67,6 +67,7 @@
                         <li>Fixed an issue where quick-use consumables 3 & 4 in the prior structure, did not save their usage toggle states to the URL. This obviously means you won't have that issue on consumable selections greater than 4 due to how we do things now as well.</li>
                         <li>Fixed an issue where armor could be incorrectly applied to a "new best" loadout that did not fit it, in query results, meaning you'd open a result's link and it would have armor that didn't match the result's displayed statistic value.</li>
                         <li>Fixed an issue where Locked items in build queries could pop an error sometimes when an item was filtered out via stats or occlusions, but was not properly added back into the possible tables, making the query think the item didn't exist.</li>
+                        <li>Fixed an issue where on the Calc, on a fresh page load with no URL parameters, some UI components would not populate until anything was clicked or triggered at least once. This included the first concoction box, the first consumable box, and tooltips.</li>
                     </ul>
                 </div>
                 <div>
