@@ -39,7 +39,6 @@ function pagePopulation() {
     // createHTML.populateGear("quickUse2List",quickUses);
     // createHTML.populateGear("quickUse3List",quickUses);
     // createHTML.populateGear("quickUse4List",quickUses); 
-    updateFormulas();
     }
     manipulateURL.importURLparameters();
   
@@ -98,6 +97,7 @@ function pagePopulation() {
         createHTML.populateGear("filterTagList",referenceTable);
         createHTML.populateGear("statInputList",playerDerivedStatistics);
     }
+    else {updateFormulas();}
 }
   let stopQueryFractures = true;
 
