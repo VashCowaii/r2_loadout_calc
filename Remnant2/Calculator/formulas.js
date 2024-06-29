@@ -52,11 +52,11 @@ let calcs = {
         return [armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR]
     },
     getResistance(index) {
-        let bleed = index.Bleed * (1+index["Bleed%"]);
-        let burn = index.Burn * (1+index["Burn%"]);
-        let shock = index.Shock * (1+index["Shock%"]);
-        let corrosive = index.Corrosive * (1+index["Corrosive%"]);
-        let blight = index.Blight * (1+index["Blight%"]);
+        let bleed = index.Bleed;
+        let burn = index.Burn;
+        let shock = index.Shock;
+        let corrosive = index.Corrosive;
+        let blight = index.Blight;
 
         return [bleed,burn,shock,corrosive,blight]
     },
