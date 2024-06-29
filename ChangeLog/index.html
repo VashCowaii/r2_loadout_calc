@@ -43,6 +43,25 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>June 29, 2024</h1>
+                    <ul>
+                        <li>Added base statistics for ranged weapons. These will now display when a given ranged weapon is selected (dmg, range, magazine, etc)</li>
+                        <li>Added base information for Polygun and its mod.</li>
+                        <li>Added additional URL handling to shorten URL parameters where possible. This does not change how imports/exports work, this is purely to shorten links that are sourced from the site. Currently the only paramters that have been changed to shorten where possible, are:
+                            <ul>
+                                <li>Armor</li>
+                                <li>Amulets & Rings</li>
+                                <li>Concoctions & Quick-Use Consumables</li>
+                                More sections will get modified and shortened later.
+                            </ul>
+                        </li>
+                        <li>Fixed an issue where after the consumables restructure, consumables did not show up in tooltips when tooltips would display all items that could contribute to a given statistic. For example, Confidence Booster and Meat Shake wouldn't show up under Flat DR, now they do.</li>
+                        <li>Fixed an issue where Compulsion Loop's attack speed bonus was one decimal place off, causing it to reflect lower than it should have.</li>
+                        <li>Updated Lifeless Heart's statistics and description to reflect the removal of any healing effect that came in DLC2, this was overlooked for a while.</li>
+                        <li>Removed "flat" and "%"" resistance as a statistic to filter by on queries. All non-physical resistance IS % resistance, there is no need to distinguish bewtween the two and no items even provide a separate form of resistance bonuses, they're all the same just a matter of which category. </li>
+                    </ul>
+                </div>
+                <div>
                     <h1>June 26, 2024 - Many fixes, such wow</h1>
                     <ul>
                         <li>Added the ability to add more than 4 total quick-use consumables. You can now add as many as you would like.
@@ -723,9 +742,21 @@
                     </ul>
                 </div>
                 <div>
-                    <h1>Might Do:</h1>
+                    <h1>Might Do: (or Extremely low priority tasks)</h1>
                     <ul>
                         <li>Add fragment level specification so people aren't forced into Mythic level assumptions. This is kind of a cancerous task though, and not really worth it. If I do end up doing this, and can't find the values for all levels, I might have to allow user input to specify level values but it just seems like a pedantic amount of customization, and if I do that then what next? Allowing weapon level specification? Blegh, no</li>
+                        <li>Add a relic usage factor setting for things like Ankh of Power instead of assuming the relic is always being used.</li>
+                        <li>Add melee usage factor setting for things like Butcher's Fetish</li>
+                        <li>Add relic charge counting/factors for things like Cost of Betrayal/Lifeless Heart</li>
+                        <li>Add relic use chance</li>
+                        <li>Add some form of HP% sliders, to dictate player health, for things like Death's Embrace/Downward Spiral. Also would make things like Restriction Cord modify the slider input capacity, etc.</li>
+                        <li>Stamina usage rotation factors for things like Gift of Euphoria. On top of that, if we can ever get 100% accurate individual attack lengths, handling for how much stamina you'd get back from Matriarch's Insignia.</li>
+                        <li>Health cost factors for things like Burden of the Warlock</li>
+                        <li>Skill charge factors</li>
+                        <li>"Taking Damage" factors</li>
+                        <li>Mod power gen/regen factors, stuff like Necklace of Flowing Life or Dense Silicon Ring</li>
+                        <li>Ammo reserve factors</li>
+                        <li>Add bleed check to Death Sentence</li>
                     </ul>
                 </div>
                 <div>

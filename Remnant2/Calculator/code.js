@@ -9,11 +9,7 @@ let starterTable = {
   //SHIELDS
   "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,
   //RESISTANCES
-  "Bleed": 0,"Bleed%": 0,
-  "Burn": 0,"Burn%": 0,
-  "Shock": 0,"Shock%": 0,
-  "Corrosive": 0,"Corrosive%": 0,
-  "Blight": 0,"Blight%": 0,
+  "Bleed": 0,"Burn": 0,"Shock": 0,"Corrosive": 0,"Blight": 0,
   //WEIGHT
   "Encumbrance": 0,"Encumbrance%": 0,"WeightThreshold": 0,
   //HEALING
@@ -110,18 +106,14 @@ let starterTable = {
 const referenceTable = {
   "Armor Effectiveness": "Armor%",
   "Armor-Flat": "Armor",
-  "Bleed Resistance-Flat": "Bleed",
-  "Bleed Resistance-%": "Bleed%",
-  "Blight Resistance-Flat": "Blight",
-  "Blight Resistance-%": "Blight%",
-  "Burn Resistance-Flat": "Burn",
-  "Burn Resistance-%": "Burn%",
+  "Bleed Resistance": "Bleed",
+  "Blight Resistance": "Blight",
+  "Burn Resistance": "Burn",
   "Class-Summon Health %": "SummonHealth%",
   "Consumable-Concoction Limit": "ConcLimit",
   "Consumable-Duration": "ConsumableDuration",
   "Consumable-Use Speed": "RelicSpeed",
-  "Corrosive Resistance-Flat": "Corrosive",
-  "Corrosive Resistance-%": "Corrosive%",
+  "Corrosive Resistance": "Corrosive",
   "Critical Chance-All": "AllCritChance",
   "Critical Chance-Bow": "BowCritChance",
   "Critical Chance-Elemental": "ElementalCritChance",
@@ -212,8 +204,7 @@ const referenceTable = {
   "Shield Effectiveness": "ShieldEFF",
   "Shield-Flat": "Shield",
   "Shield-%/second": "Shield%/S",
-  "Shock Resistance - Flat": "Shock",
-  "Shock Resistance - %": "Shock%",
+  "Shock Resistance": "Shock",
   "Skill-Cooldowns": "CDR",
   "Skill-Duration": "SkillDuration",
   "Speed-Aiming Movement Speed": "AimMovementSpeed",
@@ -866,12 +857,25 @@ let manipulateURL = {
     urlObject.archetype.push(path.two.class);
     urlObject.archetype.push(path.one.ability);
     urlObject.archetype.push(path.two.ability);
-
-    path = globalRecords.armor;
     urlObject.armor.push(path.helmet);
     urlObject.armor.push(path.chest);
     urlObject.armor.push(path.leg);
     urlObject.armor.push(path.hand);
+
+    path = globalRecords.armor;
+    if (isExported) {
+      urlObject.armor.push(path.helmet);
+      urlObject.armor.push(path.chest);
+      urlObject.armor.push(path.leg);
+      urlObject.armor.push(path.hand);
+    }
+    else {
+      urlObject.armor = "";
+      if (helmets[path.helmet].placementID != "H00") {urlObject.armor += helmets[path.helmet].placementID}
+      if (chests[path.chest].placementID != "C00") {urlObject.armor += chests[path.chest].placementID}
+      if (legs[path.leg].placementID != "L00") {urlObject.armor += legs[path.leg].placementID}
+      if (hands[path.hand].placementID != "G00") {urlObject.armor += hands[path.hand].placementID}
+    }
 
     path = globalRecords.weapons;
     urlObject.primary.push(path.primary);
@@ -884,24 +888,48 @@ let manipulateURL = {
     urlObject.secondary.push(path.secondaryMutator);
     urlObject.secondary.push(path.secondaryMod);
 
-    path = globalRecords.greatConcoctionRecords;
-    for (i=0;i<path.length;i++) {
-      urlObject.consumable.push(path[i])
+    if (isExported) {
+      path = globalRecords.greatConcoctionRecords;
+      for (i=0;i<path.length;i++) {
+        urlObject.consumable.push(path[i])
+      }
+      path = globalRecords.greatConsumableRecords;
+      for (i=0;i<path.length;i++) {
+        urlObject.consumable.push(path[i])
+      }
     }
-    path = globalRecords.greatConsumableRecords;
-    for (i=0;i<path.length;i++) {
-      urlObject.consumable.push(path[i])
+    else {
+      urlObject.consumable = "";
+
+      path = globalRecords.greatConcoctionRecords;
+      for (i=0;i<path.length;i++) {
+        if (concoctions[path[i]].placementID != "C00") {urlObject.consumable += concoctions[path[i]].placementID}
+      }
+
+      path = globalRecords.greatConsumableRecords;
+      for (i=0;i<path.length;i++) {
+        if (quickUses[path[i]].placementID != "Q00") {urlObject.consumable += quickUses[path[i]].placementID}
+      }
     }
-    // urlObject.consumable.push(path.quickUse1);
-    // urlObject.consumable.push(path.quickUse2);
-    // urlObject.consumable.push(path.quickUse3);//For later when I add 2 more quickuse
-    // urlObject.consumable.push(path.quickUse4);
 
     path = globalRecords.accessories;
-    urlObject.accessory.push(path.amulet);
-    for (i=1;i<=4;i++) {
-      urlObject.accessory.push(path[`ring${i}`]);
+    if (isExported) {
+      urlObject.accessory.push(path.amulet);
+      for (i=1;i<=4;i++) {
+        urlObject.accessory.push(path[`ring${i}`]);
+      }
     }
+    else {
+      urlObject.accessory = "";
+      if (amulets[path.amulet].placementID != "A000") {urlObject.accessory += amulets[path.amulet].placementID}
+      for (i=1;i<=4;i++) {
+        if (rings[path[`ring${i}`]].placementID != "R000") {urlObject.accessory += rings[path[`ring${i}`]].placementID}
+        // urlObject.accessory.push(path[`ring${i}`]);
+      }
+    }
+    
+
+
     urlObject.relic.push(path.relic);
     for (i=1;i<=3;i++) {
       urlObject.relic.push(path[`fragment${i}`]);
@@ -1109,6 +1137,7 @@ let manipulateURL = {
       decoded = params.toString();
       decoded = decoded.replace(/%2C/g, ',');
       const newUrl = `${R2TKprefix}?${decoded}`;
+      console.log(newUrl)
       window.open(newUrl, '_blank').focus();
     }
   },
@@ -1181,26 +1210,81 @@ let manipulateURL = {
     manipulateTrait.pointsOverLimit();//Trim points if cap exceeded
   //ARMOR
     if (urlArmor) {
-      urlArmor = urlArmor.split(",");
-      if (helmets[urlArmor[0]] === undefined) {invalidEntries.push(urlArmor[0]);}
-      else if (urlArmor[0]) {
-        readSelection("helmetChoice").value = urlArmor[0];
-        userTrigger.updateArmor('helmet',true);
+      let hasMultipleOld = urlArmor.includes(",") || urlArmor.includes(" ");
+      let isActuallyNumbers = !hasMultipleOld && urlArmor.length % 3 === 0 
+        && (urlArmor.charAt(0) === "H" || urlArmor.charAt(0) === "C" || urlArmor.charAt(0) === "L" || urlArmor.charAt(0) === "G");
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlArmor.length;i += 3) {
+          let itemHeader = urlArmor.charAt(i);
+          let itemID = urlArmor.charAt(i) + urlArmor.charAt(i+1) + urlArmor.charAt(i+2);
+
+          switch (itemHeader) {
+            case "H": 
+              armorKeys = Object.keys(helmets)
+              for (let key of armorKeys) {
+                if (helmets[key].placementID === itemID) {
+                  readSelection("helmetChoice").value = key;
+                  userTrigger.updateArmor('helmet',true);
+                  break;
+                }
+              }
+              break;
+            case "C": 
+              armorKeys = Object.keys(chests)
+              for (let key of armorKeys) {
+                if (chests[key].placementID === itemID) {
+                  readSelection("chestChoice").value = key;
+                  userTrigger.updateArmor('chest',true);
+                  break;
+                }
+              }
+              break;
+            case "L": 
+              armorKeys = Object.keys(legs)
+              for (let key of armorKeys) {
+                if (legs[key].placementID === itemID) {
+                  readSelection("legChoice").value = key;
+                  userTrigger.updateArmor('leg',true);
+                  break;
+                }
+              }
+              break;
+            case "G": 
+              armorKeys = Object.keys(hands)
+              for (let key of armorKeys) {
+                if (hands[key].placementID === itemID) {
+                  readSelection("handChoice").value = key;
+                  userTrigger.updateArmor('hand',true);
+                  break;
+                }
+              }
+              break;
+          }
+        }
       }
-      if (chests[urlArmor[1]] === undefined) {invalidEntries.push(urlArmor[1]);}
-      else if (urlArmor[1]) {
-        readSelection("chestChoice").value = urlArmor[1];
-        userTrigger.updateArmor('chest',true);
-      }
-      if (legs[urlArmor[2]] === undefined) {invalidEntries.push(urlArmor[2]);}
-      else if (urlArmor[2]) {
-        readSelection("legChoice").value = urlArmor[2];
-        userTrigger.updateArmor('leg',true);
-      }
-      if (hands[urlArmor[3]] === undefined) {invalidEntries.push(urlArmor[3]);}
-      else if (urlArmor[3]) {
-        readSelection("handChoice").value = urlArmor[3];
-        userTrigger.updateArmor('hand',true);
+      else {
+        urlArmor = urlArmor.split(",");
+        if (helmets[urlArmor[0]] === undefined) {invalidEntries.push(urlArmor[0]);}
+        else if (urlArmor[0]) {
+          readSelection("helmetChoice").value = urlArmor[0];
+          userTrigger.updateArmor('helmet',true);
+        }
+        if (chests[urlArmor[1]] === undefined) {invalidEntries.push(urlArmor[1]);}
+        else if (urlArmor[1]) {
+          readSelection("chestChoice").value = urlArmor[1];
+          userTrigger.updateArmor('chest',true);
+        }
+        if (legs[urlArmor[2]] === undefined) {invalidEntries.push(urlArmor[2]);}
+        else if (urlArmor[2]) {
+          readSelection("legChoice").value = urlArmor[2];
+          userTrigger.updateArmor('leg',true);
+        }
+        if (hands[urlArmor[3]] === undefined) {invalidEntries.push(urlArmor[3]);}
+        else if (urlArmor[3]) {
+          readSelection("handChoice").value = urlArmor[3];
+          userTrigger.updateArmor('hand',true);
+        }
       }
     }
   //RELIC AND FRAGMENTS
@@ -1271,17 +1355,58 @@ let manipulateURL = {
     }
   //AMULET AND RINGS
     if (urlAccessory) {
-      urlAccessory = urlAccessory.split(",");
-      if (amulets[urlAccessory[0]] === undefined) {invalidEntries.push(urlAccessory[0]);}
-      else if (urlAccessory[0]) {
-        readSelection("amulet").value = urlAccessory[0];
-        userTrigger.updateAccessory('amulet',null,true);
+      let hasMultipleOld = urlAccessory.includes(",") || urlAccessory.includes(" ");
+      let isActuallyNumbers = !hasMultipleOld && urlAccessory.length % 4 === 0 
+        && (urlAccessory.charAt(0) === "A" || urlAccessory.charAt(0) === "R");
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlAccessory.length;i += 4) {
+          let itemHeader = urlAccessory.charAt(i);
+          let itemID = urlAccessory.charAt(i) + urlAccessory.charAt(i+1) + urlAccessory.charAt(i+2) + urlAccessory.charAt(i+3);
+
+          switch (itemHeader) {
+            case "A": 
+              armorKeys = Object.keys(amulets)
+              for (let key of armorKeys) {
+                if (amulets[key].placementID === itemID) {
+                  readSelection("amulet").value = key;
+                  userTrigger.updateAccessory('amulet',null,true);
+                  break;
+                }
+              }
+              break;
+            case "R": 
+              armorKeys = Object.keys(rings)
+              for (let key of armorKeys) {
+                if (rings[key].placementID === itemID) {
+
+                  for (let x=1;x<=4;x++) {
+                    if (globalRecords.accessories[`ring${x}`] === "") {
+                      readSelection(`ring${x}`).value = key;
+                      userTrigger.updateAccessory('ring',x,true);
+                      break;
+                    }
+                  }
+                  break;
+                }
+              }
+              break;
+          }
+        }
       }
-      for (let i=1;i<=4;i++) {
-        if (rings[urlAccessory[i]] === undefined) {invalidEntries.push(urlAccessory[i]);}
-        else if (urlAccessory[i]) {
-          readSelection(`ring${i}`).value = urlAccessory[i];
-          userTrigger.updateAccessory('ring',i,true);
+      else {
+        urlAccessory = urlAccessory.split(",");
+        if (amulets[urlAccessory[0]] === undefined) {invalidEntries.push(urlAccessory[0]);}
+        else if (urlAccessory[0]) {
+          readSelection("amulet").value = urlAccessory[0];
+          userTrigger.updateAccessory('amulet',null,true);
+        }
+        for (let i=1;i<=4;i++) {
+          if (rings[urlAccessory[i]] === undefined) {invalidEntries.push(urlAccessory[i]);}
+          else if (urlAccessory[i]) {
+            readSelection(`ring${i}`).value = urlAccessory[i];
+            userTrigger.updateAccessory('ring',i,true);
+          }
         }
       }
     }
@@ -1289,14 +1414,53 @@ let manipulateURL = {
     if (urlConcoctions) {
       updateFormulas();//Needed to update concoction limit
       manipulateConsumable.updateConsumableCollection("concoction");//Needed to establish concoction boxes
-      urlConcoctions = urlConcoctions.split(",");
-      //Read the consumables param, and push to either concoctions or quick-use arrays, or invalid param notify
-      for (let i=0;i<urlConcoctions.length;i++) {
-        let current = urlConcoctions[i];
-        if (concoctions[current] && current) {globalRecords.greatConcoctionRecords.push(current)}
-        else if (quickUses[current] && current) {globalRecords.greatConsumableRecords.push(current)}
-        else if (current) {invalidEntries.push(current);}//Notify user if invalid
+
+      let hasMultipleOld = urlConcoctions.includes(",") || urlConcoctions.includes(" ");
+      let isActuallyNumbers = !hasMultipleOld && urlConcoctions.length % 3 === 0 
+        && (urlConcoctions.charAt(0) === "C" || urlConcoctions.charAt(0) === "Q");
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlConcoctions.length;i += 3) {
+          let itemHeader = urlConcoctions.charAt(i);
+          let itemID = urlConcoctions.charAt(i) + urlConcoctions.charAt(i+1) + urlConcoctions.charAt(i+2);
+
+          switch (itemHeader) {
+            case "C": 
+              armorKeys = Object.keys(concoctions)
+              for (let key of armorKeys) {
+                if (concoctions[key].placementID === itemID) {
+                  globalRecords.greatConcoctionRecords.push(key)
+                  // readSelection("helmetChoice").value = key;
+                  // userTrigger.updateArmor('helmet',true);
+                  break;
+                }
+              }
+              break;
+            case "Q": 
+              armorKeys = Object.keys(quickUses)
+              for (let key of armorKeys) {
+                if (quickUses[key].placementID === itemID) {
+                  globalRecords.greatConsumableRecords.push(key)
+                  // readSelection("chestChoice").value = key;
+                  // userTrigger.updateArmor('chest',true);
+                  break;
+                }
+              }
+              break;
+          }
+        }
       }
+      else {
+        urlConcoctions = urlConcoctions.split(",");
+        //Read the consumables param, and push to either concoctions or quick-use arrays, or invalid param notify
+        for (let i=0;i<urlConcoctions.length;i++) {
+          let current = urlConcoctions[i];
+          if (concoctions[current] && current) {globalRecords.greatConcoctionRecords.push(current)}
+          else if (quickUses[current] && current) {globalRecords.greatConsumableRecords.push(current)}
+          else if (current) {invalidEntries.push(current);}//Notify user if invalid
+        }
+      }
+
       //Concoctions
       for (let i=0;i<globalRecords.greatConcoctionRecords.length && i<=globalRecords.totalConcLimit;i++) {
         readSelection(`concoction${i+1}`).value = globalRecords.greatConcoctionRecords[i];
@@ -1511,6 +1675,34 @@ let userTrigger = {
       const selector = readSelection("rangedMod1List");
       const entries = selector.querySelectorAll('option');
 
+      readSelection("primaryWeaponStats").innerHTML = `
+      <div id="primaryStat1">${weaponObjectReference.DMG}</div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.RPS.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.magazine.toFixed(0)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.ideal.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.falloff.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.reserves.toFixed(0)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.critChance*100).toFixed(2)+"%"}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.weakspot*100).toFixed(2)+"%"}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.stagger*100).toFixed(2)+"%"}</span>
+      </div>
+      `;
+
       readSelection("primaryModBox").style.display = "flex";
       readSelection("primaryMutatorBox").style.display = "flex";
       readSelection("primaryAttachmentsMAIN").style.display = "flex";
@@ -1575,6 +1767,34 @@ let userTrigger = {
       let path = readSelection("rangedMod2");
       const selector = readSelection("rangedMod2List");
       const entries = selector.querySelectorAll('option');
+
+      readSelection("secondaryWeaponStats").innerHTML = `
+      <div>${weaponObjectReference.DMG}</div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.RPS.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.magazine.toFixed(0)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.ideal.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.falloff.toFixed(2)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">${weaponObjectReference.reserves.toFixed(0)}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.critChance*100).toFixed(2)+"%"}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.weakspot*100).toFixed(2)+"%"}</span>
+      </div>
+      <div class="weaponRowContainer">
+          <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">${(weaponObjectReference.stagger*100).toFixed(2)+"%"}</span>
+      </div>
+      `;
 
       readSelection("secondaryModBox").style.display = "flex";
       readSelection("secondaryMutatorBox").style.display = "flex";

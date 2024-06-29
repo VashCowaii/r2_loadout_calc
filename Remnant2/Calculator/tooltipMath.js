@@ -30,7 +30,8 @@ let tooltipMath = {
         let htmlString = "";
         let globalReference = globalRecords;
         let accessoryReference = globalReference.accessories;
-        let consumableReference = globalReference.consumables;
+        let consumableReference = globalReference.greatConsumableRecords;
+        let concoctionReference = globalReference.greatConcoctionRecords;
         let weaponReference = globalReference.weapons;
         let armorReference = globalReference.armor;
         let traitReference = globalReference.greatTraitRecords
@@ -45,12 +46,14 @@ let tooltipMath = {
             htmlString += tooltipMath.checkItemForStat(fragments[accessoryReference[`fragment${i}`]],accessoryReference[`fragment${i}`],statistic);
         }
     
-        for (let i=1;i<=7;i++) {
-            htmlString += tooltipMath.checkItemForStat(concoctions[consumableReference[`concoction${i}`]],consumableReference[`concoction${i}`],statistic);
+
+        for (let entry of consumableReference) {
+            htmlString += tooltipMath.checkItemForStat(quickUses[entry],entry,statistic);
         }
-        for (let i=1;i<=4;i++) {
-            htmlString += tooltipMath.checkItemForStat(quickUses[consumableReference[`quickUse${i}`]],consumableReference[`quickUse${i}`],statistic);
+        for (let entry of concoctionReference) {
+            htmlString += tooltipMath.checkItemForStat(concoctions[entry],entry,statistic);
         }
+
         htmlString += tooltipMath.checkItemForStat(primary[weaponReference.primary],weaponReference.primary,statistic);
         htmlString += tooltipMath.checkItemForStat(rangedMutators[weaponReference.primaryMutator],weaponReference.primaryMutator,statistic);
         htmlString += primary[weaponReference.primary].builtIN ? tooltipMath.checkItemForStat(builtInPrimary[primary[weaponReference.primary].builtIN],primary[weaponReference.primary].builtIN,statistic)
