@@ -898,15 +898,39 @@ let manipulateURL = {
     }
 
     path = globalRecords.weapons;
-    urlObject.primary.push(path.primary);
-    urlObject.primary.push(path.primaryMutator);
-    urlObject.primary.push(path.primaryMod);
-    urlObject.melee.push(path.melee);
-    urlObject.melee.push(path.meleeMutator);
-    // globalRecords.urlObject.melee.push(readSelection("meleeMod").value);
-    urlObject.secondary.push(path.secondary);
-    urlObject.secondary.push(path.secondaryMutator);
-    urlObject.secondary.push(path.secondaryMod);
+    if (isExported) {
+      urlObject.primary.push(path.primary);
+      urlObject.primary.push(path.primaryMutator);
+      urlObject.primary.push(path.primaryMod);
+      urlObject.melee.push(path.melee);
+      urlObject.melee.push(path.meleeMutator);
+      // globalRecords.urlObject.melee.push(readSelection("meleeMod").value);
+      urlObject.secondary.push(path.secondary);
+      urlObject.secondary.push(path.secondaryMutator);
+      urlObject.secondary.push(path.secondaryMod);
+    }
+    else {
+      if (primary[path.primary].placementID != "00") {urlObject.primary.push(primary[path.primary].placementID)}
+      else {urlObject.primary.push("")}
+      if (rangedMutators[path.primaryMutator].placementID != "00") {urlObject.primary.push(rangedMutators[path.primaryMutator].placementID)}
+      else {urlObject.primary.push("")}
+      if (primary[path.primary].builtIN === "" && rangedMods[path.primaryMod].placementID != "00") {urlObject.primary.push(rangedMods[path.primaryMod].placementID)}
+      else {urlObject.primary.push("")}
+
+
+      if (melee[path.melee].placementID != "00") {urlObject.melee.push(melee[path.melee].placementID)}
+      else {urlObject.melee.push("")}
+      if (meleeMutators[path.meleeMutator].placementID != "00") {urlObject.melee.push(meleeMutators[path.meleeMutator].placementID)}
+      else {urlObject.melee.push("")}
+
+
+      if (secondary[path.secondary].placementID != "00") {urlObject.secondary.push(secondary[path.secondary].placementID)}
+      else {urlObject.secondary.push("")}
+      if (rangedMutators[path.secondaryMutator].placementID != "00") {urlObject.secondary.push(rangedMutators[path.secondaryMutator].placementID)}
+      else {urlObject.secondary.push("")}
+      if (secondary[path.secondary].builtIN === "" && rangedMods[path.secondaryMod].placementID != "00") {urlObject.secondary.push(rangedMods[path.secondaryMod].placementID)}
+      else {urlObject.secondary.push("")}
+    }
 
     if (isExported) {
       path = globalRecords.greatConcoctionRecords;
@@ -1448,52 +1472,147 @@ let manipulateURL = {
     }
   //WEAPONS
     if (urlPrimary) {
+      const letterPattern = /[a-zA-Z]/;
+      letterPattern.test(urlPrimary)
+      let isActuallyNumbers = !letterPattern.test(urlPrimary);
+
       urlPrimary = urlPrimary.split(",");
-      if (primary[urlPrimary[0]] === undefined) {invalidEntries.push(urlPrimary[0]);}
-      else if (urlPrimary[0]) {
-        readSelection("primary").value = urlPrimary[0];
-        userTrigger.updateWeapon('primary',true);
+
+      if (isActuallyNumbers) {
+        armorKeys = Object.keys(primary)
+        for (let key of armorKeys) {
+          if (primary[key].placementID === urlPrimary[0]) {
+            readSelection("primary").value = key;
+            userTrigger.updateWeapon('primary',true);
+            break;
+          }
+        }
+        armorKeys = Object.keys(rangedMutators)
+        for (let key of armorKeys) {
+          if (rangedMutators[key].placementID === urlPrimary[1]) {
+            readSelection("rangedMutator1").value = key;
+            userTrigger.updateMutator('rangedMutator','1',true);
+            break;
+          }
+        }
+        if (primary[readSelection("primary").value].builtIN === "") {
+          armorKeys = Object.keys(rangedMods)
+          for (let key of armorKeys) {
+            if (rangedMods[key].placementID === urlPrimary[2]) {
+              readSelection("rangedMod1").value = key;
+              userTrigger.updateMod('rangedMod','1',true);
+              break;
+            }
+          }
+        }
       }
-      if (rangedMutators[urlPrimary[1]] === undefined) {invalidEntries.push(urlPrimary[1]);}
-      else if (urlPrimary[1]) {
-        readSelection("rangedMutator1").value = urlPrimary[1];
-        userTrigger.updateMutator('rangedMutator','1',true);
-      }
-      if (rangedMods[urlPrimary[2]] === undefined && primary[urlPrimary[0]].builtIN === "") {invalidEntries.push(urlPrimary[2]);}
-      else if (urlPrimary[2]) {
-        readSelection("rangedMod1").value = urlPrimary[2];
-        userTrigger.updateMod('rangedMod','1',true);
+      else {
+        if (primary[urlPrimary[0]] === undefined) {invalidEntries.push(urlPrimary[0]);}
+        else if (urlPrimary[0]) {
+          readSelection("primary").value = urlPrimary[0];
+          userTrigger.updateWeapon('primary',true);
+        }
+        if (rangedMutators[urlPrimary[1]] === undefined) {invalidEntries.push(urlPrimary[1]);}
+        else if (urlPrimary[1]) {
+          readSelection("rangedMutator1").value = urlPrimary[1];
+          userTrigger.updateMutator('rangedMutator','1',true);
+        }
+        if (rangedMods[urlPrimary[2]] === undefined && primary[urlPrimary[0]].builtIN === "") {invalidEntries.push(urlPrimary[2]);}
+        else if (urlPrimary[2]) {
+          readSelection("rangedMod1").value = urlPrimary[2];
+          userTrigger.updateMod('rangedMod','1',true);
+        }
       }
     }
     if (urlMelee) {
+      const letterPattern = /[a-zA-Z]/;
+      letterPattern.test(urlMelee)
+      let isActuallyNumbers = !letterPattern.test(urlMelee);
+
       urlMelee = urlMelee.split(",");
-      if (melee[urlMelee[0]] === undefined) {invalidEntries.push(urlMelee[0]);}
-      else if (urlMelee[0]) {
-        readSelection("melee").value = urlMelee[0];
-        userTrigger.updateWeapon('melee',true);
+
+      if (isActuallyNumbers) {
+        armorKeys = Object.keys(melee)
+        for (let key of armorKeys) {
+          if (melee[key].placementID === urlMelee[0]) {
+            readSelection("melee").value = key;
+            userTrigger.updateWeapon('melee',true);
+            break;
+          }
+        }
+        armorKeys = Object.keys(meleeMutators)
+        for (let key of armorKeys) {
+          if (meleeMutators[key].placementID === urlMelee[1]) {
+            readSelection("meleeMutator").value = key;
+            userTrigger.updateMutator('meleeMutator',"",true);
+            break;
+          }
+        }
       }
-      if (meleeMutators[urlMelee[1]] === undefined) {invalidEntries.push(urlMelee[1]);}
-      else if (urlMelee[1]) {
-        readSelection("meleeMutator").value = urlMelee[1];
-        userTrigger.updateMutator('meleeMutator',true);
+      else {
+        if (melee[urlMelee[0]] === undefined) {invalidEntries.push(urlMelee[0]);}
+        else if (urlMelee[0]) {
+          readSelection("melee").value = urlMelee[0];
+          userTrigger.updateWeapon('melee',true);
+        }
+        if (meleeMutators[urlMelee[1]] === undefined) {invalidEntries.push(urlMelee[1]);}
+        else if (urlMelee[1]) {
+          readSelection("meleeMutator").value = urlMelee[1];
+          userTrigger.updateMutator('meleeMutator',"",true);
+        }
       }
     }
     if (urlSecondary) {
+      const letterPattern = /[a-zA-Z]/;
+      letterPattern.test(urlSecondary)
+      let isActuallyNumbers = !letterPattern.test(urlSecondary);
+
       urlSecondary = urlSecondary.split(",");
-      if (secondary[urlSecondary[0]] === undefined) {invalidEntries.push(urlSecondary[0]);}
-      else if (urlSecondary[0]) {
-        readSelection("secondary").value = urlSecondary[0];
-        userTrigger.updateWeapon('secondary',true);
+
+      if (isActuallyNumbers) {
+        armorKeys = Object.keys(secondary)
+        for (let key of armorKeys) {
+          if (secondary[key].placementID === urlSecondary[0]) {
+            readSelection("secondary").value = key;
+            userTrigger.updateWeapon('secondary',true);
+            break;
+          }
+        }
+        armorKeys = Object.keys(rangedMutators)
+        for (let key of armorKeys) {
+          if (rangedMutators[key].placementID === urlSecondary[1]) {
+            readSelection("rangedMutator2").value = key;
+            userTrigger.updateMutator('rangedMutator','2',true);
+            break;
+          }
+        }
+        if (secondary[readSelection("secondary").value].builtIN === "") {
+          armorKeys = Object.keys(rangedMods)
+          for (let key of armorKeys) {
+            if (rangedMods[key].placementID === urlSecondary[2]) {
+              readSelection("rangedMod2").value = key;
+              userTrigger.updateMod('rangedMod','2',true);
+              break;
+            }
+          }
+        }
       }
-      if (rangedMutators[urlSecondary[1]] === undefined) {invalidEntries.push(urlSecondary[1]);}
-      else if (urlSecondary[1]) {
-        readSelection("rangedMutator2").value = urlSecondary[1];
-        userTrigger.updateMutator('rangedMutator','2',true);
-      }
-      if (rangedMods[urlSecondary[2]] === undefined && secondary[urlSecondary[0]].builtIN === "") {invalidEntries.push(urlSecondary[2]);}
-      else if (urlSecondary[2]) {
-        readSelection("rangedMod2").value = urlSecondary[2];
-        userTrigger.updateMod('rangedMod','2',true);
+      else {
+        if (secondary[urlSecondary[0]] === undefined) {invalidEntries.push(urlSecondary[0]);}
+        else if (urlSecondary[0]) {
+          readSelection("secondary").value = urlSecondary[0];
+          userTrigger.updateWeapon('secondary',true);
+        }
+        if (rangedMutators[urlSecondary[1]] === undefined) {invalidEntries.push(urlSecondary[1]);}
+        else if (urlSecondary[1]) {
+          readSelection("rangedMutator2").value = urlSecondary[1];
+          userTrigger.updateMutator('rangedMutator','2',true);
+        }
+        if (rangedMods[urlSecondary[2]] === undefined && secondary[urlSecondary[0]].builtIN === "") {invalidEntries.push(urlSecondary[2]);}
+        else if (urlSecondary[2]) {
+          readSelection("rangedMod2").value = urlSecondary[2];
+          userTrigger.updateMod('rangedMod','2',true);
+        }
       }
     }
   //AMULET AND RINGS
