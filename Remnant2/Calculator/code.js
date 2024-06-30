@@ -845,22 +845,42 @@ let manipulateURL = {
     let urlObject = globalRecords.urlObject;
     let traitRecord = globalRecords.greatTraitRecords;
 
-    for (i=1;i<=traitRecord.length;i++) {
-      let traitName = traitRecord[i-1].name || "";
-      let traitLevel = traitRecord[i-1].level || "";
-      let concatenated = `${traitName}${traitLevel}`;
-      globalRecords.urlObject.trait.push(concatenated)
+    if (isExported) {
+      for (i=1;i<=traitRecord.length;i++) {
+        let traitName = traitRecord[i-1].name || "";
+        let traitLevel = traitRecord[i-1].level || "";
+        let concatenated = `${traitName}${traitLevel}`;
+        urlObject.trait.push(concatenated)
+      }
+    }
+    else {
+      for (i=1;i<=traitRecord.length;i++) {
+        let traitName = traitRecord[i-1].name || "";
+        let traitID = "00";
+        if (traits[traitName].placementID != "00") {traitID = traits[traitName].placementID}
+        if (traitID === "00") {continue}
+        let traitLevel = traitRecord[i-1].level || "";
+        let concatenated = `${traitID}${traitLevel.toString().padStart(2, '0')}`;
+        urlObject.trait += concatenated;
+      }
     }
 
     let path = globalRecords.archs;
-    urlObject.archetype.push(path.one.class);
-    urlObject.archetype.push(path.two.class);
-    urlObject.archetype.push(path.one.ability);
-    urlObject.archetype.push(path.two.ability);
-    urlObject.armor.push(path.helmet);
-    urlObject.armor.push(path.chest);
-    urlObject.armor.push(path.leg);
-    urlObject.armor.push(path.hand);
+    if (isExported) {
+      urlObject.archetype.push(path.one.class);
+      urlObject.archetype.push(path.two.class);
+      urlObject.archetype.push(path.one.ability);
+      urlObject.archetype.push(path.two.ability);
+    }
+    else {
+      urlObject.archetype = "";
+      if (classInfo[path.one.class].placementID != "00") {
+        urlObject.archetype += classInfo[path.one.class].placementID + classInfo[path.one.class].abilities[path.one.ability].placementID;
+      }
+      if (classInfo[path.two.class].placementID != "00") {
+        urlObject.archetype += classInfo[path.two.class].placementID + classInfo[path.two.class].abilities[path.two.ability].placementID;
+      }
+    }
 
     path = globalRecords.armor;
     if (isExported) {
@@ -929,10 +949,19 @@ let manipulateURL = {
     }
     
 
+    if (isExported) {
+      urlObject.relic.push(path.relic);
+      for (i=1;i<=3;i++) {
+        urlObject.relic.push(path[`fragment${i}`]);
+      }
+    }
+    else {
+      urlObject.relic = "";
+      if (relics[path.relic].placementID != "r00") {urlObject.relic += relics[path.relic].placementID}
 
-    urlObject.relic.push(path.relic);
-    for (i=1;i<=3;i++) {
-      urlObject.relic.push(path[`fragment${i}`]);
+      for (i=1;i<=3;i++) {
+        if (fragments[path[`fragment${i}`]].placementID != "F00") {urlObject.relic += fragments[path[`fragment${i}`]].placementID}
+      }
     }
 
     urlObject.settings = ["","",""]
@@ -1161,6 +1190,33 @@ let manipulateURL = {
     let invalidEntries = [];
   //TRAITS
     if (urlTraits) {
+      const letterPattern = /[a-zA-Z]/;
+      letterPattern.test(urlTraits)
+      let isActuallyNumbers = !letterPattern.test(urlTraits);
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlTraits.length;i += 4) {
+          let itemID = urlTraits.charAt(i) + urlTraits.charAt(i+1);
+          let itemLevel = urlTraits.charAt(i+2) + urlTraits.charAt(i+3);
+
+            armorKeys = Object.keys(traits)
+            for (let key of armorKeys) {
+              if (traits[key].placementID === itemID) {
+                //If an import level is greater than 10, reduce to 10
+                traitLevel = Math.min(+itemLevel, 10);
+                //Don't need to check for less than 0, or round. A decimal or a - would be invalid.
+                manipulateTrait.modifyTraitRecord("create",0,key,+itemLevel);
+
+
+
+                // readSelection("amulet").value = key;
+                // userTrigger.updateAccessory('amulet',null,true);
+                break;
+              }
+            }
+        }
+      }
+      else {
         urlTraits = urlTraits.split(",")
         for (traitors of urlTraits) {
             let traitLevel = traitors.replace(/[^0-9]/g,"");
@@ -1176,33 +1232,80 @@ let manipulateURL = {
               manipulateTrait.modifyTraitRecord("create",0,traitName,traitLevel);
             }
         }
+      }
     }
     manipulateTrait.updateTraitCollection();//This needs to get called regardless of null or not, to generate first trait box
     //We call it before archs so when archs ARE called, they can factor default points into the trait math.
     //ARCHETYPES AND ABILITIES
     if (urlArchs) {
-      urlArchs = urlArchs.split(",");
-      //Check arch1 and ability
-      if (classInfo[urlArchs[0]] === undefined) {invalidEntries.push(urlArchs[0]);}
-      else if (urlArchs[0]) {
-        readSelection("archetype1").value = urlArchs[0];
-        userTrigger.updateArchetype('archetype','1',true);
-        if (classInfo[urlArchs[0]].abilities[urlArchs[2]] === undefined) {invalidEntries.push(urlArchs[2]);}
-        else if (urlArchs[2]) {
-          readSelection("archetype1ability").value = urlArchs[2];
-          userTrigger.updateAbility('archetype1',true);
+      const letterPattern = /[a-zA-Z]/;
+      letterPattern.test(urlArchs)
+      let isActuallyNumbers = !letterPattern.test(urlArchs);
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlArchs.length;i += 3) {
+          let itemID = urlArchs.charAt(i) + urlArchs.charAt(i+1);
+          let ability = Math.min(3,+urlArchs.charAt(i+2)).toString();
+
+            armorKeys = Object.keys(classInfo)
+            for (let key of armorKeys) {
+              if (classInfo[key].placementID === itemID) {
+
+                if (readSelection("archetype1").value === "") {
+                  readSelection("archetype1").value = key;
+                  userTrigger.updateArchetype('archetype','1',true);
+
+                  abilityKey = Object.keys(classInfo[key].abilities);
+                  for (let keys of abilityKey) {
+                    if (classInfo[key].abilities[keys].placementID === ability) {
+                      readSelection("archetype1ability").value = keys;
+                      userTrigger.updateAbility('archetype1',true);
+                      break;
+                    }
+                  }
+                }
+                else {
+                  readSelection("archetype2").value = key;
+                  userTrigger.updateArchetype('archetype','2',true);
+
+                  abilityKey = Object.keys(classInfo[key].abilities);
+                  for (let keys of abilityKey) {
+                    if (classInfo[key].abilities[keys].placementID === ability) {
+                      readSelection("archetype2ability").value = keys;
+                      userTrigger.updateAbility('archetype2',true);
+                      break;
+                    }
+                  }
+                }
+                break;
+              }
+            }
         }
       }
-      //Check arch2 and ability
-      if (classInfo[urlArchs[1]] === undefined) {invalidEntries.push(urlArchs[1]);}
-      else if (urlArchs[1]) {
-        readSelection("archetype2").value = urlArchs[1];
-        //note that parent is true here but not on arch 1. Arch 1 populates default trait points for non classtraits, 2 does not, not needed.
-        userTrigger.updateArchetype('archetype','2',true);
-        if (classInfo[urlArchs[1]].abilities[urlArchs[3]] === undefined) {invalidEntries.push(urlArchs[3]);}
-        else if (urlArchs[3]) {
-          readSelection("archetype2ability").value = urlArchs[3];
-          userTrigger.updateAbility('archetype2',true);
+      else {
+        urlArchs = urlArchs.split(",");
+        //Check arch1 and ability
+        if (classInfo[urlArchs[0]] === undefined) {invalidEntries.push(urlArchs[0]);}
+        else if (urlArchs[0]) {
+          readSelection("archetype1").value = urlArchs[0];
+          userTrigger.updateArchetype('archetype','1',true);
+          if (classInfo[urlArchs[0]].abilities[urlArchs[2]] === undefined) {invalidEntries.push(urlArchs[2]);}
+          else if (urlArchs[2]) {
+            readSelection("archetype1ability").value = urlArchs[2];
+            userTrigger.updateAbility('archetype1',true);
+          }
+        }
+        //Check arch2 and ability
+        if (classInfo[urlArchs[1]] === undefined) {invalidEntries.push(urlArchs[1]);}
+        else if (urlArchs[1]) {
+          readSelection("archetype2").value = urlArchs[1];
+          //note that parent is true here but not on arch 1. Arch 1 populates default trait points for non classtraits, 2 does not, not needed.
+          userTrigger.updateArchetype('archetype','2',true);
+          if (classInfo[urlArchs[1]].abilities[urlArchs[3]] === undefined) {invalidEntries.push(urlArchs[3]);}
+          else if (urlArchs[3]) {
+            readSelection("archetype2ability").value = urlArchs[3];
+            userTrigger.updateAbility('archetype2',true);
+          }
         }
       }
     }
@@ -1289,17 +1392,57 @@ let manipulateURL = {
     }
   //RELIC AND FRAGMENTS
     if (urlRelic) {
-      urlRelic = urlRelic.split(",");
-      if (relics[urlRelic[0]] === undefined) {invalidEntries.push(urlRelic[0]);}
-      else if (urlRelic[0]) {
-        readSelection("relic").value = urlRelic[0];
-        userTrigger.updateAccessory('relic',"",true);
+      let hasMultipleOld = urlRelic.includes(",") || urlRelic.includes(" ");
+      let isActuallyNumbers = !hasMultipleOld && urlRelic.length % 3 === 0 
+        && (urlRelic.charAt(0) === "r" || urlRelic.charAt(0) === "R" || urlRelic.charAt(0) === "Y" || urlRelic.charAt(0) === "B");
+
+      if (isActuallyNumbers) {
+        for (let i=0;i<urlRelic.length;i += 3) {
+          let itemHeader = urlRelic.charAt(i);
+          let itemID = urlRelic.charAt(i) + urlRelic.charAt(i+1) + urlRelic.charAt(i+2);
+
+
+          if (itemHeader === "r") {
+            armorKeys = Object.keys(relics)
+              for (let key of armorKeys) {
+                if (relics[key].placementID === itemID) {
+                  readSelection("relic").value = key;
+                  userTrigger.updateAccessory('relic',"",true);
+                  break;
+                }
+              }
+          }
+          else if (itemHeader === "R" || itemHeader === "Y" || itemHeader === "B") {
+            armorKeys = Object.keys(fragments)
+            for (let key of armorKeys) {
+              if (fragments[key].placementID === itemID) {
+
+                for (let x=1;x<=3;x++) {
+                  if (globalRecords.accessories[`fragment${x}`] === "") {
+                    readSelection(`fragment${x}`).value = key;
+                    userTrigger.updateFragment('fragment',x,true);
+                    break;
+                  }
+                }
+                break;
+              }
+            }
+          }
+        }
       }
-      for (let i=1;i<=3;i++) {
-        if (fragments[urlRelic[i]] === undefined) {invalidEntries.push(urlRelic[i]);}
-        else if (urlRelic[i]) {
-          readSelection(`fragment${i}`).value = urlRelic[i];
-          userTrigger.updateFragment('fragment',i,true);
+      else {
+        urlRelic = urlRelic.split(",");
+        if (relics[urlRelic[0]] === undefined) {invalidEntries.push(urlRelic[0]);}
+        else if (urlRelic[0]) {
+          readSelection("relic").value = urlRelic[0];
+          userTrigger.updateAccessory('relic',"",true);
+        }
+        for (let i=1;i<=3;i++) {
+          if (fragments[urlRelic[i]] === undefined) {invalidEntries.push(urlRelic[i]);}
+          else if (urlRelic[i]) {
+            readSelection(`fragment${i}`).value = urlRelic[i];
+            userTrigger.updateFragment('fragment',i,true);
+          }
         }
       }
     }
