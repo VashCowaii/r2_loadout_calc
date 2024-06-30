@@ -8617,7 +8617,8 @@ primary = {
 	  "reserves": 0,
 	  "accuracy": 0,
 	  "ideal": 0,
-	  "falloff": 0
+	  "falloff": 0,
+	  "placementID": "00"
 	},
 	"Alpha / Omega": {
 	  "name": "Alpha / Omega",
@@ -8637,7 +8638,8 @@ primary = {
 	  "reserves": 275,
 	  "accuracy": 95,
 	  "ideal": 24,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "01"
 	},
 	"Aphelion": {
 	  "name": "Aphelion",
@@ -8657,7 +8659,8 @@ primary = {
 	  "reserves": 49,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "02"
 	},
 	"AS-10 \"Bulldog\"": {
 	  "name": "AS-10 \"Bulldog\"",
@@ -8677,7 +8680,8 @@ primary = {
 	  "reserves": 60,
 	  "accuracy": 60,
 	  "ideal": 10,
-	  "falloff": 32
+	  "falloff": 32,
+	  "placementID": "03"
 	},
 	"Blackmaw AR-47": {
 	  "name": "Blackmaw AR-47",
@@ -8697,7 +8701,8 @@ primary = {
 	  "reserves": 190,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 60
+	  "falloff": 60,
+	  "placementID": "04"
 	},
 	"Chicago Typewriter": {
 	  "name": "Chicago Typewriter",
@@ -8717,7 +8722,8 @@ primary = {
 	  "reserves": 320,
 	  "accuracy": 80,
 	  "ideal": 17,
-	  "falloff": 55
+	  "falloff": 55,
+	  "placementID": "05"
 	},
 	"Coach Gun": {
 	  "name": "Coach Gun",
@@ -8737,7 +8743,8 @@ primary = {
 	  "reserves": 28,
 	  "accuracy": 95,
 	  "ideal": 15,
-	  "falloff": 33
+	  "falloff": 33,
+	  "placementID": "06"
 	},
 	"Corrupted Aphelion": {
 	  "name": "Corrupted Aphelion",
@@ -8757,7 +8764,8 @@ primary = {
 	  "reserves": 40,
 	  "accuracy": 95,
 	  "ideal": 15,
-	  "falloff": 40
+	  "falloff": 40,
+	  "placementID": "07"
 	},
 	"Corrupted Arbalest": {
 	  "name": "Corrupted Arbalest",
@@ -8777,7 +8785,8 @@ primary = {
 	  "reserves": 40,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "08"
 	},
 	"Corrupted Deceit": {
 	  "name": "Corrupted Deceit",
@@ -8797,7 +8806,8 @@ primary = {
 	  "reserves": 48,
 	  "accuracy": 95,
 	  "ideal": 26,
-	  "falloff": 75
+	  "falloff": 75,
+	  "placementID": "09"
 	},
 	"Corrupted Merciless": {
 	  "name": "Corrupted Merciless",
@@ -8817,7 +8827,8 @@ primary = {
 	  "reserves": 36,
 	  "accuracy": 90,
 	  "ideal": 25,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "10"
 	},
 	"Corrupted Savior": {
 	  "name": "Corrupted Savior",
@@ -8837,7 +8848,8 @@ primary = {
 	  "reserves": 200,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 60
+	  "falloff": 60,
+	  "placementID": "11"
 	},
 	"Crescent Moon": {
 	  "name": "Crescent Moon",
@@ -8857,7 +8869,8 @@ primary = {
 	  "reserves": 38,
 	  "accuracy": 100,
 	  "ideal": 25,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "12"
 	},
 	"Crossbow": {
 	  "name": "Crossbow",
@@ -8877,7 +8890,8 @@ primary = {
 	  "reserves": 27,
 	  "accuracy": 100,
 	  "ideal": 23,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "13"
 	},
 	"Deceit": {
 	  "name": "Deceit",
@@ -8897,7 +8911,8 @@ primary = {
 	  "reserves": 30,
 	  "accuracy": 95,
 	  "ideal": 28,
-	  "falloff": 75
+	  "falloff": 75,
+	  "placementID": "14"
 	},
 	"Ford's Scattergun": {
 	  "name": "Ford's Scattergun",
@@ -8917,7 +8932,8 @@ primary = {
 	  "reserves": 28,
 	  "accuracy": 95,
 	  "ideal": 10,
-	  "falloff": 35
+	  "falloff": 35,
+	  "placementID": "15"
 	},
 	"Huntmaster M1": {
 	  "name": "Huntmaster M1",
@@ -8937,7 +8953,8 @@ primary = {
 	  "reserves": 49,
 	  "accuracy": 95,
 	  "ideal": 27,
-	  "falloff": 75
+	  "falloff": 75,
+	  "placementID": "16"
 	},
 	"Merciless": {
 	  "name": "Merciless",
@@ -8960,7 +8977,8 @@ primary = {
 	  "reserves": 250,
 	  "accuracy": 90,
 	  "ideal": 20,
-	  "falloff": 45
+	  "falloff": 45,
+	  "placementID": "17"
 	},
 	"Monarch": {
 	  "name": "Monarch",
@@ -8980,7 +8998,8 @@ primary = {
 	  "reserves": 300,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 45
+	  "falloff": 45,
+	  "placementID": "18"
 	},
 	"Monolith": {
 	  "name": "Monolith",
@@ -9000,7 +9019,8 @@ primary = {
 	  "reserves": 320,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 30
+	  "falloff": 30,
+	  "placementID": "19"
 	},
 	"Nightfall": {
 	  "name": "Nightfall",
@@ -9022,7 +9042,8 @@ primary = {
 	  "reserves": 117,
 	  "accuracy": 95,
 	  "ideal": 18,
-	  "falloff": 50
+	  "falloff": 50,
+	  "placementID": "20"
 	},
 	"Plasma Cutter": {
 	  "name": "Plasma Cutter",
@@ -9042,7 +9063,8 @@ primary = {
 	  "reserves": 300,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 30
+	  "falloff": 30,
+	  "placementID": "21"
 	},
 	"Polygun": {
 	  "name": "Polygun",
@@ -9054,15 +9076,16 @@ primary = {
 	  "stats": {},
 	  "tags": [],
 	  "DMG": 207,
-	  "critChance": 0.10,
+	  "critChance": 0.1,
 	  "weakspot": 1.1,
-	  "stagger": 0.0,
+	  "stagger": 0,
 	  "RPS": 2.15,
 	  "magazine": 99,
 	  "reserves": 999,
 	  "accuracy": 95,
 	  "ideal": 26,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "22"
 	},
 	"Pulse Rifle": {
 	  "name": "Pulse Rifle",
@@ -9081,7 +9104,8 @@ primary = {
 	  "reserves": 210,
 	  "accuracy": 75,
 	  "ideal": 22,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "23"
 	},
 	"Repulsor": {
 	  "name": "Repulsor",
@@ -9101,7 +9125,8 @@ primary = {
 	  "reserves": 35,
 	  "accuracy": 95,
 	  "ideal": 13,
-	  "falloff": 35
+	  "falloff": 35,
+	  "placementID": "24"
 	},
 	"Royal Hunting Bow": {
 	  "name": "Royal Hunting Bow",
@@ -9121,7 +9146,8 @@ primary = {
 	  "reserves": 40,
 	  "accuracy": 100,
 	  "ideal": 25,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "25"
 	},
 	"Rusty Lever Action": {
 	  "name": "Rusty Lever Action",
@@ -9141,7 +9167,8 @@ primary = {
 	  "reserves": 60,
 	  "accuracy": 80,
 	  "ideal": 30,
-	  "falloff": 80
+	  "falloff": 80,
+	  "placementID": "26"
 	},
 	"Sagittarius": {
 	  "name": "Sagittarius",
@@ -9161,7 +9188,8 @@ primary = {
 	  "reserves": 32,
 	  "accuracy": 100,
 	  "ideal": 25,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "27"
 	},
 	"Savior": {
 	  "name": "Savior",
@@ -9181,7 +9209,8 @@ primary = {
 	  "reserves": 36,
 	  "accuracy": 95,
 	  "ideal": 25,
-	  "falloff": 75
+	  "falloff": 75,
+	  "placementID": "28"
 	},
 	"Sparkfire Shotgun": {
 	  "name": "Sparkfire Shotgun",
@@ -9204,7 +9233,8 @@ primary = {
 	  "reserves": 35,
 	  "accuracy": 98,
 	  "ideal": 12,
-	  "falloff": 30
+	  "falloff": 30,
+	  "placementID": "29"
 	},
 	"Sporebloom": {
 	  "name": "Sporebloom",
@@ -9224,7 +9254,8 @@ primary = {
 	  "reserves": 21,
 	  "accuracy": 95,
 	  "ideal": 10,
-	  "falloff": 25
+	  "falloff": 25,
+	  "placementID": "30"
 	},
 	"Starkiller": {
 	  "name": "Starkiller",
@@ -9244,7 +9275,8 @@ primary = {
 	  "reserves": 40,
 	  "accuracy": 95,
 	  "ideal": 30,
-	  "falloff": 80
+	  "falloff": 80,
+	  "placementID": "31"
 	},
 	"Thorn": {
 	  "name": "Thorn",
@@ -9264,7 +9296,8 @@ primary = {
 	  "reserves": 300,
 	  "accuracy": 95,
 	  "ideal": 19,
-	  "falloff": 39
+	  "falloff": 39,
+	  "placementID": "32"
 	},
 	"Trinity Crossbow": {
 	  "name": "Trinity Crossbow",
@@ -9284,7 +9317,8 @@ primary = {
 	  "reserves": 90,
 	  "accuracy": 100,
 	  "ideal": 22,
-	  "falloff": 65
+	  "falloff": 65,
+	  "placementID": "33"
 	},
 	"Twisted Arbalest": {
 	  "name": "Twisted Arbalest",
@@ -9304,7 +9338,8 @@ primary = {
 	  "reserves": 22,
 	  "accuracy": 85,
 	  "ideal": 20,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "34"
 	},
 	"Widowmaker": {
 	  "name": "Widowmaker",
@@ -9324,7 +9359,8 @@ primary = {
 	  "reserves": 27,
 	  "accuracy": 95,
 	  "ideal": 35,
-	  "falloff": 85
+	  "falloff": 85,
+	  "placementID": "35"
 	},
 	"Wrangler 1860": {
 	  "name": "Wrangler 1860",
@@ -9344,7 +9380,8 @@ primary = {
 	  "reserves": 60,
 	  "accuracy": 80,
 	  "ideal": 25,
-	  "falloff": 70
+	  "falloff": 70,
+	  "placementID": "36"
 	},
 	"XMG57 \"Bonesaw\"": {
 	  "name": "XMG57 \"Bonesaw\"",
@@ -9364,1025 +9401,944 @@ primary = {
 	  "reserves": 300,
 	  "accuracy": 75,
 	  "ideal": 19,
-	  "falloff": 55
+	  "falloff": 55,
+	  "placementID": "37"
 	}
-}
+  }
 melee = {
 	"": {
-		"name": "",
-		"slot": "Melee",
-		"image": "/images/Remnant/clear.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 0,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0,
-		"weakSpot": 0,
-		"stagger": 0,
-		"weaponClass": "Fist"
+	  "name": "",
+	  "slot": "Melee",
+	  "image": "/images/Remnant/clear.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 0,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0,
+	  "weakSpot": 0,
+	  "stagger": 0,
+	  "weaponClass": "Fist",
+	  "placementID": "00"
 	},
 	"Abyssal Hook": {
-		"name": "Abyssal Hook",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Abyssal Hook.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Fathomless Deep",
-		"DMG": 303,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 0.85,
-		"stagger": 0.80,
-		"weaponClass": "Hammer"
+	  "name": "Abyssal Hook",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Abyssal Hook.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Fathomless Deep",
+	  "DMG": 303,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 0.85,
+	  "stagger": 0.8,
+	  "weaponClass": "Hammer",
+	  "placementID": "01"
 	},
 	"Assassin's Dagger": {
-		"name": "Assassin's Dagger",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Assassin's Dagger.png",
-		"desc": "Back-attacks are guaranteed weakspot hits.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"builtIN": "Bloodthirst",
-		"DMG": 105,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": -0.03,
-		"weakSpot": 1.10,
-		"stagger": -0.15,
-		"weaponClass": "Sword"
+	  "name": "Assassin's Dagger",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Assassin's Dagger.png",
+	  "desc": "Back-attacks are guaranteed weakspot hits.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Bloodthirst",
+	  "DMG": 105,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": -0.03,
+	  "weakSpot": 1.1,
+	  "stagger": -0.15,
+	  "weaponClass": "Sword",
+	  "placementID": "02"
 	},
 	"Atom Smasher": {
-		"name": "Atom Smasher",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Atom Smasher.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Accelerator",
-		"DMG": 216,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 0.95,
-		"stagger": 0.11,
-		"weaponClass": "Hammer"
+	  "name": "Atom Smasher",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Atom Smasher.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Accelerator",
+	  "DMG": 216,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 0.95,
+	  "stagger": 0.11,
+	  "weaponClass": "Hammer",
+	  "placementID": "03"
 	},
 	"Atom Splitter": {
-		"name": "Atom Splitter",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Atom Splitter.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Fission Strike",
-		"DMG": 300,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 0.95,
-		"stagger": 0.07,
-		"weaponClass": "Greatsword"
+	  "name": "Atom Splitter",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Atom Splitter.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Fission Strike",
+	  "DMG": 300,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 0.95,
+	  "stagger": 0.07,
+	  "weaponClass": "Greatsword",
+	  "placementID": "04"
 	},
 	"Blade of Gul": {
-		"name": "Blade of Gul",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Blade of Gul.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 171,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.04,
-		"weakSpot": 1.0,
-		"stagger": 0.06,
-		"weaponClass": "Sword"
+	  "name": "Blade of Gul",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Blade of Gul.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 171,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.04,
+	  "weakSpot": 1,
+	  "stagger": 0.06,
+	  "weaponClass": "Sword",
+	  "placementID": "05"
 	},
 	"Bone Chopper": {
-		"name": "Bone Chopper",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Bone Chopper.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 174,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.07,
-		"weakSpot": 1.05,
-		"stagger": -0.03,
-		"weaponClass": "Axe"
+	  "name": "Bone Chopper",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Bone Chopper.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 174,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.07,
+	  "weakSpot": 1.05,
+	  "stagger": -0.03,
+	  "weaponClass": "Axe",
+	  "placementID": "06"
 	},
 	"Crystal Staff": {
-		"name": "Crystal Staff",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Crystal Staff.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Power Stone",
-		"DMG": 126,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 0.95,
-		"stagger": 0.03,
-		"weaponClass": "Staff"
+	  "name": "Crystal Staff",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Crystal Staff.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Power Stone",
+	  "DMG": 126,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 0.95,
+	  "stagger": 0.03,
+	  "weaponClass": "Staff",
+	  "placementID": "07"
 	},
 	"Decayed Claws": {
-		"name": "Decayed Claws",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Decayed Claws.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 147,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.16,
-		"weakSpot": 1.10,
-		"stagger": -0.04,
-		"weaponClass": "Claw"
+	  "name": "Decayed Claws",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Decayed Claws.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 147,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.16,
+	  "weakSpot": 1.1,
+	  "stagger": -0.04,
+	  "weaponClass": "Claw",
+	  "placementID": "08"
 	},
 	"Dreamcatcher": {
-		"name": "Dreamcatcher",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Dreamcatcher.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Dreamwave",
-		"DMG": 174,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 0.95,
-		"stagger": 0.03,
-		"weaponClass": "Staff"
+	  "name": "Dreamcatcher",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Dreamcatcher.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Dreamwave",
+	  "DMG": 174,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 0.95,
+	  "stagger": 0.03,
+	  "weaponClass": "Staff",
+	  "placementID": "09"
 	},
 	"Edge of the Forest": {
-		"name": "Edge of the Forest",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Edge of the Forest.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 177,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.09,
-		"weakSpot": 1.05,
-		"stagger": -0.15,
-		"weaponClass": "Katana"
+	  "name": "Edge of the Forest",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Edge of the Forest.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 177,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.09,
+	  "weakSpot": 1.05,
+	  "stagger": -0.15,
+	  "weaponClass": "Katana",
+	  "placementID": "10"
 	},
 	"Feral Judgement": {
-		"name": "Feral Judgement",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Feral Judgement.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Death Sentence",
-		"DMG": 159,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.13,
-		"weakSpot": 1.10,
-		"stagger": -0.15,
-		"weaponClass": "Claw"
+	  "name": "Feral Judgement",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Feral Judgement.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Death Sentence",
+	  "DMG": 159,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.13,
+	  "weakSpot": 1.1,
+	  "stagger": -0.15,
+	  "weaponClass": "Claw",
+	  "placementID": "11"
 	},
 	"Gas Giant": {
-		"name": "Gas Giant",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Gas Giant.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outCORRODED": 1
-		},
-		"tags": [],
-
-		"desc": "Dealing damage unleashes the dormant Toxic Gas within the head. When infused, Basic Attacks apply CORRODED for 5s.",
-		"builtIN": "Dying Breath",
-		"DMG": 222,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.03,
-		"weakSpot": 0.95,
-		"stagger": 0.08,
-		"weaponClass": "Hammer"
+	  "name": "Gas Giant",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Gas Giant.png",
+	  "desc": "Dealing damage unleashes the dormant Toxic Gas within the head. When infused, Basic Attacks apply CORRODED for 5s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outCORRODED": 1
+	  },
+	  "tags": [],
+	  "builtIN": "Dying Breath",
+	  "DMG": 222,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.03,
+	  "weakSpot": 0.95,
+	  "stagger": 0.08,
+	  "weaponClass": "Hammer",
+	  "placementID": "12"
 	},
 	"Godsplitter": {
-		"name": "Godsplitter",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Godsplitter.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Cannot score Weakspot hits without its Mod behavior.",
-		"builtIN": "Fracture",
-		"DMG": 114,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.02,
-		"weakSpot": 0.50,
-		"stagger": -0.20,
-		"weaponClass": "Sword"
+	  "name": "Godsplitter",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Godsplitter.png",
+	  "desc": "Cannot score Weakspot hits without its Mod behavior.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Fracture",
+	  "DMG": 114,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.02,
+	  "weakSpot": 0.5,
+	  "stagger": -0.2,
+	  "weaponClass": "Sword",
+	  "placementID": "13"
 	},
 	"Hero's Sword": {
-		"name": "Hero's Sword",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Hero's Sword.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Energy Wave",
-		"DMG": 153,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 35,
-		"critChance": 0.05,
-		"weakSpot": 0.90,
-		"stagger": -0.10,
-		"weaponClass": "Sword"
+	  "name": "Hero's Sword",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Hero's Sword.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Energy Wave",
+	  "DMG": 153,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 35,
+	  "critChance": 0.05,
+	  "weakSpot": 0.9,
+	  "stagger": -0.1,
+	  "weaponClass": "Sword",
+	  "placementID": "14"
 	},
 	"Huntress Spear": {
-		"name": "Huntress Spear",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Huntress Spear.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outCORRODED": 1
-		},
-		"tags": [],
-
-		"desc": "Charge Melee Attacks apply CORROSION dealing 300 ACID damage over 5s.",
-		"builtIN": "Javelin",
-		"DMG": 189,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 25,
-		"critChance": 0.05,
-		"weakSpot": 1.1,
-		"stagger": -0.5,
-		"weaponClass": "Spear"
+	  "name": "Huntress Spear",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Huntress Spear.png",
+	  "desc": "Charge Melee Attacks apply CORROSION dealing 300 ACID damage over 5s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outCORRODED": 1
+	  },
+	  "tags": [],
+	  "builtIN": "Javelin",
+	  "DMG": 189,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 25,
+	  "critChance": 0.05,
+	  "weakSpot": 1.1,
+	  "stagger": -0.5,
+	  "weaponClass": "Spear",
+	  "placementID": "15"
 	},
 	"Iron Greatsword": {
-		"name": "Iron Greatsword",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Iron Greatsword.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 315,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 0.95,
-		"stagger": 0.13,
-		"weaponClass": "Greatsword"
+	  "name": "Iron Greatsword",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Iron Greatsword.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 315,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 0.95,
+	  "stagger": 0.13,
+	  "weaponClass": "Greatsword",
+	  "placementID": "16"
 	},
 	"Knuckle Dusters": {
-		"name": "Knuckle Dusters",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Knuckle Dusters.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 129,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 1.10,
-		"stagger": 0.05,
-		"weaponClass": "Fist"
+	  "name": "Knuckle Dusters",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Knuckle Dusters.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 129,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 1.1,
+	  "stagger": 0.05,
+	  "weaponClass": "Fist",
+	  "placementID": "17"
 	},
 	"Krell Axe": {
-		"name": "Krell Axe",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Krell Axe.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Infused with Krell Shock magic, can be thrown if the wielder has stamina. Axe will magically reappear in-hand. Charge to throw.",
-		"builtIN": "Krell Edge",
-		"DMG": 162,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 25,
-		"critChance": 0.03,
-		"weakSpot": 0.85,
-		"stagger": -0.10,
-		"weaponClass": "Axe"
+	  "name": "Krell Axe",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Krell Axe.png",
+	  "desc": "Infused with Krell Shock magic, can be thrown if the wielder has stamina. Axe will magically reappear in-hand. Charge to throw.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Krell Edge",
+	  "DMG": 162,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 25,
+	  "critChance": 0.03,
+	  "weakSpot": 0.85,
+	  "stagger": -0.1,
+	  "weaponClass": "Axe",
+	  "placementID": "18"
 	},
 	"Labyrinth Staff": {
-		"name": "Labyrinth Staff",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Labyrinth Staff.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Basic Strikes generate 10% additional Mod Power. Charge Attacks perform an AOE which strikes all enemies within 2m, dealing 225 Damage. AOE Damage generates 50% additional Mod Power.",
-		"builtIN": "",
-		"DMG": 192,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.08,
-		"weakSpot": 0.95,
-		"stagger": 0.05,
-		"weaponClass": "Staff"
+	  "name": "Labyrinth Staff",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Labyrinth Staff.png",
+	  "desc": "Basic Strikes generate 10% additional Mod Power. Charge Attacks perform an AOE which strikes all enemies within 2m, dealing 225 Damage. AOE Damage generates 50% additional Mod Power.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 192,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.08,
+	  "weakSpot": 0.95,
+	  "stagger": 0.05,
+	  "weaponClass": "Staff",
+	  "placementID": "19"
 	},
 	"Mirage": {
-		"name": "Nightshade",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Mirage.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"builtIN": "Cyclone",
-		"DMG": 168,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.03,
-		"weakSpot": 1,
-		"stagger": -0.05,
-		"weaponClass": "Flail"
+	  "name": "Nightshade",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Mirage.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Cyclone",
+	  "DMG": 168,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.03,
+	  "weakSpot": 1,
+	  "stagger": -0.05,
+	  "weaponClass": "Flail",
+	  "placementID": "20"
 	},
 	"Nightshade": {
-		"name": "Nightshade",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Nightshade.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": ["MLifesteal"],
-
-		"desc": "Neutral Dodge grants the power of Lifesteal",
-		"builtIN": "Beyond The Veil",
-		"DMG": 141,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.18,
-		"weakSpot": 1.10,
-		"stagger": -0.20,
-		"weaponClass": "Claw"
+	  "name": "Nightshade",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Nightshade.png",
+	  "desc": "Neutral Dodge grants the power of Lifesteal",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [
+		"MLifesteal"
+	  ],
+	  "builtIN": "Beyond The Veil",
+	  "DMG": 141,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.18,
+	  "weakSpot": 1.1,
+	  "stagger": -0.2,
+	  "weaponClass": "Claw",
+	  "placementID": "21"
 	},
 	"Ornate Blade": {
-		"name": "Ornate Blade",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Ornate Blade.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 156,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.11,
-		"weakSpot": 1.05,
-		"stagger": -0.05,
-		"weaponClass": "Sword"
+	  "name": "Ornate Blade",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Ornate Blade.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 156,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.11,
+	  "weakSpot": 1.05,
+	  "stagger": -0.05,
+	  "weaponClass": "Sword",
+	  "placementID": "22"
 	},
 	"Ornate Flail": {
-		"name": "Ornate Flail",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Ornate Flail.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Can be charged to continuously swing, at the cost of stamina.",
-		"builtIN": "",
-		"DMG": 189,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.11,
-		"weakSpot": 1.0,
-		"stagger": -0.03,
-		"weaponClass": "Flail"
+	  "name": "Ornate Flail",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Ornate Flail.png",
+	  "desc": "Can be charged to continuously swing, at the cost of stamina.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 189,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.11,
+	  "weakSpot": 1,
+	  "stagger": -0.03,
+	  "weaponClass": "Flail",
+	  "placementID": "23"
 	},
 	"Rebellion Spear": {
-		"name": "Rebellion Spear",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Rebellion Spear.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 180,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.13,
-		"weakSpot": 1.10,
-		"stagger": 0.02,
-		"weaponClass": "Spear"
+	  "name": "Rebellion Spear",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Rebellion Spear.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 180,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.13,
+	  "weakSpot": 1.1,
+	  "stagger": 0.02,
+	  "weaponClass": "Spear",
+	  "placementID": "24"
 	},
 	"Red Doe Staff": {
-		"name": "Red Doe Staff",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Red Doe Staff.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Lifeline",
-		"DMG": 186,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.03,
-		"weakSpot": 0.95,
-		"stagger": 0.08,
-		"weaponClass": "Staff"
+	  "name": "Red Doe Staff",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Red Doe Staff.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Lifeline",
+	  "DMG": 186,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.03,
+	  "weakSpot": 0.95,
+	  "stagger": 0.08,
+	  "weaponClass": "Staff",
+	  "placementID": "25"
 	},
 	"Ritualist Scythe": {
-		"name": "Ritualist Scythe",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Ritualist Scythe.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"builtIN": "Reaver",
-		"DMG": 153,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.05,
-		"weakSpot": 1.0,
-		"stagger": -0.19,
-		"weaponClass": "Scythe"
+	  "name": "Ritualist Scythe",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Ritualist Scythe.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Reaver",
+	  "DMG": 153,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 1,
+	  "stagger": -0.19,
+	  "weaponClass": "Scythe",
+	  "placementID": "26"
 	},
 	"Royal Broadsword": {
-		"name": "Royal Broadsword",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Royal Broadsword.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 306,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.07,
-		"weakSpot": 0.95,
-		"stagger": 0.11,
-		"weaponClass": "Greatsword"
+	  "name": "Royal Broadsword",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Royal Broadsword.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 306,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.07,
+	  "weakSpot": 0.95,
+	  "stagger": 0.11,
+	  "weaponClass": "Greatsword",
+	  "placementID": "27"
 	},
 	"Rusted Claws": {
-		"name": "Rusted Claws",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Rusted Claws.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 153,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.14,
-		"weakSpot": 1.10,
-		"stagger": -0.09,
-		"weaponClass": "Claw"
+	  "name": "Rusted Claws",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Rusted Claws.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 153,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.14,
+	  "weakSpot": 1.1,
+	  "stagger": -0.09,
+	  "weaponClass": "Claw",
+	  "placementID": "28"
 	},
 	"Scrap Hammer": {
-		"name": "Scrap Hammer",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Scrap Hammer.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 249,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.08,
-		"weakSpot": 0.95,
-		"stagger": 0.09,
-		"weaponClass": "Hammer"
+	  "name": "Scrap Hammer",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Scrap Hammer.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 249,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.08,
+	  "weakSpot": 0.95,
+	  "stagger": 0.09,
+	  "weaponClass": "Hammer",
+	  "placementID": "29"
 	},
 	"Scrap Hatchet": {
-		"name": "Scrap Hatchet",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Scrap Hatchet.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Charge attacks strike twice",
-		"builtIN": "",
-		"DMG": 171,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 1.05,
-		"stagger": 0.01,
-		"weaponClass": "Axe"
+	  "name": "Scrap Hatchet",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Scrap Hatchet.png",
+	  "desc": "Charge attacks strike twice",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 171,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 1.05,
+	  "stagger": 0.01,
+	  "weaponClass": "Axe",
+	  "placementID": "30"
 	},
 	"Scrap Staff": {
-		"name": "Scrap Staff",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Scrap Staff.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 195,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 0.95,
-		"stagger": 0.08,
-		"weaponClass": "Staff"
+	  "name": "Scrap Staff",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Scrap Staff.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 195,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 0.95,
+	  "stagger": 0.08,
+	  "weaponClass": "Staff",
+	  "placementID": "31"
 	},
 	"Shovel": {
-		"name": "Shovel",
-		"slot": "Melee",
-		"image": "/images/swagCat.png",
-		"desc": "It's a shovel.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"builtIN": "",
-		"DMG": 165,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.15,
-		"weakSpot": 1,
-		"stagger": 0,
-		"weaponClass": "Hammer"
+	  "name": "Shovel",
+	  "slot": "Melee",
+	  "image": "/images/swagCat.png",
+	  "desc": "It's a shovel.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 165,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.15,
+	  "weakSpot": 1,
+	  "stagger": 0,
+	  "weaponClass": "Hammer",
+	  "placementID": "32"
 	},
 	"Smolder": {
-		"name": "Smolder",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Smolder.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "A scorched blade imbued with FIRE.",
-		"builtIN": "Blaze",
-		"DMG": 138,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.04,
-		"weakSpot": 0.95,
-		"stagger": 0.01,
-		"weaponClass": "Sword"
+	  "name": "Smolder",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Smolder.png",
+	  "desc": "A scorched blade imbued with FIRE.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Blaze",
+	  "DMG": 138,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.04,
+	  "weakSpot": 0.95,
+	  "stagger": 0.01,
+	  "weaponClass": "Sword",
+	  "placementID": "33"
 	},
 	"Spectral Blade": {
-		"name": "Spectral Blade",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Spectral Blade.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "Whirlwind",
-		"DMG": 159,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.08,
-		"weakSpot": 1.05,
-		"stagger": -0.25,
-		"weaponClass": "Katana"
+	  "name": "Spectral Blade",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Spectral Blade.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Whirlwind",
+	  "DMG": 159,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.08,
+	  "weakSpot": 1.05,
+	  "stagger": -0.25,
+	  "weaponClass": "Katana",
+	  "placementID": "34"
 	},
 	"Steel Flail": {
-		"name": "Steel Flail",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Steel Flail.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Charge to continuously chain overhead swings, at the cost of stamina.",
-		"builtIN": "",
-		"DMG": 207,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 35,
-		"critChance": 0.04,
-		"weakSpot": 1.0,
-		"stagger": 0.06,
-		"weaponClass": "Flail"
+	  "name": "Steel Flail",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Steel Flail.png",
+	  "desc": "Charge to continuously chain overhead swings, at the cost of stamina.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 207,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 35,
+	  "critChance": 0.04,
+	  "weakSpot": 1,
+	  "stagger": 0.06,
+	  "weaponClass": "Flail",
+	  "placementID": "35"
 	},
 	"Steel Katana": {
-		"name": "Steel Katana",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Steel Katana.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 168,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.10,
-		"weakSpot": 1.05,
-		"stagger": -0.10,
-		"weaponClass": "Katana"
+	  "name": "Steel Katana",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Steel Katana.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 168,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.1,
+	  "weakSpot": 1.05,
+	  "stagger": -0.1,
+	  "weaponClass": "Katana",
+	  "placementID": "36"
 	},
 	"Steel Scythe": {
-		"name": "Steel Scythe",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Steel Scythe.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 165,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.10,
-		"weakSpot": 1.0,
-		"stagger": -0.15,
-		"weaponClass": "Scythe"
+	  "name": "Steel Scythe",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Steel Scythe.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 165,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.1,
+	  "weakSpot": 1,
+	  "stagger": -0.15,
+	  "weaponClass": "Scythe",
+	  "placementID": "37"
 	},
 	"Steel Spear": {
-		"name": "Steel Spear",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Steel Spear.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 183,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.09,
-		"weakSpot": 1.10,
-		"stagger": -0.04,
-		"weaponClass": "Spear"
+	  "name": "Steel Spear",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Steel Spear.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 183,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.09,
+	  "weakSpot": 1.1,
+	  "stagger": -0.04,
+	  "weaponClass": "Spear",
+	  "placementID": "38"
 	},
 	"Steel Sword": {
-		"name": "Steel Sword",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Steel Sword.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 168,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.07,
-		"weakSpot": 1.0,
-		"stagger": 0.02,
-		"weaponClass": "Sword"
+	  "name": "Steel Sword",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Steel Sword.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 168,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.07,
+	  "weakSpot": 1,
+	  "stagger": 0.02,
+	  "weaponClass": "Sword",
+	  "placementID": "39"
 	},
 	"Stonebreaker": {
-		"name": "Stonebreaker",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Stonebreaker.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Charge Attacks can summon small shockwaves",
-		"builtIN": "Faultline",
-		"DMG": 309,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 35,
-		"critChance": 0.04,
-		"weakSpot": 0.95,
-		"stagger": 0.05,
-		"weaponClass": "Greatsword"
+	  "name": "Stonebreaker",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Stonebreaker.png",
+	  "desc": "Charge Attacks can summon small shockwaves",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Faultline",
+	  "DMG": 309,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 35,
+	  "critChance": 0.04,
+	  "weakSpot": 0.95,
+	  "stagger": 0.05,
+	  "weaponClass": "Greatsword",
+	  "placementID": "40"
 	},
 	"Vice Grips": {
-		"name": "Vice Grips",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Vice Grips.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "",
-		"builtIN": "",
-		"DMG": 165,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 1.10,
-		"stagger": -0.18,
-		"weaponClass": "Claw"
+	  "name": "Vice Grips",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Vice Grips.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "",
+	  "DMG": 165,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 1.1,
+	  "stagger": -0.18,
+	  "weaponClass": "Claw",
+	  "placementID": "41"
 	},
 	"World's Edge": {
-		"name": "World's Edge",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/World's Edge.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Charge Attacks cast waves.",
-		"builtIN": "Horizon Strike",
-		"DMG": 303,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 35,
-		"critChance": 0.03,
-		"weakSpot": 0.85,
-		"stagger": 0.80,
-		"weaponClass": "Greatsword"
+	  "name": "World's Edge",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/World's Edge.png",
+	  "desc": "Charge Attacks cast waves.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Horizon Strike",
+	  "DMG": 303,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 35,
+	  "critChance": 0.03,
+	  "weakSpot": 0.85,
+	  "stagger": 0.8,
+	  "weaponClass": "Greatsword",
+	  "placementID": "42"
 	},
 	"Wrathbringer": {
-		"name": "Wrathbringer",
-		"slot": "Melee",
-		"image": "/brotherLibrary/meleeImages/Wrathbringer.png",
-		"desc": "",
-		"usesConditional": {},
-		"stats": {},
-		"tags": [],
-
-		"desc": "Its dormant power can be awakened by taking damage",
-		"builtIN": "Awakening",
-		"DMG": 303,
-		"atkSpeed": 0,
-
-		"chargeDMG": 0,
-		"chargeSpeed": 0,
-		"chargeCost": 0,
-		"specialCost": 0,
-		"critChance": 0.06,
-		"weakSpot": 0.85,
-		"stagger": 0.80,
-		"weaponClass": "Hammer"
+	  "name": "Wrathbringer",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Wrathbringer.png",
+	  "desc": "Its dormant power can be awakened by taking damage",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Awakening",
+	  "DMG": 303,
+	  "atkSpeed": 0,
+	  "chargeDMG": 0,
+	  "chargeSpeed": 0,
+	  "chargeCost": 0,
+	  "specialCost": 0,
+	  "critChance": 0.06,
+	  "weakSpot": 0.85,
+	  "stagger": 0.8,
+	  "weaponClass": "Hammer",
+	  "placementID": "43"
 	}
-}
+  }
 secondary = {
 	"": {
 	  "name": "",
@@ -10402,7 +10358,8 @@ secondary = {
 	  "reserves": 0,
 	  "accuracy": 0,
 	  "ideal": 0,
-	  "falloff": 0
+	  "falloff": 0,
+	  "placementID": "00"
 	},
 	"Anguish": {
 	  "name": "Anguish",
@@ -10422,7 +10379,8 @@ secondary = {
 	  "reserves": 35,
 	  "accuracy": 95,
 	  "ideal": 16,
-	  "falloff": 35
+	  "falloff": 35,
+	  "placementID": "01"
 	},
 	"Bolt Driver": {
 	  "name": "Bolt Driver",
@@ -10442,7 +10400,8 @@ secondary = {
 	  "reserves": 96,
 	  "accuracy": 99,
 	  "ideal": 17,
-	  "falloff": 52
+	  "falloff": 52,
+	  "placementID": "02"
 	},
 	"Corrupted Cube Gun": {
 	  "name": "Corrupted Cube Gun",
@@ -10462,7 +10421,8 @@ secondary = {
 	  "reserves": 105,
 	  "accuracy": 95,
 	  "ideal": 15,
-	  "falloff": 35
+	  "falloff": 35,
+	  "placementID": "03"
 	},
 	"Corrupted Meridian": {
 	  "name": "Corrupted Meridian",
@@ -10482,7 +10442,8 @@ secondary = {
 	  "reserves": 36,
 	  "accuracy": 98,
 	  "ideal": 15,
-	  "falloff": 30
+	  "falloff": 30,
+	  "placementID": "04"
 	},
 	"Corrupted Nebula": {
 	  "name": "Corrupted Nebula",
@@ -10502,7 +10463,8 @@ secondary = {
 	  "reserves": 105,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 56
+	  "falloff": 56,
+	  "placementID": "05"
 	},
 	"Corrupted Rune Pistol": {
 	  "name": "Corrupted Rune Pistol",
@@ -10522,7 +10484,8 @@ secondary = {
 	  "reserves": 150,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 53
+	  "falloff": 53,
+	  "placementID": "06"
 	},
 	"Corrupted Sorrow": {
 	  "name": "Corrupted Sorrow",
@@ -10542,7 +10505,8 @@ secondary = {
 	  "reserves": 60,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 52
+	  "falloff": 52,
+	  "placementID": "07"
 	},
 	"Cube Gun": {
 	  "name": "Cube Gun",
@@ -10562,7 +10526,8 @@ secondary = {
 	  "reserves": 105,
 	  "accuracy": 90,
 	  "ideal": 20,
-	  "falloff": 50
+	  "falloff": 50,
+	  "placementID": "08"
 	},
 	"Double Barrel": {
 	  "name": "Double Barrel",
@@ -10582,7 +10547,8 @@ secondary = {
 	  "reserves": 24,
 	  "accuracy": 60,
 	  "ideal": 8,
-	  "falloff": 20
+	  "falloff": 20,
+	  "placementID": "09"
 	},
 	"Enigma": {
 	  "name": "Enigma",
@@ -10605,7 +10571,8 @@ secondary = {
 	  "reserves": 125,
 	  "accuracy": 60,
 	  "ideal": 12,
-	  "falloff": 12
+	  "falloff": 12,
+	  "placementID": "10"
 	},
 	"Hellfire": {
 	  "name": "Hellfire",
@@ -10628,7 +10595,8 @@ secondary = {
 	  "reserves": 180,
 	  "accuracy": 15,
 	  "ideal": 8,
-	  "falloff": 8
+	  "falloff": 8,
+	  "placementID": "11"
 	},
 	"MP60-R": {
 	  "name": "MP60-R",
@@ -10648,7 +10616,8 @@ secondary = {
 	  "reserves": 294,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 50
+	  "falloff": 50,
+	  "placementID": "12"
 	},
 	"Meridian": {
 	  "name": "Meridian",
@@ -10668,7 +10637,8 @@ secondary = {
 	  "reserves": 40,
 	  "accuracy": 100,
 	  "ideal": 15,
-	  "falloff": 30
+	  "falloff": 30,
+	  "placementID": "13"
 	},
 	"Nebula": {
 	  "name": "Nebula",
@@ -10691,7 +10661,8 @@ secondary = {
 	  "reserves": 220,
 	  "accuracy": 15,
 	  "ideal": 8,
-	  "falloff": 8
+	  "falloff": 8,
+	  "placementID": "14"
 	},
 	"Repeater Pistol": {
 	  "name": "Repeater Pistol",
@@ -10711,7 +10682,8 @@ secondary = {
 	  "reserves": 160,
 	  "accuracy": 95,
 	  "ideal": 18,
-	  "falloff": 52
+	  "falloff": 52,
+	  "placementID": "15"
 	},
 	"Rune Pistol": {
 	  "name": "Rune Pistol",
@@ -10731,7 +10703,8 @@ secondary = {
 	  "reserves": 168,
 	  "accuracy": 95,
 	  "ideal": 18,
-	  "falloff": 53
+	  "falloff": 53,
+	  "placementID": "16"
 	},
 	"Rupture Cannon": {
 	  "name": "Rupture Cannon",
@@ -10751,7 +10724,8 @@ secondary = {
 	  "reserves": 60,
 	  "accuracy": 90,
 	  "ideal": 14,
-	  "falloff": 35
+	  "falloff": 35,
+	  "placementID": "17"
 	},
 	"Rusty Repeater": {
 	  "name": "Rusty Repeater",
@@ -10771,7 +10745,8 @@ secondary = {
 	  "reserves": 180,
 	  "accuracy": 95,
 	  "ideal": 17,
-	  "falloff": 55
+	  "falloff": 55,
+	  "placementID": "18"
 	},
 	"Service Pistol": {
 	  "name": "Service Pistol",
@@ -10791,7 +10766,8 @@ secondary = {
 	  "reserves": 110,
 	  "accuracy": 85,
 	  "ideal": 20,
-	  "falloff": 50
+	  "falloff": 50,
+	  "placementID": "19"
 	},
 	"Silverback Model 500": {
 	  "name": "Silverback Model 500",
@@ -10811,7 +10787,8 @@ secondary = {
 	  "reserves": 48,
 	  "accuracy": 95,
 	  "ideal": 20,
-	  "falloff": 60
+	  "falloff": 60,
+	  "placementID": "20"
 	},
 	"Sorrow": {
 	  "name": "Sorrow",
@@ -10831,7 +10808,8 @@ secondary = {
 	  "reserves": 45,
 	  "accuracy": 95,
 	  "ideal": 19,
-	  "falloff": 52
+	  "falloff": 52,
+	  "placementID": "21"
 	},
 	"Star Shot": {
 	  "name": "Star Shot",
@@ -10851,7 +10829,8 @@ secondary = {
 	  "reserves": 60,
 	  "accuracy": 95,
 	  "ideal": 21,
-	  "falloff": 54
+	  "falloff": 54,
+	  "placementID": "22"
 	},
 	"Sureshot": {
 	  "name": "Sureshot",
@@ -10871,7 +10850,8 @@ secondary = {
 	  "reserves": 24,
 	  "accuracy": 80,
 	  "ideal": 22,
-	  "falloff": 75
+	  "falloff": 75,
+	  "placementID": "23"
 	},
 	"Tech 22": {
 	  "name": "Tech 22",
@@ -10891,7 +10871,8 @@ secondary = {
 	  "reserves": 330,
 	  "accuracy": 95,
 	  "ideal": 15,
-	  "falloff": 45
+	  "falloff": 45,
+	  "placementID": "24"
 	},
 	"Western Classic": {
 	  "name": "Western Classic",
@@ -10911,1018 +10892,1144 @@ secondary = {
 	  "reserves": 72,
 	  "accuracy": 95,
 	  "ideal": 18,
-	  "falloff": 48
+	  "falloff": 48,
+	  "placementID": "25"
 	}
-}
+  }
 /* ----------------------------------------------------------------------------------------*/
 /* ---------------------------------- MUTATORS --------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 rangedMutators = {
 	"": {
-		"usesConditional": {},
-		"name": "",
-		"slot": "RMutator",
-		"image": "/images/Remnant/clear.png",
-		"desc": "",
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "RMutator",
+	  "image": "/images/Remnant/clear.png",
+	  "desc": "",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "00"
 	},
 	"Bandit": {
-		"name": "Bandit",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Bandit.png",
-		"desc": "On hit, grants 30% chance to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Bandit",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Bandit.png",
+	  "desc": "On hit, grants 30% chance to return spent Ammo directly into the magazine of this weapon.<br>Level 10: When Ammo is returned to this weapon, it gains 10% increased Fire Rate for 3s. Duration can increase up to 10s",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "01"
 	},
 	"Battery": {
-		"name": "Battery",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Battery.png",
-		"desc": "Increases Weakspot Damage by 20% for every 400 Mod Power Spent by the attached weapon's mod. Max 3 stacks. Lasts 10s.<br>Level 10: At Max Stacks, gain 10% Critical Chance on Weakspot Hits",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Battery",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Battery.png",
+	  "desc": "Increases Weakspot Damage by 20% for every 400 Mod Power Spent by the attached weapon's mod. Max 3 stacks. Lasts 10s.<br>Level 10: At Max Stacks, gain 10% Critical Chance on Weakspot Hits",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "02"
 	},
 	"Bottom Heavy": {
-		"name": "Bottom Heavy",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Bottom Heavy.png",
-		"desc": "Increases Fire Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Bottom Heavy",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Bottom Heavy.png",
+	  "desc": "Increases Fire Rate by 7.5% and an additional 2% for every 10% of Magazine missing.<br>Level 10: Reload Speed is increased by 20% when this weapon's magazine is empty.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "03"
 	},
 	"Bulletweaver": {
-		"name": "Bulletweaver",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Bulletweaver.png",
-		"desc": "Mod use increases Fire Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Bulletweaver",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Bulletweaver.png",
+	  "desc": "Mod use increases Fire Rate of this weapon by 20% for 15s.<br>Level 10: Increases Mod Generation for this weapon by 15%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "04"
 	},
 	"Deadly Calm": {
-		"name": "Deadly Calm",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Deadly Calm.png",
-		"desc": "Continuosly Aiming increases Ranged Damage by up to 20% over 3s.<br>Level 10: Ranged Critical Hit Chance increased by 10%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Deadly Calm",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Deadly Calm.png",
+	  "desc": "Continuosly Aiming increases Ranged Damage by up to 20% over 3s.<br>Level 10: Ranged Critical Hit Chance increased by 10%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "05"
 	},
 	"Dreadful": {
-		"name": "Dreadful",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Dreadful.png",
-		"desc": "Increases Ranged Damage by 4% for every 10% of total Health present as Grey Health. Max 20% increase.<br>Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Dreadful",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Dreadful.png",
+	  "desc": "Increases Ranged Damage by 4% for every 10% of total Health present as Grey Health. Max 20% increase.<br>Level 10: Increases Reload Speed for this weapon by 15% while Grey Health is present.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "06"
 	},
 	"Extender": {
-		"name": "Extender",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Extender.png",
-		"desc": "Increases Magazine Capacity of this weapon by 40%.<br>Level 10: Increases Reload Speed of this weapon by 15%",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Extender",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Extender.png",
+	  "desc": "Increases Magazine Capacity of this weapon by 40%.<br>Level 10: Increases Reload Speed of this weapon by 15%",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "07"
 	},
 	"Failsafe": {
-		"name": "Failsafe",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Failsafe.png",
-		"desc": "Attached Mod deals 25% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
-		"usesConditional": {
-			"customTier0": "failsafe"
-		},
-		"stats": {
-		},
-		"tags": ["ModDamage"]
+	  "name": "Failsafe",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Failsafe.png",
+	  "desc": "Attached Mod deals 25% additional Mod Damage.<br>Level 10: Attached Mod use gains a 15% chace to not consume charge.",
+	  "usesConditional": {
+		"customTier0": "failsafe"
+	  },
+	  "stats": {},
+	  "tags": [
+		"ModDamage"
+	  ],
+	  "placementID": "08"
 	},
 	"Far-Sighted": {
-		"name": "Far-Sighted",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Far-Sighted.png",
-		"desc": "Increases Ranged Damage of this weapon by x% for every xm from the shooter to the target. Max 25%.<br>Level 10: Increases this weapon's Ideal, Falloff, and Max Range by 5m.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Far-Sighted",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Far-Sighted.png",
+	  "desc": "Increases Ranged Damage of this weapon by x% for every xm from the shooter to the target. Max 25%.<br>Level 10: Increases this weapon's Ideal, Falloff, and Max Range by 5m.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "09"
 	},
 	"Feedback": {
-		"name": "Feedback",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Feedback.png",
-		"desc": "Using this weapon's Mod generates 20% of single charge value as passive Mod Power over 10s. Does not stack.<br>Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Feedback",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Feedback.png",
+	  "desc": "Using this weapon's Mod generates 20% of single charge value as passive Mod Power over 10s. Does not stack.<br>Level 10: Mod Damage generates 10% of damage dealt as Mod Power.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "10"
 	},
 	"Fetid Wounds": {
-		"name": "Fetid Wounds",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Fetid Wounds.png",
-		"desc": "Increases Critical Chance of this weapon by 5% per unique Negative Status Effect on the enemy. Max 15% increase.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outCORRODED": 200
-		},
-		"tags": []
+	  "name": "Fetid Wounds",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Fetid Wounds.png",
+	  "desc": "Increases Critical Chance of this weapon by 5% per unique Negative Status Effect on the enemy. Max 15% increase.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply CORRODED, dealing 200 CORROSIVE damage over 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outCORRODED": 200
+	  },
+	  "tags": [],
+	  "placementID": "11"
 	},
 	"Ghost Shell": {
-		"name": "Ghost Shell",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Ghost Shell.png",
-		"desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 40%.<br>Level 10: Increases Weakspot Critical Chance by 15%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Ghost Shell",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Ghost Shell.png",
+	  "desc": "After 3 consecutive Weakspot Hits, increase the damage of the next Weakspot Hit by 40%.<br>Level 10: Increases Weakspot Critical Chance by 15%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "12"
 	},
 	"Harmonizer": {
-		"name": "Harmonizer",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Harmonizer.png",
-		"desc": "Increases Mod Damage by 20%.<br>Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
-		"usesConditional": {
-			"customTier0": "harmonizer"
-		},
-		"stats": {},
-		"tags": ["ModDamage"]
+	  "name": "Harmonizer",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Harmonizer.png",
+	  "desc": "Increases Mod Damage by 20%.<br>Level 10: Generate 25% additional Mod Power for Stowed Weapon.",
+	  "usesConditional": {
+		"customTier0": "harmonizer"
+	  },
+	  "stats": {},
+	  "tags": [
+		"ModDamage"
+	  ],
+	  "placementID": "13"
 	},
 	"Ingenuity": {
-		"name": "Ingenuity",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Ingenuity.png",
-		"desc": "Reduces the Heat Generation of this weapon by 50%.<br>Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Ingenuity",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Ingenuity.png",
+	  "desc": "Reduces the Heat Generation of this weapon by 50%.<br>Level 10: Reload Speed is increased up to 50% based on this weapon's Heat accumulation.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "14"
 	},
 	"Kill Switch": {
-		"name": "Kill Switch",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Kill Switch.png",
-		"desc": "Switching to this weapon creates an Explosive Burst which deals 250 Damage to all enemies within 7m. Can only happen once every 10s.<br>Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Kill Switch",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Kill Switch.png",
+	  "desc": "Switching to this weapon creates an Explosive Burst which deals 250 Damage to all enemies within 7m. Can only happen once every 10s.<br>Level 10: This weapon's kills with any Explosive Damage reduce Kill Switch cooldown by 1s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "15"
 	},
 	"Lithely": {
-		"name": "Lithely",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Lithely.png",
-		"desc": "Increase this weapon's Reload Speed by 7% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks.<br>Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Lithely",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Lithely.png",
+	  "desc": "Increase this weapon's Reload Speed by 7% for each enemy killed between reloads. Lasts 15s. Max 5 Stacks.<br>Level 10: Reloading at Max Stacks increases Ranged Damage by 20% for 15s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "16"
 	},
 	"Maelstrom": {
-		"name": "Maelstrom",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Maelstrom.png",
-		"desc": "Increases this weapon's Elemental Damage by 10% for each unique Elemental Status Effect on the target.<br>Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
-		"usesConditional": {
-			"customTier0": "maelstrom"
-		},
-		"stats": {},
-		"tags": ["ElementalDamage"]
+	  "name": "Maelstrom",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Maelstrom.png",
+	  "desc": "Increases this weapon's Elemental Damage by 10% for each unique Elemental Status Effect on the target.<br>Level 10: Increases Mod Power Generation of Elemental Damage and Elemental Status damage by 20%.",
+	  "usesConditional": {
+		"customTier0": "maelstrom"
+	  },
+	  "stats": {},
+	  "tags": [
+		"ElementalDamage"
+	  ],
+	  "placementID": "17"
 	},
 	"Momentum": {
-		"name": "Momentum",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Momentum.png",
-		"desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 2% for 3s. Max 10 stacks.<br>Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Momentum",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Momentum.png",
+	  "desc": "When this weapon scores a Critical hit, it increases Critical Chance and Critical Damage by 2% for 3s. Max 10 stacks.<br>Level 10: Critical Hits from this weapon add 2 stacks. Increases duration by 2s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "18"
 	},
 	"Near-Sighted": {
-		"name": "Near-Sighted",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Near-Sighted.png",
-		"desc": "Increases Ranged Damage of this weapon by 10% to enemies within 7m.<br>Level 10: Increases Ranged Critical Chance of this weapon by 10% to enemies within 7m.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Near-Sighted",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Near-Sighted.png",
+	  "desc": "Increases Ranged Damage of this weapon by 10% to enemies within 7m.<br>Level 10: Increases Ranged Critical Chance of this weapon by 10% to enemies within 7m.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "19"
 	},
 	"Pressure Point": {
-		"name": "Pressure Point",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Pressure Point.png",
-		"desc": "Increases this weapon's Ranged and Mod Damage by 5% to enemies within 7m.<br>Level 10: Activating this weapon's Mod triggers a fixed 7m blast, dealing 50 Explosive Damage per 100 Mod Power spent in a single cast. Inflicts 1.5 Stagger Damage.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Pressure Point",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Pressure Point.png",
+	  "desc": "Increases this weapon's Ranged and Mod Damage by 5% to enemies within 7m.<br>Level 10: Activating this weapon's Mod triggers a fixed 7m blast, dealing 50 Explosive Damage per 100 Mod Power spent in a single cast. Inflicts 1.5 Stagger Damage.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "20"
 	},
 	"Prophecy": {
-		"name": "Prophecy",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Prophecy.png",
-		"desc": "Using this weapon's mod increases Mod Power Generation by 6% for 10s. Max 5 stacks.<br>Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Prophecy",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Prophecy.png",
+	  "desc": "Using this weapon's mod increases Mod Power Generation by 6% for 10s. Max 5 stacks.<br>Level 10: Reduces Mod Power requirement of this weapon's mod by 10%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "21"
 	},
 	"Refunder": {
-		"name": "Refunder",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Refunder.png",
-		"desc": "Shots from this weapon have 35% chance to return spent Ammo to reserves.<br>Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Refunder",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Refunder.png",
+	  "desc": "Shots from this weapon have 35% chance to return spent Ammo to reserves.<br>Level 10: Refunded Ammo has a 50% chance to also be added to stowed weapon reserves.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "22"
 	},
 	"Searing Wounds": {
-		"name": "Searing Wounds",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Searing Wounds.png",
-		"desc": "Increases Ranged Damage of this weapon by 1% to BURNING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BURNING, dealing 50 FIRE damage over 5s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outBURN": 1
-		},
-		"tags": []
+	  "name": "Searing Wounds",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Searing Wounds.png",
+	  "desc": "Increases Ranged Damage of this weapon by 1% to BURNING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BURNING, dealing 50 FIRE damage over 5s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBURN": 1
+	  },
+	  "tags": [],
+	  "placementID": "23"
 	},
 	"Sequenced Shot": {
-		"name": "Sequenced Shot",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Sequenced Shot.png",
-		"desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 35% for 3s.<br>Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Sequenced Shot",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Sequenced Shot.png",
+	  "desc": "This weapon's Charged Shots decrease the Charge time of Subsequent Charge Shots by 35% for 3s.<br>Level 10: While active, Charged Primary Shots grant 1% Ranged Critical Chance per round spent. Max 20%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "24"
 	},
 	"Slayer": {
-		"name": "Slayer",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Slayer.png",
-		"desc": "Reloading increases the damage of this weapon's next shot by 25%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Slayer",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Slayer.png",
+	  "desc": "Reloading increases the damage of this weapon's next shot by 25%. Lasts 3s.<br>Level 10: Increases Reload Speed by 15%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "25"
 	},
 	"Sleeper": {
-		"name": "Sleeper",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Sleeper.png",
-		"desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 5 seconds after it is drawn.<br>Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Sleeper",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Sleeper.png",
+	  "desc": "This weapon becomes EMPOWERED when stowed for 7 seconds, granting 20% Critical Chance for 5 seconds after it is drawn.<br>Level 10: While EMPOWERED, increases Critical Damage of this weapon by 15%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "26"
 	},
 	"Spellweaver": {
-		"name": "Spellweaver",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Spellweaver.png",
-		"desc": "Increases this weapon's Mod Damage and Mod Generation by 15% for 10s when activating a Skill.<br>Level 10: Activating this weapon's Mod reduces Skill Cooldowns by 1% for every 100 Mod Power spent.",
-		"usesConditional": {
-			"customTier0": "spellweaver"
-		},
-		"stats": {},
-		"tags": ["ModDamage"]
+	  "name": "Spellweaver",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Spellweaver.png",
+	  "desc": "Increases this weapon's Mod Damage and Mod Generation by 15% for 10s when activating a Skill.<br>Level 10: Activating this weapon's Mod reduces Skill Cooldowns by 1% for every 100 Mod Power spent.",
+	  "usesConditional": {
+		"customTier0": "spellweaver"
+	  },
+	  "stats": {},
+	  "tags": [
+		"ModDamage"
+	  ],
+	  "placementID": "27"
 	},
 	"Spirit Feeder": {
-		"name": "Spirit Feeder",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Spirit Feeder.png",
-		"desc": "Reloading this weapon increases the damage of the Attached Mod by 25%. Lasts 5s.<br>Level 10: Casting Attached Mod increases Reload Speed by 25%. Lasts 5s.",
-		"usesConditional": {
-			"customTier0": "spiritFeeder"
-		},
-		"stats": {
-			"ReloadSpeed": 0.25,
-		},
-		"tags": ["ModDamage"]
+	  "name": "Spirit Feeder",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Spirit Feeder.png",
+	  "desc": "Reloading this weapon increases the damage of the Attached Mod by 25%. Lasts 5s.<br>Level 10: Casting Attached Mod increases Reload Speed by 25%. Lasts 5s.",
+	  "usesConditional": {
+		"customTier0": "spiritFeeder"
+	  },
+	  "stats": {
+		"ReloadSpeed": 0.25
+	  },
+	  "tags": [
+		"ModDamage"
+	  ],
+	  "placementID": "28"
 	},
 	"Spirit Healer": {
-		"usesConditional": {
-			"customTier0": "spiritHealer",
-		},
-		"name": "Spirit Healer",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Spirit Healer.png",
-		"desc": "Regenerate 2% Health over 10s for every 50 Mod Power spent.<br>Level 10: Allies within 15m are healed for 50% of the primary effect.",
-		"stats": {},
-		"tags": ["HP/S%"]
+	  "usesConditional": {
+		"customTier0": "spiritHealer"
+	  },
+	  "name": "Spirit Healer",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Spirit Healer.png",
+	  "desc": "Regenerate 2% Health over 10s for every 50 Mod Power spent.<br>Level 10: Allies within 15m are healed for 50% of the primary effect.",
+	  "stats": {},
+	  "tags": [
+		"HP/S%"
+	  ],
+	  "placementID": "29"
 	},
 	"Supercharger": {
-		"name": "Supercharger",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Supercharger.png",
-		"desc": "Increases Charge Speed of Bows and Fusion Rifles by 30%.<br>Level 10: Charged Primary Shots of Bows and Fusion Rifles gain 15% Critical Chance.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Supercharger",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Supercharger.png",
+	  "desc": "Increases Charge Speed of Bows and Fusion Rifles by 30%.<br>Level 10: Charged Primary Shots of Bows and Fusion Rifles gain 15% Critical Chance.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "30"
 	},
 	"Thousand Cuts": {
-		"name": "Thousand Cuts",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Thousand Cuts.png",
-		"desc": "Increases this weapon's Critical Chance and Critical Damage by 0.1% for each shot fired. Lasts 0.125s. Max 50 stacks.<br>Level 10: Increases this weapon's Reload Speed by 1% per stack.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Thousand Cuts",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Thousand Cuts.png",
+	  "desc": "Increases this weapon's Critical Chance and Critical Damage by 0.1% for each shot fired. Lasts 0.125s. Max 50 stacks.<br>Level 10: Increases this weapon's Reload Speed by 1% per stack.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "31"
 	},
 	"Timewave": {
-		"name": "Timewave",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Timewave.png",
-		"desc": "Mod Use applies SLOW status on all enemies within 7.5m for 7s.<br>Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outSLOW": 1
-		},
-		"tags": []
+	  "name": "Timewave",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Timewave.png",
+	  "desc": "Mod Use applies SLOW status on all enemies within 7.5m for 7s.<br>Level 10: Increase this weapon's Ranged damage by 15% to enemies inflicted with SLOW status.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [],
+	  "placementID": "32"
 	},
 	"Top Heavy": {
-		"name": "Top Heavy",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Top Heavy.png",
-		"desc": "Increases this weapon's Ranged Damage by up to 15% based on how close the magazine capacity is to full.<br>Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Top Heavy",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Top Heavy.png",
+	  "desc": "Increases this weapon's Ranged Damage by up to 15% based on how close the magazine capacity is to full.<br>Level 10: Increases this weapon's Weakspot Damage by up to 20% based on how close the magazine capacity is to full.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "33"
 	},
 	"Transpose": {
-		"name": "Transpose",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Transpose.png",
-		"desc": "Picking up Ammo increases Ranged damage by 20% for 20s.<br>Level 10: Ammo pickups are added directly to the magazine.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Transpose",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Transpose.png",
+	  "desc": "Picking up Ammo increases Ranged damage by 20% for 20s.<br>Level 10: Ammo pickups are added directly to the magazine.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "34"
 	},
 	"Twisting Wounds": {
-		"name": "Twisting Wounds",
-		"slot": "RMutator",
-		"image": "/brotherLibrary/mutatorsImages/Twisting Wounds.png",
-		"desc": "Increases Ranged damage of this weapon by 20% to BLEEDING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 200 BLEED damage over 20s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outBLEED": 200,
-		},
-		"tags": []
+	  "name": "Twisting Wounds",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Twisting Wounds.png",
+	  "desc": "Increases Ranged damage of this weapon by 20% to BLEEDING targets.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply BLEEDING, dealing 200 BLEED damage over 20s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBLEED": 200
+	  },
+	  "tags": [],
+	  "placementID": "35"
 	}
-}
+  }
 meleeMutators = {
 	"": {
-		"usesConditional": {},
-		"name": "",
-		"slot": "MMutator",
-		"image": "/images/Remnant/clear.png",
-		"desc": "",
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "MMutator",
+	  "image": "/images/Remnant/clear.png",
+	  "desc": "",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "00"
 	},
 	"Battle Mage": {
-		"usesConditional": {},
-		"name": "Battle Mage",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Battle Mage.png",
-		"desc": "Skill activation grants Mage Strike for 10s, increasing Melee Mod Generation by 50%.<br>Level 10: Mage Strike also increases Melee Damage by 15%. Bonuses assumed active at all times when selected.",
-		"stats": {
-			"MeleeDamage": 0.15,
-			"ModPowerGenMelee": 0.50
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Battle Mage",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Battle Mage.png",
+	  "desc": "Skill activation grants Mage Strike for 10s, increasing Melee Mod Generation by 50%.<br>Level 10: Mage Strike also increases Melee Damage by 15%. Bonuses assumed active at all times when selected.",
+	  "stats": {
+		"MeleeDamage": 0.15,
+		"ModPowerGenMelee": 0.5
+	  },
+	  "tags": [],
+	  "placementID": "01"
 	},
 	"Dervish": {
-		"usesConditional": {},
-		"name": "Dervish",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Dervish.png",
-		"desc": "Increases Melee Damage by 40% for 10s when activating a skill.<br>Level 10: Melee damage reduces Skill Cooldowns by 5%.",
-		"stats": {
-			"MeleeDamage": 0.40,
-		},
-		"tags": ["CDR"]
+	  "usesConditional": {},
+	  "name": "Dervish",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Dervish.png",
+	  "desc": "Increases Melee Damage by 40% for 10s when activating a skill.<br>Level 10: Melee damage reduces Skill Cooldowns by 5%.",
+	  "stats": {
+		"MeleeDamage": 0.4
+	  },
+	  "tags": [
+		"CDR"
+	  ],
+	  "placementID": "02"
 	},
 	"Disengage": {
-		"name": "Disengage",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Disengage.png",
-		"desc": "Melee Strikes(3) increase the damage of the next Backdash Evade Attack by 15%. Max 5 Stacks. Lasts 7.5s.<br>Level 10: Perfect Neutral Evades grants 5 stacks",
-		"usesConditional": {},
-		"stats": {
-			"BackstepDamage": 0.75,
-		},
-		"tags": []
+	  "name": "Disengage",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Disengage.png",
+	  "desc": "Melee Strikes(3) increase the damage of the next Backdash Evade Attack by 15%. Max 5 Stacks. Lasts 7.5s.<br>Level 10: Perfect Neutral Evades grants 5 stacks",
+	  "usesConditional": {},
+	  "stats": {
+		"BackstepDamage": 0.75
+	  },
+	  "tags": [],
+	  "placementID": "03"
 	},
 	"Edgelord": {
-		"usesConditional": {},
-		"name": "Edgelord",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Edgelord.png",
-		"desc": "Increases Melee Charge Speed by 35% and Melee Attack Speed by 10%.<br>Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
-		"stats": {
-			"ChargeSpeed": 0.35,
-			"AttackSpeed": 0.10,
-			"MChargedLifesteal": 0.03,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Edgelord",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Edgelord.png",
+	  "desc": "Increases Melee Charge Speed by 35% and Melee Attack Speed by 10%.<br>Level 10: Gain 3% of based Charged Melee Damage dealt as Lifesteal.",
+	  "stats": {
+		"ChargeSpeed": 0.35,
+		"AttackSpeed": 0.1,
+		"MChargedLifesteal": 0.03
+	  },
+	  "tags": [],
+	  "placementID": "04"
 	},
 	"Executor": {
-		"name": "Executor",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Executor.png",
-		"desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 30% of the original duration. Cannot exceed original max duration.<br>Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 20m with a Negative Status Effect. Max 4 stacks.",
-		"usesConditional": {
-			"customBase": "executor",
-		},
-		"stats": {},
-		"tags": ["AttackSpeed","ChargeSpeed"]
+	  "name": "Executor",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Executor.png",
+	  "desc": "Charged Melee Attacks increase the duration of Negative Status Effects on enemies by 30% of the original duration. Cannot exceed original max duration.<br>Level 10: Increases Melee Charge Speed and Melee Attack Speed by 5% per entity within 20m with a Negative Status Effect. Max 4 stacks.",
+	  "usesConditional": {
+		"customBase": "executor"
+	  },
+	  "stats": {},
+	  "tags": [
+		"AttackSpeed",
+		"ChargeSpeed"
+	  ],
+	  "placementID": "05"
 	},
 	"Gladiator": {
-		"usesConditional": {},
-		"name": "Gladiator",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Gladiator.png",
-		"desc": "While brandishing a Melee Weapon, receiving Enemy Damage increases Melee Damage by 50% for 5s.<br>Level 10: Receiving Enemy Damage while brandishing a Melee Weapon grants 1 stack of BULWARK for 5s. Bonus assumed active at all times when selected.",
-		"stats": {
-			"Bulwark": 1,
-			"MeleeDamage": 0.50
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Gladiator",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Gladiator.png",
+	  "desc": "While brandishing a Melee Weapon, receiving Enemy Damage increases Melee Damage by 50% for 5s.<br>Level 10: Receiving Enemy Damage while brandishing a Melee Weapon grants 1 stack of BULWARK for 5s. Bonus assumed active at all times when selected.",
+	  "stats": {
+		"Bulwark": 1,
+		"MeleeDamage": 0.5
+	  },
+	  "tags": [],
+	  "placementID": "06"
 	},
 	"Guts": {
-		"name": "Guts",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Guts.png",
-		"desc": "Increases Melee Critical Chance by 25% when Grey Health is present.<br>Level 10: Increases Melee Critical Damage by 0.5% for every 1% of Grey Health. Requires GREY HEALTH ACTIVE setting. Bonus assumes 50% GHP present.",
-		"usesConditional": {
-			"customTier0": "guts",
-		},
-		"stats": {},
-		"tags": ["MeleeCritChance","MeleeCritDamage"]
+	  "name": "Guts",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Guts.png",
+	  "desc": "Increases Melee Critical Chance by 25% when Grey Health is present.<br>Level 10: Increases Melee Critical Damage by 0.5% for every 1% of Grey Health. Requires GREY HEALTH ACTIVE setting. Bonus assumes 50% GHP present.",
+	  "usesConditional": {
+		"customTier0": "guts"
+	  },
+	  "stats": {},
+	  "tags": [
+		"MeleeCritChance",
+		"MeleeCritDamage"
+	  ],
+	  "placementID": "07"
 	},
 	"Latency": {
-		"name": "Latency",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Latency.png",
-		"desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 35% less damage to charge.<br>Level 10: Increase the potency of readied Melee Special abilities by 25%.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeSpecialAbilityCharge": -0.35,
-			"MeleeSpecialAbilityDamage": 0.25,
-		},
-		"tags": []
+	  "name": "Latency",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Latency.png",
+	  "desc": "Melee Weapons with special abilities which become readied by dealing melee damage require 35% less damage to charge.<br>Level 10: Increase the potency of readied Melee Special abilities by 25%.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeSpecialAbilityCharge": -0.35,
+		"MeleeSpecialAbilityDamage": 0.25
+	  },
+	  "tags": [],
+	  "placementID": "08"
 	},
 	"Misfortune": {
-		"name": "Misfortune",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Misfortune.png",
-		"desc": "Increase Melee damage by 10% for each unique Negative Status the target is suffering from.<br>Level 10: Melee Attacks apply SLOW for 3s.",
-		"usesConditional": {
-			"customBase": "misfortune",
-		},
-		"stats": {
-			"outgoingStatus": 1,
-			"outSLOW": 1
-		},
-		"tags": ["MeleeDamage"]
+	  "name": "Misfortune",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Misfortune.png",
+	  "desc": "Increase Melee damage by 10% for each unique Negative Status the target is suffering from.<br>Level 10: Melee Attacks apply SLOW for 3s.",
+	  "usesConditional": {
+		"customBase": "misfortune"
+	  },
+	  "stats": {
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [
+		"MeleeDamage"
+	  ],
+	  "placementID": "09"
 	},
 	"Opportunist": {
-		"name": "Opportunist",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Opportunist.png",
-		"desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance by 100% for 2s.<br>Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
-		"usesConditional": {
-			"customTier0": "opportunist",
-		},
-		"stats": {},
-		"tags": ["MeleeCritChance"]
+	  "name": "Opportunist",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Opportunist.png",
+	  "desc": "Perfect Dodge activates OPPORTUNITY which increases Melee Critical Chance by 100% for 2s.<br>Level 10: While OPPORTUNITY is active, any dodge or combat slide refreshes the duration.",
+	  "usesConditional": {
+		"customTier0": "opportunist"
+	  },
+	  "stats": {},
+	  "tags": [
+		"MeleeCritChance"
+	  ],
+	  "placementID": "10"
 	},
 	"Overdrive": {
-		"name": "Overdrive",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Overdrive.png",
-		"desc": "Melee Critical Hits increase Melee Critical Chance 5% for 15s. Stacking up to 5 times.<br>Level 10: Increases Melee Crit Damage by 20%.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeCritChance": 0.25,
-			"MeleeCritDamage": 0.20,
-		},
-		"tags": []
+	  "name": "Overdrive",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Overdrive.png",
+	  "desc": "Melee Critical Hits increase Melee Critical Chance 5% for 15s. Stacking up to 5 times.<br>Level 10: Increases Melee Crit Damage by 20%.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeCritChance": 0.25,
+		"MeleeCritDamage": 0.2
+	  },
+	  "tags": [],
+	  "placementID": "11"
 	},
 	"Reinvigorate": {
-		"name": "Reinvigorate",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Reinvigorate.png",
-		"desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 20% additional damage and 10% Critical Chance.",
-		"usesConditional": {},
-		"stats": {
-			"ChargeCost": -0.50,
-			"ChargeDamage": 0.20,
-			"ChargeCritChance": 0.10,
-		},
-		"tags": []
+	  "name": "Reinvigorate",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Reinvigorate.png",
+	  "desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 20% additional damage and 10% Critical Chance.",
+	  "usesConditional": {},
+	  "stats": {
+		"ChargeCost": -0.5,
+		"ChargeDamage": 0.2,
+		"ChargeCritChance": 0.1
+	  },
+	  "tags": [],
+	  "placementID": "12"
 	},
 	"Resentment": {
-		"name": "Resentment",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Resentment.png",
-		"desc": "Gain 30% Melee Damage when Grey Health is present.<br>Level 10: Reduces Stagger by 1 when using any Melee Attack.",
-		"usesConditional": {
-			"customTier0": "resentment",
-		},
-		"stats": {},
-		"tags": ["MeleeDamage"]
+	  "name": "Resentment",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Resentment.png",
+	  "desc": "Gain 30% Melee Damage when Grey Health is present.<br>Level 10: Reduces Stagger by 1 when using any Melee Attack.",
+	  "usesConditional": {
+		"customTier0": "resentment"
+	  },
+	  "stats": {},
+	  "tags": [
+		"MeleeDamage"
+	  ],
+	  "placementID": "13"
 	},
 	"Shielded Strike": {
-		"usesConditional": {
-			"customTier50": "shieldedStrike",
-		},
-		"name": "Shielded Strike",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Shielded Strike.png",
-		"desc": "Melee Attacks grant a Shield for 10% of Max Health. Max 50%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
-		"stats": {
-			"Shield": 0.5
-		},
-		"tags": ["ChargeDamage"]
+	  "usesConditional": {
+		"customTier50": "shieldedStrike"
+	  },
+	  "name": "Shielded Strike",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Shielded Strike.png",
+	  "desc": "Melee Attacks grant a Shield for 10% of Max Health. Max 50%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
+	  "stats": {
+		"Shield": 0.5
+	  },
+	  "tags": [
+		"ChargeDamage"
+	  ],
+	  "placementID": "14"
 	},
 	"Shocker": {
-		"name": "Shocker",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Shocker.png",
-		"desc": "Empowers weapon after 3 hits. While empowered, the next Charged Melee hit strikes all enemies within 7m with 100 SHOCK Damage.<br>Level 10: The SHOCK Damage now applies OVERLOADED dealing 125 damage every 5s for 25s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outOVERLOADED": 125
-		},
-		"tags": []
+	  "name": "Shocker",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Shocker.png",
+	  "desc": "Empowers weapon after 3 hits. While empowered, the next Charged Melee hit strikes all enemies within 7m with 100 SHOCK Damage.<br>Level 10: The SHOCK Damage now applies OVERLOADED dealing 125 damage every 5s for 25s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outOVERLOADED": 125
+	  },
+	  "tags": [],
+	  "placementID": "15"
 	},
 	"Steadfast": {
-		"usesConditional": {},
-		"name": "Steadfast",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Steadfast.png",
-		"desc": "Charged Melee Attacks cannot be interrupted and gain 10% damage reduction from all sources.<br>Level 10: All damage taken during Charged Melee Attack is converted to Grey Health.",
-		"stats": {
-			"FlatDR": 0.1
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Steadfast",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Steadfast.png",
+	  "desc": "Charged Melee Attacks cannot be interrupted and gain 10% damage reduction from all sources.<br>Level 10: All damage taken during Charged Melee Attack is converted to Grey Health.",
+	  "stats": {
+		"FlatDR": 0.1
+	  },
+	  "tags": [],
+	  "placementID": "16"
 	},
 	"Stormbringer": {
-		"name": "Stormbringer",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Stormbringer.png",
-		"desc": "Increases the Status Effect Damage applied by Melee Attacks by 50%.<br>Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeStatusDamage": 0.50,//the res reduction might be a multi, check that later.
-		},
-		"tags": []
+	  "name": "Stormbringer",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Stormbringer.png",
+	  "desc": "Increases the Status Effect Damage applied by Melee Attacks by 50%.<br>Level 10: Charged Melee Attacks lower enemy's Resistance to All Status Damage by 10%. Lasts 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeStatusDamage": 0.5
+	  },
+	  "tags": [],
+	  "placementID": "17"
 	},
 	"Striker": {
-		"name": "Striker",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Striker.png",
-		"desc": "Melee Hits increase Melee Damage by 6% for 10s. Max 5 Stacks, stacks decay.<br>Level 10: Increases Movement Speed by 3% per stack. Bonus assumed active at all times when selected.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeDamage": 0.30,
-			"MovementSpeed": 0.15,
-		},
-		"tags": []
+	  "name": "Striker",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Striker.png",
+	  "desc": "Melee Hits increase Melee Damage by 6% for 10s. Max 5 Stacks, stacks decay.<br>Level 10: Increases Movement Speed by 3% per stack. Bonus assumed active at all times when selected.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeDamage": 0.3,
+		"MovementSpeed": 0.15
+	  },
+	  "tags": [],
+	  "placementID": "18"
 	},
 	"Tainted Blade": {
-		"name": "Tainted Blade",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Tainted Blade.png",
-		"desc": "Increases Melee Damage by 8% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 250 ACID Damage over 10s. Bonus assumes maximum stacks.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeDamage": 0.40,
-			"outgoingStatus": 1,
-			"outCORRODED": 1
-		},
-		"tags": []
+	  "name": "Tainted Blade",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Tainted Blade.png",
+	  "desc": "Increases Melee Damage by 8% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 250 ACID Damage over 10s. Bonus assumes maximum stacks.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeDamage": 0.4,
+		"outgoingStatus": 1,
+		"outCORRODED": 1
+	  },
+	  "tags": [],
+	  "placementID": "19"
 	},
 	"Transference": {
-		"name": "Transference",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Transference.png",
-		"desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 5s.<br>Level 10: Increases Reload Speed by 50% after an ammo transfer.",
-		"usesConditional": {},
-		"stats": {
-			"ModPowerGenMelee": 0.25,
-			"ReloadSpeed": 0.50
-		},
-		"tags": []
+	  "name": "Transference",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Transference.png",
+	  "desc": "Melee Hits generate 5% Ammo Reserves for both Firearms. Cooldown 5s.<br>Level 10: Increases Reload Speed by 50% after an ammo transfer.",
+	  "usesConditional": {},
+	  "stats": {
+		"ModPowerGenMelee": 0.25,
+		"ReloadSpeed": 0.5
+	  },
+	  "tags": [],
+	  "placementID": "20"
 	},
 	"Vampire Blade": {
-		"usesConditional": {
-			"customBase": "vampireBlade",
-		},
-		"name": "Vampire Blade",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Vampire Blade.png",
-		"desc": "Increases Melee Damage by 30% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
-		"stats": {},
-		"tags": ["MeleeDamage","MLifesteal"]
+	  "usesConditional": {
+		"customBase": "vampireBlade"
+	  },
+	  "name": "Vampire Blade",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Vampire Blade.png",
+	  "desc": "Increases Melee Damage by 30% while within 10m of a BLEEDING entity. Level 10: Melee Hits vs BLEEDING targets will Lifesteal 3% of base damage dealt.",
+	  "stats": {},
+	  "tags": [
+		"MeleeDamage",
+		"MLifesteal"
+	  ],
+	  "placementID": "21"
 	},
 	"Vengeful Strike": {
-		"name": "Vengeful Strike",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Vengeful Strike.png",
-		"desc": "Increases Melee damage by 50% when below 50% Max Health. Level 10:<br>Increases Melee Critical Chance by 15% when below 50% Max Health. Bonus assumed active at all times when selected.",
-		"usesConditional": {},
-		"stats": {
-			"MeleeDamage": 0.50,
-			"MeleeCritChance": 0.15,
-		},
-		"tags": []
+	  "name": "Vengeful Strike",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Vengeful Strike.png",
+	  "desc": "Increases Melee damage by 50% when below 50% Max Health. Level 10:<br>Increases Melee Critical Chance by 15% when below 50% Max Health. Bonus assumed active at all times when selected.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeDamage": 0.5,
+		"MeleeCritChance": 0.15
+	  },
+	  "tags": [],
+	  "placementID": "22"
 	},
 	"Weaponlord": {
-		"name": "Weaponlord",
-		"slot": "MMutator",
-		"image": "/brotherLibrary/mutatorsImages/Weaponlord.png",
-		"desc": "Basic Melee Attack increase the next Charge Attack by 15%. Max 5 Stacks.<br>Level 10: At 3+ Stacks, the next Charge Attack gains 100% Critical Chance. Bonus assumed active at all times when selected.",
-		"usesConditional": {},
-		"stats": {
-			"ChargeDamage": 0.75,
-			"ChargeCritChance": 1.0,
-		},
-		"tags": []
+	  "name": "Weaponlord",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Weaponlord.png",
+	  "desc": "Basic Melee Attack increase the next Charge Attack by 15%. Max 5 Stacks.<br>Level 10: At 3+ Stacks, the next Charge Attack gains 100% Critical Chance. Bonus assumed active at all times when selected.",
+	  "usesConditional": {},
+	  "stats": {
+		"ChargeDamage": 0.75,
+		"ChargeCritChance": 1
+	  },
+	  "tags": [],
+	  "placementID": "23"
 	}
-}
+  }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------------------- MODS ---------------------------------------------*/
 /* ----------------------------------------------------------------------------------------*/
 rangedMods = {
 	"": {
-		"usesConditional": {},
-		"name": "",
-		"slot": "Mod",
-		"image": "/images/Remnant/clear.png",
-		"desc": "",
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "Mod",
+	  "image": "/images/Remnant/clear.png",
+	  "desc": "",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "00"
 	},
 	"Abrasive Rounds": {
-		"name": "Abrasive Rounds",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Abrasive Rounds.png",
-		"desc": "Imbues ammunition with BLEED and increases lifesteal by 5% for 20s. Shots also apply BLEEDING, dealing 200 damage over 10s.",
-		"usesConditional": {},
-		"stats": {
-			"RLifesteal": 0.05,
-			"outBLEED": 1,
-			"outgoingStatus": 1
-		},
-		"tags": []
+	  "name": "Abrasive Rounds",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Abrasive Rounds.png",
+	  "desc": "Imbues ammunition with BLEED and increases lifesteal by 5% for 20s. Shots also apply BLEEDING, dealing 200 damage over 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"RLifesteal": 0.05,
+		"outBLEED": 1,
+		"outgoingStatus": 1
+	  },
+	  "tags": [],
+	  "placementID": "01"
 	},
 	"Astral Burst": {
-		"name": "Astral Burst",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Astral Burst.png",
-		"desc": "Fires a short range burst of 7 star fragments which deal 90 damage each. Fragments bounce off walls up to 3 times, dealing 25% additional damage per bounce. Weakspot hits deal reduced damage.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Astral Burst",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Astral Burst.png",
+	  "desc": "Fires a short range burst of 7 star fragments which deal 90 damage each. Fragments bounce off walls up to 3 times, dealing 25% additional damage per bounce. Weakspot hits deal reduced damage.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "02"
 	},
 	"Blood Draw": {
-		"name": "Blood Draw",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Blood Draw.png",
-		"desc": "Shoots out razor-sharp Chain Shards which impale up to 5 targets within 15m, dealing X30 damage. On hit, chains are pulled towards the caster, dealing 750 damage split equally among enemies and applying 825 BLEEDING damage over 15s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outBLEED": 1
-		},
-		"tags": []
+	  "name": "Blood Draw",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Blood Draw.png",
+	  "desc": "Shoots out razor-sharp Chain Shards which impale up to 5 targets within 15m, dealing X30 damage. On hit, chains are pulled towards the caster, dealing 750 damage split equally among enemies and applying 825 BLEEDING damage over 15s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBLEED": 1
+	  },
+	  "tags": [],
+	  "placementID": "03"
 	},
 	"Bore": {
-		"name": "Bore",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Bore.png",
-		"desc": "Fires a drill projectile which bores into enemies on contact, dealing 240 damage. After fully burrowing into an enemy, creates a Weakspot which grants 65% of normal Weakspot Damage on hit. If attached to an existing Weakspot, Ranged Crit Chance is increased by 15% when attacking the drill. Lasts 10s. Crit Chance bonus not currently calculated.",
-		"usesConditional": {},
-		"stats": {
-			"AllWeakspot": 0.65
-		},
-		"tags": []
+	  "name": "Bore",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Bore.png",
+	  "desc": "Fires a drill projectile which bores into enemies on contact, dealing 240 damage. After fully burrowing into an enemy, creates a Weakspot which grants 65% of normal Weakspot Damage on hit. If attached to an existing Weakspot, Ranged Crit Chance is increased by 15% when attacking the drill. Lasts 10s. Crit Chance bonus not currently calculated.",
+	  "usesConditional": {},
+	  "stats": {
+		"AllWeakspot": 0.65
+	  },
+	  "tags": [],
+	  "placementID": "04"
 	},
 	"Concussive Shot": {
-		"name": "Concussive Shot",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Concussive Shot.png",
-		"desc": "Fires a focused blast of air through all targets within 8m, dealing 465 damage and 5x impact.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Concussive Shot",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Concussive Shot.png",
+	  "desc": "Fires a focused blast of air through all targets within 8m, dealing 465 damage and 5x impact.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "05"
 	},
 	"Corrosive Rounds": {
-		"name": "Corrosive Rounds",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Corrosive Rounds.png",
-		"desc": "Imbues ammunition with TOXIC and increases Range Crit Chance by 15% for 20s. Shots also apply CORRODED, dealing 300 damage over 10s.",
-		"usesConditional": {},
-		"stats": {
-			"RangedCritChance": 0.15,
-			"outgoingStatus": 1,
-			"outCORRODED": 1
-		},
-		"tags": []
+	  "name": "Corrosive Rounds",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Corrosive Rounds.png",
+	  "desc": "Imbues ammunition with TOXIC and increases Range Crit Chance by 15% for 20s. Shots also apply CORRODED, dealing 300 damage over 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"RangedCritChance": 0.15,
+		"outgoingStatus": 1,
+		"outCORRODED": 1
+	  },
+	  "tags": [],
+	  "placementID": "06"
 	},
 	"Creeping Mist": {
-		"name": "Creeping Mist",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Creeping Mist.png",
-		"desc": "Shoots a cannister out that shatters on impact to reveal an expanding mist, starting at 7.5m and growing to 15m over 5s. The mist lasts 20s. While affected, enemies receive 25% additional Status Effect Damage and are 5% more likely to be struck with a critical hit from any source. The mists debuff persists for 10s after target exits the mist.",
-		"usesConditional": {},
-		"stats": {
-			"StatusDamage": 0.25,
-			"AllCritChance": 0.05
-		},
-		"tags": []
+	  "name": "Creeping Mist",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Creeping Mist.png",
+	  "desc": "Shoots a cannister out that shatters on impact to reveal an expanding mist, starting at 7.5m and growing to 15m over 5s. The mist lasts 20s. While affected, enemies receive 25% additional Status Effect Damage and are 5% more likely to be struck with a critical hit from any source. The mists debuff persists for 10s after target exits the mist.",
+	  "usesConditional": {},
+	  "stats": {
+		"StatusDamage": 0.25,
+		"AllCritChance": 0.05
+	  },
+	  "tags": [],
+	  "placementID": "07"
 	},
 	"Defrag": {
-		"name": "Defrag",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Defrag.png",
-		"desc": "Infects weapon with Malware for 30s, causing shots to apply FRAGMENTED for 5s. When a FRAGMENTED enemy dies, they create a Glitch that lasts 15s.\n\nPicking up a Glitch increases All damage by 20% for 15s.\n\nDestroying a Glitch causes it to destabilize, creating a 5m Virus Pool which deals 75 damage per second and applies the FRAGMENTED debuff to enemies inside. Virus Pools last 15s.",
-		"usesConditional": {},
-		"stats": {
-			"AllDamage": 0.20
-		},
-		"tags": []
+	  "name": "Defrag",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Defrag.png",
+	  "desc": "Infects weapon with Malware for 30s, causing shots to apply FRAGMENTED for 5s. When a FRAGMENTED enemy dies, they create a Glitch that lasts 15s.\n\nPicking up a Glitch increases All damage by 20% for 15s.\n\nDestroying a Glitch causes it to destabilize, creating a 5m Virus Pool which deals 75 damage per second and applies the FRAGMENTED debuff to enemies inside. Virus Pools last 15s.",
+	  "usesConditional": {},
+	  "stats": {
+		"AllDamage": 0.2
+	  },
+	  "tags": [],
+	  "placementID": "08"
 	},
 	"Energy Wall": {
-		"name": "Energy Wall",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Energy Wall.png",
-		"desc": "Deploys an energy barrier on impact with ground. Allies can shoot through Energy Wall but enemy projectiles are absorbed (up to 1000 damage\nreceived). Max 1 Wall at a time. Lasts 30s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Energy Wall",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Energy Wall.png",
+	  "desc": "Deploys an energy barrier on impact with ground. Allies can shoot through Energy Wall but enemy projectiles are absorbed (up to 1000 damage\nreceived). Max 1 Wall at a time. Lasts 30s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "09"
 	},
 	"Familiar": {
-		"name": "Familiar",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Familiar.png",
-		"desc": "Summons Faerie Familiar to aid in combat. The Familiar selects a random enemy within 10m and slashes through them for 75 damage each attack. Familiar will select a new target when the previous one dies. Lasts 15s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Familiar",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Familiar.png",
+	  "desc": "Summons Faerie Familiar to aid in combat. The Familiar selects a random enemy within 10m and slashes through them for 75 damage each attack. Familiar will select a new target when the previous one dies. Lasts 15s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "10"
 	},
 	"Fargazer": {
-		"name": "Fargazer",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Fargazer.png",
-		"desc": "Calls forth an eye of Legion to gaze at player's AIM target. For every 0.25s Fargazer focuses on a target within 25m, a stack of MADNESS Status is applied for 5s. Each stack deals 9 Damage per second. Max 10 stacks. Lasts 30s.",
-		"usesConditional": {},
-		"stats": {
-			// "outgoingStatus": 1,
-			"outMADNESS": 1
-		},
-		"tags": []
+	  "name": "Fargazer",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Fargazer.png",
+	  "desc": "Calls forth an eye of Legion to gaze at player's AIM target. For every 0.25s Fargazer focuses on a target within 25m, a stack of MADNESS Status is applied for 5s. Each stack deals 9 Damage per second. Max 10 stacks. Lasts 30s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outMADNESS": 1
+	  },
+	  "tags": [],
+	  "placementID": "11"
 	},
 	"Firestorm": {
-		"name": "Firestorm",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Firestorm.png",
-		"desc": "Creates a whirling cyclone that sucks in nearby targets and applies BURNING for 10s. The center of the cyclone deals 225 FIRE damage per second. Lasts 15s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outBURN": 1
-		},
-		"tags": []
+	  "name": "Firestorm",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Firestorm.png",
+	  "desc": "Creates a whirling cyclone that sucks in nearby targets and applies BURNING for 10s. The center of the cyclone deals 225 FIRE damage per second. Lasts 15s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBURN": 1
+	  },
+	  "tags": [],
+	  "placementID": "12"
 	},
 	"Flying Bomb Trap": {
-		"name": "Flying Bomb Trap",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Flying Bomb Trap.png",
-		"desc": "Fires a projectile that deploys up to 5 traps after contacting the ground. Each trap can launch a flask of deadly liquid up to 10m when an enemy travels above and will rearm once every 3s. Flask detonatations release a 5m shockwave which deals 50 Damage and splashes targets within 3m of the center for 125 ACID Damage applying CORRODED for 125 damage over 10s. Lasts 20s or until 10 total flask launches.",
-		"usesConditional": {},
-		"stats": {
-			"outCORRODED": 1,
-			"outgoingStatus": 1
-		},
-		"tags": []
+	  "name": "Flying Bomb Trap",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Flying Bomb Trap.png",
+	  "desc": "Fires a projectile that deploys up to 5 traps after contacting the ground. Each trap can launch a flask of deadly liquid up to 10m when an enemy travels above and will rearm once every 3s. Flask detonatations release a 5m shockwave which deals 50 Damage and splashes targets within 3m of the center for 125 ACID Damage applying CORRODED for 125 damage over 10s. Lasts 20s or until 10 total flask launches.",
+	  "usesConditional": {},
+	  "stats": {
+		"outCORRODED": 1,
+		"outgoingStatus": 1
+	  },
+	  "tags": [],
+	  "placementID": "13"
 	},
 	"Healing Shot": {
-		"name": "Healing Shot",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Healing Shot.png",
-		"desc": "Launches a payload that explodes on contact with allies, healing 30% of their max health. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s, slowly losing healing potency over time.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Healing Shot",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Healing Shot.png",
+	  "desc": "Launches a payload that explodes on contact with allies, healing 30% of their max health. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s, slowly losing healing potency over time.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "14"
 	},
 	"Heatwave": {
-		"name": "Heatwave",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Heatwave.png",
-		"desc": "Activates a 10m aura of sweltering heat, causing enemies inside the aura for 3s to begin BURNING for 50 FIRE Damage per second for 5s. Lasts 30s.",
-		"usesConditional": {},
-		"stats": {
-			"outBURN": 1,
-			"outgoingStatus": 1
-		},
-		"tags": []
+	  "name": "Heatwave",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Heatwave.png",
+	  "desc": "Activates a 10m aura of sweltering heat, causing enemies inside the aura for 3s to begin BURNING for 50 FIRE Damage per second for 5s. Lasts 30s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outBURN": 1,
+		"outgoingStatus": 1
+	  },
+	  "tags": [],
+	  "placementID": "15"
 	},
 	"Helix": {
-		"name": "Helix",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Helix.png",
-		"desc": "Shoots a helix of missiles, dealing 170 damage. On contact, divides into 6 smaller rockets which seek additional targets, dealing 90 damage on contact.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Helix",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Helix.png",
+	  "desc": "Shoots a helix of missiles, dealing 170 damage. On contact, divides into 6 smaller rockets which seek additional targets, dealing 90 damage on contact.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "16"
 	},
 	"Hot Shot": {
-		"name": "Hot Shot",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Hot Shot.png",
-		"desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
-		"usesConditional": {},
-		"stats": {
-			"RangedDamage": 0.15,
-			"outgoingStatus": 1,
-			"outBURN": 1
-		},
-		"tags": []
+	  "name": "Hot Shot",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Hot Shot.png",
+	  "desc": "Imbues ammunition with FIRE and increases Ranged damage by 15% for 20s. Shots also apply BURNING, dealing 600 FIRE Damage over 10 seconds.",
+	  "usesConditional": {},
+	  "stats": {
+		"RangedDamage": 0.15,
+		"outgoingStatus": 1,
+		"outBURN": 1
+	  },
+	  "tags": [],
+	  "placementID": "17"
 	},
 	"Knight Guard": {
-		"name": "Knight Guard",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Knight Guard.png",
-		"desc": "Summons Knight Guard to aid in combat. The Guards hurl penetrating slashes at a random enemy dealing 15 damage. The Guards will melee enemies if close enough for 15 damage. Lasts 20s",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Knight Guard",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Knight Guard.png",
+	  "desc": "Summons Knight Guard to aid in combat. The Guards hurl penetrating slashes at a random enemy dealing 15 damage. The Guards will melee enemies if close enough for 15 damage. Lasts 20s",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "18"
 	},
 	"Overflow": {
-		"name": "Overflow",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Overflow.png",
-		"desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
-		"usesConditional": {},
-		"stats": {
-			"FireRate": 0.15,
-			"ReloadSpeed": 0.15,
-			"outgoingStatus": 1,
-			"outOVERLOADED": 1
-		},
-		"tags": []
+	  "name": "Overflow",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Overflow.png",
+	  "desc": "Imbues ammunition with SHOCK and increases Fire Rate by 15% and Reload Speed by 15% for 20 seconds. Shots also apply OVERLOADED, dealing 105 SHOCK Damage every 5s for 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"FireRate": 0.15,
+		"ReloadSpeed": 0.15,
+		"outgoingStatus": 1,
+		"outOVERLOADED": 1
+	  },
+	  "tags": [],
+	  "placementID": "19"
 	},
 	"Prismatic Driver": {
-		"name": "Prismatic Driver",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Prismatic Driver.png",
-		"desc": "Fires a superheated beam which deals 75 Mod Damage per second. Sustaining the beam on a target causes an explosion which deals 450 Mod damage in a 3m AOE.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Prismatic Driver",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Prismatic Driver.png",
+	  "desc": "Fires a superheated beam which deals 75 Mod Damage per second. Sustaining the beam on a target causes an explosion which deals 450 Mod damage in a 3m AOE.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "20"
 	},
 	"Ring of Spears": {
-		"name": "Ring of Spears",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Ring of Spears.png",
-		"desc": "Calls forth 7 phantom spears to encircle the wielder for 25 seconds. This ring will deal up to 35 damage per second to nearby enemies, based on the number of spears remaining in the ring. While the mod is active, these spears can be thrown by tapping the mod button, dealing 100 damage to the first enemy hit. Spears will remain at their impact point for the duration of the mod or until recalled by holding the mod button. When recalled, spears will return to the wielder, dealing 50 damage to enemies along their path. When all recalled spears have reached the wielder, they cause an explosion dealing up to 350 damage based on the number of spears recalled.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Ring of Spears",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Ring of Spears.png",
+	  "desc": "Calls forth 7 phantom spears to encircle the wielder for 25 seconds. This ring will deal up to 35 damage per second to nearby enemies, based on the number of spears remaining in the ring. While the mod is active, these spears can be thrown by tapping the mod button, dealing 100 damage to the first enemy hit. Spears will remain at their impact point for the duration of the mod or until recalled by holding the mod button. When recalled, spears will return to the wielder, dealing 50 damage to enemies along their path. When all recalled spears have reached the wielder, they cause an explosion dealing up to 350 damage based on the number of spears recalled.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "21"
 	},
 	"Rootlash": {
-		"name": "Rootlash",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Rootlash.png",
-		"desc": "Launches a projectile which summons a Root Tentacle. Tentacles deal 90 damage and steal 1.5% of the hero's Max Health per hit. Lasts 20s. (Max 2)",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Rootlash",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Rootlash.png",
+	  "desc": "Launches a projectile which summons a Root Tentacle. Tentacles deal 90 damage and steal 1.5% of the hero's Max Health per hit. Lasts 20s. (Max 2)",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "22"
 	},
 	"Rotted Arrow": {
-		"name": "Rotted Arrow",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Rotted Arrow.png",
-		"desc": "Fires a rotten arrow that deals 56 damage and detonates for another 180 damage within 4m. A deadly gas cloud is left behind that deals 600 damage over 5s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Rotted Arrow",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Rotted Arrow.png",
+	  "desc": "Fires a rotten arrow that deals 56 damage and detonates for another 180 damage within 4m. A deadly gas cloud is left behind that deals 600 damage over 5s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "23"
 	},
 	"Scrap Shot": {
-		"name": "Scrap Shot",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Scrap Shot.png",
-		"desc": "Fires a caltrops grenade that explodes to cover an area of 6m. Caltrops deal 60 damage per second and SLOW to enemies that walk over them. Lasts 10s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outSLOW": 1
-		},
-		"tags": []
+	  "name": "Scrap Shot",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Scrap Shot.png",
+	  "desc": "Fires a caltrops grenade that explodes to cover an area of 6m. Caltrops deal 60 damage per second and SLOW to enemies that walk over them. Lasts 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [],
+	  "placementID": "24"
 	},
 	"Skewer": {
-		"name": "Skewer",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Skewer.png",
-		"desc": "Fires a Wretched Spear which embeds itself on contact. Spears deal 470 damage on hit, rapidly dividing inside the target until bursting, dealing 420 damage to all targets within 3m. Spears embedded in the environment remain in place for 10s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Skewer",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Skewer.png",
+	  "desc": "Fires a Wretched Spear which embeds itself on contact. Spears deal 470 damage on hit, rapidly dividing inside the target until bursting, dealing 420 damage to all targets within 3m. Spears embedded in the environment remain in place for 10s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "25"
 	},
 	"Song of Eafir": {
-		"usesConditional": {},
-		"name": "Song of Eafir",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Song of Eafir.png",
-		"desc": "Fires a shot infused with the binding power of the Song of Eafir. Staggers most ground enemies within 10m and deals 450 damage to Flying enemies within the same range.\nThe song continues for 15s, afflicting targets within 15m with SLOW, and a 10% decrease to damage dealt.",
-		"stats": {
-			"REdamage": [-0.10],
-			"outgoingStatus": 1,
-			"outSLOW": 1,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Song of Eafir",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Song of Eafir.png",
+	  "desc": "Fires a shot infused with the binding power of the Song of Eafir. Staggers most ground enemies within 10m and deals 450 damage to Flying enemies within the same range.\nThe song continues for 15s, afflicting targets within 15m with SLOW, and a 10% decrease to damage dealt.",
+	  "stats": {
+		"REdamage": [
+		  -0.1
+		],
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [],
+	  "placementID": "26"
 	},
 	"Soulbinder": {
-		"name": "Soulbinder",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Soulbinder.png",
-		"desc": "Fires a projectile that attaches to the enemy dealing 120 damage. Enemies within 7m become bound to the primary target after impact and share 60% of damage dealt to them. Lasts 15s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Soulbinder",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Soulbinder.png",
+	  "desc": "Fires a projectile that attaches to the enemy dealing 120 damage. Enemies within 7m become bound to the primary target after impact and share 60% of damage dealt to them. Lasts 15s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "27"
 	},
 	"Space Crabs": {
-		"name": "Space Crabs",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Space Crabs.png",
-		"desc": "Launch an alien egg that bursts on impact, releasing 5 Space Crabs. Crabs follow the caster, leaping towards enemies within 4m, and exploding, dealing 180 Damage each.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Space Crabs",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Space Crabs.png",
+	  "desc": "Launch an alien egg that bursts on impact, releasing 5 Space Crabs. Crabs follow the caster, leaping towards enemies within 4m, and exploding, dealing 180 Damage each.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "28"
 	},
 	"Stasis Beam": {
-		"name": "Stasis Beam",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Stasis Beam.png",
-		"desc": "Fires a beam which deals X45 damage per second, and applies SLOW Debuff. After 3s of application to a target, SLOW becomes STASIS, freezing the target in place for 10s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outSLOW": 1
-		},
-		"tags": []
+	  "name": "Stasis Beam",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Stasis Beam.png",
+	  "desc": "Fires a beam which deals X45 damage per second, and applies SLOW Debuff. After 3s of application to a target, SLOW becomes STASIS, freezing the target in place for 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [],
+	  "placementID": "29"
 	},
 	"Time Lapse": {
-		"name": "Time Lapse",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Time Lapse.png",
-		"desc": "Creates a 6m blast which freezes all standard enemies for 7s.\nDealing damage to frozen enemies immediately breaks the Time Lapse effect, applying SLOW for the remaining duration",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outSLOW": 1
-		},
-		"tags": []
+	  "name": "Time Lapse",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Time Lapse.png",
+	  "desc": "Creates a 6m blast which freezes all standard enemies for 7s.\nDealing damage to frozen enemies immediately breaks the Time Lapse effect, applying SLOW for the remaining duration",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outSLOW": 1
+	  },
+	  "tags": [],
+	  "placementID": "30"
 	},
 	"Tremor": {
-		"name": "Tremor",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Tremor.png",
-		"desc": "Fires a projectile that cracks the ground and spawns shockwaves that deal X225 damage Within 9m for 6s. Shockwaves inflict 3x impact.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Tremor",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Tremor.png",
+	  "desc": "Fires a projectile that cracks the ground and spawns shockwaves that deal X225 damage Within 9m for 6s. Shockwaves inflict 3x impact.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "31"
 	},
 	"Voltaic Rondure": {
-		"name": "Voltaic Rondure",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Voltaic Rondure.png",
-		"desc": "Launches a slow-moving orb that pulses every 0.5s, striking enemies within 3m for 60 SHOCK damage and applying OVERLOADED for 15s. The orb lasts 20s. The orb can be overcharged by striking it with additional damage.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outOVERLOADED": 1
-		},
-		"tags": []
+	  "name": "Voltaic Rondure",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Voltaic Rondure.png",
+	  "desc": "Launches a slow-moving orb that pulses every 0.5s, striking enemies within 3m for 60 SHOCK damage and applying OVERLOADED for 15s. The orb lasts 20s. The orb can be overcharged by striking it with additional damage.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outOVERLOADED": 1
+	  },
+	  "tags": [],
+	  "placementID": "32"
 	},
 	"Witchfire": {
-		"name": "Witchfire",
-		"slot": "Mod",
-		"image": "/brotherLibrary/modsImages/Witchfire.png",
-		"desc": "Fires a highly volatile projectile that explodes to leave a line of flaming terrain. Deals 165 FIRE Damage per second, and applies BURNING, dealing 600 damage over 10s. Lasts 5s.",
-		"usesConditional": {},
-		"stats": {
-			"outgoingStatus": 1,
-			"outBURN": 1
-		},
-		"tags": []
+	  "name": "Witchfire",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Witchfire.png",
+	  "desc": "Fires a highly volatile projectile that explodes to leave a line of flaming terrain. Deals 165 FIRE Damage per second, and applies BURNING, dealing 600 damage over 10s. Lasts 5s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBURN": 1
+	  },
+	  "tags": [],
+	  "placementID": "33"
 	}
-}
+  }
 builtInPrimary = {
 	"": {
 		"usesConditional": {},
