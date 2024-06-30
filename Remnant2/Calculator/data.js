@@ -1708,1209 +1708,1323 @@ hands = {
 /* ----------------------------------------------------------------------------------------*/
 classInfo = {
 	"": {
-		"classIcon": "/images/Remnant/clear.png",
-		"primePerk": "Select a primary archetype",
-		"primePerkDesc": "",
-		"primePerkImage": "/images/Remnant/clear.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["rgb(26, 26, 26)","black"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			}
-		},
-		"classTrait": "",
-		"Endurance": 0,
-		"Expertise": 0,
-		"Spirit": 0,
-		"Vigor": 0,
-		"name": "",
-		"passives": {
-			"passive1": {
-				"name": "",
-				"desc": "",
-				"stats": {},
-				"tags": []
-			},
-			"passive2": {
-				"name": "",
-				"desc": "",
-				"stats": {},
-				"tags": []
-			},
-			"passive3": {
-				"name": "",
-				"desc": "",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "",
-				"desc": "",
-				"stats": {},
-				"tags": []
-			}
+	  "classIcon": "/images/Remnant/clear.png",
+	  "primePerk": "Select a primary archetype",
+	  "primePerkDesc": "",
+	  "primePerkImage": "/images/Remnant/clear.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"rgb(26, 26, 26)",
+		"black"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		}
+	  },
+	  "classTrait": "",
+	  "Endurance": 0,
+	  "Expertise": 0,
+	  "Spirit": 0,
+	  "Vigor": 0,
+	  "name": "",
+	  "passives": {
+		"passive1": {
+		  "name": "",
+		  "desc": "",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "",
+		  "desc": "",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "",
+		  "desc": "",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "",
+		  "desc": "",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "00"
 	},
 	"Alchemist": {
-		"classIcon": "/brotherLibrary/classIconImages/Alchemist.png",
-		"primePerk": "SPIRITED",
-		"primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Spirited.png",
-		"primeStats": {
-			"ConcLimit": 3
+	  "classIcon": "/brotherLibrary/classIconImages/Alchemist.png",
+	  "primePerk": "SPIRITED",
+	  "primePerkDesc": "Alchemist can have 3 additional Concoction buffs active.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Spirited.png",
+	  "primeStats": {
+		"ConcLimit": 3
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#105343",
+		"#08100d"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#105343","#08100d"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Vial: Stone Mist": {
-				"name": "Vial: Stone Mist",
-				"desc": "Creates vapor cloud, lasts 10s, gives STONESKIN. STONESKIN reduces incoming damage by 25%, stagger -1, increases Blight Buildup Decay Rate, grants status effect immunity. Lasts 15s. Press to use, hold to throw. Cooldown: 75s.",
-				"image": "/brotherLibrary/abilitiesImages/Vial_ Stone Mist.png",
-				"stats": {
-					"FlatDR": 0.25
-				},
-				"cooldown": 75,
-				"tags": []
-			},
-			"Vial: Frenzy Dust": {
-				"name": "Vial: Frenzy Dust",
-				"desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and then Movement Speed by 15%. Lasts 15s. Press to use, hold to throw. Cooldown: 75s.",
-				"image": "/brotherLibrary/abilitiesImages/Vial_ Frenzy Dust.png",
-				"stats": {
-					"FireRate": 0.20,
-					"ReloadSpeed": 0.20,
-					"AttackSpeed": 0.20,
-					"MovementSpeed": 0.15,
-				},
-				"cooldown": 75,
-				"tags": []
-			},
-			"Vial: Elixir of Life": {
-				"name": "Vial: Elixir of Life",
-				"desc": "Creates vapor cloud that lasts 10s and applies LIVING WILL. LIVING WILL grants 5 HP/s, and protects against fatal damage. Can revive downed players. Lasts 20s. Revived allies cannot be affected by Living Will for 180s. Press to use, hold to throw. Cooldown: 90s.",
-				"image": "/brotherLibrary/abilitiesImages/Vial_ Elixir of Life.png",
-				"stats": {
-					"HP/S+": 5
-				},
-				"cooldown": 90,
-				"tags": []
-			}
+		"Vial: Stone Mist": {
+		  "name": "Vial: Stone Mist",
+		  "desc": "Creates vapor cloud, lasts 10s, gives STONESKIN. STONESKIN reduces incoming damage by 25%, stagger -1, increases Blight Buildup Decay Rate, grants status effect immunity. Lasts 15s. Press to use, hold to throw. Cooldown: 75s.",
+		  "image": "/brotherLibrary/abilitiesImages/Vial_ Stone Mist.png",
+		  "stats": {
+			"FlatDR": 0.25
+		  },
+		  "cooldown": 75,
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Potency",
-		"Endurance": 0,
-		"Expertise": 2,
-		"Spirit": 2,
-		"Vigor": 1,
-		"name": "Alchemist",
-		"passives": {
-			"passive1": {
-				"name": "Liquid Courage",
-				"desc": "Grants +25% All Damage and +5% CC",
-				"stats": {
-					"AllDamage": 0.25,
-					"AllCritChance": 0.05,
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Panacea",
-				"desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Status and Blight Resistance.",
-				"stats": {
-					"Bleed": 15,
-					"Burn": 15,
-					"Shock": 15,
-					"Corrosive": 15,
-					"Blight": 15
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Gold to Lead",
-				"desc": "Picking up Scrap or Metals has a 15% chance to award Ammo to the Alchemist.",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Experimentalist",
-				"desc": "Using a Relic applies a random buff on the Alchemist and all allies within 20m for 60s. Cannot be overriden.",
-				"stats": {},
-				"tags": []
-			}
+		"Vial: Frenzy Dust": {
+		  "name": "Vial: Frenzy Dust",
+		  "desc": "Creates a mysterious vapor cloud which lasts 10s and applies FRENZIED. FRENZIED increases Fire Rate, Reload Speed, and Melee Speed by 20%, and then Movement Speed by 15%. Lasts 15s. Press to use, hold to throw. Cooldown: 75s.",
+		  "image": "/brotherLibrary/abilitiesImages/Vial_ Frenzy Dust.png",
+		  "stats": {
+			"FireRate": 0.2,
+			"ReloadSpeed": 0.2,
+			"AttackSpeed": 0.2,
+			"MovementSpeed": 0.15
+		  },
+		  "cooldown": 75,
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Vial: Elixir of Life": {
+		  "name": "Vial: Elixir of Life",
+		  "desc": "Creates vapor cloud that lasts 10s and applies LIVING WILL. LIVING WILL grants 5 HP/s, and protects against fatal damage. Can revive downed players. Lasts 20s. Revived allies cannot be affected by Living Will for 180s. Press to use, hold to throw. Cooldown: 90s.",
+		  "image": "/brotherLibrary/abilitiesImages/Vial_ Elixir of Life.png",
+		  "stats": {
+			"HP/S+": 5
+		  },
+		  "cooldown": 90,
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Potency",
+	  "Endurance": 0,
+	  "Expertise": 2,
+	  "Spirit": 2,
+	  "Vigor": 1,
+	  "name": "Alchemist",
+	  "passives": {
+		"passive1": {
+		  "name": "Liquid Courage",
+		  "desc": "Grants +25% All Damage and +5% CC",
+		  "stats": {
+			"AllDamage": 0.25,
+			"AllCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Panacea",
+		  "desc": "Curative effects grant +15 Resistance. Allies within 15m gain effects, +10 Status and Blight Resistance.",
+		  "stats": {
+			"Bleed": 15,
+			"Burn": 15,
+			"Shock": 15,
+			"Corrosive": 15,
+			"Blight": 15
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Gold to Lead",
+		  "desc": "Picking up Scrap or Metals has a 15% chance to award Ammo to the Alchemist.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Experimentalist",
+		  "desc": "Using a Relic applies a random buff on the Alchemist and all allies within 20m for 60s. Cannot be overriden.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "01"
 	},
 	"Archon": {
-		"classIcon": "/brotherLibrary/classIconImages/Archon.png",
-		"primePerk": "TEMPEST",
-		"primePerkDesc": "Automatically generate 30 Mod Power per second.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Tempest.png",
-		"primeStats": {
-			"ModPowerGen/s": 30
+	  "classIcon": "/brotherLibrary/classIconImages/Archon.png",
+	  "primePerk": "TEMPEST",
+	  "primePerkDesc": "Automatically generate 30 Mod Power per second.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Tempest.png",
+	  "primeStats": {
+		"ModPowerGen/s": 30
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#104259",
+		"#0a1012"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#104259","#0a1012"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Reality Rune": {
-				"name": "Reality Rune",
-				"desc": "Conjures a 7m protective dome which applies SLOW to any enemy or enemy projectile. Allies inside gain 25% DR. Lasts 15s.",
-				"image": "/brotherLibrary/abilitiesImages/Reality Rune.png",
-				"stats": {
-					"FlatDR": 0.25
-				},
-				"tags": []
-			},
-			"Chaos Gate": {
-				"name": "Chaos Gate",
-				"desc": "Conjures a 7m unstable zone which grants allies 35% increased All damage dealt, 10% increased Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
-				"image": "/brotherLibrary/abilitiesImages/Chaos Gate.png",
-				"stats": {
-					"AllDamage": 0.35,
-					"ModPowerGen": 0.1,
-					"FlatDR": -0.15
-				},
-				"tags": []
-			},
-			"Havoc Form": {
-				"name": "Havoc Form",
-				"desc": "Gain new abilities for 30s. Duration reduced on ability use. FIRE: 411.4 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
-				"image": "/brotherLibrary/abilitiesImages/Havoc Form.png",
-				"stats": {
-					"FlatDR": 0.5
-				},
-				"customStats": {///Game/World_Base/Items/Archetypes/Archon/Skills/HavocForm/Skill_HavocForm.Skill_HavocForm_C'
-					"customDPS": "HavocForm",
-					"duration": 30,
-					"entryDuration": 1.02,
-					"trueBaseDPS": 411.4,
-					"baseDamage": 144,//was 168
-					"frequency": 0.35,
-					"drain": 0.2125//was 0.15
-				},
-				"tags": []
-			}
+		"Reality Rune": {
+		  "name": "Reality Rune",
+		  "desc": "Conjures a 7m protective dome which applies SLOW to any enemy or enemy projectile. Allies inside gain 25% DR. Lasts 15s.",
+		  "image": "/brotherLibrary/abilitiesImages/Reality Rune.png",
+		  "stats": {
+			"FlatDR": 0.25
+		  },
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Flash Caster",
-		"Endurance": 1,
-		"Expertise": 0,
-		"Spirit": 3,
-		"Vigor": 1,
-		"name": "Archon",
-		"passives": {
-			"passive1": {
-				"name": "Amplify",
-				"desc": "Mod (+50%DMG +10%CC)",
-				"stats": {
-					"ModDamage": 0.50,
-					"ModCritChance": 0.10,
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Power Creep",
-				"desc": "Mod use: 10% mod power spent regened by team over 10s. While active, allies gain 10% Mod Power Generation.",
-				"stats": {
-					"ModPowerGen": 0.1
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Spirit Within",
-				"desc": "Reduces Mod Power requirement per charge by 15%.",
-				"stats": {
-					"ModCost": -0.15,
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Power Leak",
-				"desc": "Using a Relic grants 100 Mod Power for both equipped Mods, and an additional 100 to current Mod.",
-				"stats": {},
-				"tags": []
-			}
+		"Chaos Gate": {
+		  "name": "Chaos Gate",
+		  "desc": "Conjures a 7m unstable zone which grants allies 35% increased All damage dealt, 10% increased Mod Generation, but increases damage that allies take by 15%. Lasts 20s.",
+		  "image": "/brotherLibrary/abilitiesImages/Chaos Gate.png",
+		  "stats": {
+			"AllDamage": 0.35,
+			"ModPowerGen": 0.1,
+			"FlatDR": -0.15
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Havoc Form": {
+		  "name": "Havoc Form",
+		  "desc": "Gain new abilities for 30s. Duration reduced on ability use. FIRE: 411.4 shock/s to targets within 15m. AIM: 3m shield, deals 35 shock/s and reduces incoming damage to all allies by 50%. DODGE: Blink Evade that deals 450 shock within 5m.",
+		  "image": "/brotherLibrary/abilitiesImages/Havoc Form.png",
+		  "stats": {
+			"FlatDR": 0.5
+		  },
+		  "customStats": {
+			"customDPS": "HavocForm",
+			"duration": 30,
+			"entryDuration": 1.02,
+			"trueBaseDPS": 411.4,
+			"baseDamage": 144,
+			"frequency": 0.35,
+			"drain": 0.2125
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Flash Caster",
+	  "Endurance": 1,
+	  "Expertise": 0,
+	  "Spirit": 3,
+	  "Vigor": 1,
+	  "name": "Archon",
+	  "passives": {
+		"passive1": {
+		  "name": "Amplify",
+		  "desc": "Mod (+50%DMG +10%CC)",
+		  "stats": {
+			"ModDamage": 0.5,
+			"ModCritChance": 0.1
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Power Creep",
+		  "desc": "Mod use: 10% mod power spent regened by team over 10s. While active, allies gain 10% Mod Power Generation.",
+		  "stats": {
+			"ModPowerGen": 0.1
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Spirit Within",
+		  "desc": "Reduces Mod Power requirement per charge by 15%.",
+		  "stats": {
+			"ModCost": -0.15
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Power Leak",
+		  "desc": "Using a Relic grants 100 Mod Power for both equipped Mods, and an additional 100 to current Mod.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "02"
 	},
 	"Challenger": {
-		"classIcon": "/brotherLibrary/classIconImages/Challenger.png",
-		"primePerk": "DIE HARD",
-		"primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. While on cooldown, Challenger gains 1 stack of BULWARK. Resets at Worldstone or on death.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Die Hard.png",
-		"primeStats": {
-			"Bulwark": 1
+	  "classIcon": "/brotherLibrary/classIconImages/Challenger.png",
+	  "primePerk": "DIE HARD",
+	  "primePerkDesc": "When receiving fatal damage, the Challenger becomes invulnerable for 3s and regerates 100% of Max Health. Can only happen once every 10 minutes. While on cooldown, Challenger gains 1 stack of BULWARK. Resets at Worldstone or on death.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Die Hard.png",
+	  "primeStats": {
+		"Bulwark": 1
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#393129",
+		"#110e0c"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#393129","#110e0c"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"War Stomp": {
-				"name": "War Stomp",
-				"desc": "Creates a high-impact tremor that deals 450 damage and additional stagger in a forward cone up to 7.5m. Deals damage in all directions at point blank range.",
-				"image": "/brotherLibrary/abilitiesImages/War Stomp.png",
-				"stats": {},
-				"tags": []
-			},
-			"Juggernaut": {
-				"name": "Juggernaut",
-				"desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
-				"image": "/brotherLibrary/abilitiesImages/Juggernaut.png",
-				"stats": {
-					"Bulwark": 3,
-					"MovementSpeed": 0.15,
-					"AttackSpeed": 0.15,
-					"StaminaCost": -0.15,
-					"MeleeDamage": 0.50
-				},
-				"tags": []
-			},
-			"Rampage": {
-				"name": "Rampage",
-				"desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
-				"image": "/brotherLibrary/abilitiesImages/Rampage.png",
-				"stats": {
-					"FireRate": 0.10,
-					"ReloadSpeed": 0.25,
-					"MovementSpeed": 0.15
-				},
-				"tags": []
-			}
+		"War Stomp": {
+		  "name": "War Stomp",
+		  "desc": "Creates a high-impact tremor that deals 450 damage and additional stagger in a forward cone up to 7.5m. Deals damage in all directions at point blank range.",
+		  "image": "/brotherLibrary/abilitiesImages/War Stomp.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Strong Back",
-		"Endurance": 2,
-		"Expertise": 0,
-		"Spirit": 0,
-		"Vigor": 3,
-		"name": "Challenger",
-		"passives": {
-			"passive1": {
-				"name": "Close Quarters",
-				"desc": "Grants +35% All Damage to enemies within 10m. Bonus tapers off up to 20m. CC increased up to 5%.",
-				"stats": {
-					"AllDamage": 0.35,
-					"AllCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Intimidating Presence",
-				"desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%). Requires ENEMY COUNT setting to give more than the base amount.",
-				"usesConditional": {
-					"customTier0": "intimidatingPresence"
-				},
-				"stats": {},
-				"tags": ["REdamage"]
-			},
-			"passive3": {
-				"name": "Powerlifter",
-				"desc": "Both the Stamina cost increase for each weight bracket and Stamina Regen Delay are reduced by 50%.",
-				"stats": {
-					"StaminaPenaltyAdjustment": 0.5,
-					"StaminaDelaySpeed": 0.5,
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Face of Danger",
-				"desc": "Using a Relic within 10m of an enemy grants 2 stacks of Bulwark and 10% increased Damage for 10s.",
-				"stats": {
-					"Bulwark": 2,
-					"AllDamage": 0.10
-				},
-				"tags": []
-			}
+		"Juggernaut": {
+		  "name": "Juggernaut",
+		  "desc": "Become nearly unstoppable, gaining 3 stack of BULWARK, 15% increased Movement and Melee Speed and reduced Stamina Cost, and 50% increased Melee Damage. Stagger Level reduced by 1. Lasts 25s.",
+		  "image": "/brotherLibrary/abilitiesImages/Juggernaut.png",
+		  "stats": {
+			"Bulwark": 3,
+			"MovementSpeed": 0.15,
+			"AttackSpeed": 0.15,
+			"StaminaCost": -0.15,
+			"MeleeDamage": 0.5
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Rampage": {
+		  "name": "Rampage",
+		  "desc": "Fire Rate +15%, Reload Speed +25%, and Movement Speed +15%. Lasts 10s. Kills/High DMG grant 1 RAGE stack - increases Ranged Damage +2.5%/Stack. At 10 Stacks, gain BERSERK: reloads current firearm, x2 Rampage effects for 15s.",
+		  "image": "/brotherLibrary/abilitiesImages/Rampage.png",
+		  "stats": {
+			"FireRate": 0.1,
+			"ReloadSpeed": 0.25,
+			"MovementSpeed": 0.15
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Strong Back",
+	  "Endurance": 2,
+	  "Expertise": 0,
+	  "Spirit": 0,
+	  "Vigor": 3,
+	  "name": "Challenger",
+	  "passives": {
+		"passive1": {
+		  "name": "Close Quarters",
+		  "desc": "Grants +35% All Damage to enemies within 10m. Bonus tapers off up to 20m. CC increased up to 5%.",
+		  "stats": {
+			"AllDamage": 0.35,
+			"AllCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Intimidating Presence",
+		  "desc": "Skill use reduces enemy DMG within 15m by 10%, +2.5%/enemy (Max 10%). Requires ENEMY COUNT setting to give more than the base amount.",
+		  "usesConditional": {
+			"customTier0": "intimidatingPresence"
+		  },
+		  "stats": {},
+		  "tags": [
+			"REdamage"
+		  ]
+		},
+		"passive3": {
+		  "name": "Powerlifter",
+		  "desc": "Both the Stamina cost increase for each weight bracket and Stamina Regen Delay are reduced by 50%.",
+		  "stats": {
+			"StaminaPenaltyAdjustment": 0.5,
+			"StaminaDelaySpeed": 0.5
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Face of Danger",
+		  "desc": "Using a Relic within 10m of an enemy grants 2 stacks of Bulwark and 10% increased Damage for 10s.",
+		  "stats": {
+			"Bulwark": 2,
+			"AllDamage": 0.1
+		  },
+		  "tags": []
+		}
+	  },
+	  "placementID": "03"
 	},
 	"Engineer": {
-		"classIcon": "/brotherLibrary/classIconImages/Engineer.png",
-		"primePerk": "HIGH TECH",
-		"primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s. All turrets have 50% base Crit Damage bonus, and 50% DR.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/High Tech.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#313f7c","#0b0b10"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Heavy Weapon: Vulcan": {
-				"name": "Heavy Weapon: Vulcan",
-				"desc": "Deploys a Vulcan Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Vulcan.png",
-				"stats": {},
-				"tags": []
-			},
-			"Heavy Weapon: Flamethrower": {
-				"name": "Heavy Weapon: Flamethrower",
-				"desc": "Deploys a Flamethrower Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Flamethrower.png",
-				"stats": {},
-				"tags": []
-			},
-			"Heavy Weapon: Impact Cannon": {
-				"name": "Heavy Weapon: Impact Cannon",
-				"desc": "Deploys a Impact Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
-				"image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Impact Cannon.png",
-				"stats": {},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Engineer.png",
+	  "primePerk": "HIGH TECH",
+	  "primePerkDesc": "Holding the SKILL button will Overclock a Carried or Deployed Heavy Weapon. Overclocking grants Infinite Ammo, increased Fire Rate, and a 25% Damage increase for 25s. All turrets have 50% base Crit Damage bonus, and 50% DR.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/High Tech.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#313f7c",
+		"#0b0b10"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Fortify",
-		"Endurance": 3,
-		"Expertise": 0,
-		"Spirit": 0,
-		"Vigor": 2,
-		"name": "Engineer",
-		"passives": {
-			"passive1": {
-				"name": "Metalworker",
-				"desc": "Skill (+50%DMG +10%CC). Ranged (+25%DMG +5%CC) Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
-				"stats": {
-					"SkillDamage": 0.50,
-					"SkillCritChance": 0.05,
-					"RangedDamage": 0.25,
-					"RangedCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Magnetic Field",
-				"desc": "Heavy Weapons grant 15% DR and gradually restore ammo to allies within 2.5m.",
-				"stats": {
-					"FlatDR": 0.15
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Heavy Mobility",
-				"desc": "While carrying a Heavy Weapon, +35% Movement Speed, Evade Speed/Distance +25%.",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Surplus",
-				"desc": "Relic use: refills 15% Heavy Weapon. Doubled if HW stowed. If Stowed HW is full, +ammo drop based on the surplus.",
-				"stats": {},
-				"tags": []
-			}
+		"Heavy Weapon: Vulcan": {
+		  "name": "Heavy Weapon: Vulcan",
+		  "desc": "Deploys a Vulcan Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+		  "image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Vulcan.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Heavy Weapon: Flamethrower": {
+		  "name": "Heavy Weapon: Flamethrower",
+		  "desc": "Deploys a Flamethrower Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+		  "image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Flamethrower.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Heavy Weapon: Impact Cannon": {
+		  "name": "Heavy Weapon: Impact Cannon",
+		  "desc": "Deploys a Impact Cannon Turret which lasts until is ammo is exhausted. Turrets will prioritize what the player aims at. Skill press will enable auto targeting.",
+		  "image": "/brotherLibrary/abilitiesImages/Heavy Weapon_ Impact Cannon.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Fortify",
+	  "Endurance": 3,
+	  "Expertise": 0,
+	  "Spirit": 0,
+	  "Vigor": 2,
+	  "name": "Engineer",
+	  "passives": {
+		"passive1": {
+		  "name": "Metalworker",
+		  "desc": "Skill (+50%DMG +10%CC). Ranged (+25%DMG +5%CC) Heavy Weapons (+50%Ammo +25%HP +25%Weakspot)",
+		  "stats": {
+			"SkillDamage": 0.5,
+			"SkillCritChance": 0.05,
+			"RangedDamage": 0.25,
+			"RangedCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Magnetic Field",
+		  "desc": "Heavy Weapons grant 15% DR and gradually restore ammo to allies within 2.5m.",
+		  "stats": {
+			"FlatDR": 0.15
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Heavy Mobility",
+		  "desc": "While carrying a Heavy Weapon, +35% Movement Speed, Evade Speed/Distance +25%.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Surplus",
+		  "desc": "Relic use: refills 15% Heavy Weapon. Doubled if HW stowed. If Stowed HW is full, +ammo drop based on the surplus.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "04"
 	},
 	"Explorer": {
-		"classIcon": "/brotherLibrary/classIconImages/Explorer.png",
-		"primePerk": "LUCKY",
-		"primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Lucky.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#4d9c5f","#0a100b"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Plainswalker": {
-				"name": "Plainswalker",
-				"desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
-				"image": "/brotherLibrary/abilitiesImages/Plainswalker.png",
-				"stats": {
-					"MovementSpeed": 0.20,
-					"StaminaCost": -0.80
-				},
-				"tags": []
-			},
-			"Gold Digger": {
-				"name": "Gold Digger",
-				"desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
-				"image": "/brotherLibrary/abilitiesImages/Gold Digger.png",
-				"stats": {
-					"AllDamage": 0.10,
-					"FlatDR": 0.15,
-					"HP/S+": 2,
-					"HASTE": 1
-				},
-				"tags": []
-			},
-			"Fortune Hunter": {
-				"name": "Fortune Hunter",
-				"desc": "Reveal special items within 40m for all allies. Lasts 60s.",
-				"image": "/brotherLibrary/abilitiesImages/Fortune Hunter.png",
-				"stats": {},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Explorer.png",
+	  "primePerk": "LUCKY",
+	  "primePerkDesc": "Grants a 35% chance to spawn additional items and rarer drops when defeating stronger enemies.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Lucky.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#4d9c5f",
+		"#0a100b"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Swiftness",
-		"Endurance": 2,
-		"Expertise": 1,
-		"Spirit": 2,
-		"Vigor": 0,
-		"name": "Explorer",
-		"passives": {
-			"passive1": {
-				"name": "Scavenger",
-				"desc": "Pickup stacks grant +5% All Damage and +5% CC for 20s. Can +Duration up to 60s. Max 5 stacks.",
-				"stats": {
-					"AllDamage": 0.25,
-					"AllCritChance": 0.25
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Metal Detector",
-				"desc": "Ammo, Currency, Metal Drop Chance for party +10% and +chance of Consumables dropping from Chests.",
-				"stats": {},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Prospector",
-				"desc": "Relic Frag pickups +quality. 5% chance to gain 2nd of the same type/quality.",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Self Discovery",
-				"desc": "Using a Relic instantly fills Scavenger Stacks, grants +1 Stack, and prevents Stack Decay for 30s.",
-				"stats": {},
-				"tags": []
-			}
+		"Plainswalker": {
+		  "name": "Plainswalker",
+		  "desc": "Increases Movement Speed by 20% and reduces Stamina Cost by 80% for all allies. Lasts 30s.",
+		  "image": "/brotherLibrary/abilitiesImages/Plainswalker.png",
+		  "stats": {
+			"MovementSpeed": 0.2,
+			"StaminaCost": -0.8
+		  },
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Gold Digger": {
+		  "name": "Gold Digger",
+		  "desc": "Dig into the ground to spring a fountain which grants a random buff. Fountains last 45s and their buffs last 20s. Fountains can grant either: 10% increased All Damage, 15% DR, 2 HP/s, or HASTE.",
+		  "image": "/brotherLibrary/abilitiesImages/Gold Digger.png",
+		  "stats": {
+			"AllDamage": 0.1,
+			"FlatDR": 0.15,
+			"HP/S+": 2,
+			"HASTE": 1
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Fortune Hunter": {
+		  "name": "Fortune Hunter",
+		  "desc": "Reveal special items within 40m for all allies. Lasts 60s.",
+		  "image": "/brotherLibrary/abilitiesImages/Fortune Hunter.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Swiftness",
+	  "Endurance": 2,
+	  "Expertise": 1,
+	  "Spirit": 2,
+	  "Vigor": 0,
+	  "name": "Explorer",
+	  "passives": {
+		"passive1": {
+		  "name": "Scavenger",
+		  "desc": "Pickup stacks grant +5% All Damage and +5% CC for 20s. Can +Duration up to 60s. Max 5 stacks.",
+		  "stats": {
+			"AllDamage": 0.25,
+			"AllCritChance": 0.25
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Metal Detector",
+		  "desc": "Ammo, Currency, Metal Drop Chance for party +10% and +chance of Consumables dropping from Chests.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Prospector",
+		  "desc": "Relic Frag pickups +quality. 5% chance to gain 2nd of the same type/quality.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Self Discovery",
+		  "desc": "Using a Relic instantly fills Scavenger Stacks, grants +1 Stack, and prevents Stack Decay for 30s.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "05"
 	},
 	"Gunslinger": {
-		"classIcon": "/brotherLibrary/classIconImages/Gunslinger.png",
-		"primePerk": "LOADED",
-		"primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Loaded.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#932828","#170b0c"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Quick Draw": {
-				"name": "Quick Draw",
-				"desc": "Pull out your trusty side piece and unload up to 6 Critical Shots from the hip. Each shot deals 105 base damage and double stagger value.",
-				"image": "/brotherLibrary/abilitiesImages/Quick Draw.png",
-				"stats": {},
-				"tags": []
-			},
-			"Sidewinder": {
-				"name": "Sidewinder",
-				"desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 35%. Cycling weapons will automatically reload incoming Firearms. Lasts 60s. Swaps that provide ammo reduce duration by 6s.",
-				"image": "/brotherLibrary/abilitiesImages/Sidewinder.png",
-				"stats": {},
-				"tags": []
-			},
-			"Bulletstorm": {
-				"name": "Bulletstorm",
-				"desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
-				"image": "/brotherLibrary/abilitiesImages/Bulletstorm.png",
-				"stats": {
-					"FireRate": 0.20,
-					"ReloadSpeed": 0.50,
-					"BowCritChance": 0.15,
-					"ProjectileSpeed": 0.50
-				},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Gunslinger.png",
+	  "primePerk": "LOADED",
+	  "primePerkDesc": "When activiating any Gunslinger Skill, both weapons are instantly reloaded, and gain infinite reserve ammo on all weapons for 8s.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Loaded.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#932828",
+		"#170b0c"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Ammo Reserves",
-		"Endurance": 1,
-		"Expertise": 2,
-		"Spirit": 0,
-		"Vigor": 2,
-		"name": "Gunslinger",
-		"passives": {
-			"passive1": {
-				"name": "Swift Shot",
-				"desc": "Gain 15% Fire Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
-				"stats": {
-					"FireRate": 0.15,
-					"RangedDamage": 0.25,
-					"PrimaryCritChance": 0.05,
-					"SecondaryCritChance": 0.05,
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Posse Up",
-				"desc": "Ammo pickups +30%/player, split equally. Ammo Boxes drop more ammo.",
-				"stats": {},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Quick Hands",
-				"desc": "Firearms +10% Reload Speed. DOUBLED if mag is empty.",
-				"stats": {
-					"ReloadSpeed": 0.20,
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Sleight of Hand",
-				"desc": "Using a Relic reloads equipped firearm and increases Ranged Damage by 15% for 10s.",
-				"stats": {
-					"RangedDamage": 0.15,
-				},
-				"tags": []
-			}
+		"Quick Draw": {
+		  "name": "Quick Draw",
+		  "desc": "Pull out your trusty side piece and unload up to 6 Critical Shots from the hip. Each shot deals 105 base damage and double stagger value.",
+		  "image": "/brotherLibrary/abilitiesImages/Quick Draw.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Sidewinder": {
+		  "name": "Sidewinder",
+		  "desc": "Calls upon the power of the Desert Sidewinder snake to increase ADS Movement Speed and Draw/Swap Speed by 35%. Cycling weapons will automatically reload incoming Firearms. Lasts 60s. Swaps that provide ammo reduce duration by 6s.",
+		  "image": "/brotherLibrary/abilitiesImages/Sidewinder.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Bulletstorm": {
+		  "name": "Bulletstorm",
+		  "desc": "Fire Rate +20%, Reload Speed +50%. Lasts 20s. Single Shot weapons become full-auto. Kills reload weapon. Bows and Crossbows instead gain +15%CC and +50% Projectile Speed.",
+		  "image": "/brotherLibrary/abilitiesImages/Bulletstorm.png",
+		  "stats": {
+			"FireRate": 0.2,
+			"ReloadSpeed": 0.5,
+			"BowCritChance": 0.15,
+			"ProjectileSpeed": 0.5
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Ammo Reserves",
+	  "Endurance": 1,
+	  "Expertise": 2,
+	  "Spirit": 0,
+	  "Vigor": 2,
+	  "name": "Gunslinger",
+	  "passives": {
+		"passive1": {
+		  "name": "Swift Shot",
+		  "desc": "Gain 15% Fire Rate, 25% Ranged Damage, and 5% Crit Chance for all firearms.",
+		  "stats": {
+			"FireRate": 0.15,
+			"RangedDamage": 0.25,
+			"PrimaryCritChance": 0.05,
+			"SecondaryCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Posse Up",
+		  "desc": "Ammo pickups +30%/player, split equally. Ammo Boxes drop more ammo.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Quick Hands",
+		  "desc": "Firearms +10% Reload Speed. DOUBLED if mag is empty.",
+		  "stats": {
+			"ReloadSpeed": 0.2
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Sleight of Hand",
+		  "desc": "Using a Relic reloads equipped firearm and increases Ranged Damage by 15% for 10s.",
+		  "stats": {
+			"RangedDamage": 0.15
+		  },
+		  "tags": []
+		}
+	  },
+	  "placementID": "06"
 	},
 	"Handler": {
-		"classIcon": "/brotherLibrary/classIconImages/Handler.png",
-		"primePerk": "BONDED",
-		"primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge. Companion has 50% DR.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Bonded.png",
-		"primeStats": {
-			"outgoingStatus": 1,
-			"outBLEED": 1
+	  "classIcon": "/brotherLibrary/classIconImages/Handler.png",
+	  "primePerk": "BONDED",
+	  "primePerkDesc": "When Handler is downed, Companion will attempt to revive them at 50% Max Health. Can be used to revive allies with Command. Downed ally must have a Relic charge. Companion has 50% DR.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Bonded.png",
+	  "primeStats": {
+		"outgoingStatus": 1,
+		"outBLEED": 1
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#5d5c29",
+		"#0f0e09"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#5d5c29","#0f0e09"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Guard Dog": {
-				"name": "Guard Dog",
-				"desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
-				"image": "/brotherLibrary/abilitiesImages/Guard Dog.png",
-				"stats": {
-					"REdamage": [-0.15]
-				},
-				"tags": []
-			},
-			"Support Dog": {
-				"name": "Support Dog",
-				"desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
-				"image": "/brotherLibrary/abilitiesImages/Support Dog.png",
-				"stats": {
-					"HP/S%": 0.0025, //passive
-					"HP/S%": 0.02, //active use
-					"MovementSpeed": 0.25
-				},
-				"tags": []
-			},
-			"Attack Dog": {
-				"name": "Attack Dog",
-				"desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
-				"image": "/brotherLibrary/abilitiesImages/Attack Dog.png",
-				"stats": {
-					"AllDamage": 0.20
-				},
-				"tags": []
-			}
+		"Guard Dog": {
+		  "name": "Guard Dog",
+		  "desc": "Companion generates +15% Threat while attacking. All damage to them is reduced by 20%. HOLD: Reduces damage by 15% to allies within 20m. Companion generates Threat. Lasts 20s.",
+		  "image": "/brotherLibrary/abilitiesImages/Guard Dog.png",
+		  "stats": {
+			"REdamage": [
+			  -0.15
+			]
+		  },
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Kinship",
-		"Endurance": 1,
-		"Expertise": 3,
-		"Spirit": 0,
-		"Vigor": 1,
-		"name": "Handler",
-		"passives": {
-			"passive1": {
-				"name": "Pack Hunter",
-				"desc": "Gain +30% Ranged/Skill/Melee Damage, +5% Ranged/Skill/Melee CC while Companion is within 40m.",
-				"stats": {
-					"RangedDamage": 0.30,
-					"SkillDamage": 0.30,
-					"MeleeDamage": 0.30,
-					"RangedCritChance": 0.05,
-					"SkillCritChance": 0.05,
-					"MeleeCritChance": 0.05,
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Spirit of the Wolf",
-				"desc": "Move Speed +10%. Allies within 10m gain your MS(if faster). Team Stamina Cost -15%.",
-				"stats": {
-					"MovementSpeed": 0.10,
-					"StaminaCost": -0.15,
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Teamwork",
-				"desc": "Handler/Companion +30% Revive Speed. While reviving, both receive 50% less damage.",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Best Friend",
-				"desc": "Using a Relic fully restores Companion health and grants them 25% Damage and 35% DR for 15s.",
-				"stats": {},
-				"tags": []
-			}
+		"Support Dog": {
+		  "name": "Support Dog",
+		  "desc": "Companion will follow the Handler and continuously heal allies within 3.5m for 0.25% of max HP/s. HOLD: Grants 2% max HP/s and 25% increased Movement Speed to all allies within 20m. Lasts 25s.",
+		  "image": "/brotherLibrary/abilitiesImages/Support Dog.png",
+		  "stats": {
+			"HP/S%": 0.02,
+			"MovementSpeed": 0.25
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Attack Dog": {
+		  "name": "Attack Dog",
+		  "desc": "Companion deals 20% additional damage. HOLD: Increases damage by 20% for all allies within 20m. Lasts 20s.",
+		  "image": "/brotherLibrary/abilitiesImages/Attack Dog.png",
+		  "stats": {
+			"AllDamage": 0.2
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Kinship",
+	  "Endurance": 1,
+	  "Expertise": 3,
+	  "Spirit": 0,
+	  "Vigor": 1,
+	  "name": "Handler",
+	  "passives": {
+		"passive1": {
+		  "name": "Pack Hunter",
+		  "desc": "Gain +30% Ranged/Skill/Melee Damage, +5% Ranged/Skill/Melee CC while Companion is within 40m.",
+		  "stats": {
+			"RangedDamage": 0.3,
+			"SkillDamage": 0.3,
+			"MeleeDamage": 0.3,
+			"RangedCritChance": 0.05,
+			"SkillCritChance": 0.05,
+			"MeleeCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Spirit of the Wolf",
+		  "desc": "Move Speed +10%. Allies within 10m gain your MS(if faster). Team Stamina Cost -15%.",
+		  "stats": {
+			"MovementSpeed": 0.1,
+			"StaminaCost": -0.15
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Teamwork",
+		  "desc": "Handler/Companion +30% Revive Speed. While reviving, both receive 50% less damage.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Best Friend",
+		  "desc": "Using a Relic fully restores Companion health and grants them 25% Damage and 35% DR for 15s.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "07"
 	},
 	"Hunter": {
-		"classIcon": "/brotherLibrary/classIconImages/Hunter.png",
-		"primePerk": "DEAD TO RIGHTS",
-		"primePerkDesc": "Dealing 55 Base Ranged or Melee Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Dead to Rights.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#98471f","#160b09"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Hunter's Mark": {
-				"name": "Hunter's Mark",
-				"desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s. MARK: CC +10% for team on marked enemies.",
-				"image": "/brotherLibrary/abilitiesImages/Hunter's Mark.png",
-				"stats": {
-					"RangedDamage": 0.15,
-					"MeleeDamage": 0.15,
-					"AllCritChance": 0.10
-				},
-				"tags": []
-			},
-			"Hunter's Focus": {
-				"name": "Hunter's Focus",
-				"desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, and +25% Ranged/Weakspot DMG. While active, aiming applies MARK. 0.75s Grace Period when leaving ADS. Lasts 20s. MARK: CC +10% for team on marked enemies.",
-				"image": "/brotherLibrary/abilitiesImages/Hunter's Focus.png",
-				"stats": {
-					"Spread": -0.55,
-					"Recoil": -0.55,
-					"Sway": -0.55,
-					"RangedDamage": 0.25,
-					"RangedWeakspot": 0.25,
-					"AllCritChance": 0.10
-				},
-				"tags": []
-			},
-			"Hunter's Shroud": {
-				"name": "Hunter's Shroud",
-				"desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken. MARK: CC +10% for team on marked enemies.",
-				"image": "/brotherLibrary/abilitiesImages/Hunter's Shroud.png",
-				"stats": {
-					"RangedDamage": 0.50,
-					"MeleeDamage": 0.50,
-					"AllCritChance": 0.10
-				},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Hunter.png",
+	  "primePerk": "DEAD TO RIGHTS",
+	  "primePerkDesc": "Dealing 55 Base Ranged or Melee Weakspot Damage extends the duration of active Hunter Skills by 3.5s. Can extend timer beyond its initial duration.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Dead to Rights.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#98471f",
+		"#160b09"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Longshot",
-		"Endurance": 2,
-		"Expertise": 2,
-		"Spirit": 0,
-		"Vigor": 1,
-		"name": "Hunter",
-		"passives": {
-			"passive1": {
-				"name": "Deadeye",
-				"desc": "Gain 40% Ranged Damage, 15% Weakspot Damage and 5% Ranged Critical Chance.",
-				"stats": {
-					"RangedDamage": 0.40,
-					"AllWeakspot": 0.15,
-					"RangedCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Return to Sender",
-				"desc": "Weakspot/Crit kills +50% ammo drops and 2x ammo drop chance.",
-				"stats": {},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Urgency",
-				"desc": "Firearms +15% Reload Speed +15% Movement Speed after Kill. Lasts 5s.",
-				"stats": {
-					"ReloadSpeed": 0.15,
-					"MovementSpeed": 0.15
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Intuition",
-				"desc": "Relic use: +duration of active Hunter Skill by 10s. Dimishes/use. Weakspot Kills against MARKED +5% Relic Speed within 15s. Stacks 10x.",
-				"stats": {},
-				"tags": []
-			}
+		"Hunter's Mark": {
+		  "name": "Hunter's Mark",
+		  "desc": "Casts Aura that automatically applies MARK to enemies within 35m. While active, Hunter gains +15% Ranged/Melee DMG. Lasts 25s. MARK: CC +10% for team on marked enemies.",
+		  "image": "/brotherLibrary/abilitiesImages/Hunter's Mark.png",
+		  "stats": {
+			"RangedDamage": 0.15,
+			"MeleeDamage": 0.15,
+			"AllCritChance": 0.1
+		  },
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Hunter's Focus": {
+		  "name": "Hunter's Focus",
+		  "desc": "Aiming Down Sights uninterrupted/without shooting for 0.5s applies FOCUSED: reduce Weapon Spread, Recoil, Sway by 55%, and +25% Ranged/Weakspot DMG. While active, aiming applies MARK. 0.75s Grace Period when leaving ADS. Lasts 20s. MARK: CC +10% for team on marked enemies.",
+		  "image": "/brotherLibrary/abilitiesImages/Hunter's Focus.png",
+		  "stats": {
+			"Spread": -0.55,
+			"Recoil": -0.55,
+			"Sway": -0.55,
+			"RangedDamage": 0.25,
+			"RangedWeakspot": 0.25,
+			"AllCritChance": 0.1
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Hunter's Shroud": {
+		  "name": "Hunter's Shroud",
+		  "desc": "Reduce enemy awareness, become harder to target. Attacks/casts end Shroud. Exiting applies MARK to enemies within 10m, grants AMBUSH for 2s: Ranged/Melee DMG +50%,diminishes over duration. Attacks apply MARK. Shroud will reapply after 1.15 sec if no action is taken. MARK: CC +10% for team on marked enemies.",
+		  "image": "/brotherLibrary/abilitiesImages/Hunter's Shroud.png",
+		  "stats": {
+			"RangedDamage": 0.5,
+			"MeleeDamage": 0.5,
+			"AllCritChance": 0.1
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Longshot",
+	  "Endurance": 2,
+	  "Expertise": 2,
+	  "Spirit": 0,
+	  "Vigor": 1,
+	  "name": "Hunter",
+	  "passives": {
+		"passive1": {
+		  "name": "Deadeye",
+		  "desc": "Gain 40% Ranged Damage, 15% Weakspot Damage and 5% Ranged Critical Chance.",
+		  "stats": {
+			"RangedDamage": 0.4,
+			"AllWeakspot": 0.15,
+			"RangedCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Return to Sender",
+		  "desc": "Weakspot/Crit kills +50% ammo drops and 2x ammo drop chance.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Urgency",
+		  "desc": "Firearms +15% Reload Speed +15% Movement Speed after Kill. Lasts 5s.",
+		  "stats": {
+			"ReloadSpeed": 0.15,
+			"MovementSpeed": 0.15
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Intuition",
+		  "desc": "Relic use: +duration of active Hunter Skill by 10s. Dimishes/use. Weakspot Kills against MARKED +5% Relic Speed within 15s. Stacks 10x.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "08"
 	},
 	"Invader": {
-		"classIcon": "/brotherLibrary/classIconImages/Invader.png",
-		"primePerk": "SHADOW",
-		"primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Shadow.png",
-		"primeStats": {
-			"AllDamage": 0.15
+	  "classIcon": "/brotherLibrary/classIconImages/Invader.png",
+	  "primePerk": "SHADOW",
+	  "primePerkDesc": "Casting an Invader Skill leaves a Decoy for 3s which draws enemy fire. Deal 15% additional damage to enemies not targeting the Invader",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Shadow.png",
+	  "primeStats": {
+		"AllDamage": 0.15
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#783d78",
+		"#120c12"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#783d78","#120c12"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Void Cloak": {
-				"name": "Void Cloak",
-				"desc": "Auto perfect dodge incoming direct damage for 60s. Each auto-evade reduces timer by 33% - 100% based on damage absorbed and spawns a Decoy for 3s.",
-				"image": "/brotherLibrary/abilitiesImages/Void Cloak.png",
-				"stats": {},
-				"tags": []
-			},
-			"Worm Hole": {
-				"name": "Worm Hole",
-				"desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location. Triggers perfect evade/dodge interactions.",
-				"image": "/brotherLibrary/abilitiesImages/Worm Hole.png",
-				"stats": {
-					"RangedDamage": 3.0,
-					"MeleeDamage": 3.0
-				},
-				"tags": []
-			},
-			"Reboot": {
-				"name": "Reboot",
-				"desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
-				"image": "/brotherLibrary/abilitiesImages/Reboot.png",
-				"stats": {
-					"MovementSpeed": 0.15,
-					"FlatDR": 0.1
-				},
-				"tags": []
-			}
+		"Void Cloak": {
+		  "name": "Void Cloak",
+		  "desc": "Auto perfect dodge incoming direct damage for 60s. Each auto-evade reduces timer by 33% - 100% based on damage absorbed and spawns a Decoy for 3s.",
+		  "image": "/brotherLibrary/abilitiesImages/Void Cloak.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Untouchable",
-		"Endurance": 4,
-		"Expertise": 0,
-		"Spirit": 1,
-		"Vigor": 0,
-		"name": "Invader",
-		"passives": {
-			"passive1": {
-				"name": "S.H.A.R.K.",
-				"desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 10s. Max 5 stacks. Perfect Evade grants 5 stacks.",
-				"stats": {
-					"RangedDamage": 0.35,
-					"MeleeDamage": 0.35,
-					"RangedCritChance": 0.05,
-					"MeleeCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Loophole",
-				"desc": "Ally Ranged/Melee DMG against enemies distracted by Decoy grants 7.5% base damage as Lifesteal.",
-				"stats": {
-					"RLifesteal": 0.075,
-					"MLifesteal": 0.075
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Circumvent",
-				"desc": "Evade/Combat Slide cost -15%. Perfect Dodges gain an additional -15%.",
-				"stats": {
-					"EvadeCost": -0.15
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Override",
-				"desc": "Relic use: -25% Threat gen for 10s. While is active, next Evade creates Empowered Decoy, lasts 5.5s.",
-				"stats": {},
-				"tags": []
-			}
+		"Worm Hole": {
+		  "name": "Worm Hole",
+		  "desc": "Warps the caster forward. The next Melee or Ranged attack within 5s will deal 300% damage. Hold to display resulting location. Triggers perfect evade/dodge interactions.",
+		  "image": "/brotherLibrary/abilitiesImages/Worm Hole.png",
+		  "stats": {
+			"RangedDamage": 3,
+			"MeleeDamage": 3
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Reboot": {
+		  "name": "Reboot",
+		  "desc": "Saves current HP, Stamina, Relics, Ammo, and Status Effects for 30s. While active, move speed +15%, DR +10%. Reactivating restores all saved values and spawns a Decoy that lasts 3s.",
+		  "image": "/brotherLibrary/abilitiesImages/Reboot.png",
+		  "stats": {
+			"MovementSpeed": 0.15,
+			"FlatDR": 0.1
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Untouchable",
+	  "Endurance": 4,
+	  "Expertise": 0,
+	  "Spirit": 1,
+	  "Vigor": 0,
+	  "name": "Invader",
+	  "passives": {
+		"passive1": {
+		  "name": "S.H.A.R.K.",
+		  "desc": "Sprinting for 1s or Evading adds 1 stack. Stacks give Ranged/Melee (+7%DMG +1%CC) for 10s. Max 5 stacks. Perfect Evade grants 5 stacks.",
+		  "stats": {
+			"RangedDamage": 0.35,
+			"MeleeDamage": 0.35,
+			"RangedCritChance": 0.05,
+			"MeleeCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Loophole",
+		  "desc": "Ally Ranged/Melee DMG against enemies distracted by Decoy grants 7.5% base damage as Lifesteal.",
+		  "stats": {
+			"RLifesteal": 0.075,
+			"MLifesteal": 0.075
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Circumvent",
+		  "desc": "Evade/Combat Slide cost -15%. Perfect Dodges gain an additional -15%.",
+		  "stats": {
+			"EvadeCost": -0.15
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Override",
+		  "desc": "Relic use: -25% Threat gen for 10s. While is active, next Evade creates Empowered Decoy, lasts 5.5s.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "09"
 	},
 	"Invoker": {
-		"classIcon": "/brotherLibrary/classIconImages/Invoker.png",
-		"primePerk": "VISIONARY",
-		"primePerkDesc": "Doubles Base Skill Charges for all Archetypes. Skill activation reduces all Skill Cooldowns by 10%. For Heavy Weapons, doubles Heavy Base Ammo instead.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/VISIONARY.png",
-		"primeStats": {
-			"SkillCharges": 1.0,
-			"HeavyAmmo": 1.0
+	  "classIcon": "/brotherLibrary/classIconImages/Invoker.png",
+	  "primePerk": "VISIONARY",
+	  "primePerkDesc": "Doubles Base Skill Charges for all Archetypes. Skill activation reduces all Skill Cooldowns by 10%. For Heavy Weapons, doubles Heavy Base Ammo instead.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/VISIONARY.png",
+	  "primeStats": {
+		"SkillCharges": 1,
+		"HeavyAmmo": 1
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#2f3945",
+		"#0a0c0e"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#2f3945","#0a0c0e"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Way of Kaeula": {
-				"name": "Way of Kaeula",
-				"desc": "Invoke Kaeula to cast a Tidal Wave, dealing x Elemental damage and conjuring a 30m Rainstorm for 15s. Allies inside Rainstorm gain HASTE. Enemies inside Rainstorm gain DRENCHED for 10s. DRENCHED: Reduces Movement Speed by 10%. Every few seconds, lightning strikes enemies dealing y base SHOCK damage split among DRENCHED targets.",
-				"image": "/brotherLibrary/abilitiesImages/Way of Kaeula.png",
-				"stats": {
-					"HASTE": 1,
-					"outDRENCHED": 1
-				},
-				"tags": []
-			},
-			"Way of Meidra": {
-				"name": "Way of Meidra",
-				"desc": "Invoke Meidra to heal all allies for 20% Max Health over 1.5s and conjure a 20m Forest Growth for 15s. After fully blooming, allies in the Forest Growth heal 2% Max Health per second and gain 3% of base damage dealt as Lifesteal. Enemies inside Forest Growth gain GLOOM for 10s. GLOOM: Increases incoming Elemental damage by 15%.",
-				"image": "/brotherLibrary/abilitiesImages/Way of Meidra.png",
-				"stats": {
-					"Lifesteal": 0.03,
-					"HP/S%": 0.02,
-					"ElementalDamage": 0.15
-				},
-				"tags": []
-			},
-			"Way of Lydusa": {
-				"name": "Way of Lydusa",
-				"desc": "Invoke Lydusa to infuse Ranged and Melee Damage with the power to apply BRITTLE, allowing the Invoker to generate Sand Devils through damage or kills. Lasts 15s. Reactivating the skill consumes all Sand Devils generated and casts a 15m Sand Blast dealing 100 Elemental Damage per charge. Max 10 charges. BRITTLE: Increases incoming Critical Chance by 10% and Critical Damage by 15%.",
-				"image": "/brotherLibrary/abilitiesImages/Way of Lydusa.png",
-				"stats": {
-					"AllCritChance": 0.1,
-					"AllCritDamage": 0.15
-				},
-				"tags": []
-			}
+		"Way of Kaeula": {
+		  "name": "Way of Kaeula",
+		  "desc": "Invoke Kaeula to cast a Tidal Wave, dealing x Elemental damage and conjuring a 30m Rainstorm for 15s. Allies inside Rainstorm gain HASTE. Enemies inside Rainstorm gain DRENCHED for 10s. DRENCHED: Reduces Movement Speed by 10%. Every few seconds, lightning strikes enemies dealing y base SHOCK damage split among DRENCHED targets.",
+		  "image": "/brotherLibrary/abilitiesImages/Way of Kaeula.png",
+		  "stats": {
+			"HASTE": 1,
+			"outDRENCHED": 1
+		  },
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Gifted",
-		"Endurance": 0,
-		"Expertise": 3,
-		"Spirit": 0,
-		"Vigor": 2,
-		"name": "Invoker",
-		"passives": {
-			"passive1": {
-				"name": "Entranced",
-				"desc": "Increases Skill Damage by 30%, Elemental Damage by 15%, and Skill and Elemental Critical Chance by 5%.",
-				"stats": {
-					"SkillDamage": 0.30,
-					"ElementalDamage": 0.15,
-					"SkillCritChance": 0.05,
-					"ElementalCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Communion",
-				"desc": "Reduces Skill Cooldowns by 1% and Heals 2% Max Health once every 3s for allies while an Invoker Skill is active.",
-				"stats": {
-					"HP/S%": 0.00666666666666,
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Mind and Body",
-				"desc": "Increases Movement Speed by 5% and Damage Reduction by 5% while an Invoker Skill is active.",
-				"stats": {
-					"FlatDR": 0.05,
-					"MovementSpeed": 0.05,
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Soothsayer",
-				"desc": "On Relic use, extend the duration of active Invoker skills by 20% of the base duration. Cannot exceed base duration. Relic Use Speed increased by 25% while an Invoker Skill is active.",
-				"stats": {
-					"RelicSpeed": -0.25,
-				},
-				"tags": []
-			}
+		"Way of Meidra": {
+		  "name": "Way of Meidra",
+		  "desc": "Invoke Meidra to heal all allies for 20% Max Health over 1.5s and conjure a 20m Forest Growth for 15s. After fully blooming, allies in the Forest Growth heal 2% Max Health per second and gain 3% of base damage dealt as Lifesteal. Enemies inside Forest Growth gain GLOOM for 10s. GLOOM: Increases incoming Elemental damage by 15%.",
+		  "image": "/brotherLibrary/abilitiesImages/Way of Meidra.png",
+		  "stats": {
+			"Lifesteal": 0.03,
+			"HP/S%": 0.02,
+			"ElementalDamage": 0.15
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Way of Lydusa": {
+		  "name": "Way of Lydusa",
+		  "desc": "Invoke Lydusa to infuse Ranged and Melee Damage with the power to apply BRITTLE, allowing the Invoker to generate Sand Devils through damage or kills. Lasts 15s. Reactivating the skill consumes all Sand Devils generated and casts a 15m Sand Blast dealing 100 Elemental Damage per charge. Max 10 charges. BRITTLE: Increases incoming Critical Chance by 10% and Critical Damage by 15%.",
+		  "image": "/brotherLibrary/abilitiesImages/Way of Lydusa.png",
+		  "stats": {
+			"AllCritChance": 0.1,
+			"AllCritDamage": 0.15
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Gifted",
+	  "Endurance": 0,
+	  "Expertise": 3,
+	  "Spirit": 0,
+	  "Vigor": 2,
+	  "name": "Invoker",
+	  "passives": {
+		"passive1": {
+		  "name": "Entranced",
+		  "desc": "Increases Skill Damage by 30%, Elemental Damage by 15%, and Skill and Elemental Critical Chance by 5%.",
+		  "stats": {
+			"SkillDamage": 0.3,
+			"ElementalDamage": 0.15,
+			"SkillCritChance": 0.05,
+			"ElementalCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Communion",
+		  "desc": "Reduces Skill Cooldowns by 1% and Heals 2% Max Health once every 3s for allies while an Invoker Skill is active.",
+		  "stats": {
+			"HP/S%": 0.00666666666666
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Mind and Body",
+		  "desc": "Increases Movement Speed by 5% and Damage Reduction by 5% while an Invoker Skill is active.",
+		  "stats": {
+			"FlatDR": 0.05,
+			"MovementSpeed": 0.05
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Soothsayer",
+		  "desc": "On Relic use, extend the duration of active Invoker skills by 20% of the base duration. Cannot exceed base duration. Relic Use Speed increased by 25% while an Invoker Skill is active.",
+		  "stats": {
+			"RelicSpeed": -0.25
+		  },
+		  "tags": []
+		}
+	  },
+	  "placementID": "10"
 	},
 	"Medic": {
-		"classIcon": "/brotherLibrary/classIconImages/Medic.png",
-		"primePerk": "REGENERATOR",
-		"primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Regenerator.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#156644","#070f0a"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Wellspring": {
-				"name": "Wellspring",
-				"desc": "Punch the ground to create a 3m Healing Spring AOE which restores 15 HP/s and increases Blight Decay Rate. Lasts 15s.",
-				"image": "/brotherLibrary/abilitiesImages/Wellspring.png",
-				"stats": {
-					"HP/S+": 15
-				},
-				"tags": []
-			},
-			"Healing Shield": {
-				"name": "Healing Shield",
-				"desc": "The Medic quickly expels healing energy to SHIELD all allies within 25m for 100% of their max HP for 10s. Heals 20% HP over the duration.",
-				"image": "/brotherLibrary/abilitiesImages/Healing Shield.png",
-				"stats": {
-					"HP/S%": 0.02,
-					"Shield": 1
-				},
-				"tags": []
-			},
-			"Redemption": {
-				"name": "Redemption",
-				"desc": "The Medic unleashes a 30m shockwave that revives downed allies and restores 50% max HP over 10s. Every additional 1s increases the heal by 50%(200% max).",
-				"image": "/brotherLibrary/abilitiesImages/Redemption.png",
-				"stats": {
-					"HP/S%": 0.25
-				},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Medic.png",
+	  "primePerk": "REGENERATOR",
+	  "primePerkDesc": "After restoring 250 Total Health to allies, regain a spent Relic Charge. Resting or Respawning at a Worldstone resets healing accumulation. Each additional player increases the healing requirement by 50%.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Regenerator.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#156644",
+		"#070f0a"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Triage",
-		"Endurance": 0,
-		"Expertise": 2,
-		"Spirit": 1,
-		"Vigor": 2,
-		"name": "Medic",
-		"passives": {
-			"passive1": {
-				"name": "Invigorated",
-				"desc": "Grants +25% All Damage and +5% CC",
-				"stats": {
-					"AllDamage": 0.25,
-					"AllCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Benevolence",
-				"desc": "Relic Efficacy +15%. Heal nearby allies 30% of the total heal value, 60% for allies below 35% HP.",
-				"stats": {
-					"RelicEFF": 0.15
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Backbone",
-				"desc": "Increases the hits Medic can take before losing Grey Health by 2.",
-				"stats": {
-					"GreyHPHitThreshold": 2,
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Benefactor",
-				"desc": "Relic Use Speed +20%. Relic Use gains -1 Stagger.",
-				"stats": {
-					"RelicSpeed": -0.2
-				},
-				"tags": []
-			}
+		"Wellspring": {
+		  "name": "Wellspring",
+		  "desc": "Punch the ground to create a 3m Healing Spring AOE which restores 15 HP/s and increases Blight Decay Rate. Lasts 15s.",
+		  "image": "/brotherLibrary/abilitiesImages/Wellspring.png",
+		  "stats": {
+			"HP/S+": 15
+		  },
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Healing Shield": {
+		  "name": "Healing Shield",
+		  "desc": "The Medic quickly expels healing energy to SHIELD all allies within 25m for 100% of their max HP for 10s. Heals 20% HP over the duration.",
+		  "image": "/brotherLibrary/abilitiesImages/Healing Shield.png",
+		  "stats": {
+			"HP/S%": 0.02,
+			"Shield": 1
+		  },
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Redemption": {
+		  "name": "Redemption",
+		  "desc": "The Medic unleashes a 30m shockwave that revives downed allies and restores 50% max HP over 10s. Every additional 1s increases the heal by 50%(200% max).",
+		  "image": "/brotherLibrary/abilitiesImages/Redemption.png",
+		  "stats": {
+			"HP/S%": 0.25
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Triage",
+	  "Endurance": 0,
+	  "Expertise": 2,
+	  "Spirit": 1,
+	  "Vigor": 2,
+	  "name": "Medic",
+	  "passives": {
+		"passive1": {
+		  "name": "Invigorated",
+		  "desc": "Grants +25% All Damage and +5% CC",
+		  "stats": {
+			"AllDamage": 0.25,
+			"AllCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Benevolence",
+		  "desc": "Relic Efficacy +15%. Heal nearby allies 30% of the total heal value, 60% for allies below 35% HP.",
+		  "stats": {
+			"RelicEFF": 0.15
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Backbone",
+		  "desc": "Increases the hits Medic can take before losing Grey Health by 2.",
+		  "stats": {
+			"GreyHPHitThreshold": 2
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Benefactor",
+		  "desc": "Relic Use Speed +20%. Relic Use gains -1 Stagger.",
+		  "stats": {
+			"RelicSpeed": -0.2
+		  },
+		  "tags": []
+		}
+	  },
+	  "placementID": "11"
 	},
 	"Ritualist": {
-		"classIcon": "/brotherLibrary/classIconImages/Ritualist.png",
-		"primePerk": "VILE",
-		"primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Vile.png",
-		"primeStats": {
-			"StatusDamage": 0.15,
+	  "classIcon": "/brotherLibrary/classIconImages/Ritualist.png",
+	  "primePerk": "VILE",
+	  "primePerkDesc": "Negative Status Effects applied by Ritualist inflict Infected<br>Infected: Victim receives 15% more Status Effect damage, On death, spreads all statuses to nearby enemies within 5m",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Vile.png",
+	  "primeStats": {
+		"StatusDamage": 0.15
+	  },
+	  "tags": [],
+	  "gradient": [
+		"#813cc8",
+		"#110912"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"tags": [],
-		"gradient": ["#813cc8","#110912"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Eruption": {
-				"name": "Eruption",
-				"desc": "Creates explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
-				"image": "/brotherLibrary/abilitiesImages/Eruption.png",
-				"stats": {},
-				"tags": []
-			},
-			"Miasma": {
-				"name": "Miasma",
-				"desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 3,000 base damage. Lasts 20s.",
-				"image": "/brotherLibrary/abilitiesImages/Miasma.png",
-				"stats": {},
-				"tags": []
-			},
-			"Deathwish": {
-				"name": "Deathwish",
-				"desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 50% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health drain is minimized by Kinship trait.",
-				"image": "/brotherLibrary/abilitiesImages/Death Wish.png",
-				"stats": {
-					"AllDamage": 0.50,
-					"Lifesteal": 0.10
-				},
-				"tags": []
-			}
+		"Eruption": {
+		  "name": "Eruption",
+		  "desc": "Creates explosion for 150 damage within 15m. Radius and Damage increases 100% for each unique Status Effect on the target. Refreshes all Status Effects on target.",
+		  "image": "/brotherLibrary/abilitiesImages/Eruption.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
 		},
-		"classTrait": "Affliction",
-		"Endurance": 0,
-		"Expertise": 2,
-		"Spirit": 3,
-		"Vigor": 0,
-		"name": "Ritualist",
-		"passives": {
-			"passive1": {
-				"name": "Wrath",
-				"desc": " +20% DMG and +5% CC to enemies with negative status effects.",
-				"stats": {
-					"AllDamage": 0.25,
-					"AllCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Terrify",
-				"desc": "Killing applies TERRIFIED within 5m for 20s. Enemies deal -5% damage and are more likely to drop ammo.",
-				"stats": {
-					"REdamage": [-0.05]
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Dark Blood",
-				"desc": "Reduces damage received from Negative Status Effects by 25%. Reduce blight gain by 50%.",
-				"stats": {},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Purge",
-				"desc": "On Relic Use, cleanses all Negative Status Effects. Effects cleansed are applied to enemies within 7.5m.",
-				"stats": {},
-				"tags": []
-			}
+		"Miasma": {
+		  "name": "Miasma",
+		  "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15m, and dealing a total of 3,000 base damage. Lasts 20s.",
+		  "image": "/brotherLibrary/abilitiesImages/Miasma.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Deathwish": {
+		  "name": "Deathwish",
+		  "desc": "Negates all healing to self. Drain Health 300% over 20s. Increases all Damage by 50% and grants 10% Base Damage dealt as Lifesteal. Cannot kill the user, and health drain is minimized by Kinship trait.",
+		  "image": "/brotherLibrary/abilitiesImages/Death Wish.png",
+		  "stats": {
+			"AllDamage": 0.5,
+			"Lifesteal": 0.1
+		  },
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Affliction",
+	  "Endurance": 0,
+	  "Expertise": 2,
+	  "Spirit": 3,
+	  "Vigor": 0,
+	  "name": "Ritualist",
+	  "passives": {
+		"passive1": {
+		  "name": "Wrath",
+		  "desc": " +20% DMG and +5% CC to enemies with negative status effects.",
+		  "stats": {
+			"AllDamage": 0.25,
+			"AllCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Terrify",
+		  "desc": "Killing applies TERRIFIED within 5m for 20s. Enemies deal -5% damage and are more likely to drop ammo.",
+		  "stats": {
+			"REdamage": [
+			  -0.05
+			]
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Dark Blood",
+		  "desc": "Reduces damage received from Negative Status Effects by 25%. Reduce blight gain by 50%.",
+		  "stats": {},
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Purge",
+		  "desc": "On Relic Use, cleanses all Negative Status Effects. Effects cleansed are applied to enemies within 7.5m.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "12"
 	},
 	"Summoner": {
-		"classIcon": "/brotherLibrary/classIconImages/Summoner.png",
-		"primePerk": "RUTHLESS",
-		"primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed. Sacrificing Enraged Minions deals more damage based on HP when sacrificed.",
-		"primePerkImage": "/brotherLibrary/primePerkImages/Ruthless.png",
-		"primeStats": {},
-		"tags": [],
-		"gradient": ["#724528","#100d0b"],
-		"abilities": {
-			"": {
-				"name": "",
-				"desc": "",
-				"image": "/images/Remnant/clear.png",
-				"stats": {},
-				"tags": []
-			},
-			"Minion: Hollow": {
-				"name": "Minion: Hollow",
-				"desc": "Summons a Root Hollow minion to fight by your side. Costs 15% of max HP to summon, but will not kill Summoner. Max (2). Minion DR: 40%",
-				"image": "/brotherLibrary/abilitiesImages/Minion_ Hollow.png",
-				"stats": {},
-				"tags": []
-			},
-			"Minion: Flyer": {
-				"name": "Minion: Flyer",
-				"desc": "Summons a Root Flyer minion to fight by your side. Costs 10% of max HP to summon, but will not kill Summoner. Max (2). Minion DR: 40%",
-				"image": "/brotherLibrary/abilitiesImages/Minion_ Flyer.png",
-				"stats": {},
-				"tags": []
-			},
-			"Minion: Reaver": {
-				"name": "Minion: Reaver",
-				"desc": "Summons a Root Reaver minion to fight by your side. Costs 35% of max HP to summon, but will not kill Summoner. Max (1). Minion DR: 50%",
-				"image": "/brotherLibrary/abilitiesImages/Minion_ Reaver.png",
-				"stats": {},
-				"tags": []
-			}
+	  "classIcon": "/brotherLibrary/classIconImages/Summoner.png",
+	  "primePerk": "RUTHLESS",
+	  "primePerkDesc": "When the Summoner deals damage to their Minion, it causes them to ENGRAGE. Minions gain 50% increased Damage, Attack Speed, and Movement Speed. Sacrificing Enraged Minions deals more damage based on HP when sacrificed.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Ruthless.png",
+	  "primeStats": {},
+	  "tags": [],
+	  "gradient": [
+		"#724528",
+		"#100d0b"
+	  ],
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
 		},
-		"classTrait": "Regrowth",
-		"Endurance": 0,
-		"Expertise": 1,
-		"Spirit": 3,
-		"Vigor": 1,
-		"name": "Summoner",
-		"passives": {
-			"passive1": {
-				"name": "Dominator",
-				"desc": "Mod/Skill/Explosive (+35%DMG, +5%CC) with active minion.",
-				"stats": {
-					"ModDamage": 0.35,
-					"SkillDamage": 0.35,
-					"ExplosiveDamage": 0.35,
-					"ModCritChance": 0.05,
-					"SkillCritChance": 0.05,
-					"ExplosiveCritChance": 0.05
-				},
-				"tags": []
-			},
-			"passive2": {
-				"name": "Residue",
-				"desc": "Minions leave a 3m Aura on death, heals 2.5% HP/s and increases healing by 20%. Lasts 10s.",
-				"stats": {
-					"HealingEFF": 0.2,
-					"HP/S%": 0.025
-				},
-				"tags": []
-			},
-			"passive3": {
-				"name": "Outrage",
-				"desc": "Sacrifice grants 3% Lifesteal/Minion Sacrificed, +15% Move Speed. Lasts 10s.",
-				"stats": {
-					"Lifesteal": 0.06,
-					"MovementSpeed": 0.15
-				},
-				"tags": []
-			},
-			"passive4": {
-				"name": "Incite",
-				"desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC). Lasts 30s.",
-				"stats": {},
-				"tags": []
-			}
+		"Minion: Hollow": {
+		  "name": "Minion: Hollow",
+		  "desc": "Summons a Root Hollow minion to fight by your side. Costs 15% of max HP to summon, but will not kill Summoner. Max (2). Minion DR: 40%",
+		  "image": "/brotherLibrary/abilitiesImages/Minion_ Hollow.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "1"
+		},
+		"Minion: Flyer": {
+		  "name": "Minion: Flyer",
+		  "desc": "Summons a Root Flyer minion to fight by your side. Costs 10% of max HP to summon, but will not kill Summoner. Max (2). Minion DR: 40%",
+		  "image": "/brotherLibrary/abilitiesImages/Minion_ Flyer.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "2"
+		},
+		"Minion: Reaver": {
+		  "name": "Minion: Reaver",
+		  "desc": "Summons a Root Reaver minion to fight by your side. Costs 35% of max HP to summon, but will not kill Summoner. Max (1). Minion DR: 50%",
+		  "image": "/brotherLibrary/abilitiesImages/Minion_ Reaver.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "3"
 		}
+	  },
+	  "classTrait": "Regrowth",
+	  "Endurance": 0,
+	  "Expertise": 1,
+	  "Spirit": 3,
+	  "Vigor": 1,
+	  "name": "Summoner",
+	  "passives": {
+		"passive1": {
+		  "name": "Dominator",
+		  "desc": "Mod/Skill/Explosive (+35%DMG, +5%CC) with active minion.",
+		  "stats": {
+			"ModDamage": 0.35,
+			"SkillDamage": 0.35,
+			"ExplosiveDamage": 0.35,
+			"ModCritChance": 0.05,
+			"SkillCritChance": 0.05,
+			"ExplosiveCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Residue",
+		  "desc": "Minions leave a 3m Aura on death, heals 2.5% HP/s and increases healing by 20%. Lasts 10s.",
+		  "stats": {
+			"HealingEFF": 0.2,
+			"HP/S%": 0.025
+		  },
+		  "tags": []
+		},
+		"passive3": {
+		  "name": "Outrage",
+		  "desc": "Sacrifice grants 3% Lifesteal/Minion Sacrificed, +15% Move Speed. Lasts 10s.",
+		  "stats": {
+			"Lifesteal": 0.06,
+			"MovementSpeed": 0.15
+		  },
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Incite",
+		  "desc": "Relic use: Minions (+5%HP/s, +15% DMG, +15%CC). Lasts 30s.",
+		  "stats": {},
+		  "tags": []
+		}
+	  },
+	  "placementID": "13"
 	}
-}
+  }
 // //class title combos that display above the prime perk
 titleCombos = {
 	"Alchemist": "",
@@ -6701,1545 +6815,1786 @@ rings = {
   }
 relics = {
 	"": {
-		"usesConditional": {},
-		"name": "",
-		"slot": "Relic",
-		"image": "/images/Remnant/clear.png",
-		"desc": "",
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "Relic",
+	  "image": "/images/Remnant/clear.png",
+	  "desc": "",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r00"
 	},
 	"Bloodless Heart": {
-		"usesConditional": {},
-		"name": "Bloodless Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Bloodless Heart.png",
-		"desc": "Innate 50% Use Speed bonus. On use, grants a SHIELD that prevents nearly all damage for 3s. Cannot prevent certain death mechanics. No bonuses calculate when selected.",
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Bloodless Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Bloodless Heart.png",
+	  "desc": "Innate 50% Use Speed bonus. On use, grants a SHIELD that prevents nearly all damage for 3s. Cannot prevent certain death mechanics. No bonuses calculate when selected.",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r01"
 	},
 	"Blooming Heart": {
-		"usesConditional": {},
-		"name": "Blooming Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Blooming Heart.png",
-		"desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
-		"stats": {
-			"RelicHPbase": 175,
-			"RelicHPtime": 25,
-			"RelicHPtype": "%"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Blooming Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Blooming Heart.png",
+	  "desc": "On use, heals the user for 35% of caster's Max Health over 5s. Spawns 3 Healing Orbs which grant 35% of caster's Max Health over 5s. Orbs last 20s. Recasting removes previous Orbs",
+	  "stats": {
+		"RelicHPbase": 175,
+		"RelicHPtime": 25,
+		"RelicHPtype": "%"
+	  },
+	  "tags": [],
+	  "placementID": "r02"
 	},
 	"Broken Heart": {
-		"usesConditional": {},
-		"name": "Broken Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Broken Heart.png",
-		"desc": "Innate 50% Use Speed Bonus. -2 HP/s when over 50%HP. On use, sets current Health to 50% of max Health over 0.25s.",
-		"stats": {
-			"RelicHPbase": 50,
-			"RelicHPtime": 1,
-			"RelicHPtype": "%",
-			"HP/S+": -2,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Broken Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Broken Heart.png",
+	  "desc": "Innate 50% Use Speed Bonus. -2 HP/s when over 50%HP. On use, sets current Health to 50% of max Health over 0.25s.",
+	  "stats": {
+		"RelicHPbase": 50,
+		"RelicHPtime": 1,
+		"RelicHPtype": "%",
+		"HP/S+": -2
+	  },
+	  "tags": [],
+	  "placementID": "r03"
 	},
 	"Constrained Heart": {
-		"usesConditional": {},
-		"name": "Constrained Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Constrained Heart.png",
-		"desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active.",
-		"stats": {
-			"Bulwark": 2,
-			"RelicHPbase": 100,
-			"RelicHPtime": 5,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Constrained Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Constrained Heart.png",
+	  "desc": "On use regenerates 20 Health per second for 5s and grants 2 Stacks of Bulwark while heal is active.",
+	  "stats": {
+		"Bulwark": 2,
+		"RelicHPbase": 100,
+		"RelicHPtime": 5,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r04"
 	},
 	"Crystal Heart": {
-		"usesConditional": {},
-		"name": "Crystal Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Crystal Heart.png",
-		"desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s.",
-		"stats": {
-			"FlatDR": 0.25,
-			"RelicHPbase": 100,
-			"RelicHPtime": 10,
-			"RelicHPtype": "%"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Crystal Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Crystal Heart.png",
+	  "desc": "On use, regenerates 100% of Max Health over 10s, Movement Speed is reduced by 50%, and incoming damage is reduced by 25%. Lasts 10s.",
+	  "stats": {
+		"FlatDR": 0.25,
+		"RelicHPbase": 100,
+		"RelicHPtime": 10,
+		"RelicHPtype": "%"
+	  },
+	  "tags": [],
+	  "placementID": "r05"
 	},
 	"Decayed Heart": {
-		"usesConditional": {},
-		"name": "Decayed Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Decayed Heart.png",
-		"desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
-		"stats": {
-			"RelicHPbase": 120,
-			"RelicHPtime": 9,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Decayed Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Decayed Heart.png",
+	  "desc": "On use, causes the next 3 instances of enemy damage taken to trigger 40 Health regeneration over 3s. Lasts 30s.",
+	  "stats": {
+		"RelicHPbase": 120,
+		"RelicHPtime": 9,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r06"
 	},
 	"Diverting Heart": {
-		"name": "Diverting Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Diverting Heart.png",
-		"desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Diverting Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Diverting Heart.png",
+	  "desc": "On use, reduces Skill Cooldowns by 1s for sec. Lasts 15s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r07"
 	},
 	"Dragon Heart": {
-		"usesConditional": {},
-		"name": "Dragon Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Dragon Heart.png",
-		"desc": "On use, heals 70 Health over 0.5s.",
-		"stats": {
-			"RelicHPbase": 70,
-			"RelicHPtime": 1,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Dragon Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Dragon Heart.png",
+	  "desc": "On use, heals 70 Health over 0.5s.",
+	  "stats": {
+		"RelicHPbase": 70,
+		"RelicHPtime": 1,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r08"
 	},
 	"Enlarged Heart": {
-		"usesConditional": {},
-		"name": "Enlarged Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Enlarged Heart.png",
-		"desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
-		"stats": {
-			"RelicSpeed": -0.5,
-			"RelicHPbase": 140,
-			"RelicHPtime": 1,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Enlarged Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Enlarged Heart.png",
+	  "desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
+	  "stats": {
+		"RelicSpeed": -0.5,
+		"RelicHPbase": 140,
+		"RelicHPtime": 1,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r09"
 	},
 	"Lifeless Heart": {
-		"usesConditional": {},
-		"name": "Lifeless Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Lifeless Heart.png",
-		"desc": "Innate 50% Use Speed Bonus, but provides no healing. Relic capacity is doubled.",
-		"stats": {
-			"RelicCharges%": 1,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Lifeless Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Lifeless Heart.png",
+	  "desc": "Innate 50% Use Speed Bonus, but provides no healing. Relic capacity is doubled.",
+	  "stats": {
+		"RelicCharges%": 1
+	  },
+	  "tags": [],
+	  "placementID": "r10"
 	},
 	"Paper Heart": {
-		"usesConditional": {},
-		"name": "Paper Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Paper Heart.png",
-		"desc": "Heals up to 100% of current health over 0.1s. Grants 10 Stacks of 'Paper Health' for 10s, dealing 75 Base Damage of any Damage Type Removes 1 Stack of 'Paper Health'. After 15s, remaining Stacks are converted to Grey Health (10% per Stack).",
-		"stats": {
-			"RelicHPbase": 100,
-			"RelicHPtime": 1,
-			"RelicHPtype": "%"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Paper Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Paper Heart.png",
+	  "desc": "Heals up to 100% of current health over 0.1s. Grants 10 Stacks of 'Paper Health' for 10s, dealing 75 Base Damage of any Damage Type Removes 1 Stack of 'Paper Health'. After 15s, remaining Stacks are converted to Grey Health (10% per Stack).",
+	  "stats": {
+		"RelicHPbase": 100,
+		"RelicHPtime": 1,
+		"RelicHPtype": "%"
+	  },
+	  "tags": [],
+	  "placementID": "r11"
 	},
 	"Profane Heart": {
-		"usesConditional": {},
-		"name": "Profane Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Profane Heart.png",
-		"desc": "Innate 3% Lifesteal bonus. On use, increases all Lifesteal Efficacy by 50% for 15s. Efficacy bonus does not calculate here.",
-		"stats": {
-			"Lifesteal": 0.03,
-			"lifestealEFF": 0.50
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Profane Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Profane Heart.png",
+	  "desc": "Innate 3% Lifesteal bonus. On use, increases all Lifesteal Efficacy by 50% for 15s. Efficacy bonus does not calculate here.",
+	  "stats": {
+		"Lifesteal": 0.03,
+		"lifestealEFF": 0.5
+	  },
+	  "tags": [],
+	  "placementID": "r12"
 	},
 	"Pulsing Heart": {
-		"usesConditional": {},
-		"name": "Pulsing Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Pulsing Heart.png",
-		"desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
-		"stats": {
-			"RelicHPbase": 115,
-			"RelicHPtime": 15,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Pulsing Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Pulsing Heart.png",
+	  "desc": "On use, pulses every 3s, healing allies within 7m for 20 Health over 0.5s per pulse. Lasts 15s.",
+	  "stats": {
+		"RelicHPbase": 115,
+		"RelicHPtime": 15,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r13"
 	},
 	"Quilted Heart": {
-		"name": "Quilted Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Quilted Heart.png",
-		"desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Quilted Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Quilted Heart.png",
+	  "desc": "Does not provide standard healing. On use, negates Stamina Drain and cause Evades to heal for 15 Health over 0.25s. Lasts 20s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r14"
 	},
 	"Reprocessed Heart": {
-		"name": "Reprocessed Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Reprocessed Heart.png",
-		"desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Reprocessed Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Reprocessed Heart.png",
+	  "desc": "On use, converts 5 Health to 40 Mod Power per second for 25s for Both Weapons. Cannot die from conversion.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r15"
 	},
 	"Resonating Heart": {
-		"usesConditional": {
-			"customRelicFunctions": "resonatingHeart",
-		},
-		"name": "Resonating Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Resonating Heart.png",
-		"desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health to self is Doubled and awarded over the next 20s.",
-		"complex": "Resonating applies healing modifiers to base, then doubles overheal and applies Healing Effectiveness alone, again.",
-		"stats": {
-			"RelicHPbase": 50,
-			"RelicHPtime": 5,
-			"RelicHPtype": "%"
-		},
-		"tags": []
+	  "usesConditional": {
+		"customRelicFunctions": "resonatingHeart"
+	  },
+	  "name": "Resonating Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Resonating Heart.png",
+	  "desc": "On use, regenerates 50% of Max Health over 5s. When heal ends, any overhealed Health to self is Doubled and awarded over the next 20s.",
+	  "complex": "Resonating applies healing modifiers to base, then doubles overheal and applies Healing Effectiveness alone, again.",
+	  "stats": {
+		"RelicHPbase": 50,
+		"RelicHPtime": 5,
+		"RelicHPtype": "%"
+	  },
+	  "tags": [],
+	  "placementID": "r16"
 	},
 	"Ripened Heart": {
-		"usesConditional": {},
-		"name": "Ripened Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Ripened Heart.png",
-		"desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
-		"stats": {
-			"RelicHPbase": 105,
-			"RelicHPtime": 5.5,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Ripened Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Ripened Heart.png",
+	  "desc": "On use, heals 35 Health over 0.5s and an additional 70 over 5s.",
+	  "stats": {
+		"RelicHPbase": 105,
+		"RelicHPtime": 5.5,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r17"
 	},
 	"Runed Heart": {
-		"usesConditional": {},
-		"name": "Runed Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Runed Heart.png",
-		"desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
-		"stats": {
-			"RelicHPbase": 50,
-			"RelicHPtime": 10,
-			"RelicHPtype": "F"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Runed Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Runed Heart.png",
+	  "desc": "On use, increases Health Regeneration by 5 and generates 500 Mod Power over 10s.",
+	  "stats": {
+		"RelicHPbase": 50,
+		"RelicHPtime": 10,
+		"RelicHPtype": "F"
+	  },
+	  "tags": [],
+	  "placementID": "r18"
 	},
 	"Salvaged Heart": {
-		"name": "Salvaged Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Salvaged Heart.png",
-		"desc": "Innate 25% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Salvaged Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Salvaged Heart.png",
+	  "desc": "Innate 25% Use Speed bonus. On use, heals 30 Health over 0.25s and restore 300% of current Grey Health.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r19"
 	},
 	"Shielded Heart": {
-		"usesConditional": {},
-		"name": "Shielded Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Shielded Heart.png",
-		"desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage",
-		"stats": {
-			"Shield": 1
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Shielded Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Shielded Heart.png",
+	  "desc": "On use, grants a Shield for 100% of Max Health. Lasts 20s or until Shield is removed by damage",
+	  "stats": {
+		"Shield": 1
+	  },
+	  "tags": [],
+	  "placementID": "r20"
 	},
 	"Siphon Heart": {
-		"usesConditional": {},
-		"name": "Siphon Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Siphon Heart.png",
-		"desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
-		"stats": {
-			"RelicLifesteal": 0.1
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Siphon Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Siphon Heart.png",
+	  "desc": "On use, grants 10% of base damage dealt as Lifesteal for 15s.",
+	  "stats": {
+		"RelicLifesteal": 0.1
+	  },
+	  "tags": [],
+	  "placementID": "r21"
 	},
 	"Tormented Heart": {
-		"name": "Tormented Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Tormented Heart.png",
-		"desc": "Innate 25% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 20% of damage dealt. ",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Tormented Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Tormented Heart.png",
+	  "desc": "Innate 25% Relic Use Speed bonus. On use, deals 450 Explosive damage to enemies within 10m and Lifesteals 20% of damage dealt. ",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r22"
 	},
 	"Tranquil Heart": {
-		"usesConditional": {},
-		"name": "Tranquil Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Tranquil Heart.png",
-		"desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
-		"stats": {
-			"RelicHPbase": 2,
-			"RelicHPtime": 1,
-			"RelicHPtype": "P"
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Tranquil Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Tranquil Heart.png",
+	  "desc": "Passively grants 2 Health Regeneration per second. On use, doubles All Health Regeneration for 15s.",
+	  "stats": {
+		"RelicHPbase": 2,
+		"RelicHPtime": 1,
+		"RelicHPtype": "P"
+	  },
+	  "tags": [],
+	  "placementID": "r23"
 	},
 	"Unsullied Heart": {
-		"name": "Unsullied Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Unsullied Heart.png",
-		"desc": "On use, heals for 100% of Current Health over 0.5s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Unsullied Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Unsullied Heart.png",
+	  "desc": "On use, heals for 100% of Current Health over 0.5s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r24"
 	},
 	"Void Heart": {
-		"name": "Void Heart",
-		"slot": "Relic",
-		"image": "/brotherLibrary/relicsImages/Void Heart.png",
-		"desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Void Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Void Heart.png",
+	  "desc": "On use, reduces incoming damage by 50% for 4s. When buff ends, heals 100% of missing Health over 0.75s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "r25"
 	}
-}
+  }
 fragments = {
 	"": {
-		"usesConditional": {},
-		"name": "",
-		"slot": "",
-		"image": "",
-		"desc": "",
-		"value": 0,
-		"stats": {},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "",
+	  "image": "",
+	  "desc": "",
+	  "value": 0,
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "F00"
 	},
 	"Ammo Pickups": {
-		"name": "Ammo Pickups",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
-		"value": 0.30,
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Ammo Pickups",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
+	  "value": 0.3,
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y01"
 	},
 	"Ammo Reserves": {
-		"name": "Ammo Reserves",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
-		"value": 0.20,
-		"usesConditional": {},
-		"stats": {
-			"Reserves": 0.20,
-		},
-		"tags": []
+	  "name": "Ammo Reserves",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
+	  "value": 0.2,
+	  "usesConditional": {},
+	  "stats": {
+		"Reserves": 0.2
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y02"
 	},
 	"Armor Effectiveness": {
-		"usesConditional": {},
-		"name": "Armor Effectiveness",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Armor Effectiveness [MYTHIC]",
-		"value": 0.10,
-		"stats": {
-			"Armor%": 0.10
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Armor Effectiveness",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Armor Effectiveness [MYTHIC]",
+	  "value": 0.1,
+	  "stats": {
+		"Armor%": 0.1
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B01"
 	},
 	"Blight Resistance": {
-		"name": "Blight Resistance",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1 Blight Resistance [MYTHIC]",
-		"value": 30,
-		"usesConditional": {},
-		"stats": {
-			"Blight": 30,
-		},
-		"tags": []
+	  "name": "Blight Resistance",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1 Blight Resistance [MYTHIC]",
+	  "value": 30,
+	  "usesConditional": {},
+	  "stats": {
+		"Blight": 30
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B02"
 	},
 	"Casting Speed": {
-		"name": "Casting Speed",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Casting Speed [MYTHIC]",
-		"value": 0.20,
-		"usesConditional": {},
-		"stats": {
-			"CastSpeed": 0.20,
-		},
-		"tags": []
+	  "name": "Casting Speed",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Casting Speed [MYTHIC]",
+	  "value": 0.2,
+	  "usesConditional": {},
+	  "stats": {
+		"CastSpeed": 0.2
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y03"
 	},
 	"Charge Melee Cost": {
-		"name": "Charge Melee Cost",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
-		"value": -0.30,
-		"usesConditional": {},
-		"stats": {
-			"ChargeCost": -0.30,
-		},
-		"tags": []
+	  "name": "Charge Melee Cost",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
+	  "value": -0.3,
+	  "usesConditional": {},
+	  "stats": {
+		"ChargeCost": -0.3
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B03"
 	},
 	"Consumable Duration": {
-		"name": "Consumable Duration",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Consumable Duration [MYTHIC]",
-		"value": 0.20,
-		"usesConditional": {},
-		"stats": {
-			"ConsumableDuration": 0.20,
-		},
-		"tags": []
+	  "name": "Consumable Duration",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Consumable Duration [MYTHIC]",
+	  "value": 0.2,
+	  "usesConditional": {},
+	  "stats": {
+		"ConsumableDuration": 0.2
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y04"
 	},
 	"Consumable Speed": {
-		"name": "Consumable Speed",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
-		"value": -0.15,
-		"usesConditional": {},
-		"stats": {
-			"RelicSpeed": -0.15
-		},
-		"tags": []
+	  "name": "Consumable Speed",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
+	  "value": -0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"RelicSpeed": -0.15
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y05"
 	},
 	"Damage Reduction": {
-		"usesConditional": {},
-		"name": "Damage Reduction",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Damage Reduction [MYTHIC]",
-		"value": 0.05,
-		"stats": {
-			"FlatDR": 0.05,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Damage Reduction",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Damage Reduction [MYTHIC]",
+	  "value": 0.05,
+	  "stats": {
+		"FlatDR": 0.05
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B04"
 	},
 	"Elemental Damage": {
-		"name": "Elemental Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Elemental Damage [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"ElementalDamage": 0.10,
-		},
-		"tags": []
+	  "name": "Elemental Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Elemental Damage [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"ElementalDamage": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R01"
 	},
 	"Elemental Resistance": {
-		"usesConditional": {},
-		"name": "Elemental Resistance",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1 Elemental Damage Resistance [MYTHIC]",
-		"value": 10,
-		"stats": {
-			"Burn": 10,
-			"Shock": 10,
-			"Corrosive": 10,
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Elemental Resistance",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1 Elemental Damage Resistance [MYTHIC]",
+	  "value": 10,
+	  "stats": {
+		"Burn": 10,
+		"Shock": 10,
+		"Corrosive": 10
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B05"
 	},
 	"Grey Health Rate": {
-		"name": "Grey Health Rate",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
-		"value": 0.20,
-		"usesConditional": {},
-		"stats": {
-			"GreyHealthConversion": 0.20,
-		},
-		"tags": [] //this is legit ONLY the CONVERSION rate btw
+	  "name": "Grey Health Rate",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
+	  "value": 0.2,
+	  "usesConditional": {},
+	  "stats": {
+		"GreyHealthConversion": 0.2
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B06"
 	},
 	"Healing Effectiveness": {
-		"usesConditional": {},
-		"name": "Healing Effectiveness",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Healing Effectiveness [MYTHIC]",
-		"value": 0.2,
-		"stats": {
-			"HealingEFF": 0.2
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Healing Effectiveness",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Healing Effectiveness [MYTHIC]",
+	  "value": 0.2,
+	  "stats": {
+		"HealingEFF": 0.2
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B07"
 	},
 	"Health": {
-		"usesConditional": {},
-		"name": "Health",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Health [MYTHIC]",
-		"value": 0.15,
-		"stats": {
-			"Health%": 0.15
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Health",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Health [MYTHIC]",
+	  "value": 0.15,
+	  "stats": {
+		"Health%": 0.15
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B08"
 	},
 	"Melee Critical Chance": {
-		"name": "Melee Critical Chance",
-		"slot": "RFragRed",
-		"image": 0.10,
-		"desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
-		"usesConditional": {},
-		"stats": {
-			"MeleeCritChance": 0.10,
-		},
-		"tags": []
+	  "name": "Melee Critical Chance",
+	  "slot": "RelicFragRed",
+	  "image": 0.1,
+	  "desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeCritChance": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R02"
 	},
 	"Melee Critical Damage": {
-		"name": "Melee Critical Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"MeleeCritDamage": 0.15,
-		},
-		"tags": []
+	  "name": "Melee Critical Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeCritDamage": 0.15
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R03"
 	},
 	"Melee Damage": {
-		"name": "Melee Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Melee Damage [MYTHIC]",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"MeleeDamage": 0.15,
-		},
-		"tags": []
+	  "name": "Melee Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Melee Damage [MYTHIC]",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeDamage": 0.15
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R04"
 	},
 	"Melee Speed": {
-		"name": "Melee Speed",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"AttackSpeed": 0.15,
-			"ChargeSpeed": 0.15,
-		},
-		"tags": []
+	  "name": "Melee Speed",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"AttackSpeed": 0.15,
+		"ChargeSpeed": 0.15
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R05"
 	},
 	"Mod Cost": {
-		"name": "Mod Cost",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Mod Cost [MYTHIC]",
-		"value": -0.10,
-		"usesConditional": {},
-		"stats": {
-			"ModCost": -0.10,
-		},
-		"tags": []
+	  "name": "Mod Cost",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Mod Cost [MYTHIC]",
+	  "value": -0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"ModCost": -0.1
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y06"
 	},
 	"Mod Damage": {
-		"name": "Mod Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Mod Damage [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"ModDamage": 0.10,
-		},
-		"tags": []
+	  "name": "Mod Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Mod Damage [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"ModDamage": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R06"
 	},
 	"Mod Duration": {
-		"name": "Mod Duration",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Mod Duration [MYTHIC]",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"ModDuration": 0.15,
-		},
-		"tags": []
+	  "name": "Mod Duration",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Mod Duration [MYTHIC]",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"ModDuration": 0.15
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y07"
 	},
 	"Ranged Critical Chance": {
-		"name": "Ranged Critical Chance",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
-		"value": 0.075,
-		"usesConditional": {},
-		"stats": {
-			"RangedCritChance": 0.075,
-		},
-		"tags": []
+	  "name": "Ranged Critical Chance",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
+	  "value": 0.075,
+	  "usesConditional": {},
+	  "stats": {
+		"RangedCritChance": 0.075
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R07"
 	},
 	"Ranged Critical Damage": {
-		"name": "Ranged Critical Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"RangedCritDamage": 0.15,
-		},
-		"tags": []
+	  "name": "Ranged Critical Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"RangedCritDamage": 0.15
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R08"
 	},
 	"Ranged Damage": {
-		"name": "Ranged Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Ranged Damage [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"RangedDamage": 0.10,
-		},
-		"tags": []
+	  "name": "Ranged Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Ranged Damage [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"RangedDamage": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R09"
 	},
 	"Ranged Fire Rate": {
-		"name": "Ranged Fire Rate",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Fire Rate [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"FireRate": 0.10,
-		},
-		"tags": []
+	  "name": "Ranged Fire Rate",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Fire Rate [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"FireRate": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R10"
 	},
 	"Recoil": {
-		"name": "Recoil",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Recoil [MYTHIC]",
-		"value": -0.30,
-		"usesConditional": {},
-		"stats": {
-			"Recoil": -0.30,
-		},
-		"tags": []
+	  "name": "Recoil",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Recoil [MYTHIC]",
+	  "value": -0.3,
+	  "usesConditional": {},
+	  "stats": {
+		"Recoil": -0.3
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y08"
 	},
 	"Revive Speed": {
-		"name": "Revive Speed",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Revive Speed [MYTHIC]",
-		"value": 0.25,
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Revive Speed",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Revive Speed [MYTHIC]",
+	  "value": 0.25,
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B09"
 	},
 	"Shield Effectiveness": {
-		"usesConditional": {},
-		"name": "Shield Effectiveness",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Shield Amount [MYTHIC]",
-		"value": 0.2,
-		"stats": {
-			"ShieldEFF": 0.2
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Shield Effectiveness",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Shield Amount [MYTHIC]",
+	  "value": 0.2,
+	  "stats": {
+		"ShieldEFF": 0.2
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B10"
 	},
 	"Skill Cooldown": {
-		"name": "Skill Cooldown",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
-		"value": -0.10,
-		"usesConditional": {},
-		"stats": {
-			"CDR": -0.10,
-		},
-		"tags": []
+	  "name": "Skill Cooldown",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
+	  "value": -0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"CDR": -0.1
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y09"
 	},
 	"Skill Damage": {
-		"name": "Skill Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Skill Damage [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"SkillDamage": 0.10,
-		},
-		"tags": []
+	  "name": "Skill Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Skill Damage [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"SkillDamage": 0.1
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R11"
 	},
 	"Skill Duration": {
-		"name": "Skill Duration",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Skill Duration [MYTHIC]",
-		"value": 0.10,
-		"usesConditional": {},
-		"stats": {
-			"SkillDuration": 0.10,
-		},
-		"tags": []
+	  "name": "Skill Duration",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Skill Duration [MYTHIC]",
+	  "value": 0.1,
+	  "usesConditional": {},
+	  "stats": {
+		"SkillDuration": 0.1
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y10"
 	},
 	"Spread Recovery": {
-		"name": "Spread Recovery",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
-		"value": -0.30,
-		"usesConditional": {},
-		"stats": {
-			"SpreadRecovery": -0.30,
-		},
-		"tags": []
+	  "name": "Spread Recovery",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
+	  "value": -0.3,
+	  "usesConditional": {},
+	  "stats": {
+		"SpreadRecovery": -0.3
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y11"
 	},
 	"Stagger Damage": {
-		"name": "Stagger Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Stagger Damage [MYTHIC]",
-		"value": 0.20,
-		"usesConditional": {},
-		"stats": {
-			"StaggerDamage": 0.20,
-		},
-		"tags": []
+	  "name": "Stagger Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Stagger Damage [MYTHIC]",
+	  "value": 0.2,
+	  "usesConditional": {},
+	  "stats": {
+		"StaggerDamage": 0.2
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R12"
 	},
 	"Stamina": {
-		"usesConditional": {},
-		"name": "Stamina",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Stamina [MYTHIC]",
-		"value": 0.15,
-		"stats": {
-			"Stamina%": 0.15
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Stamina",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Stamina [MYTHIC]",
+	  "value": 0.15,
+	  "stats": {
+		"Stamina%": 0.15
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B11"
 	},
 	"Stamina Cost": {
-		"usesConditional": {},
-		"name": "Stamina Cost",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Reduced Stamina Cost [MYTHIC]",
-		"value": -0.2,
-		"stats": {
-			"StaminaCost": -0.2
-		},
-		"tags": []
+	  "usesConditional": {},
+	  "name": "Stamina Cost",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Reduced Stamina Cost [MYTHIC]",
+	  "value": -0.2,
+	  "stats": {
+		"StaminaCost": -0.2
+	  },
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B12"
 	},
 	"Stamina Recovery Delay": {
-		"name": "Stamina Recovery Delay",
-		"slot": "RFragBlue",
-		"image": "",
-		"desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
-		"value": -0.30,
-		"usesConditional": {},
-		"stats": {},
-		"tags": []
+	  "name": "Stamina Recovery Delay",
+	  "slot": "RelicFragBlue",
+	  "image": "",
+	  "desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
+	  "value": -0.3,
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "color": "Blue",
+	  "placementID": "B13"
 	},
 	"Weakspot Damage": {
-		"name": "Weakspot Damage",
-		"slot": "RFragRed",
-		"image": "",
-		"desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
-		"value": 0.15,
-		"usesConditional": {},
-		"stats": {
-			"AllWeakspot": 0.15,
-		},
-		"tags": []
+	  "name": "Weakspot Damage",
+	  "slot": "RelicFragRed",
+	  "image": "",
+	  "desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
+	  "value": 0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"AllWeakspot": 0.15
+	  },
+	  "tags": [],
+	  "color": "Red",
+	  "placementID": "R13"
 	},
 	"Weapon Spread": {
-		"name": "Weapon Spread",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Weapon Spread [MYTHIC]",
-		"value": -0.15,
-		"usesConditional": {},
-		"stats": {
-			"Spread": -0.15,
-		},
-		"tags": []
+	  "name": "Weapon Spread",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Weapon Spread [MYTHIC]",
+	  "value": -0.15,
+	  "usesConditional": {},
+	  "stats": {
+		"Spread": -0.15
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y12"
 	},
 	"Weapon Swap": {
-		"name": "Weapon Swap",
-		"slot": "RFragYellow",
-		"image": "",
-		"desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
-		"value": 0.35,
-		"usesConditional": {},
-		"stats": {
-			"WeaponSwapSpeed": 0.35,
-		},
-		"tags": []
+	  "name": "Weapon Swap",
+	  "slot": "RelicFragYellow",
+	  "image": "",
+	  "desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
+	  "value": 0.35,
+	  "usesConditional": {},
+	  "stats": {
+		"WeaponSwapSpeed": 0.35
+	  },
+	  "tags": [],
+	  "color": "Yellow",
+	  "placementID": "Y13"
 	}
-}
+  }
 // /* ----------------------------------------------------------------------------------------*/
 // /* ------------------------------------ TRAITS --------------------------------------------*/
 // /* ----------------------------------------------------------------------------------------*/
 traits = {
 	"": {
-		"name": "",
-		"property": "",
-		"tags": [],
-		"usesConditional": {},
-		"desc": "",
-		"level": {
-			"0": 0,
-			"1": 0,
-			"2": 0,
-			"3": 0,
-			"4": 0,
-			"5": 0,
-			"6": 0,
-			"7": 0,
-			"8": 0,
-			"9": 0,
-			"10": 0
-		}
+	  "name": "",
+	  "property": "",
+	  "tags": [],
+	  "usesConditional": {},
+	  "desc": "",
+	  "level": {
+		"0": 0,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 0,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 0
+	  },
+	  "placementID": "00"
 	},
 	"Affliction": {
-		"name": "Affliction",
-		"property": "StatusDuration",
-		"tags": ["StatusDuration"],
-		"usesConditional": {},
-		"desc": "Increases STATUS EFFECT duration against enemies by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.10,
-			"2": 0.20,
-			"3": 0.30,
-			"4": 0.40,
-			"5": 0.50,
-			"6": 0.60,
-			"7": 0.70,
-			"8": 0.80,
-			"9": 0.90,
-			"10": 1
-		}
+	  "name": "Affliction",
+	  "property": "StatusDuration",
+	  "tags": [
+		"StatusDuration"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases STATUS EFFECT duration against enemies by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.1,
+		"2": 0.2,
+		"3": 0.3,
+		"4": 0.4,
+		"5": 0.5,
+		"6": 0.6,
+		"7": 0.7,
+		"8": 0.8,
+		"9": 0.9,
+		"10": 1
+	  },
+	  "placementID": "01"
 	},
 	"Ammo Reserves": {
-		"name": "Ammo Reserves",
-		"property": "Reserves",
-		"tags": ["Reserves"],
-		"usesConditional": {},
-		"desc": "Increases Ammo Reserves by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Ammo Reserves",
+	  "property": "Reserves",
+	  "tags": [
+		"Reserves"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Ammo Reserves by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "02"
 	},
 	"Amplitude": {
-		"name": "Amplitude",
-		"property": "auraAOE",
-		"tags": ["auraAOE"],
-		"usesConditional": {},
-		"desc": "Increases AOE and AURA Size by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Amplitude",
+	  "property": "auraAOE",
+	  "tags": [
+		"auraAOE"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases AOE and AURA Size by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "03"
 	},
 	"Arcane Strike": {
-		"name": "Arcane Strike",
-		"property": "ModPowerGenMelee",
-		"tags": ["ModPowerGenMelee"],
-		"usesConditional": {},
-		"desc": "Increases Mod Power Generation from Melee Damage by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Arcane Strike",
+	  "property": "ModPowerGenMelee",
+	  "tags": [
+		"ModPowerGenMelee"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Mod Power Generation from Melee Damage by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "04"
 	},
 	"Barkskin": {
-		"name": "Barkskin",
-		"property": "FlatDR",
-		"tags": ["FlatDR"],
-		"usesConditional": {},
-		"desc": "Reduces all incoming damage by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.01,
-			"2": 0.02,
-			"3": 0.03,
-			"4": 0.04,
-			"5": 0.05,
-			"6": 0.06,
-			"7": 0.07,
-			"8": 0.08,
-			"9": 0.09,
-			"10": 0.1
-		}
+	  "name": "Barkskin",
+	  "property": "FlatDR",
+	  "tags": [
+		"FlatDR"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Reduces all incoming damage by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.01,
+		"2": 0.02,
+		"3": 0.03,
+		"4": 0.04,
+		"5": 0.05,
+		"6": 0.06,
+		"7": 0.07,
+		"8": 0.08,
+		"9": 0.09,
+		"10": 0.1
+	  },
+	  "placementID": "05"
 	},
 	"Blood Bond": {
-		"name": "Blood Bond",
-		"property": "",
-		"tags": ["DMGKept"],//the property is left blank else the bonus will populate in spite of the custom function. Added it to the tags array to store the property type anyways.
-		"usesConditional": {
-			"customTier0": "bloodBond",
-		},
-		"desc": `SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in "Damage Kept" bonuses under Advanced Stats.`,
-		"level": {
-			"0": [0],
-			"1": [-0.01],
-			"2": [-0.02],
-			"3": [-0.03],
-			"4": [-0.04],
-			"5": [-0.05],
-			"6": [-0.06],
-			"7": [-0.07],
-			"8": [-0.08],
-			"9": [-0.09],
-			"10": [-0.1]
-		}
+	  "name": "Blood Bond",
+	  "property": "",
+	  "tags": [
+		"DMGKept"
+	  ],
+	  "usesConditional": {
+		"customTier0": "bloodBond"
+	  },
+	  "desc": "SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in \"Damage Kept\" bonuses under Advanced Stats.",
+	  "level": {
+		"0": [
+		  0
+		],
+		"1": [
+		  -0.01
+		],
+		"2": [
+		  -0.02
+		],
+		"3": [
+		  -0.03
+		],
+		"4": [
+		  -0.04
+		],
+		"5": [
+		  -0.05
+		],
+		"6": [
+		  -0.06
+		],
+		"7": [
+		  -0.07
+		],
+		"8": [
+		  -0.08
+		],
+		"9": [
+		  -0.09
+		],
+		"10": [
+		  -0.1
+		]
+	  },
+	  "placementID": "06"
 	},
 	"Bloodstream": {
-		"name": "Bloodstream",
-		"property": "GreyHP/S+",
-		"tags": ["GreyHP/S+"],
-		"usesConditional": {},
-		"desc": "Increases Grey Health Regeneration by VALUE1.1/s.",
-		"level": {
-			"0": 0,
-			"1": 0.3,
-			"2": 0.6,
-			"3": 0.9,
-			"4": 1.2,
-			"5": 1.5,
-			"6": 1.8,
-			"7": 2.1,
-			"8": 2.4,
-			"9": 2.7,
-			"10": 3
-		}
+	  "name": "Bloodstream",
+	  "property": "GreyHP/S+",
+	  "tags": [
+		"GreyHP/S+"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Grey Health Regeneration by VALUE1.1/s.",
+	  "level": {
+		"0": 0,
+		"1": 0.3,
+		"2": 0.6,
+		"3": 0.9,
+		"4": 1.2,
+		"5": 1.5,
+		"6": 1.8,
+		"7": 2.1,
+		"8": 2.4,
+		"9": 2.7,
+		"10": 3
+	  },
+	  "placementID": "07"
 	},
 	"Chakra": {
-		"name": "Chakra",
-		"property": "ModDuration",
-		"tags": ["ModDuration"],
-		"usesConditional": {},
-		"desc": "Increases Mod Duration by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.03,
-			"2": 0.06,
-			"3": 0.09,
-			"4": 0.12,
-			"5": 0.15,
-			"6": 0.18,
-			"7": 0.21,
-			"8": 0.24,
-			"9": 0.27,
-			"10": 0.3
-		}
+	  "name": "Chakra",
+	  "property": "ModDuration",
+	  "tags": [
+		"ModDuration"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Mod Duration by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.3
+	  },
+	  "placementID": "08"
 	},
 	"Dark Pact": {
-		"name": "Dark Pact",
-		"property": "GreyHealthConversion",
-		"tags": ["GreyHealthConversion"],
-		"usesConditional": {},
-		"desc": "Increases Grey Health Conversion Rate by VALUE1.1%.<br><br>Conversion Rate is how much HP is converted to GHP when you take damage, not your regen rate.",
-		"level": {
-			"0": 0.00,
-			"1": 0.03,
-			"2": 0.06,
-			"3": 0.09,
-			"4": 0.12,
-			"5": 0.15,
-			"6": 0.18,
-			"7": 0.21,
-			"8": 0.24,
-			"9": 0.27,
-			"10": 0.3
-		}
+	  "name": "Dark Pact",
+	  "property": "GreyHealthConversion",
+	  "tags": [
+		"GreyHealthConversion"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Grey Health Conversion Rate by VALUE1.1%.<br><br>Conversion Rate is how much HP is converted to GHP when you take damage, not your regen rate.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.3
+	  },
+	  "placementID": "09"
 	},
 	"Endurance": {
-		"name": "Endurance",
-		"property": "Stamina",
-		"tags": ["Stamina"],
-		"usesConditional": {},
-		"desc": "Increases Max Stamina by VALUE1.1.",
-		"level": {
-			"0": 0,
-			"1": 3,
-			"2": 6,
-			"3": 9,
-			"4": 12,
-			"5": 15,
-			"6": 18,
-			"7": 21,
-			"8": 24,
-			"9": 27,
-			"10": 30
-		}
+	  "name": "Endurance",
+	  "property": "Stamina",
+	  "tags": [
+		"Stamina"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Max Stamina by VALUE1.1.",
+	  "level": {
+		"0": 0,
+		"1": 3,
+		"2": 6,
+		"3": 9,
+		"4": 12,
+		"5": 15,
+		"6": 18,
+		"7": 21,
+		"8": 24,
+		"9": 27,
+		"10": 30
+	  },
+	  "placementID": "10"
 	},
 	"Expertise": {
-		"name": "Expertise",
-		"property": "CDR",
-		"tags": ["CDR"],
-		"usesConditional": {},
-		"desc": "Reduces Skill Cooldowns by VALUE1.1%.",
-		"level": {
-			"0": -0.00,
-			"1": -0.02,
-			"2": -0.04,
-			"3": -0.06,
-			"4": -0.08,
-			"5": -0.10,
-			"6": -0.12,
-			"7": -0.14,
-			"8": -0.16,
-			"9": -0.18,
-			"10": -0.20
-		}
+	  "name": "Expertise",
+	  "property": "CDR",
+	  "tags": [
+		"CDR"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Reduces Skill Cooldowns by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": -0.02,
+		"2": -0.04,
+		"3": -0.06,
+		"4": -0.08,
+		"5": -0.1,
+		"6": -0.12,
+		"7": -0.14,
+		"8": -0.16,
+		"9": -0.18,
+		"10": -0.2
+	  },
+	  "placementID": "11"
 	},
 	"Fitness": {
-		"name": "Fitness",
-		"property": "EvadeDistance",
-		"tags": ["EvadeDistance"],
-		"usesConditional": {},
-		"desc": "Increases Evade Distance by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.03,
-			"2": 0.06,
-			"3": 0.09,
-			"4": 0.12,
-			"5": 0.15,
-			"6": 0.18,
-			"7": 0.21,
-			"8": 0.24,
-			"9": 0.27,
-			"10": 0.30
-		}
+	  "name": "Fitness",
+	  "property": "EvadeDistance",
+	  "tags": [
+		"EvadeDistance"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Evade Distance by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.3
+	  },
+	  "placementID": "12"
 	},
 	"Flash Caster": {
-		"name": "Flash Caster",
-		"property": "CastSpeed",
-		"tags": ["CastSpeed"],
-		"usesConditional": {},
-		"desc": "Increases Casting Speed by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Flash Caster",
+	  "property": "CastSpeed",
+	  "tags": [
+		"CastSpeed"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Casting Speed by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "13"
 	},
 	"Footwork": {
-		"name": "Footwork",
-		"property": "AimMovementSpeed",
-		"tags": ["AimMovementSpeed"],
-		"usesConditional": {},
-		"desc": "Increases Movement Speed while Aiming by VALUE1.1%.",
-		"level": {
-			"0": 0.0,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Footwork",
+	  "property": "AimMovementSpeed",
+	  "tags": [
+		"AimMovementSpeed"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Movement Speed while Aiming by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "14"
 	},
 	"Fortify": {
-		"name": "Fortify",
-		"property": "Armor%",
-		"tags": ["Armor%"],
-		"usesConditional": {},
-		"desc": "Increases Armor Effectiveness by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.05,
-			"2": 0.1,
-			"3": 0.15,
-			"4": 0.2,
-			"5": 0.25,
-			"6": 0.3,
-			"7": 0.35,
-			"8": 0.4,
-			"9": 0.45,
-			"10": 0.5
-		}
+	  "name": "Fortify",
+	  "property": "Armor%",
+	  "tags": [
+		"Armor%"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Armor Effectiveness by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "15"
 	},
 	"Gifted": {
-		"name": "Gifted",
-		"property": "SkillDuration",
-		"tags": ["SkillDuration"],
-		"usesConditional": {},
-		"desc": "Increases Skill Duration by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.03,
-			"2": 0.06,
-			"3": 0.09,
-			"4": 0.12,
-			"5": 0.15,
-			"6": 0.18,
-			"7": 0.21,
-			"8": 0.24,
-			"9": 0.27,
-			"10": 0.30
-		}
+	  "name": "Gifted",
+	  "property": "SkillDuration",
+	  "tags": [
+		"SkillDuration"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Skill Duration by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.3
+	  },
+	  "placementID": "16"
 	},
 	"Glutton": {
-		"name": "Glutton",
-		"property": "RelicSpeed",
-		"tags": ["RelicSpeed"],
-		"usesConditional": {},
-		"desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": -0.035,
-			"2": -0.07,
-			"3": -0.0105,
-			"4": -0.14,
-			"5": -0.175,
-			"6": -0.21,
-			"7": -0.245,
-			"8": -0.28,
-			"9": -0.315,
-			"10": -0.35
-		}
+	  "name": "Glutton",
+	  "property": "RelicSpeed",
+	  "tags": [
+		"RelicSpeed"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": -0.035,
+		"2": -0.07,
+		"3": -0.0105,
+		"4": -0.14,
+		"5": -0.175,
+		"6": -0.21,
+		"7": -0.245,
+		"8": -0.28,
+		"9": -0.315,
+		"10": -0.35
+	  },
+	  "placementID": "17"
 	},
 	"Handling": {
-		"name": "Handling",
-		"property": ["Spread","Recoil"],
-		"tags": ["Spread","Recoil"],
-		"usesConditional": {},
-		"desc": "Reduces Weapon Spread and Recoil by VALUE1.1%.",
-		"level": {
-			"0": -0.00,
-			"1": -0.03,
-			"2": -0.06,
-			"3": -0.09,
-			"4": -0.12,
-			"5": -0.15,
-			"6": -0.18,
-			"7": -0.21,
-			"8": -0.24,
-			"9": -0.27,
-			"10": -0.30
-		}
+	  "name": "Handling",
+	  "property": [
+		"Spread",
+		"Recoil"
+	  ],
+	  "tags": [
+		"Spread",
+		"Recoil"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Reduces Weapon Spread and Recoil by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": -0.03,
+		"2": -0.06,
+		"3": -0.09,
+		"4": -0.12,
+		"5": -0.15,
+		"6": -0.18,
+		"7": -0.21,
+		"8": -0.24,
+		"9": -0.27,
+		"10": -0.3
+	  },
+	  "placementID": "18"
 	},
 	"Kinship": {
-		"name": "Kinship",
-		"property": "SelfDamageModifier",
-		"tags": ["SelfDamageModifier"],
-		"usesConditional": {},
-		"desc": "Reduces FriendlyFire Damage Dealt and Received by VALUE1.1%.",
-		"level": {
-			"0": -0.00,
-			"1": -0.08,
-			"2": -0.16,
-			"3": -0.24,
-			"4": -0.32,
-			"5": -0.40,
-			"6": -0.48,
-			"7": -0.56,
-			"8": -0.64,
-			"9": -0.72,
-			"10": -0.80
-		}
+	  "name": "Kinship",
+	  "property": "SelfDamageModifier",
+	  "tags": [
+		"SelfDamageModifier"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Reduces FriendlyFire Damage Dealt and Received by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": -0.08,
+		"2": -0.16,
+		"3": -0.24,
+		"4": -0.32,
+		"5": -0.4,
+		"6": -0.48,
+		"7": -0.56,
+		"8": -0.64,
+		"9": -0.72,
+		"10": -0.8
+	  },
+	  "placementID": "19"
 	},
 	"Leech": {
-		"name": "Leech",
-		"property": "LifestealEFF",
-		"tags": ["LifestealEFF"],
-		"usesConditional": {},
-		"desc": "Increases Lifesteal Efficacy by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.05,
-			"2": 0.1,
-			"3": 0.15,
-			"4": 0.2,
-			"5": 0.25,
-			"6": 0.3,
-			"7": 0.35,
-			"8": 0.4,
-			"9": 0.45,
-			"10": 0.5
-		}
+	  "name": "Leech",
+	  "property": "LifestealEFF",
+	  "tags": [
+		"LifestealEFF"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Lifesteal Efficacy by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "20"
 	},
 	"Longshot": {
-		"name": "Longshot",
-		"property": "Range",
-		"tags": ["Range"],
-		"usesConditional": {},
-		"desc": "Increases Weapon Ideal Range by VALUE1.1m.",
-		"level": {
-			"0": 0.00,
-			"1": 0.60,
-			"2": 1.20,
-			"3": 1.80,
-			"4": 2.40,
-			"5": 3.00,
-			"6": 3.60,
-			"7": 4.20,
-			"8": 4.80,
-			"9": 5.40,
-			"10": 6.00
-		}
+	  "name": "Longshot",
+	  "property": "Range",
+	  "tags": [
+		"Range"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Weapon Ideal Range by VALUE1.1m.",
+	  "level": {
+		"0": 0,
+		"1": 0.6,
+		"2": 1.2,
+		"3": 1.8,
+		"4": 2.4,
+		"5": 3,
+		"6": 3.6,
+		"7": 4.2,
+		"8": 4.8,
+		"9": 5.4,
+		"10": 6
+	  },
+	  "placementID": "21"
 	},
 	"Potency": {
-		"name": "Potency",
-		"property": "ConsumableDuration",
-		"tags": ["ConsumableDuration"],
-		"usesConditional": {},
-		"desc": "Increases Consumable Duration by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.10,
-			"2": 0.20,
-			"3": 0.30,
-			"4": 0.40,
-			"5": 0.50,
-			"6": 0.60,
-			"7": 0.70,
-			"8": 0.80,
-			"9": 0.90,
-			"10": 1.00
-		}
+	  "name": "Potency",
+	  "property": "ConsumableDuration",
+	  "tags": [
+		"ConsumableDuration"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Consumable Duration by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.1,
+		"2": 0.2,
+		"3": 0.3,
+		"4": 0.4,
+		"5": 0.5,
+		"6": 0.6,
+		"7": 0.7,
+		"8": 0.8,
+		"9": 0.9,
+		"10": 1
+	  },
+	  "placementID": "22"
 	},
 	"Recovery": {
-		"name": "Recovery",
-		"property": "Stamina/S+",
-		"tags": ["Stamina/S+"],
-		"usesConditional": {},
-		"desc": "Increases Stamina Regen by VALUE1.1/s.",
-		"level": {
-			"0": 0,
-			"1": 3,
-			"2": 6,
-			"3": 9,
-			"4": 12,
-			"5": 15,
-			"6": 18,
-			"7": 21,
-			"8": 24,
-			"9": 27,
-			"10": 30
-		}
+	  "name": "Recovery",
+	  "property": "Stamina/S+",
+	  "tags": [
+		"Stamina/S+"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Stamina Regen by VALUE1.1/s.",
+	  "level": {
+		"0": 0,
+		"1": 3,
+		"2": 6,
+		"3": 9,
+		"4": 12,
+		"5": 15,
+		"6": 18,
+		"7": 21,
+		"8": 24,
+		"9": 27,
+		"10": 30
+	  },
+	  "placementID": "23"
 	},
 	"Regrowth": {
-		"name": "Regrowth",
-		"property": "HP/S+",
-		"tags": ["HP/S+"],
-		"usesConditional": {},
-		"desc": "Increases Health Regeneration by VALUE1.1/s.",
-		"level": {
-			"0": 0,
-			"1": 0.15,
-			"2": 0.3,
-			"3": 0.45,
-			"4": 0.6,
-			"5": 0.75,
-			"6": 0.9,
-			"7": 1.05,
-			"8": 1.2,
-			"9": 1.35,
-			"10": 1.5
-		}
+	  "name": "Regrowth",
+	  "property": "HP/S+",
+	  "tags": [
+		"HP/S+"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Health Regeneration by VALUE1.1/s.",
+	  "level": {
+		"0": 0,
+		"1": 0.15,
+		"2": 0.3,
+		"3": 0.45,
+		"4": 0.6,
+		"5": 0.75,
+		"6": 0.9,
+		"7": 1.05,
+		"8": 1.2,
+		"9": 1.35,
+		"10": 1.5
+	  },
+	  "placementID": "24"
 	},
 	"Resolute": {
-		"name": "Resolute",
-		"property": null,
-		"tags": [],
-		"usesConditional": {},
-		"desc": "Reduces Hit Reaction Time by VALUE1.1%",
-		"level": {
-			"0": 0.00,
-			"1": 0.025,
-			"2": 0.05,
-			"3": 0.075,
-			"4": 0.10,
-			"5": 0.125,
-			"6": 0.15,
-			"7": 0.175,
-			"8": 0.20,
-			"9": 0.225,
-			"10": 0.25
-		}
+	  "name": "Resolute",
+	  "property": null,
+	  "tags": [],
+	  "usesConditional": {},
+	  "desc": "Reduces Hit Reaction Time by VALUE1.1%",
+	  "level": {
+		"0": 0,
+		"1": 0.025,
+		"2": 0.05,
+		"3": 0.075,
+		"4": 0.1,
+		"5": 0.125,
+		"6": 0.15,
+		"7": 0.175,
+		"8": 0.2,
+		"9": 0.225,
+		"10": 0.25
+	  },
+	  "placementID": "25"
 	},
 	"Revivalist": {
-		"name": "Revivalist",
-		"property": null,
-		"tags": [],
-		"usesConditional": {},
-		"desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Revivalist",
+	  "property": null,
+	  "tags": [],
+	  "usesConditional": {},
+	  "desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "26"
 	},
 	"Rugged": {
-		"name": "Rugged",
-		"property": "SummonHealth",
-		"tags": ["SummonHealth"],
-		"usesConditional": {},
-		"desc": "Increases the Health of Archetype Summons by a VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.10,
-			"2": 0.20,
-			"3": 0.30,
-			"4": 0.40,
-			"5": 0.50,
-			"6": 0.60,
-			"7": 0.70,
-			"8": 0.80,
-			"9": 0.90,
-			"10": 1.00
-		}
+	  "name": "Rugged",
+	  "property": "SummonHealth",
+	  "tags": [
+		"SummonHealth"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases the Health of Archetype Summons by a VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.1,
+		"2": 0.2,
+		"3": 0.3,
+		"4": 0.4,
+		"5": 0.5,
+		"6": 0.6,
+		"7": 0.7,
+		"8": 0.8,
+		"9": 0.9,
+		"10": 1
+	  },
+	  "placementID": "27"
 	},
 	"Scholar": {
-		"name": "Scholar",
-		"property": null,
-		"tags": [],
-		"usesConditional": {},
-		"desc": "Increases Experience Gain by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.01,
-			"2": 0.02,
-			"3": 0.03,
-			"4": 0.05,
-			"5": 0.06,
-			"6": 0.07,
-			"7": 0.10,
-			"8": 0.12,
-			"9": 0.12,
-			"10": 0.15
-		}
+	  "name": "Scholar",
+	  "property": null,
+	  "tags": [],
+	  "usesConditional": {},
+	  "desc": "Increases Experience Gain by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.01,
+		"2": 0.02,
+		"3": 0.03,
+		"4": 0.05,
+		"5": 0.06,
+		"6": 0.07,
+		"7": 0.1,
+		"8": 0.12,
+		"9": 0.12,
+		"10": 0.15
+	  },
+	  "placementID": "28"
 	},
 	"Shadeskin": {
-		"name": "Shadeskin",
-		"property": ["Burn","Shock","Corrosive"],
-		"tags": ["Burn","Shock","Corrosive"],
-		"usesConditional": {},
-		"desc": "Increases Elemental Damage Resistance by VALUE1.1.",
-		"level": {
-			"0": 0,
-			"1": 2,
-			"2": 4,
-			"3": 6,
-			"4": 8,
-			"5": 10,
-			"6": 12,
-			"7": 14,
-			"8": 16,
-			"9": 18,
-			"10": 20
-		}
+	  "name": "Shadeskin",
+	  "property": [
+		"Burn",
+		"Shock",
+		"Corrosive"
+	  ],
+	  "tags": [
+		"Burn",
+		"Shock",
+		"Corrosive"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Elemental Damage Resistance by VALUE1.1.",
+	  "level": {
+		"0": 0,
+		"1": 2,
+		"2": 4,
+		"3": 6,
+		"4": 8,
+		"5": 10,
+		"6": 12,
+		"7": 14,
+		"8": 16,
+		"9": 18,
+		"10": 20
+	  },
+	  "placementID": "29"
 	},
 	"Siphoner": {
-		"name": "Siphoner",
-		"property": "Lifesteal",
-		"tags": ["Lifesteal"],
-		"usesConditional": {},
-		"desc": "Grants VALUE1.1% base damage as Lifesteal.",
-		"level": {
-			"0": 0,
-			"1": 0.003,
-			"2": 0.006,
-			"3": 0.009,
-			"4": 0.012,
-			"5": 0.015,
-			"6": 0.018,
-			"7": 0.021,
-			"8": 0.024,
-			"9": 0.027,
-			"10": 0.030
-		}
+	  "name": "Siphoner",
+	  "property": "Lifesteal",
+	  "tags": [
+		"Lifesteal"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Grants VALUE1.1% base damage as Lifesteal.",
+	  "level": {
+		"0": 0,
+		"1": 0.003,
+		"2": 0.006,
+		"3": 0.009,
+		"4": 0.012,
+		"5": 0.015,
+		"6": 0.018,
+		"7": 0.021,
+		"8": 0.024,
+		"9": 0.027,
+		"10": 0.03
+	  },
+	  "placementID": "30"
 	},
 	"Spirit": {
-		"name": "Spirit",
-		"property": "ModPowerGen",
-		"tags": ["ModPowerGen"],
-		"usesConditional": {},
-		"desc": "Increases Mod Power Generation by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.02,
-			"2": 0.04,
-			"3": 0.06,
-			"4": 0.08,
-			"5": 0.10,
-			"6": 0.12,
-			"7": 0.14,
-			"8": 0.16,
-			"9": 0.18,
-			"10": 0.20
-		}
+	  "name": "Spirit",
+	  "property": "ModPowerGen",
+	  "tags": [
+		"ModPowerGen"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Mod Power Generation by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.02,
+		"2": 0.04,
+		"3": 0.06,
+		"4": 0.08,
+		"5": 0.1,
+		"6": 0.12,
+		"7": 0.14,
+		"8": 0.16,
+		"9": 0.18,
+		"10": 0.2
+	  },
+	  "placementID": "31"
 	},
 	"Strong Back": {
-		"name": "Strong Back",
-		"property": "WeightThreshold",
-		"tags": ["WeightThreshold"],
-		"usesConditional": {},
-		"desc": "Increases Dodge Weight Threshold by VALUE1.1.",
-		"level": {
-			"0": 0,
-			"1": 1.5,
-			"2": 3,
-			"3": 4.5,
-			"4": 6,
-			"5": 7.5,
-			"6": 9,
-			"7": 10.5,
-			"8": 12,
-			"9": 13.5,
-			"10": 15
-		}
+	  "name": "Strong Back",
+	  "property": "WeightThreshold",
+	  "tags": [
+		"WeightThreshold"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Dodge Weight Threshold by VALUE1.1.",
+	  "level": {
+		"0": 0,
+		"1": 1.5,
+		"2": 3,
+		"3": 4.5,
+		"4": 6,
+		"5": 7.5,
+		"6": 9,
+		"7": 10.5,
+		"8": 12,
+		"9": 13.5,
+		"10": 15
+	  },
+	  "placementID": "32"
 	},
 	"Swiftness": {
-		"name": "Swiftness",
-		"property": "MovementSpeed",
-		"tags": ["MovementSpeed","EnvMovementSpeed"],
-		"usesConditional": {},
-		"desc": "Increases Movement Speed by VALUE1.1%.<br>Increases Environmental Movement Speed by VALUE2.1%.<br>(Vaulting, Ladders, Wading)",
-		"level": {
-			"0": 0.00,
-			"1": 0.01,
-			"2": 0.02,
-			"3": 0.03,
-			"4": 0.05,
-			"5": 0.06,
-			"6": 0.07,
-			"7": 0.10,
-			"8": 0.11,
-			"9": 0.12,
-			"10": 0.15
-		},
-		"property2": "EnvMovementSpeed",
-		"level2": {
-			"0": 0.00,
-			"1": 0.05,
-			"2": 0.10,
-			"3": 0.15,
-			"4": 0.20,
-			"5": 0.25,
-			"6": 0.30,
-			"7": 0.35,
-			"8": 0.40,
-			"9": 0.45,
-			"10": 0.50
-		}
+	  "name": "Swiftness",
+	  "property": "MovementSpeed",
+	  "tags": [
+		"MovementSpeed",
+		"EnvMovementSpeed"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Movement Speed by VALUE1.1%.<br>Increases Environmental Movement Speed by VALUE2.1%.<br>(Vaulting, Ladders, Wading)",
+	  "level": {
+		"0": 0,
+		"1": 0.01,
+		"2": 0.02,
+		"3": 0.03,
+		"4": 0.05,
+		"5": 0.06,
+		"6": 0.07,
+		"7": 0.1,
+		"8": 0.11,
+		"9": 0.12,
+		"10": 0.15
+	  },
+	  "property2": "EnvMovementSpeed",
+	  "level2": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "33"
 	},
 	"Triage": {
-		"name": "Triage",
-		"property": "HealingEFF",
-		"tags": ["HealingEFF"],
-		"usesConditional": {},
-		"desc": "Increases Healing by VALUE1.1%.",
-		"level": {
-			"0": 0,
-			"1": 0.05,
-			"2": 0.1,
-			"3": 0.15,
-			"4": 0.2,
-			"5": 0.25,
-			"6": 0.3,
-			"7": 0.35,
-			"8": 0.4,
-			"9": 0.45,
-			"10": 0.5
-		}
+	  "name": "Triage",
+	  "property": "HealingEFF",
+	  "tags": [
+		"HealingEFF"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Healing by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.05,
+		"2": 0.1,
+		"3": 0.15,
+		"4": 0.2,
+		"5": 0.25,
+		"6": 0.3,
+		"7": 0.35,
+		"8": 0.4,
+		"9": 0.45,
+		"10": 0.5
+	  },
+	  "placementID": "34"
 	},
 	"Untouchable": {
-		"name": "Untouchable",
-		"property": "iFrameWindow",
-		"tags": ["iFrameWindow"],
-		"usesConditional": {},
-		"desc": "Increases Evade Window by VALUE1.1%.",
-		"level": {
-			"0": 0.00,
-			"1": 0.03,
-			"2": 0.06,
-			"3": 0.09,
-			"4": 0.12,
-			"5": 0.15,
-			"6": 0.18,
-			"7": 0.21,
-			"8": 0.24,
-			"9": 0.27,
-			"10": 0.30
-		}
+	  "name": "Untouchable",
+	  "property": "iFrameWindow",
+	  "tags": [
+		"iFrameWindow"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Evade Window by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.3
+	  },
+	  "placementID": "35"
 	},
 	"Vigor": {
-		"name": "Vigor",
-		"property": "Health",
-		"tags": ["Health"],
-		"usesConditional": {},
-		"desc": `Increases Max Health by VALUE1.1.`,
-		"level": {
-			"0": 0,
-			"1": 3,
-			"2": 6,
-			"3": 9,
-			"4": 12,
-			"5": 15,
-			"6": 18,
-			"7": 21,
-			"8": 24,
-			"9": 27,
-			"10": 30
-		}
+	  "name": "Vigor",
+	  "property": "Health",
+	  "tags": [
+		"Health"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases Max Health by VALUE1.1.",
+	  "level": {
+		"0": 0,
+		"1": 3,
+		"2": 6,
+		"3": 9,
+		"4": 12,
+		"5": 15,
+		"6": 18,
+		"7": 21,
+		"8": 24,
+		"9": 27,
+		"10": 30
+	  },
+	  "placementID": "36"
 	}
-}
+  }
 // /* ----------------------------------------------------------------------------------------*/
 // /* ---------------------------------- WEAPONS ---------------------------------------------*/
 // /* ----------------------------------------------------------------------------------------*/
