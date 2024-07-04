@@ -104,6 +104,7 @@ function pagePopulation() {
   //Must be last, fill the page
   pagePopulation();
   if (document.location.href.includes("Optimizer")) {filters.updateDodgeClass();}
+  else {basicsUpdates.updateFocus();}
   //buildTime.js script call is injected into the HTML of the deployment, never the actual files here.
 
 

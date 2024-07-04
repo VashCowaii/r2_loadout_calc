@@ -2180,8 +2180,8 @@ let userTrigger = {
     //assign new image path to the img tag src
     readSelection(`${armorPiece}Image`).src=selectedArmor.image;
     readSelection(`${armorPiece}MAIN`).src=selectedArmor.image;
-    readSelection(`${armorPiece}Armor`).innerHTML=selectedArmor.stats.Armor;
-    readSelection(`${armorPiece}Weight`).innerHTML=selectedArmor.stats.Encumbrance;
+    readSelection(`${armorPiece}Armor`).innerHTML=selectedArmor.stats.Armor || 0;
+    readSelection(`${armorPiece}Weight`).innerHTML=selectedArmor.stats.Encumbrance || 0;
     if (!parent) {
       updateFormulas();
     }
@@ -3397,13 +3397,9 @@ let customItemFunctions = {
       }
     },
     shieldedStrike(index) {//50
-      let shieldAmount = index.Shield;
-      let cap = 0.50;
+      let shieldAmount = Math.min(1,index.Shield);
       let dmgCap = 0.25;
-      if (shieldAmount > 0) {
-        if (shieldAmount > cap) {shieldAmount = cap;}
-        index.ChargeDamage += (shieldAmount/cap) * dmgCap;
-      }
+      if (shieldAmount > 0) {index.ChargeDamage += shieldAmount * dmgCap;}
     },
     vampireBlade(index) {//base
       if (index.outBLEED) {
@@ -3602,6 +3598,20 @@ function updateFormulas(index,ping) {
     targetStat = playerDerivedStatistics[filters.types.vars.targetStatistic];
     isSumOrCustom = targetStat === "totalDPS";
   }
+
+
+  if(tableReference.WeakspotDisable) {
+    globalRecords.enableWeakspots = false;
+    if (isUIcalcs) {
+      readSelection("enableWeakspots").checked = false;
+      readSelection("weakspotEnableHolderBox").style.color = "grey";
+    }
+  }
+  else if (isUIcalcs) {
+    readSelection("weakspotEnableHolderBox").style.color = "white";
+  }
+
+
   if (Array.isArray(targetStat) || isUIcalcs || isSumOrCustom) {
     let abilityPath1,abilityPath2,ability1,ability2,modPath1,modPath2;
 
@@ -3664,10 +3674,12 @@ function updateFormulas(index,ping) {
     // addTooltipListeners();
     manipulateConsumable.updateConsumableCollection("concoction");
     basicsUpdates.updateMainFromFormulas(returnStats);
-    basicsUpdates.updateFocus();
+    // basicsUpdates.updateFocus();
     manipulateURL.updateURLparameters();
+    customDamage.MeleeDamage(tableReference);
     tooltips.loadTooltips();
     if (!stopQueryFractures) {window.updateConsole(index,dodgeClass);}
+    // customDamage.MeleeDamage(null,tableReference);
   }
 }
 
@@ -3694,6 +3706,9 @@ let basicsUpdates = {
     globalRecords.useDMGKept = readSelection("includeDMGKept").checked;
     globalRecords.useRelicHealing = readSelection(`includeRelicHealing`).checked;
     globalRecords.useShields = readSelection(`includeShields`).checked;
+
+    globalRecords.enableWeakspots = readSelection(`enableWeakspots`).checked;
+    globalRecords.enableCrits = readSelection(`enableCrits`).checked;
 
 
     globalRecords.meleeFactors.enemyCount = readSelection("enemyCount").value;
@@ -4837,6 +4852,7 @@ let advancedUpdates = {
     readSelection("ability2BreakdownTab").style.display = "none";
     readSelection("mod1BreakdownTab").style.display = "none";
     readSelection("mod1BreakdownTab").style.display = "none";
+    readSelection("meleeBreakdownTab").style.display = "none";
 
     if (breakdownClicked === "clear") {
       readSelection("breakdownSelectorMain").style.display = "flex";
@@ -4847,6 +4863,10 @@ let advancedUpdates = {
       readSelection("breakdownSelectorReturn").style.display = "flex";
       readSelection(`${breakdownClicked}`).style.display = "flex";
     }
+  },
+  updateSelectedMeleeBreakdown(breakdownClicked) {
+    globalRecords.selectedMeleeBreakdown = breakdownClicked;
+    updateFormulas();
   },
   updateSelectedFilterDisplay(elemID) {
     readSelection("statsFiltersHolder").style.display = "none";

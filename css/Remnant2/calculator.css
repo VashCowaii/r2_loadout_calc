@@ -6,7 +6,7 @@
 .classAbilityDescription,.classPassiveDescription,.classPerkDescription,.accessoryDescription,
 .relicDescription,.relicComplexDesc,.consumableDesc,.weaponDescriptionBox,.mutatorDesc,
 .filtersQuarterDescription,.comboDebugWindow,.settingsImportDesc,.settingsImportedList,.selectItemDesc,
-.weaponDisplayDamageHeader,.helpBoxText,.tooltip {
+.weaponDisplayDamageHeader,.helpBoxText,.tooltip,.mvNotesDisplay {
     font-family: "Montserrat-Light";
 }
 
@@ -526,6 +526,28 @@ div {
     justify-items: center;
     justify-content: center;
     box-sizing: border-box;
+}
+.MVDisplayRow {
+    font-size: 16px;
+    display: none;
+}
+.mvNotesDisplay {
+    max-width: 100%;
+    padding: 0;
+    /* line-height: 0.5em; */
+    display: inline-block;
+    /* flex-basis: wrap; */
+    white-space: normal;
+    font-size: 12px;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+}
+.damageEnableOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .basicsDRStat {
     width: auto;

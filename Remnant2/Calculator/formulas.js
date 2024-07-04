@@ -465,6 +465,522 @@ let customDamage = {
 
         return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
+    MeleeDamage(index) {
+        let globalPath = globalRecords.weapons;
+
+        let meleePath = melee[globalPath.melee];
+        let classPath = weaponClass[meleePath.weaponClass];
+        // let mutatorPath = meleeMutators[globalPath.meleeMutator];
+
+        let isCrit = globalRecords.enableCrits;
+        let isWeakspot = globalRecords.enableWeakspots;
+        if (meleePath.weakspotOverride) {isWeakspot = true;}//aka, is Godsplitter equipped.
+
+        let highestDPS = 0;
+        let highestSingleHit = 0;
+        let highestComboDamage = 0;
+
+        function parseMVArrayDamage(MVArray,damageMulti,damageMultiNoCrit,fullCritMulti) {
+            let comboDamage = 0;
+            let totalHits = 0;
+            let damageArray = [];
+            let highestComboHit = 0;
+            let highestCritHit = 0;
+            for (attack of MVArray) {
+                if (Array.isArray(attack)) {
+                    let parsedArray = parseMVArrayDamage(attack,damageMulti,damageMultiNoCrit,fullCritMulti);
+                    comboDamage += parsedArray.comboDamage;
+                    totalHits += parsedArray.totalHits;
+                    damageArray.push(parsedArray.damageArray);
+
+                    if (parsedArray.highestComboHit>highestComboHit) {highestComboHit = parsedArray.highestComboHit;}
+                    if (parsedArray.highestCritHit>highestCritHit) {highestCritHit = parsedArray.highestCritHit;}
+                }
+                else {
+                    let attackDamage = attack * damageMulti;//averaged crit factors
+                    let attackDamageCrit = attack * fullCritMulti;//full crit factor, not averaged
+                    let attackDamageNoCrit = attack * damageMultiNoCrit;
+                    if (attackDamageCrit>highestSingleHit) {highestSingleHit = attackDamageCrit;}
+                    comboDamage += attackDamage;
+                    if (attackDamageNoCrit>highestComboHit) {highestComboHit = attackDamageNoCrit;}
+                    if (attackDamageCrit>highestCritHit) {highestCritHit = attackDamageCrit;}
+                    damageArray.push(+attackDamageNoCrit.toFixed(2));
+                    totalHits++;
+                }
+            }
+            if (comboDamage>highestComboDamage) {highestComboDamage = comboDamage;}
+            return {comboDamage,totalHits,damageArray,highestComboHit,highestCritHit}
+        }
+
+        function generateAttacksArray(meleePath,classPath,attackType) {
+
+            let baseDamage = meleePath.DMG;
+            let baseGenerationDamage = baseDamage/3;
+            let baseCrit = meleePath.critChance;
+            let baseWeakspot = meleePath.weakSpot;
+            let baseStagger = meleePath.stagger;
+
+            let attackPaths = classPath[attackType];
+
+            let mvNote = attackPaths.mvNote || "";
+            let projectileNote = attackPaths.projectileNote || "";
+            let projectileChargeReleaseNote = attackPaths.projectileChargeReleaseNote || "";
+
+            let damageTags = attackPaths.damageTags.Damage;
+            let critTags = attackPaths.damageTags.CritChance;
+            let critDamageTags = attackPaths.damageTags.CritDamage;
+            let weakspotTags = attackPaths.damageTags.WeakSpot;
+            let speedTags = attackPaths.damageTags.Speed;
+
+            let dodgeClass = calcs.getWeight(index)[1];
+
+            let projectileObject;
+            let projectileChargeReleaseObject;
+
+            //Crit Chance
+            let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+            //Crit Damage
+            let baseCritDamage = 0.50;
+            let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+            let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
+            //Weakspot
+            let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+            let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+            //Stagger
+            let attackStagger = baseStagger + index.StaggerDamage;
+            //Damage
+            let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+            let attackDamageNoCrit = attackDamage * attackWeakspot;
+            let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
+            let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
+
+            
+            let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
+            //BASIC ATTACK INFO
+            //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
+            let baseDuration = attackPaths.expectedDuration
+                + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
+            let attackComboDuration = 0;
+            if (attackType === "backstep" || attackType === "backstepCharge") {
+                attackComboDuration =
+                ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
+                + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
+            }
+            else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
+
+            let attackBaseDamage = baseDamage * attackDamageBonus;
+            let attackBaseDamageCrit = baseDamage * attackDamageBonusFullCrit;
+            let attackBaseDamageNoCrit = baseDamage * attackDamageNoCrit;
+            let attackMVArray = attackPaths.mv;
+            let attackComboParse = parseMVArrayDamage(attackMVArray,attackBaseDamage,attackBaseDamageNoCrit,attackBaseDamageCrit);
+            let attackTotalComboDamage = attackComboParse.comboDamage;
+            let attackComboArray = attackComboParse.damageArray;
+            let highestComboHit = attackComboParse.highestComboHit;
+            let highestCritHit = attackComboParse.highestCritHit;
+            let attackComboDPS = attackTotalComboDamage/attackComboDuration;
+            if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
+            let attackTotalHits = attackComboParse.totalHits;
+
+            let returnObject = {
+                baseDuration,
+                attackComboDuration,
+                attackBaseDamage,
+                attackBaseDamageCrit,
+                attackMVArray,
+                attackTotalComboDamage,
+                attackComboArray,
+                attackComboDPS,
+                attackTotalHits,
+                highestComboHit,
+                highestCritHit,
+                damageTags,
+                critTags,
+                critDamageTags,
+                weakspotTags,
+                speedTags,
+                projectileObject,
+                projectileChargeReleaseObject,
+                mvNote,
+                projectileNote,
+                projectileChargeReleaseNote,
+            }
+
+            if (!globalRecords.enableMainSwings && attackPaths.projectileTags) {
+                //if we are excluding the main swings and a projectile exists, set main dmg related values to 0 so the effect values can overwrite them
+                returnObject.attackBaseDamage = 0;
+                returnObject.attackBaseDamageCrit = 0;
+                returnObject.attackTotalComboDamage = 0;
+                returnObject.attackComboDPS = 0;
+                returnObject.attackTotalHits = 0;
+                returnObject.highestComboHit = 0;
+                returnObject.highestCritHit = 0;
+            }
+
+            if (globalRecords.enableMeleeEffects) {
+                if (attackPaths.projectileTags) {
+                    let damageTags = attackPaths.projectileTags.Damage;
+                    let critTags = attackPaths.projectileTags.CritChance;
+                    let critDamageTags = attackPaths.projectileTags.CritDamage;
+                    let weakspotTags = attackPaths.projectileTags.WeakSpot;
+                    let speedTags = attackPaths.projectileTags.Speed;
+
+                    //Crit Chance
+                    let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+                    //Crit Damage
+                    let baseCritDamage = 0.50;
+                    let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+                    let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
+                    //Weakspot
+                    let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+                    let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+                    //Stagger
+                    let attackStagger = baseStagger + index.StaggerDamage;
+                    //Damage
+                    let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+                    let attackDamageNoCrit = attackDamage * attackWeakspot;
+                    let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
+                    let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
+
+                    let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
+                    //BASIC ATTACK INFO
+                    //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
+                    let baseDuration = attackPaths.expectedDuration
+                        + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
+                    let attackComboDuration = 0;
+                    if (attackType === "backstep" || attackType === "backstepCharge") {
+                        attackComboDuration =
+                        ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
+                        + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
+                    }
+                    else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
+                    let attackBaseDamage = baseDamage * attackDamageBonus;
+                    let attackBaseDamageCrit = baseDamage * attackDamageBonusFullCrit;
+                    let attackBaseDamageNoCrit = baseDamage * attackDamageNoCrit;
+                    let attackMVArray = attackPaths.projectile;
+                    let attackComboParse = parseMVArrayDamage(attackMVArray,attackBaseDamage,attackBaseDamageNoCrit,attackBaseDamageCrit);
+                    let attackTotalComboDamage = attackComboParse.comboDamage;
+                    let attackComboArray = attackComboParse.damageArray;
+                    let highestComboHit = attackComboParse.highestComboHit;
+                    if (highestComboHit>returnObject.highestComboHit) {returnObject.highestComboHit = highestComboHit}
+                    let highestCritHit = attackComboParse.highestCritHit;
+                    if (highestCritHit>returnObject.highestCritHit) {returnObject.highestCritHit = highestCritHit}
+
+                    let attackComboDPS = attackTotalComboDamage/attackComboDuration;
+                    if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
+                    let attackTotalHits = attackComboParse.totalHits;
+
+                    returnObject.projectileObject = {
+                        attackComboDuration,
+                        attackBaseDamage,
+                        attackBaseDamageCrit,
+                        attackMVArray,
+                        attackTotalComboDamage,
+                        attackComboArray,
+                        attackComboDPS,
+                        attackTotalHits,
+                        highestComboHit,
+                        highestCritHit,
+                        damageTags,
+                        critTags,
+                        critDamageTags,
+                        weakspotTags,
+                        speedTags
+                    }
+                    returnObject.attackComboDPS += returnObject.projectileObject.attackComboDPS;
+                }
+                if (attackPaths.projectileChargeReleaseTags) {
+                    let damageTags = attackPaths.projectileChargeReleaseTags.Damage;
+                    let critTags = attackPaths.projectileChargeReleaseTags.CritChance;
+                    let critDamageTags = attackPaths.projectileChargeReleaseTags.CritDamage;
+                    let weakspotTags = attackPaths.projectileChargeReleaseTags.WeakSpot;
+                    let speedTags = attackPaths.projectileChargeReleaseTags.Speed;
+
+                    //Crit Chance
+                    let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+                    //Crit Damage
+                    let baseCritDamage = 0.50;
+                    let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+                    let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
+                    //Weakspot
+                    let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+                    let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+                    //Stagger
+                    let attackStagger = baseStagger + index.StaggerDamage;
+                    //Damage
+                    let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+                    let attackDamageNoCrit = attackDamage * attackWeakspot;
+                    let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
+                    let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
+
+
+                    let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
+                    //BASIC ATTACK INFO
+                    //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
+                    let baseDuration = attackPaths.expectedDuration
+                        + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
+                    let attackComboDuration = 0;
+                    if (attackType === "backstep" || attackType === "backstepCharge") {
+                        attackComboDuration =
+                        ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
+                        + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
+                    }
+                    else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
+                    let attackBaseDamage = baseDamage * attackDamageBonus;
+                    let attackBaseDamageCrit = baseDamage * attackDamageBonusFullCrit;
+                    let attackBaseDamageNoCrit = baseDamage * attackDamageNoCrit;
+                    let attackMVArray = attackPaths.projectileChargeRelease;
+                    let attackComboParse = parseMVArrayDamage(attackMVArray,attackBaseDamage,attackBaseDamageNoCrit,attackBaseDamageCrit);
+                    let attackTotalComboDamage = attackComboParse.comboDamage;
+                    let attackComboArray = attackComboParse.damageArray;
+                    let highestComboHit = attackComboParse.highestComboHit;
+                    if (highestComboHit>returnObject.highestComboHit) {returnObject.highestComboHit = highestComboHit}
+                    let highestCritHit = attackComboParse.highestCritHit;
+                    if (highestCritHit>returnObject.highestCritHit) {returnObject.highestCritHit = highestCritHit}
+
+                    let attackComboDPS = attackTotalComboDamage/attackComboDuration;
+                    if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
+                    let attackTotalHits = attackComboParse.totalHits;
+
+                    returnObject.projectileChargeReleaseObject = {
+                        attackComboDuration,
+                        attackBaseDamage,
+                        attackBaseDamageCrit,
+                        attackMVArray,
+                        attackTotalComboDamage,
+                        attackComboArray,
+                        attackComboDPS,
+                        attackTotalHits,
+                        highestComboHit,
+                        highestCritHit,
+                        damageTags,
+                        critTags,
+                        critDamageTags,
+                        weakspotTags,
+                        speedTags
+                    }
+                    returnObject.attackComboDPS += returnObject.projectileChargeReleaseObject.attackComboDPS;
+                }
+            }
+
+            return returnObject
+        }
+
+        let basicAttacks = generateAttacksArray(meleePath,classPath,"basicAttack");
+        let chargeAttacks = generateAttacksArray(meleePath,classPath,"chargeAttack");
+        let backstepAttacks = generateAttacksArray(meleePath,classPath,"backstep");
+        let backstepChargeAttacks = generateAttacksArray(meleePath,classPath,"backstepCharge");
+
+        if (index.thisIsAQuery != 1) {//meleeBreakdownTab
+            let breakdownDomID = `meleeBreakdownTab`;
+            let factorID = `meleeFactors`
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(meleePath.name,(meleePath.name === "Bare Fists" ? "/images/swagCat.png" : meleePath.image),breakdownDomID);
+            let insertedHTML = `
+            <div class="seletionBackgroundAbilityBox">
+                <div class="selectionBackgroundAbilityAdjustment">
+                    <img class="abilityDPSbackgroundImage" src="${meleePath.image}" alt="Ability breakdown icon">
+                </div>
+            </div>
+            
+            <div class="selectionAbilityDPSBody">
+                <div class="selectionAbilityDPSTitleHeader">${meleePath.name.toUpperCase()}</div>
+                <div class="filtersInstructionsBox" style="color: #e06666;">Melee calcs are brand new. Report any bugs/feedback in my discord linked at the bottom.</div>
+
+                <div class="totalHealingHeader">
+                    <span class="damageEnableOptions hasHoverTooltip" id="swingsMeleeHolder">Include Swings&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" onchange="conditionalHelpers.updateGlobalToggle('enableMainSwings','enableMeleeEffects')" ${globalRecords.enableMainSwings ? "checked" : ""}> <!--math toggle-->
+                            <span class="toggleSlider"></span>
+                        </label>&nbsp;
+                    </span>
+                    <span class="damageEnableOptions hasHoverTooltip" id="bonusEffectMeleeHolder">&nbsp;Include Effects&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" onchange="conditionalHelpers.updateGlobalToggle('enableMeleeEffects','enableMainSwings')"  ${globalRecords.enableMeleeEffects ? "checked" : ""}> <!--math toggle-->
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </span>
+                </div>
+
+                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
+                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('basicAttacks')">
+                        <div class="exportText">Basic Attack</div>
+                    </button>
+                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('chargeAttacks')">
+                        <div class="exportText">Charge Attack</div>
+                    </button>
+                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('backstepAttacks')">
+                        <div class="exportText">Backstep Attack</div>
+                    </button>
+                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('backstepChargeAttacks')">
+                        <div class="exportText">Backstep Charge Attack</div>
+                    </button>
+                </div>
+                
+                <div class="abilityFactorsList" id="${factorID}"></div>
+            </div>`
+            
+            readSelection(breakdownDomID).innerHTML = insertedHTML
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            // readSelection(`meleeDPS`).innerHTML = highestDPS.toFixed(2);//later make this so it can work with either ability box
+            // readSelection(`meleeTotalDamage`).innerHTML = highestComboDamage.toFixed(2);
+            // console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
+            let selectedMeleeBreakdown = null;
+            let breakdownHeaderTitle = "";
+            switch (globalRecords.selectedMeleeBreakdown) {
+                case "basicAttacks": 
+                    selectedMeleeBreakdown = basicAttacks;
+                    breakdownHeaderTitle = "BASIC ATTACKS";
+                    break;
+                case "chargeAttacks": 
+                    selectedMeleeBreakdown = chargeAttacks;
+                    breakdownHeaderTitle = "CHARGE ATTACKS";
+                    break;
+                case "backstepAttacks": 
+                    selectedMeleeBreakdown = backstepAttacks;
+                    breakdownHeaderTitle = "BACKSTEP ATTACKS";
+                    break;
+                case "backstepChargeAttacks": 
+                    selectedMeleeBreakdown = backstepChargeAttacks;
+                    breakdownHeaderTitle = "BACKSTEP CHARGE ATTACKS";
+                    break;
+            }
+            // (modifiedDuration + entryDuration)
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = `<div class="advancedStatsHeader" id="selectedMeleeAttackHeader">${breakdownHeaderTitle}</div>`
+            let displayArrayString = '';
+            for (let entry of selectedMeleeBreakdown.attackMVArray) {
+                displayArrayString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : entry}`
+            }
+            let projectileArrayString = "";
+            if (selectedMeleeBreakdown.projectileObject) {
+                for (let entry of selectedMeleeBreakdown.projectileObject.attackMVArray) {
+                    projectileArrayString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : `${entry}`}`
+                }
+            }
+            let projectileArrayReleaseString = "";
+            if (selectedMeleeBreakdown.projectileChargeReleaseObject) {
+                for (let entry of selectedMeleeBreakdown.projectileChargeReleaseObject.attackMVArray) {
+                    projectileArrayReleaseString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : entry}`
+                }
+            }
+
+            drRowsHTML += selectedMeleeBreakdown.mvNote ? `<span class="mvNotesDisplay">${selectedMeleeBreakdown.mvNote || ""}</span>` : "";
+            drRowsHTML += selectedMeleeBreakdown.projectileObject ? `
+            <div class="totalHealingHeader">Physical Swings - Show&nbsp;
+                <label class="toggleContainer">
+                    <input type="checkbox" class="toggleCheckbox" id="showPhysicalSwings" onchange="conditionalHelpers.updateMVDisplay('physicalSwingDisplayRow','showPhysicalSwings')"> <!--math toggle-->
+                    <span class="toggleSlider"></span>
+                </label>
+            </div>
+            ` + `<div class="basicsDRContainer MVDisplayRow" id="physicalSwingDisplayRow">${displayArrayString}</div>`
+            : `<div class="basicsDRContainer">${displayArrayString}</div>`;
+            
+            drRowsHTML += selectedMeleeBreakdown.projectileObject ? 
+            `<div class="totalHealingHeader">Bonus Effect - Show&nbsp;
+                <label class="toggleContainer">
+                    <input type="checkbox" class="toggleCheckbox" id="showBonusEffects" onchange="conditionalHelpers.updateMVDisplay('bonusEffectDisplayRow','showBonusEffects')"> <!--math toggle-->
+                    <span class="toggleSlider"></span>
+                </label>
+            </div>` + `<div class="basicsDRContainer MVDisplayRow" id="bonusEffectDisplayRow">
+            ${selectedMeleeBreakdown.projectileNote ? `<span class="mvNotesDisplay">${selectedMeleeBreakdown.projectileNote || ""}</span><br>` : ""}
+            ${projectileArrayString}
+            ${(selectedMeleeBreakdown.projectileChargeReleaseObject ? (selectedMeleeBreakdown.projectileChargeReleaseNote ? `<br><span class="mvNotesDisplay">${selectedMeleeBreakdown.projectileChargeReleaseNote || ""}</span>` : "") + `<div>${projectileArrayReleaseString}</div>` : "")}
+            </div>`
+            : "";
+
+
+            drRowsHTML += `<br>`;
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="averageDPSExplainerMelee">AVG DPS [?]</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.attackComboDPS.toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="highestHitMeleeHolder">Highest Hit</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.highestComboHit.toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="highestCritMeleeHolder">Highest Crit</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.highestCritHit.toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="meleeComboDurationHolder">Combo Duration</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.baseDuration.toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="meleeModifiedDurationHolder">Modified Duration</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.attackComboDuration.toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `
+
+            let allDamageTags = [...selectedMeleeBreakdown.damageTags];
+            let allCritTags = [...selectedMeleeBreakdown.critTags];
+            let allCritDamageTags = [...selectedMeleeBreakdown.critDamageTags];
+            let allWeakspotTags = [...selectedMeleeBreakdown.weakspotTags];
+            let allSpeedTags = [...selectedMeleeBreakdown.speedTags];
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","damageTags",allDamageTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","critTags",allCritTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","critDamageTags",allCritDamageTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","weakspotTags",allWeakspotTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","speedTags",allSpeedTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","damageTags",allDamageTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","critTags",allCritTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","critDamageTags",allCritDamageTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","weakspotTags",allWeakspotTags);
+            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","speedTags",allSpeedTags);
+            
+
+            if (allDamageTags.length) {
+                drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
+                for (let tag of allDamageTags) {
+                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                }
+            }
+            if (allCritTags.length || allCritDamageTags.length) {
+                drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
+                drRowsHTML += createHTML.basicsRow("","Weapon's Crit Chance",meleePath.critChance,true,"%");
+                for (let tag of allCritTags) {
+                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                }
+                if (allCritDamageTags.length) {
+                    drRowsHTML += createHTML.basicsRow("","Base Crit Damage",0.50,true,"%")
+                }
+                for (let tag of allCritDamageTags) {
+                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                }
+            }
+            if (allWeakspotTags.length) {
+                drRowsHTML += "<div class='basicsDRheaderTitle'>WEAKSPOT FACTORS</div>";
+                drRowsHTML += createHTML.basicsRow("","Weapon's Weakspot",meleePath.weakSpot,true,"%");
+                drRowsHTML += createHTML.basicsRow("","Base Weakspot",1,true,"%");
+                for (let tag of allWeakspotTags) {
+                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                }
+            }
+            if (allSpeedTags.length) {
+                drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
+                for (let tag of allSpeedTags) {
+                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                }
+            }
+
+            
+
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+            // console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
+        }
+
+        // return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+    },
     sumTotalDamage(index) {
 
     },
@@ -486,5 +1002,48 @@ let conditionalHelpers = {
         activeStatus += index.outOVERLOADED ? 1 : 0;
         activeStatus += index.outCORRODED ? 1 : 0;
         return activeStatus;
+    },
+    returnIndexTagSums(index,tagsArray) {
+        let statistic = 0;
+        if (tagsArray === -1) {return -1;}
+        for (tag of tagsArray) {
+            if (index[tag]) {statistic += index[tag];}
+        }
+        return statistic;
+    },
+    addSpacesToTagNames(string) {
+        //&nbsp; is a space
+        return string.replace(/([a-z])([A-Z])/g, '$1&nbsp;$2');
+    },
+    addMissingTags(primaryObject,secondaryObject,tagsArray,actualTagArray) {
+        if (primaryObject[secondaryObject]) {
+            if (!primaryObject[secondaryObject][tagsArray].length) {return;}
+            for (let tag of primaryObject[secondaryObject][tagsArray]) {
+                let tagFound = false;
+                for (let innerTag of primaryObject[tagsArray]) {
+                    if (innerTag === tag) {
+                        tagFound = true;
+                        break;
+                    }
+                }
+                if (!tagFound) {
+                    actualTagArray.push(tag);
+                }
+            }
+        }
+    },
+    updateMVDisplay(elemID,checkID) {
+        if (readSelection(checkID).checked) {
+            readSelection(elemID).style.display = "block"
+        }
+        else {
+            readSelection(elemID).style.display = "none"
+        }
+    },
+    updateGlobalToggle(elemID,comparableToggleID) {
+        globalRecords[elemID] = !globalRecords[elemID];
+
+        if (!globalRecords[elemID]) {globalRecords[comparableToggleID] = true;}
+        updateFormulas();
     }
 }
