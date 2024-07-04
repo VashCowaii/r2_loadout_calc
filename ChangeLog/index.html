@@ -43,6 +43,28 @@
                     </ul>
                 </div> -->
                 <div>
+                    <h1>July 4, 2024 - THE MELEE DAMAGE UPDATE</h1>
+                    As with every major addition, be on the lookout for bugs. If you find any or just have feedback to give, join the discord linked at the bottom of any page, and ping me with it, you have my blessing to do so.
+                    <ul>
+                        <li>Added melee weapon damage/dps to the Damage Breakdown section of the calculator
+                            <ul>
+                                <li>Note that these are not interable within build queries/optimizer yet. Getting them calculable is one thing, getting them iterable is another, and that will come next.</li>
+                            </ul>
+                        </li>
+                        <li>Added settings to enable/disable weakspot and critical hits. Right now these only apply to the melee breakdown, but I'll extend them to apply to our other breakdowns as well(even though the others can't weakspot at all, they will at least benefit from a crit toggle)</li>
+                        <li>Added info to Fission Strike's description to elaborate on the 25% multiplier better</li>
+                        <li>Updated World's Edge base damage. Somehow I'd modified the crit values and such but neglected to change the base damage lol.</li>
+                        <li>Updated Fathomless Deep's stagger values</li>
+                        <li>Updated handling for Shielded Strike. We'd long believed it was bugged, since the damage values didn't line up with the description. However the description is just extremely vague. It turns out the dmg bonus is based on the %shield active on your hp bar not the %max provided by the mutator, meaning without 100% shield you will not get the full 25% damage bonus and in practice, so with the shield from Shielded Strike alone, it will only reach half or 12.5% dmg bonus when at that 50% shield.</li>
+                        <li>Updated Overdrive's crit damage bonus from the lvl 10 effect to reflect the true increased value.</li>
+                        <li>Updated Fracture's description to clarify its interaction with Burden of the Gambler.</li>
+                        <li>Updated Acid Stone, Fire Stone, and Grounding Stone's bonuses.</li>
+                        <li>Fixed an issue where certain UI actions could refocus the window on a given item's input selector, when the action wasn't relevant to focusing that item selector element.</li>
+                        <li>Fixed an issue where the armor selection UI's display values could show as "undefined" when armor pieces were selected in that slot and then removed with nothing to replace them.</li>
+                        <li>Fixed an issue where if Mirage was selected as a melee weapon, its name could sometimes display as Nightshade instead. You can tell I copy-pasted at one point lmao.</li>
+                    </ul>
+                </div>
+                <div>
                     <h1>June 29, 2024</h1>
                     <ul>
                         <li>Added base statistics for ranged weapons. These will now display when a given ranged weapon is selected (dmg, range, magazine, etc)</li>
@@ -738,8 +760,8 @@
                     <ul>
                         <li>Damage Calculations: <b>Monster Task</b>.
                             <ul>
-                                <li>Melee calcs are functionally done but parsing attack durations from the game files is an extremely difficult task. I've done my best but without help from a Dev most likely, I am not going to be able to get the durations to be as accurate as I want them to be. If I cannot get them to the level of precision I am after, I simply will not publish them.</li>
                                 <li><b>Think you can help me?</b> Join my discord and ping me, you have my permission. I really don't wanna be doing this shit alone, it sucks.</li>
+                                <li>See the Calculator page's Damage section for a list of currently supported damage calculations.</li>
                             </ul>
                         </li>
                     </ul>
@@ -766,7 +788,7 @@
                     <h1>Will Not Do:</h1>
                     <ul>
                         <li>Expanded builds sharing logic</li>
-                        <li>Accounts/sign-ins(with the singular exception of allowing loadout saves later, possibly, but likely no)</li>
+                        <li>Accounts/sign-ins(with the singular exception of allowing loadout saves in the cloud instead of locally later, possibly, but likely no)</li>
                         <li>Anything that far exceeds the bounds of a <i><b>calculator</b></i></li>
                     </ul>
                 </div>

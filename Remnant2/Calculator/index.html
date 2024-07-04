@@ -1193,6 +1193,22 @@
                         </label>
                     </div>
                 </div>
+
+                <div class="totalHealingHeader">
+                    <span class="damageEnableOptions hasHoverTooltip" id="weakspotEnableHolderBox">Use Weakspots&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="enableWeakspots" onchange="updateFormulas()"> <!--math toggle-->
+                            <span class="toggleSlider"></span>
+                        </label>&nbsp;
+                    </span>--
+                    <span class="damageEnableOptions hasHoverTooltip" id="critEnableHolderBox">&nbsp;Enable Crits&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="enableCrits" onchange="updateFormulas()"> <!--math toggle-->
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </span>
+                </div>
+
                 <div class="hasHoverTooltip" id="currentlySupportedDamageCalcs">Currently supported damage calcs [?]</div>
 
                 <div class="advancedAbilityBoxHolder" id="havocFormBoxHolder" style="display: none;">
@@ -1209,12 +1225,11 @@
                             </button>
                         </div>
 
-
                         <div class="havocInfoContainer" id="ability1BreakdownTab" style="display: none;"></div>
                         <div class="havocInfoContainer" id="ability2BreakdownTab" style="display: none;"></div>
                         <div class="havocInfoContainer" id="mod1BreakdownTab" style="display: none;"></div>
                         <div class="havocInfoContainer" id="mod2BreakdownTab" style="display: none;"></div>
-
+                        <div class="havocInfoContainer" id="meleeBreakdownTab" style="display: none;"></div>
                         <div class="havocInfoContainer" id="sumTotalBreakdownTab" style="display: none;"></div>
                     </div>
                 </div>
@@ -1231,6 +1246,7 @@
 <script src="/htmlTemplates/injectMainHTML.js"></script>
 <script src="/htmlTemplates/injectR2HTML.js"></script>
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/Remnant2/Calculator/meleeClasses.js"></script>
 <script src="/Remnant2/Calculator/data.js"></script>
 <script src="/Remnant2/Calculator/postData.js"></script>
 <script src="/MainJS/buildTime.js"></script>
