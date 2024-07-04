@@ -873,12 +873,11 @@ let cycles = {
                 //if slot 1 is locked/dedicated
                 if (specified[0] || specified[0] === "") {
                     if (!iterateSeparately) {iteration = index;}
-                    if (slots===1) {
-                        if (!refTable[specified[0]]) {
-                            refTable[specified[0]] = cycles.extractTableEntry(specified[0])
-                        }
-                        combinations.push([refTable[specified[0]].ID]);
-                    }//Unless only 1 slot exists, then push the combo
+                    console.log(refTable)
+                    if (!refTable[specified[0]]) {
+                        refTable[specified[0]] = cycles.extractTableEntry(specified[0])
+                    }
+                    if (slots===1) {combinations.push([refTable[specified[0]].ID]);}//Unless only 1 slot exists, then push the combo
                     else {loopSlot2(iteration,specified[0]);}//Otherwise head to slot 2 loops
                 }
                 //if the ring slots are not locked at all, then initiate all other loops within a loop for slot 1
@@ -903,12 +902,10 @@ let cycles = {
                 let iteration = 0;
                 if (specified[1] || specified[1] === "") {
                     if (!iterateSeparately) {iteration = index;}
-                    if (slots===2) {
-                        if (!refTable[specified[1]]) {
-                            refTable[specified[1]] = cycles.extractTableEntry(specified[1])
-                        }
-                        combinations.push([refTable[slot1].ID,refTable[specified[1]].ID]);
+                    if (!refTable[specified[1]]) {
+                        refTable[specified[1]] = cycles.extractTableEntry(specified[1])
                     }
+                    if (slots===2) {combinations.push([refTable[slot1].ID,refTable[specified[1]].ID]);}
                     else {loopSlot3(iteration,slot1,specified[1]);}
                 }
                 else {
@@ -932,12 +929,10 @@ let cycles = {
                 let iteration = 0;
                 if (specified[2] || specified[2] === "") {
                     if (!iterateSeparately) {iteration = index;}
-                    if (slots===3) {
-                            if (!refTable[specified[2]]) {
-                            refTable[specified[2]] = cycles.extractTableEntry(specified[2])
-                        }
-                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[specified[2]].ID]);
+                    if (!refTable[specified[2]]) {
+                        refTable[specified[2]] = cycles.extractTableEntry(specified[2])
                     }
+                    if (slots===3) {combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[specified[2]].ID]);}
                     else {loopSlot4(iteration,slot1,slot2,specified[2]);}
                 }
                 else {
@@ -967,12 +962,10 @@ let cycles = {
                 let iteration = 0;
                 if (specified[3] || specified[3] === "") {
                     if (!iterateSeparately) {iteration = index;}
-                    if (slots===4) {
-                        if (!refTable[specified[3]]) {
-                            refTable[specified[3]] = cycles.extractTableEntry(specified[3])
-                        }
-                        combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[specified[3]].ID]);
+                    if (!refTable[specified[3]]) {
+                        refTable[specified[3]] = cycles.extractTableEntry(specified[3])
                     }
+                    if (slots===4) {combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[specified[3]].ID]);}
                     else {loopSlot5(iteration,slot1,slot2,slot3,specified[3]);}
                 }
                 else {
@@ -1010,10 +1003,10 @@ let cycles = {
                 let iteration = 0;
                 if (specified[4] || specified[4] === "") {
                     if (!iterateSeparately) {iteration = index;}
+                    if (!refTable[specified[4]]) {
+                        refTable[specified[4]] = cycles.extractTableEntry(specified[4])
+                    }
                     if (slots===5) {
-                        if (!refTable[specified[4]]) {
-                            refTable[specified[4]] = cycles.extractTableEntry(specified[4])
-                        }
                         combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[specified[4]].ID]);
                     }
                     else {loopSlot6(iteration,slot1,slot2,slot3,slot4,specified[4]);}
@@ -1039,10 +1032,10 @@ let cycles = {
                 let iteration = 0;
                 if (specified[5] || specified[5] === "") {
                     if (!iterateSeparately) {iteration = index;}
+                    if (!refTable[specified[5]]) {
+                        refTable[specified[5]] = cycles.extractTableEntry(specified[5])
+                    }
                     if (slots===6) {
-                        if (!refTable[specified[5]]) {
-                            refTable[specified[5]] = cycles.extractTableEntry(specified[5])
-                        }
                         combinations.push([refTable[slot1].ID,refTable[slot2].ID,refTable[slot3].ID,refTable[slot4].ID,refTable[slot5].ID,refTable[specified[5]].ID]);
                     }
                     else {loopSlot7(iteration,slot1,slot2,slot3,slot4,slot5,specified[5]);}
