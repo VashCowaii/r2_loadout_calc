@@ -1520,7 +1520,7 @@ let cyclesLoop = {
             else {
                 switch (data.command) {
                     case `canIHaveSomeMore`: 
-                        cycles.iterator.next();
+                        if (cycles.iterator) {cycles.iterator.next();}
                         workerIdentifier = data.workerIdentifier;
                         let queueStorage = cycles.vars.queueStorage;
                         if (queueStorage.length) {//ideally this will only fail if we're out of combos to distribute //TODO: add safety handling here later
