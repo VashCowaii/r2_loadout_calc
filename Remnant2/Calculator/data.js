@@ -13182,8 +13182,8 @@ globalRecords = {
 	"ALTcomplexInput": 0,
 	"RECORDEDcomplexInput": 0,
 
-	"ALTspiritHealterStacks": 0,
-	"RECORDEDspiritHealterStacks": 0,
+	"ALTspiritHealerStacks": 0,
+	"RECORDEDspiritHealerStacks": 0,
 
 	"useShields": false,
 	"ALTuseShields": false,

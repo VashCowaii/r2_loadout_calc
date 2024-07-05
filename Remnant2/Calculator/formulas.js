@@ -69,10 +69,11 @@ let calcs = {
         //REGENERATION---
         let flatHPperSec = index["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
         let percHPperSec = index["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
+
         //GREY HEALTH
         let greyHPperSec = 0.2 + index["GreyHP/S+"];
-        let greyPercHPperSec = index["GreyHP/S%"];
-        let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
+        // let greyPercHPperSec = index["GreyHP/S%"];
+        let totalGreyHPperSec = greyHPperSec;
         let conversionRate = 0.5 * (1 + index.GreyHealthConversion);
         let hitThreshold = index.GreyHPHitThreshold;
 
