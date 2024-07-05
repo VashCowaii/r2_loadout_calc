@@ -90,6 +90,7 @@
                         <li>Fixed an issue where Glutton's level 3 effect was off by a decimal point, but only the level 3 effect lol.</li>
                         <li>Fixed an issue that could cause healing-specific queries in the optimizer to output no values</li>
                         <li>Fixed an issue where locked ranged mutators could queries to fail to start.</li>
+                        <li>Fixed an issue where an error could pop(it was harmless, wouldn't prevent anything from running) if you had more query threads enabled than you did possible combos. Each query thread can handle 100k combos at a time, and if you had more threads prepared than combos would allow for it would pop that, that's all.</li>
                         <li>Back-end changes to greatly simplify how the main stats column populates its statistics. Also makes it much easier to add stats to display along with custom tooltips for each individual one if needed.</li>
                     </ul>
                 </div>
