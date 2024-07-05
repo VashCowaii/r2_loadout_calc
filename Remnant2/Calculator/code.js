@@ -1,7 +1,7 @@
 //This is the actual table for starter values, but we reuse it to clean (cycles/great)TableKnowerOfAll on updateFormulas() calls
 let starterTable = {
   //HEALTH
-  "Health": 0,"Health%": 0,"GlobalHealthModifier": 1,
+  "Health": 0,"Health%": 0,"GlobalHealthModifier": 1,"HealthCap": 1,
   //ARMOR
   "Armor": 0,"Armor%": 0,
   //DR
@@ -30,7 +30,7 @@ let starterTable = {
   "Stamina": 0,"Stamina%": 0,"Stamina/S+": 0,"Stamina/S+Multi": 0,"StaminaDelaySpeed": 0,
   //STAMINA COSTS -base cost reductions
   "StaminaCost": 1,"StaminaNegation": 0,"StaminaPenaltyAdjustment": 0,
-  "EvadeCost": 0,"ChargeCost": 1,
+  "EvadeCost": 0,"ChargeCost": 0,
   //EVADES
   "EvadeBaseCost": 25,"EvadeSpeed": 0,"EvadeDistance": 0,"iFrames": 0,"iFrameWindow": 0,"BackstepCost": 0,
   //DAMAGE
@@ -61,7 +61,7 @@ let starterTable = {
   "CastSpeed": 0,"SprintSpeed": 0,
   "FireRate": 0,"ReloadSpeed": 0,"WeaponSwapSpeed": 0,
   "MovementSpeed": 0,"EnvMovementSpeed": 0,"AimMovementSpeed": 0,
-  "ProjectileSpeed": 0,
+  "ProjectileSpeed": 0,"ConsumableSpeed": 0,
   //MODS
   "ModDuration": 0,"ModPowerGen/s": 0,"ModPowerGen": 0,"ModCost": 0,
   "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,"ModPowerGenElemental": 0,
@@ -75,6 +75,8 @@ let starterTable = {
   "Reserves": 0,"ReservesMulti": 0,
   //MINIONS/SUMMONS
   "SummonHealth": 0,"HeavyAmmo": 1,
+  //MISC RANDM SHIT
+  "Experience": 0,
   //OUTBOUND STATUS EFFECTS
   "StatusDuration": 0,
   "outgoingStatus": 0,
@@ -256,7 +258,7 @@ const referenceTable = {
 };
 //All the speed stats that HASTE gives
 const hasteTable = {
-  "RelicSpeed": -0.07,//consumableusespeedmod     //Not sure how this is calculated yet, I've always shown this is a -stat when it's good though
+  "RelicSpeed": 0.07,//consumableusespeedmod     //Not sure how this is calculated yet, I've always shown this is a -stat when it's good though
   "EvadeSpeed": 0.07,//evadespeedmod
   "AttackSpeed": 0.07,//meleeattackspeedmod
   "ChargeSpeed": 0.07,//winduptimemod
@@ -3235,7 +3237,7 @@ let customItemFunctions = {
     },
     matriarchsRing(index) {//0 user input
       let perfectDodge = globalRecords.meleeFactors.isPerfectDodge;
-      index.ChargeCost += perfectDodge ? -1 : 0;
+      index.ChargeCost += perfectDodge ? 1 : 0;
     },
     mechanicsCog(index) {//0 user input
       let referenceTable = globalRecords.archs;
@@ -3261,7 +3263,7 @@ let customItemFunctions = {
       index.AllCritChance += isBleeding ? 0.05 : 0;
     },
     restrictionCord(index) {//base
-      index.GlobalHealthModifier *= 0.5;
+      index.HealthCap *= 0.5;
     },
     ringOfSpirits(index) {//0 user input
       let totalActive = 0;
@@ -3469,6 +3471,10 @@ function updateFormulas(index,ping) {
   healthQuery = calcs.getHealth(tableReference);
   let totalHealth = healthQuery[0];
   let totalHealthNoGlobal = healthQuery[1]; //Stuff like restriction cord. Not used outside of calcs.functions yet
+  let totalBaseHealth = healthQuery[2];
+  let percentHealthMulti = healthQuery[3];
+  let healthCap = healthQuery[4];
+  let globalCap = healthQuery[5];
 //---------- STAMINA ---------------------------------------------------
   let totalStamina = calcs.getStamina(tableReference)[0]; 
   let weightQuery = calcs.getWeight(tableReference);
@@ -3482,6 +3488,11 @@ function updateFormulas(index,ping) {
   let staminaValuesQuery = calcs.getStaminaValues(tableReference,staminaPenalty);
   let staminaPerSec = staminaValuesQuery[0];
   let staminaCost = staminaValuesQuery[1];
+  let adjustedPenalty = staminaValuesQuery[2];
+  let evadeCost = staminaValuesQuery[3];
+  let meleeCost = staminaValuesQuery[4];
+  let evadePrice = staminaValuesQuery[5];
+
   
 //---------- RESISTANCES ---------------------------------------------------
   let resistanceQuery = calcs.getResistance(tableReference);
@@ -3502,6 +3513,8 @@ function updateFormulas(index,ping) {
   let flatHPperSec = healingQuery[2];
   let percHPperSec = healingQuery[3];
   let totalGreyHPperSec = healingQuery[4];
+  let greyConversionRate = healingQuery[5];
+  let greyHitThreshold = healingQuery[6];
 
   formulasValues.callStoredFunctions(tieredFunctionStorage,"customPostHealing",tableReference);//anastasijasInspiration, stuff like that
   if (valueTables[index].HASTE > 0) {
@@ -3627,8 +3640,8 @@ function updateFormulas(index,ping) {
       let weaponPath = globalRecords.weapons;
       modPath1 = primary[weaponPath.primary].builtIN ? builtInPrimary[primary[weaponPath.primary].builtIN].customStats : rangedMods[weaponPath.primaryMod].customStats;
       modPath2 = secondary[weaponPath.secondary].builtIN ? builtInSecondary[secondary[weaponPath.secondary].builtIN].customStats : rangedMods[weaponPath.secondaryMod].customStats;
-      mod1Breakdown = modPath1 ? (modPath1.customDPS ? customDamage[modPath1.customDPS](1,index) : -1) : -1;
-      mod2Breakdown = modPath2 ? (modPath2.customDPS ? customDamage[modPath2.customDPS](2,index) : -1) : -1;
+      mod1Breakdown = modPath1 ? (modPath1.customDPS ? customDamage[modPath1.customDPS](1,tableReference) : -1) : -1;
+      mod2Breakdown = modPath2 ? (modPath2.customDPS ? customDamage[modPath2.customDPS](2,tableReference) : -1) : -1;
     }
     if (isUIcalcs || isSumOrCustom) {
       totalDPS = (ability1Breakdown[3] ?? 0) + (ability2Breakdown[3] ?? 0) + (mod1Breakdown[3] ?? 0) + (mod2Breakdown[3] ?? 0)
@@ -3648,12 +3661,12 @@ function updateFormulas(index,ping) {
   let movementSpeed = tableReference.MovementSpeed;
 
   let returnStats = {
-    totalHealth,totalHealthNoGlobal,
+    totalHealth,totalHealthNoGlobal,totalBaseHealth,percentHealthMulti,healthCap,globalCap,
     totalStamina,
     totalWeight,dodgeClass,staminaPenalty,baseWeight,weightBoost,weightThreshold,
-    staminaPerSec,staminaCost,
+    staminaPerSec,staminaCost,adjustedPenalty,evadeCost,meleeCost,evadePrice,
     bleed,burn,shock,corrosive,blight,
-    globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec,
+    globalHealingMod,relicEffectiveness,healingEffectiveness,relicUseTime,flatHPperSec,percHPperSec,totalGreyHPperSec,greyConversionRate,greyHitThreshold,
     lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal,
     relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,
     baseArmor,armorEff,totalArmor,
@@ -3864,57 +3877,18 @@ let basicsUpdates = {
       readSelection("basicsInnerBox").innerHTML = "";
       let drHTML = "<div class='basicsDRheaderTitle'>DAMAGE REDUCTION</div>";
       let drRowsHTML = '';
+      let rowsListings = [
+        {"statName": "baseArmor","statCoverName": "Base Armor","tooltip":"","relevantTags": ["Armor"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "armorEff","statCoverName": "Armor Effectiveness","tooltip":"ArmorEffectiveness = 1 + ArmorEffBonuses<br>Note that you will always have 100% armor effectiveness by default, the only way that wouldn't be true is if you are afflicted with Lydusa's curse which reduces it by a flat 15%.","relevantTags": ["Armor%"],"condition": (returnObject.armorEff != 1)},
+        {"statName": "totalArmor","statCoverName": "Total Armor","tooltip":"TotalArmor = Armor * (1 + ArmorEffectiveness)","relevantTags": ["Armor","Armor%"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "armorDR","statCoverName": "Armor DR%","tooltip":"ArmorDR = TotalArmor / (TotalArmor + 200)","relevantTags": ["Armor","Armor%"]},
+        {"statName": "bulwarkStacks","statCoverName": "Bulwark Stacks","tooltip":"Bulwark stacks have a base limit of 5, but it can be modified.<br>See Bulwark DR statistic tooltip for an equation breakdown.","relevantTags": ["Bulwark"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "bulwarkDR","statCoverName": "Bulwark %DR","tooltip":"BulwarkDR = -0.005 * (BulwarkStacks^2) + 0.075 * BulwarkStacks<br>Bulwark DR is considered Flat DR.","relevantTags": ["Bulwark"]},
+        {"statName": "otherFlat","statCoverName": "Other Flat DR","tooltip":"This is for all sources of Flat DR that do not originate from Bulwark.","relevantTags": ["FlatDR"]},
+        {"statName": "totalFlat","statCoverName": "Total Flat DR%","tooltip":"TotalFlatDR = BulwarkDR + OtherFlatDR","relevantTags": ["FlatDR","Bulwark"]},
+      ]
+      drRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,returnObject);
 
-
-      drRowsHTML += returnObject.baseArmor ? createHTML.basicsRow("baseArmor","Base Armor",returnObject.baseArmor,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "baseArmor",
-        "",
-        ["Armor"]
-      )
-      drRowsHTML += returnObject.armorEff != 1 ? createHTML.basicsRow("armorEff","Armor Effectiveness",returnObject.armorEff,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "armorEff",
-        "",
-        ["Armor%"]
-      )
-      drRowsHTML += returnObject.totalArmor ? createHTML.basicsRow("totalArmor","Total Armor",returnObject.totalArmor,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "totalArmor",
-        "TotalArmor = Armor * (1 + ArmorEffectiveness)",
-        []
-      )
-      drRowsHTML += returnObject.armorDR ? createHTML.basicsRow("armorDR","Armor DR%",returnObject.armorDR,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "armorDR",
-        "ArmorDR = TotalArmor / (TotalArmor + 200)",
-        []
-      )
-      drRowsHTML += returnObject.bulwarkStacks ? createHTML.basicsRow("bulwarkStacks","Bulwark Stacks",returnObject.bulwarkStacks,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "bulwarkStacks",
-        "",
-        ["Bulwark"]
-      )
-      drRowsHTML += returnObject.bulwarkDR ? createHTML.basicsRow("bulwarkDR","Bul. Flat Equivalent",returnObject.bulwarkDR,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "bulwarkDR",
-        "BulwarkDR = -0.005 * (BulwarkStacks^2) + 0.075 * BulwarkStacks",
-        []
-      )
-
-      drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("otherFlat","Other Flat",returnObject.otherFlat,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "otherFlat",
-        "",
-        ["FlatDR"]
-      )
-      drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("totalFlat","Total Flat DR%",returnObject.totalFlat,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "totalFlat",
-        "",
-        ["FlatDR","Bulwark"]
-      )
       let drSumHTML = `<div class="basicsDRsumContainer hasHoverTooltip" id="totalDRRow">
            <span class="basicsTotalDR">TOTAL DR:</span><span class="basicsTotalDRsum" id="totalDR">${(returnObject.totalDR*100).toFixed(2)}%</span>
        </div>
@@ -3932,113 +3906,73 @@ let basicsUpdates = {
       }
 
  
-      let healingHTML = "<div class='basicsDRheaderTitle'>HEALING</div>";
+      let healingHTML = "<div class='basicsDRheaderTitle'>HEALTH</div>";
       let healingHTMLRowsHTML = '';
-      healingHTMLRowsHTML += returnObject.relicEffectiveness ? createHTML.basicsRow("relicEffectiveness","Relic Effectiveness",returnObject.relicEffectiveness,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "relicEffectiveness",
-        "This is a boost to all relic-based healing and/or some relic specific effects.",
-        ["RelicEFF"]
-      )
-      healingHTMLRowsHTML += returnObject.healingEffectiveness ? createHTML.basicsRow("healingEffectiveness","Healing Effectiveness",returnObject.healingEffectiveness,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "healingEffectiveness",
-        "This is a boost to all healing done of any kind. Grey Health regen and lifesteal do not count as healing.",
-        ["HealingEFF"]
-      )
-      healingHTMLRowsHTML += returnObject.relicUseTime ? createHTML.basicsRow("relicUseTime","Relic Use Time",returnObject.relicUseTime,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "relicUseTime",
-        "",
-        ["RelicSpeed","HASTE"]
-      )
-      healingHTMLRowsHTML += returnObject.flatHPperSec ? createHTML.basicsRow("flatHPperSec","Flat HP/s",returnObject.flatHPperSec,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "flatHPperSec",
-        "",
-        ["HP/S+"]
-      )
-      healingHTMLRowsHTML += returnObject.percHPperSec ? createHTML.basicsRow("percHPperSec","% HP/s",returnObject.percHPperSec,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "percHPperSec",
-        "",
-        ["HP/S%"]
-      )
-      healingHTMLRowsHTML += returnObject.totalGreyHPperSec != 0.20 ? createHTML.basicsRow("totalGreyHPperSec","Grey Health/s",returnObject.totalGreyHPperSec,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "totalGreyHPperSec",
-        "",
-        ["GreyHP/S%","GreyHP/S+"]
-      )
-      readSelection("basicsInnerBox").innerHTML += healingHTMLRowsHTML ? healingHTML + healingHTMLRowsHTML + "<br>" : "";
+      rowsListings = [//totalHealth,totalHealthNoGlobal
+        {"statName": "flatHPperSec","statCoverName": "Flat HP/s","tooltip":"","relevantTags": ["HP/S+"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "percHPperSec","statCoverName": "% HP/s","tooltip":"","relevantTags": ["HP/S%"]},
+        {"statName": "relicEffectiveness","statCoverName": "Relic Effectiveness","tooltip":"This is a boost to all relic-based healing and/or some relic specific effects.","relevantTags": ["RelicEFF"]},
+        {"statName": "healingEffectiveness","statCoverName": "Healing Effectiveness","tooltip":"This is a boost to all healing done of any kind. Grey Health regen and lifesteal do not count as healing.<br>Multiplicative against RelicEff when calculated.","relevantTags": ["HealingEFF"]},
+        {"statName": "totalBaseHealth","statCoverName": "Base Health","tooltip":"BaseHealth = 100 + FlatHealth<br><br>This is your total base health before any % bonuses or reductions come into play.","relevantTags": ["Health"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "percentHealthMulti","statCoverName": "Health% Multi","tooltip":"HealthPercentMulti = 1 + HealthPercentBonuses<br><br>This is the total health multiplier that applies to your Base Health, from positive bonuses.","relevantTags": ["Health%"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.percentHealthMulti != 1)},
+        {"statName": "globalCap","statCoverName": "Reduction Multi","tooltip":"This is the reduction multiplier that applies to your total health after flat HP and % bonuses. This modifies your actual Max Health, when considering Shields or Healing % amounts.","relevantTags": ["GlobalHealthModifier"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.globalCap != 1)},
+        {"statName": "healthCap","statCoverName": "Health% Cap","tooltip":"This is the % maximum health you can have on your HP bar at any given time.<br><br>Note that this does NOT reduce your Max Health when considering Healing or Shield factors, this only prevents you from healing past a certain %HP threshold, like Restriction Cord.","relevantTags": ["HealthCap"],"condition": (returnObject.healthCap != 1)},
+        {"statName": "totalHealthNoGlobal","statCoverName": "Max Health","tooltip":"MaxHealth = BaseHealth * Health%Multi * Reduction Multi<br><br>This is your true, end total Max Health. Even if you have a Health Cap in effect, Shields and Healing will still go off of this value, not the Capped Health value.","relevantTags": ["Health","Health%","GlobalHealthModifier"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "totalHealth","statCoverName": "Capped Health","tooltip":"CappedHealth = MaxHealth * Health%Cap<br><br>This is your end total HP after HP reduction and cap multipliers take effect on your total health. This is NOT your Max Health, it is simply how much health you have when capped. Healing and Shields still go off of your true Max Health.","relevantTags": ["Health","Health%","GlobalHealthModifier","HealthCap"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalHealth < returnObject.totalHealthNoGlobal)},
+      ]
+      healingHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,returnObject);
+      readSelection("basicsInnerBox").innerHTML += healingHTMLRowsHTML ? healingHTML + healingHTMLRowsHTML : "";
+
+
+      let greyHealthHTML = "<div class='basicsDRheaderTitle'>GREY HEALTH</div>";
+      let greyHealthHTMLRows = "";
+      rowsListings = [
+        {"statName": "greyConversionRate","statCoverName": "Grey Health Conversion","tooltip":"GreyHealthConversion = BaseRate * (1 + ConversionBonuses)<br>BaseRate = 50%<br><br>This is the rate at which damaged or lost health, is converted to Grey Health when you take damage. If you take 50 damage and have 50% conversion, that means you'll still take 50 damage and lose 50 health, but you'll also get 25 Grey Health on your bar that can regenerate slowly over time. Grey Health can be lost on your bar if you get hit more than your threshold amount allows for.<br><br>You cannot exceed 100% Conversion Rate.","relevantTags": ["GreyHealthConversion"],"condition": (returnObject.greyConversionRate != 0.5)},
+        {"statName": "greyHitThreshold","statCoverName": "Grey-Hit Threshold","tooltip":"This is the threshold of hits after which you will lose Grey Health accrued in your health bar. By default, the threshold is 0 meaning if you get hit with any Grey Health on your bar it will be lost.","relevantTags": ["GreyHPHitThreshold"],"isNotAPercent": true,"roundAnyways": true},
+        {"statName": "totalGreyHPperSec","statCoverName": "Grey Health/s","tooltip":"This regen is only applicable when Grey Health is actually present on your healthbar.<br>0.2/s is the default regen rate. Note that Grey Health Rate is NOT the regen rate, it is the CONVERSION rate. See Conversion Rate tooltip for details.<br><br>Grey Health regen does not count as 'Healing' when factoring Healing Effectiveness.","relevantTags": ["GreyHP/S%","GreyHP/S+"],"isNotAPercent": true,"roundAnyways": true, "condition": (returnObject.totalGreyHPperSec != 0.2)},
+      ]
+      greyHealthHTMLRows += basicsUpdates.expandRowListingInfo(rowsListings,returnObject);
+      readSelection("basicsInnerBox").innerHTML += greyHealthHTMLRows ? greyHealthHTML + greyHealthHTMLRows : "";
 
 
       let lifestealHTML = "<div class='basicsDRheaderTitle'>LIFESTEAL</div>";
       let lifestealHTMLRowsHTML = '';
-      lifestealHTMLRowsHTML += returnObject.lifestealEFF ? createHTML.basicsRow("lifestealEFF","Effectiveness",returnObject.lifestealEFF,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "lifestealEFF",
-        "",
-        ["LifestealEFF"]
-      )
-      lifestealHTMLRowsHTML += returnObject.lifestealALL ? createHTML.basicsRow("lifestealALL","All",returnObject.lifestealALL,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "lifestealALL",
-        "",
-        ["Lifesteal"]
-      )
-      lifestealHTMLRowsHTML += returnObject.lifestealMelee ? createHTML.basicsRow("lifestealMelee","Melee",returnObject.lifestealMelee,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "lifestealMelee",
-        "",
-        ["MLifesteal"]
-      )
-      lifestealHTMLRowsHTML += returnObject.lifestealMeleeCharged ? createHTML.basicsRow("lifestealMeleeCharged","Melee (Charged)",returnObject.lifestealMeleeCharged,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "lifestealMeleeCharged",
-        "",
-        ["MChargedLifesteal"]
-      )
-      lifestealHTMLRowsHTML += returnObject.lifestealRange ? createHTML.basicsRow("lifestealRange","Ranged",returnObject.lifestealRange,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "lifestealRange",
-        "",
-        ["RLifesteal"]
-      )
-      readSelection("basicsInnerBox").innerHTML += lifestealHTMLRowsHTML ? lifestealHTML + lifestealHTMLRowsHTML + "<br>" : "";
+      rowsListings = [//"RelicLifesteal"
+        {"statName": "lifestealEFF","statCoverName": "Effectiveness","tooltip":"This is a %Bonus applied to all forms of lifesteal available to you.","relevantTags": ["LifestealEFF"]},
+        {"statName": "lifestealALL","statCoverName": "All","tooltip":"This is the Lifesteal that applies to the base(level 0) damage of all outgoing player damage.<br>Includes relic-based lifesteal if a relic provides it.","relevantTags": ["Lifesteal","LifestealEFF"]},
+        {"statName": "lifestealMelee","statCoverName": "Melee","tooltip":"This is the Lifesteal that applies to the base(level 0) damage of all outgoing melee damage.","relevantTags": ["MLifesteal","LifestealEFF"]},
+        {"statName": "lifestealMeleeCharged","statCoverName": "Melee (Charged)","tooltip":"This is the Lifesteal that applies to the base(level 0) damage of all outgoing charged melee damage.","relevantTags": ["MChargedLifesteal","LifestealEFF"]},
+        {"statName": "lifestealRange","statCoverName": "Ranged","tooltip":"This is the Lifesteal that applies to the base(level 0) damage of all outgoing ranged damage.","relevantTags": ["RLifesteal","LifestealEFF"]},
+        // {"statName": "baseArmor","statCoverName": "Base","tooltip":"","relevantTags": ["Armor"],"isNotAPercent": true,"roundAnyways": true},
+      ]
+      lifestealHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,returnObject);
+      readSelection("basicsInnerBox").innerHTML += lifestealHTMLRowsHTML ? lifestealHTML + lifestealHTMLRowsHTML : "";
 
 
       let staminaHTML = "<div class='basicsDRheaderTitle'>STAMINA</div>";
       let staminaHTMLRowsHTML = '';
-      staminaHTMLRowsHTML += returnObject.staminaPerSec != 33 ? createHTML.basicsRow("staminaPerSec","Regen/s",returnObject.staminaPerSec,true) : "";
-      tooltipMath.updateTooltipDisplay(
-        "staminaPerSec",
-        "",
-        ["Stamina/S+","Stamina/S+Multi"]
-      )
-      staminaHTMLRowsHTML += returnObject.staminaCost != 1 ? createHTML.basicsRow("staminaCost","Cost",returnObject.staminaCost,true,"%") : "";
-      tooltipMath.updateTooltipDisplay(
-        "staminaCost",
-        "",
-        ["StaminaCost","StaStaminaPenaltyAdjustment","Encumbrance","Encumbrance%","WeightThreshold"]
-      )
-      staminaHTMLRowsHTML += staminaHTMLRowsHTML ? createHTML.basicsRow("staminaHTMLRowsHTML","Dodge Class",returnObject.dodgeClass,false) : "";
-      tooltipMath.updateTooltipDisplay(
-        "staminaHTMLRowsHTML",
-        "",
-        ["Encumbrance","Encumbrance%","WeightThreshold"]
-      )
+      rowsListings = [//evadeCost,meleeCost
+        {"statName": "staminaPerSec","statCoverName": "Regen/s","tooltip":"StaminaRegen/s = Stamina/s * Stamina/sMultipliers<br>DefaultRegen = 33/s<br><br>A good example of a stamina/s multiplier would be Drakestone Pearl as it reduces regen to 1/5th of the normal rate.","relevantTags": ["Stamina/S+","Stamina/S+Multi"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.staminaPerSec != 33)},
+        {"statName": "evadeCost","statCoverName": "Evade Cost%","tooltip":"This is a multiplier against the Evade's base cost of 25, BEFORE the general stamina cost multiplier takes effect.<br><br>Cannot go lower than 0%, as an action cannot go negative cost and refund you.","relevantTags": ["EvadeCost"],"condition": (returnObject.evadeCost != 1)},
+        {"statName": "meleeCost","statCoverName": "Melee Cost%","tooltip":"This is a multiplier against any given melee action's base cost, BEFORE the general stamina cost multiplier takes effect.<br><br>Cannot go lower than 0%, as an action cannot go negative cost and refund you.","relevantTags": ["ChargeCost"],"condition": (returnObject.meleeCost != 1)},
+        {"statName": "adjustedPenalty","statCoverName": "Weight Penalty%","tooltip":"Penalty = WeightPenalty * (1 + PenaltyModifier)<br>This is the overall stamina cost penalty applied by a given weight category.<br><br>Default values of:<br>Light - 0%<br>Medium - 25%<br>Heavy - 50%<br>Flop - 75%<br><br>Cannot be modified by general cost reductions, but CAN be modified by penalty reductions like Verdant Tea.","relevantTags": ["StaStaminaPenaltyAdjustment","Encumbrance","Encumbrance%","WeightThreshold"]},
+        {"statName": "staminaCost","statCoverName": "General Cost%","tooltip":"StaminaCost = CostModifiers + WeightPenalty<br>Has a base value of 1.0 or 100%.<br>This is the stamina cost multiplier applied to any given action.<br><br>Note that this does NOT add with action specific cost reductions like Evade Cost or Melee Cost, those are separate multipliers that this stat will apply to multiplicatively, but never additively.<br><br>Cannot go lower than 0%, as an action cannot go negative cost and refund you.","relevantTags": ["StaminaCost","StaminaPenaltyAdjustment","Encumbrance","Encumbrance%","WeightThreshold"],"condition": (returnObject.staminaCost != 1)},
+        {"statName": "evadePrice","statCoverName": "Evade Price","tooltip":"EvadePrice = BaseCost * EvadeCost% * OverallCost%<br>BaseCost = 25 stamina<br><br>Note that the action specific cost reductions are MULTIPLICATIVE with general stamina cost modifiers, they are not additive.","relevantTags": ["StaminaCost","EvadeCost","StaminaPenaltyAdjustment","Encumbrance","Encumbrance%","WeightThreshold"],"isNotAPercent": true,"roundAnyways": true},
+        // {"statName": "baseArmor","statCoverName": "Base","tooltip":"","relevantTags": ["Armor"],"isNotAPercent": true,"roundAnyways": true},
+      ]
+      staminaHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,returnObject);
       readSelection("basicsInnerBox").innerHTML += staminaHTMLRowsHTML ? staminaHTML + staminaHTMLRowsHTML + "<br>" : "";
 
 
-      readSelection("basicsInnerBox").innerHTML += `<div class="basicsDamageRows" id="basicsDamageRows"></div>
+      readSelection("basicsInnerBox").innerHTML += `
+      <div class="basicsDamageRows" id="basicsDamageRows"></div>
       <div class="basicsDamageRows" id="basicsCritChance"></div>
       <div class="basicsDamageRows" id="basicsCritDamage"></div>
       <div class="basicsDamageRows" id="basicsWeakspot"></div>
       <div class="basicsDamageRows" id="basicsActionSpeed"></div>
       <div class="basicsDamageRows" id="basicsStatusOut"></div>
       <div class="basicsDamageRows" id="basicsStatusIn"></div>
-      <div class="basicsDamageRows" id="basicsMisc"></div>`
+      <div class="basicsDamageRows" id="basicsMisc"></div>`;
 
 
 
@@ -4232,150 +4166,32 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">DAMAGE</div>`;
     let list = ``;
 
-    list += table.AllDamage ? createHTML.basicsRow("AllDamage","All",table.AllDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AllDamage",
-      "",
-      ["AllDamage"]
-    )
-    list += table.RangedDamage ? createHTML.basicsRow("RangedDamage","Ranged",table.RangedDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "RangedDamage",
-      "",
-      ["RangedDamage"]
-    )
-    list += table.SkillDamage ? createHTML.basicsRow("SkillDamage","Skill",table.SkillDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SkillDamage",
-      "",
-      ["SkillDamage"]
-    )
-    list += table.MeleeDamage ? createHTML.basicsRow("MeleeDamage","Melee",table.MeleeDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeDamage",
-      "",
-      ["MeleeDamage"]
-    )
-    list += table.ChargeDamage ? createHTML.basicsRow("ChargeDamage","Charged",table.ChargeDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ChargeDamage",
-      "",
-      ["ChargeDamage"]
-    )
-    list += table.BackstepDamage ? createHTML.basicsRow("BackstepDamage","Evade",table.BackstepDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "BackstepDamage",
-      "",
-      ["BackstepDamage"]
-    )
-    list += table.FistDamage ? createHTML.basicsRow("FistDamage","Unarmed",table.FistDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "FistDamage",
-      "",
-      ["FistDamage"]
-    )
-    list += table.MeleeSpecialAbilityDamage ? createHTML.basicsRow("MeleeSpecialAbilityDamage","Melee Threshold",table.MeleeSpecialAbilityDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeSpecialAbilityDamage",
-      "",
-      ["MeleeSpecialAbilityDamage"]
-    )
-    list += table.CorrosiveDamage ? createHTML.basicsRow("CorrosiveDamage","Corrosive",table.CorrosiveDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "CorrosiveDamage",
-      "",
-      ["CorrosiveDamage"]
-    )
-    list += table.AcidDamage ? createHTML.basicsRow("AcidDamage","Acid",table.AcidDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AcidDamage",
-      "",
-      ["AcidDamage"]
-    )
-    list += table.BurningDamage ? createHTML.basicsRow("BurningDamage","Burning",table.BurningDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "BurningDamage",
-      "",
-      ["BurningDamage"]
-    )
-    list += table.FireDamage ? createHTML.basicsRow("FireDamage","Fire",table.FireDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "FireDamage",
-      "",
-      ["FireDamage"]
-    )
-    list += table.ElementalDamage ? createHTML.basicsRow("ElementalDamage","Elemental",table.ElementalDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ElementalDamage",
-      "",
-      ["ElementalDamage"]
-    )
-    list += table.PrimaryElementalDamage ? createHTML.basicsRow("PrimaryElementalDamage","Primary Elemental",table.PrimaryElementalDamage,true,"%") : "";
-    list += table.SecondaryElementalDamage ? createHTML.basicsRow("","Secondary Elemental",table.SecondaryElementalDamage,true,"%") : "";
-    list += table.ShockDamage ? createHTML.basicsRow("ShockDamage","Shock",table.ShockDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ShockDamage",
-      "",
-      ["ShockDamage"]
-    )
-    list += table.OverloadedDamage ? createHTML.basicsRow("OverloadedDamage","Overloaded",table.OverloadedDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "OverloadedDamage",
-      "",
-      ["OverloadedDamage"]
-    )
-    list += table.ExplosiveDamage ? createHTML.basicsRow("ExplosiveDamage","Explosive",table.ExplosiveDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ExplosiveDamage",
-      "",
-      ["ExplosiveDamage"]
-    )
-    list += table.StatusDamage ? createHTML.basicsRow("StatusDamage","Status",table.StatusDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "StatusDamage",
-      "",
-      ["StatusDamage"]
-    )
-    list += table.MeleeStatusDamage ? createHTML.basicsRow("MeleeStatusDamage","Melee Status",table.MeleeStatusDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeStatusDamage",
-      "",
-      ["MeleeStatusDamage"]
-    )
-    list += table.ModDamage ? createHTML.basicsRow("ModDamage","Mod",table.ModDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ModDamage",
-      "",
-      ["ModDamage"]
-    )
-    list += table.PrimaryModDamage ? createHTML.basicsRow("","Primary Mod",table.PrimaryModDamage,true,"%") : "";
-    list += table.SecondaryModDamage ? createHTML.basicsRow("","Secondary Mod",table.SecondaryModDamage,true,"%") : "";
-    list += table.StaggerDamage ? createHTML.basicsRow("StaggerDamage","Stagger",table.StaggerDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "StaggerDamage",
-      "",
-      ["StaggerDamage"]
-    )
-    list += table.SummonDamage ? createHTML.basicsRow("SummonDamage","Summon",table.StaggerDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SummonDamage",
-      "",
-      ["SummonDamage"]
-    )
-    // let uniqueMulti = 0;
-    // for (let i=0;i<table.UniqueMulti.length;i++) {
-    //   let currentMulti = table.UniqueMulti[i];
-    //   if (i===0) {uniqueMulti = currentMulti}
-    //   else {
-    //     uniqueMulti *= currentMulti;
-    //   }
-    // }
-    list += table.UniqueMulti != 1 ? createHTML.basicsRow("UniqueMulti","Multiplier",table.UniqueMulti,true,"%") : "";//This one needs work later, it's an array
-    tooltipMath.updateTooltipDisplay(
-      "UniqueMulti",
-      "",
-      ["UniqueMulti"]
-    )
+    let rowsListings = [
+      {"statName": "AllDamage","statCoverName": "","tooltip":"","relevantTags": ["AllDamage","outCORRODED","outEXPOSED"]},
+      {"statName": "RangedDamage","statCoverName": "","tooltip":"","relevantTags": ["RangedDamage"]},
+      {"statName": "SkillDamage","statCoverName": "","tooltip":"","relevantTags": ["SkillDamage"]},
+      {"statName": "MeleeDamage","statCoverName": "","tooltip":"","relevantTags": ["MeleeDamage"]},
+      {"statName": "ChargeDamage","statCoverName": "","tooltip":"","relevantTags": ["ChargeDamage"]},
+      {"statName": "BackstepDamage","statCoverName": "","tooltip":"","relevantTags": ["BackstepDamage"]},
+      {"statName": "FistDamage","statCoverName": "","tooltip":"","relevantTags": ["FistDamage"]},
+      {"statName": "MeleeSpecialAbilityDamage","statCoverName": "Special Melee","tooltip":"This is the damage bonus applicable to special melee weapon abilities that require damage threshold build-ups, in particular this applies to Red Doe Staff's special charged effect. This does NOT apply to generalized melee projectiles or effects","relevantTags": ["MeleeSpecialAbilityDamage"]},
+      {"statName": "CorrosiveDamage","statCoverName": "","tooltip":"","relevantTags": ["CorrosiveDamage"]},
+      {"statName": "AcidDamage","statCoverName": "","tooltip":"","relevantTags": ["AcidDamage"]},
+      {"statName": "BurningDamage","statCoverName": "","tooltip":"","relevantTags": ["BurningDamage"]},
+      {"statName": "FireDamage","statCoverName": "","tooltip":"","relevantTags": ["FireDamage"]},
+      {"statName": "ElementalDamage","statCoverName": "","tooltip":"","relevantTags": ["ElementalDamage"]},
+      {"statName": "ShockDamage","statCoverName": "","tooltip":"","relevantTags": ["ShockDamage"]},
+      {"statName": "OverloadedDamage","statCoverName": "","tooltip":"","relevantTags": ["OverloadedDamage"]},
+      {"statName": "ExplosiveDamage","statCoverName": "","tooltip":"","relevantTags": ["ExplosiveDamage"]},
+      {"statName": "StatusDamage","statCoverName": "","tooltip":"","relevantTags": ["StatusDamage"]},
+      {"statName": "MeleeStatusDamage","statCoverName": "","tooltip":"","relevantTags": ["MeleeStatusDamage"]},
+      {"statName": "ModDamage","statCoverName": "","tooltip":"","relevantTags": ["ModDamage"]},
+      {"statName": "StaggerDamage","statCoverName": "","tooltip":"","relevantTags": ["StaggerDamage"]},
+      {"statName": "SummonDamage","statCoverName": "","tooltip":"","relevantTags": ["SummonDamage"]},
+      {"statName": "UniqueMulti","statCoverName": "Unique Multi","tooltip":"This is the composite, multiplicative sum of any generalized unique multipliers that would factor into any given damage equation. Right now this particular stat is only going to show if Brightstone is equipped or not.","relevantTags": ["UniqueMulti"],"isNotAPercent": true,"roundAnyways": true},
+    ]
+
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -4387,79 +4203,22 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">CRIT CHANCE</div>`;
     let list = ``;
 
-    list += table.AllCritChance ? createHTML.basicsRow("AllCritChance","All",table.AllCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AllCritChance",
-      "",
-      ["AllCritChance"]
-    )
-    list += table.RangedCritChance ? createHTML.basicsRow("RangedCritChance","Ranged",table.RangedCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "RangedCritChance",
-      "",
-      ["RangedCritChance"]
-    )
-    list += table.MeleeCritChance ? createHTML.basicsRow("MeleeCritChance","Melee",table.MeleeCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeCritChance",
-      "",
-      ["MeleeCritChance"]
-    )
-    list += table.ChargeCritChance ? createHTML.basicsRow("ChargeCritChance","Charged",table.ChargeCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ChargeCritChance",
-      "",
-      ["ChargeCritChance"]
-    )
-    list += table.SkillCritChance ? createHTML.basicsRow("SkillCritChance","Skill",table.SkillCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SkillCritChance",
-      "",
-      ["SkillCritChance"]
-    )
-    list += table.ElementalCritChance ? createHTML.basicsRow("ElementalCritChance","Elemental",table.SkillCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ElementalCritChance",
-      "",
-      ["ElementalCritChance"]
-    )
-    list += table.ModCritChance ? createHTML.basicsRow("ModCritChance","Mod",table.ModCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ModCritChance",
-      "",
-      ["ModCritChance"]
-    )
-    list += table.ExplosiveCritChance ? createHTML.basicsRow("ExplosiveCritChance","Explosive",table.ExplosiveCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ExplosiveCritChance",
-      "",
-      ["ExplosiveCritChance"]
-    )
-    list += table.FirearmCritChance ? createHTML.basicsRow("FirearmCritChance","Firearm",table.FirearmCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "FirearmCritChance",
-      "",
-      ["FirearmCritChance"]
-    )
-    list += table.BowCritChance ? createHTML.basicsRow("BowCritChance","Bow",table.BowCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "BowCritChance",
-      "",
-      ["BowCritChance"]
-    )
-    list += table.PrimaryCritChance ? createHTML.basicsRow("PrimaryCritChance","Primary",table.PrimaryCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "PrimaryCritChance",
-      "",
-      ["PrimaryCritChance"]
-    )
-    list += table.SecondaryCritChance ? createHTML.basicsRow("SecondaryCritChance","Secondary",table.SecondaryCritChance,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SecondaryCritChance",
-      "",
-      ["SecondaryCritChance"]
-    )
-    // list += table.UniqueMulti ? createHTML.basicsRow("Multiplier",table.AllDUniqueMultiamage,false) : "";//This one needs work later, it's an array
+    let rowsListings = [
+      {"statName": "AllCritChance","statCoverName": "","tooltip":"","relevantTags": ["AllCritChance"]},
+      {"statName": "RangedCritChance","statCoverName": "","tooltip":"","relevantTags": ["RangedCritChance"]},
+      {"statName": "MeleeCritChance","statCoverName": "","tooltip":"","relevantTags": ["MeleeCritChance"]},
+      {"statName": "ChargeCritChance","statCoverName": "","tooltip":"","relevantTags": ["ChargeCritChance"]},
+      {"statName": "SkillCritChance","statCoverName": "","tooltip":"","relevantTags": ["SkillCritChance"]},
+      {"statName": "ElementalCritChance","statCoverName": "","tooltip":"","relevantTags": ["ElementalCritChance"]},
+      {"statName": "ModCritChance","statCoverName": "","tooltip":"","relevantTags": ["ModCritChance"]},
+      {"statName": "ExplosiveCritChance","statCoverName": "","tooltip":"","relevantTags": ["ExplosiveCritChance"]},
+      {"statName": "FirearmCritChance","statCoverName": "","tooltip":"","relevantTags": ["FirearmCritChance"]},
+      {"statName": "BowCritChance","statCoverName": "","tooltip":"","relevantTags": ["BowCritChance"]},
+      {"statName": "PrimaryCritChance","statCoverName": "","tooltip":"","relevantTags": ["PrimaryCritChance"]},
+      {"statName": "SecondaryCritChance","statCoverName": "","tooltip":"","relevantTags": ["SecondaryCritChance"]},
+    ]
+
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -4471,36 +4230,21 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">CRIT DAMAGE</div>`;
     let list = ``;
 
-    damageHeader += createHTML.basicsRow("baseCritDamageRow","Base Bonus",0.50,true,"%")
+    damageHeader += createHTML.basicsRow("baseCritDamageRow","Base Bonus",0.50,true,"%");
     tooltipMath.updateTooltipDisplay(
       "baseCritDamageRow",
       "Players have a base crit damage of 50%, or, 1.5x.",
       []
-    )
-    list += table.AllCritDamage ? createHTML.basicsRow("AllCritDamage","All",table.AllCritDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AllCritDamage",
-      "",
-      ["AllCritDamage"]
-    )
-    list += table.RangedCritDamage ? createHTML.basicsRow("RangedCritDamage","Ranged",table.RangedCritDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "RangedCritDamage",
-      "",
-      ["RangedCritDamage"]
-    )
-    list += table.MeleeCritDamage ? createHTML.basicsRow("MeleeCritDamage","Melee",table.MeleeCritDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeCritDamage",
-      "",
-      ["MeleeCritDamage"]
-    )
-    list += table.ChargeCritDamage ? createHTML.basicsRow("ChargeCritDamage","Charged",table.ChargeCritDamage,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ChargeCritDamage",
-      "",
-      ["ChargeCritDamage"]
-    )
+    );
+
+    let rowsListings = [
+      {"statName": "AllCritDamage","statCoverName": "","tooltip":"","relevantTags": ["AllCritDamage"]},
+      {"statName": "RangedCritDamage","statCoverName": "","tooltip":"","relevantTags": ["RangedCritDamage"]},
+      {"statName": "MeleeCritDamage","statCoverName": "","tooltip":"","relevantTags": ["MeleeCritDamage"]},
+      {"statName": "ChargeCritDamage","statCoverName": "","tooltip":"","relevantTags": ["ChargeCritDamage"]},
+    ]
+
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -4518,36 +4262,16 @@ let basicsUpdates = {
       "Players have a base weakspot damage bonus of 100%, or, 2x.",
       []
     )
-    list += table.AllWeakspot ? createHTML.basicsRow("AllWeakspot","All",table.AllWeakspot,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AllWeakspot",
-      "",
-      ["AllWeakspot"]
-    )
-    list += table.SkillWeakspot ? createHTML.basicsRow("SkillWeakspot","Skill",table.SkillWeakspot,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SkillWeakspot",
-      "",
-      ["SkillWeakspot"]
-    )
-    list += table.RangedWeakspot ? createHTML.basicsRow("","Ranged",table.RangedWeakspot,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "RangedWeakspot",
-      "",
-      ["RangedWeakspot"]
-    )
-    list += table.MeleeWeakspot ? createHTML.basicsRow("MeleeWeakspot","Melee",table.MeleeWeakspot,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeWeakspot",
-      "",
-      ["MeleeWeakspot"]
-    )
-    list += table.ChargeWeakspot ? createHTML.basicsRow("ChargeWeakspot","Charged",table.ChargeWeakspot,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ChargeWeakspot",
-      "",
-      ["ChargeWeakspot"]
-    )
+
+    let rowsListings = [
+      {"statName": "AllWeakspot","statCoverName": "","tooltip":"","relevantTags": ["AllWeakspot"]},
+      {"statName": "SkillWeakspot","statCoverName": "","tooltip":"","relevantTags": ["SkillWeakspot"]},
+      {"statName": "RangedWeakspot","statCoverName": "","tooltip":"","relevantTags": ["RangedWeakspot"]},
+      {"statName": "MeleeWeakspot","statCoverName": "","tooltip":"","relevantTags": ["MeleeWeakspot"]},
+      {"statName": "ChargeWeakspot","statCoverName": "","tooltip":"","relevantTags": ["ChargeWeakspot"]},
+    ]
+
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -4559,68 +4283,24 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">ACTION SPEED</div>`;
     let list = ``;
 
-    list += table.MovementSpeed ? createHTML.basicsRow("MovementSpeed","Movement",table.MovementSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MovementSpeed",
-      "",
-      ["MovementSpeed","HASTE"]
-    )
-    list += table.SprintSpeed ? createHTML.basicsRow("SprintSpeed","Sprint",table.SprintSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SprintSpeed",
-      "",
-      ["SprintSpeed","HASTE"]
-    )
-    list += table.EnvMovementSpeed ? createHTML.basicsRow("EnvMovementSpeed","Vaulting",table.EnvMovementSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "EnvMovementSpeed",
-      "",
-      ["EnvMovementSpeed","HASTE"]
-    )
-    list += table.AimMovementSpeed ? createHTML.basicsRow("AimMovementSpeed","Aiming",table.AimMovementSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AimMovementSpeed",
-      "",
-      ["AimMovementSpeed","HASTE"]
-    )
-    list += table.FireRate ? createHTML.basicsRow("FireRate","Fire Rate",table.FireRate,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "FireRate",
-      "",
-      ["FireRate","HASTE"]
-    )
-    list += table.ReloadSpeed ? createHTML.basicsRow("ReloadSpeed","Reload",table.ReloadSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ReloadSpeed",
-      "",
-      ["ReloadSpeed","HASTE"]
-    )
-    list += table.WeaponSwapSpeed ? createHTML.basicsRow("WeaponSwapSpeed","Swap",table.WeaponSwapSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "WeaponSwapSpeed",
-      "",
-      ["WeaponSwapSpeed","HASTE"]
-    )
+    // {"statName": "relicUseTime","statCoverName": "Relic Use Speed","tooltip":"","relevantTags": ["RelicSpeed","HASTE"]},
 
-    list += table.AttackSpeed ? createHTML.basicsRow("AttackSpeed","Melee",table.AttackSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "AttackSpeed",
-      "",
-      ["AttackSpeed","HASTE"]
-    )
-    list += table.ChargeSpeed ? createHTML.basicsRow("ChargeSpeed","Charged Attack",table.ChargeSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "ChargeSpeed",
-      "",
-      ["ChargeSpeed","HASTE"]
-    )
+    let rowsListings = [
+      {"statName": "MovementSpeed","statCoverName": "","tooltip":"","relevantTags": ["MovementSpeed","HASTE"]},
+      {"statName": "SprintSpeed","statCoverName": "","tooltip":"","relevantTags": ["SprintSpeed","HASTE"]},
+      {"statName": "EnvMovementSpeed","statCoverName": "Vaulting","tooltip":"This is how fast your character moves when wading through water, vaulting over objects, or climbing ladders.","relevantTags": ["EnvMovementSpeed","HASTE"]},
+      {"statName": "AimMovementSpeed","statCoverName": "","tooltip":"This is how fast your character walks while aiming down weapon sights.","relevantTags": ["AimMovementSpeed","HASTE"]},
+      {"statName": "FireRate","statCoverName": "","tooltip":"","relevantTags": ["FireRate","HASTE"]},
+      {"statName": "ReloadSpeed","statCoverName": "","tooltip":"","relevantTags": ["ReloadSpeed","HASTE"]},
+      {"statName": "WeaponSwapSpeed","statCoverName": "Swap Speed","tooltip":"","relevantTags": ["WeaponSwapSpeed","HASTE"]},
+      {"statName": "AttackSpeed","statCoverName": "","tooltip":"","relevantTags": ["AttackSpeed","HASTE"]},
+      {"statName": "ChargeSpeed","statCoverName": "","tooltip":"","relevantTags": ["ChargeSpeed","HASTE"]},
+      {"statName": "CastSpeed","statCoverName": "","tooltip":"","relevantTags": ["CastSpeed","HASTE"]},
+      {"statName": "RelicSpeed","statCoverName": "Relic Speed","tooltip":"Remember that Relic Speed is not Consumable Speed. All Consumable Speed will add into Relic Speed, but Relic Speed does not add into Consumable Speed.","relevantTags": ["RelicSpeed","HASTE"]},
+      {"statName": "ConsumableSpeed","statCoverName": "Consumable Speed","tooltip":"Remember that all Consumable Speed will add into Relic Speed, but Relic Speed does not add into Consumable Speed.","relevantTags": ["ConsumableSpeed","HASTE"]},
+    ]
 
-    list += table.CastSpeed ? createHTML.basicsRow("CastSpeed","Cast",table.CastSpeed,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "CastSpeed",
-      "",
-      ["CastSpeed","HASTE"]
-    )
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
@@ -4632,57 +4312,36 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">STATUS: OUTBOUND</div>`;
     let list = ``;
 
-    list += table.StatusDuration ? createHTML.basicsRow("StatusDuration","Duration",table.StatusDuration,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "StatusDuration",
-      "",
-      ["StatusDuration"]
-    )
-    list += table.outSLOW ? createHTML.basicsRow("outSLOW","","SLOW",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outSLOW",
-      "",
-      ["outSLOW"]
-    )
-    list += table.outBLEED ? createHTML.basicsRow("outBLEED","","BLEED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outBLEED",
-      "",
-      ["outBLEED"]
-    )
-    list += table.outBURN ? createHTML.basicsRow("outBURN","","BURN",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outBURN",
-      "",
-      ["outBURN"]
-    )
-    list += table.outCORRODED ? createHTML.basicsRow("outCORRODED","","CORRODED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outCORRODED",
-      "",
-      ["outCORRODED"]
-    )
-    list += table.outOVERLOADED ? createHTML.basicsRow("outOVERLOADED","","OVERLOADED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outOVERLOADED",
-      "",
-      ["outOVERLOADED"]
-    )
-    list += table.outEXPOSED ? createHTML.basicsRow("outEXPOSED","","EXPOSED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "outEXPOSED",
-      "",
-      ["outEXPOSED"]
-    )
-    // list += table.outMADNESS ? createHTML.basicsRow("","MADNESS",false) : "";
+    let rowsListings = [{"statName": "StatusDuration","statCoverName": "","tooltip":"","relevantTags": ["StatusDuration"]},]
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
+    rowsListings = [
+      {"statName": "outBLEED","statCoverName": "BLEED","tooltip":"","relevantTags": ["outBLEED"],"isNotAPercent": true},
+      {"statName": "outSLOW","statCoverName": "SLOW","tooltip":"","relevantTags": ["outSLOW"],"isNotAPercent": true},
+      {"statName": "outBURN","statCoverName": "BURN","tooltip":"","relevantTags": ["outBURN"],"isNotAPercent": true},
+      {"statName": "outCORRODED","statCoverName": "CORRODED","tooltip":"Targets suffering from CORROSIVE status effects boost incoming player All Damage by 10% This is additive.","relevantTags": ["outCORRODED"],"isNotAPercent": true},
+      {"statName": "outOVERLOADED","statCoverName": "OVERLOADED","tooltip":"","relevantTags": ["outOVERLOADED"],"isNotAPercent": true},
+      {"statName": "outEXPOSED","statCoverName": "EXPOSED","tooltip":"Targets suffering from EXPOSED status effects boost incoming player All Damage by 15%. This is additive.","relevantTags": ["outEXPOSED"],"isNotAPercent": true},
+    ];
+    for (let entry of rowsListings) {
+      let percent = entry.isNotAPercent;
+      let round = entry.roundAnyways;
+      let condition = entry.condition;
+      list += (condition || (condition === undefined && table[entry.statName]))
+      ? createHTML.basicsRow(entry.statName,"",entry.statCoverName,!percent || round,(!percent ? "%" : "")) 
+      : "";
+      tooltipMath.updateTooltipDisplay(
+        entry.statName,
+        entry.tooltip,
+        entry.relevantTags
+      )
+    }
 
     if (list != "") {
       list = userTrigger.updateSubstatColor(list);
       damageHeader+=list;
     }
     else {damageHeader = ""}
-    // readSelection("basicsInnerBox").innerHTML = userTrigger.updateSubstatColor(damageHeader);
     damageRows.innerHTML = damageHeader;
   },
   statusIn() {
@@ -4691,71 +4350,36 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">STATUS: INBOUND</div>`;
     let list = ``;
 
-    list += table.HASTE ? createHTML.basicsRow("HASTERow","","HASTE",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "HASTERow",
-      "",
-      ["HASTE"]
-    )
-    list += table.inBLEED ? createHTML.basicsRow("inBLEED","","BLEED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inBLEED",
-      "",
-      ["inBLEED"]
-    )
-    list += table.inSLOW ? createHTML.basicsRow("inSLOW","","SLOW",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inSLOW",
-      "",
-      ["inSLOW"]
-    )
-    list += table.inBURN ? createHTML.basicsRow("inBURN","","BURN",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inBURN",
-      "",
-      ["inBURN"]
-    )
-    list += table.inCORRODED ? createHTML.basicsRow("inCORRODED","","CORRODED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inCORRODED",
-      "",
-      ["inCORRODED"]
-    )
-    list += table.inOVERLOADED ? createHTML.basicsRow("inOVERLOADED","","OVERLOADED",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inOVERLOADED",
-      "",
-      ["inOVERLOADED"]
-    )
-    list += table.inCURSE ? createHTML.basicsRow("inCURSE","","CURSE",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inCURSE",
-      "",
-      ["inCURSE"]
-    )
-    list += table.inMADNESS ? createHTML.basicsRow("inMADNESS","","MADNESS",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inMADNESS",
-      "",
-      ["inMADNESS"]
-    )
-    list += table.inROOTROT ? createHTML.basicsRow("inROOTROT","","ROOT ROT",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inROOTROT",
-      "",
-      ["inROOTROT"]
-    )
-    list += table.inDATACORRUPTION ? createHTML.basicsRow("","","DATA CORRUPTION",false) : "";
-    tooltipMath.updateTooltipDisplay(
-      "inDATACORRUPTION",
-      "",
-      ["inDATACORRUPTION"]
-    )
+    let rowsListings = [
+      {"statName": "HASTE","statCoverName": "HASTE","tooltip":"","relevantTags": ["HASTE"],"isNotAPercent": true},
+      {"statName": "inBLEED","statCoverName": "BLEED","tooltip":"Players suffering from BLEED effects will have their sum total Healing Effectiveness cut in half multiplicatively.","relevantTags": ["inBLEED"],"isNotAPercent": true},
+      {"statName": "inSLOW","statCoverName": "SLOW","tooltip":"","relevantTags": ["inSLOW"],"isNotAPercent": true},
+      {"statName": "inBURN","statCoverName": "BURN","tooltip":"","relevantTags": ["inBURN"],"isNotAPercent": true},
+      {"statName": "inCORRODED","statCoverName": "CORRODED","tooltip":"","relevantTags": ["inCORRODED"],"isNotAPercent": true},
+      {"statName": "inOVERLOADED","statCoverName": "OVERLOADED","tooltip":"","relevantTags": ["inOVERLOADED"],"isNotAPercent": true},
+      {"statName": "inCURSE","statCoverName": "CURSE","tooltip":"","relevantTags": ["inCURSE"],"isNotAPercent": true},
+      {"statName": "inMADNESS","statCoverName": "MADNESS","tooltip":"","relevantTags": ["inMADNESS"],"isNotAPercent": true},
+      {"statName": "inROOTROT","statCoverName": "ROOT ROT","tooltip":"","relevantTags": ["inROOTROT"],"isNotAPercent": true},
+      {"statName": "inDATACORRUPTION","statCoverName": "DATA CORRUPTION","tooltip":"","relevantTags": ["inDATACORRUPTION"],"isNotAPercent": true},
+    ];
+    for (let entry of rowsListings) {
+      let percent = entry.isNotAPercent;
+      let round = entry.roundAnyways;
+      let condition = entry.condition;
+      list += (condition || (condition === undefined && table[entry.statName]))
+      ? createHTML.basicsRow(entry.statName,"",entry.statCoverName,!percent || round,(!percent ? "%" : "")) 
+      : "";
+      tooltipMath.updateTooltipDisplay(
+        entry.statName,
+        entry.tooltip,
+        entry.relevantTags
+      )
+    }
 
+    // list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list;}
     else {damageHeader = ""}
-    // readSelection("basicsInnerBox").innerHTML = userTrigger.updateSubstatColor(damageHeader);
     damageRows.innerHTML = damageHeader;
   },
   misc() {
@@ -4764,23 +4388,37 @@ let basicsUpdates = {
     let damageHeader = `<div class="basicsDRheaderTitle">MISC</div>`;
     let list = ``;
 
+    let rowsListings = [//"ConsumableDuration"
+      {"statName": "MeleeSpecialAbilityCharge","statCoverName": "Melee Threshold","tooltip":"This is the %threshold modification for special melee ability effects that require a given damage threshold in order to take effect. An example would be Red Doe Staff.","relevantTags": ["MeleeSpecialAbilityCharge"]},
+      {"statName": "SummonHealth","statCoverName": "","tooltip":"","relevantTags": ["SummonHealth"]},
+      {"statName": "Experience","statCoverName": "%XP Boost","tooltip":"This the %XP boost you gain from your items. This is separate from the %XP gained from being in higher difficulties.","relevantTags": ["Experience"]},
+      {"statName": "auraAOE","statCoverName": "AOE Range%","tooltip":"This is a bonus to the range of AOE specific effects. Note that this does not apply to ALL AOE effects.","relevantTags": ["auraAOE"]},
+      {"statName": "ConsumableDuration","statCoverName": "","tooltip":"This is a % bonus to quick-use consumable durations. This does not apply to any relic-based effects.","relevantTags": ["ConsumableDuration"]},
+      // {"statName": "SummonHealth","statCoverName": "","tooltip":"","relevantTags": ["SummonHealth"]},
+    ]
 
-    list += table.MeleeSpecialAbilityCharge ? createHTML.basicsRow("MeleeSpecialAbilityCharge","Melee Threshold",table.MeleeSpecialAbilityCharge,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "MeleeSpecialAbilityCharge",
-      "",
-      ["MeleeSpecialAbilityCharge"]
-    )
-    list += table.SummonHealth ? createHTML.basicsRow("SummonHealth","Summon Health",table.SummonHealth,true,"%") : "";
-    tooltipMath.updateTooltipDisplay(
-      "SummonHealth",
-      "",
-      ["SummonHealth"]
-    )
+    list += basicsUpdates.expandRowListingInfo(rowsListings,table);
 
     if (list != "") {list = userTrigger.updateSubstatColor(list);damageHeader+=list}
     else {damageHeader = ""}
     damageRows.innerHTML = damageHeader;
+  },
+  expandRowListingInfo(rowsListings,table) {
+    let returnString = "";
+    for (let entry of rowsListings) {
+      let percent = entry.isNotAPercent;
+      let round = entry.roundAnyways;
+      let condition = entry.condition;
+      returnString += (condition || (condition === undefined && table[entry.statName]))
+      ? createHTML.basicsRow(entry.statName,(entry.statCoverName || conditionalHelpers.addSpacesToTagNames(entry.statName)),table[entry.statName],!percent || round,(!percent ? "%" : "")) 
+      : "";
+      tooltipMath.updateTooltipDisplay(
+        entry.statName,
+        entry.tooltip,
+        entry.relevantTags
+      )
+    }
+    return returnString;
   },
   "targetTab": "amuletTab",
   "targetFocus": "amulet",

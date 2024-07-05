@@ -3,10 +3,11 @@ let calcs = {
         let baseHealth = 100 + index.Health;
         let healthBoost = 1 + index["Health%"];
         let globalHealth = index.GlobalHealthModifier;
-        let totalHealth = baseHealth * healthBoost * globalHealth; 
-        let totalHealthNoGlobal = baseHealth * healthBoost;
+        let healthCap = index.HealthCap;
+        let totalHealth = baseHealth * healthBoost * globalHealth * healthCap; 
+        let totalHealthNoGlobal = baseHealth * healthBoost * globalHealth;
 
-        return [totalHealth,totalHealthNoGlobal]
+        return [totalHealth,totalHealthNoGlobal,baseHealth,healthBoost,healthCap,globalHealth]
     },
     getStamina(index) {
         let baseStamina = 100 + index.Stamina;
@@ -72,8 +73,10 @@ let calcs = {
         let greyHPperSec = 0.2 + index["GreyHP/S+"];
         let greyPercHPperSec = index["GreyHP/S%"];
         let totalGreyHPperSec = greyHPperSec * (1+greyPercHPperSec);
+        let conversionRate = 0.5 * (1 + index.GreyHealthConversion);
+        let hitThreshold = index.GreyHPHitThreshold;
 
-        return [globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec]
+        return [globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec,conversionRate,hitThreshold]
     },
     getLifesteal(index,relicEffectiveness) {
         let lifestealEFF = index.LifestealEFF;
@@ -104,12 +107,19 @@ let calcs = {
         let staminaPerSec = (33 + index["Stamina/S+"]) * regenMulti;
 
         let staminaPenaltyAdjustment = Math.max(0,index.StaminaPenaltyAdjustment);
+        let adjustedPenalty = (staminaPenalty * (1-staminaPenaltyAdjustment));
 
-        let staminaCost = index.StaminaCost + (staminaPenalty * (1-staminaPenaltyAdjustment));
+        let staminaCost = index.StaminaCost + adjustedPenalty;
         //If something like bisected it on, or if we go under 0% costs, turn off stamina costs.
         if (index.StaminaNegation > 0 || staminaCost < 0) {staminaCost = 0}
 
-        return [staminaPerSec,staminaCost]
+        let evadeCost = Math.max(0,1-index.EvadeCost);
+        let meleeCost = Math.max(0,1-index.ChargeCost);
+
+        let baseEvadeCost = index.EvadeBaseCost;
+        let evadePrice = baseEvadeCost * evadeCost * staminaCost;
+
+        return [staminaPerSec,staminaCost,adjustedPenalty,evadeCost,meleeCost,evadePrice]
     },
     getRelicHealing(tieredFunctionStorage,index,totalHealth,globalHealingMod,healingEffectiveness) {
         //RELIC HEALING
@@ -248,6 +258,7 @@ let calcs = {
 let customDamage = {
     HavocForm(abilityPlacement,index) {
         let reference = index;
+        let isCrit = globalRecords.enableCrits;
 
         let abilityPath = classInfo.Archon.abilities["Havoc Form"];
         let customStats = abilityPath.customStats//path to havoc relevant stats
@@ -258,6 +269,16 @@ let customDamage = {
         let frequency = customStats.frequency;//the rate at which we hit enemies without cast speed
         let drain = customStats.drain;//How much duration we lost per instance of outgoing dmg.
 
+        let tagReference = customStats.statTags;
+        let allDamageTags = tagReference.Damage;
+        let sumDamageBonuses = conditionalHelpers.returnIndexTagSums(index,allDamageTags);
+        let allCritTags = tagReference.CritChance;
+        let sumCritChance = conditionalHelpers.returnIndexTagSums(index,allCritTags);
+        let allCritDamageTags = tagReference.CritDamage;
+        let sumCritDamage = conditionalHelpers.returnIndexTagSums(index,allCritDamageTags);
+        let allSpeedTags = tagReference.Speed;
+        let sumSpeedBonuses = conditionalHelpers.returnIndexTagSums(index,allSpeedTags);
+
         let modifiedDuration = (duration * (1 + reference.SkillDuration)) - entryDuration;//The duration left after entry animation, before the drain starts
         let effectiveDrainRate = (frequency/(1 + reference.CastSpeed)) + drain;//The total drain per instance of damage, including time passed between instances
         let totalHits = Math.floor(modifiedDuration/effectiveDrainRate);//total hits possible when firing constantly.
@@ -266,18 +287,17 @@ let customDamage = {
 
 
         let baseCritDamage = 0.5;
-        let totalDamageBonus = reference.AllDamage + reference.SkillDamage + reference.ElementalDamage + reference.ShockDamage;
-        let totalCritDamageBonus = reference.AllCritDamage;
+        let totalDamageBonus = sumDamageBonuses;
+        let totalCritDamageBonus = sumCritDamage;
         let finalCritDamage = baseCritDamage + totalCritDamageBonus;
-        let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.SkillCritChance;
-        totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
-        let avgCritDamage = finalCritDamage * totalCritChance;
+        let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
+        let avgCritDamage = isCrit ? finalCritDamage * totalCritChance : 0;
 
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
         let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
 
 
-        let trueDPS = trueBaseDPS * (1 + reference.CastSpeed) * (1 + totalDamageBonus) * (1 + avgCritDamage);
+        let trueDPS = trueBaseDPS * (1 + sumSpeedBonuses) * (1 + totalDamageBonus) * (1 + avgCritDamage);
         let trueTotalDamage = baseDamage * totalHits * (1 + totalDamageBonus) * (1 + avgCritDamage);
 
         if (index.thisIsAQuery != 1) {
@@ -323,33 +343,14 @@ let customDamage = {
             drRowsHTML += entryDuration ? createHTML.basicsRow("","Entry Duration",entryDuration.toFixed(2),false) : "";
             drRowsHTML += modifiedDuration ? createHTML.basicsRow("","Usable Duration",modifiedDuration.toFixed(2),false) : "";
             drRowsHTML += trueDuration ? createHTML.basicsRow("","True Duration",trueDuration.toFixed(2),false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
-            drRowsHTML += reference.CastSpeed ? createHTML.basicsRow("","Cast Speed",reference.CastSpeed,true,"%") : "";
-            drRowsHTML += totalHits ? createHTML.basicsRow("","Total Hits",totalHits,false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
-            drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
-            drRowsHTML += reference.AllDamage ? createHTML.basicsRow("","All Damage",reference.AllDamage,true,"%") : "";
-            drRowsHTML += reference.SkillDamage ? createHTML.basicsRow("","Skill Damage",reference.SkillDamage,true,"%") : "";
-            drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("","Elemental Damage",reference.ElementalDamage,true,"%") : "";
-            drRowsHTML += reference.ShockDamage ? createHTML.basicsRow("","Shock Damage",reference.ShockDamage,true,"%") : "";
-            drRowsHTML += totalDamageBonus ? createHTML.basicsRow("","Total Damage Bonus",totalDamageBonus,true,"%") : "";
-            drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
-            drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
-            drRowsHTML += reference.outBURN ? createHTML.basicsRow("","","BURN",false) : "";
-            drRowsHTML += reference.outCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
-            drRowsHTML += reference.outOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
-            drRowsHTML += reference.outEXPOSED ? createHTML.basicsRow("","","EXPOSED",false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
-            drRowsHTML += reference.AllCritChance ? createHTML.basicsRow("","All Crit Chance",reference.AllCritChance,true,"%") : "";
-            drRowsHTML += reference.ElementalCritChance ? createHTML.basicsRow("","Elemental Crit Chance",reference.ElementalCritChance,true,"%") : "";
-            drRowsHTML += reference.SkillCritChance ? createHTML.basicsRow("","Skill Crit Chance",reference.SkillCritChance,true,"%") : "";
-            drRowsHTML += totalCritChance ? createHTML.basicsRow("","Total Crit Chance",totalCritChance,true,"%") : "";
-            drRowsHTML += baseCritDamage ? createHTML.basicsRow("","Base Crit Damage",baseCritDamage,true,"%") : "";
-            drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("","All Crit Damage",reference.AllCritDamage,true,"%") : "";
-            drRowsHTML += finalCritDamage ? createHTML.basicsRow("","Total Crit Damage",finalCritDamage,true,"%") : "";
-            drRowsHTML += avgCritDamage ? createHTML.basicsRow("","Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
-            // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
-            // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+
+            
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,allSpeedTags,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,allDamageTags);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,allCritTags,allCritDamageTags,true);
+
+            
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
             console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
@@ -358,15 +359,26 @@ let customDamage = {
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
     MonolithSandstorm(modPlacement,index) {//wip do not touch
-        let reference = valueTables[index];
-        let isUIcalcs = index != "greatTableKnowerOfAll";
+        let isUIcalcs = index.thisIsAQuery;
+        let isCrit = globalRecords.enableCrits;
 
         let modPath = builtInPrimary.Sandstorm;
         let customStats = modPath.customStats;
         let duration = customStats.duration;
-        let modDurationBonus = 1 + reference.ModDuration;
+        let modDurationBonus = 1 + index.ModDuration;
         let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
         let frequency = customStats.frequency;//the rate at which the mod hits enemies
+
+        let tagReference = customStats.statTags;
+        let allDamageTags = tagReference.Damage;
+        console.log(allDamageTags)
+        let sumDamageBonuses = conditionalHelpers.returnIndexTagSums(index,allDamageTags);
+        let allCritTags = tagReference.CritChance;
+        let sumCritChance = conditionalHelpers.returnIndexTagSums(index,allCritTags);
+        let allCritDamageTags = tagReference.CritDamage;
+        let sumCritDamage = conditionalHelpers.returnIndexTagSums(index,allCritDamageTags);
+        // let allSpeedTags = tagReference.Speed;
+        // let sumSpeedBonuses = conditionalHelpers.returnIndexTagSums(index,allSpeedTags);
 
         let modifiedDuration = duration * modDurationBonus;
         let totalHits = Math.floor(modifiedDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
@@ -374,19 +386,19 @@ let customDamage = {
 
         let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
 
-        let totalDamageBonus = reference.AllDamage + reference.ModDamage + reference.PrimaryModDamage + reference.ElementalDamage + reference.PrimaryElementalDamage;
+        let totalDamageBonus = sumDamageBonuses;
         let baseCritDamage = 0.5;
-        let totalCritDamageBonus = reference.AllCritDamage;
+        let totalCritDamageBonus = sumCritDamage;
         let finalCritDamage = baseCritDamage + totalCritDamageBonus
-        let totalCritChance = reference.AllCritChance + reference.ElementalCritChance + reference.ModCritChance;
+        let totalCritChance = sumCritChance;
         totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
-        let avgCritDamage = finalCritDamage * totalCritChance;
+        let avgCritDamage = isCrit ? finalCritDamage * totalCritChance : 0;
 
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
         let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
 
         // console.log("DMG%: " + totalDamageBonus)
-        let firstHitModifier = reference.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
+        let firstHitModifier = index.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
         let firstHitDamage = baseDamage * (1 + totalDamageBonus + firstHitModifier) * (1 + avgCritDamage);
         let trueTotalDamage = baseDamage * (totalHits-1) * (1 + totalDamageBonus) * (1 + avgCritDamage) + firstHitDamage;
         let trueDPS = trueTotalDamage/trueDuration;
@@ -430,35 +442,16 @@ let customDamage = {
             let drRowsHTML = "<div class='dpsFactorDisclaimer'>Sandstorm assumes the first hit is not EXPOSED, but every hit thereafter is.</div>"
             drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
             drRowsHTML += duration ? createHTML.basicsRow("","Base Duration",duration.toFixed(2),false) : "";
-            drRowsHTML += reference.ModDuration ? createHTML.basicsRow("","Duration Bonus",reference.ModDuration.toFixed(2),true,"%") : "";
+            drRowsHTML += index.ModDuration ? createHTML.basicsRow("","Duration Bonus",index.ModDuration.toFixed(2),true,"%") : "";
             drRowsHTML += modifiedDuration ? createHTML.basicsRow("","Actual Duration",modifiedDuration.toFixed(2),false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
             drRowsHTML += totalHits ? createHTML.basicsRow("","Total Hits",totalHits,false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
-            drRowsHTML += "<div class='dpsFactorDisclaimer'>Note that temporary bonuses, for now, are assumed to be active at all times when you have an item that provides it. Jester's bell, EXPOSED, corroded, etc.</div>";
-            drRowsHTML += reference.AllDamage ? createHTML.basicsRow("","All Damage",reference.AllDamage,true,"%") : "";
-            drRowsHTML += reference.ElementalDamage ? createHTML.basicsRow("","Elemental Damage",reference.ElementalDamage,true,"%") : "";
-            drRowsHTML += reference.PrimaryElementalDamage ? createHTML.basicsRow("","Primary Elemental Damage",reference.PrimaryElementalDamage,true,"%") : "";
-            drRowsHTML += reference.ModDamage ? createHTML.basicsRow("","Mod Damage",reference.ModDamage,true,"%") : "";
-            drRowsHTML += reference.PrimaryModDamage ? createHTML.basicsRow("","Primary Mod Damage",reference.PrimaryModDamage,true,"%") : "";
-            drRowsHTML += totalDamageBonus ? createHTML.basicsRow("","Total Damage Bonus",totalDamageBonus,true,"%") : "";
-            drRowsHTML += reference.outSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
-            drRowsHTML += reference.outBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
-            drRowsHTML += reference.outBURN ? createHTML.basicsRow("","","BURN",false) : "";
-            drRowsHTML += reference.outCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
-            drRowsHTML += reference.outOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
-            drRowsHTML += reference.outEXPOSED ? createHTML.basicsRow("","","EXPOSED",false) : "";
-            drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
-            drRowsHTML += reference.AllCritChance ? createHTML.basicsRow("","All Crit Chance",reference.AllCritChance,true,"%") : "";
-            drRowsHTML += reference.ElementalCritChance ? createHTML.basicsRow("","Elemental Crit Chance",reference.ElementalCritChance,true,"%") : "";
-            drRowsHTML += reference.ModCritChance ? createHTML.basicsRow("","Mod Crit Chance",reference.ModCritChance,true,"%") : "";
-            drRowsHTML += totalCritChance ? createHTML.basicsRow("","Total Crit Chance",totalCritChance,true,"%") : "";
-            drRowsHTML += baseCritDamage ? createHTML.basicsRow("","Base Crit Damage",baseCritDamage,true,"%") : "";
-            drRowsHTML += reference.AllCritDamage ? createHTML.basicsRow("","All Crit Damage",reference.AllCritDamage,true,"%") : "";
-            drRowsHTML += finalCritDamage ? createHTML.basicsRow("","Total Crit Damage",finalCritDamage,true,"%") : "";
-            drRowsHTML += avgCritDamage ? createHTML.basicsRow("","Avg. Bonus from Crit",avgCritDamage,true,"%") : "";
-            // drRowsHTML += returnObject.otherFlat ? createHTML.basicsRow("Other Flat",returnObject.otherFlat,true,"%") : "";
-            // drRowsHTML += returnObject.totalFlat ? createHTML.basicsRow("Total Flat DR%",returnObject.totalFlat,true,"%") : "";
+
+            // drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,allSpeedTags,false);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,allDamageTags);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,allCritTags,allCritDamageTags,true);
+
+
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
         }
@@ -1039,6 +1032,64 @@ let conditionalHelpers = {
         else {
             readSelection(elemID).style.display = "none"
         }
+    },
+    addBreakdownStatusRows(index) {
+        let returnString = "";
+        let returnHeader = "<div class='basicsDRheaderTitle'>ACTIVE STATUSES</div>";
+
+        returnString += index.outSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
+        returnString += index.outBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
+        returnString += index.outBURN ? createHTML.basicsRow("","","BURN",false) : "";
+        returnString += index.outCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
+        returnString += index.outOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
+        returnString += index.outEXPOSED ? createHTML.basicsRow("","","EXPOSED",false) : "";
+
+        if (returnString) {return returnHeader + returnString;}
+        else {return "";}
+    },
+    addBreakdownSpeedRows(index,allSpeedTags,totalHitsFactor) {
+        let returnString = "";
+        let returnHeader = "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
+        if (allSpeedTags.length) {
+            for (let tag of allSpeedTags) {
+                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+            }
+        }
+        if (totalHitsFactor) {returnString += createHTML.basicsRow("","Total Hits",totalHitsFactor,false);}
+
+        if (returnString) {return returnHeader + returnString;}
+        else {return "";}
+    },
+    addBreakdownDamageRows(index,allDamageTags) {
+        let returnString = "";
+        let returnHeader = "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
+        returnHeader += "<div class='dpsFactorDisclaimer'>Note that timed/limited bonuses are assumed to be active at all times when selected.</div>";
+        if (allDamageTags.length) {
+            for (let tag of allDamageTags) {
+                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+            }
+        }
+        
+        if (returnString) {return returnHeader + returnString;}
+        else {return "";}
+    },
+    addBreakdownCritRows(index,allCritTags,allCritDamageTags,showBaseCritDMG) {
+        let returnString = "";
+        let returnHeader = "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
+        if (allCritTags.length) {
+            for (let tag of allCritTags) {
+                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+            }
+        }
+        if (showBaseCritDMG) {returnString += createHTML.basicsRow("","Base Crit Damage",0.50,true,"%");}
+        if (allCritDamageTags.length) {
+            for (let tag of allCritDamageTags) {
+                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+            }
+        }
+
+        if (returnString) {return returnHeader + returnString;}
+        else {return "";}
     },
     updateGlobalToggle(elemID,comparableToggleID) {
         globalRecords[elemID] = !globalRecords[elemID];

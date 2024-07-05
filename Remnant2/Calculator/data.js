@@ -1917,6 +1917,13 @@ classInfo = {
 		  },
 		  "customStats": {
 			"customDPS": "HavocForm",
+			"statTags": {
+				"Damage": ["AllDamage","SkillDamage","ElementalDamage","ShockDamage"],
+				"CritChance": ["AllCritChance","SkillCritChance","ElementalCritChance"],
+				"CritDamage": ["AllCritDamage"],
+				"WeakSpot": -1,
+				"Speed": ["CastSpeed"],
+			},
 			"duration": 30,
 			"entryDuration": 1.02,
 			"trueBaseDPS": 411.4,
@@ -2007,7 +2014,7 @@ classInfo = {
 			"Bulwark": 3,
 			"MovementSpeed": 0.15,
 			"AttackSpeed": 0.15,
-			"StaminaCost": -0.15,
+			"ChargeCost": 0.15,
 			"MeleeDamage": 0.5
 		  },
 		  "tags": [],
@@ -2739,7 +2746,7 @@ classInfo = {
 		  "name": "Soothsayer",
 		  "desc": "On Relic use, extend the duration of active Invoker skills by 20% of the base duration. Cannot exceed base duration. Relic Use Speed increased by 25% while an Invoker Skill is active.",
 		  "stats": {
-			"RelicSpeed": -0.25
+			"RelicSpeed": 0.25
 		  },
 		  "tags": []
 		}
@@ -2834,7 +2841,7 @@ classInfo = {
 		  "name": "Benefactor",
 		  "desc": "Relic Use Speed +20%. Relic Use gains -1 Stagger.",
 		  "stats": {
-			"RelicSpeed": -0.2
+			"RelicSpeed": 0.2
 		  },
 		  "tags": []
 		}
@@ -3794,9 +3801,9 @@ amulets = {
 	  "name": "Kuri Kuri Charm",
 	  "slot": "Amulet",
 	  "image": "/brotherLibrary/amuletsImages/Kuri Kuri Charm.png",
-	  "desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge. Speed bonus assumed active at all times when selected.",
+	  "desc": "For every 10% of Health missing (Max 50%), gain 10% increased Relic Use Speed and 7% chance to not consume a Relic Charge. Speed bonus assumed maximum and active at all times when selected.",
 	  "stats": {
-		"RelicSpeed": -0.5
+		"RelicSpeed": 0.5
 	  },
 	  "tags": [],
 	  "placementID": "A043"
@@ -4016,9 +4023,9 @@ amulets = {
 	  "desc": "Firearm damage (100 base) adds stacks which increase the damage of stowed firearm by 2% for 15s. Stacks 10x. Multiplicative. Bonus assumed active at all times when selected.",
 	  "usesConditional": {},
 	  "stats": {
-		"UniqueMulti": [
-		  0.2
-		]
+		// "UniqueMulti": [
+		//   0.2
+		// ]
 	  },
 	  "tags": [],
 	  "placementID": "A059"
@@ -4579,7 +4586,7 @@ rings = {
 	  "image": "/brotherLibrary/ringsImages/Berserker's Crest.png",
 	  "desc": "Increases Melee Speed by 10% and reduces Melee Stamina Cost by 30%.",
 	  "stats": {
-		"ChargeCost": -0.3,
+		"ChargeCost": 0.3,
 		"ChargeSpeed": 0.1,
 		"AttackSpeed": 0.1
 	  },
@@ -4906,7 +4913,7 @@ rings = {
 	  "desc": "Reduces Skill Cooldowns by 15%, but reduces Relic Use Speed by 25%.",
 	  "stats": {
 		"CDR": -0.15,
-		"RelicSpeed": 0.25
+		"RelicSpeed": -0.25
 	  },
 	  "tags": [],
 	  "placementID": "R040"
@@ -4978,7 +4985,8 @@ rings = {
 	  "image": "/brotherLibrary/ringsImages/Celerity Stone.png",
 	  "desc": "Increases Consumable and Relic Use Speed by 25%.",
 	  "stats": {
-		"RelicSpeed": -0.25
+		"RelicSpeed": 0.25,
+		"ConsumableSpeed": 0.25,
 	  },
 	  "tags": [],
 	  "placementID": "R046"
@@ -5360,7 +5368,7 @@ rings = {
 	  "image": "/brotherLibrary/ringsImages/Fae Shaman Ring.png",
 	  "desc": "Increases Health Regeneration by 0.35 and Relic Use Speed by 25%.",
 	  "stats": {
-		"RelicSpeed": -0.25,
+		"RelicSpeed": 0.25,
 		"HP/S+": 0.35
 	  },
 	  "tags": [],
@@ -5963,7 +5971,8 @@ rings = {
 	  "desc": "After killing an enemy, increases Movement Speed by 5% and Consumable Use Speed by 10% for 10s. Stacks 3x. Bonus assumed active at all times when selected.",
 	  "stats": {
 		"MovementSpeed": 0.15,
-		"RelicSpeed": -0.3
+		"ConsumableSpeed": 0.3,
+		"RelicSpeed": 0.3
 	  },
 	  "tags": [],
 	  "placementID": "R124"
@@ -6063,7 +6072,7 @@ rings = {
 		"FlatDR": 0.15
 	  },
 	  "tags": [
-		"GlobalHealthModifier"
+		"HealthCap"
 	  ],
 	  "placementID": "R132"
 	},
@@ -6296,7 +6305,9 @@ rings = {
 	  "slot": "Ring",
 	  "image": "/brotherLibrary/ringsImages/Sagestone.png",
 	  "desc": "Increases earned Experience by 10%.",
-	  "stats": {},
+	  "stats": {
+		"Experience": 0.10
+	  },
 	  "tags": [],
 	  "placementID": "R152"
 	},
@@ -6938,7 +6949,7 @@ relics = {
 	  "image": "/brotherLibrary/relicsImages/Enlarged Heart.png",
 	  "desc": "Innate double use speed. On use, heals 140 health over 0.5s. Relic capacity is halved.",
 	  "stats": {
-		"RelicSpeed": -0.5,
+		"RelicSpeed": 1,
 		"RelicHPbase": 140,
 		"RelicHPtime": 1,
 		"RelicHPtype": "F"
@@ -6953,6 +6964,7 @@ relics = {
 	  "image": "/brotherLibrary/relicsImages/Lifeless Heart.png",
 	  "desc": "Innate 50% Use Speed Bonus, but provides no healing. Relic capacity is doubled.",
 	  "stats": {
+		"RelicSpeed": 0.5,
 		"RelicCharges%": 1
 	  },
 	  "tags": [],
@@ -7231,7 +7243,7 @@ fragments = {
 	  "value": -0.3,
 	  "usesConditional": {},
 	  "stats": {
-		"ChargeCost": -0.3
+		"ChargeCost": 0.3
 	  },
 	  "tags": [],
 	  "color": "Blue",
@@ -7259,7 +7271,8 @@ fragments = {
 	  "value": -0.15,
 	  "usesConditional": {},
 	  "stats": {
-		"RelicSpeed": -0.15
+		"ConsumableSpeed": 0.15,
+		"RelicSpeed": 0.15
 	  },
 	  "tags": [],
 	  "color": "Yellow",
@@ -8117,24 +8130,28 @@ traits = {
 	},
 	"Glutton": {
 	  "name": "Glutton",
-	  "property": "RelicSpeed",
+	  "property": [
+		"RelicSpeed",
+		"ConsumableSpeed"
+	  ],
 	  "tags": [
-		"RelicSpeed"
+		"RelicSpeed",
+		"ConsumableSpeed"
 	  ],
 	  "usesConditional": {},
 	  "desc": "Increases the Use Speed of Consumables and Relics by VALUE1.1%.",
 	  "level": {
 		"0": 0,
-		"1": -0.035,
-		"2": -0.07,
-		"3": -0.0105,
-		"4": -0.14,
-		"5": -0.175,
-		"6": -0.21,
-		"7": -0.245,
-		"8": -0.28,
-		"9": -0.315,
-		"10": -0.35
+		"1": 0.035,
+		"2": 0.07,
+		"3": 0.105,
+		"4": 0.14,
+		"5": 0.175,
+		"6": 0.21,
+		"7": 0.245,
+		"8": 0.28,
+		"9": 0.315,
+		"10": 0.35
 	  },
 	  "placementID": "17"
 	},
@@ -8370,8 +8387,8 @@ traits = {
 	},
 	"Scholar": {
 	  "name": "Scholar",
-	  "property": null,
-	  "tags": [],
+	  "property": "Experience",
+	  "tags": ["Experience"],
 	  "usesConditional": {},
 	  "desc": "Increases Experience Gain by VALUE1.1%.",
 	  "level": {
@@ -11251,7 +11268,7 @@ meleeMutators = {
 	  "desc": "Reduces Stamina Cost of all Charged Melee Attacks by 50%.<br>Level 10: Melee Charge Attacks gain 20% additional damage and 10% Critical Chance.",
 	  "usesConditional": {},
 	  "stats": {
-		"ChargeCost": -0.5,
+		"ChargeCost": 0.5,
 		"ChargeDamage": 0.2,
 		"ChargeCritChance": 0.1
 	  },
@@ -11895,6 +11912,13 @@ builtInPrimary = {
 		},
 		"customStats": {
 			"customDPS": "MonolithSandstorm",
+			"statTags": {
+				"Damage": ["AllDamage","ModDamage","PrimaryModDamage","ElementalDamage","PrimaryElementalDamage"],
+				"CritChance": ["AllCritChance","ModCritChance","ElementalCritChance"],
+				"CritDamage": ["AllCritDamage"],
+				"WeakSpot": -1,
+				"Speed": [],
+			},
 			"frequency": 0.5,
 			"baseDamage": 112.5,
 			"duration": 15,
