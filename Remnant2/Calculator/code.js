@@ -114,7 +114,7 @@ const referenceTable = {
   "Class-Summon Health %": "SummonHealth%",
   "Consumable-Concoction Limit": "ConcLimit",
   "Consumable-Duration": "ConsumableDuration",
-  "Consumable-Use Speed": "RelicSpeed",
+  "Consumable-Use Speed": "ConsumableSpeed",
   "Corrosive Resistance": "Corrosive",
   "Critical Chance-All": "AllCritChance",
   "Critical Chance-Bow": "BowCritChance",
@@ -169,13 +169,13 @@ const referenceTable = {
   "Evade-Speed": "EvadeSpeed",
   "Grey Health-Flat/second": "GreyHP/S+",
   "Grey Health-Hit Threshold": "GreyHPHitThreshold",
-  "Grey Health-% Recovery Modifier": "GreyHP/S%",
   "Grey Health Conversion": "GreyHealthConversion",
   "Healing Effectiveness": "HealingEFF",
   "Healing-Flat/second": "HP/S+",
   "Healing-Global Effectiveness": "GlobalHealingEff",
   "Healing-Modifiers": "HealingModifiers",
   "Healing-%/second": "HP/S%",
+  "Health-Cap%": "HealthCap",
   "Health-Flat": "Health",
   "Health-Global Modifier": "GlobalHealthModifier",
   "Health-%": "Health%",
@@ -203,6 +203,7 @@ const referenceTable = {
   "Relic-Charges %": "RelicCharges%",
   "Relic-Healing Duration": "RelicHPtime",
   "Relic-Healing Type": "RelicHPtype",
+  "Relic-Use Speed": "RelicSpeed",
   "Shield Effectiveness": "ShieldEFF",
   "Shield-Flat": "Shield",
   "Shield-%/second": "Shield%/S",
@@ -3364,7 +3365,7 @@ let customItemFunctions = {
     },
     spiritHealer(index) {
       let healingPerSecond = 0.02/10;
-      index["HP/S%"] += globalRecords.spiritHealerStacks * healingPerSecond;
+      index["HP/S%"] += (globalRecords.spiritHealerStacks * healingPerSecond);
     },
   // "mutators": {//DONE
     executor(index) {//base

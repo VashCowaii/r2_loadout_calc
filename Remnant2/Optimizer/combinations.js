@@ -13,23 +13,23 @@ let cycles = {
         "None": [],
         "TANK:EHP+Shields": [
             "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
-            "Health-Flat","Health-%","Health-Global Modifier",
+            "Health-Flat","Health-%","Health-Global Modifier","Health-Cap%",
             "Armor-Flat","Armor Effectiveness","DR-Flat","DR-Bulwark","DR-Bulwark Limit","DR-Reduced Enemy Damage","DR-Damage Shared",
             "Shield-Flat","Shield Effectiveness","Shield-%/second",
             "Consumable-Concoction Limit"
         ],
         "TANK:EHP": [
             "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
-            "Health-Flat","Health-%","Health-Global Modifier",
+            "Health-Flat","Health-%","Health-Global Modifier","Health-Cap%",
             "Armor-Flat","Armor Effectiveness","DR-Flat","DR-Bulwark","DR-Bulwark Limit","DR-Reduced Enemy Damage","DR-Damage Shared",
             "Consumable-Concoction Limit"
         ],
         "TANK:EHP/S": [
             "Encumbrance/Weight","Encumbrance/Weight - Threshold","Encumbrance/Weight-%",
-            "Health-Flat","Health-%","Health-Global Modifier",
+            "Health-Flat","Health-%","Health-Global Modifier","Health-Cap%",
             "Armor-Flat","Armor Effectiveness","DR-Flat","DR-Bulwark","DR-Bulwark Limit","DR-Reduced Enemy Damage","DR-Damage Shared",
             "Healing Effectiveness","Healing-Global Effectiveness","Healing-Modifiers","Healing-Flat/second","Healing-%/second",
-            "Grey Health-% Recovery Modifier","Grey Health-Flat/second",
+            "Grey Health-Flat/second",
             "Lifesteal-All","Lifesteal-Melee","Lifesteal-Ranged","Lifesteal-Melee Charged",
             "Relic Effectiveness","Relic-Base Healing","Relic-Healing Type","Relic-Healing Duration",
             "Consumable-Concoction Limit"
@@ -38,7 +38,7 @@ let cycles = {
             "Shield-Flat","Shield Effectiveness","Shield-%/second"
         ],
         "Grey Health Regen": [
-            "Grey Health-Flat/second", "Grey Health-Hit Threshold", "Grey Health-% Recovery Modifier", "Grey Health Conversion",
+            "Grey Health-Flat/second", "Grey Health-Hit Threshold", "Grey Health Conversion",
         ],
         "Lifesteal (All forms)": [
             "Lifesteal Effectiveness","RelicLifesteal","Lifesteal-All","Lifesteal-Melee","Lifesteal-Melee Charged","Lifesteal-Ranged","Status-Outgoing Statuses","Status-Self-Bleed","Relic Effectiveness"
@@ -538,16 +538,8 @@ let cycles = {
                     cycleCounter++;
                     lastSent++;
 
-
-                    // let refKeys = Object.keys(refTable);
-                    // for (let key in returnTable) {
-                    //     if (refKeys.includes(key)) {
-                    //         returnTable[key].ID = refKeys.indexOf(key);
-                    //     }
-                    // }
-                    // console.log(ringSet,relic,fragmentSet,amulet,currentTable[conc],quickUse,
-                    //     gun1,gun2,stick,rMutator1, mMutator1,rMod1)
-                    //     alert("test")
+                    // console.log({ringSet,relic,fragmentSet,amulet,concoction:currentTable[conc],
+                    //     gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1})
 
                     messageComboArray.push({ringSet,relic,fragmentSet,amulet,concoction:currentTable[conc],
                         gun1,gun2,stick,rangedMutators: rMutator1, meleeMutators: mMutator1,rangedMods: rMod1});
@@ -692,9 +684,11 @@ let cycles = {
             dataRef = Object.keys(secondary);
             for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
         }
-        if (rangedMutators[item]) {
+        if (rangedMutators[item[0]]) {
             dataRef = Object.keys(rangedMutators);
-            for (let i=0;i<dataRef.length;i++) {if (dataRef[i] === item) {ID = i;}}
+            for (let i=0;i<dataRef.length;i++) {
+                if (dataRef[i] === item[0]) { ID = i;}
+            }
         }
         if (meleeMutators[item]) {
             dataRef = Object.keys(meleeMutators);
@@ -714,6 +708,7 @@ let cycles = {
         }
 
         if (ID) {return {ID}}
+
         postMessage({command: `pushAlert`, data: `cycles.extractTableEntry(${item}) failed to find an valid item entry.`});
     },
     checkConcoctionLimit(table,slots,item1,item2,item3,item4,item5,item6,item7) {
@@ -873,7 +868,6 @@ let cycles = {
                 //if slot 1 is locked/dedicated
                 if (specified[0] || specified[0] === "") {
                     if (!iterateSeparately) {iteration = index;}
-                    console.log(refTable)
                     if (!refTable[specified[0]]) {
                         refTable[specified[0]] = cycles.extractTableEntry(specified[0])
                     }
@@ -1207,7 +1201,7 @@ let cyclesLoop = {
         globalRecords.RECORDEDteamCount = +globalRecords.ALTteamCount.toString();
         globalRecords.RECORDEDminionCount = +globalRecords.ALTminionCount.toString();
         globalRecords.RECORDEDcomplexInput = +globalRecords.ALTcomplexInput.toString();
-        globalRecords.RECORDEDspiritHealterStacks = +globalRecords.ALTspiritHealterStacks.toString();
+        globalRecords.RECORDEDspiritHealerStacks = +globalRecords.ALTspiritHealerStacks.toString();
         globalRecords.RECORDEDuseShields = globalRecords.ALTuseShields ? true : false;
         globalRecords.RECORDEDuseRelicHealing = globalRecords.ALTuseRelicHealing ? true : false;
         globalRecords.RECORDEDuseNonStandardDR = globalRecords.ALTuseNonStandardDR ? true : false;
@@ -1696,8 +1690,6 @@ let cyclesLoop = {
             cycleCounter++;
             let cycleObject = comboArray[i];
 
-            // if (!cycleObject) {console.log(i);alert(i);}
-
             cyclesLoop.updateCycleRecord(cycleObject);//Assigns cycle items to records so updateFormulas can work
             let preArmor = updateFormulas(`cycleTableKnowerOfAll`,true);//If armor is needed, it will return it. Otherwise it will return stats.
 
@@ -1711,6 +1703,7 @@ let cyclesLoop = {
             comboArray.splice(i,1);
         }
         postMessage({command:`yieldCombination`,isUpdated:betterFound,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
+        // console.log({command:`yieldCombination`,isUpdated:betterFound,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter})
     },
     evaluateCombinationsArray(comboArray,midQuery,targetStatistic) {
         let targetDamageCategory = midQuery.targetDamageCategory
@@ -1718,7 +1711,7 @@ let cyclesLoop = {
         let comboArrayLength = comboArray.length;
         let betterFound = false;
 
-        for (let i=0;i<comboArrayLength;i++) {
+        for (let i=comboArrayLength-1;i>=0;i--) {
             cycleCounter++;
             let cycleObject = comboArray[i];
 
@@ -1731,6 +1724,7 @@ let cyclesLoop = {
                 midQuery.bestLoadout.bestArmorSet = {...globalRecords.armor};
                 betterFound = true;
             }
+            comboArray.splice(i,1);
         }
         postMessage({command:`yieldCombination`,isUpdated:betterFound,cycleObject:midQuery.bestLoadout,preArmor:midQuery.recordedStatistic,cycleCounter});
         // postMessage({command:`yieldCombination`,cycleCounter});
@@ -1744,7 +1738,7 @@ let cyclesLoop = {
         let amuletRef = dataKeyReference.amuletRef;
         let relicRef = dataKeyReference.relicRef;
         let fragRef = dataKeyReference.fragRef;
-        let quickRef = dataKeyReference.quickRef;
+        // let quickRef = dataKeyReference.quickRef;
         let concRef = dataKeyReference.concRef;
         let primRef = dataKeyReference.primRef;
         let meleeRef = dataKeyReference.meleeRef;
@@ -2031,7 +2025,7 @@ let filters = {
         globalRecords.minionCount = summonCount;
         readSelection("selectedSummonCount").innerHTML = summonCount;
 
-        globalRecords.spiritHealterStacks = +readSelection("spiritCountSlider").value;
+        globalRecords.spiritHealerStacks = +readSelection("spiritCountSlider").value;
         readSelection("selectedSpiritCount").innerHTML = readSelection("spiritCountSlider").value;
 
         globalRecords.useShields = readSelection("settingsUseShields").checked;
