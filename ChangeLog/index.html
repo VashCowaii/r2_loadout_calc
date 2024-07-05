@@ -37,11 +37,60 @@
             <div class="changeLogMegaBody">
                 <!-- template -->
                 <!-- <div>
-                    <h1>June X, 2024</h1>
+                    <h1>July X, 2024</h1>
                     <ul>
                         <li>asdf</li>
                     </ul>
                 </div> -->
+                <div>
+                    <h1>July 5, 2024</h1>
+                    <ul>
+                        <li>Added a shit-load of tooltips to the Calculator's display statistics.</li>
+                        <li>Renamed the "Healing" section to "Health" in the main stats, and added the following statistics:
+                            <ul>
+                                <li>Health Reduction: for %HP modifiers that DO modify your true Max Health, like Burden of the Mesmer.</li>
+                                <li>Health Cap: for %HP limits like Restriction Cord that modify your maximum allowed health but do not actually modify your true Max Health.</li>
+                                <li>Max Health: for the true Max Health value used by Shields and Healing effects</li>
+                                <li>Capped Health: for the end total HP value used for general EHP aside from Shield EHP.</li>
+                            </ul>
+                        </li>
+                        <li>Added the following statistics to the Stamina section in the main stats:
+                            <ul>
+                                <li>Weight Penalty%</li>
+                                <li>Evade Cost%</li>
+                                <li>Evade Price</li>
+                                <li>Melee Cost%</li>
+                                <li>Renamed "Stamina Cost" to "General Cost" as the name was semi misleading. It acts as a multiplier against any given action cost, while action specific costs are separate from that.</li>
+                            </ul>
+                        </li> 
+                        <li>Added a Grey Health section to the main stats column and added the following statistics to it:
+                            <ul>
+                                <li>Grey Health/s</li>
+                                <li>Grey Health Hit Threshold</li>
+                                <li>Grey Health Conversion Rate</li>
+                            </ul>
+                        </li>   
+                        <li>Moved Relic Speed to the Action Speed section, and separated Consumable Use Speed from Relic Speed as a new statistic in that same section.
+                            <ul>
+                                <li>If anyone is confused on why, consider that while all Consumable Speed bonuses are also Relic Speed bonuses, not all Relic Speed bonuses are also Consumable Speed bonuses.</li>
+                                <li>Along with this change, I added the new Consumable Speed stat to all items that use it, including the trait "Glutton".</li>
+                            </ul>
+                        </li>
+                        <li>Added the following statistics to the Misc section of the main stats column:
+                            <ul>
+                                <li>Consumable Duration%</li>
+                                <li>XP% or Experience</li>
+                            </ul>
+                        </li>
+                        <li>Added handling to include sources of Corroded or Exposed to the All Damage tooltip, in the main stats column of the Calculator. While they were still being calculated before, these status sources would never show under the All Damage tooltip, only their respective status tooltips.</li>
+                        <li>Added handling to extend the "Use Weakspots" and "Enable Crits" toggle's effects on the optimizer, to the Havoc Form and Sandstorm breakdowns, regarding enabling crits (those two obviously can't weakspot). Now all currently supported breakdowns can use these toggles.</li>
+                        <li>Flipped Relic/Consumable Use Speed to a positive value, and renamed it in the main column from Time to Speed. I'd technically listed any increase in speeds as a negative value up until now, but that was just because I wasn't positive how relic usage duration was calculated. Now that I know, it should be positive.</li>
+                        <li>Updated Juggernaut's Stamina Cost bonus to be a Melee Cost bonus, because it is.</li>
+                        <li>Removed Dodge Class from the Stamina section. You guys all know your colors, it reflects in both the total weight font color and within the total weight tooltip.</li>
+                        <li>Fixed an issue where Glutton's level 3 effect was off by a decimal point, but only the level 3 effect lol.</li>
+                        <li>Back-end changes to greatly simplify how the main stats column populates its statistics. Also makes it much easier to add stats to display along with custom tooltips for each individual one if needed.</li>
+                    </ul>
+                </div>
                 <div>
                     <h1>July 4, 2024 - THE MELEE DAMAGE UPDATE</h1>
                     As with every major addition, be on the lookout for bugs. If you find any or just have feedback to give, join the discord linked at the bottom of any page, and ping me with it, you have my blessing to do so.
@@ -51,7 +100,7 @@
                                 <li>Note that these are not iterable within build queries/optimizer yet. Getting them calculable is one thing, getting them iterable is another, and that will come next.</li>
                             </ul>
                         </li>
-                        <li>Added settings to enable/disable weakspot and critical hits. Right now these only apply to the melee breakdown, but I'll extend them to apply to our other breakdowns as well(even though the others can't weakspot at all, they will at least benefit from a crit toggle)</li>
+                        <li>Added settings to enable/disable weakspot and critical hits.</li>
                         <li>Added info to Fission Strike's description to elaborate on the 25% multiplier better</li>
                         <li>Updated World's Edge base damage. Somehow I'd modified the crit values and such but neglected to change the base damage lol.</li>
                         <li>Updated Fathomless Deep's stagger values</li>

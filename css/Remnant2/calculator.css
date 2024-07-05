@@ -6,7 +6,7 @@
 .classAbilityDescription,.classPassiveDescription,.classPerkDescription,.accessoryDescription,
 .relicDescription,.relicComplexDesc,.consumableDesc,.weaponDescriptionBox,.mutatorDesc,
 .filtersQuarterDescription,.comboDebugWindow,.settingsImportDesc,.settingsImportedList,.selectItemDesc,
-.weaponDisplayDamageHeader,.helpBoxText,.tooltip,.mvNotesDisplay {
+.weaponDisplayDamageHeader,.helpBoxText,.tooltip,.mvNotesDisplay,.dpsFactorDisclaimer {
     font-family: "Montserrat-Light";
 }
 
