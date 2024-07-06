@@ -334,7 +334,6 @@ let customDamage = {
 
             readSelection(`ability${abilityPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
             readSelection(`ability${abilityPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
-            console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
 
 
             // (modifiedDuration + entryDuration)
@@ -354,7 +353,6 @@ let customDamage = {
             
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
-            console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
         }
 
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
@@ -372,7 +370,6 @@ let customDamage = {
 
         let tagReference = customStats.statTags;
         let allDamageTags = tagReference.Damage;
-        console.log(allDamageTags)
         let sumDamageBonuses = conditionalHelpers.returnIndexTagSums(index,allDamageTags);
         let allCritTags = tagReference.CritChance;
         let sumCritChance = conditionalHelpers.returnIndexTagSums(index,allCritTags);
@@ -383,7 +380,6 @@ let customDamage = {
 
         let modifiedDuration = duration * modDurationBonus;
         let totalHits = Math.floor(modifiedDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
-        // console.log("Total Hits: " + totalHits)
 
         let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
 
@@ -398,7 +394,6 @@ let customDamage = {
         let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
         let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
 
-        // console.log("DMG%: " + totalDamageBonus)
         let firstHitModifier = index.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
         let firstHitDamage = baseDamage * (1 + totalDamageBonus + firstHitModifier) * (1 + avgCritDamage);
         let trueTotalDamage = baseDamage * (totalHits-1) * (1 + totalDamageBonus) * (1 + avgCritDamage) + firstHitDamage;
