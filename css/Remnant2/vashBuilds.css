@@ -51,3 +51,53 @@
 * {
     color: white;
 }
+
+.buildsMainHeader {
+    font-size: 30px;
+}
+
+.buildsRowBoxHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+}
+.buildThirdsHolder {
+    width: 25%;
+    /* height: 200px; */
+    border: 1px solid #434343;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+.buildThirdsHeader {
+    font-size: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+.buildListHolder {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    .buildsRowBoxHolder {
+        flex-direction: column;
+    }
+    .buildThirdsHolder {
+        width: 100%;
+    }
+}
