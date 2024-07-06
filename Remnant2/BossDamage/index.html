@@ -189,7 +189,7 @@
                         <div>Boss Selection</div>
                         <div class="statisticSettingsRow">
                             <div class="statsRowToggle" style="width: 100%;">
-                                <select id="bossList" class="bossSelector" onchange="tableGeneration.generateInitialTable()"></select>
+                                <select id="bossList" class="bossSelector" onchange="userSettings.updateUserInputs()"></select>
                             </div>
                         </div>
                         <div class="selectedBossImageContainer">
@@ -322,6 +322,7 @@
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 <script src="/Remnant2/BossDamage/bossData.js"></script>
 <script src="/Remnant2/BossDamage/tooltipStorage.js"></script>
+<script src="/Remnant2/BossDamage/urlHandling.js"></script>
 <script src="/MainJS/Tooltips/tooltips.js"></script>
 <script src="/Remnant2/BossDamage/scaling.js"></script>
 <script src="/MainJS/buildTime.js"></script>

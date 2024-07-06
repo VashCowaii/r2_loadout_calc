@@ -160,7 +160,9 @@ let userSettings = {
         readSelection("playerCountDisplay").innerHTML = playerCount;
         userSettings.vars.playerCount = playerCount;
 
-        let effectiveDR = +readSelection("playerDRValue").value;
+        let effectiveDR = Math.max(0, +readSelection("playerDRValue").value || 0);
+        effectiveDR = Math.min(80,effectiveDR);
+        readSelection("playerDRValue").value = effectiveDR;
         userSettings.vars.effectiveDR = effectiveDR || 0.00;
 
         userSettings.vars.includeStandard = readSelection("includeStandard").checked;
@@ -186,6 +188,7 @@ let userSettings = {
 
 
         tableGeneration.generateInitialTable();
+        manipulateURL.updateURLparameters();
     }
 }
 
@@ -449,7 +452,8 @@ let tableGeneration = {
 
 populateGear("bossList",bosses)
 readSelection("bossList").value = "Venom";
-tableGeneration.generateInitialTable();
+manipulateURL.importURLparameters();
+// tableGeneration.generateInitialTable();
 
 function applyPlayerLevelScalar(level,base,baseInc,exp) {
     return exp!=1 ? base+baseInc*(Math.pow(exp,Math.max(0,level))-1)/(exp-1): base+(Math.max(0,level)*baseInc)
@@ -462,6 +466,7 @@ function applyPlayerLevelScalar(level,base,baseInc,exp) {
 // }
 
 userSettings.updateUserInputs();
+// manipulateURL.importURLparameters();
 
 
 
