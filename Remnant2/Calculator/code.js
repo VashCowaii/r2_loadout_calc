@@ -408,7 +408,6 @@ let createHTML = {
     `
   },
   consumableIconBox(consumableTable,elemID) {
-    console.log(`${consumableTable}${elemID}Tab`,`${consumableTable}${elemID}`)
     return `
     <button type="button" class="comboConsumableImageBox comboConsumableImageBoxMAIN" id="${consumableTable}${elemID}MAINbox" onclick="basicsUpdates.updateFocus('${consumableTable}${elemID}Tab','${consumableTable}${elemID}')">
         <img class="comboArmorImage" src="/images/Remnant/clear.png" id="${consumableTable}${elemID}IconMAIN" alt="Combo ${consumableTable}${elemID}">
