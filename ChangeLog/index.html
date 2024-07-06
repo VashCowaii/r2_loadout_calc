@@ -818,6 +818,7 @@
                                 <li>See the Calculator page's Damage section for a list of currently supported damage calculations.</li>
                             </ul>
                         </li>
+                        <li>Add a better way to estimate time on the Optimizer. How it works right now is calculating the time remaining after X combos are processed, but since we allow multi-threading now that means that all threads can post back at the same time which would show a very fast estimate when that isn't accurate. It was accurate before, it isn't now.</li>
                     </ul>
                 </div>
                 <div>
