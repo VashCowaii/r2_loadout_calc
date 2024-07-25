@@ -136,6 +136,21 @@ html,body {
     grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [end-line];
 }
 
+.honkaiWaitingBoxMain {
+    width: 100%;
+    height: 500px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-sizing: border-box;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 50px;
