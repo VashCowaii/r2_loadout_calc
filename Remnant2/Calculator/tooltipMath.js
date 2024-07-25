@@ -54,17 +54,17 @@ let tooltipMath = {
             htmlString += tooltipMath.checkItemForStat(concoctions[entry],entry,statistic);
         }
 
-        htmlString += tooltipMath.checkItemForStat(primary[weaponReference.primary],weaponReference.primary,statistic);
+        htmlString += tooltipMath.checkItemForStat(primaries[weaponReference.primary],weaponReference.primary,statistic);
         htmlString += tooltipMath.checkItemForStat(rangedMutators[weaponReference.primaryMutator],weaponReference.primaryMutator,statistic);
-        htmlString += primary[weaponReference.primary].builtIN ? tooltipMath.checkItemForStat(builtInPrimary[primary[weaponReference.primary].builtIN],primary[weaponReference.primary].builtIN,statistic)
+        htmlString += primaries[weaponReference.primary].builtIN ? tooltipMath.checkItemForStat(builtInPrimary[primaries[weaponReference.primary].builtIN],primaries[weaponReference.primary].builtIN,statistic)
         : tooltipMath.checkItemForStat(rangedMods[weaponReference.primaryMod],weaponReference.primaryMod,statistic);
-        htmlString += tooltipMath.checkItemForStat(melee[weaponReference.melee],weaponReference.melee,statistic);
+        htmlString += tooltipMath.checkItemForStat(melees[weaponReference.melee],weaponReference.melee,statistic);
         htmlString += tooltipMath.checkItemForStat(meleeMutators[weaponReference.meleeMutator],weaponReference.meleeMutator,statistic);
-        htmlString += melee[weaponReference.melee].builtIN ? tooltipMath.checkItemForStat(builtInMelee[melee[weaponReference.melee].builtIN],melee[weaponReference.melee].builtIN,statistic)
+        htmlString += melees[weaponReference.melee].builtIN ? tooltipMath.checkItemForStat(builtInMelee[melees[weaponReference.melee].builtIN],melees[weaponReference.melee].builtIN,statistic)
         : "";
-        htmlString += tooltipMath.checkItemForStat(secondary[weaponReference.secondary],weaponReference.secondary,statistic);
+        htmlString += tooltipMath.checkItemForStat(secondaries[weaponReference.secondary],weaponReference.secondary,statistic);
         htmlString += tooltipMath.checkItemForStat(rangedMutators[weaponReference.secondaryMutator],weaponReference.secondaryMutator,statistic);
-        htmlString += secondary[weaponReference.secondary].builtIN ? tooltipMath.checkItemForStat(builtInSecondary[secondary[weaponReference.secondary].builtIN],secondary[weaponReference.secondary].builtIN,statistic)
+        htmlString += secondaries[weaponReference.secondary].builtIN ? tooltipMath.checkItemForStat(builtInSecondary[secondaries[weaponReference.secondary].builtIN],secondaries[weaponReference.secondary].builtIN,statistic)
         : tooltipMath.checkItemForStat(rangedMods[weaponReference.secondaryMod],weaponReference.secondaryMod,statistic);
         htmlString += tooltipMath.checkItemForStat(helmets[armorReference.helmet],armorReference.helmet,statistic);
         htmlString += tooltipMath.checkItemForStat(chests[armorReference.chest],armorReference.chest,statistic);

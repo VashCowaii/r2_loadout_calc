@@ -96,7 +96,7 @@ let tooltips = {
         });
         element.addEventListener('click', (event) => {
             const currentTime = new Date().getTime();
-            if (currentTime - touchStartTime < 500) {
+            if (currentTime - touchStartTime < 50) {
                 // Ignore click event if it is fired within 500ms of touchstart
                 event.preventDefault();
                 event.stopPropagation();

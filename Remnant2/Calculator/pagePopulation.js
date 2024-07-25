@@ -1,112 +1,81 @@
 //Used to populate the page with given item selections
 function pagePopulation() {
-    //If we run into undefined issues again, just swap back to this
-    // document.addEventListener("DOMContentLoaded", function() {})
-    createHTML.populateGear("archs1List",classInfo);
-    createHTML.populateGear("archs2List",classInfo);
-    if (document.location.href.includes("Calculator")) {
-    createHTML.populateGear("helmetsList",helmets);
-    createHTML.populateGear("chestsList",chests);
-    createHTML.populateGear("legsList",legs);
-    createHTML.populateGear("handsList",hands);
-    createHTML.populateGear("amuletsList",amulets);
-    createHTML.populateGear("rings1List",rings);
-    createHTML.populateGear("rings2List",rings);
-    createHTML.populateGear("rings3List",rings);
-    createHTML.populateGear("rings4List",rings);
-    createHTML.populateGear("relicsList",relics);
-    createHTML.populateGear("fragment1List",fragments);
-    createHTML.populateGear("fragment2List",fragments);
-    createHTML.populateGear("fragment3List",fragments);
-    //updateTraitCollection(); //gets called in importURLparams
-    createHTML.populateGear("primariesList",primary);
-    createHTML.populateGear("meleesList",melee);
-    createHTML.populateGear("secondariesList",secondary);
-    createHTML.populateGear("rangedMutator1List",rangedMutators);
-    createHTML.populateGear("meleeMutatorsList",meleeMutators);
-    createHTML.populateGear("rangedMutator2List",rangedMutators);
-    createHTML.populateGear("rangedMod1List",rangedMods);
-    // populateGear("meleeMod",meleeMods); //not yet, if ever really? It's not like melee mods are even selected.
-    createHTML.populateGear("rangedMod2List",rangedMods);
-    // createHTML.populateGear("concoction1List",concoctions);
-    // createHTML.populateGear("concoction2List",concoctions);
-    // createHTML.populateGear("concoction3List",concoctions);
-    // createHTML.populateGear("concoction4List",concoctions);
-    // createHTML.populateGear("concoction5List",concoctions);
-    // createHTML.populateGear("concoction6List",concoctions);
-    // createHTML.populateGear("concoction7List",concoctions);
-    // createHTML.populateGear("quickUse1List",quickUses);
-    // createHTML.populateGear("quickUse2List",quickUses);
-    // createHTML.populateGear("quickUse3List",quickUses);
-    // createHTML.populateGear("quickUse4List",quickUses); 
+  let populate = createHTML.populateGear;
+  populate("archs1List",classInfo);
+  populate("archs2List",classInfo);
+  if (document.location.href.includes("Calculator")) {
+    let calcPops = [
+      {"Name": "helmetsList", "DataSet": helmets},
+      {"Name": "chestsList", "DataSet": chests},
+      {"Name": "legsList", "DataSet": legs},
+      {"Name": "handsList", "DataSet": hands},
+      {"Name": "amuletsList", "DataSet": amulets},
+      {"Name": "rings1List", "DataSet": rings},
+      {"Name": "rings2List", "DataSet": rings},
+      {"Name": "rings3List", "DataSet": rings},
+      {"Name": "rings4List", "DataSet": rings},
+      {"Name": "relicsList", "DataSet": relics},
+      {"Name": "fragment1List", "DataSet": fragments},
+      {"Name": "fragment2List", "DataSet": fragments},
+      {"Name": "fragment3List", "DataSet": fragments},
+      {"Name": "primariesList", "DataSet": primaries},
+      {"Name": "meleesList", "DataSet": melees},
+      {"Name": "secondariesList", "DataSet": secondaries},
+      {"Name": "rangedMutator1List", "DataSet": rangedMutators},
+      {"Name": "rangedMutator2List", "DataSet": rangedMutators},
+      {"Name": "meleeMutatorsList", "DataSet": meleeMutators},
+      {"Name": "rangedMod1List", "DataSet": rangedMods},
+      {"Name": "rangedMod2List", "DataSet": rangedMods},
+    ];
+
+    for (let entry of calcPops) {
+      populate(entry.Name,entry.DataSet);
     }
+
     manipulateURL.importURLparameters();
+    updateFormulas();
+  }
   
-  
-    if (document.location.href.includes("Optimizer")) {
-    //Occlusions filter selections
-    createHTML.populateGear("amuletOcclusionsList",amulets);
-    createHTML.populateGear("ringOcclusionsList",rings);
-    createHTML.populateGear("relicOcclusionsList",relics);
-    createHTML.populateGear("fragmentOcclusionsList",fragments);
-    createHTML.populateGear("concoctionOcclusionsList",concoctions);
-    createHTML.populateGear("consumableOcclusionsList",quickUses);
-    createHTML.populateGear("primaryOcclusionsList",primary);
-    createHTML.populateGear("primaryMutatorOcclusionsList",rangedMutators);
-    createHTML.populateGear("primaryModOcclusionsList",rangedMods);
-    createHTML.populateGear("meleeOcclusionsList",melee);
-    createHTML.populateGear("meleeMutatorOcclusionsList",meleeMutators);
-    createHTML.populateGear("secondaryOcclusionsList",secondary);
+  if (document.location.href.includes("Optimizer")) {
+    let optimizerArmorPops = [
+      {"Name": "helmets", "DataSet": helmets},{"Name": "chests", "DataSet": chests},{"Name": "legs", "DataSet": legs},{"Name": "hands", "DataSet": hands},
+    ];
+    for (let entry of optimizerArmorPops) {populate(entry.Name + "OcclusionsList",entry.DataSet);populate(entry.Name + "LocksList",entry.DataSet);}
 
-    createHTML.populateGear("helmetsOcclusionsList",helmets);
-    createHTML.populateGear("chestsOcclusionsList",chests);
-    createHTML.populateGear("legsOcclusionsList",legs);
-    createHTML.populateGear("handsOcclusionsList",hands);
-    // createHTML.populateGear("secondaryMutatorOcclusionsList",rangedMutators); //we disabled occlusions so they were bundled into ranged. Locks still possible on each.
-    // createHTML.populateGear("secondaryModOcclusionsList",rangedMods);
-  
-    //Lock filter selections
-    createHTML.populateGear("amuletList",amulets);
-    createHTML.populateGear("ringList",rings);
-    createHTML.populateGear("relicList",relics);
-    createHTML.populateGear("fragmentList",fragments);
-    createHTML.populateGear("concoctionList",concoctions);
-    // createHTML.populateGear("consumableList",quickUses);
-    createHTML.populateGear("primaryList",primary);
-    createHTML.populateGear("primaryMutatorList",rangedMutators);
-    createHTML.populateGear("primaryModList",rangedMods);
-    createHTML.populateGear("meleeList",melee);
-    createHTML.populateGear("meleeMutatorList",meleeMutators);
-    createHTML.populateGear("secondaryList",secondary);
-    createHTML.populateGear("secondaryMutatorList",rangedMutators);
-    createHTML.populateGear("secondaryModList",rangedMods);
+    let optimizerPops = [
+      //FILTERS: 0 is both, 1 is occlusions only, 2 is locks only
+      {"Name": "amulet", "DataSet": amulets, "Filters": 0},
+      {"Name": "ring", "DataSet": rings, "Filters": 0},
+      {"Name": "relic", "DataSet": relics, "Filters": 0},
+      {"Name": "fragment", "DataSet": fragments, "Filters": 0},
+      {"Name": "primary", "DataSet": primaries, "Filters": 0},
+      {"Name": "melee", "DataSet": melees, "Filters": 0},
+      {"Name": "secondary", "DataSet": secondaries, "Filters": 0},
+      {"Name": "primaryMutator", "DataSet": rangedMutators, "Filters": 0},
+      {"Name": "secondaryMutator", "DataSet": rangedMutators, "Filters": 2},//Can't be filtered by occlusion since they're considered ranged mutators under the Primary Weapon section
+      {"Name": "meleeMutator", "DataSet": meleeMutators, "Filters": 0},
+      {"Name": "primaryMod", "DataSet": rangedMods, "Filters": 0},
+      {"Name": "secondaryMod", "DataSet": rangedMods, "Filters": 2},//Can't be filtered by occlusion since they're considered ranged mods under the Primary Weapon section
+      {"Name": "concoction", "DataSet": concoctions, "Filters": 0},
+      {"Name": "consumable", "DataSet": quickUses, "Filters": 1},//quick-use items are only filtered by occlusion, since locks don't make sense when they are in all their entirety considered one single combination now for queries
+    ];
 
-    createHTML.populateGear("helmetsLocksList",helmets);
-    createHTML.populateGear("chestsLocksList",chests);
-    createHTML.populateGear("legsLocksList",legs);
-    createHTML.populateGear("handsLocksList",hands);
-
-    if (stopQueryFractures) {
-      // readSelection("calcLastUpdated").innerHTML != ""
-      // readSelection("queryBox").style.display = "none";
-      // readSelection("dmgVisibilityToggle").style.display = "none";
-      // readSelection("damageStatsContainer").style.display = "none";
+    for (let entry of optimizerPops) {
+      if (entry.Filters === 0 || entry.Filters === 1) {populate(entry.Name + "OcclusionsList",entry.DataSet);}
+      if (entry.Filters === 0 || entry.Filters === 2) {populate(entry.Name + "List",entry.DataSet);}
     }
-        //Tag filter selections
-        createHTML.populateGear("tagPresets",cycles.presets);
-        createHTML.populateGear("filterTagList",referenceTable);
-        createHTML.populateGear("statInputList",playerDerivedStatistics);
-    }
-    else {updateFormulas();}
+
+    //Tag filter selections
+    populate("tagPresets",cycles.presets);
+    populate("filterTagList",referenceTable);
+    populate("statInputList",playerDerivedStatistics);
+    manipulateTrait.updateTraitCollection();//Still gotta pop the trait side of things for the selections, but this line doesn't need to be updateFormulas();
+  }
 }
   let stopQueryFractures = true;
 
   //Must be last, fill the page
   pagePopulation();
-  if (document.location.href.includes("Optimizer")) {filters.updateDodgeClass();}
-  else {basicsUpdates.updateFocus();}
+  if (document.location.href.includes("Optimizer")) {filters.updateDodgeClass();}//Update user selection elements if optimizer
+  else {basicsUpdates.updateFocus();}//otherwise focus the amulet display tab to start us off when opening a page on the calc
   //buildTime.js script call is injected into the HTML of the deployment, never the actual files here.
-
-
-
- //Moved the parsing to js.js. Open gitbash and type node within the file.

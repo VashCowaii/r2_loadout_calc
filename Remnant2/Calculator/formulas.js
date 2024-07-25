@@ -1,43 +1,51 @@
 let calcs = {
+    dodgeClasses: [
+        {threshold:75,class:"Flop",penalty:0.75},
+        {threshold:50,class:"Heavy",penalty:0.5},
+        {threshold:25,class:"Medium",penalty:0.25}
+    ],
     getHealth(index) {
-        let baseHealth = 100 + index.Health;
-        let healthBoost = 1 + index["Health%"];
-        let globalHealth = index.GlobalHealthModifier;
+        let totalBaseHealth = 100 + index.Health;
+        let percentHealthMulti = 1 + index["Health%"];
+        let globalCap = index.GlobalHealthModifier;
         let healthCap = index.HealthCap;
-        let totalHealth = baseHealth * healthBoost * globalHealth * healthCap; 
-        let totalHealthNoGlobal = baseHealth * healthBoost * globalHealth;
+        let healthComposite = totalBaseHealth * percentHealthMulti * globalCap;
+        let totalHealth = healthComposite * healthCap; 
+        let totalHealthNoGlobal = healthComposite;
 
-        return [totalHealth,totalHealthNoGlobal,baseHealth,healthBoost,healthCap,globalHealth]
+        return {totalHealth,totalHealthNoGlobal,totalBaseHealth,percentHealthMulti,healthCap,globalCap}
     },
     getStamina(index) {
-        let baseStamina = 100 + index.Stamina;
-        let staminaBoost = 1 + index["Stamina%"];
-        let totalStamina = baseStamina * staminaBoost;
-        return [totalStamina];
+        return (100 + index.Stamina) * (1 + index["Stamina%"]);
     },
     getArmor(index) {
         let baseArmor = index.Armor;
         let armorEff = 1 + index["Armor%"];
         let totalArmor = baseArmor * armorEff;
 
-        return [baseArmor,armorEff,totalArmor]
+        return {baseArmor,armorEff,totalArmor}
     },
     getWeight(index) {
         let baseWeight = index.Encumbrance;
         //Stuff that reduces weight can technically put us negative. We need the negative for armor pings, but not for displays
         let adjustedBaseWeight = Math.max(0,baseWeight);
         let weightBoost = 1 + index["Encumbrance%"];
-        let totalWeight = +(adjustedBaseWeight * weightBoost).toFixed(2);
-        let weightThreshold = +(index.WeightThreshold).toFixed(2);
-        let dodgeClass = "";
-        let staminaPenalty = 0;
-        //Define the current dodge class and stamina penalty
-        if (totalWeight>(75+weightThreshold)) {dodgeClass = "Flop";staminaPenalty = .75;}
-        else if (totalWeight>(50+weightThreshold)) {dodgeClass = "Heavy";staminaPenalty = .5;}
-        else if (totalWeight>(25+weightThreshold)) {dodgeClass = "Medium";staminaPenalty = .25;}
-        else {dodgeClass = "Light";}//No stamina cost penalty on light dodge
+        let totalWeight = adjustedBaseWeight * weightBoost;//.toFixed(2);
+        let weightThreshold = index.WeightThreshold;//.toFixed(2);
 
-        return [totalWeight,dodgeClass,staminaPenalty,baseWeight,weightBoost,weightThreshold]
+        let dodgeClass = "Light";
+        let staminaPenalty = 0;
+        let dodgeClasses = calcs.dodgeClasses;
+
+        for (let i=0;i<dodgeClasses.length;i++) {
+            if (totalWeight>dodgeClasses[i].threshold + weightThreshold) {
+                dodgeClass = dodgeClasses[i].class;
+                staminaPenalty = dodgeClasses[i].penalty;
+                break;
+            }
+        }
+
+        return {totalWeight,dodgeClass,staminaPenalty,baseWeight,weightBoost,weightThreshold}
     },
     getDR(index,totalArmor) {
         //Armor DR
@@ -50,57 +58,44 @@ let calcs = {
         //Total DR
         let totalDR = 1-(1-armorDR)*(1-totalFlat);
 
-        return [armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR]
-    },
-    getResistance(index) {
-        let bleed = index.Bleed;
-        let burn = index.Burn;
-        let shock = index.Shock;
-        let corrosive = index.Corrosive;
-        let blight = index.Blight;
-
-        return [bleed,burn,shock,corrosive,blight]
+        return {armorDR,bulwarkStacks,bulwarkDR,otherFlat,totalFlat,totalDR}
     },
     getHealing(index) {
         //this is for shit like game master's pride, it's a global multi modifier
         let globalHealingMod = index.GlobalHealingEff;
         //BOOSTS---
         let healingEffectiveness = index.HealingEFF;
+        let compositeModifier = (1+healingEffectiveness) * globalHealingMod;
         //REGENERATION---
-        let flatHPperSec = index["HP/S+"] * (1+healingEffectiveness) * globalHealingMod;
-        let percHPperSec = index["HP/S%"] * (1+healingEffectiveness) * globalHealingMod;
+        let flatHPperSec = index["HP/S+"] * compositeModifier;
+        let percHPperSec = index["HP/S%"] * compositeModifier;
 
         //GREY HEALTH
-        let greyHPperSec = 0.2 + index["GreyHP/S+"];
-        // let greyPercHPperSec = index["GreyHP/S%"];
-        let totalGreyHPperSec = greyHPperSec;
-        let conversionRate = 0.5 * (1 + index.GreyHealthConversion);
-        let hitThreshold = index.GreyHPHitThreshold;
+        let totalGreyHPperSec = 0.2 + index["GreyHP/S+"];
+        let greyConversionRate = 0.5 * (1 + index.GreyHealthConversion);
+        let greyHitThreshold = index.GreyHPHitThreshold;
 
-        return [globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec,conversionRate,hitThreshold]
+        return {globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec,greyConversionRate,greyHitThreshold,};
     },
     getLifesteal(index,relicEffectiveness) {
         let lifestealEFF = index.LifestealEFF;
+        let lifestealEffResult = (1 + lifestealEFF);
         let relicLifesteal = index.RelicLifesteal * (1 + (relicEffectiveness || 0));
-        let lifestealALL = (index.Lifesteal + relicLifesteal) * (1 + lifestealEFF);
-        let lifestealMelee = index.MLifesteal * (1 + lifestealEFF);
-        let lifestealMeleeCharged = index.MChargedLifeSteal * (1 + lifestealEFF);
-        let lifestealRange = index.RLifesteal * (1 + lifestealEFF);
-        let peakLifesteal;
+        let lifestealALL = (index.Lifesteal + relicLifesteal) * lifestealEffResult;
+        let lifestealMelee = index.MLifesteal * lifestealEffResult;
+        let lifestealMeleeCharged = index.MChargedLifesteal * lifestealEffResult;
+        let lifestealRange = index.RLifesteal * lifestealEffResult;
+        let peakLifesteal = 0;
 
-        if (filters.types.vars.targetStatistic && playerDerivedStatistics[filters.types.vars.targetStatistic].includes("Lifesteal")) {
-        let newLifestealAll = lifestealALL;
-        let newLifestealMelee = lifestealALL + lifestealMelee;
-        let newLifestealMeleeCharged = lifestealALL + lifestealMelee + lifestealMeleeCharged;
-        let newLifestealRanged = lifestealALL + lifestealRange;
-
-        peakLifesteal = newLifestealAll;
-        peakLifesteal = newLifestealMelee > peakLifesteal ? newLifestealMelee : peakLifesteal;
-        peakLifesteal = newLifestealMeleeCharged > peakLifesteal ? newLifestealMeleeCharged : peakLifesteal;
-        peakLifesteal = newLifestealRanged > peakLifesteal ? newLifestealRanged : peakLifesteal;
+        if (index.thisIsAQuery) {
+            let newLifestealAll = lifestealALL;
+            let newLifestealMelee = lifestealALL + lifestealMelee;
+            let newLifestealMeleeCharged = newLifestealMelee + lifestealMeleeCharged;
+            let newLifestealRanged = lifestealALL + lifestealRange;
+            peakLifesteal = Math.max(newLifestealAll, newLifestealMelee, newLifestealMeleeCharged, newLifestealRanged);
         }
-
-        return [lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal]
+    
+        return {lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal}
     },
     getStaminaValues(index,staminaPenalty) {
         //STAMINA
@@ -120,7 +115,15 @@ let calcs = {
         let baseEvadeCost = index.EvadeBaseCost;
         let evadePrice = baseEvadeCost * evadeCost * staminaCost;
 
-        return [staminaPerSec,staminaCost,adjustedPenalty,evadeCost,meleeCost,evadePrice]
+        return {
+            staminaPerSec,
+            staminaCost,
+            adjustedPenalty,
+            evadeCost,
+            meleeCost,
+            evadePrice
+        };
+        // return [staminaPerSec,staminaCost,adjustedPenalty,evadeCost,meleeCost,evadePrice]
     },
     getRelicHealing(tieredFunctionStorage,index,totalHealth,globalHealingMod,healingEffectiveness) {
         //RELIC HEALING
@@ -130,35 +133,31 @@ let calcs = {
         let relicHPtime = index.RelicHPtime;
         let relicUseTime = index.RelicSpeed;
         let relicEffectiveness = index.RelicEFF;
+        let chargeOverride = index.RelicChargesOverride;
+        let relicCharges = Math.floor(chargeOverride ? chargeOverride : (10 + index.RelicCharges) * index["RelicCharges%"]);//can't have 0 charges, yet at least.
+        let relicChance = Math.max(0,index.RelicUseChance);//cannot be less than 0 and refund you
 
         let relicHPscaled = relicHPbase * (1+relicEffectiveness) * (1+healingEffectiveness);
 
         let relicPercPerSecond,relicFlatPerSecond;
         globalRecords.relicComplexArray = null;//Need to clear the complex array in case it persists
 
+        let perSecComposite = relicHPscaled/relicHPtime;
         switch (relicHPtype) {
             case "%":
-                relicPercPerSecond = (relicHPscaled/relicHPtime);
-                relicFlatPerSecond = ((relicHPscaled/relicHPtime)/100)*totalHealth;
-                break;
+                relicPercPerSecond = perSecComposite;relicFlatPerSecond = (perSecComposite/100)*totalHealth;break;
             case "P":
-                relicPercPerSecond = null;
-                relicFlatPerSecond = (relicHPscaled/relicHPtime);
-                break;
+                relicPercPerSecond = null;relicFlatPerSecond = perSecComposite;break;
             case "F":
-                relicPercPerSecond = null;
-                relicFlatPerSecond = (relicHPscaled/relicHPtime);
-                break;
+                relicPercPerSecond = null;relicFlatPerSecond = perSecComposite;break;
             default:
-                relicHPscaled = 0;
-                relicHPtime = 0;
-                relicPercPerSecond = null;
-                relicFlatPerSecond = null;
+                relicHPscaled = 0;relicHPtime = 0;
+                relicPercPerSecond = null;relicFlatPerSecond = null;
                 break;
         }
 
         if (index.thisIsAQuery) {
-            relicComplexArray = formulasValues.callStoredFunctions(tieredFunctionStorage,"customRelicFunctions",index,[relicHPscaled,totalHealth]);//resonating heart, stuff like that
+            if (tieredFunctionStorage.customRelicFunctions) {relicComplexArray = formulasValues.callStoredFunctions(tieredFunctionStorage,"customRelicFunctions",index,[relicHPscaled,totalHealth]);}//resonating heart, stuff like that
         }
         else {
             let toggleCheck = readSelection(`USEtoggledRelic`).checked;
@@ -168,33 +167,26 @@ let calcs = {
             }
         }
 
-        return [relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,globalRecords.relicComplexArray,relicUseTime,relicEffectiveness]
+        return {relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray:globalRecords.relicComplexArray,relicUseTime,relicEffectiveness,relicCharges,relicChance}
     },
     getAdvancedDR(index,totalDR,totalHealth,totalHealthNoGlobal) {
-        //REDUCED ENEMY DAMAGE
-        let reducedEnemyDamage = index.REdamage - 1;
-        //DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
-        let damageKept = index.DMGKept - 1;
+        let INITIALreducedEnemyDamage = index.REdamage - 1;//REDUCED ENEMY DAMAGE
+        let INITIALdamageKept = index.DMGKept - 1;//DAMAGE KEPT OR RETAINED(how much gets shared to allies via various sources)
 
-        //Save the current values to be used in the switch case returns, as we're going to modify the original values after this
-        let MODreducedEnemyDamage = reducedEnemyDamage;
-        let MODdamageKept = damageKept;
-        //Modify the original values to give proper amounts to bonus mitigation and EHP after.
-        if (!globalRecords.useREdamage){reducedEnemyDamage=1} else {reducedEnemyDamage += 1;}
-        if (!globalRecords.useDMGKept){damageKept=1} else {damageKept += 1;}
-        //TOTAL BONUS TO EFFECTIVE DR, BASED ON REDMG AND DMGKEPT
-        let totalBonusMitigation = (damageKept*reducedEnemyDamage)-1;
-        //TOTAL EFFECTIVE DAMAGE REDUCTION INCLUDING REDMG AND DMGKEPT
-        totalDR = Math.min(0.80,totalDR);
+        let reducedEnemyDamage = INITIALreducedEnemyDamage;//Save the current values to be used in the return values, not the mitigation sum math
+        let damageKept = INITIALdamageKept;
+        if (!globalRecords.useREdamage){INITIALreducedEnemyDamage=1} else {INITIALreducedEnemyDamage += 1;}//Modify the original values to give proper amounts to bonus mitigation and EHP after.
+        if (!globalRecords.useDMGKept){INITIALdamageKept=1} else {INITIALdamageKept += 1;}
+        let totalBonusMitigation = (INITIALdamageKept*INITIALreducedEnemyDamage)-1;//TOTAL BONUS TO EFFECTIVE DR, BASED ON REDMG AND DMGKEPT
+        totalDR = Math.min(0.80,totalDR);//TOTAL EFFECTIVE DAMAGE REDUCTION INCLUDING REDMG AND DMGKEPT
         let effectiveDR = 1-(1-totalDR)*(1+totalBonusMitigation);
         //----------BASE EHP----------------------------------------------------------------------------
-        //For general EHP math
-        let baseEHP = totalHealth/(1-effectiveDR); 
+        let baseEHP = totalHealth/(1-effectiveDR);//For general EHP math
         //For shields EHP math, when restriction cord exists
         //This exists for and is used solely by shields and healing. Restriction Cord stops you from HEALING past 50%, it does not actually reduce MAX by 50%.
         let baseEHPforShieldsAndHealing = totalHealthNoGlobal/(1-effectiveDR);
 
-        return [MODreducedEnemyDamage,MODdamageKept,totalBonusMitigation,effectiveDR,baseEHP,baseEHPforShieldsAndHealing]
+        return {reducedEnemyDamage,damageKept,totalBonusMitigation,effectiveDR,baseEHP,baseEHPforShieldsAndHealing}
     },
     getShields(index,baseEHP) {
         //----------SHIELDS----------------------------------------------------------------------------
@@ -204,249 +196,895 @@ let calcs = {
         //noGlobal on HP here, as stuff like restriction cord does not reduce max hp, it only prevents you from HEALING past 50%
         let shieldEHP = baseEHP * totalPercShields;
 
-        return [percShields,shieldEff,totalPercShields,shieldEHP]
+        return {percShields,shieldEff,totalPercShields,shieldEHP}
     },
     getEHP(shieldEHP,baseEHP) {
         shieldEHP = globalRecords.useShields ? shieldEHP : 0;
         let totalEHP = baseEHP + shieldEHP;
 
-        return [totalEHP]
+        return totalEHP;
     },
-    getAdvancedHealing(baseEHP,regHealing,relicHealing,totalHealthNoGlobal) {
+    getAdvancedHealing(baseEHP,regHealing,totalHealthNoGlobal) {
         let advancedRelicFlat,advancedRelicPerc;
-
-        let flatHPperSec = regHealing[0];
-        let percHPperSec = regHealing[1];
-
-        let relicHPtype = relicHealing[0];
-        let relicHPtime = relicHealing[1];
-        let relicHPscaled = relicHealing[2];
-        let useComplexValues = relicHealing[3];
-        let relicComplexArray = relicHealing[4];
-
+        const {flatHPperSec,percHPperSec,relicHPtype,relicHPtime,relicHPscaled,useComplexValues,relicComplexArray} = regHealing;
 
         if (useComplexValues===true) {advancedRelicPerc = relicComplexArray[0];advancedRelicFlat = 0;}
         else {
             switch (relicHPtype) {
-                case "%":
-                    advancedRelicPerc = relicHPscaled/relicHPtime;advancedRelicFlat = 0;
-                    break;
-                case "P":
-                    advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;
-                    break;
-                case "F":
-                    advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;
-                    break;
-                default:
-                    advancedRelicPerc = 0;advancedRelicFlat = 0;//If there is no healing type(unique relic like Shielded Heart)
-                    break;
+                case "%":advancedRelicPerc = relicHPscaled/relicHPtime;advancedRelicFlat = 0;break;
+                case "P":advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;break;
+                case "F":advancedRelicPerc = 0;advancedRelicFlat = relicHPscaled/relicHPtime;break;
+                default:advancedRelicPerc = 0;advancedRelicFlat = 0;break;//If there is no healing type(unique relic like Shielded Heart)
             }
         }
 
-        let totalHealth = totalHealthNoGlobal;//noGlobal hp here
-        let advancedRelicTotalFlat = advancedRelicFlat + (advancedRelicPerc/100)*totalHealth;
-        let advancedRelicTotalPerc = ((advancedRelicPerc/100) + advancedRelicFlat/totalHealth) * 100;
+        let advancedRelicTotalFlat = advancedRelicFlat + (advancedRelicPerc/100)*totalHealthNoGlobal;
+        let advancedRelicTotalPerc = ((advancedRelicPerc/100) + advancedRelicFlat/totalHealthNoGlobal) * 100;
 
-        let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealth;
-        let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealth)*100;
+        let advancedTotalFlatHP = flatHPperSec + percHPperSec*totalHealthNoGlobal;
+        let advancedTotalPercHP = (percHPperSec + flatHPperSec/totalHealthNoGlobal)*100;
         if (globalRecords.useRelicHealing) {advancedTotalFlatHP += advancedRelicTotalFlat;advancedTotalPercHP += advancedRelicTotalPerc;}
 
         let EHPpSec = baseEHP * (advancedTotalPercHP/100);
 
-        return [advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec]
+        return {advancedRelicFlat,advancedRelicPerc,advancedRelicTotalFlat,advancedRelicTotalPerc,advancedTotalFlatHP,advancedTotalPercHP,EHPpSec}
     },
+    getHeavyAmmoRegenValues(index,cappedCDR,baseRegenRate,baseAmmoValue) {
+        const percentRate = (baseRegenRate/cappedCDR) * index.HeavyAmmoRegenMulti;
+        const totalAmmoValue = Math.ceil(baseAmmoValue * (1 + index.HeavyAmmoBaseMulti) * (1 + index.HeavyAmmo));
+        const ammoPerSecond = (percentRate/100) * totalAmmoValue;
+        const ammoPerSecondActive = index.HeavyAmmoActiveRegen ? ammoPerSecond * 0.75 : 0;
+        return {percentRate,totalAmmoValue,ammoPerSecond,ammoPerSecondActive}
+    }
 }
 let customDamage = {
     HavocForm(abilityPlacement,index) {
-        let reference = index;
         let isCrit = globalRecords.enableCrits;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
 
         let abilityPath = classInfo.Archon.abilities["Havoc Form"];
         let customStats = abilityPath.customStats//path to havoc relevant stats
-        let duration = customStats.duration;
-        let entryDuration = customStats.entryDuration;//the amount of time you spend locked in the entry animation
-        let trueBaseDPS = customStats.trueBaseDPS;//base dps without cast speed
-        let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
-        let frequency = customStats.frequency;//the rate at which we hit enemies without cast speed
-        let drain = customStats.drain;//How much duration we lost per instance of outgoing dmg.
+        const {statTags,duration,entryDuration,trueBaseDPS,baseDamage,frequency,drain} = customStats;
+        //tags, duration of skill, duration of entry anim not changed by speed, base dps, base dmg - not dps, the rate at which we hit without speed, how much duration we lost per instance of outgoing dmg.
 
-        let tagReference = customStats.statTags;
-        let allDamageTags = tagReference.Damage;
-        let sumDamageBonuses = conditionalHelpers.returnIndexTagSums(index,allDamageTags);
-        let allCritTags = tagReference.CritChance;
-        let sumCritChance = conditionalHelpers.returnIndexTagSums(index,allCritTags);
-        let allCritDamageTags = tagReference.CritDamage;
-        let sumCritDamage = conditionalHelpers.returnIndexTagSums(index,allCritDamageTags);
-        let allSpeedTags = tagReference.Speed;
-        let sumSpeedBonuses = conditionalHelpers.returnIndexTagSums(index,allSpeedTags);
-
-        let modifiedDuration = (duration * (1 + reference.SkillDuration)) - entryDuration;//The duration left after entry animation, before the drain starts
-        let effectiveDrainRate = (frequency/(1 + reference.CastSpeed)) + drain;//The total drain per instance of damage, including time passed between instances
-        let totalHits = Math.floor(modifiedDuration/effectiveDrainRate);//total hits possible when firing constantly.
-
-        let trueDuration = modifiedDuration - (totalHits * drain);//The actual amount of time the skill lasts, when constantly fired, not including entry duration
-
+        const {Damage,CritChance,CritDamage,Speed} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
+        let sumSpeedBonuses = getIndexSums(index,Speed);
 
         let baseCritDamage = 0.5;
-        let totalDamageBonus = sumDamageBonuses;
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let totalSpeedBonus = 1 + sumSpeedBonuses;
         let totalCritDamageBonus = sumCritDamage;
         let finalCritDamage = baseCritDamage + totalCritDamageBonus;
         let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
-        let avgCritDamage = isCrit ? finalCritDamage * totalCritChance : 0;
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
 
-        let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
-        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
+        let adjustedBaseDmg = baseDamage * totalDamageBonus;
 
+        let modifiedDuration = (duration * (1 + index.SkillDuration)) - entryDuration;//The duration left after entry animation, before the drain starts
+        let effectiveDrainRate = (frequency/totalSpeedBonus) + drain;//The total drain per instance of damage, including time passed between instances
+        let totalHits = Math.floor(modifiedDuration/effectiveDrainRate);//total hits possible when firing constantly.
+        let trueDuration = modifiedDuration - (totalHits * drain);//The actual amount of time the skill lasts, when constantly fired, not including entry duration
 
-        let trueDPS = trueBaseDPS * (1 + sumSpeedBonuses) * (1 + totalDamageBonus) * (1 + avgCritDamage);
-        let trueTotalDamage = baseDamage * totalHits * (1 + totalDamageBonus) * (1 + avgCritDamage);
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
 
-        if (index.thisIsAQuery != 1) {
+        let trueDPS = trueBaseDPS * totalSpeedBonus * totalDamageBonus * avgCritDamage;
+        let trueTotalDamage = adjustedBaseDmg * totalHits * avgCritDamage;
+
+        if (!index.thisIsAQuery) {
             let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
-            let factorID = `ability${abilityPlacement}Factors`
+            let factorID = `ability${abilityPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
 
             readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
-            let insertedHTML = `
-            <div class="seletionBackgroundAbilityBox">
-                <div class="selectionBackgroundAbilityAdjustment">
-                    <img class="abilityDPSbackgroundImage" src='${abilityPath.image}' alt="Ability ${abilityPlacement} breakdown icon">
-                </div>
-            </div>
-            
-            <div class="selectionAbilityDPSBody">
-                <div class="selectionAbilityDPSTitleHeader">${abilityPath.name.toUpperCase()}</div>
-
-                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
-                    <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
-                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${abilityPlacement}DPS">0.00</span>
-                    </div>
-                    <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
-                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="ability${abilityPlacement}TotalDamage">0.00</span>
-                    </div>
-                </div>
-                
-                <div class="abilityFactorsList" id="${factorID}"></div>
-            </div>`
-
-            readSelection(breakdownDomID).innerHTML = insertedHTML
-
+            let breakdownInfoUI = {factorID,"image": abilityPath.image,"name": abilityPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
             readSelection("havocFormBoxHolder").style.display = "flex"
 
-            readSelection(`ability${abilityPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
-            readSelection(`ability${abilityPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
-
-
-            // (modifiedDuration + entryDuration)
             readSelection(factorID).innerHTML = "";
             let drRowsHTML = "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
-            drRowsHTML += (modifiedDuration + entryDuration) ? createHTML.basicsRow("","Duration",(modifiedDuration + entryDuration),false) : "";
-            drRowsHTML += entryDuration ? createHTML.basicsRow("","Entry Duration",entryDuration.toFixed(2),false) : "";
-            drRowsHTML += modifiedDuration ? createHTML.basicsRow("","Usable Duration",modifiedDuration.toFixed(2),false) : "";
-            drRowsHTML += trueDuration ? createHTML.basicsRow("","True Duration",trueDuration.toFixed(2),false) : "";
+            drRowsHTML += (modifiedDuration + entryDuration) ? addRow("","Duration",(modifiedDuration + entryDuration),false) : "";
+            drRowsHTML += entryDuration ? addRow("","Entry Duration",entryDuration.toFixed(2),false) : "";
+            drRowsHTML += modifiedDuration ? addRow("","Usable Duration",modifiedDuration.toFixed(2),false) : "";
+            drRowsHTML += trueDuration ? addRow("","True Duration",trueDuration.toFixed(2),false) : "";
 
-            
-            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,allSpeedTags,totalHits);
-            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,allDamageTags);
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,Speed,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
             drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
-            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,allCritTags,allCritDamageTags,true);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
 
-            
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
         }
 
         return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
-    MonolithSandstorm(modPlacement,index) {//wip do not touch
-        let isUIcalcs = index.thisIsAQuery;
+    FlamethrowerCarry(abilityPlacement,index) {
         let isCrit = globalRecords.enableCrits;
+        let isWeakspot = globalRecords.enableWeakspots && !index.WeakspotDisable;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
 
-        let modPath = builtInPrimary.Sandstorm;
+        let abilityPath = classInfo.Engineer.abilities["Heavy Weapon: Flamethrower"];
+        let customStats = abilityPath.customStats;
+        const {statTags,statTagsDOT,fireRate,fireRateTurret,baseDamage,baseDamageTurretBase,baseWeakspot,frequencyDOT,baseDamageDOT,durationDOT,turretAmmoCostMulti} = customStats;
+        const costMulti = globalRecords.enableEngTurretModes ? turretAmmoCostMulti : 1;
+
+        
+
+        const cappedCDR = Math.max(0.2,1 + index.CDR);
+        const {percentRate,totalAmmoValue,ammoPerSecond,ammoPerSecondActive} = calcs.getHeavyAmmoRegenValues(index,cappedCDR,abilityPath.regenRate,abilityPath.baseEnergy);
+        // const actualTotalAmmo = globalRecords.enableEngTurretModes ? totalAmmoValue/turretAmmoCostMulti : totalAmmoValue;
+        const actualFireRate = globalRecords.enableEngTurretModes ? fireRateTurret : fireRate;
+        const actualBaseDamage = globalRecords.enableEngTurretModes ? baseDamageTurretBase : baseDamage;
+        const effectiveDrainRate = ammoPerSecondActive - (actualFireRate * costMulti);
+        let drainState = false;
+        if (effectiveDrainRate >= 0) {drainState = false;}
+        else {drainState = true;}
+
+        let effectiveDuration = 0;
+        if (drainState) {effectiveDuration = totalAmmoValue / (-effectiveDrainRate);}
+        else {effectiveDuration = Infinity;}
+        let statusDuration = durationDOT * index.StatusDuration;
+        let trueDurationDOT = effectiveDuration + statusDuration;
+        let totalHitsDOT = Math.floor(trueDurationDOT/frequencyDOT);
+
+        const DamageDOT = statTagsDOT.Damage;
+        let sumDotDamageBonuses = 1 + getIndexSums(index,DamageDOT);
+        const adjustedBaseDmgDOT = baseDamageDOT * sumDotDamageBonuses;
+
+        let trueTotalDamageDOT = adjustedBaseDmgDOT * totalHitsDOT;
+        let trueDPSDOT = trueTotalDamageDOT/trueDurationDOT;
+
+        const {Damage,CritChance,CritDamage,WeakSpot,Speed} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
+        let sumWeakspot = getIndexSums(index,WeakSpot);
+
+        let baseCritDamage = 0.5;
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let finalCritDamage = baseCritDamage + sumCritDamage;
+        let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
+
+        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+
+        let adjustedBaseDmg = actualBaseDamage * totalDamageBonus * attackWeakspot;
+
+        // let trueDuration = (duration * (1 + index.SkillDuration)) + effectDuration;//DRENCHED can't be modified by duration bonuses, but obv the total duration is the modified base duration + drenched's duration
+        let totalHits = Math.floor(effectiveDuration*actualFireRate);//total hits possible within drenched's full effective duration.
+
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let trueTotalDamage = adjustedBaseDmg * totalHits * avgCritDamage;
+        let trueDPS = actualFireRate * adjustedBaseDmg * avgCritDamage;
+
+        const sumDPS = trueDPS + trueDPSDOT;
+        const sumTotalDamage = trueTotalDamage + trueTotalDamageDOT;
+        const sumAvgDPS = sumTotalDamage/trueDurationDOT
+
+        
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
+            let factorID = `ability${abilityPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": abilityPath.image,"name": abilityPath.name,"dps": sumAvgDPS,"totalDMG": sumTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+            drRowsHTML += `
+            <div class='dpsFactorDisclaimer'>Toggle "Use Turret Mode" to see stats in turret mode. Otherwise this will always use Carry mode.</div><br>`;
+
+            drRowsHTML += `
+            <div class='dpsFactorDisclaimer'><span>"Full"</span> DPS is the DPS while the heavy weapon is still active and has ammo. <span>Total</span> DPS is averaged over the full duration including the status duration after the ammo has run out.</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Heavy DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueDPS).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DoT DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueDPSDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">FULL DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(sumDPS).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            <br>`;
+            
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(totalHits).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(minimumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Crit Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(maximumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            <br>`;
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DoT Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(totalHitsDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Tick</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(adjustedBaseDmgDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total DoT</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueTotalDamageDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            <br>`;
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Ammo/s</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">-${(actualFireRate * costMulti).toFixed(2)}/+${(+(ammoPerSecondActive).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">CDR</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+((cappedCDR-1)*100).toFixed(2)).toLocaleString()}%</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Eff. Duration</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(effectiveDuration).toFixed(2)).toLocaleString()}s</div>
+                </div>
+            </div>
+            `;
+
+            let newDamageTags = [...new Set([...Damage,...DamageDOT])];
+
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            drRowsHTML += durationDOT ? addRow("","DoT Duration",durationDOT.toFixed(2),false) : "";
+            drRowsHTML += index.StatusDuration-1 ? addRow("","Status&nbsp;Duration Bonus",(index.StatusDuration-1).toFixed(2),true,"%") : "";
+            drRowsHTML += durationDOT*index.StatusDuration != durationDOT ? addRow("","Actual&nbsp;Status&nbsp;Duration",(durationDOT*index.StatusDuration).toFixed(2)) : "";
+
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,Speed,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,newDamageTags);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
+            drRowsHTML += conditionalHelpers.addBreakdownWeakspotRows(index,WeakSpot);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Heavy Weapon: Flamethrower",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+    },
+    ImpactCarry(abilityPlacement,index) {
+        let isCrit = globalRecords.enableCrits;
+        let isWeakspot = globalRecords.enableWeakspots && !index.WeakspotDisable;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+
+        let abilityPath = classInfo.Engineer.abilities["Heavy Weapon: Impact Cannon"];
+        let customStats = abilityPath.customStats;
+        const {statTags,statTagsAOE,fireRate,fireRateTurret,baseDamage,baseDamageAOE,baseDamageTurretBase,baseWeakspot} = customStats;
+
+        const cappedCDR = Math.max(0.2,1 + index.CDR);
+        const {percentRate,totalAmmoValue,ammoPerSecond,ammoPerSecondActive} = calcs.getHeavyAmmoRegenValues(index,cappedCDR,abilityPath.regenRate,abilityPath.baseEnergy);
+        let minimumPossibleDamageAOE="",maximumPossibleDamageAOE="";
+        let actualBaseDamage,actualFireRate;
+        let includeExplosiveAOE = false;
+        const {Damage,CritChance,CritDamage,WeakSpot,Speed} = statTags;
+
+        let actualDamage = Damage;
+        let actualCritChance = CritChance;
+        let actualCritDamage = CritDamage;
+        let actualWeakSpot = WeakSpot;
+
+
+        if (globalRecords.enableEngTurretModes) {
+            actualFireRate = fireRateTurret;
+            actualBaseDamage = baseDamageTurretBase;
+
+            actualDamage = statTagsAOE.Damage;
+            actualCritChance = statTagsAOE.CritChance;
+            actualCritDamage = statTagsAOE.CritDamage;
+            actualWeakSpot = statTagsAOE.WeakSpot;
+        }
+        else {
+            actualFireRate = fireRate;
+            actualBaseDamage = baseDamage;
+            includeExplosiveAOE = true;//if this is the carried firing mode, include the explosive AOE separate from the missile impact
+        }
+
+
+        const effectiveDrainRate = ammoPerSecondActive - actualFireRate;
+        let drainState = false;
+        if (effectiveDrainRate >= 0) {drainState = false;}
+        else {drainState = true;}
+
+        let effectiveDuration = 0;
+        if (drainState) {effectiveDuration = totalAmmoValue / (-effectiveDrainRate);}
+        else {effectiveDuration = Infinity;}
+
+        let sumDamageBonuses = getIndexSums(index,actualDamage);
+        let sumCritChance = getIndexSums(index,actualCritChance);
+        let sumCritDamage = getIndexSums(index,actualCritDamage);
+        let sumWeakspot = getIndexSums(index,actualWeakSpot);
+
+        let baseCritDamage = 0.5;
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let finalCritDamage = baseCritDamage + sumCritDamage;
+        let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
+
+        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+
+        let adjustedBaseDmg = actualBaseDamage * totalDamageBonus * attackWeakspot;
+
+        // let trueDuration = (duration * (1 + index.SkillDuration)) + effectDuration;//DRENCHED can't be modified by duration bonuses, but obv the total duration is the modified base duration + drenched's duration
+        let totalHits = Math.floor(effectiveDuration*fireRate);//total hits possible within drenched's full effective duration.
+
+        const minimumPossibleDamage = adjustedBaseDmg;
+        const maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let trueTotalDamage = adjustedBaseDmg * totalHits * avgCritDamage;
+        let trueDPS = fireRate * adjustedBaseDmg * avgCritDamage;
+
+        if (includeExplosiveAOE) {
+            let sumDamageBonusesAOE = getIndexSums(index,statTagsAOE.Damage);
+            let sumCritChanceAOE = getIndexSums(index,statTagsAOE.CritChance);
+            let sumCritDamageAOE = getIndexSums(index,statTagsAOE.CritDamage);
+
+            let totalDamageBonusAOE = 1 + sumDamageBonusesAOE;
+            let finalCritDamageAOE = baseCritDamage + sumCritDamageAOE;
+            let totalCritChanceAOE = Math.min(1,sumCritChanceAOE);//cap crit chance at 100%
+            let avgCritDamageAOE = 1 + (isCrit ? finalCritDamageAOE * totalCritChanceAOE : 0);
+            let adjustedBaseDmgAOE = baseDamageAOE * totalDamageBonusAOE;
+
+            minimumPossibleDamageAOE = adjustedBaseDmgAOE;
+            maximumPossibleDamageAOE = adjustedBaseDmgAOE * (1 + finalCritDamageAOE);
+
+            trueTotalDamage += adjustedBaseDmgAOE * totalHits * avgCritDamageAOE;
+            trueDPS += fireRate * adjustedBaseDmgAOE * avgCritDamageAOE;
+        }
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
+            let factorID = `ability${abilityPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
+
+            minimumPossibleDamageAOE = minimumPossibleDamageAOE ? `/${(+(minimumPossibleDamageAOE).toFixed(2)).toLocaleString()}` : "";
+            maximumPossibleDamageAOE = maximumPossibleDamageAOE ? `/${(+(maximumPossibleDamageAOE).toFixed(2)).toLocaleString()}` : "";
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": abilityPath.image,"name": abilityPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+            drRowsHTML += `
+            <div class='dpsFactorDisclaimer'>When carried, the AOE is explosive but the hit-scan impact is not. When turreted, the entire attack is explosive.<br>AKA: Carried can weakspot, but only part of it.</div><br>
+            `;
+            
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(totalHits).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(minimumPossibleDamage).toFixed(2)).toLocaleString()}${minimumPossibleDamageAOE}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Crit Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(maximumPossibleDamage).toFixed(2)).toLocaleString()}${maximumPossibleDamageAOE}</div>
+                </div>
+            </div>
+            `;
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Ammo/s</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">-${actualFireRate.toFixed(2)}/+${(+(ammoPerSecondActive).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">CDR</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+((cappedCDR-1)*100).toFixed(2)).toLocaleString()}%</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Eff. Duration</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(effectiveDuration).toFixed(2)).toLocaleString()}s</div>
+                </div>
+            </div>
+            `;
+
+            //unique to this turret, we're just going with the AOE tags as a general tags display route
+            //reason being is that the explosive elements of the attacks are present in both carried and turreted,
+            //it's only in the math that we split it for the carried form
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,Speed,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,statTagsAOE.Damage);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,statTagsAOE.CritChance,statTagsAOE.CritDamage,true);
+            drRowsHTML += conditionalHelpers.addBreakdownWeakspotRows(index,WeakSpot);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Heavy Weapon: Impact Cannon",1,1,trueDPS,trueTotalDamage]
+    },
+    VulcanCarry(abilityPlacement,index) {
+        let isCrit = globalRecords.enableCrits;
+        let isWeakspot = globalRecords.enableWeakspots && !index.WeakspotDisable;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+
+        let abilityPath = classInfo.Engineer.abilities["Heavy Weapon: Vulcan"];
+        let customStats = abilityPath.customStats;
+        const {statTags,fireRate,baseDamage,baseWeakspot} = customStats;
+
+        const cappedCDR = Math.max(0.2,1 + index.CDR);
+        const {percentRate,totalAmmoValue,ammoPerSecond,ammoPerSecondActive} = calcs.getHeavyAmmoRegenValues(index,cappedCDR,abilityPath.regenRate,abilityPath.baseEnergy);
+        const effectiveDrainRate = ammoPerSecondActive - fireRate;
+        let drainState = false;
+        if (effectiveDrainRate >= 0) {drainState = false;}
+        else {drainState = true;}
+
+        let effectiveDuration = 0;
+        if (drainState) {effectiveDuration = totalAmmoValue / (-effectiveDrainRate);}
+        else {effectiveDuration = Infinity;}
+
+        const {Damage,CritChance,CritDamage,WeakSpot,Speed} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
+        let sumWeakspot = getIndexSums(index,WeakSpot);
+
+        let baseCritDamage = 0.5;
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let finalCritDamage = baseCritDamage + sumCritDamage;
+        let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
+
+        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+
+        let adjustedBaseDmg = baseDamage * totalDamageBonus * attackWeakspot;
+
+        // let trueDuration = (duration * (1 + index.SkillDuration)) + effectDuration;//DRENCHED can't be modified by duration bonuses, but obv the total duration is the modified base duration + drenched's duration
+        let totalHits = Math.floor(effectiveDuration*fireRate);//total hits possible within drenched's full effective duration.
+
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let trueTotalDamage = adjustedBaseDmg * totalHits * avgCritDamage;
+        let trueDPS = fireRate * adjustedBaseDmg * avgCritDamage;
+
+        if (globalRecords.enableEngTurretModes) {
+            minimumPossibleDamage *= 0.5;
+            maximumPossibleDamage *= 0.5;
+            trueTotalDamage *= 0.5;
+            trueDPS *= 0.5;
+        }
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
+            let factorID = `ability${abilityPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": abilityPath.image,"name": abilityPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+            drRowsHTML += `
+            <div class='dpsFactorDisclaimer'>This is for CARRIED only damage. If you want DPS/Dmg for Turret mode, then cut the numbers you see here in half as the turret deals exactly half the damage.</div><br>
+            `;
+            
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(totalHits).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(minimumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Crit Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(maximumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Ammo/s</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">-${fireRate.toFixed(2)}/+${(+(ammoPerSecondActive).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">CDR</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+((cappedCDR-1)*100).toFixed(2)).toLocaleString()}%</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Eff. Duration</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(effectiveDuration).toFixed(2)).toLocaleString()}s</div>
+                </div>
+            </div>
+            `;
+
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,Speed,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
+            drRowsHTML += conditionalHelpers.addBreakdownWeakspotRows(index,WeakSpot);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Heavy Weapon: Vulcan",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+    },
+    WayOfKaeula(abilityPlacement,index) {
+        let isCrit = globalRecords.enableCrits;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+
+        let abilityPath = classInfo.Invoker.abilities["Way of Kaeula"];
+        let customStats = abilityPath.customStats;
+        const {statTags,duration,effectDuration,baseDamage,baseWaveDamage,frequency} = customStats;
+
+        const {Damage,CritChance,CritDamage,Speed} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
+
+        let baseCritDamage = 0.5;
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let finalCritDamage = baseCritDamage + sumCritDamage;
+        let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
+
+        let adjustedBaseDmg = baseDamage * totalDamageBonus;
+
+        let adjustedBaseWaveDmg = baseWaveDamage * (totalDamageBonus - index.ShockDamage);
+        let waveDmgCrit = adjustedBaseWaveDmg * (1 + finalCritDamage);
+
+        let trueDuration = (duration * (1 + index.SkillDuration)) + effectDuration;//DRENCHED can't be modified by duration bonuses, but obv the total duration is the modified base duration + drenched's duration
+        let totalHits = Math.floor(trueDuration/frequency);//total hits possible within drenched's full effective duration.
+
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let trueTotalDamage = adjustedBaseDmg * totalHits * avgCritDamage;
+        let trueDPS = trueTotalDamage/trueDuration;
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `ability${abilityPlacement}BreakdownTab`;
+            let factorID = `ability${abilityPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(abilityPath.name,abilityPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": abilityPath.image,"name": abilityPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            let enemyCount = Math.max(1,globalRecords.enemyCount);
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Targets</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${enemyCount}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(minimumPossibleDamage/enemyCount).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Crit Strike</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(maximumPossibleDamage/enemyCount).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+            drRowsHTML += `
+            <div class="rowTraceLine"></div>
+            <div class='basicsDRheaderTitle'>WAVE DAMAGE</div>
+            <div class='dpsFactorDisclaimer'>Not included in the DPS or Total Damage listed above.</div>
+            <div class='basicsDRheaderTitle'><div>${adjustedBaseWaveDmg.toFixed(2)}</div>&nbsp;-&nbsp;<div>CRIT: ${waveDmgCrit.toFixed(2)}</div></div>
+            <div class="rowTraceLine"></div><br>
+            `;
+
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+
+            drRowsHTML += duration ? addRow("","Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += index.SkillDuration ? addRow("","Duration Bonus",index.SkillDuration.toFixed(2),true,"%") : "";
+            drRowsHTML += effectDuration ? addRow("","DRENCHED&nbsp;Duration",effectDuration.toFixed(2),false) : "";
+            drRowsHTML += trueDuration ? addRow("","Effective Duration",trueDuration.toFixed(2),false) : "";
+
+            drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,Speed,totalHits);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Way of Kaeula",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
+    },
+    Firestorm(modPlacement,index) {
+        let isCrit = globalRecords.enableCrits;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+        let bonusPrefix = modPlacement === 1 ? "Primary" : "Secondary";
+        
+        let modPath = rangedMods.Firestorm;
         let customStats = modPath.customStats;
-        let duration = customStats.duration;
-        let modDurationBonus = 1 + index.ModDuration;
-        let baseDamage = customStats.baseDamage;//base dmg, not dps. True base dmg is divided by 3 for lifesteal and stuff
-        let frequency = customStats.frequency;//the rate at which the mod hits enemies
+        const {statTags,statTagsDOT,duration,durationDOT,baseDamage,baseDamageDOT,frequency,frequencyDOT,modScaling} = customStats;
 
-        let tagReference = customStats.statTags;
-        let allDamageTags = tagReference.Damage;
-        let sumDamageBonuses = conditionalHelpers.returnIndexTagSums(index,allDamageTags);
-        let allCritTags = tagReference.CritChance;
-        let sumCritChance = conditionalHelpers.returnIndexTagSums(index,allCritTags);
-        let allCritDamageTags = tagReference.CritDamage;
-        let sumCritDamage = conditionalHelpers.returnIndexTagSums(index,allCritDamageTags);
-        // let allSpeedTags = tagReference.Speed;
-        // let sumSpeedBonuses = conditionalHelpers.returnIndexTagSums(index,allSpeedTags);
+        const {Damage,CritChance,CritDamage} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage,bonusPrefix);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
 
-        let modifiedDuration = duration * modDurationBonus;
-        let totalHits = Math.floor(modifiedDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
+        let columnDuration = duration * (1 + index.ModDuration);
+        let columnHits = Math.floor(columnDuration/frequency) + 1;//There's always one hit to start, that's the +1 here
 
-        let trueDuration = modifiedDuration;//The actual amount of time the skill lasts, when constantly fired, not including entry duration
-
-        let totalDamageBonus = sumDamageBonuses;
+        let totalDamageBonus = 1 + sumDamageBonuses;
         let baseCritDamage = 0.5;
         let totalCritDamageBonus = sumCritDamage;
         let finalCritDamage = baseCritDamage + totalCritDamageBonus
-        let totalCritChance = sumCritChance;
-        totalCritChance = Math.min(totalCritChance,1)//cap crit chance at 100%
-        let avgCritDamage = isCrit ? finalCritDamage * totalCritChance : 0;
+        let totalCritChance = Math.min(sumCritChance,1);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
 
-        let minimumPossibleDamage = baseDamage * (1 + totalDamageBonus);
-        let maximumPossibleDamage = baseDamage * (1 + totalDamageBonus) * (1 + finalCritDamage);
+        const adjustedBaseDmg = baseDamage * totalDamageBonus;
 
-        let firstHitModifier = index.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
-        let firstHitDamage = baseDamage * (1 + totalDamageBonus + firstHitModifier) * (1 + avgCritDamage);
-        let trueTotalDamage = baseDamage * (totalHits-1) * (1 + totalDamageBonus) * (1 + avgCritDamage) + firstHitDamage;
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let trueTotalDamageColumn = adjustedBaseDmg * columnHits * avgCritDamage;
+
+        let modDotBonus = modScaling ? 1 + conditionalHelpers.getIndexSumsModDots(index) : 1;//Mod damage is a unique multi to mod DoTs, but only the DoT aspect they can apply.
+        //No prefix here as firestorm does NOT benefit from mutator mod dmg boosts, on the DoT. It DOES benefit from it on the column's damage though.
+
+        let statusDuration = durationDOT * index.StatusDuration;
+        let statusHits = Math.floor(statusDuration/frequencyDOT)-1;
+        let sumDotDamageBonuses = 1 + getIndexSums(index,statTagsDOT.Damage);
+        const adjustedBaseDmgDOT = baseDamageDOT * sumDotDamageBonuses * modDotBonus;
+
+        let totalHits = columnHits + statusHits;
+
+        let trueTotalDamageDOT = adjustedBaseDmgDOT * totalHits;//dots don't benefit from the first hit
+
+
+        let trueTotalDamage = trueTotalDamageColumn + trueTotalDamageDOT;
+        let trueDuration = columnDuration + statusDuration;
+
+
         let trueDPS = trueTotalDamage/trueDuration;
 
-        if (!isUIcalcs) {
+        if (!index.thisIsAQuery) {
             let breakdownDomID = `mod${modPlacement}BreakdownTab`;
-            let factorID = `mod${modPlacement}Factors`
+            let factorID = `mod${modPlacement}Factors`;
 
             readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(modPath.name,modPath.image,breakdownDomID);
-            let insertedHTML = `
-            <div class="seletionBackgroundAbilityBox">
-                <div class="selectionBackgroundAbilityAdjustment">
-                    <img class="abilityDPSbackgroundImage" src='${modPath.image}' alt="Ability ${modPlacement} breakdown icon">
-                </div>
-            </div>
-            
-            <div class="selectionAbilityDPSBody">
-                <div class="selectionAbilityDPSTitleHeader">${modPath.name.toUpperCase()}</div>
-
-                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
-                    <div class="advancedSummaryThirds" title="trueHavocDPS = " style="width: auto;">
-                        <span class="advancedSummaryStat">DPS</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="mod${modPlacement}DPS">0.00</span>
-                    </div>
-                    <div class="advancedSummaryThirds" title="totalHavocDamage = " style="width: auto;">
-                        <span class="advancedSummaryStat">TOTAL DMG</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="mod${modPlacement}TotalDamage">0.00</span>
-                    </div>
-                </div>
-                
-                <div class="abilityFactorsList" id="${factorID}"></div>
-            </div>`
-
-            readSelection(breakdownDomID).innerHTML = insertedHTML
-
+            let breakdownInfoUI = {factorID,"image": modPath.image,"name": modPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
             readSelection("havocFormBoxHolder").style.display = "flex"
 
-            readSelection(`mod${modPlacement}DPS`).innerHTML = trueDPS.toFixed(2);//later make this so it can work with either ability box
-            readSelection(`mod${modPlacement}TotalDamage`).innerHTML = trueTotalDamage.toFixed(2);
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+            let addRow = createHTML.basicsRow;
 
+            drRowsHTML += `
+            <div class='dpsFactorDisclaimer'><span>"Full"</span> DPS is the DPS while the column is still active. <span>Total</span> DPS is averaged over the full duration including the status duration after the column has subsided.</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Column DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueTotalDamageColumn/columnDuration).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DoT DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueTotalDamageDOT/trueDuration).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">FULL DPS</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+((trueTotalDamageDOT/trueDuration) + (trueTotalDamageColumn/columnDuration)).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+
+            drRowsHTML += `
+            <div class='basicsDRheaderTitle'>COLUMN DAMAGE</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Tick</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(minimumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Crit/Tick</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(maximumPossibleDamage).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total DoT</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueTotalDamageColumn).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+
+            drRowsHTML += `
+            <div class='basicsDRheaderTitle'>BURNING&nbsp;DAMAGE</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DoT Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${totalHits-1}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Tick</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(adjustedBaseDmgDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">Total DoT</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(trueTotalDamageDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+            // drRowsHTML += "<div class='dpsFactorDisclaimer'>Sandstorm assumes the first hit is not EXPOSED, but every hit thereafter is.</div>"
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            drRowsHTML += duration ? addRow("","Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += durationDOT ? addRow("","Base DoT Duration",durationDOT.toFixed(2),false) : "";
+            drRowsHTML += index.ModDuration ? addRow("","Duration Bonus",index.ModDuration.toFixed(2),true,"%") : "";
+            drRowsHTML += index.StatusDuration-1 ? addRow("","Status Duration Bonus",(index.StatusDuration-1).toFixed(2),true,"%") : "";
+            drRowsHTML += trueDuration ? addRow("","Efffective Duration",trueDuration.toFixed(2),false) : "";
+            drRowsHTML += columnHits ? addRow("","Column Hits",columnHits.toFixed(0),false) : "";
+            drRowsHTML += totalHits ? addRow("","DoT Hits",(totalHits-1).toFixed(0),false) : "";
+
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Firestorm",1,1,trueDPS,trueTotalDamage]
+    },
+    Heatwave(modPlacement,index) {
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+        let bonusPrefix = modPlacement === 1 ? "Primary" : "Secondary";
+        
+        let modPath = rangedMods.Heatwave;
+        let customStats = modPath.customStats;
+        const {statTagsDOT,duration,durationDOT,baseDamageDOT,frequencyDOT,modScaling,buildUpDuration} = customStats;
+
+        let effectDuration = (duration * (1 + index.ModDuration)) - buildUpDuration;
+        let statusDuration = durationDOT * index.StatusDuration;
+        let trueDuration = effectDuration + statusDuration;
+        let totalHits = Math.floor(trueDuration/frequencyDOT) - 1;//the dot trigger doesn't do dmg instantly like continuous attacks. DoT's have to wait until the frequency triggers it
+
+        let modDotBonus = modScaling ? 1 + conditionalHelpers.getIndexSumsModDots(index,bonusPrefix) : 1;//this will be 1 flat as heatwave doesn't scale with mod dmg at all, be it additive or multi
+
+        const Damage = statTagsDOT.Damage;
+        let sumDotDamageBonuses = 1 + getIndexSums(index,Damage,bonusPrefix);
+        const adjustedBaseDmgDOT = baseDamageDOT * sumDotDamageBonuses * modDotBonus;
+
+        let trueTotalDamageDOT = adjustedBaseDmgDOT * totalHits;
+        let trueTotalDamage = trueTotalDamageDOT;
+        let trueDPS = trueTotalDamage/trueDuration;
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `mod${modPlacement}BreakdownTab`;
+            let factorID = `mod${modPlacement}Factors`;
+            let addRow = createHTML.basicsRow;
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(modPath.name,modPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": modPath.image,"name": modPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
+
+            readSelection(factorID).innerHTML = "";
+            let drRowsHTML = "";
+
+            drRowsHTML += `
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DoT Hits</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(totalHits).toFixed(2)).toLocaleString()}</div>
+                </div>
+                <div class="totalHealingBoxHalf">
+                    <div class="totalHealingHeader hasHoverTooltip" id="">DMG/Tick</div>
+                    <div class="totalHealingValue" style="border-bottom: none;">${(+(adjustedBaseDmgDOT).toFixed(2)).toLocaleString()}</div>
+                </div>
+            </div>
+            `;
+
+            drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
+            drRowsHTML += duration ? addRow("","Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += durationDOT ? addRow("","DoT Duration",durationDOT.toFixed(2),false) : "";
+            drRowsHTML += index.ModDuration ? addRow("","Mod Duration Bonus",index.ModDuration.toFixed(2),true,"%") : "";
+            drRowsHTML += index.StatusDuration-1 ? addRow("","Status&nbsp;Duration Bonus",(index.StatusDuration-1).toFixed(2),true,"%") : "";
+            drRowsHTML += buildUpDuration ? addRow("","Build-Up Time",buildUpDuration.toFixed(2),false) : "";
+            drRowsHTML += trueDuration ? addRow("","Effective Duration",trueDuration.toFixed(2),false) : "";
+
+            drRowsHTML += "<div class='dpsFactorDisclaimer'>Does not benefit from any Mod Damage sources, at all.</div>"
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
+            drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
+
+            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
+            readSelection(factorID).innerHTML += drRowsHTML;
+        }
+
+        return ["Heatwave",1,1,trueDPS,trueTotalDamage]
+    },
+    MonolithSandstorm(modPlacement,index) {
+        let isCrit = globalRecords.enableCrits;
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
+
+        let modPath = builtInPrimary.Sandstorm;
+        let customStats = modPath.customStats;
+        const {statTags,duration,baseDamage,frequency} = customStats;
+
+        const {Damage,CritChance,CritDamage} = statTags;
+        let sumDamageBonuses = getIndexSums(index,Damage);
+        let sumCritChance = getIndexSums(index,CritChance);
+        let sumCritDamage = getIndexSums(index,CritDamage);
+
+        let trueDuration = duration * (1 + index.ModDuration);
+        let totalHits = Math.floor(trueDuration/frequency);//total hits possible given the frequency of hits in the duration of the mod
+
+        let totalDamageBonus = 1 + sumDamageBonuses;
+        let baseCritDamage = 0.5;
+        let totalCritDamageBonus = sumCritDamage;
+        let finalCritDamage = baseCritDamage + totalCritDamageBonus
+        let totalCritChance = Math.min(sumCritChance,1);//cap crit chance at 100%
+        let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
+
+        const adjustedBaseDmg = baseDamage * totalDamageBonus;
+
+        let minimumPossibleDamage = adjustedBaseDmg;
+        let maximumPossibleDamage = adjustedBaseDmg * (1 + finalCritDamage);
+
+        let firstHitModifier = index.outEXPOSED ? -.15 : 0;//The first hit doesn't benefit from EXPOSED, so remove the bonus from that hit alone.
+        let firstHitDamage = baseDamage * (totalDamageBonus + firstHitModifier) * avgCritDamage;
+        let trueTotalDamage = adjustedBaseDmg * (totalHits-1) * avgCritDamage + firstHitDamage;
+        let trueDPS = trueTotalDamage/trueDuration;
+
+        if (!index.thisIsAQuery) {
+            let breakdownDomID = `mod${modPlacement}BreakdownTab`;
+            let factorID = `mod${modPlacement}Factors`
+            let addRow = createHTML.basicsRow;
+
+            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(modPath.name,modPath.image,breakdownDomID);
+            let breakdownInfoUI = {factorID,"image": modPath.image,"name": modPath.name,"dps": trueDPS,"totalDMG": trueTotalDamage};
+            readSelection(breakdownDomID).innerHTML = createHTML.generalAbilityBreakdownBox(breakdownInfoUI);
+            readSelection("havocFormBoxHolder").style.display = "flex"
 
             readSelection(factorID).innerHTML = "";
             let drRowsHTML = "<div class='dpsFactorDisclaimer'>Sandstorm assumes the first hit is not EXPOSED, but every hit thereafter is.</div>"
             drRowsHTML += "<div class='basicsDRheaderTitle'>DURATION FACTORS</div>";
-            drRowsHTML += duration ? createHTML.basicsRow("","Base Duration",duration.toFixed(2),false) : "";
-            drRowsHTML += index.ModDuration ? createHTML.basicsRow("","Duration Bonus",index.ModDuration.toFixed(2),true,"%") : "";
-            drRowsHTML += modifiedDuration ? createHTML.basicsRow("","Actual Duration",modifiedDuration.toFixed(2),false) : "";
-            drRowsHTML += totalHits ? createHTML.basicsRow("","Total Hits",totalHits,false) : "";
+            drRowsHTML += duration ? addRow("","Base Duration",duration.toFixed(2),false) : "";
+            drRowsHTML += index.ModDuration ? addRow("","Duration Bonus",index.ModDuration.toFixed(2),true,"%") : "";
+            drRowsHTML += trueDuration ? addRow("","Actual Duration",trueDuration.toFixed(2),false) : "";
+            drRowsHTML += totalHits ? addRow("","Total Hits",totalHits,false) : "";
 
-            // drRowsHTML += conditionalHelpers.addBreakdownSpeedRows(index,allSpeedTags,false);
-            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,allDamageTags);
+            drRowsHTML += conditionalHelpers.addBreakdownDamageRows(index,Damage);
             drRowsHTML += conditionalHelpers.addBreakdownStatusRows(index);
-            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,allCritTags,allCritDamageTags,true);
-
+            drRowsHTML += conditionalHelpers.addBreakdownCritRows(index,CritChance,CritDamage,true);
 
             drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
             readSelection(factorID).innerHTML += drRowsHTML;
@@ -454,20 +1092,35 @@ let customDamage = {
 
         return ["Sandstorm",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
     },
-    MeleeDamage(index) {
+    MeleeDamage(placement,index) {
         let globalPath = globalRecords.weapons;
+        let meleePath = melees[globalPath.melee];
+        const {DMG,critChance,weakSpot,stagger,weakspotOverride} = meleePath;
 
-        let meleePath = melee[globalPath.melee];
+        let baseDamage = DMG;
+        let baseGenerationDamage = baseDamage/3;
+        let baseCrit = critChance;
+        let baseWeakspot = weakSpot;
+        let baseStagger = stagger;
+        const dodgeClass = calcs.getWeight(index).dodgeClass;
+        const flopExtension = dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0;
+        const backstepDuration = dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium;
+        const backstepModifiedDuration = backstepDuration/(1 + index.EvadeSpeed);
+
         let classPath = weaponClass[meleePath.weaponClass];
         // let mutatorPath = meleeMutators[globalPath.meleeMutator];
 
         let isCrit = globalRecords.enableCrits;
-        let isWeakspot = globalRecords.enableWeakspots;
-        if (meleePath.weakspotOverride) {isWeakspot = true;}//aka, is Godsplitter equipped.
+        let isWeakspot = globalRecords.enableWeakspots && !index.WeakspotDisable;
+        const useSwings = globalRecords.enableMainSwings;
+        const useEffects = globalRecords.enableMeleeEffects;
+        if (weakspotOverride) {isWeakspot = true;}//aka, is Godsplitter equipped.
 
         let highestDPS = 0;
         let highestSingleHit = 0;
         let highestComboDamage = 0;
+
+        let getIndexSums = conditionalHelpers.returnIndexTagSums;
 
         function parseMVArrayDamage(MVArray,damageMulti,damageMultiNoCrit,fullCritMulti) {
             let comboDamage = 0;
@@ -501,60 +1154,46 @@ let customDamage = {
             return {comboDamage,totalHits,damageArray,highestComboHit,highestCritHit}
         }
 
-        function generateAttacksArray(meleePath,classPath,attackType) {
+        function generateAttacksArray(classPath,attackType) {
+            const attackPaths = classPath[attackType];
+            const isBackstepVariant = attackType === "backstep" || attackType === "backstepCharge";
 
-            let baseDamage = meleePath.DMG;
-            let baseGenerationDamage = baseDamage/3;
-            let baseCrit = meleePath.critChance;
-            let baseWeakspot = meleePath.weakSpot;
-            let baseStagger = meleePath.stagger;
+            const {
+                mvNote = "",
+                projectileNote = "",
+                projectileChargeReleaseNote = "",
+            } = attackPaths;
 
-            let attackPaths = classPath[attackType];
+            const tagPath = attackPaths.damageTags;
+            const {Damage,CritChance,CritDamage,WeakSpot,Speed} = tagPath;
 
-            let mvNote = attackPaths.mvNote || "";
-            let projectileNote = attackPaths.projectileNote || "";
-            let projectileChargeReleaseNote = attackPaths.projectileChargeReleaseNote || "";
-
-            let damageTags = attackPaths.damageTags.Damage;
-            let critTags = attackPaths.damageTags.CritChance;
-            let critDamageTags = attackPaths.damageTags.CritDamage;
-            let weakspotTags = attackPaths.damageTags.WeakSpot;
-            let speedTags = attackPaths.damageTags.Speed;
-
-            let dodgeClass = calcs.getWeight(index)[1];
-
-            let projectileObject;
-            let projectileChargeReleaseObject;
+            let projectileObject,projectileChargeReleaseObject;
 
             //Crit Chance
-            let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+            let attackCritChance = Math.min(1,baseCrit + getIndexSums(index,CritChance));
             //Crit Damage
             let baseCritDamage = 0.50;
-            let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+            let attackCritDamage = isCrit ? baseCritDamage + getIndexSums(index,CritDamage) : 0;
             let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
             //Weakspot
-            let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+            let sumWeakspot = getIndexSums(index,WeakSpot);
             let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
             //Stagger
             let attackStagger = baseStagger + index.StaggerDamage;
             //Damage
-            let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+            let attackDamage = 1 + getIndexSums(index,Damage);
             let attackDamageNoCrit = attackDamage * attackWeakspot;
             let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
             let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
 
             
-            let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
+            let sumSpeedBonus = getIndexSums(index,Speed) - (isBackstepVariant ? index.EvadeSpeed : 0);
             //BASIC ATTACK INFO
             //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
-            let baseDuration = attackPaths.expectedDuration
-                + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
+            let baseDuration = attackPaths.expectedDuration + (isBackstepVariant ? flopExtension : 0);
             let attackComboDuration = 0;
-            if (attackType === "backstep" || attackType === "backstepCharge") {
-                attackComboDuration =
-                ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
-                + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
-            }
+            //Remove the evade duration, reduce the attack by attack speed,add the evade duration back in, reduced by evade speed if available.
+            if (isBackstepVariant) {attackComboDuration = ((baseDuration - backstepDuration)/(1 + sumSpeedBonus))+ backstepModifiedDuration;}
             else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
 
             let attackBaseDamage = baseDamage * attackDamageBonus;
@@ -567,7 +1206,6 @@ let customDamage = {
             let highestComboHit = attackComboParse.highestComboHit;
             let highestCritHit = attackComboParse.highestCritHit;
             let attackComboDPS = attackTotalComboDamage/attackComboDuration;
-            if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
             let attackTotalHits = attackComboParse.totalHits;
 
             let returnObject = {
@@ -582,11 +1220,11 @@ let customDamage = {
                 attackTotalHits,
                 highestComboHit,
                 highestCritHit,
-                damageTags,
-                critTags,
-                critDamageTags,
-                weakspotTags,
-                speedTags,
+                Damage,
+                CritChance,
+                CritDamage,
+                WeakSpot,
+                Speed,
                 projectileObject,
                 projectileChargeReleaseObject,
                 mvNote,
@@ -594,7 +1232,10 @@ let customDamage = {
                 projectileChargeReleaseNote,
             }
 
-            if (!globalRecords.enableMainSwings && attackPaths.projectileTags) {
+            const projTags = attackPaths.projectileTags;
+            const projReleaseTags = attackPaths.projectileChargeReleaseTags;
+
+            if (!useSwings && projTags) {
                 //if we are excluding the main swings and a projectile exists, set main dmg related values to 0 so the effect values can overwrite them
                 returnObject.attackBaseDamage = 0;
                 returnObject.attackBaseDamageCrit = 0;
@@ -605,43 +1246,27 @@ let customDamage = {
                 returnObject.highestCritHit = 0;
             }
 
-            if (globalRecords.enableMeleeEffects) {
-                if (attackPaths.projectileTags) {
-                    let damageTags = attackPaths.projectileTags.Damage;
-                    let critTags = attackPaths.projectileTags.CritChance;
-                    let critDamageTags = attackPaths.projectileTags.CritDamage;
-                    let weakspotTags = attackPaths.projectileTags.WeakSpot;
-                    let speedTags = attackPaths.projectileTags.Speed;
+            if (useEffects) {
+                if (projTags) {
+                    const {Damage,CritChance,CritDamage,WeakSpot} = projTags;
 
                     //Crit Chance
-                    let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+                    let attackCritChance = Math.min(1,baseCrit + getIndexSums(index,CritChance));
                     //Crit Damage
                     let baseCritDamage = 0.50;
-                    let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+                    let attackCritDamage = isCrit ? baseCritDamage + getIndexSums(index,CritDamage) : 0;
                     let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
                     //Weakspot
-                    let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+                    let sumWeakspot = getIndexSums(index,WeakSpot);
                     let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
                     //Stagger
                     let attackStagger = baseStagger + index.StaggerDamage;
                     //Damage
-                    let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+                    let attackDamage = 1 + getIndexSums(index,Damage);
                     let attackDamageNoCrit = attackDamage * attackWeakspot;
                     let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
                     let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
 
-                    let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
-                    //BASIC ATTACK INFO
-                    //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
-                    let baseDuration = attackPaths.expectedDuration
-                        + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
-                    let attackComboDuration = 0;
-                    if (attackType === "backstep" || attackType === "backstepCharge") {
-                        attackComboDuration =
-                        ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
-                        + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
-                    }
-                    else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
                     let attackBaseDamage = baseDamage * attackDamageBonus;
                     let attackBaseDamageCrit = baseDamage * attackDamageBonusFullCrit;
                     let attackBaseDamageNoCrit = baseDamage * attackDamageNoCrit;
@@ -655,11 +1280,9 @@ let customDamage = {
                     if (highestCritHit>returnObject.highestCritHit) {returnObject.highestCritHit = highestCritHit}
 
                     let attackComboDPS = attackTotalComboDamage/attackComboDuration;
-                    if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
                     let attackTotalHits = attackComboParse.totalHits;
 
                     returnObject.projectileObject = {
-                        attackComboDuration,
                         attackBaseDamage,
                         attackBaseDamageCrit,
                         attackMVArray,
@@ -669,51 +1292,33 @@ let customDamage = {
                         attackTotalHits,
                         highestComboHit,
                         highestCritHit,
-                        damageTags,
-                        critTags,
-                        critDamageTags,
-                        weakspotTags,
-                        speedTags
+                        Damage,
+                        CritChance,
+                        CritDamage,
+                        WeakSpot
                     }
                     returnObject.attackComboDPS += returnObject.projectileObject.attackComboDPS;
                 }
-                if (attackPaths.projectileChargeReleaseTags) {
-                    let damageTags = attackPaths.projectileChargeReleaseTags.Damage;
-                    let critTags = attackPaths.projectileChargeReleaseTags.CritChance;
-                    let critDamageTags = attackPaths.projectileChargeReleaseTags.CritDamage;
-                    let weakspotTags = attackPaths.projectileChargeReleaseTags.WeakSpot;
-                    let speedTags = attackPaths.projectileChargeReleaseTags.Speed;
+                if (projReleaseTags) {
+                    const {Damage,CritChance,CritDamage,WeakSpot} = projTags;
 
                     //Crit Chance
-                    let attackCritChance = Math.min(1,baseCrit + conditionalHelpers.returnIndexTagSums(index,critTags));
+                    let attackCritChance = Math.min(1,baseCrit + getIndexSums(index,CritChance));
                     //Crit Damage
                     let baseCritDamage = 0.50;
-                    let attackCritDamage = isCrit ? baseCritDamage + conditionalHelpers.returnIndexTagSums(index,critDamageTags) : 0;
+                    let attackCritDamage = isCrit ? baseCritDamage + getIndexSums(index,CritDamage) : 0;
                     let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
                     //Weakspot
-                    let sumWeakspot = conditionalHelpers.returnIndexTagSums(index,weakspotTags);
+                    let sumWeakspot = getIndexSums(index,WeakSpot);
                     let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
                     //Stagger
                     let attackStagger = baseStagger + index.StaggerDamage;
                     //Damage
-                    let attackDamage = 1 + conditionalHelpers.returnIndexTagSums(index,damageTags);
+                    let attackDamage = 1 + getIndexSums(index,Damage);
                     let attackDamageNoCrit = attackDamage * attackWeakspot;
                     let attackDamageBonus = attackDamage * attackWeakspot * averagedAttackCrit;
                     let attackDamageBonusFullCrit = attackDamage * attackWeakspot * (1 + attackCritDamage);
 
-
-                    let sumSpeedBonus = conditionalHelpers.returnIndexTagSums(index,speedTags) - (attackType === "backstep" || attackType === "backstepCharge" ? index.EvadeSpeed : 0);
-                    //BASIC ATTACK INFO
-                    //Evade attack durations were recorded with a medium(normal) evade. If we are in flop territory, then add the difference in evade time.
-                    let baseDuration = attackPaths.expectedDuration
-                        + (dodgeClass === "Flop" ? evadeDuration.flop - evadeDuration.medium : 0);
-                    let attackComboDuration = 0;
-                    if (attackType === "backstep" || attackType === "backstepCharge") {
-                        attackComboDuration =
-                        ((baseDuration - (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium))/(1 + sumSpeedBonus))//Remove the evade duration, reduce the attack by attack speed
-                        + (dodgeClass === "Flop" ? evadeDuration.flop : evadeDuration.medium)/(1 + index.EvadeSpeed);//add the evade duration back in, reduced by evade speed if available.
-                    }
-                    else {attackComboDuration = baseDuration/(1 + sumSpeedBonus);}
                     let attackBaseDamage = baseDamage * attackDamageBonus;
                     let attackBaseDamageCrit = baseDamage * attackDamageBonusFullCrit;
                     let attackBaseDamageNoCrit = baseDamage * attackDamageNoCrit;
@@ -727,11 +1332,9 @@ let customDamage = {
                     if (highestCritHit>returnObject.highestCritHit) {returnObject.highestCritHit = highestCritHit}
 
                     let attackComboDPS = attackTotalComboDamage/attackComboDuration;
-                    if (attackComboDPS>highestDPS) {highestDPS = attackComboDPS}
                     let attackTotalHits = attackComboParse.totalHits;
 
                     returnObject.projectileChargeReleaseObject = {
-                        attackComboDuration,
                         attackBaseDamage,
                         attackBaseDamageCrit,
                         attackMVArray,
@@ -741,11 +1344,10 @@ let customDamage = {
                         attackTotalHits,
                         highestComboHit,
                         highestCritHit,
-                        damageTags,
-                        critTags,
-                        critDamageTags,
-                        weakspotTags,
-                        speedTags
+                        Damage,
+                        CritChance,
+                        CritDamage,
+                        WeakSpot
                     }
                     returnObject.attackComboDPS += returnObject.projectileChargeReleaseObject.attackComboDPS;
                 }
@@ -754,224 +1356,18 @@ let customDamage = {
             return returnObject
         }
 
-        let basicAttacks = generateAttacksArray(meleePath,classPath,"basicAttack");
-        let chargeAttacks = generateAttacksArray(meleePath,classPath,"chargeAttack");
-        let backstepAttacks = generateAttacksArray(meleePath,classPath,"backstep");
-        let backstepChargeAttacks = generateAttacksArray(meleePath,classPath,"backstepCharge");
-
-        if (index.thisIsAQuery != 1) {//meleeBreakdownTab
-            let breakdownDomID = `meleeBreakdownTab`;
-            let factorID = `meleeFactors`
-
-            readSelection("damageBreakdownSelectorHolder").innerHTML += createHTML.damageBreakdownSelectorButton(meleePath.name,(meleePath.name === "Bare Fists" ? "/images/swagCat.png" : meleePath.image),breakdownDomID);
-            let insertedHTML = `
-            <div class="seletionBackgroundAbilityBox">
-                <div class="selectionBackgroundAbilityAdjustment">
-                    <img class="abilityDPSbackgroundImage" src="${meleePath.image}" alt="Ability breakdown icon">
-                </div>
-            </div>
-            
-            <div class="selectionAbilityDPSBody">
-                <div class="selectionAbilityDPSTitleHeader">${meleePath.name.toUpperCase()}</div>
-                <div class="filtersInstructionsBox" style="color: #e06666;">Melee calcs are brand new. Report any bugs/feedback in my discord linked at the bottom.</div>
-
-                <div class="totalHealingHeader">
-                    <span class="damageEnableOptions hasHoverTooltip" id="swingsMeleeHolder">Include Swings&nbsp;
-                        <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" onchange="conditionalHelpers.updateGlobalToggle('enableMainSwings','enableMeleeEffects')" ${globalRecords.enableMainSwings ? "checked" : ""}> <!--math toggle-->
-                            <span class="toggleSlider"></span>
-                        </label>&nbsp;
-                    </span>
-                    <span class="damageEnableOptions hasHoverTooltip" id="bonusEffectMeleeHolder">&nbsp;Include Effects&nbsp;
-                        <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" onchange="conditionalHelpers.updateGlobalToggle('enableMeleeEffects','enableMainSwings')"  ${globalRecords.enableMeleeEffects ? "checked" : ""}> <!--math toggle-->
-                            <span class="toggleSlider"></span>
-                        </label>
-                    </span>
-                </div>
-
-                <div class="selectionAbilityDPSHeader" style="white-space: normal;">
-                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('basicAttacks')">
-                        <div class="exportText">Basic Attack</div>
-                    </button>
-                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('chargeAttacks')">
-                        <div class="exportText">Charge Attack</div>
-                    </button>
-                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('backstepAttacks')">
-                        <div class="exportText">Backstep Attack</div>
-                    </button>
-                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedMeleeBreakdown('backstepChargeAttacks')">
-                        <div class="exportText">Backstep Charge Attack</div>
-                    </button>
-                </div>
-                
-                <div class="abilityFactorsList" id="${factorID}"></div>
-            </div>`
-            
-            readSelection(breakdownDomID).innerHTML = insertedHTML
-            readSelection("havocFormBoxHolder").style.display = "flex"
-
-            // readSelection(`meleeDPS`).innerHTML = highestDPS.toFixed(2);//later make this so it can work with either ability box
-            // readSelection(`meleeTotalDamage`).innerHTML = highestComboDamage.toFixed(2);
-            // console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
-            let selectedMeleeBreakdown = null;
-            let breakdownHeaderTitle = "";
-            switch (globalRecords.selectedMeleeBreakdown) {
-                case "basicAttacks": 
-                    selectedMeleeBreakdown = basicAttacks;
-                    breakdownHeaderTitle = "BASIC ATTACKS";
-                    break;
-                case "chargeAttacks": 
-                    selectedMeleeBreakdown = chargeAttacks;
-                    breakdownHeaderTitle = "CHARGE ATTACKS";
-                    break;
-                case "backstepAttacks": 
-                    selectedMeleeBreakdown = backstepAttacks;
-                    breakdownHeaderTitle = "BACKSTEP ATTACKS";
-                    break;
-                case "backstepChargeAttacks": 
-                    selectedMeleeBreakdown = backstepChargeAttacks;
-                    breakdownHeaderTitle = "BACKSTEP CHARGE ATTACKS";
-                    break;
-            }
-            // (modifiedDuration + entryDuration)
-            readSelection(factorID).innerHTML = "";
-            let drRowsHTML = `<div class="advancedStatsHeader" id="selectedMeleeAttackHeader">${breakdownHeaderTitle}</div>`
-            let displayArrayString = '';
-            for (let entry of selectedMeleeBreakdown.attackMVArray) {
-                displayArrayString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : entry}`
-            }
-            let projectileArrayString = "";
-            if (selectedMeleeBreakdown.projectileObject) {
-                for (let entry of selectedMeleeBreakdown.projectileObject.attackMVArray) {
-                    projectileArrayString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : `${entry}`}`
-                }
-            }
-            let projectileArrayReleaseString = "";
-            if (selectedMeleeBreakdown.projectileChargeReleaseObject) {
-                for (let entry of selectedMeleeBreakdown.projectileChargeReleaseObject.attackMVArray) {
-                    projectileArrayReleaseString += "&nbsp;" + `x${Array.isArray(entry) ? `[${entry}]` : entry}`
-                }
-            }
-
-            drRowsHTML += selectedMeleeBreakdown.mvNote ? `<span class="mvNotesDisplay">${selectedMeleeBreakdown.mvNote || ""}</span>` : "";
-            drRowsHTML += selectedMeleeBreakdown.projectileObject ? `
-            <div class="totalHealingHeader">Physical Swings - Show&nbsp;
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="showPhysicalSwings" onchange="conditionalHelpers.updateMVDisplay('physicalSwingDisplayRow','showPhysicalSwings')"> <!--math toggle-->
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>
-            ` + `<div class="basicsDRContainer MVDisplayRow" id="physicalSwingDisplayRow">${displayArrayString}</div>`
-            : `<div class="basicsDRContainer">${displayArrayString}</div>`;
-            
-            drRowsHTML += selectedMeleeBreakdown.projectileObject ? 
-            `<div class="totalHealingHeader">Bonus Effect - Show&nbsp;
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="showBonusEffects" onchange="conditionalHelpers.updateMVDisplay('bonusEffectDisplayRow','showBonusEffects')"> <!--math toggle-->
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>` + `<div class="basicsDRContainer MVDisplayRow" id="bonusEffectDisplayRow">
-            ${selectedMeleeBreakdown.projectileNote ? `<span class="mvNotesDisplay">${selectedMeleeBreakdown.projectileNote || ""}</span><br>` : ""}
-            ${projectileArrayString}
-            ${(selectedMeleeBreakdown.projectileChargeReleaseObject ? (selectedMeleeBreakdown.projectileChargeReleaseNote ? `<br><span class="mvNotesDisplay">${selectedMeleeBreakdown.projectileChargeReleaseNote || ""}</span>` : "") + `<div>${projectileArrayReleaseString}</div>` : "")}
-            </div>`
-            : "";
-
-
-            drRowsHTML += `<br>`;
-            drRowsHTML += `
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf">
-                    <div class="totalHealingHeader hasHoverTooltip" id="averageDPSExplainerMelee">AVG DPS [?]</div>
-                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.attackComboDPS.toFixed(2)).toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf">
-                    <div class="totalHealingHeader hasHoverTooltip" id="highestHitMeleeHolder">Highest Hit</div>
-                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.highestComboHit.toFixed(2)).toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf">
-                    <div class="totalHealingHeader hasHoverTooltip" id="highestCritMeleeHolder">Highest Crit</div>
-                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.highestCritHit.toFixed(2)).toLocaleString()}</div>
-                </div>
-            </div>
-            `
-            drRowsHTML += `
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf">
-                    <div class="totalHealingHeader hasHoverTooltip" id="meleeComboDurationHolder">Combo Duration</div>
-                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.baseDuration.toFixed(2)).toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf">
-                    <div class="totalHealingHeader hasHoverTooltip" id="meleeModifiedDurationHolder">Modified Duration</div>
-                    <div class="totalHealingValue" style="border-bottom: none;">${(+selectedMeleeBreakdown.attackComboDuration.toFixed(2)).toLocaleString()}</div>
-                </div>
-            </div>
-            `
-
-            let allDamageTags = [...selectedMeleeBreakdown.damageTags];
-            let allCritTags = [...selectedMeleeBreakdown.critTags];
-            let allCritDamageTags = [...selectedMeleeBreakdown.critDamageTags];
-            let allWeakspotTags = [...selectedMeleeBreakdown.weakspotTags];
-            let allSpeedTags = [...selectedMeleeBreakdown.speedTags];
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","damageTags",allDamageTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","critTags",allCritTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","critDamageTags",allCritDamageTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","weakspotTags",allWeakspotTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileObject","speedTags",allSpeedTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","damageTags",allDamageTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","critTags",allCritTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","critDamageTags",allCritDamageTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","weakspotTags",allWeakspotTags);
-            conditionalHelpers.addMissingTags(selectedMeleeBreakdown,"projectileChargeReleaseObject","speedTags",allSpeedTags);
-            
-
-            if (allDamageTags.length) {
-                drRowsHTML += "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
-                for (let tag of allDamageTags) {
-                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
-                }
-            }
-            if (allCritTags.length || allCritDamageTags.length) {
-                drRowsHTML += "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
-                drRowsHTML += createHTML.basicsRow("","Weapon's Crit Chance",meleePath.critChance,true,"%");
-                for (let tag of allCritTags) {
-                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
-                }
-                if (allCritDamageTags.length) {
-                    drRowsHTML += createHTML.basicsRow("","Base Crit Damage",0.50,true,"%")
-                }
-                for (let tag of allCritDamageTags) {
-                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
-                }
-            }
-            if (allWeakspotTags.length) {
-                drRowsHTML += "<div class='basicsDRheaderTitle'>WEAKSPOT FACTORS</div>";
-                drRowsHTML += createHTML.basicsRow("","Weapon's Weakspot",meleePath.weakSpot,true,"%");
-                drRowsHTML += createHTML.basicsRow("","Base Weakspot",1,true,"%");
-                for (let tag of allWeakspotTags) {
-                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
-                }
-            }
-            if (allSpeedTags.length) {
-                drRowsHTML += "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
-                for (let tag of allSpeedTags) {
-                    drRowsHTML += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
-                }
-            }
-
-            
-
-
-            drRowsHTML = userTrigger.updateSubstatColor(drRowsHTML);
-            readSelection(factorID).innerHTML += drRowsHTML;
-            // console.log(trueDPS.toFixed(2),trueTotalDamage.toFixed(2))
+        const attacksConstructor = {
+            "basicAttacks": generateAttacksArray(classPath,"basicAttack"),
+            "chargeAttacks": generateAttacksArray(classPath,"chargeAttack"),
+            "backstepAttacks": generateAttacksArray(classPath,"backstep"),
+            "backstepChargeAttacks": generateAttacksArray(classPath,"backstepCharge")
         }
 
-        // return ["Havoc Form",minimumPossibleDamage,maximumPossibleDamage,trueDPS,trueTotalDamage]
-    },
-    sumTotalDamage(index) {
+        highestDPS = Math.max(attacksConstructor.basicAttacks.attackComboDPS,attacksConstructor.chargeAttacks.attackComboDPS,attacksConstructor.backstepAttacks.attackComboDPS,attacksConstructor.backstepChargeAttacks.attackComboDPS);
 
+        if (index.thisIsAQuery != 1) {breakdownsUI.meleeBreakdownUI(index,meleePath,attacksConstructor);}
+
+        return ["Melee Damage",1,1,highestDPS,highestSingleHit]
     },
 }
 
@@ -992,13 +1388,24 @@ let conditionalHelpers = {
         activeStatus += index.outCORRODED ? 1 : 0;
         return activeStatus;
     },
-    returnIndexTagSums(index,tagsArray) {
+    returnIndexTagSums(index,tagsArray,prefix) {
         let statistic = 0;
         if (tagsArray === -1) {return -1;}
         for (tag of tagsArray) {
             if (index[tag]) {statistic += index[tag];}
+            if (prefix) {
+                let prefixTag = prefix + tag;
+                if (index[prefixTag]) {statistic += index[prefixTag];}
+            }
         }
-        return statistic;
+        return statistic;//prefix is for Primary or Secondary Elemental/Mod Damage stuff from mutators and the like.
+    },
+    getIndexSumsModDots(index,prefix) {
+        let modDamageTagsArray = [
+            "ModDamage"
+        ];
+
+        return conditionalHelpers.returnIndexTagSums(index,modDamageTagsArray,prefix);
     },
     addSpacesToTagNames(string) {
         //&nbsp; is a space
@@ -1032,37 +1439,42 @@ let conditionalHelpers = {
     addBreakdownStatusRows(index) {
         let returnString = "";
         let returnHeader = "<div class='basicsDRheaderTitle'>ACTIVE STATUSES</div>";
+        let addRow = createHTML.basicsRow;
 
-        returnString += index.outSLOW ? createHTML.basicsRow("","","SLOW",false) : "";
-        returnString += index.outBLEED ? createHTML.basicsRow("","","BLEED",false) : "";
-        returnString += index.outBURN ? createHTML.basicsRow("","","BURN",false) : "";
-        returnString += index.outCORRODED ? createHTML.basicsRow("","","CORRODED",false) : "";
-        returnString += index.outOVERLOADED ? createHTML.basicsRow("","","OVERLOADED",false) : "";
-        returnString += index.outEXPOSED ? createHTML.basicsRow("","","EXPOSED",false) : "";
+        returnString += index.outSLOW ? addRow("","","SLOW",false) : "";
+        returnString += index.outBLEED ? addRow("","","BLEED",false) : "";
+        returnString += index.outBURN ? addRow("","","BURN",false) : "";
+        returnString += index.outCORRODED ? addRow("","","CORRODED",false) : "";
+        returnString += index.outOVERLOADED ? addRow("","","OVERLOADED",false) : "";
+        returnString += index.outEXPOSED ? addRow("","","EXPOSED",false) : "";
 
         if (returnString) {return returnHeader + returnString;}
         else {return "";}
     },
     addBreakdownSpeedRows(index,allSpeedTags,totalHitsFactor) {
         let returnString = "";
+        let addRow = createHTML.basicsRow;
+        let addSpaces = conditionalHelpers.addSpacesToTagNames;
         let returnHeader = "<div class='basicsDRheaderTitle'>SPEED FACTORS</div>";
         if (allSpeedTags.length) {
             for (let tag of allSpeedTags) {
-                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                returnString += index[tag] ? addRow("",addSpaces(tag),index[tag],true,"%") : "";
             }
         }
-        if (totalHitsFactor) {returnString += createHTML.basicsRow("","Total Hits",totalHitsFactor,false);}
+        if (totalHitsFactor) {returnString += addRow("","Total Hits",totalHitsFactor,false);}
 
         if (returnString) {return returnHeader + returnString;}
         else {return "";}
     },
     addBreakdownDamageRows(index,allDamageTags) {
         let returnString = "";
+        let addRow = createHTML.basicsRow;
+        let addSpaces = conditionalHelpers.addSpacesToTagNames;
         let returnHeader = "<div class='basicsDRheaderTitle'>DAMAGE FACTORS</div>";
         returnHeader += "<div class='dpsFactorDisclaimer'>Note that timed/limited bonuses are assumed to be active at all times when selected.</div>";
         if (allDamageTags.length) {
             for (let tag of allDamageTags) {
-                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                returnString += index[tag] ? addRow("",addSpaces(tag),index[tag],true,"%") : "";
             }
         }
         
@@ -1071,16 +1483,33 @@ let conditionalHelpers = {
     },
     addBreakdownCritRows(index,allCritTags,allCritDamageTags,showBaseCritDMG) {
         let returnString = "";
+        let addRow = createHTML.basicsRow;
+        let addSpaces = conditionalHelpers.addSpacesToTagNames;
         let returnHeader = "<div class='basicsDRheaderTitle'>CRIT FACTORS</div>";
         if (allCritTags.length) {
             for (let tag of allCritTags) {
-                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                returnString += index[tag] ? addRow("",addSpaces(tag),index[tag],true,"%") : "";
             }
         }
-        if (showBaseCritDMG) {returnString += createHTML.basicsRow("","Base Crit Damage",0.50,true,"%");}
+        if (showBaseCritDMG) {returnString += addRow("","Base Crit Damage",0.50,true,"%");}
         if (allCritDamageTags.length) {
             for (let tag of allCritDamageTags) {
-                returnString += index[tag] ? createHTML.basicsRow("",conditionalHelpers.addSpacesToTagNames(tag),index[tag],true,"%") : "";
+                returnString += index[tag] ? addRow("",addSpaces(tag),index[tag],true,"%") : "";
+            }
+        }
+
+        if (returnString) {return returnHeader + returnString;}
+        else {return "";}
+    },
+    addBreakdownWeakspotRows(index,allWeakspotTags) {
+        let returnString = "";
+        let addRow = createHTML.basicsRow;
+        let addSpaces = conditionalHelpers.addSpacesToTagNames;
+        let returnHeader = "<div class='basicsDRheaderTitle'>WEAKSPOT FACTORS</div>";
+        returnString += addRow("","Base Weakspot Bonus",1,true,"%");
+        if (allWeakspotTags) {
+            for (let tag of allWeakspotTags) {
+                returnString += index[tag] ? addRow("",addSpaces(tag),index[tag],true,"%") : "";
             }
         }
 

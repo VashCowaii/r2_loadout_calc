@@ -1,8 +1,8 @@
 let globalRecords = {};
 let manipulateURL = {
     //Used to modify and actively update the browser URL display without a page reload.
-    //Also used to compile the query string when exporting to R2TK.
     updateURLparameters() {
+        const setRef = userSettings.vars;
         globalRecords.urlObject = {
         "m": "",
         "b": "",
@@ -27,15 +27,15 @@ let manipulateURL = {
         if (difficulty != 4) {urlObject.d = difficulty;}
 
         let resistanceArray = [];
-        resistanceArray.push(userSettings.vars.maxHealth != 100 ? userSettings.vars.maxHealth : "");
-        resistanceArray.push(userSettings.vars.bossHP != 100 ? userSettings.vars.bossHP : "")
-        resistanceArray.push(userSettings.vars.effectiveDR || "");
-        resistanceArray.push(userSettings.vars.playerCount != 1 ? userSettings.vars.playerCount : "");
-        resistanceArray.push(+userSettings.vars.playerBleedRes || "");
-        resistanceArray.push(+userSettings.vars.playerBurnRes || "");
-        resistanceArray.push(+userSettings.vars.playerShockRes || "");
-        resistanceArray.push(+userSettings.vars.playerAcidRes || "");
-        resistanceArray.push(+userSettings.vars.playerBlightRes || "");
+        resistanceArray.push(setRef.maxHealth != 100 ? setRef.maxHealth : "");
+        resistanceArray.push(setRef.bossHP != 100 ? setRef.bossHP : "")
+        resistanceArray.push(setRef.effectiveDR || "");
+        resistanceArray.push(setRef.playerCount != 1 ? setRef.playerCount : "");
+        resistanceArray.push(+setRef.playerBleedRes || "");
+        resistanceArray.push(+setRef.playerBurnRes || "");
+        resistanceArray.push(+setRef.playerShockRes || "");
+        resistanceArray.push(+setRef.playerAcidRes || "");
+        resistanceArray.push(+setRef.playerBlightRes || "");
         urlObject.res = resistanceArray;
 
         //binary toggles
@@ -57,13 +57,14 @@ let manipulateURL = {
         listToggles = listToggles.replace(/\.?0+$/, '');
         urlObject.lSet = listToggles;
 
-        manipulateURL.urlParamIsEmpty("m");
-        manipulateURL.urlParamIsEmpty("b");
-        manipulateURL.urlParamIsEmpty("wl");
-        manipulateURL.urlParamIsEmpty("d");
-        manipulateURL.urlParamIsEmpty("res");
-        manipulateURL.urlParamIsEmpty("mSet");
-        manipulateURL.urlParamIsEmpty("lSet");
+        const checkEmpty = manipulateURL.urlParamIsEmpty;
+        checkEmpty("m");
+        checkEmpty("b");
+        checkEmpty("wl");
+        checkEmpty("d");
+        checkEmpty("res");
+        checkEmpty("mSet");
+        checkEmpty("lSet");
   
         const params = new URLSearchParams(urlObject);
         decoded = params.toString();
@@ -87,7 +88,7 @@ let manipulateURL = {
         }
       }
     },
-    //Reads the query string if one exists, and populates all fields/updates formulas accordingly -- push text test
+    //Reads the query string if one exists, and populates all fields/updates formulas accordingly
     importURLparameters() {
         let feed = (new URL(document.location)).searchParams;
 

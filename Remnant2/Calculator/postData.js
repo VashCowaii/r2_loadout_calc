@@ -14,10 +14,7 @@ generateRecords("rangedMutator",2);
 generateRecords("rangeMod",2);
 
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML
-function readSelection(elemID) {
-	let selectedValue = document.getElementById(elemID);
-	return selectedValue;
-}
+function readSelection(elemID) {return document.getElementById(elemID);}
 
 let workers = {
 	"cycleWorker": undefined,

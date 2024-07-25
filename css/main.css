@@ -267,3 +267,7 @@ html,body {
 .toggleCheckbox:checked + .toggleSlider:before {
     transform: translateX(20px);
 }
+.toggleCheckbox:disabled + .toggleSlider {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
