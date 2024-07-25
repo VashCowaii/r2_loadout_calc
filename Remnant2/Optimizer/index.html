@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/optimizer.css">
     <link rel="stylesheet" href="/css/Remnant2/substat.css">
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
     <link rel="Icon" href="/images/Cowaii.png">
@@ -99,10 +100,10 @@
                                         <div class="filterSelectionTitleText">LOCKS</div>
                                     </button>
                                     <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('searchSettingsHolder')">
-                                        <div class="filterSelectionTitleText">ARCHS & SETTINGS</div>
+                                        <div class="filterSelectionTitleText">SETTINGS</div>
                                     </button>
                                     <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('traitsSettingsHolder')">
-                                        <div class="filterSelectionTitleText">TRAITS</div>
+                                        <div class="filterSelectionTitleText">ARCHS & TRAITS</div>
                                     </button>
                                 </div>
     
@@ -265,7 +266,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="primaryOcclusionsInput" list="primaryOcclusionsList" onchange="filters.addFilter(`primaryOcclusionsInput`,`primaryOcclusionsContainer`,`primary`,1,primary)" >
+                                                        <input class="tagInput" id="primaryOcclusionsInput" list="primaryOcclusionsList" onchange="filters.addFilter(`primaryOcclusionsInput`,`primaryOcclusionsContainer`,`primary`,1,primaries)" >
                                                         <datalist id="primaryOcclusionsList"></datalist>
                                                     </div>
                                                 </div>
@@ -317,7 +318,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="meleeOcclusionsInput" list="meleeOcclusionsList" onchange="filters.addFilter(`meleeOcclusionsInput`,`meleeOcclusionsContainer`,`melee`,1,melee)" >
+                                                        <input class="tagInput" id="meleeOcclusionsInput" list="meleeOcclusionsList" onchange="filters.addFilter(`meleeOcclusionsInput`,`meleeOcclusionsContainer`,`melee`,1,melees)" >
                                                         <datalist id="meleeOcclusionsList"></datalist>
                                                     </div>
                                                 </div>
@@ -352,7 +353,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="secondaryOcclusionsInput" list="secondaryOcclusionsList" onchange="filters.addFilter(`secondaryOcclusionsInput`,`secondaryOcclusionsContainer`,`secondary`,1,secondary)" >
+                                                        <input class="tagInput" id="secondaryOcclusionsInput" list="secondaryOcclusionsList" onchange="filters.addFilter(`secondaryOcclusionsInput`,`secondaryOcclusionsContainer`,`secondary`,1,secondaries)" >
                                                         <datalist id="secondaryOcclusionsList"></datalist>
                                                     </div>
                                                 </div>
@@ -513,7 +514,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="primaryInput" list="primaryList" onchange="filters.addFilter(`primaryInput`,`primaryLocksContainer`,`primary`,0,primary,1)" >
+                                                        <input class="tagInput" id="primaryInput" list="primaryList" onchange="filters.addFilter(`primaryInput`,`primaryLocksContainer`,`primary`,0,primaries,1)" >
                                                         <datalist id="primaryList"></datalist>
                                                     </div>
                                                 </div>
@@ -541,7 +542,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="meleeInput" list="meleeList" onchange="filters.addFilter(`meleeInput`,`meleeLocksContainer`,`melee`,0,melee,1)" >
+                                                        <input class="tagInput" id="meleeInput" list="meleeList" onchange="filters.addFilter(`meleeInput`,`meleeLocksContainer`,`melee`,0,melees,1)" >
                                                         <datalist id="meleeList"></datalist>
                                                     </div>
                                                 </div>
@@ -560,7 +561,7 @@
                                                 <div class="statFiltersRowContainer">
                                                     <div class="presetsTitle">INPUT:</div>
                                                     <div class="presetsSelectorBox">
-                                                        <input class="tagInput" id="secondaryInput" list="secondaryList" onchange="filters.addFilter(`secondaryInput`,`secondaryLocksContainer`,`secondary`,0,secondary,1)" >
+                                                        <input class="tagInput" id="secondaryInput" list="secondaryList" onchange="filters.addFilter(`secondaryInput`,`secondaryLocksContainer`,`secondary`,0,secondaries,1)" >
                                                         <datalist id="secondaryList"></datalist>
                                                     </div>
                                                 </div>
@@ -640,34 +641,12 @@
                                                         <input type="range" id="dodgeSlider" name="slider" min="1" max="4" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
                                                     </div>
                                                 </div>
-                                                <div>ARCHETYPE SELECTION</div>
-                                                <div class="selectionSelectorBoxQuery1">
-                                                    <div class="selectSelectorTitle">SELECT:</div>
-                                                    <div class="presetsSelectorBox">
-                                                        <input class="selectSelector" id="archetype1" list="archs1List" onchange="userTrigger.updateArchetypeQuery('archetype','1')"> <!--selector-->
-                                                        <datalist id="archs1List"></datalist>
-                                                    </div>
-                                                </div>
-                                                <div class="selectionSelectorBoxQuery1" style="bottom: 68px;">
-                                                    <div class="selectSelectorTitle">ABILITY:</div>
-                                                    <div class="presetsSelectorBox">
-                                                        <input class="selectSelector" id="archetype1ability" list="archetype1abilityList" onchange="userTrigger.updateAbilityQuery('archetype1')"> <!--selector-->
-                                                        <datalist id="archetype1abilityList"></datalist>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="selectionSelectorBoxQuery2">
-                                                    <div class="selectSelectorTitle">SELECT:</div>
-                                                    <div class="presetsSelectorBox">
-                                                        <input class="selectSelector" id="archetype2" list="archs2List" onchange="userTrigger.updateArchetypeQuery('archetype','2')"> <!--selector-->
-                                                        <datalist id="archs2List"></datalist>
-                                                    </div>
-                                                </div>
-                                                <div class="selectionSelectorBoxQuery2" style="bottom: 18px;">
-                                                    <div class="selectSelectorTitle">ABILITY:</div>
-                                                    <div class="presetsSelectorBox">
-                                                        <input class="selectSelector" id="archetype2ability" list="archetype2abilityList" onchange="userTrigger.updateAbilityQuery('archetype2')"> <!--selector-->
-                                                        <datalist id="archetype2abilityList"></datalist>
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Find Lightest Armor at DR Cap?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsFindLightestArmor" onchange="filters.updateDodgeClass()" checked><span class="toggleSlider"></span>
+                                                        </label>
                                                     </div>
                                                 </div>
                                                 <div>Team Settings</div>
@@ -743,11 +722,47 @@
                                                 </div>
             
                                                 <div>Important Factors - Damage</div>
-                                                <div class="statisticSettingsRow" title="This is a forced override to turn off weakspot hits in damage calculations no matter what is equipped. So if Burden of the Gambler turned off weakspot, and Gift of the Unbound turned it back on, this setting would still disable weakspots.">
-                                                    <div class="statsRowName">Disable Weakspot?</div>
+                                                <div class="statisticSettingsRow hasHoverTooltip" id="weakspotEnableHolderBox">
+                                                    <div class="statsRowName">Use Weakspots</div>
                                                     <div class="statsRowToggle">
                                                         <label class="toggleContainer">
-                                                            <input type="checkbox" class="toggleCheckbox" id="settingsNeverWeakspot" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseWeakspots" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow hasHoverTooltip" id="critEnableHolderBox">
+                                                    <div class="statsRowName">Enable Crits</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="settingsUseCrits" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div>Melee-ONLY</div>
+                                                <div class="statisticSettingsRow hasHoverTooltip" id="swingsMeleeHolder">
+                                                    <div class="statsRowName">Include Swings</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="enableMainSwings" onchange="filters.updateDodgeClass()" checked><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="statisticSettingsRow hasHoverTooltip" id="bonusEffectMeleeHolder">
+                                                    <div class="statsRowName">Include Effects</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="enableMeleeEffects" onchange="filters.updateDodgeClass()" checked><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div>Engineer-ONLY</div>
+                                                <div class="statisticSettingsRow hasHoverTooltip" id="turretModeExplainer">
+                                                    <div class="statsRowName">Use Turret Mode?</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="enableEngTurretModes" onchange="filters.updateDodgeClass()" checked><span class="toggleSlider"></span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -761,11 +776,56 @@
                                                 <div class="statisticSettingsRow">
                                                     <div class="statsRowName">Spirit Healer Stacks:&nbsp;<span id="selectedSpiritCount">0</span></div>
                                                     <div class="statsRowToggle">
-                                                        <input type="range" id="spiritCountSlider" name="slider" min="0" max="10" value="0" step="1" onchange="filters.updateDodgeClass()">
+                                                        <input type="range" id="spiritCountSlider" name="slider" min="0" max="20" value="0" step="1" onchange="filters.updateDodgeClass()">
                                                     </div>
                                                 </div>
             
-                                                <div>Disable Archetype Calculations</div>
+                                                
+                                                <div class="statisticSettingsRow">
+                                                    <div class="statsRowName">Disable Query Length Limit (Bad Idea)</div>
+                                                    <div class="statsRowToggle">
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="bypassLimit" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="filtersBoxHalf" id="traitsSettingsHolder" style="display: none;">
+                                        <div class="cyclesSettingsBox">
+                                            <div class="statisticSettingsContainer">
+                                                <div>ARCHETYPE SELECTION</div>
+                                                <div class="selectionSelectorBoxQuery1">
+                                                    <div class="selectSelectorTitle">SELECT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype1" list="archs1List" onchange="userTrigger.updateArchetypeQuery('archetype','1')"> <!--selector-->
+                                                        <datalist id="archs1List"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div class="selectionSelectorBoxQuery1" style="bottom: 68px;">
+                                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype1ability" list="archetype1abilityList" onchange="userTrigger.updateAbilityQuery('archetype1')"> <!--selector-->
+                                                        <datalist id="archetype1abilityList"></datalist>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="selectionSelectorBoxQuery2">
+                                                    <div class="selectSelectorTitle">SELECT:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype2" list="archs2List" onchange="userTrigger.updateArchetypeQuery('archetype','2')"> <!--selector-->
+                                                        <datalist id="archs2List"></datalist>
+                                                    </div>
+                                                </div>
+                                                <div class="selectionSelectorBoxQuery2" style="bottom: 18px;">
+                                                    <div class="selectSelectorTitle">ABILITY:</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector" id="archetype2ability" list="archetype2abilityList" onchange="userTrigger.updateAbilityQuery('archetype2')"> <!--selector-->
+                                                        <datalist id="archetype2abilityList"></datalist>
+                                                    </div>
+                                                </div>
                                                 <div style="text-align: left;">Archetype 1:&nbsp;<span id="settingsArch1">No Archetype Imported</span></div>
                                                 <div class="statisticSettingsRow">
                                                     <div class="statsRowName">Disable Prime Perk:&nbsp;<span id="settingsPrimePerk"></span></div>
@@ -858,21 +918,10 @@
                                                     </div>
                                                 </div>
                                                 <div style="white-space: normal;">Unlike the main calculator, we don't give the option to disable item calculations. If you want to stop an item from calculating, simply exclude it in the filters.</div>
-                                                <div class="statisticSettingsRow">
-                                                    <div class="statsRowName">Debug Mode(DO NOT)</div>
-                                                    <div class="statsRowToggle">
-                                                        <label class="toggleContainer">
-                                                            <input type="checkbox" class="toggleCheckbox" id="bypassLimit" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
-                                                        </label>
-                                                    </div>
-                                                </div>
+                                                <div class="traitsBoxQueries" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
+                                                <!-- traitsMegaBox gets filled in automatically using the trait code -->
                                             </div>
                                         </div>
-                                    </div>
-    
-                                    <div class="filtersBoxHalf" id="traitsSettingsHolder" style="display: none;">
-                                        <div class="traitsBoxQueries" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
-                                        <!-- traitsMegaBox gets filled in automatically using the trait code -->
                                     </div>
                                 </div>
                             </div>
@@ -889,17 +938,36 @@
                                     <datalist id="statInputList"></datalist>
                                 </div>
                             </div>
+                            <div class="hasHoverTooltip" id="currentlySupportedDamageCalcs">Currently supported damage calcs [?]</div>
 
-                            <div class="statisticSettingsRow hasHoverTooltip" id="threadCountTooltip">
-                                <!-- <div class="statsRowName">Enemy Count:&nbsp;<span id="selectedEnemyCount">0</span></div> -->
-                                <!-- <div class="statsRowToggle"> -->
+                            <div class="compositeQueryDisplaybox" id="compositeQueryDisplaybox"></div>
+
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip" id="threadCountTooltip">
+                                    <div class="totalHealingHeader">Open CPU Threads:</div>
+                                    <div class="totalHealingValue" style="border-bottom: none;font-size: 14px;">
+                                        <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                        <span id="selectedThreadCount">0</span>
+                                        <span>/16&nbsp;[?]</span>
+                                    </div>
+                                </div>
+                                <div class="totalHealingBoxHalf">
+                                    <div class="totalHealingHeader hasHoverTooltip" id="smartSkipEnable">Enable Smart Skips</div>
+                                    <div class="totalHealingValue" style="border-bottom: none;">
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="smartSkipsToggle" onchange="filters.updateDodgeClass()" checked><span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="statisticSettingsRow hasHoverTooltip" id="threadCountTooltip">
                                     <span>Open CPU Threads:</span>
                                     <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
                                     <span id="selectedThreadCount">0</span>
                                     <span>/16&nbsp;[?]</span>
-                                <!-- </div> -->
-                            </div>
-
+                            </div> -->
+                            <div class="chromeWarning hasHoverTooltip">Queries have been optimized for <span>Google Chrome</span>. Firefox can be up to <span>2,000% slower.</span></div>
                             <div class="cyclesControlBox">
                                 <button type="button" onclick="cyclesLoop.generationStart()" id="cycleSTART" class="cyclesControl" style="background-color: #90ee90;">START</button>
                                 <button type="button" onclick="cyclesLoop.generationStop()" id="cycleSTOP" disabled class="cyclesControl">ABORT</button>
@@ -913,47 +981,69 @@
                                     <span id="counterInt" class="counterDisplay">0</span> / <span id="comboCount" class="counterDisplay">0</span>
                                 </div>
                             </div>
-                            <span>Currently Open Threads: <span id="openThreadsDisplay">0</span>/<span id="maxThreadsDisplay">0</span></span>
-                            <span>Distributed Combos: <span id="distributedCounter">0</span></span>
+                            <span class="hasHoverTooltip" id="lastFound"></span>
+
+                            <br>
+                            <!-- <div class='dpsFactorDisclaimer'>Testy tester text</div> -->
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf">
+                                    <div class="totalHealingHeader hasHoverTooltip" id="evaluatedExplainer">Evaluated</div>
+                                    <div class="totalHealingValue" style="border-bottom: none;"><span id="distributedCounter" style="font-size: 18px;">0</span></div>
+                                </div>
+                                <div class="totalHealingBoxHalf">
+                                    <div class="totalHealingHeader hasHoverTooltip" id="smartSkipExplainer">Smart Skips [?]</div>
+                                    <div class="totalHealingValue" style="border-bottom: none;"><span id="skipsCounter" style="font-size: 18px;">0</span></div>
+                                </div>
+                                <div class="totalHealingBoxHalf">
+                                    <div class="totalHealingHeader hasHoverTooltip" id="">Open Threads</div>
+                                    <div class="totalHealingValue" style="border-bottom: none;"><span id="openThreadsDisplay" style="font-size: 18px;">0</span>/<span id="maxThreadsDisplay" style="font-size: 18px;">0</span></div>
+                                </div>
+                            </div>
+
+
+                            <!-- <span>Currently Open Threads: <span id="openThreadsDisplay">0</span>/<span id="maxThreadsDisplay">0</span></span> -->
+                            <!-- <span>Distributed Combos: <span id="distributedCounter">0</span></span> -->
+                            <!-- <span>Smart Skips: <span id="skipsCounter">0</span></span> -->
                             <span class="hasHoverTooltip" id="lastFound"></span>
                             <div class="comboDisplay"> <!-- The visual display for best current build in queries -->
                                 <div class="comboDisplayImageBox">
+                                    <img class="backgroundCircles" src="/images/BackgroundCircles.png" alt="backgroundcircles png">
                                     <!-- BACKGROUND BANNERS -->
                                     <div class="comboBackgroundContainer">
                                         <div class="backgroundHalvesLeft" id="archetype1MAINbg">
-                                            <img class="backgroundLeftImage" src="/images/Remnant/clear.png" id="archetype1MAIN" alt="Combo Class1">
+                                            <img class="backgroundLeftImage hasHoverTooltip" src="/images/Remnant/clear.png" id="archetype1MAIN" alt="Combo Class1">
                                         </div>
                                         <div class="backgroundHalvesRight" id="archetype2MAINbg">
-                                            <img class="backgroundRightImage" src="/images/Remnant/clear.png" id="archetype2MAIN" alt="Combo Class2">
+                                            <img class="backgroundRightImage hasHoverTooltip" src="/images/Remnant/clear.png" id="archetype2MAIN" alt="Combo Class2">
                                         </div>
                                     </div>
                                     <div class="comboHeadsUpMessage" id="comboHeadsUpMessage"></div>
 
                                     <!-- ARMOR DISPLAY COLUMN -->
-                                    <div class="comboArmorRow"> 
+                                    <div class="comboArmorRow queryDisplayAdjustmentLeft"> 
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorHelmet" alt="Combo Helmet">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboArmorHelmet" alt="Combo Helmet">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: -15%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorChest" alt="Combo Chest">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboArmorChest" alt="Combo Chest">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: -30%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorLeg" alt="Combo Leg">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboArmorLeg" alt="Combo Leg">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: -15%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboArmorHand" alt="Combo Hand">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboArmorHand" alt="Combo Hand">
                                         </div>
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRelic" alt="Combo Relic">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboRelic" alt="Combo Relic">
                                         </div>
                                     </div>
                                     <!-- ABILITY DISPLAY ROW -->
                                     <div class="comboAbilityRow"> 
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1abilityIcon" alt="Combo Ability1">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="archetype1abilityIcon" alt="Combo Ability1">
                                         </div>
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2abilityIcon" alt="Combo Ability2">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="archetype2abilityIcon" alt="Combo Ability2">
                                         </div>
                                     </div>
                                     <!-- STAT DISPLAY COLUMN -->
@@ -961,77 +1051,59 @@
                                         Target Statistic:
                                     </div>
                                     <!-- ACCESSORY DISPLAY COLUMN -->
-                                    <div class="comboAccessoryRow"> 
+                                    <div class="comboAccessoryRow queryDisplayAdjustmentRight"> 
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboAmulet" alt="Combo Helmet">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboAmulet" alt="Combo Helmet">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: 15%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing1" alt="Combo Chest">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboRing1" alt="Combo Chest">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: 30%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing2" alt="Combo Leg">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboRing2" alt="Combo Leg">
                                         </div>
                                         <div class="comboArmorImageBox" style="translate: 15%;">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing3" alt="Combo Hand">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboRing3" alt="Combo Hand">
                                         </div>
                                         <div class="comboArmorImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboRing4" alt="Combo Relic">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboRing4" alt="Combo Relic">
                                         </div>
                                     </div>
                                     <!-- WEAPON DISPLAY ROW -->
                                     <div class="comboWeaponRow"> 
                                         <div class="comboWeaponImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon1" alt="Combo Weapon1">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboWeapon1" alt="Combo Weapon1">
                                         </div>
                                         <div class="comboWeaponImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon2" alt="Combo Weapon2">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboWeapon2" alt="Combo Weapon2">
                                         </div>
                                         <div class="comboWeaponImageBox">
-                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboWeapon3" alt="Combo Weapon3">
+                                            <img class="comboArmorImage hasHoverTooltip" src="/images/Remnant/clear.png" id="comboWeapon3" alt="Combo Weapon3">
                                         </div>
                                     </div>
                                     <!-- WEAPON MUTS/MODS ROW -->
                                     <div class="comboWeaponPiecesRow"> 
                                         <div class="comboWeaponPiecesHolder">
-                                            <div class="comboMutatorName" id="comboPrimaryMutator"></div>
-                                            <div class="comboModName" id="comboPrimaryMod"></div>
+                                            <div class="comboMutatorName hasHoverTooltip" id="comboPrimaryMutator"></div>
+                                            <div class="comboModName hasHoverTooltip" id="comboPrimaryMod"></div>
                                         </div>
                                         <div class="comboWeaponPiecesHolder">
-                                            <div class="comboMutatorName"id="comboMeleeMutator"></div>
-                                            <div class="comboModName" id="comboMeleeMod"></div>
+                                            <div class="comboMutatorName hasHoverTooltip"id="comboMeleeMutator"></div>
+                                            <div class="comboModName hasHoverTooltip" id="comboMeleeMod"></div>
                                         </div>
                                         <div class="comboWeaponPiecesHolder">
-                                            <div class="comboMutatorName"id="comboSecondaryMutator"></div>
-                                            <div class="comboModName" id="comboSecondaryMod"></div>
+                                            <div class="comboMutatorName hasHoverTooltip"id="comboSecondaryMutator"></div>
+                                            <div class="comboModName hasHoverTooltip" id="comboSecondaryMod"></div>
                                         </div>
                                     </div>
                                     <!-- CONCOCTION DISPLAY ROW -->
                                     <div class="comboConcoctionRow"> 
-                                        <div class="comboConcoctionsBox" style="justify-content: center;">
+                                        <div class="comboConcoctionsBox concBoxQueryAdjustment" style="justify-content: center;" id="comboConcoctionsBox">
                                             <div class="comboConsumableImageBox" id="comboConcoction1Holder">
                                                 <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction1" alt="Combo Concoction1">
                                             </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction2Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction2" alt="Combo Concoction2">
-                                            </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction3Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction3" alt="Combo Concoction3">
-                                            </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction4Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction4" alt="Combo Concoction4">
-                                            </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction5Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction5" alt="Combo Concoction5">
-                                            </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction6Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction6" alt="Combo Concoction6">
-                                            </div>
-                                            <div class="comboConsumableImageBox" id="comboConcoction7Holder">
-                                                <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConcoction7" alt="Combo Concoction7">
-                                            </div>
                                         </div>
                                     <!-- QUICKUSE DISPLAY ROW -->
-                                        <div class="comboQuickUseBox" style="justify-content: center;" id="comboQuickUseBox">
+                                        <!-- <div class="comboQuickUseBox" style="justify-content: center;" id="comboQuickUseBox">
                                             <div class="comboConsumableImageBox" id="comboQuickUse1Holder">
                                                 <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable1" alt="Combo Consumable1">
                                             </div>
@@ -1044,10 +1116,10 @@
                                             <div class="comboConsumableImageBox" id="comboQuickUse4Holder">
                                                 <img class="comboArmorImage" src="/images/Remnant/clear.png" id="comboConsumable4" alt="Combo Consumable4">
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="comboFragmentsRow">
-                                        <span id="comboDisplay"></span>
+                                        <span class="hasHoverTooltip" id="comboDisplay"></span>
                                     </div>
                                 </div>
                             </div>
@@ -1082,13 +1154,21 @@
 <script src="/htmlTemplates/injectR2HTML.js"></script>
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 <script src="/Remnant2/Calculator/data.js"></script>
+<script src="/Remnant2/Calculator/archetypeCombos.js"></script> <!-- combo names -->
 <script src="/Remnant2/Calculator/postData.js"></script>
 <script src="/MainJS/buildTime.js"></script>
 <!-- <script src="/Remnant2/dpsModules/melee.js"></script> -->
 <script src="/Remnant2/Optimizer/combinations.js"></script>
+<script src="/Remnant2/Calculator/meleeClasses.js"></script>
 <script src="/Remnant2/Calculator/formulas.js"></script>
 <!-- <script src="/Remnant2/Resources/attacks_Male.js"></script> -->
+<script src="/Remnant2/Calculator/userTriggers.js"></script>
+<script src="/Remnant2/Calculator/createHTML.js"></script>
+<script src="/Remnant2/Calculator/urlHandling.js"></script>
+<script src="/Remnant2/Calculator/traitMath.js"></script>
+<script src="/Remnant2/Calculator/statsList.js"></script>
 <script src="/Remnant2/Calculator/code.js"></script>
+<script src="/Remnant2/Calculator/interfaceFunctions.js"></script> <!-- display handling -->
 <script src="/Remnant2/Optimizer/tooltipStorage.js"></script>
 <script src="/MainJS/Tooltips/tooltips.js"></script>
 <script src="/Remnant2/Calculator/pagePopulation.js"></script>

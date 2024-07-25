@@ -57,7 +57,6 @@
     <div id="tooltip" class="tooltip"></div>
 
     <div class="loadoutOptionsBackgroundShutter" id="loadoutOptionsBackgroundShutter"></div>
-
     <div id="loadoutOptionsBox" class="loadoutOptionsBox">
         <div id="storedLoadoutNotifBox" class="storedLoadoutNotifBox">This text box will display if a loadout is found in the stored local data. If you see this text as it is without it being changed, I have done sometehing wrong and you should let me know.</div>
         <br>
@@ -81,6 +80,8 @@
         <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div> -->
 
         <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
+            <!-- <img class="backgroundCircles" src="/images/BackgroundCircles.png" alt="backgroundcircles png"> -->
+
             <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
                 <div class="basicsResistanceBox">
                     <div class="resistanceContainer"> <!-- Resistance Icons -->
@@ -128,21 +129,16 @@
 
                     <div class="loudoutHeaderbox"><!--Loadout buttons-->
                         <div class="loadout5BoxHolder">
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(1)">1</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(2)">2</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(3)">3</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(4)">4</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(5)">5</div>
-                        <!-- </div> -->
-            
-                        <!-- <div class="loadoutTitleHeader">LOADOUTS</div> -->
-            
-                        <!-- <div class="loadout5BoxHolder"> -->
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(6)">6</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(7)">7</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(8)">8</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(9)">9</div>
-                            <div class="loadoutTenthButton" onclick="basicsUpdates.loadoutSettingsVisibilityToggle(10)">10</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(1)">1</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(2)">2</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(3)">3</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(4)">4</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(5)">5</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(6)">6</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(7)">7</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(8)">8</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(9)">9</div>
+                            <div class="loadoutTenthButton" onclick="loadouts.loadoutSettingsVisibilityToggle(10)">10</div>
                         </div>
                     </div>
                     
@@ -563,69 +559,111 @@
                                 </div> -->
 
                                 <div class="fragmentsContainer classDescriptionsAdjustment">
-                                <div class="classPerkName">PRIME PERK:&nbsp;<span class="classPerkName" id="primePerk" style="white-space: normal;"></span>
-                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                        <label class="toggleContainer">
-                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPrimeP" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                        </label>
+                                    <div class="classIconsDisplayRow">
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1PrimeTab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1PrimePerkImage" alt="Combo ${comboString}">
+                                        </button>
+                                        &nbsp;-&nbsp;
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1AbilityTab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1AbilityRowImage" alt="Combo ${comboString}">
+                                        </button>
+                                        &nbsp;-&nbsp;
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1Passive1Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1Passive1Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1Passive2Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1Passive2Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1Passive3Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1Passive3Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch1Tab`,null,true,`archetype1Passive4Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype1Passive4Image" alt="Combo ${comboString}">
+                                        </button>
                                     </div>
-                                </div>
-                                <div class="classPerkDescription" id="primePerkDesc">---</div>
 
-                                <div class="flex">
-                                    <div class="classThinHeader">ABILITY:</div>
-                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                        <label class="toggleContainer">
-                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility1" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                        </label>
+
+                                    <div class="archs1DisplaysRow">
+                                        <div class="archsSelectionDisplayTab" id="archetype1PrimeTab">
+                                            <div class="classPerkName">PRIME PERK:&nbsp;<span class="classPerkName" id="primePerk" style="white-space: normal;"></span>
+                                                <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="USEtoggledPrimeP" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="primePerkCooldown"></div>
+                                            <div class="classPassiveDescription" id="primePerkDesc">---</div>
+                                        </div>
+
+                                        <div class="archsSelectionDisplayTab" id="archetype1AbilityTab" style="display: flex;">
+                                            <div class="flex">
+                                                <div class="classPerkName">ABILITY:&nbsp;<span class="classPerkName" id="ability1DisplayName" style="white-space: normal;"></span></div>
+                                                <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility1" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="ability1Cooldown"></div>
+                                            <div class="classPassiveDescription" id="ability1RegenRate"></div>
+                                            <div class="classPassiveDescription" id="ability1SkillCharges"></div>
+                                            <div class="classPassiveDescription" id="archetype1abilityDesc">Select an ability above</div>
+                                        </div>
+                                        <div class="archsSelectionDisplayTab" id="archetype1Passive1Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype1passive1">Passive 1: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive1" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype1passive1desc"></div>
+                                        </div>
+                                        <div class="archsSelectionDisplayTab" id="archetype1Passive2Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype1passive2">Passive 2: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive2" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype1passive2desc"></div>
+                                        </div>
+                                        <div class="archsSelectionDisplayTab" id="archetype1Passive3Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype1passive3">Passive 3: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive3" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype1passive3desc"></div>
+                                        </div>
+                                        <div class="archsSelectionDisplayTab" id="archetype1Passive4Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype1passive4">Passive 4: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive4" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype1passive4desc"></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype1abilityDesc">Select an ability above</div>
 
-                                <div class="classThinHeader">PASSIVES:</div>
 
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype1passive1"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive1" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype1passive1desc">Select an archetype above</div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype1passive2"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive2" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype1passive2desc"></div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype1passive3"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive3" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype1passive3desc"></div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype1passive4"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive4" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype1passive4desc"></div>
                                 </div>
 
                             </div>
                             <div class="selectionItemTypeFooter">
                             </div>
                         </div>
+
                         <div class="selectionsInfoContainer" id="arch2Tab">
                             <div class="selectionItemTypeHeader">Secondary Archetype</div>
                             <div class="selectionItemTypeBody">
@@ -650,59 +688,96 @@
                                     </div>
                                 </div>
 
+                                
+
                                 <div class="fragmentsContainer classDescriptionsAdjustment">
+                                    <div class="classIconsDisplayRow">
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch2Tab`,null,true,`archetype2AbilityTab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2AbilityRowImage" alt="Combo ${comboString}">
+                                        </button>
+                                        &nbsp;-&nbsp;
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch2Tab`,null,true,`archetype2Passive1Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2Passive1Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch2Tab`,null,true,`archetype2Passive2Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2Passive2Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch2Tab`,null,true,`archetype2Passive3Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2Passive3Image" alt="Combo ${comboString}">
+                                        </button>
+                                        <button type="button" class="comboIconsImageBox" onclick="basicsUpdates.updateFocus(`arch2Tab`,null,true,`archetype2Passive4Tab`)">
+                                            <img class="comboArmorImage" src="/images/Remnant/clear.png" id="archetype2Passive4Image" alt="Combo ${comboString}">
+                                        </button>
+                                    </div>
 
-                                <div class="flex">
-                                    <div class="classThinHeader">ABILITY:</div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility2" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
+                                    <div class="archs1DisplaysRow">
+                                        <div class="archsSelectionDisplayTab" id="archetype2AbilityTab" style="display: flex;">
+                                            <div class="flex">
+                                                <div class="classPerkName">ABILITY:&nbsp;<span class="classPerkName" id="ability2DisplayName" style="white-space: normal;"></span></div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledAbility2" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="ability2Cooldown"></div>
+                                            <div class="classPassiveDescription" id="ability2RegenRate"></div>
+                                            <div class="classPassiveDescription" id="ability2SkillCharges"></div>
+                                            <div class="classPassiveDescription" id="archetype2abilityDesc">Select an ability above</div>
                                         </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype2abilityDesc">Select an ability above</div>
-                                <div class="classThinHeader">PASSIVES:</div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype2passive1"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive5" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
+                                        <div class="archsSelectionDisplayTab" id="archetype2Passive1Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype2passive1">Passive 1: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive5" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype2passive1desc"></div>
                                         </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype2passive1desc">Select an archetype above</div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype2passive2"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive6" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
+                                        <div class="archsSelectionDisplayTab" id="archetype2Passive2Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype2passive2">Passive 2: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive6" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype2passive2desc"></div>
                                         </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype2passive2desc"></div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype2passive3"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive7" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
+                                        <div class="archsSelectionDisplayTab" id="archetype2Passive3Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype2passive3">Passive 3: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive7" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype2passive3desc"></div>
                                         </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype2passive3desc"></div>
-                                <div class="flex">
-                                    <div class="classPassiveHeader" id="archetype2passive4"></div>
-                                        <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive8" onchange="updateFormulas()"><span class="toggleSlider"></span>
-                                            </label>
+                                        <div class="archsSelectionDisplayTab" id="archetype2Passive4Tab">
+                                            <div class="flex">
+                                                <div class="classPassiveHeader" id="archetype2passive4">Passive 4: No archetype selected</div>
+                                                    <div class="selectionClassToggle"><div style="padding-right: 5px">Disable:</div>
+                                                        <label class="toggleContainer">
+                                                            <input type="checkbox" class="toggleCheckbox" id="USEtoggledPassive8" onchange="updateFormulas()"><span class="toggleSlider"></span>
+                                                        </label>
+                                                    </div>
+                                            </div>
+                                            <div class="classPassiveDescription" id="archetype2passive4desc"></div>
                                         </div>
-                                </div>
-                                <div class="classPassiveDescription" id="archetype2passive4desc"></div>
+                                    </div>
+
+                                
+                                
+                                
                                 </div>
 
                             </div>
-                            <div class="selectionItemTypeFooter">
-                            </div>
+                            <div class="selectionItemTypeFooter"></div>
                         </div>
 
                         <div class="selectionsInfoContainer" id="primaryTab"> <!--primary-->
@@ -762,30 +837,6 @@
 
                                 <div class="weaponStatsHolder" id="primaryWeaponStats"><!--stats rows-->
                                     <div>-</div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="selectionItemTypeFooter">
@@ -853,30 +904,6 @@
 
                                 <div class="weaponStatsHolder" id="secondaryWeaponStats"><!--stats rows-->
                                     <div>-</div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">RPS:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Magazine:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Range:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Falloff:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Reserves:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue">-</span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="selectionItemTypeFooter">
@@ -941,38 +968,8 @@
                                     </div>
                                 </div>
 
-                                <div class="weaponStatsHolder">
-                                    <span id="meleeStat1">0</span>
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">DMG% Bonus:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat2">0</span>
-                                    </div> -->
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">Combo Length:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat3">0</span>
-                                    </div> -->
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">Attack Speed:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat4">0</span>
-                                    </div> -->
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">Charge Speed:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat5">0</span>
-                                    </div> -->
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">Charge Cost:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat6">0</span>
-                                    </div> -->
-                                    <!-- <div class="weaponRowContainer">
-                                        <span class="weaponStat">Special Cost:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat7">0</span>
-                                    </div> -->
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Crit Chance:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat2">0</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Weak Spot:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat3">0</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Stagger:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat4">0</span>
-                                    </div>
-                                    <div class="weaponRowContainer">
-                                        <span class="weaponStat">Class:</span><span class="rowTraceLine"></span><span class="weaponValue" id="meleeStat5">--</span>
-                                    </div>
+                                <div class="weaponStatsHolder" id="meleeDisplayStatsRows">
+                                    <span id="meleeStat1">-</span>
                                 </div>
 
                             </div>
@@ -1022,7 +1019,7 @@
                         <span class="advancedSummaryStat">Effective DR</span><span class="rowTraceLine"></span><span class="advancedSummaryValue" id="effectiveDR">0.00%</span>
                     </div>
                 </div>
-                <div class="advancedCategoryBoxHolder" id="tankStatsContainer">
+                <div class="advancedCategoryBoxHolder" id="tankStatsContainer"><!-- settings -->
 
                     <div class="advancedCategoryBox advStatsMobileAdjustment"> <!-- DR Factors -->
                         <div class="advancedCategoryHeader">EHP FACTORS</div>
@@ -1166,8 +1163,16 @@
                             </div>
                         </div>
 
-
-
+                        <div>Engineer Turret Prefs</div>
+                        <div class="statisticSettingsRow hasHoverTooltip" id="isEnableEngTurretModes">
+                            <span class="statsRowName">Use Turret Mode?</span>
+                            <div class="statsRowToggle">
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="enableEngTurretModes" onchange="updateFormulas()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
 
 
 
@@ -1238,28 +1243,34 @@
 
     </div>
 
-
     <footer class="generalFooter" id="footerPlaceholder"></footer>
 
 </div>
 <!-- script/data calls -->
-<script src="/htmlTemplates/injectMainHTML.js"></script>
-<script src="/htmlTemplates/injectR2HTML.js"></script>
-<script src="/htmlTemplates/adjustMobileNav.js"></script>
-<script src="/Remnant2/Calculator/meleeClasses.js"></script>
-<script src="/Remnant2/Calculator/data.js"></script>
-<script src="/Remnant2/Calculator/postData.js"></script>
-<script src="/MainJS/buildTime.js"></script>
-<!-- <script src="/Remnant2/dpsModules/melee.js"></script> -->
-<script src="/Remnant2/Optimizer/combinations.js"></script>
-<script src="/Remnant2/Calculator/formulas.js"></script>
-<!-- <script src="/Remnant2/Resources/attacks_Male.js"></script> -->
-<script src="/Remnant2/Calculator/code.js"></script>
-<script src="/Remnant2/Calculator/tooltipStorage.js"></script>
-<script src="/Remnant2/Calculator/tooltipMath.js"></script>
-<script src="/MainJS/Tooltips/tooltips.js"></script>
-<script src="/Remnant2/Calculator/pagePopulation.js"></script>
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectR2HTML.js"></script> <!-- r2 Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+<script src="/Remnant2/Calculator/meleeClasses.js"></script> <!-- melee weapon archetype info -->
+<script src="/Remnant2/Calculator/breakdownsUI.js"></script> <!-- melee weapon archetype info -->
+<script src="/Remnant2/Calculator/data.js"></script> <!-- overall info -->
+<script src="/Remnant2/Calculator/archetypeCombos.js"></script> <!-- combo names -->
+<script src="/Remnant2/Calculator/postData.js"></script> <!-- things to do after loading data -->
+<script src="/MainJS/buildTime.js"></script> <!-- modify last updated time -->
+<script src="/Remnant2/Calculator/formulas.js"></script> <!-- calculation functions -->
+<script src="/Remnant2/Calculator/consumableConstructors.js"></script> <!-- consumable handling -->
+<script src="/Remnant2/Calculator/userTriggers.js"></script> <!-- react to user-triggered actions like clicks or input -->
+<script src="/Remnant2/Calculator/createHTML.js"></script> <!-- html templates of sorts -->
+<script src="/Remnant2/Calculator/urlHandling.js"></script> <!-- imports/exports via URLs -->
+<script src="/Remnant2/Calculator/traitMath.js"></script> <!-- trait handling -->
+<script src="/Remnant2/Calculator/statsList.js"></script> <!-- stat list and user friendly names for them -->
+<script src="/Remnant2/Calculator/code.js"></script> <!-- main calculator handling -->
+<script src="/Remnant2/Calculator/loadouts.js"></script> <!-- loadout handling -->
+<script src="/Remnant2/Calculator/interfaceFunctions.js"></script> <!-- display handling -->
+<script src="/Remnant2/Calculator/tooltipStorage.js"></script> <!-- holds info for calc specific tooltips -->
+<script src="/Remnant2/Calculator/tooltipMath.js"></script> <!-- calc specific tooltip handling -->
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+<script src="/Remnant2/Calculator/pagePopulation.js"></script> <!-- once everything is done, populate what needs populating, and get things started -->
 
 </body>
 
-</html> 
+</html>

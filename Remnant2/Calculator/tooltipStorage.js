@@ -1,6 +1,17 @@
 const tooltipStorage = {
     //"elementID": "tooltip text here",
-    "currentlySupportedDamageCalcs": "Breakdowns will not display unless the item is equipped<br><ul><li>Melee Damage (NEW)</li><li>Havoc Form (ability)</li><li>Sandstorm (mod)</li></ul>IF YOU WANT MORE BREAKDOWNS JOIN MY DISCORD AND HELP ME. I am NOT going to do all the damage breakdowns by myself, I can very much use help with in-game testing.",
+    "currentlySupportedDamageCalcs": `Breakdowns will not display unless the item is equipped<br>
+    <ul>
+    <li>Melee Damage</li>
+    <li>Havoc Form (Archon)</li>
+    <li>Way of Kaeula (Invoker)</li>
+    <li>Heavy Weapon: Vulcan (Engineer)</li>
+    <li>Heavy Weapon: Flamethrower (Engineer)</li>
+    <li>Heavy Weapon: Impact Cannon (Engineer)</li>
+    <li>Firestorm (mod)</li>
+    <li>Heatwave (mod)</li>
+    <li>Sandstorm (Monolith mod)</li>
+    </ul>IF YOU WANT MORE BREAKDOWNS JOIN MY DISCORD AND HELP ME. I am NOT going to do all the damage breakdowns by myself, I can very much use help with in-game testing.`,
     "weakspotEnableHolderBox": "Determines if Weakspot damage will be factored into calculations or not. If toggled on, all damage will be assumed as weakspot damage where applicable.<br>Will not force weakspot damage on items or attacks that cannot weakspot to begin with.<br><br><span>Burden of the Gambler</span> will disable weakspots and this toggle while equipped and enabled.<br><span>Godsplitter</span> will still assume weakspot hits even if this toggle is disabled by any means.",
     "critEnableHolderBox": "Determines if crit chance and crit damage will factored into calculations or not. If toggled on, crit damage bonuses are <span>averaged</span> against your applicable crit chance, before being applied as a damage bonus.",
     "averageDPSExplainerMelee": "<span>This is averaged in two ways.</span><br>The first of which is that we average the damage of the entire combo and all its entities(projectiles, bonus effects, whatever you left enabled), across the entire duration of the combo. This means that technically the DPS is ONLY true when you evaluate the full combo, but if you evaluate any other length, shorter or longer, it can and will likely be wrong.<br>The second of which is that we are taking any active crit damage bonuses, and averaging them against your applicable crit rate before adding it in as another multiplicative damage bonus.<br><br>On top of that, we don't account for time limits on certain bonuses yet. So if you have Invader's 'Wormhole' ability selected and enabled, it will skew the numbers quite drastically on the DPS side, but will be fully accurate on the 'Highest Hit/Crit' statistic display.<br><br>TLDR: You still need to use at least two brain cells when considering these stats.",

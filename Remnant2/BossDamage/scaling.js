@@ -114,13 +114,15 @@ let userSettings = {
         "playerBlightRes": 0,
     },
     updateUserInputs() {
+        const setRef = userSettings.vars;
+
         let HPvalue = Math.max(1,Math.min(+readSelection("playerHealthValue").value,1000));
         readSelection("playerHealthValue").value = HPvalue;
-        userSettings.vars.maxHealth = Math.max(1,Math.min(HPvalue,1000));
+        setRef.maxHealth = Math.max(1,Math.min(HPvalue,1000));
 
         let worldLevel = +readSelection("worldLevelSlider").value;
         readSelection("worldLevelDisplay").innerHTML = worldLevel;
-        userSettings.vars.worldLevel = worldLevel;
+        setRef.worldLevel = worldLevel;
 
         let difficulty = +readSelection("difficultySlider").value;
         let diffName = ""
@@ -130,61 +132,61 @@ let userSettings = {
             case 3: diffName = "Nightmare";readSelection("difficultyDisplay").style.color = "orange"; break;
             case 4: diffName = "Apocalypse";readSelection("difficultyDisplay").style.color = "#e06666"; break;
         }
-        userSettings.vars.difficulty = difficulty;
+        setRef.difficulty = difficulty;
         readSelection("difficultyDisplay").innerHTML = diffName;
 
         let vicious = readSelection("isVicious").checked;
-        userSettings.vars.isVicious = vicious;
+        setRef.isVicious = vicious;
 
         readSelection("bossHPSlider").disabled = false;
         let hpLevel = +readSelection("bossHPSlider").value;
         readSelection("bossHPDisplay").innerHTML = hpLevel;
-        userSettings.vars.bossHP = hpLevel;
+        setRef.bossHP = hpLevel;
 
         let spiteful = readSelection("isSpiteful").checked;
-        userSettings.vars.isSpiteful = spiteful;
+        setRef.isSpiteful = spiteful;
         readSelection("spitefulDisplay").innerHTML = (tableGeneration.getSpitefulModifier()*100).toFixed(2);
 
         if (!spiteful) {
             readSelection("spitefulDisplay").innerHTML = 0.00
             readSelection("bossHPDisplay").innerHTML = 100;
-            userSettings.vars.bossHP = 100;
+            setRef.bossHP = 100;
             readSelection("bossHPSlider").value = 100;
             readSelection("bossHPSlider").disabled = true;
         }
 
         let useBuffs = readSelection("useBuffs").checked;
-        userSettings.vars.useBuffs = useBuffs;
+        setRef.useBuffs = useBuffs;
 
         let playerCount = +readSelection("playerCountSlider").value;
         readSelection("playerCountDisplay").innerHTML = playerCount;
-        userSettings.vars.playerCount = playerCount;
+        setRef.playerCount = playerCount;
 
         let effectiveDR = Math.max(0, +readSelection("playerDRValue").value || 0);
         effectiveDR = Math.min(80,effectiveDR);
         readSelection("playerDRValue").value = effectiveDR;
-        userSettings.vars.effectiveDR = effectiveDR || 0.00;
+        setRef.effectiveDR = effectiveDR || 0.00;
 
-        userSettings.vars.includeStandard = readSelection("includeStandard").checked;
-        userSettings.vars.includePercentHP = readSelection("includePercentHP").checked;
-        userSettings.vars.includeDOT = readSelection("includeDOT").checked;
-        userSettings.vars.includeDRBypass = readSelection("includeDRBypass").checked;
-        userSettings.vars.includeLethal = readSelection("includeLethal").checked;
-        userSettings.vars.includeElemental = readSelection("includeElemental").checked;
+        setRef.includeStandard = readSelection("includeStandard").checked;
+        setRef.includePercentHP = readSelection("includePercentHP").checked;
+        setRef.includeDOT = readSelection("includeDOT").checked;
+        setRef.includeDRBypass = readSelection("includeDRBypass").checked;
+        setRef.includeLethal = readSelection("includeLethal").checked;
+        setRef.includeElemental = readSelection("includeElemental").checked;
 
-        userSettings.vars.includeWorldBoss = readSelection("includeWorldBoss").checked;
-        userSettings.vars.includeMiniBoss = readSelection("includeMiniBoss").checked;
+        setRef.includeWorldBoss = readSelection("includeWorldBoss").checked;
+        setRef.includeMiniBoss = readSelection("includeMiniBoss").checked;
 
         readSelection("playerBleedRes").value = Math.max(0,Math.min(80,readSelection("playerBleedRes").value))
-        userSettings.vars.playerBleedRes = readSelection("playerBleedRes").value;
+        setRef.playerBleedRes = readSelection("playerBleedRes").value;
         readSelection("playerBurnRes").value = Math.max(0,Math.min(80,readSelection("playerBurnRes").value))
-        userSettings.vars.playerBurnRes = readSelection("playerBurnRes").value;
+        setRef.playerBurnRes = readSelection("playerBurnRes").value;
         readSelection("playerShockRes").value = Math.max(0,Math.min(80,readSelection("playerShockRes").value))
-        userSettings.vars.playerShockRes = readSelection("playerShockRes").value;
+        setRef.playerShockRes = readSelection("playerShockRes").value;
         readSelection("playerAcidRes").value = Math.max(0,Math.min(80,readSelection("playerAcidRes").value))
-        userSettings.vars.playerAcidRes = readSelection("playerAcidRes").value;
+        setRef.playerAcidRes = readSelection("playerAcidRes").value;
         readSelection("playerBlightRes").value = Math.max(0,Math.min(80,readSelection("playerBlightRes").value))
-        userSettings.vars.playerBlightRes = readSelection("playerBlightRes").value;
+        setRef.playerBlightRes = readSelection("playerBlightRes").value;
 
 
         tableGeneration.generateInitialTable();
@@ -240,18 +242,19 @@ let tableGeneration = {
     },
     createAttackEntry(currentAttack,boss) {
         let scaling21 = tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(21-1,1,scalingInfo.DamageScalarPerLevel,1);
-        let worldLevel = userSettings.vars.worldLevel;
+        const setRef = userSettings.vars;
+        let worldLevel = setRef.worldLevel;
         //Calculate the world level scalar
         let compositeWorldScalar = tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevelInc,scalingInfo.DamageScalarPerLevelExp) * tableGeneration.applyPlayerLevelScalar(worldLevel-1,1,scalingInfo.DamageScalarPerLevel,1);
 
         //Determine if this is health based damage or not. If it is, apply the correct percentage.
-        let damage = currentAttack.attackType === "%HP" ? userSettings.vars.maxHealth * (currentAttack.hpPercent/100) : currentAttack.damage;
+        let damage = currentAttack.attackType === "%HP" ? setRef.maxHealth * (currentAttack.hpPercent/100) : currentAttack.damage;
         //If the world level is 21, then leave the values as they are. This is because all damage values were obtained in Apocalypse difficulty, with world level 21.
         //However if the world level is NOT 21, then work backwards to find the values for the current world level.
         damage = worldLevel===21 ? damage : (damage/scaling21)*compositeWorldScalar;
 
         let diffName = ""
-        switch (userSettings.vars.difficulty) {
+        switch (setRef.difficulty) {
             case 1: diffName = "Survivor"; break;
             case 2: diffName = "Veteran"; break;
             case 3: diffName = "Nightmare"; break;
@@ -266,28 +269,28 @@ let tableGeneration = {
 
         damage = diffName==="Apocalypse" ? damage : (damage/currentApocBossScalar)*currentDiffBossScalar;
         //Establish if the boss has damage affixes, how many players are active in the world, and if the boss has a buff to apply if selected
-        let viciousScalar = 1 + (userSettings.vars.isVicious ? 0.15 : 0);
-        let spitefulScalar = 1 + (userSettings.vars.isSpiteful ? tableGeneration.getSpitefulModifier() : 0);
-        let playerCountScalar = 1 + (scalingInfo.DamageScalarPerPlayer * (userSettings.vars.playerCount-1));
-        let bossBuffScalar = (userSettings.vars.useBuffs && currentAttack.isBuffed) ? (1 + boss.buffs) : 1;
+        let viciousScalar = 1 + (setRef.isVicious ? 0.15 : 0);
+        let spitefulScalar = 1 + (setRef.isSpiteful ? tableGeneration.getSpitefulModifier() : 0);
+        let playerCountScalar = 1 + (scalingInfo.DamageScalarPerPlayer * (setRef.playerCount-1));
+        let bossBuffScalar = (setRef.useBuffs && currentAttack.isBuffed) ? (1 + boss.buffs) : 1;
         damage *= viciousScalar * spitefulScalar * playerCountScalar * bossBuffScalar;//Apply all scalar values to the main damage value
 
         let element = currentAttack.damageType;
         let resistanceValue = 0;
 
         switch (element) {
-            case "Bleed": resistanceValue = userSettings.vars.playerBleedRes; break;
-            case "Fire": resistanceValue = userSettings.vars.playerBurnRes; break;
-            case "Shock": resistanceValue = userSettings.vars.playerShockRes; break;
-            case "Acid": resistanceValue = userSettings.vars.playerAcidRes; break;
-            case "Blight": resistanceValue = userSettings.vars.playerBlightRes; break;
+            case "Bleed": resistanceValue = +setRef.playerBleedRes; break;
+            case "Fire": resistanceValue = +setRef.playerBurnRes; break;
+            case "Shock": resistanceValue = +setRef.playerShockRes; break;
+            case "Acid": resistanceValue = +setRef.playerAcidRes; break;
+            case "Blight": resistanceValue = +setRef.playerBlightRes; break;
         }
 
         if (!currentAttack.drBypass) {
-            damage *= (1-(userSettings.vars.effectiveDR/100)) * (1-(resistanceValue/100));
+            damage *= (1-(setRef.effectiveDR/100)) * (1-(resistanceValue/100));
         }//If the attack does not ignore DR, reduce by DR
         else {
-            damage *= (1-resistanceValue); //still apply elem resistances
+            damage *= (1-(resistanceValue/100)); //still apply elem resistances
         }
         let dps = currentAttack.frequency ? ((1/currentAttack.frequency)*damage) : 0;//If the attack does continuous damage, calculate its DPS
         return {
