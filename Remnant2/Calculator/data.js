@@ -2208,6 +2208,7 @@ classInfo = {
 		  "tags": [],
 		  "regenRate": 1,
 		  "baseEnergy": 150,
+		  "provides": ["Fire"],
 		  "placementID": "2"
 		},
 		"Heavy Weapon: Impact Cannon": {
