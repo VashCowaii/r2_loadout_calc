@@ -3108,6 +3108,7 @@ classInfo = {
 		  "desc": "Casts an AOE burst that applies BLEEDING, BURNING, OVERLOADED, and CORRODED to all enemies within 15mAOE, and dealing a total of 3,000 base damage. Lasts 20s.",
 		  "image": "/brotherLibrary/abilitiesImages/Miasma.png",
 		  "stats": {
+			"outgoingStatus": 4,
 			"outBLEED": 1,
 			"outBURN": 1,
 			"outOVERLOADED": 1,
