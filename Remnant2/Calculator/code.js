@@ -736,7 +736,7 @@ let customItemFunctions = {
       if (shieldAmount > 0) {index.ChargeDamage += shieldAmount * dmgCap;}
     },
     vampireBlade(index) {//base
-      if (index.outBLEED) {
+      if (index.outBLEED || index.inBLEED) {
         index.MeleeDamage += 0.30;
         index.MLifesteal += 0.03;
       }
