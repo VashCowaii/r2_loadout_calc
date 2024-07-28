@@ -735,6 +735,12 @@ let customItemFunctions = {
       let dmgCap = 0.25;
       if (shieldAmount > 0) {index.ChargeDamage += shieldAmount * dmgCap;}
     },
+    taintedBlade(index) {
+      if (index.outCORRODED) {
+        const bonusPerStack = 0.08;
+        index.MeleeDamage += (bonusPerStack * Math.min(5,index.outCORRODED));
+      }
+    },
     vampireBlade(index) {//base
       if (index.outBLEED || index.inBLEED) {
         index.MeleeDamage += 0.30;
