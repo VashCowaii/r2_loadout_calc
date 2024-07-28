@@ -4454,7 +4454,7 @@ amulets = {
 	  "usesConditional": {},
 	  "stats": {
 		"outgoingStatus": 1,
-		"outCORRODED": 280
+		"outCORRODED": 1
 	  },
 	  "tags": [],
 	  "provides": ["Status","Acid","Elemental"],
@@ -11262,7 +11262,7 @@ rangedMutators = {
 	  "usesConditional": {},
 	  "stats": {
 		"outgoingStatus": 1,
-		"outCORRODED": 200
+		"outCORRODED": 1
 	  },
 	  "tags": [],
 	  "provides": ["Status","Acid","Elemental"],
@@ -11847,14 +11847,18 @@ meleeMutators = {
 	  "name": "Tainted Blade",
 	  "slot": "MMutator",
 	  "image": "/brotherLibrary/mutatorsImages/Tainted Blade.png",
-	  "desc": "Increases Melee Damage by 8% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 250 ACID Damage over 10s. Bonus assumes maximum stacks.",
-	  "usesConditional": {},
+	  "desc": "Increases Melee Damage by 8% per stack of CORRODED on the target.<br>Max of 5 stacks. Level 10: Charged Melee Attacks apply CORRODED, dealing 250 ACID Damage over 10s. Bonus checks for the number of CORRODED sources within your current build.",
+	  "usesConditional": {
+		"customTier50": "taintedBlade",
+		"keys": [
+		  "customTier50"
+		]
+	  },
 	  "stats": {
-		"MeleeDamage": 0.4,
 		"outgoingStatus": 1,
 		"outCORRODED": 1
 	  },
-	  "tags": [],
+	  "tags": ["MeleeDamage"],
 	  "provides": ["Status","Acid","Elemental"],
 	  "placementID": "19"
 	},
