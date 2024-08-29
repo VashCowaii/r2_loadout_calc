@@ -2588,9 +2588,11 @@ classInfo = {
 		},
 		"passive3": {
 		  "name": "Teamwork",
-		  "desc": "Handler/Companion +30% Revive Speed. While reviving, both receive 50% less damage.",
+		  "desc": "Handler/Companion +15% Revive Speed. While reviving, both receive 50% less damage.",
 		  "image": "/brotherLibrary/passivesImages/Teamwork.png",
-		  "stats": {},
+		  "stats": {
+			"ReviveSpeed": 0.15
+		  },
 		  "tags": []
 		},
 		"passive4": {
@@ -4752,7 +4754,9 @@ rings = {
 	  "slot": "Ring",
 	  "image": "/brotherLibrary/ringsImages/Band Band.png",
 	  "desc": "Increases Speed of Revive and being Revived by 35%. Increases Downed Health and Downed Movement Speed by 100%.",
-	  "stats": {},
+	  "stats": {
+		"ReviveSpeed": 0.35
+	  },
 	  "tags": [],
 	  "placementID": "R012"
 	},
@@ -7956,7 +7960,9 @@ fragments = {
 	  "image": "",
 	  "desc": "VALUE1.1% Revive Speed [MYTHIC]",
 	  "value": 0.25,
-	  "usesConditional": {},
+	  "usesConditional": {
+		"ReviveSpeed": 0.25
+	  },
 	  "stats": {},
 	  "tags": [],
 	  "color": "Blue",
@@ -8766,8 +8772,8 @@ traits = {
 	},
 	"Revivalist": {
 	  "name": "Revivalist",
-	  "property": null,
-	  "tags": [],
+	  "property": "ReviveSpeed",
+	  "tags": ["ReviveSpeed"],
 	  "usesConditional": {},
 	  "desc": "Increases the speed of Reviving and being Revived by VALUE1.1%.",
 	  "level": {

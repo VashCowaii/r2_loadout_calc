@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="stylesheet" href="/css/Remnant2/prism.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>stonkies</title> <!-- Browser Tab title -->
+
+
+    <meta property="og:title" content="R2 Prism Planner">
+    <meta
+      property="og:description"
+      content="A calculator to help you plan your prisms, with the highest chance of success!"
+    />
+    <meta
+      property="description"
+      content="A calculator to help you plan your prisms, with the highest chance of success!"
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="Remnant 2 Prism Planner" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Remnant 2 Prism Planner" />
+    <meta
+      name="twitter:description"
+      content="A calculator to help you plan your prisms, with the highest chance of success!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+
+    <div class="loadoutOptionsBackgroundShutter" id="loadoutOptionsBackgroundShutter"></div>
+    <div id="loadoutOptionsBox" class="loadoutOptionsBox">
+        <div id="storedLoadoutNotifBox" class="storedLoadoutNotifBox">This text box will display if a loadout is found in the stored local data. If you see this text as it is without it being changed, I have done sometehing wrong and you should let me know.</div>
+        <br>
+        <div style="display: flex;">
+            Name:
+            <input class="selectSelector traitNameAdjustment" id="loadoutNameInput" maxlength="30">
+        </div>
+        <br>
+        <div class="loadoutControlsBox" id="loadoutControlsBox"></div>
+    </div>
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+        <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">BUILD GENERATOR IS LIVE. SEE BOTTOM OF PAGE.</div> -->
+
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
+            <!-- <img class="backgroundCircles" src="/images/BackgroundCircles.png" alt="backgroundcircles png"> -->
+            <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
+                <!-- <div class="traitMegaTitleHeader">INPUT MODIFIERS</div> -->
+                <div class="basicsSummaryBox" id="plannerDesiredRows" style="white-space: normal;">
+
+                    I will make the TFD homepage prettier later. Right now the site is so wholly focused on remnant 2 I haven't had the time to start formatting for another game just yet. If you want a good idea of what I generally go for in terms of visuals, go look at the R2 section of the site for a look of things to come.
+                    
+
+
+                </div> <!-- filled according to inputs -->
+
+
+            
+
+            </div>
+
+            
+
+            <div class="prismColumn">
+                <div class="prismDisplayMainBox">
+                    <img class="prismDisplayIcon" src="/images/peepoFishing.png">
+                </div>
+            </div>
+
+            <div class="basicsBox" style="white-space: normal;"> <!-- BASIC STATS COLUMN -->
+                In the meantime, have some links to some character calcs that are ready for public use:
+                
+                <a href="/TFD/CharacterCalculators/Bunny/" rel="noopener noreferrer" style="color: lightblue;">Bunny Calc</a>
+                <a href="/TFD/CharacterCalculators/Lepic/" rel="noopener noreferrer" style="color: lightblue;">Lepic Calc</a>
+                    
+
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+<!-- script/data calls -->
+<script src="/TFD/bunnyMath.js"></script>
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<!-- <script src="/htmlTemplates/injectR2HTML.js"></script> r2 Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+
+
+</body>
+
+</html>
