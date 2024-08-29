@@ -3,7 +3,10 @@
 .env
 honkaiCodeTests/
 Planner/
+plannerImages/
+prism.css
 
+Lepic/
 
 VercelFiles/node_modules/
 VercelFiles/.next/

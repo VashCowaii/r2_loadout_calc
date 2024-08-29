@@ -7,7 +7,7 @@ let starterTable = {
     //DR
     "FlatDR": 0,"Bulwark": 0,"BulwarkCap": 5,"REdamage": 1,"DMGKept": 1,"SelfDamageModifier": 1,"inStatusDamage": 0,
     //SHIELDS
-    "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,
+    "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,"ShieldDuration": 0,
     //RESISTANCES
     "Bleed": 0,"Burn": 0,"Shock": 0,"Corrosive": 0,"Blight": 0,
     //WEIGHT
@@ -62,6 +62,7 @@ let starterTable = {
     "FireRate": 0,"ReloadSpeed": 0,"WeaponSwapSpeed": 0,
     "MovementSpeed": 0,"EnvMovementSpeed": 0,"AimMovementSpeed": 0,
     "ProjectileSpeed": 0,"ConsumableSpeed": 0,"CrouchSpeed": 0,
+    "ReviveSpeed": 0,
     //MODS
     "ModDuration": 0,"ModPowerGen/s": 0,"ModPowerGen": 0,"ModCost": 0,
     "ModPowerGenCrit": 0,"ModPowerGenWeakspot": 0,"ModPowerGenMelee": 0,"ModPowerGenElemental": 0,
@@ -71,6 +72,7 @@ let starterTable = {
     "auraAOE": 0,
     //GUNS
     "Recoil": 0,"Range": 0,"Range%": 0,"Spread": 0,"SpreadRecovery": 0,"Sway": 0,"WeaponChargeTime": 0,
+    "HeatGeneration": 0,
     //AMMO
     "Reserves": 0,"ReservesMulti": 0,
     //MINIONS/SUMMONS

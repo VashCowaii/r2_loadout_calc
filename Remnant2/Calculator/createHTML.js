@@ -170,5 +170,56 @@ let createHTML = {
             <div class="abilityFactorsList" id="${breakdownInfoUI.factorID}"></div>
         </div>`
       return insertedHTML;
-    }
+    },
+    "Planner": {
+      populateGearPlannerVariant(elemID,collection,removePriorOptions) {
+        const select = readSelection(elemID);
+        if (!removePriorOptions) {
+          for (const gear in collection) {
+            if (collection.hasOwnProperty(gear)) {
+              const option = document.createElement("option");
+              option.text = gear;
+              select.appendChild(option);
+            }
+          }
+        }
+        else {
+          for (const gear in collection) {
+            if (collection.hasOwnProperty(gear)) {
+              let matchFound = false;
+              for (let i=1;i<=globalRecords.greatTraitRecords.length;i++) {
+                if (gear === globalRecords.greatTraitRecords[i-1].name && gear && `trait${i}` != elemID) {
+                  matchFound = true;
+                  break;
+                }
+              }
+              if (matchFound===false) {
+                const option = document.createElement("option");
+                option.text = gear;
+                select.appendChild(option);
+              }
+            }
+          }
+        }
+      },
+      plannerRowBox(rowID,iconImageOverride) {
+        return `
+        <div class="basicsSummaryContainer hasHoverTooltip" id="PrismRow${rowID}Holder">
+            <div class="prismRowIconPlusName">
+              <div class="fragIconRowBox">
+                  <img class="fragRowIcon" src=${iconImageOverride ?? "/brotherLibrary/plannerImages/iconImages/Blank.png"} id="PrismRow${rowID}Icon">
+              </div>
+
+              <div class="presetsSelectorBox">
+                  <input class="selectSelector traitNameAdjustment hasHoverTooltip" id="PrismRow${rowID}" list="PrismRow${rowID}List" onchange="plannerTrigger.updateRow(${rowID})">
+                  <datalist id="PrismRow${rowID}List"></datalist>
+              </div>
+              <span class="prismRowValue" id="PrismRow${rowID}Value"></span>
+            </div>
+
+            <span class="prismRowDescription" id="PrismRow${rowID}Description"></span>
+        </div>
+        `
+      }
+    }//<span class="rowTraceLine"></span> <span class="basicsSummaryValue" id="PrismRow${rowID}Value">0.0</span>
   }
