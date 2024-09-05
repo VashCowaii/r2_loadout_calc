@@ -472,6 +472,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
         `;
         readSelection("bunnyBarFilledSlider3").value = settingsRef.barPercentState;
+        readSelection("barFilledDisplay").innerHTML = `${settingsRef.barPercentState}%`;
         
 
         const basePowerModifier = (isHVStarter ? 250.5 : 148.7)/100;
