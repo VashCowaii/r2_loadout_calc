@@ -1,7 +1,15 @@
 /* #434343 */
 /* #666666 */
 
-.prismRowDescription,.comboInnerDisplayRow {
+/* transcendant #99483c */
+/* ultimate #938557 */
+/* rare #845f93 */
+/* common #467592 */
+/* sub attack glow #815232 */
+/* trans glow #2a8378 */
+
+
+.prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription {
     font-family: "Montserrat-Light";
 }
 
@@ -10,7 +18,7 @@
     height: 23px; */
     padding: 0;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-items: center;
     justify-content: center;
@@ -53,6 +61,7 @@
 
 
 .basicsBox {
+    min-width: 25%;
     width: 33.33%;
     max-width: 350px;
     max-height: 800px;
@@ -66,13 +75,37 @@
     /* white-space: normal; */
     box-sizing: border-box;
     margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #434343;
+}
+.basicsBoxModsHolder {
+    min-width: 25%;
+    width: 33.33%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 800px;
+    overflow-y: auto;
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* white-space: normal; */
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 5px;
+    /* border: 2px solid #434343; */
+    padding: 2px;
+    white-space: normal;
+    overflow: hidden;
 }
 
 .basicsSummaryBox {
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    border: 2px solid #434343;
+    /* border: 2px solid #434343; */
     padding: 2px;
     border-radius: 10px;
 }
@@ -107,7 +140,7 @@
     align-items: center;
     text-align: left;
     /* border: 1px solid red; */
-    font-size: 20px;
+    font-size: 16px;
 }
 .traitNameAdjustment {
     width: 100%;
@@ -119,7 +152,12 @@
 
 .prismColumn {
     width: 33%;
+    height: 100%;
     box-sizing: border-box;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .prismDisplayMainBox {
     width: 100%;
@@ -181,6 +219,381 @@
 }
 
 
+.descSelectorInfoHolder {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #434343;
+    box-sizing: border-box;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 1px;
+}
+.breakdownTab {
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.breakdownTabHeader {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.breakdownTabBody {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.selectionSelectorBoxes {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.selectionSelectorBoxesReactor {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.selectionSelectorBoxesReactorIcons {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.breakdownDisplayImageBox {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.breakdownDisplayIcon {
+    object-fit: contain;
+    width: 130px;
+    height: 130px;
+    border: 1px solid #434343;
+    border-radius: 5px;
+}
+.breakdownAbilityIcon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: none;
+}
+.breakdownDescriptionBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+    border-top: 1px solid #434343;
+    box-sizing: border-box;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.descendantOverviewBox {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.descOverviewRow {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.descOverviewMiniBox {
+    height: 100%;
+    width: 33%;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characterSelector {
+    width: 100%;
+}
+.modsOverviewBox {
+    width: 100%;
+}
+.modSlotBoxHolder,.modSlotBoxHolderTrans,.modSlotBoxHolderSub {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #434343;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.modSlotBoxHolderTrans {
+    background: linear-gradient(
+                to top, 
+                #2a8378 0%,
+                rgba(255, 0, 0, 0.1) 10%,
+                rgba(255, 0, 0, 0) 20%
+            ); 
+}
+.modSlotBoxHolderSub {
+    background: linear-gradient(
+                to top, 
+                #815232 0%,
+                rgba(255, 0, 0, 0.1) 10%,
+                rgba(255, 0, 0, 0) 20%
+            ); 
+}
+
+.modSlotPolarityHolderBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.modSlotPolarityImage {
+    /* display: flex; */
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+}
+.modSlotNameHolder {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 1px;
+    background-image:   linear-gradient(135deg, #434343, rgba(255, 0, 0, 0) 50%), linear-gradient(315deg, #434343, rgba(0, 0, 255, 0) 50%);
+}
+.modSlotNameMod {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+}
+.modSlotNameCategory {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+}
+
+
+.reactorSelectorMainBox {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+.reactorBreakdownIconBox {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.componentBreakdownIconBox {
+    width: auto;
+    height: 200px;
+    object-fit: contain;
+    box-sizing: border-box;
+    position: absolute;
+    /* filter: brightness(0.3); */
+    filter: opacity(0.1);
+    overflow: hidden;
+    
+    /* border: 1px solid red; */
+}
+.reactorBreakdownIcon {
+    /* width: 200px;
+    height: 200px; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.reactorRowIcons {
+    width: 35px;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    /* border: 1px solid white; */
+    filter: brightness(0.5);
+}
+.componentDescription {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.abilityDamageDisplayImageBox {
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #434343;
+}
+.abilityDamageRowIcon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.abilityBreakdownTab {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.abilityBreakdownHeader {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+}
+.abilityBreakdownBody {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.abilityBreakdownDescription {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left;
+    align-items: flex-start; */
+    white-space: normal;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.missingBreakdownHeadsup {
+    width: 100%;
+    white-space: normal;
+}
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {
@@ -196,6 +609,13 @@
     /* padding: 0; */
     padding-top: 20px;
     margin: 0;
+}
+
+.basicsBox {
+    width: 100%;
+}
+.basicsBoxModsHolder {
+    width: 100%;
 }
 
 }
