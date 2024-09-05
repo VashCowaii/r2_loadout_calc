@@ -30,7 +30,7 @@ const augments = {
         "type": "Descendant",
         "cost": 15,
         "category": "Lepic",
-        "desc": "Removes Close Call's effect. When using skill, chance to recover MP instead.",
+        "desc": "Chance to recover MP when using a skill.",
         "skillOverrides": [0,0,0,0,"Regenerative Braking"]
     },
     "Power Unit Change": {
@@ -48,7 +48,7 @@ const augments = {
         "type": "Descendant",
         "cost": 17,
         "category": "Lepic",
-        "desc": "MP is no longer consumed while Overkill is active. It consumes MP when attacking with Overkill. It recovers MP when Overkill lands a Critical Hit.",
+        "desc": "MP is no longer consumed while Overkill is active. It consumes MP when attacking with Unique Weapon. It recovers MP when Unique Weapon lands a Critical Hit.",
         "skillOverrides": [0,0,0,"Increased Efficiency",0]
     },
     "Firearm Master": {
@@ -57,7 +57,7 @@ const augments = {
         "type": "Descendant",
         "cost": 15,
         "category": "Ultimate Lepic",
-        "desc": "Removes Close Call's effect. Reloading weapon increases Skill Power Modifier.",
+        "desc": "Reloading weapon increases Skill Range.<br>Changing weapon increases Skill Power Modifier.<br><br>Remove's Close Call's effect",
         "stats": {
             "PowerModifierBase": 0.39,
         },
@@ -73,6 +73,64 @@ const augments = {
         ,
         "skillOverrides": ["Explosive Stacks",0,0,0,0]
     },
+
+
+
+
+
+
+    // "High-Voltage": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Malachite",
+    //     "type": "Descendant",
+    //     "cost": 15,
+    //     "category": "Ultimate Bunny",
+    //     "desc": "Reduces the number of enemies that Thrill Bomb and Lightning Emission can strike. Increases Range and Damage instead.."
+    // },
+    // "Electric Charge": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Malachite",
+    //     "type": "Descendant",
+    //     "cost": 13,
+    //     "category": "Ultimate Bunny",
+    //     "desc": "Increases the landing damage after Rabbit Foot's Double Jump. Double Jump deals significantly increased damage after hitting enemies with the skill a certain number of times."
+    // },
+    // "Bionic Fuel": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Rutile",
+    //     "type": "Descendant",
+    //     "cost": 16,
+    //     "category": "Bunny",
+    //     "desc": "Modifies Speed of Light to consume HP instead of MP."
+    // },
+    // "Superconductor": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Xantic",
+    //     "type": "Descendant",
+    //     "cost": 16,
+    //     "category": "Bunny",
+    //     "desc": "Adds a debuff that reduces the enemy's ATK to the Electruction effect that Bunny inflicts."
+    // },
+    // "Electric Transition": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Cerulean",
+    //     "type": "Descendant",
+    //     "cost": 14,
+    //     "category": "Bunny",
+    //     "desc": "Modifies Speed of Light to recover Energy Shield continuously in proportion to the distance traveled."
+    // },
+    // "Electric Condense": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Xantic",
+    //     "type": "Descendant",
+    //     "cost": 16,
+    //     "category": "Bunny",
+    //     "desc": "Changes Maximum Power into a form that causes damage around Bunny."
+    // },
+
+
+
+
 
     // "Classic Chef": {
     //     "rarity": "Transcendant",
@@ -313,54 +371,6 @@ const augments = {
     //     "cost": 17,
     //     "category": "Freyna",
     //     "desc": "When an enemy inflicted with Room 0 Trauma is killed, There is a contagion of Poison surrounding it."
-    // },
-    // "High-Voltage": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Malachite",
-    //     "type": "Descendant",
-    //     "cost": 15,
-    //     "category": "Ultimate Bunny",
-    //     "desc": "Reduces the number of enemies that Thrill Bomb and Lightning Emission can strike. Increases Range and Damage instead.."
-    // },
-    // "Electric Charge": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Malachite",
-    //     "type": "Descendant",
-    //     "cost": 13,
-    //     "category": "Ultimate Bunny",
-    //     "desc": "Increases the landing damage after Rabbit Foot's Double Jump. Double Jump deals significantly increased damage after hitting enemies with the skill a certain number of times."
-    // },
-    // "Bionic Fuel": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Rutile",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Bunny",
-    //     "desc": "Modifies Speed of Light to consume HP instead of MP."
-    // },
-    // "Superconductor": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Bunny",
-    //     "desc": "Adds a debuff that reduces the enemy's ATK to the Electruction effect that Bunny inflicts."
-    // },
-    // "Electric Transition": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Bunny",
-    //     "desc": "Modifies Speed of Light to recover Energy Shield continuously in proportion to the distance traveled."
-    // },
-    // "Electric Condense": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Bunny",
-    //     "desc": "Changes Maximum Power into a form that causes damage around Bunny."
     // },
     // "Attacking Compulsion": {
     //     "rarity": "Transcendant",
