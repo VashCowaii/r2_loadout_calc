@@ -210,7 +210,7 @@
 
                             <div class="reactorSelectorMainBox">
 
-                                <div class="selectionSelectorBoxesReactor">
+                                <div class="selectionSelectorBoxesReactor" style="margin: 0;">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="reactorSub1" list="reactorSub1List" onchange="userTriggers.updateReactorSelections()"> <!--selector-->
                                         <datalist id="reactorSub1List"></datalist>
@@ -227,8 +227,8 @@
 
                             </div>
 
-                            <div class="componentHeaderRow">Weapon Conditions</div>
-                            <div class="reactorSelectorMainBox">
+                            <div class="componentHeaderRow" style="margin: 0;padding: 0;">Weapon Conditions</div>
+                            <div class="reactorSelectorMainBox" style="margin: 0;padding: 0;">
                                 <div class="selectionSelectorBoxesReactorIcons">
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_A_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorGeneral','General')" id="reactorGeneral">
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_B_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorSpecial','Special')" id="reactorSpecial">
@@ -236,8 +236,8 @@
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_D_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorHighPowered','HighPowered')" id="reactorHighPowered">
                                 </div>
                             </div>
-                            <br>
-                            <div class="totalHealingBox">
+                            <!-- <br> -->
+                            <div class="totalHealingBox" style="margin: 0;padding: 0;">
                                 <div class="totalHealingBoxHalf hasHoverTooltip">
                                     <div style="padding-right: 5px;">Reactor Weapon Matched</div>
                                     <label class="toggleContainer">
@@ -569,6 +569,38 @@
                             <div class="componentHeaderRow" id="mod10Cost">Cost: 0</div>
 
                             <div class="breakdownDescriptionBox" id="mod10Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod11BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 11</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod11" list="mod11List" onchange="userTriggers.updateSelectedMod('11');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod11List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod11Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod11Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod12BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 12</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod12" list="mod12List" onchange="userTriggers.updateSelectedMod('12');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod12List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod12Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod12Desc">Select a mod above</div>
                         </div>
                     </div>
                 </div>

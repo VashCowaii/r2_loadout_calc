@@ -1,7 +1,7 @@
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML, etc.
 function readSelection(elemID) {return document.getElementById(elemID);}
 
-for (let i=1;i<=10;i++) {
+for (let i=1;i<=12;i++) {
     let boxType = null;
     if (i===1) {boxType = "trans"}
     else if (i===2) {boxType = "sub"}
@@ -247,9 +247,9 @@ const userTriggers = {
         //also check for duplicate categories, like arche tech or support etc.
         //we only check mods 3-10 as it is impossible for mods 1 and 2 (transc and sub) to have a duplicate as only their respective slots can slot their respective mods.
         if (+modSlot >=3) {
-            for (let i=2;i<=9;i++) {
+            for (let i=2;i<=11;i++) {
                 if (inputRef.value != "" && inputRef.value === globalRecords.character.mods[i]) {alert(`You already have ${inputRef.value} equipped, I cleared the selection to avoid a duplicate.`);inputRef.value = "";}
-                else if (inputRef.value != "" && modData[inputRef.value].category != "" && modData[inputRef.value].category === modData[globalRecords.character.mods[i]].category) {alert(`${modData[inputRef.value].category} mod already equipped [${globalRecords.character.mods[i]}]`);inputRef.value = "";}
+                else if (inputRef.value != "" && modSlot != i+1 && modData[inputRef.value].category != "" && modData[inputRef.value].category === modData[globalRecords.character.mods[i]].category) {alert(`${modData[inputRef.value].category} mod already equipped [${globalRecords.character.mods[i]}]`);inputRef.value = "";}
             }
         }
 
@@ -303,6 +303,8 @@ const pagePopulation = {
         {"Name": "mod8List", "DataSet": modData},
         {"Name": "mod9List", "DataSet": modData},
         {"Name": "mod10List", "DataSet": modData},
+        {"Name": "mod11List", "DataSet": modData},
+        {"Name": "mod12List", "DataSet": modData},
 
         // {"Name": "reactorAttributeList", "DataSet": attributeList},
         // {"Name": "reactorTypeList", "DataSet": typeList},
@@ -611,7 +613,7 @@ const formulasValues = {
         let modArrayRef = globalRecords.character.mods;
         let pullStats = formulasValues.pullStats;
 
-        for (let i=2;i<=9;i++) {
+        for (let i=2;i<=11;i++) {
             let path = modData[modArrayRef[i]].stats
             pullStats(index,path);
         }
