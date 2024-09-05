@@ -3,7 +3,7 @@ const calcs = {
         const baseCharacterHealth = characterRef.HP;
         const baseHealthBonus = index.HP + (index.boostHPFromShield ? calcs.getShield(index,characterRef).totalShield * modData["Overwhelming HP"].conversionRate : 0);
         const healthPercentBonus = index["HP%"];
-        const totalHealth = (baseCharacterHealth + baseHealthBonus) * (1 + healthPercentBonus);
+        const totalHealth = Math.max(1,(baseCharacterHealth + baseHealthBonus) * (1 + healthPercentBonus));
         const displayHealth = index.isHPSetTo1 ? 1 : totalHealth;
 
         return {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth}
@@ -12,7 +12,7 @@ const calcs = {
         const baseCharacterShield = characterRef.Shield;
         const baseShieldBonus = index.Shield + (index.boostShieldFromHP ? calcs.getHealth(index,characterRef).totalHealth * modData["Overwhelming Shield"].conversionRate : 0);
         const shieldPercentBonus = index["Shield%"];
-        const totalShield = (baseCharacterShield + baseShieldBonus) * (1 + shieldPercentBonus);
+        const totalShield = Math.max(1,(baseCharacterShield + baseShieldBonus) * (1 + shieldPercentBonus));
         const displayShield = index.isShieldSetTo1 ? 1 : totalShield;
 
         return {baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield}
@@ -21,7 +21,7 @@ const calcs = {
         const baseCharacterDEF = characterRef.DEF;
         const baseDEFBonus = index.DEF + (index.boostDEFFromHP ? calcs.getHealth(index,characterRef).totalHealth * modData["Overwhelming DEF"].conversionRate : 0);
         const DEFPercentBonus = index["DEF%"];
-        const totalDEF = (baseCharacterDEF + baseDEFBonus) * (1 + DEFPercentBonus);
+        const totalDEF = Math.max((baseCharacterDEF + baseDEFBonus) * (1 + DEFPercentBonus));
         const displayDEF = totalDEF;
 
         return {baseCharacterDEF,baseDEFBonus,DEFPercentBonus,totalDEF,displayDEF}
