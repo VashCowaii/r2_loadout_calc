@@ -27,6 +27,8 @@ const userTriggers = {
             "mod8BreakdownTab",
             "mod9BreakdownTab",
             "mod10BreakdownTab",
+            "mod11BreakdownTab",
+            "mod12BreakdownTab",
         ]
         for (let name of list) {
             readSelection(name).style.display = "none";
@@ -249,7 +251,7 @@ const userTriggers = {
         if (+modSlot >=3) {
             for (let i=2;i<=11;i++) {
                 if (inputRef.value != "" && inputRef.value === globalRecords.character.mods[i]) {alert(`You already have ${inputRef.value} equipped, I cleared the selection to avoid a duplicate.`);inputRef.value = "";}
-                else if (inputRef.value != "" && modSlot != i+1 && modData[inputRef.value].category != "" && modData[inputRef.value].category === modData[globalRecords.character.mods[i]].category) {alert(`${modData[inputRef.value].category} mod already equipped [${globalRecords.character.mods[i]}]`);inputRef.value = "";}
+                else if (inputRef.value != "" && +modSlot != i+1 && modData[inputRef.value].category != "" && modData[inputRef.value].category === modData[globalRecords.character.mods[i]].category) {alert(`${modData[inputRef.value].category} mod already equipped [${globalRecords.character.mods[i]}]`);inputRef.value = "";}
             }
         }
 
@@ -279,7 +281,7 @@ const userTriggers = {
         readSelection(`mod${modSlot}Desc`).innerHTML = desc;
 
         //pass the mod value to records, and then update forms
-        globalRecords.character.mods[+modSlot-1] = inputRef.value
+        globalRecords.character.mods[+modSlot - 1] = inputRef.value
         userTriggers.updateSelectedCharacter();
         updateFormulas();
     }
