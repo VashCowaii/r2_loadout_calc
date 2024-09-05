@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- &nbsp; -->
+    <!-- style="color: #93CCEA;" -->
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>TFD Build Calculator</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="TFD Build Calc">
+    <meta
+      property="og:description"
+      content="A detailed and comprehensive calculator for builds in The First Descendant."
+    />
+    <meta
+      property="description"
+      content="A detailed and comprehensive calculator for builds in The First Descendant."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="TFD Build Calc" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFD Build Calc" />
+    <meta
+      name="twitter:description"
+      content="A detailed and comprehensive calculator for builds in The First Descendant."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+
+    <div class="loadoutOptionsBackgroundShutter" id="loadoutOptionsBackgroundShutter"></div>
+    <div id="loadoutOptionsBox" class="loadoutOptionsBox">
+        <div id="storedLoadoutNotifBox" class="storedLoadoutNotifBox">This text box will display if a loadout is found in the stored local data. If you see this text as it is without it being changed, I have done sometehing wrong and you should let me know.</div>
+        <br>
+        <div style="display: flex;">
+            Name:
+            <input class="selectSelector traitNameAdjustment" id="loadoutNameInput" maxlength="30">
+        </div>
+        <br>
+        <div class="loadoutControlsBox" id="loadoutControlsBox"></div>
+    </div>
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+        <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">SEE CHANGELOG FOR PROGRESS AND TO-DO LIST.</div> -->
+
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;"> <!-- From stats to traits -->
+            <!-- <img class="backgroundCircles" src="/images/BackgroundCircles.png" alt="backgroundcircles png"> -->
+            <div class="basicsBox"> <!-- BASIC STATS COLUMN -->
+                <div class="basicsSummaryBox">
+                    <div class="updateWarningBar" style="border: none;color: #93CCEA;white-space: normal;">SEE CHANGELOG FOR PROGRESS AND TO-DO LIST.</div>
+                    <div class="basicsSummaryContainer hasHoverTooltip" id="summaryHealthRow"><span class="basicsSummaryStat">HP</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryHealth">0.00</span></div>
+                    <div class="basicsSummaryContainer hasHoverTooltip" id="summaryStaminaRow"><span class="basicsSummaryStat">SHIELDS</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryShields">0.00</span></div>
+                    <div class="basicsSummaryContainer hasHoverTooltip" id="summaryArmorRow"><span class="basicsSummaryStat">DEF</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryDEF">0.00</span></div>
+                    <div class="basicsSummaryContainer hasHoverTooltip" id="summaryWeightRow"><span class="basicsSummaryStat">MP</span><span class="rowTraceLine"></span><span class="basicsSummaryValue" id="summaryMP">0.00</span></div>
+                </div>
+
+                <div class="basicsInnerBox" id="basicsInnerBox">asdf</div> <!-- populated via updateMainFromFormulas() -->
+            
+
+            </div>
+
+            
+            <div class="prismColumn" style="width: 100%;"><!-- PLACEHOLDER -->
+
+                <!-- <div class="reactorSettingsHeader">REACTOR SETTINGS</div> -->
+
+                <div class="abilityDamageDisplayImageBox">
+                    <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_01.png" id="damageAbilityIcon1" onclick="userTriggers.updateSelectedAbilityBreakdown(1,'damageAbilityIcon1')">
+                    <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_02.png" id="damageAbilityIcon2" onclick="userTriggers.updateSelectedAbilityBreakdown(2,'damageAbilityIcon2')">
+                    <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_03.png" id="damageAbilityIcon3" onclick="userTriggers.updateSelectedAbilityBreakdown(3,'damageAbilityIcon3')">
+                    <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_04.png" id="damageAbilityIcon4" onclick="userTriggers.updateSelectedAbilityBreakdown(4,'damageAbilityIcon4')">
+                    <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_00.png" id="damageAbilityIcon5" onclick="userTriggers.updateSelectedAbilityBreakdown(5,'damageAbilityIcon5')">
+                </div>
+                <!-- <div class="totalHealingBox">
+                    <div class="totalHealingBoxHalf hasHoverTooltip">
+                        <div style="padding-right: 5px;">Fire Rate UP</div>
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="USEFireRateUP" onchange="settings.updateCharacterSettings('Lepic','Overkill')">
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                </div> -->
+
+
+                <div class="abilityDamageTabHolder"><!-- ABILITY BREAKDOWN CONTAINERS -->
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab1">
+                        <div class="abilityBreakdownHeader" id="abilityBreakdownHeader1"></div>
+                        <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader1"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownBody1"></div>
+                    </div>
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab2">
+                        <div class="abilityBreakdownHeader" id="abilityBreakdownHeader2"></div>
+                        <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader2"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownBody2"></div>
+                    </div>
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab3">
+                        <div class="abilityBreakdownHeader" id="abilityBreakdownHeader3"></div>
+                        <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader3"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownBody3"></div>
+                    </div>
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab4">
+                        <div class="abilityBreakdownHeader" id="abilityBreakdownHeader4"></div>
+                        <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader4"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownBody4"></div>
+                    </div>
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab5">
+                        <div class="abilityBreakdownHeader" id="abilityBreakdownHeader5"></div>
+                        <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader5"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownBody5"></div>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
+
+
+            <div class="basicsBoxModsHolder">
+
+                <div class="descSelectorInfoHolder"><!-- this is the html for all the breakdown tabs that populate the upper right box -->
+
+                    <div class="breakdownTab" id="characterBreakdownTab" style="display: flex;">
+                        <div class="breakdownTabHeader">DESCENDANT</div>
+                        <div class="breakdownTabBody">
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="character" list="characterList" onchange="userTriggers.updateSelectedCharacter()"> <!--selector-->
+                                    <datalist id="characterList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="breakdownDisplayImageBox">
+                                <img class="breakdownDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="breakdownDisplayImageBox">
+                                <img class="breakdownAbilityIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_01.png" id="breakdownAbilityIcon1">
+                                <img class="breakdownAbilityIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_02.png" id="breakdownAbilityIcon2">
+                                <img class="breakdownAbilityIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_03.png" id="breakdownAbilityIcon3">
+                                <img class="breakdownAbilityIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_04.png" id="breakdownAbilityIcon4">
+                                <img class="breakdownAbilityIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_00.png" id="breakdownAbilityIcon5">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="reactorBreakdownTab">
+                        <div class="breakdownTabHeader">REACTOR</div>
+                        <div class="breakdownTabBody">
+
+                            <div class="componentBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="reactorBreakdownIcon">
+                            </div>
+
+                            <div class="reactorSelectorMainBox">
+                                <div class="selectionSelectorBoxesReactorIcons">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_000.png" onclick="userTriggers.updateReactorSelections(1,'reactorNonAttribute','Non-Attribute')" id="reactorNonAttribute">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_001.png" onclick="userTriggers.updateReactorSelections(1,'reactorFire','Fire')" id="reactorFire">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_002.png" onclick="userTriggers.updateReactorSelections(1,'reactorElectric','Electric')" id="reactorElectric">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_003.png" onclick="userTriggers.updateReactorSelections(1,'reactorChill','Chill')" id="reactorChill">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_004.png" onclick="userTriggers.updateReactorSelections(1,'reactorToxic','Toxic')" id="reactorToxic">
+                                </div>
+                                <div class="selectionSelectorBoxesReactorIcons">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheDimension.png" onclick="userTriggers.updateReactorSelections(2,'reactorDimension','Dimension')" id="reactorDimension">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheFusion.png" onclick="userTriggers.updateReactorSelections(2,'reactorFusion','Fusion')" id="reactorFusion">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheSingular.png" onclick="userTriggers.updateReactorSelections(2,'reactorSingular','Singular')" id="reactorSingular">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheTech.png" onclick="userTriggers.updateReactorSelections(2,'reactorTech','Tech')" id="reactorTech">
+                                </div>
+                            </div>
+
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="reactorSub1" list="reactorSub1List" onchange="userTriggers.updateReactorSelections()"> <!--selector-->
+                                        <datalist id="reactorSub1List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="reactorSub1Value">0</div>
+                                </div>
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="reactorSub2" list="reactorSub2List" onchange="userTriggers.updateReactorSelections()"> <!--selector-->
+                                        <datalist id="reactorSub2List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="reactorSub2Value">0</div>
+                                </div>
+
+                            </div>
+
+                            <div class="componentHeaderRow">Weapon Conditions</div>
+                            <div class="reactorSelectorMainBox">
+                                <div class="selectionSelectorBoxesReactorIcons">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_A_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorGeneral','General')" id="reactorGeneral">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_B_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorSpecial','Special')" id="reactorSpecial">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_C_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorImpact','Impact')" id="reactorImpact">
+                                    <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_D_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorHighPowered','HighPowered')" id="reactorHighPowered">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div style="padding-right: 5px;">Reactor Weapon Matched</div>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="USEReactorOptimization" onchange="userTriggers.updateReactorSelections()" checked> <!--math toggle-->
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- <div class="reactorBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="reactorBreakdownIcon">
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="breakdownTab" id="auxiliaryBreakdownTab">
+                        <div class="breakdownTabHeader">AUXILIARY</div>
+                        <div class="breakdownTabBody">
+                            <div class="componentBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="auxiliaryBreakdownIcon">
+                            </div>
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="auxiliary" list="auxiliaryList" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                    <datalist id="auxiliaryList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="auxiliaryHeaderRow"></div>
+                            
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="auxiliarySub1" list="auxiliarySub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="auxiliarySub1List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="auxiliarySub1Value">0</div>
+                                </div>
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="auxiliarySub2" list="auxiliarySub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="auxiliarySub2List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="auxiliarySub2Value">0</div>
+                                </div>
+
+                            </div>
+
+                            <div class="breakdownDescriptionBox" id="auxiliaryDesc"></div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="sensorBreakdownTab">
+                        <div class="breakdownTabHeader">SENSOR</div>
+                        <div class="breakdownTabBody">
+                            <div class="componentBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="sensorBreakdownIcon">
+                            </div>
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="sensor" list="sensorList" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                    <datalist id="sensorList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="sensorHeaderRow"></div>
+                            
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="sensorSub1" list="sensorSub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="sensorSub1List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="sensorSub1Value">0</div>
+                                </div>
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="sensorSub2" list="sensorSub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="sensorSub2List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="sensorSub2Value">0</div>
+                                </div>
+
+                            </div>
+
+                            <div class="breakdownDescriptionBox" id="sensorDesc"></div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="memoryBreakdownTab">
+                        <div class="breakdownTabHeader">MEMORY</div>
+                        <div class="breakdownTabBody">
+                            <div class="componentBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="memoryBreakdownIcon">
+                            </div>
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="memory" list="memoryList" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                    <datalist id="memoryList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="memoryHeaderRow"></div>
+                            
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="memorySub1" list="memorySub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="memorySub1List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="memorySub1Value">0</div>
+                                </div>
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="memorySub2" list="memorySub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="memorySub2List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="memorySub2Value">0</div>
+                                </div>
+
+                            </div>
+
+                            <div class="breakdownDescriptionBox" id="memoryDesc"></div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="processorBreakdownTab">
+                        <div class="breakdownTabHeader">PROCESSOR</div>
+                        <div class="breakdownTabBody">
+                            <div class="componentBreakdownIconBox">
+                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="processorBreakdownIcon">
+                            </div>
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="processor" list="processorList" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                    <datalist id="processorList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="processorHeaderRow"></div>
+                            
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="processorSub1" list="processorSub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="processorSub1List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="processorSub1Value">0</div>
+                                </div>
+                                <div class="selectionSelectorBoxesReactor">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="processorSub2" list="processorSub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                        <datalist id="processorSub2List"></datalist>
+                                    </div>
+                                    <div class="selectSelectorTitle" id="processorSub2Value">0</div>
+                                </div>
+
+                            </div>
+
+                            <div class="breakdownDescriptionBox" id="processorDesc"></div>
+                        </div>
+                    </div>
+
+                    <div class="breakdownTab" id="mod1BreakdownTab">
+                        <div class="breakdownTabHeader">TRANSCENDANT</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod1" list="mod1List" onchange="userTriggers.updateSelectedMod('1');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod1List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod1Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod1Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod2BreakdownTab">
+                        <div class="breakdownTabHeader">SUB ATTACK</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod2" list="mod2List" onchange="userTriggers.updateSelectedMod('2');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod2List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod2Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod2Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod3BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 3</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod3" list="mod3List" onchange="userTriggers.updateSelectedMod('3');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod3List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod3Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod3Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod4BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 4</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod4" list="mod4List" onchange="userTriggers.updateSelectedMod('4');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod4List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod4Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod4Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod5BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 5</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod5" list="mod5List" onchange="userTriggers.updateSelectedMod('5');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod5List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod5Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod5Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod6BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 6</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod6" list="mod6List" onchange="userTriggers.updateSelectedMod('6');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod6List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod6Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod6Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod7BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 7</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod7" list="mod7List" onchange="userTriggers.updateSelectedMod('7');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod7List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod7Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod7Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod8BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 8</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod8" list="mod8List" onchange="userTriggers.updateSelectedMod('8');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod8List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod8Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod8Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod9BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 9</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod9" list="mod9List" onchange="userTriggers.updateSelectedMod('9');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod9List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod9Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod1Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod10BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 10</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod10" list="mod10List" onchange="userTriggers.updateSelectedMod('10');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod10List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod10Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod10Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="descendantOverviewBox"> <!-- this is the html for all the buttons -->
+                    <div class="descOverviewRow">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('characterBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png" id="buttonsCharacterIcon">
+                        </div>
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('auxiliaryBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_01.png" id="buttonsAuxiliaryIcon">
+                        </div>
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('sensorBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_02.png" id="buttonsSensorIcon">
+                        </div>
+                    </div>
+                    <div class="descOverviewRow">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('reactorBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="buttonsReactorIcon">
+                        </div>
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('memoryBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_03.png" id="buttonsMemoryIcon">
+                        </div>
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('processorBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_04.png" id="buttonsProcessorIcon">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="statsRowToggle" style="width: 100%;">
+                    <select id="characterList" class="characterSelector" onchange="userSettings.updateUserInputs()"></select>
+                </div> -->
+                <!-- <div class="prismDisplayMainBox">
+                    <img class="prismDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png">
+                </div> -->
+                <div class="modsOverviewBox" id="basicsBoxModsHolder"></div>
+            </div><!-- mod selections -->
+            
+            
+        </div>
+        
+
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+<!-- script/data calls -->
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+
+<script src="/TFD/Calculator/statList.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/formulas.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/tooltipStorage.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/tooltipMath.js"></script> <!-- desc mod data -->
+
+<script src="/TFD/Calculator/globalRecords.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/reactors.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/components.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/characterData.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/createHTML.js"></script> 
+<script src="/TFD/Calculator/pagePopulation.js"></script> <!-- mobile nav bar handling -->
+<script src="/MainJS/buildTime.js"></script>
+
+
+
+</body>
+
+</html>

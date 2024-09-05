@@ -1,5 +1,4 @@
-//Shorthand for selecting an element by ID. Follow up with .value or .innerHTML, etc.
-function readSelection(elemID) {return document.getElementById(elemID);}
+
 
 function bunnyStonkiesCalc() {
     const basePowerModifier = (readSelection("USEHighVoltage").checked ? 250.5 : 148.7)/100;

@@ -1,0 +1,25 @@
+const tooltipStorage = {
+    //"elementID": "tooltip text here",
+    "currentlySupportedDamageCalcs": `Breakdowns will not display unless the item is equipped<br>
+    <ul>
+    <li>Melee Damage</li>
+    <li>Havoc Form (Archon)</li>
+    <li>Way of Kaeula (Invoker)</li>
+    <li>Heavy Weapon: Vulcan (Engineer)</li>
+    <li>Heavy Weapon: Flamethrower (Engineer)</li>
+    <li>Heavy Weapon: Impact Cannon (Engineer)</li>
+    <li>Firestorm (mod)</li>
+    <li>Heatwave (mod)</li>
+    <li>Sandstorm (Monolith mod)</li>
+    </ul>IF YOU WANT MORE BREAKDOWNS JOIN MY DISCORD AND HELP ME. I am NOT going to do all the damage breakdowns by myself, I can very much use help with in-game testing.`,
+    "weakspotEnableHolderBox": "Determines if Weakspot damage will be factored into calculations or not. If toggled on, all damage will be assumed as weakspot damage where applicable.<br>Will not force weakspot damage on items or attacks that cannot weakspot to begin with.<br><br><span>Burden of the Gambler</span> will disable weakspots and this toggle while equipped and enabled.<br><span>Godsplitter</span> will still assume weakspot hits even if this toggle is disabled by any means.",
+    "critEnableHolderBox": "Determines if crit chance and crit damage will factored into calculations or not. If toggled on, crit damage bonuses are <span>averaged</span> against your applicable crit chance, before being applied as a damage bonus.",
+    "averageDPSExplainerMelee": "<span>This is averaged in two ways.</span><br>The first of which is that we average the damage of the entire combo and all its entities(projectiles, bonus effects, whatever you left enabled), across the entire duration of the combo. This means that technically the DPS is ONLY true when you evaluate the full combo, but if you evaluate any other length, shorter or longer, it can and will likely be wrong.<br>The second of which is that we are taking any active crit damage bonuses, and averaging them against your applicable crit rate before adding it in as another multiplicative damage bonus.<br><br>On top of that, we don't account for time limits on certain bonuses yet. So if you have Invader's 'Wormhole' ability selected and enabled, it will skew the numbers quite drastically on the DPS side, but will be fully accurate on the 'Highest Hit/Crit' statistic display.<br><br>TLDR: You still need to use at least two brain cells when considering these stats.",
+    "highestHitMeleeHolder": "This is the highest hit any single attack(or bonus effect) can do within this given combo type. Does include weakspot factors if enabled, but does NOT include crit bonuses.",
+    "highestCritMeleeHolder": "<span>NEEDS CRITS ENABLED</span><br>This is the highest hit any single attack(or bonus effect) can do within this given combo type. Includes weakspot bonuses if enabled, and includes MAXIMUM crit damage bonuses available from your loadout, this not averaged against your crit chance. This way it will display the actual highest crit value you would see on screen within your game.",
+    "swingsMeleeHolder": "<span>This only matters when an attack type has BOTH a regular swing AND a bonus effect.</span><br>If that is the case, then while this is toggled, it will still include the main swings of the physical attacks themselves. If this is disabled, then only when an attack has bonus effects, will it exclude the regular attacks from calculations. You'd turn this off if you want to see how much a bonus effect does without the physical swings skewing the numbers. Turning this off will automatically turn on the Effects toggle, as at least one form of damage must be factored at all times.",
+    "bonusEffectMeleeHolder": "When an attack type has both a regular physical swing AND a bonus effect, leaving this toggled will include bonus effects within damage calculations. If you want to know the damage of a special weapon without its special effects, turn this off. Turning this off will automatically turn on the Swings toggle, as at least one form of damage must be factored at all times.",
+    "meleeComboDurationHolder": "This is the shortest possible, BASE length for this combo of the given attack type. Shortest meaning this value is the length of the combo when continuously chained into other combos, with no excess animations.<br><br>If this attack type is a backstep variant, then this time also includes the duration of the backstep itself. If you're in the flop range, the evade length is somewhere around 1.266s, otherwise the length is around 0.4s.",
+    "meleeModifiedDurationHolder": "This is the base duration, modified by attack speed.<br><span>EndDuration = BaseDuration/(1+AttackSpeed)</span><br><br>If the attack type is a backstep variant, then you subtract the duration of the evade action from the base duration first, then modify the duration by attack speed, then add the evade duration back into the equation while modifying it by Evade Speed.<br><span>EndDuration = ((BaseDuration-EvadeDuration)/(1+AttackSpeed)) + EvadeDuration/(1+EvadeSpeed)</span>"
+
+};  

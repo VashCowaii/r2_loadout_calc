@@ -67,6 +67,23 @@ li {
     margin: 0;
     font-size: 22px;
 }
+.changelogOptionsRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-bottom: 10px; */
+    padding: 5px;
+    border-top: 1px solid #434343;
+    /* margin-top: 3px; */
+}
+.changelogButton {
+    border: 2px solid #434343;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 5px;
+    background-color: black;
+}
 
 
 @media (max-width: 768px) {

@@ -32,8 +32,12 @@
         <div class="changeLogHeaderIconHolder">
             <img class="honkaiWaitImage" src="/images/madPrince.png" alt="Home Page MadPrince">
         </div>
+        <div class="changelogOptionsRow">
+            <div class="changelogButton" onclick="buttons.updateChangelog('R2')">Remnant 2</div>
+            <div class="changelogButton" onclick="buttons.updateChangelog('TFD')">TFD</div>
+        </div>
         <div class="changeLogMegaHalves"> <!-- Changelog -->
-            <div class="changeLogMegaHeader">ChangeLog</div>
+            <div class="changeLogMegaHeader">ChangeLog:&nbsp;<span id="currentLogs">Remnant 2</span></div>
 
             <div class="changeLogMegaBody" id="remnantLogBody"></div>
 
@@ -56,6 +60,7 @@
 
 <script src="/htmlTemplates/injectMainHTML.js"></script>
 <script src="injectR2Log.js"></script>
+<script src="buttons.js"></script>
 
 </body>
 </html> 
