@@ -242,12 +242,12 @@ const modData = {
         "type": "Descendant",
         "cost": 6,
         "category": "Final Hand",
-        "desc": "Fixes Max Shield at 1, and increases Max HP by 14.2% of Max Shield. The increased HP can be further increased by other buffs.",
+        "desc": "Fixes Max Shield at 1, and increases Max HP by 19.8% of Max Shield. The increased HP can be further increased by other buffs.",
         "stats": {
             "isShieldSetTo1": 1,
             "boostHPFromShield": 1
         },
-        "conversionRate": 0.142
+        "conversionRate": 0.198
     },
     "Overwhelming DEF": {//not using a custom function, but it might be prudent to add one later. Rn it is just using these flags to tell the calcs.getXYZ how to do the math
         "rarity": "Ultimate",
@@ -268,12 +268,12 @@ const modData = {
         "type": "Descendant",
         "cost": 6,
         "category": "Final Hand",
-        "desc": "Fixes Max HP at 1, and increases Max Shield by 2% of Max HP. The increased Shield can be further increased by other buffs.",
+        "desc": "Fixes Max HP at 1, and increases Max Shield by 26.8% of Max HP. The increased Shield can be further increased by other buffs.",
         "stats": {
             "isHPSetTo1": 1,
             "boostShieldFromHP": 1
         },
-        "conversionRate": 0.02
+        "conversionRate": 0.268
     },
     "Heat Release": {
         "rarity": "Ultimate",

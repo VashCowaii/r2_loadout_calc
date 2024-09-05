@@ -40,6 +40,25 @@ const userTriggers = {
         if (!characters[readSelection("character").value]) {readSelection("character").value = ""}
         selectedCharacter = readSelection("character").value;
 
+        //If the character is actually different, then update the possible augment mod selections so people don't create errors.
+        //Also clear the currently selected augment so it doesn't fuck with the new character's math and ability array
+        if (selectedCharacter != globalRecords.character.currentCharacter) {
+            readSelection("mod1").value = "";
+            //set parent to true, and parentIsCharacterUpdate to true, so we don't get infinite recursion here
+            userTriggers.updateSelectedMod("1",true,true);
+            const augDisplayList = document.getElementById('mod1List');
+            augDisplayList.innerHTML = '';
+
+            const augArrayList = Object.keys(augments);
+            for (let entry of augArrayList) {
+                if (augments[entry].category.includes(selectedCharacter)){
+                    const optionElement = document.createElement('option');
+                    optionElement.value = entry;
+                    augDisplayList.appendChild(optionElement);
+                }
+            }
+        }
+
         globalRecords.character.currentCharacter = selectedCharacter;
 
         readSelection("characterBreakdownIcon").src = characters[selectedCharacter].image;
@@ -234,7 +253,7 @@ const userTriggers = {
 
         updateFormulas();
     },
-    updateSelectedMod(modSlot) {
+    updateSelectedMod(modSlot,parentCall,parentIsCharacterUpdate) {
         let inputRef = readSelection(`mod${modSlot}`);
 
         let categoryRef = null;
@@ -243,9 +262,13 @@ const userTriggers = {
             case "2": categoryRef = subAttacks;break;
             default: categoryRef = modData;break;
         }
-
+        
         //if the input is invalid or a duplicate, clear it
         if (!categoryRef[inputRef.value]) {inputRef.value = "";}
+        //If this is the augment slot and the input doesn't match a mod specific to that character, then clear the input
+        //these two can't be joined in one if/else, it needs to do both checks.
+        if (+modSlot === 1 && !augments[inputRef.value].category.includes(globalRecords.character.currentCharacter)) {inputRef.value = "";}
+        
         //also check for duplicate categories, like arche tech or support etc.
         //we only check mods 3-10 as it is impossible for mods 1 and 2 (transc and sub) to have a duplicate as only their respective slots can slot their respective mods.
         if (+modSlot >=3) {
@@ -282,8 +305,9 @@ const userTriggers = {
 
         //pass the mod value to records, and then update forms
         globalRecords.character.mods[+modSlot - 1] = inputRef.value
-        userTriggers.updateSelectedCharacter();
-        updateFormulas();
+        if (!parentIsCharacterUpdate) {userTriggers.updateSelectedCharacter();}
+        if (!parentCall) {updateFormulas();}
+        
     }
 }
 
@@ -380,6 +404,11 @@ const settings = {
             settingsRef.USEFireRateUP = readSelection("USEFireRateUP").checked;
             settingsRef.USESharpPrecisionShot = readSelection("USESharpPrecisionShot").checked;
         },
+        LightningEmission(settingsRef) {
+            console.log(settingsRef.barPercentState)
+            settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider3").value;
+            console.log(settingsRef.barPercentState)
+        }
     }
 
 }
@@ -791,5 +820,7 @@ readSelection("memory").value = globalRecords.components.memory
 readSelection("processor").value = globalRecords.components.processor
 userTriggers.updateComponentSelections();
 
-readSelection("character").value = globalRecords.character.currentCharacter;
+// readSelection("character").value = globalRecords.character.currentCharacter;
+userTriggers.updateSelectedCharacter();
+readSelection("character").value = "Lepic";
 userTriggers.updateSelectedCharacter();

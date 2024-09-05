@@ -188,131 +188,130 @@ const characters = {
 
 
 
-    // "Bunny" : {
-    //     "baseStats": {
-    //         "HP": 810,
-    //         "Shield": 404,
-    //         "ShieldInCombat": 3.3,
-    //         "ShieldOutCombat": 3.96,
-    //         "DEF": 1767,
-    //         "ResistanceFire": 11,
-    //         "ResistanceChill": 11,
-    //         "ResistanceElectric": 13,
-    //         "ResistanceToxin": 11,
-    //         "MP": 300,
-    //         "MPInCombat": 0,
-    //         "MPOutCombat": 0.3,
-    //         "CritRate": 0.10,
-    //         "CritDamage": 1.3,
-    //         "MaxElectricity": 1000
-    //     },
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_004_U01.png",
-    //     "characterSettings": {
-    //         "asdf": {
-    //             "asdf": true,
-    //             "asdff": true,
-    //         }
-    //     },
-    //     "abilities": {
-    //         "ability1": {
-    //             "base": {
-    //                 "name": "Thrill Bomb",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_01.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": ""
-    //             },
-    //             "High Voltage": {
-    //                 "name": "Thrill Bomb",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R06_01.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": ""
-    //             },
-    //             "Superconductor": {
-    //                 "name": "Thrill Bomb",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R03_01.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": ""
-    //             },
-    //         },
-    //         "ability2": {
-    //             "base": {
-    //                 "name": "Speed of Light",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_02.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "stats": {},
-    //                 "customDPS": ""
-    //             },
-    //             "Electric Transition": {
-    //                 "name": "Electric Transition",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R02_Rune.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "stats": {},
-    //                 "customDPS": ""
-    //             },
-    //             "Bionic Fuel": {
-    //                 "name": "Bionic Fuel",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R04_Rune.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "stats": {},
-    //                 "customDPS": ""
-    //             },
-    //         },
-    //         "ability3": {
-    //             "base": {
-    //                 "name": "Lightning Emission",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_03.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "customDPS": "lepicOverkillCalcs",
-    //                 "desc": ""
-    //             },
-    //             "High Voltage": {
-    //                 "name": "Lightning Emission",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R06_03.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "customDPS": "lepicOverkillCalcs",
-    //                 "desc": ""
-    //             },
-    //             "Superconductor": {
-    //                 "name": "Lightning Emission",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R03_03.png",
-    //                 "type": ["Electric","Singular"],
-    //                 "customDPS": "lepicOverkillCalcs",
-    //                 "desc": ""
-    //             },
-    //         },
-    //         "ability4": {
-    //             "base": {
-    //                 "name": "Maximum Power",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_04.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": "",
-    //                 "desc": ""
-    //             },
-    //             "Electric Condense": {
-    //                 "name": "Maximum Power",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R01_Rune.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": "",
-    //                 "desc": ""
-    //             },
-    //         },
-    //         "ability5": {
-    //             "base": {
-    //                 "name": "Rabbit Foot",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_00.png",
-    //                 "type": ["Electric","Fusion"],
-    //                 "customDPS": ""
-    //             },
-    //             "Electric Charge": {
-    //                 "name": "Electric Charge",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R05_Rune.png",
-    //                 "type": ["Fire"],
-    //                 "stats": {},
-    //                 "customDPS": ""
-    //             },
-    //         }
-    //     }
-    // },
+    "Bunny" : {
+        "baseStats": {
+            "HP": 810,
+            "Shield": 404,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 1767,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 13,
+            "ResistanceToxin": 11,
+            "MP": 300,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.10,
+            "CritDamage": 1.3,
+            "MaxElectricity": 1000
+        },
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_004_U01.png",
+        "characterSettings": {
+            "LightningEmission": {
+                "barPercentState": 90,
+            }
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Thrill Bomb",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_01.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": ""
+                },
+                "High-Voltage": {
+                    "name": "Thrill Bomb",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R06_01.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": ""
+                },
+                "Superconductor": {
+                    "name": "Thrill Bomb",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R03_01.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": ""
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Speed of Light",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_02.png",
+                    "type": ["Electric","Singular"],
+                    "stats": {},
+                    "customDPS": ""
+                },
+                "Electric Transition": {
+                    "name": "Electric Transition",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R02_Rune.png",
+                    "type": ["Electric","Singular"],
+                    "stats": {},
+                    "customDPS": ""
+                },
+                "Bionic Fuel": {
+                    "name": "Bionic Fuel",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R04_Rune.png",
+                    "type": ["Electric","Singular"],
+                    "stats": {},
+                    "customDPS": ""
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Lightning Emission",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_03.png",
+                    "type": ["Electric","Singular"],
+                    "customDPS": "bunnyEmissionCalcs",
+                    "desc": "Activates the Lightning Emission state. Deals damage to nearby enemies when moving a certain distance, increases damage proportional to the amount of Electricity retained. Inflicts Electrocution on enemies hit."
+                },
+                "High-Voltage": {
+                    "name": "Lightning Emission",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R06_03.png",
+                    "type": ["Electric","Singular"],
+                    "customDPS": "bunnyEmissionCalcsHVStarter",
+                    "desc": "Activates the Lightning Emission state. Deals damage to nearby enemies when moving a certain distance, increases damage proportional to the amount of Electricity retained. Inflicts Electrocution on enemies hit."
+                },
+                "Superconductor": {
+                    "name": "Lightning Emission",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R03_03.png",
+                    "type": ["Electric","Singular"],
+                    "customDPS": "bunnyEmissionCalcs",
+                    "desc": ""
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Maximum Power",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_04.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": "",
+                    "desc": ""
+                },
+                "Electric Condense": {
+                    "name": "Maximum Power",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R01_Rune.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": "",
+                    "desc": ""
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Rabbit Foot",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_00.png",
+                    "type": ["Electric","Fusion"],
+                    "customDPS": ""
+                },
+                "Electric Charge": {
+                    "name": "Electric Charge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R05_Rune.png",
+                    "type": ["Fire"],
+                    "stats": {},
+                    "customDPS": ""
+                },
+            }
+        }
+    },
 
 
 
