@@ -26,7 +26,7 @@ let globalRecords = {
     },
     "character": {
         "currentCharacter": "Lepic",
-        "mods": ["","","","","","","","","",""],
+        "mods": ["","","","","","","","","","","",""],
         "abilityArray": [0,0,0,0,0],
         "currentAbilityBreakdown": 4,
         "currentAbilityBreakdownID": "damageAbilityIcon4",

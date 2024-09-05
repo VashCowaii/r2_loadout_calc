@@ -329,6 +329,7 @@
     padding-right: 3px;
     overflow-y: auto;
     font-size: 14px;
+    z-index: 1;
 }
 
 
@@ -359,7 +360,7 @@
 }
 .descOverviewRow {
     width: 100%;
-    height: 55px;
+    height: 50px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-evenly;
@@ -477,6 +478,7 @@
     /* filter: brightness(0.3); */
     filter: opacity(0.1);
     overflow: hidden;
+    z-index: 0;
     
     /* border: 1px solid red; */
 }
