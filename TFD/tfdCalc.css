@@ -460,7 +460,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 3px;
+    /* padding: 3px; */
 }
 .reactorBreakdownIconBox {
     width: 100%;

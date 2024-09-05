@@ -287,8 +287,6 @@ const customDamage = {
                 shotCount += Math.floor(floatCount);
                 durationDiff = floatCount - Math.floor(floatCount);
                 readSelection("wastedTime").innerHTML = `+${(durationDiff).toFixed(3)}s`;
-
-                console.log(floatCount)
             }
         
             const continuousTicks = Math.floor(continuousDuration/0.5) * shotCount;
@@ -321,7 +319,7 @@ const customDamage = {
             const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
         
             //We're assuming you're using a fully enhanced reactor. Doesn't make TOO big a diff, but it still matters.
-            const baseSkillPower = 11724.62 * reactorOptimizationBonus * firePowerRatio * techPowerRatio * basePowerRatio;//18,759.392
+            const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * firePowerRatio * techPowerRatio * basePowerRatio;//18,759.392
         
             const dmgPerShot = baseSkillPower * baseSkillPowerPercent;
             const dmgPerShotCrit = dmgPerShot * critDamage;
@@ -352,6 +350,205 @@ const customDamage = {
         readSelection("averageSumTicks").innerHTML = `${tickEndDamage.toLocaleString()}`;
     
         readSelection("totalAverageSum").innerHTML = `${(endDmg+tickEndDamage).toLocaleString()}`;
+    },
+    bunnyEmissionCalcsHVStarter(index,returnObject) {
+        //used purely to do emission calcs with the specification that high voltage is active
+        customDamage.bunnyEmissionCalcs(index,returnObject,true);
+    },
+    bunnyEmissionCalcs(index,returnObject,isHVStarter) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings["LightningEmission"];
+
+        readSelection("abilityBreakdownBody3").innerHTML = `
+        <div class="totalHealingBox">
+            <div class="statsRowName">Bar % Filled:&nbsp;<span id="barFilledDisplay">90%</span></div>
+            <div class="statsRowToggle">
+                <input type="range" id="bunnyBarFilledSlider3" name="slider" min="0" max="90" value="90" step="10" onchange="settings.updateCharacterSettings('Bunny','LightningEmission')">
+            </div>
+        </div>
+
+        <div class="traitMegaTitleHeader">RESULTS</div>
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Initial Cost</div>
+                    <div class="totalHealingValue" id="initialCost">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Drain Rate</div>
+                    <div class="totalHealingValue" id="drainRate">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">SoL Duration</div>
+                    <div class="totalHealingValue" id="speedDuration">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Bar Bonus</div>
+                    <div class="totalHealingValue" id="barBonus">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill Power</div>
+                    <div class="totalHealingValue" id="skillPower">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Power Mod</div>
+                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Dmg/Hit</div>
+                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Hit</div>
+                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Hit</div>
+                    <div class="totalHealingValue" id="averageSum">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Hit Rate (SoL)</div>
+                    <div class="totalHealingValue" id="speedHitRate">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Hit Rate</div>
+                    <div class="totalHealingValue" id="sprintHitRate">0.00</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Dmg/Tick</div>
+                    <div class="totalHealingValue" id="dmgPerTick">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Tick</div>
+                    <div class="totalHealingValue" id="critPerTick">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Tick</div>
+                    <div class="totalHealingValue" id="averageSumTicks">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Hit Rate</div>
+                    <div class="totalHealingValue" id="">1/s</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Avg DMG (SoL + DoT)</div>
+                    <div class="totalHealingValue" id="speedSprintAvgDamage">0.00</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Avg DPS (SoL + DoT)</div>
+                    <div class="totalHealingValue" id="speedSprintAvgSum">0.00</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Avg DPS (Sprint + DoT)</div>
+                    <div class="totalHealingValue" id="normalSprintAvgSum">0.00</div>
+                </div>
+            </div>
+
+        </div>
+        `;
+        readSelection("abilityBreakdownBody3").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
+        `;
+        readSelection("bunnyBarFilledSlider3").value = settingsRef.barPercentState;
+        
+
+        const basePowerModifier = (isHVStarter ? 250.5 : 148.7)/100;
+        const baseDotModifier = (isHVStarter ? 89.5 : 53.1)/100;
+        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierElectric + index.PowerModifierSingular;
+        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+        const skillPowerModifierDot = baseDotModifier + sumModifierBonus;
+    
+        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
+        const basePowerRatio = 1 + index.PowerRatioBase;
+        const electricPowerRatio = 1 + index.PowerRatioElectric;
+        const singularPowerRatio = 1 + index.PowerRatioSingular;
+    
+        // const elecBarBonus = 2.35;
+        //Bunny is bugged, and she doesn't get the full 2.5x multi from her 1&3 bar scaling, instead it stops at 9 stacks for 2.35.
+        const barFilledAmount = 1 + ((+readSelection("bunnyBarFilledSlider3").value/10)*0.15) //TODO: this line might be used later to dynamically state the fill % if we know exactly how the scaling thresholds are set
+        readSelection("barBonus").innerHTML = barFilledAmount.toFixed(2) + "x";
+    
+        //We're assuming you're using a fully enhanced reactor.
+        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * electricPowerRatio * singularPowerRatio * basePowerRatio;
+    
+        const critRate = returnObject.totalSkillCritRate;
+        const critDamage = returnObject.totalSkillCritDamage;
+        const critComposite = 1 + (critRate * (critDamage-1));
+    
+        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount;
+        const dmgPerTick = baseSkillPower * skillPowerModifierDot;
+        const dmgPerHitCrit = dmgPerHit * critDamage;
+        const dmgPerTickCrit = dmgPerTick * critDamage;
+        const dmgPerHitAvg = dmgPerHit * critComposite;
+        const dmgPerTickAvg = dmgPerTick * critComposite;
+    
+        //bunny hits every 0.9 seconds when sprinting normally, and 0.6 seconds when using speed of light.
+        //this is with an 800 sprint speed weapon though TODO: possibly look into how weapon speed modifies sprint speed, if it isn't negligible
+        //when SOL is active, supposedly you're maxed at 800 MS regardless, so the only dps loss could be for normal sprints
+        const hitsPerSecondSpeed = 0.6;
+        const hitsPerSecond = 0.9;
+    
+        const costModifier = 1 + index.SkillCost;
+        const drainRate = 25 * costModifier;
+        const startCost = 12 * costModifier;
+        const maxMP = returnObject.displayMP;
+    
+        const speedDuration = (maxMP - startCost)/drainRate;
+        const thirdHits = Math.floor(speedDuration/hitsPerSecondSpeed);
+    
+        const dpsNormalHits = dmgPerHitAvg * (1/hitsPerSecond);
+        const dpsNormalTicks = dmgPerTickAvg; 
+        const dpsNormalSum = dpsNormalHits + dpsNormalTicks;//sum total avg dps when doing NORMAL SPRINT
+    
+        const dpsSpeedHits = (dmgPerHitAvg * thirdHits)/speedDuration;
+        const dpsSpeedSum = dpsSpeedHits + dpsNormalTicks;//sum total avg dps when doing SPEED OF LIGHT
+    
+        const speedTotalDmgAvg = (dpsNormalTicks * speedDuration) + (dmgPerHitAvg * thirdHits);
+    
+        readSelection("initialCost").innerHTML = startCost.toFixed(2) + "MP";
+        readSelection("drainRate").innerHTML = drainRate.toFixed(2) + "MP/s";
+        readSelection("speedDuration").innerHTML = speedDuration.toFixed(2) + "s";
+    
+        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
+        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
+    
+        readSelection("dmgPerShot").innerHTML = `${dmgPerHit.toLocaleString()}`;
+        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
+    
+        readSelection("dmgPerTick").innerHTML = `${dmgPerTick.toLocaleString()}`;
+        readSelection("critPerTick").innerHTML = `${dmgPerTickCrit.toLocaleString()}`;
+        readSelection("averageSumTicks").innerHTML = `${dmgPerTickAvg.toLocaleString()}`;
+    
+        readSelection("normalSprintAvgSum").innerHTML = `${dpsNormalSum.toLocaleString()}`;
+        readSelection("speedSprintAvgSum").innerHTML = `${dpsSpeedSum.toLocaleString()}`;
+    
+        readSelection("speedSprintAvgDamage").innerHTML = `${speedTotalDmgAvg.toLocaleString()}`;
+    
+        readSelection("speedHitRate").innerHTML = (1/hitsPerSecondSpeed).toFixed(2) + "/s";
+        readSelection("sprintHitRate").innerHTML = (1/hitsPerSecond).toFixed(2) + "/s";
     }
 }
 
