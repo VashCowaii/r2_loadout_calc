@@ -14,7 +14,7 @@ const augments = {
     },
 
 
-
+    //Lepic
     "Nerve Infiltration": {
         "rarity": "Transcendant",
         "polarity": "Xantic",
@@ -73,11 +73,7 @@ const augments = {
         "skillOverrides": ["Explosive Stacks",0,0,0,0]
     },
 
-
-
-
-
-
+    //Bunny
     "High-Voltage": {
         "rarity": "Transcendant",
         "polarity": "Malachite",
@@ -134,6 +130,44 @@ const augments = {
     },
 
 
+    "Superconductive Bombing": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Kyle",
+        "desc": "While airborne, continuously consumes Magnetic Force to drop bombs. The bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.",
+        "skillOverrides": [0,0,0,"Superconductive Bombing",0]
+    },
+    "Diamagnetic Bulwark": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 14,
+        "category": "Kyle",
+        "desc": "Instead of Magnetic Bulwark's projectile defense, knocks back enemies on contact. Recovers Magnetic Force based on the number of knockbacks.",
+        "skillOverrides": [0,"Diamagnetic Bulwark",0,0,0]
+    },
+    "Self-Directed Eruption": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 15,
+        "category": "Kyle",
+        "desc": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle. Deals great damage to nearby enemies when the skill ends.",
+        "skillOverrides": [0,0,"Self-Directed Eruption",0,0]
+    },
+    "Collision Instinct": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Kyle",
+        "desc": "After a dash, inflicts Stun at the end of a knockback. However, DEF increase is not applied.",
+        "skillOverrides": ["Collision Instinct",0,0,0,0]
+    },
+
+
 
 
 
@@ -169,38 +203,7 @@ const augments = {
     //     "category": "Blair",
     //     "desc": "Blaze Up skill conversion. Throws a projectile forward that spawns a Flame Zone where it lands."
     // },
-    // "Superconductive Bombing": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Kyle",
-    //     "desc": "While airborne, continuously consumes Magnetic Force to drop bombs. The bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision."
-    // },
-    // "Diamagnetic Bulwark": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Malachite",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Kyle",
-    //     "desc": "Instead of Magnetic Bulwark's projectile defense, knocks back enemies on contact. Recovers Magnetic Force based on the number of knockbacks."
-    // },
-    // "Self-Directed Eruption": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Almandine",
-    //     "type": "Descendant",
-    //     "cost": 15,
-    //     "category": "Kyle",
-    //     "desc": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle. Deals great damage to nearby enemies when the skill ends."
-    // },
-    // "Collision Instinct": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Almandine",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Kyle",
-    //     "desc": "After a dash, inflicts Stun at the end of a knockback. However, stacks are removed and DEF Up effect is not applied."
-    // },
+    
     // "Singing Water": {
     //     "rarity": "Transcendant",
     //     "polarity": "Rutile",

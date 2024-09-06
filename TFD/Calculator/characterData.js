@@ -65,6 +65,105 @@ const characters = {
             }
         }
     },
+
+    "Kyle": {
+        "baseStats": {
+            "HP": 1309,
+            "Shield": 1006,
+            "ShieldInCombat": 2.68,
+            "ShieldOutCombat": 3.22,
+            "DEF": 2441,
+            "ResistanceFire": 11,
+            "ResistanceChill": 13,
+            "ResistanceElectric": 11,
+            "ResistanceToxin": 11,
+            "MP": 0,
+            "MagneticForce": 1,//1 simply means to calculate MF's amount, it doesn't mean you only have 1
+            "MPInCombat": 0,
+            "MPOutCombat": 0,
+            "CritRate": 0.05,
+            "CritDamage": 1.3,
+        },
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_011_A01.png",
+        "characterSettings": {
+            "MagneticForce": {
+                "magForceBarState": 100,
+            }
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Repulsion Dash",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_A01_01.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "customDPS": ""
+                },
+                "Collision Instinct": {
+                    "name": "Collision Instinct",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_R01_Rune.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "customDPS": ""
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Magnetic Bulwark",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_A01_02.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "stats": {},
+                    "customDPS": ""
+                },
+                "Diamagnetic Bulwark": {
+                    "name": "Diamagnetic Bulwark",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_R03_Rune.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "stats": {},
+                    "customDPS": "kyleBulwarkTicks",//kyleThrustersCalcs
+                    "desc": "Creates a Barrier that inflicts Knockback on all enemies in contact. Recovers Magnetic Force based on the number of times the Barrier inflicted Knockback on enemies."
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Magnetism Spurt",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_A01_03.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "customDPS": ""
+                },
+                "Self-Directed Eruption": {
+                    "name": "Self-Directed Eruption",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_R02_Rune.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "customDPS": ""
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Superconductivity Thrusters",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_A01_04.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "customDPS": "kyleThrustersCalcs",//kyleThrustersCalcs
+                    "desc": "Uses Superconductivity Thrusters to soar into the air. Descends, colliding with enemies and dealingg damage upon impact. Damage increases proportionally to the amount of Magnetic Force consumed. When the skill ends, Magnetic Force is fully consumed.<br><br>Maybe not specified the best here is that the dmg is scaled off of your owned mag force on impact, not necessarily how much mag force you lose or consume between casting and impact."
+                },
+                "Superconductive Bombing": {
+                    "name": "Superconductive Bombing",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_R04_Rune.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "customDPS": "kyleBomberCalcs",
+                    "desc": "[BUGGED, SEE SECOND PARAGRAPH]<br>Uses Superconductive Bombing to fly in the air and drop bombs. Each bomb consumes Magnetic Force to drop and the bombing stops when Magnetic Force is completely depleted. On collision with an enemy, deals damage to the enemy, but additional damage from Magnetic Force on collision is not triggered.<br><br>Hella fuckin bugged right now, the bombs individually just do 100% of skill power + modifiers, and only 5-6 bombs drop per cost interval. This means that either we're missing 2.5 bombs per drop, or each bomb is only doing 1/8th the damage that they should be.<br>If ever fixed, Kyle will easily solo one-phase bosses. "
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Experienced Technician",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_A01_00.png",
+                    "type": ["Non-Attribute"],
+                    "customDPS": ""
+                },
+            }
+        }
+    },
+
+
     "Lepic": {
         "baseStats": {
             "HP": 1402,
@@ -335,9 +434,7 @@ const characters = {
     // "Valby": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_010_U01.png"
     // },
-    // "Kyle": {
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_011_A01.png"
-    // },
+    
     // "Esiemo": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_012_A01.png"
     // },

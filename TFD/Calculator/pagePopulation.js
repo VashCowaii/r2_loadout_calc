@@ -405,9 +405,10 @@ const settings = {
             settingsRef.USESharpPrecisionShot = readSelection("USESharpPrecisionShot").checked;
         },
         LightningEmission(settingsRef) {
-            console.log(settingsRef.barPercentState)
             settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider3").value;
-            console.log(settingsRef.barPercentState)
+        },
+        MagneticForce(settingsRef) {
+            settingsRef.magForceBarState = +readSelection("kyleMagForceBar4").value;
         }
     }
 
@@ -445,7 +446,24 @@ const basicsUpdates = {
         readSelection("summaryHealth").innerHTML = returnObject.displayHealth.toFixed(3);
         readSelection("summaryShields").innerHTML = returnObject.displayShield.toFixed(3);
         readSelection("summaryDEF").innerHTML = returnObject.displayDEF.toFixed(3);
-        readSelection("summaryMP").innerHTML = returnObject.displayMP.toFixed(3);
+
+        //custom resource handling, if there is no MP involved
+        const currentCharacter = globalRecords.character.currentCharacter;
+        const characterRef = characters[currentCharacter].baseStats;
+
+        if (characterRef.MP > 0) {
+            readSelection("summaryMP").innerHTML = returnObject.displayMP.toFixed(3);
+            readSelection("resourceDisplayName").innerHTML = "MP";
+            readSelection("summaryMP").innerHTML = returnObject.displayMP.toFixed(3);
+        }
+        //TODO: handle when people have mp and custom resource, like bunny. Hide the mp bar if no mp, but otherwise make visible a separate resource row for shit like this
+        else {
+            if (characterRef.MagneticForce) {
+                readSelection("summaryMP").innerHTML = (returnObject.totalShield * 2).toFixed(3);
+                readSelection("resourceDisplayName").innerHTML = "MAG FORCE";
+            }
+        }
+
 
 
         let skillHTML = "<div class='basicsDRheaderTitle'>SKILL LOGIC</div>";
