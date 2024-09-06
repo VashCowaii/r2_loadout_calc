@@ -113,7 +113,7 @@ const modData = {
         "category": "Arche Tech",
         "desc": "When landing a Skill Attack while the enemy is not targeting you, Skill Power +24.9%. On Skill Attack against an immobilized enemy, Skill Power +49.8%.",
         "stats": {
-            "PowerRatioBase": 0.747
+            "PowerRatioBase": 0.498//initially added together accidentally to 0.747, but it is 24.9 OR 49.8
         },
     },
     "Weaken Recovery": {

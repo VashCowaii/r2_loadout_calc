@@ -550,6 +550,467 @@ const customDamage = {
     
         readSelection("speedHitRate").innerHTML = (1/hitsPerSecondSpeed).toFixed(2) + "/s";
         readSelection("sprintHitRate").innerHTML = (1/hitsPerSecond).toFixed(2) + "/s";
+    },
+    kyleBulwarkTicks(index,returnObject) {
+        const characterRef = characters.Kyle;
+
+        readSelection("abilityBreakdownBody2").innerHTML = `
+        <div class="traitMegaTitleHeader">RESULTS</div>
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Hits</div>
+                    <div class="totalHealingValue" id="barBonus2">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill Power</div>
+                    <div class="totalHealingValue" id="skillPower2">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Power Mod</div>
+                    <div class="totalHealingValue" id="powerModifier2">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">DMG/Hit</div>
+                    <div class="totalHealingValue" id="skillDmg2">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Hit</div>
+                    <div class="totalHealingValue" id="critPerShot2">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Hit</div>
+                    <div class="totalHealingValue" id="avgImpact2">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Hits DMG</div>
+                    <div class="totalHealingValue" id="totalBombDamage2">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total AVG DMG</div>
+                    <div class="totalHealingValue" id="totalAvgDamage2">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Cooldown</div>
+                    <div class="totalHealingValue" id="cooldown2">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg Use Duration</div>
+                    <div class="totalHealingValue" id="avgDuration2">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Interval</div>
+                    <div class="totalHealingValue" id="totalInterval">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">AVG DPS/Interval</div>
+                    <div class="totalHealingValue" id="avgDPS2">0.00%</div>
+                </div>
+            </div>
+        </div>
+        `;
+
+        readSelection("abilityBreakdownBody2").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2["Diamagnetic Bulwark"].desc}</div>
+        `;
+
+        const basePowerModifier = 109.7/100;
+        const maxHits = 50;
+
+        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierNonAttribute + index.PowerModifierDimension;
+        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+    
+        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
+        const basePowerRatio = 1 + index.PowerRatioBase;
+        const nonAttributePowerRatio = 1 + index.PowerRatioNonAttribute;
+        const dimensionPowerRatio = 1 + index.PowerRatioDimension;
+    
+        //We're assuming you're using a fully enhanced reactor.
+        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * dimensionPowerRatio * basePowerRatio;
+    
+        const critRate = returnObject.totalSkillCritRate;
+        const critDamage = returnObject.totalSkillCritDamage;
+        const critComposite = 1 + (critRate * (critDamage-1));
+    
+        const dmgPerHit = baseSkillPower * skillPowerModifier;
+        const dmgPerHitCrit = dmgPerHit * critDamage;
+        const avgImpact = dmgPerHit * critComposite;
+
+        const totalTicksDamage = dmgPerHit * maxHits;
+        const totalAvgDamage = totalTicksDamage * critComposite;
+
+        const cooldown = 20 * (1 + index.SkillCooldown);
+        const avgUseDuration = 4;
+        const totalInterval = cooldown + avgUseDuration;
+        const totalDPS = totalAvgDamage/totalInterval;
+        // const dmgPerHitAvg = dmgPerHitSum * critComposite;
+    
+        readSelection("barBonus2").innerHTML = maxHits.toFixed(2);
+        readSelection("skillPower2").innerHTML = `${baseSkillPower.toLocaleString()}`;
+        readSelection("powerModifier2").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
+
+        readSelection("skillDmg2").innerHTML = `${dmgPerHit.toLocaleString()}`;
+        readSelection("critPerShot2").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        readSelection("avgImpact2").innerHTML = `${avgImpact.toLocaleString()}`;
+
+        readSelection("totalBombDamage2").innerHTML = `${totalTicksDamage.toLocaleString()}`;
+
+        readSelection("totalAvgDamage2").innerHTML = `${totalAvgDamage.toLocaleString()}`;
+
+        readSelection("cooldown2").innerHTML = `${cooldown.toLocaleString()}`;
+        readSelection("avgDuration2").innerHTML = `${avgUseDuration.toLocaleString()}`;
+        readSelection("totalInterval").innerHTML = `${totalInterval.toLocaleString()}`;
+
+
+        readSelection("avgDPS2").innerHTML = `${totalDPS.toLocaleString()}`;
+    },
+    kyleThrustersCalcs(index,returnObject) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings["MagneticForce"];
+
+        readSelection("abilityBreakdownBody4").innerHTML = `
+        <div class="totalHealingBox">
+            <div class="statsRowName">Mag % Filled:&nbsp;<span id="barFilledDisplay">100%</span></div>
+            <div class="statsRowToggle">
+                <input type="range" id="kyleMagForceBar4" name="slider" min="0" max="100" value="100" step="10" onchange="settings.updateCharacterSettings('Kyle','MagneticForce')">
+            </div>
+        </div>
+
+        <div class="traitMegaTitleHeader">RESULTS</div>
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Mag Force</div>
+                    <div class="totalHealingValue" id="barBonus">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill Power</div>
+                    <div class="totalHealingValue" id="skillPower">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Power Mod</div>
+                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill DMG</div>
+                    <div class="totalHealingValue" id="skillDmg">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Mag Force DMG</div>
+                    <div class="totalHealingValue" id="magDmg">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Dmg/Impact</div>
+                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Impact</div>
+                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Impact</div>
+                    <div class="totalHealingValue" id="averageSum">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Cooldown</div>
+                    <div class="totalHealingValue" id="cooldown">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg Use Duration</div>
+                    <div class="totalHealingValue" id="avgActiveDuration">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Interval</div>
+                    <div class="totalHealingValue" id="damageIntervals">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">AVG DPS/Interval</div>
+                    <div class="totalHealingValue" id="damagePerSecond">0.00%</div>
+                </div>
+            </div>
+        </div>
+        `;
+
+
+        readSelection("abilityBreakdownBody4").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4.base.desc}</div>
+        `;
+        readSelection("kyleMagForceBar4").value = settingsRef.magForceBarState;
+        readSelection("barFilledDisplay").innerHTML = `${settingsRef.magForceBarState}%`;
+
+
+        const basePowerModifier = 11207.7/100;
+        const baseMagModifier = 7809.8/100;
+
+        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierNonAttribute + index.PowerModifierTech;
+        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+        //no sum modifier for mag force as it is static
+    
+        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
+        const basePowerRatio = 1 + index.PowerRatioBase;
+        const nonAttributePowerRatio = 1 + index.PowerRatioNonAttribute;
+        const techPowerRatio = 1 + index.PowerRatioTech;
+    
+        //double shield to get mag force, and then apply the %portion the user specified on the mag force bar to get the actual mag force amount.
+        //also note this is based on total shield, not fixed or display shield, so overwhelming HP does not ruin your mag force amount
+        const magForce = (returnObject.totalShield * 2) * (+readSelection("kyleMagForceBar4").value/100);
+        readSelection("barBonus").innerHTML = magForce.toFixed(2);
+    
+        //We're assuming you're using a fully enhanced reactor.
+        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * techPowerRatio * basePowerRatio;
+    
+        const critRate = returnObject.totalSkillCritRate;
+        const critDamage = returnObject.totalSkillCritDamage;
+        const critComposite = 1 + (critRate * (critDamage-1));
+    
+        const dmgPerHit = baseSkillPower * skillPowerModifier;
+        const dmgPerHitMag = magForce * baseMagModifier;
+        const dmgPerHitSum = dmgPerHit + dmgPerHitMag;
+
+        const dmgPerHitCrit = dmgPerHitSum * critDamage;
+        const dmgPerHitAvg = dmgPerHitSum * critComposite;
+
+        const cooldown = 60 * (1 + index.SkillCooldown);
+        const avgActiveDuration = 5;
+        const damageIntervals = cooldown + avgActiveDuration;
+        const damagePerSecond = dmgPerHitAvg/damageIntervals;
+    
+        readSelection("barBonus").innerHTML = magForce.toFixed(2);
+        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
+        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
+
+        readSelection("skillDmg").innerHTML = `${dmgPerHit.toLocaleString()}`;
+        readSelection("magDmg").innerHTML = `${dmgPerHitMag.toLocaleString()}`;
+    
+        readSelection("dmgPerShot").innerHTML = `${dmgPerHitSum.toLocaleString()}`;
+        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;//
+
+
+        readSelection("cooldown").innerHTML = `${cooldown.toLocaleString()}`;//
+        readSelection("avgActiveDuration").innerHTML = `${avgActiveDuration.toLocaleString()}`;//
+        readSelection("damageIntervals").innerHTML = `${damageIntervals.toLocaleString()}`;//
+
+        readSelection("damagePerSecond").innerHTML = `${damagePerSecond.toLocaleString()}`;//
+    
+    
+    },
+    kyleBomberCalcs(index,returnObject) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings["MagneticForce"];
+
+        readSelection("abilityBreakdownBody4").innerHTML = `
+        <div class="totalHealingBox">
+            <div class="statsRowName">Mag % Filled:&nbsp;<span id="barFilledDisplay">100%</span></div>
+            <div class="statsRowToggle">
+                <input type="range" id="kyleMagForceBar4" name="slider" min="0" max="100" value="100" step="10" onchange="settings.updateCharacterSettings('Kyle','MagneticForce')">
+            </div>
+        </div>
+
+        <div class="traitMegaTitleHeader">RESULTS</div>
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Mag Force</div>
+                    <div class="totalHealingValue" id="barBonus">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill Power</div>
+                    <div class="totalHealingValue" id="skillPower">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Power Mod</div>
+                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Impact DMG</div>
+                    <div class="totalHealingValue" id="skillDmg">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Impact</div>
+                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Impact</div>
+                    <div class="totalHealingValue" id="avgImpact">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Bomb DMG</div>
+                    <div class="totalHealingValue" id="magDmg">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Bomb</div>
+                    <div class="totalHealingValue" id="magDmgCrit">0.00%</div>
+                </div>
+            </div>
+
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Cost/Set</div>
+                    <div class="totalHealingValue" id="costPerSet">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Bombs/Set</div>
+                    <div class="totalHealingValue" id="BombsPerSet">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Bombs</div>
+                    <div class="totalHealingValue" id="totalBombs">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Bomb DMG</div>
+                    <div class="totalHealingValue" id="totalBombDamage">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">AVG Bomb DMG</div>
+                    <div class="totalHealingValue" id="avgBombDamage">0.00%</div>
+                </div>
+            </div>
+
+
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total AVG/Cast</div>
+                    <div class="totalHealingValue" id="totalAvgDamage">0.00%</div>
+                </div>
+            </div>
+        </div>
+        `;
+        readSelection("abilityBreakdownBody4").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4["Superconductive Bombing"].desc}</div>
+        `;
+        readSelection("kyleMagForceBar4").value = settingsRef.magForceBarState;
+        readSelection("barFilledDisplay").innerHTML = `${settingsRef.magForceBarState}%`;
+
+
+        const basePowerModifier = 1895.7/100;
+
+        //TODO: see if this is still bugged later. Right now the bombs individually do 100% instead of 835.6%, and only 5-6 bombs drop right now.
+        //this means that either the damage is split between all bombs and we're still missing damage, or it means all bombs are doing about ~12% of the damage they should be.
+        const basePowerModifierBombs = 835.6/100;
+        // const basePowerModifierBombs = 100/100;
+
+        const costPerDropSet = 0.10 * (1 + index.SkillCost);
+        const dropInterval = 0.5;
+
+        const riseDuration = 1;
+        const flightDuration = 7.8;//this is the usable duration, can't be modified, and given that the drop interval is .5s that means we'll always have excess time
+        const maxDropIntervals = Math.floor(flightDuration/dropInterval);
+
+        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierNonAttribute + index.PowerModifierTech;
+        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+        const skillPowerModifierBombs = basePowerModifierBombs + sumModifierBonus;
+    
+        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
+        const basePowerRatio = 1 + index.PowerRatioBase;
+        const nonAttributePowerRatio = 1 + index.PowerRatioNonAttribute;
+        const techPowerRatio = 1 + index.PowerRatioTech;
+    
+        const magForceTotal = returnObject.totalShield * 2;
+        const magForce = magForceTotal * (+readSelection("kyleMagForceBar4").value/100);
+        readSelection("barBonus").innerHTML = magForce.toFixed(2);
+
+        const flatCostPerSet = magForceTotal * costPerDropSet;
+        const totalDropsPossible = Math.min(maxDropIntervals,Math.floor(magForce/flatCostPerSet));
+        const bombsPerSet = 6;
+        const totalBombsDropped = bombsPerSet * totalDropsPossible;
+    
+        //We're assuming you're using a fully enhanced reactor.
+        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * techPowerRatio * basePowerRatio;
+
+        // const baseSkillPower = (11060.96 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * techPowerRatio * basePowerRatio;
+    
+        const critRate = returnObject.totalSkillCritRate;
+        const critDamage = returnObject.totalSkillCritDamage;
+        const critComposite = 1 + (critRate * (critDamage-1));
+    
+        const dmgPerHit = baseSkillPower * skillPowerModifier;
+        const dmgPerHitBombs = baseSkillPower * skillPowerModifierBombs;
+        // const dmgPerHitSum = dmgPerHit + dmgPerHitMag;
+
+        const dmgPerHitCrit = dmgPerHit * critDamage;
+        const dmgPerHitCritBombs = dmgPerHitBombs * critDamage;
+
+        const avgImpact = dmgPerHit * critComposite;
+        const totalBombDamage = totalBombsDropped * dmgPerHitBombs;
+        const avgBombDamage = totalBombDamage * critComposite;
+
+        const totalAvgDamage = avgImpact + avgBombDamage;
+        // const dmgPerHitAvg = dmgPerHitSum * critComposite;
+    
+        readSelection("barBonus").innerHTML = magForce.toFixed(2);
+        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
+        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
+
+        readSelection("skillDmg").innerHTML = `${dmgPerHit.toLocaleString()}`;
+        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        readSelection("avgImpact").innerHTML = `${avgImpact.toLocaleString()}`
+
+        readSelection("magDmg").innerHTML = `${dmgPerHitBombs.toLocaleString()}`;
+        readSelection("magDmgCrit").innerHTML = `${dmgPerHitCritBombs.toLocaleString()}`;
+
+
+        readSelection("costPerSet").innerHTML = `${(costPerDropSet*100).toLocaleString() + "%"}`;
+        readSelection("BombsPerSet").innerHTML = bombsPerSet;
+        readSelection("totalBombs").innerHTML = `${totalBombsDropped.toLocaleString()}`;
+
+        readSelection("totalBombDamage").innerHTML = `${totalBombDamage.toLocaleString()}`;
+        readSelection("avgBombDamage").innerHTML = `${avgBombDamage.toLocaleString()}`;
+
+        readSelection("totalAvgDamage").innerHTML = `${totalAvgDamage.toLocaleString()}`;
+    
+        // readSelection("dmgPerShot").innerHTML = `${dmgPerHitSum.toLocaleString()}`;
+        // readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        // readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;//
     }
 }
 
