@@ -936,8 +936,8 @@ const customDamage = {
 
         //TODO: see if this is still bugged later. Right now the bombs individually do 100% instead of 835.6%, and only 5-6 bombs drop right now.
         //this means that either the damage is split between all bombs and we're still missing damage, or it means all bombs are doing about ~12% of the damage they should be.
-        const basePowerModifierBombs = 835.6/100;
-        // const basePowerModifierBombs = 100/100;
+        // const basePowerModifierBombs = 835.6/100;
+        const basePowerModifierBombs = 100/100;
 
         const costPerDropSet = 0.10 * (1 + index.SkillCost);
         const dropInterval = 0.5;
