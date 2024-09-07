@@ -149,7 +149,7 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_011_R04_Rune.png",
                     "type": ["Non-Attribute","Tech"],
                     "customDPS": "kyleBomberCalcs",
-                    "desc": "[BUGGED, SEE SECOND PARAGRAPH]<br>Uses Superconductive Bombing to fly in the air and drop bombs. Each bomb consumes Magnetic Force to drop and the bombing stops when Magnetic Force is completely depleted. On collision with an enemy, deals damage to the enemy, but additional damage from Magnetic Force on collision is not triggered.<br><br>Hella fuckin bugged right now, the bombs individually just do 100% of skill power + modifiers, and only 5-6 bombs drop per cost interval. This means that either we're missing 2.5 bombs per drop, or each bomb is only doing 1/8th the damage that they should be.<br>If ever fixed, Kyle will easily solo one-phase bosses. "
+                    "desc": "[BUGGED, SEE SECOND PARAGRAPH]<br>Uses Superconductive Bombing to fly in the air and drop bombs. Each bomb consumes Magnetic Force to drop and the bombing stops when Magnetic Force is completely depleted. On collision with an enemy, deals damage to the enemy, but additional damage from Magnetic Force on collision is not triggered.<br><br>Hella fuckin bugged right now, the bombs individually just do 100% of skill power + modifiers, and only 5-6 bombs drop per cost interval. This means that either we're missing 2.5 bombs per drop, or each bomb is only doing 1/8th the damage that they should be.<br>If ever fixed, Kyle will easily solo one-phase bosses.<br>THIS WILL SHOW THE BUGGED NUMBERS UNTIL NEXON PATCHES IT. "
                 },
             },
             "ability5": {
