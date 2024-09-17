@@ -43,7 +43,6 @@ const greatTableKnowerOfAll = {
     
 
     "Accuracy": 1,
-    "FirearmATK%": 1,
     "OutgoingDamageMod": 1,
 
 
@@ -61,6 +60,39 @@ const greatTableKnowerOfAll = {
     "SkillAttackColossus": 0,
 
 
+    //GUNS
+    "ColossusATK": 0,
+    "FirearmATK%": 0,
+    "WeakPointDamage%": 0,
+
+    "StatusTriggerRate": 0,
+
+    "FireRate": 0,
+    "Accuracy": 1,
+    "Recoil": 1,
+    "ReloadSpeed": 0,
+    "MagazineSize": 0,
+
+    "FireATK": 0,
+    "FireATK%": 0,
+    "FireATK%Bonus": 0,
+    "ToxicATK": 0,
+    "ToxicATK%": 0,
+    "ToxicATK%Bonus": 0,
+    "ChillATK": 0,
+    "ChillATK%": 0,
+    "ChillATK%Bonus": 0,
+    "ElectricATK": 0,
+    "ElectricATK%": 0,//enhancement
+    "ElectricATK%Bonus": 0,//priority/gunbarrel
+
+    "FirearmCritRate": 0,
+    "FirearmCritRateBase": 0,
+    "FirearmCritDamage": 0,
+    "FirearmCritDamageBase": 0,
+
+
+    "haileyExtraShots": 0,//specific to hailey impact rounds builds
 
 
 }

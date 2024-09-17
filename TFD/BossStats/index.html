@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- &nbsp; -->
+    <!-- style="color: #93CCEA;" -->
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>TFD Boss Stats</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="TFD Build Calc">
+    <meta
+      property="og:description"
+      content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    />
+    <meta
+      property="description"
+      content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="TFD Build Calc" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFD Build Calc" />
+    <meta
+      name="twitter:description"
+      content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body style="background-color:#181818;padding: 0;" class="mainBody">
+    <div id="tooltip" class="tooltip"></div>
+
+    <div class="loadoutOptionsBackgroundShutter" id="loadoutOptionsBackgroundShutter"></div>
+    <div id="loadoutOptionsBox" class="loadoutOptionsBox">
+        <div id="storedLoadoutNotifBox" class="storedLoadoutNotifBox">This text box will display if a loadout is found in the stored local data. If you see this text as it is without it being changed, I have done sometehing wrong and you should let me know.</div>
+        <br>
+        <div style="display: flex;">
+            Name:
+            <input class="selectSelector traitNameAdjustment" id="loadoutNameInput" maxlength="30">
+        </div>
+        <br>
+        <div class="loadoutControlsBox" id="loadoutControlsBox"></div>
+    </div>
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+        <!-- <div class="updateWarningBar" style="border: none;color: #93CCEA;">SEE CHANGELOG FOR PROGRESS AND TO-DO LIST.</div> -->
+
+
+
+
+
+        <div class="mainGridRowBoss" style="display: flex;width: 100%;">
+
+            <div style="width: 100%;white-space: normal; display: flex;justify-content: center;align-items: center;">
+                <a href="https://youtu.be/_5A4JVKAPq0" style="color: lightblue;">Guide to Crit Resist</a>&nbsp;&nbsp;
+                <a href="https://youtu.be/_5A4JVKAPq0" style="color: lightblue;">Guide to Unique Weak Point Modifiers</a>
+            </div>
+            
+            <div class="bossDataMainHolder"> <!-- EXECUTIONER -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Executioner.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">EXECUTIONER</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 25% / 26%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- DEAD BRIDE -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_DeadBride.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">DEAD BRIDE</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 20% / 20%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- DEVOURER -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">DEVOURER</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 25% / 27%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- PYROMANIAC -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Pyromaniac.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">PYROMANIAC</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 25% / 20%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- SWAMP WALKER -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_SwampWalker.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">SWAMP WALKER</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 20% / 20%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                HELMET
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- OBSTRUCTER -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Obstructer.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">OBSTRUCTER</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 20% / 23%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- FROST WALKER -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_FrostWalker.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">FROST WALKER</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 20% / 20%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                HELMET
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.375x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- MOLTEN FORTRESS -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Moltenfortress_Info.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">MOLTEN FORTRESS</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 20% / 27%</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                ARMOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                HELMET
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                JAW
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+            <div class="bossDataMainHolder"> <!-- GLUTTONY -->
+                <div class="breakdownDisplayImageBoxBoss">
+                    <img class="breakdownDisplayIcon" src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Gluttony.png" id="characterBreakdownIcon">
+                </div>
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeader">GLUTTONY</div>
+                    <div class="bossDataCritResist">Skill/Gun Crit Resist: 80%[?] / 50%[?]</div>
+                    <div class="bossDataCritResist">[?] - this is the only crit resist not tested by Vash</div>
+
+                    <div class="bossDataPartsRow">
+
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BODY
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">N/A</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SHOULDER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                CORE
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                BALANCER
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.25x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bossDataPartsBox">
+                            <div class="bossDataHeaderBody">
+                                SENSOR
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png" id="characterBreakdownIcon">
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div class="totalHealingHeaderBoss">WeakPt. Mod:</div>
+                                    <div class="totalHealingValueBoss">+0.50x</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+</div>
+<!-- script/data calls -->
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+
+
+<script src="/TFD/Calculator/createHTML.js"></script> 
+<script src="/MainJS/buildTime.js"></script>
+
+
+
+</body>
+
+</html>

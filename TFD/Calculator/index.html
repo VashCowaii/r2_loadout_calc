@@ -102,8 +102,28 @@
             <div class="prismColumn" style="width: 100%;"><!-- PLACEHOLDER -->
 
                 <!-- <div class="reactorSettingsHeader">REACTOR SETTINGS</div> -->
+                <!-- <div class="abilityDamageDisplayImageBox">
+                    asdf
+                </div> -->
+                <div class="totalHealingBox" style="margin: 0;padding: 0;">
+                    <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
+                        <!-- <div style="padding-right: 5px;">Reactor Weapon Matched</div> -->
+                        Character Mode&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="displayModeToggle" onchange="userTriggers.toggleDisplayMode()"> <!--math toggle-->
+                            <span class="toggleSlider"></span>
+                        </label>
+                        &nbsp;Weapon Mode
+                    </div>
+                </div>
 
-                <div class="abilityDamageDisplayImageBox">
+                <div style="width: 100%;white-space: normal;display: none;" id="weaponModeWarning">
+                    <br><br>
+                    Right now weapon mode is only for clarifying what mods you use on weapons, when you're using a character that benefits from a "stat-stick" which just means your equipped weapon mods can modify the Unique Weapon of the character.<br><br>
+                    Later, I will actually give you breakdowns on the weapons themselves, but for now at least this is just for specifying how you mod your Hailey sniper.
+                </div>
+
+                <div class="abilityDamageDisplayImageBox" id="centerAbilityImageRow">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_01.png" id="damageAbilityIcon1" onclick="userTriggers.updateSelectedAbilityBreakdown(1,'damageAbilityIcon1')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_02.png" id="damageAbilityIcon2" onclick="userTriggers.updateSelectedAbilityBreakdown(2,'damageAbilityIcon2')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_03.png" id="damageAbilityIcon3" onclick="userTriggers.updateSelectedAbilityBreakdown(3,'damageAbilityIcon3')">
@@ -121,7 +141,7 @@
                 </div> -->
 
 
-                <div class="abilityDamageTabHolder"><!-- ABILITY BREAKDOWN CONTAINERS -->
+                <div class="abilityDamageTabHolder" id="centerAbilityBreakdownTabHolders"><!-- ABILITY BREAKDOWN CONTAINERS -->
                     <div class="abilityBreakdownTab" id="abilityBreakdownTab1">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader1"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader1"></div>
@@ -184,6 +204,69 @@
 
                         </div>
                     </div>
+                    <div class="breakdownTab" id="characterWeaponBreakdownTab">
+                        <div class="breakdownTabHeader">WEAPON</div>
+                        <div class="breakdownTabBody">
+
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="characterWeapon" list="characterWeaponList" onchange="userTriggers.updateSelectedWeapon()"> <!--selector-->
+                                    <datalist id="characterWeaponList"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="breakdownDisplayImageBox">
+                                <img class="breakdownDisplayIconWeapon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png" id="characterWeaponBreakdownIcon">
+                            </div>
+
+                            <div class="reactorSelectorMainBox">
+
+                                <div class="selectionSelectorBoxesReactor" style="margin: 1px;">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="weaponSub1" list="weaponSub1List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="weaponSub1List"></datalist>
+                                    </div>
+                                    <!-- <div class="selectSelectorTitle" id="weaponSub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="weaponSub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesReactor" style="margin: 1px;">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="weaponSub2" list="weaponSub2List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="weaponSub2List"></datalist>
+                                    </div>
+                                    <!-- <div class="selectSelectorTitle" id="weaponSub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="weaponSub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesReactor" style="margin: 1px;">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="weaponSub3" list="weaponSub3List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="weaponSub3List"></datalist>
+                                    </div>
+                                    <!-- <div class="selectSelectorTitle" id="weaponSub3Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="weaponSub3Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesReactor" style="margin: 1px;">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="weaponSub4" list="weaponSub4List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="weaponSub4List"></datalist>
+                                    </div>
+                                    <!-- <div class="selectSelectorTitle" id="weaponSub4Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="weaponSub4Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="breakdownTab" id="reactorBreakdownTab">
                         <div class="breakdownTabHeader">REACTOR</div>
                         <div class="breakdownTabBody">
@@ -215,14 +298,20 @@
                                         <input class="selectSelector" id="reactorSub1" list="reactorSub1List" onchange="userTriggers.updateReactorSelections()"> <!--selector-->
                                         <datalist id="reactorSub1List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="reactorSub1Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="reactorSub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="reactorSub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateReactorSelections()">
+                                    </div> 
                                 </div>
                                 <div class="selectionSelectorBoxesReactor">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="reactorSub2" list="reactorSub2List" onchange="userTriggers.updateReactorSelections()"> <!--selector-->
                                         <datalist id="reactorSub2List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="reactorSub2Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="reactorSub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="reactorSub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateReactorSelections()">
+                                    </div> 
                                 </div>
 
                             </div>
@@ -278,14 +367,20 @@
                                         <input class="selectSelector" id="auxiliarySub1" list="auxiliarySub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="auxiliarySub1List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="auxiliarySub1Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="auxiliarySub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="auxiliarySub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div> 
                                 </div>
                                 <div class="selectionSelectorBoxesReactor">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="auxiliarySub2" list="auxiliarySub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="auxiliarySub2List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="auxiliarySub2Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="auxiliarySub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="auxiliarySub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div> 
                                 </div>
 
                             </div>
@@ -317,14 +412,20 @@
                                         <input class="selectSelector" id="sensorSub1" list="sensorSub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="sensorSub1List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="sensorSub1Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="sensorSub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="sensorSub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div>
                                 </div>
                                 <div class="selectionSelectorBoxesReactor">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="sensorSub2" list="sensorSub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="sensorSub2List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="sensorSub2Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="sensorSub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="sensorSub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div> 
                                 </div>
 
                             </div>
@@ -356,14 +457,20 @@
                                         <input class="selectSelector" id="memorySub1" list="memorySub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="memorySub1List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="memorySub1Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="memorySub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="memorySub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div>
                                 </div>
                                 <div class="selectionSelectorBoxesReactor">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="memorySub2" list="memorySub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="memorySub2List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="memorySub2Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="memorySub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="memorySub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div>
                                 </div>
 
                             </div>
@@ -395,14 +502,20 @@
                                         <input class="selectSelector" id="processorSub1" list="processorSub1List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="processorSub1List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="processorSub1Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="processorSub1Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="processorSub1Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div>
                                 </div>
                                 <div class="selectionSelectorBoxesReactor">
                                     <div class="presetsSelectorBox">
                                         <input class="selectSelector" id="processorSub2" list="processorSub2List" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
                                         <datalist id="processorSub2List"></datalist>
                                     </div>
-                                    <div class="selectSelectorTitle" id="processorSub2Value">0</div>
+                                    <!-- <div class="selectSelectorTitle" id="processorSub2Value">0</div> -->
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="processorSub2Value" min="0" max="1" step=".001" value="1" onchange="userTriggers.updateComponentSelections()">
+                                    </div>
                                 </div>
 
                             </div>
@@ -411,6 +524,7 @@
                         </div>
                     </div>
 
+                    <!-- descendant mods, 1 is augment, 2 is exilus, 3-12 are reg desc mods -->
                     <div class="breakdownTab" id="mod1BreakdownTab">
                         <div class="breakdownTabHeader">TRANSCENDANT</div>
                         <div class="breakdownTabBody">
@@ -603,9 +717,171 @@
                             <div class="breakdownDescriptionBox" id="mod12Desc">Select a mod above</div>
                         </div>
                     </div>
+
+                    <!-- weapon mods, right now just heavy weapon sniper, can look into making that more dynamic later -->
+                    <div class="breakdownTab" id="mod21BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 1</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod21" list="mod21List" onchange="userTriggers.updateSelectedMod('21');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod21List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod21Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod21Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod22BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 2</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod22" list="mod22List" onchange="userTriggers.updateSelectedMod('22');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod22List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod22Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod22Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod23BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 3</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod23" list="mod23List" onchange="userTriggers.updateSelectedMod('23');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod23List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod23Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod23Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod24BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 4</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod24" list="mod24List" onchange="userTriggers.updateSelectedMod('24');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod24List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod24Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod24Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod25BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 5</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod25" list="mod25List" onchange="userTriggers.updateSelectedMod('25');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod25List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod25Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod25Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod26BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 6</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod26" list="mod26List" onchange="userTriggers.updateSelectedMod('26');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod26List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod26Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod26Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod27BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 7</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod27" list="mod27List" onchange="userTriggers.updateSelectedMod('27');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod27List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod27Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod27Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod28BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 8</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod28" list="mod28List" onchange="userTriggers.updateSelectedMod('28');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod28List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod28Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod28Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod29BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 9</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod29" list="mod29List" onchange="userTriggers.updateSelectedMod('29');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod29List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod29Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod29Desc">Select a mod above</div>
+                        </div>
+                    </div>
+                    <div class="breakdownTab" id="mod30BreakdownTab">
+                        <div class="breakdownTabHeader">MOD 10</div>
+                        <div class="breakdownTabBody">
+                            <div class="selectionSelectorBoxes">
+                                <div class="selectSelectorTitle">SELECT:</div>
+                                <div class="presetsSelectorBox">
+                                    <input class="selectSelector" id="mod30" list="mod30List" onchange="userTriggers.updateSelectedMod('30');" style="width: 100%;"> <!--selector-->
+                                    <datalist id="mod30List"></datalist>
+                                </div>
+                            </div>
+
+                            <div class="componentHeaderRow" id="mod30Cost">Cost: 0</div>
+
+                            <div class="breakdownDescriptionBox" id="mod30Desc">Select a mod above</div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="descendantOverviewBox"> <!-- this is the html for all the buttons -->
+                <div class="descendantOverviewBox" id="descendantGearBoxHolder"> <!-- this is the html for all the buttons -->
                     <div class="descOverviewRow">
                         <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('characterBreakdownTab')">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png" id="buttonsCharacterIcon">
@@ -629,6 +905,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="descendantOverviewBoxWeapon" id="descendantWeaponBoxHolder">
+                    <div class="descOverviewRow">
+                        <div class="descOverviewMiniBoxWeapon" onclick="userTriggers.updateSelectedFocus('characterWeaponBreakdownTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Weapons/Icon_RW_SR_1005_A001.png" id="buttonsCharacterWeaponIcon">
+                        </div>
+                    </div>
+                </div>
 
                 <!-- <div class="statsRowToggle" style="width: 100%;">
                     <select id="characterList" class="characterSelector" onchange="userSettings.updateUserInputs()"></select>
@@ -637,12 +920,28 @@
                     <img class="prismDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png">
                 </div> -->
                 <div class="modsOverviewBox" id="basicsBoxModsHolder"></div>
+                <div class="modsOverviewBox" id="basicsBoxWeaponModsHolder" style="display: none;"></div>
             </div><!-- mod selections -->
             
             
         </div>
-        
 
+        <div class="mainGridRow2" style="display: flex;width: 100%;">
+            <div style="display: flex;width: 100%;flex-direction: column;max-width: 300px;">
+                <div class="totalHealingBox">
+                    <div class="statsRowName">Weapon Crit Ceiling:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
+                    <div class="statsRowToggle">
+                        <input type="range" id="weaponCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
+                    </div>
+                </div>
+                <div class="totalHealingBox">
+                    <div class="statsRowName">Skill Crit Ceiling:&nbsp;<span id="skillCritCeilingDisplay">0%</span></div>
+                    <div class="statsRowToggle">
+                        <input type="range" id="skillCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -668,7 +967,11 @@
 <script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/createHTML.js"></script> 
+<script src="/TFD/Calculator/urlHandling.js"></script> 
 <script src="/TFD/Calculator/pagePopulation.js"></script> <!-- mobile nav bar handling -->
 <script src="/MainJS/buildTime.js"></script>
 

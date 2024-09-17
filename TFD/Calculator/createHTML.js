@@ -1,10 +1,5 @@
 const createHTML = {
-    modSlotBox(number,boxType) {
-        let typeString = "modSlotBoxHolder"
-        switch (boxType) {
-            case "trans": typeString = "modSlotBoxHolderTrans";break;
-            case "sub": typeString = "modSlotBoxHolderSub";break;
-        }
+    modSlotBox(number,typeString) {
         return `
         <div class="${typeString}" onclick="userTriggers.updateSelectedFocus('mod${number}BreakdownTab')">
             <div class="modSlotPolarityHolderBox">

@@ -1,4 +1,12 @@
 const subAttacks = {
+    "": {//
+        "rarity": "Empty",
+        "polarity": "Empty",
+        "type": "Descendant",
+        "cost": 0,
+        "category": "",
+        "desc": ""
+    },
     "Multi-Maneuvering": {//
         "rarity": "Ultimate",
         "polarity": "Malachite",
