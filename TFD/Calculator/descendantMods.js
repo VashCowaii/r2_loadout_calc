@@ -105,7 +105,18 @@ const modData = {
         },
         "usesConditional": {},
     },
-    "Dangerous Ambush": {//this is a ratio base bonus, not a reactor bonus
+    "Dangerous Ambush (No Target)": {//this is a ratio base bonus, not a reactor bonus
+        "rarity": "Ultimate",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 13,
+        "category": "Arche Tech",
+        "desc": "When landing a Skill Attack while the enemy is not targeting you, Skill Power +24.9%. On Skill Attack against an immobilized enemy, Skill Power +49.8%.",
+        "stats": {
+            "PowerRatioBase": 0.249//initially added together accidentally to 0.747, but it is 24.9 OR 49.8
+        },
+    },
+    "Dangerous Ambush (Immobile)": {//this is a ratio base bonus, not a reactor bonus
         "rarity": "Ultimate",
         "polarity": "Xantic",
         "type": "Descendant",
@@ -289,7 +300,7 @@ const modData = {
     },
     "Perfect Antivenom": {
         "rarity": "Ultimate",
-        "polarity": "Rutile",
+        "polarity": "Almandine",
         "type": "Descendant",
         "cost": 16,
         "category": "",
@@ -310,7 +321,7 @@ const modData = {
     },
     "Antifreeze Solution": {
         "rarity": "Ultimate",
-        "polarity": "Cerulean",
+        "polarity": "Almandine",
         "type": "Descendant",
         "cost": 16,
         "category": "",
@@ -322,7 +333,7 @@ const modData = {
     },
     "Insulated Conductor": {
         "rarity": "Ultimate",
-        "polarity": "Xantic",
+        "polarity": "Almandine",
         "type": "Descendant",
         "cost": 16,
         "category": "",
@@ -1465,7 +1476,7 @@ const modData = {
     },
     "Skill Extension": {
         "rarity": "Normal",
-        "polarity": "Malachite",
+        "polarity": "Rutile",
         "type": "Descendant",
         "cost": 15,
         "category": "",

@@ -1,4 +1,5 @@
 const componentImagePrefixes = {
+    "": "Icon_Item_Acc_Default_",
     "Hungry Sonic": "Icon_Item_Acc_Gluttony_T3_",
     "Volcanic": "Icon_Item_Acc_Moltenfortress_T3_",
     "Frozen Heart": "Icon_Item_Acc_FrostWalker_T3_",
@@ -26,8 +27,8 @@ const auxiliary = {
     "": {
         "headerStat": "DEF",
         "value": 0,
-        "rarity": "Ultimate",
-        "imageSuffix": "00"
+        "rarity": "Empty",
+        "imageSuffix": "01"
     },
     "Hungry Sonic": {
         "headerStat": "DEF",
@@ -153,25 +154,33 @@ const auxiliary = {
 const auxiliaryRolls = {
     "": {
         "stats": {},
-        "value": 0
+        "value": 0,
+        "minimum": 0,
+        "maximum": 0,
     },
     "HP": {
         "stats": {
             "HP": 914,
         },
-        "value": 914
+        "value": 914,
+        "minimum": 411,
+        "maximum": 914,
     },
     "Fire Resistance": {
         "stats": {
             "ResistanceFire": 3860,
         },
-        "value": 3860
+        "value": 3860,
+        "minimum": 1608,
+        "maximum": 3860,
     },
     "MP Out of Combat": {
         "stats": {
             "MPOutCombat": 2.454,
         },
-        "value": 2.454
+        "value": 2.454,
+        "minimum": 1.791,
+        "maximum": 2.454,
     },
     // module drop rate 0.191
     // kuiper drop rate 0.168
@@ -182,8 +191,8 @@ const sensor = {
     "": {
         "headerStat": "DEF",
         "value": 0,
-        "rarity": "Ultimate",
-        "imageSuffix": "00"
+        "rarity": "Empty",
+        "imageSuffix": "02"
     },
     "Hungry Sonic": {
         "headerStat": "Shield",
@@ -309,37 +318,49 @@ const sensor = {
 const sensorRolls = {
     "": {
         "stats": {},
-        "value": 0
+        "value": 0,
+        "minimum": 0,
+        "maximum": 0,
     },
     "MP": {
         "stats": {
             "MP": 159
         },
-        "value": 159
+        "value": 159,
+        "minimum": 110,
+        "maximum": 159,
     },
     "MP in Combat": {
         "stats": {
             "MPInCombat": 0.287
         },
-        "value": 0.287
+        "value": 0.287,
+        "minimum": 0.208,
+        "maximum": 0.287,
     },
     "Chill Resistance": {
         "stats": {
             "ResistanceChill": 3860
         },
-        "value": 3860
+        "value": 3860,
+        "minimum": 1608,
+        "maximum": 3860,
     },
     "HP Recovery Mod": {
         "stats": {//TODO: see what exactly this populates as, I'm assuming hp recovery mod bc iirc it says hp heal, but hp heal means 3 diff things in this game
             "HPRecovery": 0.085
         },
-        "value": 0.085
+        "value": 0.085,
+        "minimum": 0.057,
+        "maximum": 0.085,
     },
     "Shield Out of Combat": {
         "stats": {
             "ShieldOutCombat": 16.630
         },
-        "value": 16.630
+        "value": 16.630,
+        "minimum": 11.311,
+        "maximum": 16.630,
     },
     // consumable drop rate 0.191
     // character xp 0.191
@@ -349,8 +370,8 @@ const memory = {
     "": {
         "headerStat": "DEF",
         "value": 0,
-        "rarity": "Ultimate",
-        "imageSuffix": "00"
+        "rarity": "Empty",
+        "imageSuffix": "03"
     },
     "Hungry Sonic": {
         "headerStat": "Shield",
@@ -476,31 +497,41 @@ const memory = {
 const memoryRolls = {
     "": {
         "stats": {},
-        "value": 0
+        "value": 0,
+        "minimum": 0,
+        "maximum": 0,
     },
     "DEF": {
         "stats": {
             "DEF": 4249
         },
-        "value": 4249
+        "value": 4249,
+        "minimum": 1724,
+        "maximum": 4249,
     },
     "Shield in Combat": {
         "stats": {
             "ShieldInCombat": 5.033
         },
-        "value": 5.033
+        "value": 5.033,
+        "minimum": 3.271,
+        "maximum": 5.033,
     },
     "Electric Resistance": {
         "stats": {
             "ResistanceElectricity": 3860
         },
-        "value": 3860
+        "value": 3860,
+        "minimum": 1608,
+        "maximum": 3860,
     },
     "MP Recovery Mod": {
         "stats": {
             "MPRecovery": 0.160
         },
-        "value": 0.160
+        "value": 0.160,
+        "minimum": 0.108,
+        "maximum": 0.160,
     },
     // gold drop rate 0.191
     // firearm xp 0.191
@@ -511,8 +542,8 @@ const processor = {
     "": {
         "headerStat": "DEF",
         "value": 0,
-        "rarity": "Ultimate",
-        "imageSuffix": "00"
+        "rarity": "Empty",
+        "imageSuffix": "04"
     },
     "Hungry Sonic": {
         "headerStat": "HP",
@@ -638,25 +669,33 @@ const processor = {
 const processorRolls = {
     "": {
         "stats": {},
-        "value": 0
+        "value": 0,
+        "minimum": 0,
+        "maximum": 0,
     },
     "Shield": {
         "stats": {
             "Shield": 283
         },
-        "value": 283
+        "value": 283,
+        "minimum": 124,
+        "maximum": 283,
     },
     "Toxin Resistance": {
         "stats": {
             "ResistanceToxin": 3860
         },
-        "value": 3860
+        "value": 3860,
+        "minimum": 1608,
+        "maximum": 3860,
     },
     "Shield Recovery Mod": {
         "stats": {
             "ShieldRecovery": 0.085
         },
-        "value": 0.085
+        "value": 0.085,
+        "minimum": 0.057,
+        "maximum": 0.085,
     },
     // equipment drop rate 0.191
     // item acquisition distance 0.253
@@ -665,6 +704,16 @@ const processorRolls = {
 
 
 const componentSetBonuses = {
+    "": {
+        "2pc": {
+            "desc": "N/A",
+            "stats": {}
+        },
+        "4pc": {
+            "desc": "N/A",
+            "stats": {}
+        },
+    },
     "Supernova": {
         "2pc": {
             "desc": "Electric Skill Power Modifier +8.6%",
@@ -675,7 +724,6 @@ const componentSetBonuses = {
         "4pc": {
             "desc": "Fusion Skill Power Modifier +12%.<br>On Electric Skill Attack upon an enemy inflicted with Electrocution, activates Executioner's Thunderbolt at the target's location, dealing additional Electric damage equivalent to 100% of Skill Power Modifier (cooldown 2s) at a 50% chance.<br>Note: The damage per bolt is your skill power * 1 + skill and electric power modifier. It's pretty fuckin awful.",
             "stats": {
-                //TODO: magazine size
                 "SkillCost": 0.15,
                 "PowerRatioBase": 0.261
             }
@@ -708,6 +756,7 @@ const componentSetBonuses = {
             "desc": "Rounds per Magazine +9%.<br>Skill Cost +15%.<br>Skill Power +26.1%.<br>When defeating enemies inflicted with Towed, recovers 12.2% MP and Specialized Resource at a 17% chance",
             "stats": {
                 //TODO: magazine size
+                "MagazineSize": 0.09,
                 "SkillCost": 0.15,
                 "PowerRatioBase": 0.261
             }

@@ -66,6 +66,90 @@ const characters = {
         }
     },
 
+    "Hailey": {
+        "baseStats": {
+            "HP": 935,
+            "Shield": 537,
+            "ShieldInCombat": 4.08,
+            "ShieldOutCombat": 4.88,
+            "DEF": 2441,
+            "ResistanceFire": 11,
+            "ResistanceChill": 13,
+            "ResistanceElectric": 11,
+            "ResistanceToxin": 11,
+            "MP": 300,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.05,
+            "CritDamage": 1.4,
+        },
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_016_A01.png",
+        "characterSettings": {
+            "ColdFury": {
+                "stackCount": 16,
+            },
+            "Retreat": {
+                "distance": 25,
+            },
+            "Zenith": {
+                "haileyUseWeakspots": true,
+                "haileyUsePhysBonus": false,
+                "haileyUseCryoDamage": true,
+                "haileyUsePyroDR": true,
+            }
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Cryo Round",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_01.png",
+                    "type": ["Chill","Dimension"],
+                    "customDPS": ""
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Storm Snare",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_02.png",
+                    "type": ["Chill","Singular"],
+                    "stats": {},
+                    "customDPS": "",//haileyBigFuckinGunCalcs
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Cold Fury",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_03.png",
+                    "type": ["Chill","Dimension"],
+                    "desc": "Grants Hailey Cold Fury every second. The Cold Fury effect gradually decreases her movement speed, but greatly increases the base Firearm and Skill Critical Hit Rate and Firearm Penetration.<br>When Cold Fury reaches maximum stacks, Hailey becomes immune to Knockdown and gains an increase to her Firearm and Skill Critical Hit Damage. However, rolling or grappling removes 3 stacks.",
+                    "customDPSBase": "haileyFuryCalcs",
+                    "customDPS": ""
+                },
+                "augNameHere": {},
+            },
+            "ability4": {
+                "base": {
+                    "name": "Zenith",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_04.png",
+                    "type": ["Chill","Singular"],
+                    "customDPSBase": "",
+                    "customDPS": "haileyZenithCalcs",//haileyZenithCalcs
+                    "desc": "Equips her Unique Weapon. When hitting an enemy with the Unique Weapon, greatly increases Penetration and Firearm ATK and deals additional Chill skill damage. Recovers a portion of MP upon successfully attacking Weak Points. Partially decreases the Cooldown of the Unique Weapon skill when the skill ends depending on the number of bullets fired."
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Safe Strategic Retreat",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_00.png",
+                    "type": ["Chill"],
+                    "desc": "Proportional to the distance between the target and Hailey, the Weak Point Damage decreases the closer you are to your target and increases the farther you are.",
+                    "customDPSBase": "haileyRetreatCalcs",
+                    "customDPS": ""
+                },
+            }
+        }
+    },
+
     "Kyle": {
         "baseStats": {
             "HP": 1309,
@@ -446,8 +530,5 @@ const characters = {
     // },
     // "Luna": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_015_A01.png"
-    // },
-    // "Hailey": {
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_016_A01.png"
     // },
 }

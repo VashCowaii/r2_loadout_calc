@@ -5,10 +5,47 @@ for (let i=1;i<=12;i++) {
     let boxType = null;
     if (i===1) {boxType = "trans"}
     else if (i===2) {boxType = "sub"}
-    readSelection("basicsBoxModsHolder").innerHTML += createHTML.modSlotBox(i,boxType);
+    let typeString = "modSlotBoxHolder"
+    switch (boxType) {
+        case "trans": typeString = "modSlotBoxHolderTrans";break;
+        case "sub": typeString = "modSlotBoxHolderSub";break;
+    }
+    readSelection("basicsBoxModsHolder").innerHTML += createHTML.modSlotBox(i,typeString);
 }
 
+for (let i=21;i<=30;i++) {
+    let typeString = "modSlotBoxHolder";
+    readSelection("basicsBoxWeaponModsHolder").innerHTML += createHTML.modSlotBox(i,typeString);
+}
+
+
 const userTriggers = {
+    toggleDisplayMode() {
+        const toggle = readSelection("displayModeToggle").checked;//true is weapon, false is character
+        const characterDisplay = toggle ? "none" : "flex";
+        const weaponDisplay = toggle ? "flex" : "none";
+
+        readSelection("centerAbilityImageRow").style.display = characterDisplay;
+        readSelection("centerAbilityBreakdownTabHolders").style.display = characterDisplay;
+        readSelection("basicsBoxModsHolder").style.display = characterDisplay;
+        readSelection("descendantGearBoxHolder").style.display = characterDisplay;
+
+        readSelection("basicsBoxWeaponModsHolder").style.display = weaponDisplay;
+        readSelection("weaponModeWarning").style.display = weaponDisplay;
+        readSelection("descendantWeaponBoxHolder").style.display = weaponDisplay;
+
+        if (characterDisplay === "none") {userTriggers.updateSelectedFocus('characterWeaponBreakdownTab');}
+        else {userTriggers.updateSelectedFocus('characterBreakdownTab');}
+        
+    },
+    updateGeneralSettings() {
+        globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value
+        globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value
+
+        readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
+        readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
+        updateFormulas();
+    },
     updateSelectedFocus(elementID) {
         const list = [
             "characterBreakdownTab",
@@ -17,6 +54,9 @@ const userTriggers = {
             "sensorBreakdownTab",
             "memoryBreakdownTab",
             "processorBreakdownTab",
+
+            "characterWeaponBreakdownTab",
+
             "mod1BreakdownTab",
             "mod2BreakdownTab",
             "mod3BreakdownTab",
@@ -29,17 +69,36 @@ const userTriggers = {
             "mod10BreakdownTab",
             "mod11BreakdownTab",
             "mod12BreakdownTab",
+
+            "mod21BreakdownTab",
+            "mod22BreakdownTab",
+            "mod23BreakdownTab",
+            "mod24BreakdownTab",
+            "mod25BreakdownTab",
+            "mod26BreakdownTab",
+            "mod27BreakdownTab",
+            "mod28BreakdownTab",
+            "mod29BreakdownTab",
+            "mod30BreakdownTab",
         ]
         for (let name of list) {
             readSelection(name).style.display = "none";
         }
         readSelection(elementID).style.display = "flex";
     },
-    updateSelectedCharacter() {
+    updateSelectedCharacter(isImportedValue) {
         //clear invalid inputs
-        if (!characters[readSelection("character").value]) {readSelection("character").value = ""}
-        selectedCharacter = readSelection("character").value;
-
+        let selectedCharacter = "";
+        if (isImportedValue) {
+            if (!characters[globalRecords.character.currentCharacter]) {globalRecords.character.currentCharacter = ""}
+            selectedCharacter = globalRecords.character.currentCharacter;
+            readSelection("character").value = selectedCharacter;
+        }
+        else {
+            if (!characters[readSelection("character").value]) {readSelection("character").value = ""}
+            selectedCharacter = readSelection("character").value;
+        }
+        
         //If the character is actually different, then update the possible augment mod selections so people don't create errors.
         //Also clear the currently selected augment so it doesn't fuck with the new character's math and ability array
         if (selectedCharacter != globalRecords.character.currentCharacter) {
@@ -87,6 +146,111 @@ const userTriggers = {
 
         updateFormulas();
     },
+    updateSelectedWeapon(parentCall,isImportedValue) {
+        let currentWeapon = readSelection("characterWeapon");
+        const weaponRef = globalRecords.weapon;
+        if (!sniperList[currentWeapon.value]) {currentWeapon.value = "";}
+
+        //If the character is actually different, then update the possible augment mod selections so people don't create errors.
+        //Also clear the currently selected augment so it doesn't fuck with the new character's math and ability array
+
+        if (sniperList[currentWeapon.value].ammoType != sniperList[weaponRef.currentWeapon].ammoType) {
+            if (!isImportedValue) {weaponRef.currentWeapon = currentWeapon.value;}
+            else {currentWeapon.value = weaponRef.currentWeapon}
+
+            console.log("inner reached")
+            for (let i=21;i<=30;i++) {
+                readSelection(`mod${i}`).value = "";
+
+                //set parent to true, and parentIsCharacterUpdate to true, so we don't get infinite recursion here
+                userTriggers.updateSelectedMod(`${i}`,true,true);
+                const augDisplayList = document.getElementById(`mod${i}List`);
+                augDisplayList.innerHTML = '';
+
+                pagePopulation.populateGear(`mod${i}List`,sniperList[currentWeapon.value].ammoType === "HighPowered" ? highPowerRounds : impactRounds);
+
+            }
+        }
+        else {
+            if (!isImportedValue) {weaponRef.currentWeapon = currentWeapon.value;}
+            else {currentWeapon.value = weaponRef.currentWeapon}
+        }
+
+        const currentWeaponImage = sniperList[currentWeapon.value].image;
+        weaponRef.currentWeaponType = sniperList[currentWeapon.value].weaponType;
+
+        readSelection("characterWeaponBreakdownIcon").src = currentWeaponImage;
+        readSelection("buttonsCharacterWeaponIcon").src = currentWeaponImage;
+
+        if (!weaponSubstatList[readSelection("weaponSub1").value]) {readSelection("weaponSub1").value = ""};
+        if (!weaponSubstatList[readSelection("weaponSub2").value]) {readSelection("weaponSub2").value = ""};
+        if (!weaponSubstatList[readSelection("weaponSub3").value]) {readSelection("weaponSub3").value = ""};
+        if (!weaponSubstatList[readSelection("weaponSub4").value]) {readSelection("weaponSub4").value = ""};
+
+        if (!isImportedValue) {
+            weaponRef.subRoll1 = readSelection("weaponSub1").value;
+            weaponRef.subRoll2 = readSelection("weaponSub2").value;
+            weaponRef.subRoll3 = readSelection("weaponSub3").value;
+            weaponRef.subRoll4 = readSelection("weaponSub4").value;
+        }
+        else {
+            readSelection("weaponSub1").value = weaponRef.subRoll1
+            readSelection("weaponSub2").value = weaponRef.subRoll2
+            readSelection("weaponSub3").value = weaponRef.subRoll3
+            readSelection("weaponSub4").value = weaponRef.subRoll4
+        }
+
+        const sub1Value = readSelection("weaponSub1Value");
+        const sub2Value = readSelection("weaponSub2Value");
+        const sub3Value = readSelection("weaponSub3Value");
+        const sub4Value = readSelection("weaponSub4Value");
+
+        if (weaponRef.subRoll1Value === 0) {sub1Value.value = 10000000;}
+        if (weaponRef.subRoll2Value === 0) {sub2Value.value = 10000000;}
+        if (weaponRef.subRoll3Value === 0) {sub3Value.value = 10000000;}
+        if (weaponRef.subRoll4Value === 0) {sub4Value.value = 10000000;}
+
+        const roll1Min = weaponSubstatList[weaponRef.subRoll1][weaponRef.currentWeaponType][0];
+        const roll1Max = weaponSubstatList[weaponRef.subRoll1][weaponRef.currentWeaponType][1];
+        const roll2Min = weaponSubstatList[weaponRef.subRoll2][weaponRef.currentWeaponType][0];
+        const roll2Max = weaponSubstatList[weaponRef.subRoll2][weaponRef.currentWeaponType][1];
+        const roll3Min = weaponSubstatList[weaponRef.subRoll3][weaponRef.currentWeaponType][0];
+        const roll3Max = weaponSubstatList[weaponRef.subRoll3][weaponRef.currentWeaponType][1];
+        const roll4Min = weaponSubstatList[weaponRef.subRoll4][weaponRef.currentWeaponType][0];
+        const roll4Max = weaponSubstatList[weaponRef.subRoll4][weaponRef.currentWeaponType][1];
+
+        sub1Value.min = roll1Min;
+        sub1Value.max = roll1Max;
+        sub2Value.min = roll2Min;
+        sub2Value.max = roll2Max;
+        sub3Value.min = roll3Min;
+        sub3Value.max = roll3Max;
+        sub4Value.min = roll4Min;
+        sub4Value.max = roll4Max;
+
+        if (!isImportedValue) {
+            sub1Value.value = Math.max(Math.min(+sub1Value.value,roll1Max),roll1Min);
+            sub2Value.value = Math.max(Math.min(+sub2Value.value,roll2Max),roll2Min);
+            sub3Value.value = Math.max(Math.min(+sub3Value.value,roll3Max),roll3Min);
+            sub4Value.value = Math.max(Math.min(+sub4Value.value,roll4Max),roll4Min);
+        }
+        else {
+            sub1Value.value = Math.max(Math.min(+weaponRef.subRoll1Value,roll1Max),roll1Min);
+            sub2Value.value = Math.max(Math.min(+weaponRef.subRoll2Value,roll2Max),roll2Min);
+            sub3Value.value = Math.max(Math.min(+weaponRef.subRoll3Value,roll3Max),roll3Min);
+            sub4Value.value = Math.max(Math.min(+weaponRef.subRoll4Value,roll4Max),roll4Min);
+        }
+
+        weaponRef.subRoll1Value = +sub1Value.value;
+        weaponRef.subRoll2Value = +sub2Value.value;
+        weaponRef.subRoll3Value = +sub3Value.value;
+        weaponRef.subRoll4Value = +sub4Value.value;
+
+        // characterWeaponBreakdownIcon
+        // buttonsCharacterWeaponIcon
+        //characterWeapon
+        if (!parentCall) {updateFormulas();}
+    },
     updateSelectedAbilityBreakdown(abilityID,imageElementID) {
         const imageIDList = ["damageAbilityIcon1","damageAbilityIcon2","damageAbilityIcon3","damageAbilityIcon4","damageAbilityIcon5"];
         const tabList = ["abilityBreakdownTab1","abilityBreakdownTab2","abilityBreakdownTab3","abilityBreakdownTab4","abilityBreakdownTab5"]
@@ -110,9 +274,9 @@ const userTriggers = {
         readSelection(globalRef.currentAbilityBreakdownID).style.opacity = "1";
         readSelection(`abilityBreakdownTab${globalRef.currentAbilityBreakdown}`).style.display = "flex";
 
-        //no update formulas needed here since we aren't changing any math, only visuals with this function
+        updateFormulas();
     },
-    updateReactorSelections(list,iconID,valueToAssign) {
+    updateReactorSelections(list,iconID,valueToAssign,isImportedValue) {
         const lists = {
             "1": ["reactorNonAttribute","reactorFire","reactorElectric","reactorChill","reactorToxic"],
             "2": ["reactorDimension","reactorFusion","reactorSingular","reactorTech"],
@@ -152,15 +316,59 @@ const userTriggers = {
         readSelection("buttonsReactorIcon").src = imageString;
 
         //clear invalid or duplicate selections
-        if (readSelection("reactorSub1").value === readSelection("reactorSub2").value) {readSelection("reactorSub2").value = "";}
+        if (readSelection("reactorSub1").value === readSelection("reactorSub2").value && readSelection("reactorSub1").value != "") {readSelection("reactorSub2").value = "";}
         if (!reactorSubRolls[readSelection("reactorSub1").value]) {readSelection("reactorSub1").value = "";}
         if (!reactorSubRolls[readSelection("reactorSub2").value]) {readSelection("reactorSub2").value = "";}
 
-        globalRef.subRoll1 = readSelection("reactorSub1").value;
-        globalRef.subRoll2 = readSelection("reactorSub2").value;
 
-        readSelection("reactorSub1Value").innerHTML = reactorSubRolls[globalRef.subRoll1].maximum;
-        readSelection("reactorSub2Value").innerHTML = reactorSubRolls[globalRef.subRoll2].maximum;
+        const sub1Value = readSelection("reactorSub1Value");
+        const sub2Value = readSelection("reactorSub2Value");
+
+        //if the recorded value in settings is 0, or if we're changing the stat type, assume a max value(we're putting in a value that will be capped to the max)
+        if (globalRef.subRoll1Value === 0 || globalRef.subRoll1 != readSelection("reactorSub1").value) {
+            sub1Value.value = 10000000;
+        }
+        if (globalRef.subRoll2Value === 0 || globalRef.subRoll2 != readSelection("reactorSub2").value) {
+            sub2Value.value = 10000000;
+        }
+        
+        if (!isImportedValue) {
+            globalRef.subRoll1 = readSelection("reactorSub1").value;
+            globalRef.subRoll2 = readSelection("reactorSub2").value;
+        }
+        else {
+            readSelection("reactorSub1").value = globalRef.subRoll1;
+            readSelection("reactorSub2").value = globalRef.subRoll2;
+            sub1Value.value = globalRef.subRoll1Value;
+            sub2Value.value = globalRef.subRoll2Value;
+        }
+
+
+        if (reactorSubRolls[globalRef.subRoll1].minimum > 0) {
+            //set the min/max values the user will be able to work with, based on the min and max of the actual substat roll
+            sub1Value.min = reactorSubRolls[globalRef.subRoll1].minimum;
+            sub1Value.max = reactorSubRolls[globalRef.subRoll1].maximum;
+            //bind the values to the range of the given stat, needs to be capped even with a min/max specified from before, as this value can seemingly bypass the restrictions when set in code
+            sub1Value.value = Math.max(Math.min(+sub1Value.value,reactorSubRolls[globalRef.subRoll1].maximum),reactorSubRolls[globalRef.subRoll1].minimum);
+        }
+        else {
+            sub1Value.min = reactorSubRolls[globalRef.subRoll1].maximum;
+            sub1Value.max = reactorSubRolls[globalRef.subRoll1].minimum;
+            sub1Value.value = Math.max(Math.min(+sub1Value.value,reactorSubRolls[globalRef.subRoll1].minimum),reactorSubRolls[globalRef.subRoll1].maximum);
+        }
+        if (reactorSubRolls[globalRef.subRoll2].minimum > 0) {
+            sub2Value.min = reactorSubRolls[globalRef.subRoll2].minimum;
+            sub2Value.max = reactorSubRolls[globalRef.subRoll2].maximum;
+            sub2Value.value = Math.max(Math.min(+sub2Value.value,reactorSubRolls[globalRef.subRoll2].maximum),reactorSubRolls[globalRef.subRoll2].minimum);
+        }
+        else {
+            sub2Value.min = reactorSubRolls[globalRef.subRoll2].maximum;
+            sub2Value.max = reactorSubRolls[globalRef.subRoll2].minimum;
+            sub2Value.value = Math.max(Math.min(+sub2Value.value,reactorSubRolls[globalRef.subRoll2].minimum),reactorSubRolls[globalRef.subRoll2].maximum);
+        }
+
+        globalRef.subRoll1Value = +sub1Value.value;
+        globalRef.subRoll2Value = +sub2Value.value;
 
         globalRef.weaponMatched = readSelection("USEReactorOptimization").checked;
 
@@ -196,30 +404,91 @@ const userTriggers = {
 
         //Clear invalid or dupe roll selections
         userTriggers.checkInvalidComponentSelections();
-        //assign values to global and update subroll display values
+
+        const auxiliarySub1Value = readSelection("auxiliarySub1Value");
+        const auxiliarySub2Value = readSelection("auxiliarySub2Value");
+        if (!auxiliaryRolls[readSelection("auxiliarySub1").value]) {readSelection("auxiliarySub1").value = "";}
+        if (!auxiliaryRolls[readSelection("auxiliarySub2").value]) {readSelection("auxiliarySub2").value = "";}
+        const sensorSub1Value = readSelection("sensorSub1Value");
+        const sensorSub2Value = readSelection("sensorSub2Value");
+        if (!sensorRolls[readSelection("sensorSub1").value]) {readSelection("sensorSub1").value = "";}
+        if (!sensorRolls[readSelection("sensorSub2").value]) {readSelection("sensorSub2").value = "";}
+        const memorySub1Value = readSelection("memorySub1Value");
+        const memorySub2Value = readSelection("memorySub2Value");
+        if (!memoryRolls[readSelection("memorySub1").value]) {readSelection("memorySub1").value = "";}
+        if (!memoryRolls[readSelection("memorySub2").value]) {readSelection("memorySub2").value = "";}
+        const processorSub1Value = readSelection("processorSub1Value");
+        const processorSub2Value = readSelection("processorSub2Value");
+        if (!processorRolls[readSelection("processorSub1").value]) {readSelection("processorSub1").value = "";}
+        if (!processorRolls[readSelection("processorSub2").value]) {readSelection("processorSub2").value = "";}
+
+        if (globalRef.auxiliarySub1Value === 0 || globalRef.auxiliarySub1 != readSelection("auxiliarySub1").value) {auxiliarySub1Value.value = 10000000;}
+        if (globalRef.auxiliarySub2Value === 0 || globalRef.auxiliarySub2 != readSelection("auxiliarySub2").value) {auxiliarySub2Value.value = 10000000;}
+
+        if (globalRef.sensorSub1Value === 0 || globalRef.sensorSub1 != readSelection("sensorSub1").value) {sensorSub1Value.value = 10000000;}
+        if (globalRef.sensorSub2Value === 0 || globalRef.sensorSub2 != readSelection("sensorSub2").value) {sensorSub2Value.value = 10000000;}
+
+        if (globalRef.memorySub1Value === 0 || globalRef.memorySub1 != readSelection("memorySub1").value) {memorySub1Value.value = 10000000;}
+        if (globalRef.memorySub2Value === 0 || globalRef.memorySub2 != readSelection("memorySub2").value) {memorySub2Value.value = 10000000;}
+
+        if (globalRef.processorSub1Value === 0 || globalRef.processorSub1 != readSelection("processorSub1").value) {processorSub1Value.value = 10000000;}
+        if (globalRef.processorSub2Value === 0 || globalRef.processorSub2 != readSelection("processorSub2").value) {processorSub2Value.value = 10000000;}
+
         globalRef.auxiliary = readSelection("auxiliary").value;
         globalRef.auxiliarySub1 = readSelection("auxiliarySub1").value;
         globalRef.auxiliarySub2 = readSelection("auxiliarySub2").value;
-        readSelection("auxiliarySub1Value").innerHTML = auxiliaryRolls[globalRef.auxiliarySub1].value.toLocaleString();
-        readSelection("auxiliarySub2Value").innerHTML = auxiliaryRolls[globalRef.auxiliarySub2].value.toLocaleString();
+        const auxSub1Name = globalRef.auxiliarySub1;
+        auxiliarySub1Value.min = auxiliaryRolls[auxSub1Name].minimum;
+        auxiliarySub1Value.max = auxiliaryRolls[auxSub1Name].maximum;
+        auxiliarySub1Value.value = Math.max(Math.min(+auxiliarySub1Value.value,auxiliaryRolls[auxSub1Name].maximum),auxiliaryRolls[auxSub1Name].minimum);
+        const auxSub2Name = globalRef.auxiliarySub2;
+        auxiliarySub2Value.min = auxiliaryRolls[auxSub2Name].minimum;
+        auxiliarySub2Value.max = auxiliaryRolls[auxSub2Name].maximum;
+        auxiliarySub2Value.value = Math.max(Math.min(+auxiliarySub2Value.value,auxiliaryRolls[auxSub2Name].maximum),auxiliaryRolls[auxSub2Name].minimum);
+        globalRef.auxiliarySub1Value = +readSelection("auxiliarySub1Value").value;
+        globalRef.auxiliarySub2Value = +readSelection("auxiliarySub2Value").value;
 
         globalRef.sensor = readSelection("sensor").value;
         globalRef.sensorSub1 = readSelection("sensorSub1").value;
         globalRef.sensorSub2 = readSelection("sensorSub2").value;
-        readSelection("sensorSub1Value").innerHTML = sensorRolls[globalRef.sensorSub1].value.toLocaleString();
-        readSelection("sensorSub2Value").innerHTML = sensorRolls[globalRef.sensorSub2].value.toLocaleString();
+        const sensorSub1Name = globalRef.sensorSub1;
+        sensorSub1Value.min = sensorRolls[sensorSub1Name].minimum;
+        sensorSub1Value.max = sensorRolls[sensorSub1Name].maximum;
+        sensorSub1Value.value = Math.max(Math.min(+sensorSub1Value.value,sensorRolls[sensorSub1Name].maximum),sensorRolls[sensorSub1Name].minimum);
+        const sensorSub2Name = globalRef.sensorSub2;
+        sensorSub2Value.min = sensorRolls[sensorSub2Name].minimum;
+        sensorSub2Value.max = sensorRolls[sensorSub2Name].maximum;
+        sensorSub2Value.value = Math.max(Math.min(+sensorSub2Value.value,sensorRolls[sensorSub2Name].maximum),sensorRolls[sensorSub2Name].minimum);
+        globalRef.sensorSub1Value = +readSelection("sensorSub1Value").value;
+        globalRef.sensorSub2Value = +readSelection("sensorSub2Value").value;
 
         globalRef.memory = readSelection("memory").value;
         globalRef.memorySub1 = readSelection("memorySub1").value;
         globalRef.memorySub2 = readSelection("memorySub2").value;
-        readSelection("memorySub1Value").innerHTML = memoryRolls[globalRef.memorySub1].value.toLocaleString();
-        readSelection("memorySub2Value").innerHTML = memoryRolls[globalRef.memorySub2].value.toLocaleString();
+        const memorySub1Name = globalRef.memorySub1;
+        memorySub1Value.min = memoryRolls[memorySub1Name].minimum;
+        memorySub1Value.max = memoryRolls[memorySub1Name].maximum;
+        memorySub1Value.value = Math.max(Math.min(+memorySub1Value.value,memoryRolls[memorySub1Name].maximum),memoryRolls[memorySub1Name].minimum);
+        const memorySub2Name = globalRef.memorySub2;
+        memorySub2Value.min = memoryRolls[memorySub2Name].minimum;
+        memorySub2Value.max = memoryRolls[memorySub2Name].maximum;
+        memorySub2Value.value = Math.max(Math.min(+memorySub2Value.value,memoryRolls[memorySub2Name].maximum),memoryRolls[memorySub2Name].minimum);
+        globalRef.memorySub1Value = +readSelection("memorySub1Value").value;
+        globalRef.memorySub2Value = +readSelection("memorySub2Value").value;
 
         globalRef.processor = readSelection("processor").value;
         globalRef.processorSub1 = readSelection("processorSub1").value;
         globalRef.processorSub2 = readSelection("processorSub2").value;
-        readSelection("processorSub1Value").innerHTML = processorRolls[globalRef.processorSub1].value.toLocaleString();
-        readSelection("processorSub2Value").innerHTML = processorRolls[globalRef.processorSub2].value.toLocaleString();
+        const processorSub1Name = globalRef.processorSub1;
+        processorSub1Value.min = processorRolls[processorSub1Name].minimum;
+        processorSub1Value.max = processorRolls[processorSub1Name].maximum;
+        processorSub1Value.value = Math.max(Math.min(+processorSub1Value.value,processorRolls[processorSub1Name].maximum),processorRolls[processorSub1Name].minimum);
+        const processorSub2Name = globalRef.processorSub2;
+        processorSub2Value.min = processorRolls[processorSub2Name].minimum;
+        processorSub2Value.max = processorRolls[processorSub2Name].maximum;
+        processorSub2Value.value = Math.max(Math.min(+processorSub2Value.value,processorRolls[processorSub2Name].maximum),processorRolls[processorSub2Name].minimum);
+        globalRef.processorSub1Value = +readSelection("processorSub1Value").value;
+        globalRef.processorSub2Value = +readSelection("processorSub2Value").value;
         //create images strings
         const imageStringAuxiliary = `/TFD/TFDImages/Components/${componentImagePrefixes[globalRef.auxiliary]}${auxiliary[globalRef.auxiliary].imageSuffix}.png`;
         const imageStringSensor = `/TFD/TFDImages/Components/${componentImagePrefixes[globalRef.sensor]}${sensor[globalRef.sensor].imageSuffix}.png`;
@@ -253,14 +522,18 @@ const userTriggers = {
 
         updateFormulas();
     },
-    updateSelectedMod(modSlot,parentCall,parentIsCharacterUpdate) {
+    updateSelectedMod(modSlot,parentCall,parentIsCharacterUpdate,isImportedValue) {
         let inputRef = readSelection(`mod${modSlot}`);
+        const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
 
         let categoryRef = null;
-        switch (modSlot) {
-            case "1": categoryRef = augments;break;
-            case "2": categoryRef = subAttacks;break;
-            default: categoryRef = modData;break;
+        if (+modSlot >= 21) {categoryRef = weaponModsCategory}//console.log("weapons reached")
+        else {
+            switch (modSlot) {
+                case "1": categoryRef = augments;break;
+                case "2": categoryRef = subAttacks;break;
+                default: categoryRef = modData;break;
+            }
         }
         
         //if the input is invalid or a duplicate, clear it
@@ -271,7 +544,13 @@ const userTriggers = {
         
         //also check for duplicate categories, like arche tech or support etc.
         //we only check mods 3-10 as it is impossible for mods 1 and 2 (transc and sub) to have a duplicate as only their respective slots can slot their respective mods.
-        if (+modSlot >=3) {
+        if (+modSlot >=21) {
+            for (let i=0;i<=9;i++) {
+                if (inputRef.value != "" && inputRef.value === globalRecords.weapon.mods[i]) {alert(`You already have ${inputRef.value} equipped, I cleared the selection to avoid a duplicate.`);inputRef.value = "";}
+                else if (inputRef.value != "" && +modSlot != i+21 && weaponModsCategory[inputRef.value].category != "" && weaponModsCategory[inputRef.value].category === weaponModsCategory[globalRecords.weapon.mods[i]].category) {alert(`${weaponModsCategory[inputRef.value].category} mod already equipped [${globalRecords.weapon.mods[i]}]`);inputRef.value = "";}
+            }
+        }
+        else if (+modSlot >=3) {
             for (let i=2;i<=11;i++) {
                 if (inputRef.value != "" && inputRef.value === globalRecords.character.mods[i]) {alert(`You already have ${inputRef.value} equipped, I cleared the selection to avoid a duplicate.`);inputRef.value = "";}
                 else if (inputRef.value != "" && +modSlot != i+1 && modData[inputRef.value].category != "" && modData[inputRef.value].category === modData[globalRecords.character.mods[i]].category) {alert(`${modData[inputRef.value].category} mod already equipped [${globalRecords.character.mods[i]}]`);inputRef.value = "";}
@@ -304,7 +583,12 @@ const userTriggers = {
         readSelection(`mod${modSlot}Desc`).innerHTML = desc;
 
         //pass the mod value to records, and then update forms
-        globalRecords.character.mods[+modSlot - 1] = inputRef.value
+        if (+modSlot < 21) {
+            globalRecords.character.mods[+modSlot - 1] = inputRef.value;
+        }
+        else {
+            globalRecords.weapon.mods[+modSlot - 21] = inputRef.value;
+        }
         if (!parentIsCharacterUpdate) {userTriggers.updateSelectedCharacter();}
         if (!parentCall) {updateFormulas();}
         
@@ -314,6 +598,8 @@ const userTriggers = {
 const pagePopulation = {
     "dataListsList": [
         {"Name": "characterList", "DataSet": characters},
+        {"Name": "characterWeaponList", "DataSet": sniperList},
+
         // {"Name": "reactorList", "DataSet": helmets},
         // {"Name": "auxiliaryList", "DataSet": helmets},
         // {"Name": "sensorList", "DataSet": helmets},
@@ -331,6 +617,17 @@ const pagePopulation = {
         {"Name": "mod10List", "DataSet": modData},
         {"Name": "mod11List", "DataSet": modData},
         {"Name": "mod12List", "DataSet": modData},
+
+        {"Name": "mod21List", "DataSet": highPowerRounds},
+        {"Name": "mod22List", "DataSet": highPowerRounds},
+        {"Name": "mod23List", "DataSet": highPowerRounds},
+        {"Name": "mod24List", "DataSet": highPowerRounds},
+        {"Name": "mod25List", "DataSet": highPowerRounds},
+        {"Name": "mod26List", "DataSet": highPowerRounds},
+        {"Name": "mod27List", "DataSet": highPowerRounds},
+        {"Name": "mod28List", "DataSet": highPowerRounds},
+        {"Name": "mod29List", "DataSet": highPowerRounds},
+        {"Name": "mod30List", "DataSet": highPowerRounds},
 
         // {"Name": "reactorAttributeList", "DataSet": attributeList},
         // {"Name": "reactorTypeList", "DataSet": typeList},
@@ -353,6 +650,11 @@ const pagePopulation = {
         {"Name": "processorList", "DataSet": processor},
         {"Name": "processorSub1List", "DataSet": processorRolls},
         {"Name": "processorSub2List", "DataSet": processorRolls},
+
+        {"Name": "weaponSub1List", "DataSet": weaponSubstatList},
+        {"Name": "weaponSub2List", "DataSet": weaponSubstatList},
+        {"Name": "weaponSub3List", "DataSet": weaponSubstatList},
+        {"Name": "weaponSub4List", "DataSet": weaponSubstatList},
 
     ],
     populateGear(elemID,collection) {
@@ -409,6 +711,18 @@ const settings = {
         },
         MagneticForce(settingsRef) {
             settingsRef.magForceBarState = +readSelection("kyleMagForceBar4").value;
+        },
+        ColdFury(settingsRef) {
+            settingsRef.stackCount = +readSelection("haileyColdFuryBar4").value;
+        },
+        Retreat(settingsRef) {
+            settingsRef.distance = +readSelection("haileyDistanceBar4").value;
+        },
+        Zenith(settingsRef) {
+            settingsRef.haileyUseWeakspots = readSelection("haileyUseWeakspots").checked;
+            settingsRef.haileyUsePhysBonus = readSelection("haileyUsePhysBonus").checked;
+            settingsRef.haileyUseCryoDamage = readSelection("haileyUseCryoDamage").checked;
+            settingsRef.haileyUsePyroDR = readSelection("haileyUsePyroDR").checked;
         }
     }
 
@@ -663,16 +977,36 @@ const formulasValues = {
         let pullStats = formulasValues.pullStats;
 
         for (let i=2;i<=11;i++) {
-            let path = modData[modArrayRef[i]].stats
+            let path = modData[modArrayRef[i]].stats;
             pullStats(index,path);
         }
     },
-    pullReactorStats(index) {
-        let reactorRef = globalRecords.reactor;
+    pullWeaponStats(index) {
         let pullStats = formulasValues.pullStats;
 
-        pullStats(index,reactorSubRolls[reactorRef.subRoll1].stats);
-        pullStats(index,reactorSubRolls[reactorRef.subRoll2].stats);
+        //weapon mods
+        let modArrayRef = globalRecords.weapon.mods;
+        const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+        for (let i=0;i<=9;i++) {
+            let path = weaponModsCategory[modArrayRef[i]].stats;
+            pullStats(index,path);
+        }
+        //this was used when I had the stats baked into the weapon objects themselves, instead of allowing manual value input
+        // modArrayRef = sniperList[globalRecords.weapon.currentWeapon].subStats;
+        // pullStats(index,modArrayRef)
+
+        const weaponRef = globalRecords.weapon;
+        index[weaponSubstatList[weaponRef.subRoll1].statName] += weaponRef.subRoll1Value;
+        index[weaponSubstatList[weaponRef.subRoll2].statName] += weaponRef.subRoll2Value;
+        index[weaponSubstatList[weaponRef.subRoll3].statName] += weaponRef.subRoll3Value;
+        index[weaponSubstatList[weaponRef.subRoll4].statName] += weaponRef.subRoll4Value;
+    },
+    pullReactorStats(index) {
+        let reactorRef = globalRecords.reactor;
+        // let pullStats = formulasValues.pullStats;
+
+        index[reactorSubRolls[reactorRef.subRoll1].statName] += reactorRef.subRoll1Value;
+        index[reactorSubRolls[reactorRef.subRoll2].statName] += reactorRef.subRoll2Value;
 
         const ratioTable = {
             "Fire" : "PowerRatioFire",
@@ -768,13 +1102,15 @@ const formulasValues = {
 function updateFormulas() {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     let characterRef = characters[globalRecords.character.currentCharacter].baseStats
-    const globalRef = globalRecords.character.abilities
+    const globalRef = globalRecords.character.abilities;
+
+    customDamage.callAbilityFunctionsTier0(tableReference);
 
     formulasValues.pullModStats(tableReference);
     formulasValues.pullReactorStats(tableReference);
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullAbilityStats(tableReference);
-
+    formulasValues.pullWeaponStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
     const {baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield} = calcs.getShield(tableReference,characterRef);
@@ -802,18 +1138,9 @@ function updateFormulas() {
     }
 
     customDamage.callAbilityFunctions(tableReference,returnObject);
-    basicsUpdates.updateMainFromFormulas(returnObject,tableReference)
+    basicsUpdates.updateMainFromFormulas(returnObject,tableReference);
+    manipulateURL.updateURLparameters();
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -828,17 +1155,27 @@ function updateFormulas() {
 
 pagePopulation.pagePopulation();
 
-readSelection("reactorSub1").value = globalRecords.reactor.subRoll1
-readSelection("reactorSub2").value = globalRecords.reactor.subRoll2
-userTriggers.updateReactorSelections();
-userTriggers.updateSelectedAbilityBreakdown();
-readSelection("auxiliary").value = globalRecords.components.auxiliary
-readSelection("sensor").value = globalRecords.components.sensor
-readSelection("memory").value = globalRecords.components.memory
-readSelection("processor").value = globalRecords.components.processor
-userTriggers.updateComponentSelections();
 
-// readSelection("character").value = globalRecords.character.currentCharacter;
-userTriggers.updateSelectedCharacter();
-readSelection("character").value = "Lepic";
-userTriggers.updateSelectedCharacter();
+let feedCheck = (new URL(document.location)).searchParams;
+if (feedCheck != "") {manipulateURL.importURLparameters();}
+else {
+    userTriggers.updateSelectedAbilityBreakdown(4,"damageAbilityIcon4");
+    readSelection("reactorSub1").value = "Singular Power Boost";
+    readSelection("reactorSub2").value = "Skill ATK - Colossus";
+    userTriggers.updateReactorSelections();
+    readSelection("auxiliary").value = "Slayer";
+    readSelection("auxiliarySub1").value = "";
+    readSelection("auxiliarySub2").value = "";
+    readSelection("sensor").value = "Slayer";
+    readSelection("sensorSub1").value = "";
+    readSelection("sensorSub2").value = "";
+    readSelection("memory").value = "Slayer";
+    readSelection("memorySub1").value = "";
+    readSelection("memorySub2").value = "";
+    readSelection("processor").value = "Slayer";
+    readSelection("processorSub1").value = "";
+    readSelection("processorSub2").value = "";
+    userTriggers.updateComponentSelections();
+    userTriggers.updateSelectedWeapon();
+    updateFormulas();
+}

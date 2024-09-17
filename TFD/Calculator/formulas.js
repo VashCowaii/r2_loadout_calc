@@ -96,6 +96,21 @@ const calcs = {
 
 
 const customDamage = {
+    callAbilityFunctionsTier0(index) {
+        const globalRef = globalRecords.character;
+        const selectedCharacter = globalRef.currentCharacter;
+
+        //ability array handling is done within userTriggers.updateSelectedMod
+        const arrayRef = globalRef.abilityArray;
+        const abilityRefs = characters[selectedCharacter].abilities;
+
+        for (let i=1;i<=5;i++) {
+            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+
+            const currentPath = abilityRefs[`ability${i}`][path];
+            if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index);}
+        }
+    },
     callAbilityFunctions(index,returnObject) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
@@ -118,8 +133,428 @@ const customDamage = {
 
             const currentPath = abilityRefs[`ability${i}`][path];
             if (currentPath.customDPS) {customDamage[currentPath.customDPS](index,returnObject);}
-            else {readSelection(`abilityBreakdownBody${i}`).innerHTML = absentBreakdown;}
+            else if (!currentPath.customDPSBase) {readSelection(`abilityBreakdownBody${i}`).innerHTML = absentBreakdown;}
         }
+    },
+    haileyFuryCalcs(index) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings["ColdFury"];
+        readSelection("abilityBreakdownBody3").innerHTML = `
+        <div class="totalHealingBox">
+            <div class="statsRowName">Cold Fury Stacks:&nbsp;<span id="haileyColdFuryBar4Display">16</span></div>
+            <div class="statsRowToggle">
+                <input type="range" id="haileyColdFuryBar4" name="slider" min="0" max="16" value="16" step="1" onchange="settings.updateCharacterSettings('Hailey','ColdFury')">
+            </div>
+        </div>
+
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">+BASE Crit Rate</div>
+                    <div class="totalHealingValue" id="furyCritRate">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">+% Crit DMG</div>
+                    <div class="totalHealingValue" id="furyCritDamage">0.00</div>
+                </div>
+            </div>
+
+        </div>
+        `;
+        readSelection("abilityBreakdownBody3").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
+        `;
+
+        readSelection("haileyColdFuryBar4").value = +settingsRef.stackCount;
+        readSelection("haileyColdFuryBar4Display").innerHTML = `${settingsRef.stackCount}`;
+
+        //adds up to 40% BASE crit rate, that's nuts
+        const baseSkillCritRateBonus = +settingsRef.stackCount * 0.025;
+        index.SkillCritRateBaseBonus += baseSkillCritRateBonus;
+        const baseFirearmCritRateBonus = +settingsRef.stackCount * 0.025;
+        index.FirearmCritRateBase += baseFirearmCritRateBonus;
+
+        //unlike the crit rate bonuses, the crit damage is not a base bonus, it acts like any other crit module. also only applies at max stacks.
+        let bonusCritDamage = 0
+        if (+settingsRef.stackCount === 16) {bonusCritDamage = 0.20;}
+        index.SkillCritDamage += bonusCritDamage;
+        index.FirearmCritDamage += bonusCritDamage;
+
+        readSelection("furyCritRate").innerHTML = (baseSkillCritRateBonus*100).toLocaleString() + "%";
+        readSelection("furyCritDamage").innerHTML = (bonusCritDamage*100).toLocaleString() + "%";
+    },
+    haileyRetreatCalcs(index) {
+        const characterRef = characters.Hailey;
+        const settingsRef2 = characterRef.characterSettings["Retreat"];
+        readSelection("abilityBreakdownBody5").innerHTML = `
+        <div class="totalHealingBox">
+            <div class="statsRowName">Retreat Distance:&nbsp;<span id="haileyDistanceBar4Display">25m</span></div>
+            <div class="statsRowToggle">
+                <input type="range" id="haileyDistanceBar4" name="slider" min="0" max="25" value="25" step="0.5" onchange="settings.updateCharacterSettings('Hailey','Retreat')">
+            </div>
+        </div>
+
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">0-Point</div>
+                    <div class="totalHealingValue">12.5m</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">+% Weak Point DMG</div>
+                    <div class="totalHealingValue" id="retreatWPValue">0.00</div>
+                </div>
+            </div>
+
+        </div>
+        `;
+        readSelection("abilityBreakdownBody5").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5.base.desc}</div>
+        `;
+
+        readSelection("haileyDistanceBar4").value = +settingsRef2.distance;
+        readSelection("haileyDistanceBar4Display").innerHTML = `${settingsRef2.distance}m`;
+
+        let weakspotBonus = 0;
+        if (+settingsRef2.distance > 12.5) {weakspotBonus = ((settingsRef2.distance - 12.5)/12.5) * 0.50}
+        else if (+settingsRef2.distance < 12.5) {weakspotBonus = -((12.5 - settingsRef2.distance)/12.5) * 0.50}
+        //and then if the distance is equal to 12.5, the bonus is 0
+        readSelection("retreatWPValue").innerHTML = (weakspotBonus*100).toLocaleString() + "%";
+        index["WeakPointDamage%"] += weakspotBonus;
+    },
+    haileyZenithCalcs(index,returnObject,weaponObject) {
+        const characterRef = characters.Hailey;
+        const settingsRef3 = characterRef.characterSettings["Zenith"];
+
+        readSelection("abilityBreakdownBody4").innerHTML = `
+        <div class="totalHealingBox" style="margin: 0;padding: 0;">
+                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
+                    <div style="padding-right: 5px;">Use Pyro DR Modifiers</div>
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="haileyUsePyroDR" onchange="settings.updateCharacterSettings('Hailey','Zenith')" checked> <!--math toggle-->
+                        <span class="toggleSlider"></span>
+                    </label>
+                </div>
+            </div>
+
+        <div class="traitMegaTitleHeader" style="background-color: black;">SKILL SPLIT</div>
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit Rate</div>
+                    <div class="totalHealingValue" id="barBonus">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit Damage</div>
+                    <div class="totalHealingValue" id="barBonus2">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Skill Power</div>
+                    <div class="totalHealingValue" id="skillPower">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Dmg/Hit</div>
+                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Hit</div>
+                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Shots</div>
+                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Avg/Hit</div>
+                    <div class="totalHealingValue" id="averageSum">0.00%</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Avg Skill DMG</div>
+                    <div class="totalHealingValue" id="totalAvgSkill">0.00</div>
+                </div>
+            </div>
+
+
+            <div class="traitMegaTitleHeader" style="background-color: black;border-top: 4px solid #434343">WEAPON SPLIT</div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Base ATK</div>
+                    <div class="totalHealingValue" id="zenithATK">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">ATK %</div>
+                    <div class="totalHealingValue" id="zenithATKPercent">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Phys Multi</div>
+                    <div class="totalHealingValue" id="zenithATKPhysical">0.00</div>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit Rate</div>
+                    <div class="totalHealingValue" id="firearmCritRate">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit Damage</div>
+                    <div class="totalHealingValue" id="firearmCritDamage">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Zenith Multi</div>
+                    <div class="totalHealingValue" id="zenithMulti">0.00</div>
+                </div>
+            </div>
+            <div style="white-space: normal;width: 100%">Weakpoints are assumed to be shoulder hits. See Weapon DMG video for more info.</div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Weakspot Multi</div>
+                    <div class="totalHealingValue" id="firearmWeakspotMulti">0.00</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox" style="margin: 0;padding: 0;">
+                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
+                    <div style="padding-right: 5px;">Use Weakspot Hits: &nbsp;</div>
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="haileyUseWeakspots" onchange="settings.updateCharacterSettings('Hailey','Zenith')" checked> <!--math toggle-->
+                        <span class="toggleSlider"></span>
+                    </label>
+                </div>
+                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
+                    <div style="padding-right: 5px;">Use Physical Bonus: &nbsp;</div>
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="haileyUsePhysBonus" onchange="settings.updateCharacterSettings('Hailey','Zenith')" checked> <!--math toggle-->
+                        <span class="toggleSlider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Dmg/Hit</div>
+                    <div class="totalHealingValue" id="dmgPerShotGun">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Hit</div>
+                    <div class="totalHealingValue" id="critPerShotGun">0.00%</div>
+                </div>
+            </div>
+            
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Elements</div>
+                    <div class="totalHealingValue" id="ActiveElements">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Hit/Element</div>
+                    <div class="totalHealingValue" id="ActiveElementValues">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Crit/Element</div>
+                    <div class="totalHealingValue" id="ActiveElementValuesCrit">0.00%</div>
+                </div>
+            </div>
+
+            <br>
+            <div class="totalHealingBox" style="margin: 0;padding: 0;">
+                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
+                    <div style="padding-right: 5px;">Use Cryo Bonus [Max: 9]&nbsp;</div>
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="haileyUseCryoDamage" onchange="settings.updateCharacterSettings('Hailey','Zenith')" checked> <!--math toggle-->
+                        <span class="toggleSlider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Cryo/Hit</div>
+                    <div class="totalHealingValue" id="cryoPerHit">0.00</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Cryo/Crit</div>
+                    <div class="totalHealingValue" id="cryoPerCrit">0.00%</div>
+                </div>
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">AVG Cryo</div>
+                    <div class="totalHealingValue" id="cryoAVG">0.00%</div>
+                </div>
+            </div>
+
+
+            <div class="totalHealingBox">
+                <div class="totalHealingBoxHalf hasHoverTooltip">
+                    <div class="totalHealingHeader">Total Avg Gun DMG</div>
+                    <div class="totalHealingValue" id="totalAvgGun">0.00</div>
+                </div>
+            </div>
+
+            <div class="totalHealingBox" style="border-top: 4px solid #434343">
+                <div class="totalHealingBoxHalf hasHoverTooltip" >
+                    <div class="totalHealingHeader">Total Avg SUM DMG</div>
+                    <div class="totalHealingValue" id="totalAvgAll">0.00</div>
+                </div>
+            </div>
+
+        </div>
+        `;
+        readSelection("abilityBreakdownBody4").innerHTML += `
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4.base.desc}</div>
+        `;
+        
+        readSelection("haileyUseWeakspots").checked = settingsRef3.haileyUseWeakspots;
+        readSelection("haileyUsePhysBonus").checked = settingsRef3.haileyUsePhysBonus;
+        readSelection("haileyUseCryoDamage").checked = settingsRef3.haileyUseCryoDamage;
+        readSelection("haileyUsePyroDR").checked = settingsRef3.haileyUsePyroDR;
+
+
+        
+        const magazineSize = 4 * (1+index.MagazineSize) + index.haileyExtraShots;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = Math.floor(magazineSize);
+
+        
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+        const basePowerModifier = 3627.4/100;
+        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierChill + index.PowerModifierSingular;
+        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+    
+        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
+        const basePowerRatio = 1 + index.PowerRatioBase;
+        const chillPowerRatio = 1 + index.PowerRatioChill;
+        const singularPowerRatio = 1 + index.PowerRatioSingular;
+    
+        //We're assuming you're using a fully enhanced reactor.
+        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * chillPowerRatio * singularPowerRatio * basePowerRatio;
+    
+        const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
+        const critDamage = totalSkillCritDamage;//returnObject.totalSkillCritDamage;
+        const critComposite = 1 + (critRate * (critDamage-1));
+    
+        const pyroSkillChillDR = 0.48480002924431460907286277768636;
+        const dmgPerHit = baseSkillPower * skillPowerModifier * (settingsRef3.haileyUsePyroDR ? pyroSkillChillDR : 1);
+        const dmgPerHitCrit = dmgPerHit * critDamage;
+        const dmgPerHitAvg = dmgPerHit * critComposite;
+
+        const totalAVGSkill = actualMagSize * dmgPerHitAvg;
+    
+        readSelection("barBonus").innerHTML = `${(critRate*100).toLocaleString()}%`;//crit rate
+        readSelection("barBonus2").innerHTML = `${(critDamage).toLocaleString()}x`;
+        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;//skill power
+        readSelection("powerModifier").innerHTML = `${magazineSize.toLocaleString()}`;//total shots
+
+        readSelection("dmgPerShot").innerHTML = `${dmgPerHit.toLocaleString()}`;
+        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
+        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
+
+        readSelection("totalAvgSkill").innerHTML = `${totalAVGSkill.toLocaleString()}`;
+
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        const currentWeaponBase = currentWeaponRef.baseATK;
+        const attackPercent = index["FirearmATK%"];
+        const crushBonus = settingsRef3.haileyUsePhysBonus ? 0.2 : 0;//haileyUsePhysBonus
+
+        const firearmCritRate = Math.min((1+(globalRecords.weaponCritCeiling/100)),(currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate));
+
+        const currentWeaponBaseWS = currentWeaponRef.baseWeakPoint
+        const weakpointBonus = index["WeakPointDamage%"];
+        const totalWSBonus = currentWeaponBaseWS * (1 + weakpointBonus) + 0.50 + -0.25;
+
+        const currentWeaponBaseCD = currentWeaponRef.baseCritDamage;
+        const critDamageBonus = index.FirearmCritDamage;
+        const totalCDBonus = currentWeaponBaseCD * (1 + critDamageBonus);
+
+        const firearmCritComposite = 1 + ((totalCDBonus-1) * firearmCritRate);
+
+        const zenithMultiplier = 1.5;
+        let activeElements = [];
+        let activeElementsDamage = [];
+        let activeElementsDamageCrit = [];
+
+        const preElementDamage = currentWeaponBase * (1 + attackPercent);
+
+        const labLvl1DR = 0.9134999589774536;
+        // const pyroHardGunDR = settingsRef3.haileyUsePyroDR ? 0.188044490144759411839168012509 : 1;
+        // const pyroHardGunDR = settingsRef3.haileyUsePyroDR ? 0.19890908975776126019563485088228 : 1;
+        const pyroHardGunDR = settingsRef3.haileyUsePyroDR ? 0.21879999872496580683257858011967 : 1;
+
+        const damage = (preElementDamage * zenithMultiplier)* (1 + crushBonus) + (index.ColossusATK * (1 + crushBonus));//zenithMultiplier
+        const baseDamage = damage * pyroHardGunDR;
+        const baseWeakspotDamage = baseDamage * (totalWSBonus);
+        const baseCritDamage = baseDamage * totalCDBonus;
+        const baseWeakspotCritDamage = baseWeakspotDamage * totalCDBonus;
+
+
+        // const laboratoryPhysDR = 402842/440987.4308598;
+        // const chillDRPyro = settingsRef3.haileyUsePyroDR ? 0.4407267479722824885562598693665 : 1; 
+        const chillDRPyro = settingsRef3.haileyUsePyroDR ? 0.48479941965823031622160008234121 : 1;
+
+        if (index["ChillATK%"]) {
+            activeElements.push("Chill");
+            const damageChill = (preElementDamage) * index["ChillATK%"] * (1 + index["ChillATK%Bonus"]);
+            const damageChillCrit = (preElementDamage * totalCDBonus) * index["ChillATK%"] * (1 + index["ChillATK%Bonus"]);
+            const visibleChill = damageChill * chillDRPyro;
+            const visibleChillCrit = damageChillCrit * chillDRPyro;
+            activeElementsDamage.push(visibleChill);
+            activeElementsDamageCrit.push(visibleChillCrit);
+        }
+        if (!activeElements.length) {
+            activeElements.push("None");
+            activeElementsDamage.push(0);
+            activeElementsDamageCrit.push(0);
+        }
+
+        const avgGunDamage = (settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage) * firearmCritComposite;
+        const avgElemental = activeElementsDamage[0] * firearmCritComposite;
+
+
+        const cryoDamageHit = settingsRef3.haileyUseCryoDamage ? ((settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage) + activeElementsDamage[0])/2 : 0;
+        const cryoDamageCrit = cryoDamageHit * totalCDBonus;
+        const cryoDamageAVG = cryoDamageHit * firearmCritComposite;
+
+
+        const totalAVGGun = ((avgGunDamage + avgElemental) * actualMagSize) + (cryoDamageAVG * Math.min(9,actualMagSize));
+
+        const totalAVGSum = totalAVGSkill + totalAVGGun;
+
+
+        readSelection("zenithATK").innerHTML = currentWeaponBase.toLocaleString();
+        readSelection("zenithATKPercent").innerHTML = `${(attackPercent*100).toLocaleString()}%`;
+        readSelection("zenithATKPhysical").innerHTML = `${(crushBonus*100).toLocaleString()}%`;
+
+        readSelection("firearmCritRate").innerHTML = `${(firearmCritRate*100).toLocaleString()}%`;
+        readSelection("firearmCritDamage").innerHTML = `${totalCDBonus.toLocaleString()}x`;
+        readSelection("zenithMulti").innerHTML = "1.5x";
+
+        readSelection("firearmWeakspotMulti").innerHTML = `${totalWSBonus.toLocaleString()}x`;
+
+        readSelection("dmgPerShotGun").innerHTML = `${(settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage).toLocaleString()}`;
+        readSelection("critPerShotGun").innerHTML = `${(settingsRef3.haileyUseWeakspots ? baseWeakspotCritDamage : baseCritDamage).toLocaleString()}`;
+
+        readSelection("ActiveElements").innerHTML = `[${activeElements}]`;
+        readSelection("ActiveElementValues").innerHTML = `${activeElementsDamage[0].toFixed(2)}`;
+        readSelection("ActiveElementValuesCrit").innerHTML = `${activeElementsDamageCrit[0].toFixed(2)}`;
+
+        readSelection("cryoPerHit").innerHTML = cryoDamageHit.toLocaleString();
+        readSelection("cryoPerCrit").innerHTML = cryoDamageCrit.toLocaleString();
+        readSelection("cryoAVG").innerHTML = cryoDamageAVG.toLocaleString();
+
+        readSelection("totalAvgGun").innerHTML = `${totalAVGGun.toLocaleString()}`;
+        readSelection("totalAvgAll").innerHTML = `${totalAVGSum.toLocaleString()}`;
     },
     lepicOverkillCalcs(index,returnObject) {
         //this function is gonna look pretty scuffed for a bit, all I did was rip it from and combine all the functions from my lepic-only calc
