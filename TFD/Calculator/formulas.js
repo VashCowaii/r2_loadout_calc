@@ -87,7 +87,9 @@ const calcs = {
         const critRatePercentBonus = index.SkillCritRate;
         const critDamagePercentBonus = index.SkillCritDamage;
 
-        const totalSkillCritRate = (baseCharacterCritRate + baseCritRateBonus) * (1 + critRatePercentBonus)
+        const totalSkillCritRatePreCap = (baseCharacterCritRate + baseCritRateBonus) * (1 + critRatePercentBonus)
+        const totalSkillCritRate = Math.max(0,Math.min(totalSkillCritRatePreCap,1)) * (1 + (+globalRecords.skillCritCeiling/100))
+        const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);
         const totalSkillCritDamage = (baseCharacterCritDamage + baseCritDamageBonus) * (1 + critDamagePercentBonus)
 
         return {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage}
@@ -441,7 +443,8 @@ const customDamage = {
         //We're assuming you're using a fully enhanced reactor.
         const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * chillPowerRatio * singularPowerRatio * basePowerRatio;
     
-        const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
+        // const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
+        const critRate = totalSkillCritRate;//returnObject.totalSkillCritRate;
         const critDamage = totalSkillCritDamage;//returnObject.totalSkillCritDamage;
         const critComposite = 1 + (critRate * (critDamage-1));
     
@@ -468,7 +471,10 @@ const customDamage = {
         const attackPercent = index["FirearmATK%"];
         const crushBonus = settingsRef3.haileyUsePhysBonus ? 0.2 : 0;//haileyUsePhysBonus
 
-        const firearmCritRate = Math.min((1+(globalRecords.weaponCritCeiling/100)),(currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate));
+        // const firearmCritRate = Math.min((1+(globalRecords.weaponCritCeiling/100)),(currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate));
+
+        const firearmCritRatePreCap = (currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate);
+        const firearmCritRate = Math.max(0,Math.min(firearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100));
 
         const currentWeaponBaseWS = currentWeaponRef.baseWeakPoint
         const weakpointBonus = index["WeakPointDamage%"];
