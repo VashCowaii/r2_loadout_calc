@@ -1176,6 +1176,7 @@ else {
     readSelection("processorSub1").value = "";
     readSelection("processorSub2").value = "";
     userTriggers.updateComponentSelections();
+    readSelection("characterWeapon").value = "";
     userTriggers.updateSelectedWeapon();
     updateFormulas();
 }
