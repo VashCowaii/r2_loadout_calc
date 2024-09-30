@@ -777,6 +777,7 @@ let advancedUpdates = {
     readSelection("locksFiltersHolder").style.display = "none";
     readSelection("searchSettingsHolder").style.display = "none";
     readSelection("traitsSettingsHolder").style.display = "none";
+    readSelection("prismSettingsHolder").style.display = "none";
 
     readSelection(elemID).style.display = "flex";
   }

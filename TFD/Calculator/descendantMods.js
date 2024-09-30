@@ -696,7 +696,7 @@ const modData = {
         "desc": "Skill Cost -8.5%, Skill Effect Range +22.2%.",
         "stats": {
             "SkillRange": 0.225,
-            "SkillCooldown": -0.085
+            "SkillCost": -0.085
         },
     },
     "An Outstanding Investment": {

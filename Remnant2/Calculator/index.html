@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+    
     <link rel="stylesheet" href="/css/Remnant2/substat.css">
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
     <link rel="Icon" href="/images/Cowaii.png">
@@ -365,22 +366,6 @@
                                     </div>
                                 </div>
                                 <div class="selectItemDesc" id="relicDesc"></div> <!--description-->
-
-                                <div class="fragmentsContainer">
-                                    <div>Fragments:</div>
-                                    <div class="presetsSelectorBox adjustedSpacingSelector">
-                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment1" list="fragment1List" onchange="userTrigger.updateFragment('fragment','1')"> <!--selector-->
-                                        <datalist id="fragment1List"></datalist>
-                                    </div>
-                                    <div class="presetsSelectorBox adjustedSpacingSelector">
-                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment2" list="fragment2List" onchange="userTrigger.updateFragment('fragment','2')"> <!--selector-->
-                                        <datalist id="fragment2List"></datalist>
-                                    </div>
-                                    <div class="presetsSelectorBox adjustedSpacingSelector">
-                                        <input class="selectSelector selectMiniSelectorAdjustment hasHoverTooltip" id="fragment3" list="fragment3List" onchange="userTrigger.updateFragment('fragment','3')"> <!--selector-->
-                                        <datalist id="fragment3List"></datalist>
-                                    </div>
-                                </div>
 
                                 <div class="relicEffectsContainer">
                                     <div class="relicHealingContainer">
@@ -990,7 +975,20 @@
 
             </div>
 
-            <div class="traitsBox" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
+            <div class="traitsPrismsMegaBox">
+                <div class="traitsPrismsButtonsRow">
+                    <div class="traitsPrismsButtonRowButton" id="traitsTraitsButton" onclick="userTrigger.updateTraitsPrismDisplay('traitsMegaBox','traitsTraitsButton')">TRAITS</div>
+                    <div class="traitsPrismsButtonRowButton" id="traitsPrismButton" onclick="userTrigger.updateTraitsPrismDisplay('prismMegaBox','traitsPrismButton')" style="border: none;">PRISM</div>
+                </div>
+                <div class="traitsBox" id="traitsMegaBox"><div class="traitMegaTitleHeader"><span>TRAITS <span id="traitCount"></span>/<span id="traitCap"></span></span></div></div> <!-- Traits Box -->
+                <div class="basicsSummaryBox" id="prismMegaBox" style="display: none;flex-direction: column;">
+                    <div class="prismTitleMegaHeader">PRISM</div>
+                    <div class="prismIconBoxHolder">
+                        <img class="prismDisplayIcon" src="/brotherLibrary/plannerImages/prismImages/Prism of Jealousy.png">
+                    </div>
+                    <div class="basicsSummaryBox" id="plannerDesiredRows"></div>
+                </div>
+            </div>
             <!-- traitsMegaBox gets filled in automatically using the trait code -->
         </div>
 
@@ -1215,7 +1213,6 @@
                 </div>
 
                 <div class="hasHoverTooltip" id="currentlySupportedDamageCalcs">Currently supported damage calcs [?]</div>
-
                 <div class="advancedAbilityBoxHolder" id="havocFormBoxHolder" style="display: none;">
 
 
@@ -1252,11 +1249,13 @@
 <script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
 <script src="/Remnant2/Calculator/meleeClasses.js"></script> <!-- melee weapon archetype info -->
 <script src="/Remnant2/Calculator/breakdownsUI.js"></script> <!-- melee weapon archetype info -->
+<script src="/Remnant2/Calculator/legendary.js"></script> <!-- overall info -->
 <script src="/Remnant2/Calculator/data.js"></script> <!-- overall info -->
 <script src="/Remnant2/Calculator/archetypeCombos.js"></script> <!-- combo names -->
 <script src="/Remnant2/Calculator/postData.js"></script> <!-- things to do after loading data -->
 <script src="/MainJS/buildTime.js"></script> <!-- modify last updated time -->
 <script src="/Remnant2/Calculator/formulas.js"></script> <!-- calculation functions -->
+<script src="/Remnant2/Calculator/triggers.js"></script> <!-- calculation functions -->
 <script src="/Remnant2/Calculator/consumableConstructors.js"></script> <!-- consumable handling -->
 <script src="/Remnant2/Calculator/userTriggers.js"></script> <!-- react to user-triggered actions like clicks or input -->
 <script src="/Remnant2/Calculator/createHTML.js"></script> <!-- html templates of sorts -->

@@ -1653,11 +1653,13 @@ let cyclesLoop = {
             ring2: ringRef[CringSet[1]] || "",
             ring3: ringRef[CringSet[2]] || "",
             ring4: ringRef[CringSet[3]] || "",
-            relic: relicRef[Crelic[0]] || "",
-            fragment1: fragRef[CfragmentSet[0]] || "",
-            fragment2: fragRef[CfragmentSet[1]] || "",
-            fragment3: fragRef[CfragmentSet[2]] || "",
+            relic: relicRef[Crelic[0]] || ""
         }
+
+        globalRecords.greatRowRecords[0].name = fragRef[CfragmentSet[0]] || "";
+        globalRecords.greatRowRecords[1].name = fragRef[CfragmentSet[1]] || "";
+        globalRecords.greatRowRecords[2].name = fragRef[CfragmentSet[2]] || "";
+        // for (let i=4;i<=9;i++) {globalRecords.greatRowRecords[i-1].name = "";}
 
         globalRecords.greatConcoctionRecords = [...Cconcoction.map(item => {
             return concRef[item];
@@ -1690,11 +1692,13 @@ let cyclesLoop = {
             ring2: ringRef[CringSet[1]] || "",
             ring3: ringRef[CringSet[2]] || "",
             ring4: ringRef[CringSet[3]] || "",
-            relic: relicRef[Crelic[0]] || "",
-            fragment1: fragRef[CfragmentSet[0]] || "",
-            fragment2: fragRef[CfragmentSet[1]] || "",
-            fragment3: fragRef[CfragmentSet[2]] || "",
+            relic: relicRef[Crelic[0]] || ""
         }
+
+        globalRecords.greatRowRecords[0].name = fragRef[CfragmentSet[0]] || "";
+        globalRecords.greatRowRecords[1].name = fragRef[CfragmentSet[1]] || "";
+        globalRecords.greatRowRecords[2].name = fragRef[CfragmentSet[2]] || "";
+        // for (let i=4;i<=9;i++) {globalRecords.greatRowRecords[i-1].name = "";}
 
         globalRecords.greatConcoctionRecords = [...Cconcoction.map(item => {
             return concRef[item];

@@ -7,7 +7,7 @@ let starterTable = {
     //DR
     "FlatDR": 0,"Bulwark": 0,"BulwarkCap": 5,"REdamage": 1,"DMGKept": 1,"SelfDamageModifier": 1,"inStatusDamage": 0,
     //SHIELDS
-    "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,"ShieldDuration": 0,
+    "Shield": 0,"ShieldEFF": 0,"Shield%/S": 0,"ShieldDuration": 0,"ShieldCap": 1,
     //RESISTANCES
     "Bleed": 0,"Burn": 0,"Shock": 0,"Corrosive": 0,"Blight": 0,
     //WEIGHT
@@ -45,12 +45,12 @@ let starterTable = {
     "UniqueMulti": 1,
     //CRIT CHANCE
     "AllCritChance": 0,"RangedCritChance": 0,"MeleeCritChance": 0,"ChargeCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,
-    "ExplosiveCritChance": 0,"ElementalCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,"PrimaryCritChance": 0,"SecondaryCritChance": 0,
+    "ExplosiveCritChance": 0,"ElementalCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,"PrimaryCritChance": 0,"SecondaryCritChance": 0,"WeaponChargeDamage": 0,
     //CRIT DAMAGE
-    "AllCritDamage": 0,"RangedCritDamage": 0,"MeleeCritDamage": 0,"ChargeCritDamage": 0,
+    "AllCritDamage": 0,"RangedCritDamage": 0,"MeleeCritDamage": 0,"ChargeCritDamage": 0,"ExplosiveCritDamage": 0,
     //WEAKSPOT
     "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,"RangedWeakspot": 0,"MeleeWeakspot": 0,"ChargeWeakspot": 0,"HeavyWeaponWeakspot": 0,
-    "WeakspotDisable": 0,
+    "WeakspotDisable": 0,"WeakspotMultiplier": 1,
     //STAGGER
     "StaggerDamage": 0,
     //MELEE SPEED
@@ -76,7 +76,7 @@ let starterTable = {
     //AMMO
     "Reserves": 0,"ReservesMulti": 0,
     //MINIONS/SUMMONS
-    "SummonHealth": 0,"HeavyAmmo": 0,"HeavyAmmoActiveRegen": 0,"HeavyAmmoBaseMulti": 0,"HeavyAmmoRegenMulti": 1,
+    "SummonHealth": 0,"HeavyAmmo": 0,"HeavyAmmoActiveRegen": 0,"HeavyAmmoBaseMulti": 0,"HeavyAmmoRegenMulti": 1,"HeavyAmmoInfiite": 0,
     //MISC RANDM SHIT
     "Experience": 0,
     //OUTBOUND STATUS EFFECTS
@@ -93,6 +93,9 @@ let starterTable = {
     "outDRENCHED": 0,
     //INCOMING STATUS EFFECTS
     "HASTE": 0,
+    "HASTEBonus": 0,
+    "HASTEEffectiveness": 1,
+    "SLOWBonus": 0,
     "incomingStatus": 0,
     "inSLOW": 0,
     "inBLEED": 0,

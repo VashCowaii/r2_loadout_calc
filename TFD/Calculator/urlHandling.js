@@ -562,6 +562,10 @@ let manipulateURL = {
           readSelection("auxiliarySub2").value = auxiliaryRollKeys[+`${urlAuxiliary[0][4]}${urlAuxiliary[0][5]}`];
           readSelection("auxiliarySub1Value").value = +urlAuxiliary[1] || 0;
           readSelection("auxiliarySub2Value").value = +urlAuxiliary[2] || 0;
+          componentRef.auxiliarySub1 = auxiliaryRollKeys[+`${urlAuxiliary[0][2]}${urlAuxiliary[0][3]}`];
+          componentRef.auxiliarySub2 = auxiliaryRollKeys[+`${urlAuxiliary[0][4]}${urlAuxiliary[0][5]}`];
+          componentRef.auxiliarySub1Value = +urlAuxiliary[1] || 0;
+          componentRef.auxiliarySub2Value = +urlAuxiliary[2] || 0;
           // userTriggers.updateComponentSelections();
         }
         if (urlSensor) {
@@ -573,6 +577,10 @@ let manipulateURL = {
           readSelection("sensorSub2").value = sensorRollKeys[+`${urlSensor[0][4]}${urlSensor[0][5]}`];
           readSelection("sensorSub1Value").value = +urlSensor[1] || 0;
           readSelection("sensorSub2Value").value = +urlSensor[2] || 0;
+          componentRef.sensorSub1 = sensorRollKeys[+`${urlSensor[0][2]}${urlSensor[0][3]}`];
+          componentRef.sensorSub2 = sensorRollKeys[+`${urlSensor[0][4]}${urlSensor[0][5]}`];
+          componentRef.sensorSub1Value = +urlSensor[1] || 0;
+          componentRef.sensorSub2Value = +urlSensor[2] || 0;
           // userTriggers.updateComponentSelections();
         }
         if (urlMemory) {
@@ -584,6 +592,10 @@ let manipulateURL = {
           readSelection("memorySub2").value = memoryRollKeys[+`${urlMemory[0][4]}${urlMemory[0][5]}`];
           readSelection("memorySub1Value").value = +urlMemory[1] || 0;
           readSelection("memorySub2Value").value = +urlMemory[2] || 0;
+          componentRef.memorySub1 = memoryRollKeys[+`${urlMemory[0][2]}${urlMemory[0][3]}`];
+          componentRef.memorySub2 = memoryRollKeys[+`${urlMemory[0][4]}${urlMemory[0][5]}`];
+          componentRef.memorySub1Value = +urlMemory[1] || 0;
+          componentRef.memorySub2Value = +urlMemory[2] || 0;
           // userTriggers.updateComponentSelections();
         }
         if (urlProcessor) {
@@ -595,6 +607,10 @@ let manipulateURL = {
           readSelection("processorSub2").value = processorRollKeys[+`${urlProcessor[0][4]}${urlProcessor[0][5]}`];
           readSelection("processorSub1Value").value = +urlProcessor[1] || 0;
           readSelection("processorSub2Value").value = +urlProcessor[2] || 0;
+          componentRef.processorSub1 = processorRollKeys[+`${urlProcessor[0][2]}${urlProcessor[0][3]}`];
+          componentRef.processorSub2 = processorRollKeys[+`${urlProcessor[0][4]}${urlProcessor[0][5]}`];
+          componentRef.processorSub1Value = +urlProcessor[1] || 0;
+          componentRef.processorSub2Value = +urlProcessor[2] || 0;
           // userTriggers.updateComponentSelections();
         }
         if (urlAuxiliary || urlSensor || urlMemory || urlProcessor) {userTriggers.updateComponentSelections();}

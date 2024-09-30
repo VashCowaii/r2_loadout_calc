@@ -1,4 +1,4 @@
-// //class title combos that display above the prime perk
+//class title combos that display above the prime perk
 let archetypeCombos = {
     getTitleCombo(arch1,arch2) {
         let first,second;
@@ -32,6 +32,7 @@ let archetypeCombos = {
         "0111": "SHAMAN", //Alchemist Medic
         "0112": "DIABOLIST", //Alchemist Ritualist
         "0113": "CONJURER", //Alchemist Summoner
+        "0114": "PURIFIER", //Alchemist Warden
 
         "0203": "ARBITER", //Challenger Archon
         "0204": "LUMINARY", //Engineer Archon
@@ -44,6 +45,7 @@ let archetypeCombos = {
         "0211": "VIRTUOSO", //Medic Archon
         "0212": "HARBINGER", //Archon Ritualist
         "0213": "AUGUR", //Summoner Archon
+        "0214": "ORACLE", //Archon Warden
 
         "0304": "SENTINEL", //Challenger Engineer
         "0305": "CRUSADER", //Challenger Explorer
@@ -55,6 +57,7 @@ let archetypeCombos = {
         "0311": "GUARDIAN", //Challenger Medic
         "0312": "WARLORD", //Challenger Ritualist
         "0313": "OVERSEER", //Challenger Summoner
+        "0314": "DEFENDER", //Challenger Warden
 
         "0405": "PIONEER", //Explorer Engineer
         "0406": "BARRELSMITH", //Gunslinger Engineer
@@ -65,6 +68,7 @@ let archetypeCombos = {
         "0411": "SPECIALIST", //Medic Engineer
         "0412": "WRECKER", //Engineer Ritualist
         "0413": "MASTERMIND", //Summoner Engineer
+        "0414": "AUTOMATOR", //Warden Engineer
         
         "0506": "RAIDER", //Explorer Gunslinger
         "0507": "BLOODHOUND", //Explorer Handler
@@ -74,6 +78,7 @@ let archetypeCombos = {
         "0511": "SURVIVALIST", //Explorer Medic
         "0512": "OUTCAST", //Explorer Ritualist
         "0513": "HERALD", //Explorer Summoner
+        "0514": "DIVINER", //Explorer Warden
 
         "0607": "RIDGEBACK", //Gunslinger Handler
         "0608": "SHARPSHOOTER", //Gunslinger Hunter
@@ -82,6 +87,7 @@ let archetypeCombos = {
         "0611": "PEACEMAKER", //Gunslinger Medic
         "0612": "PUNISHER", //Gunslinger Ritualist
         "0613": "TORMENTOR", //Gunslinger Summoner
+        "0614": "VINDICATOR", //Gunslinger Warden
 
         "0708": "PREDATOR", //Handler Hunter
         "0709": "PROWLER", //Handler Invader
@@ -89,25 +95,33 @@ let archetypeCombos = {
         "0711": "SHEPHERD", //Handler Medic
         "0712": "HELLHOUND", //Handler Ritualist
         "0713": "BEASTMASTER", //Handler Summoner
+        "0714": "KINDRED", //Handler warden
         
         "0809": "ASSASSIN", //Hunter Invader
         "0810": "SPIRIT OF STALKING", //Hunter Invoker
         "0811": "RANGER", //Hunter Medic
         "0812": "HEADHUNTER", //Hunter Ritualist
         "0813": "PAINBRINGER", //Hunter Summoner
+        "0814": "LIBERATOR", //Hunter Warden
 
         "0910": "SPIRIT OF VIOLENCE", //Invader Invoker
         "0911": "BLOODLETTER", //Medic Invader
         "0912": "REAPER", //Invader Ritualist
         "0913": "TYRANT", //Summoner Invader
+        "0914": "DECEIVER", //Warden Invader
 
         "1011": "SPIRIT OF HEALING", //Medic Invoker
         "1012": "SPIRIT OF PAIN", //Ritualist Invoker
         "1013": "SPIRIT OF DARKNESS", //Summoner Invoker
+        "1014": "SPIRIT OF PROTECTION", //Warden Invoker
 
         "1112": "PLAGUE DOCTOR", //Medic Ritualist
         "1113": "DEFILER", //Medic Summoner
+        "1114": "ADVOCATE", //Medic Warden
         
         "1213": "GRAVELORD", //Summoner Ritualist
+        "1214": "OCCULTIST", //Warden Ritualist
+
+        "1314": "HERETIC", //Warden Summoner
     }
 }

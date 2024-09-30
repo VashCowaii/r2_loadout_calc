@@ -1,4 +1,5 @@
 importScripts(
+    '/Remnant2/Calculator/legendary.js',
     '/Remnant2/Calculator/data.js',
     '/Remnant2/Optimizer/combinations.js',
     '/Remnant2/Calculator/formulas.js',
@@ -113,6 +114,30 @@ self.onmessage = function(event) {
             if (pathRef) {pullStatsCall(starterTable,pathRef.stats);}
         }
 
+        // recordPath = globalRecords.greatRowRecords;
+        // console.log(globalRecords.greatRowRecords)
+        // for (let i=4;i<=recordPath.length;i++) {
+        //     let entry = recordPath[i-1].name;
+        //     let pathRef = i!=9 ? prismRowOptions[entry] : legendaryPerks[entry];
+
+        //     if (pathRef) {pullStatsCall(starterTable,pathRef.stats);}
+        // }
+
+        for (let i=4;i<=9;i++) {
+            let categoryRef = i<9 ? prismRowOptions : legendaryPerks;
+            let current = categoryRef[globalRecords.greatRowRecords[i-1].name];
+            if (current.color === "Combo") {
+                pullStatsCall(starterTable,categoryRef[current.requirements[0]].stats);
+                pullStatsCall(starterTable,categoryRef[current.requirements[1]].stats);
+                continue;
+            }
+            else {
+                pullStatsCall(starterTable,current.stats);
+            }
+            // console.log(globalRecords.greatRowRecords[i-1].name)
+        }
+        console.log(globalRecords.greatRowRecords)
+
         //Abilities, passives, prime perks, are all static within queries. Shifted their pullStats evaluations to the cycle worker initiation so they'll be permnantly a part of the starter table within a query
         //Ideally this should make things faster but we'll see. Custom functions still have to be pulled mid-cycle, it's just the base stats that this can be done with.
         let archsRecord = globalRecords.archs;
@@ -157,6 +182,16 @@ self.onmessage = function(event) {
             const conditionalPath = traitPath.usesConditional;
             formulasValues.readActiveConditionalsTraits(globalRecords.tieredFunctionStorage,conditionalPath,traitLevel);
         }
+
+        recordPath = globalRecords.greatRowRecords;
+        for (let i=4;i<=recordPath.length;i++) {
+            let entry = recordPath[i-1].name;
+            let pathRef = i!=9 ? prismRowOptions[entry] : legendaryPerks[entry];
+            const conditionalPath = pathRef.usesConditional;
+
+            formulasValues.readActiveConditionalsGeneralCYCLES(globalRecords.tieredFunctionStorage,null,conditionalPath);
+        }
+
         globalRecords.tieredFunctionStorageKeys = Object.keys(globalRecords.tieredFunctionStorage);
         
         starterTable = {...starterTable};//Why is this even necessary

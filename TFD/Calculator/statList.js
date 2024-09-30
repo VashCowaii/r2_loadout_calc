@@ -28,6 +28,8 @@ const greatTableKnowerOfAll = {
     "SkillDuration": 0,
     "SkillRange": 0,
 
+    //BASE OPTIMIZATION POWER BONUS
+    "PowerOptimization": 0,
     //SKILL POWER BOOST RATIOS
     "PowerRatioBase": 0,
     "PowerRatioNonAttribute": 0,"PowerRatioElectric": 0,"PowerRatioToxic": 0,"PowerRatioChill": 0,"PowerRatioFire": 0,

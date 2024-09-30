@@ -1,9 +1,26 @@
 //Used to populate the page with given item selections
 function pagePopulation() {
   let populate = createHTML.populateGear;
+  
+
   populate("archs1List",classInfo);
   populate("archs2List",classInfo);
   if (document.location.href.includes("Calculator")) {
+
+    let populatePrism = createHTML.Planner.populateGearPlannerVariant;
+    plannerOutcomebox = readSelection("plannerDesiredRows");
+    plannerOutcomebox.innerHTML = ``;
+    for (let i=1;i<=9;i++) {
+        if (i===1) {plannerOutcomebox.innerHTML += `<div class="prismTitleTypeHeader">FRAGMENTS</div>`}
+        else if (i===4) {plannerOutcomebox.innerHTML += `<div class="prismTitleTypeHeader">PRISM</div>`}
+        const imageOverride = i!=9 ? null : "/brotherLibrary/plannerImages/iconImages/LegendaryStar.png";
+        plannerOutcomebox.innerHTML += createHTML.Planner.plannerRowBox(i,imageOverride);
+    }
+    for (let i=4;i<=8;i++) {
+      populatePrism(`PrismRow${i}List`,prismRowOptions) 
+    }
+    populatePrism("PrismRow9List",legendaryPerks);
+
     let calcPops = [
       {"Name": "helmetsList", "DataSet": helmets},
       {"Name": "chestsList", "DataSet": chests},
@@ -15,9 +32,9 @@ function pagePopulation() {
       {"Name": "rings3List", "DataSet": rings},
       {"Name": "rings4List", "DataSet": rings},
       {"Name": "relicsList", "DataSet": relics},
-      {"Name": "fragment1List", "DataSet": fragments},
-      {"Name": "fragment2List", "DataSet": fragments},
-      {"Name": "fragment3List", "DataSet": fragments},
+      {"Name": "PrismRow1List", "DataSet": fragments},
+      {"Name": "PrismRow2List", "DataSet": fragments},
+      {"Name": "PrismRow3List", "DataSet": fragments},
       {"Name": "primariesList", "DataSet": primaries},
       {"Name": "meleesList", "DataSet": melees},
       {"Name": "secondariesList", "DataSet": secondaries},
@@ -37,6 +54,20 @@ function pagePopulation() {
   }
   
   if (document.location.href.includes("Optimizer")) {
+    let populatePrism = createHTML.Planner.populateGearPlannerVariant;
+    plannerOutcomebox = readSelection("plannerDesiredRows");
+    plannerOutcomebox.innerHTML = ``;
+    for (let i=4;i<=9;i++) {
+        if (i===1) {plannerOutcomebox.innerHTML += `<div class="prismTitleTypeHeader">FRAGMENTS</div>`}
+        else if (i===4) {plannerOutcomebox.innerHTML += `<div class="prismTitleTypeHeader">PRISM</div>`}
+        const imageOverride = i!=9 ? null : "/brotherLibrary/plannerImages/iconImages/LegendaryStar.png";
+        plannerOutcomebox.innerHTML += createHTML.Planner.plannerRowBox(i,imageOverride);
+    }
+    for (let i=4;i<=8;i++) {
+      populatePrism(`PrismRow${i}List`,prismRowOptions) 
+    }
+    populatePrism("PrismRow9List",legendaryPerks);
+
     let optimizerArmorPops = [
       {"Name": "helmets", "DataSet": helmets},{"Name": "chests", "DataSet": chests},{"Name": "legs", "DataSet": legs},{"Name": "hands", "DataSet": hands},
     ];

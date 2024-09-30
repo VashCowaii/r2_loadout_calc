@@ -5,6 +5,42 @@
         <li>asdf</li>
     </ul>
 </div> -->
+<!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
+<div>
+    <h1>Sept 30, 2024 - THE ESIEMO CALCS AND BOSS RESISTS UPDATE</h1>
+    I had to change a lot of things in this update to make life easier in the future. As such, if you see anything jank, please let me know in the discord.
+    <ul>
+        <li>Added calculations for Esiemo and ALL his abilities and transcendent mods, and updated ability breakdowns for Kyle
+            <ul>
+                <li>Most of the math was done before their rework update, so some are temporarily disabled until I can confirm all of their math is still the same, which should not take me very long to do. Only reason they aren't done already is because I was playing Remnant 2's new DLC.</li>
+            </ul>
+        </li>
+        <li>Added resistance data for all bosses to the boss stats page, but also added a dropdown on the calculator page to allow users to choose the boss they want to see numbers adjusted to. This means that without needing to go and attack a boss, you can tell how much damage you will deal to it just from lookin at the calc. I'll have a video on this out separately, later.</li>
+        <li>Added support for the following ability breakdowns for characters that did not have them before:
+            <ul>
+                <li>Bunny: Electric Condense</li>
+                <li>Bunny: Thrill Bomb</li>
+                <li>Hailey: Storm Snare</li>
+                <li>Hailey: Cryo Round</li>
+                <li>Lepic: Overclock</li>
+                <li>Lepic: Power Unit Change</li>
+                <li>Lepic: Nerve Infiltration</li>
+                <li>Lepic: Traction Grenade</li>
+                <li>Lepic: Firearm Master</li>
+                <li>Lepic: Regenerative Braking</li>
+            </ul>
+        </li>
+        <li>Started adding ability specific statistics to each ability breakdown, so say what the range is or maybe an ability has more than 1 range stat to factor in, they'll display in rows beneath the discription.
+            <ul>
+                <li>I have NOT added this to every ability yet, but I will. Only clarifying this so if you see it pop up on some but not others, that's why. When I add descendant math in the future for new characters, I'll have it already for them, but I'll have to circle back to older additions to my calc and add them.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where URL logging didn't properly retain the values a user input. It kept the stat names correctly, but the values were lost on a page load which would force the value to register as zero, causing the calc to automatically provided the highest values possible for the associated rolls. Note that reactors did not have this issue, only component substat numbers.</li>
+        <li>Fixed an issue where weapon attribute damage on Zenith wouldn't populate for anything but Chill damage</li>
+        <li>Fixed an issue where on the boss stats page, Gluttony listed its weak point physical types(pierce, burst, etc.) to be the same as Devourer's, which isn't correct. Only the physical type images were incorrect, the rest of of Gluttony's info is fine.</li>
+    
+    </ul>
+</div>
 <div>
     <h1>Sept 18, 2024</h1>
     <ul>

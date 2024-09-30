@@ -130,15 +130,14 @@
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_04.png" id="damageAbilityIcon4" onclick="userTriggers.updateSelectedAbilityBreakdown(4,'damageAbilityIcon4')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_00.png" id="damageAbilityIcon5" onclick="userTriggers.updateSelectedAbilityBreakdown(5,'damageAbilityIcon5')">
                 </div>
-                <!-- <div class="totalHealingBox">
-                    <div class="totalHealingBoxHalf hasHoverTooltip">
-                        <div style="padding-right: 5px;">Fire Rate UP</div>
-                        <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" id="USEFireRateUP" onchange="settings.updateCharacterSettings('Lepic','Overkill')">
-                            <span class="toggleSlider"></span>
-                        </label>
+
+                <div class="selectionSelectorBoxes">
+                    <div class="selectSelectorTitle">&nbsp;RESISTS:&nbsp;</div>
+                    <div class="presetsSelectorBox">
+                        <input class="selectSelector" id="boss" list="bossList" onchange="userTriggers.updateSelectedBoss()"> <!--selector-->
+                        <datalist id="bossList"></datalist>
                     </div>
-                </div> -->
+                </div>
 
 
                 <div class="abilityDamageTabHolder" id="centerAbilityBreakdownTabHolders"><!-- ABILITY BREAKDOWN CONTAINERS -->
@@ -146,26 +145,31 @@
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader1"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader1"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody1"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownFooter1"></div>
                     </div>
                     <div class="abilityBreakdownTab" id="abilityBreakdownTab2">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader2"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader2"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody2"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownFooter2"></div>
                     </div>
                     <div class="abilityBreakdownTab" id="abilityBreakdownTab3">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader3"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader3"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody3"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownFooter3"></div>
                     </div>
                     <div class="abilityBreakdownTab" id="abilityBreakdownTab4">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader4"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader4"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody4"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownFooter4"></div>
                     </div>
                     <div class="abilityBreakdownTab" id="abilityBreakdownTab5">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader5"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader5"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody5"></div>
+                        <div class="abilityBreakdownBody" id="abilityBreakdownFooter5"></div>
                     </div>
                 </div>
 
@@ -183,7 +187,7 @@
                         <div class="breakdownTabHeader">DESCENDANT</div>
                         <div class="breakdownTabBody">
 
-                            <div class="selectionSelectorBoxes">
+                            <div class="selectionSelectorBoxes" style="margin: 5px;margin-bottom: 16px;">
                                 <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
                                 <div class="presetsSelectorBox">
                                     <input class="selectSelector" id="character" list="characterList" onchange="userTriggers.updateSelectedCharacter()"> <!--selector-->
@@ -927,6 +931,7 @@
         </div>
 
         <div class="mainGridRow2" style="display: flex;width: 100%;">
+
             <div style="display: flex;width: 100%;flex-direction: column;max-width: 300px;">
                 <div class="totalHealingBox">
                     <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
@@ -964,6 +969,7 @@
 <script src="/TFD/Calculator/reactors.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/components.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/characterData.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/bossData.js"></script>
 <script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
