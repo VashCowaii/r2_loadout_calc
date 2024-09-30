@@ -105,9 +105,13 @@
                                     <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('traitsSettingsHolder')">
                                         <div class="filterSelectionTitleText">ARCHS & TRAITS</div>
                                     </button>
+                                    <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('prismSettingsHolder')">
+                                        <div class="filterSelectionTitleText">PRISM</div>
+                                    </button>
                                 </div>
     
                                 <div class="filterRowHolder" id="filterRowHolder">
+
                                     <div class="filtersBoxHalf" id="statsFiltersHolder"> <!-- Stats filters box -->
                                         <div class="filtersQuarterHeader">STATS</div>
                                         <div class="filtersQuarterDescription">Stat Filters are used to retrieve any and all items that ever use the stats you specify here. These apply first. Enter manually, or use presets.<br>Or both. Both is good.</div>
@@ -197,7 +201,11 @@
                                                     </div>
                                                 </div>
                                                 <div id="relicsOcclusionsContainer" class="locksBox"></div>
-                                                <div class="statFiltersRowMiniHeader">FRAGMENTS</div>
+                                                
+
+                                                <!-- PRISM OCCLUSION -->
+                                                <div class="statFiltersRowHeader">FRAGMENTS</div>
+                                                <!-- <div class="statFiltersRowMiniHeader">FRAGMENTS</div> -->
                                                 <div class="occlusionsToggleBox">
                                                     <span class="occlusionOption">Exclusion</span>
                                                     <label class="toggleContainer">
@@ -214,6 +222,7 @@
                                                     </div>
                                                 </div>
                                                 <div id="fragmentsOcclusionsContainer" class="locksBox"></div>
+
                                                 <!-- CONSUMABLES OCCLUSION -->
                                                 <div class="statFiltersRowHeader">CONSUMABLES</div>
                                                 <!-- ARMOR OCCLUSION -->
@@ -923,6 +932,23 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="filtersBoxHalf" id="prismSettingsHolder" style="display: none;">
+                                        <div class="cyclesSettingsBox">
+                                            <div class="statisticSettingsContainer">
+                                                
+                                                <!-- <div style="white-space: normal;">Unlike the main calculator, we don't give the option to disable item calculations. If you want to stop an item from calculating, simply exclude it in the filters.</div> -->
+                                                <div class="basicsSummaryBox" id="prismMegaBox" style="flex-direction: column;">
+                                                    <div class="prismTitleMegaHeader">PRISM</div>
+                                                    <div class="prismIconBoxHolder">
+                                                        <img class="prismDisplayIcon" src="/brotherLibrary/plannerImages/prismImages/Prism of Jealousy.png">
+                                                    </div>
+                                                    <div class="basicsSummaryBox" id="plannerDesiredRows"></div>
+                                                </div>
+                                                <!-- traitsMegaBox gets filled in automatically using the trait code -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1153,6 +1179,8 @@
 <script src="/htmlTemplates/injectMainHTML.js"></script>
 <script src="/htmlTemplates/injectR2HTML.js"></script>
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
+<script src="/Remnant2/Calculator/legendary.js"></script>
+<script src="/Remnant2/Calculator/triggers.js"></script>
 <script src="/Remnant2/Calculator/data.js"></script>
 <script src="/Remnant2/Calculator/archetypeCombos.js"></script> <!-- combo names -->
 <script src="/Remnant2/Calculator/postData.js"></script>

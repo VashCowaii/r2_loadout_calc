@@ -7,7 +7,7 @@ function generateRecords(name,limit) {
 }
 generateRecords("archetype",2);
 generateRecords("ring",4);
-generateRecords("fragment",3);
+generateRecords("PrismRow",3);
 generateRecords("concoction",7);
 generateRecords("quickUse",2);
 generateRecords("rangedMutator",2);

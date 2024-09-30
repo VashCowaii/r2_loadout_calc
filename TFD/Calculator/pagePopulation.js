@@ -406,6 +406,7 @@ const userTriggers = {
         userTriggers.checkInvalidComponentSelections();
 
         const auxiliarySub1Value = readSelection("auxiliarySub1Value");
+        console.log(auxiliarySub1Value.value)
         const auxiliarySub2Value = readSelection("auxiliarySub2Value");
         if (!auxiliaryRolls[readSelection("auxiliarySub1").value]) {readSelection("auxiliarySub1").value = "";}
         if (!auxiliaryRolls[readSelection("auxiliarySub2").value]) {readSelection("auxiliarySub2").value = "";}
@@ -433,6 +434,8 @@ const userTriggers = {
 
         if (globalRef.processorSub1Value === 0 || globalRef.processorSub1 != readSelection("processorSub1").value) {processorSub1Value.value = 10000000;}
         if (globalRef.processorSub2Value === 0 || globalRef.processorSub2 != readSelection("processorSub2").value) {processorSub2Value.value = 10000000;}
+
+        console.log(auxiliarySub1Value.value)
 
         globalRef.auxiliary = readSelection("auxiliary").value;
         globalRef.auxiliarySub1 = readSelection("auxiliarySub1").value;
@@ -566,7 +569,7 @@ const userTriggers = {
         const polarityImagePath = polarityImages[polarity];
         const cost = categoryRef[inputRef.value].cost;
 
-        //if an augment was equipped, update the ability array.
+        //if an augment was equipped, update the ability array
         if (+modSlot === 1) {globalRecords.character.abilityArray = [...categoryRef[inputRef.value].skillOverrides];}
 
         //If the mod has no category, then remove the category from view. Otherwise, show it.
@@ -592,7 +595,13 @@ const userTriggers = {
         if (!parentIsCharacterUpdate) {userTriggers.updateSelectedCharacter();}
         if (!parentCall) {updateFormulas();}
         
-    }
+    },
+    updateSelectedBoss() {
+        console.log(readSelection("boss").value)
+        if (!bosses[readSelection("boss").value]) {readSelection("boss").value = "None (True Damage)"}
+        globalRecords.boss.currentBoss = readSelection("boss").value;
+        updateFormulas();
+    },
 }
 
 const pagePopulation = {
@@ -656,6 +665,8 @@ const pagePopulation = {
         {"Name": "weaponSub3List", "DataSet": weaponSubstatList},
         {"Name": "weaponSub4List", "DataSet": weaponSubstatList},
 
+        {"Name": "bossList", "DataSet": bosses},
+
     ],
     populateGear(elemID,collection) {
         const select = readSelection(elemID);
@@ -696,34 +707,102 @@ const pagePopulation = {
 }
 
 const settings = {
-    updateCharacterSettings(character,settingsBracket) {
-        const settingsRef = characters[character].characterSettings[settingsBracket];
-        settings.customSettingsUpdates[settingsBracket](settingsRef);
-        updateFormulas();
+    updateCharacterSettings(character,isParentCall) {
+        const settingsRef = characters[character].characterSettings;
+        const arrayRef = globalRecords.character.abilityArray;
+        settings.customSettingsUpdates[character](settingsRef,arrayRef);
+        
+        if (!isParentCall) {updateFormulas();}
     },
     "customSettingsUpdates": {
-        Overkill(settingsRef) {
-            settingsRef.USEFireRateUP = readSelection("USEFireRateUP").checked;
-            settingsRef.USESharpPrecisionShot = readSelection("USESharpPrecisionShot").checked;
+        // characterName(settingsRef,arrayRef) {
+        //     if (arrayRef[0] === 0) {}//1
+        //     if (arrayRef[1] === 0) {}//2
+        //     if (arrayRef[2] === 0) {}//3
+        //     if (arrayRef[3] === 0) {}//4
+        //     if (arrayRef[4] === 0) {}//passive
+        // },
+        Esiemo(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {
+                settingsRef.timeBombStacks = +readSelection("timeBombStacks").value;
+            }//1
+            if (arrayRef[1] === 0) {}//2
+            else {settingsRef.blastStacksPowerBonus = 1;}//set the multiplier to x1 when using cluster bombs, so we don't use the bonus on accident
+            if (arrayRef[2] === 0) {
+                settingsRef.propagandaBombStacks = 0;
+                settingsRef.guidedBombStacks = +readSelection("guidedBombStacks").value;
+            }//3
+            else {
+                settingsRef.guidedBombStacks = 0;
+                settingsRef.propagandaBombStacks = +readSelection("propagandaBombStacks").value;
+            }
+            if (arrayRef[3] === 0) {
+                settingsRef.isMadnessActive = readSelection("isMadnessActive").checked;
+            }//4
+            else {
+                settingsRef.isNarcissimActive = readSelection("isNarcissimActive").checked;
+            }
+            if (arrayRef[4] === 0) {}//passive
         },
-        LightningEmission(settingsRef) {
-            settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider3").value;
+        Lepic(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {
+                settingsRef.lepicOverclockBonus = readSelection("lepicOverclockBonus").checked;
+            }//2
+            else if (arrayRef[1] === "Power Unit Change") {
+                settingsRef.lepicPowerUnitBonus = readSelection("lepicPowerUnitBonus").checked;
+            }
+            else if (arrayRef[1] === "Nerve Infiltration") {
+                settingsRef.lepicNerveBonus = readSelection("lepicNerveBonus").checked;
+            }
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {
+                settingsRef.USEFireRateUP = readSelection("USEFireRateUP").checked;
+                settingsRef.USESharpPrecisionShot = readSelection("USESharpPrecisionShot").checked;
+            }//4
+            if (arrayRef[4] === 0) {}//passive
+            else if (arrayRef[4] === "Firearm Master") {
+                settingsRef.lepicFirearmMasterBonus = readSelection("lepicFirearmMasterBonus").checked;
+            }
         },
-        MagneticForce(settingsRef) {
-            settingsRef.magForceBarState = +readSelection("kyleMagForceBar4").value;
+        Bunny(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {
+                // settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
+            }//3
+            else {
+                // settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
+            }
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {
+                settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
+            }//passive
         },
-        ColdFury(settingsRef) {
-            settingsRef.stackCount = +readSelection("haileyColdFuryBar4").value;
+        Kyle(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {
+                settingsRef.magForceBarState = +readSelection("kyleMagForceBar4").value;
+            }//passive
         },
-        Retreat(settingsRef) {
-            settingsRef.distance = +readSelection("haileyDistanceBar4").value;
+        Hailey(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {
+                settingsRef.stackCount = +readSelection("haileyColdFuryBar4").value;
+            }//3
+            if (arrayRef[3] === 0) {
+                settingsRef.haileyUseWeakspots = readSelection("haileyUseWeakspots").checked;
+                settingsRef.haileyUsePhysBonus = readSelection("haileyUsePhysBonus").checked;
+                settingsRef.haileyUseCryoDamage = readSelection("haileyUseCryoDamage").checked;
+            }//4
+            if (arrayRef[4] === 0) {
+                settingsRef.distance = +readSelection("haileyDistanceBar4").value;
+            }//passive
         },
-        Zenith(settingsRef) {
-            settingsRef.haileyUseWeakspots = readSelection("haileyUseWeakspots").checked;
-            settingsRef.haileyUsePhysBonus = readSelection("haileyUsePhysBonus").checked;
-            settingsRef.haileyUseCryoDamage = readSelection("haileyUseCryoDamage").checked;
-            settingsRef.haileyUsePyroDR = readSelection("haileyUsePyroDR").checked;
-        }
     }
 
 }
@@ -1036,14 +1115,26 @@ const formulasValues = {
         index[memory[globalRef.memory].headerStat] += memory[globalRef.memory].value;
         index[processor[globalRef.processor].headerStat] += processor[globalRef.processor].value;
 
-        //pull substat data
-        const subsArray = [
-            auxiliaryRolls[globalRef.auxiliarySub1].stats,auxiliaryRolls[globalRef.auxiliarySub2].stats,
-            sensorRolls[globalRef.sensorSub1].stats,sensorRolls[globalRef.sensorSub2].stats,
-            memoryRolls[globalRef.memorySub1].stats,memoryRolls[globalRef.memorySub2].stats,
-            processorRolls[globalRef.processorSub1].stats,processorRolls[globalRef.processorSub2].stats,
-        ];
-        formulasValues.pullStatsArray(index,subsArray);
+        // //pull substat data
+        // const subsArray = [
+        //     auxiliaryRolls[globalRef.auxiliarySub1].stats,auxiliaryRolls[globalRef.auxiliarySub2].stats,
+        //     sensorRolls[globalRef.sensorSub1].stats,sensorRolls[globalRef.sensorSub2].stats,
+        //     memoryRolls[globalRef.memorySub1].stats,memoryRolls[globalRef.memorySub2].stats,
+        //     processorRolls[globalRef.processorSub1].stats,processorRolls[globalRef.processorSub2].stats,
+        // ];
+        // formulasValues.pullStatsArray(index,subsArray);
+
+        index[globalRef.auxiliarySub1] += globalRef.auxiliarySub1Value || 0;
+        index[globalRef.auxiliarySub2] += globalRef.auxiliarySub2Value || 0;
+
+        index[globalRef.sensorSub1] += globalRef.sensorSub1Value || 0;
+        index[globalRef.sensorSub2] += globalRef.sensorSub2Value || 0;
+
+        index[globalRef.memorySub1] += globalRef.memorySub1Value || 0;
+        index[globalRef.memorySub2] += globalRef.memorySub2Value || 0;
+
+        index[globalRef.processorSub1] += globalRef.processorSub1Value || 0;
+        index[globalRef.processorSub2] += globalRef.processorSub2Value || 0;
 
         //later, look into doing this in a way that just has the parts provide a +1 to greatTable during the earlier pullstats section,
         //then no for loops are needed. low priority, but it'd be better
@@ -1159,6 +1250,8 @@ pagePopulation.pagePopulation();
 let feedCheck = (new URL(document.location)).searchParams;
 if (feedCheck != "") {manipulateURL.importURLparameters();}
 else {
+    readSelection("character").value = "Hailey"
+    userTriggers.updateSelectedCharacter();
     userTriggers.updateSelectedAbilityBreakdown(4,"damageAbilityIcon4");
     readSelection("reactorSub1").value = "Singular Power Boost";
     readSelection("reactorSub2").value = "Skill ATK - Colossus";
@@ -1180,3 +1273,6 @@ else {
     userTriggers.updateSelectedWeapon();
     updateFormulas();
 }
+
+readSelection("boss").value = "Devourer";
+userTriggers.updateSelectedBoss();

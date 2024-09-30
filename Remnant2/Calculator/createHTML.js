@@ -204,7 +204,7 @@ let createHTML = {
       },
       plannerRowBox(rowID,iconImageOverride) {
         return `
-        <div class="basicsSummaryContainer hasHoverTooltip" id="PrismRow${rowID}Holder">
+        <div class="basicsSummaryContainerPrism hasHoverTooltip" id="PrismRow${rowID}Holder">
             <div class="prismRowIconPlusName">
               <div class="fragIconRowBox">
                   <img class="fragRowIcon" src=${iconImageOverride ?? "/brotherLibrary/plannerImages/iconImages/Blank.png"} id="PrismRow${rowID}Icon">

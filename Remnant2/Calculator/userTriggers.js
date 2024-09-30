@@ -313,18 +313,19 @@ let userTrigger = {
     },
     //Triggers whenever a new fragment is selected
     updateFragment(elem,ID,parent) {
+      // userTrigger.updateFragment('fragment','1')
       userTrigger.checkDuplicateSelection(elem,ID,`updateFragment`,`several`,3);
-      let selectedValue = readSelection(`fragment${ID}`);
+      let selectedValue = readSelection(`PrismRow${ID}`);
       selectedValue.value = !gear.fragments[selectedValue.value] ? "" : selectedValue.value;//clear invalid selections.
       let fragmentName = selectedValue.value;
-      globalRecords.accessories[`fragment${ID}`] = fragmentName
+      globalRecords.prism[`PrismRow${ID}`] = fragmentName
   
       let fragDescription = fragments[fragmentName].desc
       let levelValue = fragments[fragmentName].value;
       if (fragDescription.includes("%")) {levelValue *= 100;}
       let adjustedDescription = fragDescription.replace("VALUE1.1",levelValue.toFixed(2));
   
-      tooltipStorage[`fragment${ID}`] = adjustedDescription.replace("VALUE1.1",levelValue.toFixed(2));
+      tooltipStorage[`PrismRow${ID}`] = adjustedDescription.replace("VALUE1.1",levelValue.toFixed(2));
   
       if (!parent) {updateFormulas();}
     },
@@ -492,6 +493,7 @@ let userTrigger = {
               //Checks ID's on ACTIVE selections for a dupe, non-matching ID, that isn't blank.
               //If criteria met, swap places like in game.
               if ((current===selectedOption) && ((`${collection}${i}`)!=(`${collection}${value}`)) && current) {
+                console.log("HEY HOWYD")
                 globalRecords[`${collection}${i}Old`]=globalRecords[`${collection}${value}Old`];
                 readSelection(`${collection}${i}`).value=globalRecords[`${collection}${value}Old`];
                 oppositeValue = i;
@@ -503,7 +505,7 @@ let userTrigger = {
         //Assigns currently selected option to the "Old" variable for that selection for the sake
         //of tracking selection swaps
         globalRecords[`${option1}Old`]=selectedOption;
-        if (updateOpposing===true && collection != "fragment"){userTrigger[functionName](collection,oppositeValue,true);}//update the swapped item, if not a fragment(they have no displays)
+        if (updateOpposing===true && collection != "PrismRow"){userTrigger[functionName](collection,oppositeValue,true);}//update the swapped item, if not a fragment(they have no displays)
     },
     //Used to modify the description of any given item, using substat color specifications from substatColorMods{}
     updateSubstatColor(description) {
@@ -525,5 +527,18 @@ let userTrigger = {
       let regExNumbers = new RegExp(`\\b(\\d[%\\w]*)`, "gi");
       description = description.replace(regExNumbers, `<span class="numberTag">$&</span>`);
       return description;
-    }
+    },
+    updateTraitsPrismDisplay(tabToChange,buttonToHighlight) {
+      readSelection("traitsMegaBox").style.display = "none";
+      readSelection("prismMegaBox").style.display = "none";
+      readSelection("traitsTraitsButton").style.border = "none";
+      readSelection("traitsPrismButton").style.border = "none";
+
+      readSelection(tabToChange).style.display = "flex";
+
+      // readSelection(buttonToHighlight).style.borderTop = "3px solid #434343";
+      // readSelection(buttonToHighlight).style.borderBottom = "3px solid #434343";
+      readSelection(buttonToHighlight).style.borderTop = "3px solid white";
+      readSelection(buttonToHighlight).style.borderBottom = "3px solid white";
+    },
 }

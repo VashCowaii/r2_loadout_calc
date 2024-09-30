@@ -503,7 +503,52 @@ helmets = {
 	  "image": "/brotherLibrary/helmetsImages/Zealot's Hat.png",
 	  "tags": [],
 	  "placementID": "H33"
-	}
+	},
+	"Welding Goggles": {
+	  "SLOT": "Head",
+	  "stats": {
+		"Armor": 9,
+		"Encumbrance": 4,
+		"Bleed": 0,
+		"Burn": 3,
+		"Shock": 0,
+		"Corrosive": 0,
+		"Blight": 0
+	  },
+	  "image": "/brotherLibrary/helmetsImages/Welding Goggles.png",
+	  "tags": [],
+	  "placementID": "H34"
+	},
+	"Nanoplated Transmitter": {
+	  "SLOT": "Head",
+	  "stats": {
+		"Armor": 12.4,
+		"Encumbrance": 5,
+		"Bleed": 2,
+		"Burn": 1,
+		"Shock": 0,
+		"Corrosive": 0,
+		"Blight": 2
+	  },
+	  "image": "/brotherLibrary/helmetsImages/Nanoplated Transmitter.png",
+	  "tags": [],
+	  "placementID": "H35"
+	},
+	"Phetyr Sensor": {
+	  "SLOT": "Head",
+	  "stats": {
+		"Armor": 19.8,
+		"Encumbrance": 9.8,
+		"Bleed": 3,
+		"Burn": 3,
+		"Shock": 3,
+		"Corrosive": 4,
+		"Blight": 5
+	  },
+	  "image": "/brotherLibrary/helmetsImages/Phetyr Sensor.png",
+	  "tags": [],
+	  "placementID": "H36"
+	},
   }
 chests = {
 	"": {
@@ -902,7 +947,37 @@ chests = {
 	  "image": "/brotherLibrary/chestsImages/Zealot's Overcoat.png",
 	  "tags": [],
 	  "placementID": "C26"
-	}
+	},
+	"Nanoplated Vestments": {
+	  "SLOT": "Chest",
+	  "stats": {
+		"Armor": 29.6,
+		"Encumbrance": 12,
+		"Bleed": 4,
+		"Burn": 2,
+		"Shock": 0,
+		"Corrosive": 0,
+		"Blight": 4
+	  },
+	  "image": "/brotherLibrary/chestsImages/Nanoplated Vestments.png",
+	  "tags": [],
+	  "placementID": "C27"
+	},
+	"Phetyr Chassis": {
+	  "SLOT": "Chest",
+	  "stats": {
+		"Armor": 80.6,
+		"Encumbrance": 39.9,
+		"Bleed": 4,
+		"Burn": 6,
+		"Shock": 6,
+		"Corrosive": 7,
+		"Blight": 3
+	  },
+	  "image": "/brotherLibrary/chestsImages/Phetyr Chassis.png",
+	  "tags": [],
+	  "placementID": "C28"
+	},
   }
 legs = {
 	"": {
@@ -1301,7 +1376,37 @@ legs = {
 	  "image": "/brotherLibrary/legsImages/Zealot's Seaboots.png",
 	  "tags": [],
 	  "placementID": "L26"
-	}
+	},
+	"Nanoplated Waist": {
+	  "SLOT": "Leg",
+	  "stats": {
+		"Armor": 14.8,
+		"Encumbrance": 6,
+		"Bleed": 3,
+		"Burn": 2,
+		"Shock": 0,
+		"Corrosive": 0,
+		"Blight": 2
+	  },
+	  "image": "/brotherLibrary/legsImages/Nanoplated Waist.png",
+	  "tags": [],
+	  "placementID": "L27"
+	},
+	"Phetyr Locomotor": {
+	  "SLOT": "Leg",
+	  "stats": {
+		"Armor": 43.8,
+		"Encumbrance": 21.7,
+		"Bleed": 2,
+		"Burn": 2,
+		"Shock": 3,
+		"Corrosive": 4,
+		"Blight": 2
+	  },
+	  "image": "/brotherLibrary/legsImages/Phetyr Locomotor.png",
+	  "tags": [],
+	  "placementID": "L28"
+	},
   }
 hands = {
 	"": {
@@ -1700,7 +1805,37 @@ hands = {
 	  "image": "/brotherLibrary/handsImages/Zealot's Wraps.png",
 	  "tags": [],
 	  "placementID": "G26"
-	}
+	},
+	"Nanoplated Hands": {
+	  "SLOT": "Hand",
+	  "stats": {
+		"Armor": 7.4,
+		"Encumbrance": 3,
+		"Bleed": 1,
+		"Burn": 1,
+		"Shock": 0,
+		"Corrosive": 0,
+		"Blight": 1
+	  },
+	  "image": "/brotherLibrary/handsImages/Nanoplated Hands.png",
+	  "tags": [],
+	  "placementID": "G27"
+	},
+	"Phetyr Crushers": {
+	  "SLOT": "Hand",
+	  "stats": {
+		"Armor": 17.4,
+		"Encumbrance": 8.6,
+		"Bleed": 2,
+		"Burn": 2,
+		"Shock": 1,
+		"Corrosive": 2,
+		"Blight": 1
+	  },
+	  "image": "/brotherLibrary/handsImages/Phetyr Crushers.png",
+	  "tags": [],
+	  "placementID": "G28"
+	},
   }
 
 /* ----------------------------------------------------------------------------------------*/
@@ -2829,11 +2964,11 @@ classInfo = {
 	"Invoker": {
 	  "classIcon": "/brotherLibrary/classIconImages/Invoker.png",
 	  "primePerk": "VISIONARY",
-	  "primePerkDesc": "Gain +100% Skill Charges for all Archetypes. Skill activation reduces all Skill Cooldowns by 10%. For Heavy Weapons, +100% Heavy Ammo instead.",
+	  "primePerkDesc": "Gain +100% Skill Charges for all Archetypes. Skill activation reduces all Skill Cooldowns by 10%. For Heavy Weapons, +50% Heavy Ammo instead.",
 	  "primePerkImage": "/brotherLibrary/primePerkImages/VISIONARY.png",
 	  "primeStats": {
 		"SkillCharges": 1,
-		"HeavyAmmo": 1
+		"HeavyAmmo": 0.5
 	  },
 	  "tags": [],
 	  "gradient": [
@@ -3281,6 +3416,125 @@ classInfo = {
 		}
 	  },
 	  "placementID": "13"
+	},
+	"Warden": {
+	  "classIcon": "/brotherLibrary/classIconImages/Warden.png",
+	  "primePerk": "DYNAMIC",
+	  "primePerkDesc": "After 10s of not being damaged, the Warden generates a Shield for 23% of their Max Health over 2s.",
+	  "primePerkImage": "/brotherLibrary/primePerkImages/Dynamic.png",
+	  "primeStats": {
+		"Shield": 0.23
+	  },
+	  "provides": ["Shield"],
+	  "tags": [],
+	  "gradient": [
+		"#34393b",
+		"#131616"
+	  ],
+	  "classTrait": "Barrier",
+	  "Endurance": 1,
+	  "Expertise": 2,
+	  "Spirit": 2,
+	  "Vigor": 0,
+	  "name": "Warden",
+	  "abilities": {
+		"": {
+		  "name": "",
+		  "desc": "Select an ability, above.",
+		  "image": "/images/Remnant/clear.png",
+		  "stats": {},
+		  "tags": [],
+		  "placementID": "0"
+		},
+		"Drone: Shield": {
+		  "name": "Drone: Shield",
+		  "desc": "Deploy Shield Drone with 100 Energy Reserves to follow and protect its Warded Target.<br>The Warded Target gains 10% increased Damage Reduction. When the Warded Target is not at Max SHIELD Capacity, the Drone consumes 25 Energy to grant a SHIELD for 8% of the target's Max Health once every 2s. Shields from the Drone last until removed by damage, altering the Warded Target, or the drone is Stowed.",
+		  "image": "/brotherLibrary/abilitiesImages/Shield Drone.png",
+		  "stats": {
+			"FlatDR": 0.10,
+			"Shield": 1
+		  },
+		  "tags": [],
+		  "provides": ["Shield"],
+		  "regenRate": 1.5,
+		  "baseEnergy": 100,
+		  "placementID": "1"
+		},
+		"Drone: Heal": {
+		  "name": "Drone: Heal",
+		  "desc": "Deploy Heal Drone with 100 Energy Reserves to follow and protect its Warded Target.<br>The Warded Target gains 10% increased Relic Use Speed. When the Warded Target is not at Max Health, the Drone consumes 15 Energy to heal 10% of the target's Max Health once every 1s.",
+		  "image": "/brotherLibrary/abilitiesImages/Heal Drone.png",
+		  "stats": {
+			"RelicSpeed": 0.10,
+			"HP/S%": 0.10
+		  },
+		  "tags": [],
+		  "provides": ["Healing"],
+		  "regenRate": 2,
+		  "baseEnergy": 100,
+		  "placementID": "2"
+		},
+		"Drone: Combat": {
+		  "name": "Drone: Combat",
+		  "desc": "Deploy Combat Drone with 100 Energy Reserves to follow and protect its Warded Target.<br>The Warded Target gains 10% increased Fire Rate and Melee Speed and 10% faster firearm charge time. While in combat, the Drone attacks the Warded Target's focused enemy, consuming 10 Energy per barrage.",
+		  "image": "/brotherLibrary/abilitiesImages/Combat Drone.png",
+		  "stats": {
+			"FireRate": 0.10,
+			"AttackSpeed": 0.10,
+			"WeaponChargeTime": 0.10
+		  },
+		  "tags": [],
+		  "regenRate": 2,
+		  "baseEnergy": 100,
+		  "placementID": "3"
+		}
+	  },
+	  "passives": {
+		"passive1": {
+		  "name": "Galvanize",
+		  "desc": "Grants a 25% increase to All Damage and 5% Critical Chance.",
+		  "image": "/brotherLibrary/passivesImages/Galvanize.png",
+		  "stats": {
+			"AllDamage": 0.25,
+			"AllCritChance": 0.05
+		  },
+		  "tags": []
+		},
+		"passive2": {
+		  "name": "Safeguard",
+		  "desc": "The Warden's Drone grants 1 stack of BULWARK and increases incoming Healing Effectiveness by 10% to its Warded Target.",
+		  "image": "/brotherLibrary/passivesImages/Safeguard.png",
+		  "stats": {
+			"HealingEFF": 0.1,
+			"Bulwark": 1
+		  },
+		  "tags": [],
+		  "provides": ["Healing","Bulwark"],
+		},
+		"passive3": {
+		  "name": "Contingency",
+		  "desc": "When the Warden's Health drops below 25%, gain a SHIELD for 25% of Max Health. Lasts 10s. Can only happen once every 30s.<br>When active, increases Movement Speed by 15%.",
+		  "image": "/brotherLibrary/passivesImages/Contingency.png",
+		  "stats": {
+			"Shield": 0.25,
+			"MovementSpeed": 0.15
+		  },
+		  "provides": ["Shield"],
+		  "tags": []
+		},
+		"passive4": {
+		  "name": "Energize",
+		  "desc": "On Relic Use, grants a SHIELD for 25% of Max Health. Cannot stack with itself. Lasts 10s or until SHIELD is depleted by damage.<br>When active, actions which consume N'Erudian Energy have no cost.",
+		  "image": "/brotherLibrary/passivesImages/Energize.png",
+		  "stats": {
+			"Shield": 0.25,
+			"HeavyAmmoInfiite": 1
+		  },
+		  "provides": ["Shield"],
+		  "tags": []
+		}
+	  },
+	  "placementID": "14"
 	}
 }
 // /* ----------------------------------------------------------------------------------------*/
@@ -4564,7 +4818,243 @@ amulets = {
 	  },
 	  "tags": [],
 	  "placementID": "A086"
-	}
+	},
+
+	//DLC AMULETS
+
+	"Cessation Bulbel": {//done
+	  "usesConditional": {
+		"customTier50": "cessationBulbel",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Cessation Bulbel",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Cessation Bulbel.png",
+	  "desc": "Activating a Mod consumes all current SHIELD. For every 20 SHIELD consumed, increases All Damage dealt by 4% for 10s. Max 10 stacks.<br>Calculator assumes max stacks bonus when selected.",
+	  "stats": {},
+	  "requires": ["Shield"],
+	  "tags": ["AllDamage"],
+	  "placementID": "A087"
+	},
+	"Short Circuit": {//done
+	  "usesConditional": {
+		"customTier50": "shortCircuit",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Short Circuit",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Short Circuit.png",
+	  "desc": "While a SHIELD is active, increases Critical Chance and Critical Damage by 10% and Skill Cooldowns are reduced by 6% once every 5s.",
+	  "stats": {},
+	  "tags": ["AllCritChance","AllCritDamage"],
+	  "placementID": "A088"
+	},
+	"Exhaust Valve": {//TODO: custom function later
+	  "usesConditional": {},
+	  "name": "Exhaust Valve",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Exhaust Valve.png",
+	  "desc": "Increases Heat Decay Rate by 25% and Weapons that Generate Heat no longer Overheat. At Max Heat, Fire Rate is reduced by 20%.",
+	  "stats": {
+		//TODO: add heat decay rate later
+	  },
+	  "tags": [],
+	  "placementID": "A089"
+	},
+	"Chef Medal": {//done
+	  "usesConditional": {},
+	  "name": "Chef Medal",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Chef Medal.png",
+	  "desc": "On Perfect Dodge, automatically trigger effects that require Relic Use to activate.",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "A090"
+	},
+	"Echo Chamber": {//done
+	  "usesConditional": {},
+	  "name": "Echo Chamber",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Echo Chamber.png",
+	  "desc": "Increases Explosive Damage by 10% and AOE Size by 25%. Inflicting Explosive Damage applies EXPOSED for 5s. Max 15s.<br>EXPOSED: Target receives 15% additional damage from all sources.",
+	  "stats": {
+		"outEXPOSED": 1,
+		"ExplosiveDamage": 0.10,
+		"auraAOE": 0.25
+	  },
+	  "tags": [],
+	  "placementID": "A091"
+	},
+	"Relay Device": {//TODO: custom later
+	  "usesConditional": {},
+	  "name": "Relay Device",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Relay Device.png",
+	  "desc": "Swapping Firearms increases Ranged Damage by 20% for 1.5s plus an additional 0.5s for each round in the Magazine. Max 15s.<br>Calculator does not factor the magazine bonus yet.",
+	  "stats": {
+		"RangedDamage": 0.20
+	  },
+	  "tags": [],
+	  "placementID": "A092"
+	},
+	"Brazen Amalgam": {
+	  "usesConditional": {},
+	  "name": "Brazen Amalgam",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Brazen Amalgam.png",
+	  "desc": "Increases Critical Chance by 1.5% and Movement Speed while Aiming by 2.5% per second. Max 10 stacks. Dodge, Slide, or Flop removes stacks.<br>Calculator assumes max stacks when this item is selected.",
+	  "stats": {
+		"AllCritChance": 0.15,
+		"AimMovementSpeed": 0.25,
+	  },
+	  "tags": [],
+	  "placementID": "A093"
+	},
+	"Quantum Memory": {//we're never gonna factor this in the calcs
+	  "usesConditional": {},
+	  "name": "Quantum Memory",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Quantum Memory.png",
+	  "desc": "Combat Slide reloads currently equipped Firearm. Perfect Dodge Combat Slide reloads both firearms.<br>Not factored by the calculator.",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "A094"
+	},
+	"Insipid Talon": {//done
+	  "usesConditional": {
+		"customTier0": "insipidTalon",
+		"keys": [
+		  "customTier0"
+		]
+	  },
+	  "name": "Insipid Talon",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Insipid Talon.png",
+	  "desc": "On Perfect Dodge, increases All Damage dealt by 2% and Damage Reduction by 1% for 10s. Max 15 stacks.<br>Requires PERFECT DODGE setting and assumes max stacks when toggled.",
+	  "stats": {},
+	  "tags": ["AllDamage","FlatDR"],
+	  "requires": ["Perfect Dodge"],
+	  "placementID": "A095"
+	},
+	"Hangman's Noose": {//TODO: figure out how I want to handle this
+	  "usesConditional": {},
+	  "name": "Hangman's Noose",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Hangman's Noose.png",
+	  "desc": "Restricts Health to 50% and backfills with permanent Grey Health. All incoming damage is fully converted into Grey Health and Grey Health cannot be removed.<br>Currently the calculator treats this like Restriction Cord.",
+	  "stats": {},
+	  "provides": ["Grey Health Active"],
+	  "tags": [],
+	  "placementID": "A096"
+	},
+	"Crisis Core": {//done
+	  "usesConditional": {},
+	  "name": "Crisis Core",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Crisis Core.png",
+	  "desc": "When a single source of Enemy Damage exceeds 15% of Max Health, automatically trigger effects that require Perfect Dodge to activate and gain 15% Damage Reduction for 3s. Can only happen once every 3 seconds.<br>Calc assumes DR to be active at all times when selected.",
+	  "stats": {
+		"FlatDR": 0.15
+	  },
+	  "tags": [],
+	  "placementID": "A097"
+	},
+	"Canine Keepsake": {//done
+	  "usesConditional": {},
+	  "name": "Canine Keepsake",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Canine Keepsake.png",
+	  "desc": "Increases All Damage by 2.5%, Critical Chance by 1.5%, and Critical Damage by 1.5% for every 5% of total Health present as Grey Health. Max 10 stacks.<br>Calc assumes maximum stacks when this item is selected.",
+	  "stats": {
+		"AllDamage": 0.25,
+		"AllCritChance": 0.15,
+		"AllCritDamage": 0.15
+	  },
+	  "tags": [],
+	  "placementID": "A098"
+	},
+	"Reaction Chain": {//done
+	  "usesConditional": {},
+	  "name": "Reaction Chain",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Reaction Chain.png",
+	  "desc": "Increases Mod Damage by 20%. Activating a Mod generates 50% of Mod Power Spent to the Stowed Weapon's Mod.",
+	  "stats": {
+		"ModDamage": 0.20
+	  },
+	  "tags": [],
+	  "placementID": "A099"
+	},
+	"Zero Hour": {//done
+	  "usesConditional": {
+		"customTier50": "zeroHour",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Zero Hour",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Zero Hour.png",
+	  "desc": "Increases All Damage by 20% and Critical Chance by 10%. Each Weight Class above LIGHT reduces All Damage bonus by 5% and Critical Chance by 2.5%.",
+	  "stats": {
+		"AllDamage": 0.20,
+		"AllCritChance": 0.10
+	  },
+	  "tags": [],
+	  "placementID": "A100"
+	},
+	"Timekeeper's Forfeit": {//done
+	  "usesConditional": {
+		"customTierBase": "timekeepersForfeit",
+		"keys": [
+		  "customTierBase"
+		]
+	  },
+	  "name": "Timekeeper's Forfeit",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Timekeeper's Forfeit.png",
+	  "desc": "Increases Status Effect Damage by 50%. Applying a Status Effect to an enemy also applies it to the wearer.",
+	  "stats": {
+		"StatusDamage": 0.50
+	  },
+	  "provides": ["Status"],
+	  "tags": ["incomingStatus","inSLOW","inBLEED","inBURN","inOVERLOADED","inCORRODED"],
+	  "placementID": "A101"
+	},
+	"Ornate Amulet": {//done
+	  "usesConditional": {},
+	  "name": "Ornate Amulet",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Ornate Amulet.png",
+	  "desc": "Activating a Skill increases All Damage by 5% for 10s. Max 5 stacks.<br>Calculator assumes max stacks when selected.",
+	  "stats": {
+		"AllDamage": 0.25
+	  },
+	  "tags": [],
+	  "placementID": "A102"
+	},
+	"Volatile Cartridge": {//done
+	  "usesConditional": {
+		"customTier50": "volatileCartridge",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Volatile Cartridge",
+	  "slot": "Amulet",
+	  "image": "/brotherLibrary/amuletsImages/Volatile Cartridge.png",
+	  "desc": "Increases Explosive Critical Chance and Explosive Critical Damage by 1% for every 5% of Max Health protected by a SHIELD.",
+	  "stats": {},
+	  "requires": ["Shield"],
+	  "tags": ["ExplosiveCritChance","ExplosiveCritDamage"],
+	  "placementID": "A103"
+	},
+
+	//I'm sure there are more but that is all I have in game right now for amulets
   }
 rings = {
 	"": {
@@ -5915,7 +6405,7 @@ rings = {
 	  "image": "/brotherLibrary/ringsImages/Hardcore Metal Band.png",
 	  "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks. Bonus assumed active at all times when selected.",
 	  "stats": {
-		"Bulwark": 5
+		"Bulwark": 3
 	  },
 	  "tags": [],
 	  "provides": ["Bulwark"],
@@ -7215,7 +7705,454 @@ rings = {
 	  },
 	  "tags": [],
 	  "placementID": "R194"
+	},
+
+	//DLC RINGS
+	"Ring of Ashes": {//done
+	  "usesConditional": {},
+	  "name": "Ring of Ashes",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Ring of Ashes.png",
+	  "desc": "Stowed weapons generate 15 Mod Power per second.",
+	  "stats": {
+		"ModPowerGen/s": 15
+	  },
+	  "tags": [],
+	  "placementID": "R195"
+	},
+	"Nightmare Sigil": {//done
+	  "usesConditional": {
+		"customTier0": "nightmareSigil",
+		"keys": [
+		  "customTier0"
+		]
+	  },
+	  "name": "Nightmare Sigil",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Nightmare Sigil.png",
+	  "desc": "On Perfect Dodge, increases base Lifesteal by 5% for 10s.",
+	  "stats": {},
+	  "tags": [
+		"Lifesteal"
+	  ],
+	  "requires": ["Perfect Dodge"],
+	  "provides": ["Lifesteal"],
+	  "placementID": "R196"
+	},
+	"Disaster Converter": {//TODO: should this even be calculated right now? will need function for it tho
+	  "usesConditional": {},
+	  "name": "Disaster Converter",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Disaster Converter.png",
+	  "desc": "When wearer's Health drops below 25%, gain a SHIELD for 50% of total Grey Health for 10s. Max 50% SHIELD. Does not stack with itself.<br>Calculator assumes full shield bonus when selected.",
+	  "stats": {
+		"Shield": 0.50
+	  },
+	  "tags": [],
+	  "provides": ["Shield"],
+	  "placementID": "R197"
+	},
+	"Clear Halo": {//done
+	  "usesConditional": {},
+	  "name": "Clear Halo",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Clear Halo.png",
+	  "desc": "After 10s of not being damaged, generate a SHIELD for 10% of Max Health over 2s.",
+	  "stats": {
+		"Shield": 0.10
+	  },
+	  "tags": [],
+	  "provides": ["Shield"],
+	  "placementID": "R198"
+	},
+	"Combat Shield Generator": {//not gonna factor this unless it benefits from DR, though I am curious how the shield health is determined.
+	  "usesConditional": {},
+	  "name": "Combat Shield Generator",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Combat Shield Generator.png",
+	  "desc": "While in combat, Crouching or Combat Slide generates a stationary 3m x 1.5m Energy Shield with 680 Health which blocks enemy projectiles. Lasts 10s or until broken by damage<br>Can only happen once every 10s after expiring. Not currently factored by the calculator.",
+	  "stats": {},
+	  "tags": [],
+	  "provides": [],
+	  "placementID": "R199"
+	},
+	"Feeding Tube": {///done
+	  "usesConditional": {},
+	  "name": "Feeding Tube",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Feeding Tube.png",
+	  "desc": "While in combat, auto-consume the compatible item in the first quick-slot every 30s. Increases Consumable and Relic Use Speed by 10%.<br>Not compatible with Concoctions, Grenades, and some Unique Consumables.",
+	  "stats": {
+		"ConsumableSpeed": 0.10
+	  },
+	  "tags": [],
+	  "placementID": "R200"
+	},
+	"Burden of the Protector": {//done
+	  "usesConditional": {},
+	  "name": "Burden of the Protector",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Burden of the Protector.png",
+	  "desc": "Reduces incoming SHIELD Duration by 50%. Increases Shield Amount by 15%.",
+	  "stats": {
+		"ShieldDuration": -0.50,
+		"ShieldEFF": 0.15
+	  },
+	  "requires": ["Shield"],
+	  "provides": ["Burden"],
+	  "tags": [],
+	  "placementID": "R201"
+	},
+	"Shield Alternator": {//done
+	  "usesConditional": {},
+	  "name": "Shield Alternator",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Shield Alternator.png",
+	  "desc": "Activating a Mod that costs 100 Mod Power or greater, generates a SHIELD for 20% of Max Health. Lasts 15s. Cannot stack with itself.<br>Calculator assumes SHIELD active at all times when selected.",
+	  "stats": {
+		"Shield": 0.20
+	  },
+	  "provides": ["Shield"],
+	  "tags": [],
+	  "placementID": "R202"
+	},
+	"Spirit Alternator": {//TODO: custom function later
+	  "usesConditional": {},
+	  "name": "Spirit Alternator",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Spirit Alternator.png",
+	  "desc": "Incoming SHIELD grants 150% of the SHIELD generated as Mod Power.",
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "R203"
+	},
+	"Security Half-Measure": {//done
+	  "usesConditional": {},
+	  "name": "Security Half-Measure",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Security Half-Measure.png",
+	  "desc": "On Relic Use, sacrifices 15% of Max Health and grants a SHIELD for 10% of the wearer's Max Health to allies within 8m. Conversion cannot kill wearer. Lasts 15s.",
+	  "stats": {
+		"Shield": 0.10
+	  },
+	  "provides": ["Shield"],
+	  "tags": [],
+	  "placementID": "R204"
+	},
+	"Custodian's Bastion": {//done
+	  "usesConditional": {
+		"customPostHealing": "custodiansBastion",
+		"keys": [
+		  "customPostHealing"
+		]
+	  },
+	  "name": "Custodian's Bastion",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Custodian's Bastion.png",
+	  "desc": "Increases Armor by 1 per 2% of active SHIELD. Max 100 Bonus Armor.",
+	  "stats": {},
+	  "provides": [],
+	  "requires": ["Shield"],
+	  "tags": ["Armor"],
+	  "placementID": "R205"
+	},
+	"Siphon Filter": {//done
+	  "usesConditional": {
+		"customTier50": "siphonFilter",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Siphon Filter",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Siphon Filter.png",
+	  "desc": "Increases All Damage dealt by an amount equal to an active HASTE bonus. Grants HASTE when within 15m of an enemy entity suffering from SLOW.",
+	  "stats": {},
+	  "tags": ["AllDamage","HASTE"],
+	  "placementID": "R206"
+	},
+	"Burden of the Excavator": {//done
+	  "usesConditional": {},
+	  "name": "Burden of the Excavator",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Burden of the Excavator.png",
+	  "desc": "Explosions cannot Critical Hit. Increases Explosive Damage by 35%.",
+	  "stats": {
+		"ExplosiveDamage": 0.35,
+		"ExplosiveCritChance": -1000//cheating here, rather than disabling the explosive crit I will simply overwhelm any positive with a negative since crit gets floored and ceilinged in the code
+	  },
+	  "provides": ["Burden"],
+	  "tags": [],
+	  "placementID": "R207"
+	},
+	"Bypass Primer": {//done
+	  "usesConditional": {},
+	  "name": "Bypass Primer",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Bypass Primer.png",
+	  "desc": "On Perfect Dodge, reload current Firearm.",
+	  "stats": {},
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R208"
+	},
+	"Nanofiber Strand": {//done
+	  "usesConditional": {},
+	  "name": "Nanofiber Strand",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Nanofiber Strand.png",
+	  "desc": "Increases SHIELD amount by 10%.",
+	  "stats": {
+		"ShieldEFF": 0.10
+	  },
+	  "requires": ["Shield"],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R209"
+	},
+	"Detonating Cord": {//done
+	  "usesConditional": {},
+	  "name": "Detonating Cord",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Detonating Cord.png",
+	  "desc": "On Relic Use, increases Explosive Damage by 10% for 15s and casts a 3mAOE Explosive AOE which deals 375 Base Damage.",
+	  "stats": {
+		"ExplosiveDamage": 0.10
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R210"
+	},
+	"Breach Accelerator": {//done
+	  "usesConditional": {
+		"customTier50": "breachAccelerator",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Breach Accelerator",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Breach Accelerator.png",
+	  "desc": "Increases Movement Speed and Physical Damage by 5%. Bonus is doubled when HASTE is active.<br>Calculator assumes physical damage is All Damage, testing needs to be done on whether it is not All Damage.",
+	  "stats": {
+		"MovementSpeed": 0.05,
+		"AllDamage": 0.05,
+		//TODO: is the "physical" distinction important here? does it just mean AllDamage but not elemental? look into this later
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R211"
+	},
+	"Ring Of Phantom Pain": {//done
+	  "usesConditional": {},
+	  "name": "Ring Of Phantom Pain",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Ring Of Phantom Pain.png",
+	  "desc": "Missing Health is converted to 10 Grey Health per second. Reduces Grey Health Regeneration by 90%.<br>Testing needs to be done on whether the %Regen reduction applies to the +10/s as well.",
+	  "stats": {
+		"GreyHP/S%": -0.90,
+		"GreyHP/S+": 10
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R212"
+	},
+	"Infinity Pocket": {//skipped
+	  "usesConditional": {},
+	  "name": "Infinity Pocket",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Infinity Pocket.png",
+	  "desc": "Reloading an Empty Magazine refills 10% of the stowed weapon's Max Ammo. When stowed weapon is full, the refill amount applies to the primary weapon instead.",
+	  "stats": {},
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R213"
+	},
+	"Force Multiplier": {//skipped, this is specific to fusion rifles and we don't factor for them right now
+	  "usesConditional": {},
+	  "name": "Force Multiplier",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Force Multiplier.png",
+	  "desc": "Overcharging Charge Weapons grants 1.05x Weapon Damage Per 0.5s while Charge is held beyond Perfect Release Window. Max 1.3x.<br>Not currently factored by the calculator.",
+	  "stats": {},
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R214"
+	},
+	"Empowering Loop": {//done
+	  "usesConditional": {},
+	  "name": "Empowering Loop",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Empowering Loop.png",
+	  "desc": "Increases Ranged Damage by 15%. Slows Firearm Charge Time by 10% and reduces Fire Rate by 10%.",
+	  "stats": {
+		"RangedDamage": 0.15,
+		"WeaponChargeTime": -0.10,
+		"FireRate": -0.10
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R215"
+	},
+	"Mortal Coil": {//done
+	  "usesConditional": {},
+	  "name": "Mortal Coil",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Mortal Coil.png",
+	  "desc": "Increases All Damage dealt by 1% for every 2% of the wearer's total Lifesteal. Max 20% All Damage.<br>Calculator assumes max damage bonus at all times: Testing needs to be done here on whether it counts all lifesteal on every type of damage, or if this is applicable only to the lifesteal applicable to the dmg type used.",
+	  "stats": {
+		"AllDamage": 0.20
+	  },
+	  "requires": ["Lifesteal"],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R216"
+	},
+	"Symbol of Royalty": {//done
+	  "usesConditional": {
+		"customTier0": "symbolOfRoyalty",
+		"keys": [
+		  "customTier0"
+		]
+	  },
+	  "name": "Symbol of Royalty",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Symbol of Royalty.png",
+	  "desc": "On Perfect Dodge, grants 1 stack of Bulwark for 10s. Max 3 stacks. Requires PERFECT DODGE setting, and assume maximum stacks when toggled.",
+	  "stats": {},
+	  "requires": ["Perfect Dodge"],
+	  "provides": ["Bulwark"],
+	  "tags": ["Bulwark"],
+	  "placementID": "R217"
+	},
+	"Strand of Sinew": {//done
+	  "usesConditional": {},
+	  "name": "Strand of Sinew",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Strand of Sinew.png",
+	  "desc": "Slows Firearm Charge Time by 30% and increases Ranged Charge Damage by 20%.",
+	  "stats": {
+		"WeaponChargeTime": -0.30,
+		"WeaponChargeDamage": 0.20
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R218"
+	},
+	"Wired Inhibitor": {//done
+	  "usesConditional": {
+		"customTier0": "wiredInhibitor",
+		"keys": [
+		  "customTier0"
+		]
+	  },
+	  "name": "Wired Inhibitor",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Wired Inhibitor.png",
+	  "desc": "Applying a Negative Status Effect on an enemy also applies SLOW for 1s. Applying or refreshing additional Negative Statuses will increase the duration by 1s. Max 5s.",
+	  "stats": {},
+	  "requires": ["Status"],
+	  "provides": ["Status"],
+	  "tags": ["outSLOW"],
+	  "placementID": "R219"
+	},
+	"Tolerance Band": {//done
+	  "usesConditional": {},
+	  "name": "Tolerance Band",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Tolerance Band.png",
+	  "desc": "Decreases Firearm Charge Time by 10% and increases Perfect Charge Window for applicable ranged weaponry.",
+	  "stats": {
+		"WeaponChargeTime": 0.10
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R220"
+	},
+	"Ring Of Bones": {//done
+	  "usesConditional": {},
+	  "name": "Ring Of Bones",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Ring Of Bones.png",
+	  "desc": "On Relic Use, increase All Damage by 10% for 15s. Calculator assumes bonus active at all times when selected.",
+	  "stats": {
+		"AllDamage": 0.10
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R221"
+	},
+	"Impact Augment": {//done
+	  "usesConditional": {},
+	  "name": "Impact Augment",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Impact Augment.png",
+	  "desc": "When a single source of Enemy Damage exceeds 15% of Max Health, increase All Damage dealt by 3% for 10s. Max 5 Stacks.<br>Calculator assumes max stacks when selected.",
+	  "stats": {
+		"AllDamage": 0.15
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R222"
+	},
+	"Demolition Coil": {//probably skipping, would need its own breakdown but we haven't added DPS breakdowns on rings yet
+	  "usesConditional": {},
+	  "name": "Demolition Coil",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Demolition Coil.png",
+	  "desc": "Unarmed Charged Melee Attacks explode when hitting an enemy, dealing 30% additional explosive damage over 1.5mAOE.",
+	  "stats": {},
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R223"
+	},
+	"Stone of Revelation": {//done
+	  "usesConditional": {
+		"customTier50": "stoneOfRevelation",
+		"keys": [
+		  "customTier50"
+		]
+	  },
+	  "name": "Stone of Revelation",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Stone of Revelation.png",
+	  "desc": "Increases Mod Generation and Mod Damage by 5%. Bonus is doubled against EXPOSED targets.",
+	  "stats": {
+		"ModDamage": 0.05,
+		"ModPowerGen": 0.05
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R224"
+	},
+	"Transient Cord": {//done
+	  "usesConditional": {},
+	  "name": "Transient Cord",
+	  "slot": "Ring",
+	  "image": "/brotherLibrary/ringsImages/Transient Cord.png",
+	  "desc": "On Relic Use, increases Critical Chance by 10% and Critical Damage by 10% for 15s. Reduce Bonus by 1% every 1.5s.<br>Calculator assumes an average benefit of half when selected.",
+	  "stats": {
+		"AllCritChance": 0.05,
+		"AllCritDamage": 0.05
+	  },
+	  "requires": [],
+	  "provides": [],
+	  "tags": [],
+	  "placementID": "R225"
 	}
+
   }
 relics = {
 	"": {
@@ -7575,567 +8512,589 @@ relics = {
 	  "tags": [],
 	  "provides": ["Relic Healing"],
 	  "placementID": "r25"
-	}
+	},
+	"Gossamer Heart": {//I don't think I care about this one, we're not gonna add any stats for it as well
+	  "name": "Gossamer Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Gossamer Heart.png",
+	  "desc": "Innate base Evade Window Frames increased by 1. On use, increases Evade Window Bonus Frames by an additional 2 for 15s.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "provides": ["Relic Healing"],
+	  "placementID": "r26"
+	},
+	"Latent Heart": {//TODO: well this one is fuckin complicated. christ
+	  "name": "Latent Heart",
+	  "slot": "Relic",
+	  "image": "/brotherLibrary/relicsImages/Latent Heart.png",
+	  "desc": "On use, absorbs 95% incoming damage for 5s. Upon expiring, the absorbed damage is then applied to the wearer at a rate of 10% of the total absorbed damage per second for 10s.<br>Damage reduction does not apply to SHIELD.<br>Calculator cannot accurately include this relic bonus, so it doesn't at all.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "provides": ["Relic Healing"],
+	  "placementID": "r27"
+	},
   }
-fragments = {
-	"": {
-	  "usesConditional": {},
-	  "name": "",
-	  "slot": "",
-	  "image": "",
-	  "desc": "",
-	  "value": 0,
-	  "stats": {},
-	  "tags": [],
-	  "placementID": "F00"
-	},
-	"Ammo Pickups": {
-	  "name": "Ammo Pickups",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
-	  "value": 0.3,
-	  "usesConditional": {},
-	  "stats": {},
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y01"
-	},
-	"Ammo Reserves": {
-	  "name": "Ammo Reserves",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
-	  "value": 0.2,
-	  "usesConditional": {},
-	  "stats": {
-		"Reserves": 0.2
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y02"
-	},
-	"Armor Effectiveness": {
-	  "usesConditional": {},
-	  "name": "Armor Effectiveness",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Armor Effectiveness [MYTHIC]",
-	  "value": 0.1,
-	  "stats": {
-		"Armor%": 0.1
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B01"
-	},
-	"Blight Resistance": {
-	  "name": "Blight Resistance",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1 Blight Resistance [MYTHIC]",
-	  "value": 30,
-	  "usesConditional": {},
-	  "stats": {
-		"Blight": 30
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B02"
-	},
-	"Casting Speed": {
-	  "name": "Casting Speed",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Casting Speed [MYTHIC]",
-	  "value": 0.2,
-	  "usesConditional": {},
-	  "stats": {
-		"CastSpeed": 0.2
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y03"
-	},
-	"Charge Melee Cost": {
-	  "name": "Charge Melee Cost",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
-	  "value": -0.3,
-	  "usesConditional": {},
-	  "stats": {
-		"ChargeCost": 0.3
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B03"
-	},
-	"Consumable Duration": {
-	  "name": "Consumable Duration",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Consumable Duration [MYTHIC]",
-	  "value": 0.2,
-	  "usesConditional": {},
-	  "stats": {
-		"ConsumableDuration": 0.2
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y04"
-	},
-	"Consumable Speed": {
-	  "name": "Consumable Speed",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
-	  "value": -0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"ConsumableSpeed": 0.15,
-		"RelicSpeed": 0.15
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y05"
-	},
-	"Damage Reduction": {
-	  "usesConditional": {},
-	  "name": "Damage Reduction",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Damage Reduction [MYTHIC]",
-	  "value": 0.05,
-	  "stats": {
-		"FlatDR": 0.05
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B04"
-	},
-	"Elemental Damage": {
-	  "name": "Elemental Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Elemental Damage [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"ElementalDamage": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R01"
-	},
-	"Elemental Resistance": {
-	  "usesConditional": {},
-	  "name": "Elemental Resistance",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1 Elemental Damage Resistance [MYTHIC]",
-	  "value": 10,
-	  "stats": {
-		"Burn": 10,
-		"Shock": 10,
-		"Corrosive": 10
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B05"
-	},
-	"Grey Health Rate": {
-	  "name": "Grey Health Rate",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
-	  "value": 0.2,
-	  "usesConditional": {},
-	  "stats": {
-		"GreyHealthConversion": 0.2
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B06"
-	},
-	"Healing Effectiveness": {
-	  "usesConditional": {},
-	  "name": "Healing Effectiveness",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Healing Effectiveness [MYTHIC]",
-	  "value": 0.2,
-	  "stats": {
-		"HealingEFF": 0.2
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B07"
-	},
-	"Health": {
-	  "usesConditional": {},
-	  "name": "Health",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Health [MYTHIC]",
-	  "value": 0.15,
-	  "stats": {
-		"Health%": 0.15
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B08"
-	},
-	"Melee Critical Chance": {
-	  "name": "Melee Critical Chance",
-	  "slot": "RelicFragRed",
-	  "image": 0.1,
-	  "desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
-	  "usesConditional": {},
-	  "stats": {
-		"MeleeCritChance": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R02"
-	},
-	"Melee Critical Damage": {
-	  "name": "Melee Critical Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"MeleeCritDamage": 0.15
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R03"
-	},
-	"Melee Damage": {
-	  "name": "Melee Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Melee Damage [MYTHIC]",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"MeleeDamage": 0.15
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R04"
-	},
-	"Melee Speed": {
-	  "name": "Melee Speed",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"AttackSpeed": 0.15,
-		"ChargeSpeed": 0.15
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R05"
-	},
-	"Mod Cost": {
-	  "name": "Mod Cost",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Mod Cost [MYTHIC]",
-	  "value": -0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"ModCost": -0.1
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y06"
-	},
-	"Mod Damage": {
-	  "name": "Mod Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Mod Damage [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"ModDamage": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R06"
-	},
-	"Mod Duration": {
-	  "name": "Mod Duration",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Mod Duration [MYTHIC]",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"ModDuration": 0.15
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y07"
-	},
-	"Ranged Critical Chance": {
-	  "name": "Ranged Critical Chance",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
-	  "value": 0.075,
-	  "usesConditional": {},
-	  "stats": {
-		"RangedCritChance": 0.075
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R07"
-	},
-	"Ranged Critical Damage": {
-	  "name": "Ranged Critical Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"RangedCritDamage": 0.15
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R08"
-	},
-	"Ranged Damage": {
-	  "name": "Ranged Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Ranged Damage [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"RangedDamage": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R09"
-	},
-	"Ranged Fire Rate": {
-	  "name": "Ranged Fire Rate",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Fire Rate [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"FireRate": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R10"
-	},
-	"Recoil": {
-	  "name": "Recoil",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Recoil [MYTHIC]",
-	  "value": -0.3,
-	  "usesConditional": {},
-	  "stats": {
-		"Recoil": -0.3
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y08"
-	},
-	"Revive Speed": {
-	  "name": "Revive Speed",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Revive Speed [MYTHIC]",
-	  "value": 0.25,
-	  "usesConditional": {
-		"ReviveSpeed": 0.25
-	  },
-	  "stats": {},
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B09"
-	},
-	"Shield Effectiveness": {
-	  "usesConditional": {},
-	  "name": "Shield Effectiveness",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Shield Amount [MYTHIC]",
-	  "value": 0.2,
-	  "stats": {
-		"ShieldEFF": 0.2
-	  },
-	  "tags": [],
-	  "requires": ["Shield"],
-	  "color": "Blue",
-	  "placementID": "B10"
-	},
-	"Skill Cooldown": {
-	  "name": "Skill Cooldown",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
-	  "value": -0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"CDR": -0.1
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y09"
-	},
-	"Skill Damage": {
-	  "name": "Skill Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Skill Damage [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"SkillDamage": 0.1
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R11"
-	},
-	"Skill Duration": {
-	  "name": "Skill Duration",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Skill Duration [MYTHIC]",
-	  "value": 0.1,
-	  "usesConditional": {},
-	  "stats": {
-		"SkillDuration": 0.1
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y10"
-	},
-	"Spread Recovery": {
-	  "name": "Spread Recovery",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
-	  "value": -0.3,
-	  "usesConditional": {},
-	  "stats": {
-		"SpreadRecovery": -0.3
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y11"
-	},
-	"Stagger Damage": {
-	  "name": "Stagger Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Stagger Damage [MYTHIC]",
-	  "value": 0.2,
-	  "usesConditional": {},
-	  "stats": {
-		"StaggerDamage": 0.2
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R12"
-	},
-	"Stamina": {
-	  "usesConditional": {},
-	  "name": "Stamina",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Stamina [MYTHIC]",
-	  "value": 0.15,
-	  "stats": {
-		"Stamina%": 0.15
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B11"
-	},
-	"Stamina Cost": {
-	  "usesConditional": {},
-	  "name": "Stamina Cost",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Reduced Stamina Cost [MYTHIC]",
-	  "value": -0.2,
-	  "stats": {
-		"StaminaCost": -0.2
-	  },
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B12"
-	},
-	"Stamina Recovery Delay": {
-	  "name": "Stamina Recovery Delay",
-	  "slot": "RelicFragBlue",
-	  "image": "",
-	  "desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
-	  "value": -0.3,
-	  "usesConditional": {},
-	  "stats": {},
-	  "tags": [],
-	  "color": "Blue",
-	  "placementID": "B13"
-	},
-	"Weakspot Damage": {
-	  "name": "Weakspot Damage",
-	  "slot": "RelicFragRed",
-	  "image": "",
-	  "desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
-	  "value": 0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"AllWeakspot": 0.15
-	  },
-	  "tags": [],
-	  "color": "Red",
-	  "placementID": "R13"
-	},
-	"Weapon Spread": {
-	  "name": "Weapon Spread",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Weapon Spread [MYTHIC]",
-	  "value": -0.15,
-	  "usesConditional": {},
-	  "stats": {
-		"Spread": -0.15
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y12"
-	},
-	"Weapon Swap": {
-	  "name": "Weapon Swap",
-	  "slot": "RelicFragYellow",
-	  "image": "",
-	  "desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
-	  "value": 0.35,
-	  "usesConditional": {},
-	  "stats": {
-		"WeaponSwapSpeed": 0.35
-	  },
-	  "tags": [],
-	  "color": "Yellow",
-	  "placementID": "Y13"
-	}
-  }
+// fragments = {
+// 	"": {
+// 	  "usesConditional": {},
+// 	  "name": "",
+// 	  "slot": "",
+// 	  "image": "",
+// 	  "desc": "",
+// 	  "value": 0,
+// 	  "stats": {},
+// 	  "tags": [],
+// 	  "placementID": "F00"
+// 	},
+// 	"Ammo Pickups": {
+// 	  "name": "Ammo Pickups",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Ammo Pickups [MYTHIC]",
+// 	  "value": 0.3,
+// 	  "usesConditional": {},
+// 	  "stats": {},
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y01"
+// 	},
+// 	"Ammo Reserves": {
+// 	  "name": "Ammo Reserves",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Ammo Reserves [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"Reserves": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y02"
+// 	},
+// 	"Armor Effectiveness": {
+// 	  "usesConditional": {},
+// 	  "name": "Armor Effectiveness",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Armor Effectiveness [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "stats": {
+// 		"Armor%": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B01"
+// 	},
+// 	"Blight Resistance": {
+// 	  "name": "Blight Resistance",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1 Blight Resistance [MYTHIC]",
+// 	  "value": 30,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"Blight": 30
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B02"
+// 	},
+// 	"Casting Speed": {
+// 	  "name": "Casting Speed",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Casting Speed [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"CastSpeed": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y03"
+// 	},
+// 	"Charge Melee Cost": {
+// 	  "name": "Charge Melee Cost",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Melee Charge Attack Stamina Cost [MYTHIC]",
+// 	  "value": -0.3,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ChargeCost": 0.3
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B03"
+// 	},
+// 	"Consumable Duration": {
+// 	  "name": "Consumable Duration",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Consumable Duration [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ConsumableDuration": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y04"
+// 	},
+// 	"Consumable Speed": {
+// 	  "name": "Consumable Speed",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Consumable Use Speed [MYTHIC]",
+// 	  "value": -0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ConsumableSpeed": 0.15,
+// 		"RelicSpeed": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y05"
+// 	},
+// 	"Damage Reduction": {
+// 	  "usesConditional": {},
+// 	  "name": "Damage Reduction",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Damage Reduction [MYTHIC]",
+// 	  "value": 0.05,
+// 	  "stats": {
+// 		"FlatDR": 0.05
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B04"
+// 	},
+// 	"Elemental Damage": {
+// 	  "name": "Elemental Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Elemental Damage [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ElementalDamage": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R01"
+// 	},
+// 	"Elemental Resistance": {
+// 	  "usesConditional": {},
+// 	  "name": "Elemental Resistance",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1 Elemental Damage Resistance [MYTHIC]",
+// 	  "value": 10,
+// 	  "stats": {
+// 		"Burn": 10,
+// 		"Shock": 10,
+// 		"Corrosive": 10
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B05"
+// 	},
+// 	"Grey Health Rate": {
+// 	  "name": "Grey Health Rate",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Grey Health Conversion Rate [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"GreyHealthConversion": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B06"
+// 	},
+// 	"Healing Effectiveness": {
+// 	  "usesConditional": {},
+// 	  "name": "Healing Effectiveness",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Healing Effectiveness [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "stats": {
+// 		"HealingEFF": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B07"
+// 	},
+// 	"Health": {
+// 	  "usesConditional": {},
+// 	  "name": "Health",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Health [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "stats": {
+// 		"Health%": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B08"
+// 	},
+// 	"Melee Critical Chance": {
+// 	  "name": "Melee Critical Chance",
+// 	  "slot": "RelicFragRed",
+// 	  "image": 0.1,
+// 	  "desc": "VALUE1.1% Melee Crit Chance [MYTHIC]",
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"MeleeCritChance": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R02"
+// 	},
+// 	"Melee Critical Damage": {
+// 	  "name": "Melee Critical Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Melee Crit Damage [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"MeleeCritDamage": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R03"
+// 	},
+// 	"Melee Damage": {
+// 	  "name": "Melee Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Melee Damage [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"MeleeDamage": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R04"
+// 	},
+// 	"Melee Speed": {
+// 	  "name": "Melee Speed",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Total Melee Attack Speed [MYTHIC]<br>(Attack + Charge)",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"AttackSpeed": 0.15,
+// 		"ChargeSpeed": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R05"
+// 	},
+// 	"Mod Cost": {
+// 	  "name": "Mod Cost",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Mod Cost [MYTHIC]",
+// 	  "value": -0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ModCost": -0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y06"
+// 	},
+// 	"Mod Damage": {
+// 	  "name": "Mod Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Mod Damage [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ModDamage": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R06"
+// 	},
+// 	"Mod Duration": {
+// 	  "name": "Mod Duration",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Mod Duration [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"ModDuration": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y07"
+// 	},
+// 	"Ranged Critical Chance": {
+// 	  "name": "Ranged Critical Chance",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Ranged Crit Chance [MYTHIC]",
+// 	  "value": 0.075,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"RangedCritChance": 0.075
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R07"
+// 	},
+// 	"Ranged Critical Damage": {
+// 	  "name": "Ranged Critical Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Ranged Crit Damage [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"RangedCritDamage": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R08"
+// 	},
+// 	"Ranged Damage": {
+// 	  "name": "Ranged Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Ranged Damage [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"RangedDamage": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R09"
+// 	},
+// 	"Ranged Fire Rate": {
+// 	  "name": "Ranged Fire Rate",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Fire Rate [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"FireRate": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R10"
+// 	},
+// 	"Recoil": {
+// 	  "name": "Recoil",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Recoil [MYTHIC]",
+// 	  "value": -0.3,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"Recoil": -0.3
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y08"
+// 	},
+// 	"Revive Speed": {
+// 	  "name": "Revive Speed",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Revive Speed [MYTHIC]",
+// 	  "value": 0.25,
+// 	  "usesConditional": {
+// 		"ReviveSpeed": 0.25
+// 	  },
+// 	  "stats": {},
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B09"
+// 	},
+// 	"Shield Effectiveness": {
+// 	  "usesConditional": {},
+// 	  "name": "Shield Effectiveness",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Shield Amount [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "stats": {
+// 		"ShieldEFF": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "requires": ["Shield"],
+// 	  "color": "Blue",
+// 	  "placementID": "B10"
+// 	},
+// 	"Skill Cooldown": {
+// 	  "name": "Skill Cooldown",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Skill Cooldown [MYTHIC]",
+// 	  "value": -0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"CDR": -0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y09"
+// 	},
+// 	"Skill Damage": {
+// 	  "name": "Skill Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Skill Damage [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"SkillDamage": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R11"
+// 	},
+// 	"Skill Duration": {
+// 	  "name": "Skill Duration",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Skill Duration [MYTHIC]",
+// 	  "value": 0.1,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"SkillDuration": 0.1
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y10"
+// 	},
+// 	"Spread Recovery": {
+// 	  "name": "Spread Recovery",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Reticle Spread Recovery Speed [MYTHIC]",
+// 	  "value": -0.3,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"SpreadRecovery": -0.3
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y11"
+// 	},
+// 	"Stagger Damage": {
+// 	  "name": "Stagger Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Stagger Damage [MYTHIC]",
+// 	  "value": 0.2,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"StaggerDamage": 0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R12"
+// 	},
+// 	"Stamina": {
+// 	  "usesConditional": {},
+// 	  "name": "Stamina",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Stamina [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "stats": {
+// 		"Stamina%": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B11"
+// 	},
+// 	"Stamina Cost": {
+// 	  "usesConditional": {},
+// 	  "name": "Stamina Cost",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Reduced Stamina Cost [MYTHIC]",
+// 	  "value": -0.2,
+// 	  "stats": {
+// 		"StaminaCost": -0.2
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B12"
+// 	},
+// 	"Stamina Recovery Delay": {
+// 	  "name": "Stamina Recovery Delay",
+// 	  "slot": "RelicFragBlue",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Stamina Recovery Delay [MYTHIC]",
+// 	  "value": -0.3,
+// 	  "usesConditional": {},
+// 	  "stats": {},
+// 	  "tags": [],
+// 	  "color": "Blue",
+// 	  "placementID": "B13"
+// 	},
+// 	"Weakspot Damage": {
+// 	  "name": "Weakspot Damage",
+// 	  "slot": "RelicFragRed",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Weakspot Damage [MYTHIC]",
+// 	  "value": 0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"AllWeakspot": 0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Red",
+// 	  "placementID": "R13"
+// 	},
+// 	"Weapon Spread": {
+// 	  "name": "Weapon Spread",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Weapon Spread [MYTHIC]",
+// 	  "value": -0.15,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"Spread": -0.15
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y12"
+// 	},
+// 	"Weapon Swap": {
+// 	  "name": "Weapon Swap",
+// 	  "slot": "RelicFragYellow",
+// 	  "image": "",
+// 	  "desc": "VALUE1.1% Weapon Swap Speed [MYTHIC]",
+// 	  "value": 0.35,
+// 	  "usesConditional": {},
+// 	  "stats": {
+// 		"WeaponSwapSpeed": 0.35
+// 	  },
+// 	  "tags": [],
+// 	  "color": "Yellow",
+// 	  "placementID": "Y13"
+// 	}
+//   }
 // /* ----------------------------------------------------------------------------------------*/
 // /* ------------------------------------ TRAITS --------------------------------------------*/
 // /* ----------------------------------------------------------------------------------------*/
@@ -9042,7 +10001,114 @@ traits = {
 		"10": 30
 	  },
 	  "placementID": "36"
-	}
+	},
+	"Barrier": {
+	  "name": "Barrier",
+	  "property": "ShieldEFF",
+	  "tags": [
+		"ShieldEFF"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases SHIELD amount by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.015,
+		"2": 0.030,
+		"3": 0.045,
+		"4": 0.060,
+		"5": 0.075,
+		"6": 0.090,
+		"7": 0.105,
+		"8": 0.120,
+		"9": 0.135,
+		"10": 0.15
+	  },
+	  "placementID": "37"
+	},
+	"Preservation": {
+	  "name": "Preservation",
+	  "property": "ShieldDuration",
+	  "tags": [
+		"ShieldDuration"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases SHIELD Duration Received by VALUE1.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.03,
+		"2": 0.06,
+		"3": 0.09,
+		"4": 0.12,
+		"5": 0.15,
+		"6": 0.18,
+		"7": 0.21,
+		"8": 0.24,
+		"9": 0.27,
+		"10": 0.30
+	  },
+	  "placementID": "38"
+	},
+	"Perception": {//TODO: check if this is an additive bonus before haste effectiveness or not
+	  "name": "Perception",
+	  "property": "HASTEBonus",
+	  "tags": [
+		"HASTEBonus",
+		"SLOWBonus"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Increases HASTE by VALUE1.1% and SLOW by VALUE2.1%.",
+	  "level": {
+		"0": 0,
+		"1": 0.003,
+		"2": 0.006,
+		"3": 0.009,
+		"4": 0.012,
+		"5": 0.015,
+		"6": 0.018,
+		"7": 0.021,
+		"8": 0.024,
+		"9": 0.027,
+		"10": 0.030
+	  },
+	  "property2": "SLOWBonus",
+	  "level2": {
+		"0": 0,
+		"1": 0.01,
+		"2": 0.02,
+		"3": 0.03,
+		"4": 0.04,
+		"5": 0.05,
+		"6": 0.06,
+		"7": 0.07,
+		"8": 0.08,
+		"9": 0.09,
+		"10": 0.10
+	  },
+	  "placementID": "39"
+	},
+	"Insight": {
+	  "name": "Insight",
+	  "property": "ModPowerGen/s",
+	  "tags": [
+		"ModPowerGen/s"
+	  ],
+	  "usesConditional": {},
+	  "desc": "Automatically generate VALUE1.1 Mod Power per second.",
+	  "level": {
+		"0": 0,
+		"1": 1,
+		"2": 2,
+		"3": 3,
+		"4": 4,
+		"5": 5,
+		"6": 6,
+		"7": 7,
+		"8": 8,
+		"9": 9,
+		"10": 10,
+	  },
+	  "placementID": "40"
+	},
   }
 // /* ----------------------------------------------------------------------------------------*/
 // /* ---------------------------------- WEAPONS ---------------------------------------------*/
@@ -9082,7 +10148,7 @@ primaries = {
 	  "critChance": 0.1,
 	  "weakspot": 1,
 	  "stagger": 0,
-	  "RPS": 6.89,
+	  "RPS": 7.42,
 	  "magazine": 55,
 	  "reserves": 275,
 	  "accuracy": 95,
@@ -9293,7 +10359,7 @@ primaries = {
 	  "weakspot": 1,
 	  "stagger": 0,
 	  "RPS": 3.15,
-	  "magazine": 40,
+	  "magazine": 50,
 	  "reserves": 200,
 	  "accuracy": 95,
 	  "ideal": 20,
@@ -9760,13 +10826,13 @@ primaries = {
 	  "builtIN": "",
 	  "stats": {},
 	  "tags": [],
-	  "DMG": 132,
+	  "DMG": 144,
 	  "critChance": 0.1,
 	  "weakspot": 1.15,
 	  "stagger": -0.65,
 	  "RPS": 0.63,
-	  "magazine": 18,
-	  "reserves": 90,
+	  "magazine": 24,
+	  "reserves": 96,
 	  "accuracy": 100,
 	  "ideal": 22,
 	  "falloff": 65,
@@ -9855,7 +10921,51 @@ primaries = {
 	  "ideal": 19,
 	  "falloff": 55,
 	  "placementID": "37"
-	}
+	},
+
+	// //DLC LONG GUNS, we'll circle back to these later
+	"Genesis": {
+	  "name": "Genesis",
+	  "slot": "Primary",
+	  "image": "/brotherLibrary/primaryImages/Genesis.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "builtIN": "Mega Drive",
+	  "stats": {},
+	  "tags": [],
+	  "DMG": 150,
+	  "critChance": 0.1,
+	  "weakspot": 1.15,
+	  "stagger": 0.05,
+	  "RPS": 5,
+	  "magazine": 10,
+	  "reserves": 60,
+	  "accuracy": 80,
+	  "ideal": 35,
+	  "falloff": 85,
+	  "placementID": "38"
+	},
+	"Monorail": {
+	  "name": "Monorail",
+	  "slot": "Primary",
+	  "image": "/brotherLibrary/primaryImages/Monorail.png",
+	  "desc": "Warning: Overcharging may have catastrophic results.",
+	  "usesConditional": {},
+	  "builtIN": "Recoil Dampener",
+	  "stats": {},
+	  "tags": [],
+	  "DMG": 250,
+	  "critChance": 0.05,
+	  "weakspot": 1.1,
+	  "stagger": 0.05,
+	  "RPS": 60,
+	  "magazine": 3,
+	  "reserves": 27,
+	  "accuracy": 0,
+	  "ideal": 35,
+	  "falloff": 85,
+	  "placementID": "39"
+	},
   }
 melees = {
 	"": {
@@ -10575,7 +11685,61 @@ melees = {
 	  "stagger": 0.8,
 	  "weaponClass": "Hammer",
 	  "placementID": "43"
-	}
+	},
+
+	//DLC MELEE WEAPONS
+	"Black Greatsword": {
+	  "name": "Black Greatsword",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Black Greatsword.png",
+	  "desc": "Attacks can be enhanced by Charging at the cost of Stamina over time.<br>Increases Encumbrance by 15.<br>Right now the dmg will display as 0 until I get full stats on the weapon's moveset",
+	  "usesConditional": {},
+	  "stats": {
+		"Encumbrance": 15,
+	  },
+	  "tags": [],
+	  "builtIN": "Indomitable Strike",
+	//   "DMG": 345,
+	  "DMG": 0,
+	  "critChance": 0.15,
+	  "weakSpot": 1.10,
+	  "stagger": 0.25,
+	  "weaponClass": "Greatsword",
+	  "placementID": "44"
+	},
+	"Harvester Scythe": {
+	  "name": "Harvester Scythe",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Harvester Scythe.png",
+	  "desc": "",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Phantom Blade",
+	  "DMG": 195,
+	  "critChance": 0.12,
+	  "weakSpot": 1,
+	  "stagger": -0.334,
+	  "weaponClass": "Scythe",
+	  "placementID": "45"
+	},
+	"Dark Matter Gauntlets": {
+	  "name": "Dark Matter Gauntlets",
+	  "slot": "Melee",
+	  "image": "/brotherLibrary/meleeImages/Dark Matter Gauntlets.png",
+	  "desc": "Right now the dmg will display as 0 until I get full stats on the weapon's moveset",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "builtIN": "Kilonova",
+	//   "DMG": 150,
+	  "DMG": 0,
+	  "critChance": 0.05,
+	  "weakSpot": 1.10,
+	  "stagger": 0.05,
+	  "weaponClass": "Fist",
+	  "placementID": "46"
+	},
   }
 secondaries = {
 	"": {
@@ -11136,7 +12300,52 @@ secondaries = {
 	  "ideal": 18,
 	  "falloff": 48,
 	  "placementID": "25"
-	}
+	},
+	"Repair Tool": {
+	  "name": "Repair Tool",
+	  "slot": "Secondary",
+	  "image": "/brotherLibrary/secondaryImages/Repair Tool.png",
+	  "desc": "When allies are hit, heals for 3% of their Max Health per second. Also restores N'Erudian Energy.",
+	  "usesConditional": {},
+	  "builtIN": "",
+	  "stats": {
+		"HP/S%": 0.03
+	  },
+	  "tags": [],
+	  "provides": ["Healing"],
+	  "DMG": 30,
+	  "critChance": 0.05,
+	  "weakspot": 0.80,
+	  "stagger": -0.20,
+	  "RPS": 11,
+	  "magazine": 150,
+	  "reserves": 30,
+	  "accuracy": 0,
+	  "ideal": 15,
+	  "falloff": 30,
+	  "placementID": "26"
+	},
+	"Redeemer": {
+	  "name": "Redeemer",
+	  "slot": "Secondary",
+	  "image": "/brotherLibrary/secondaryImages/Redeemer.png",
+	  "desc": "Incapable of standard Mod Generation.",
+	  "usesConditional": {},
+	  "builtIN": "Aftermath",
+	  "stats": {},
+	  "tags": [],
+	  "DMG": 207,
+	  "critChance": 0.05,
+	  "weakspot": 1,
+	  "stagger": -0.35,
+	  "RPS": 2.5,
+	  "magazine": 6,
+	  "reserves": 36,
+	  "accuracy": 0,
+	  "ideal": 20,
+	  "falloff": 60,
+	  "placementID": "27"
+	},
   }
 /* ----------------------------------------------------------------------------------------*/
 /* ---------------------------------- MUTATORS --------------------------------------------*/
@@ -11464,7 +12673,7 @@ rangedMutators = {
 	  "name": "Spirit Feeder",
 	  "slot": "RMutator",
 	  "image": "/brotherLibrary/mutatorsImages/Spirit Feeder.png",
-	  "desc": "Reloading this weapon increases the damage of the Attached Mod by 25%. Lasts 5s.<br>Level 10: Casting Attached Mod increases Reload Speed by 25%. Lasts 5s.",
+	  "desc": "Reloading this weapon increases the damage of the Attached Mod by 30%. Lasts 5s.<br>Level 10: Casting Attached Mod increases Reload Speed by 25%. Lasts 7s.",
 	  "usesConditional": {
 		"customTier0": "spiritFeeder",
 		"keys": [
@@ -11564,7 +12773,78 @@ rangedMutators = {
 	  "tags": [],
 	  "provides": ["Status","Bleed"],
 	  "placementID": "35"
-	}
+	},
+	"Detonator": {
+	  "name": "Detonator",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Detonator.png",
+	  "desc": "Each 10% of this weapon's magazine spent, cause an explosion for 50 Explosive Damage to targets within 0.5m of impact location.<br>Level 10: Increases this weapon's explosive damage by 20%.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "36"
+	},
+	"Hidden Power": {
+	  "name": "Hidden Power",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Hidden Power.png",
+	  "desc": "Increases the attached weapon's Ranged Damage by 25% after being stowed for 2s. Lasts 7s upon being brandished.<br>Level 10: Automatically reloads the attached weapon after being stowed for 2s.",
+	  "usesConditional": {},
+	  "stats": {
+		"RangedDamage": 0.25
+	  },
+	  "tags": [],
+	  "placementID": "37"
+	},
+	"Charged Wounds": {//TODO: custom function later, but reload and fire rate aren't relevant right now so low priority
+	  "name": "Charged Wounds",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Charged Wounds.png",
+	  "desc": "Increases this weapon's Fire Rate and Reload Speed by 5% per Overloaded entity within 15m. Max 5 stacks.<br>Level 10: This weapon's Ranged Weakspot and Ranged Critical Hits apply Overloaded, dealing X Shock damage over 10s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outOVERLOADED": 1
+	  },
+	  "tags": [],
+	  "placementID": "38"
+	},
+	"Repercussion": {
+	  "name": "Repercussion",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Repercussion.png",
+	  "desc": "Each enemy hit by Primary Weapons grants 1 stack of REPERCUSSION, increasing Ranged Damage by 3% per stack. Max 5 stacks. Shots consume stacks.<br>Level 10: Increases this weapon's Critical Chance by 3% per stack of REPERCUSSION.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "placementID": "39"
+	},
+	"Insulator": {
+	  "name": "Insulator",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Insulator.png",
+	  "desc": "Spending 20% of this weapon's magazine grants a SHIELD for 5% of Max Health for 10s. Max 25% SHIELD.<br>Level 10: Increases Ranged Critical Chance for this weapon by 10% when SHIELD is above 10% of Max Health.",
+	  "usesConditional": {},
+	  "stats": {
+		"Shield": 0.25
+	  },
+	  "provides": ["Shield"],
+	  "tags": [],
+	  "placementID": "40"
+	},
+	"Superheated": {
+	  "name": "Insulator",
+	  "slot": "RMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Superheated.png",
+	  "desc": "When this weapon is above 25% Heat, a 7.5mAOE Pulse deals 150 Explosive Damage once every 5s.<br>Level 10: At Max Heat, a 10m Pulse deals 300 Explosive Damage which applies BURNING to all entities for 100 FIRE damage over 20s. Can only happen once every 5s.",
+	  "usesConditional": {},
+	  "stats": {
+		"outgoingStatus": 1,
+		"outBURN": 1
+	  },
+	  "tags": [],
+	  "placementID": "41"
+	},
   }
 meleeMutators = {
 	"": {
@@ -11787,9 +13067,9 @@ meleeMutators = {
 	  "name": "Shielded Strike",
 	  "slot": "MMutator",
 	  "image": "/brotherLibrary/mutatorsImages/Shielded Strike.png",
-	  "desc": "Melee Attacks grant a Shield for 10% of Max Health. Max 50%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
+	  "desc": "Melee Attacks grant a Shield for 10% of Max Health. Max 30%. Last 5s.<br>Level 10: Charged Melee Attacks deal 25% additional Melee Damage based on current Shield amount.",
 	  "stats": {
-		"Shield": 0.5
+		"Shield": 0.3
 	  },
 	  "tags": [
 		"ChargeDamage"
@@ -11927,7 +13207,33 @@ meleeMutators = {
 	  },
 	  "tags": [],
 	  "placementID": "23"
-	}
+	},
+	"Hyper Charger": {
+	  "name": "Hyper Charger",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Hyper Charger.png",
+	  "desc": "Increases Charged Melee Stamina Cost by 65%. Increases Charged Melee Damage by 25%.<br>Level 10: Charged Melee Hits increase Stamina Recovery Rate by 100% for 3s.",
+	  "usesConditional": {},
+	  "stats": {
+		"ChargeCost": 0.65,
+		"ChargeDamage": 0.25,
+		//TODO: is that actually a % increase on stamina gain, would it counteract drakestone pearl? If so that'd be insane actually
+	  },
+	  "tags": [],
+	  "placementID": "24"
+	},
+	"Volatile Strike": {
+	  "name": "Volatile Strike",
+	  "slot": "MMutator",
+	  "image": "/brotherLibrary/mutatorsImages/Volatile Strike.png",
+	  "desc": "Dealing Melee Damage creates a 3m blast which deals 150 Explosive Damage. Can only happen once every 1s.<br>Level 10: When Volatile Strike triggers a blast, increases Movement Speed by 20% for 5s.<br>Calculator does not factor Blast Damage",
+	  "usesConditional": {},
+	  "stats": {
+		"MovementSpeed": 0.20
+	  },
+	  "tags": [],
+	  "placementID": "25"
+	},
   }
 /* ----------------------------------------------------------------------------------------*/
 /* ------------------------------------- MODS ---------------------------------------------*/
@@ -12410,7 +13716,44 @@ rangedMods = {
 	  "tags": [],
 	  "provides": ["Status","Fire","Elemental"],
 	  "placementID": "33"
-	}
+	},
+	"Shielding Shot": {
+	  "name": "Shielding Shot",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Shielding Shot.png",
+	  "desc": "Launches a payload that bursts on contact with allies, applying a SHIELD for 25% of their Max Health for 15s. Max 50% SHIELD. When no ally is struck, payload lays dormant until an ally gets close. Dormant payload lasts 30s and slowly loses Shield potency over time.",
+	  "usesConditional": {},
+	  "stats": {
+		"Shield": 0.25
+	  },
+	  "tags": [],
+	  "provides": ["Shield"],
+	  "placementID": "34"
+	},
+	"Harvester Bots": {
+	  "name": "Harvester Bots",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Harvester Bots.png",
+	  "desc": "Releases 5 Harvester Bots for 30s that seek an enemy to siphon, granting allies within 30m a stack of DRAIN. Gain 1% of base damage dealt as Lifesteal per stack. Max 5 stacks.<br>Calculator assumes max stacks when selected.",
+	  "usesConditional": {},
+	  "stats": {
+		"Lifesteal": 0.05
+	  },
+	  "tags": [],
+	  "provides": ["Lifesteal"],
+	  "placementID": "35"
+	},
+	"Voidlight": {
+	  "name": "Voidlight",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/modsImages/Voidlight.png",
+	  "desc": "Launches a projectile that releases Voidlight which remains dormant for 10s. While active, aborbs other damage sources. After expiration, explodes and fires up to 5 protectiles which home in on enemies within 22.5m. Projectiles deal 750 Mod Damage split among enemies hit, dealing an additional 450 per 100 Base Damage absorbed. Max 5x.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "provides": [],
+	  "placementID": "36"
+	},
   }
 builtInPrimary = {
 	"": {
@@ -12675,7 +14018,25 @@ builtInPrimary = {
 	  "desc": "When Mod Power is full, Primary Fire becomes Empowered and highlights enemies it strikes. Activating the mod calls down a Guardian Sword on enemies struck by an Empowered Energy Disc. Swords deal 300 damage and 3x stagger within 3mAOE.",
 	  "stats": {},
 	  "tags": []
-	}
+	},
+	"Recoil Dampener": {
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/primaryModsImages/Recoil Dampener.png",
+	  "desc": "Activation stabilizes Monorail, increasing Charge Speed by 25% and reducing Recoil and Sway by 75%. Lasts 20s.<br>Additionally, for each 5% of the Charge Meter filled upon firing, gain 1% Critical Chance and Critical Damage. Max 20%.",
+	  "stats": {},
+	  "tags": []
+	},
+	"Mega Drive": {
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/primaryModsImages/Mega Drive.png",
+	  "desc": "Activate while a valid target is in-sights, marking it with quantum Entanglement. All Genesis projectiles seek to the Entanglement target after initial impact, dealing 50% of Primary Hit damage. While active, activating can switch Entanglement target. Lasts 15s.",
+	  "stats": {},
+	  "tags": []
+	},
   }
 builtInMelee = {
 	"": {
@@ -12930,7 +14291,43 @@ builtInMelee = {
 	  "tags": [
 		"MeleeDamage"
 	  ]
-	}
+	},
+	"Indomitable Strike": {
+	  "name": "Indomitable Strike",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/meleeModsImages/Indomitable Strike.png",
+	  "desc": "Charged Attacks become INDOMITABLE.<br>INDOMITABLE: Grants 15% Damage Reduction, converts all damage taken to Grey Health, and prevents wielder from being staggered. Charging increases maximum damage by up to 350%.<br>Calculator assumes max damage at all times when this mod is enabled.",
+	  "usesConditional": {},
+	  "stats": {
+		"FlatDR": 0.15,
+		"MeleeDamage": 3.5
+	  },
+	  "tags": []
+	},
+	"Phantom Blade": {
+	  "name": "Phantom Blade",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/meleeModsImages/Phantom Blade.png",
+	  "desc": "Charged Melee Attacks release a Phantom that trails behind the host weapon, dealing 35% of the Harvester Scythe's damage. Each hit of the Phantom Blade increases Melee Attack Speed and Melee Charge Speed by 6% for 5s. Max 5 stacks.<br>Calculator assumes max stacks at all times when this mod is enabled.",
+	  "usesConditional": {},
+	  "stats": {
+		"AttackSpeed": 0.30
+	  },
+	  "tags": []
+	},
+	"Kilonova": {
+	  "name": "Kilonova",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/meleeModsImages/Kilonova.png",
+	  "desc": "Charged Melee empowers the Gauntlets for 15s, increasing Standard Melee Damage by 25% and causing Charged Melee Attacks to release 8m penetrating blasts. Each blast reduces the duration.<br>While empowered, performing a Charged Melee Attack during a Neutral Backdash gathers power for up to 5s, then fires a DARKNESS BEAM that deals 125 Melee Damage every 0.5s. The beam duration equals its time charged, then ends Kilonova after firing.",
+	  "usesConditional": {},
+	  "stats": {
+		"MeleeDamage": 0.25
+	  },
+	  "tags": []
+	},
+
+	
   }
 builtInSecondary = {
 	"": {
@@ -13089,7 +14486,17 @@ builtInSecondary = {
 	  },
 	  "tags": [],
 	  "provides": ["Status","Fire","Elemental"],
-	}
+	},
+	"Aftermath": {//not gonna factor for this, too large a can of worms to open especially since some relic effects cannot stack even on themselves.
+	  "usesConditional": {},
+	  "name": "",
+	  "slot": "Mod",
+	  "image": "/brotherLibrary/secondaryModsImages/Aftermath.png",
+	  "desc": "On Relic Use, Redeemer stores the wielder's equipped Relic effect with the weapon as a launchable payload. Upon firing, the payload bursts across 4m when contacting a human ally, or lays dormant up to 15s until an ally gets close. Max 1 stored Relic which cannot be modified.<br>Calculator does not account for bonus relic effects provided by this mod.",
+	  "stats": {},
+	  "tags": [],
+	  "provides": [],
+	},
   }
 // /* ----------------------------------------------------------------------------------------*/
 // /* ------------------------------- CONSUMABLES --------------------------------------------*/
@@ -13331,7 +14738,31 @@ concoctions = {
 	  "tags": [],
 	  "duration": 3600,
 	  "placementID": "C17"
-	}
+	},
+	"Numbing Agent": {
+	  "name": "Numbing Agent",
+	  "slot": "Conc",
+	  "image": "/brotherLibrary/concoctionsImages/Numbing Agent.png",
+	  "desc": "Increases the hits that can be taken before losing Grey Health by 1. Lasts 60m and will stay in effect after death. Only one Concoction may be active at a time.",
+	  "usesConditional": {},
+	  "stats": {
+		"GreyHPHitThreshold": 1
+	  },
+	  "tags": [],
+	  "duration": 3600,
+	  "placementID": "C18"
+	},
+	"Mudtooth's Snake Oil": {//I don't think I'll let this add stats. I don't see the point. It's something cool to have, but like the Eye it can't be relied upon.
+	  "name": "Mudtooth's Snake Oil",
+	  "slot": "Conc",
+	  "image": "/brotherLibrary/concoctionsImages/Mudtooth's Snake Oil.png",
+	  "desc": "Grants 1 random Concoction effect. Ignores Concoction limit. Lasts 60m. Can only be consumed once every 60m.<br>This does not provide any bonuses on the calculator, and as such it is not required to slot it to gain anything.",
+	  "usesConditional": {},
+	  "stats": {},
+	  "tags": [],
+	  "duration": 3600,
+	  "placementID": "C19"
+	},
   }
 quickUses = {
 	"": {
@@ -13667,6 +15098,19 @@ quickUses = {
 	  "tags": [],
 	  "duration": 600,
 	  "placementID": "Q26"
+	},
+	"Light Extract": {
+	  "name": "Light Extract",
+	  "slot": "Cons",
+	  "image": "/brotherLibrary/consumablesImages/Light Extract.png",
+	  "desc": "Grants HASTE. Lasts 60s.",
+	  "usesConditional": {},
+	  "stats": {
+		"HASTE": 1
+	  },
+	  "tags": [],
+	  "duration": 60,
+	  "placementID": "Q27"
 	}
   }
 /* ----------------------------------------------------------------------------------------*/
@@ -13744,6 +15188,18 @@ globalRecords = {
 	"greatConcoctionRecords": [],
 	"greatConsumableRecords": [],
 	"urlObject": {},
+	"greatRowRecords": [
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": 0,"isCombo": false,"comboArray": ["",""]},
+		{"name": "","level": -1,"isCombo": false,"comboArray": ["",""]}
+	],
+	"traitsOrPrismsOpen": "traitsMegaBox",
 	"armor": {
 		"helmet": "",
 		"chest": "",
@@ -13770,6 +15226,17 @@ globalRecords = {
 		"fragment1": "",
 		"fragment2": "",
 		"fragment3": "",
+	},
+	"prism": {
+		"PrismRow1": "",
+		"PrismRow2": "",
+		"PrismRow3": "",
+		"PrismRow4": "",
+		"PrismRow5": "",
+		"PrismRow6": "",
+		"PrismRow7": "",
+		"PrismRow8": "",
+		"PrismRow9": "",
 	},
 	"consumables": {
 		"concoction1": "",

@@ -50,7 +50,7 @@ let formulasValues = {
       if (armorOnly) {return}
     }
 
-    const {amulet,ring1,ring2,ring3,ring4,relic,fragment1,fragment2,fragment3} = overAccessoryRef;
+    const {amulet,ring1,ring2,ring3,ring4,relic} = overAccessoryRef;
     const {primary,primaryMutator,primaryMod,melee,meleeMutator,secondary,secondaryMutator,secondaryMod} = overWeaponRef;
     let builtInRef1 = primaries[primary].builtIN;
     let builtInRef2 = melees[melee].builtIN;
@@ -58,12 +58,31 @@ let formulasValues = {
 
     let iterableArray = [
       amulets[amulet].stats,rings[ring1].stats,rings[ring2].stats,rings[ring3].stats,rings[ring4].stats,
-      relics[relic].stats,fragments[fragment1].stats,fragments[fragment2].stats,fragments[fragment3].stats,
+      relics[relic].stats,
+      // fragments[fragment1].stats,fragments[fragment2].stats,fragments[fragment3].stats,
       primaries[primary].stats,melees[melee].stats,secondaries[secondary].stats,rangedMutators[primaryMutator].stats,meleeMutators[meleeMutator].stats,rangedMutators[secondaryMutator].stats,
       builtInRef1 ? builtInPrimary[builtInRef1].stats : rangedMods[primaryMod].stats,
       builtInRef2 ? builtInMelee[builtInRef2].stats : {},
       builtInRef3 ? builtInSecondary[builtInRef3].stats : rangedMods[secondaryMod].stats,
     ]
+
+    // for (let i=1;i<=9;i++) {
+    //   let categoryRef = i<9 ? prismRowOptions : legendaryPerks;
+    //   let current = categoryRef[globalRecords.greatRowRecords[i-1].name];
+    //   if (current.color === "Combo") {
+    //     refArray.push({item: categoryRef[current.requirements[0]].stats},{item: categoryRef[current.requirements[1]].stats});
+    //     continue;
+    //   }
+    //   else {
+    //     refArray.push({item: current.stats})
+    //   }
+    // }
+
+    //this is just for frags, as we pull the stats of all prism rows BEFORE the cycles even start
+    for (let i=1;i<=3;i++) {
+      let current = prismRowOptions[globalRecords.greatRowRecords[i-1].name];
+      iterableArray.push(current.stats);
+    }
 
     //Concoctions only, consumables are static
     recordPath = globalRecords.greatConcoctionRecords;
@@ -85,7 +104,7 @@ let formulasValues = {
     let ability2Path = arch2Path.abilities[archsTableName.two.ability];
 
     const {helmet,chest,leg,hand} = globalRecords.armor;
-    const {amulet,ring1,ring2,ring3,ring4,relic,fragment1,fragment2,fragment3} = globalRecords.accessories;
+    const {amulet,ring1,ring2,ring3,ring4,relic} = globalRecords.accessories;
     const {primary,primaryMutator,primaryMod,melee,meleeMutator,secondary,secondaryMutator,secondaryMod} = globalRecords.weapons;
     let builtInRef1 = primaries[primary].builtIN;
     let builtInRef2 = melees[melee].builtIN;
@@ -102,8 +121,8 @@ let formulasValues = {
       {item: helmets[helmet].stats, toggle: 'USEtoggledHead'},{item: chests[chest].stats, toggle: 'USEtoggledChest'},{item: legs[leg].stats, toggle: 'USEtoggledLegs'},{item: hands[hand].stats, toggle: 'USEtoggledHands'},
 
       {item: amulets[amulet].stats, toggle: 'USEtoggledAmulet'},{item: rings[ring1].stats, toggle: 'USEtoggledRing1'},{item: rings[ring2].stats, toggle: 'USEtoggledRing2'},{item: rings[ring3].stats, toggle: 'USEtoggledRing3'},{item: rings[ring4].stats, toggle: 'USEtoggledRing4'},
-      {item: relics[relic].stats, toggle: 'USEtoggledRelic'},{item: fragments[fragment1].stats},{item: fragments[fragment2].stats},{item: fragments[fragment3].stats},
-
+      {item: relics[relic].stats, toggle: 'USEtoggledRelic'},
+      // {item: fragments[fragment1].stats},{item: fragments[fragment2].stats},{item: fragments[fragment3].stats},
       {item: primaries[primary].stats, toggle: 'USEtoggledPrimary'},{item: rangedMutators[primaryMutator].stats, toggle: 'USEtoggledpMutator'},{item: builtInRef1 ? builtInPrimary[builtInRef1].stats : rangedMods[primaryMod].stats, toggle: 'USEtoggledpMod'},
       {item: melees[melee].stats, toggle: 'USEtoggledMelee'},{item: meleeMutators[meleeMutator].stats, toggle: 'USEtoggledmMutator'},{item: builtInRef2 ? builtInMelee[builtInRef2].stats : {}, toggle: 'USEtoggledmMod'},
       {item: secondaries[secondary].stats, toggle: 'USEtoggledSecondary'},{item: rangedMutators[secondaryMutator].stats, toggle: 'USEtoggledsMutator'},{item: builtInRef3 ? builtInSecondary[builtInRef3].stats : rangedMods[secondaryMod].stats, toggle: 'USEtoggledsMod'},
@@ -111,6 +130,18 @@ let formulasValues = {
       {item: arch1Path.primeStats, toggle: 'USEtoggledPrimeP'},{item: ability1Path.stats, toggle: 'USEtoggledAbility1'},{item: ability2Path.stats, toggle: 'USEtoggledAbility2'},
       // {item: hands[hand].stats, toggle: 'USEtoggledHands'},
     ]
+    for (let i=1;i<=9;i++) {
+      let categoryRef = i<9 ? prismRowOptions : legendaryPerks;
+      let current = categoryRef[globalRecords.greatRowRecords[i-1].name];
+      if (current.color === "Combo") {
+        refArray.push({item: categoryRef[current.requirements[0]].stats},{item: categoryRef[current.requirements[1]].stats});
+        continue;
+      }
+      else {
+        refArray.push({item: current.stats})
+      }
+      // console.log(globalRecords.greatRowRecords[i-1].name)
+    }
     //Push PASSIVES
     for (let i=1;i<=4;i++) {
       refArray.push({item: arch1Path.passives[`passive${i}`].stats, toggle: `USEtoggledPassive${i}`},{item: arch2Path.passives[`passive${i}`].stats, toggle: `USEtoggledPassive${i+4}`});
@@ -339,6 +370,8 @@ let customItemFunctions = {
       "Burden of the Mesmer": {action: (index) => {index.GlobalHealthModifier *= 1 + (1/3);}},
       "Burden of the Rebel": {stat: "RelicSpeed", value: -rings[`Burden of the Rebel`].stats.RelicSpeed},
       "Burden of the Sciolist": {stat: "Reserves", value: -rings[`Burden of the Sciolist`].stats.Reserves},
+      "Burden of the Protector": {stat: "ShieldDuration", value: -rings[`Burden of the Protector`].stats.ShieldDuration},
+      "Burden of the Excavator": {stat: "ExplosiveCritChance", value: -rings[`Burden of the Excavator`].stats.ExplosiveCritChance},
       "Burden of the Stargazer": {action: () => {}}, // Negate health cost on skill activation.
       "Burden of the Warlock": {action: () => {}} // Negate health cost on mod activation.
     },//this is explicitly for Gift of the Unbound's burden negation math/effects
@@ -647,6 +680,99 @@ let customItemFunctions = {
     whiteGlassBead(index) {//0 user input
       index.Shield += globalRecords.isPerfectDodge ? 0.15 : 0;
     },
+    volatileCartridge(index) {
+      const totalShield = index.Shield * (1 + index.ShieldEFF);
+      const actualShield = Math.min(totalShield,index.ShieldCap);
+
+      const bonus = Math.floor(actualShield/5);
+
+      index.ExplosiveCritChance += bonus;
+      index.ExplosiveCritDamage += bonus;
+    },
+    timekeepersForfeit(index)  {
+      if (outgoingStatus) {
+        index.incomingStatus += 1;
+
+        index.inSLOW += index.outSLOW ? 1 : 0;
+        index.inBLEED += index.outBLEED ? 1 : 0;
+        index.inBURN += index.outBURN ? 1 : 0;
+        index.inOVERLOADED += index.outOVERLOADED ? 1 : 0;
+        index.inCORRODED += index.outCORRODED ? 1 : 0;
+      }
+    },
+    zeroHour(index) {
+      let currentClass = 0;
+      switch (dodgeClass) {
+        case "Flop": currentClass = 3;break;
+        case "Heavy": currentClass = 2;break;
+        case "Medium": currentClass = 1;break;
+      }
+      index.AllDamage -= 0.05 * currentClass;
+      index.AllCritChance -= 0.025 * currentClass;
+    },
+    insipidTalon(index) {
+      let perfectDodge = globalRecords.isPerfectDodge;
+      const stackCount = 15;
+      if (perfectDodge === true) {
+        index.AllDamage += 0.02 * stackCount;
+        index.FlatDR += 0.01 * stackCount;
+      }
+    },
+    shortCircuit(index) {
+      if (index.Shield) {
+        index.AllCritChance += 0.10;
+        index.AllCritDamage += 0.10;
+      }
+    },
+    cessationBulbel(index) {
+      const totalShield = index.Shield * (1 + index.ShieldEFF);
+      const actualShield = Math.min(totalShield,index.ShieldCap);
+
+      const bonus = Math.floor(actualShield/20)
+
+      index.AllDamage += Math.min(10,bonus) * 0.04;
+    },
+
+    nightmareSigil(index) {
+      let perfectDodge = globalRecords.isPerfectDodge;
+      if (perfectDodge === true) {
+        index.Lifesteal += 0.05;
+      }
+    },
+    stoneOfRevelation(index) {
+      if (index.outEXPOSED) {
+        index.ModDamage += 0.05;
+        index.ModPowerGen += 0.05;
+      }
+    },
+    wiredInhibitor(index) {
+      index.outSLOW += index.outgoingStatus ? 1 : 0;
+    },
+    symbolOfRoyalty(index) {
+      index.Bulwark += globalRecords.isPerfectDodge ? 3 : 0;
+    },
+    breachAccelerator(index) {
+      if (index.HASTE) {
+        index.MovementSpeed += 0.05;
+        index.AllDamage += 0.05;
+      }
+    },
+    siphonFilter(index) {
+      index.HASTE += index.outSLOW ? 1 : 0;
+
+      if (index.HASTE) {
+        const totalHasteBonus = (0.07 + index.HASTEBonus) * index.HASTEEffectiveness;
+        index.AllDamage += totalHasteBonus;
+      }
+    },
+    custodiansBastion(index) {
+      const totalShield = index.Shield * (1 + index.ShieldEFF);
+      const actualShield = Math.min(totalShield,index.ShieldCap);
+
+      index.Armor += Math.min(100,actualShield/2);
+    },
+
+
   // },
   // "relic": {//DONE relics are currently tierless
     resonatingHeart(index,[relicHPscaled,totalHealth]) {
@@ -691,7 +817,7 @@ let customItemFunctions = {
       conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Spellweaver");
     },
     spiritFeeder(index) {
-      let modDamageBonus = 0.25;
+      let modDamageBonus = 0.30;
       conditionalHelpers.applySpecifiedMutatorBaseBonus(index,"ModDamage",modDamageBonus,"Spirit Feeder");
     },
     spiritHealer(index) {

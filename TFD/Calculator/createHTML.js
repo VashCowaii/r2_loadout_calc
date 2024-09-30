@@ -18,7 +18,14 @@ const createHTML = {
         value = !isRounded ? value : value.toFixed(3)
         return `<div class="basicsDRContainer hasHoverTooltip" id="${tooltipID}">
           <span class="basicsDRStat">${name}</span><span class="rowTraceLine"></span><span class="basicsDRValue" id="">${value}</span>
-        ${unit}</div>`
+        <span class="rowUnitCenter">${unit}</span></div>`
+    },
+    basicsRowAbilityHeader(tooltipID,name,value,isRounded,unit) {
+        unit = unit ?? "";
+        value = unit==="%" ? value*100 : value;
+        value = !isRounded ? value : value.toFixed(3)
+        return `<div class="basicsDRContainer hasHoverTooltip" id="${tooltipID}">
+          <span class="basicsDRStatGreen">${name}</span></div>`
     },
     componentDescription(descRef) {
         return `<span class="componentDescription">

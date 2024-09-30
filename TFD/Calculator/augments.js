@@ -13,7 +13,6 @@ const augments = {
         "skillOverrides": [0,0,0,0,0]
     },
 
-
     //Lepic
     "Nerve Infiltration": {
         "rarity": "Transcendant",
@@ -129,7 +128,7 @@ const augments = {
         "skillOverrides": [0,0,0,"Electric Condense",0]
     },
 
-
+    //Kyle
     "Superconductive Bombing": {
         "rarity": "Transcendant",
         "polarity": "Xantic",
@@ -170,6 +169,43 @@ const augments = {
 
 
 
+    //Esiemo
+    "Explosive Evade": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Esiemo",
+        "desc": "Spawns a Guided Landmine when rolling.",
+        "skillOverrides": [0,0,0,0,"Explosive Evade"]
+    },
+    "Cluster Bomb": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 14,
+        "category": "Esiemo",
+        "desc": "Detonating an attached bomb creates additional Explosives at the detonated location.",
+        "skillOverrides": [0,"Cluster Bomb",0,0,0]
+    },
+    "Explosive Propaganda": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 14,
+        "category": "Esiemo",
+        "desc": "Generates Explosive Propaganda. The generated Explosive Propaganda taunts nearby monsters until destroyed, upon which it explodes and causes great damage to nearby enemies.",
+        "skillOverrides": [0,0,"Explosive Propaganda",0,0]
+    },
+    "Creative Explosion": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Esiemo",
+        "desc": "After a dash, uses up all available bombs to inflict great damage to nearby enemies. The more bombs available, the greater the damage inflicted.",
+        "skillOverrides": [0,"Creative Explosion",0,"Creative Explosion",0]
+    },
 
     // "Classic Chef": {
     //     "rarity": "Transcendant",

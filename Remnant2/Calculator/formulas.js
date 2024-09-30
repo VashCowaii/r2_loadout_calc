@@ -192,7 +192,7 @@ let calcs = {
         //----------SHIELDS----------------------------------------------------------------------------
         let percShields = index.Shield;
         let shieldEff = index.ShieldEFF;
-        let totalPercShields = percShields * (1+shieldEff);
+        let totalPercShields = Math.min(index.ShieldCap, percShields * (1+shieldEff));
         //noGlobal on HP here, as stuff like restriction cord does not reduce max hp, it only prevents you from HEALING past 50%
         let shieldEHP = baseEHP * totalPercShields;
 

@@ -54,6 +54,14 @@ let globalRecords = {
         "subRoll3Value": 0,
         "subRoll4Value": 0,
     },
+    "boss": {
+        "currentBoss": "Devourer",
+        // "DEF": 162232,
+        // "Fire": 162232,
+        // "Electric": 75746,
+        // "Chill": 250324,
+        // "Toxic": 409149,
+    },
     "weaponCritCeiling": 0,
     "skillCritCeiling": 0,
 

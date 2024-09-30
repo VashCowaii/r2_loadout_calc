@@ -70,6 +70,7 @@ let manipulateURL = {
         "consumable": [],
         "accessory": [],
         "relic": [],
+        "prism": [],
         "settings": [],
         "adv": [],
         "s": ["s"]
@@ -148,7 +149,11 @@ let manipulateURL = {
         path = globalRecords.greatConcoctionRecords;
         for (i=0;i<path.length;i++) {if (concoctions[path[i]].placementID != "C00") {urlObject.consumable += concoctions[path[i]].placementID}}
         path = globalRecords.greatConsumableRecords;
-        for (i=0;i<path.length;i++) {if (quickUses[path[i]].placementID != "Q00") {urlObject.consumable += quickUses[path[i]].placementID}}
+        if (globalRecords.greatConsumableRecords[0] != undefined) {
+          for (i=0;i<path.length;i++) {
+            console.log(path[i],quickUses[path[i]],globalRecords.greatConsumableRecords)
+            if (quickUses[path[i]].placementID != "Q00") {urlObject.consumable += quickUses[path[i]].placementID}}
+        }
       }
   
       path = globalRecords.accessories;
@@ -163,20 +168,34 @@ let manipulateURL = {
       }
       
   
-      if (isExported) {
-        urlObject.relic.push(path.relic);
-        for (i=1;i<=3;i++) {
-          urlObject.relic.push(path[`fragment${i}`]);
-        }
-      }
+      if (isExported) {urlObject.relic.push(path.relic);}
       else {
         urlObject.relic = "";
         if (relics[path.relic].placementID != "r00") {urlObject.relic += relics[path.relic].placementID}
-  
-        for (i=1;i<=3;i++) {
-          if (fragments[path[`fragment${i}`]].placementID != "F00") {urlObject.relic += fragments[path[`fragment${i}`]].placementID}
+      }
+
+      path = globalRecords.greatRowRecords;
+      if (isExported) {
+        for (i=1;i<=9;i++) {
+          urlObject.prism.push(path[i-1].name);
         }
       }
+      else {
+        urlObject.prism = "";
+        for (i=1;i<=9;i++) {
+          let categoryRef = i===9 ? legendaryPerks : prismRowOptions;
+
+          let usableID = categoryRef[path[i-1].name].placementID;
+          let displayedID = usableID;
+          if (i>3 && (usableID.charAt(0) === "R" || usableID.charAt(0) === "Y" || usableID.charAt(0) === "B")) {
+            displayedID = displayedID.charAt(0).toLowerCase() + displayedID.slice(1);
+          }
+          if (categoryRef[path[i-1].name].placementID != "F00" && categoryRef[path[i-1].name].placementID != "L00") {urlObject.prism += displayedID}
+        }
+      }
+
+
+
   
       urlObject.settings = ["","",""]//0 is general gear, 1 is concoctions, 2 is quick-use items
       manipulateURL.updateGeneralToggles(isOverride);
@@ -298,6 +317,7 @@ let manipulateURL = {
       let urlConcoctions = feed.get("consumable");
       let urlAccessory = feed.get("accessory");
       let urlRelic = feed.get("relic");
+      let urlPrism = feed.get("prism");
       let urlSettings = feed.get("settings");
       let urlAdvanced = feed.get("adv");
       let urlSource = feed.get("s");
@@ -497,7 +517,7 @@ let manipulateURL = {
       if (urlRelic) {//RELIC AND FRAGMENTS
         let hasMultipleOld = urlRelic.includes(",") || urlRelic.includes(" ");
         let isActuallyNumbers = !hasMultipleOld && urlRelic.length % 3 === 0 
-          && (urlRelic.charAt(0) === "r" || urlRelic.charAt(0) === "R" || urlRelic.charAt(0) === "Y" || urlRelic.charAt(0) === "B");
+          && (urlRelic.charAt(0) === "r");
   
         if (isActuallyNumbers) {
           for (let i=0;i<urlRelic.length;i += 3) {
@@ -515,22 +535,6 @@ let manipulateURL = {
                   }
                 }
             }
-            else if (itemHeader === "R" || itemHeader === "Y" || itemHeader === "B") {
-              armorKeys = Object.keys(fragments)
-              for (let key of armorKeys) {
-                if (fragments[key].placementID === itemID) {
-  
-                  for (let x=1;x<=3;x++) {
-                    if (globalRecords.accessories[`fragment${x}`] === "") {
-                      readSelection(`fragment${x}`).value = key;
-                      userTrigger.updateFragment('fragment',x,true);
-                      break;
-                    }
-                  }
-                  break;
-                }
-              }
-            }
           }
         }
         else {
@@ -540,14 +544,78 @@ let manipulateURL = {
             readSelection("relic").value = urlRelic[0];
             userTrigger.updateAccessory('relic',"",true);
           }
-          for (let i=1;i<=3;i++) {
-            if (fragments[urlRelic[i]] === undefined) {invalidEntries.push(urlRelic[i]);}
-            else if (urlRelic[i]) {
-              readSelection(`fragment${i}`).value = urlRelic[i];
-              userTrigger.updateFragment('fragment',i,true);
+        }
+      }
+      if (urlPrism) {
+        let hasMultipleOld = urlPrism.includes(",") || urlPrism.includes(" ");
+        let isActuallyNumbers = !hasMultipleOld && urlPrism.length % 3 === 0 
+          && (urlPrism.charAt(0) === "F" || urlPrism.charAt(0) === "R" || urlPrism.charAt(0) === "Y" || urlPrism.charAt(0) === "B" || urlPrism.charAt(0) === "L" 
+          || urlPrism.charAt(0) === "C" || urlPrism.charAt(0) === "r" || urlPrism.charAt(0) === "y" || urlPrism.charAt(0) === "b");
+
+
+          if (isActuallyNumbers) {
+            for (let i=0;i<urlPrism.length;i += 3) {
+              let itemHeader = urlPrism.charAt(i);
+              let itemID = urlPrism.charAt(i) + urlPrism.charAt(i+1) + urlPrism.charAt(i+2);
+    
+    
+              if (itemHeader === "R" || itemHeader === "Y" || itemHeader === "B") {
+                armorKeys = Object.keys(prismRowOptions)
+                for (let key of armorKeys) {
+                  if (prismRowOptions[key].placementID === itemID) {
+    
+                    for (let x=1;x<=3;x++) {
+                      if (globalRecords.greatRowRecords[x-1].name === "") {
+                        readSelection(`PrismRow${x}`).value = key;
+                        plannerTrigger.updateRow(x);
+                        break;
+                      }
+                    }
+                    break;
+                  }
+                }
+              }
+              else if (itemHeader === "C" || itemHeader === "r" || itemHeader === "y" || itemHeader === "b") {
+                armorKeys = Object.keys(prismRowOptions);
+                itemID = itemID.charAt(0).toUpperCase() + itemID.slice(1);
+                for (let key of armorKeys) {
+
+                  if (prismRowOptions[key].placementID === itemID) {
+    
+                    for (let x=4;x<=8;x++) {
+                      if (globalRecords.greatRowRecords[x-1].name === "") {
+                        readSelection(`PrismRow${x}`).value = key;
+                        plannerTrigger.updateRow(x);
+                        break;
+                      }
+                    }
+                    break;
+                  }
+                }
+              }
+              else if (itemHeader === "L") {
+                armorKeys = Object.keys(legendaryPerks);
+                for (let key of armorKeys) {
+                  if (legendaryPerks[key].placementID === itemID) {
+                    readSelection("PrismRow9").value = key;
+                    plannerTrigger.updateRow(9);
+                    break;
+                  }
+                }
+              }
             }
           }
-        }
+          else {
+            urlPrism = urlPrism.split(",");
+            for (let i=1;i<=9;i++) {
+              if (i<9 && prismRowOptions[urlPrism[i]] === undefined) {invalidEntries.push(urlPrism[i]);}
+              else if (i===9 && legendaryPerks[urlPrism[i]] === undefined) {invalidEntries.push(urlPrism[i]);}
+              else if (urlPrism[i]) {
+                readSelection(`PrismRow${i}`).value = urlPrism[i];
+                plannerTrigger.updateRow(i);
+              }
+            }
+          }
       }
       if (urlPrimary) {//WEAPONS
         const letterPattern = /[a-zA-Z]/;

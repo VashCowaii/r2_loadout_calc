@@ -9,7 +9,8 @@
 /* trans glow #2a8378 */
 
 
-.prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription,.totalHealingHeaderBoss,.totalHealingValueBoss,.bossDataCritResist {
+.prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription,.totalHealingHeaderBoss,.totalHealingValueBoss,.bossDataCritResist,.abilityBreakdownGeneralMessage,
+.bossResistBoxHolder,.bossResistValue {
     font-family: "Montserrat-Light";
 }
 
@@ -290,7 +291,7 @@
     text-align: left;
     position: relative;
     box-sizing: border-box;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 .breakdownDisplayImageBox {
@@ -614,6 +615,41 @@
     width: 100%;
     white-space: normal;
 }
+.abilityBreakdownGeneralMessage {
+    width: 100%;
+    white-space: normal;
+    font-size: 14px;
+}
+.basicsDRStat {
+    width: auto;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+}
+.basicsDRStatGreen {
+    width: auto;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    white-space: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+    color: #0eef52;
+    width: 100%;
+}
+.rowUnitCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
 
 
 
@@ -858,6 +894,34 @@
     object-fit: contain;
     width: 20px;
     height: 20px;
+}
+.bossResistBoxHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.bossDataCritResistAttributes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.bossDataBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bossDataPageHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    font-size: 30px;
 }
 
 
