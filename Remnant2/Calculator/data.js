@@ -3451,7 +3451,7 @@ classInfo = {
 		  "desc": "Deploy Shield Drone with 100 Energy Reserves to follow and protect its Warded Target.<br>The Warded Target gains 10% increased Damage Reduction. When the Warded Target is not at Max SHIELD Capacity, the Drone consumes 25 Energy to grant a SHIELD for 8% of the target's Max Health once every 2s. Shields from the Drone last until removed by damage, altering the Warded Target, or the drone is Stowed.",
 		  "image": "/brotherLibrary/abilitiesImages/Shield Drone.png",
 		  "stats": {
-			"REdamage": [0.15],
+			"REdamage": [-0.10],
 			"Shield": 1
 		  },
 		  "tags": [],
