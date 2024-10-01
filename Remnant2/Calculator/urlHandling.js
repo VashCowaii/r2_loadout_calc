@@ -151,7 +151,6 @@ let manipulateURL = {
         path = globalRecords.greatConsumableRecords;
         if (globalRecords.greatConsumableRecords[0] != undefined) {
           for (i=0;i<path.length;i++) {
-            console.log(path[i],quickUses[path[i]],globalRecords.greatConsumableRecords)
             if (quickUses[path[i]].placementID != "Q00") {urlObject.consumable += quickUses[path[i]].placementID}}
         }
       }

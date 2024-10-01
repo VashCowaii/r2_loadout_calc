@@ -12359,6 +12359,8 @@ rangedMutators = {
 	  "desc": "",
 	  "stats": {},
 	  "tags": [],
+	  "requires": [],
+	  "provides": [],
 	  "placementID": "00"
 	},
 	"Bandit": {
@@ -12782,6 +12784,8 @@ rangedMutators = {
 	  "usesConditional": {},
 	  "stats": {},
 	  "tags": [],
+	  "requires": [],
+	  "provides": [],
 	  "placementID": "36"
 	},
 	"Hidden Power": {
@@ -12794,6 +12798,8 @@ rangedMutators = {
 		"RangedDamage": 0.25
 	  },
 	  "tags": [],
+	  "requires": [],
+	  "provides": [],
 	  "placementID": "37"
 	},
 	"Charged Wounds": {//TODO: custom function later, but reload and fire rate aren't relevant right now so low priority
@@ -12807,6 +12813,8 @@ rangedMutators = {
 		"outOVERLOADED": 1
 	  },
 	  "tags": [],
+	  "requires": [],
+	  "provides": ["Status"],
 	  "placementID": "38"
 	},
 	"Repercussion": {
@@ -12817,6 +12825,8 @@ rangedMutators = {
 	  "usesConditional": {},
 	  "stats": {},
 	  "tags": [],
+	  "requires": [],
+	  "provides": [],
 	  "placementID": "39"
 	},
 	"Insulator": {
@@ -12829,6 +12839,7 @@ rangedMutators = {
 		"Shield": 0.25
 	  },
 	  "provides": ["Shield"],
+	  "requires": [],
 	  "tags": [],
 	  "placementID": "40"
 	},
@@ -12843,6 +12854,8 @@ rangedMutators = {
 		"outBURN": 1
 	  },
 	  "tags": [],
+	  "requires": [],
+	  "provides": ["Status"],
 	  "placementID": "41"
 	},
   }
