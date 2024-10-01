@@ -643,16 +643,19 @@ let cycles = {
         if (currentMMutator.provides) {provided.push(...currentMMutator.provides)}
 
         for (let entry of rMutator1) {
+            if (!entry || entry === -1) {continue;}
             const currentRMutator = rangedMutators[rangedMutRef[entry]];
             if (currentRMutator.requires) {required.push(...currentRMutator.requires)}
             if (currentRMutator.provides) {provided.push(...currentRMutator.provides)}
         }
         for (let entry of Cconcoction) {
+            if (!entry || entry === -1) {continue;}
             const currentConc = concoctions[concRef[entry]];
             if (currentConc.requires) {required.push(...currentConc.requires)}
             if (currentConc.provides) {provided.push(...currentConc.provides)}
         }
         for (let entry of CfragmentSet) {
+            if (!entry || entry === -1) {continue;}
             const currentFrag = fragments[fragRef[entry]];
             if (currentFrag.requires) {required.push(...currentFrag.requires)}
             if (currentFrag.provides) {provided.push(...currentFrag.provides)}
@@ -672,17 +675,21 @@ let cycles = {
         if (secondariesRef.requires) {required.push(...secondariesRef.requires)}
         if (secondariesRef.provides) {provided.push(...secondariesRef.provides)}
 
-        const currentPrimaryMod = primariesRef.builtIN ? builtInPrimary[primariesRef.builtIN] : rangedMods[rangedModRef[rMod1[0] ?? 0]];
-        if (currentPrimaryMod.requires) {required.push(...currentPrimaryMod.requires)}
-        if (currentPrimaryMod.provides) {provided.push(...currentPrimaryMod.provides)}
+        if (rMod1[0] != -1) {
+            const currentPrimaryMod = primariesRef.builtIN ? builtInPrimary[primariesRef.builtIN] : rangedMods[rangedModRef[rMod1[0] ?? 0]];
+            if (currentPrimaryMod.requires) {required.push(...currentPrimaryMod.requires)}
+            if (currentPrimaryMod.provides) {provided.push(...currentPrimaryMod.provides)}
+        }
         if (meleesRef.builtIN) {
             const currentMeleeMod = builtInMelee[meleesRef.builtIN];
             if (currentMeleeMod.requires) {required.push(...currentMeleeMod.requires)}
             if (currentMeleeMod.provides) {provided.push(...currentMeleeMod.provides)}
         }
-        const currentSecondaryMod = secondariesRef.builtIN ? builtInSecondary[secondariesRef.builtIN] : rangedMods[rangedModRef[rMod1[1] ?? 0]];
-        if (currentSecondaryMod.requires) {required.push(...currentSecondaryMod.requires)}
-        if (currentSecondaryMod.provides) {provided.push(...currentSecondaryMod.provides)}
+        if (rMod1[1] != -1) {
+            const currentSecondaryMod = secondariesRef.builtIN ? builtInSecondary[secondariesRef.builtIN] : rangedMods[rangedModRef[rMod1[1] ?? 0]];
+            if (currentSecondaryMod.requires) {required.push(...currentSecondaryMod.requires)}
+            if (currentSecondaryMod.provides) {provided.push(...currentSecondaryMod.provides)}
+        }
 
         required = new Set(required);
         provided = new Set(provided);
