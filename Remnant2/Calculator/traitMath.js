@@ -27,10 +27,12 @@ let manipulateTrait = {
         let trait1Path = classInfo[arch1path].classTrait;
         let trait2Path = classInfo[arch2path].classTrait;
         //Check if the intrinsic traits even have a bonus
-        let useEndurance = classInfo[arch1path].Endurance > 0;
-        let useExpertise = classInfo[arch1path].Expertise > 0;
-        let useSpirit = classInfo[arch1path].Spirit > 0;
-        let useVigor = classInfo[arch1path].Vigor > 0;
+        const isTraitorActive = globalRecords.greatRowRecords[8].name === "Traitor";
+        const defaultModifier = isTraitorActive ? 10 : 0;
+        let useEndurance = (classInfo[arch1path].Endurance + defaultModifier) > 0;
+        let useExpertise = (classInfo[arch1path].Expertise + defaultModifier) > 0;
+        let useSpirit = (classInfo[arch1path].Spirit + defaultModifier) > 0;
+        let useVigor = (classInfo[arch1path].Vigor + defaultModifier) > 0;
         //If so, trigger autopopulation checks for whichever ones do.
         //All the following checks are done in reverse order, as the display scheme is first in last out
         let pushTrait = manipulateTrait.bumpTrait;
@@ -59,7 +61,7 @@ let manipulateTrait = {
             addOrDelete("delete",i);
           }
           //Correct/store trait levels, create the trait box, and then populate it with trait options
-          manipulateTrait.modifyTraitLevels(i,trait1Path,trait2Path);
+          manipulateTrait.modifyTraitLevels(i,trait1Path,trait2Path,isTraitorActive);
           megaBox.innerHTML += createHTML.traitBox(i);
           createHTML.populateGear(`trait${i}List`,traits);
         }
@@ -167,17 +169,18 @@ let manipulateTrait = {
       }
     },
     //Used in updateTraitCollection to calculate the adjusted trait levels, accounting for archetype-provided levels.
-    modifyTraitLevels(entry,trait1Path,trait2Path) {
+    modifyTraitLevels(entry,trait1Path,trait2Path,isTraitorActive) {
       let recordPath = globalRecords.greatTraitRecords[entry-1];
       let traitName = recordPath.name;
       let defaultPoints = 0;
+      const defaultOverride = isTraitorActive ? 10 : 0;
       //define the intrinsic points here so we don't have to in update forms
       let path1 = classInfo[readSelection("archetype1").value];
       let intrinsics = {
-        "Endurance": path1.Endurance,
-        "Expertise": path1.Expertise,
-        "Spirit": path1.Spirit,
-        "Vigor": path1.Vigor
+        "Endurance": Math.min(10,path1.Endurance + defaultOverride),
+        "Expertise": Math.min(10,path1.Expertise + defaultOverride),
+        "Spirit": Math.min(10,path1.Spirit + defaultOverride),
+        "Vigor": Math.min(10,path1.Vigor + defaultOverride)
       }
   
       if (intrinsics[traitName] > 0) { //If the selected trait IS intrinsic

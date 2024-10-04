@@ -438,7 +438,8 @@ let userTrigger = {
     },
     //Triggers trait updates based on newly selected trait and associate level.
     //Also prevents items from going above 85 total points spent.
-    updateTrait(elemID,adjustment) {
+    updateTrait(elemID,adjustment,parentCall) {
+      if (!elemID) {manipulateTrait.updateTraitCollection();updateFormulas();return;}
       let traitName = readSelection(`trait${elemID}`).value;
   
       if (!traits[traitName]) {readSelection(`trait${elemID}`).value = "";}
@@ -465,8 +466,8 @@ let userTrigger = {
       globalRecords.greatTraitRecords[elemID-1].level = traitLevel;
       //Dupe/swaps are not needed for traits as the dropdowns for them decrease with selections
       //Finally, update formulas based on the newly displayed values for this trait
-      manipulateTrait.updateTraitCollection()
-      updateFormulas();
+      manipulateTrait.updateTraitCollection();
+      if (!parentCall) {updateFormulas();}
     },
     //Used to check if a duplicate selection happened on anything but traits. If it did, then swap positions.
     checkDuplicateSelection(collection,value,functionName,handling,limits) {

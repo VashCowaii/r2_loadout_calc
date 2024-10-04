@@ -114,15 +114,6 @@ self.onmessage = function(event) {
             if (pathRef) {pullStatsCall(starterTable,pathRef.stats);}
         }
 
-        // recordPath = globalRecords.greatRowRecords;
-        // console.log(globalRecords.greatRowRecords)
-        // for (let i=4;i<=recordPath.length;i++) {
-        //     let entry = recordPath[i-1].name;
-        //     let pathRef = i!=9 ? prismRowOptions[entry] : legendaryPerks[entry];
-
-        //     if (pathRef) {pullStatsCall(starterTable,pathRef.stats);}
-        // }
-
         for (let i=4;i<=9;i++) {
             let categoryRef = i<9 ? prismRowOptions : legendaryPerks;
             let current = categoryRef[globalRecords.greatRowRecords[i-1].name];

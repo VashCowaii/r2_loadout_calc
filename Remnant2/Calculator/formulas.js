@@ -350,7 +350,7 @@ let customDamage = {
         let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
         let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
 
-        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+        let attackWeakspot = (isWeakspot && sumWeakspot != -1 ? (1 + baseWeakspot + sumWeakspot) * index.WeakspotMultiplier : 1);
 
         let adjustedBaseDmg = actualBaseDamage * totalDamageBonus * attackWeakspot;
 
@@ -528,7 +528,7 @@ let customDamage = {
         let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
         let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
 
-        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? (1 + baseWeakspot + sumWeakspot) * index.WeakspotMultiplier : 1;
 
         let adjustedBaseDmg = actualBaseDamage * totalDamageBonus * attackWeakspot;
 
@@ -658,7 +658,7 @@ let customDamage = {
         let totalCritChance = Math.min(1,sumCritChance);//cap crit chance at 100%
         let avgCritDamage = 1 + (isCrit ? finalCritDamage * totalCritChance : 0);
 
-        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+        let attackWeakspot = isWeakspot && sumWeakspot != -1 ? (1 + baseWeakspot + sumWeakspot) * index.WeakspotMultiplier : 1;
 
         let adjustedBaseDmg = baseDamage * totalDamageBonus * attackWeakspot;
 
@@ -1177,7 +1177,7 @@ let customDamage = {
             let averagedAttackCrit = isCrit ? 1 + (attackCritChance * attackCritDamage) : 1;
             //Weakspot
             let sumWeakspot = getIndexSums(index,WeakSpot);
-            let attackWeakspot = isWeakspot && sumWeakspot != -1 ? 1 + baseWeakspot + sumWeakspot : 1;
+            let attackWeakspot = isWeakspot && sumWeakspot != -1 ? (1 + baseWeakspot + sumWeakspot) * index.WeakspotMultiplier : 1;
             //Stagger
             let attackStagger = baseStagger + index.StaggerDamage;
             //Damage

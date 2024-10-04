@@ -886,7 +886,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L00"
     },
-    "Allegiance": {//not applicable yet
+    "Allegiance": {//not applicable to calcs
         "name": "",
         "desc": "Cannot Kill or Be Killed by Friendly Fire Damage",
         "stats": {},
@@ -894,7 +894,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L01"
     },
-    "Altruistic": {//not applicable yet
+    "Altruistic": {//not applicable to calcs
         "name": "",
         "desc": "Lifesteal applies 30% of Stolen Health to Allies.",
         "stats": {},
@@ -902,15 +902,15 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L02"
     },
-    "Artful Dodger": {//not applicable yet
+    "Artful Dodger": {//done
         "name": "",
-        "desc": "All Dodges trigger Perfect Dodge Mechanics",
+        "desc": "All Dodges trigger Perfect Dodge Mechanics.<br>Will not force the PERFECT DODGE setting, and it must still be toggled.",
         "stats": {},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L03"
     },
-    "Bodyguard": {//not applicable yet
+    "Bodyguard": {//not applicable to calcs
         "name": "",
         "desc": "Cannot be One-Shot while at Max Health Capacity.",
         "stats": {},
@@ -918,10 +918,13 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L04"
     },
-    "Boundless Energy": {//TODO: Manage how this would work on the engineer skill math
+    "Boundless Energy": {//TODO: need to work out drone drain math like I have with engineer turrets, otherwise done with this one for now
         "name": "",
-        "desc": "Grants Infinite N'Erudian Energy.<br>Not factored yet",
-        "stats": {},
+        "desc": "Grants Infinite N'Erudian Energy.",
+        "stats": {
+			"HeavyAmmoActiveRegen": 100,
+			"HeavyAmmoRegenMulti": 100
+		},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L05"
@@ -934,7 +937,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L06"
     },
-    "Critical Situation": {
+    "Critical Situation": {//done
         "name": "",
         "desc": "Grants 25% to All Critical Chance.",
         "stats": {
@@ -944,7 +947,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L07"
     },
-    "Dark Omen": {
+    "Dark Omen": {//not applicable to calcs
         "name": "",
         "desc": "Dodges become Mist Step, costing Health instead of Stamina.<br><br>[Functions identically to Ring of Omens in terms of health cost math]",
         "stats": {},
@@ -952,7 +955,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L08"
     },
-    "Defensive Measures": {
+    "Defensive Measures": {//done
         "name": "",
         "desc": "Increases the Maximum Shield Capacity by +100%.<br><br>And yes the implication here is that shields are capped now.",
         "stats": {
@@ -970,7 +973,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L10"
     },
-    "Fleet Footed": {
+    "Fleet Footed": {//done
         "name": "",
         "desc": "Increases Dodge Weight Threshold by 100.",
         "stats": {
@@ -988,7 +991,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L12"
     },
-    "Gigantic": {
+    "Gigantic": {//done
         "name": "",
         "desc": "Grants +50 Health and Stamina.",
         "stats": {
@@ -999,7 +1002,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L13"
     },
-    "God Tear": {//not applicable yet
+    "God Tear": {//not applicable to calcs
         "name": "",
         "desc": "Reduces Cheat Death Cooldowns by 50%",
         "stats": {},
@@ -1007,7 +1010,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L14"
     },
-    "Heavy Drinker": {
+    "Heavy Drinker": {//done
         "name": "",
         "desc": "Increases the active Concoction Limit by 5.",
         "stats": {
@@ -1017,7 +1020,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L15"
     },
-    "Hyperactive": {
+    "Hyperactive": {//done
         "name": "",
         "desc": "Haste's bonus gains +100% effectiveness.",
         "stats": {
@@ -1027,7 +1030,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L16"
     },
-    "Immovable": {//not applicable yet
+    "Immovable": {//not applicable to calcs
         "name": "",
         "desc": "Cannot be staggered while Bulwark is active.",
         "stats": {},
@@ -1035,7 +1038,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L17"
     },
-    "Impervious": {
+    "Impervious": {//done
         "name": "",
         "desc": "Grants 20% Damage Reduction. [FlatDR]",
         "stats": {
@@ -1045,15 +1048,20 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L18"
     },
-    "Insult to Injury": {//TODO: add a custom function on this one that looks for any outgoing statuses and applies exposed if any are found
+    "Insult to Injury": {//done
         "name": "",
-        "desc": "All outgoing Status Effects now apply EXPOSED as well.<br>Not factored yet",
+        "desc": "All outgoing Status Effects now apply EXPOSED as well.",
         "stats": {},
         "tags": [],
-        "usesConditional": {},
+		"usesConditional": {
+			"customTier0": "legendaryInsultToInjury",
+			"keys": [
+				"customTier0"
+			]
+		},
 		"placementID": "L19"
     },
-    "Jack of All Trades": {
+    "Jack of All Trades": {//done
         "name": "",
         "desc": "Grants 45% All Damage",
         "stats": {
@@ -1071,9 +1079,9 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L21"
     },
-    "Master Killer": {
+    "Master Killer": {//done, this is referred to as  * index.WeakspotMultiplier in damage breakdowns
         "name": "",
-        "desc": "Weakspot Damage gains a 1.25x multiplier.<br>Not factored yet",
+        "desc": "Weakspot Damage gains a 1.25x multiplier.",
         "stats": {
 			"WeakspotMultiplier": 0.25
 		},
@@ -1099,7 +1107,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L24"
     },
-    "Peak Conditioning": {
+    "Peak Conditioning": {//done
         "name": "",
         "desc": "Gain infinite stamina.<br>[0 cost, not infinite spending]",
         "stats": {
@@ -1109,7 +1117,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L25"
     },
-    "Physician": {
+    "Physician": {//done
         "name": "",
         "desc": "Increases Healing Effectiveness by 100%.",
         "stats": {
@@ -1119,7 +1127,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L26"
     },
-    "Power Fantasy": {
+    "Power Fantasy": {//done
         "name": "",
         "desc": "Grants 30% Explosive Critical Chance and Critical Damage.",
         "stats": {
@@ -1146,7 +1154,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L29"
     },
-    "Reverberation": {
+    "Reverberation": {//done
         "name": "",
         "desc": "Grants +200 Stamina per second.",
         "stats": {
@@ -1159,12 +1167,15 @@ let legendaryPerks = {
     "Sadistic": {//TODO: code this one, god I hate it already, THERE IS SO MUCH TO DO
         "name": "",
         "desc": "Status Effects have a 25% chance per tick to deal 50% more damage.<br>Not factored yet",
-        "stats": {},
+        "stats": {
+			"legendaryStatusCritChance": 0.25,
+			"legendaryStatusCritDamage": 0.50
+		},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L31"
     },
-    "Sharpshooter": {
+    "Sharpshooter": {//done
         "name": "",
         "desc": "Increases Ranged Damage by 75%.",
         "stats": {
@@ -1190,23 +1201,28 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L34"
     },
-    "Spectrum": {//TODO: custom calc here, this is a weird one
+    "Spectrum": {//done
         "name": "",
-        "desc": "Grants bonuses based on the colors of each row within this Prism.<br><br>Red - Damage<br>Blue - DR<br>Yellow - Movespeed<br>[Unsure if combo stats count both or one]<br>Not factored yet",
+        "desc": "Grants bonuses based on the colors of each row within this Prism.<br><br>Red - Damage<br>Blue - DR<br>Yellow - Movespeed",
         "stats": {},
         "tags": [],
-        "usesConditional": {},
+        "usesConditional": {
+			"customTier0": "legendarySpectrum",
+			"keys": [
+				"customTier0"
+			]
+		},
 		"placementID": "L35"
     },
-    "Speed Demon": {//not applicable yet
+    "Speed Demon": {//TODO: Figure out exactly what bonus this is
         "name": "",
-        "desc": "Grants maximum Movement Speed bonuses.",
+        "desc": "Grants maximum Movement Speed bonuses.<br>Not currently factored by the calc until we know exactly what the movespeed caps are everywhere.",
         "stats": {},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L36"
     },
-    "Steel Plating": {
+    "Steel Plating": {//done
         "name": "",
         "desc": "Increases Base Armor by 100.",
         "stats": {
@@ -1216,9 +1232,9 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L37"
     },
-    "Traitor": {//TODO: Fuck this one, god I don't wanna do it though I think I may have actually already added the baseline needed to make this happen
+    "Traitor": {//done, the trait handling is done specifically within manipulateTrait.modifyTraitLevels() and manipulateTrait.updateTraitCollection()
         "name": "",
-        "desc": "Maxes all Core Traits.<br>Not factored yet",
+        "desc": "Maxes all Core Traits.",
         "stats": {},
         "tags": [],
         "usesConditional": {},
@@ -1232,7 +1248,7 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L39"
     },
-    "Unbridled": {
+    "Unbridled": {//TODO: figure out exactly how this one functions
         "name": "",
         "desc": "Reduces all Skill Cooldowns by Half.<br><br>I think this might be post CDR, which is nuts, but not sure",
         "stats": {},
@@ -1240,18 +1256,25 @@ let legendaryPerks = {
         "usesConditional": {},
 		"placementID": "L40"
     },
-    "Vaccinated": {
+    "Vaccinated": {//done
         "name": "",
         "desc": "Gain immunity to Negative Status Effects.",
         "stats": {},
         "tags": [],
-        "usesConditional": {},
+        "usesConditional": {
+			"customTier0": "legendaryVaccinated",
+			"keys": [
+				"customTier0"
+			]
+		},
 		"placementID": "L41"
     },
     "Wrecking Ball": {
         "name": "",
-        "desc": "TBD",
-        "stats": {},
+        "desc": "Increases Explosive Critical Chance by 100%.",
+        "stats": {
+			"ExplosiveCritChance": 1
+		},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L42"
