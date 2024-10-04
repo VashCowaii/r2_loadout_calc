@@ -35,39 +35,53 @@ let plannerTrigger = {
         }
         else {//otherwise check to see if the value already exists in the row records after frags
             for (let i=4;i<=8;i++) {
-                //if we see a duplicate value, clear ther current value and move on
+                //if we see a duplicate value, clear the current value and move on
                 if (domValue.value === globalRecords.greatRowRecords[i-1].name) {domValue.value = "";break;}
+                //else check if your currently placed combo statistic has matching substats with another combo in play, and clear the current if so
+                else if (ComboStats[domValue.value] && ComboStats[globalRecords.greatRowRecords[i-1].name]) {
+                    const currentCombo = ComboStats[domValue.value].requirements;
+                    const currentRecord = ComboStats[globalRecords.greatRowRecords[i-1].name].requirements;
+                    if (currentCombo[0] === currentRecord[0]
+                        || currentCombo[0] === currentRecord[1]
+                        || currentCombo[1] === currentRecord[0]
+                        || currentCombo[1] === currentRecord[1]
+                    )
+                    {domValue.value = "";}
+                }
                 else {
                     //otherwise check to see if we can make a combo with existing row stats
                     for (let entry of comboKeys) {
                         let entryToFind = null; 
                         //note which entry we are missing and need to find to complete a combo
-                        if (domValue.value === ComboStats[entry].requirements[0]) {entryToFind = 1;}
-                        else if (domValue.value === ComboStats[entry].requirements[1]) {entryToFind = 0;}
+                        if (!ComboStats[domValue.value]) {
+                            if (domValue.value === ComboStats[entry].requirements[0]) {entryToFind = ComboStats[entry].requirements[1];}
+                            else if (domValue.value === ComboStats[entry].requirements[1]) {entryToFind = ComboStats[entry].requirements[0];}
 
-                        if (entryToFind) {//if we found a match, look for the second requirement
-                            for (let i=4;i<=8;i++) {
-                                if ((i-1) === recordIndex) {continue;}//if we are on our own record, skip it
-
-                                if (ComboStats[entry].requirements[entryToFind] === globalRecords.greatRowRecords[i-1].name) {
-                                    globalRecords.greatRowRecords[i-1].name = "";
-                                    globalRecords.greatRowRecords[i-1].isCombo = false;
-                                    globalRecords.greatRowRecords[i-1].comboArray = ["",""];
-
-                                    domValue.value = ComboStats[entry].name;
+                            if (entryToFind) {//if we found a match, look for the second requirement
+                                for (let i=4;i<=8;i++) {
+                                    if ((i-1) === recordIndex) {continue;}//if we are on our own record, skip it
+    
+                                    if (entryToFind === globalRecords.greatRowRecords[i-1].name) {
+                                        globalRecords.greatRowRecords[i-1].name = "";
+                                        globalRecords.greatRowRecords[i-1].isCombo = false;
+                                        globalRecords.greatRowRecords[i-1].comboArray = ["",""];
+    
+                                        domValue.value = ComboStats[entry].name;
+                                    }
                                 }
                             }
-                        }
-                        //otherwise, check if your current record is a match for an existing combo substat to avoid dupe values
-                        else {
-                            for (let i=4;i<=8;i++) {
-                                if (globalRecords.greatRowRecords[i-1].comboArray[0] === domValue.value || globalRecords.greatRowRecords[i-1].comboArray[1] === domValue.value) {domValue.value = "";}
+                            //otherwise, check if your current record is a match for an existing combo substat to avoid dupe values
+                            else {
+                                for (let i=4;i<=8;i++) {
+                                    if (globalRecords.greatRowRecords[i-1].comboArray[0] === domValue.value || globalRecords.greatRowRecords[i-1].comboArray[1] === domValue.value) {domValue.value = "";}
+                                }
                             }
                         }
                     }
                 }
             }
 
+            
         }
 
         
