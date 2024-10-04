@@ -4991,9 +4991,9 @@ amulets = {
 	},
 	"Zero Hour": {//done
 	  "usesConditional": {
-		"customTier50": "zeroHour",
+		"customPostWeightClass": "zeroHour",
 		"keys": [
-		  "customTier50"
+		  "customPostWeightClass"
 		]
 	  },
 	  "name": "Zero Hour",

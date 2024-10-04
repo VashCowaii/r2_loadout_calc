@@ -127,7 +127,6 @@ let plannerTrigger = {
             if (currentComboStats>=4 && !recordReference[i-1].isCombo) {isFragsOnly=true;}
             
             const injectedOptions = isFragsOnly ? fragments : prismRowOptions;
-            console.log(isFragsOnly,currentComboStats)
             populate(`PrismRow${i}List`,injectedOptions) 
         }
         populate(`PrismRow9List`,legendaryPerks)
