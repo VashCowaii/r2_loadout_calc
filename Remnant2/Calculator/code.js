@@ -713,7 +713,7 @@ let customItemFunctions = {
         index.inCORRODED += index.outCORRODED ? 1 : 0;
       }
     },
-    zeroHour(index) {
+    zeroHour(index,dodgeClass) {
       let currentClass = 0;
       switch (dodgeClass) {
         case "Flop": currentClass = 3;break;
