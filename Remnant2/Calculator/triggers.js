@@ -88,7 +88,7 @@ let plannerTrigger = {
         const recordReference = globalRecords.greatRowRecords[recordIndex];
         recordReference.name = domValue.value;
         recordReference.isCombo = ComboStats[recordReference.name] ? true : false;
-        recordReference.comboArray = recordReference.isCombo ? ComboStats[recordReference.name].requirements : ["",""];
+        recordReference.comboArray = recordReference.isCombo ? [...ComboStats[recordReference.name].requirements] : ["",""];
 
         plannerTrigger.updateRowBySelections();
     },
