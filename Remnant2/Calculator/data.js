@@ -2362,7 +2362,7 @@ classInfo = {
 			"statTagsAOE": {
 				"Damage": ["AllDamage","SkillDamage","ExplosiveDamage"],
 				"CritChance": ["AllCritChance","SkillCritChance","ExplosiveCritChance"],
-				"CritDamage": ["AllCritDamage"],
+				"CritDamage": ["AllCritDamage","ExplosiveCritDamage"],
 				"WeakSpot": -1,
 				"Speed": ["CDR"],
 			},//normally would add another tags set for the turret only dmg, but it is the same as the AOE tags so we'll reuse it

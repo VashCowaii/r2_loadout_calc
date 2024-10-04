@@ -434,7 +434,7 @@ let manipulateURL = {
         }
       }
       // manipulateTrait.updateTraitCollection();
-      manipulateTrait.pointsOverLimit();//Trim points if cap exceeded
+      // manipulateTrait.pointsOverLimit();//Trim points if cap exceeded
       if (urlArmor) {//ARMOR
         let hasMultipleOld = urlArmor.includes(",") || urlArmor.includes(" ");
         let isActuallyNumbers = !hasMultipleOld && urlArmor.length % 3 === 0 
@@ -616,6 +616,8 @@ let manipulateURL = {
             }
           }
       }
+      manipulateTrait.pointsOverLimit();//Trim points if cap exceeded
+      // userTrigger.updateTrait(null,null,false);
       if (urlPrimary) {//WEAPONS
         const letterPattern = /[a-zA-Z]/;
         letterPattern.test(urlPrimary)

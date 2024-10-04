@@ -1,5 +1,7 @@
 //This is the actual table for starter values, but we reuse it to clean (cycles/great)TableKnowerOfAll on updateFormulas() calls
 let starterTable = {
+    //Trait trickery for Traitor leggy perk
+    "Vigor": 0,"Expertise": 0,"Endurance": 0,"Spirit": 0,
     //HEALTH
     "Health": 0,"Health%": 0,"GlobalHealthModifier": 1,"HealthCap": 1,
     //ARMOR
@@ -46,8 +48,9 @@ let starterTable = {
     //CRIT CHANCE
     "AllCritChance": 0,"RangedCritChance": 0,"MeleeCritChance": 0,"ChargeCritChance": 0,"SkillCritChance": 0,"ModCritChance": 0,
     "ExplosiveCritChance": 0,"ElementalCritChance": 0,"FirearmCritChance": 0,"BowCritChance": 0,"PrimaryCritChance": 0,"SecondaryCritChance": 0,"WeaponChargeDamage": 0,
+    "legendaryStatusCritChance": 0,
     //CRIT DAMAGE
-    "AllCritDamage": 0,"RangedCritDamage": 0,"MeleeCritDamage": 0,"ChargeCritDamage": 0,"ExplosiveCritDamage": 0,
+    "AllCritDamage": 0,"RangedCritDamage": 0,"MeleeCritDamage": 0,"ChargeCritDamage": 0,"ExplosiveCritDamage": 0,"legendaryStatusCritDamage": 1,
     //WEAKSPOT
     "AllWeakspot": 0,"SkillWeakspot": 0,"ModWeakspot": 0,"RangedWeakspot": 0,"MeleeWeakspot": 0,"ChargeWeakspot": 0,"HeavyWeaponWeakspot": 0,
     "WeakspotDisable": 0,"WeakspotMultiplier": 1,

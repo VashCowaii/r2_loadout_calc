@@ -250,6 +250,19 @@ let formulasValues = {
       {item: rangedMutators[secondaryMutator].usesConditional, toggle: 'USEtoggledsMutator'},{item: builtInRef3 ? builtInSecondary[builtInRef3].usesConditional : rangedMods[secondaryMod].usesConditional, toggle: 'USEtoggledsMod'},
     ]
 
+    for (let i=1;i<=9;i++) {
+      let categoryRef = i<9 ? prismRowOptions : legendaryPerks;
+      let current = categoryRef[globalRecords.greatRowRecords[i-1].name];
+      if (current.color === "Combo") {
+        refArray.push({item: categoryRef[current.requirements[0]].usesConditional},{item: categoryRef[current.requirements[1]].usesConditional});
+        continue;
+      }
+      else {
+        refArray.push({item: current.usesConditional})
+      }
+      // console.log(globalRecords.greatRowRecords[i-1].name)
+    }
+
       if (isUIcalcs) {
         let archsTableName = globalRecords.archs;
         let arch1Path = classInfo[archsTableName.one.class];
@@ -902,6 +915,56 @@ let customItemFunctions = {
       let reductionPerEnemy = 0.025;
       index.REdamage *= (1 - (baseReduction + Math.min(maxAdditionalReduction,(reductionPerEnemy * globalRecords.enemyCount))));
     },
+
+    //leggy perks
+    legendarySpectrum(index) {
+      const recordRef = globalRecords.greatRowRecords;
+
+      const colorRowBonuses = {
+        "Blue": "FlatDR",
+        "Red": "AllDamage",
+        "Yellow": "MovementSpeed",
+      }
+      let colorArray = [];
+
+      for (let i=1;i<=8;i++) {
+        const currentRecord = recordRef[i-1];
+        const name = currentRecord.name;
+        const isCombo = currentRecord.isCombo;
+        const comboArray = currentRecord.comboArray;
+
+        if (!isCombo) {colorArray.push(prismRowOptions[name].color);}
+        else {colorArray.push(prismRowOptions[comboArray[0]].color,prismRowOptions[comboArray[1]].color);}
+      }
+
+      for (let entry of colorArray) {
+        if (!colorRowBonuses[entry]) {continue;}
+        index[colorRowBonuses[entry]] += 0.03;
+      }
+    },
+    legendaryVaccinated(index) {
+      console.log("hi")
+      index.incomingStatus = 0;
+      index.inSLOW = 0;
+      index.inBLEED = 0;
+      index.inBURN = 0;
+      index.inOVERLOADED = 0;
+      index.inCORRODED = 0;
+      index.inCURSE = 0;
+      index.inMADNESS = 0;
+      index.inSUPPRESSION = 0;
+      index.inROOTROT = 0;
+      index.inDATACORRUPTION = 0;
+    },
+    legendaryInsultToInjury(index) {
+      if (index.outgoingStatus
+       || index.outSLOW
+       || index.outBLEED
+       || index.outBURN
+       || index.outOVERLOADED
+       || index.outCORRODED)
+       {index.outEXPOSED += 1;}
+    },
 }
 
 function setupDamageBreakdowns(override,targetStat,tableReference,returnStats) {
@@ -1016,7 +1079,8 @@ function updateFormulas(ping,refFuncStorage,refStatsStorage) {
   callStored(tieredFunctionStorage,"customPreHealing",tableReference);//generating band, etc
   const {globalHealingMod,healingEffectiveness,flatHPperSec,percHPperSec,totalGreyHPperSec,greyConversionRate,greyHitThreshold} = calcs.getHealing(tableReference);
   callStored(tieredFunctionStorage,"customPostHealing",tableReference);//anastasijasInspiration, stuff like that
-  if (tableReference.HASTE) {for (let bonuses of hasteTable) {tableReference[bonuses] += 0.07;}}//If haste exists, add relevant speed stats
+  const hasteBonus = (0.07 + tableReference.HASTEBonus) * tableReference.HASTEEffectiveness;
+  if (tableReference.HASTE) {for (let bonuses of hasteTable) {tableReference[bonuses] += hasteBonus;}}//If haste exists, add relevant speed stats
 //----------RELIC HEALING---------------------------------------------------
   const {relicHPbase,relicHPtype,relicHPtime,relicHPscaled,relicPercPerSecond,relicFlatPerSecond,relicComplexArray,relicUseTime,relicEffectiveness,relicCharges,relicChance} = calcs.getRelicHealing(tieredFunctionStorage,tableReference,totalHealthNoGlobal,globalHealingMod,healingEffectiveness);
   const useComplexValues = !!relicComplexArray;

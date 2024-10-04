@@ -91,6 +91,7 @@ let plannerTrigger = {
         recordReference.comboArray = recordReference.isCombo ? [...ComboStats[recordReference.name].requirements] : ["",""];
 
         plannerTrigger.updateRowBySelections();
+        if (rowID === 9) {userTrigger.updateTrait(null,null,false);}
     },
     updateRowBySelections() {
         const recordReference = globalRecords.greatRowRecords;
