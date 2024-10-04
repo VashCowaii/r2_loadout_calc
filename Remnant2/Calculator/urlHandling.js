@@ -607,10 +607,10 @@ let manipulateURL = {
           else {
             urlPrism = urlPrism.split(",");
             for (let i=1;i<=9;i++) {
-              if (i<9 && prismRowOptions[urlPrism[i]] === undefined) {invalidEntries.push(urlPrism[i]);}
-              else if (i===9 && legendaryPerks[urlPrism[i]] === undefined) {invalidEntries.push(urlPrism[i]);}
-              else if (urlPrism[i]) {
-                readSelection(`PrismRow${i}`).value = urlPrism[i];
+              if (i<9 && prismRowOptions[urlPrism[i-1]] === undefined) {invalidEntries.push(urlPrism[i-1]);}
+              else if (i===9 && legendaryPerks[urlPrism[i-1]] === undefined) {invalidEntries.push(urlPrism[i-1]);}
+              else if (urlPrism[i-1]) {
+                readSelection(`PrismRow${i}`).value = urlPrism[i-1];
                 plannerTrigger.updateRow(i);
               }
             }

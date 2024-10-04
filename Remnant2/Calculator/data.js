@@ -2083,8 +2083,8 @@ classInfo = {
 			},
 			"duration": 30,
 			"entryDuration": 1.02,
-			"trueBaseDPS": 411.4,
-			"baseDamage": 144,
+			"trueBaseDPS": 325.71428571428571428571428571429,
+			"baseDamage": 114,
 			"frequency": 0.35,
 			"drain": 0.2125
 		  },
@@ -6403,7 +6403,7 @@ rings = {
 	  "name": "Hardcore Metal Band",
 	  "slot": "Ring",
 	  "image": "/brotherLibrary/ringsImages/Hardcore Metal Band.png",
-	  "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 5 stacks. Bonus assumed active at all times when selected.",
+	  "desc": "Taking damage adds 1 stack of BULWARK which individually falls of after 10s. Max 3 stacks. Bonus assumed active at all times when selected.",
 	  "stats": {
 		"Bulwark": 3
 	  },
