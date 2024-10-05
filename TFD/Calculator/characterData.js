@@ -552,7 +552,17 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_012_A01_01.png",
                     "type": ["Fire","Tech"],
                     "desc": "Fires a Sticky Bomb forward. The Sticky Bomb attaches to an enemy or terrain on contact.",
-                    "customDPS": "esiemoTimeBombCalcs"
+                    "customDPS": "esiemoTimeBombCalcs",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                        {"statType": "cooldown","statName": "Stack Cooldown","value": 12,"limit": null,"isModified": true},
+                        {"statType": "cost","statName": "MP Cost","value": 12,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Skill Effect"},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 439.1/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 3,"limit": 2,"isModified": true},
+                        {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true}
+                    ],
                 },
             },
             "ability2": {
@@ -563,7 +573,14 @@ const characters = {
                     "stats": {},
                     "desc": "Detonate the attached bombs. Damage dealt increases with the number of attached bombs.",
                     "customDPSBase": "esiemoBlastCalcs",
-                    "customDPS": "",//haileyBigFuckinGunCalcs
+                    "customDPS": "",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 2.7,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Detonate"},
+                        {"statType": "","statName": "+DMG% per Bomb","value": 0.35,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "Max Increases","value": 8,"limit": null,"isModified": false},
+                    ],
                 },
                 "Cluster Bomb": {
                     "name": "Cluster Bomb",
@@ -572,15 +589,37 @@ const characters = {
                     "desc": "Detonates the attached bomb immediately. The detonated bomb spawns an explosive.",
                     // "customDPSBase": "esiemoClusterCalcsTier0",
                     // "customDPS": "esiemoClusterCalcs"
-                    "customDPSBase": "",
-                    "customDPS": ""
+                    "customDPSBase": "esiemoClusterCalcs",
+                    "customDPS": "",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 2.7,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Detonate"},
+                        {"statType": "","statName": "+DMG% per Bomb","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "Max Increases","value": 8,"limit": null,"isModified": false},
+                        {"isHeader": true,"statName": "Explosive"},
+                        {"statType": "","statName": "Amount","value": 3,"limit": null,"isModified": false},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 143.9/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Range","value": 2.5,"limit": 2,"isModified": true},
+                        {"isHeader": true,"statName": "Burn"},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 15.5/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                        {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                    ],
                 },
                 "Creative Explosion": {
                     "name": "Blast",
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_012_A01_02.png",
                     "type": ["Fire","Fusion"],
                     "customDPSBase": "esiemoBlastCalcs2",
-                    "desc": "Detonate the attached bombs. Damage dealt increases with the number of attached bombs."
+                    "desc": "Detonate the attached bombs. Damage dealt increases with the number of attached bombs.",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 2.7,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Detonate"},
+                        {"statType": "","statName": "+DMG% per Bomb","value": 0.35,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "Max Increases","value": 10,"limit": null,"isModified": false},
+                    ],
                 },
             },
             "ability3": {
@@ -590,14 +629,40 @@ const characters = {
                     "type": ["Fire","Tech"],
                     "desc": "Places a Guided Landmine. Once placed, the Guided Landmine flies to an enemy within its detection range and attaches to it. If there are obstacles in its path, it attaches to the terrain.",
                     "customDPSBase": "",
-                    "customDPS": "esiemoGuidedCalcs"
+                    "customDPS": "esiemoGuidedCalcs",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                        {"statType": "cooldown","statName": "Stack Cooldown","value": 14,"limit": null,"isModified": true},
+                        {"statType": "cost","statName": "MP Cost","value": 18,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Guided Landmine"},
+                        {"statType": "range","statName": "Detection Range","value": 10,"limit": 2,"isModified": true},
+                        {"statType": "duration","statName": "Detection Duration","value": 40,"limit": null,"isModified": true},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 1061.9/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 3,"limit": 2,"isModified": true},
+                        {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true}
+                    ],
                 },
                 "Explosive Propaganda": {
                     "name": "Explosive Propaganda",
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_012_R03_Rune.png",
                     "type": ["Fire","Tech"],
                     "desc": "Summons an Explosive Propaganda that taunts nearby enemies. The summoned Explosive Propaganda explodes on expiration.",
-                    "customDPS": "esiemoPropagandaCalcs"
+                    "customDPS": "esiemoPropagandaCalcs",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "","statName": "Max Stacks","value": 2,"limit": null,"isModified": false},
+                        {"statType": "cooldown","statName": "Stack Cooldown","value": 38,"limit": null,"isModified": true},
+                        {"statType": "cost","statName": "MP Cost","value": 25,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Explosive Propaganda"},
+                        {"statType": "","statName": "HP","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "DEF","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                        {"statType": "range","statName": "Taunt Range","value": 6,"limit": 2.5,"isModified": true},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 1493.3/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 7,"limit": 2,"isModified": true},
+                        {"statType": "","statName": "Max Active","value": 2,"limit": null,"isModified": false}
+                    ],
                 },
             },
             "ability4": {
@@ -607,7 +672,23 @@ const characters = {
                     "type": ["Fire","Fusion"],
                     "customDPSBase": "esiemoArcheCalcsMadnessTier0",
                     "customDPS": "esiemoArcheCalcs",//
-                    "desc": "Dashes forward to deal damage and inflict Knockback on colliding targets during movement. Interacting with the skill button again or ending movement deals Burst damage to nearby enemies. Enemies hit by the explosion lose their buffs. When the skill ends, grants self Madness."
+                    "desc": "Dashes forward to deal damage and inflict Knockback on colliding targets during movement. Interacting with the skill button again or ending movement deals Burst damage to nearby enemies. Enemies hit by the explosion lose their buffs. When the skill ends, grants self Madness. While using the skill, you are immune to Stagger effects.",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 80,"limit": null,"isModified": true},
+                        {"statType": "cost","statName": "MP Cost","value": 65,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Skill Effect"},
+                        {"statType": "","statName": "+Movement Speed","value": 1.2,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "powerMod","statName": "Impact Power Mod.","value": 85.8/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 7414.4/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 6,"limit": 2,"isModified": true},
+                        {"isHeader": true,"statName": "Madness"},
+                        {"statType": "duration","statName": "Duration","value": 14,"limit": null,"isModified": true},
+                        {"statType": "","statName": "+Skill Power","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "+Firearm ATK","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "-DEF","value": -0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                    ],
                 },
                 "Creative Explosion": {
                     "name": "Creative Explosion",
@@ -615,7 +696,22 @@ const characters = {
                     "type": ["Fire","Fusion"],
                     "customDPSBase": "esiemoCreativeCalcsNarcissimTier0",
                     "customDPS": "esiemoCreativeCalcs",//
-                    "desc": "Dashes forward, dealing damage and inflict Knockback on colliding targets with during movement[that's the genuine description, what the fuck]. Interacting with the skill button or ending the movement deals Burst damage to nearby enemies. Enemies hit by the explosion lose their buffs. When the skill ends, grants self Narcissism.<br>Currently bugged, see Esiemo build video for more details."
+                    "desc": "Rushes forward. Deals damage to targets collided with during movement and grants Knockback. Upon reactivating the skill or ending movement, deals explosive damage to nearby enemies. Enemies hit by the explosion have their buffs removed. At the end of skill, grants the Narcissism effect. While using the skill, you are immune to Stagger effects<br>Currently BUGGED, should do more dmg per bomb unused, see Esiemo build video for more details.",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 40,"limit": null,"isModified": true},
+                        {"statType": "cost","statName": "MP Cost","value": 80,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Skill Effect"},
+                        {"statType": "powerMod","statName": "Impact Power Mod.","value": 101.8/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 4948.7/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 8,"limit": 2,"isModified": true},
+                        {"statType": "","statName": "+DMG/Bomb [Doesn't work]","value": 0.044,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"isHeader": true,"statName": "Narcissism"},
+                        {"statType": "duration","statName": "Duration","value": 14,"limit": null,"isModified": true},
+                        {"statType": "","statName": "Cooldown Decrease","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "","statName": "-DEF","value": -0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                    ],
                 },
             },
             "ability5": {
@@ -623,9 +719,18 @@ const characters = {
                     "name": "Adventitious Habit",
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_012_A01_00.png",
                     "type": ["Fire","Tech"],
-                    "desc": "Drops a bomb on the ground when the shield is completely depleted.",
+                    "desc": "Drops a bomb on the ground when hit.",
                     "customDPSBase": "",
-                    "customDPS": "esiemoHabitCalcs"
+                    "customDPS": "esiemoHabitCalcs",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Upon Skill Use"},
+                        {"statType": "","statName": "Cooldown Decrease","value": 2,"limit": null,"isModified": false},
+                        {"isHeader": true,"statName": "Skill Effect"},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 1617.3/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 4,"limit": 2,"isModified": true}
+                    ],
                 },
                 "Explosive Evade": {
                     "name": "Explosive Evade",
@@ -633,7 +738,17 @@ const characters = {
                     "type": ["Fire","Tech"],
                     "desc": "Places a Guided Landmine when rolling.",
                     "customDPSBase": "",
-                    "customDPS": "esiemoEvadeCalcs"
+                    "customDPS": "esiemoEvadeCalcs",
+                    "displayStats": [
+                        {"isHeader": true,"statName": "Basic Info"},
+                        {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                        {"isHeader": true,"statName": "Guided Landmine"},
+                        {"statType": "range","statName": "Detection Range","value": 10,"limit": 2,"isModified": true},
+                        {"statType": "duration","statName": "Detection Duration","value": 40,"limit": null,"isModified": true},
+                        {"statType": "powerMod","statName": "Base Power Mod.","value": 1276.7/100,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        {"statType": "range","statName": "Explosion Range","value": 4,"limit": 2,"isModified": true},
+                        {"statType": "","statName": "Max Active","value": 3,"limit": null,"isModified": false},
+                    ],
                 },
             }
         }
