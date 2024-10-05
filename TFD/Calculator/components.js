@@ -755,7 +755,6 @@ const componentSetBonuses = {
         "4pc": {
             "desc": "Rounds per Magazine +9%.<br>Skill Cost +15%.<br>Skill Power +26.1%.<br>When defeating enemies inflicted with Towed, recovers 12.2% MP and Specialized Resource at a 17% chance",
             "stats": {
-                //TODO: magazine size
                 "MagazineSize": 0.09,
                 "SkillCost": 0.15,
                 "PowerRatioBase": 0.261

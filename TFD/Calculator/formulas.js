@@ -269,36 +269,16 @@ const customDamage = {
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
 
         readSelection(`totalAvgDmg${skillPlacement}`).innerHTML = `${totalAvgDmg.toLocaleString()}`;
-        
-
-        const rowsObject = {maxStacks,cooldown,cost,basePowerModifier,range}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "maxStacks","statCoverName": "Max Stacks","tooltip":"","relevantTags": [],"isNotAPercent": true},
-            {"statName": "cooldown","statCoverName": "Stack Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
 
         
         readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
         readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
 
     },
-    esiemoBlastCalcs(index,returnObject,bombCap) {
+    esiemoBlastCalcs(index,returnObject,bombCap,bombMulti,nameOverride) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability2.base.type;
+        const abilityTypeArray = characterRef.abilities.ability2[nameOverride ? nameOverride : "base"].type;
         const skillPlacement = 2; 
 
         readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
@@ -323,13 +303,13 @@ const customDamage = {
         `;
         readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2.base.desc}</div>
+        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2[nameOverride ? nameOverride : "base"].desc}</div>
         `;
 
         const maxStacks = 5;
         const cooldown = 2.7 * (1 + index.SkillCooldown);
         const cost = 0 * (1 + index.SkillCost);
-        const increasePerBomb = 0.35;
+        const increasePerBomb = bombMulti ? bombMulti : 0.35;
         const multiplierCap = bombCap ? bombCap : 8;
 
         const totalBombsActive = Math.min(multiplierCap,(settingsRef.timeBombStacks + settingsRef.guidedBombStacks + settingsRef.propagandaBombStacks))// + asdf the other bomb
@@ -340,147 +320,18 @@ const customDamage = {
 
         readSelection(`skillPower${skillPlacement}`).innerHTML = `${totalBombsActive.toLocaleString()}`;
         readSelection(`powerModifier${skillPlacement}`).innerHTML = `${totalBombsMulti.toLocaleString()}x`;
-
-        
-
-        const rowsObject = {maxStacks,cooldown,cost,increasePerBomb}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "maxStacks","statCoverName": "Max Stacks","tooltip":"","relevantTags": [],"isNotAPercent": true},
-            {"statName": "cooldown","statCoverName": "Stack Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "increasePerBomb","statCoverName": "+Power/Bomb","tooltip":"","relevantTags": [],"isNotAPercent": false},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
-
     },
     esiemoBlastCalcs2(index,returnObject) {
         //for when Creative Explosion modifies the bomb multi bonus cap
         customDamage.esiemoBlastCalcs(index,returnObject,10);
     },
-    esiemoClusterCalcsTier0(index,returnObject) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-
-        //clear the bonus
-        settingsRef.blastStacksPowerBonus = 1;
-
-    },
     esiemoClusterCalcs(index,returnObject) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability2["Cluster Bomb"].type;
-        const skillPlacement = 2; 
+        customDamage.esiemoBlastCalcs(index,returnObject,null,0.15,"Cluster Bomb");
+        // const characterRef = characters.Esiemo;
+        // const settingsRef = characterRef.characterSettings;
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="abilityBreakdownGeneralMessage">
-            This transcendent mod sucks heinous amounts of shit. Do. Not. Use it.
-            <br>
-            Remind me to add the burn damage to this later, though it's so low priority I don't really care.
-        </div>
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/MiniBomb</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/MiniBomb</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG/MiniBomb</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total AVG DMG per Set[2]</div>
-                    <div class="totalHealingValue" id="totalAvgDmg${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2["Cluster Bomb"].desc}</div>
-        `;
-
-        const bombsPerExplosion = 2;
-        const cooldown = 10 * (1 + index.SkillCooldown);
-        const cost = 15 * (1 + index.SkillCost);
-        const range = 3.5 * (1 + Math.min(2,index.SkillRange));
-
-        const basePowerModifier = 27.3/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * abilityDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const totalAvgDmg = 2 * dmgPerHitAvg;
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection(`totalAvgDmg${skillPlacement}`).innerHTML = `${totalAvgDmg.toLocaleString()}`;
-        
-
-        const rowsObject = {bombsPerExplosion,cooldown,cost,basePowerModifier,range}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "bombsPerExplosion","statCoverName": "Bombs per Explosion","tooltip":"","relevantTags": [],"isNotAPercent": true},
-            {"statName": "cooldown","statCoverName": "Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
+        // //clear the bonus
+        // settingsRef.blastStacksPowerBonus = 1;
 
     },
     esiemoGuidedCalcs(index,returnObject) {
@@ -586,32 +437,8 @@ const customDamage = {
 
         readSelection(`totalAvgDmg${skillPlacement}`).innerHTML = `${totalAvgDmg.toLocaleString()}`;
         
-
-        const rowsObject = {maxStacks,cooldown,cost,basePowerModifier,range,rangeDetection,detectionDuration}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "maxStacks","statCoverName": "Max Stacks","tooltip":"","relevantTags": [],"isNotAPercent": true},
-            {"statName": "cooldown","statCoverName": "Stack Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "rangeDetection","statCoverName": "Detection Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "detectionDuration","statCoverName": "Detection Duration","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
-
-        
         readSelection("guidedBombStacks").value = +settingsRef.guidedBombStacks;
         readSelection("guidedBombStackDisplay").innerHTML = `${settingsRef.guidedBombStacks}`;
-
     },
     esiemoPropagandaCalcs(index,returnObject) {
         const characterRef = characters.Esiemo;
@@ -699,27 +526,6 @@ const customDamage = {
         readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        
-
-        const rowsObject = {cooldown,cost,basePowerModifier,range,rangeTaunt,tauntDuration}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [
-            {"statName": "cooldown","statCoverName": "Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "tauntDuration","statCoverName": "Taunt Duration","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "rangeTaunt","statCoverName": "Taunt Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "DMG Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
 
         readSelection("propagandaBombStacks").value = +settingsRef.propagandaBombStacks;
         readSelection("propagandaBombStackDisplay").innerHTML = `${settingsRef.propagandaBombStacks}`;
@@ -831,33 +637,6 @@ const customDamage = {
         readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        
-
-        const rowsObject = {cooldown,cost,basePowerModifier,range,madnessDuration,madnessPower,madnessATK,madnessMovement,madnessDEF}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "cooldown","statCoverName": "Stack Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            {"statName": "madnessDuration","statCoverName": "Madness Duration","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "madnessPower","statCoverName": "Madness Power%","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "madnessATK","statCoverName": "Madness FirearmATK%","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "madnessMovement","statCoverName": "Madness Movement Speed","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "madnessDEF","statCoverName": "Madness DEF","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            
-            
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
 
         readSelection("isMadnessActive").checked = settingsRef.isMadnessActive;
 
@@ -974,32 +753,6 @@ const customDamage = {
         readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        
-
-        const rowsObject = {cooldown,cost,basePowerModifier,range,NarcissismDuration,NarcissismCooldown,NarcissismMovement,NarcissismDEF}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "cooldown","statCoverName": "Stack Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            {"statName": "NarcissismDuration","statCoverName": "Narcissism Duration","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "NarcissismCooldown","statCoverName": "Narcissism CDR","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "NarcissismMovement","statCoverName": "Narcissism Movement Sp.","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "NarcissismDEF","statCoverName": "Narcissism DEF","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            
-            
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
 
         readSelection("isNarcissimActive").checked = settingsRef.isNarcissimActive;
 
@@ -1076,25 +829,6 @@ const customDamage = {
         readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        
-
-        const rowsObject = {maxStacks,cooldown,basePowerModifier,range}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "cooldown","statCoverName": "Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
-
     },
     esiemoEvadeCalcs(index,returnObject) {
         const characterRef = characters.Esiemo;
@@ -1179,27 +913,6 @@ const customDamage = {
         readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        
-
-        const rowsObject = {maxStacks,cooldown,basePowerModifier,range,rangeDetection,detectionDuration}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "cooldown","statCoverName": "Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "rangeDetection","statCoverName": "Detection Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "detectionDuration","statCoverName": "Detection Duration","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "basePowerModifier","statCoverName": "Base Power Modifier","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "range","statCoverName": "Range (m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-
-            // {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            // {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ];
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
-
     },
     //Hailey
     haileyCryoRoundCalcs(index,returnObject,weaponObject) {
