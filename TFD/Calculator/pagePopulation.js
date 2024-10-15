@@ -31,8 +31,8 @@ const userTriggers = {
         readSelection("descendantGearBoxHolder").style.display = characterDisplay;
 
         readSelection("basicsBoxWeaponModsHolder").style.display = weaponDisplay;
-        readSelection("weaponModeWarning").style.display = weaponDisplay;
         readSelection("descendantWeaponBoxHolder").style.display = weaponDisplay;
+        readSelection("weaponBreakdownTabHolders").style.display = weaponDisplay;
 
         if (characterDisplay === "none") {userTriggers.updateSelectedFocus('characterWeaponBreakdownTab');}
         else {userTriggers.updateSelectedFocus('characterBreakdownTab');}
@@ -41,6 +41,10 @@ const userTriggers = {
     updateGeneralSettings() {
         globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value
         globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value
+
+        globalRecords.useWeakspots = readSelection("useWeakspots").checked;
+        globalRecords.useCrits = readSelection("useCrits").checked;
+        globalRecords.useFirearmPhysical = readSelection("useFirearmPhysical").checked;
 
         readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
@@ -146,6 +150,12 @@ const userTriggers = {
 
         updateFormulas();
     },
+    "weaponTypeModList": {
+        "HighPowered": highPowerRounds,
+        "Impact": impactRounds,
+        "Special": specialRounds,
+        // "General": generalRounds
+    },
     updateSelectedWeapon(parentCall,isImportedValue) {
         let currentWeapon = readSelection("characterWeapon");
         const weaponRef = globalRecords.weapon;
@@ -158,6 +168,8 @@ const userTriggers = {
             if (!isImportedValue) {weaponRef.currentWeapon = currentWeapon.value;}
             else {currentWeapon.value = weaponRef.currentWeapon}
 
+            const ammoTypeModList = userTriggers.weaponTypeModList[sniperList[currentWeapon.value].ammoType];
+
             console.log("inner reached")
             for (let i=21;i<=30;i++) {
                 readSelection(`mod${i}`).value = "";
@@ -167,7 +179,7 @@ const userTriggers = {
                 const augDisplayList = document.getElementById(`mod${i}List`);
                 augDisplayList.innerHTML = '';
 
-                pagePopulation.populateGear(`mod${i}List`,sniperList[currentWeapon.value].ammoType === "HighPowered" ? highPowerRounds : impactRounds);
+                pagePopulation.populateGear(`mod${i}List`,ammoTypeModList);
 
             }
         }
@@ -406,7 +418,6 @@ const userTriggers = {
         userTriggers.checkInvalidComponentSelections();
 
         const auxiliarySub1Value = readSelection("auxiliarySub1Value");
-        console.log(auxiliarySub1Value.value)
         const auxiliarySub2Value = readSelection("auxiliarySub2Value");
         if (!auxiliaryRolls[readSelection("auxiliarySub1").value]) {readSelection("auxiliarySub1").value = "";}
         if (!auxiliaryRolls[readSelection("auxiliarySub2").value]) {readSelection("auxiliarySub2").value = "";}
@@ -434,8 +445,6 @@ const userTriggers = {
 
         if (globalRef.processorSub1Value === 0 || globalRef.processorSub1 != readSelection("processorSub1").value) {processorSub1Value.value = 10000000;}
         if (globalRef.processorSub2Value === 0 || globalRef.processorSub2 != readSelection("processorSub2").value) {processorSub2Value.value = 10000000;}
-
-        console.log(auxiliarySub1Value.value)
 
         globalRef.auxiliary = readSelection("auxiliary").value;
         globalRef.auxiliarySub1 = readSelection("auxiliarySub1").value;
@@ -527,7 +536,8 @@ const userTriggers = {
     },
     updateSelectedMod(modSlot,parentCall,parentIsCharacterUpdate,isImportedValue) {
         let inputRef = readSelection(`mod${modSlot}`);
-        const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+        // const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+        const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
 
         let categoryRef = null;
         if (+modSlot >= 21) {categoryRef = weaponModsCategory}//console.log("weapons reached")
@@ -597,9 +607,16 @@ const userTriggers = {
         
     },
     updateSelectedBoss() {
-        console.log(readSelection("boss").value)
         if (!bosses[readSelection("boss").value]) {readSelection("boss").value = "None (True Damage)"}
         globalRecords.boss.currentBoss = readSelection("boss").value;
+
+        const critPath = bosses[readSelection("boss").value];
+        globalRecords.weaponCritCeiling = -critPath.gunCrit*100;
+        globalRecords.skillCritCeiling = -critPath.skillCrit*100;
+        readSelection("weaponCritCeiling").value = -critPath.gunCrit*100;
+        readSelection("skillCritCeiling").value = -critPath.skillCrit*100;
+        readSelection("weaponCritCeilingDisplay").innerHTML = -critPath.gunCrit*100 + "%";
+        readSelection("skillCritCeilingDisplay").innerHTML = -critPath.skillCrit*100 + "%";
         updateFormulas();
     },
 }
@@ -714,6 +731,12 @@ const settings = {
         
         if (!isParentCall) {updateFormulas();}
     },
+    updateWeaponSettings(weaponName,isParentCall) {
+        const settingsRef = sniperList[weaponName].weaponSettings;
+        settings.customSettingsUpdates[weaponName](settingsRef);
+        
+        if (!isParentCall) {updateFormulas();}
+    },
     "customSettingsUpdates": {
         // characterName(settingsRef,arrayRef) {
         //     if (arrayRef[0] === 0) {}//1
@@ -722,6 +745,20 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
+        Freyna(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] != "Venom Injection") {
+                //this is universal to all her augments right now besides injection, so it doesn't need a specific check
+                settingsRef.freynaBodyarmorBonus = readSelection("freynaBodyarmorBonus").checked;
+            }//2.
+            else if (arrayRef[1] === "Venom Injection") {
+                settingsRef.freynaInjectionBonuses = +readSelection("freynaInjectionBonuses").value;
+                // settingsRef.freynaCorrosionBonuses = readSelection("freynaCorrosionBonuses").checked;
+            }
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {}//passive
+        },
         Esiemo(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {
                 settingsRef.timeBombStacks = +readSelection("timeBombStacks").value;
@@ -792,16 +829,18 @@ const settings = {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] === 0) {}//2
             if (arrayRef[2] === 0) {
-                settingsRef.stackCount = +readSelection("haileyColdFuryBar4").value;
+                settingsRef.haileyColdFuryBar4 = +readSelection("haileyColdFuryBar4").value;
             }//3
-            if (arrayRef[3] === 0) {
-                settingsRef.haileyUseWeakspots = readSelection("haileyUseWeakspots").checked;
-                settingsRef.haileyUsePhysBonus = readSelection("haileyUsePhysBonus").checked;
-                settingsRef.haileyUseCryoDamage = readSelection("haileyUseCryoDamage").checked;
-            }//4
+            if (arrayRef[3] === 0) {}//4
             if (arrayRef[4] === 0) {
-                settingsRef.distance = +readSelection("haileyDistanceBar4").value;
+                settingsRef.haileyDistanceBar4 = +readSelection("haileyDistanceBar4").value;
             }//passive
+        },
+        "Secret Garden"(settingsRef,arrayRef) {
+            settingsRef.gardenStackCount = +readSelection("gardenStackCount").value
+        },
+        "Blue Beetle"(settingsRef,arrayRef) {
+            settingsRef.arcaneWaveActive = readSelection("arcaneWaveActive").checked
         },
     }
 
@@ -944,6 +983,68 @@ const basicsUpdates = {
 
 
 
+        let critGunHTML = "<div class='basicsDRheaderTitle'>FIREARM CRIT</div>";
+        let critGunHTMLRowsHTML = '';
+        rowsListings = [//evadeCost,meleeCost
+            {"statName": "baseFirearmCritRate","statCoverName": "Base Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "baseFirearmCritDamage","statCoverName": "Base Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
+            {"statName": "baseFirearmCritRateBonus","statCoverName": "+Base Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "baseFirearmCritDamageBonus","statCoverName": "+Base Damage","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
+            {"statName": "firearmCritRateBonus","statCoverName": "+% Crit Rate","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "firearmCritDamageBonus","statCoverName": "+% Crit Damage","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "totalFirearmCritRate","statCoverName": "Total Weapon CR","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.totalFirearmCritRate != returnObject.baseFirearmCritRate)},
+            {"statName": "totalFirearmCritDamage","statCoverName": "Total Weapon CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalFirearmCritDamage != returnObject.baseFirearmCritDamage)},
+        ]
+        critGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
+        readSelection("basicsInnerBox").innerHTML += critGunHTMLRowsHTML ? critGunHTML + critGunHTMLRowsHTML + "<br>" : "";
+
+
+        let wpGunHTML = "<div class='basicsDRheaderTitle'>FIREARM WEAK POINT</div>";
+        let wpGunHTMLRowsHTML = '';
+        rowsListings = [//evadeCost,meleeCost
+            {"statName": "baseWPMulti","statCoverName": "Base Weak Point","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
+            {"statName": "weakpointBonus","statCoverName": "+Weak Point %","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (returnObject.baseWPMulti != 0)},
+            {"statName": "bossPartWPBonus","statCoverName": "+End Part Bonus","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.baseWPMulti != 0)},
+            {"statName": "totalWPBonus","statCoverName": "Total Weak Point Multi","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.baseWPMulti != 0)},
+        ]
+        wpGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
+        readSelection("basicsInnerBox").innerHTML += wpGunHTMLRowsHTML ? wpGunHTML + wpGunHTMLRowsHTML + "<br>" : "";
+
+        let atkGunHTML = "<div class='basicsDRheaderTitle'>FIREARM ATK</div>";
+        let atkGunHTMLRowsHTML = '';
+        rowsListings = [//evadeCost,meleeCost
+            {"statName": "baseFirearmATK","statCoverName": "Base Weapon ATK","tooltip":"","relevantTags": [],"isNotAPercent": true},
+            {"statName": "attackPercent","statCoverName": "+ATK %","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "firearmColossusATK","statCoverName": "+Colossus ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
+            {"statName": "physicalTypeMulti","statCoverName": "Physical Type Multi","tooltip":"","relevantTags": [],"isNotAPercent": false},
+            {"statName": "firearmAttributeConversionBase","statCoverName": "Attribute Conversion Base","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
+            {"statName": "totalFirearmATK","statCoverName": "Total ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalFirearmATK != returnObject.baseFirearmATK)},
+        ]
+        atkGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
+        readSelection("basicsInnerBox").innerHTML += atkGunHTMLRowsHTML ? atkGunHTML + atkGunHTMLRowsHTML + "<br>" : "";
+
+
+        let firearmAttributeHTML = "<div class='basicsDRheaderTitle'>FIREARM ATTRIBUTE</div>";
+        let firearmAttributeHTMLRowsHTML = '';
+        rowsListings = [
+            {"statName": "FireATK","statCoverName": "Base Fire ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"condition": (index.FireATK != 0)},
+            {"statName": "FireATK%","statCoverName": "Fire ATK Conversion","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["FireATK%"] != 0)},
+            {"statName": "FireATK%Bonus","statCoverName": "+Fire ATK%","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["FireATK%Bonus"] != 0)},
+
+            {"statName": "ChillATK","statCoverName": "Base Chill ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"condition": (index.ChillATK != 0)},
+            {"statName": "ChillATK%","statCoverName": "Chill ATK Conversion","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ChillATK%"] != 0)},
+            {"statName": "ChillATK%Bonus","statCoverName": "+Chill ATK%","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ChillATK%Bonus"] != 0)},
+
+            {"statName": "ToxicATK","statCoverName": "Base Toxic ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"condition": (index.ToxicATK != 0)},
+            {"statName": "ToxicATK%","statCoverName": "Toxic ATK Conversion","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ToxicATK%"] != 0)},
+            {"statName": "ToxicATK%Bonus","statCoverName": "+Toxic ATK%","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ToxicATK%Bonus"] != 0)},
+
+            {"statName": "ElectricATK","statCoverName": "Base Electric ATK","tooltip":"","relevantTags": [],"isNotAPercent": true,"condition": (index.ElectricATK != 0)},
+            {"statName": "ElectricATK%","statCoverName": "Electric ATK Conversion","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ElectricATK%"] != 0)},
+            {"statName": "ElectricATK%Bonus","statCoverName": "+Electric ATK%","tooltip":"","relevantTags": [],"isNotAPercent": false,"condition": (index["ElectricATK%Bonus"] != 0)},
+        ]
+        firearmAttributeHTMLRowsHTML += expandRows(rowsListings,index);
+        readSelection("basicsInnerBox").innerHTML += firearmAttributeHTMLRowsHTML ? firearmAttributeHTML + firearmAttributeHTMLRowsHTML + "<br>" : "";
 
   
         let healthHTML = "<div class='basicsDRheaderTitle'>HEALTH</div>";
@@ -1065,7 +1166,7 @@ const formulasValues = {
 
         //weapon mods
         let modArrayRef = globalRecords.weapon.mods;
-        const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+        const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
         for (let i=0;i<=9;i++) {
             let path = weaponModsCategory[modArrayRef[i]].stats;
             pullStats(index,path);
@@ -1192,7 +1293,8 @@ const formulasValues = {
 
 function updateFormulas() {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
-    let characterRef = characters[globalRecords.character.currentCharacter].baseStats
+    const characterRef = characters[globalRecords.character.currentCharacter].baseStats
+    const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
     const globalRef = globalRecords.character.abilities;
 
     customDamage.callAbilityFunctionsTier0(tableReference);
@@ -1211,8 +1313,11 @@ function updateFormulas() {
     const {MPRecoveryModifier,baseCharacterMPInCombat,baseMPInCombatBonus,totalMPInCombat,baseCharacterMPOutCombat,baseMPOutCombatBonus,totalMPOutCombat,
         shieldRecoveryModifier,baseCharacterShieldInCombat,baseShieldInCombatBonus,totalShieldInCombat,baseCharacterShieldOutCombat,baseShieldOutCombatBonus,totalShieldOutCombat,
         totalHPRecoveryModifier,totalHPHealModifier} = calcs.getRecovery(tableReference,characterRef);
-
     const {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(tableReference,characterRef);
+
+    const {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus} = calcs.getFirearmWeakpoint(tableReference,currentWeaponRef);
+    const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableReference,currentWeaponRef);
+    const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableReference,currentWeaponRef);
 
 
     const returnObject = {
@@ -1224,8 +1329,10 @@ function updateFormulas() {
         MPRecoveryModifier,baseCharacterMPInCombat,baseMPInCombatBonus,totalMPInCombat,baseCharacterMPOutCombat,baseMPOutCombatBonus,totalMPOutCombat,
         shieldRecoveryModifier,baseCharacterShieldInCombat,baseShieldInCombatBonus,totalShieldInCombat,baseCharacterShieldOutCombat,baseShieldOutCombatBonus,totalShieldOutCombat,
         totalHPRecoveryModifier,totalHPHealModifier,
-
-        baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage
+        baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage,
+        baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus,
+        baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage,
+        baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK
     }
 
     customDamage.callAbilityFunctions(tableReference,returnObject);

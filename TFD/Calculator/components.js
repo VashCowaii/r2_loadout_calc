@@ -20,6 +20,8 @@ const componentImagePrefixes = {
     "Decimator": "Icon_Item_Acc_Executioner_T2_",
     "Battle Aesthetics": "Icon_Item_Acc_StunningBeauty_T2_",
     "Tomb Vanguard": "Icon_Item_Acc_Gravewalker_T2_",
+    "Distorted Resolve": "Icon_Item_Acc_DeathStalker_T3_",
+    "Invader": "Icon_Item_Acc_A006_T2_",
 }
 
 
@@ -148,6 +150,18 @@ const auxiliary = {
         "headerStat": "DEF",
         "value": 4683,
         "rarity": "Rare",
+        "imageSuffix": "01"
+    },
+    "Distorted Resolve": {
+        "headerStat": "HP",
+        "value": 646,
+        "rarity": "Ultimate",
+        "imageSuffix": "01"
+    },
+    "Invader": {
+        "headerStat": "HP",
+        "value": 646,
+        "rarity": "Ultimate",
         "imageSuffix": "01"
     },
 }
@@ -312,6 +326,18 @@ const sensor = {
         "headerStat": "DEF",
         "value": 2341,
         "rarity": "Rare",
+        "imageSuffix": "02"
+    },
+    "Distorted Resolve": {
+        "headerStat": "HP",
+        "value": 484,
+        "rarity": "Ultimate",
+        "imageSuffix": "02"
+    },
+    "Invader": {
+        "headerStat": "HP",
+        "value": 484,
+        "rarity": "Ultimate",
         "imageSuffix": "02"
     },
 }
@@ -493,6 +519,18 @@ const memory = {
         "rarity": "Rare",
         "imageSuffix": "03"
     },
+    "Distorted Resolve": {
+        "headerStat": "HP",
+        "value": 484,
+        "rarity": "Ultimate",
+        "imageSuffix": "03"
+    },
+    "Invader": {
+        "headerStat": "HP",
+        "value": 484,
+        "rarity": "Ultimate",
+        "imageSuffix": "03"
+    },
 }
 const memoryRolls = {
     "": {
@@ -663,6 +701,18 @@ const processor = {
         "headerStat": "DEF",
         "value": 1171,
         "rarity": "Rare",
+        "imageSuffix": "04"
+    },
+    "Distorted Resolve": {
+        "headerStat": "HP",
+        "value": 646,
+        "rarity": "Ultimate",
+        "imageSuffix": "04"
+    },
+    "Invader": {
+        "headerStat": "HP",
+        "value": 646,
+        "rarity": "Ultimate",
         "imageSuffix": "04"
     },
 }
@@ -998,6 +1048,34 @@ const componentSetBonuses = {
         "4pc": {
             "desc": "N/A - No set bonuses",
             "stats": {}
+        },
+    },
+    "Distorted Resolve": {
+        "2pc": {
+            "desc": "Assault Rifle ATK +5.6%<br>Submachine Gun ATK +5.6%",
+            "stats": {}//TODO: gun type specific atk bonuses
+        },
+        "4pc": {
+            "desc": "Increases Toxic Skill Power by up to +7.15% based on HP lost. When current HP is 1, Toxic Skill Power +14.3%.<br>Has a 5% chance to recover 3.2% Shield each time you inflict an enemy with a debuff. Successful part destruction grants 5 stacks of Exaltation which fires a guided projectile toward the colossus on Skill Attack (Cooldown 7s).<br>Deals additional Toxic damage equivalent to 9.7% of Skill Power and inflicts Desolation.<br>Desolation: All Colossus ATK -0.5% (up to 5 stacks, 30s duration)",
+            "stats": {
+                "PowerRatioToxic": 0.143
+            }
+        },
+    },
+    "Invader": {
+        "2pc": {
+            "desc": "Max Shield +11.9%",
+            "stats": {
+                "Shield%": 0.119
+            }
+        },
+        "4pc": {
+            "desc": "When defeating an enemy, Skill Duration +2.1% (10s duration, up to 5 stacks, assumed active at all times in calculator).<br>Tech Skill Power Modifier +4.1%<br>Dimension Skill Power Modifier +4.1%",
+            "stats": {
+                "SkillDuration": 0.21,
+                "PowerModifierTech": 0.041,
+                "PowerModifierDimension": 0.041,
+            }
         },
     },
 }

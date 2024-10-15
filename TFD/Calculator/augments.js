@@ -71,7 +71,6 @@ const augments = {
         "desc": "Modifies Grenade Throw to be charged up to 3 times. Grenade charges once whenever a certain amount of ammo is consumed.",
         "skillOverrides": ["Explosive Stacks",0,0,0,0]
     },
-
     //Bunny
     "High-Voltage": {
         "rarity": "Transcendant",
@@ -127,7 +126,6 @@ const augments = {
         "desc": "Changes Maximum Power into a form that causes damage around Bunny.",
         "skillOverrides": [0,0,0,"Electric Condense",0]
     },
-
     //Kyle
     "Superconductive Bombing": {
         "rarity": "Transcendant",
@@ -165,10 +163,6 @@ const augments = {
         "desc": "After a dash, inflicts Stun at the end of a knockback. However, DEF increase is not applied.",
         "skillOverrides": ["Collision Instinct",0,0,0,0]
     },
-
-
-
-
     //Esiemo
     "Explosive Evade": {
         "rarity": "Transcendant",
@@ -206,6 +200,55 @@ const augments = {
         "desc": "After a dash, uses up all available bombs to inflict great damage to nearby enemies. The more bombs available, the greater the damage inflicted.",
         "skillOverrides": [0,"Creative Explosion",0,"Creative Explosion",0]
     },
+
+    //Freyna
+    "Neurotoxin Synthesis": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Freyna",
+        "desc": "Modifies the effects of Room 0 Trauma. Does not spread Poison, but inflicts ATK reduction and Weaken Regeneration.",
+        "skillOverrides": ["Neurotoxin Synthesis","Neurotoxin Synthesis","Neurotoxin Synthesis","Neurotoxin Synthesis","Neurotoxin Synthesis"]
+    },
+    "Venom Synthesis": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Freyna",
+        "desc": "Putrid Venom skill conversion. Each time you move, create Toxic Footprints in the area you traversed. Enemies that touch the Toxic Footprints are afflicted with Room 0 Trauma.",
+        "skillOverrides": [0,0,"Venom Synthesis",0,0]
+    },
+    "Toxic Stimulation": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Freyna",
+        "desc": "Defense Mechanism skill conversion. Grants Plague Bodyarmor to surrounding allies.",
+        "skillOverrides": [0,"Toxic Stimulation",0,0,0]
+    },
+    "Venom Injection": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Ultimate Freyna",
+        "desc": "When using skill, continuously consumes resources to give self Toxic Sense. While Toxic Sense is active, hitting an enemy with a firearm or a Skill inflicts Corrosion.",
+        "skillOverrides": [0,"Venom Injection",0,0,0]
+    },
+    "Contagion": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 7,
+        "category": "Freyna",
+        "desc": "When an enemy inflicted with Room 0 Trauma is killed, it infects nearby enemies with Room 0 Trauma.",
+        "skillOverrides": ["Contagion","Contagion","Contagion","Contagion","Contagion"]
+    },
+
+    
 
     // "Classic Chef": {
     //     "rarity": "Transcendant",
@@ -320,22 +363,7 @@ const augments = {
     //     "category": "Sharen",
     //     "desc": "Modifies Cutoff Beam so that it can be unleashed as Sword Aura."
     // },
-    // "Absolute-Zero": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Ultimate Viessa",
-    //     "desc": "When using skill, Ice Shackle is not inflicted. When the skill lands a Critical Hit, inflicts Frostbite on the target. Successfully inflicting Frostbite triggers Ice Sphere."
-    // },
-    // "Cold Cohesion": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Ultimate Viessa",
-    //     "desc": "The number of Ice Spheres increases by 5, and the base cooldown is reduced by 5 seconds."
-    // },
+    
     // "Blood and Iron": {
     //     "rarity": "Transcendant",
     //     "polarity": "Xantic",
@@ -384,38 +412,7 @@ const augments = {
     //     "category": "Ultimate Gley",
     //     "desc": "The chance to create a Life Sphere is slightly increased. Detonates all nearby Life Spheres to deal damage instead of absorbing HP. Recovers Power of Life based on the number of Life Spheres exploded."
     // },
-    // "Neurotoxin Synthesis": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Freyna",
-    //     "desc": "Modifies the effects of Room 0 Trauma as follows: -Does not spread Poison. -Adds ATK reduction & Weaken Regeneration effects."
-    // },
-    // "Venom Synthesis": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Rutile",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Freyna",
-    //     "desc": "Putrid Venom skill conversion. Leaves behind a Toxic Footprint after every step. Inflicts Poison on enemies coming in contact with Toxic Footprint."
-    // },
-    // "Toxic Stimulation": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 15,
-    //     "category": "Freyna",
-    //     "desc": "Defense Mechanism skill conversion. Grants Plague Bodyarmor to surrounding allies."
-    // },
-    // "Contagion": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Rutile",
-    //     "type": "Descendant",
-    //     "cost": 17,
-    //     "category": "Freyna",
-    //     "desc": "When an enemy inflicted with Room 0 Trauma is killed, There is a contagion of Poison surrounding it."
-    // },
+    
     // "Attacking Compulsion": {
     //     "rarity": "Transcendant",
     //     "polarity": "Almandine",
@@ -449,38 +446,7 @@ const augments = {
     //     "desc": "Multi-purpose Gun skill conversion. When using skill, recovers the HP of all summoned turrets and extends their duration. Does not switch turrets to Enhanced mode."
     // },
     
-    // "Cold-Bloodedness": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Rutile",
-    //     "type": "Descendant",
-    //     "cost": 15,
-    //     "category": "Ultimate Viessa/Viessa",
-    //     "desc": "Frost Road Skill Conversion. When using skill, increases Skill Power Modifier and decreases MP Cost and Skill Cooldown. Frost Roads are not created when moving."
-    // },
-    // "Cold Snap Watch": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 15,
-    //     "category": "Ultimate Viessa/Viessa",
-    //     "desc": "Cold Snap skill conversion. Creates a Cold Snap zone in front that remains for a certain period of time. Enemies enterting the Cold Snap zone are inflicted wtih Ice Shackle and suffer continuous damage."
-    // },
-    // "Hypothermy": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Ultimate Viessa/Viessa",
-    //     "desc": "When using skill, inflicts Ice Needle insted of Ice Shackle. When Ice Needle reaches a certain number of stacks, passive skills are triggered. Ice Needle: Continuous damage to the target. Damage increases as it stacks."
-    // },
-    // "Glacial Cloud": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Cerulean",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Ultimate Viessa/Viessa",
-    //     "desc": "Blizzard Skill conversion. Throws a projectile forward that spawns a blizzard where it lands."
-    // },
+    
     // "Void Barrier": {
     //     "rarity": "Transcendant",
     //     "polarity": "Malachite",

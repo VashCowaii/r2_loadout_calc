@@ -10,7 +10,7 @@
 
 
 .prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription,.totalHealingHeaderBoss,.totalHealingValueBoss,.bossDataCritResist,.abilityBreakdownGeneralMessage,
-.bossResistBoxHolder,.bossResistValue {
+.bossResistBoxHolder,.bossResistValue,.smolText {
     font-family: "Montserrat-Light";
 }
 
@@ -267,7 +267,7 @@
     text-align: left;
     position: relative;
     box-sizing: border-box;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 .selectionSelectorBoxesReactor {
@@ -326,6 +326,7 @@
 .breakdownDescriptionBox {
     width: 100%;
     height: 100%;
+    max-height: 100px;
     display: flex;
     justify-content: left;
     align-items: flex-start;
@@ -339,6 +340,7 @@
     font-size: 14px;
     z-index: 1;
 }
+
 
 
 
@@ -574,6 +576,7 @@
     display: none;
     width: 100%;
     height: 100%;
+    max-height: 660px;
     overflow-y: auto;
     flex-direction: column;
     /* border: 1px solid red; */
@@ -583,7 +586,7 @@
     width: 100%;
     box-sizing: border-box;
     background-color: black;
-    height: 40px;
+    /* height: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -593,9 +596,7 @@
 .abilityBreakdownBody {
     width: 100%;
     height: 100%;
-    max-height: 650px;
     box-sizing: border-box;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -609,7 +610,7 @@
     white-space: normal;
     /* border: 1px solid green; */
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 14px;
 }
 .missingBreakdownHeadsup {
     width: 100%;
@@ -619,6 +620,11 @@
     width: 100%;
     white-space: normal;
     font-size: 14px;
+}
+.breakdownRowInjectionHeader {
+    width: 100%;
+    font-size: 16px;
+    border-top: 2px solid #434343;
 }
 .basicsDRStat {
     width: auto;
@@ -649,6 +655,28 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
+}
+.abilityBreakdownSplitterHeader {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-top: 2px solid #434343;
+    display: flex;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 3px;
+    color: #0eef52;
+}
+.weaponBreakdownSplitterHeader {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-top: 2px solid #434343;
+    display: flex;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 3px;
+    color: #1488fd;
 }
 
 
@@ -735,6 +763,21 @@
     overflow: hidden;
     position: relative;
 }
+.tfdSettingsMainBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.tfdSettingsRowBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .totalHealingBoxHalfModeSelector {
     width: 100%;
@@ -743,6 +786,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.totalHealingBoxBreakdownRows {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+.totalHealingBoxHalfBreakdownRows {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 

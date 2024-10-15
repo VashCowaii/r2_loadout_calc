@@ -117,12 +117,6 @@
                     </div>
                 </div>
 
-                <div style="width: 100%;white-space: normal;display: none;" id="weaponModeWarning">
-                    <br><br>
-                    Right now weapon mode is only for clarifying what mods you use on weapons, when you're using a character that benefits from a "stat-stick" which just means your equipped weapon mods can modify the Unique Weapon of the character.<br><br>
-                    Later, I will actually give you breakdowns on the weapons themselves, but for now at least this is just for specifying how you mod your Hailey sniper.
-                </div>
-
                 <div class="abilityDamageDisplayImageBox" id="centerAbilityImageRow">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_01.png" id="damageAbilityIcon1" onclick="userTriggers.updateSelectedAbilityBreakdown(1,'damageAbilityIcon1')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_02.png" id="damageAbilityIcon2" onclick="userTriggers.updateSelectedAbilityBreakdown(2,'damageAbilityIcon2')">
@@ -170,6 +164,20 @@
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader5"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody5"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownFooter5"></div>
+                    </div>
+                </div>
+
+                
+
+                <div class="abilityDamageTabHolder" id="weaponBreakdownTabHolders" style="display: none;"><!-- ABILITY BREAKDOWN CONTAINERS -->
+                    <div class="abilityBreakdownTab" style="display: flex;flex-direction: column;">
+                        <div style="width: 100%;white-space: normal;display: flex;" class="smolText">
+                            Weapon mode is a work in progress, and is primarily for use with abilities that utilize the mods of your currently equipped weapon.
+                        </div>
+                        <div class="abilityBreakdownHeader" id="weaponBreakdownHeader1"></div>
+                        <div class="abilityBreakdownTypeHeader" id="weaponBreakdownTypeHeader1"></div>
+                        <div class="abilityBreakdownBody" id="weaponBreakdownBody1"></div>
+                        <div class="abilityBreakdownBody" id="weaponBreakdownFooter1"></div>
                     </div>
                 </div>
 
@@ -930,19 +938,65 @@
             
         </div>
 
-        <div class="mainGridRow2" style="display: flex;width: 100%;">
+        <div class="mainGridRow2" style="display: flex;width: 100%;border: none;background: none;"><!-- settings -->
 
-            <div style="display: flex;width: 100%;flex-direction: column;max-width: 300px;">
-                <div class="totalHealingBox">
-                    <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
-                    <div class="statsRowToggle">
-                        <input type="range" id="weaponCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
-                    </div>
-                </div>
-                <div class="totalHealingBox">
-                    <div class="statsRowName">Skill Crit Resist:&nbsp;<span id="skillCritCeilingDisplay">0%</span></div>
-                    <div class="statsRowToggle">
-                        <input type="range" id="skillCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
+            <div class="tfdSettingsMainBox">
+                <div class="advancedStatsTitleHeader" style="padding-top: 0;">SETTINGS</div>
+
+                <div class="survivabilityContainer" style="border: none;background: none;">
+                    <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;"><!-- settings -->
+
+                        <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"> <!-- Firearm settings -->
+                            <div class="advancedCategoryHeader" style="border: none;">FIREARM</div>
+
+                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                                <span class="statsRowName">Use Weak Points?</span>
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statsRowToggle">
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="useWeakspots" onchange="userTriggers.updateGeneralSettings()" checked>
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                                <span class="statsRowName">Use Crits?</span>
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statsRowToggle">
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="useCrits" onchange="userTriggers.updateGeneralSettings()" checked>
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                                <span class="statsRowName">Use Physical Bonus?</span>
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statsRowToggle">
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="useFirearmPhysical" onchange="userTriggers.updateGeneralSettings()" checked>
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"> <!-- enemy settings -->
+                            <div class="advancedCategoryHeader" style="border: none;">ENEMY</div>
+
+                            <div class="totalHealingBox">
+                                <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
+                                <div class="statsRowToggle">
+                                    <input type="range" id="weaponCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
+                                </div>
+                            </div>
+                            <div class="totalHealingBox">
+                                <div class="statsRowName">Skill Crit Resist:&nbsp;<span id="skillCritCeilingDisplay">0%</span></div>
+                                <div class="statsRowToggle">
+                                    <input type="range" id="skillCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -960,25 +1014,27 @@
 <script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
 <script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
 
-<script src="/TFD/Calculator/statList.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/formulas.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/tooltipStorage.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/tooltipMath.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/characterData.js"></script> <!-- character data -->
 
-<script src="/TFD/Calculator/globalRecords.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/reactors.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/components.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/characterData.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/statList.js"></script>
+<script src="/TFD/Calculator/formulas.js"></script>
+<script src="/TFD/Calculator/tooltipStorage.js"></script>
+<script src="/TFD/Calculator/tooltipMath.js"></script>
+
+<script src="/TFD/Calculator/globalRecords.js"></script>
+<script src="/TFD/Calculator/reactors.js"></script> <!-- reactor data -->
+<script src="/TFD/Calculator/components.js"></script> <!-- Component data -->
 <script src="/TFD/Calculator/bossData.js"></script>
 <script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- desc mod data -->
-<script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- weapon data -->
+<script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- weapon mod data -->
+<script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- weapon mod data -->
+<script src="/TFD/Calculator/WeaponMods/specialRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/createHTML.js"></script> 
 <script src="/TFD/Calculator/urlHandling.js"></script> 
-<script src="/TFD/Calculator/pagePopulation.js"></script> <!-- mobile nav bar handling -->
+<script src="/TFD/Calculator/pagePopulation.js"></script>
 <script src="/MainJS/buildTime.js"></script>
 
 
