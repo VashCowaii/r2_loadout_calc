@@ -1033,4 +1033,110 @@ const highPowerRounds = {
             "FirearmATK%": 0.32
         }
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Charge Amplification (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 0,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -20%",
+        "stats": {
+            "FirearmATK%": 0.67,
+            "FirearmCritDamage": -0.20
+        }
+    },
+    // "Charge Amplification (Shotgun)": {
+    //     "rarity": "Rare",
+    //     "polarity": "Malachite",
+    //     "type": "High-Power Rounds",
+    //     "cost": 0,
+    //     "category": "Firearm Critical Hit Damage",
+    //     "desc": "Firearm ATK +40%, Firearm Critical Hit Damage -30%",
+    //     "stats": {
+    //         "FirearmATK%": 0.40,
+    //         "FirearmCritDamage": -0.30
+    //     }
+    // },
+    // "Charge Amplification (Launcher)": {
+    //     "rarity": "Rare",
+    //     "polarity": "Malachite",
+    //     "type": "High-Power Rounds",
+    //     "cost": 0,
+    //     "category": "Firearm Critical Hit Damage",
+    //     "desc": "Firearm ATK +40%, Firearm Critical Hit Damage -30%",
+    //     "stats": {
+    //         "FirearmATK%": 0.40,
+    //         "FirearmCritDamage": -0.30
+    //     }
+    // },
+    "Charge Integration (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 0,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Firearm ATK +16%, Firearm Critical Hit Damage +20%",
+        "stats": {
+            "FirearmATK%": 0.16,
+            "FirearmCritDamage": 0.20
+        }
+    },
+    // "Charge Integration (Shotgun)": {
+    //     "rarity": "Rare",
+    //     "polarity": "Malachite",
+    //     "type": "High-Power Rounds",
+    //     "cost": 0,
+    //     "category": "Firearm Critical Hit Damage",
+    //     "desc": "Firearm ATK +10%, Firearm Critical Hit Damage +10%",
+    //     "stats": {
+    //         "FirearmATK%": 0.10,
+    //         "FirearmCritDamage": 0.10
+    //     }
+    // },
+    // "Charge Integration (Launcher)": {
+    //     "rarity": "Rare",
+    //     "polarity": "Malachite",
+    //     "type": "High-Power Rounds",
+    //     "cost": 0,
+    //     "category": "Firearm Critical Hit Damage",
+    //     "desc": "Firearm Explosive ATK +13%, Firearm Critical Hit Damage +10%",
+    //     "stats": {
+    //         "FirearmATK%": 0.13,
+    //         "FirearmCritDamage": 0.10
+    //     }
+    // },
 }

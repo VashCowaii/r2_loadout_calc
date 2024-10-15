@@ -1617,4 +1617,244 @@ const modData = {
             "CritResist": 0.269
         },
     },
+
+
+
+
+
+
+
+    "Hyperfocus": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 13,
+        "category": "Arche Tech",
+        "desc": "Firearm Critical Hit damage on Skill Critical Hit +12.4%, Skill Critical Hit damage on Firearm Critical Hit +10.1%. These effects do not stack with each other.<br>Calculator assumes both bonuses active at all times when selected. This is not realistic, but there aren't many options here on how to calculate it.",
+        "stats": {
+            "SkillCritDamage": 0.101,
+            "FirearmCritDamage": 0.124,
+        },
+    },
+
+    "Non-Attribute Amplification": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Non-Attribute Skill Power +65.4%, Critical Hit Damage -140%",
+        "stats": {
+            "SkillCritDamage": -1.4,
+            "PowerRatioNonAttribute": 0.654
+        },
+    },
+    "Fire Amplification": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Fire Skill Power +65.4%, Critical Hit Damage -140%",
+        "stats": {
+            "SkillCritDamage": -1.4,
+            "PowerRatioFire": 0.654
+        },
+    },
+    "Chill Amplification": {
+        "rarity": "Rare",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Chill Skill Power +65.4%, Critical Hit Damage -140%",
+        "stats": {
+            "SkillCritDamage": -1.4,
+            "PowerRatioChill": 0.654
+        },
+    },
+    "Electric Amplification": {
+        "rarity": "Rare",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Electric Skill Power +65.4%, Critical Hit Damage -140%",
+        "stats": {
+            "SkillCritDamage": -1.4,
+            "PowerRatioElectric": 0.654
+        },
+    },
+    "Toxic Amplification": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Toxic Skill Power +65.4%, Critical Hit Damage -140%",
+        "stats": {
+            "SkillCritDamage": -1.4,
+            "PowerRatioToxic": 0.654
+        },
+    },
+
+    "Tech Amplification": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Tech Skill Power Modifier +61.3%, Critical Hit Rate -140%",
+        "stats": {
+            "SkillCritRate": -1.4,
+            "PowerModifierTech": 0.613
+        },
+    },
+    "Fusion Amplification": {
+        "rarity": "Rare",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Fusion Skill Power Modifier +61.3%, Critical Hit Rate -140%",
+        "stats": {
+            "SkillCritRate": -1.4,
+            "PowerModifierFusion": 0.613
+        },
+    },
+    "Singular Amplification": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Singular Skill Power Modifier +61.3%, Critical Hit Rate -140%",
+        "stats": {
+            "SkillCritRate": -1.4,
+            "PowerModifierSingular": 0.613
+        },
+    },
+    "Dimension Amplification": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Dimension Skill Power Modifier +61.3%, Critical Hit Rate -140%",
+        "stats": {
+            "SkillCritRate": -1.4,
+            "PowerModifierDimension": 0.613
+        },
+    },
+
+
+    "Non-Attribute Intensive": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Non-Attribute Skill Power +28.7%, Critical Hit Damage +10%",
+        "stats": {
+            "SkillCritDamage": 0.10,
+            "PowerRatioNonAttribute": 0.287
+        },
+    },
+    "Fire Intensive": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Fire Skill Power +28.7%, Critical Hit Damage +10%",
+        "stats": {
+            "SkillCritDamage": 0.10,
+            "PowerRatioFire": 0.287
+        },
+    },
+    "Chill Intensive": {
+        "rarity": "Rare",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Chill Skill Power +28.7%, Critical Hit Damage +10%",
+        "stats": {
+            "SkillCritDamage": 0.10,
+            "PowerRatioChill": 0.287
+        },
+    },
+    "Electric Intensive": {
+        "rarity": "Rare",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Electric Skill Power +28.7%, Critical Hit Damage +10%",
+        "stats": {
+            "SkillCritDamage": 0.10,
+            "PowerRatioElectric": 0.287
+        },
+    },
+    "Toxic Intensive": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Strike",
+        "desc": "Toxic Skill Power +28.7%, Critical Hit Damage +10%",
+        "stats": {
+            "SkillCritDamage": 0.10,
+            "PowerRatioToxic": 0.287
+        },
+    },
+
+    "Tech Intensive": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Tech Skill Power Modifier +26.9%, Critical Hit Rate +10%",
+        "stats": {
+            "SkillCritRate": 0.10,
+            "PowerModifierTech": 0.269
+        },
+    },
+    "Fusion Intensive": {
+        "rarity": "Xantic",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Fusion Skill Power Modifier +26.9%, Critical Hit Rate +10%",
+        "stats": {
+            "SkillCritRate": 0.10,
+            "PowerModifierFusion": 0.269
+        },
+    },
+    "Singular Intensive": {
+        "rarity": "Rare",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Singular Skill Power Modifier +26.9%, Critical Hit Rate +10%",
+        "stats": {
+            "SkillCritRate": 0.10,
+            "PowerModifierSingular": 0.269
+        },
+    },
+    "Dimension Intensive": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Luck",
+        "desc": "Dimension Skill Power Modifier +26.9%, Critical Hit Rate +10%",
+        "stats": {
+            "SkillCritRate": 0.10,
+            "PowerModifierDimension": 0.269
+        },
+    },
 }

@@ -20,7 +20,7 @@ const impactRounds = {
          "FireRate": 0.10,
          "FirearmATK%": 0.90
       },
-      "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +3% for 2s (up to 30 stacks) Removes effect when reloading or changing firearm"
+      "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +3% for 2s (up to 30 stacks) Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
    },
    "Real-life Fighter": {
       "rarity": "Ultimate",
@@ -30,9 +30,9 @@ const impactRounds = {
       "category": "Special Mod",
       "stats": {
          "Accuracy": -0.20,
-         "FirearmATK%": 0.50
+         "FirearmATK%": 1
       },
-      "desc": "Base Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks) But loses 2 stacks per failed Weak Point Attack"
+      "desc": "Base Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks) But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
    },
    "Sharp Precision Shot": {
       "rarity": "Ultimate",
@@ -492,7 +492,7 @@ const impactRounds = {
       "category": "Rounds per Magazine",
       "stats": {
          "MagazineSize": 0.30,
-         "FirearmATK%": 0.015
+         "FirearmATK%": 0.01
       },
       "desc": "Rounds per Magazine +30%, Firearm ATK +1%"
    },
@@ -612,7 +612,7 @@ const impactRounds = {
       "category": "ATK",
       "stats": {
          "FirearmATK%": 0.26,
-         "FirearmCritRate": 0.04
+         "FirearmCritDamage": 0.04
       },
       "desc": "Firearm ATK +26%, Firearm Critical Hit Damage +4%"
    },
@@ -939,7 +939,9 @@ const impactRounds = {
       "type": "Impact Rounds",
       "cost": 12,
       "category": "Fire Rate",
-      "stats": {},
+      "stats": {
+         "FireRate": -0.25,
+      },
       "desc": "Fire Rate +25%"
    },
    "Rifling Reinforcement": {
@@ -948,7 +950,53 @@ const impactRounds = {
       "type": "Impact Rounds",
       "cost": 16,
       "category": "",
-      "stats": {},
+      "stats": {
+         "FirearmATK%": 0.32,
+      },
       "desc": "Firearm ATK +32%"
-   },    
+   },   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   "Charge Amplification": {
+      "rarity": "Rare",
+      "polarity": "Malachite",
+      "type": "Impact Rounds",
+      "cost": 0,
+      "category": "Firearm Critical Hit Damage",
+      "stats": {
+         "FirearmATK%": 0.67,
+         "FirearmCritDamage": -0.35
+      },
+      "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -35%"
+   }, 
+   "Charge Integration": {
+      "rarity": "Rare",
+      "polarity": "Malachite",
+      "type": "Impact Rounds",
+      "cost": 0,
+      "category": "Firearm Critical Hit Damage",
+      "stats": {
+         "FirearmATK%": 0.21,
+        "FirearmCritDamage": 0.10
+      },
+      "desc": "Firearm ATK +21%, Firearm Critical Hit Damage +10%"
+   }, 
 }

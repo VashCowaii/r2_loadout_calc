@@ -84,9 +84,10 @@ const characters = {
             "CritDamage": 1.4,
         },
         "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_016_A01.png",
+        "name": "Hailey",
         "characterSettings": {
-            "stackCount": 16,
-            "distance": 25,
+            "haileyColdFuryBar4": 16,
+            "haileyDistanceBar4": 25,
             "haileyUseWeakspots": true,
             "haileyUsePhysBonus": false,
             "haileyUseCryoDamage": true,
@@ -98,7 +99,32 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_01.png",
                     "type": ["Chill","Dimension"],
                     "desc": "Fires a Cryo Round at enemies in front to deal damage and inflict Cryo. Targets with Cryo stacks receive additional damage and lose 1 stack when hit by any firearm damage, not skill damage.",
-                    "customDPS": "haileyCryoRoundCalcs"
+                    "powerMods": {
+                        "base": 93.8/100,
+                    },
+                    "customDPS": "haileyCryoRoundCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 8,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 2,"limit": null,"isModified": true},
+                        ],
+                        "CRYO ROUNDS": [
+                            {"statType": "","statName": "Max Fire Count","value": 9,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Targets Hit","value": 9,"limit": null,"isModified": false},
+                        ],
+                        "CRYO": [
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Additional DMG%","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 9,"limit": null,"isModified": false},
+                        ],
+                        "FLASH FREEZE": [
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "","statName": "-Speed%/Stack","value": -0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "-Speed%/Stack (Boss)","value": -0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 9,"limit": null,"isModified": false},
+                        ],
+                    },
                 },
             },
             "ability2": {
@@ -107,8 +133,38 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_02.png",
                     "type": ["Chill","Singular"],
                     "stats": {},
-                    "desc": "Unleashes a Chill Vortex around her, knocking back hit targets and firing a massive Freezing Beam in the direction of the crosshairs. Inflicts Cry on targets hit based on Enemy AOE.",
+                    "desc": "Unleashes a Chill Vortex around her, knocking back hit targets and firing a massive Freezing Beam in the direction of the crosshairs. Inflicts Cryo on targets hit based on Enemy AOE.",
+                    "powerMods": {
+                        "base": 8902.2/100,
+                        "AOE": 4533.9/100,
+                    },
                     "customDPS": "haileyStormCalcs",//haileyBigFuckinGunCalcs
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 50,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                        ],
+                        "IMPACT": [
+                            {"statType": "","statName": "Applied Cryo (Impact)","value": 5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Knockback Range","value": 5,"limit": 2,"isModified": true},
+                            {"statType": "","statName": "Applied Cryo (Knockback)","value": 5,"limit": null,"isModified": false},
+                        ],
+                        "IMPACT AOE": [
+                            {"statType": "","statName": "Applied Cryo (Impact)","value": 2,"limit": null,"isModified": false},
+                        ],
+                        "CRYO": [
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Additional DMG%","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 9,"limit": null,"isModified": false},
+                        ],
+                        "FLASH FREEZE": [
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "","statName": "-Speed%/Stack","value": -0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "-Speed%/Stack (Boss)","value": -0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 9,"limit": null,"isModified": false},
+                        ],
+                    },
                 },
             },
             "ability3": {
@@ -117,8 +173,28 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_03.png",
                     "type": ["Chill","Dimension"],
                     "desc": "Grants Hailey Cold Fury every second. The Cold Fury effect gradually decreases her movement speed, but greatly increases the base Firearm and Skill Critical Hit Rate and Firearm Penetration.<br>When Cold Fury reaches maximum stacks, Hailey becomes immune to Knockdown and gains an increase to her Firearm and Skill Critical Hit Damage. However, rolling or grappling removes 3 stacks.",
-                    "customDPSBase": "haileyFuryCalcs",
-                    "customDPS": ""
+                    "customDPSBase": "haileyFuryCalcsTier0",
+                    "customDPS": "",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 5,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 12,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Continuous Cost","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Cost Interval (s)","value": 1,"limit": null,"isModified": false},
+                        ],
+                        "COLD FURY": [
+                            {"statType": "","statName": "Skill & Firearm Crit Rate/Stack","value": 0.025,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm Pen.","value": 20,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Firearm Pen./Stack","value": 6,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Stacks","value": 16,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-Movement Speed%/Stack","value": -0.025,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Stack Loss/Movement Skill","value": -3,"limit": null,"isModified": false},
+                        ],
+                        "MAX STACKS BONUS": [
+                            {"statType": "","statName": "Skill & Firearm Crit DMG","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
                 },
                 "augNameHere": {},
             },
@@ -129,7 +205,24 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "customDPSBase": "",
                     "customDPS": "haileyZenithCalcs",//haileyZenithCalcs
-                    "desc": "Equips her Unique Weapon. When hitting an enemy with the Unique Weapon, greatly increases Penetration and Firearm ATK and deals additional Chill skill damage. Recovers a portion of MP upon successfully attacking Weak Points. Partially decreases the Cooldown of the Unique Weapon skill when the skill ends depending on the number of bullets fired."
+                    "desc": "Equips her Unique Weapon. When hitting an enemy with the Unique Weapon, greatly increases Penetration and Firearm ATK and deals additional Chill skill damage. Recovers a portion of MP upon successfully attacking Weak Points. Partially decreases the Cooldown of the Unique Weapon skill when the skill ends depending on the number of bullets fired.",
+                    "powerMods": {
+                        "base": 3627.4/100,
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 30,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max CDR when finished","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "UNIQUE WEAPON - SKILL SPLIT": [],
+                        "UNIQUE WEAPON - FIREARM SPLIT": [
+                            {"statType": "","statName": "+Firearm ATK Multi","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "magazine","statName": "Magazine","value": 4,"limit": null,"isModified": true},
+                            {"statType": "","statName": "MP Recovery/Weak Point Shot","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "UNIQUE WEAPON - SUM": [],
+                    },
                 },
             },
             "ability5": {
@@ -138,8 +231,19 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_00.png",
                     "type": ["Chill"],
                     "desc": "Proportional to the distance between the target and Hailey, the Weak Point Damage decreases the closer you are to your target and increases the farther you are.",
-                    "customDPSBase": "haileyRetreatCalcs",
-                    "customDPS": ""
+                    "customDPSBase": "haileyRetreatCalcsTier0",
+                    "customDPS": "",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "SAFE STRATEGIC RETREAT": [
+                            {"statType": "","statName": "Reference Distance (m)","value": 12.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Distance (m)","value": 25,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Min Distance (m)","value": 0,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Bonus","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Min Bonus","value": -0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
                 },
             }
         }
@@ -754,70 +858,642 @@ const characters = {
         }
     },
 
-    // "Freyna": {
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_006_A01.png",
-    //     "baseStats": {},
-    //     "characterSettings": {},
-    //     "abilities": {
-    //         "ability1": {
-    //             "base": {
-    //                 "name": "Placeholder",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_01.png",
-    //                 "type": ["Placeholder","Placeholder"],
-    //                 "desc": "Placeholder.",
-    //                 "customDPS": ""
-    //             },
-    //         },
-    //         "ability2": {
-    //             "base": {
-    //                 "name": "Placeholder",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_02.png",
-    //                 "type": ["Placeholder","Placeholder"],
-    //                 "stats": {},
-    //                 "desc": "Placeholder.",
-    //                 "customDPS": "",//haileyBigFuckinGunCalcs
-    //             },
-    //         },
-    //         "ability3": {
-    //             "base": {
-    //                 "name": "Placeholder",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_03.png",
-    //                 "type": ["Placeholder","Placeholder"],
-    //                 "desc": "Placeholder.",
-    //                 "customDPSBase": "",
-    //                 "customDPS": ""
-    //             },
-    //             "augNameHere": {},
-    //         },
-    //         "ability4": {
-    //             "base": {
-    //                 "name": "Placeholder",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_04.png",
-    //                 "type": ["Toxic","Tech"],
-    //                 "customDPSBase": "",
-    //                 "customDPS": "freynaResistTesting",//haileyZenithCalcs
-    //                 "desc": "If you're seeing this then I'm an idiot and forgot to remove it before pushing the update. This was only used to help me test out boss resistances and confirm values, and if you see it, ping me in my discord to remind me to remove it."
-    //             },
-    //         },
-    //         "ability5": {
-    //             "base": {
-    //                 "name": "Placeholder",
-    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_016_A01_00.png",
-    //                 "type": ["Placeholder"],
-    //                 "desc": "Placeholder.",
-    //                 "customDPSBase": "",
-    //                 "customDPS": ""
-    //             },
-    //         }
-    //     }
+
+    "Freyna": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_006_U01.png",
+        "name": "Freyna",
+        "baseStats": {
+            "HP": 916,
+            "Shield": 537,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 2083,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 11,
+            "ResistanceToxin": 13,
+            "MP": 187,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.05,
+            "CritDamage": 1.3,
+        },
+        "characterSettings": {
+            "freynaBodyarmorBonus": true,
+            "freynaInjectionBonuses": 15,
+            // "freynaCorrosionBonuses": true,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Venom Trauma",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_01.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Shoots a toxic bullet that deals damage to enemies hit. The toxic bullet explodes, creating a Toxic Puddle and granting the Room 0 Trauma effect to affected enemies. Room 0 Trauma inflicts damage over time and grants the Panic effect to nearby enemies.",
+                    "powerMods": {
+                        "base": 718.6/100,
+                        "puddle": 160.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaVenomTraumaCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 11,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                        ],
+                        "IMPACT": [
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "PANIC": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Neurotoxin Synthesis": {
+                    "name": "Venom Trauma",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R04_01.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Shoots a toxic bullet that deals damage to enemies hit. The toxic bullet explodes, creating a Toxic Puddle and granting the Room 0 Trauma effect to affected enemies. Room 0 Trauma inflicts damage over time, decreases ATK, and prevents healing.",
+                    "powerMods": {
+                        "base": 718.6/100,
+                        "puddle": 160.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaVenomTraumaCalcsNeuroStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 11,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                        ],
+                        "IMPACT": [
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Contagion": {
+                    "name": "Venom Trauma",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R01_01.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Shoots a toxic bullet that deals damage to enemies hit. The toxic bullet explodes, creating a Toxic Puddle and granting the Room 0 Trauma effect to affected enemies. Room 0 Trauma inflicts damage over time. When an enemy with Room 0 Trauma dies, it grants the Room 0 Trauma effect to nearby enemies.",
+                    "powerMods": {
+                        "base": 718.6/100,
+                        "puddle": 160.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 0/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaVenomTraumaCalcsContagionStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 11,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                        ],
+                        "IMPACT": [
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 4,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Defense Mechanism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_02.png",
+                    "type": ["Toxic","Dimension"],
+                    "desc": "Grants the effect of Plague Bodyarmor. Grants the Room 0 Trauma effect to enemies that attack you. Room 0 Trauma inflicts damage over time and grants the Despair effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                        "DEF": 0.25
+                    },
+                    "customDPSBase": "freynaMechanismCalcsTier0",
+                    "customDPS": "freynaMechanismCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "BODYARMOR": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+DEF","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Imbue Rate","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "DESPAIR": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Neurotoxin Synthesis": {
+                    "name": "Defense Mechanism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R04_02.png",
+                    "type": ["Toxic","Dimension"],
+                    "desc": "Grants the effect of Plague Bodyarmor. Grants the Room 0 Trauma effect to enemies that attack you. Room 0 Trauma inflicts damage over time, decreases ATK, and prevents recovery.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,//not used
+                        "DEF": 0.50
+                    },
+                    "customDPSBase": "freynaMechanismCalcsTier0NeuroStarter",
+                    "customDPS": "freynaMechanismCalcsNeuroStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "BODYARMOR": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+DEF","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Imbue Rate","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Contagion": {
+                    "name": "Defense Mechanism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R01_02.png",
+                    "type": ["Toxic","Dimension"],
+                    "desc": "Grants the effect of Plague Bodyarmor. Grants the Room 0 Trauma effect to enemies that attack you. Room 0 Trauma inflicts damage over time. When an enemy with Room 0 Trauma dies, it grants the Room 0 Trauma effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "panic": 0/100,//not used
+                        "DEF": 0.50
+                    },
+                    "customDPSBase": "freynaMechanismCalcsTier0ContagionStarter",
+                    "customDPS": "freynaMechanismCalcsContagionStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "BODYARMOR": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+DEF","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Imbue Rate","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                        ],
+                    },
+                },
+                "Toxic Stimulation": {
+                    "name": "Toxic Stimulation",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R02_Rune.png",
+                    "type": ["Toxic","Dimension"],
+                    "desc": "Grants the effect of Plague Bodyarmor to yourself and nearby allies. Grants the Room 0 Trauma effect to enemies that attack you. Room 0 Trauma inflicts damage over time and grants the Despair effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                        "DEF": 0.25
+                    },
+                    "customDPSBase": "freynaMechanismCalcsTier0ToxicStarter",
+                    "customDPS": "freynaMechanismCalcsStimulationStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "BODYARMOR": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+DEF","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Imbue Rate","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "DESPAIR": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Venom Injection": {
+                    "name": "Toxic Stimulation",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R05_Rune.png",
+                    "type": ["Toxic","Dimension"],
+                    "desc": "Grants Toxic Sense. Consumes HP for the duration of the effect, and MP when HP is at 15%.<br>Toxic Sense increases inversely proportional to the amount of HP lost, and has a chance to grant self Purification when using skills. While toxic sense is active, attacking an enemy inflicts Corrosion on the enemy.<br><br>[BUG] The bonuses related to missing HP can't reach their maximum unless you are using something that will force your HP down to 1, in which case they grant slightly more than the bonus listed in game.",
+                    "powerMods": {},
+                    "customDPSBase": "freynaMechanismCalcsInjection",
+                    "customDPS": "",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "","statName": "%HP Cost/s","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "cost","statName": "MP Cost/s","value": 6,"limit": null,"isModified": true},
+                        ],
+                        "TOXIC SENSE": [
+                            {"statType": "","statName": "Max +Power Modifier","value": 0.663,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max +Toxin Resistance","value": 2.5,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max +Shield%/s","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Purification Chance","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CORROSION": [
+                            {"statType": "","statName": "-Enemy Toxin Resistance","value": -0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Corrosion Chance","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Putrid Venom",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_03.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Throws a toxin to create a Toxic Swamp. Enemies affected by the Toxic Swamp receive the Room 0 Trauma and Venom-Injected effects. Enemies with the Venom-Injected effect leave Toxic Footprints in their path which grant the Room 0 Trauma effect to enemies. Room 0 Trauma inflicts damage over time and grants the Putrid effect to nearby enemies.",
+                    "powerMods": {
+                        "puddle": 202.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaPutridVenomCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": true},
+                            
+                        ],
+                        "SWAMP": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                            {"isHeader": true,"statName": "Toxic Footprint"},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"isHeader": true,"statName": "Venom-Injected"},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "PUTRID": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Neurotoxin Synthesis": {
+                    "name": "Putrid Venom",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_03.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Throws a toxin to create a Toxic Swamp. Enemies affected by the Toxic Swamp receive the Room 0 Trauma and Venom-Injected effects. Enemies with the Venom-Injected effect leave Toxic Footprints in their path which grant the Room 0 Trauma effect to enemies. Room 0 Trauma inflicts damage over time, reduces ATK, and prevents recovery.",
+                    "powerMods": {
+                        "puddle": 202.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 0/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaPutridVenomCalcsNeuroStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "SWAMP": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                            {"isHeader": true,"statName": "Toxic Footprint"},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"isHeader": true,"statName": "Venom-Injected"},
+                            {"statType": "duration","statName": "Duration","value": 16,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Contagion": {
+                    "name": "Putrid Venom",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_03.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Throws a toxin to create a Toxic Swamp. Enemies affected by the Toxic Swamp receive the Room 0 Trauma and Venom-Injected effects. Enemies with the Venom-Injected effect leave Toxic Footprints in their path which grant the Room 0 Trauma effect to enemies. Room 0 Trauma inflicts damage over time. When an enemy with Room 0 Trauma dies, it grants the Room 0 Trauma effect to nearby enemies.",
+                    "powerMods": {
+                        "puddle": 202.4/100,
+                        "trauma": 188.2/100,
+                        "panic": 0/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaPutridVenomCalcsContagionStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                            
+                        ],
+                        "SWAMP": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 12,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                            {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                            {"isHeader": true,"statName": "Toxic Footprint"},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"isHeader": true,"statName": "Venom-Injected"},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                        ],
+                    },
+                },
+                "Venom Synthesis": {
+                    "name": "Venom Synthesis",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R03_Rune.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Enters the Venom-Injected state. While in the Venom-Injected state, each time you move, you create Toxic Footprints. Enemies that come into contact with Toxic Footprints receive the Room 0 Trauma effect. Room 0 Trauma inflicts damage over time and grants the Putrid effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaPutridVenomCalcsSynthesis",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Toxic Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Footprint Duration","value": 8,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "PUTRID": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Venom Baptism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_04.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Equips a Unique Weapon, which is released when all bullets are consumed or after the duration expires. Enemies hit by the bullets of the Unique Weapon receive the Room 0 Trauma effect. Room 0 Trauma inflicts damage over time and grants the Nightmare effect to nearby enemies.",
+                    "powerMods": {
+                        "base": 768.9/100,
+                        "trauma": 188.2/100,
+                        "panic": 174.6/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaBaptismCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
+                        ],
+                        "UNIQUE WEAPON": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "NIGHTMARE": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Neurotoxin Synthesis": {
+                    "name": "Venom Baptism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R04_04.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Equips a Unique Weapon, which is released when all bullets are consumed or after the duration expires. Enemies hit by the bullets of the Unique Weapon receive the Room 0 Trauma effect. Room 0 Trauma inflicts damage over time, reduces ATK, and prevents recovery.",
+                    "powerMods": {
+                        "base": 768.9/100,
+                        "trauma": 188.2/100,
+                        "panic": 0/100,///not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaBaptismCalcsNeuroStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
+                        ],
+                        "UNIQUE WEAPON": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Contagion": {
+                    "name": "Venom Baptism",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_R01_04.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "Equips a Unique Weapon, which is released when all bullets are consumed or after the duration expires. Enemies hit by the bullets of the Unique Weapon receive the Room 0 Trauma effect. Room 0 Trauma inflicts damage over time, reduces ATK, and prevents recovery.",
+                    "powerMods": {
+                        "base": 768.9/100,
+                        "trauma": 188.2/100,
+                        "panic": 0/100,///not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaBaptismCalcsContagionStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
+                        ],
+                        "UNIQUE WEAPON": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Contagion Links",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_00.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "When an enemy with Room 0 Trauma dies, it generates a Toxic Puddle. Enemies standing on the Toxic Puddle receive Room 0 Trauma. Room 0 Trauma inflicts damage over time and grants the Toxic Reaction effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "base": 200.5/100,
+                        "toxic": 133.5/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaContagionCalcs",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Spawn Rate","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 10,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 3,"isModified": true},
+                        ],
+                        "TOXIC REACTION": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Neurotoxin Synthesis": {
+                    "name": "Contagion Links",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_00.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "When an enemy with Room 0 Trauma dies, it generates a Toxic Puddle. Enemies standing on the Toxic Puddle receive Room 0 Trauma. Room 0 Trauma inflicts damage over time, reduces attack power, and prevents healing.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "base": 178.0/100,
+                        "toxic": 0/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaContagionCalcsNeuroStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Spawn Rate","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 6,"limit": null,"isModified": true},
+                            {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Contagion": {
+                    "name": "Contagion Links",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_006_A01_00.png",
+                    "type": ["Toxic","Tech"],
+                    "desc": "When an enemy with Room 0 Trauma dies, it generates a Toxic Puddle. Enemies standing on the Toxic Puddle receive Room 0 Trauma. Room 0 Trauma inflicts damage over time. When an enemy with Room 0 Trauma dies, it grants the Room 0 Trauma effect to nearby enemies.",
+                    "powerMods": {
+                        "trauma": 188.2/100,
+                        "base": 200.5/100,
+                        "toxic": 0/100,//not used
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "freynaContagionCalcsContagionStarter",
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "PUDDLE": [
+                            {"statType": "","statName": "Spawn Rate","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 4,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3,"limit": 3,"isModified": true},
+                        ],
+                        "TRAUMA": [
+                            {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Base","value": 6,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                        ],
+                    },
+                },
+            }
+        }
+    },
+
+
+    // "Viessa": {
+    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_003_U01.png",
     // },
-
-
     // "Ajax": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_002_U01.png"
-    // },
-    // "Viessa": {
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_003_U01.png"
     // },
 
     // "Jayber": {

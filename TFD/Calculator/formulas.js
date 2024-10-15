@@ -88,9 +88,8 @@ const calcs = {
         const critDamagePercentBonus = index.SkillCritDamage;
 
         const totalSkillCritRatePreCap = (baseCharacterCritRate + baseCritRateBonus) * (1 + critRatePercentBonus)
-        const totalSkillCritRate = Math.max(0,Math.min(totalSkillCritRatePreCap,1)) * (1 + (+globalRecords.skillCritCeiling/100))
-        const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);
-        const totalSkillCritDamage = (baseCharacterCritDamage + baseCritDamageBonus) * (1 + critDamagePercentBonus)
+        const totalSkillCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalSkillCritRatePreCap,1)) * (1 + (+globalRecords.skillCritCeiling/100)) : 0;
+        const totalSkillCritDamage = Math.max(1,(baseCharacterCritDamage + baseCritDamageBonus) * (1 + critDamagePercentBonus))
 
         return {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage}
     },
@@ -112,14 +111,182 @@ const calcs = {
 
         return baseSkillPower;
     },
-
-    getResistanceBasedDR(typeName) {
+    getResistanceBasedDR(index,typeName) {
         const currentBoss = globalRecords.boss.currentBoss;
-        const currentResistValue = bosses[currentBoss][typeName];
+        const resistReduction = 1 + index[`enemy${typeName}ResistanceReduction`];
+        const currentResistValue = bosses[currentBoss][typeName] * resistReduction;
         return 150/(150 + Math.sqrt(currentResistValue));
+    },
+    getCritComposites(returnObject) {
+        const Rate = returnObject.totalSkillCritRate;
+        const Damage = returnObject.totalSkillCritDamage;
+        const Composite = 1 + (Rate * (Damage-1));
+
+        return {Rate,Damage,Composite}
+    },
+    getFirearmCritComposites(returnObject) {
+        const Rate = returnObject.totalFirearmCritRate;
+        const Damage = returnObject.totalFirearmCritDamage;
+        const Composite = 1 + (Rate * (Damage-1));
+
+        return {Rate,Damage,Composite}
+    },
+    getCompositeDamageSpread(basicInfo,skillPowerModifier) {
+        const perHit = basicInfo.baseSkillPower * skillPowerModifier * basicInfo.abilityDR;
+        const perCrit = perHit * basicInfo.crit.Damage;
+        const AVG = perHit * basicInfo.crit.Composite;
+
+        return {perHit,perCrit,AVG}
+    },
+    getCompositeFirearmDamageSpread(baseDamage,critFirearm,factorDR) {
+        const perHit = baseDamage * (factorDR ? factorDR : 1);
+        const perCrit = perHit * critFirearm.Damage;
+        const AVG = perHit * critFirearm.Composite;
+
+        return {perHit,perCrit,AVG}
+    },
+
+    getFirearmATK(index,weaponRef) {
+        const baseFirearmATK = weaponRef.baseATK;
+        const attackPercent = index["FirearmATK%"];
+        const physicalTypeMulti = globalRecords.useFirearmPhysical ? 0.2 : 0;
+        const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
+
+        const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
+        const totalFirearmATK = (firearmAttributeConversionBase + index.ColossusATK) * (1 + physicalTypeMulti);
+
+        return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
+    },
+    getFirearmWeakpoint(index,weaponRef) {
+        const baseWPMulti = weaponRef.baseWeakPoint
+        const weakpointBonus = index["WeakPointDamage%"];
+        // const bossPartWPBonus = 0.25;//will edit this later and let people specify what boss body part they are shooting for the sake of completeness
+
+        const bossPartWPBonus = 0.25;
+
+        const totalWPBonus = globalRecords.useWeakspots ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1;
+
+        return {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus}
+    },
+    getFirearmCrit(index,weaponRef) {
+        const baseFirearmCritRate = weaponRef.baseCritRate;
+        const baseFirearmCritDamage = weaponRef.baseCritDamage;
+
+        const baseFirearmCritRateBonus = index.FirearmCritRateBase;
+        const baseFirearmCritDamageBonus = index.FirearmCritDamageBase;
+
+        const firearmCritRateBonus = index.FirearmCritRate;
+        const firearmCritDamageBonus = index.FirearmCritDamage;
+
+        const totalFirearmCritRatePreCap = (baseFirearmCritRate + baseFirearmCritRateBonus) * (1 + firearmCritRateBonus);
+        const totalFirearmCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalFirearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100)) : 0;
+
+        const totalFirearmCritDamage = (baseFirearmCritDamage + baseFirearmCritDamageBonus) * (1 + firearmCritDamageBonus);
+
+        return {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage}
+    },
+    getFirearmElementalSpread(index,elementName,usableBase,critFirearm) {
+        const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
+        const damageElementBase = (usableBase) * index[`${elementName}ATK%`] * (1 + index[`${elementName}ATK%Bonus`]) * elemDR;
+
+        const perHit = damageElementBase;
+        const perCrit = perHit * critFirearm.Damage;
+        const AVG = perHit * critFirearm.Composite;
+
+        return {perHit,perCrit,AVG}
+    },
+    getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm) {
+        let activeElements = [];
+        let activeElementsDamage = [];
+
+        if (index["ChillATK%"]) {activeElements.push("Chill");}
+        if (index["ElectricATK%"]) {activeElements.push("Electric");}
+        if (index["ToxicATK%"]) {activeElements.push("Toxic");}
+        if (index["FireATK%"]) {activeElements.push("Fire");}
+        if (!activeElements.length) {
+            activeElements.push("None");
+            activeElementsDamage.push(0);
+        }
+        else {
+            const damageSubAttribute = calcs.getFirearmElementalSpread(index,activeElements[0],preElementDamage,critFirearm)
+            activeElementsDamage.push(damageSubAttribute.perHit);
+        }
+
+        return {activeElements,activeElementsDamage}
     },
 }
 
+const calcsUIHelper = {
+    addHealingBoxCluster(name,value,unit) {
+        const displayValue = unit ? value * (unit === "%" ? 100 : 1) : value;
+        return `
+        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+            <div class="totalHealingHeader">${name}</div>
+            <div class="totalHealingValueBoss">${(displayValue).toLocaleString()}${unit}</div>
+        </div>
+        `
+    },
+    addHealingBoxRows(bodyID,breakdownArray,displayStatsPath,index,returnObject,characterName,isWeapon) {
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        let returnString = `${conditionalHelpers.addAbilityInfoRows(displayStatsPath["BASIC"],index,returnObject)}`;
+        const settingsRef = !isWeapon ? characters[characterName].characterSettings : sniperList[characterName].weaponSettings;
+
+        for (let entry of breakdownArray) {
+            if (entry.condition) {continue;}//skip any rows with a condition that was met
+
+            function getInjectionString(path) {
+                if (path && path[0].length) {
+                    let returnString = `<div class="totalHealingBoxBreakdownRows">`
+                    for (let entry2 of path[0]) {returnString += addRow(entry2.name,entry2.value,entry2.unit);}
+                    returnString += `</div>`
+                    return returnString;
+                }
+                else {return}
+            }
+
+            let rowInjectionString = getInjectionString(entry.rowInjection);
+            let rowInjectionString2 = getInjectionString(entry.rowInjection2);
+            let rowInjectionString3 = getInjectionString(entry.rowInjection3);
+
+
+            returnString += `
+            <div class="${!isWeapon ? "abilityBreakdownSplitterHeader" : "weaponBreakdownSplitterHeader"}">${entry.header}</div>
+            ${entry.toggleElemID ? 
+                `<div class="totalHealingBox">
+                    <div class="totalHealingBoxHalf hasHoverTooltip">
+                        <div style="padding-right: 5px;">${entry.toggleElemID[1] ? entry.toggleElemID[1] : "Include in Character Statistics?"}</div>
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}('${characterName}')" ${settingsRef[entry.toggleElemID[0]] ? "checked" : ""}>
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                </div>` : ""}
+            ${entry.sliderElemID ? 
+                ` <div class="totalHealingBox">
+                    <div class="statsRowName">${entry.sliderElemID[4]}:&nbsp;<span>${settingsRef[entry.sliderElemID[0]]}</span></div>
+                    <div class="statsRowToggle">
+                        <input type="range" id="${entry.sliderElemID[0]}" name="slider" min="${entry.sliderElemID[1]}" max="${entry.sliderElemID[2]}" value="${+settingsRef[entry.sliderElemID[0]]}" step="${entry.sliderElemID[3]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}('${characterName}')">
+                    </div>
+                </div>` : ""}
+            ${entry.desc ? `<div class="abilityBreakdownGeneralMessage">${entry.desc}</div>` : ""}
+            ${entry.value != null ? `<div class="totalHealingBoxBreakdownRows">
+                ${entry.modifier ? addRow("Mod",entry.modifier,"%") : ""}
+                ${entry.FirearmATK ? addRow("Firearm ATK",entry.FirearmATK,"") : ""}
+                ${addRow("Hit",entry.value.perHit,"")}
+                ${entry.hasCritAVG ? addRow("Crit",entry.value.perCrit,"") : ""}
+                ${entry.hasCritAVG ? addRow("AVG",entry.value.AVG,"") : ""}
+                ${entry.magazineTypeWeapon ? addRow("SUM AVG",entry.magazineTypeWeapon[1],"") : ""}
+            </div>` : ""}
+            ${rowInjectionString ? `<div class="breakdownRowInjectionHeader">${entry.rowInjection[1]}</div>` + rowInjectionString : ""}
+            ${rowInjectionString2 ? `<div class="breakdownRowInjectionHeader">${entry.rowInjection2[1]}</div>` + rowInjectionString2 : ""}
+            ${rowInjectionString3 ? `<div class="breakdownRowInjectionHeader">${entry.rowInjection3[1]}</div>` + rowInjectionString3 : ""}
+            ${displayStatsPath ? conditionalHelpers.addAbilityInfoRows(displayStatsPath[entry.header],index,returnObject) : ""}
+            `
+        }
+        return returnString;
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+}
 
 const customDamage = {
     callAbilityFunctionsTier0(index) {
@@ -136,6 +303,17 @@ const customDamage = {
             const currentPath = abilityRefs[`ability${i}`][path];
             if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index);}
         }
+
+        const absentBreakdownWeapon = `<span class="missingBreakdownHeadsup"><br>
+        You are seeing this for one of two reasons:<br>
+        1) You have no weapon equipped<br>
+        2) This weapon doesn't have a unique ability supported. Yet.<br>
+        <br><br>
+        If you want to speed up the process of adding them all, feel free to join my discord and help me.
+        </span>`;
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        if (currentWeaponRef.customDPSBase) {customDamage[currentWeaponRef.customDPSBase](index);}
+        else {readSelection(`weaponBreakdownBody1`).innerHTML = absentBreakdownWeapon}
     },
     callAbilityFunctions(index,returnObject) {
         const globalRef = globalRecords.character;
@@ -169,7 +347,380 @@ const customDamage = {
             readSelection(`abilityBreakdownFooter${i}`).innerHTML = currentPath ? conditionalHelpers.addAbilityInfoRows(currentPath,index,returnObject) : "";
         }
     },
-    // //Esiemo
+    //-- Freyna --
+    //ability 1
+    freynaVenomTraumaCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierPuddle = abilityMods.puddle + sumModifierBonus;
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damagePuddle = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPuddle);
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
+
+
+        const breakdownArray = [
+            {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "PANIC","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    freynaVenomTraumaCalcsNeuroStarter(index,returnObject) {
+        customDamage.freynaVenomTraumaCalcs(index,returnObject,"Neurotoxin Synthesis")
+    },
+    freynaVenomTraumaCalcsContagionStarter(index,returnObject) {
+        customDamage.freynaVenomTraumaCalcs(index,returnObject,"Contagion")
+    },
+    //ability 2 - used to dictate whether the bodyArmor def bonus applies or not, early in the calcs
+    freynaMechanismCalcsTier0(index,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+
+        const defBonus = abilityMap.powerMods.DEF;
+
+        index["DEF%"] += settingsRef.freynaBodyarmorBonus ? defBonus : 0;
+    },
+    freynaMechanismCalcsTier0NeuroStarter(index) {
+        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    },
+    freynaMechanismCalcsTier0ContagionStarter(index) {
+        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    },
+    freynaMechanismCalcsTier0ToxicStarter(index) {
+        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    },
+    //ability 2 - normal math
+    freynaMechanismCalcs(index,returnObject,nameOverride) { 
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
+    
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
+        if (nameOverride === "Toxic Stimulation") {nameOverride = null;}
+
+
+        const breakdownArray = [
+            {"header": "BODYARMOR","value": null,"modifier": null,"hasCritAVG": false,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": "","toggleElemID": ["freynaBodyarmorBonus",""]},
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "DESPAIR","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    freynaMechanismCalcsNeuroStarter(index,returnObject) {
+        customDamage.freynaMechanismCalcs(index,returnObject,"Neurotoxin Synthesis")
+    },
+    freynaMechanismCalcsContagionStarter(index,returnObject) {
+        customDamage.freynaMechanismCalcs(index,returnObject,"Contagion")
+    },
+    freynaMechanismCalcsStimulationStarter(index,returnObject) {
+        customDamage.freynaMechanismCalcs(index,returnObject,"Toxic Stimulation")
+    },
+    freynaMechanismCalcsInjection(index,returnObject,nameOverride) { 
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Venom Injection"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const hpSliderValue = settingsRef.freynaInjectionBonuses;
+        const inverseBonusPercent = (150 - hpSliderValue)/150;
+        const finalPowerModifier = 0.663 * inverseBonusPercent;
+        const finalShieldRegen = 0.05 * inverseBonusPercent;
+        const finalToxinRes = 2.5 * inverseBonusPercent;
+
+        // index.enemyToxicResistanceReduction += settingsRef.freynaCorrosionBonuses ? -0.25 : 0;
+        index["ResistanceToxin%"] += finalToxinRes;
+        index.PowerModifierBase += finalPowerModifier;
+
+
+        const rowInjection = [
+            {"name": "+Power Mod","value": finalPowerModifier,"unit": "%"},
+            {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
+            {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
+        ]
+
+        const breakdownArray = [
+            {"header": "TOXIC SENSE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": "The maximum of 66.3% bonus modifier can only be achieved when using Overwhelming Shield or when damaged, otherwise you stop at 15%",
+                "sliderElemID": ["freynaInjectionBonuses",0,90,15,"%HP Remaining"],"rowInjection": [rowInjection,""],},
+            {"header": "CORROSION","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                // "toggleElemID": ["freynaCorrosionBonuses","Use Resistance Reduction?"],//do not uncomment, you will break things, it's not ready
+                "condition": false,"desc": "Corrosion's bonus is not factored. Yet."},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 3
+    freynaPutridVenomCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierPuddle = abilityMods.puddle + sumModifierBonus;
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
+    
+        const damagePuddle = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPuddle);
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
+
+
+        const breakdownArray = [
+            {"header": "SWAMP","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+    },
+    freynaPutridVenomCalcsNeuroStarter(index,returnObject) {
+        customDamage.freynaPutridVenomCalcs(index,returnObject,"Neurotoxin Synthesis")
+    },
+    freynaPutridVenomCalcsContagionStarter(index,returnObject) {
+        customDamage.freynaPutridVenomCalcs(index,returnObject,"Contagion")
+    },
+    freynaPutridVenomCalcsSynthesis(index,returnObject,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Venom Synthesis"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
+    
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
+
+
+        const breakdownArray = [
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+    },
+    //ability 4
+    freynaBaptismCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
+
+        const magazine = 45 * (1 + index.MagazineSize);
+        const usableMagazine = Math.floor(magazine);
+
+        const totalAVGGun = usableMagazine * damage.AVG;
+
+        const breakdownArray = [
+            {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVGGun],
+                "condition": false,"desc": "Benefits from Fire Rate and Rounds Per Magazine stats."},
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "NIGHTMARE","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+    },
+    freynaBaptismCalcsNeuroStarter(index,returnObject) {
+        customDamage.freynaBaptismCalcs(index,returnObject,"Neurotoxin Synthesis")
+    },
+    freynaBaptismCalcsContagionStarter(index,returnObject) {
+        customDamage.freynaBaptismCalcs(index,returnObject,"Contagion")
+    },
+    //passive
+    freynaContagionCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
+        const skillPowerModifierToxic = abilityMods.toxic + sumModifierBonus;
+    
+        const damagePuddle = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
+        const damageReaction = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierToxic);
+
+        const breakdownArray = [
+            {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": false,"desc": ""},
+            {"header": "TOXIC REACTION","value": damageReaction,"modifier": skillPowerModifierToxic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+    },
+    freynaContagionCalcsNeuroStarter(index,returnObject) {
+        customDamage.freynaContagionCalcs(index,returnObject,"Neurotoxin Synthesis")
+    },
+    freynaContagionCalcsContagionStarter(index,returnObject) {
+        customDamage.freynaContagionCalcs(index,returnObject,"Contagion")
+    },
+    //Esiemo
     esiemoTimeBombCalcs(index,returnObject) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
@@ -244,7 +795,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR("Fire");
+        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const blastMulti = settingsRef.blastStacksPowerBonus;
@@ -412,7 +963,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const blastMulti = settingsRef.blastStacksPowerBonus;
@@ -507,7 +1058,7 @@ const customDamage = {
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const blastMulti = settingsRef.blastStacksPowerBonus;
-        const fireDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
     
@@ -615,7 +1166,7 @@ const customDamage = {
 
         const basePowerModifier = 7414.4/100;
         const basePowerModifierRunning = 85.8/100;
-        const fireDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
@@ -731,7 +1282,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR("Fire");
+        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus// + (8 * 0.044);
     
@@ -809,7 +1360,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR("Fire");
+        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const blastMulti = settingsRef.blastStacksPowerBonus;
@@ -892,7 +1443,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const blastMulti = settingsRef.blastStacksPowerBonus;
@@ -915,607 +1466,247 @@ const customDamage = {
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
     },
     //Hailey
-    haileyCryoRoundCalcs(index,returnObject,weaponObject) {
-        const characterRef = characters.Hailey;
-        const settingsRef3 = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability1.base.type;
-        const skillPlacement = 1; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Rate</div>
-                    <div class="totalHealingValue" id="barBonus${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Damage</div>
-                    <div class="totalHealingValue" id="barBonus2${skillPlacement}">0.00</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Modifier</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerShot${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShot${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="averageSum${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="averageTotal${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability1.base.desc}</div>
-        `;
-
-        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
-        const basePowerModifier = 93.8/100;
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray)
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
-    
-        // const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
-        const critRate = totalSkillCritRate;//returnObject.totalSkillCritRate;
-        const critDamage = totalSkillCritDamage;//returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * abilityDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const avgTotalDamage = dmgPerHitAvg * 9;
-    
-        readSelection(`barBonus${skillPlacement}`).innerHTML = `${(critRate*100).toLocaleString()}%`;//crit rate
-        readSelection(`barBonus2${skillPlacement}`).innerHTML = `${(critDamage).toLocaleString()}x`;
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;//skill power
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;//total shots
-
-        readSelection(`dmgPerShot${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`critPerShot${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`averageSum${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-        readSelection(`averageTotal${skillPlacement}`).innerHTML = `${avgTotalDamage.toLocaleString()}`;
-    },
-    haileyStormCalcs(index,returnObject,weaponObject) {
-        const characterRef = characters.Hailey;
-        const settingsRef3 = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability2.base.type;
-        const skillPlacement = 2; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Rate</div>
-                    <div class="totalHealingValue" id="barBonus21${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Damage</div>
-                    <div class="totalHealingValue" id="barBonus22${skillPlacement}">0.00</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Modifier</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerShot${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShot${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="averageSum${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2.base.desc}</div>
-        `;
-
-        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
-        const basePowerModifier = 8902.2/100;
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray)
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const chillDR = calcs.getResistanceBasedDR("Chill");
-    
-        // const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
-        const critRate = totalSkillCritRate;//returnObject.totalSkillCritRate;
-        const critDamage = totalSkillCritDamage;//returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * chillDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-    
-        readSelection(`barBonus21${skillPlacement}`).innerHTML = `${(critRate*100).toLocaleString()}%`;//crit rate
-        readSelection(`barBonus22${skillPlacement}`).innerHTML = `${(critDamage).toLocaleString()}x`;
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;//skill power
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;//total shots
-
-        readSelection(`dmgPerShot${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`critPerShot${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`averageSum${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-    },
-    haileyFuryCalcs(index) {
+    haileyCryoRoundCalcs(index,returnObject,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
-        readSelection("abilityBreakdownBody3").innerHTML = `
-        <div class="totalHealingBox">
-            <div class="statsRowName">Cold Fury Stacks:&nbsp;<span id="haileyColdFuryBar4Display">16</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="haileyColdFuryBar4" name="slider" min="0" max="16" value="16" step="1" onchange="settings.updateCharacterSettings('Hailey')">
-            </div>
-        </div>
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const magazine = 9;
+        const totalAVG = magazine * damage.AVG;
+
+
+        const breakdownArray = [
+            {"header": "CRYO ROUNDS","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVG],
+                "condition": false,"desc": ""},
+            {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
+            {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
         <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+BASE Crit Rate</div>
-                    <div class="totalHealingValue" id="furyCritRate">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+% Crit DMG</div>
-                    <div class="totalHealingValue" id="furyCritDamage">0.00</div>
-                </div>
-            </div>
-
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
         </div>
-        `;
-        readSelection("abilityBreakdownBody3").innerHTML += `
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
+    },
+    haileyStormCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-        readSelection("haileyColdFuryBar4").value = +settingsRef.stackCount;
-        readSelection("haileyColdFuryBar4Display").innerHTML = `${settingsRef.stackCount}`;
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierAOE = abilityMods.AOE + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageAOE = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierAOE);
+
+        const breakdownArray = [
+            {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                "condition": false,"desc": ""},
+            {"header": "IMPACT AOE","value": damageAOE,"modifier": skillPowerModifierAOE,"hasCritAVG": true,"unit": "",
+                "condition": false,"desc": "The AOE on impact does not apply to the target hit. Only to those around them."},
+            {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
+            {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
+    },
+    haileyFuryCalcsTier0(index,returnObject,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
 
         //adds up to 40% BASE crit rate, that's nuts
-        const baseSkillCritRateBonus = +settingsRef.stackCount * 0.025;
+        const baseSkillCritRateBonus = +settingsRef.haileyColdFuryBar4 * 0.025;
         index.SkillCritRateBaseBonus += baseSkillCritRateBonus;
-        const baseFirearmCritRateBonus = +settingsRef.stackCount * 0.025;
+        const baseFirearmCritRateBonus = +settingsRef.haileyColdFuryBar4 * 0.025;
         index.FirearmCritRateBase += baseFirearmCritRateBonus;
 
         //unlike the crit rate bonuses, the crit damage is not a base bonus, it acts like any other crit module. also only applies at max stacks.
         let bonusCritDamage = 0
-        if (+settingsRef.stackCount === 16) {bonusCritDamage = 0.20;}
+        if (+settingsRef.haileyColdFuryBar4 === 16) {bonusCritDamage = 0.20;}
         index.SkillCritDamage += bonusCritDamage;
         index.FirearmCritDamage += bonusCritDamage;
 
-        readSelection("furyCritRate").innerHTML = (baseSkillCritRateBonus*100).toLocaleString() + "%";
-        readSelection("furyCritDamage").innerHTML = (bonusCritDamage*100).toLocaleString() + "%";
-    },
-    haileyRetreatCalcs(index) {
-        const characterRef = characters.Hailey;
-        const settingsRef2 = characterRef.characterSettings;
-        readSelection("abilityBreakdownBody5").innerHTML = `
-        <div class="totalHealingBox">
-            <div class="statsRowName">Retreat Distance:&nbsp;<span id="haileyDistanceBar4Display">25m</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="haileyDistanceBar4" name="slider" min="0" max="25" value="25" step="0.5" onchange="settings.updateCharacterSettings('Hailey')">
-            </div>
-        </div>
+        const rowInjection = [
+            {"name": "+BASE Crit Rate","value": baseSkillCritRateBonus,"unit": "%"},
+            {"name": "+Crit DMG %","value": bonusCritDamage,"unit": "%"},
+        ]
 
+        const breakdownArray = [
+            {"header": "COLD FURY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyColdFuryBar4",0,16,1,"Cold Fury Stacks"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+            {"header": "MAX STACKS BONUS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
         <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">0-Point</div>
-                    <div class="totalHealingValue">12.5m</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+% Weak Point DMG</div>
-                    <div class="totalHealingValue" id="retreatWPValue">0.00</div>
-                </div>
-            </div>
-
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
         </div>
-        `;
-        readSelection("abilityBreakdownBody5").innerHTML += `
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5.base.desc}</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
-
-        readSelection("haileyDistanceBar4").value = +settingsRef2.distance;
-        readSelection("haileyDistanceBar4Display").innerHTML = `${settingsRef2.distance}m`;
+    },
+    haileyRetreatCalcsTier0(index,returnObject,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
 
         let weakspotBonus = 0;
-        if (+settingsRef2.distance > 12.5) {weakspotBonus = ((settingsRef2.distance - 12.5)/12.5) * 0.50}
-        else if (+settingsRef2.distance < 12.5) {weakspotBonus = -((12.5 - settingsRef2.distance)/12.5) * 0.50}
+        if (+settingsRef.haileyDistanceBar4 > 12.5) {weakspotBonus = ((settingsRef.haileyDistanceBar4 - 12.5)/12.5) * 0.50}
+        else if (+settingsRef.haileyDistanceBar4 < 12.5) {weakspotBonus = -((12.5 - settingsRef.haileyDistanceBar4)/12.5) * 0.50}
         //and then if the distance is equal to 12.5, the bonus is 0
-        readSelection("retreatWPValue").innerHTML = (weakspotBonus*100).toLocaleString() + "%";
+
         index["WeakPointDamage%"] += weakspotBonus;
-    },
-    haileyZenithCalcs(index,returnObject,weaponObject) {
-        const characterRef = characters.Hailey;
-        const settingsRef3 = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4.base.type;
 
-        readSelection("abilityBreakdownBody4").innerHTML = `
-        <div class="traitMegaTitleHeader" style="background-color: black;">SKILL SPLIT</div>
+        const rowInjection = [
+            {"name": "0-Point","value": 12.5,"unit": "m"},
+            {"name": "+% Weak Point DMG","value": weakspotBonus,"unit": "%"},
+        ]
+
+        const breakdownArray = [
+            {"header": "SAFE STRATEGIC RETREAT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyDistanceBar4",0,25,0.5,"Retreat Distance"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
         <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Rate</div>
-                    <div class="totalHealingValue" id="barBonus">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Damage</div>
-                    <div class="totalHealingValue" id="barBonus2">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Shots</div>
-                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="averageSum">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg Skill DMG</div>
-                    <div class="totalHealingValue" id="totalAvgSkill">0.00</div>
-                </div>
-            </div>
-
-
-            <div class="traitMegaTitleHeader" style="background-color: black;border-top: 4px solid #434343">WEAPON SPLIT</div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Base ATK</div>
-                    <div class="totalHealingValue" id="zenithATK">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">ATK %</div>
-                    <div class="totalHealingValue" id="zenithATKPercent">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Phys Multi</div>
-                    <div class="totalHealingValue" id="zenithATKPhysical">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Rate</div>
-                    <div class="totalHealingValue" id="firearmCritRate">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit Damage</div>
-                    <div class="totalHealingValue" id="firearmCritDamage">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Zenith Multi</div>
-                    <div class="totalHealingValue" id="zenithMulti">0.00</div>
-                </div>
-            </div>
-            <div style="white-space: normal;width: 100%">Weakpoints are assumed to be shoulder hits. See Weapon DMG video for more info.</div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Weakspot Multi</div>
-                    <div class="totalHealingValue" id="firearmWeakspotMulti">0.00</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox" style="margin: 0;padding: 0;">
-                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
-                    <div style="padding-right: 5px;">Use Weakspot Hits: &nbsp;</div>
-                    <label class="toggleContainer">
-                        <input type="checkbox" class="toggleCheckbox" id="haileyUseWeakspots" onchange="settings.updateCharacterSettings('Hailey')" checked> <!--math toggle-->
-                        <span class="toggleSlider"></span>
-                    </label>
-                </div>
-                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
-                    <div style="padding-right: 5px;">Use Physical Bonus: &nbsp;</div>
-                    <label class="toggleContainer">
-                        <input type="checkbox" class="toggleCheckbox" id="haileyUsePhysBonus" onchange="settings.updateCharacterSettings('Hailey')" checked> <!--math toggle-->
-                        <span class="toggleSlider"></span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerShotGun">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShotGun">0.00%</div>
-                </div>
-            </div>
-            
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Elements</div>
-                    <div class="totalHealingValue" id="ActiveElements">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Hit/Element</div>
-                    <div class="totalHealingValue" id="ActiveElementValues">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Element</div>
-                    <div class="totalHealingValue" id="ActiveElementValuesCrit">0.00%</div>
-                </div>
-            </div>
-
-            <br>
-            <div class="totalHealingBox" style="margin: 0;padding: 0;">
-                <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
-                    <div style="padding-right: 5px;">Use Cryo Bonus [Max: 9]&nbsp;</div>
-                    <label class="toggleContainer">
-                        <input type="checkbox" class="toggleCheckbox" id="haileyUseCryoDamage" onchange="settings.updateCharacterSettings('Hailey')" checked> <!--math toggle-->
-                        <span class="toggleSlider"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Cryo/Hit</div>
-                    <div class="totalHealingValue" id="cryoPerHit">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Cryo/Crit</div>
-                    <div class="totalHealingValue" id="cryoPerCrit">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG Cryo</div>
-                    <div class="totalHealingValue" id="cryoAVG">0.00%</div>
-                </div>
-            </div>
-
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg Gun DMG</div>
-                    <div class="totalHealingValue" id="totalAvgGun">0.00</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox" style="border-top: 4px solid #434343">
-                <div class="totalHealingBoxHalf hasHoverTooltip" >
-                    <div class="totalHealingHeader">Total Avg SUM DMG</div>
-                    <div class="totalHealingValue" id="totalAvgAll">0.00</div>
-                </div>
-            </div>
-
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
         </div>
-        `;
-        readSelection("abilityBreakdownBody4").innerHTML += `
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4.base.desc}</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
-        
-        readSelection("haileyUseWeakspots").checked = settingsRef3.haileyUseWeakspots;
-        readSelection("haileyUsePhysBonus").checked = settingsRef3.haileyUsePhysBonus;
-        readSelection("haileyUseCryoDamage").checked = settingsRef3.haileyUseCryoDamage;
+    },
+    haileyZenithCalcs(index,returnObject,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
         const magazineSize = 4 * (1+index.MagazineSize) + index.haileyExtraShots;//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = Math.floor(magazineSize);
 
-        const chillDR = calcs.getResistanceBasedDR("Chill");
-        const fireDR = calcs.getResistanceBasedDR("Fire");
-        const electricDR = calcs.getResistanceBasedDR("Electric");
-        const toxicDR = calcs.getResistanceBasedDR("Toxic");
-        const physDR = calcs.getResistanceBasedDR("DEF");
+        const totalAVGSKill = damageSkill.AVG * actualMagSize;
 
-        
 
-        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
-        const basePowerModifier = 3627.4/100;
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray)
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-    
-        // const critRate = Math.min((1+(globalRecords.skillCritCeiling/100)),totalSkillCritRate);//returnObject.totalSkillCritRate;
-        const critRate = totalSkillCritRate;//returnObject.totalSkillCritRate;
-        const critDamage = totalSkillCritDamage;//returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * chillDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-
-        const totalAVGSkill = actualMagSize * dmgPerHitAvg;
-    
-        readSelection("barBonus").innerHTML = `${(critRate*100).toLocaleString()}%`;//crit rate
-        readSelection("barBonus2").innerHTML = `${(critDamage).toLocaleString()}x`;
-        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;//skill power
-        readSelection("powerModifier").innerHTML = `${magazineSize.toLocaleString()}`;//total shots
-
-        readSelection("dmgPerShot").innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection("totalAvgSkill").innerHTML = `${totalAVGSkill.toLocaleString()}`;
-
-        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
-        const currentWeaponBase = currentWeaponRef.baseATK;
-        const attackPercent = index["FirearmATK%"];
-        const crushBonus = settingsRef3.haileyUsePhysBonus ? 0.2 : 0;//haileyUsePhysBonus
-
-        // const firearmCritRate = Math.min((1+(globalRecords.weaponCritCeiling/100)),(currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate));
-
-        const firearmCritRatePreCap = (currentWeaponRef.baseCritRate + index.FirearmCritRateBase) * (1 + index.FirearmCritRate);
-        const firearmCritRate = Math.max(0,Math.min(firearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100));
-
-        const currentWeaponBaseWS = currentWeaponRef.baseWeakPoint
-        const weakpointBonus = index["WeakPointDamage%"];
-        const totalWSBonus = currentWeaponBaseWS * (1 + weakpointBonus) + 0.50 + -0.25;
-
-        const currentWeaponBaseCD = currentWeaponRef.baseCritDamage;
-        const critDamageBonus = index.FirearmCritDamage;
-        const totalCDBonus = currentWeaponBaseCD * (1 + critDamageBonus);
-
-        const firearmCritComposite = 1 + ((totalCDBonus-1) * firearmCritRate);
-
+        //WEAPON MATH
         const zenithMultiplier = 1.5;
-        let activeElements = [];
-        let activeElementsDamage = [];
-        let activeElementsDamageCrit = [];
+        const preElementDamage = returnObject.firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
+        const damage = (preElementDamage * zenithMultiplier + returnObject.firearmColossusATK) * (1 + returnObject.physicalTypeMulti);
+        const physDR = calcs.getResistanceBasedDR(index,"DEF");
+        const baseDamage = damage * physDR * returnObject.totalWPBonus;
 
-        const preElementDamage = currentWeaponBase * (1 + attackPercent);
+        const critFirearm = calcs.getFirearmCritComposites(returnObject);
+        const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
 
-        const damage = (preElementDamage * zenithMultiplier)* (1 + crushBonus) + (index.ColossusATK * (1 + crushBonus));//zenithMultiplier
-        const baseDamage = damage * physDR;
-        const baseWeakspotDamage = baseDamage * (totalWSBonus);
-        const baseCritDamage = baseDamage * totalCDBonus;
-        const baseWeakspotCritDamage = baseWeakspotDamage * totalCDBonus;
+        const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm);
+        const weaponDamageElemental = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[0],critFirearm);
 
-        if (index["ChillATK%"]) {
-            activeElements.push("Chill");
-            const damageChill = (preElementDamage) * index["ChillATK%"] * (1 + index["ChillATK%Bonus"]);
-            const damageChillCrit = (preElementDamage * totalCDBonus) * index["ChillATK%"] * (1 + index["ChillATK%Bonus"]);
-            const visibleChill = damageChill * chillDR;
-            const visibleChillCrit = damageChillCrit * chillDR;
-            activeElementsDamage.push(visibleChill);
-            activeElementsDamageCrit.push(visibleChillCrit);
-        }
-        if (index["ElectricATK%"]) {
-            activeElements.push("Electric");
-            const damageElectric = (preElementDamage) * index["ElectricATK%"] * (1 + index["ElectricATK%Bonus"]);
-            const damageElectricCrit = (preElementDamage * totalCDBonus) * index["ElectricATK%"] * (1 + index["ElectricATK%Bonus"]);
-            const visibleElectric = damageElectric * electricDR;
-            const visibleElectricCrit = damageElectricCrit * electricDR;
-            activeElementsDamage.push(visibleElectric);
-            activeElementsDamageCrit.push(visibleElectricCrit);
-        }
-        if (index["ToxicATK%"]) {
-            activeElements.push("Toxic");
-            const damageToxic = (preElementDamage) * index["ToxicATK%"] * (1 + index["ToxicATK%Bonus"]);
-            const damageToxicCrit = (preElementDamage * totalCDBonus) * index["ToxicATK%"] * (1 + index["ToxicATK%Bonus"]);
-            const visibleToxic = damageToxic * toxicDR;
-            const visibleToxicCrit = damageToxicCrit * toxicDR;
-            activeElementsDamage.push(visibleToxic);
-            activeElementsDamageCrit.push(visibleToxicCrit);
-        }
-        if (index["FireATK%"]) {
-            activeElements.push("Fire");
-            const damageFire = (preElementDamage) * index["FireATK%"] * (1 + index["FireATK%Bonus"]);
-            const damageFireCrit = (preElementDamage * totalCDBonus) * index["FireATK%"] * (1 + index["FireATK%Bonus"]);
-            const visibleFire = damageFire * fireDR;
-            const visibleFireCrit = damageFireCrit * fireDR;
-            activeElementsDamage.push(visibleFire);
-            activeElementsDamageCrit.push(visibleFireCrit);
-        }
-        if (!activeElements.length) {
-            activeElements.push("None");
-            activeElementsDamage.push(0);
-            activeElementsDamageCrit.push(0);
-        }
+        const cryoDamageHit = (baseDamage + activeElementsDamage[0])/2;
+        const weaponDamageCryo = calcs.getCompositeFirearmDamageSpread(cryoDamageHit,critFirearm);
 
-        const avgGunDamage = (settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage) * firearmCritComposite;
-        const avgElemental = activeElementsDamage[0] * firearmCritComposite;
+        const totalAVGGun = ((weaponDamage.AVG + weaponDamageElemental.AVG) * actualMagSize) + (weaponDamageCryo.AVG * Math.min(9,actualMagSize));
+        const totalAVGSum = totalAVGSKill + totalAVGGun;
 
+        let rowInjectionFirearmElemental = [
+            {"name": "Element","value": activeElements[0],"unit": ""},
+            {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
+            {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
+        ]
+        if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
+        const rowInjectionCryo = [
+            {"name": "Max Procs","value": 9,"unit": "x"},
+            {"name": "Hit","value": weaponDamageCryo.perHit,"unit": ""},
+            {"name": "Crit","value": weaponDamageCryo.perCrit,"unit": ""},
+            {"name": "AVG","value": weaponDamageCryo.AVG,"unit": ""},
+        ]
+        const rowInjectionSums = [
+            {"name": "SUM Firearm AVG","value": totalAVGGun,"unit": ""},
+        ]
+        const rowInjectionTotalSum = [
+            {"name": "SUM Zenith AVG per Cast","value": totalAVGSum,"unit": ""},
+        ]
 
-        const cryoDamageHit = settingsRef3.haileyUseCryoDamage ? ((settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage) + activeElementsDamage[0])/2 : 0;
-        const cryoDamageCrit = cryoDamageHit * totalCDBonus;
-        const cryoDamageAVG = cryoDamageHit * firearmCritComposite;
-
-
-        const totalAVGGun = ((avgGunDamage + avgElemental) * actualMagSize) + (cryoDamageAVG * Math.min(9,actualMagSize));
-
-        const totalAVGSum = totalAVGSkill + totalAVGGun;
-
-
-        readSelection("zenithATK").innerHTML = currentWeaponBase.toLocaleString();
-        readSelection("zenithATKPercent").innerHTML = `${(attackPercent*100).toLocaleString()}%`;
-        readSelection("zenithATKPhysical").innerHTML = `${(crushBonus*100).toLocaleString()}%`;
-
-        readSelection("firearmCritRate").innerHTML = `${(firearmCritRate*100).toLocaleString()}%`;
-        readSelection("firearmCritDamage").innerHTML = `${totalCDBonus.toLocaleString()}x`;
-        readSelection("zenithMulti").innerHTML = "1.5x";
-
-        readSelection("firearmWeakspotMulti").innerHTML = `${totalWSBonus.toLocaleString()}x`;
-
-        readSelection("dmgPerShotGun").innerHTML = `${(settingsRef3.haileyUseWeakspots ? baseWeakspotDamage : baseDamage).toLocaleString()}`;
-        readSelection("critPerShotGun").innerHTML = `${(settingsRef3.haileyUseWeakspots ? baseWeakspotCritDamage : baseCritDamage).toLocaleString()}`;
-
-        readSelection("ActiveElements").innerHTML = `[${activeElements}]`;
-        readSelection("ActiveElementValues").innerHTML = `${activeElementsDamage[0].toFixed(2)}`;
-        readSelection("ActiveElementValuesCrit").innerHTML = `${activeElementsDamageCrit[0].toFixed(2)}`;
-
-        readSelection("cryoPerHit").innerHTML = cryoDamageHit.toLocaleString();
-        readSelection("cryoPerCrit").innerHTML = cryoDamageCrit.toLocaleString();
-        readSelection("cryoAVG").innerHTML = cryoDamageAVG.toLocaleString();
-
-        readSelection("totalAvgGun").innerHTML = `${totalAVGGun.toLocaleString()}`;
-        readSelection("totalAvgAll").innerHTML = `${totalAVGSum.toLocaleString()}`;
+        const breakdownArray = [
+            {"header": "UNIQUE WEAPON - SKILL SPLIT","value": damageSkill,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagSize,totalAVGSKill],
+                "condition": false,"desc": ""},
+            {"header": "UNIQUE WEAPON - FIREARM SPLIT","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
+                "rowInjection": [rowInjectionFirearmElemental,"Firearm Element"],"rowInjection2": [rowInjectionCryo,"Firearm Cryo DMG"],"rowInjection3": [rowInjectionSums,""],
+                "condition": false,"desc": "Must enable/disable <span>WEAK PT HITS</span> and <span>FIREARM PHYS BONUS</span> in <span>SETTINGS</span> for accurate values.<br>WP Hits are assumed Shoulder shots. See Weapon DMG video for more info."},
+            {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "rowInjection": [rowInjectionTotalSum,""],
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+        ${addRow("Power",baseSkillPower,"")}
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+        `;
     },
     //Lepic
     lepicOverclockCalcs(index) {
@@ -1768,7 +1959,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const baseSkillPowerPercent = (2760.3)/100 + sumModifierBonus;
         const baseContinuousSkillPowerPercent = (43.8)/100 + sumModifierBonus;
@@ -1927,7 +2118,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const skillPowerModifierDot = baseDotModifier + sumModifierBonus;
@@ -2174,9 +2365,11 @@ const customDamage = {
         const critRate = returnObject.totalSkillCritRate;
         const critDamage = returnObject.totalSkillCritDamage;
         const critComposite = 1 + (critRate * (critDamage-1));
+
+        const abilityDR = calcs.getResistanceBasedDR(index,"Electric");
     
-        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount;
-        const dmgPerTick = baseSkillPower * skillPowerModifierDot;
+        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount * abilityDR;
+        const dmgPerTick = baseSkillPower * skillPowerModifierDot * abilityDR;
         const dmgPerHitCrit = dmgPerHit * critDamage;
         const dmgPerTickCrit = dmgPerTick * critDamage;
         const dmgPerHitAvg = dmgPerHit * critComposite;
@@ -2238,7 +2431,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
     
@@ -2542,7 +2735,7 @@ const customDamage = {
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);  console.log(abilityDR)
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);  console.log(abilityDR)
         //no sum modifier for mag force as it is static
     
         //double shield to get mag force, and then apply the %portion the user specified on the mag force bar to get the actual mag force amount.
@@ -2700,7 +2893,7 @@ const customDamage = {
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(abilityTypeArray[0]);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
         const skillPowerModifierBombs = basePowerModifierBombs + sumModifierBonus;
@@ -2747,7 +2940,7 @@ const customDamage = {
         readSelection("magDmgCrit").innerHTML = `${dmgPerHitCritBombs.toLocaleString()}`;
 
 
-        readSelection("costPerSet").innerHTML = `${(costPerDropSet*100).toLocaleString() + "%"}`;
+        readSelection("costPerSet").innerHTML = `${(costPerDropSet).toLocaleString()}`;
         readSelection("BombsPerSet").innerHTML = bombsPerSet;
         readSelection("totalBombs").innerHTML = `${totalBombsDropped.toLocaleString()}`;
 
@@ -2785,6 +2978,75 @@ const customDamage = {
 
 
 
+
+
+
+
+
+
+
+    //LE GUNS
+    secretGardenCalcsTier0(index,returnObject) {
+        const weaponRef = sniperList["Secret Garden"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        const currentStacks = +settingsRef.gardenStackCount;
+        const stackBonusRef = [0.00,0.05,0.21,0.37]
+        const currentBonus = stackBonusRef[currentStacks]
+
+        index.PowerOptimization += currentBonus;
+        index["FirearmATK%"] += currentBonus;
+
+        const rowInjection = [
+            {"name": "+Firearm ATK %","value": currentBonus,"unit": "%"},
+            {"name": "+Skill Power Optimization","value": currentBonus,"unit": "%"},
+        ]
+        const breakdownArray = [
+            {"header": "DIMENSION SKILL","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+            {"header": "PEST CONTROL","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["gardenStackCount",0,3,1,"Stack Count"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML = `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Secret Garden",true)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        `;
+    },
+    blueBeetleCalcsTier0(index,returnObject) {
+        const weaponRef = sniperList["Blue Beetle"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        index.SkillCritRate += settingsRef.arcaneWaveActive ? 0.30 : 0;
+
+        const rowInjection = [
+            {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? 0.30 : 0,"unit": "%"},
+        ]
+        const breakdownArray = [
+            {"header": "ARCANE ENERGY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","toggleElemID": ["arcaneWaveActive","Use +Skill Crit Rate?"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+            {"header": "PURIFICATION","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML = `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Blue Beetle",true)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        `;
+    }
+
 }
 
 
@@ -2806,7 +3068,7 @@ let conditionalHelpers = {
                 let statValue = entry.value;
                 const isModifiedByIndex = entry.isModified;
                 const limit = entry.limit;
-                const rangeBonus = Math.min(2,index.SkillRange)/2;//range caps at 200%
+                const rangeBonus = Math.min(limit,index.SkillRange+1);
                 let unit = "";
                 let isRounded = true;
 
@@ -2819,11 +3081,12 @@ let conditionalHelpers = {
                     unit = "s";
                 }
                 else if (statType === "range") {
-                    const addedRangeLimit = statValue * limit - statValue;
-                    statValue += Math.min(addedRangeLimit,(addedRangeLimit*rangeBonus)); 
+                    const addedRangeLimit = statValue * rangeBonus;
+                    statValue = addedRangeLimit; 
                     unit = "m";
                 }
                 else if (statType === "cost") {if (isModifiedByIndex) {statValue *= (1 + index.SkillCost);}}
+                else if (statType === "magazine") {if (isModifiedByIndex) {statValue *= (1 + index.MagazineSize);}}
                 else if (entry.isUnlabeledPercent) {unit = "%";}
 
                 rowString += addRow("",statName,statValue,isRounded,unit);

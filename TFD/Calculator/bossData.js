@@ -57,7 +57,7 @@ const bosses = {
         "Fire": 226617.8,//was 226707
         "Electric": 372421,//was 372489
         "Chill": 146003.15,//was 146,074, //TODO check if the def and non attribute values line up with the .15 here
-        "Toxic": 67226,//67282, //67225.69301
+        "Toxic": 67282,//67226? //67225.69301
 
         "attacks": [
            {
@@ -645,7 +645,7 @@ const bosses = {
         "Fire": 162159.1,//was 162232
         "Electric": 75718.5,//was 75746
         "Chill": 250195.05,//was 250324
-        "Toxic": 408938,//409149,
+        "Toxic": 408925,//409149,
 
         "attacks": [
            {
@@ -1611,10 +1611,10 @@ const bosses = {
 
         "DEF": 193880.7,//193880,//was 194054,
         "Non-Attribute": 193880.7,//was 194054
-        "Fire": 480485,//was 481060,
-        "Electric": 296419.6,//was 296709,
+        "Fire": 480480.5,//was 481060,
+        "Electric": 296419.5,//was 296709,
         "Chill": 92496.6,//was 92564,
-        "Toxic": 193880.85,//was 194054,
+        "Toxic": 193880.7,//was 194054,
 
         "attacks": [
            {
@@ -1755,9 +1755,9 @@ const bosses = {
         "shortName": "Gluttony",
         "buffs": {},
 
-        "skillCrit": 0.80,
-        "gunCrit": 0.50,
-        "note": "*this is the only crit resist not personally verified by Vash",
+        "skillCrit": 0.60,
+        "gunCrit": 0.30,
+        "note": "",
 
         "parts": [
             {"name": "Body","type": "Crush","wpMod": 0},
@@ -1770,9 +1770,9 @@ const bosses = {
         "DEF": 193880.7,//194054,
         "Non-Attribute": 193880.7,//was 194054
         "Fire": 92496.6,//was 92564, //TODO: this is another great example on why decimals are used
-        "Electric": 193880.75,//was 194054,
+        "Electric": 193880.7,//was 194054,
         "Chill": 480480.5,//was 481060,
-        "Toxic": 296437.9,//was 296709,
+        "Toxic": 296419.5,//was 296709,
 
         "attacks": [
            {
@@ -1935,5 +1935,209 @@ const bosses = {
             },
         ]
     },
+    "Death Stalker": {
+        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Deathstalker.png",
+        "shortName": "Death Stalker",
+        "buffs": {},
+
+        "skillCrit": 0.70,
+        "gunCrit": 0.30,
+        "note": "",
+
+        "parts": [
+            {"name": "Body","type": "Pierce","wpMod": 0},
+            {"name": "Balancer","type": "Crush","wpMod": 0.25},
+            {"name": "Core","type": "Burst","wpMod": 0.375},
+            {"name": "Sensor","type": "Burst","wpMod": 0.375},
+            {"name": "Back","type": "Crush","wpMod": 0.50},
+        ],
+
+        "DEF": 193880.7,
+        "Non-Attribute": 193880.7,
+        "Fire": 193880.7,
+        "Electric": 92496.6,
+        "Chill": 296419.5,
+        "Toxic": 480480.5,
+
+        "attacks": [
+           {
+                "name":"Laser Swipe Right",
+                "description": "The Eye will swipe a red laser quickly across the arena from its left to its right.",
+                "damage": 178.606,
+                "stagger": 2,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "Hit",
+                "frequency": 0,
+            },
+            {
+                "name":"Laser Swipe Left",
+                "description": "The Eye will swipe a red laser quickly across the arena from its right to its left, always follows the Laser Swipe Right attack.",
+                "damage": 178.606,
+                "stagger": 2,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "Hit",
+                "frequency": 0,
+            },
+            {
+                "name":"Blue Barrage",
+                "description": "The Eye will glow blue and shoot out a barrage of energy projectiles. This is the damage per projectile, and it hits 49 times.",
+                "damage": 178.606,
+                "stagger": 1,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "DOT",
+                "frequency": 0.2,
+                "duration": 9.8,
+            },
+            {
+                "name":"Purple Laser",
+                "description": "The Eye will glow purple and emit a continuous purple beam that traces lines within the arena. The lines it draws turn into mines that explode. This is the damage of the beam itself, not the mines.",
+                "damage": 89.303,
+                "stagger": 1,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "DOT",
+                "frequency": 0.3,
+            },
+            {
+                "name":"Purple Laser (Mines)",
+                "description": "The Eye will glow purple and emit a continuous purple beam that traces lines within the arena. The lines it draws turn into mines that explode. This is the damage of mines, not the beam.",
+                "damage": 89.303,
+                "stagger": 1,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": true,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "DOT",
+                "frequency": 0.3,
+            },
+            {
+                "name":"Disco Lasers",
+                "description": "The Eye will raise into the sky while transforming the arena into a layered descending pit. Once raised, the eye will glow blue and emit three separate beams that will track players around the arena. This is the damage of the beam if it hits the player, but it's remarkably hard to be hit by it as the beam seems to have a physical geometry outside of the beam's visual indicator that pushes players away from it before it can hit them. I had to run into them in order to get hit.",
+                "damage": 267.91,
+                "stagger": 1,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "DOT",
+                "frequency": 0.7,
+            },
+            {
+                "name":"Carousel: Tri-Laser",
+                "description": "The Eye will raise into the sky while transforming most of the arena into a pit. The Eye will then lower to be level with the top layer of the pit, and shoot out three red lasers that are evenly split in their directions, and begin to rotate. This is the damage if a laser hits you on the top level.",
+                "damage": 357.213,
+                "stagger": 2,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "Hit",
+                "frequency": 0,
+            },
+            {
+                "name":"Carousel: Pit-Fall",
+                "description": "The Eye will raise into the sky while transforming most of the arena into a pit. The Eye will then lower to be level with the top layer of the pit, and shoot out three red lasers that are evenly split in their directions, and begin to rotate. This is the fall damage if you are in the middle of the arena when it collapses, dealing 50% of your max HP.",
+                "damage": 0,
+                "stagger": 0,
+                "hpBased": true,
+                "hpPercent": 50,
+                "drBypass": true,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "%HP",
+                "damageType": "Fall",
+                "frequency": 0,
+            },
+            {
+                "name":"Carousel: Pit Tiles",
+                "description": "The Eye will raise into the sky while transforming most of the arena into a pit. The Eye will then lower to be level with the top layer of the pit, and shoot out three red lasers that are evenly split in their directions, and begin to rotate. This is the fall damage the tiles in the bottom of the pit will do to you if you stand over them while they are glowing, dealing 50% of your max HP..",
+                "damage": 0,
+                "stagger": 2,
+                "hpBased": true,
+                "hpPercent": 50,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "%HP",
+                "frequency": 0,
+            },
+            {
+                "name":"Drone: Projectiles",
+                "description": "The Eye can summon Drone minions throughout the fight. This is the damage the drones deal to you with their projectile attacks.",
+                "damage": 89.303,
+                "stagger": 1,
+                "hpBased": false,
+                "hpPercent": 0,
+                "drBypass": false,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "Hit",
+                "damageType": "Shock",
+                "frequency": 0,
+            },
+            {
+                "name":"Drone: Fallen AOE",
+                "description": "If the Eye's drone summons live long enough, the Eye will send out a blue shockwave that doesn't damage the player, but causes all drones to fall to the floor and emit a damaging blue sphere AOE, where every hit deal 5% of the player's maximum HP.",
+                "damage": 0,
+                "stagger": 1,
+                "hpBased": true,
+                "hpPercent": 5,
+                "drBypass": true,
+                "canBeLethal": false,
+                "lethalCondition": "",
+                "isBuffed": false,
+                "attackType": "%HP",
+                "frequency": 0.5,
+                "duration": 8.5
+            },
+        ]
+    },
+
+    // "LvL 1 Vulgus": {
+    //     "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+    //     "shortName": "NONE",
+    //     "buffs": {},
+
+    //     "skillCrit": 0,
+    //     "gunCrit": 0,
+    //     "note": "",
+
+    //     "parts": [{"name": "Body","type": "Burst","wpMod": 0},],
+
+    //     "DEF": 0,
+    //     "Non-Attribute": 0,
+    //     "Fire": 0,
+    //     "Electric": 0,
+    //     "Chill": 0,
+    //     "Toxic": 0,
+    // },
 
 }
