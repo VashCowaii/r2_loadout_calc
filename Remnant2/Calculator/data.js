@@ -3420,10 +3420,10 @@ classInfo = {
 	"Warden": {
 	  "classIcon": "/brotherLibrary/classIconImages/Warden.png",
 	  "primePerk": "DYNAMIC",
-	  "primePerkDesc": "After 10s of not being damaged, the Warden generates a Shield for 23% of their Max Health over 2s.",
+	  "primePerkDesc": "After 10s of not being damaged, the Warden generates a Shield for 20% of their Max Health over 2s.",
 	  "primePerkImage": "/brotherLibrary/primePerkImages/Dynamic.png",
 	  "primeStats": {
-		"Shield": 0.23
+		"Shield": 0.20
 	  },
 	  "provides": ["Shield"],
 	  "tags": [],
