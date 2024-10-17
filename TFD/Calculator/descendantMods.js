@@ -1053,7 +1053,7 @@ const modData = {
         "type": "Descendant",
         "cost": 15,
         "category": "Range",
-        "desc": "Skill Range +94.4%, Skill Power Modifier -20%. .",
+        "desc": "Skill Range +94.4%, Skill Power Modifier -20%.",
         "stats": {
             "PowerModifierBase": -0.20,
             "SkillRange": 0.944

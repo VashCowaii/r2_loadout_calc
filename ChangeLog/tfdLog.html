@@ -9,6 +9,19 @@
 <!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
 
 <div>
+    <h1>Oct 17, 2024</h1>
+    <ul>
+        <li>Added an extremely basic damage overview for whatever your selected weapon is, in Weapon Mode. This will be expanded upon more later.</li>
+        <li>Added the ability to select a target body part on the enemy selected for resistances:
+            <ul>
+                <li>Part-specific weakpoint modifiers will now automatically adjust based on the part selected. This also means that if you select Body which obviously can't hit weakpoints, that means weakpoints will also automatically be disabled.</li>
+                <li>Part-specific physical type bonuses(crush, pierce, burst) will now automatically adjust based on the part selected. This also means the type bonus will disable automatically when you are selecting a body part with a weakness that is not applicable to the physical type of your weapon. This also means in the future when I add enemy selections for regular vulgus, it will automatically adjust the amount of the type bonus too.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Non-Attribute characters could pop an error when obtaining the Boss DR related to non-attribute, failing to validate the display numbers. This was caused when I made a change to how character abilities retrieve boss DR to apply, and Non-Attribute having a hyphen in the attribute name tripped it.</li>
+    </ul>
+</div>
+<div>
     <h1>Oct 15, 2024 - THE FREYNA CALCS UPDATE</h1>
     <ul>
         <h3>BOSS STATS</h3>

@@ -18,15 +18,32 @@ const bosses = {
     "None (True Damage)": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
         "shortName": "NONE",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0,
         "gunCrit": 0,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Burst","wpMod": 0},
-        ],
+        "parts": {
+            "Body (None)": {"name": "Body","type": "","wpMod": 0},
+            
+            "Body (Crush)": {"name": "Body","type": "Crush","wpMod": 0},
+            "Body (Pierce)": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Body (Burst)": {"name": "Body","type": "Burst","wpMod": 0},
+
+            "Generic .25 (Crush)": {"name": "N/A","type": "Crush","wpMod": 0.25},
+            "Generic .25 (Pierce)": {"name": "N/A","type": "Pierce","wpMod": 0.25},
+            "Generic .25 (Burst)": {"name": "N/A","type": "Burst","wpMod": 0.25},
+
+            "Generic .375 (Crush)": {"name": "N/A","type": "Crush","wpMod": 0.375},
+            "Generic .375 (Pierce)": {"name": "N/A","type": "Pierce","wpMod": 0.375},
+            "Generic .375 (Burst)": {"name": "N/A","type": "Burst","wpMod": 0.375},
+
+            "Generic .50 (Crush)": {"name": "N/A","type": "Crush","wpMod": 0.50},
+            "Generic .50 (Pierce)": {"name": "N/A","type": "Pierce","wpMod": 0.50},
+            "Generic .50 (Burst)": {"name": "N/A","type": "Burst","wpMod": 0.50},
+        },
 
         "DEF": 0,
         "Non-Attribute": 0,
@@ -38,19 +55,20 @@ const bosses = {
     "Executioner": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Executioner.png",
         "shortName": "Executioner",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.25,
         "gunCrit": 0.26,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Burst","wpMod": 0},
-            {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
-            {"name": "Core","type": "Pierce","wpMod": 0.375},
-            {"name": "Balancer","type": "Pierce","wpMod": 0.375},
-            {"name": "Sensor","type": "Pierce","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Burst","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Pierce","wpMod": 0.375},
+            "Balancer": {"name": "Balancer","type": "Pierce","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
+        },
 
         "DEF": 146003,////was 146,074
         "Non-Attribute": 146003,//was 146,074
@@ -347,19 +365,20 @@ const bosses = {
     "Dead Bride": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_DeadBride.png",
         "shortName": "Dead Bride",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.20,
         "gunCrit": 0.20,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Burst","wpMod": 0},
-            {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
-            {"name": "Core","type": "Pierce","wpMod": 0.375},
-            {"name": "Balancer","type": "Pierce","wpMod": 0.375},
-            {"name": "Sensor","type": "Pierce","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Burst","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Pierce","wpMod": 0.375},
+            "Balancer": {"name": "Balancer","type": "Pierce","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
+        },
 
         "DEF": 92413,//was 92430,
         "Non-Attribute": 92413,//was 92430
@@ -626,19 +645,20 @@ const bosses = {
     "Devourer": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
         "shortName": "Devourer",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.25,
         "gunCrit": 0.27,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Pierce","wpMod": 0},
-            {"name": "Shoulder","type": "Crush","wpMod": 0.25},
-            {"name": "Core","type": "Crush","wpMod": 0.25},
-            {"name": "Balancer","type": "Burst","wpMod": 0.25},
-            {"name": "Sensor","type": "Burst","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Crush","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Crush","wpMod": 0.25},
+            "Balancer": {"name": "Balancer","type": "Burst","wpMod": 0.25},
+            "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.50},
+        },
 
         "DEF": 162159,//was 162232
         "Non-Attribute": 162159,//was 162232
@@ -835,19 +855,20 @@ const bosses = {
     "Pyromaniac": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Pyromaniac.png",
         "shortName": "Pyromaniac",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.25,
         "gunCrit": 0.20,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Pierce","wpMod": 0},
-            {"name": "Shoulder","type": "Burst","wpMod": 0.25},
-            {"name": "Core","type": "Burst","wpMod": 0.375},
-            {"name": "Balancer","type": "Crush","wpMod": 0.375},
-            {"name": "Sensor","type": "Crush","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Burst","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Burst","wpMod": 0.375},
+            "Balancer": {"name": "Balancer","type": "Crush","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Crush","wpMod": 0.50},
+        },
 
         "DEF": 286822,//407806,
         "Non-Attribute": 63631.39022,//was 63645
@@ -977,19 +998,20 @@ const bosses = {
     "Swamp Walker": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_SwampWalker.png",
         "shortName": "Swamp Walker",
+        "enemyType": "Colossus",
         "buffs": {},
         "note": "",
 
         "skillCrit": 0.20,
         "gunCrit": 0.20,
 
-        "parts": [
-            {"name": "Body","type": "Pierce","wpMod": 0},
-            {"name": "Shoulder","type": "Crush","wpMod": 0.25},
-            {"name": "Core","type": "Pierce","wpMod": 0.25},
-            {"name": "Helmet","type": "Crush","wpMod": 0.375},
-            {"name": "Sensor","type": "Pierce","wpMod": 0.375},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Crush","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Pierce","wpMod": 0.25},
+            "Helmet": {"name": "Helmet","type": "Crush","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.375},
+        },
 
         "DEF": 176323.5,//was 176346
         "Non-Attribute": 176323.5,//was 176346
@@ -1257,19 +1279,20 @@ const bosses = {
     "Obstructer": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Obstructer.png",
         "shortName": "Obstructer",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.20,
         "gunCrit": 0.23,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Crush","wpMod": 0},
-            {"name": "Shoulder","type": "Burst","wpMod": 0.25},
-            {"name": "Core","type": "Burst","wpMod": 0.375},
-            {"name": "Balancer","type": "Pierce","wpMod": 0.375},
-            {"name": "Sensor","type": "Pierce","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Crush","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Burst","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Burst","wpMod": 0.375},
+            "Balancer": {"name": "Balancer","type": "Pierce","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
+        },
 
         "DEF": 182074,//was 182156,
         "Non-Attribute": 182074,//was 182156
@@ -1410,19 +1433,20 @@ const bosses = {
     "Frost Walker": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_FrostWalker.png",
         "shortName": "Frost Walker",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.20,
         "gunCrit": 0.20,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Pierce","wpMod": 0},
-            {"name": "Shoulder","type": "Burst","wpMod": 0.25},
-            {"name": "Core","type": "Crush","wpMod": 0.25},
-            {"name": "Helmet","type": "Burst","wpMod": 0.50},
-            {"name": "Sensor","type": "Crush","wpMod": 0.375},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Burst","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Crush","wpMod": 0.25},
+            "Helmet": {"name": "Helmet","type": "Burst","wpMod": 0.50},
+            "Sensor": {"name": "Sensor","type": "Crush","wpMod": 0.375},
+        },
 
         "DEF": 188059,//was 188,058
         "Non-Attribute": 187862,//was 188058
@@ -1594,20 +1618,21 @@ const bosses = {
     "Molten Fortress": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Moltenfortress_Info.png",
         "shortName": "Molten Fortress",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.20,
         "gunCrit": 0.27,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Crush","wpMod": 0},
-            {"name": "Armor","type": "Burst","wpMod": 0.25},
-            {"name": "Core","type": "Pierce","wpMod": 0.25},
-            {"name": "Helmet","type": "Burst","wpMod": 0.25},
-            {"name": "Jaw","type": "Pierce","wpMod": 0.25},
-            {"name": "Sensor","type": "Pierce","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Crush","wpMod": 0},
+            "Armor": {"name": "Armor","type": "Burst","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Pierce","wpMod": 0.25},
+            "Helmet": {"name": "Helmet","type": "Burst","wpMod": 0.25},
+            "Jaw": {"name": "Jaw","type": "Pierce","wpMod": 0.25},
+            "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
+        },
 
         "DEF": 193880.7,//193880,//was 194054,
         "Non-Attribute": 193880.7,//was 194054
@@ -1753,19 +1778,20 @@ const bosses = {
     "Gluttony": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Gluttony.png",
         "shortName": "Gluttony",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.60,
         "gunCrit": 0.30,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Crush","wpMod": 0},
-            {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
-            {"name": "Core","type": "Pierce","wpMod": 0.25},
-            {"name": "Balancer","type": "Burst","wpMod": 0.25},
-            {"name": "Sensor","type": "Burst","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Crush","wpMod": 0},
+            "Shoulder": {"name": "Shoulder","type": "Pierce","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Pierce","wpMod": 0.25},
+            "Balancer": {"name": "Balancer","type": "Burst","wpMod": 0.25},
+            "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.50},
+        },
 
         "DEF": 193880.7,//194054,
         "Non-Attribute": 193880.7,//was 194054
@@ -1938,19 +1964,20 @@ const bosses = {
     "Death Stalker": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Deathstalker.png",
         "shortName": "Death Stalker",
+        "enemyType": "Colossus",
         "buffs": {},
 
         "skillCrit": 0.70,
         "gunCrit": 0.30,
         "note": "",
 
-        "parts": [
-            {"name": "Body","type": "Pierce","wpMod": 0},
-            {"name": "Balancer","type": "Crush","wpMod": 0.25},
-            {"name": "Core","type": "Burst","wpMod": 0.375},
-            {"name": "Sensor","type": "Burst","wpMod": 0.375},
-            {"name": "Back","type": "Crush","wpMod": 0.50},
-        ],
+        "parts": {
+            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Balancer": {"name": "Balancer","type": "Crush","wpMod": 0.25},
+            "Core": {"name": "Core","type": "Burst","wpMod": 0.375},
+            "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.375},
+            "Back": {"name": "Back","type": "Crush","wpMod": 0.50},
+        },
 
         "DEF": 193880.7,
         "Non-Attribute": 193880.7,
@@ -2124,6 +2151,7 @@ const bosses = {
     // "LvL 1 Vulgus": {
     //     "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
     //     "shortName": "NONE",
+    //     "enemyType": "Vulgus",
     //     "buffs": {},
 
     //     "skillCrit": 0,

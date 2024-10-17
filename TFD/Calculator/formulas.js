@@ -113,7 +113,7 @@ const calcs = {
     },
     getResistanceBasedDR(index,typeName) {
         const currentBoss = globalRecords.boss.currentBoss;
-        const resistReduction = 1 + index[`enemy${typeName}ResistanceReduction`];
+        const resistReduction = 1 + index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
         const currentResistValue = bosses[currentBoss][typeName] * resistReduction;
         return 150/(150 + Math.sqrt(currentResistValue));
     },
@@ -149,7 +149,11 @@ const calcs = {
     getFirearmATK(index,weaponRef) {
         const baseFirearmATK = weaponRef.baseATK;
         const attackPercent = index["FirearmATK%"];
-        const physicalTypeMulti = globalRecords.useFirearmPhysical ? 0.2 : 0;
+
+        // globalRecords.boss.currentBossPartType
+        const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
+        const physicalTypeBonus = globalRecords.boss.enemyType === "Colossus" ? 0.20 : 0.10;
+        const physicalTypeMulti = weaknessCheck ? physicalTypeBonus : 0;
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
@@ -160,11 +164,11 @@ const calcs = {
     getFirearmWeakpoint(index,weaponRef) {
         const baseWPMulti = weaponRef.baseWeakPoint
         const weakpointBonus = index["WeakPointDamage%"];
+
         // const bossPartWPBonus = 0.25;//will edit this later and let people specify what boss body part they are shooting for the sake of completeness
+        const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
-        const bossPartWPBonus = 0.25;
-
-        const totalWPBonus = globalRecords.useWeakspots ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1;
+        const totalWPBonus = globalRecords.useWeakspots && bossPartWPBonus != 0 ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1;
 
         return {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus}
     },
@@ -228,7 +232,8 @@ const calcsUIHelper = {
     },
     addHealingBoxRows(bodyID,breakdownArray,displayStatsPath,index,returnObject,characterName,isWeapon) {
         const addRow = calcsUIHelper.addHealingBoxCluster;
-        let returnString = `${conditionalHelpers.addAbilityInfoRows(displayStatsPath["BASIC"],index,returnObject)}`;
+        let returnString = `${displayStatsPath ? conditionalHelpers.addAbilityInfoRows(displayStatsPath["BASIC"],index,returnObject) : ""}`;
+        if (characterName === undefined) {return ""}
         const settingsRef = !isWeapon ? characters[characterName].characterSettings : sniperList[characterName].weaponSettings;
 
         for (let entry of breakdownArray) {
@@ -289,7 +294,7 @@ const calcsUIHelper = {
 }
 
 const customDamage = {
-    callAbilityFunctionsTier0(index) {
+    callAbilityFunctionsTier0(index,isCycleCalcs) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -301,21 +306,16 @@ const customDamage = {
             const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
 
             const currentPath = abilityRefs[`ability${i}`][path];
-            if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index);}
+            if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index,null,isCycleCalcs);}
         }
 
         const absentBreakdownWeapon = `<span class="missingBreakdownHeadsup"><br>
-        You are seeing this for one of two reasons:<br>
-        1) You have no weapon equipped<br>
-        2) This weapon doesn't have a unique ability supported. Yet.<br>
-        <br><br>
-        If you want to speed up the process of adding them all, feel free to join my discord and help me.
-        </span>`;
+        No unique weapon ability found/supported for the current selection</span>`;
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
-        if (currentWeaponRef.customDPSBase) {customDamage[currentWeaponRef.customDPSBase](index);}
+        if (currentWeaponRef.customDPSBase) {customDamage[currentWeaponRef.customDPSBase](index,null,isCycleCalcs);}
         else {readSelection(`weaponBreakdownBody1`).innerHTML = absentBreakdownWeapon}
     },
-    callAbilityFunctions(index,returnObject) {
+    callAbilityFunctions(index,returnObject,isCycleCalcs) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -332,24 +332,54 @@ const customDamage = {
         Please note that adding breakdown calculations for every ability with every transcendant mod with every fuckin character, is going to take a long time. If you want to speed up that process, feel free to join my discord and help me.
         </span>`;
 
+        let returnValuesObject = {};
+
         for (let i=1;i<=5;i++) {
             const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
 
             const currentPath = abilityRefs[`ability${i}`][path];
-            if (currentPath.customDPS) {customDamage[currentPath.customDPS](index,returnObject);}
-            else if (!currentPath.customDPSBase) {readSelection(`abilityBreakdownBody${i}`).innerHTML = absentBreakdown;}
+            if (currentPath.customDPS) {returnValuesObject[`ability${i}`] = customDamage[currentPath.customDPS](index,returnObject,isCycleCalcs);}
+            else if (!currentPath.customDPSBase && !isCycleCalcs) {readSelection(`abilityBreakdownBody${i}`).innerHTML = absentBreakdown;}
+            else {returnValuesObject[`ability${i}`] = {};}
         }
 
-        for (let i=1;i<=5;i++) {
-            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+        if (!isCycleCalcs) {
+            for (let i=1;i<=5;i++) {
+                const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
 
-            const currentPath = abilityRefs[`ability${i}`][path].displayStats;
-            readSelection(`abilityBreakdownFooter${i}`).innerHTML = currentPath ? conditionalHelpers.addAbilityInfoRows(currentPath,index,returnObject) : "";
+                const currentPath = abilityRefs[`ability${i}`][path].displayStats;
+                readSelection(`abilityBreakdownFooter${i}`).innerHTML = currentPath ? conditionalHelpers.addAbilityInfoRows(currentPath,index,returnObject) : "";
+            }
         }
+
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        if (currentWeaponRef.customDPS) {customDamage[currentWeaponRef.customDPS](index,returnObject,isCycleCalcs);}
+        else {customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,currentWeaponRef);}
+
+        return returnValuesObject;
     },
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //-- Freyna --
     //ability 1
-    freynaVenomTraumaCalcs(index,returnObject,nameOverride) {
+    freynaVenomTraumaCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 1;
@@ -375,37 +405,39 @@ const customDamage = {
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
 
-        const breakdownArray = [
-            {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "PANIC","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "PANIC","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    freynaVenomTraumaCalcsNeuroStarter(index,returnObject) {
-        customDamage.freynaVenomTraumaCalcs(index,returnObject,"Neurotoxin Synthesis")
+    freynaVenomTraumaCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaVenomTraumaCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
     },
-    freynaVenomTraumaCalcsContagionStarter(index,returnObject) {
-        customDamage.freynaVenomTraumaCalcs(index,returnObject,"Contagion")
+    freynaVenomTraumaCalcsContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaVenomTraumaCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
     //ability 2 - used to dictate whether the bodyArmor def bonus applies or not, early in the calcs
-    freynaMechanismCalcsTier0(index,nameOverride) {
+    freynaMechanismCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 2;
@@ -415,17 +447,17 @@ const customDamage = {
 
         index["DEF%"] += settingsRef.freynaBodyarmorBonus ? defBonus : 0;
     },
-    freynaMechanismCalcsTier0NeuroStarter(index) {
-        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    freynaMechanismCalcsTier0NeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcsTier0(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis");
     },
-    freynaMechanismCalcsTier0ContagionStarter(index) {
-        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    freynaMechanismCalcsTier0ContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcsTier0(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis");
     },
-    freynaMechanismCalcsTier0ToxicStarter(index) {
-        customDamage.freynaMechanismCalcsTier0(index,"Neurotoxin Synthesis");
+    freynaMechanismCalcsTier0ToxicStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcsTier0(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis");
     },
     //ability 2 - normal math
-    freynaMechanismCalcs(index,returnObject,nameOverride) { 
+    freynaMechanismCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 2;
@@ -448,37 +480,39 @@ const customDamage = {
         if (nameOverride === "Toxic Stimulation") {nameOverride = null;}
 
 
-        const breakdownArray = [
-            {"header": "BODYARMOR","value": null,"modifier": null,"hasCritAVG": false,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": "","toggleElemID": ["freynaBodyarmorBonus",""]},
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "DESPAIR","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "BODYARMOR","value": null,"modifier": null,"hasCritAVG": false,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "","toggleElemID": ["freynaBodyarmorBonus",""]},
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "DESPAIR","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    freynaMechanismCalcsNeuroStarter(index,returnObject) {
-        customDamage.freynaMechanismCalcs(index,returnObject,"Neurotoxin Synthesis")
+    freynaMechanismCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
     },
-    freynaMechanismCalcsContagionStarter(index,returnObject) {
-        customDamage.freynaMechanismCalcs(index,returnObject,"Contagion")
+    freynaMechanismCalcsContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
-    freynaMechanismCalcsStimulationStarter(index,returnObject) {
-        customDamage.freynaMechanismCalcs(index,returnObject,"Toxic Stimulation")
+    freynaMechanismCalcsStimulationStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaMechanismCalcs(index,returnObject,isCycleCalcs,"Toxic Stimulation")
     },
-    freynaMechanismCalcsInjection(index,returnObject,nameOverride) { 
+    freynaMechanismCalcsInjection(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 2;
@@ -497,34 +531,36 @@ const customDamage = {
         index.PowerModifierBase += finalPowerModifier;
 
 
-        const rowInjection = [
-            {"name": "+Power Mod","value": finalPowerModifier,"unit": "%"},
-            {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
-            {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
-        ]
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "+Power Mod","value": finalPowerModifier,"unit": "%"},
+                {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
+                {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
+            ]
 
-        const breakdownArray = [
-            {"header": "TOXIC SENSE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": "The maximum of 66.3% bonus modifier can only be achieved when using Overwhelming Shield or when damaged, otherwise you stop at 15%",
-                "sliderElemID": ["freynaInjectionBonuses",0,90,15,"%HP Remaining"],"rowInjection": [rowInjection,""],},
-            {"header": "CORROSION","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                // "toggleElemID": ["freynaCorrosionBonuses","Use Resistance Reduction?"],//do not uncomment, you will break things, it's not ready
-                "condition": false,"desc": "Corrosion's bonus is not factored. Yet."},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+            const breakdownArray = [
+                {"header": "TOXIC SENSE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "The maximum of 66.3% bonus modifier can only be achieved when using Overwhelming Shield or when damaged, otherwise you stop at 15%",
+                    "sliderElemID": ["freynaInjectionBonuses",0,90,15,"%HP Remaining"],"rowInjection": [rowInjection,""],},
+                {"header": "CORROSION","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "toggleElemID": ["freynaCorrosionBonuses","Use Resistance Reduction?"],//do not uncomment, you will break things, it's not ready
+                    "condition": false,"desc": "Corrosion's bonus is not factored. Yet."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     //ability 3
-    freynaPutridVenomCalcs(index,returnObject,nameOverride) {
+    freynaPutridVenomCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 3;
@@ -549,33 +585,35 @@ const customDamage = {
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
 
-        const breakdownArray = [
-            {"header": "SWAMP","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "SWAMP","value": damagePuddle,"modifier": skillPowerModifierPuddle,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
     },
-    freynaPutridVenomCalcsNeuroStarter(index,returnObject) {
-        customDamage.freynaPutridVenomCalcs(index,returnObject,"Neurotoxin Synthesis")
+    freynaPutridVenomCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaPutridVenomCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
     },
-    freynaPutridVenomCalcsContagionStarter(index,returnObject) {
-        customDamage.freynaPutridVenomCalcs(index,returnObject,"Contagion")
+    freynaPutridVenomCalcsContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaPutridVenomCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
-    freynaPutridVenomCalcsSynthesis(index,returnObject,nameOverride) {
+    freynaPutridVenomCalcsSynthesis(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 3;
@@ -597,26 +635,28 @@ const customDamage = {
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
 
-        const breakdownArray = [
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "PUTRID","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
     },
     //ability 4
-    freynaBaptismCalcs(index,returnObject,nameOverride) {
+    freynaBaptismCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 4;
@@ -644,34 +684,39 @@ const customDamage = {
 
         const totalAVGGun = usableMagazine * damage.AVG;
 
-        const breakdownArray = [
-            {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVGGun],
-                "condition": false,"desc": "Benefits from Fire Rate and Rounds Per Magazine stats."},
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "NIGHTMARE","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVGGun],
+                    "condition": false,"desc": "Benefits from Fire Rate and Rounds Per Magazine stats."},
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NIGHTMARE","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {totalAVGGun}
+        }
     },
-    freynaBaptismCalcsNeuroStarter(index,returnObject) {
-        customDamage.freynaBaptismCalcs(index,returnObject,"Neurotoxin Synthesis")
+    freynaBaptismCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaBaptismCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
     },
-    freynaBaptismCalcsContagionStarter(index,returnObject) {
-        customDamage.freynaBaptismCalcs(index,returnObject,"Contagion")
+    freynaBaptismCalcsContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaBaptismCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
     //passive
-    freynaContagionCalcs(index,returnObject,nameOverride) {
+    freynaContagionCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 5;
@@ -694,34 +739,46 @@ const customDamage = {
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damageReaction = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierToxic);
 
-        const breakdownArray = [
-            {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": false,"desc": ""},
-            {"header": "TOXIC REACTION","value": damageReaction,"modifier": skillPowerModifierToxic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "TOXIC REACTION","value": damageReaction,"modifier": skillPowerModifierToxic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
     },
-    freynaContagionCalcsNeuroStarter(index,returnObject) {
-        customDamage.freynaContagionCalcs(index,returnObject,"Neurotoxin Synthesis")
+    freynaContagionCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaContagionCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
     },
-    freynaContagionCalcsContagionStarter(index,returnObject) {
-        customDamage.freynaContagionCalcs(index,returnObject,"Contagion")
+    freynaContagionCalcsContagionStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.freynaContagionCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
+
+
+
+
+
+
+
+
+
+
     //Esiemo
-    esiemoTimeBombCalcs(index,returnObject) {
+    esiemoTimeBombCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability1.base.type;
@@ -826,7 +883,7 @@ const customDamage = {
         readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
 
     },
-    esiemoBlastCalcs(index,returnObject,bombCap,bombMulti,nameOverride) {
+    esiemoBlastCalcs(index,returnObject,isCycleCalcs,bombCap,bombMulti,nameOverride) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability2[nameOverride ? nameOverride : "base"].type;
@@ -872,12 +929,12 @@ const customDamage = {
         readSelection(`skillPower${skillPlacement}`).innerHTML = `${totalBombsActive.toLocaleString()}`;
         readSelection(`powerModifier${skillPlacement}`).innerHTML = `${totalBombsMulti.toLocaleString()}x`;
     },
-    esiemoBlastCalcs2(index,returnObject) {
+    esiemoBlastCalcs2(index,returnObject,isCycleCalcs) {
         //for when Creative Explosion modifies the bomb multi bonus cap
-        customDamage.esiemoBlastCalcs(index,returnObject,10);
+        customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,10);
     },
-    esiemoClusterCalcs(index,returnObject) {
-        customDamage.esiemoBlastCalcs(index,returnObject,null,0.15,"Cluster Bomb");
+    esiemoClusterCalcs(index,returnObject,isCycleCalcs) {
+        customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,null,0.15,"Cluster Bomb");
         // const characterRef = characters.Esiemo;
         // const settingsRef = characterRef.characterSettings;
 
@@ -885,7 +942,7 @@ const customDamage = {
         // settingsRef.blastStacksPowerBonus = 1;
 
     },
-    esiemoGuidedCalcs(index,returnObject) {
+    esiemoGuidedCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability3.base.type;
@@ -991,7 +1048,7 @@ const customDamage = {
         readSelection("guidedBombStacks").value = +settingsRef.guidedBombStacks;
         readSelection("guidedBombStackDisplay").innerHTML = `${settingsRef.guidedBombStacks}`;
     },
-    esiemoPropagandaCalcs(index,returnObject) {
+    esiemoPropagandaCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability3["Explosive Propaganda"].type;
@@ -1082,7 +1139,7 @@ const customDamage = {
         readSelection("propagandaBombStackDisplay").innerHTML = `${settingsRef.propagandaBombStacks}`;
 
     },
-    esiemoArcheCalcsMadnessTier0(index) {
+    esiemoArcheCalcsMadnessTier0(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
 
@@ -1093,7 +1150,7 @@ const customDamage = {
         const madnessDEF = -0.30;
 
     },
-    esiemoArcheCalcs(index,returnObject) {
+    esiemoArcheCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability4.base.type;
@@ -1192,7 +1249,7 @@ const customDamage = {
         readSelection("isMadnessActive").checked = settingsRef.isMadnessActive;
 
     },
-    esiemoCreativeCalcsNarcissimTier0(index) {
+    esiemoCreativeCalcsNarcissimTier0(index,returnObject,isCycleCalcs) {
         // const characterRef = characters.Esiemo;
         // const settingsRef = characterRef.characterSettings;
 
@@ -1203,7 +1260,7 @@ const customDamage = {
         // const madnessDEF = -0.30;
 
     },
-    esiemoCreativeCalcs(index,returnObject) {
+    esiemoCreativeCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability4["Creative Explosion"].type;
@@ -1308,7 +1365,7 @@ const customDamage = {
         readSelection("isNarcissimActive").checked = settingsRef.isNarcissimActive;
 
     },
-    esiemoHabitCalcs(index,returnObject) {
+    esiemoHabitCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability5.base.type;
@@ -1381,7 +1438,7 @@ const customDamage = {
         readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
     },
-    esiemoEvadeCalcs(index,returnObject) {
+    esiemoEvadeCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability5["Explosive Evade"].type;
@@ -1466,7 +1523,7 @@ const customDamage = {
         readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
     },
     //Hailey
-    haileyCryoRoundCalcs(index,returnObject,nameOverride) {
+    haileyCryoRoundCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 1;
@@ -1509,7 +1566,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
     },
-    haileyStormCalcs(index,returnObject,nameOverride) {
+    haileyStormCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 2;
@@ -1552,7 +1609,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
     },
-    haileyFuryCalcsTier0(index,returnObject,nameOverride) {
+    haileyFuryCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 3;
@@ -1592,7 +1649,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
     },
-    haileyRetreatCalcsTier0(index,returnObject,nameOverride) {
+    haileyRetreatCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 5;
@@ -1625,7 +1682,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
         `;
     },
-    haileyZenithCalcs(index,returnObject,nameOverride) {
+    haileyZenithCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 4;
@@ -1709,7 +1766,7 @@ const customDamage = {
         `;
     },
     //Lepic
-    lepicOverclockCalcs(index) {
+    lepicOverclockCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 2; 
@@ -1745,7 +1802,7 @@ const customDamage = {
 
         
     },
-    lepicNerveCalcs(index) {
+    lepicNerveCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 2; 
@@ -1781,7 +1838,7 @@ const customDamage = {
 
         
     },
-    lepicPowerUnitCalcs(index) {
+    lepicPowerUnitCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 2; 
@@ -1817,7 +1874,7 @@ const customDamage = {
 
         
     },
-    lepicTractionCalcs(index,returnObject) {
+    lepicTractionCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 3; 
@@ -1829,7 +1886,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
         `;
     },
-    lepicOverkillCalcs(index,returnObject) {
+    lepicOverkillCalcs(index,returnObject,isCycleCalcs) {
         //this function is gonna look pretty scuffed for a bit, all I did was rip it from and combine all the functions from my lepic-only calc
         //so I'll pretty it up later.
         const characterRef = characters.Lepic;
@@ -2043,7 +2100,7 @@ const customDamage = {
     
         return {shotCount,skillDuration,continuousTicks,excessWasted};
     },
-    lepicCloseCallCalcs(index,returnObject) {
+    lepicCloseCallCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 5; 
@@ -2054,7 +2111,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
         `;
     },
-    lepicFirearmMasterCalcs(index,returnObject) {
+    lepicFirearmMasterCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 5; 
@@ -2094,7 +2151,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`]["Firearm Master"].desc}</div>
         `;
     },
-    lepicBrakingCalcs(index,returnObject) {
+    lepicBrakingCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Lepic;
         const settingsRef2 = characterRef.characterSettings;
         const skillPlacement = 5; 
@@ -2106,7 +2163,7 @@ const customDamage = {
         `;
     },
     //Bunny
-    bunnyThrillCalcs(index,returnObject,isHVStarter) {
+    bunnyThrillCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
         const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability1.base.type;
@@ -2191,7 +2248,11 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities.ability1.base.desc}</div>
         `;
     },
-    bunnySpeedCalcs(index) {
+    bunnyThrillCalcsHVStarter(index,returnObject,isCycleCalcs) {
+        //used purely to do emission calcs with the specification that high voltage is active
+        customDamage.bunnyThrillCalcs(index,returnObject,isCycleCalcs,true);
+    },
+    bunnySpeedCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Bunny;
         const settingsRef2 = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability2.base.type;
@@ -2228,11 +2289,11 @@ const customDamage = {
         skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
         readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
     },
-    bunnyEmissionCalcsHVStarter(index,returnObject) {
+    bunnyEmissionCalcsHVStarter(index,returnObject,isCycleCalcs) {
         //used purely to do emission calcs with the specification that high voltage is active
-        customDamage.bunnyEmissionCalcs(index,returnObject,true);
+        customDamage.bunnyEmissionCalcs(index,returnObject,isCycleCalcs,true);
     },
-    bunnyEmissionCalcs(index,returnObject,isHVStarter) {
+    bunnyEmissionCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
         const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
 
@@ -2421,7 +2482,7 @@ const customDamage = {
         readSelection("speedHitRate").innerHTML = (1/hitsPerSecondSpeed).toFixed(2) + "/s";
         readSelection("sprintHitRate").innerHTML = (1/hitsPerSecond).toFixed(2) + "/s";
     },
-    bunnyCondenseCalcs(index,returnObject,isHVStarter) {
+    bunnyCondenseCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
         const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability4["Electric Condense"].type;
@@ -2489,7 +2550,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${characterRef.abilities.ability4["Electric Condense"].desc}</div>
         `;
     },
-    bunnyFootCalcs(index) {
+    bunnyFootCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Bunny;
         const settingsRef2 = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability5.base.type;
@@ -2513,7 +2574,7 @@ const customDamage = {
         readSelection(`barFilledDisplay${skillPlacement}`).innerHTML = `${settingsRef2.barPercentState}%`;
     },
     //Kyle
-    kyleBulwarkTicks(index,returnObject) {
+    kyleBulwarkTicks(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Kyle;
 
         readSelection("abilityBreakdownBody2").innerHTML = `
@@ -2644,7 +2705,7 @@ const customDamage = {
 
         readSelection("avgDPS2").innerHTML = `${totalDPS.toLocaleString()}`;
     },
-    kyleThrustersCalcs(index,returnObject) {
+    kyleThrustersCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Kyle;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability4.base.type;
@@ -2735,7 +2796,7 @@ const customDamage = {
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
 
         const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);  console.log(abilityDR)
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
         //no sum modifier for mag force as it is static
     
         //double shield to get mag force, and then apply the %portion the user specified on the mag force bar to get the actual mag force amount.
@@ -2779,7 +2840,7 @@ const customDamage = {
     
     
     },
-    kyleBomberCalcs(index,returnObject) {
+    kyleBomberCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Kyle;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability4["Superconductive Bombing"].type;
@@ -2953,7 +3014,7 @@ const customDamage = {
         // readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
         // readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;//
     },
-    kyleBarCalcs(index,returnObject) {
+    kyleBarCalcs(index,returnObject,isCycleCalcs) {
         const characterRef = characters.Kyle;
         const settingsRef = characterRef.characterSettings;
         const abilityTypeArray = characterRef.abilities.ability5.base.type;
@@ -2986,7 +3047,64 @@ const customDamage = {
 
 
     //LE GUNS
-    secretGardenCalcsTier0(index,returnObject) {
+    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef) {
+        const settingsRef = weaponRef.weaponSettings;
+
+        const magazineSize = weaponRef.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = Math.floor(magazineSize);
+
+
+        //WEAPON MATH
+        const preElementDamage = returnObject.firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
+        const damage = (preElementDamage + returnObject.firearmColossusATK) * (1 + returnObject.physicalTypeMulti);
+        const physDR = calcs.getResistanceBasedDR(index,"DEF");
+        const baseDamage = damage * physDR * returnObject.totalWPBonus;
+
+        const critFirearm = calcs.getFirearmCritComposites(returnObject);
+        const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
+
+        const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm);
+        const weaponDamageElemental = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[0],critFirearm);
+
+        const avgPerShot = weaponDamage.AVG + weaponDamageElemental.AVG;
+
+        const totalAVGGun = avgPerShot * actualMagSize;
+
+        let rowInjectionFirearmElemental = [
+            {"name": "Element","value": activeElements[0],"unit": ""},
+            {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
+            {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
+            {"name": "AVG","value": weaponDamageElemental.AVG,"unit": ""},
+        ]
+        if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
+        const rowInjectionSums = [
+            {"name": "Magazine","value": magazineSize,"unit": ""},
+            {"name": "AVG/Shot","value": avgPerShot,"unit": ""},
+            {"name": "SUM AVG","value": totalAVGGun,"unit": ""},
+        ]
+
+        const breakdownArray = [
+            {"header": "FIREARM DAMAGE","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
+                "condition": false,"desc": "Part-specific <span>Weak Point Modifiers</span>, and <span>Type Bonuses</span>, will automatically adjust based on the part selected, unless forcibly disabled in settings."},
+            {"header": "FIREARM ATTRIBUTE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                "rowInjection": [rowInjectionFirearmElemental,""],//"rowInjection2": [rowInjectionSums,"SUM"],//"rowInjection3": [rowInjectionSums,""],
+                "condition": !rowInjectionFirearmElemental.length,"desc": ""},
+            {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                "rowInjection": [rowInjectionSums,""],
+                "condition": false,"desc": ""},
+
+            // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML += `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
+        </div>
+        `;
+    },
+    secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Secret Garden"];
         const settingsRef = weaponRef.weaponSettings;
 
@@ -3019,7 +3137,7 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
         `;
     },
-    blueBeetleCalcsTier0(index,returnObject) {
+    blueBeetleCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Blue Beetle"];
         const settingsRef = weaponRef.weaponSettings;
 

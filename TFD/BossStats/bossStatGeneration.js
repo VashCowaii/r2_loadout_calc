@@ -27,19 +27,20 @@ function readSelection(elemID) {return document.getElementById(elemID);}
 
         let partsString = ``;
         const partsRef = bossRef.parts;
+        const partsRefKeys = Object.keys(partsRef);
 
 
-        for (let part of partsRef) {
+        for (let part of partsRefKeys) {
             partsString += `
             <div class="bossDataPartsBox">
                 <div class="bossDataHeaderBody">
-                    ${part.name.toUpperCase()}
-                    <img class="bossWeaknessIcon" src="${typeImages[part.type]}">
+                    ${partsRef[part].name.toUpperCase()}
+                    <img class="bossWeaknessIcon" src="${typeImages[partsRef[part].type]}">
                 </div>
                 <div class="totalHealingBox">
                     <div class="totalHealingBoxHalf hasHoverTooltip">
                         <div class="totalHealingHeaderBoss">+WeakPt.</div>
-                        <div class="totalHealingValueBoss">+${part.wpMod.toFixed(3)}x</div>
+                        <div class="totalHealingValueBoss">+${partsRef[part].wpMod.toFixed(3)}x</div>
                     </div>
                 </div>
             </div>
