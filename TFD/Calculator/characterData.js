@@ -530,7 +530,7 @@ const characters = {
                     "name": "Thrill Bomb",
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_R06_01.png",
                     "type": ["Electric","Fusion"],
-                    "customDPS": ""
+                    "customDPS": "bunnyThrillCalcsHVStarter"
                 },
                 "Superconductor": {
                     "name": "Thrill Bomb",
@@ -1313,6 +1313,9 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaBaptismCalcs",
+                    "returnStatOptions": {
+                        "Total AVG Unique Weapon DMG" : "totalAVGGun",
+                    },
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
@@ -1489,15 +1492,14 @@ const characters = {
     },
 
 
+    
+
+
     // "Viessa": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_003_U01.png",
     // },
     // "Ajax": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_002_U01.png"
-    // },
-
-    // "Jayber": {
-    //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_005_A01.png"
     // },
     
     // "Gley": {

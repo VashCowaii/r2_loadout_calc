@@ -56,6 +56,10 @@ let globalRecords = {
     },
     "boss": {
         "currentBoss": "Devourer",
+        "enemyType": "Colossus",
+        "currentBossPart": "",
+        "currentBossPartType": "",
+        "currentBossPartWP": 0,
         // "DEF": 162232,
         // "Fire": 162232,
         // "Electric": 75746,

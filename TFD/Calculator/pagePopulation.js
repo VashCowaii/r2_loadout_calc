@@ -603,20 +603,77 @@ const userTriggers = {
             globalRecords.weapon.mods[+modSlot - 21] = inputRef.value;
         }
         if (!parentIsCharacterUpdate) {userTriggers.updateSelectedCharacter();}
+
+
+
+        // const characterRef = globalRecords.character;
+        // const currentCharacter = characterRef.currentCharacter;
+        // const currentCharacterMods = characterRef.mods;
+        // const abilityArray = characterRef.abilityArray;
+        // const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
+
+        // let newModArray1 = [...currentCharacterMods];
+        // let newModArray2 = [...currentCharacterMods].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
+        // characterRef.modQueryOptions = [...currentCharacterMods].slice(2);
+        // console.log(characterRef.modQueryOptions)
+
+        // const modKeyReference = Object.keys(modData);
+
+
+        // // Array of strings that will be the option names
+        // const queryLister = readSelection("queryModList");
+        // queryLister.innerHTML = "";
+        // // Loop through the array and create option elements
+        // newModArray2.forEach(function(optionName) {
+        //     const option = document.createElement("option");
+        //     // option.value = optionName.toLowerCase().replace(/\s+/g, '-'); // Set a value (optional)
+        //     option.textContent = optionName; // Set the display name
+        //     queryLister.appendChild(option); // Append the option to the select element
+        // });
+
+        // let isValidMod = false;
+        // for (let entry of newModArray2) {
+        //     if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
+        // }
+        // if (!isValidMod) {
+        //     for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
+        // }
+
+
+
         if (!parentCall) {updateFormulas();}
         
     },
     updateSelectedBoss() {
         if (!bosses[readSelection("boss").value]) {readSelection("boss").value = "None (True Damage)"}
-        globalRecords.boss.currentBoss = readSelection("boss").value;
-
         const critPath = bosses[readSelection("boss").value];
+        const partsPath = critPath.parts;
+        const partsArray = Object.keys(partsPath);
+
+        if (globalRecords.boss.currentBoss != readSelection("boss").value) {
+            readSelection(`bossPart`).value = partsArray[1];
+            const partDisplayList = document.getElementById(`bossPartList`);
+            partDisplayList.innerHTML = '';
+
+            pagePopulation.populateGear(`bossPartList`,partsPath);
+        }
+        if (!partsPath[readSelection("bossPart").value]) {readSelection("bossPart").value = partsArray[0]}
+
+        globalRecords.boss.currentBoss = readSelection("boss").value;
+        globalRecords.boss.enemyType = critPath.enemyType,
+        globalRecords.boss.currentBossPart = readSelection("bossPart").value;
+        globalRecords.boss.currentBossPartType = partsPath[readSelection("bossPart").value].type;
+        globalRecords.boss.currentBossPartWP = partsPath[readSelection("bossPart").value].wpMod;
+        
         globalRecords.weaponCritCeiling = -critPath.gunCrit*100;
         globalRecords.skillCritCeiling = -critPath.skillCrit*100;
         readSelection("weaponCritCeiling").value = -critPath.gunCrit*100;
         readSelection("skillCritCeiling").value = -critPath.skillCrit*100;
         readSelection("weaponCritCeilingDisplay").innerHTML = -critPath.gunCrit*100 + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = -critPath.skillCrit*100 + "%";
+
+
+
         updateFormulas();
     },
 }
@@ -1152,8 +1209,8 @@ const basicsUpdates = {
 }
 
 const formulasValues = {
-    pullModStats(index) {
-        let modArrayRef = globalRecords.character.mods;
+    pullModStats(index,modArrayOverride) {
+        let modArrayRef = modArrayOverride || globalRecords.character.mods;
         let pullStats = formulasValues.pullStats;
 
         for (let i=2;i<=11;i++) {
@@ -1291,15 +1348,15 @@ const formulasValues = {
 }
 
 
-function updateFormulas() {
+function updateFormulas(isCycleCalcs,modArrayOverride) {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     const characterRef = characters[globalRecords.character.currentCharacter].baseStats
     const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
     const globalRef = globalRecords.character.abilities;
 
-    customDamage.callAbilityFunctionsTier0(tableReference);
+    customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs);
 
-    formulasValues.pullModStats(tableReference);
+    formulasValues.pullModStats(tableReference,modArrayOverride);
     formulasValues.pullReactorStats(tableReference);
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullAbilityStats(tableReference);
@@ -1320,7 +1377,7 @@ function updateFormulas() {
     const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableReference,currentWeaponRef);
 
 
-    const returnObject = {
+    let returnObject = {
         baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth,
         baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield,
         baseCharacterDEF,baseDEFBonus,DEFPercentBonus,totalDEF,displayDEF,
@@ -1332,12 +1389,19 @@ function updateFormulas() {
         baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage,
         baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus,
         baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage,
-        baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK
-    }
+        baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK,
 
-    customDamage.callAbilityFunctions(tableReference,returnObject);
-    basicsUpdates.updateMainFromFormulas(returnObject,tableReference);
-    manipulateURL.updateURLparameters();
+    }
+    returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs)}
+
+    // customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs);
+    if (!isCycleCalcs) {
+        basicsUpdates.updateMainFromFormulas(returnObject,tableReference);
+        manipulateURL.updateURLparameters();
+    }
+    else {
+        return {tableReference,returnObject}
+    }
 }
 
 
@@ -1381,5 +1445,9 @@ else {
     updateFormulas();
 }
 
-readSelection("boss").value = "Devourer";
 userTriggers.updateSelectedBoss();
+readSelection("boss").value = "Devourer";
+readSelection("bossPart").value = "Shoulder";
+userTriggers.updateSelectedBoss();
+
+// moduleQueryFunctions.getModuleQueryResults();

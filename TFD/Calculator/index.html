@@ -101,10 +101,6 @@
             
             <div class="prismColumn" style="width: 100%;"><!-- PLACEHOLDER -->
 
-                <!-- <div class="reactorSettingsHeader">REACTOR SETTINGS</div> -->
-                <!-- <div class="abilityDamageDisplayImageBox">
-                    asdf
-                </div> -->
                 <div class="totalHealingBox" style="margin: 0;padding: 0;">
                     <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
                         <!-- <div style="padding-right: 5px;">Reactor Weapon Matched</div> -->
@@ -123,14 +119,6 @@
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_03.png" id="damageAbilityIcon3" onclick="userTriggers.updateSelectedAbilityBreakdown(3,'damageAbilityIcon3')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_04.png" id="damageAbilityIcon4" onclick="userTriggers.updateSelectedAbilityBreakdown(4,'damageAbilityIcon4')">
                     <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_00.png" id="damageAbilityIcon5" onclick="userTriggers.updateSelectedAbilityBreakdown(5,'damageAbilityIcon5')">
-                </div>
-
-                <div class="selectionSelectorBoxes">
-                    <div class="selectSelectorTitle">&nbsp;RESISTS:&nbsp;</div>
-                    <div class="presetsSelectorBox">
-                        <input class="selectSelector" id="boss" list="bossList" onchange="userTriggers.updateSelectedBoss()"> <!--selector-->
-                        <datalist id="bossList"></datalist>
-                    </div>
                 </div>
 
 
@@ -983,6 +971,23 @@
 
                         <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"> <!-- enemy settings -->
                             <div class="advancedCategoryHeader" style="border: none;">ENEMY</div>
+                            <!-- <div class="selectionSelectorBoxesBossTargetStats"> -->
+                                <div class="totalHealingBox">
+                                    <div class="selectSelectorTitle">&nbsp;RESISTS:&nbsp;</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="boss" list="bossList" onchange="userTriggers.updateSelectedBoss()">
+                                        <datalist id="bossList"></datalist>
+                                    </div>
+                                </div>
+            
+                                <div class="totalHealingBox" style="margin-top: 2px;">
+                                    <div class="selectSelectorTitle">&nbsp;TARGET:&nbsp;</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="bossPart" list="bossPartList" onchange="userTriggers.updateSelectedBoss(true)">
+                                            <datalist id="bossPartList"></datalist>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
 
                             <div class="totalHealingBox">
                                 <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
@@ -1001,6 +1006,41 @@
                 </div>
             </div>
         </div>
+
+        <!-- <div class="mainGridRow3" style="display: flex;width: 100%;border: none;background: none;margin-bottom: 2px;">
+
+            <div class="tfdSettingsMainBox">
+                <div class="advancedStatsTitleHeader" style="padding-top: 0;">OPTIMIZER</div>
+
+                <div class="survivabilityContainer">
+
+                    <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;flex-direction: column;">
+
+                        <div>
+                            Selected Ability to Optimize
+                            <button>GET QUERY STATS</button>
+                        </div>
+
+                        <div class="breakdownTab" style="display: flex;">
+                            <div class="breakdownTabHeader">SLOT TO QUERY FROM CURRENT MODS</div>
+                            <div class="breakdownTabBody">
+                                <div class="selectionSelectorBoxes">
+                                    <div class="selectSelectorTitle">SELECT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="queryMod" list="queryModList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                        <datalist id="queryModList"></datalist>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="modQueryResultsBoxHolder" id="moduleQueryBoxHolder"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
 
     </div>
 

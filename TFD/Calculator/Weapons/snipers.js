@@ -106,7 +106,8 @@ const sniperList = {
         "baseCritRate": 0.00,
         "baseCritDamage": 1,
         "baseWeakPoint": 1,
-        "crush": 0,
+        "physicalType": "Crush",
+        "physicalTypeBonus": 0.10,
         "magazine": 0,
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -114,7 +115,11 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {}
+        "subStats": {},
+        "weaponSettings": {},
+        "displayStatsALT": {
+            "BASIC": [],
+        },
     },
 
     "Perforator": {
@@ -123,7 +128,8 @@ const sniperList = {
         "baseCritRate": 0.20,
         "baseCritDamage": 2.0,
         "baseWeakPoint": 2.25,
-        "burst": 0.10,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
         "magazine": 6,
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -131,7 +137,11 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {}
+        "subStats": {},
+        "weaponSettings": {},
+        "displayStatsALT": {
+            "BASIC": [],
+        },
     },
     "Afterglow Sword": {
         "name": "Afterglow Sword",
@@ -139,7 +149,8 @@ const sniperList = {
         "baseCritRate": 0.50,
         "baseCritDamage": 2,
         "baseWeakPoint": 1.8,
-        "crush": 0.10,
+        "physicalType": "Crush",
+        "physicalTypeBonus": 0.10,
         "magazine": 6,
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -147,7 +158,11 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {}
+        "subStats": {},
+        "weaponSettings": {},
+        "displayStatsALT": {
+            "BASIC": [],
+        },
     },
     "Piercing Light": {
         "name": "Piercing Light",
@@ -155,7 +170,8 @@ const sniperList = {
         "baseCritRate": 0.40,
         "baseCritDamage": 1.2,
         "baseWeakPoint": 2,
-        "crush": 0.10,
+        "physicalType": "Crush",
+        "physicalTypeBonus": 0.10,
         "magazine": 6,
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -163,7 +179,11 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {}
+        "subStats": {},
+        "weaponSettings": {},
+        "displayStatsALT": {
+            "BASIC": [],
+        },
     },
 
     "Secret Garden": {
@@ -172,7 +192,8 @@ const sniperList = {
         "baseCritRate": 0.50,
         "baseCritDamage": 2.25,
         "baseWeakPoint": 1.5,
-        "burst": 0.10,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
         "magazine": 48,
         "ammoType": "Special",
         "weaponType": "Burst Rifle",
@@ -209,7 +230,8 @@ const sniperList = {
         "baseCritRate": 0.25,
         "baseCritDamage": 1.80,
         "baseWeakPoint": 1.5,
-        "burst": 0.10,
+        "physicalType": "Crush",
+        "physicalTypeBonus": 0.10,
         "magazine": 16,
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
