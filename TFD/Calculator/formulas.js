@@ -4073,7 +4073,7 @@ let moduleQueryFunctions = {
         const modSelection = readSelection("queryMod").value;
         //abort invalid or empty queries
         if (modSelection === "" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
-            readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the ability you selected either:<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
+            readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the ability you selected:<br>- Doesn't have any mods equipped to compare against<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
             return;
         }
 
