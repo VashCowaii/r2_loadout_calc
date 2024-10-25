@@ -1,4 +1,5 @@
 let globalRecords = {
+    "URLImportCompleted": false,
     "reactor": {
         "currentAttribute": "Chill",
         "currentAttributeID": "reactorChill",
@@ -68,6 +69,7 @@ let globalRecords = {
     },
     "weaponCritCeiling": 0,
     "skillCritCeiling": 0,
+    "ambushImmobileSlider": 100,
     "useWeakspots": true,
     "useCrits": true,
     "useFirearmPhysical": true,

@@ -39,12 +39,16 @@ const userTriggers = {
         
     },
     updateGeneralSettings() {
-        globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value
-        globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value
+        globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value;
+        globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value;
+        globalRecords.ambushImmobileSlider = readSelection("ambushImmobileSlider").value;
 
         globalRecords.useWeakspots = readSelection("useWeakspots").checked;
         globalRecords.useCrits = readSelection("useCrits").checked;
         globalRecords.useFirearmPhysical = readSelection("useFirearmPhysical").checked;
+
+        readSelection("ambushImmobileSliderDisplay").innerHTML = globalRecords.ambushImmobileSlider + "%";
+        modData["Dangerous Ambush (Immobile)"].stats.PowerRatioBase = 0.498 * (+globalRecords.ambushImmobileSlider/100)
 
         readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
@@ -120,6 +124,10 @@ const userTriggers = {
                     augDisplayList.appendChild(optionElement);
                 }
             }
+
+            globalRecords.character.currentCharacter = selectedCharacter;
+            updateFormulas();
+            if (globalRecords.character.currentCharacter != "") {settings.updateCharacterSettings(globalRecords.character.currentCharacter,true);}
         }
 
         globalRecords.character.currentCharacter = selectedCharacter;
@@ -285,6 +293,7 @@ const userTriggers = {
         readSelection(globalRef.currentAbilityBreakdownID).style.border = "1px solid white";
         readSelection(globalRef.currentAbilityBreakdownID).style.opacity = "1";
         readSelection(`abilityBreakdownTab${globalRef.currentAbilityBreakdown}`).style.display = "flex";
+        if (globalRecords.character.currentCharacter != "") {settings.updateCharacterSettings(globalRecords.character.currentCharacter,true);}
 
         updateFormulas();
     },
@@ -602,7 +611,9 @@ const userTriggers = {
         else {
             globalRecords.weapon.mods[+modSlot - 21] = inputRef.value;
         }
-        if (!parentIsCharacterUpdate) {userTriggers.updateSelectedCharacter();}
+        if (!parentIsCharacterUpdate) {
+            userTriggers.updateSelectedCharacter();
+        }
 
 
 
@@ -640,7 +651,7 @@ const userTriggers = {
         // }
 
 
-
+        if (globalRecords.character.currentCharacter != "") {settings.updateCharacterSettings(globalRecords.character.currentCharacter,true);}
         if (!parentCall) {updateFormulas();}
         
     },
@@ -802,6 +813,15 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
+        Jayber(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2.
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {
+                settingsRef.jayberTurretSyncActive = readSelection("jayberTurretSyncActive").checked
+            }//passive
+        },
         Freyna(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] != "Venom Injection") {
@@ -817,42 +837,39 @@ const settings = {
             if (arrayRef[4] === 0) {}//passive
         },
         Esiemo(settingsRef,arrayRef) {
+            let totalActiveBombs = 0
             if (arrayRef[0] === 0) {
                 settingsRef.timeBombStacks = +readSelection("timeBombStacks").value;
+                totalActiveBombs += +readSelection("timeBombStacks").value;
             }//1
             if (arrayRef[1] === 0) {}//2
             else {settingsRef.blastStacksPowerBonus = 1;}//set the multiplier to x1 when using cluster bombs, so we don't use the bonus on accident
             if (arrayRef[2] === 0) {
-                settingsRef.propagandaBombStacks = 0;
                 settingsRef.guidedBombStacks = +readSelection("guidedBombStacks").value;
+                totalActiveBombs += +readSelection("guidedBombStacks").value;
             }//3
             else {
-                settingsRef.guidedBombStacks = 0;
                 settingsRef.propagandaBombStacks = +readSelection("propagandaBombStacks").value;
+                totalActiveBombs += +readSelection("propagandaBombStacks").value;
             }
-            if (arrayRef[3] === 0) {
-                settingsRef.isMadnessActive = readSelection("isMadnessActive").checked;
-            }//4
-            else {
-                settingsRef.isNarcissimActive = readSelection("isNarcissimActive").checked;
-            }
+            if (arrayRef[3] === 0) {}//4
+            settingsRef.isMadnessActive = readSelection("isMadnessActive").checked;//appicable to both, just uses the same toggle
             if (arrayRef[4] === 0) {}//passive
+            else if (arrayRef[4] === "Explosive Evade") {
+                settingsRef.evadeBombStacks = +readSelection("evadeBombStacks").value;
+                totalActiveBombs += +readSelection("evadeBombStacks").value;
+            }
+            //this particular setting is used for Blast calcs only, and is just an easy way to tally up all the active bombs from all the different versions
+            settingsRef.totalActiveBombs = totalActiveBombs;
         },
         Lepic(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
-            if (arrayRef[1] === 0) {
-                settingsRef.lepicOverclockBonus = readSelection("lepicOverclockBonus").checked;
-            }//2
-            else if (arrayRef[1] === "Power Unit Change") {
-                settingsRef.lepicPowerUnitBonus = readSelection("lepicPowerUnitBonus").checked;
-            }
-            else if (arrayRef[1] === "Nerve Infiltration") {
-                settingsRef.lepicNerveBonus = readSelection("lepicNerveBonus").checked;
-            }
+            //this applies to all variations of the 2nd skill now, ergo we can use it all the time
+            settingsRef.lepicOverclockBonus = readSelection("lepicOverclockBonus").checked;
+            if (arrayRef[1]) {}//2
             if (arrayRef[2] === 0) {}//3
             if (arrayRef[3] === 0) {
-                settingsRef.USEFireRateUP = readSelection("USEFireRateUP").checked;
-                settingsRef.USESharpPrecisionShot = readSelection("USESharpPrecisionShot").checked;
+                settingsRef.lepicOverclockMPRestrictions = readSelection("lepicOverclockMPRestrictions").checked
             }//4
             if (arrayRef[4] === 0) {}//passive
             else if (arrayRef[4] === "Firearm Master") {
@@ -862,24 +879,25 @@ const settings = {
         Bunny(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] === 0) {}//2
-            if (arrayRef[2] === 0) {
-                // settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
-            }//3
-            else {
-                // settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
-            }
+            settingsRef.bunnySoLSpeed = readSelection("bunnySoLSpeed").checked;//this applies to all augments, not just one
+            if (arrayRef[2] === 0) {}//3
+            settingsRef.bunnyCostRestrictions = readSelection("bunnyCostRestrictions").checked;//this applies to all augments, not just one
             if (arrayRef[3] === 0) {}//4
-            if (arrayRef[4] === 0) {
-                settingsRef.barPercentState = +readSelection("bunnyBarFilledSlider5").value;
-            }//passive
+            else if (arrayRef[3] === "Electric Condense") {
+                settingsRef.bunnyCondenseSpeed = readSelection("bunnyCondenseSpeed").checked;
+            }
+            if (arrayRef[4] === 0) {}//passive
+            settingsRef.barPercentState = +readSelection("barPercentState").value;//this applies to all augments, not just one
         },
         Kyle(settingsRef,arrayRef) {
-            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[0] === 0) {
+                settingsRef.repulsionDEFBonus = readSelection("repulsionDEFBonus").checked;
+            }//1
             if (arrayRef[1] === 0) {}//2
             if (arrayRef[2] === 0) {}//3
             if (arrayRef[3] === 0) {}//4
             if (arrayRef[4] === 0) {
-                settingsRef.magForceBarState = +readSelection("kyleMagForceBar4").value;
+                settingsRef.magForceBarState = +readSelection("magForceBarState").value;
             }//passive
         },
         Hailey(settingsRef,arrayRef) {
@@ -889,6 +907,9 @@ const settings = {
                 settingsRef.haileyColdFuryBar4 = +readSelection("haileyColdFuryBar4").value;
             }//3
             if (arrayRef[3] === 0) {}//4
+            else if (arrayRef[3] === "Supercooled Kuiper Round") {
+                settingsRef.haileySupercooledStacks = +readSelection("haileySupercooledStacks").value;
+            }
             if (arrayRef[4] === 0) {
                 settingsRef.haileyDistanceBar4 = +readSelection("haileyDistanceBar4").value;
             }//passive
@@ -898,6 +919,9 @@ const settings = {
         },
         "Blue Beetle"(settingsRef,arrayRef) {
             settingsRef.arcaneWaveActive = readSelection("arcaneWaveActive").checked
+        },
+        "Peace Maker"(settingsRef,arrayRef) {
+            settingsRef.peacemakerStackCount = +readSelection("peacemakerStackCount").value
         },
     }
 
@@ -1354,9 +1378,10 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
     const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
     const globalRef = globalRecords.character.abilities;
 
+    formulasValues.pullModStats(tableReference,modArrayOverride);
+    
     customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs);
 
-    formulasValues.pullModStats(tableReference,modArrayOverride);
     formulasValues.pullReactorStats(tableReference);
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullAbilityStats(tableReference);
@@ -1398,6 +1423,7 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
     if (!isCycleCalcs) {
         basicsUpdates.updateMainFromFormulas(returnObject,tableReference);
         manipulateURL.updateURLparameters();
+        if (globalRecords.URLImportCompleted) {moduleQueryFunctions.getModuleQueryResults();}
     }
     else {
         return {tableReference,returnObject}
@@ -1449,5 +1475,5 @@ userTriggers.updateSelectedBoss();
 readSelection("boss").value = "Devourer";
 readSelection("bossPart").value = "Shoulder";
 userTriggers.updateSelectedBoss();
-
-// moduleQueryFunctions.getModuleQueryResults();
+globalRecords.URLImportCompleted = true;
+moduleQueryFunctions.getModuleQueryResults();

@@ -100,13 +100,13 @@ const calcs = {
         for (let type of abilityTypeArray) {sumModifierBonus += index[`PowerModifier${type.replace(/-/g, "")}`];}
         return sumModifierBonus;
     },
-    getTotalSkillPower(index,abilityTypeArray) {
+    getTotalSkillPower(index,abilityTypeArray,skillDependentModifier) {
         const powerOptimization = (globalRecords.reactor.weaponMatched ? 1.6 : 1) + index.PowerOptimization;
+        skillDependentModifier = skillDependentModifier || 1;
 
         const basePowerRatio = 1 + index.PowerRatioBase;
         // let baseSkillPower = (11060.96 * powerOptimization + index.SkillAttackColossus) * basePowerRatio;//uncomment when verifying resistances on an unenhanced reactor
-        let baseSkillPower = (11724.62 * powerOptimization + index.SkillAttackColossus) * basePowerRatio;//11724.62
-
+        let baseSkillPower = (11724.62 * powerOptimization * skillDependentModifier + index.SkillAttackColossus) * basePowerRatio;
         for (let type of abilityTypeArray) {baseSkillPower *= (1 + index[`PowerRatio${type.replace(/-/g, "")}`]);}
 
         return baseSkillPower;
@@ -131,12 +131,29 @@ const calcs = {
 
         return {Rate,Damage,Composite}
     },
-    getCompositeDamageSpread(basicInfo,skillPowerModifier) {
-        const perHit = basicInfo.baseSkillPower * skillPowerModifier * basicInfo.abilityDR;
+    getCompositeDamageSpread(basicInfo,skillPowerModifier,addedExtraneousDamage,addedExtraneousMultiplier) {
+        addedExtraneousDamage = addedExtraneousDamage || 0;//this is something like Kyle's damage based purely on mag force, that needs to add in for crits but not for modifiers
+        addedExtraneousMultiplier = addedExtraneousMultiplier || 1//this is for stuff like Last Stand on kyle
+        const perHit = (basicInfo.baseSkillPower * skillPowerModifier + addedExtraneousDamage) * addedExtraneousMultiplier * basicInfo.abilityDR;
         const perCrit = perHit * basicInfo.crit.Damage;
         const AVG = perHit * basicInfo.crit.Composite;
 
         return {perHit,perCrit,AVG}
+    },
+    getDPSPerSkillInterval(index,totalDamageDealt,baseCooldown,extraUsageDuration) {
+        const cooldown = baseCooldown * Math.max(0.10,1 + index.SkillCooldown);//enforce the 90% CDR cap
+        const interval = cooldown + (extraUsageDuration || 0);
+        const DPS = totalDamageDealt/interval;
+
+        return {cooldown,interval,DPS}
+    },
+    getDoTTotalBreakdown(index,dmgPerTick,interval,baseDuration) {
+        const durationDOT = baseDuration * (1 + index.SkillDuration);
+        const intervalDOT = interval;
+        const totalTicks = Math.floor(durationDOT/interval);
+        const totalTickDamage = dmgPerTick * totalTicks;
+
+        return {durationDOT,totalTicks,intervalDOT,totalTickDamage}
     },
     getCompositeFirearmDamageSpread(baseDamage,critFirearm,factorDR) {
         const perHit = baseDamage * (factorDR ? factorDR : 1);
@@ -361,21 +378,848 @@ const customDamage = {
 
 
 
+
+
+    //Kyle
+    //ability 1
+    kyleRepulsionCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const defBonus = abilityMap.powerMods["DEF"];
+
+        index["DEF%"] += settingsRef.repulsionDEFBonus ? defBonus : 0;
+
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    kyleRepulsionCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const baseCooldown = abilityMods.cooldown;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerImpact1 = damage.AVG;
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,damage.AVG,baseCooldown,null)
+        const avgDPSImpact1 = DPS;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Cooldown","value": cooldown,"unit": ""},
+                {"name": "Interval Length (s)","value": interval,"unit": ""},
+                {"name": "DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "DEF +","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//only shows with no transcendent mod equipped
+                    "toggleElemID": ["repulsionDEFBonus",""],
+                    "condition": nameOverride,"desc": ""},
+                {"header": "STUN","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//only shows if collission instinct is equipped
+                    "condition": !nameOverride,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerImpact1,avgDPSImpact1}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    kyleRepulsionCalcsInstinctStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.kyleRepulsionCalcs(index,returnObject,isCycleCalcs,"Collision Instinct");
+    },
+    //ability 2
+    kyleBulwarkCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "BARRIER","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    kyleDiamagneticCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Diamagnetic Bulwark"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const baseCooldown = abilityMods.cooldown;
+        const usageDuration = 4;
+        const maxTicks = abilityMods.MaxHits;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerTick2 = damage.AVG;
+        const sumTotalAVGTicks2 = damage.AVG * maxTicks;
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,sumTotalAVGTicks2,baseCooldown,usageDuration)
+        const avgDPSTicks2 = DPS;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Cooldown","value": cooldown,"unit": ""},
+                {"name": "Active Duration","value": usageDuration,"unit": ""},
+                {"name": "Interval Length (s)","value": interval,"unit": ""},
+                {"name": "DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "BARRIER","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [maxTicks,sumTotalAVGTicks2],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick2,avgDPSTicks2,sumTotalAVGTicks2}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 3
+    kyleSpurtCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const magForce = (returnObject.totalShield * 2) * (+settingsRef.magForceBarState/100);
+        const magPowerModifier = abilityMods.baseMagForce;
+        const magForceDamage = magForce * magPowerModifier;
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,magForceDamage);
+
+        const avgDmgPerExplosion = damage.AVG;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Magnetic Force","value": magForce,"unit": ""},
+                {"name": "%Mag Force DMG","value": magPowerModifier,"unit": "%"},
+                {"name": "Mag Force DMG","value": magForceDamage,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,"The Magnetic Force bonus damage is already added in the damage spread above, and reduced by DR"],
+                    "condition": false,"desc": ""},
+                {"header": "TRACTION BEAM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//only shows if trans mod is equipped
+                    "condition": !nameOverride,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerExplosion}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    kyleSpurtCalcsEruptionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.kyleSpurtCalcs(index,returnObject,isCycleCalcs,"Self-Directed Eruption");
+    },
+    //ability 4
+    kyleThrustersCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const magForce = (returnObject.totalShield * 2) * (+settingsRef.magForceBarState/100);
+        const magPowerModifier = abilityMods.baseMagForce;
+        const magForceDamage = magForce * magPowerModifier;
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        let isLastStand = false;
+        for (let entry of globalRecords.character.mods) {if (entry === "Last Stand") {isLastStand = true;}}
+        let lastStandMulti = isLastStand ? 0.085 + (Math.min(10000,returnObject.displayShield)/10000) * 0.17 : 1;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,magForceDamage);
+
+        const lastStandDamage = isLastStand ? lastStandMulti * damage.AVG : 0;
+        const avgDmgPerImpact4 = damage.AVG;
+        const totalImpactDamage4 = damage.AVG + lastStandDamage;
+        
+        const baseCooldown = abilityMods.cooldown;
+        const avgActiveDuration = 5;
+
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,totalImpactDamage4,baseCooldown,avgActiveDuration)
+        const avgDPSImpact1 = DPS;
+
+
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Magnetic Force","value": magForce,"unit": ""},
+                {"name": "%Mag Force DMG","value": magPowerModifier,"unit": "%"},
+                {"name": "Mag Force DMG","value": magForceDamage * abilityDR,"unit": ""},
+            ]
+            let rowInjectionLastStand = isLastStand ? [
+                {"name": "Last Stand Multi","value": lastStandMulti,"unit": "x"},
+                {"name": "Last Stand DMG","value": lastStandDamage,"unit": ""},
+            ] : [];
+            let rowInjectionDPS = [
+                {"name": "SUM Total AVG","value": totalImpactDamage4,"unit": ""},
+                {"name": "Cooldown","value": cooldown,"unit": "s"},
+                {"name": "Active Duration","value": avgActiveDuration,"unit": "s"},
+                {"name": "Total Interval","value": interval,"unit": "s"},
+                {"name": "AVG DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,"The Magnetic Force bonus damage is already added in the damage spread above"],
+                    "rowInjection2": [rowInjectionLastStand,"Last Stand appears as a separate damage number."],
+                    "condition": false,"desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection3": [rowInjectionDPS,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerImpact4,avgDPSImpact1,totalImpactDamage4}
+        }
+    },
+    kyleBomberCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Superconductive Bombing"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const magForce = (returnObject.totalShield * 2) * (+settingsRef.magForceBarState/100);
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierBombs = abilityMods.baseBombs + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageBombs = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierBombs);
+
+        const baseCooldown = abilityMods.cooldown;
+        const flightDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const dropInterval = abilityMods.dropInterval;
+        const maxDropIntervals = Math.floor(flightDuration/dropInterval);
+        const avgActiveDuration = flightDuration;
+
+        const costPerDropSet = abilityMods.bombCost * (1 + index.SkillCost);
+        const totalDropsPossible = Math.min(maxDropIntervals,Math.floor(magForce/costPerDropSet));
+        const bombsPerSet = abilityMods.bombsPerSet;
+        const totalBombsDropped = bombsPerSet * totalDropsPossible;
+
+        const avgDmgPerImpact4 = damage.AVG;
+        const avgDmgPerBomb4 = damageBombs.AVG;
+        const sumTotalAVGBombs = totalBombsDropped * damageBombs.AVG;
+        const sumTotalAVGSkill = totalBombsDropped * damageBombs.AVG + damage.AVG;
+        
+
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,sumTotalAVGSkill,baseCooldown,avgActiveDuration)
+        const avgActiveDPS = sumTotalAVGSkill/flightDuration;
+        const avgTotalDPS4 = DPS;
+
+
+        if (!isCycleCalcs) {
+            let rowInjectionBombs = [
+                {"name": "Magnetic Force","value": magForce,"unit": ""},
+                {"name": "Cost Per Set","value": costPerDropSet,"unit": ""},
+                {"name": "Bombs Per Set","value": bombsPerSet,"unit": ""},
+                {"name": "Total Bombs","value": totalBombsDropped,"unit": ""},
+            ]
+            let rowInjection = [
+                {"name": "SUM Total AVG","value": sumTotalAVGSkill,"unit": ""},
+                {"name": "DPS per Cast","value": avgActiveDPS,"unit": ""},
+                {"name": "DPS w/Cooldown","value": avgTotalDPS4,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+                {"header": "BOMBS","value": damageBombs,"modifier": skillPowerModifierBombs,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalBombsDropped,sumTotalAVGBombs],
+                    "rowInjection": [rowInjectionBombs,""],
+                    "condition": false,"desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerImpact4,avgDmgPerBomb4,sumTotalAVGBombs,avgTotalDPS4,avgActiveDPS,sumTotalAVGSkill}
+        }
+
+    },
+    //passive
+    kyleBarCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Kyle;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "MAGNETIC FORCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "The bar here modifies all abilities that depend on Magnetic force for fuel or damage.",
+                    "sliderElemID": ["magForceBarState",0,100,1,"%Mag Force Filled"]},
+                {"header": "MAGNETIC CARE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+
+    //MY MAN JAYBER
+    //ability1
+    jayberAssaultCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const jayberCuckedPowerModifierModifier = 0.755;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray,jayberCuckedPowerModifierModifier);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = (abilityMods.base + sumModifierBonus);
+        const skillPowerModifierZone = (abilityMods.zone + sumModifierBonus);
+
+        // const skillPowerModifier = (abilityMods.base* jayberCuckedPowerModifierModifier + index[`PowerModifier${abilityTypeArray[1].replace(/-/g, "")}`] + index.PowerModifierBase)* jayberCuckedPowerModifierModifier;
+        // const skillPowerModifierZone = (abilityMods.zone* jayberCuckedPowerModifierModifier + index[`PowerModifier${abilityTypeArray[1].replace(/-/g, "")}`] + index.PowerModifierBase)* jayberCuckedPowerModifierModifier;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageZone = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierZone);
+
+        const turretInterval = 1/0.6;
+        const zoneInterval = 1/0.3
+
+        const turretCount = nameOverride ? 2 : 1;
+        const skillDurationMulti = 1 + index.SkillDuration;
+        const turretTotalHits = Math.floor((15*skillDurationMulti)/1) * turretCount;
+        const zoneTotalHits = Math.floor((10*skillDurationMulti)/0.30) * turretCount;
+
+        const avgAssaultTick1 = damage.AVG;
+        const avgZoneTick1 = damageZone.AVG;
+        const totalTurretAVG1 = avgAssaultTick1 * turretTotalHits;
+        const totalZoneAVG1 = avgZoneTick1 * zoneTotalHits;
+        const sumTotalAVG1 = totalTurretAVG1 + totalZoneAVG1;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjectionTurretTicks = [
+                {"name": "Hit/s","value": turretInterval,"unit": ""},
+                {"name": "Total Hits","value": turretTotalHits,"unit": ""},
+            ]
+            let rowInjectionZoneTicks = [
+                {"name": "Hit/s","value": zoneInterval,"unit": ""},
+                {"name": "Total Hits","value": zoneTotalHits,"unit": ""},
+            ]
+            let rowInjectionSum = [
+                {"name": "","value": sumTotalAVG1,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "ASSAULT TURRET","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjectionTurretTicks,""],
+                    "condition": false,"desc": ""},
+                {"header": "TURRET ZONE","value": damageZone,"modifier": skillPowerModifierZone,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [zoneTotalHits,totalZoneAVG1],
+                    "rowInjection": [rowInjectionZoneTicks,""],
+                    "condition": false,"desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "rowInjection": [rowInjectionSum,"SUM AVG per Cast"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgAssaultTick1,avgZoneTick1,totalTurretAVG1,totalZoneAVG1,sumTotalAVG1}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    jayberAssaultCalcsAttackCompulsionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.jayberAssaultCalcs(index,returnObject,isCycleCalcs,"Attacking Compulsion")
+    },
+    jayberAssaultCalcsMedicalCompulsion(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Medical Compulsion"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 2
+    jayberMedicalCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "MEDICAL TURRET","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "TURRET ZONE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    jayberMedicalCalcsAttackCompulsion(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Attacking Compulsion"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    jayberAssaultCalcsMedicalCompulsionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.jayberMedicalCalcs(index,returnObject,isCycleCalcs,"Medical Compulsion")
+    },
+    //ability 3
+    jayberMultipurposeCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const magazine = 3 * (1 + index.MagazineSize);
+        const actualMagazine = Math.floor(magazine);
+
+        const avgDmgPerShot3 = damage.AVG;
+        const totalMagazineSize3 = actualMagazine
+        const totalUniqueWeaponDamage3 = actualMagazine * avgDmgPerShot3;
+
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagazine,totalUniqueWeaponDamage3],
+                    "condition": false,"desc": ""},
+                {"header": "ON TURRET HIT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerShot3,totalMagazineSize3,totalUniqueWeaponDamage3}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    jayberMultipurposeCalcsEngineering(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Turret Engineering"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    jayberReactivateCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const magazine = 3 * (1 + index.MagazineSize);//TODO: check later if the shot count is actually modified by mag size or if it just says 3x for shits and giggles
+        //if it doesn't apply, then delete the shot count return variable from here and from character stats later.
+        const actualMagazine = Math.floor(magazine);
+
+        const avgDmgPerShot4 = damage.AVG;
+        const totalMagazineSize4 = actualMagazine
+        const totalExplosionDamage4 = actualMagazine * avgDmgPerShot4;
+
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "PROJECTILES","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagazine,totalExplosionDamage4],
+                    "condition": false,"desc": ""},
+                {"header": "OVERHAUL","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerShot4,totalMagazineSize4,totalExplosionDamage4}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    jayberReactivateCalcsPurge(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Immediate Purge Code"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierAOE = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageAOE = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierAOE);
+
+        const aoeDuration = 10 * (1 + index.SkillDuration);
+        const tickcount = Math.floor(aoeDuration/1);
+        const avgTotalTicks = tickcount * damageAOE.AVG
+
+
+        const avgDmgPerExplosion4 = damage.AVG;
+        const avgDmgPerTick4 = damageAOE.AVG
+        const totalAvgTickDMG4 = avgTotalTicks;
+        const sumTotalAVG4 = avgDmgPerExplosion4 + totalAvgTickDMG4;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Hit/s","value": 1,"unit": ""},
+                {"name": "Total Hits","value": tickcount,"unit": ""},
+            ]
+            const breakdownArray = [
+                {"header": "EXPLOSION","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "LIGHTNING AOE","value": damageAOE,"modifier": skillPowerModifierAOE,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [tickcount,avgTotalTicks],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "OVERHAUL","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerExplosion4,avgDmgPerTick4,totalAvgTickDMG4,sumTotalAVG4}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //passive
+    jayberSyncCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+            const characterRef = characters.Jayber;
+            const settingsRef = characterRef.characterSettings;
+            const skillPlacement = 5;
+            const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
     
+            const atkBonus = abilityMap.powerMods["FirearmATK%"];
+            const powerBonus = abilityMap.powerMods.SkillPower;
+    
+            index["FirearmATK%"] += settingsRef.jayberTurretSyncActive ? atkBonus : 0;
+            index["PowerOptimization"] += settingsRef.jayberTurretSyncActive ? powerBonus : 0; //figure out the skill power bonus later
+    },
+    jayberSyncCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Jayber;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "TURRET SYNC","value": null,"modifier": null,"hasCritAVG": false,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "","toggleElemID": ["jayberTurretSyncActive","Both Turrets active?"]},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
 
     //-- Freyna --
     //ability 1
@@ -405,6 +1249,11 @@ const customDamage = {
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
 
+        const avgPerImpact = damage.AVG;
+        const avgPerPuddleTick = damagePuddle.AVG;
+        const avgPerTraumaTick = damage.AVG;
+
+
         if (!isCycleCalcs) {
             const breakdownArray = [
                 {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
@@ -427,6 +1276,9 @@ const customDamage = {
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
             `;
+        }
+        else {
+            return {avgPerPuddleTick,avgPerTraumaTick,avgPerImpact}
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
@@ -479,6 +1331,7 @@ const customDamage = {
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
         if (nameOverride === "Toxic Stimulation") {nameOverride = null;}
 
+        const avgPerTraumaTick = damageTrauma.AVG
 
         if (!isCycleCalcs) {
             const breakdownArray = [
@@ -501,6 +1354,9 @@ const customDamage = {
             <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
             `;
         }
+        else {
+            return {avgPerTraumaTick}
+        }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     freynaMechanismCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
@@ -512,7 +1368,7 @@ const customDamage = {
     freynaMechanismCalcsStimulationStarter(index,returnObject,isCycleCalcs) {
         return customDamage.freynaMechanismCalcs(index,returnObject,isCycleCalcs,"Toxic Stimulation")
     },
-    freynaMechanismCalcsInjection(index,returnObject,isCycleCalcs,nameOverride) { 
+    freynaMechanismCalcsInjectionTier0(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 2;
@@ -520,7 +1376,11 @@ const customDamage = {
         const abilityTypeArray = abilityMap.type;
         const abilityMods = abilityMap.powerMods;
 
-        const hpSliderValue = settingsRef.freynaInjectionBonuses;
+        //If overwhelming shield or def is equipped, force a 0-state, otherwise never let people go below 15% HP to follow game logic
+        if (index.isHPSetTo1 > 0) {settingsRef.freynaInjectionBonuses = 0;}
+        else if (settingsRef.freynaInjectionBonuses < 15) {settingsRef.freynaInjectionBonuses = 15;}
+
+        const hpSliderValue = +settingsRef.freynaInjectionBonuses;
         const inverseBonusPercent = (150 - hpSliderValue)/150;
         const finalPowerModifier = 0.663 * inverseBonusPercent;
         const finalShieldRegen = 0.05 * inverseBonusPercent;
@@ -529,7 +1389,6 @@ const customDamage = {
         // index.enemyToxicResistanceReduction += settingsRef.freynaCorrosionBonuses ? -0.25 : 0;
         index["ResistanceToxin%"] += finalToxinRes;
         index.PowerModifierBase += finalPowerModifier;
-
 
         if (!isCycleCalcs) {
             const rowInjection = [
@@ -584,6 +1443,9 @@ const customDamage = {
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
+        const avgPerPuddleTick = damagePuddle.AVG
+        const avgPerTraumaTick = damageTrauma.AVG
+
 
         if (!isCycleCalcs) {
             const breakdownArray = [
@@ -605,6 +1467,9 @@ const customDamage = {
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
             `;
+        }
+        else {
+            return {avgPerPuddleTick,avgPerTraumaTick}
         }
     },
     freynaPutridVenomCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
@@ -634,6 +1499,8 @@ const customDamage = {
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
+        const avgPerTraumaTick = damageTrauma.AVG
+
 
         if (!isCycleCalcs) {
             const breakdownArray = [
@@ -653,6 +1520,9 @@ const customDamage = {
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
             `;
+        }
+        else {
+            return {avgPerTraumaTick}
         }
     },
     //ability 4
@@ -679,19 +1549,57 @@ const customDamage = {
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
-        const magazine = 45 * (1 + index.MagazineSize);
-        const usableMagazine = Math.floor(magazine);
+        const rollDuration = 1.35;
+        const firingWindowBase = abilityMods.duration * (1 + index.SkillDuration);
+        const actualFiringWindow = firingWindowBase - rollDuration;
 
-        const totalAVGGun = usableMagazine * damage.AVG;
+        const currentAmmoType = globalRecords.reactor.currentAmmoType;
+        const weaponModsPath = globalRecords.weapon.mods;
+        let isSharpPrecision = false;
+        for (let entry of weaponModsPath) {if (entry === "Sharp Precision Shot") {isSharpPrecision = true;break;}}
+        const baseRate = 60/451;//gap between shots with 0 fire rate active from any source.
+        const {shotCount,firingWindowDuration,excessWasted} = customDamage.skillBasedFireRateMath(index,actualFiringWindow,baseRate,isSharpPrecision,currentAmmoType);
+
+
+
+        const magazine = abilityMods.magazine * (1 + index.MagazineSize);
+        const usableMagazine = Math.floor(magazine);
+        const possibleShots = Math.min(usableMagazine,shotCount)
+
+        const avgPerTraumaTick = damageTrauma.AVG;
+        const totalAVGTrauma = Math.floor(actualFiringWindow) * damageTrauma.AVG;
+        const avgPerShot = damage.AVG;
+        const totalAVGGun = possibleShots * damage.AVG;
+        const avgGunDPS = (possibleShots * damage.AVG) / actualFiringWindow;
+        const avgTotalDPS = (possibleShots * damage.AVG + totalAVGTrauma) / actualFiringWindow;
+        const SUMTotalAVG = possibleShots * damage.AVG + totalAVGTrauma;
 
         if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Firing Window","value": firingWindowBase,"unit": "s"},
+                {"name": "Roll Cancel","value": -rollDuration,"unit": "s"},
+                {"name": "Actual","value": actualFiringWindow,"unit": "s"},
+                {"name": "Magazine","value": usableMagazine,"unit": " shots"},
+                {"name": "Time for","value": shotCount,"unit": " shots"},
+            ]
+            let rowInjectionSUMS = [
+                {"name": "SUM Total AVG","value": SUMTotalAVG,"unit": ""},
+                {"name": "AVG DPS","value": avgTotalDPS,"unit": ""},
+                {"name": "Total AVG Baptism","value": totalAVGGun,"unit": ""},
+                {"name": "Total AVG Trauma","value": totalAVGTrauma,"unit": ""},
+            ]
+
             const breakdownArray = [
-                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVGGun],
-                    "condition": false,"desc": "Benefits from Fire Rate and Rounds Per Magazine stats."},
+                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [possibleShots,totalAVGGun],
+                    "rowInjection": [rowInjection,"Benefits from Fire Rate and Rounds Per Magazine stats."],
+                    "condition": false,"desc": ""},
                 {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "condition": false,"desc": ""},
                 {"header": "NIGHTMARE","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."}
+                    "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionSUMS,""],
+                    "condition": false,"desc": "Only Baptism + Trauma damage is factored here. The cut-off for these numbers is when you run out of Baptism ammo."},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
             
@@ -706,7 +1614,7 @@ const customDamage = {
             `;
         }
         else {
-            return {totalAVGGun}
+            return {avgPerTraumaTick,totalAVGTrauma,avgPerShot,totalAVGGun,avgGunDPS,avgTotalDPS,SUMTotalAVG}
         }
     },
     freynaBaptismCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
@@ -739,6 +1647,9 @@ const customDamage = {
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damageReaction = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierToxic);
 
+        const avgPerPuddleTick = damagePuddle.AVG;
+        const avgPerTraumaTick = damageTrauma.AVG;
+
         if (!isCycleCalcs) {
             const breakdownArray = [
                 {"header": "PUDDLE","value": damagePuddle,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
@@ -760,6 +1671,9 @@ const customDamage = {
             <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
             `;
         }
+        else {
+            return {avgPerPuddleTick,avgPerTraumaTick}
+        }
     },
     freynaContagionCalcsNeuroStarter(index,returnObject,isCycleCalcs) {
         return customDamage.freynaContagionCalcs(index,returnObject,isCycleCalcs,"Neurotoxin Synthesis")
@@ -778,160 +1692,123 @@ const customDamage = {
 
 
     //Esiemo
-    esiemoTimeBombCalcs(index,returnObject,isCycleCalcs) {
+    //ability1
+    esiemoTimeBombCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability1.base.type;
-        const skillPlacement = 1; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="statsRowName">Bombs Placed:&nbsp;<span id="timeBombStackDisplay">0</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="timeBombStacks" name="slider" min="0" max="8" value="5" step="1" onchange="settings.updateCharacterSettings('Esiemo')">
-            </div>
-        </div>
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Blast Multi</div>
-                    <div class="totalHealingValue" id="uniquePowerBonus${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG/Bomb</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total AVG DMG [${settingsRef.timeBombStacks}]</div>
-                    <div class="totalHealingValue" id="totalAvgDmg${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability1.base.desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-        // readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        // readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
-        const maxStacks = 5;
-        const cooldown = 12 * (1 + index.SkillCooldown);
-        const cost = 12 * (1 + index.SkillCost);
-        const range = 3 * (1 + Math.min(2,index.SkillRange));
-
-
-        const basePowerModifier = 439.1/100;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
         const blastMulti = settingsRef.blastStacksPowerBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
+        const currentBombs = +settingsRef.timeBombStacks;
 
-        const dmgPerHit = baseSkillPower * skillPowerModifier * blastMulti * fireDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const totalAvgDmg = settingsRef.timeBombStacks * dmgPerHitAvg;
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
 
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-        readSelection(`uniquePowerBonus${skillPlacement}`).innerHTML = `${blastMulti.toLocaleString()}x`;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,blastMulti);
 
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
+        const avgDmgPerHit = damage.AVG;
+        const sumTotalAVG = damage.AVG * currentBombs;
 
-        readSelection(`totalAvgDmg${skillPlacement}`).innerHTML = `${totalAvgDmg.toLocaleString()}`;
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Blast Multiplier","value": blastMulti,"unit": "x"},
+            ]
 
-        
-        readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "sliderElemID": ["timeBombStacks",0,15,1,"Time Bombs Placed"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    esiemoBlastCalcs(index,returnObject,isCycleCalcs,bombCap,bombMulti,nameOverride) {
+    //ability 2
+    esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability2[nameOverride ? nameOverride : "base"].type;
-        const skillPlacement = 2; 
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="abilityBreakdownGeneralMessage">
-            The bonus here is automatically adjusted based on your specified bomb count on both your first and third abilities.
-        </div>
+        const bombMulti = abilityMods.bombMulti;
+        const bombMultiCap = abilityMods.bombMultiCap;
 
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Specified Bomb Count</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Resulting DMG Multi</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2[nameOverride ? nameOverride : "base"].desc}</div>
-        `;
-
-        const maxStacks = 5;
-        const cooldown = 2.7 * (1 + index.SkillCooldown);
-        const cost = 0 * (1 + index.SkillCost);
-        const increasePerBomb = bombMulti ? bombMulti : 0.35;
-        const multiplierCap = bombCap ? bombCap : 8;
-
-        const totalBombsActive = Math.min(multiplierCap,(settingsRef.timeBombStacks + settingsRef.guidedBombStacks + settingsRef.propagandaBombStacks))// + asdf the other bomb
-        const totalBombsMulti = 1 + (totalBombsActive * increasePerBomb);
+        const totalBombsActive = Math.min(bombMultiCap,settingsRef.totalActiveBombs);
+        const totalBombsMulti = 1 + (totalBombsActive * bombMulti);
 
         settingsRef.blastStacksPowerBonus = totalBombsMulti;
-
-
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${totalBombsActive.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${totalBombsMulti.toLocaleString()}x`;
     },
-    esiemoBlastCalcs2(index,returnObject,isCycleCalcs) {
-        //for when Creative Explosion modifies the bomb multi bonus cap
-        customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,10);
+    esiemoBlastCalcsTier0CreativeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Creative Explosion");
+    },
+    esiemoBlastCalcsTier0ClusterStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Cluster Bomb");
+    },
+    esiemoBlastCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const totalBombsActive = Math.min(abilityMods.bombMultiCap,settingsRef.totalActiveBombs);
+        const totalBombsMulti = settingsRef.blastStacksPowerBonus;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Bombs Active","value": totalBombsActive,"unit": ""},
+                {"name": "Blast Multiplier","value": totalBombsMulti,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "DETONATE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    esiemoBlastCalcsCreativeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,"Creative Explosion");
     },
     esiemoClusterCalcs(index,returnObject,isCycleCalcs) {
         customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,null,0.15,"Cluster Bomb");
@@ -942,586 +1819,422 @@ const customDamage = {
         // settingsRef.blastStacksPowerBonus = 1;
 
     },
-    esiemoGuidedCalcs(index,returnObject,isCycleCalcs) {
+    esiemoBlastCalcsCluster(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Esiemo;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability3.base.type;
-        const skillPlacement = 3; 
-
-        settingsRef.propagandaBombStacks = 0;
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="statsRowName">Bombs Placed:&nbsp;<span id="guidedBombStackDisplay">0</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="guidedBombStacks" name="slider" min="0" max="3" value="3" step="1" onchange="settings.updateCharacterSettings('Esiemo')">
-            </div>
-        </div>
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Blast Multi</div>
-                    <div class="totalHealingValue" id="uniquePowerBonus${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG/Bomb</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total AVG DMG [${settingsRef.guidedBombStacks}]</div>
-                    <div class="totalHealingValue" id="totalAvgDmg${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-        // readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        // readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
-        const maxStacks = 3;
-        const cooldown = 14 * (1 + index.SkillCooldown);
-        const cost = 18 * (1 + index.SkillCost);
-        const range = 3 * (1 + Math.min(2,index.SkillRange));
-        const rangeDetection = 10 * (1 + Math.min(2,index.SkillRange));
-        const detectionDuration = 40 * (1 + index.SkillDuration);
-
-
-        const basePowerModifier = 1061.9/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const blastMulti = settingsRef.blastStacksPowerBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * blastMulti * fireDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const totalAvgDmg = settingsRef.guidedBombStacks * dmgPerHitAvg;
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-        readSelection(`uniquePowerBonus${skillPlacement}`).innerHTML = `${blastMulti.toLocaleString()}x`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection(`totalAvgDmg${skillPlacement}`).innerHTML = `${totalAvgDmg.toLocaleString()}`;
-        
-        readSelection("guidedBombStacks").value = +settingsRef.guidedBombStacks;
-        readSelection("guidedBombStackDisplay").innerHTML = `${settingsRef.guidedBombStacks}`;
-    },
-    esiemoPropagandaCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability3["Explosive Propaganda"].type;
-        const skillPlacement = 3; 
-
-        settingsRef.guidedBombStacks = 0;
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="statsRowName">Bombs Placed:&nbsp;<span id="propagandaBombStackDisplay">0</span></div>
-                <div class="statsRowToggle">
-                    <input type="range" id="propagandaBombStacks" name="slider" min="0" max="2" value="2" step="1" onchange="settings.updateCharacterSettings('Esiemo')">
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3["Explosive Propaganda"].desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-
-        const cooldown = 45 * (1 + index.SkillCooldown);
-        const cost = 25 * (1 + index.SkillCost);
-        const range = 4 * (1 + Math.min(2.5,index.SkillRange));
-        const rangeTaunt = 6 * (1 + Math.min(2.5,index.SkillRange));
-        const tauntDuration = 8 * (1 + index.SkillDuration);
-
-
-        const basePowerModifier = 1493.3/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const blastMulti = settingsRef.blastStacksPowerBonus;
-        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * blastMulti * fireDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection("propagandaBombStacks").value = +settingsRef.propagandaBombStacks;
-        readSelection("propagandaBombStackDisplay").innerHTML = `${settingsRef.propagandaBombStacks}`;
-
-    },
-    esiemoArcheCalcsMadnessTier0(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-
-        index.PowerOptimization += settingsRef.isMadnessActive ? 0.25 : 0;
-
-        const madnessATK = 0.25;
-        const madnessMovement = 0.30;
-        const madnessDEF = -0.30;
-
-    },
-    esiemoArcheCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4.base.type;
-        const skillPlacement = 4;
-        //madness skill power is added via esiemoArcheCalcsMadness as a tier 0 call
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG Explosion</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-
-            <div class="abilityBreakdownGeneralMessage">The madness buff can never realistically apply to this ability, as it only lasts for a duration after the skill cast. Only use this toggle if you want to see how the buff factors in on the skill power of the mine-based abilities.</div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div style="padding-right: 5px;">Add Madness Power?</div>
-                    <label class="toggleContainer">
-                        <input type="checkbox" class="toggleCheckbox" id="isMadnessActive" onchange="settings.updateCharacterSettings('Esiemo')"> <!--math toggle-->
-                        <span class="toggleSlider"></span>
-                    </label>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4.base.desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-        // readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        // readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
-        const cooldown = 80 * (1 + index.SkillCooldown);
-        const cost = 65 * (1 + index.SkillCost);
-        const range = 6 * (1 + Math.min(2,index.SkillRange));
-        const madnessDuration = 14 * (1 + index.SkillDuration);
-        const madnessPower = 0.25;
-        const madnessATK = 0.25;
-        const madnessMovement = 0.30;
-        const madnessDEF = -0.30;
-
-
-        const basePowerModifier = 7414.4/100;
-        const basePowerModifierRunning = 85.8/100;
-        const fireDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * fireDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection("isMadnessActive").checked = settingsRef.isMadnessActive;
-
-    },
-    esiemoCreativeCalcsNarcissimTier0(index,returnObject,isCycleCalcs) {
-        // const characterRef = characters.Esiemo;
-        // const settingsRef = characterRef.characterSettings;
-
-        // index.PowerOptimization += settingsRef.isMadnessActive ? 0.25 : 0;
-
-        // const madnessATK = 0.25;
-        // const madnessMovement = 0.30;
-        // const madnessDEF = -0.30;
-
-    },
-    esiemoCreativeCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4["Creative Explosion"].type;
-        const skillPlacement = 4;
-        //madness skill power is added via esiemoArcheCalcsMadness as a tier 0 call
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG Explosion</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-
-            <div class="abilityBreakdownGeneralMessage">The Narcissism buff is mainly just for faster cooldowns. Use this toggle when you want to see how it will modify your cooldown times on all abilities.</div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div style="padding-right: 5px;">Add Narcissism CDR?</div>
-                    <label class="toggleContainer">
-                        <input type="checkbox" class="toggleCheckbox" id="isNarcissimActive" onchange="settings.updateCharacterSettings('Esiemo')"> <!--math toggle-->
-                        <span class="toggleSlider"></span>
-                    </label>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4["Creative Explosion"].desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-        // readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        // readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
-        const cooldown = 40 * (1 + index.SkillCooldown);
-        const cost = 80 * (1 + index.SkillCost);
-        const range = 8 * (1 + Math.min(2,index.SkillRange));
-        const NarcissismDuration = 10 * (1 + index.SkillDuration);//
-        const NarcissismCooldown = -0.40;
-        const NarcissismMovement = 0.30;
-        const NarcissismDEF = -0.30;
-
-        //28,150.679451808095549422143444334
-
-        //65.982670264844958388922475115248 modifier
-
-
-        const basePowerModifier = 4948.7/100;
-        const basePowerModifierRunning = 101.8/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus// + (8 * 0.044);
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * fireDR// * (1 + (8 * 0.044));//3.6666 if fixed, or 1.333 for now
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-
-        //true skill power = 44,177.73101136412978497844262314
-        //true power modifier? = 30.929361212519373731857157308055
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-
-        readSelection("isNarcissimActive").checked = settingsRef.isNarcissimActive;
-
-    },
-    esiemoHabitCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability5.base.type;
-        const skillPlacement = 5; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG/Bomb</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5.base.desc}</div>
-        `;
-
-        const cooldown = 60 * (1 + index.SkillCooldown);
-        const range = 4 * (1 + Math.min(2,index.SkillRange));
-
-        const basePowerModifier = 1617.3/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const fireDR = calcs.getResistanceBasedDR(index,"Fire");
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const blastMulti = settingsRef.blastStacksPowerBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * blastMulti * fireDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-    },
-    esiemoEvadeCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Esiemo;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability5["Explosive Evade"].type;
-        const skillPlacement = 5; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier${skillPlacement}">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Blast Multi</div>
-                    <div class="totalHealingValue" id="uniquePowerBonus${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerHit${skillPlacement}">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Crit</div>
-                    <div class="totalHealingValue" id="dmgPerCrit${skillPlacement}">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DMG/Bomb</div>
-                    <div class="totalHealingValue" id="avgPerHit${skillPlacement}">0.00</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5["Explosive Evade"].desc}</div>
-        `;
-        //the dom element mods need to after all of them are done, so after the stats rows are generated, else they get reset
-        // readSelection("timeBombStacks").value = +settingsRef.timeBombStacks;
-        // readSelection("timeBombStackDisplay").innerHTML = `${settingsRef.timeBombStacks}`;
-
-        const cooldown = 20 * (1 + index.SkillCooldown);
-        const range = 4 * (1 + Math.min(2,index.SkillRange));
-        const rangeDetection = 10 * (1 + Math.min(2,index.SkillRange));
-        const detectionDuration = 40 * (1 + index.SkillDuration);
-
-
-        const basePowerModifier = 1276.7/100;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Cluster Bomb"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const totalBombsActive = Math.min(abilityMods.bombMultiCap,settingsRef.totalActiveBombs);
+        const totalBombsMulti = settingsRef.blastStacksPowerBonus;
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const blastMulti = settingsRef.blastStacksPowerBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * blastMulti * abilityDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
+        const basicInfo = {baseSkillPower,abilityDR,crit};
 
-    
-        readSelection(`skillPower${skillPlacement}`).innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection(`powerModifier${skillPlacement}`).innerHTML = `${(skillPowerModifier*100).toLocaleString()}%`;
-        readSelection(`uniquePowerBonus${skillPlacement}`).innerHTML = `${blastMulti.toLocaleString()}x`;
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierBurn = abilityMods.baseBurn + sumModifierBonus;
 
-        readSelection(`dmgPerHit${skillPlacement}`).innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection(`dmgPerCrit${skillPlacement}`).innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection(`avgPerHit${skillPlacement}`).innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,null);
+        const damageBurn = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierBurn,null,null);
+
+        const avgDmgPerHit = damage.AVG;
+        const avgDmgPerHitBurn = damageBurn.AVG;
+        const totalClusterBombs = settingsRef.totalActiveBombs * 3;
+        const sumTotalAVG = damage.AVG * totalClusterBombs;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Bombs Active","value": totalBombsActive,"unit": ""},
+                {"name": "Blast Multiplier","value": totalBombsMulti,"unit": "x"},
+                {"name": "Total Cluster Bombs","value": totalClusterBombs,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "DETONATE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "EXPLOSIVE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalClusterBombs,sumTotalAVG],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damageBurn,"modifier": skillPowerModifierBurn,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,avgDmgPerHitBurn,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
+    //ability 3
+    esiemoGuidedCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const blastMulti = settingsRef.blastStacksPowerBonus;
+        const currentBombs = +settingsRef.guidedBombStacks;
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,blastMulti);
+
+        const avgDmgPerHit = damage.AVG;
+        const sumTotalAVG = damage.AVG * currentBombs;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Blast Multiplier","value": blastMulti,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "GUIDED LANDMINE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "sliderElemID": ["guidedBombStacks",0,7,1,"Guided Bombs Placed"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    esiemoPropagandaCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Explosive Propaganda"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const blastMulti = settingsRef.blastStacksPowerBonus;
+        const currentBombs = +settingsRef.propagandaBombStacks;
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,blastMulti);
+
+        const avgDmgPerHit = damage.AVG;
+        const sumTotalAVG = damage.AVG * currentBombs;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Blast Multiplier","value": blastMulti,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "EXPLOSIVE PROPAGANDA","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "sliderElemID": ["propagandaBombStacks",0,2,1,"Propaganda Placed"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    esiemoArcheCalcsMadnessTier0(index,returnObject,isCycleCalcs) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+
+        if (settingsRef.isMadnessActive) {
+            index.PowerOptimization += 0.25;
+            index["FirearmATK%"] += 0.25;
+            index.SprintSpeedBonus += 0.30;
+            index["DEF%"] += -0.30;
+        }
+
+    },
+    esiemoArcheCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierRun = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,null);
+        const damageRun = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierRun,null,null);
+
+        const avgDmgPerHitRun = damageRun.AVG;
+        const avgDmgPerHit = damage.AVG;
+
+        if (!isCycleCalcs) {
+
+            const breakdownArray = [
+                {"header": "EXPLOSION","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "condition": false,"desc": ""},
+                {"header": "RUNNING","value": damageRun,"modifier": skillPowerModifierRun,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "condition": false,"desc": ""},
+                {"header": "MADNESS","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "toggleElemID": ["isMadnessActive","Use Madness Buff?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHitRun,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    esiemoCreativeCalcsNarcissimTier0(index,returnObject,isCycleCalcs) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+
+        //we use the same variable, isMadnessActive, just because the toggle can apply to both abilities
+        //but the abilities give diff bonuses
+        if (settingsRef.isMadnessActive) {
+            index.SkillCooldown += -0.40;
+            index.SprintSpeedBonus += 0.30;
+            index["DEF%"] += -0.30;
+        }
+
+    },
+    esiemoCreativeCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Creative Explosion"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierRun = abilityMods.base + sumModifierBonus;
+
+        //I believe the unused bomb cap is 8, since that's how many total stacks you can have
+        const unusedBombs = 8 - Math.min(8,settingsRef.totalActiveBombs);
+        const unusedBombsMulti = 1 + (unusedBombs * abilityMods.increasePerUnsued);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,unusedBombsMulti);
+        const damageRun = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierRun,null,null);
+
+        const avgDmgPerHitRun = damageRun.AVG;
+        const avgDmgPerHit = damage.AVG;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Unused Bombs","value": unusedBombs,"unit": ""},
+                {"name": "Increase per Unused","value": abilityMods.increasePerUnsued,"unit": "%"},
+                {"name": "Total Multi","value": unusedBombsMulti,"unit": "x"},
+            ]
+            
+            const breakdownArray = [
+                {"header": "EXPLOSION","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "RUNNING","value": damageRun,"modifier": skillPowerModifierRun,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "condition": false,"desc": ""},
+                {"header": "NARCISSISM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "toggleElemID": ["isMadnessActive","Use Narcissim Buff?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHitRun,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //passive
+    esiemoHabitCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        // const blastMulti = settingsRef.blastStacksPowerBonus;
+        // const currentBombs = +settingsRef.timeBombStacks;
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,null);
+
+        const avgDmgPerHit = damage.AVG;
+
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Blast Multiplier","value": blastMulti,"unit": "x"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    esiemoEvadeCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Esiemo;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Explosive Evade"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const blastMulti = settingsRef.blastStacksPowerBonus;
+        const currentBombs = +settingsRef.evadeBombStacks;
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,blastMulti);
+
+        const avgDmgPerHit = damage.AVG;
+        const sumTotalAVG = damage.AVG * currentBombs;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Blast Multiplier","value": blastMulti,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "GUIDED LANDMINE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [currentBombs,sumTotalAVG],
+                    "sliderElemID": ["evadeBombStacks",0,3,1,"Evade Bombs Placed"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+
+
+
     //Hailey
     haileyCryoRoundCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
@@ -1543,29 +2256,89 @@ const customDamage = {
         const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
 
         const magazine = 9;
+        const avgPerHit = damage.AVG;
         const totalAVG = magazine * damage.AVG;
 
-
-        const breakdownArray = [
-            {"header": "CRYO ROUNDS","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVG],
-                "condition": false,"desc": ""},
-            {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
-            {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "CRYO ROUNDS","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVG],
+                    "condition": false,"desc": ""},
+                {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
+                {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgPerHit,totalAVG}
+        }
     },
+    haileyCryoRoundCalcsCluster(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Cryogenic Cluster Shot"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierCryogenic = abilityMods.baseCryogenic + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageCryogenic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierCryogenic);
+
+        const magazine = 9;
+        const avgPerHit = damage.AVG;
+        const avgPerHitCryogenic = damageCryogenic.AVG
+
+        const totalAVGHits = magazine * (damage.AVG);
+        const totalAVGHitsCryo = magazine * (damageCryogenic.AVG);
+        const sumTotalAVG = magazine * (damage.AVG + damageCryogenic.AVG);
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "CRYOGENIC CLUSTER SHOT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [magazine,totalAVGHits],
+                    "condition": false,"desc": ""},
+                {"header": "CRYOGENIC","value": damageCryogenic,"modifier": skillPowerModifierCryogenic,"hasCritAVG": null,"unit": "","magazineTypeWeapon": [magazine,totalAVGHitsCryo],
+                    "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
+                {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgPerHit,avgPerHitCryogenic,totalAVGHits,totalAVGHitsCryo,sumTotalAVG}
+        }
+    },
+    //ability 2
     haileyStormCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
@@ -1587,28 +2360,39 @@ const customDamage = {
         const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
         const damageAOE = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierAOE);
 
-        const breakdownArray = [
-            {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
-                "condition": false,"desc": ""},
-            {"header": "IMPACT AOE","value": damageAOE,"modifier": skillPowerModifierAOE,"hasCritAVG": true,"unit": "",
-                "condition": false,"desc": "The AOE on impact does not apply to the target hit. Only to those around them."},
-            {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
-            {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
+        const avgPerAOE = damageAOE.AVG
+        const avgPerHit = damage.AVG
         
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "IMPACT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "IMPACT AOE","value": damageAOE,"modifier": skillPowerModifierAOE,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": "The AOE on impact does not apply to the target hit. Only to those around them."},
+                {"header": "CRYO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": "Cryo ONLY applies to Firearm damage. It takes the end total damage a gun deals, then creates a new number for exactly half of it on impact."},
+                {"header": "FLASH FREEZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgPerAOE,avgPerHit}
+        }
     },
+    //ability 3
     haileyFuryCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
@@ -1627,61 +2411,33 @@ const customDamage = {
         index.SkillCritDamage += bonusCritDamage;
         index.FirearmCritDamage += bonusCritDamage;
 
-        const rowInjection = [
-            {"name": "+BASE Crit Rate","value": baseSkillCritRateBonus,"unit": "%"},
-            {"name": "+Crit DMG %","value": bonusCritDamage,"unit": "%"},
-        ]
-
-        const breakdownArray = [
-            {"header": "COLD FURY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyColdFuryBar4",0,16,1,"Cold Fury Stacks"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-            {"header": "MAX STACKS BONUS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "+BASE Crit Rate","value": baseSkillCritRateBonus,"unit": "%"},
+                {"name": "+Crit DMG %","value": bonusCritDamage,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "COLD FURY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyColdFuryBar4",0,16,1,"Cold Fury Stacks"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "MAX STACKS BONUS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
     },
-    haileyRetreatCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
-        const characterRef = characters.Hailey;
-        const settingsRef = characterRef.characterSettings;
-        const skillPlacement = 5;
-        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
-
-        let weakspotBonus = 0;
-        if (+settingsRef.haileyDistanceBar4 > 12.5) {weakspotBonus = ((settingsRef.haileyDistanceBar4 - 12.5)/12.5) * 0.50}
-        else if (+settingsRef.haileyDistanceBar4 < 12.5) {weakspotBonus = -((12.5 - settingsRef.haileyDistanceBar4)/12.5) * 0.50}
-        //and then if the distance is equal to 12.5, the bonus is 0
-
-        index["WeakPointDamage%"] += weakspotBonus;
-
-        const rowInjection = [
-            {"name": "0-Point","value": 12.5,"unit": "m"},
-            {"name": "+% Weak Point DMG","value": weakspotBonus,"unit": "%"},
-        ]
-
-        const breakdownArray = [
-            {"header": "SAFE STRATEGIC RETREAT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyDistanceBar4",0,25,0.5,"Retreat Distance"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
-    },
+    //ability 4
     haileyZenithCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
@@ -1699,14 +2455,13 @@ const customDamage = {
         const skillPowerModifier = abilityMods.base + sumModifierBonus;
         const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
 
-        const magazineSize = 4 * (1+index.MagazineSize) + index.haileyExtraShots;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const magazineSize = abilityMods.magazine * (1+index.MagazineSize) + index.haileyExtraShots;//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = Math.floor(magazineSize);
 
-        const totalAVGSKill = damageSkill.AVG * actualMagSize;
-
+        const totalAVGSkill = damageSkill.AVG * actualMagSize;
 
         //WEAPON MATH
-        const zenithMultiplier = 1.5;
+        const zenithMultiplier = abilityMods.firearmATKMulti;
         const preElementDamage = returnObject.firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const damage = (preElementDamage * zenithMultiplier + returnObject.firearmColossusATK) * (1 + returnObject.physicalTypeMulti);
         const physDR = calcs.getResistanceBasedDR(index,"DEF");
@@ -1722,341 +2477,490 @@ const customDamage = {
         const weaponDamageCryo = calcs.getCompositeFirearmDamageSpread(cryoDamageHit,critFirearm);
 
         const totalAVGGun = ((weaponDamage.AVG + weaponDamageElemental.AVG) * actualMagSize) + (weaponDamageCryo.AVG * Math.min(9,actualMagSize));
-        const totalAVGSum = totalAVGSKill + totalAVGGun;
+        const totalAVGSum = totalAVGSkill + totalAVGGun;
 
-        let rowInjectionFirearmElemental = [
-            {"name": "Element","value": activeElements[0],"unit": ""},
-            {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
-            {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
-        ]
-        if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
-        const rowInjectionCryo = [
-            {"name": "Max Procs","value": 9,"unit": "x"},
-            {"name": "Hit","value": weaponDamageCryo.perHit,"unit": ""},
-            {"name": "Crit","value": weaponDamageCryo.perCrit,"unit": ""},
-            {"name": "AVG","value": weaponDamageCryo.AVG,"unit": ""},
-        ]
-        const rowInjectionSums = [
-            {"name": "SUM Firearm AVG","value": totalAVGGun,"unit": ""},
-        ]
-        const rowInjectionTotalSum = [
-            {"name": "SUM Zenith AVG per Cast","value": totalAVGSum,"unit": ""},
-        ]
-
-        const breakdownArray = [
-            {"header": "UNIQUE WEAPON - SKILL SPLIT","value": damageSkill,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagSize,totalAVGSKill],
-                "condition": false,"desc": ""},
-            {"header": "UNIQUE WEAPON - FIREARM SPLIT","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
-                "rowInjection": [rowInjectionFirearmElemental,"Firearm Element"],"rowInjection2": [rowInjectionCryo,"Firearm Cryo DMG"],"rowInjection3": [rowInjectionSums,""],
-                "condition": false,"desc": "Must enable/disable <span>WEAK PT HITS</span> and <span>FIREARM PHYS BONUS</span> in <span>SETTINGS</span> for accurate values.<br>WP Hits are assumed Shoulder shots. See Weapon DMG video for more info."},
-            {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "rowInjection": [rowInjectionTotalSum,""],
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `abilityBreakdownBody${skillPlacement}`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        ${addRow("Power",baseSkillPower,"")}
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
-        `;
-    },
-    //Lepic
-    lepicOverclockCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 2; 
-
-        if (settingsRef2.lepicOverclockBonus) {index.PowerModifierBase += 0.20;}
-        //TODO: add the burn stuff later
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Use Modifier Bonus?</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="lepicOverclockBonus" onchange="settings.updateCharacterSettings('Lepic')" ${settingsRef2.lepicOverclockBonus ? "checked" : ""}>
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>
-        </div>
-
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+Power Modifier</div>
-                    <div class="totalHealingValue">${settingsRef2.lepicOverclockBonus ? "20" : "0"}%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
-        `;
+        const avgSkillHit = damageSkill.AVG;
+        const avgGunPerHit = weaponDamage.AVG + weaponDamageElemental.AVG + weaponDamageCryo.AVG;
 
         
-    },
-    lepicNerveCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 2; 
+        if (!isCycleCalcs) {
+            let rowInjectionFirearmElemental = [
+                {"name": "Element","value": activeElements[0],"unit": ""},
+                {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
+                {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
+            ]
+            if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
+            const rowInjectionCryo = [
+                {"name": "Max Procs","value": 9,"unit": "x"},
+                {"name": "Hit","value": weaponDamageCryo.perHit,"unit": ""},
+                {"name": "Crit","value": weaponDamageCryo.perCrit,"unit": ""},
+                {"name": "AVG","value": weaponDamageCryo.AVG,"unit": ""},
+            ]
+            const rowInjectionSums = [
+                {"name": "SUM Firearm AVG","value": totalAVGGun,"unit": ""},
+            ]
+            const rowInjectionTotalSum = [
+                {"name": "SUM Zenith AVG per Cast","value": totalAVGSum,"unit": ""},
+            ]
 
-        if (settingsRef2.lepicNerveBonus) {index.PowerModifierBase += 0.30;}
-        //TODO: add the burn stuff later
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Use Modifier Bonus?</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="lepicNerveBonus" onchange="settings.updateCharacterSettings('Lepic')" ${settingsRef2.lepicNerveBonus ? "checked" : ""}>
-                    <span class="toggleSlider"></span>
-                </label>
+            const breakdownArray = [
+                {"header": "SUPERCOOLED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "sliderElemID": ["haileySupercooledStacks",0,12,1,"Supercooled Stacks"],
+                    "condition": !nameOverride,"desc": ""},
+                {"header": "UNIQUE WEAPON - SKILL SPLIT","value": damageSkill,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagSize,totalAVGSkill],
+                    "condition": false,"desc": ""},
+                {"header": "UNIQUE WEAPON - FIREARM SPLIT","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionFirearmElemental,"Firearm Element"],"rowInjection2": [rowInjectionCryo,"Firearm Cryo DMG"],"rowInjection3": [rowInjectionSums,""],
+                    "condition": false,"desc": "Must enable/disable <span>WEAK PT HITS</span> and <span>FIREARM PHYS BONUS</span> in <span>SETTINGS</span> for accurate values.<br>WP Hits are assumed Shoulder shots. See Weapon DMG video for more info."},
+                {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "rowInjection": [rowInjectionTotalSum,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
-        </div>
-
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+Power Modifier</div>
-                    <div class="totalHealingValue">${settingsRef2.lepicNerveBonus ? "30" : "0"}%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`]["Nerve Infiltration"].desc}</div>
-        `;
-
-        
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgSkillHit,avgGunPerHit,totalAVGSkill,totalAVGGun,totalAVGSum}
+        }
     },
-    lepicPowerUnitCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 2; 
-
-        if (settingsRef2.lepicPowerUnitBonus) {index["FirearmATK%"] += 0.52;}
-        //TODO: add the burn stuff later
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Use FirearmATK% Bonus?</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="lepicPowerUnitBonus" onchange="settings.updateCharacterSettings('Lepic')" ${settingsRef2.lepicPowerUnitBonus ? "checked" : ""}>
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>
-        </div>
-
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+Firearm ATK%</div>
-                    <div class="totalHealingValue">${settingsRef2.lepicPowerUnitBonus ? "52" : "0"}%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`]["Power Unit Change"].desc}</div>
-        `;
-
-        
-    },
-    lepicTractionCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 3; 
-        
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `This ability has no damage to elaborate on.`;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
-        `;
-    },
-    lepicOverkillCalcs(index,returnObject,isCycleCalcs) {
-        //this function is gonna look pretty scuffed for a bit, all I did was rip it from and combine all the functions from my lepic-only calc
-        //so I'll pretty it up later.
-        const characterRef = characters.Lepic;
+    haileyZenithCalcsSuperStarterTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 4;
-        const abilityTypeArray = characterRef.abilities[`ability${skillPlacement}`].base.type;
-        
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Supercooled Kuiper Round"];
+        const abilityMods = abilityMap.powerMods;
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Fire Rate UP</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="USEFireRateUP" onchange="settings.updateCharacterSettings('Lepic')"> <!--math toggle-->
-                    <span class="toggleSlider"></span>
-                </label>
+        const wpBonus = abilityMods.weakpointStackBonus;
+        const currentStacks = +settingsRef.haileySupercooledStacks;
+
+        const totalBonus = currentStacks * wpBonus;
+
+        index["WeakPointDamage%"] += totalBonus;
+    },
+    haileyZenithCalcsSuperStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.haileyZenithCalcs(index,returnObject,isCycleCalcs,"Supercooled Kuiper Round");
+    },
+    //ability 5
+    haileyRetreatCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+
+        let weakspotBonus = 0;
+        if (+settingsRef.haileyDistanceBar4 > 12.5) {weakspotBonus = ((settingsRef.haileyDistanceBar4 - 12.5)/12.5) * 0.50}
+        else if (+settingsRef.haileyDistanceBar4 < 12.5) {weakspotBonus = -((12.5 - settingsRef.haileyDistanceBar4)/12.5) * 0.50}
+        //and then if the distance is equal to 12.5, the bonus is 0
+
+        index["WeakPointDamage%"] += weakspotBonus;
+
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "0-Point","value": 12.5,"unit": "m"},
+                {"name": "+% Weak Point DMG","value": weakspotBonus,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "SAFE STRATEGIC RETREAT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["haileyDistanceBar4",0,25,0.5,"Retreat Distance"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Sharp Precision</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="USESharpPrecisionShot" onchange="settings.updateCharacterSettings('Lepic')"> <!--math toggle-->
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>
-        </div>
-        
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Duration</div>
-                    <div class="totalHealingValue" id="actualDuration">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Usable Duration</div>
-                    <div class="totalHealingValue" id="usableDuration">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Shots</div>
-                    <div class="totalHealingValue" id="totalShots">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Excess/Short</div>
-                    <div class="totalHealingValue" id="wastedTime">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Shot</div>
-                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Shot</div>
-                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg SUM</div>
-                    <div class="totalHealingValue" id="averageSum">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Tick</div>
-                    <div class="totalHealingValue" id="dmgPerTick">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Tick</div>
-                    <div class="totalHealingValue" id="critPerTick">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Ticks</div>
-                    <div class="totalHealingValue" id="totalTicks">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg SUM Ticks</div>
-                    <div class="totalHealingValue" id="averageSumTicks">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg SUM</div>
-                    <div class="totalHealingValue" id="totalAverageSum">0.00%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
-        `;
-        readSelection("USEFireRateUP").checked = settingsRef.USEFireRateUP;
-        if (globalRecords.reactor.currentAmmoType === "HighPowered") {settingsRef.USESharpPrecisionShot = false;}
-        readSelection("USESharpPrecisionShot").checked = settingsRef.USESharpPrecisionShot;
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
 
 
-        const isFireRateUp = readSelection("USEFireRateUP").checked;
-        const isSharpPrecision = readSelection("USESharpPrecisionShot").checked;
-        const skillDurationMod = index.SkillDuration;
-    
-        const {shotCount,skillDuration,continuousTicks,excessWasted} = customDamage.lepicOverkillFireRateMath(skillDurationMod,isFireRateUp,isSharpPrecision);
-        readSelection("wastedTime").innerHTML = `${(excessWasted).toFixed(3)}s`;
-    
-        readSelection("actualDuration").innerHTML = `${(8 * (1+skillDurationMod)).toFixed(3)}s`;
-        readSelection("usableDuration").innerHTML = `${skillDuration.toLocaleString()}s`;
-        readSelection("totalShots").innerHTML = `${shotCount}`;
+    //Lepic
+    //ability 1
+    lepicGrenadeCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        const baseSkillPowerPercent = (2760.3)/100 + sumModifierBonus;
-        const baseContinuousSkillPowerPercent = (43.8)/100 + sumModifierBonus;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerShot = baseSkillPower * baseSkillPowerPercent * abilityDR;
-        const dmgPerShotCrit = dmgPerShot * critDamage;
-        const endDmg = dmgPerShot * critComposite * shotCount;
-    
-        const dmgPerTick = baseSkillPower * baseContinuousSkillPowerPercent * abilityDR;
-        const dmgPerTickCrit = dmgPerTick * critDamage;
-        const tickEndDamage = dmgPerTick * critComposite * continuousTicks;
-    
-        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection("powerModifier").innerHTML = `${(baseSkillPowerPercent*100).toLocaleString()}`;
-    
-        readSelection("dmgPerShot").innerHTML = `${dmgPerShot.toLocaleString()}`;
-        readSelection("critPerShot").innerHTML = `${dmgPerShotCrit.toLocaleString()}`;
-        readSelection("averageSum").innerHTML = `${endDmg.toLocaleString()}`;
-    
-        readSelection("dmgPerTick").innerHTML = `${dmgPerTick.toLocaleString()}`;
-        readSelection("critPerTick").innerHTML = `${dmgPerTickCrit.toLocaleString()}`;
-        readSelection("totalTicks").innerHTML = `${continuousTicks.toLocaleString()}`;
-    
-        readSelection("averageSumTicks").innerHTML = `${tickEndDamage.toLocaleString()}`;
-    
-        readSelection("totalAverageSum").innerHTML = `${(endDmg+tickEndDamage).toLocaleString()}`;
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const baseCooldown = abilityMods.cooldown;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerGrenade1 = damage.AVG;
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,damage.AVG,baseCooldown,null)
+        const avgDPSGrenade1 = DPS;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Cooldown","value": cooldown,"unit": ""},
+                {"name": "Interval Length (s)","value": interval,"unit": ""},
+                {"name": "DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "GRENADE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerGrenade1,avgDPSGrenade1}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    lepicOverkillFireRateMath(skillDurationMod,isFireRateUp,isSharpPrecision) {
-        const skillDuration = 8 * (1 + skillDurationMod) - 1.06; //subtract the roll's duration
-        // const firearmMasterDuration = 5 * (1 + skillDurationMod) - 1.06;//still subtract the roll's duration
-        const continuousDuration = 4 * (1 + skillDurationMod);//don't need to minus the roll here
-        // const continuousTicks = Math.floor(continuousDuration/0.5);
+    lepicGrenadeCalcsStacksStarter(index,returnObject,isCycleCalcs) {
+        return customDamage.lepicGrenadeCalcs(index,returnObject,isCycleCalcs,"Explosive Stacks")
+    },
+    //ability 2
+    lepicOverclockCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const powerModBonus = abilityMap.powerMods["PowerModifierBase"];
+
+        index.PowerModifierBase += settingsRef.lepicOverclockBonus ? powerModBonus : 0;
+    },
+    lepicOverclockCalcsTier0NerveStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.lepicOverclockCalcsTier0(index,returnObject,isCycleCalcs,"Nerve Infiltration");
+        //lepicOverclockBonus is used for all applicable bonuses related to 2nd ability that can get away with a toggle
+    },
+    lepicOverclockCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const dotDuration = abilityMods.duration * (1 + index.SkillDuration);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const {durationDOT,totalTicks,intervalDOT,totalTickDamage} = calcs.getDoTTotalBreakdown(index,damage.AVG,abilityMods.interval,dotDuration);
+
+        const avgDmgPerTick2 = damage.AVG;
+        const totalTickDamage2 = totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "DOT Duration","value": durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "OVERCLOCK","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["lepicOverclockBonus","Use Bonus Modifier?"],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalTicks,totalTickDamage],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": "[Note] If burn is applied faster than the interval of once per second, then the burn damage will not take place until you stop refreshing it."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick2,totalTickDamage2}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lepicPowerUnitCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Power Unit Change"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const bonus = abilityMap.powerMods["FirearmATK%"];
+
+        index["FirearmATK%"] += settingsRef.lepicOverclockBonus ? bonus : 0;
+    },
+    lepicPowerUnitCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Power Unit Change"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const dotDuration = abilityMods.duration * (1 + index.SkillDuration);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const {durationDOT,totalTicks,intervalDOT,totalTickDamage} = calcs.getDoTTotalBreakdown(index,damage.AVG,abilityMods.interval,dotDuration);
+
+        const avgDmgPerTick2 = damage.AVG;
+        const totalTickDamage2 = totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "DOT Duration","value": durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "POWER UNIT CHANGE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["lepicOverclockBonus","Use Bonus ATK?"],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalTicks,totalTickDamage],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": "[Note] If burn is applied faster than the interval of once per second, then the burn damage will not take place until you stop refreshing it."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick2,totalTickDamage2}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lepicNerveCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Nerve Infiltration"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "OVERCLOCK","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["lepicOverclockBonus","Use Bonus Modifier?"],
+                    "condition": false,"desc": ""},
+                {"header": "WEAKEN REGENERATION","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 3
+    lepicTractionCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "TRACTION GRENADE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    lepicOverkillCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const totalMP = returnObject.displayMP;
+        const continuousCost = abilityMods.continuousCost * (1 + index.SkillCost);
+        const allowedMPDuration = Math.ceil(totalMP/continuousCost)
+
+
+        const rollDuration = 1.06;
+        const normalDuration = abilityMods.skillDuration * (1 + index.SkillDuration) - rollDuration;
+        const baseSkillDuration = settingsRef.lepicOverclockMPRestrictions ? Math.min(allowedMPDuration,normalDuration) : normalDuration;
+
+        const currentAmmoType = globalRecords.reactor.currentAmmoType;
+        const weaponModsPath = globalRecords.weapon.mods;
+        let isSharpPrecision = false;
+        for (let entry of weaponModsPath) {if (entry === "Sharp Precision Shot") {isSharpPrecision = true;break;}}
+        const baseRate = 60/46;//gap between shots with 0 fire rate active from any source.
+        // const baseRate = 1.26;//gap between shots with 0 fire rate active from any source.
+        const {shotCount,excessWasted} = customDamage.skillBasedFireRateMath(index,baseSkillDuration,baseRate,isSharpPrecision,currentAmmoType);
+
+        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const continuousInterval = abilityMods.interval;
+        const ticksPerShot = Math.floor(continuousDuration/continuousInterval);
+        const continuousTicks = ticksPerShot * shotCount;
+
+        const overkillAVGperHit4 = damage.AVG;
+        const overkillTotalShotDamage4 = damage.AVG * shotCount;
+        const overkillShotCount = shotCount
+        const continuousAVGperTick4 = damageDOT.AVG;
+        const continuousTotalDamage4 = damageDOT.AVG * continuousTicks;
+
+
+        const sumTotalDamage4 = overkillTotalShotDamage4 + continuousTotalDamage4;
+        const dpsPerShot4 = (damage.AVG + ticksPerShot * damageDOT.AVG) / continuousDuration;
+        const dpsPerCast4 = (overkillTotalShotDamage4 + continuousTotalDamage4) / (baseSkillDuration + continuousDuration);
+
+
+        
+        if (!isCycleCalcs) {
+            let rowInjectionOverkill = [
+                {"name": "-Roll Duration","value": -rollDuration,"unit": ""},
+                {"name": "Usable Duration","value": baseSkillDuration,"unit": ""},
+                {"name": "Excess/Wasted","value": excessWasted,"unit": ""},
+                {"name": "Shots","value": shotCount,"unit": ""},
+            ]
+            let Continuous = [
+                {"name": "DOT Duration","value": continuousDuration,"unit": ""},
+                {"name": "Interval","value": continuousInterval,"unit": ""},
+                {"name": "Total Ticks","value": continuousTicks,"unit": ""},
+            ]
+            let SUM = [
+                {"name": "SUM AVG DMG per Cast","value": sumTotalDamage4,"unit": ""},
+                {"name": "DPS Per Shot","value": dpsPerShot4,"unit": ""},
+                {"name": "DPS Per Cast","value": dpsPerCast4,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "OVERKILL","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [shotCount,overkillTotalShotDamage4],
+                    "toggleElemID": ["lepicOverclockMPRestrictions","Restrict Duration by MP?"],
+                    "rowInjection": [rowInjectionOverkill,""],
+                    "condition": false,"desc": "Overkill benefits from Fire Rate modifiers on your selected weapon in the calculator. If shot count doesn't line up, make sure you have Fire Rate UP and Sharp Precision Shot selected."},
+                {"header": "CONTINUOUS DAMAGE","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [continuousTicks,continuousTotalDamage4],
+                    "rowInjection": [Continuous,""],
+                    "condition": false,"desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [SUM,""],
+                    "condition": false,"desc": "This number assumes you are roll canceling the starting animation."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {overkillAVGperHit4,overkillTotalShotDamage4,continuousAVGperTick4,continuousTotalDamage4,dpsPerShot4,dpsPerCast4,sumTotalDamage4}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    skillBasedFireRateMath(index,firingWindowDuration,delayBetweenShots,isSharpPrecision,currentAmmoType) {
+        const fireRate = index.FireRate;//the flat, non-dynamic fire rate bonuses/negatives from equipped mods, before something like sharp precision kicks in.
     
-        const fireRate = (isFireRateUp ? -0.25 : 0) + (isSharpPrecision ? 0.20 : 0);//the flat, non-dynamic fire rate bonuses/negatives from equipped mods, before something like sharp precision kicks in.
-    
-        const baseRate = 1.308;//gap between shots with 0 fire rate active from any source.
+        const baseRate = delayBetweenShots;//gap between shots with 0 fire rate active from any source.
         const modifiedRate = baseRate * (1 + fireRate);//modified time between shots with -20% penalty and +25% boost
     
         const reductionPerStack = baseRate * 0.04;//4% reduction of the base time per stack
@@ -2065,983 +2969,643 @@ const customDamage = {
             "General": 0.5,
             "Special": 0.5,
             "Impact": 0.4,
-            "HighPowered": "In theory we should prevent anyone from using sharp precision if it is ever a heavy weapon."
+            "HighPowered": 0
         }
-        const stackDelay = sharpAmmoTypeDelays[globalRecords.reactor.currentAmmoType];//Are we using Sharp Precision from green ammo, or from white/orange.
+        const stackDelay = sharpAmmoTypeDelays[currentAmmoType];//Are we using Sharp Precision from green ammo, or from white/orange.
     
         let timePassed = 0;
-        let shotCount = 1;//start at 1, bc the first shot is instantaneous after the roll
+        let shotCount = 1;//start at 1, bc the first shot is considered instantaneous
         let excessWasted = 0;
     
         if (isSharpPrecision) {
-            while (timePassed < skillDuration) {
+            while (timePassed < firingWindowDuration) {
                 const stacks = Math.min(Math.floor(timePassed / stackDelay), maxStacks);
                 const currentRate = modifiedRate - stacks * reductionPerStack;//time between shots with the stacks applied
                 const nextShotTime = timePassed + currentRate;//time for the next shot
     
-                if (nextShotTime <= skillDuration) {
+                if (nextShotTime <= firingWindowDuration) {
                     shotCount++;
                     timePassed = nextShotTime;//passed to the time of the next shot
                 }
                 else {
-                    excessWasted = skillDuration - nextShotTime;
+                    excessWasted = firingWindowDuration - nextShotTime;
                     break;
                 }
             }
         }
         else {
-            const floatCount = skillDuration/(modifiedRate);
+            const floatCount = firingWindowDuration/(modifiedRate);
             shotCount += Math.floor(floatCount);
             durationDiff = floatCount - Math.floor(floatCount);
             excessWasted = durationDiff;
         }
     
-        const continuousTicks = Math.floor(continuousDuration/0.5) * shotCount;
     
-        return {shotCount,skillDuration,continuousTicks,excessWasted};
+        return {shotCount,firingWindowDuration,excessWasted};
     },
-    lepicCloseCallCalcs(index,returnObject,isCycleCalcs) {
+    lepicOverkillCalcsEfficiency(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 5; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `This ability has no damage to elaborate on.`;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`].base.desc}</div>
-        `;
-    },
-    lepicFirearmMasterCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 5; 
-
-        if (settingsRef2.lepicFirearmMasterBonus) {
-            index.PowerModifierBase += 0.39;
-            index.SkillRange += 0.45;
-        }
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="totalHealingBoxHalf hasHoverTooltip">
-                <div style="padding-right: 5px;">Use Modifier Bonus?</div>
-                <label class="toggleContainer">
-                    <input type="checkbox" class="toggleCheckbox" id="lepicFirearmMasterBonus" onchange="settings.updateCharacterSettings('Lepic')" ${settingsRef2.lepicFirearmMasterBonus ? "checked" : ""}>
-                    <span class="toggleSlider"></span>
-                </label>
-            </div>
-        </div>
-
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+Power Modifier</div>
-                    <div class="totalHealingValue">${settingsRef2.lepicFirearmMasterBonus ? "39" : "0"}%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">+Range</div>
-                    <div class="totalHealingValue">${settingsRef2.lepicFirearmMasterBonus ? "45" : "0"}%</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`]["Firearm Master"].desc}</div>
-        `;
-    },
-    lepicBrakingCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Lepic;
-        const settingsRef2 = characterRef.characterSettings;
-        const skillPlacement = 5; 
-
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `This ability has no damage to elaborate on.`;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities[`ability${skillPlacement}`]["Regenerative Braking"].desc}</div>
-        `;
-    },
-    //Bunny
-    bunnyThrillCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
-        const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability1.base.type;
-        const skillPlacement = 1;
-
-        const basePowerModifier = (isHVStarter ? 250.5 : 156.6)/100;
-        const baseDotModifier = (isHVStarter ? 89.5 : 55.9)/100;
-
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Increased Efficiency"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const skillPowerModifierDot = baseDotModifier + sumModifierBonus;
-    
-        // const elecBarBonus = 2.35;
-        //Bunny is bugged, and she doesn't get the full 2.5x multi from her 1&3 bar scaling, instead it stops at 9 stacks for 2.35.
-        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15) //TODO: this line might be used later to dynamically state the fill % if we know exactly how the scaling thresholds are set
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount * abilityDR;
-        const dmgPerTick = baseSkillPower * skillPowerModifierDot;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerTickCrit = dmgPerTick * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const dmgPerTickAvg = dmgPerTick * critComposite;
+        const basicInfo = {baseSkillPower,abilityDR,crit};
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Bar Bonus</div>
-                    <div class="totalHealingValue">${barFilledAmount.toFixed(2) + "x"}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue">${baseSkillPower.toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue">${`${(skillPowerModifier*100).toLocaleString()}%`}</div>
-                </div>
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerShot4 = damage.AVG;
+
+        
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerShot4}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //passive
+    lepicCloseCallCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHit.toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHitCrit.toLocaleString()}</div>
-                </div>
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "CLOSE CALL","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHitAvg.toLocaleString()}</div>
-                </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lepicFirearmMasterCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Firearm Master"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const powerModBonus = abilityMap.powerMods["PowerModifierBase"];
+        const skillRangebonus = abilityMap.powerMods["SkillRange"];
+
+        if (settingsRef.lepicFirearmMasterBonus) {
+            index.PowerModifierBase += powerModBonus;
+            index.SkillRange += skillRangebonus;
+        }
+    },
+    lepicFirearmMasterCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Firearm Master"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "LOAD MASTERY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "CHANGE MASTERY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "BONUS USAGE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["lepicFirearmMasterBonus",""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lepicBrakingCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Regenerative Braking"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Tick</div>
-                    <div class="totalHealingValue">${dmgPerTick.toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Tick</div>
-                    <div class="totalHealingValue">${dmgPerTickCrit.toLocaleString()}</div>
-                </div>
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
-
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability1.base.desc}</div>
-        `;
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    bunnyThrillCalcsHVStarter(index,returnObject,isCycleCalcs) {
-        //used purely to do emission calcs with the specification that high voltage is active
-        customDamage.bunnyThrillCalcs(index,returnObject,isCycleCalcs,true);
-    },
-    bunnySpeedCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Bunny;
-        const settingsRef2 = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability2.base.type;
-        const skillPlacement = 2;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div style="white-space: normal;width: 100%">This ability has no damage, and as such, no damage breakdown.</div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2.base.desc}</div>
-        `;
 
-        const cooldown = 2 * (1 + Math.max(-0.90,index.SkillCooldown));
-        const cost = 12 * (1 + index.SkillCost);
-        const costOverTime = 25 * (1 + index.SkillCost);
-        const speedIncrease = 0.50;
-        const barDistance = 1;
-        const barGain = 0.006;
 
-        const rowsObject = {cooldown,cost,costOverTime,speedIncrease,barDistance,barGain}
-        // let skillHTML = "<div class='basicsDRheaderTitle'>Ability Statistics</div>";
-        let skillHTML = "";
-        let skillHTMLRowsHTML = '';
-        rowsListings = [//evadeCost,meleeCost
-            {"statName": "cooldown","statCoverName": "Cooldown","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "cost","statCoverName": "Cost","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "costOverTime","statCoverName": "Cost/s","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "speedIncrease","statCoverName": "+Speed%","tooltip":"","relevantTags": [],"isNotAPercent": false},
-            {"statName": "barDistance","statCoverName": "Distance/Gain(m)","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
-            {"statName": "barGain","statCoverName": "Gain/Distance","tooltip":"","relevantTags": [],"isNotAPercent": false},
 
-            // {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
-        ]
-        skillHTMLRowsHTML += basicsUpdates.expandRowListingInfo(rowsListings,rowsObject);
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += skillHTMLRowsHTML ? skillHTML + skillHTMLRowsHTML + "<br>" : "";
-    },
-    bunnyEmissionCalcsHVStarter(index,returnObject,isCycleCalcs) {
-        //used purely to do emission calcs with the specification that high voltage is active
-        customDamage.bunnyEmissionCalcs(index,returnObject,isCycleCalcs,true);
-    },
-    bunnyEmissionCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
+
+    //Bunny
+    //ability 1
+    bunnyThrillCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-        readSelection("abilityBreakdownBody3").innerHTML = `
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Initial Cost</div>
-                    <div class="totalHealingValue" id="initialCost">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Drain Rate</div>
-                    <div class="totalHealingValue" id="drainRate">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">SoL Duration</div>
-                    <div class="totalHealingValue" id="speedDuration">0.00%</div>
-                </div>
-            </div>
+        const basicInfo = {baseSkillPower,abilityDR,crit};
 
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Bar Bonus</div>
-                    <div class="totalHealingValue" id="barBonus">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="averageSum">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Hit Rate (SoL)</div>
-                    <div class="totalHealingValue" id="speedHitRate">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Hit Rate</div>
-                    <div class="totalHealingValue" id="sprintHitRate">0.00</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Tick</div>
-                    <div class="totalHealingValue" id="dmgPerTick">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Tick</div>
-                    <div class="totalHealingValue" id="critPerTick">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Tick</div>
-                    <div class="totalHealingValue" id="averageSumTicks">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Hit Rate</div>
-                    <div class="totalHealingValue" id="">1/s</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg DMG (SoL + DoT)</div>
-                    <div class="totalHealingValue" id="speedSprintAvgDamage">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg DPS (SoL + DoT)</div>
-                    <div class="totalHealingValue" id="speedSprintAvgSum">0.00</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Avg DPS (Sprint + DoT)</div>
-                    <div class="totalHealingValue" id="normalSprintAvgSum">0.00</div>
-                </div>
-            </div>
-
-        </div>
-        `;
-        readSelection("abilityBreakdownBody3").innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability3.base.desc}</div>
-        `;
-
-        const basePowerModifier = (isHVStarter ? 250.5 : 148.7)/100;
-        const baseDotModifier = (isHVStarter ? 89.5 : 53.1)/100;
-        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierElectric + index.PowerModifierSingular;
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const skillPowerModifierDot = baseDotModifier + sumModifierBonus;
-    
-        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
-        const basePowerRatio = 1 + index.PowerRatioBase;
-        const electricPowerRatio = 1 + index.PowerRatioElectric;
-        const singularPowerRatio = 1 + index.PowerRatioSingular;
-    
-        // const elecBarBonus = 2.35;
         //Bunny is bugged, and she doesn't get the full 2.5x multi from her 1&3 bar scaling, instead it stops at 9 stacks for 2.35.
-        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15) //TODO: this line might be used later to dynamically state the fill % if we know exactly how the scaling thresholds are set
-        readSelection("barBonus").innerHTML = barFilledAmount.toFixed(2) + "x";
-    
-        //We're assuming you're using a fully enhanced reactor.
-        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * electricPowerRatio * singularPowerRatio * basePowerRatio;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
+        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15)
 
-        const abilityDR = calcs.getResistanceBasedDR(index,"Electric");
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount * abilityDR;
-        const dmgPerTick = baseSkillPower * skillPowerModifierDot * abilityDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerTickCrit = dmgPerTick * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
-        const dmgPerTickAvg = dmgPerTick * critComposite;
-    
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierElec = abilityMods.baseElec + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,barFilledAmount);
+        const damageElec = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierElec);
+
+        const avgDmgPerHit = damage.AVG;
+        const avgDmgPerElec = damageElec.AVG;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Electricity Bar Multi","value": barFilledAmount,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTROCUTION","value": damageElec,"modifier": skillPowerModifierElec,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerElec,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    bunnyThrillCalcsHVStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        //used purely to do emission calcs with the specification that high voltage is active
+        return customDamage.bunnyThrillCalcs(index,returnObject,isCycleCalcs,"High-Voltage");
+    },
+    bunnyThrillCalcsSuperStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        //used purely to do emission calcs with the specification that high voltage is active
+        return customDamage.bunnyThrillCalcs(index,returnObject,isCycleCalcs,"Superconductor");
+    },
+    //ability 2
+    bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const bonus = abilityMods.SprintSpeedBonus;
+        settingsRef.CostType = abilityMods.CostType;
+
+        index.SprintSpeedBonus += settingsRef.bunnySoLSpeed ? bonus : 0;
+    },
+    bunnySpeedCalcsTier0SpeedTransitionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Electric Transition");
+    },
+    bunnySpeedCalcsTier0SpeedBionicStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Bionic Fuel");
+    },
+    bunnySpeedCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const costOverTime = abilityMods.cost * (1 + index.SkillCost);
+        const isMPbasedCost = settingsRef.CostType === "MP";
+        const duration = returnObject.displayMP/costOverTime;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Cost/s","value": costOverTime,"unit": ""},
+                {"name": "Sprint Duration","value": isMPbasedCost ? duration : "Infinite","unit": isMPbasedCost ? "s" : ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "toggleElemID": ["bunnySoLSpeed","Include Speed Bonus?"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTRICITY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    bunnySpeedCalcsTransitionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.bunnySpeedCalcs(index,returnObject,isCycleCalcs,"Electric Transition")
+    },
+    bunnySpeedCalcsBionicStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Bionic Fuel"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const costOverTime = abilityMods.cost * (1 + index.SkillCost) * returnObject.displayHealth;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "HP Cost/s","value": costOverTime,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "toggleElemID": ["bunnySoLSpeed","Include Speed Bonus?"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTRICITY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    //ability 3
+    bunnyEmissionCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        //Bunny is bugged, and she doesn't get the full 2.5x multi from her 1&3 bar scaling, instead it stops at 9 stacks for 2.35.
+        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15)
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierElec = abilityMods.baseElec + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,barFilledAmount);
+        const damageElec = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierElec);
+
+
         //bunny hits every 0.9 seconds when sprinting normally, and 0.6 seconds when using speed of light.
         //this is with an 800 sprint speed weapon though TODO: possibly look into how weapon speed modifies sprint speed, if it isn't negligible
         //when SOL is active, supposedly you're maxed at 800 MS regardless, so the only dps loss could be for normal sprints
-        const hitsPerSecondSpeed = 0.6;
-        const hitsPerSecond = 0.9;
-    
+        const secondsPerHitNormal = 0.9;//the time between hits when sprinting normally.
+        const totalSpeedBonus = index.SprintSpeedBonus;
+        const newSecondsPerHit = secondsPerHitNormal/(1 + totalSpeedBonus);
+        const hitsPerSecond = 1/newSecondsPerHit;
+
+        const avgDmgPerHit = damage.AVG;
+        const avgDmgPerElec = damageElec.AVG;
+        const avgDPSHits = damage.AVG * hitsPerSecond;
+        const avgDPSElec = damageElec.AVG;//since the interval is once per second, it is its own DPS value
+
+        const isMPbasedCost = settingsRef.CostType === "MP";
         const costModifier = 1 + index.SkillCost;
         const drainRate = 25 * costModifier;
         const startCost = 12 * costModifier;
         const maxMP = returnObject.displayMP;
-    
-        const speedDuration = (maxMP - startCost)/drainRate;
-        const thirdHits = Math.floor(speedDuration/hitsPerSecondSpeed);
-    
-        const dpsNormalHits = dmgPerHitAvg * (1/hitsPerSecond);
-        const dpsNormalTicks = dmgPerTickAvg; 
-        const dpsNormalSum = dpsNormalHits + dpsNormalTicks;//sum total avg dps when doing NORMAL SPRINT
-    
-        const dpsSpeedHits = (dmgPerHitAvg * thirdHits)/speedDuration;
-        const dpsSpeedSum = dpsSpeedHits + dpsNormalTicks;//sum total avg dps when doing SPEED OF LIGHT
-    
-        const speedTotalDmgAvg = (dpsNormalTicks * speedDuration) + (dmgPerHitAvg * thirdHits);
-    
-        readSelection("initialCost").innerHTML = startCost.toFixed(2) + "MP";
-        readSelection("drainRate").innerHTML = drainRate.toFixed(2) + "MP/s";
-        readSelection("speedDuration").innerHTML = speedDuration.toFixed(2) + "s";
-    
-        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
-    
-        readSelection("dmgPerShot").innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;
-    
-        readSelection("dmgPerTick").innerHTML = `${dmgPerTick.toLocaleString()}`;
-        readSelection("critPerTick").innerHTML = `${dmgPerTickCrit.toLocaleString()}`;
-        readSelection("averageSumTicks").innerHTML = `${dmgPerTickAvg.toLocaleString()}`;
-    
-        readSelection("normalSprintAvgSum").innerHTML = `${dpsNormalSum.toLocaleString()}`;
-        readSelection("speedSprintAvgSum").innerHTML = `${dpsSpeedSum.toLocaleString()}`;
-    
-        readSelection("speedSprintAvgDamage").innerHTML = `${speedTotalDmgAvg.toLocaleString()}`;
-    
-        readSelection("speedHitRate").innerHTML = (1/hitsPerSecondSpeed).toFixed(2) + "/s";
-        readSelection("sprintHitRate").innerHTML = (1/hitsPerSecond).toFixed(2) + "/s";
+        const speedDuration = settingsRef.bunnyCostRestrictions && isMPbasedCost ? (maxMP - startCost)/drainRate : 1;
+
+        const totalHits = Math.floor(speedDuration*hitsPerSecond);
+        const totalTicks = Math.floor(speedDuration);
+        const totalDamagePerInterval = totalHits*damage.AVG + totalTicks*damageElec.AVG;
+        const totalAVGDPS = settingsRef.bunnyCostRestrictions && isMPbasedCost ? totalDamagePerInterval/speedDuration : avgDPSHits + avgDPSElec;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Electricity Bar Multi","value": barFilledAmount,"unit": "x"},
+                {"name": "Sprint Speed Bonus","value": totalSpeedBonus,"unit": "%"},
+                {"name": "Hits/s","value": hitsPerSecond,"unit": ""},
+            ]
+
+            let rowInjectionSUMS = [
+                {"name": "Total AVG DPS","value": totalAVGDPS,"unit": ""},
+                {"name": "SUM Total AVG/Interval","value": totalDamagePerInterval,"unit": ""},
+                {"name": "Hits DPS","value": avgDPSHits,"unit": ""},
+                {"name": "Ticks DPS","value": avgDPSElec,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "LIGHTNING EMISSION","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "toggleElemID": ["bunnyCostRestrictions","Use Cost Restrictions?"],
+                    "rowInjection": [rowInjection,"Sprint Speed Bonuses can be toggled on the abilities that provide them"],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTROCUTION","value": damageElec,"modifier": skillPowerModifierElec,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjectionSUMS,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,avgDmgPerElec,avgDPSHits,avgDPSElec,totalAVGDPS}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    bunnyCondenseCalcs(index,returnObject,isCycleCalcs,isHVStarter) {
+    bunnyEmissionCalcsHVStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.bunnyEmissionCalcs(index,returnObject,isCycleCalcs,"High-Voltage");
+    },
+    bunnyEmissionCalcsSuperStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.bunnyEmissionCalcs(index,returnObject,isCycleCalcs,"Superconductor");
+    },
+    //ability 4
+    bunnyCondenseCalcsTier0Speed(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Bunny;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4["Electric Condense"].type;
         const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Electric Condense"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-        const basePowerModifier = 1946/100;
+        const bonus = abilityMods.SprintSpeedBonus;
+
+        index.SprintSpeedBonus += settingsRef.bunnyCondenseSpeed ? bonus : 0;
+    },
+    bunnyCondenseCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Electric Condense"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-    
-        // const elecBarBonus = 2.35;
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
         //Bunny is bugged, and she doesn't get the full 2.5x multi from her 1&3 bar scaling, instead it stops at 9 stacks for 2.35.
-        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15) //TODO: this line might be used later to dynamically state the fill % if we know exactly how the scaling thresholds are set
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * barFilledAmount * abilityDR;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitAvg = dmgPerHit * critComposite;
+        const barFilledAmount = 1 + ((settingsRef.barPercentState/10)*0.15)
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Bar Bonus</div>
-                    <div class="totalHealingValue">${barFilledAmount.toFixed(2) + "x"}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue">${baseSkillPower.toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue">${`${(skillPowerModifier*100).toLocaleString()}%`}</div>
-                </div>
-            </div>
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
 
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHit.toLocaleString()}</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHitCrit.toLocaleString()}</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue">${dmgPerHitAvg.toLocaleString()}</div>
-                </div>
-            </div>
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,null,barFilledAmount);
 
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4["Electric Condense"].desc}</div>
-        `;
+        const avgDmgPerHit = damage.AVG;
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Electricity Bar Multi","value": barFilledAmount,"unit": "x"},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "toggleElemID": ["bunnyCondenseSpeed","Include Speed Bonus?"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTRICITY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-    bunnyFootCalcs(index,returnObject,isCycleCalcs) {
+    //passive
+    bunnyFootCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Bunny;
-        const settingsRef2 = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability5.base.type;
-        const skillPlacement = 5; 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-
-        <div class="totalHealingBox">
-            <div class="statsRowName">Bar % Filled:&nbsp;<span id="barFilledDisplay${skillPlacement}">90%</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="bunnyBarFilledSlider${skillPlacement}" name="slider" min="0" max="90" value="90" step="10" onchange="settings.updateCharacterSettings('Bunny')">
-            </div>
-        </div>
-        <div style="white-space: normal;width: 100%">This controls the % multiplier available to whatever abilities use the electricity bar.</div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5.base.desc}</div>
-        `;
-
-        readSelection(`bunnyBarFilledSlider${skillPlacement}`).value = +settingsRef2.barPercentState;
-        readSelection(`barFilledDisplay${skillPlacement}`).innerHTML = `${settingsRef2.barPercentState}%`;
-    },
-    //Kyle
-    kyleBulwarkTicks(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Kyle;
-
-        readSelection("abilityBreakdownBody2").innerHTML = `
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Hits</div>
-                    <div class="totalHealingValue" id="barBonus2">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower2">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier2">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">DMG/Hit</div>
-                    <div class="totalHealingValue" id="skillDmg2">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Hit</div>
-                    <div class="totalHealingValue" id="critPerShot2">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Hit</div>
-                    <div class="totalHealingValue" id="avgImpact2">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Hits DMG</div>
-                    <div class="totalHealingValue" id="totalBombDamage2">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total AVG DMG</div>
-                    <div class="totalHealingValue" id="totalAvgDamage2">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Cooldown</div>
-                    <div class="totalHealingValue" id="cooldown2">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg Use Duration</div>
-                    <div class="totalHealingValue" id="avgDuration2">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Interval</div>
-                    <div class="totalHealingValue" id="totalInterval">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DPS/Interval</div>
-                    <div class="totalHealingValue" id="avgDPS2">0.00%</div>
-                </div>
-            </div>
-        </div>
-        `;
-
-        readSelection("abilityBreakdownBody2").innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability2["Diamagnetic Bulwark"].desc}</div>
-        `;
-
-        const basePowerModifier = 109.7/100;
-        const maxHits = 50;
-
-        const sumModifierBonus = index.PowerModifierBase + index.PowerModifierNonAttribute + index.PowerModifierDimension;
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-    
-        const reactorOptimizationBonus = globalRecords.reactor.weaponMatched ? 1.6 : 1;
-        const basePowerRatio = 1 + index.PowerRatioBase;
-        const nonAttributePowerRatio = 1 + index.PowerRatioNonAttribute;
-        const dimensionPowerRatio = 1 + index.PowerRatioDimension;
-    
-        //We're assuming you're using a fully enhanced reactor.
-        const baseSkillPower = (11724.62 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * dimensionPowerRatio * basePowerRatio;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier;
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const avgImpact = dmgPerHit * critComposite;
-
-        const totalTicksDamage = dmgPerHit * maxHits;
-        const totalAvgDamage = totalTicksDamage * critComposite;
-
-        const cooldown = 20 * (1 + index.SkillCooldown);
-        const avgUseDuration = 4;
-        const totalInterval = cooldown + avgUseDuration;
-        const totalDPS = totalAvgDamage/totalInterval;
-        // const dmgPerHitAvg = dmgPerHitSum * critComposite;
-    
-        readSelection("barBonus2").innerHTML = maxHits.toFixed(2);
-        readSelection("skillPower2").innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection("powerModifier2").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
-
-        readSelection("skillDmg2").innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection("critPerShot2").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection("avgImpact2").innerHTML = `${avgImpact.toLocaleString()}`;
-
-        readSelection("totalBombDamage2").innerHTML = `${totalTicksDamage.toLocaleString()}`;
-
-        readSelection("totalAvgDamage2").innerHTML = `${totalAvgDamage.toLocaleString()}`;
-
-        readSelection("cooldown2").innerHTML = `${cooldown.toLocaleString()}`;
-        readSelection("avgDuration2").innerHTML = `${avgUseDuration.toLocaleString()}`;
-        readSelection("totalInterval").innerHTML = `${totalInterval.toLocaleString()}`;
-
-
-        readSelection("avgDPS2").innerHTML = `${totalDPS.toLocaleString()}`;
-    },
-    kyleThrustersCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Kyle;
         const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4.base.type;
-        const skillPlacement = 4;
-
-        readSelection("abilityBreakdownBody4").innerHTML = `
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Mag Force</div>
-                    <div class="totalHealingValue" id="barBonus">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill DMG</div>
-                    <div class="totalHealingValue" id="skillDmg">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Mag Force DMG</div>
-                    <div class="totalHealingValue" id="magDmg">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Dmg/Impact</div>
-                    <div class="totalHealingValue" id="dmgPerShot">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Impact</div>
-                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Impact</div>
-                    <div class="totalHealingValue" id="averageSum">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Cooldown</div>
-                    <div class="totalHealingValue" id="cooldown">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg Use Duration</div>
-                    <div class="totalHealingValue" id="avgActiveDuration">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Interval</div>
-                    <div class="totalHealingValue" id="damageIntervals">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG DPS/Interval</div>
-                    <div class="totalHealingValue" id="damagePerSecond">0.00%</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection("abilityBreakdownBody4").innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4.base.desc}</div>
-        `;
-        readSelection("kyleMagForceBar4").value = settingsRef.magForceBarState;
-        readSelection("barFilledDisplay").innerHTML = `${settingsRef.magForceBarState}%`;
-
-
-        const basePowerModifier = 26980.6/100;
-        const baseMagModifier = 12861.8/100;
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-        //no sum modifier for mag force as it is static
-    
-        //double shield to get mag force, and then apply the %portion the user specified on the mag force bar to get the actual mag force amount.
-        //also note this is based on total shield, not fixed or display shield, so overwhelming HP does not ruin your mag force amount
-        const magForce = (returnObject.totalShield * 2) * (+settingsRef.magForceBarState/100);
-        readSelection("barBonus").innerHTML = magForce.toFixed(2);
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * abilityDR;
-        const dmgPerHitMag = magForce * baseMagModifier * abilityDR;
-        const dmgPerHitSum = dmgPerHit + dmgPerHitMag;
-
-        const dmgPerHitCrit = dmgPerHitSum * critDamage;
-        const dmgPerHitAvg = dmgPerHitSum * critComposite;
-
-        const cooldown = 120 * (1 + index.SkillCooldown);
-        const avgActiveDuration = 5;
-        const damageIntervals = cooldown + avgActiveDuration;
-        const damagePerSecond = dmgPerHitAvg/damageIntervals;
-    
-        readSelection("barBonus").innerHTML = magForce.toFixed(2);
-        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
-
-        readSelection("skillDmg").innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection("magDmg").innerHTML = `${dmgPerHitMag.toLocaleString()}`;
-    
-        readSelection("dmgPerShot").innerHTML = `${dmgPerHitSum.toLocaleString()}`;
-        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;//
-
-
-        readSelection("cooldown").innerHTML = `${cooldown.toLocaleString()}`;//
-        readSelection("avgActiveDuration").innerHTML = `${avgActiveDuration.toLocaleString()}`;//
-        readSelection("damageIntervals").innerHTML = `${damageIntervals.toLocaleString()}`;//
-
-        readSelection("damagePerSecond").innerHTML = `${damagePerSecond.toLocaleString()}`;//
-    
-    
-    },
-    kyleBomberCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Kyle;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability4["Superconductive Bombing"].type;
-
-        readSelection("abilityBreakdownBody4").innerHTML = `
-        <div class="traitMegaTitleHeader">RESULTS</div>
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Mag Force</div>
-                    <div class="totalHealingValue" id="barBonus">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Skill Power</div>
-                    <div class="totalHealingValue" id="skillPower">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Power Mod</div>
-                    <div class="totalHealingValue" id="powerModifier">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Impact DMG</div>
-                    <div class="totalHealingValue" id="skillDmg">0.00</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Impact</div>
-                    <div class="totalHealingValue" id="critPerShot">0.00%</div>
-                </div>
-            </div>
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Avg/Impact</div>
-                    <div class="totalHealingValue" id="avgImpact">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Bomb DMG</div>
-                    <div class="totalHealingValue" id="magDmg">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Crit/Bomb</div>
-                    <div class="totalHealingValue" id="magDmgCrit">0.00%</div>
-                </div>
-            </div>
-
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Cost/Set</div>
-                    <div class="totalHealingValue" id="costPerSet">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Bombs/Set</div>
-                    <div class="totalHealingValue" id="BombsPerSet">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Bombs</div>
-                    <div class="totalHealingValue" id="totalBombs">0.00%</div>
-                </div>
-            </div>
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total Bomb DMG</div>
-                    <div class="totalHealingValue" id="totalBombDamage">0.00%</div>
-                </div>
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">AVG Bomb DMG</div>
-                    <div class="totalHealingValue" id="avgBombDamage">0.00%</div>
-                </div>
-            </div>
-
-
-
-            <div class="totalHealingBox">
-                <div class="totalHealingBoxHalf hasHoverTooltip">
-                    <div class="totalHealingHeader">Total AVG/Cast</div>
-                    <div class="totalHealingValue" id="totalAvgDamage">0.00%</div>
-                </div>
-            </div>
-        </div>
-        `;
-        readSelection("abilityBreakdownBody4").innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability4["Superconductive Bombing"].desc}</div>
-        `;
-
-
-        const basePowerModifier = 1895.7/100;
-
-        //TODO: see if this is still bugged later. Right now the bombs individually do 100% instead of 835.6%, and only 5-6 bombs drop right now.
-        //this means that either the damage is split between all bombs and we're still missing damage, or it means all bombs are doing about ~12% of the damage they should be.
-        const basePowerModifierBombs = 835.6/100;
-        // const basePowerModifierBombs = 790.3/100;
-        // const basePowerModifierBombs = 100/100;
-
-        // const costPerDropSet = 0.10 * (1 + index.SkillCost);
-        const costPerDropSet = 1080 * (1 + index.SkillCost);
-        const dropInterval = 0.5;
-
-        const riseDuration = 1;
-        // const flightDuration = 7.8;//this is the usable duration, can't be modified, and given that the drop interval is .5s that means we'll always have excess time
-        const flightDuration = 7.4 * (1 + index.SkillDuration);//this is the usable duration, can't be modified, and given that the drop interval is .5s that means we'll always have excess time
-        const maxDropIntervals = Math.floor(flightDuration/dropInterval);
-
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
-        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-
-        const skillPowerModifier = basePowerModifier + sumModifierBonus;
-        const skillPowerModifierBombs = basePowerModifierBombs + sumModifierBonus;
-    
-        const magForceTotal = returnObject.totalShield * 2;
-        const magForce = magForceTotal * (+settingsRef.magForceBarState/100);
-        readSelection("barBonus").innerHTML = magForce.toFixed(2);
-
-        // const flatCostPerSet = magForceTotal * costPerDropSet;
-        const flatCostPerSet = costPerDropSet;
-        const totalDropsPossible = Math.min(maxDropIntervals,Math.floor(magForce/flatCostPerSet));
-        const bombsPerSet = 6;
-        const totalBombsDropped = bombsPerSet * totalDropsPossible;
-
-        // const baseSkillPower = (11060.96 * reactorOptimizationBonus + index.SkillAttackColossus) * nonAttributePowerRatio * techPowerRatio * basePowerRatio;
-    
-        const critRate = returnObject.totalSkillCritRate;
-        const critDamage = returnObject.totalSkillCritDamage;
-        const critComposite = 1 + (critRate * (critDamage-1));
-    
-        const dmgPerHit = baseSkillPower * skillPowerModifier * abilityDR;
-        const dmgPerHitBombs = baseSkillPower * skillPowerModifierBombs * abilityDR;
-        // const dmgPerHitSum = dmgPerHit + dmgPerHitMag;
-
-        const dmgPerHitCrit = dmgPerHit * critDamage;
-        const dmgPerHitCritBombs = dmgPerHitBombs * critDamage;
-
-        const avgImpact = dmgPerHit * critComposite;
-        const totalBombDamage = totalBombsDropped * dmgPerHitBombs;
-        const avgBombDamage = totalBombDamage * critComposite;
-
-        const totalAvgDamage = avgImpact + avgBombDamage;
-        // const dmgPerHitAvg = dmgPerHitSum * critComposite;
-    
-        readSelection("barBonus").innerHTML = magForce.toFixed(2);
-        readSelection("skillPower").innerHTML = `${baseSkillPower.toLocaleString()}`;
-        readSelection("powerModifier").innerHTML = `${(sumModifierBonus*100).toLocaleString()}%`;
-
-        readSelection("skillDmg").innerHTML = `${dmgPerHit.toLocaleString()}`;
-        readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        readSelection("avgImpact").innerHTML = `${avgImpact.toLocaleString()}`
-
-        readSelection("magDmg").innerHTML = `${dmgPerHitBombs.toLocaleString()}`;
-        readSelection("magDmgCrit").innerHTML = `${dmgPerHitCritBombs.toLocaleString()}`;
-
-
-        readSelection("costPerSet").innerHTML = `${(costPerDropSet).toLocaleString()}`;
-        readSelection("BombsPerSet").innerHTML = bombsPerSet;
-        readSelection("totalBombs").innerHTML = `${totalBombsDropped.toLocaleString()}`;
-
-        readSelection("totalBombDamage").innerHTML = `${totalBombDamage.toLocaleString()}`;
-        readSelection("avgBombDamage").innerHTML = `${avgBombDamage.toLocaleString()}`;
-
-        readSelection("totalAvgDamage").innerHTML = `${totalAvgDamage.toLocaleString()}`;
-    
-        // readSelection("dmgPerShot").innerHTML = `${dmgPerHitSum.toLocaleString()}`;
-        // readSelection("critPerShot").innerHTML = `${dmgPerHitCrit.toLocaleString()}`;
-        // readSelection("averageSum").innerHTML = `${dmgPerHitAvg.toLocaleString()}`;//
-    },
-    kyleBarCalcs(index,returnObject,isCycleCalcs) {
-        const characterRef = characters.Kyle;
-        const settingsRef = characterRef.characterSettings;
-        const abilityTypeArray = characterRef.abilities.ability5.base.type;
         const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
-        <div class="totalHealingBox">
-            <div class="statsRowName">Mag % Filled:&nbsp;<span id="barFilledDisplay">100%</span></div>
-            <div class="statsRowToggle">
-                <input type="range" id="kyleMagForceBar4" name="slider" min="0" max="100" value="100" step="10" onchange="settings.updateCharacterSettings('Kyle')">
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "0-Point","value": 12.5,"unit": "m"},
+            //     {"name": "+% Weak Point DMG","value": weakspotBonus,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "MOVEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["barPercentState",0,90,10,"Bar % Filled"],
+                    "condition": false,"desc": "This controls the % multiplier available to whatever abilities use the electricity bar"},
+                {"header": "STOPPED","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "DOUBLE JUMP","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
-        </div>
-        `;
-        readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML += `
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${characterRef.abilities.ability5.base.desc}</div>
-        `;
-
-        readSelection("kyleMagForceBar4").value = settingsRef.magForceBarState;
-        readSelection("barFilledDisplay").innerHTML = `${settingsRef.magForceBarState}%`;
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
     },
+    bunnyFootCalcsCharge(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Bunny;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Electric Charge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierCharge = abilityMods.baseCharge + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageCharge = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierCharge);
+
+        const avgDmgPerHit = damage.AVG;
+        const avgDmgPerHitCharge = damageCharge.AVG;
 
 
-
-
-
-
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "0-Point","value": 12.5,"unit": "m"},
+            //     {"name": "+% Weak Point DMG","value": weakspotBonus,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "MOVEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["barPercentState",0,90,10,"Bar % Filled"],
+                    "condition": false,"desc": "This controls the % multiplier available to whatever abilities use the electricity bar"},
+                {"header": "STOPPED","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "DOUBLE JUMP","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "CHARGE","value": damageCharge,"modifier": skillPowerModifierCharge,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,avgDmgPerHitCharge}
+        }
+    },
 
 
 
@@ -3163,7 +3727,38 @@ const customDamage = {
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
         <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
         `;
-    }
+    },
+    peacemakerCalcsTier0(index,returnObject,isCycleCalcs) {
+        const weaponRef = sniperList["Peace Maker"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        const currentStacks = +settingsRef.peacemakerStackCount;
+        const stackBonusRef = [0.00,0.05,0.145,0.24,0.335,0.43]
+        const currentBonus = stackBonusRef[currentStacks]
+
+        index.PowerRatioNonAttribute += currentBonus;
+
+        const rowInjection = [
+            {"name": "+Non-Attribute Power Ratio","value": currentBonus,"unit": "%"},
+        ]
+        const breakdownArray = [
+            {"header": "SINGLE RELOAD FOR PEACE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["peacemakerStackCount",0,5,1,"Stack Count"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+            {"header": "AIMING AT MAX STACKS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML = `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Peace Maker",true)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        `;
+    },
 
 }
 
@@ -3205,7 +3800,7 @@ let conditionalHelpers = {
                 }
                 else if (statType === "cost") {if (isModifiedByIndex) {statValue *= (1 + index.SkillCost);}}
                 else if (statType === "magazine") {if (isModifiedByIndex) {statValue *= (1 + index.MagazineSize);}}
-                else if (entry.isUnlabeledPercent) {unit = "%";}
+                if (entry.isUnlabeledPercent) {unit = "%";}
 
                 rowString += addRow("",statName,statValue,isRounded,unit);
                 if (limit) {rowString += addRow("","Max Range",limit,true,"%");}
@@ -3363,5 +3958,245 @@ let conditionalHelpers = {
 
         if (!globalRecords[elemID]) {globalRecords[comparableToggleID] = true;}
         updateFormulas();
+    }
+}
+
+
+
+
+
+
+
+
+
+let moduleQueryFunctions = {
+    clearQueryResultsDisplay() {
+        readSelection("moduleQueryBoxHolder").innerHTML = "";
+    },
+    clearInvalidQuerySelections() {
+        const referenceArray = globalRecords.character.modQueryOptions;
+        let isValidMod = false;
+        for (let entry of referenceArray) {
+            if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
+        }
+        if (!isValidMod) {
+            for (let entry of referenceArray) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
+        }
+    },
+    getUpdatedQueryModSelections() {
+        const characterRef = globalRecords.character;
+        const currentCharacter = characterRef.currentCharacter;
+        const currentCharacterMods = characterRef.mods;
+        const abilityArray = characterRef.abilityArray;
+        const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
+
+        let newModArray1 = [...currentCharacterMods];
+        let newModArray2 = [...currentCharacterMods].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
+        characterRef.modQueryOptions = [...currentCharacterMods].slice(2);
+
+        const modKeyReference = Object.keys(modData);
+
+
+        // Array of strings that will be the option names
+        const queryLister = readSelection("queryModList");
+        queryLister.innerHTML = "";
+        // Loop through the array and create option elements
+        newModArray2.forEach(function(optionName) {
+            const option = document.createElement("option");
+            // option.value = optionName.toLowerCase().replace(/\s+/g, '-'); // Set a value (optional)
+            option.textContent = optionName; // Set the display name
+            queryLister.appendChild(option); // Append the option to the select element
+        });
+
+        let isValidMod = false;
+        for (let entry of newModArray2) {
+            if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
+        }
+        if (!isValidMod) {
+            for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
+        }
+
+        const abilityLister = readSelection("queryAbilityList");
+        const abilityOptionLister = readSelection("queryAbilityOptionList");
+
+        //ability array handling is done within userTriggers.updateSelectedMod
+        const arrayRef = characterRef.abilityArray;
+        const abilityRefs = characters[currentCharacter].abilities;
+
+        //ABILITY KEYS
+        let abilityRefArray = [];
+        for (let i=1;i<=5;i++) {
+            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+            const currentPath = abilityRefs[`ability${i}`][path];
+            abilityRefArray.push(currentPath.name);
+        }
+        const abilityRefSet = new Set(abilityRefArray);
+        abilityLister.innerHTML = "";
+        abilityRefArray.forEach(function(optionName) {
+            const option = document.createElement("option");
+            option.textContent = optionName;
+            abilityLister.appendChild(option);
+        });
+        if (!abilityRefSet.has(readSelection("queryAbility").value)) {readSelection("queryAbility").value = abilityRefArray[0]}
+        const selectedAbilityIndexReference = abilityRefArray.indexOf(readSelection("queryAbility").value);
+        const selectedAbilityPath = abilityRefs[`ability${selectedAbilityIndexReference+1}`][arrayRef[selectedAbilityIndexReference] === 0 ? "base" : arrayRef[selectedAbilityIndexReference]];
+        const currentAbilityReturnOptions = selectedAbilityPath.returnStatOptions;
+
+        //ABILITY OPTION RETURN KEYS
+        const optionKeys = Object.keys(currentAbilityReturnOptions);
+        const optionKeysSet = new Set(optionKeys);
+        abilityOptionLister.innerHTML = "";
+        if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+        else {
+            optionKeys.forEach(function(optionName) {
+                const option = document.createElement("option");
+                option.textContent = optionName || "N/A (or not coded yet)";
+                abilityOptionLister.appendChild(option);
+            });
+            if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[optionKeys.length-1]}
+        }
+        const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+        const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : currentAbilityReturnOptions[optionKeys[selectedAbilityOptionIndexReference]];
+
+        return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+    },
+    getModuleQueryResults() {
+        const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections();
+        moduleQueryFunctions.clearInvalidQuerySelections();
+        const characterRef = globalRecords.character;
+        const currentCharacter = characterRef.currentCharacter;
+        const currentCharacterMods = characterRef.mods;
+        const abilityArray = characterRef.abilityArray;
+        const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
+
+        let newModArray1 = [...currentCharacterMods];
+        const modSelection = readSelection("queryMod").value;
+        //abort invalid or empty queries
+        if (modSelection === "" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
+            readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the ability you selected either:<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
+            return;
+        }
+
+
+
+        const indexToModify = characterRef.modQueryOptions.indexOf(modSelection) + 2;
+        const modKeyReference = Object.keys(modData);
+        const abilityTarget = `ability${selectedAbilityIndexReference+1}`;
+        const targetReturnValue = `${selectedAbilityOptionPath}`;
+
+
+        newModArray1[indexToModify] = "";
+        const modCategoriesHolder = [];
+        for (let entry of newModArray1) {
+            if (modData[entry]) {
+                if (modData[entry].category === "") {continue;}
+                modCategoriesHolder.push(modData[entry].category);
+            }
+        }
+        const categorySet = new Set(modCategoriesHolder);
+        const modSet = new Set(newModArray1);
+        readSelection("moduleQueryBoxHolder").innerHTML = "";
+
+        let queryResultsArray = [];
+        for (let entry of modKeyReference) {
+            if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
+            newModArray1[indexToModify] = entry;
+
+            queryResultsArray.push(
+                {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
+            )
+        }
+
+
+        // console.log(queryResultsArray)
+
+        queryResultsArray.sort((a, b) => b.returnedValue - a.returnedValue); // Sort in ascending order
+
+        let referencePoint = {};
+        for (let entry of queryResultsArray) {
+            if (entry.modName === modSelection) {
+                referencePoint = {...entry};
+                queryResultsArray.splice(queryResultsArray.indexOf(entry),1)
+                break;
+            }
+        }
+        const highestValue = queryResultsArray[0].returnedValue
+        const lowestValue = queryResultsArray[queryResultsArray.length-1].returnedValue;
+        const referenceValue = referencePoint.returnedValue;
+
+        // readSelection("moduleQueryBoxHolder").innerHTML += `${referencePoint.modName} - ${referencePoint.returnedValue.toLocaleString()} - ${referencePoint.category}<br><br>`
+        // for (let entry of queryResultsArray) {
+        //     readSelection("moduleQueryBoxHolder").innerHTML += `${entry.modName} - ${entry.returnedValue.toLocaleString()} - ${entry.category}<br>`
+        // }
+        
+        
+        const barWidth = 200;
+        
+        // Get the container for the table
+        const table = document.getElementById('moduleQueryBoxHolder');
+        function createRow(entry) {
+            const totalRange = highestValue - lowestValue;//the range between the lowest value seen, and the highest value seen, used to enact proportions between the ref point
+            const referencePositionPercentage = ((referenceValue - lowestValue) / totalRange) * 100;//ref point placement
+            const percentageDifference = ((entry.returnedValue - referenceValue) / totalRange) * 100;//this is ONLY for the bar % width, not the diff %
+
+            //And then this is for the actual value % diff, not the bar width
+            const percentageDifferenceCheck = entry.returnedValue/referenceValue;
+            const percentageDifferenceValue = percentageDifferenceCheck >= 0 ? (percentageDifferenceCheck-1) * 100 : (1 - percentageDifferenceCheck) * -100;
+        
+            // Create the row
+            const row = document.createElement('div');
+            row.classList.add('modsQueryResultsRow');
+        
+            // Create a div for the name
+            const nameDiv = document.createElement('div');
+            nameDiv.classList.add('modsQueryResultsRowName');
+            nameDiv.textContent = `${percentageDifferenceValue>=0 ? "+" : ""}${(percentageDifferenceValue).toFixed(2)}% ${entry.modName} (${(+entry.returnedValue.toFixed(0)).toLocaleString()})`;
+        
+            // Create a div for the bar
+            const barContainer = document.createElement('div');
+            barContainer.classList.add('modsQueryResultsRowBarBoxHolder');
+        
+            // Create the reference tick mark
+            const refMark = document.createElement('div');
+            refMark.classList.add('modsQueryResultsRowBarTickMark');
+            refMark.style.position = 'absolute';
+            refMark.style.left = `${referencePositionPercentage}%`;//Set to ref point
+            refMark.style.width = '2px';
+            refMark.style.height = '100%';
+            refMark.style.backgroundColor = 'white';
+            refMark.style.zIndex = '1';
+        
+            // Create the bar that shows the percentage difference
+            const bar = document.createElement('div');
+            bar.classList.add('modsQueryResultsRowBar');
+            bar.style.position = 'absolute';
+            bar.style.height = '100%';
+        
+            if (percentageDifference < 0) {
+                // Negative bar (to the left of the reference point)
+                bar.style.width = `${Math.abs(percentageDifference)}%`;
+                bar.style.backgroundColor = 'red';
+                bar.style.left = `${referencePositionPercentage - Math.abs(percentageDifference)}%`;
+            } else {
+                // Positive bar (to the right of the reference point)
+                bar.style.width = `${percentageDifference}%`;
+                bar.style.backgroundColor = 'green';
+                bar.style.left = `${referencePositionPercentage}%`;
+            }
+        
+            // Append elements to the bar container
+            barContainer.appendChild(refMark);
+            barContainer.appendChild(bar);
+        
+            // Append the name and bar to the row
+            row.appendChild(barContainer);
+            row.appendChild(nameDiv);
+        
+            // Append the row to the table
+            table.appendChild(row);
+        }
+        
+        // Create rows for each person in the array
+        queryResultsArray.forEach(entry => createRow(entry));
     }
 }

@@ -125,6 +125,7 @@ const modData = {
         "desc": "When landing a Skill Attack while the enemy is not targeting you, Skill Power +24.9%. On Skill Attack against an immobilized enemy, Skill Power +49.8%.",
         "stats": {
             "PowerRatioBase": 0.498//initially added together accidentally to 0.747, but it is 24.9 OR 49.8
+            // "PowerRatioBase": 0.2988
         },
     },
     "Weaken Recovery": {
@@ -1065,10 +1066,10 @@ const modData = {
         "type": "Descendant",
         "cost": 15,
         "category": "Cooldown",
-        "desc": "Skill Duration +40%, Skill Power Modifier -20%. .",
+        "desc": "Skill Duration +40%, Skill Power Modifier -21.1%",
         "stats": {
             "SkillDuration": 0.40,
-            "PowerModifierBase": -0.20
+            "PowerModifierBase": -0.211
         },
     },
     "Maximize Conservation": {
@@ -1855,6 +1856,37 @@ const modData = {
         "stats": {
             "SkillCritRate": 0.10,
             "PowerModifierDimension": 0.269
+        },
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Last Stand": {
+        "rarity": "Ultimate",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 11,
+        "category": "Arche Tech",
+        "desc": "ONLY FACTORS ON KYLE THRUSTERS<br>On Skill Attack, consumes all Shield to deal additional damage on top of damage dealt. Deals 8.5% additional damage, which can increase up to 17% based on the amount of Shield consumed (max 10,000)<br>Once triggered, recovers Shield by 1.5% of Max Shield every second for 30s.",
+        "stats": {
+            // "SkillCritRate": 0.10,
+            // "PowerModifierDimension": 0.269
         },
     },
 }

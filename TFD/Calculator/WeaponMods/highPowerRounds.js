@@ -460,7 +460,7 @@ const highPowerRounds = {
             "FirearmATK%": 0.01
         }
     },
-    "Magazine Compulsive": {
+    "Compulsive Magazine": {
         "rarity": "Rare",
         "polarity": "Cerulean",
         "type": "High-Power Rounds",

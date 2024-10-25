@@ -27,11 +27,11 @@ const specialRounds =  {
         "category": "Special Mod",
         "stats": {
             "FireRate": 0.20,
-            "FireRate": -0.40,
+            // "FireRate": -0.40, //this will be added in with functions, not via a flat value
             "Recoil": -0.50,
             "FirearmATK%": 0.60
         },
-        "desc": "Base Fire Rate -20%. While pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 1s (up to 10 stacks)."
+        "desc": "Base Fire Rate -20%. While pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.5s (up to 10 stacks)."
     },
     // "Lethal Finish": {//
     //     "rarity": "Ultimate",
@@ -655,7 +655,7 @@ const specialRounds =  {
     //     "stats": {},
     //     "desc": "Max Special Rounds +60%, Movement Speed -20%"
     // },
-    "Magazine Compulsive": {//
+    "Compulsive Magazine": {//
         "rarity": "Rare",
         "polarity": "Cerulean",
         "type": "Special Rounds",

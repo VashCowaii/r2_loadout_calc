@@ -121,7 +121,6 @@ const sniperList = {
             "BASIC": [],
         },
     },
-
     "Perforator": {
         "name": "Perforator",
         "baseATK": 67092,
@@ -241,7 +240,7 @@ const sniperList = {
         },
         "customDPSBase": "blueBeetleCalcsTier0",
         "customDPS": "",
-        "desc": "When using a Dimension skill, recovers Custom Resource with a set chance. When using a Tech Skill, grants the unique ability Pest Control with a set chance.",
+        "desc": "When using a Fusion skill, grants self the unique ability Arcane Energy with a set chance. When using a Singular skill, grants self the unique Ability Purification with a set chance.",
         "displayStatsALT": {
             "BASIC": [
                 {"statType": "","statName": "Skill Cost","value": 0,"limit": null,"isModified": false},
@@ -258,6 +257,43 @@ const sniperList = {
             ],
         },
         "subStats": {}
+    },
+    "Peace Maker": {
+        "name": "Peace Maker",
+        "baseATK": 32471,
+        "baseCritRate": 0.50,
+        "baseCritDamage": 2.5,
+        "baseWeakPoint": 1.20,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+        "magazine": 8,
+        "ammoType": "Impact",
+        "weaponType": "Hand Cannon",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1010_A001.png",
+        "customDPSBase": "peacemakerCalcsTier0",
+        "customDPS": "",
+        "desc": "When using a Dimension or Fusion skill, grants the unique ability Single Reload for Peace. When Single Reload for Peace is at Max Stacks, shooting while aiming rapidly fires all loaded rounds.",
+        "subStats": {},
+        "weaponSettings": {
+            "peacemakerStackCount": 5,
+        },
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "Reload Time Modifier","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "Recoil","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "SINGLE RELOAD FOR PEACE": [
+                {"statType": "","statName": "Trigger Rate","value": 1.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "Skill Cost","value": 0.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Non-Attribute Power Ratio","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Non-Attribute Power/Stack","value": 0.095,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "AIMING AT MAX STACKS": [
+                {"statType": "","statName": "Fire Rate","value": 545,"limit": null,"isModified": false},
+            ],
+        },
     },
 
     // //purple snipers

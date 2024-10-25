@@ -526,7 +526,7 @@
 
                     <!-- descendant mods, 1 is augment, 2 is exilus, 3-12 are reg desc mods -->
                     <div class="breakdownTab" id="mod1BreakdownTab">
-                        <div class="breakdownTabHeader">TRANSCENDANT</div>
+                        <div class="breakdownTabHeader">TRANSCENDENT</div>
                         <div class="breakdownTabBody">
                             <div class="selectionSelectorBoxes">
                                 <div class="selectSelectorTitle">SELECT:</div>
@@ -935,10 +935,10 @@
                     <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;"><!-- settings -->
 
                         <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"> <!-- Firearm settings -->
-                            <div class="advancedCategoryHeader" style="border: none;">FIREARM</div>
+                            <div class="advancedCategoryHeader" style="border: none;">PLAYER</div>
 
                             <div class="statisticSettingsRow hasHoverTooltip" id="">
-                                <span class="statsRowName">Use Weak Points?</span>
+                                <span class="statsRowName">Allow Weak Points?</span>
                                 <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
@@ -948,7 +948,7 @@
                                 </div>
                             </div>
                             <div class="statisticSettingsRow hasHoverTooltip" id="">
-                                <span class="statsRowName">Use Crits?</span>
+                                <span class="statsRowName">Allow Crits?</span>
                                 <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
@@ -958,7 +958,7 @@
                                 </div>
                             </div>
                             <div class="statisticSettingsRow hasHoverTooltip" id="">
-                                <span class="statsRowName">Use Physical Bonus?</span>
+                                <span class="statsRowName">Allow Physical Bonus?</span>
                                 <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
@@ -967,6 +967,7 @@
                                     </label>
                                 </div>
                             </div>
+                            
                         </div>
 
                         <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"> <!-- enemy settings -->
@@ -990,6 +991,13 @@
                             <!-- </div> -->
 
                             <div class="totalHealingBox">
+                                <div class="statsRowName">Time Spent Immobile:&nbsp;<span id="ambushImmobileSliderDisplay">100%</span></div>
+                                <div class="statsRowToggle">
+                                    <input type="range" id="ambushImmobileSlider" name="slider" min="0" max="100" value="100" step="1" onchange="userTriggers.updateGeneralSettings()">
+                                </div>
+                            </div>
+
+                            <div class="totalHealingBox">
                                 <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
                                 <div class="statsRowToggle">
                                     <input type="range" id="weaponCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
@@ -1007,31 +1015,49 @@
             </div>
         </div>
 
-        <!-- <div class="mainGridRow3" style="display: flex;width: 100%;border: none;background: none;margin-bottom: 2px;">
+        <div class="mainGridRow3" style="display: flex;width: 100%;border: none;background: none;margin-bottom: 2px;">
 
             <div class="tfdSettingsMainBox">
-                <div class="advancedStatsTitleHeader" style="padding-top: 0;">OPTIMIZER</div>
+                <div class="advancedStatsTitleHeader" style="padding-top: 0;">MOD COMPARISONS</div>
 
                 <div class="survivabilityContainer">
 
                     <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;flex-direction: column;">
 
-                        <div>
-                            Selected Ability to Optimize
-                            <button>GET QUERY STATS</button>
-                        </div>
-
+                        <!-- <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;"></div> -->
                         <div class="breakdownTab" style="display: flex;">
-                            <div class="breakdownTabHeader">SLOT TO QUERY FROM CURRENT MODS</div>
-                            <div class="breakdownTabBody">
-                                <div class="selectionSelectorBoxes">
-                                    <div class="selectSelectorTitle">SELECT:</div>
-                                    <div class="presetsSelectorBox">
-                                        <input class="selectSelector" id="queryMod" list="queryModList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
-                                        <datalist id="queryModList"></datalist>
+
+                            <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;">
+                                <div class="breakdownTabHeader">Ability Targets:</div>
+                                <div class="breakdownTabBody">
+
+                                    <div class="abilityBreakdownGeneralMessage">You need at least one mod equipped on your character in slots 3-12 order to see a breakdown generate.<br>Transcendent and Sub-Attack mods cannot be compared.</div>
+                                    <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                        <div class="selectSelectorTitle">ABILITY:</div>
+                                        <div class="presetsSelectorBox">
+                                            <input class="selectSelector" id="queryAbility" list="queryAbilityList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                            <datalist id="queryAbilityList"></datalist>
+                                        </div>
+                                    </div>
+
+                                    <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                        <div class="selectSelectorTitle">ASPECT:</div>
+                                        <div class="presetsSelectorBox">
+                                            <input class="selectSelector" id="queryAbilityOption" list="queryAbilityOptionList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                            <datalist id="queryAbilityOptionList"></datalist>
+                                        </div>
+                                    </div>
+
+                                    <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                        <div class="selectSelectorTitle">MOD:</div>
+                                        <div class="presetsSelectorBox">
+                                            <input class="selectSelector" id="queryMod" list="queryModList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                            <datalist id="queryModList"></datalist>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                         
 
@@ -1040,7 +1066,7 @@
 
                 </div>
             </div>
-        </div> -->
+        </div>
 
     </div>
 

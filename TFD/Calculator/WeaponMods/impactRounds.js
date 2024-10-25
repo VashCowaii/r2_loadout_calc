@@ -42,7 +42,7 @@ const impactRounds = {
       "category": "Special Mod",
       "stats": {
          "FireRate": 0.20,
-         "FireRate": -0.40,
+         // "FireRate": -0.40, //this will be added in with functions, not via a flat value
          "Recoil": -0.50,
          "FirearmATK%": 0.60
       },
@@ -661,12 +661,12 @@ const impactRounds = {
    //    "stats": {},
    //    "desc": "Max Impact Rounds +15%, Movement Speed -5%"
    // },
-   "Magazine Compulsive": {
+   "Compulsive Magazine": {
       "rarity": "Rare",
       "polarity": "Cerulean",
       "type": "Impact Rounds",
       "cost": 15,
-      "category": "Firearm Critical Hit Rate",
+      "category": "Rounds per Magazine",
       "stats": {
          "MagazineSize": 0.39,
          "WeakPointDamage%": -0.10

@@ -660,8 +660,8 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.50},
         },
 
-        "DEF": 162159,//was 162232
-        "Non-Attribute": 162159,//was 162232
+        "DEF": 162159.1,//was 162232
+        "Non-Attribute": 162159.1,//was 162232
         "Fire": 162159.1,//was 162232
         "Electric": 75718.5,//was 75746
         "Chill": 250195.05,//was 250324
