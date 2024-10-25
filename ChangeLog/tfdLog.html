@@ -9,6 +9,56 @@
 <!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
 
 <div>
+    <h1>Oct X, 2024 - THE MOD COMPARISONS UPDATE + JAYBER BUT WHO CARES</h1>
+    <ul>
+        <h3>MOD COMPARISONS</h3>
+
+        <li>Added the ability to compare one mod you have selected, against all other possible mods that could fit in that slot, in order to determine if there are better options for your build in that mod slot</li>
+        <li>Comparisons only work on abilities right now, and you need to select what ability you want to get values for, as well as what aspect you want to compare with:
+            <ul>
+                <li>An example would be Lepic's grenade throw. You might want to compare the total damage of a single grenade, or you the DPS of the grenade throw overall while also considering cooldowns. You have to choose what part you want to compare on.</li>
+            </ul>
+        </li>
+        <li>Comparisons will not populate if you have no mods equipped, or if the ability isn't meant to be compared. An example would be an ability that gives you a bonus to your stats but does nothing else, there is no point in comparing what your mods do there.</li>
+        <li>Comparisons do not function on transcendent or sub-attack modules, nor do I do comparisons for weapon modules. Yet. Weapons soon though.</li>
+
+        <h3>CALCULATOR</h3>
+
+        <li>Added Jayber to the character selection, along with breakdowns for all abilities and transcendent mods.</li>
+        <li>Added a slider to enemy settings, that dictates your Dangerous Ambush (Immobile) uptime. This slider directly modifies the bonus given by the mod, and defaults at 100% so that way people who don't notice it don't get confused by custom amounts.</li>
+        <li>Completed all remaining unfinished abilities, transcendent mods, and UI revamp for the following characters, including hook-ups to the mod comparison tool:
+            <ul>
+                <li>Lepic</li>
+                <li>Kyle</li>
+                <li>Hailey</li>
+                <li>Bunny (her 4th skill at base still needs testing that I'll do later, it's a weird one)</li>
+                <li>Esiemo</li>
+                <li>Freyna</li>
+            </ul>
+        </li>
+        <li>Added support for the Last Stand mod, specifically in Kyle's Superconductivity Thrusters skill damage.</li>
+        <li>Added a toggle to restrict Lepic's overkill duration my the maximum duration that would be allowed by your maximum MP.</li>
+        <li>Added support for dynamic sprint speed bonuses on Bunny's Lightning Emission skill, to be modified by the various speed bonuses provided by her other abilities. This will also allow me to factor in sprint speed bonuses provided by weapons or modules in the future.</li>
+        <li>Added toggles for each sprint speed bonus provided by any of Bunny's abilities or transcendent mods(even bionic, sadge)</li>
+        <li>Added support for all aspects of Esiemo's Madness and Narcissism buffs, so the -DEF, the firearm ATK%, etc. will now factor into character and weapon statistics where applicable.</li>
+        <li>Added Duration and Fire Rate restrictions for Freyna's Venom Baptism. This way people can see how many shots they have time for, vs how many shots they can actually manage.</li>
+        <li>Added support for Freyna's Venom Injection transcendent mod to check if a 1-HP mod is equipped and force the HP slider down to 0% and ensure the maximum bonus is applied without the user needing to be aware of it. Conversely, if you have no 0-HP mods equipped, the calculator will ensure you cannot go below 15%HP on the slider.</li>
+        <li>Added Peace Maker to the weapon dropdown, and added its unique weapon ability to factor in stacks to player stats when applicable.</li>
+        <li>Renamed the following settings from "Use" to "Allow" for better clarity in regards to what they do. For example, physical type bonuses or part-specific weak point modifiers will be automatically adjusted or even disabled depening on the target selected and their corresponding weakpoints. "Use" make it sound like it will happen always when selected, but "Allow" implies that when it can happen, you're letting it still factor in:
+            <ul>
+                <li>"Allow Weak Points?"</li>
+                <li>"Allow Crits?"</li>
+                <li>"Allow Physical Bonus?"</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Maximize Duration had a negative power modifier of -20% instead of the -21.1% it should be.</li>
+        <li>Fixed an issue where Lepic's overkill shot count display could be one shot off on edge case duration amounts.</li>
+        <li>Fixed an issue where swapping to Esiemo as your selected character didn't always update the total bombs placed amount correctly.</li>
+        <li>Fixed an issue where the description for Blue Beetle's unique ability listed as Secret Garden's. This didn't modify the ability, only the description.</li>
+        <li>Fixed a typo on the Transendent mod overview header</li>
+    </ul>
+</div>
+<div>
     <h1>Oct 17, 2024</h1>
     <ul>
         <li>Added an extremely basic damage overview for whatever your selected weapon is, in Weapon Mode. This will be expanded upon more later.</li>

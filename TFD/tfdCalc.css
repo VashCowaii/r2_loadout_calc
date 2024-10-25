@@ -10,7 +10,7 @@
 
 
 .prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription,.totalHealingHeaderBoss,.totalHealingValueBoss,.bossDataCritResist,.abilityBreakdownGeneralMessage,
-.bossResistBoxHolder,.bossResistValue,.smolText,.modsQueryResultsRowName {
+.bossResistBoxHolder,.bossResistValue,.smolText,.modsQueryResultsRowName,.breakdownRowInjectionHeader {
     font-family: "Montserrat-Light";
 }
 
@@ -637,6 +637,7 @@
     width: 100%;
     font-size: 16px;
     border-top: 2px solid #434343;
+    white-space: normal;
 }
 .basicsDRStat {
     width: auto;

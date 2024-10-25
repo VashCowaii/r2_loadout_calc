@@ -295,7 +295,7 @@ const generalRounds =  {
           "exclusive": "Fire Rate",
           "desc": "Fire Rate +8%, Firearm ATK +1%"
        },
-       "Magazine Compulsive": {
+       "Compulsive Magazine": {
           "rarity": "Rare",
           "polarity": "Cerulean",
           "type": "General Rounds",

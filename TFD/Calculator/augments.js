@@ -66,7 +66,7 @@ const augments = {
         "rarity": "Transcendant",
         "polarity": "Rutile",
         "type": "Descendant",
-        "cost": 16,
+        "cost": 6,
         "category": "Ultimate Lepic",
         "desc": "Modifies Grenade Throw to be charged up to 3 times. Grenade charges once whenever a certain amount of ammo is consumed.",
         "skillOverrides": ["Explosive Stacks",0,0,0,0]
@@ -133,7 +133,7 @@ const augments = {
         "type": "Descendant",
         "cost": 16,
         "category": "Kyle",
-        "desc": "While airborne, continuously consumes Magnetic Force to drop bombs. The bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision.",
+        "desc": "While airborne, continuously consumes Magnetic Force to drop bombs. The bombing stops when Magnetic Force is completely depleted, and additional damage from Magnetic Force is not triggered on collision. Airborne duration increases as the Skill Duration increases, but the base airborne duration decreases.",
         "skillOverrides": [0,0,0,"Superconductive Bombing",0]
     },
     "Diamagnetic Bulwark": {
@@ -151,7 +151,7 @@ const augments = {
         "type": "Descendant",
         "cost": 15,
         "category": "Kyle",
-        "desc": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle. Deals great damage to nearby enemies when the skill ends.",
+        "desc": "Consumes Magnetic Force every second when used to pull enemies in front of Kyle. Deals great damage to nearby enemies when the skill ends, but removes the ally Shield recovery effect.",
         "skillOverrides": [0,0,"Self-Directed Eruption",0,0]
     },
     "Collision Instinct": {
@@ -247,6 +247,76 @@ const augments = {
         "desc": "When an enemy inflicted with Room 0 Trauma is killed, it infects nearby enemies with Room 0 Trauma.",
         "skillOverrides": ["Contagion","Contagion","Contagion","Contagion","Contagion"]
     },
+    "Toxic Mixture": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Ultimate Freyna",
+        "desc": "NOT CALCULATED. YET.<br>Modifies the Room 0 Trauma effect to Necrosis. Firearm ATK increases with the number of Necrosis stacks.",
+        "skillOverrides": [0,0,0,0,0]
+    },
+
+    //JAYBER
+    "Attacking Compulsion": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 9,
+        "category": "Jayber",
+        "desc": "When using skill, summons an Assault Turret instead. The summoned turret operates in the same way as your other Assault Turret.",
+        "skillOverrides": ["Attacking Compulsion","Attacking Compulsion",0,0,0]
+    },
+    "Medical Compulsion": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 16,
+        "category": "Jayber",
+        "desc": "When using skill, summons a Medical Turret instead. The summoned turret operates in the same way as your other Medical Turret.",
+        "skillOverrides": ["Medical Compulsion","Medical Compulsion",0,0,0]
+    },
+    "Immediate Purge Code": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Jayber",
+        "desc": "When using skill, instantly explodes all turrets and inflicts damage on nearby enemies. Creates Lightning AoE that deals continuous damage where the turrets exploded.",
+        "skillOverrides": [0,0,0,"Immediate Purge Code",0]
+    },
+    "Turret Engineering": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Jayber",
+        "desc": "When using skill, recovers the HP of all summoned turrets and extends their duration.",
+        "skillOverrides": [0,0,"Turret Engineering",0,0]
+    },
+
+    //HAILEY
+    "Supercooled Kuiper Round": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Hailey",
+        "desc": "Equipping a Unique Weapon decreases Additional Firearm ATK and Fire Rate, but increases Weak Point Damage and successfully attacking Weak Points recovers Shield instead of MP. The increase in Weak Point Damage decreases when firing a Unique Weapon, but increases again on a successful Weak Point Attack.",
+        "skillOverrides": [0,0,0,"Supercooled Kuiper Round",0]
+    },
+    "Cryogenic Cluster Shot": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Hailey",
+        "desc": "Modifies the Cryo effect to Cryogenic, reducing the number of maximum stacks and effect strength, but dealing additional AoE damage to nearby enemies when the effect is removed.",
+        "skillOverrides": ["Cryogenic Cluster Shot",0,0,0,0]
+    },
+
+
+
 
     
 
@@ -411,39 +481,6 @@ const augments = {
     //     "cost": 16,
     //     "category": "Ultimate Gley",
     //     "desc": "The chance to create a Life Sphere is slightly increased. Detonates all nearby Life Spheres to deal damage instead of absorbing HP. Recovers Power of Life based on the number of Life Spheres exploded."
-    // },
-    
-    // "Attacking Compulsion": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Almandine",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Jayber",
-    //     "desc": "Healing Turret skill conversion. When using skill, summons an Assault Turret. The summoned turret operates in the same way as the existing Assault Turrets."
-    // },
-    // "Medical Compulsion": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Xantic",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Jayber",
-    //     "desc": "Assault Turret skill conversion. When using skill, summons a Healing Turret. The summoned turret operates in the same way as the existing Healing Turrets."
-    // },
-    // "Immedaite Purge Code": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Almandine",
-    //     "type": "Descendant",
-    //     "cost": 16,
-    //     "category": "Jayber",
-    //     "desc": "Reactivate Skill Conversion. When using skill, instantly explodes all turrets and inflicts damage on nearby enemies. Creates Lightning AoE that deals continuous damage where the turrets exploded."
-    // },
-    // "Turret Engineering": {
-    //     "rarity": "Transcendant",
-    //     "polarity": "Malachite",
-    //     "type": "Descendant",
-    //     "cost": 14,
-    //     "category": "Jayber",
-    //     "desc": "Multi-purpose Gun skill conversion. When using skill, recovers the HP of all summoned turrets and extends their duration. Does not switch turrets to Enhanced mode."
     // },
     
     

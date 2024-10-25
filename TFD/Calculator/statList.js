@@ -22,6 +22,8 @@ const greatTableKnowerOfAll = {
     "MPRecovery": 0,
     "MPInCombat": 0, "MPOutCombat": 0,
 
+    "SprintSpeedBonus": 0,
+
     //SKILL LOGISTICS
     "SkillCost": 0,
     "SkillCooldown": 0,
