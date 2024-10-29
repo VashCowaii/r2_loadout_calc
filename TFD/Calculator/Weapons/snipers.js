@@ -296,6 +296,68 @@ const sniperList = {
         },
     },
 
+
+    "Nazeistra's Devotion": {
+        "name": "Nazeistra's Devotion",
+        "baseATK": 38461,
+        "baseCritRate": 0.45,
+        // "baseCritDamage": 2.24995,
+        // "baseCritDamage": 2.24996,
+        "baseCritDamage": 2.25,
+        "baseWeakPoint": 1.7,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+        "magazine": 8,
+        "ammoType": "Impact",
+        "weaponType": "Hand Cannon",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1007_A001.png",
+        "weaponSettings": {
+            "defDebuffActive": false,
+        },
+        "customDPSBase": "",//nazDevotionCalcsTier0
+        "customDPS": "",
+        "desc": "On hitting an enemy's Weak Point, inflicts the unique ability Devotion Mark on the target. On hitting an ally, that ally's shield is restored at the cost of your MP. If your current MP is less than the MP cost, this effect is not triggered.",
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "Aim Recovery Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "DEVOTION MARK": [
+                {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "-DEF%","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "ON ALLIED HIT": [
+                {"statType": "","statName": "MP Cost","value": -65,"limit": null,"isModified": false},
+                {"statType": "","statName": "Shield Recovery","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "subStats": {}
+    },
+
+
+
+
+    "Assassin's Edge": {
+        "name": "Assassin's Edge",
+        "baseATK": 40788,
+        "baseCritRate": 0.40,
+        "baseCritDamage": 2.0,
+        "baseWeakPoint": 2.0,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+        "magazine": 9,
+        "ammoType": "Impact",
+        "weaponType": "Hand Cannon",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1001_A001.png",
+        "customDPSBase": "",
+        "customDPS": "",
+        "desc": "",
+        "subStats": {},
+        "weaponSettings": {},
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+    },
+
     // //purple snipers
     // "Different Dream": {
     //     "baseATK": 110259,

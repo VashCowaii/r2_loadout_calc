@@ -103,10 +103,10 @@ const greatTableKnowerOfAll = {
     "enemyCritResistReductionFirearm": 0,
     "enemyCritResistReductionSkill": 0,
 
-    "enemyDEFResistanceReduction": 0,
+    "enemyDEFResistanceReduction": 0,//-0.3,//-0.30025,
     "enemyNonAttributeResistanceReduction": 0,
     "enemyElectricResistanceReduction": 0,
-    "enemyToxicResistanceReduction": 0,
+    "enemyToxicResistanceReduction": 0,//-0.25,
     "enemyChillResistanceReduction": 0,
     "enemyFireResistanceReduction": 0,
 

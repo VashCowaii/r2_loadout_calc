@@ -813,6 +813,19 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
+        // Viessa(settingsRef,arrayRef) {
+        //     if (arrayRef[0] === 0) {}//1
+        //     if (arrayRef[1] === 0) {}//2
+        //     else if (arrayRef[1] === "Cold-Bloodedness") {
+        //         settingsRef.isColdBloodedActive = readSelection("isColdBloodedActive").checked;
+        //     }
+        //     if (arrayRef[2] === 0) {}//3
+        //     if (arrayRef[3] === 0) {}//4
+        //     if (arrayRef[4] === 0) {}//passive
+        //     else if (arrayRef[4] === "Hypothermia") {
+        //         settingsRef.viessaIceNeedleStacks = +readSelection("viessaIceNeedleStacks").value;
+        //     }
+        // },
         Jayber(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] === 0) {}//2.
@@ -922,6 +935,9 @@ const settings = {
         },
         "Peace Maker"(settingsRef,arrayRef) {
             settingsRef.peacemakerStackCount = +readSelection("peacemakerStackCount").value
+        },
+        "Nazeistra's Devotion"(settingsRef,arrayRef) {
+            settingsRef.defDebuffActive = readSelection("defDebuffActive").checked
         },
     }
 

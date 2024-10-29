@@ -94,6 +94,13 @@ const calcs = {
         return {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage}
     },
 
+    // limitDecimals(num) { 
+    //     return Math.round(num * 10000) / 10000;
+    // },
+    // limitDecimals2(num) { 
+    //     return Math.round(num * 10000) / 10000;
+    // },
+
 
     getTotalSkillPowerModifier(index,abilityTypeArray) {
         let sumModifierBonus = index.PowerModifierBase;
@@ -113,9 +120,21 @@ const calcs = {
     },
     getResistanceBasedDR(index,typeName) {
         const currentBoss = globalRecords.boss.currentBoss;
-        const resistReduction = 1 + index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
+        const obscureReductionModifier = 1/.999175
+
+        const reductionValue = index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
+        // const resistReduction = 1 + index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`]//s * obscureReductionModifier;
+        const resistReduction = 1 + reductionValue//s * obscureReductionModifier;
+        // const resistReduction = 1/(1 - reductionValue)//s * obscureReductionModifier;
         const currentResistValue = bosses[currentBoss][typeName] * resistReduction;
-        return 150/(150 + Math.sqrt(currentResistValue));
+
+        const drConstant = 150;
+        // const drConstant = 150/resistReduction;
+
+        // calcs.limitDecimals();
+        return drConstant/(drConstant + (Math.sqrt(currentResistValue)));
+        // return calcs.limitDecimals2(150/(150 + (Math.sqrt(currentResistValue))));
+        // return 150/(150 + calcs.limitDecimals2(Math.sqrt(currentResistValue)));
     },
     getCritComposites(returnObject) {
         const Rate = returnObject.totalSkillCritRate;
@@ -127,6 +146,8 @@ const calcs = {
     getFirearmCritComposites(returnObject) {
         const Rate = returnObject.totalFirearmCritRate;
         const Damage = returnObject.totalFirearmCritDamage;
+        // const Damage = calcs.limitDecimals(returnObject.totalFirearmCritDamage);
+        // console.log(Damage)
         const Composite = 1 + (Rate * (Damage-1));
 
         return {Rate,Damage,Composite}
@@ -170,10 +191,12 @@ const calcs = {
         // globalRecords.boss.currentBossPartType
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
         const physicalTypeBonus = globalRecords.boss.enemyType === "Colossus" ? 0.20 : 0.10;
+        // const physicalTypeBonus = 0.1999875;
+        // const physicalTypeBonus = 0.10;
         const physicalTypeMulti = weaknessCheck ? physicalTypeBonus : 0;
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
-        const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
+        const firearmAttributeConversionBase = (baseFirearmATK * (1 + attackPercent));//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const totalFirearmATK = (firearmAttributeConversionBase + index.ColossusATK) * (1 + physicalTypeMulti);
 
         return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
@@ -278,7 +301,7 @@ const calcsUIHelper = {
                     <div class="totalHealingBoxHalf hasHoverTooltip">
                         <div style="padding-right: 5px;">${entry.toggleElemID[1] ? entry.toggleElemID[1] : "Include in Character Statistics?"}</div>
                         <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}('${characterName}')" ${settingsRef[entry.toggleElemID[0]] ? "checked" : ""}>
+                            <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}(\`${characterName}\`)" ${settingsRef[entry.toggleElemID[0]] ? "checked" : ""}>
                             <span class="toggleSlider"></span>
                         </label>
                     </div>
@@ -374,6 +397,425 @@ const customDamage = {
         else {customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,currentWeaponRef);}
 
         return returnValuesObject;
+    },
+
+
+
+
+    //Viessa
+    //ability 1
+    viessaFrostShardCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+        const baseCooldown = abilityMods.cooldown;
+        const {cooldown,DPS} = calcs.getDPSPerSkillInterval(index,avgDmgPerHit,baseCooldown,0);
+
+        
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Cycled DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "PROJECTILE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ICE SHACKLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride,"desc": ""},
+                {"header": "FROSTBITE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Absolute-Zero","desc": ""},
+                {"header": "ICE NEEDLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Hypothermia","desc": ""},
+
+                
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    viessaFrostShardCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.viessaFrostShardCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+    },
+    viessaFrostShardCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.viessaFrostShardCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+    },
+    //ability 2
+    viessaFrostRoadCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const isDamaging = nameOverride === "Absolute-Zero";
+        const displayModifier = isDamaging ? skillPowerModifier : null;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const displayDamage = isDamaging ? damage : null;
+        const avgDmgPerHit = damage.AVG;
+        
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Cooldown","value": cooldown,"unit": ""},
+            //     {"name": "Interval Length (s)","value": interval,"unit": ""},
+            //     {"name": "DPS","value": DPS,"unit": ""},
+            // ]
+
+            const breakdownArray = [
+                {"header": "FROST ROAD","value": displayDamage,"modifier": displayModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ICE SHACKLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride,"desc": ""},
+                {"header": "FROSTBITE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Absolute-Zero","desc": ""},
+                {"header": "ICE NEEDLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Hypothermia","desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    viessaFrostRoadCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.viessaFrostRoadCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+    },
+    viessaFrostRoadCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.viessaFrostRoadCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+    },
+    viessaColdBloodedCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Cold-Bloodedness"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (settingsRef.isColdBloodedActive) {
+            index.PowerOptimization += 0.05;
+            index.SkillCost += -0.20;
+            index.SkillCooldown += -0.20;
+        }
+        
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Cooldown","value": cooldown,"unit": ""},
+            //     {"name": "Interval Length (s)","value": interval,"unit": ""},
+            //     {"name": "DPS","value": DPS,"unit": ""},
+            // ]
+
+            const breakdownArray = [
+                {"header": "COLD-BLOODEDNESS","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "toggleElemID": ["isColdBloodedActive","Use Bonuses?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+    },
+    //ability 3
+    viessaColdSnapCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+        const baseCooldown = abilityMods.cooldown;
+        const {cooldown,DPS} = calcs.getDPSPerSkillInterval(index,avgDmgPerHit,baseCooldown,0);
+
+        
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Cooldown","value": cooldown,"unit": ""},
+            //     {"name": "Interval Length (s)","value": interval,"unit": ""},
+            //     {"name": "DPS","value": DPS,"unit": ""},
+            // ]
+            let rowInjection = [
+                {"name": "Cycled DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "CHILL","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ICE SHACKLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride && nameOverride != "Cold Snap Watch","desc": ""},
+                {"header": "FROSTBITE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Absolute-Zero","desc": ""},
+                {"header": "ICE NEEDLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Hypothermia","desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    viessaColdSnapCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+    },
+    viessaColdSnapCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+    },
+    viessaColdSnapCalcsWatchStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Cold Snap Watch");
+    },
+    //ability 4
+    viessaBlizzardCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierContinuous = abilityMods.baseContinuous + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageContinuous = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierContinuous);
+
+        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const interval = abilityMods.interval;
+        const totalTicks = Math.floor(continuousDuration/interval);
+
+        const avgDmgPerTick = damageContinuous.AVG;
+        const avgTotalTicks = totalTicks * damageContinuous.AVG;
+        const avgDmgPerBurst = damage.AVG;
+        const SumTotalAVG = damage.AVG + totalTicks * damageContinuous.AVG;
+        const avgTotalDPS = SumTotalAVG/continuousDuration;
+
+        const baseCooldown = abilityMods.cooldown;
+        const {cooldown,DPS} = calcs.getDPSPerSkillInterval(index,SumTotalAVG,baseCooldown,0);
+
+        
+        if (!isCycleCalcs) {
+            let rowInjectionSUMS = [
+                {"name": "SUM Total AVG","value": SumTotalAVG,"unit": ""},
+                {"name": "AVG DPS","value": avgTotalDPS,"unit": ""},
+                {"name": "Cycled DPS","value": DPS,"unit": ""},
+                // {"name": "Interval Length (s)","value": interval,"unit": ""},
+                // {"name": "DPS","value": DPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "BLIZZARD","value": damageContinuous,"modifier": skillPowerModifierContinuous,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalTicks,avgTotalTicks],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "BURST","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ICE SHACKLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride && nameOverride != "Glacial Cloud","desc": ""},
+                {"header": "FROSTBITE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Absolute-Zero","desc": ""},
+                {"header": "ICE NEEDLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Hypothermia","desc": ""},
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionSUMS,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick,avgTotalTicks,avgDmgPerBurst,avgTotalDPS,DPS,SumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    viessaBlizzardCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+    },
+    viessaBlizzardCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+    },
+    viessaBlizzardCalcsCloudStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Glacial Cloud")
+    },
+    //passive
+    viessaSphereCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+        const iceNeedleModifierArray = [0,0.117,0.159,0.199,0.237];
+        let iceNeedleDamage = null;
+        let iceNeedleModifier = null;
+        let iceNeedleDPS = null;
+        if (nameOverride === "Hypothermia" && settingsRef.viessaIceNeedleStacks != 0) {
+            iceNeedleModifier = iceNeedleModifierArray[settingsRef.viessaIceNeedleStacks] + sumModifierBonus;
+            iceNeedleDamage = calcs.getCompositeDamageSpread(basicInfo,iceNeedleModifier);
+            iceNeedleDPS = iceNeedleDamage.AVG * 2;
+        }
+
+        
+        if (!isCycleCalcs) {
+            let rowInjectionNeedle = [
+                {"name": "Needle Modifier","value": iceNeedleModifier,"unit": "%"},
+                {"name": "Interval","value": 0.5,"unit": "s"},
+                // {"name": "AVG/Tick","value": iceNeedleDamage.AVG || 0,"unit": ""},
+                {"name": "DPS","value": iceNeedleDPS,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "PROJECTILE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ICE SHACKLE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride && nameOverride != "Cold Cohesion","desc": ""},
+                {"header": "FROSTBITE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride != "Absolute-Zero","desc": ""},
+                {"header": "ICE NEEDLE","value": iceNeedleDamage,"modifier": iceNeedleModifier,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "rowInjection": [rowInjectionNeedle,""],
+                    "sliderElemID": ["viessaIceNeedleStacks",0,4,1,"Stack Count"],
+                    "condition": nameOverride != "Hypothermia","desc": ""},
+                {"header": "EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride && nameOverride != "Cold Cohesion","desc": ""},
+                {"header": "EFFECT (COLOSSUS)","value": null,"modifier": null,"hasCritAVG": true,"unit": "",//"magazineTypeWeapon": [turretTotalHits,totalTurretAVG1],
+                    "condition": nameOverride && nameOverride != "Cold Cohesion","desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    viessaSphereCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+    },
+    viessaSphereCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+    },
+    viessaSphereCalcsCohesionStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Cold Cohesion")
     },
 
 
@@ -1682,15 +2124,6 @@ const customDamage = {
         return customDamage.freynaContagionCalcs(index,returnObject,isCycleCalcs,"Contagion")
     },
 
-
-
-
-
-
-
-
-
-
     //Esiemo
     //ability1
     esiemoTimeBombCalcs(index,returnObject,isCycleCalcs,nameOverride) {
@@ -2233,8 +2666,6 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
 
-
-
     //Hailey
     haileyCryoRoundCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
@@ -2587,7 +3018,6 @@ const customDamage = {
             return {}
         }
     },
-
 
     //Lepic
     //ability 1
@@ -3158,9 +3588,6 @@ const customDamage = {
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
-
-
-
 
     //Bunny
     //ability 1
@@ -3754,6 +4181,40 @@ const customDamage = {
         <div class="basicsSummaryBox" id="lepicResultsBox">
         <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
             ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Peace Maker",true)}
+        </div>
+        <div class="abilityBreakdownHeader">DESCRIPTION</div>
+        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        `;
+    },
+
+
+    nazDevotionCalcsTier0(index,returnObject,isCycleCalcs) {
+        const weaponName = "Nazeistra's Devotion"
+        const weaponRef = sniperList[weaponName];
+        const settingsRef = weaponRef.weaponSettings;
+
+        const defDebuff = -0.30;
+        // const defDebuff = -0.30025;
+        const currentAmount = settingsRef.defDebuffActive ? defDebuff : 0;
+        index.enemyDEFResistanceReduction += currentAmount;
+
+        const rowInjection = [
+            {"name": "-Enemy DEF%","value": currentAmount,"unit": "%"},
+        ]
+        const breakdownArray = [
+            {"header": "DEVOTION MARK","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "toggleElemID": ["defDebuffActive","Use DEF Debuff?"],"rowInjection": [rowInjection,""],
+                "condition": false,"desc": ""},
+            {"header": "ON ALLIED HIT","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                "condition": false,"desc": ""},
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML = `
+        <div class="basicsSummaryBox" id="lepicResultsBox">
+        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,weaponName,true)}
         </div>
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
         <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
