@@ -802,7 +802,7 @@ const specialRounds =  {
         "cost": 16,
         "category": "",
         "stats": {
-            "WeakPointDamage": 0.35
+            "WeakPointDamage%": 0.35
         },
         "desc": "Weak Point Damage +35%"
     },

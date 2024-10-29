@@ -2903,13 +2903,715 @@ const characters = {
     },
 
 
+
     // "Viessa": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_003_U01.png",
+    //     "name": "Viessa",
+    //     "baseStats": {
+    //         "HP": 1373,
+    //         "Shield": 413,
+    //         "ShieldInCombat": 4.08,
+    //         "ShieldOutCombat": 4.88,
+    //         "DEF": 2441,
+    //         "ResistanceFire": 11,
+    //         "ResistanceChill": 13,
+    //         "ResistanceElectric": 11,
+    //         "ResistanceToxin": 11,
+    //         "MP": 187,
+    //         "MPInCombat": 0,
+    //         "MPOutCombat": 0.3,
+    //         "CritRate": 0.15,
+    //         "CritDamage": 1.2,
+    //     },
+    //     "characterSettings": {
+    //         "isColdBloodedActive": true,
+    //         "hypothermiaStackLevel": 4,
+    //         "viessaIceNeedleStacks": 4,
+    //         //asdf settings go here
+    //     },
+    //     "abilities": {
+    //         "ability1": {
+    //             "base": {
+    //                 "name": "Frost Shards",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_A01_01.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Fires Frost Shards to deal damage to enemies hit and Burst damage to nearby enemies. Inflicts Ice Shackle on hit enemies.",
+    //                 "powerMods": {
+    //                     "base": 803.6/100,
+    //                     "cooldown": 7,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostShardCalcs",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 22,"limit": null,"isModified": true},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 3.5,"limit": 2.5,"isModified": true},
+    //                         {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "","statName": "On Burst DMG","value": 1,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Absolute-Zero": {
+    //                 "name": "Frost Shards",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R06_01.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Fires Frost Shards to deal damage to enemies hit and Burst damage to nearby enemies. On Critical Hit, inflicts Frostbite on enemies hit.",
+    //                 "powerMods": {
+    //                     "base": 997.1/100,
+    //                     "cooldown": 7,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostShardCalcs",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 22,"limit": null,"isModified": true},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 3.5,"limit": 2.5,"isModified": true},
+    //                         {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [
+    //                         {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": true},
+    //                     ],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Hypothermia": {
+    //                 "name": "Frost Shards",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R02_01.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Fires Frost Shards to deal damage to enemies hit and Burst damage to nearby enemies. Inflicts Ice Needle on hit enemies.",
+    //                 "powerMods": {
+    //                     "base": 888.2/100,
+    //                     "cooldown": 7,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostShardCalcsHypoStarter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 22,"limit": null,"isModified": true},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 3.5,"limit": 2.5,"isModified": true},
+    //                         {"statType": "","statName": "Projectile Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "","statName": "On Burst DMG","value": 1,"limit": null,"isModified": false},
+    //                     ],
+    //                 },
+    //             },
+    //         },
+    //         "ability2": {
+    //             "base": {
+    //                 "name": "Frost Road",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_A01_02.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Activates the Frost Road state. While in the Frost Road state, creates Ice Sheets on the ground touched. Enemies that touch the Ice Sheets are inflicted with Ice Shackle.",
+    //                 "powerMods": {
+    //                     "base": 0/100,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostRoadCalcs",
+    //                 "returnStatOptions": {
+    //                     // "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 24,"limit": null,"isModified": true},
+    //                     ],
+    //                     "FROST ROAD": [
+    //                         {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
+    //                         {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
+    //                         {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On Contact","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Absolute-Zero": {
+    //                 "name": "Frost Road",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R06_02.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Activates the Frost Road state. While in the Frost Road state, creates Ice Sheets on the ground touched. Enemies that touch the Ice Sheets, on Critical Hits, are inflicted with Frostbite.",
+    //                 "powerMods": {
+    //                     "base": 249.1/100,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostRoadCalcsABS0Starter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Tick" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 24,"limit": null,"isModified": true},
+    //                     ],
+    //                     "FROST ROAD": [
+    //                         {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+    //                         {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
+    //                         {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
+    //                         {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [
+    //                         {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": true},
+    //                     ],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Hypothermia": {
+    //                 "name": "Frost Road",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R02_02.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Activates the Frost Road state. While in the Frost Road state, creates Ice Sheets on the ground touched. Enemies that touch the Ice Sheets are inflicted with Ice Needle.",
+    //                 "powerMods": {
+    //                     "base": 0/100,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaFrostRoadCalcsHypoStarter",
+    //                 "returnStatOptions": {
+    //                     // "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 24,"limit": null,"isModified": true},
+    //                     ],
+    //                     "FROST ROAD": [
+    //                         {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
+    //                         {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
+    //                         {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [
+    //                         {"statType": "","statName": "On Contact","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                 },
+    //             },
+    //             "Cold-Bloodedness": {
+    //                 "name": "Cold-Bloodedness",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R04_Rune.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Gains Cold-Bloodedness when using skill.",
+    //                 "powerMods": {
+    //                     "base": 0/100,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaColdBloodedCalcsTier0",
+    //                 "returnStatOptions": {
+    //                     // "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 25,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 24,"limit": null,"isModified": true},
+    //                     ],
+    //                     "COLD-BLOODEDNESS": [
+    //                         {"statType": "duration","statName": "Duration","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "+Skill Power (Opt.)","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "-Skill Cost","value": -0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "-Skill Cooldown","value": -0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                 },
+    //             },
+    //         },
+    //         "ability3": {
+    //             "base": {
+    //                 "name": "Cold Snap",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_A01_03.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill.",
+    //                 "powerMods": {
+    //                     "base": 1149.0/100,
+    //                     "cooldown": 20,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaColdSnapCalcs",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+    //                     ],
+    //                     "CHILL": [
+    //                         {"statType": "range","statName": "Range","value": 10,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Absolute-Zero": {
+    //                 "name": "Cold Snap",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R06_03.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill. On Critical Hits, inflicts Frostbite on the enemy.",
+    //                 "powerMods": {
+    //                     "base": 1131.6/100,
+    //                     "cooldown": 20,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaColdSnapCalcsABS0Starter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+    //                     ],
+    //                     "CHILL": [
+    //                         {"statType": "range","statName": "Range","value": 10,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [
+    //                         {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": true},
+    //                     ],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //             "Hypothermia": {
+    //                 "name": "Cold Snap",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R02_03.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill.",
+    //                 "powerMods": {
+    //                     "base": 973.2/100,
+    //                     "cooldown": 20,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaColdSnapCalcsHypoStarter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+    //                     ],
+    //                     "CHILL": [
+    //                         {"statType": "range","statName": "Range","value": 10,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                 },
+    //             },
+    //             "Cold Snap Watch": {
+    //                 "name": "Cold Snap Watch",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R03_Rune.png",
+    //                 "type": ["Chill","Fusion"],
+    //                 "desc": "Throws a Chill Zone forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill Zone.",
+    //                 "powerMods": {
+    //                     "base": 293.4/100,
+    //                     "cooldown": 20,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaColdSnapCalcsWatchStarter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Tick" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+    //                     ],
+    //                     "CHILL": [
+    //                         {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+    //                         {"statType": "range","statName": "Range","value": 10,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On Cont. DMG","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                 },
+    //             },
+    //         },
+    //         "ability4": {
+    //             "base": {
+    //                 "name": "Blizzard",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_A01_04.png",
+    //                 "type": ["Chill","Tech"],
+    //                 "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Shackle on enemies.",
+    //                 "powerMods": {
+    //                     "base": 1845.3/100,
+    //                     "baseContinuous": 1435.2/100,
+    //                     "duration": 6,
+    //                     "interval": 2,
+    //                     "cooldown": 60,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaBlizzardCalcs",
+    //                 "returnStatOptions": {
+    //                     "Continuous - AVG/Tick" : "avgDmgPerTick",
+    //                     "Continuous - Total AVG" : "avgTotalTicks",
+    //                     "Burst - AVG/Burst" : "avgDmgPerBurst",
+    //                     "DPS per Cast" : "avgTotalDPS",
+    //                     "Cycled DPS" : "DPS",
+    //                     "SUM Total AVG" : "SumTotalAVG",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 38,"limit": null,"isModified": true},
+    //                     ],
+    //                     "BLIZZARD": [
+    //                         {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "BURST": [
+    //                         {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                     "SUM": [],
+    //                 },
+    //             },
+    //             "Absolute-Zero": {
+    //                 "name": "Blizzard",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R06_04.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. On Critical Hit, inflicts Frostbite on the enemy.",
+    //                 "powerMods": {
+    //                     "base": 1950.0/100,
+    //                     "baseContinuous": 1516.7/100,
+    //                     "duration": 6,
+    //                     "interval": 2,
+    //                     "cooldown": 60,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaBlizzardCalcsABS0Starter",
+    //                 "returnStatOptions": {
+    //                     "Continuous - AVG/Tick" : "avgDmgPerTick",
+    //                     "Continuous - Total AVG" : "avgTotalTicks",
+    //                     "Burst - AVG/Burst" : "avgDmgPerBurst",
+    //                     "SUM Total AVG" : "SumTotalAVG",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 38,"limit": null,"isModified": true},
+    //                     ],
+    //                     "BLIZZARD": [
+    //                         {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "BURST": [
+    //                         {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [
+    //                         {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": true},
+    //                     ],
+    //                     "ICE NEEDLE": [],
+    //                     "SUM": [],
+    //                 },
+    //             },
+    //             "Hypothermia": {
+    //                 "name": "Blizzard",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R02_04.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Needle on enemies.",
+    //                 "powerMods": {
+    //                     "base": 1826.7/100,
+    //                     "baseContinuous": 1422.2/100,
+    //                     "duration": 6,
+    //                     "interval": 2,
+    //                     "cooldown": 60,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaBlizzardCalcsHypoStarter",
+    //                 "returnStatOptions": {
+    //                     "Continuous - AVG/Tick" : "avgDmgPerTick",
+    //                     "Continuous - Total AVG" : "avgTotalTicks",
+    //                     "Burst - AVG/Burst" : "avgDmgPerBurst",
+    //                     "SUM Total AVG" : "SumTotalAVG",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 38,"limit": null,"isModified": true},
+    //                     ],
+    //                     "BLIZZARD": [
+    //                         {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "BURST": [
+    //                         {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [
+    //                         {"statType": "","statName": "On Continuous","value": 3,"limit": null,"isModified": false},
+    //                         {"statType": "","statName": "On Burst","value": 4,"limit": null,"isModified": false},
+    //                     ],
+    //                     "SUM": [],
+    //                 },
+    //             },
+    //             "Glacial Cloud": {
+    //                 "name": "Glacial Cloud",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R01_Rune.png",
+    //                 "type": ["Chill","Tech"],
+    //                 "desc": "Throws a projectile forward to create a Blizzard. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Shackle on enemies.<br>[NOTE] This just gives a 10s shorter cooldown. That's it.",
+    //                 "powerMods": {
+    //                     "base": 1845.3/100,
+    //                     "baseContinuous": 1435.2/100,
+    //                     "duration": 6,
+    //                     "interval": 2,
+    //                     "cooldown": 50,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaBlizzardCalcsCloudStarter",
+    //                 "returnStatOptions": {
+    //                     "Continuous - AVG/Tick" : "avgDmgPerTick",
+    //                     "Continuous - Total AVG" : "avgTotalTicks",
+    //                     "Burst - AVG/Burst" : "avgDmgPerBurst",
+    //                     "SUM Total AVG" : "SumTotalAVG",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 50,"limit": null,"isModified": true},
+    //                         {"statType": "cost","statName": "MP Cost","value": 38,"limit": null,"isModified": true},
+    //                     ],
+    //                     "BLIZZARD": [
+    //                         {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+    //                         {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "BURST": [
+    //                         {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                     "SUM": [],
+    //                 },
+    //             },
+    //         },
+    //         "ability5": {
+    //             "base": {
+    //                 "name": "Ice Sphere",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_A01_00.png",
+    //                 "type": ["Chill","Tech"],
+    //                 "desc": "Upon using a skill to put an enemy into an Ice Shackle stage, creates an Ice Sphere that orbits nearby. The Ice Sphere that is created flies at nearby enemies, dealing damage to the hit enemy and Burst damage to nearby enemies. The enemy is inflicted with Ice Shackle.<br>Ice Shackle decreases speed, and increases in stage when the effect stacks.",
+    //                 "powerMods": {
+    //                     "base": 259.3/100,
+    //                     // "burst": 259.3/100
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaSphereCalcs",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "Minimum Trigger LvL","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "LvL 4","value": 8,"limit": null,"isModified": true},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                     "EFFECT": [
+    //                         {"statType": "","statName": "LvL 1","value": -0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 2","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 3","value": -0.60,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 4","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "EFFECT (COLOSSUS)": [
+    //                         {"statType": "","statName": "LvL 1","value": -0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 2","value": -0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 3","value": -0.07,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 4","value": -0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                 },
+    //             },
+    //             "Absolute-Zero": {
+    //                 "name": "Absolute-Zero",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R06_00.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "When a skill lands a Critical Hit, creates an Ice Sphere that orbits nearby. The Ice Sphere created flies to nearby enemies, dealing damage on hit and Burst damage to nearby enemies. On Critical Hits, inflict Frostbite on the enemy.",
+    //                 "powerMods": {
+    //                     "base": 352.5/100,
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaSphereCalcsABS0Starter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [
+    //                         {"statType": "duration","statName": "Base","value": 2,"limit": null,"isModified": true},
+    //                     ],
+    //                     "ICE NEEDLE": [],
+    //                     "EFFECT": [],
+    //                     "EFFECT (COLOSSUS)": [],
+    //                 },
+    //             },
+    //             "Hypothermia": {
+    //                 "name": "Hypothermia",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R02_00.png",
+    //                 "type": ["Chill","Singular"],
+    //                 "desc": "Upon using a skill to put an enemy into a Ice Needle stage, creates an Ice Sphere that orbits nearby. The Ice Sphere that is created flies at nearby enemies, dealing damage to the hit enemy and Burst damage to nearby enemies. The enemy is inflicted with Ice Needle.<br>Ice Needle deals continuous damage to the enemy, and its stag increases when the effect stacks.",
+    //                 "powerMods": {
+    //                     "base": 250.4/100,
+    //                     // "burst": 259.3/100
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaSphereCalcsHypoStarter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "Minimum Trigger LvL","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [
+    //                         {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "LvL 1","value": 0.117,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 2","value": 0.159,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 3","value": 0.199,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 4","value": 0.237,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "EFFECT": [],
+    //                     "EFFECT (COLOSSUS)": [],
+    //                 },
+    //             },
+    //             "Cold Cohesion": {
+    //                 "name": "Cold Cohesion",
+    //                 "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_003_R05_Rune.png",
+    //                 "type": ["Chill","Tech"],
+    //                 "desc": "Upon using a skill to put an enemy into a Ice Shackle stage, creates an Ice Sphere that orbits nearby. The Ice Sphere that is created flies at nearby enemies, dealing damage to the hit enemy and Burst damage to nearby enemies. The enemy is inflicted with Ice Shackle.<br>Ice Shackle decreases speed, and increases in stage when the effect stacks.",
+    //                 "powerMods": {
+    //                     "base": 259.3/100,
+    //                     // "burst": 259.3/100
+    //                 },
+    //                 "customDPSBase": "",
+    //                 "customDPS": "viessaSphereCalcsCohesionStarter",
+    //                 "returnStatOptions": {
+    //                     "AVG/Hit" : "avgDmgPerHit",
+    //                 },
+    //                 "displayStats": [],
+    //                 "displayStatsALT": {
+    //                     "BASIC": [
+    //                         {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "Minimum Trigger LvL","value": 2,"limit": null,"isModified": false},
+    //                     ],
+    //                     "PROJECTILE": [
+    //                         {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
+    //                     ],
+    //                     "ICE SHACKLE": [
+    //                         {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
+    //                         {"statType": "duration","statName": "LvL 4","value": 8,"limit": null,"isModified": true},
+    //                         {"statType": "","statName": "On Continuous","value": 1,"limit": null,"isModified": false},
+    //                         {"statType": "","statName": "On Burst","value": 1,"limit": null,"isModified": false},
+    //                     ],
+    //                     "FROSTBITE": [],
+    //                     "ICE NEEDLE": [],
+    //                     "EFFECT": [
+    //                         {"statType": "","statName": "LvL 1","value": -0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 2","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 3","value": -0.60,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 4","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                     "EFFECT (COLOSSUS)": [
+    //                         {"statType": "","statName": "LvL 1","value": -0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 2","value": -0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 3","value": -0.07,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                         {"statType": "","statName": "LvL 4","value": -0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+    //                     ],
+    //                 },
+    //             },
+    //         }
+    //     }
     // },
+
+
     // "Ajax": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_002_U01.png"
     // },
-    
     // "Gley": {
     //     "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_007_U01.png"
     // },

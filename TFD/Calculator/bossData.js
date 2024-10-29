@@ -661,6 +661,7 @@ const bosses = {
         },
 
         "DEF": 162159.1,//was 162232
+        // "DEF": 162164.5,//was 162232
         "Non-Attribute": 162159.1,//was 162232
         "Fire": 162159.1,//was 162232
         "Electric": 75718.5,//was 75746
@@ -2168,4 +2169,26 @@ const bosses = {
     //     "Toxic": 0,
     // },
 
+    "LvL 1 Order of Truth": {
+        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "shortName": "NONE",
+        "enemyType": "Vulgus",
+        "buffs": {},
+
+        "skillCrit": 0,
+        "gunCrit": 0,
+        "note": "",
+
+        "parts": {
+            "Body (None)": {"name": "Body","type": "Burst","wpMod": 0},
+            "Generic .50 (Burst)": {"name": "N/A","type": "Burst","wpMod": 0.50},
+        },
+
+        "DEF": 0,
+        "Non-Attribute": 0,
+        "Fire": 0,
+        "Electric": 0,
+        "Chill": 0,
+        "Toxic": 0,
+    },
 }

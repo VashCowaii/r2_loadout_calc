@@ -796,7 +796,7 @@ const impactRounds = {
       "cost": 16,
       "category": "",
       "stats": {
-         "WeakPointDamage": 0.35
+         "WeakPointDamage%": 0.35
       },
       "desc": "Weak Point Damage +35%"
    },
@@ -822,7 +822,7 @@ const impactRounds = {
    },
    "Expand Weapon Charge": {
       "rarity": "Normal",
-      "polarity": "Malachite",
+      "polarity": "Cerulean",
       "type": "Impact Rounds",
       "cost": 15,
       "category": "",

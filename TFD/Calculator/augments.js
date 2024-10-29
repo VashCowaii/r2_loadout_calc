@@ -316,6 +316,63 @@ const augments = {
     },
 
 
+    //VIESSA
+    "Absolute-Zero": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Ultimate Viessa",
+        "desc": "When using skill, Ice Shackle is not inflicted. When the skill lands a Critical Hit, inflicts Frostbite on the target. Successfully inflicting Frostbite triggers Ice Sphere.",
+        "skillOverrides": ["Absolute-Zero","Absolute-Zero","Absolute-Zero","Absolute-Zero","Absolute-Zero"]
+    },
+    "Cold Cohesion": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Ultimate Viessa",
+        "desc": "The number of Ice Spheres increases to 5, and the base cooldown is reduced by 5 seconds.",
+        "skillOverrides": [0,0,0,0,"Cold Cohesion"]
+    },
+    "Cold-Bloodedness": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Viessa",
+        "desc": "When using skill, increases Skill Power and decreases Skill Cost and Skill Cooldown. Frost Roads are not created when moving.",
+        "skillOverrides": [0,"Cold-Bloodedness",0,0,0]
+    },
+    "Cold Snap Watch": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Viessa",
+        "desc": "Creates a Cold Snap zone in front that remains for a certain period of time. Enemies enterting the Cold Snap zone are inflicted wtih Ice Shackle and suffer continuous damage.",
+        "skillOverrides": [0,0,"Cold Snap Watch",0,0]
+    },
+    "Hypothermia": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Viessa",
+        "desc": "When using skill, inflicts Ice Needle instead of Ice Shackle. When Ice Needle reaches a certain number of stacks, passive skills are triggered.<br>Ice Needle: Continuous damage to the target. Damage increases as it stacks.",
+        "skillOverrides": ["Hypothermia","Hypothermia","Hypothermia","Hypothermia","Hypothermia"]
+    },
+    "Glacial Cloud": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Viessa",
+        "desc": "Throws a projectile forward that spawns a blizzard where it lands.",
+        "skillOverrides": [0,0,0,"Glacial Cloud",0]
+    },
+
+
 
 
     
