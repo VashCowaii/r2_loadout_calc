@@ -110,6 +110,7 @@ const userTriggers = {
         //If the character is actually different, then update the possible augment mod selections so people don't create errors.
         //Also clear the currently selected augment so it doesn't fuck with the new character's math and ability array
         if (selectedCharacter != globalRecords.character.currentCharacter) {
+            globalRecords.character.abilityArray = [0,0,0,0,0];
             readSelection("mod1").value = "";
             //set parent to true, and parentIsCharacterUpdate to true, so we don't get infinite recursion here
             userTriggers.updateSelectedMod("1",true,true);
@@ -791,6 +792,7 @@ const pagePopulation = {
     },
 }
 
+let localInsertionSettings = localCheck ? {} : customSettingsLocal;
 const settings = {
     updateCharacterSettings(character,isParentCall) {
         const settingsRef = characters[character].characterSettings;
@@ -813,19 +815,19 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
-        // Viessa(settingsRef,arrayRef) {
-        //     if (arrayRef[0] === 0) {}//1
-        //     if (arrayRef[1] === 0) {}//2
-        //     else if (arrayRef[1] === "Cold-Bloodedness") {
-        //         settingsRef.isColdBloodedActive = readSelection("isColdBloodedActive").checked;
-        //     }
-        //     if (arrayRef[2] === 0) {}//3
-        //     if (arrayRef[3] === 0) {}//4
-        //     if (arrayRef[4] === 0) {}//passive
-        //     else if (arrayRef[4] === "Hypothermia") {
-        //         settingsRef.viessaIceNeedleStacks = +readSelection("viessaIceNeedleStacks").value;
-        //     }
-        // },
+        Viessa(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2
+            else if (arrayRef[1] === "Cold-Bloodedness") {
+                settingsRef.isColdBloodedActive = readSelection("isColdBloodedActive").checked;
+            }
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {}//passive
+            else if (arrayRef[4] === "Hypothermia") {
+                settingsRef.viessaIceNeedleStacks = +readSelection("viessaIceNeedleStacks").value;
+            }
+        },
         Jayber(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] === 0) {}//2.
@@ -939,6 +941,7 @@ const settings = {
         "Nazeistra's Devotion"(settingsRef,arrayRef) {
             settingsRef.defDebuffActive = readSelection("defDebuffActive").checked
         },
+        ...localInsertionSettings
     }
 
 }

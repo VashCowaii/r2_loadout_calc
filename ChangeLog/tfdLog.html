@@ -8,14 +8,15 @@
 
 <!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
 
-<!-- <div>
-    <h1>Oct X, 2024 - THE VIESSA CALCS UPDATE</h1>
+<div>
+    <h1>Oct 31, 2024 - THE VIESSA CALCS UPDATE</h1>
     <ul>
         <li>Added Viessa to the character selection, along with breakdowns for all abilities and transcendent mods.</li>
-        <li>Fixed an issue where Impact Rounds "Expand Weapon Charge" reflected as a Malachite polarity instead of Cerulean.</li>
-        <li>Fixed an issue where Impact Rounds "Weak Point Sight" module did not get properly factored into the weak point damage equation.</li>
+        <li>Fixed an issue where weapon substat flat attribute attack bonuses could sometimes not reflect in the weapon damage breakdown, more precisely the attribute display wouldn't populate if there was only an attribute attack bonus with no enhancement mods. (thank you turbo for the report)</li>
+        <li>Added a structure that will allow me to work on character calculations without altering the code that gets shipped out to the live site each update, that way I don't accidentally ship out part of a character. Keen-eyed code viewers noticed in the last update I accidentally shipped out Viessa's ability functions before Viessa herself, but that is something you'd have only seen in the code. In theory, that shouldn't happen anymore.</li>
+        <li>Fixed an issue where if a character had a transcendent mod active but the character was removed from the selections, it could break the calculator.</li>
     </ul>
-</div> -->
+</div>
 <div>
     <h1>Oct 28, 2024</h1>
     <ul>
