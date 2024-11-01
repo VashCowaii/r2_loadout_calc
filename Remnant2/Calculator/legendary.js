@@ -931,8 +931,11 @@ let legendaryPerks = {
     },
     "Brutality": {//TODO: work out w/e tf this is
         "name": "",
-        "desc": "100% increased outgoing and incoming damage.<br><br>[These both seem to be multipliers, which is slightly nuts, need to confirm]<br>Not factored yet",
-        "stats": {},
+        "desc": "100% increased outgoing and incoming damage.<br>",
+        "stats": {
+			"FlatDR": -1,
+			"AllDamage": 1
+		},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L06"
