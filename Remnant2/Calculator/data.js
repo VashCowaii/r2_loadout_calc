@@ -8688,7 +8688,7 @@ traits = {
 		  "customTier0"
 		]
 	  },
-	  "desc": "SUMMONER ONLY<br>Minions absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER to be selected, to populate in \"Damage Kept\" bonuses under Advanced Stats.",
+	  "desc": "SUMMONER/HANDLER ONLY<br>Skill Summons absorb VALUE1.1% of damage taken by the caster.<br><br>Requires SUMMONER or HANDLER to be selected, to populate in \"Damage Kept\" bonuses under Advanced Stats.",
 	  "level": {
 		"0": [
 		  0
