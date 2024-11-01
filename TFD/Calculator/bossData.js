@@ -2186,9 +2186,9 @@ const bosses = {
 
         "DEF": 0,
         "Non-Attribute": 0,
-        "Fire": 0,
+        "Fire": 167,
         "Electric": 0,
-        "Chill": 0,
-        "Toxic": 0,
+        "Chill": 167,
+        "Toxic": 250,
     },
 }
