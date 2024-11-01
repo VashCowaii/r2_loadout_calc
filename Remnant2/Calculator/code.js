@@ -903,7 +903,7 @@ let customItemFunctions = {
   // "traits": {
     bloodBond(index,traitLevel) {//0 user input
       let referenceTable = globalRecords.archs;
-      if (referenceTable.one.class === "Summoner" || referenceTable.two.class === "Summoner" ) {
+      if (referenceTable.one.class === "Summoner" || referenceTable.one.class === "Handler" || referenceTable.two.class === "Summoner" || referenceTable.two.class === "Handler") {
         index.DMGKept *= 1 + (-0.01 * traitLevel);
       }
     },
