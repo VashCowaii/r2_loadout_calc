@@ -1080,6 +1080,22 @@
     white-space: normal;
     font-size: 30px;
 }
+.bossDataPageHeaderMini {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    font-size: 22px;
+}
+.bossDataGuideBox {
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 

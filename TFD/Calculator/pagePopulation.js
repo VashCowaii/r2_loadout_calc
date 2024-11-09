@@ -797,7 +797,9 @@ const settings = {
     updateCharacterSettings(character,isParentCall) {
         const settingsRef = characters[character].characterSettings;
         const arrayRef = globalRecords.character.abilityArray;
-        settings.customSettingsUpdates[character](settingsRef,arrayRef);
+        if (readSelection("character").value === character) {//this stops some shit from breaking when transcendent mods are equipped
+            settings.customSettingsUpdates[character](settingsRef,arrayRef);
+        }
         
         if (!isParentCall) {updateFormulas();}
     },
@@ -845,7 +847,7 @@ const settings = {
             }//2.
             else if (arrayRef[1] === "Venom Injection") {
                 settingsRef.freynaInjectionBonuses = +readSelection("freynaInjectionBonuses").value;
-                // settingsRef.freynaCorrosionBonuses = readSelection("freynaCorrosionBonuses").checked;
+                settingsRef.freynaCorrosionBonuses = readSelection("freynaCorrosionBonuses").checked;
             }
             if (arrayRef[2] === 0) {}//3
             if (arrayRef[3] === 0) {}//4
@@ -1034,6 +1036,7 @@ const basicsUpdates = {
         let ratioHTML = "<div class='basicsDRheaderTitle'>POWER RATIO</div>";
         let ratioHTMLRowsHTML = '';
         rowsListings = [
+            {"statName": "PowerOptimization","statCoverName": "Power Optimization","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (index.PowerOptimization != 0)},
             {"statName": "PowerRatioBase","statCoverName": "Base Power Ratio","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (index.PowerRatioBase != 0)},
             
             {"statName": "PowerRatioNonAttribute","statCoverName": "Non-Attr Power Ratio","tooltip":"","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (index.PowerRatioNonAttribute != 0)},

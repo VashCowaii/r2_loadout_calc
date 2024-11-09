@@ -94,12 +94,13 @@ const calcs = {
         return {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage}
     },
 
-    // limitDecimals(num) { 
-    //     return Math.round(num * 10000) / 10000;
-    // },
-    // limitDecimals2(num) { 
-    //     return Math.round(num * 10000) / 10000;
-    // },
+    customTruncate(num, decimalPlaces) {
+        const factor = Math.pow(10, decimalPlaces);
+        return Math.floor(num * factor)/factor;
+    },
+    customCeiling(value, precision = 0.00001) {
+        return Math.ceil(value / precision) * precision;
+    },
 
 
     getTotalSkillPowerModifier(index,abilityTypeArray) {
@@ -120,21 +121,18 @@ const calcs = {
     },
     getResistanceBasedDR(index,typeName) {
         const currentBoss = globalRecords.boss.currentBoss;
-        const obscureReductionModifier = 1/.999175
-
         const reductionValue = index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
-        // const resistReduction = 1 + index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`]//s * obscureReductionModifier;
-        const resistReduction = 1 + reductionValue//s * obscureReductionModifier;
-        // const resistReduction = 1/(1 - reductionValue)//s * obscureReductionModifier;
+        const resistReduction = 1 + reductionValue;
         const currentResistValue = bosses[currentBoss][typeName] * resistReduction;
 
         const drConstant = 150;
-        // const drConstant = 150/resistReduction;
 
-        // calcs.limitDecimals();
-        return drConstant/(drConstant + (Math.sqrt(currentResistValue)));
-        // return calcs.limitDecimals2(150/(150 + (Math.sqrt(currentResistValue))));
-        // return 150/(150 + calcs.limitDecimals2(Math.sqrt(currentResistValue)));
+        let sqRoot = Math.sqrt(currentResistValue);
+        let initialValue = 1 - (drConstant/(drConstant + sqRoot))
+        if (typeName === "DEF") {initialValue = calcs.customCeiling(initialValue,0.00001);}
+        const endValue = 1 - calcs.customTruncate(initialValue,4);
+        
+        return endValue;
     },
     getCritComposites(returnObject) {
         const Rate = returnObject.totalSkillCritRate;
@@ -146,8 +144,6 @@ const calcs = {
     getFirearmCritComposites(returnObject) {
         const Rate = returnObject.totalFirearmCritRate;
         const Damage = returnObject.totalFirearmCritDamage;
-        // const Damage = calcs.limitDecimals(returnObject.totalFirearmCritDamage);
-        // console.log(Damage)
         const Composite = 1 + (Rate * (Damage-1));
 
         return {Rate,Damage,Composite}
@@ -186,26 +182,22 @@ const calcs = {
 
     getFirearmATK(index,weaponRef) {
         const baseFirearmATK = weaponRef.baseATK;
-        const attackPercent = index["FirearmATK%"];
 
-        // globalRecords.boss.currentBossPartType
+        const attackPercent = index["FirearmATK%"];
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
         const physicalTypeBonus = globalRecords.boss.enemyType === "Colossus" ? 0.20 : 0.10;
-        // const physicalTypeBonus = 0.1999875;
-        // const physicalTypeBonus = 0.10;
         const physicalTypeMulti = weaknessCheck ? physicalTypeBonus : 0;
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
-        const firearmAttributeConversionBase = (baseFirearmATK * (1 + attackPercent));//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
+        const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const totalFirearmATK = (firearmAttributeConversionBase + index.ColossusATK) * (1 + physicalTypeMulti);
 
         return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
     getFirearmWeakpoint(index,weaponRef) {
-        const baseWPMulti = weaponRef.baseWeakPoint
+        const baseWPMulti = weaponRef.baseWeakPoint;
         const weakpointBonus = index["WeakPointDamage%"];
 
-        // const bossPartWPBonus = 0.25;//will edit this later and let people specify what boss body part they are shooting for the sake of completeness
         const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
         const totalWPBonus = globalRecords.useWeakspots && bossPartWPBonus != 0 ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1;
@@ -305,6 +297,14 @@ const calcsUIHelper = {
                             <span class="toggleSlider"></span>
                         </label>
                     </div>
+                    ${entry.toggleElemID2 ? 
+                    `<div class="totalHealingBoxHalf hasHoverTooltip">
+                        <div style="padding-right: 5px;">${entry.toggleElemID2[1] ? entry.toggleElemID2[1] : "Include in Character Statistics?"}</div>
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID2[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}(\`${characterName}\`)" ${settingsRef[entry.toggleElemID2[0]] ? "checked" : ""}>
+                            <span class="toggleSlider"></span>
+                        </label>
+                    </div>` : ""}
                 </div>` : ""}
             ${entry.sliderElemID ? 
                 ` <div class="totalHealingBox">
@@ -1410,7 +1410,7 @@ const customDamage = {
         const finalShieldRegen = 0.05 * inverseBonusPercent;
         const finalToxinRes = 2.5 * inverseBonusPercent;
 
-        // index.enemyToxicResistanceReduction += settingsRef.freynaCorrosionBonuses ? -0.25 : 0;
+        index.enemyToxicResistanceReduction += settingsRef.freynaCorrosionBonuses ? -0.25 : 0;
         index["ResistanceToxin%"] += finalToxinRes;
         index.PowerModifierBase += finalPowerModifier;
 
@@ -1426,8 +1426,8 @@ const customDamage = {
                     "condition": false,"desc": "The maximum of 66.3% bonus modifier can only be achieved when using Overwhelming Shield or when damaged, otherwise you stop at 15%",
                     "sliderElemID": ["freynaInjectionBonuses",0,90,15,"%HP Remaining"],"rowInjection": [rowInjection,""],},
                 {"header": "CORROSION","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                    // "toggleElemID": ["freynaCorrosionBonuses","Use Resistance Reduction?"],//do not uncomment, you will break things, it's not ready
-                    "condition": false,"desc": "Corrosion's bonus is not factored. Yet."},
+                    "toggleElemID": ["freynaCorrosionBonuses","Use Resistance Reduction?"],//do not uncomment, you will break things, it's not ready
+                    "condition": false,"desc": ""},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
             
@@ -2626,9 +2626,11 @@ const customDamage = {
         const avgDmgPerGrenade1 = damage.AVG;
         const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,damage.AVG,baseCooldown,null)
         const avgDPSGrenade1 = DPS;
+        
 
         
         if (!isCycleCalcs) {
+            // console.log(avgDmgPerGrenade1)
             let rowInjection = [
                 {"name": "Cooldown","value": cooldown,"unit": ""},
                 {"name": "Interval Length (s)","value": interval,"unit": ""},
@@ -4071,7 +4073,6 @@ const customDamage = {
             {"name": "AVG/Shot","value": avgPerShot,"unit": ""},
             {"name": "SUM AVG","value": totalAVGGun,"unit": ""},
         ]
-
         const breakdownArray = [
             {"header": "FIREARM DAMAGE","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
                 "condition": false,"desc": "Part-specific <span>Weak Point Modifiers</span>, and <span>Type Bonuses</span>, will automatically adjust based on the part selected, unless forcibly disabled in settings."},
@@ -4184,15 +4185,12 @@ const customDamage = {
         <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
         `;
     },
-
-
     nazDevotionCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponName = "Nazeistra's Devotion"
         const weaponRef = sniperList[weaponName];
         const settingsRef = weaponRef.weaponSettings;
 
         const defDebuff = -0.30;
-        // const defDebuff = -0.30025;
         const currentAmount = settingsRef.defDebuffActive ? defDebuff : 0;
         index.enemyDEFResistanceReduction += currentAmount;
 
