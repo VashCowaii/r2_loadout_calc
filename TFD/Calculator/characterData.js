@@ -281,7 +281,7 @@ const characters = {
                     "desc": "Equips her Unique Weapon. When hitting an enemy with the Unique Weapon, greatly increases Penetration and Firearm ATK and deals additional Chill skill damage. Recovers a portion of MP upon successfully attacking Weak Points. Partially decreases the Cooldown of the Unique Weapon skill when the skill ends depending on the number of bullets fired.",
                     "powerMods": {
                         "base": 3627.4/100,
-                        "firearmATKMulti": 0.50,
+                        "firearmATKMulti": 1.50,
                         "magazine": 4,
                     },
                     "returnStatOptions": {
@@ -316,7 +316,7 @@ const characters = {
                     "desc": "Equips a Unique Weapon. Grants self Supercooled, which increases Weak Point Damage. When hitting an enemy with a Unique Weapon, slightly increases ATK and inflicts additional Chill skill damage.<br>Reduces Supercooled stacks upon firing, but gains stacks upon successful Weak Point Attacks.",
                     "powerMods": {
                         "base": 3627.4/100,
-                        "firearmATKMulti": 0.25,
+                        "firearmATKMulti": 1.25,
                         "magazine": 4,
                         "weakpointStackBonus": 0.097
                     },

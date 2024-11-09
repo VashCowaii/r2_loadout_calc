@@ -301,8 +301,6 @@ const sniperList = {
         "name": "Nazeistra's Devotion",
         "baseATK": 38461,
         "baseCritRate": 0.45,
-        // "baseCritDamage": 2.24995,
-        // "baseCritDamage": 2.24996,
         "baseCritDamage": 2.25,
         "baseWeakPoint": 1.7,
         "physicalType": "Burst",
@@ -312,9 +310,9 @@ const sniperList = {
         "weaponType": "Hand Cannon",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1007_A001.png",
         "weaponSettings": {
-            "defDebuffActive": false,
+            "defDebuffActive": false,//default to off, we don't want it skewing stuff like zenith math unless the user is content screwing themselves by enabling it
         },
-        "customDPSBase": "",//nazDevotionCalcsTier0
+        "customDPSBase": "nazDevotionCalcsTier0",
         "customDPS": "",
         "desc": "On hitting an enemy's Weak Point, inflicts the unique ability Devotion Mark on the target. On hitting an ally, that ally's shield is restored at the cost of your MP. If your current MP is less than the MP cost, this effect is not triggered.",
         "displayStatsALT": {

@@ -70,12 +70,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
         },
 
-        "DEF": 146003,////was 146,074
-        "Non-Attribute": 146003,//was 146,074
-        "Fire": 226617.8,//was 226707
-        "Electric": 372421,//was 372489
-        "Chill": 146003.15,//was 146,074, //TODO check if the def and non attribute values line up with the .15 here
-        "Toxic": 67282,//67226? //67225.69301
+        "DEF": 146074,
+        "Non-Attribute": 146074,
+        "Fire": 226707,
+        "Electric": 372489,
+        "Chill": 146074,
+        "Toxic": 67282,
 
         "attacks": [
            {
@@ -380,12 +380,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
         },
 
-        "DEF": 92413,//was 92430,
-        "Non-Attribute": 92413,//was 92430
-        "Fire": 39697.9,//was 39699
-        "Electric": 92413.1,//was 92430 //TODO: use this an example later. 92413.1 is right but the flat values would not be correct
-        "Chill": 248510.64,//was 248637, //TODO: amazing example to use, for all 3 skils, including whether the crit lines up on the Q with or without the max stack bonus
-        "Toxic": 147463,//was 147564,
+        "DEF": 92430,
+        "Non-Attribute": 92430,
+        "Fire": 39699,
+        "Electric": 92430,
+        "Chill": 248637,
+        "Toxic": 147564,
 
         "attacks": [
             {
@@ -660,13 +660,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.50},
         },
 
-        "DEF": 162159.1,//was 162232
-        // "DEF": 162164.5,//was 162232
-        "Non-Attribute": 162159.1,//was 162232
-        "Fire": 162159.1,//was 162232
-        "Electric": 75718.5,//was 75746
-        "Chill": 250195.05,//was 250324
-        "Toxic": 408925,//409149,
+        "DEF": 162232,
+        "Non-Attribute": 162232,
+        "Fire": 162232,
+        "Electric": 75746,
+        "Chill": 250324,
+        "Toxic": 409149,
 
         "attacks": [
            {
@@ -871,12 +870,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Crush","wpMod": 0.50},
         },
 
-        "DEF": 286822,//407806,
-        "Non-Attribute": 63631.39022,//was 63645
-        "Fire": 180194.1,//was 180356
-        "Electric": 104449.22,//was 104511 //TODO: another good example
-        "Chill": 25410.25,//25424,
-        "Toxic": 63634.45,//63645,
+        "DEF": 287000,
+        "Non-Attribute": 63645,
+        "Fire": 180356,
+        "Electric": 104511,
+        "Chill": 25424,
+        "Toxic": 63645,
 
         "attacks": [
            {
@@ -1007,19 +1006,19 @@ const bosses = {
         "gunCrit": 0.20,
 
         "parts": {
-            "Body": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Body": {"name": "Body","type": "Burst","wpMod": 0},
             "Shoulder": {"name": "Shoulder","type": "Crush","wpMod": 0.25},
             "Core": {"name": "Core","type": "Pierce","wpMod": 0.25},
             "Helmet": {"name": "Helmet","type": "Crush","wpMod": 0.375},
             "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.375},
         },
 
-        "DEF": 176323.5,//was 176346
-        "Non-Attribute": 176323.5,//was 176346
-        "Fire": 176323.6,//was 176346
-        "Electric": 83140,//was 83182
-        "Chill": 270651,//was 270956,
-        "Toxic": 440765.5,//441218,
+        "DEF": 176346,
+        "Non-Attribute": 176346,
+        "Fire": 176346,
+        "Electric": 83182,
+        "Chill": 270956,
+        "Toxic": 441218,
 
         "attacks": [
            {
@@ -1295,12 +1294,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
         },
 
-        "DEF": 182074,//was 182156,
-        "Non-Attribute": 182074,//was 182156
-        "Fire": 182074,//was 182156,
-        "Electric": 86233.8,//was 86251,
-        "Chill": 279234.1,//was 279427,
-        "Toxic": 453914.2,//was 454297,
+        "DEF": 182156,
+        "Non-Attribute": 182156,
+        "Fire": 182156,
+        "Electric": 86251,
+        "Chill": 279427,
+        "Toxic": 454297,
 
         "attacks": [
            {
@@ -1449,12 +1448,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Crush","wpMod": 0.375},
         },
 
-        "DEF": 188059,//was 188,058
-        "Non-Attribute": 187862,//was 188058
-        "Fire": 89381.5,//was 89384,
-        "Electric": 187862,//was 188058,
-        "Chill": 466944.5,//was 467512,
-        "Toxic": 287831.1,//was 288011,
+        "DEF": 188058,
+        "Non-Attribute": 188058,
+        "Fire": 89384,
+        "Electric": 188058,
+        "Chill": 467512,
+        "Toxic": 288011,
 
         "attacks": [
            {
@@ -1635,12 +1634,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Pierce","wpMod": 0.50},
         },
 
-        "DEF": 193880.7,//193880,//was 194054,
-        "Non-Attribute": 193880.7,//was 194054
-        "Fire": 480480.5,//was 481060,
-        "Electric": 296419.5,//was 296709,
-        "Chill": 92496.6,//was 92564,
-        "Toxic": 193880.7,//was 194054,
+        "DEF": 194054,
+        "Non-Attribute": 194054,
+        "Fire": 481060,
+        "Electric": 296709,
+        "Chill": 92564,
+        "Toxic": 194054,
 
         "attacks": [
            {
@@ -1794,12 +1793,12 @@ const bosses = {
             "Sensor": {"name": "Sensor","type": "Burst","wpMod": 0.50},
         },
 
-        "DEF": 193880.7,//194054,
-        "Non-Attribute": 193880.7,//was 194054
-        "Fire": 92496.6,//was 92564, //TODO: this is another great example on why decimals are used
-        "Electric": 193880.7,//was 194054,
-        "Chill": 480480.5,//was 481060,
-        "Toxic": 296419.5,//was 296709,
+        "DEF": 194054,
+        "Non-Attribute": 194054,
+        "Fire": 92564,
+        "Electric": 194054,
+        "Chill": 481060,
+        "Toxic": 296709,
 
         "attacks": [
            {
@@ -1980,12 +1979,12 @@ const bosses = {
             "Back": {"name": "Back","type": "Crush","wpMod": 0.50},
         },
 
-        "DEF": 193880.7,
-        "Non-Attribute": 193880.7,
-        "Fire": 193880.7,
-        "Electric": 92496.6,
-        "Chill": 296419.5,
-        "Toxic": 480480.5,
+        "DEF": 194054,
+        "Non-Attribute": 194054,
+        "Fire": 194054,
+        "Electric": 92564,
+        "Chill": 296709,
+        "Toxic": 481060,
 
         "attacks": [
            {
@@ -2149,25 +2148,8 @@ const bosses = {
         ]
     },
 
-    // "LvL 1 Vulgus": {
-    //     "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
-    //     "shortName": "NONE",
-    //     "enemyType": "Vulgus",
-    //     "buffs": {},
 
-    //     "skillCrit": 0,
-    //     "gunCrit": 0,
-    //     "note": "",
 
-    //     "parts": [{"name": "Body","type": "Burst","wpMod": 0},],
-
-    //     "DEF": 0,
-    //     "Non-Attribute": 0,
-    //     "Fire": 0,
-    //     "Electric": 0,
-    //     "Chill": 0,
-    //     "Toxic": 0,
-    // },
 
     "LvL 1 Order of Truth": {
         "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
@@ -2175,8 +2157,8 @@ const bosses = {
         "enemyType": "Vulgus",
         "buffs": {},
 
-        "skillCrit": 0,
-        "gunCrit": 0,
+        "skillCrit": 0.05,
+        "gunCrit": 0.05,
         "note": "",
 
         "parts": {
@@ -2190,5 +2172,49 @@ const bosses = {
         "Electric": 0,
         "Chill": 167,
         "Toxic": 250,
+    },
+    "LvL 1 Legion of Immortality": {
+        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "shortName": "NONE",
+        "enemyType": "Vulgus",
+        "buffs": {},
+
+        "skillCrit": 0.05,
+        "gunCrit": 0.05,
+        "note": "",
+
+        "parts": {
+            "Body (None)": {"name": "Body","type": "Crush","wpMod": 0},
+            "Generic .50 (Burst)": {"name": "N/A","type": "Crush","wpMod": 0.50},
+        },
+
+        "DEF": 202,
+        "Non-Attribute": 202,
+        "Fire": 135,
+        "Electric": 202,
+        "Chill": 135,
+        "Toxic": 101,
+    },
+    "LvL 1 Legion of Darkness": {
+        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "shortName": "NONE",
+        "enemyType": "Vulgus",
+        "buffs": {},
+
+        "skillCrit": 0.05,
+        "gunCrit": 0.05,
+        "note": "",
+
+        "parts": {
+            "Body (None)": {"name": "Body","type": "Pierce","wpMod": 0},
+            "Generic .50 (Burst)": {"name": "N/A","type": "Pierce","wpMod": 0.50},
+        },
+
+        "DEF": 288,
+        "Non-Attribute": 288,
+        "Fire": 288,
+        "Electric": 192,
+        "Chill": 144,
+        "Toxic": 192,
     },
 }
