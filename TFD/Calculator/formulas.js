@@ -2524,7 +2524,7 @@ const customDamage = {
                     "condition": false,"desc": ""},
                 {"header": "UNIQUE WEAPON - FIREARM SPLIT","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
                     "rowInjection": [rowInjectionFirearmElemental,"Firearm Element"],"rowInjection2": [rowInjectionCryo,"Firearm Cryo DMG"],"rowInjection3": [rowInjectionSums,""],
-                    "condition": false,"desc": "Must enable/disable <span>WEAK PT HITS</span> and <span>FIREARM PHYS BONUS</span> in <span>SETTINGS</span> for accurate values.<br>WP Hits are assumed Shoulder shots. See Weapon DMG video for more info."},
+                    "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab accurate values.<br>See Weapon DMG video for more info."},
                 {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
                     "rowInjection": [rowInjectionTotalSum,""],
                     "condition": false,"desc": ""},
