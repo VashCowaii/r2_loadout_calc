@@ -16,7 +16,7 @@ const bosses = {
     //     "frequency": 0,
     // },
     "None (True Damage)": {
-        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "image": "/images/Remnant/clear.png",
         "shortName": "NONE",
         "enemyType": "Colossus",
         "buffs": {},
@@ -2152,7 +2152,7 @@ const bosses = {
 
 
     "LvL 1 Order of Truth": {
-        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "image": "/images/Remnant/clear.png",
         "shortName": "NONE",
         "enemyType": "Vulgus",
         "buffs": {},
@@ -2174,7 +2174,7 @@ const bosses = {
         "Toxic": 250,
     },
     "LvL 1 Legion of Immortality": {
-        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "image": "/images/Remnant/clear.png",
         "shortName": "NONE",
         "enemyType": "Vulgus",
         "buffs": {},
@@ -2185,7 +2185,7 @@ const bosses = {
 
         "parts": {
             "Body (None)": {"name": "Body","type": "Crush","wpMod": 0},
-            "Generic .50 (Burst)": {"name": "N/A","type": "Crush","wpMod": 0.50},
+            "Generic .50 (Crush)": {"name": "N/A","type": "Crush","wpMod": 0.50},
         },
 
         "DEF": 202,
@@ -2196,7 +2196,7 @@ const bosses = {
         "Toxic": 101,
     },
     "LvL 1 Legion of Darkness": {
-        "image": "/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_Devourer.png",
+        "image": "/images/Remnant/clear.png",
         "shortName": "NONE",
         "enemyType": "Vulgus",
         "buffs": {},
@@ -2207,7 +2207,7 @@ const bosses = {
 
         "parts": {
             "Body (None)": {"name": "Body","type": "Pierce","wpMod": 0},
-            "Generic .50 (Burst)": {"name": "N/A","type": "Pierce","wpMod": 0.50},
+            "Generic .50 (Pierce)": {"name": "N/A","type": "Pierce","wpMod": 0.50},
         },
 
         "DEF": 288,

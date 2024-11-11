@@ -97,7 +97,7 @@ let manipulateURL = {
     const reactorSubKeys = Object.keys(reactorSubRolls);
     const ammoKeys = Object.keys(reactorAmmoList);
     
-    const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}`;
+    const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}${globalRecords.reactor.weaponMatched ? 1 : 0}${globalRecords.currentDisplayMode}`;
 
     urlObject.r.push(concatenatedType,reactorRef.subRoll1Value.toFixed(3),reactorRef.subRoll2Value.toFixed(3));
 
@@ -465,6 +465,10 @@ let manipulateURL = {
 
             reactorRef.subRoll1 = reactorSubKeys[+`${urlReactor[0][3]}${urlReactor[0][4]}`];
             reactorRef.subRoll2 = reactorSubKeys[+`${urlReactor[0][5]}${urlReactor[0][6]}`];
+
+            reactorRef.weaponMatched = +urlReactor[0][7] === 1 ? true : false;//reactor optimization condition
+            readSelection("USEReactorOptimization").checked = reactorRef.weaponMatched;
+            globalRecords.currentDisplayMode = +urlReactor[0][8] || 1;
 
             reactorRef.subRoll1Value = +urlReactor[1];
             reactorRef.subRoll2Value = +urlReactor[2];

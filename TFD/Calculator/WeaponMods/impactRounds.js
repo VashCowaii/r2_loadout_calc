@@ -987,7 +987,7 @@ const impactRounds = {
       },
       "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -35%"
    }, 
-   "Charge Integration": {
+   "Bullet Integration": {
       "rarity": "Rare",
       "polarity": "Malachite",
       "type": "Impact Rounds",

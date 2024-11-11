@@ -615,8 +615,8 @@
 .abilityBreakdownDescription {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* justify-content: left;
     align-items: flex-start; */
     white-space: normal;
@@ -862,41 +862,50 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    white-space: normal;
     /* justify-content: center; */
     align-items: center;
+    /* justify-content: center; */
     border-top: 2px solid #434343;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .modQueryResultsBoxHolder div {
     margin-bottom: 3px;
-    width: 100%; /* Ensure each div takes full width */
+    width: 100%;
 }
 
 .modsQueryResultsRow {
-    display: flex; /* Use flexbox for the row */
-    flex-direction: row; /* Horizontal layout */
+    display: flex;
+    flex-direction: column; 
     width: 100%;
-    max-width: 700px;
+    /* max-width: 700px; */
     /* margin-bottom: 10px; */
-    align-items: center; /* Center items vertically */
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    /* justify-content: center; */
 }
 
 .modsQueryResultsRowName {
     /* width: 100px; */
+    flex-grow: 1; 
     width: auto;
-    text-align: left; /* Align text to the right */
-    margin-left: 5px; /* Add space between name and bar */
+    /* text-align: left; */
+    margin-left: 5px;
     font-size: 14px;
 }
 
 .modsQueryResultsRowBarBoxHolder {
-    flex-grow: 1; /* Allow bar to grow and fill remaining space */
+    flex-grow: 1; 
     max-width: 300px;
+    /* max-width: 100%; */
     height: 7px;
     border: 2px solid #434343;
     border-radius: 5px;
     position: relative;
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden; 
 }
 
 .modsQueryResultsRowBar {
@@ -1099,6 +1108,33 @@
 
 
 
+.modeSelectionBoxHolder {
+    width: 100%;
+    border-bottom: 2px solid #434343;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.modeSelectionSelectorBox {
+    border: 2px solid #434343;
+    color: grey;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+
 
 
 
@@ -1127,6 +1163,10 @@
 
 
 @media (max-width: 768px) {
+    .basicsInnerBox {
+        height: auto;
+        max-height: auto;
+    }
     .bossDataMainHolder,.bossDataPartsRow {
         flex-direction: column;
     }
@@ -1153,6 +1193,8 @@
 
 .basicsBox {
     width: 100%;
+    height: auto;
+    max-height: 100%;
 }
 .basicsBoxModsHolder {
     width: 100%;
@@ -1187,4 +1229,15 @@
     margin-top: 5px;
     background-color: transparent;
     border-top: 1px solid black;
+}
+
+
+
+
+
+.laundry,.coldfury,.towed,.uniqueweapon,.cryo,.devotionmark,.singlereloadforpeace,.pestcontrol,.closecall,
+.overclock,.weakenregeneration,.overkill,.grenadethrow,.powerunitchange,.burn,.loadmastery,.changemastery,
+.tractiongrenade,.necrosis,.toxicsense,.purification,.corrosion,.room0trauma,.toxicpuddle,.toxicreaction,.panic,
+.plaguebodyarmor,.despair,.toxicswamp,.venom-injected,.toxicfootprints,.putrid,.nightmare {
+    color: #1488fd;
 }

@@ -28,10 +28,10 @@ const createHTML = {
           <span class="basicsDRStatGreen">${name}</span></div>`
     },
     componentDescription(descRef) {
-        return `<span class="componentDescription">
+        return tooltips.updateSubstatColor(`<span class="componentDescription">
             <b>2 Piece:</b> ${descRef["2pc"].desc}
             <br>
             <b>4 Piece:</b> ${descRef["4pc"].desc}
-        </span>`
+        </span>`)
     }
 }

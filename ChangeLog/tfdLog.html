@@ -9,6 +9,48 @@
 <!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
 
 <div>
+    <h1>Nov 11, 2024</h1>
+    <ul>
+        <h3>Mod Comparisons</h3>
+        <li>Added the ability to target generalized player statistics, whereas before you could only target ability aspects.</li>
+        <li>Added the following options under "Stat" targets:
+            <ul>
+                <li>Max HP</li>
+                <li>Max Shield</li>
+                <li>Max MP</li>
+                <li>DEF</li>
+                <li>Resist - Fire</li>
+                <li>Resist - Chill</li>
+                <li>Resist - Toxin</li>
+                <li>Resist - Electric</li>
+            </ul>
+        </li>
+        <li>Moved the comparisons tool up to a new tab at the top called "Compare"</li>
+        <li>Reworked the comparison UI to be more mobile friendly.</li>
+
+        <h3>General</h3>
+        <li>Added the first batch of tooltips to the main stat column.
+            <ul>
+                <li>Still more work to be done here and they haven't been added to everything just yet. Also, I'll have it so it'll not only tell you about the stat but also tell you everything in your gear that is adding to it</li>
+            </ul>
+        </li>
+        <li>Added the structure needed to do keyword-color-tagging in descriptions. Now I just need to add all the keys. This is for stuff like Cold Fury in Hailey's Description, in-game it is changed to blue text and highlighted, and that's what this code will do.</li>
+        <li>Moved the "Player" and "Enemy" settings to tabs up near where the Character/Weapon display toggle used to be, and changed the toggle to a tabbing system instead to allow me to better manage UI space with new things I might add later.</li>
+        <li>Added a display to enemy settings that will notify users of the enemy part weakness as well as weak point bonus if applicable</li>
+        <li>The following user inputs will now save to the URL length:
+            <ul>
+                <li>Reactor Weapon Match (the 1.6x bonus or not)</li>
+                <li>Current Display Tab (Character, weapon, team, enemy etc.)</li>
+            </ul>
+        </li>
+        <li>Renamed the "Charge Integration" mods to "Bullet Integration" which used to also be called "Charge Intensive"</li>
+        <li>Fixed a mislabeled weakness type on the recently added lvl1 immortality and darkness enemy selections. This was purely a display issue, the weakness type behind the scenes was still correct.</li>
+        <li>Fixed an issue where the 60% bonus from the matching reactor weapon didn't show up in the main stat column under power optimization. It still factored into the math as it should have, was just an error in how the UI pulled the numbers.</li>
+    
+    </ul>
+</div>
+
+<div>
     <h1>Nov 9, 2024 - THE DEF FORMULA UPDATE</h1>
     If you're not familiar, we sorted out the actual DEF formula, and this brings changes to the resistances values we use and the resulting values we get from them.
     <a href="https://youtu.be/7fWFPwAflMI" target="_blank" rel="noopener noreferrer" style="color: #93CCEA;">See the latest video for better info</a>

@@ -1103,7 +1103,7 @@ const highPowerRounds = {
     //         "FirearmCritDamage": -0.30
     //     }
     // },
-    "Charge Integration (Sniper)": {
+    "Bullet Integration (Sniper)": {
         "rarity": "Rare",
         "polarity": "Malachite",
         "type": "High-Power Rounds",
@@ -1115,7 +1115,7 @@ const highPowerRounds = {
             "FirearmCritDamage": 0.20
         }
     },
-    // "Charge Integration (Shotgun)": {
+    // "Bullet Integration (Shotgun)": {
     //     "rarity": "Rare",
     //     "polarity": "Malachite",
     //     "type": "High-Power Rounds",
@@ -1127,7 +1127,7 @@ const highPowerRounds = {
     //         "FirearmCritDamage": 0.10
     //     }
     // },
-    // "Charge Integration (Launcher)": {
+    // "Bullet Integration (Launcher)": {
     //     "rarity": "Rare",
     //     "polarity": "Malachite",
     //     "type": "High-Power Rounds",
