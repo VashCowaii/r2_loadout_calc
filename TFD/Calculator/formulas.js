@@ -109,7 +109,7 @@ const calcs = {
         return sumModifierBonus;
     },
     getTotalSkillPower(index,abilityTypeArray,skillDependentModifier) {
-        const powerOptimization = (globalRecords.reactor.weaponMatched ? 1.6 : 1) + index.PowerOptimization;
+        const powerOptimization = index.PowerOptimization;
         skillDependentModifier = skillDependentModifier || 1;
 
         const basePowerRatio = 1 + index.PowerRatioBase;
@@ -472,7 +472,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -505,7 +505,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -563,7 +563,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -620,7 +620,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -706,7 +706,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -790,7 +790,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -823,7 +823,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
@@ -906,7 +906,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -935,7 +935,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -967,7 +967,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -993,7 +993,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1048,7 +1048,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1078,7 +1078,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1131,7 +1131,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1194,7 +1194,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1236,7 +1236,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1298,7 +1298,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1375,7 +1375,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1437,7 +1437,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
@@ -1489,7 +1489,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1542,7 +1542,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1634,7 +1634,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1692,7 +1692,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1753,7 +1753,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1814,7 +1814,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1887,7 +1887,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1941,7 +1941,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -1994,7 +1994,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2059,7 +2059,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2134,7 +2134,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2186,7 +2186,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2239,7 +2239,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2290,7 +2290,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2344,7 +2344,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2398,7 +2398,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2443,7 +2443,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <span class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</span>
             `;
         }
         else {
@@ -2538,7 +2538,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2593,7 +2593,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2651,7 +2651,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2728,7 +2728,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2797,7 +2797,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2829,7 +2829,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2859,7 +2859,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -2963,7 +2963,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3055,7 +3055,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3085,7 +3085,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3135,7 +3135,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3164,7 +3164,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3224,7 +3224,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3294,7 +3294,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3335,7 +3335,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3427,7 +3427,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3501,7 +3501,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3554,7 +3554,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3610,7 +3610,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3672,7 +3672,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3735,7 +3735,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3784,7 +3784,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
     },
@@ -3844,7 +3844,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -3932,7 +3932,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -4016,7 +4016,7 @@ const customDamage = {
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
-            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
@@ -4124,7 +4124,7 @@ const customDamage = {
             ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Secret Garden",true)}
         </div>
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
         `;
     },
     blueBeetleCalcsTier0(index,returnObject,isCycleCalcs) {
@@ -4151,7 +4151,7 @@ const customDamage = {
             ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Blue Beetle",true)}
         </div>
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
         `;
     },
     peacemakerCalcsTier0(index,returnObject,isCycleCalcs) {
@@ -4182,7 +4182,7 @@ const customDamage = {
             ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Peace Maker",true)}
         </div>
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
         `;
     },
     nazDevotionCalcsTier0(index,returnObject,isCycleCalcs) {
@@ -4213,7 +4213,7 @@ const customDamage = {
             ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,weaponName,true)}
         </div>
         <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${weaponRef.desc}</div>
+        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
         `;
     },
     ...localInsertionDamage
@@ -4440,7 +4440,7 @@ let moduleQueryFunctions = {
             for (let entry of referenceArray) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
         }
     },
-    getUpdatedQueryModSelections() {
+    getUpdatedQueryModSelections(queryType) {
         const characterRef = globalRecords.character;
         const currentCharacter = characterRef.currentCharacter;
         const currentCharacterMods = characterRef.mods;
@@ -4460,7 +4460,6 @@ let moduleQueryFunctions = {
         // Loop through the array and create option elements
         newModArray2.forEach(function(optionName) {
             const option = document.createElement("option");
-            // option.value = optionName.toLowerCase().replace(/\s+/g, '-'); // Set a value (optional)
             option.textContent = optionName; // Set the display name
             queryLister.appendChild(option); // Append the option to the select element
         });
@@ -4473,52 +4472,85 @@ let moduleQueryFunctions = {
             for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
         }
 
-        const abilityLister = readSelection("queryAbilityList");
-        const abilityOptionLister = readSelection("queryAbilityOptionList");
+        if (queryType === "Ability") {
+            const abilityLister = readSelection("queryAbilityList");
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
 
-        //ability array handling is done within userTriggers.updateSelectedMod
-        const arrayRef = characterRef.abilityArray;
-        const abilityRefs = characters[currentCharacter].abilities;
+            //ability array handling is done within userTriggers.updateSelectedMod
+            const arrayRef = characterRef.abilityArray;
+            const abilityRefs = characters[currentCharacter].abilities;
 
-        //ABILITY KEYS
-        let abilityRefArray = [];
-        for (let i=1;i<=5;i++) {
-            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
-            const currentPath = abilityRefs[`ability${i}`][path];
-            abilityRefArray.push(currentPath.name);
-        }
-        const abilityRefSet = new Set(abilityRefArray);
-        abilityLister.innerHTML = "";
-        abilityRefArray.forEach(function(optionName) {
-            const option = document.createElement("option");
-            option.textContent = optionName;
-            abilityLister.appendChild(option);
-        });
-        if (!abilityRefSet.has(readSelection("queryAbility").value)) {readSelection("queryAbility").value = abilityRefArray[0]}
-        const selectedAbilityIndexReference = abilityRefArray.indexOf(readSelection("queryAbility").value);
-        const selectedAbilityPath = abilityRefs[`ability${selectedAbilityIndexReference+1}`][arrayRef[selectedAbilityIndexReference] === 0 ? "base" : arrayRef[selectedAbilityIndexReference]];
-        const currentAbilityReturnOptions = selectedAbilityPath.returnStatOptions;
-
-        //ABILITY OPTION RETURN KEYS
-        const optionKeys = Object.keys(currentAbilityReturnOptions);
-        const optionKeysSet = new Set(optionKeys);
-        abilityOptionLister.innerHTML = "";
-        if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
-        else {
-            optionKeys.forEach(function(optionName) {
+            //ABILITY KEYS
+            let abilityRefArray = [];
+            for (let i=1;i<=5;i++) {
+                const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+                const currentPath = abilityRefs[`ability${i}`][path];
+                abilityRefArray.push(currentPath.name);
+            }
+            const abilityRefSet = new Set(abilityRefArray);
+            readSelection("queryAbilityBoxHolder").style.display = "flex";
+            abilityLister.innerHTML = "";
+            abilityRefArray.forEach(function(optionName) {
                 const option = document.createElement("option");
-                option.textContent = optionName || "N/A (or not coded yet)";
-                abilityOptionLister.appendChild(option);
+                option.textContent = optionName;
+                abilityLister.appendChild(option);
             });
-            if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[optionKeys.length-1]}
-        }
-        const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
-        const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : currentAbilityReturnOptions[optionKeys[selectedAbilityOptionIndexReference]];
+            if (!abilityRefSet.has(readSelection("queryAbility").value)) {readSelection("queryAbility").value = abilityRefArray[0]}
+            const selectedAbilityIndexReference = abilityRefArray.indexOf(readSelection("queryAbility").value);
+            const selectedAbilityPath = abilityRefs[`ability${selectedAbilityIndexReference+1}`][arrayRef[selectedAbilityIndexReference] === 0 ? "base" : arrayRef[selectedAbilityIndexReference]];
+            const currentAbilityReturnOptions = selectedAbilityPath.returnStatOptions;
 
-        return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+            //ABILITY OPTION RETURN KEYS
+            const optionKeys = Object.keys(currentAbilityReturnOptions);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[optionKeys.length-1]}
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : currentAbilityReturnOptions[optionKeys[selectedAbilityOptionIndexReference]];
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
+        else if (queryType === "Stat") {
+            //STAT OPTION RETURN KEYS
+            readSelection("queryAbilityBoxHolder").style.display = "none";
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
+            const statRefs = characterRef.statTargets;
+
+
+            const optionKeys = Object.keys(statRefs);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
+            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
     },
     getModuleQueryResults() {
-        const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections();
+        //never allow a blank query, default to ability if all else fails
+        const typeRef = {"Ability": "","Stat": ""}
+        if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
+        const queryType = readSelection("queryType").value;
+
+        const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections(queryType);
         moduleQueryFunctions.clearInvalidQuerySelections();
         const characterRef = globalRecords.character;
         const currentCharacter = characterRef.currentCharacter;
@@ -4530,7 +4562,7 @@ let moduleQueryFunctions = {
         const modSelection = readSelection("queryMod").value;
         //abort invalid or empty queries
         if (modSelection === "" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
-            readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the ability you selected:<br>- Doesn't have any mods equipped to compare against<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
+            readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the target you selected:<br>- Doesn't have any mods equipped to compare against<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
             return;
         }
 
@@ -4555,13 +4587,26 @@ let moduleQueryFunctions = {
         readSelection("moduleQueryBoxHolder").innerHTML = "";
 
         let queryResultsArray = [];
-        for (let entry of modKeyReference) {
-            if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
-            newModArray1[indexToModify] = entry;
+        if (queryType === "Ability") {
+            for (let entry of modKeyReference) {
+                if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
+                newModArray1[indexToModify] = entry;
 
-            queryResultsArray.push(
-                {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
-            )
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
+                )
+            }
+        }
+        else if (queryType === "Stat") {
+            console.log(targetReturnValue)
+            for (let entry of modKeyReference) {
+                if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
+                newModArray1[indexToModify] = entry;
+
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[targetReturnValue],"category": modData[entry].category}
+                )
+            }
         }
 
 
@@ -4580,14 +4625,6 @@ let moduleQueryFunctions = {
         const highestValue = queryResultsArray[0].returnedValue
         const lowestValue = queryResultsArray[queryResultsArray.length-1].returnedValue;
         const referenceValue = referencePoint.returnedValue;
-
-        // readSelection("moduleQueryBoxHolder").innerHTML += `${referencePoint.modName} - ${referencePoint.returnedValue.toLocaleString()} - ${referencePoint.category}<br><br>`
-        // for (let entry of queryResultsArray) {
-        //     readSelection("moduleQueryBoxHolder").innerHTML += `${entry.modName} - ${entry.returnedValue.toLocaleString()} - ${entry.category}<br>`
-        // }
-        
-        
-        const barWidth = 200;
         
         // Get the container for the table
         const table = document.getElementById('moduleQueryBoxHolder');
@@ -4600,20 +4637,20 @@ let moduleQueryFunctions = {
             const percentageDifferenceCheck = entry.returnedValue/referenceValue;
             const percentageDifferenceValue = percentageDifferenceCheck >= 0 ? (percentageDifferenceCheck-1) * 100 : (1 - percentageDifferenceCheck) * -100;
         
-            // Create the row
+            //row creation
             const row = document.createElement('div');
             row.classList.add('modsQueryResultsRow');
         
-            // Create a div for the name
+            //name generation
             const nameDiv = document.createElement('div');
             nameDiv.classList.add('modsQueryResultsRowName');
             nameDiv.textContent = `${percentageDifferenceValue>=0 ? "+" : ""}${(percentageDifferenceValue).toFixed(2)}% ${entry.modName} (${(+entry.returnedValue.toFixed(0)).toLocaleString()})`;
         
-            // Create a div for the bar
+            //bar div
             const barContainer = document.createElement('div');
             barContainer.classList.add('modsQueryResultsRowBarBoxHolder');
         
-            // Create the reference tick mark
+            //reference tick mark
             const refMark = document.createElement('div');
             refMark.classList.add('modsQueryResultsRowBarTickMark');
             refMark.style.position = 'absolute';
@@ -4623,7 +4660,7 @@ let moduleQueryFunctions = {
             refMark.style.backgroundColor = 'white';
             refMark.style.zIndex = '1';
         
-            // Create the bar that shows the percentage difference
+            //bar
             const bar = document.createElement('div');
             bar.classList.add('modsQueryResultsRowBar');
             bar.style.position = 'absolute';
@@ -4641,19 +4678,17 @@ let moduleQueryFunctions = {
                 bar.style.left = `${referencePositionPercentage}%`;
             }
         
-            // Append elements to the bar container
+            //add to bar container
             barContainer.appendChild(refMark);
             barContainer.appendChild(bar);
-        
-            // Append the name and bar to the row
-            row.appendChild(barContainer);
+            //add to row
             row.appendChild(nameDiv);
-        
-            // Append the row to the table
+            row.appendChild(barContainer);
+            //add to table
             table.appendChild(row);
         }
         
-        // Create rows for each person in the array
+        //add a row for each entry in the comparison cycles
         queryResultsArray.forEach(entry => createRow(entry));
     }
 }
