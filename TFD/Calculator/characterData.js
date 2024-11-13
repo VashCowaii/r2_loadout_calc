@@ -27,6 +27,8 @@ const characters = {
                     "image": "/images/Remnant/clear.png",
                     "type": [""],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {},
                     "displayStatsALT": {
@@ -40,6 +42,8 @@ const characters = {
                     "image": "/images/Remnant/clear.png",
                     "type": [""],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {},
                     "displayStatsALT": {
@@ -53,6 +57,8 @@ const characters = {
                     "image": "/images/Remnant/clear.png",
                     "type": [""],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {},
                     "displayStatsALT": {
@@ -66,6 +72,8 @@ const characters = {
                     "image": "/images/Remnant/clear.png",
                     "type": [""],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {},
                     "displayStatsALT": {
@@ -79,6 +87,8 @@ const characters = {
                     "image": "/images/Remnant/clear.png",
                     "type": [""],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {},
                     "displayStatsALT": {
@@ -127,6 +137,8 @@ const characters = {
                         "base": 93.8/100,
                     },
                     "customDPS": "haileyCryoRoundCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgPerHit",
                         "SUM Total AVG" : "totalAVG",
@@ -164,6 +176,8 @@ const characters = {
                         "baseCryogenic": 178.8/100,
                     },
                     "customDPS": "haileyCryoRoundCalcsCluster",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgPerHit",
                         "Cryogenic - AVG/Hit" : "avgPerHitCryogenic",
@@ -207,6 +221,8 @@ const characters = {
                         "AOE": 4533.9/100,
                     },
                     "customDPS": "haileyStormCalcs",//haileyBigFuckinGunCalcs
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG AOE DMG" : "avgPerAOE",
                         "AVG Impact DMG" : "avgPerHit",
@@ -247,6 +263,8 @@ const characters = {
                     "desc": "Grants Hailey Cold Fury every second. The Cold Fury effect gradually decreases her movement speed, but greatly increases the base Firearm and Skill Critical Hit Rate and Firearm Penetration.<br>When Cold Fury reaches maximum stacks, Hailey becomes immune to Knockdown and gains an increase to her Firearm and Skill Critical Hit Damage. However, rolling or grappling removes 3 stacks.",
                     "customDPSBase": "haileyFuryCalcsTier0",
                     "customDPS": "",
+                    "stats": {},
+                    "tags": ["FirearmCritRateBase","FirearmCritDamage","SkillCritRateBaseBonus","SkillCritDamage"],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -278,6 +296,8 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "customDPSBase": "",
                     "customDPS": "haileyZenithCalcs",//haileyZenithCalcs
+                    "stats": {},
+                    "tags": [],
                     "desc": "Equips her Unique Weapon. When hitting an enemy with the Unique Weapon, greatly increases Penetration and Firearm ATK and deals additional Chill skill damage. Recovers a portion of MP upon successfully attacking Weak Points. Partially decreases the Cooldown of the Unique Weapon skill when the skill ends depending on the number of bullets fired.",
                     "powerMods": {
                         "base": 3627.4/100,
@@ -313,6 +333,10 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "customDPSBase": "haileyZenithCalcsSuperStarterTier0",
                     "customDPS": "haileyZenithCalcsSuperStarter",//haileyZenithCalcs
+                    "stats": {},
+                    "tags": [],
+                    "stats": {},
+                    "tags": ["WeakPointDamage%"],
                     "desc": "Equips a Unique Weapon. Grants self Supercooled, which increases Weak Point Damage. When hitting an enemy with a Unique Weapon, slightly increases ATK and inflicts additional Chill skill damage.<br>Reduces Supercooled stacks upon firing, but gains stacks upon successful Weak Point Attacks.",
                     "powerMods": {
                         "base": 3627.4/100,
@@ -358,6 +382,8 @@ const characters = {
                     "desc": "Proportional to the distance between the target and Hailey, the Weak Point Damage decreases the closer you are to your target and increases the farther you are.",
                     "customDPSBase": "haileyRetreatCalcsTier0",
                     "customDPS": "",
+                    "stats": {},
+                    "tags": ["WeakPointDamage%"],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -413,6 +439,8 @@ const characters = {
                     },
                     "customDPSBase": "kyleRepulsionCalcsTier0",
                     "customDPS": "kyleRepulsionCalcs",
+                    "stats": {},
+                    "tags": ["DEF%"],
                     "returnStatOptions": {
                         "Impact - AVG/Hit" : "avgDmgPerImpact1",
                         "Impact - AVG/DPS" : "avgDPSImpact1",
@@ -448,6 +476,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleRepulsionCalcsInstinctStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Impact - AVG/Hit" : "avgDmgPerImpact1",
                         "Impact - AVG/DPS" : "avgDPSImpact1",
@@ -480,6 +510,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "kyleBulwarkCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -514,6 +546,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleDiamagneticCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Barrier Hits - AVG/Hit" : "avgDmgPerTick2",
                         "AVG DPS" : "avgDPSTicks2",
@@ -548,6 +582,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleSpurtCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Explosion - AVG/Hit" : "avgDmgPerExplosion",
                     },
@@ -579,6 +615,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleSpurtCalcsEruptionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Explosion - AVG/Hit" : "avgDmgPerExplosion",
                     },
@@ -613,6 +651,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleThrustersCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Impact - AVG/Hit" : "avgDmgPerImpact4",
                         "Impact - AVG/DPS" : "avgDPSImpact1",
@@ -647,6 +687,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "kyleBomberCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Impact - AVG/Hit" : "avgDmgPerImpact4",
                         "Bombs - AVG/Hit" : "avgDmgPerBomb4",
@@ -683,6 +725,8 @@ const characters = {
                     },
                     "customDPSBase": "kyleBarCalcsTier0",
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -743,6 +787,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "lepicGrenadeCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Grenade - AVG/Hit" : "avgDmgPerGrenade1",
                         "Grenade - AVG/DPS" : "avgDPSGrenade1",
@@ -769,6 +815,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "lepicGrenadeCalcsStacksStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Grenade - AVG/Hit" : "avgDmgPerGrenade1",
                         "Grenade - AVG/DPS" : "avgDPSGrenade1",
@@ -801,6 +849,8 @@ const characters = {
                     },
                     "customDPSBase": "lepicOverclockCalcsTier0",
                     "customDPS": "lepicOverclockCalcs",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
                     "returnStatOptions": {
                         "Burn - AVG/Tick" : "avgDmgPerTick2",
                         "Burn - Total Damage" : "totalTickDamage2",
@@ -834,6 +884,8 @@ const characters = {
                     },
                     "customDPSBase": "lepicPowerUnitCalcsTier0",
                     "customDPS": "lepicPowerUnitCalcs",
+                    "stats": {},
+                    "tags": ["FirearmATK%"],
                     "returnStatOptions": {
                         "Burn - AVG/Tick" : "avgDmgPerTick2",
                         "Burn - Total Damage" : "totalTickDamage2",
@@ -864,6 +916,8 @@ const characters = {
                     },
                     "customDPSBase": "lepicOverclockCalcsTier0NerveStarter",
                     "customDPS": "lepicNerveCalcs",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -893,6 +947,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "lepicTractionCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -924,6 +980,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "lepicOverkillCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Overkill - AVG/Hit" : "overkillAVGperHit4",
                         "Overkill - Total Burst Damage" : "overkillTotalShotDamage4",
@@ -963,6 +1021,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "lepicOverkillCalcsEfficiency",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Overkill - AVG/Hit" : "avgDmgPerShot4",
                     },
@@ -992,6 +1052,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "lepicCloseCallCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1016,6 +1078,8 @@ const characters = {
                     },
                     "customDPSBase": "lepicFirearmMasterCalcsTier0",
                     "customDPS": "lepicFirearmMasterCalcs",
+                    "stats": {},
+                    "tags": ["PowerModifierBase","SkillRange"],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1040,6 +1104,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "lepicBrakingCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1095,6 +1161,8 @@ const characters = {
                         "baseElec": 55.9/100,
                     },
                     "customDPS": "bunnyThrillCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Elec" : "avgDmgPerElec",
                         "Skill - AVG/Hit" : "avgDmgPerHit",
@@ -1122,6 +1190,8 @@ const characters = {
                     "type": ["Electric","Fusion"],
                     "desc": "Creates a Thrill Bomb that targets the nearest enemy within range, dealing damage. This damage increases proportionally to the amount of Electricity retained. Inflicts Electrocution on enemies hit.",
                     "customDPS": "bunnyThrillCalcsHVStarter",
+                    "stats": {},
+                    "tags": [],
                     "powerMods": {
                         "base": 215.9/100,
                         "baseElec": 77.1/100,
@@ -1153,6 +1223,8 @@ const characters = {
                     "type": ["Electric","Fusion"],
                     "desc": "Creates a Thrill Bomb that targets the nearest enemy within range, dealing damage. This damage increases proportionally to the amount of Electricity retained. Inflicts Electrocution on enemies hit.",
                     "customDPS": "bunnyThrillCalcsSuperStarter",
+                    "stats": {},
+                    "tags": [],
                     "powerMods": {
                         "base": 156.6/100,
                         "baseElec": 55.9/100,
@@ -1189,6 +1261,8 @@ const characters = {
                     "desc": "Always moves by Sprinting, and increases Sprint Speed.<br>Gains Speed of Light. Speed of Light additionally gains electricity while moving.",
                     "customDPSBase": "bunnySpeedCalcsTier0Speed",
                     "customDPS": "bunnySpeedCalcs",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "powerMods": {
                         "cost": 25,
                         "SprintSpeedBonus": 0.50,
@@ -1221,6 +1295,8 @@ const characters = {
                     "desc": "Always moves by Sprinting, and gains Speed of Light.<br>Speed of Light additionally gains electricity while moving. Recovers Shield continuously proportionally to the distance traveled.",
                     "customDPSBase": "bunnySpeedCalcsTier0SpeedTransitionStarter",
                     "customDPS": "bunnySpeedCalcsTransitionStarter",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "powerMods": {
                         "cost": 25,
                         "SprintSpeedBonus": 0.50,
@@ -1254,6 +1330,8 @@ const characters = {
                     "desc": "Always moves by Sprinting, and gains Speed of Light.<br>Speed of Light additionally gains electricity while moving. Recovers Shield continuously proportionally to the distance traveled.<br><br>Also just no. There are better options for bunny.",
                     "customDPSBase": "bunnySpeedCalcsTier0SpeedBionicStarter",
                     "customDPS": "bunnySpeedCalcsBionicStarter",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "powerMods": {
                         "cost": 15/100,
                         "SprintSpeedBonus": 0.30,
@@ -1290,6 +1368,8 @@ const characters = {
                         "baseElec": 53.1/100,
                     },
                     "customDPS": "bunnyEmissionCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgDmgPerHit",
                         "Skill - AVG/Elec" : "avgDmgPerElec",
@@ -1327,6 +1407,8 @@ const characters = {
                         "baseElec": 89.5/100,
                     },
                     "customDPS": "bunnyEmissionCalcsHVStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgDmgPerHit",
                         "Skill - AVG/Elec" : "avgDmgPerElec",
@@ -1364,6 +1446,8 @@ const characters = {
                         "baseElec": 53.1/100,
                     },
                     "customDPS": "bunnyEmissionCalcsSuperStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgDmgPerHit",
                         "Skill - AVG/Elec" : "avgDmgPerElec",
@@ -1399,6 +1483,8 @@ const characters = {
                     "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_004_A01_04.png",
                     "type": ["Electric","Fusion"],
                     "customDPS": "",
+                    "stats": {},
+                    "tags": [],
                     "desc": "",
                     "returnStatOptions": {
                     },
@@ -1417,6 +1503,8 @@ const characters = {
                     },
                     "customDPSBase": "bunnyCondenseCalcsTier0Speed",
                     "customDPS": "bunnyCondenseCalcs",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgDmgPerHit",
                     },
@@ -1451,6 +1539,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "bunnyFootCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Jump - AVG/Hit" : "avgDmgPerHit",
                     },
@@ -1481,6 +1571,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "bunnyFootCalcsCharge",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Charge - AVG/Hit" : "avgDmgPerHitCharge",
                         "Jump - AVG/Hit" : "avgDmgPerHit",
@@ -1547,6 +1639,8 @@ const characters = {
                         "base": 439.1/100,
                     },
                     "customDPS": "esiemoTimeBombCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Bomb - AVG/Hit" : "avgDmgPerHit",
                         "SUM Total AVG" : "sumTotalAVG",
@@ -1577,6 +1671,8 @@ const characters = {
                     },
                     "customDPSBase": "esiemoBlastCalcsTier0",
                     "customDPS": "esiemoBlastCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1603,6 +1699,8 @@ const characters = {
                     },
                     "customDPSBase": "esiemoBlastCalcsTier0ClusterStarter",
                     "customDPS": "esiemoBlastCalcsCluster",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Clusters - AVG/Hit" : "avgDmgPerHit",
                         "Burn - AVG/Hit" : "avgDmgPerHitBurn",
@@ -1638,6 +1736,8 @@ const characters = {
                     },
                     "customDPSBase": "esiemoBlastCalcsTier0CreativeStarter",
                     "customDPS": "esiemoBlastCalcsCreativeStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1662,6 +1762,8 @@ const characters = {
                         "base": 1061.9/100,
                     },
                     "customDPS": "esiemoGuidedCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Bomb - AVG/Hit" : "avgDmgPerHit",
                         "SUM Total AVG" : "sumTotalAVG",
@@ -1690,6 +1792,8 @@ const characters = {
                         "base": 1493.3/100,
                     },
                     "customDPS": "esiemoPropagandaCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Bomb - AVG/Hit" : "avgDmgPerHit",
                         "SUM Total AVG" : "sumTotalAVG",
@@ -1724,6 +1828,8 @@ const characters = {
                     },
                     "customDPSBase": "esiemoArcheCalcsMadnessTier0",
                     "customDPS": "esiemoArcheCalcs",//
+                    "stats": {},
+                    "tags": ["Power Optimization","DEF%","SprintSpeedBonus","FirearmATK%"],
                     "returnStatOptions": {
                         "Running - AVG/Hit" : "avgDmgPerHitRun",
                         "Explosion - AVG/Hit" : "avgDmgPerHit",
@@ -1741,7 +1847,7 @@ const characters = {
                         "RUNNING": [],
                         "MADNESS": [
                             {"statType": "duration","statName": "Duration","value": 14,"limit": null,"isModified": true},
-                            {"statType": "","statName": "+Skill Power","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Power (Opt.)","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "+Firearm ATK","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "-DEF","value": -0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
@@ -1760,6 +1866,8 @@ const characters = {
                     },
                     "customDPSBase": "esiemoCreativeCalcsNarcissimTier0",
                     "customDPS": "esiemoCreativeCalcs",//
+                    "stats": {},
+                    "tags": ["SkillCooldown","DEF%","SprintSpeedBonus"],
                     "returnStatOptions": {
                         "Running - AVG/Hit" : "avgDmgPerHitRun",
                         "Explosion - AVG/Hit" : "avgDmgPerHit",
@@ -1795,6 +1903,8 @@ const characters = {
                         "base": 1617.3/100,
                     },
                     "customDPS": "esiemoHabitCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Bomb - AVG/Hit" : "avgDmgPerHit",
                     },
@@ -1820,6 +1930,8 @@ const characters = {
                         "base": 1276.7/100,
                     },
                     "customDPS": "esiemoEvadeCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Bomb - AVG/Hit" : "avgDmgPerHit",
                         "SUM Total AVG" : "sumTotalAVG",
@@ -1879,6 +1991,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaVenomTraumaCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -1922,6 +2036,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaVenomTraumaCalcsNeuroStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -1962,6 +2078,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaVenomTraumaCalcsContagionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2002,6 +2120,8 @@ const characters = {
                     },
                     "customDPSBase": "freynaMechanismCalcsTier0",
                     "customDPS": "freynaMechanismCalcs",
+                    "stats": {},
+                    "tags": ["DEF%"],
                     "returnStatOptions": {
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
                     },
@@ -2039,6 +2159,8 @@ const characters = {
                     },
                     "customDPSBase": "freynaMechanismCalcsTier0NeuroStarter",
                     "customDPS": "freynaMechanismCalcsNeuroStarter",
+                    "stats": {},
+                    "tags": ["DEF%"],
                     "returnStatOptions": {
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
                     },
@@ -2073,6 +2195,8 @@ const characters = {
                     },
                     "customDPSBase": "freynaMechanismCalcsTier0ContagionStarter",
                     "customDPS": "freynaMechanismCalcsContagionStarter",
+                    "stats": {},
+                    "tags": ["DEF%"],
                     "returnStatOptions": {
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
                     },
@@ -2106,6 +2230,8 @@ const characters = {
                     },
                     "customDPSBase": "freynaMechanismCalcsTier0ToxicStarter",
                     "customDPS": "freynaMechanismCalcsStimulationStarter",
+                    "stats": {},
+                    "tags": ["DEF%"],
                     "returnStatOptions": {
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
                     },
@@ -2139,6 +2265,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "freynaMechanismCalcsInjectionTier0",
                     "customDPS": "",
+                    "stats": {},
+                    "tags": ["ResistanceToxin%","PowerModifierBase","enemyToxicResistanceReduction"],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -2175,6 +2303,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaPutridVenomCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2220,6 +2350,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaPutridVenomCalcsNeuroStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2261,6 +2393,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaPutridVenomCalcsContagionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2301,6 +2435,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaPutridVenomCalcsSynthesis",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "returnStatOptions": {
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
                     },
@@ -2340,6 +2476,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaBaptismCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Trauma - AVG/Tick" : "avgPerTraumaTick",
                         "Trauma - Total AVG" : "totalAVGTrauma",
@@ -2385,6 +2523,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaBaptismCalcsNeuroStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Trauma - AVG/Tick" : "avgPerTraumaTick",
                         "Trauma - Total AVG" : "totalAVGTrauma",
@@ -2427,6 +2567,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaBaptismCalcsContagionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Trauma - AVG/Tick" : "avgPerTraumaTick",
                         "Trauma - Total AVG" : "totalAVGTrauma",
@@ -2468,6 +2610,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaContagionCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2504,6 +2648,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaContagionCalcsNeuroStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2537,6 +2683,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "freynaContagionCalcsContagionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Puddle - AVG/Hit" : "avgPerPuddleTick",
                         "Trauma - AVG/Hit" : "avgPerTraumaTick",
@@ -2595,6 +2743,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberAssaultCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Assault - AVG/Tick" : "avgAssaultTick1",
                         "Zone - AVG/Tick" : "avgZoneTick1",
@@ -2634,6 +2784,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberAssaultCalcsAttackCompulsionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Assault - AVG/Tick" : "avgAssaultTick1",
                         "Zone - AVG/Tick" : "avgZoneTick1",
@@ -2672,6 +2824,8 @@ const characters = {
                     "returnStatOptions": {},
                     "customDPSBase": "",
                     "customDPS": "jayberAssaultCalcsMedicalCompulsion",
+                    "stats": {},
+                    "tags": [],
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [],
@@ -2689,6 +2843,8 @@ const characters = {
                     "returnStatOptions": {},
                     "customDPSBase": "",
                     "customDPS": "jayberMedicalCalcs",
+                    "stats": {},
+                    "tags": [],
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
@@ -2719,6 +2875,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "jayberMedicalCalcsAttackCompulsion",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {},
                     "displayStats": [],
                     "displayStatsALT": {
@@ -2735,6 +2893,8 @@ const characters = {
                     "returnStatOptions": {},
                     "customDPSBase": "",
                     "customDPS": "jayberAssaultCalcsMedicalCompulsionStarter",
+                    "stats": {},
+                    "tags": [],
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
@@ -2769,6 +2929,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberMultipurposeCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Unique Weapon - AVG/Hit" : "avgDmgPerShot3",
                         "Unique Weapon - Mag Size" : "totalMagazineSize3",
@@ -2797,6 +2959,8 @@ const characters = {
                     "powerMods": {},
                     "customDPSBase": "",
                     "customDPS": "jayberMultipurposeCalcsEngineering",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {},
                     "displayStats": [],
                     "displayStatsALT": {
@@ -2822,6 +2986,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberReactivateCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Explosion - AVG/Hit" : "avgDmgPerShot4",
                         "Explosion - Shot Count" : "totalMagazineSize4",
@@ -2853,6 +3019,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberReactivateCalcsPurge",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Explosion - AVG/Hit" : "avgDmgPerExplosion4",
                         "Lightning - AVG/Hit" : "avgDmgPerTick4",
@@ -2892,6 +3060,8 @@ const characters = {
                     "returnStatOptions": {},
                     "customDPSBase": "jayberSyncCalcsTier0",
                     "customDPS": "jayberSyncCalcs",
+                    "stats": {},
+                    "tags": ["PowerOptimization","FirearmATK%"],
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [],
@@ -2942,6 +3112,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostShardCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -2974,6 +3146,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostShardCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3005,6 +3179,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostShardCalcsHypoStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3038,6 +3214,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostRoadCalcs",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "returnStatOptions": {
                         // "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3070,6 +3248,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostRoadCalcsABS0Starter",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "returnStatOptions": {
                         "AVG/Tick" : "avgDmgPerHit",
                     },
@@ -3103,6 +3283,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaFrostRoadCalcsHypoStarter",
+                    "stats": {},
+                    "tags": ["SprintSpeedBonus"],
                     "returnStatOptions": {
                         // "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3135,6 +3317,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdBloodedCalcsTier0",
+                    "stats": {},
+                    "tags": ["SkillCost","SkillCooldown","PowerOptimization"],
                     "returnStatOptions": {
                         // "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3165,6 +3349,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdSnapCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3195,6 +3381,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdSnapCalcsABS0Starter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3225,6 +3413,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdSnapCalcsHypoStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3255,6 +3445,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdSnapCalcsWatchStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Tick" : "avgDmgPerHit",
                     },
@@ -3291,6 +3483,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaBlizzardCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Continuous - AVG/Tick" : "avgDmgPerTick",
                         "Continuous - Total AVG" : "avgTotalTicks",
@@ -3335,6 +3529,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaBlizzardCalcsABS0Starter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Continuous - AVG/Tick" : "avgDmgPerTick",
                         "Continuous - Total AVG" : "avgTotalTicks",
@@ -3377,6 +3573,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaBlizzardCalcsHypoStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Continuous - AVG/Tick" : "avgDmgPerTick",
                         "Continuous - Total AVG" : "avgTotalTicks",
@@ -3420,6 +3618,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaBlizzardCalcsCloudStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "Continuous - AVG/Tick" : "avgDmgPerTick",
                         "Continuous - Total AVG" : "avgTotalTicks",
@@ -3461,6 +3661,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaSphereCalcs",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3503,6 +3705,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaSphereCalcsABS0Starter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3534,6 +3738,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaSphereCalcsHypoStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
@@ -3570,6 +3776,8 @@ const characters = {
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaSphereCalcsCohesionStarter",
+                    "stats": {},
+                    "tags": [],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },

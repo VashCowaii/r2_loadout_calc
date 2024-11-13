@@ -6,7 +6,8 @@ const highPowerRounds = {
         "cost": 16,
         "category": "",
         "desc": "Select a mod above.",
-        "stats": {}
+        "stats": {},
+        "tags": [],
     },
 
     //GOLDS
@@ -30,7 +31,8 @@ const highPowerRounds = {
         "desc": "Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks) But loses 2 stacks per failed Weak Point Attack.",
         "stats": {
             "FirearmATK%": 0.30//this is also the regular atk% bucket, not too amazing.
-        }
+        },
+        "tags": [],
     },
     // "Lethal Finish": {
     //     "rarity": "Ultimate",
@@ -58,7 +60,8 @@ const highPowerRounds = {
         "desc": "After Reload, first shot's Firearm ATK +200% (Cooldown 10s)",
         "stats": {
             "FirearmATK%": 2//this is actually the regular ATK% bucket, so good but not quite as good as you'd hope it is.
-        }
+        },
+        "tags": [],
     },
     "Special Sight": {
         "rarity": "Ultimate",
@@ -69,7 +72,8 @@ const highPowerRounds = {
         "desc": "Movement Speed When Aiming -30%, Weak Point Damage When Aiming +30%",
         "stats": {
             "WeakPointDamage%": 0.30
-        }
+        },
+        "tags": [],
     },
     // "Descendant Roll": {
     //     "rarity": "Ultimate",
@@ -87,7 +91,8 @@ const highPowerRounds = {
         "cost": 16,
         "category": "Special Mod",
         "desc": "On Weak Point hit, Weak Point Damage +140% (Cooldown 10s)",
-        "stats": {}
+        "stats": {},
+        "tags": [],
     },
     "Dopaminergic Activate": {
         "rarity": "Ultimate",
@@ -96,7 +101,8 @@ const highPowerRounds = {
         "cost": 16,
         "category": "Special Mod",
         "desc": "On Weak Point hit, Firearm Critical Hit Rate +45.5%, Firearm Critical Hit Damage +59.3% (Cooldown 10s)",
-        "stats": {}
+        "stats": {},
+        "tags": [],
     },
     // "Auto-Reload (Shotty)": {
     //     "rarity": "Ultimate",
@@ -115,7 +121,8 @@ const highPowerRounds = {
         "desc": "When attacking enemies inflicted with Electrocution, Firearm ATK +26%",
         "stats": {
             "FireATK%": 0.26,
-        }
+        },
+        "tags": [],
     },
     "Toxic Conductor": {
         "rarity": "Ultimate",
@@ -126,7 +133,8 @@ const highPowerRounds = {
         "desc": "When attacking enemies inflicted with Poison, Firearm ATK +26%",
         "stats": {
             "FireATK%": 0.26,
-        }
+        },
+        "tags": [],
     },
     "Snowflake Conductor": {
         "rarity": "Ultimate",
@@ -137,7 +145,8 @@ const highPowerRounds = {
         "desc": "When attacking enemies inflicted with Frostbite, Firearm ATK +26%",
         "stats": {
             "FireATK%": 0.26,
-        }
+        },
+        "tags": [],
     },
     "Fire Conductor": {
         "rarity": "Ultimate",
@@ -148,7 +157,8 @@ const highPowerRounds = {
         "desc": "When attacking enemies inflicted with Burn, Firearm ATK +26%",
         "stats": {
             "FireATK%": 0.26,
-        }
+        },
+        "tags": [],
     },
     // "Quick Freezer": {
     //     "rarity": "Ultimate",
@@ -198,7 +208,8 @@ const highPowerRounds = {
         "stats": {
             "ToxicATK%Bonus": 0.90,
             "FireRate": 0.25
-        }
+        },
+        "tags": [],
     },
     "Electric Gunbarrel": {
         "rarity": "Rare",
@@ -210,7 +221,8 @@ const highPowerRounds = {
         "stats": {
             "ElectricATK%Bonus": 0.90,
             "FireRate": 0.25
-        }
+        },
+        "tags": [],
     },
     "Refrigerate Gunbarrel": {
         "rarity": "Rare",
@@ -222,7 +234,8 @@ const highPowerRounds = {
         "stats": {
             "ChillATK%Bonus": 0.90,
             "FireRate": 0.25
-        }
+        },
+        "tags": [],
     },
     "Superheated Gunbarrel": {
         "rarity": "Rare",
@@ -234,7 +247,8 @@ const highPowerRounds = {
         "stats": {
             "FireATK%Bonus": 0.90,
             "FireRate": 0.25
-        }
+        },
+        "tags": [],
     },
     "Poison Priority": {
         "rarity": "Rare",
@@ -246,7 +260,8 @@ const highPowerRounds = {
         "stats": {
             "ToxicATK%Bonus": 0.50,
             "Reload": -0.30
-        }
+        },
+        "tags": [],
     },
     "Electric Priority": {
         "rarity": "Rare",
@@ -258,7 +273,8 @@ const highPowerRounds = {
         "stats": {
             "ElectricATK%Bonus": 0.50,
             "Reload": -0.30
-        }
+        },
+        "tags": [],
     },
     "Chill Priority": {
         "rarity": "Rare",
@@ -270,7 +286,8 @@ const highPowerRounds = {
         "stats": {
             "ChillATK%Bonus": 0.50,
             "Reload": -0.30
-        }
+        },
+        "tags": [],
     },
     "Fire Priority": {
         "rarity": "Rare",
@@ -282,7 +299,8 @@ const highPowerRounds = {
         "stats": {
             "FireATK%Bonus": 0.50,
             "Reload": -0.30
-        }
+        },
+        "tags": [],
     },
     // "Hit Rate Insight (Shotty)": {
     //     "rarity": "Rare",
@@ -326,7 +344,8 @@ const highPowerRounds = {
         "stats": {
             "Reload": 0.25,
             "FirearmCritDamage": 0.01
-        }
+        },
+        "tags": [],
     },
     "Reload Focus": {
         "rarity": "Rare",
@@ -338,7 +357,8 @@ const highPowerRounds = {
         "stats": {
             "Reload": 0.25,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Consume Magazines": {
         "rarity": "Rare",
@@ -350,7 +370,8 @@ const highPowerRounds = {
         "stats": {
             "Reload": 0.25,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Reload Expert": {
         "rarity": "Rare",
@@ -362,7 +383,8 @@ const highPowerRounds = {
         "stats": {
             "Reload": 0.25,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Insight Stabilizer": {
         "rarity": "Rare",
@@ -374,7 +396,8 @@ const highPowerRounds = {
         "stats": {
             "Recoil": -0.30,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     },
     "Concentration Stabilizer": {
         "rarity": "Rare",
@@ -386,7 +409,8 @@ const highPowerRounds = {
         "stats": {
             "Recoil": -0.30,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Fixed Shot": {
         "rarity": "Rare",
@@ -398,7 +422,8 @@ const highPowerRounds = {
         "stats": {
             "Recoil": -0.30,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Stance Stabilizer": {
         "rarity": "Rare",
@@ -410,7 +435,8 @@ const highPowerRounds = {
         "stats": {
             "Recoil": -0.30,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Rapid Fire Insight": {
         "rarity": "Rare",
@@ -422,7 +448,8 @@ const highPowerRounds = {
         "stats": {
             "FireRate": -0.20,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     },
     "Fire Rate Concentration": {
         "rarity": "Rare",
@@ -434,7 +461,8 @@ const highPowerRounds = {
         "stats": {
             "FireRate": -0.20,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Weak Point Quick Fire": {
         "rarity": "Rare",
@@ -446,7 +474,8 @@ const highPowerRounds = {
         "stats": {
             "FireRate": -0.20,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Bullet Rain": {
         "rarity": "Rare",
@@ -458,7 +487,8 @@ const highPowerRounds = {
         "stats": {
             "FireRate": -0.20,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Compulsive Magazine": {
         "rarity": "Rare",
@@ -470,7 +500,8 @@ const highPowerRounds = {
         "stats": {
             "MagazineSize": 0.39,
             "WeakPointDamage%": -0.10
-        }
+        },
+        "tags": [],
     },
     "Insight Support Ammo": {
         "rarity": "Rare",
@@ -482,7 +513,8 @@ const highPowerRounds = {
         "stats": {
             "MagazineSize": 0.30,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     },
     "Concentrate Support Ammo": {
         "rarity": "Rare",
@@ -494,7 +526,8 @@ const highPowerRounds = {
         "stats": {
             "MagazineSize": 0.30,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Maximize Weight Balance": {
         "rarity": "Rare",
@@ -506,7 +539,8 @@ const highPowerRounds = {
         "stats": {
             "MagazineSize": 0.30,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Weapon Tuning": {
         "rarity": "Rare",
@@ -518,7 +552,8 @@ const highPowerRounds = {
         "stats": {
             "MagazineSize": 0.30,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Edging Shot": {
         "rarity": "Rare",
@@ -530,7 +565,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritRate": 0.36,
             "FirearmATK%": -0.15
-        }
+        },
+        "tags": [],
     },
     "Insight Focus": {
         "rarity": "Rare",
@@ -542,7 +578,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritRate": 0.13,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Adventurer": {
         "rarity": "Rare",
@@ -554,7 +591,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritRate": 0.13,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Marksman": {
         "rarity": "Rare",
@@ -566,7 +604,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritRate": 0.13,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Concentration Priority": {
         "rarity": "Rare",
@@ -578,7 +617,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritDamage": 0.339,
             "Reload": -0.30
-        }
+        },
+        "tags": [],
     },
     "Target Detection": {
         "rarity": "Rare",
@@ -590,7 +630,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritDamage": 0.17,
             "WeakPointDamage%": 0.02
-        }
+        },
+        "tags": [],
     },
     "Commando Marksmanship": {
         "rarity": "Rare",
@@ -602,7 +643,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritDamage": 0.17,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Fatal Critical": {
         "rarity": "Rare",
@@ -614,7 +656,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmCritDamage": 0.17,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     }, 
     // "Targeted Vulnerability (Shotty)": {
     //     "rarity": "Rare",
@@ -634,7 +677,8 @@ const highPowerRounds = {
         "stats": {
             "WeakPointDamage%": 0.20,
             "FirearmATK%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Focus Fire": {
         "rarity": "Rare",
@@ -646,7 +690,8 @@ const highPowerRounds = {
         "stats": {
             "WeakPointDamage%": 0.20,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Weak Point Insight": {
         "rarity": "Rare",
@@ -658,7 +703,8 @@ const highPowerRounds = {
         "stats": {
             "WeakPointDamage%": 0.20,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     },
     // "Action and Reaction (Launcher)": {
     //     "rarity": "Rare",
@@ -750,7 +796,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.61,
             "Recoil": 0.20
-        }
+        },
+        "tags": [],
     },
     "Slow Art (Sniper)": {
         "rarity": "Rare",
@@ -762,7 +809,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.44,
             "FireRate": 0.25
-        }
+        },
+        "tags": [],
     },
     "Anti-matter Round (Sniper)": {
         "rarity": "Rare",
@@ -774,7 +822,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.26,
             "FirearmCritDamage": 0.035
-        }
+        },
+        "tags": [],
     },
     "Pinpoint Shot (Sniper)": {
         "rarity": "Rare",
@@ -786,7 +835,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.26,
             "WeakPointDamage%": 0.01
-        }
+        },
+        "tags": [],
     },
     "Sharpshooter (Sniper)": {
         "rarity": "Rare",
@@ -798,7 +848,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.26,
             "FirearmCritRate": 0.01
-        }
+        },
+        "tags": [],
     },
     // "High-Power Rounds Compulsive": {
     //     "rarity": "Rare",
@@ -848,7 +899,8 @@ const highPowerRounds = {
         "desc": "Weak Point Damage +35%",
         "stats": {
             "WeakPointDamage%": 0.35
-        }
+        },
+        "tags": [],
     },
     // "Colon Special Forces": {
     //     "rarity": "Normal",
@@ -868,7 +920,8 @@ const highPowerRounds = {
         "desc": "Firearm Critical Hit Damage +37.2%",
         "stats": {
             "FirearmCritDamage": 0.372
-        }
+        },
+        "tags": [],
     },
     "Expand Weapon Charge": {
         "rarity": "Normal",
@@ -879,7 +932,8 @@ const highPowerRounds = {
         "desc": "Rounds per Magazine +49%",
         "stats": {
             "MagazineSize": 0.49,
-        }
+        },
+        "tags": [],
     },
     // "Shell UP (Shotty)": {
     //     "rarity": "Normal",
@@ -918,7 +972,8 @@ const highPowerRounds = {
         "desc": "Adds Chill ATK equal to 30% of Firearm ATK",
         "stats": {
             "ChillATK%": 0.30
-        }
+        },
+        "tags": [],
     },
     // "Hawk-Eye": {
     //     "rarity": "Normal",
@@ -940,7 +995,8 @@ const highPowerRounds = {
         "desc": "Firearm Critical Hit Rate +33%",
         "stats": {
             "FirearmCritRate": 0.33
-        }
+        },
+        "tags": [],
     },
     // "Expand High-Power Magazine": {
     //     "rarity": "Normal",
@@ -960,7 +1016,8 @@ const highPowerRounds = {
         "desc": "Adds Electric ATK equal to 30% of Firearm ATK",
         "stats": {
             "ElectricATK%": 0.30
-        }
+        },
+        "tags": [],
     },
     "Toxic Enhancement": {
         "rarity": "Normal",
@@ -971,7 +1028,8 @@ const highPowerRounds = {
         "desc": "Adds Toxic ATK equal to 30% of Firearm ATK",
         "stats": {
             "ToxicATK%": 0.30
-        }
+        },
+        "tags": [],
     },
     "Fire Enhancement": {
         "rarity": "Normal",
@@ -982,7 +1040,8 @@ const highPowerRounds = {
         "desc": "Adds Fire ATK equal to 30% of Firearm ATK",
         "stats": {
             "FireATK%": 0.30
-        }
+        },
+        "tags": [],
     },
     // "Vibration Absorption": {
     //     "rarity": "Normal",
@@ -1031,7 +1090,8 @@ const highPowerRounds = {
         "desc": "Firearm ATK +32%",
         "stats": {
             "FirearmATK%": 0.32
-        }
+        },
+        "tags": [],
     },
 
 
@@ -1077,7 +1137,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.67,
             "FirearmCritDamage": -0.20
-        }
+        },
+        "tags": [],
     },
     // "Charge Amplification (Shotgun)": {
     //     "rarity": "Rare",
@@ -1113,7 +1174,8 @@ const highPowerRounds = {
         "stats": {
             "FirearmATK%": 0.16,
             "FirearmCritDamage": 0.20
-        }
+        },
+        "tags": [],
     },
     // "Bullet Integration (Shotgun)": {
     //     "rarity": "Rare",

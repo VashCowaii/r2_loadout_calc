@@ -33,7 +33,9 @@ let globalRecords = {
         "processorSub1": "",
         "processorSub2": "",
         "processorSub1Value": 0,
-        "processorSub2Value": 0
+        "processorSub2Value": 0,
+        "current2piece": "Slayer",
+        "current4piece": "Slayer",
     },
     "character": {
         "currentCharacter": "Hailey",

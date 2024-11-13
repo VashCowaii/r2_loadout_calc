@@ -3,7 +3,8 @@ const reactorSubRolls = {
         "minimum": 0,
         "maximum": 0,
         "statName": "SkillCost",
-        "stats": {}
+        "stats": {},
+        "tags": [],
     },
     "Skill Cost": {//
         "minimum": -0.027,
@@ -11,7 +12,8 @@ const reactorSubRolls = {
         "statName": "SkillCost",
         "stats": {
             "SkillCost": -0.041
-        }
+        },
+        "tags": [],
     },
     "Skill Cooldown": {//
         "minimum": -0.053,
@@ -19,7 +21,8 @@ const reactorSubRolls = {
         "statName": "SkillCooldown",
         "stats": {
             "SkillCooldown": -0.074,
-        }
+        },
+        "tags": [],
     },
     "Skill Duration UP": {//
         "minimum": 0.076,
@@ -27,7 +30,8 @@ const reactorSubRolls = {
         "statName": "SkillDuration",
         "stats": {
             "SkillDuration": 0.106
-        }
+        },
+        "tags": [],
     },
     "Skill Effect Range": {//
         "minimum": 0.174,
@@ -35,7 +39,8 @@ const reactorSubRolls = {
         "statName": "SkillRange",
         "stats": {
             "SkillRange": 0.258
-        }
+        },
+        "tags": [],
     },
     "Skill Critical Rate": {//
         "minimum": 0.228,
@@ -44,7 +49,8 @@ const reactorSubRolls = {
         "isPercentDisplay": true,
         "stats": {
             "SkillCritRate": 0.33
-        }
+        },
+        "tags": [],
     },
     "Skill Critical Damage": {//
         "minimum": 0.228,
@@ -53,7 +59,8 @@ const reactorSubRolls = {
         "isPercentDisplay": true,
         "stats": {
             "SkillCritDamage": 0.33
-        }
+        },
+        "tags": [],
     },
     "Non-Attribute Power Boost": {//
         "minimum": 0.054,
@@ -61,7 +68,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioNonAttribute",
         "stats": {
             "PowerRatioNonAttribute": 0.085
-        }
+        },
+        "tags": [],
     },
     "Fire Power Boost": {//
         "minimum": 0.054,
@@ -69,7 +77,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioFire",
         "stats": {
             "PowerRatioFire": 0.085
-        }
+        },
+        "tags": [],
     },
     "Chill Power Boost": {//
         "minimum": 0.054,
@@ -77,7 +86,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioChill",
         "stats": {
             "PowerRatioChill": 0.085
-        }
+        },
+        "tags": [],
     },
     "Toxic Power Boost": {//
         "minimum": 0.054,
@@ -85,7 +95,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioToxic",
         "stats": {
             "PowerRatioToxic": 0.085
-        }
+        },
+        "tags": [],
     },
     "Electric Power Boost": {//
         "minimum": 0.054,
@@ -93,7 +104,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioElectric",
         "stats": {
             "PowerRatioElectric": 0.085
-        }
+        },
+        "tags": [],
     },
     "Fusion Power Boost": {//
         "minimum": 0.054,
@@ -101,7 +113,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioFusion",
         "stats": {
             "PowerRatioFusion": 0.085
-        }
+        },
+        "tags": [],
     },
     "Singular Power Boost": {//
         "minimum": 0.054,
@@ -110,7 +123,8 @@ const reactorSubRolls = {
         "stats": {
             "PowerRatioSingular": 0.085
             // "PowerRatioSingular": 0.056
-        }
+        },
+        "tags": [],
     },
     "Dimension Power Boost": {//
         "minimum": 0.054,
@@ -118,7 +132,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioDimension",
         "stats": {
             "PowerRatioDimension": 0.085
-        }
+        },
+        "tags": [],
     },
     "Tech Power Boost": {//
         "minimum": 0.054,
@@ -126,7 +141,8 @@ const reactorSubRolls = {
         "statName": "PowerRatioTech",
         "stats": {
             "PowerRatioTech": 0.085
-        }
+        },
+        "tags": [],
     },
     "HP Heal Modifier": {
         "minimum": 0.057,
@@ -134,7 +150,8 @@ const reactorSubRolls = {
         "statName": "HPHeal",
         "stats": {
             "HPHeal": 0.085
-        }
+        },
+        "tags": [],
     },
     "Sub Attack Power": {
         "minimum": 0.125,
@@ -142,7 +159,8 @@ const reactorSubRolls = {
         "statName": "SubAttackPower",
         "stats": {
             "SubAttackPower": 0.191
-        }
+        },
+        "tags": [],
     },
     "Skill ATK - Colossus": {
         "minimum": 1778.310,
@@ -150,8 +168,8 @@ const reactorSubRolls = {
         "statName": "SkillAttackColossus",
         "stats": {
             "SkillAttackColossus": 2633.560
-            // "SkillAttackColossus": 2626.83
-        }
+        },
+        "tags": [],
     }
 }
 

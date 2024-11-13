@@ -23,6 +23,7 @@ const modData = {
         "category": "",
         "desc": "Select a mod in the dropdown above.",
         "stats": {},
+        "tags": [],
         "usesConditional": {},
     },
     "Shield Collector": {
@@ -33,6 +34,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When defeating an enemy, instantly recovers 6.3% of Max Shield. (Cooldown 2s)",
         "stats": {},
+        "tags": [],
         "usesConditional": {},
     },
     "Arche Concretion": {
@@ -53,6 +55,7 @@ const modData = {
             "MP%": 0.39
             //this one is kinda dumb. It means it reduces all power ratios excluding NA, and then it DOES reduce everything that comes after in the description, but only once even if max stacks or 1 stack.
         },
+        "tags": [],
         "usesConditional": {},
     },
     "Final Wish": {
@@ -66,6 +69,7 @@ const modData = {
             "SkillCost": -0.37,
             "PowerRatioBase": -0.40
         },
+        "tags": [],
         "usesConditional": {},
     },
     "Narcissism": {
@@ -79,6 +83,7 @@ const modData = {
             "SkillCost": -0.33,
             "SkillCooldown": 0.33,
         },
+        "tags": [],
         "usesConditional": {},
     },
     "Continuous Exaltation": {//It says +- for w/e reason but it's a negative power ratio base
@@ -91,6 +96,7 @@ const modData = {
         "stats": {
             "PowerRatioBase": -0.25
         },
+        "tags": [],
         "usesConditional": {},
     },
     "Lethal Infection": {
@@ -103,6 +109,7 @@ const modData = {
         "stats": {
             "PowerModifierBase": 0.25
         },
+        "tags": [],
         "usesConditional": {},
     },
     "Dangerous Ambush (No Target)": {//this is a ratio base bonus, not a reactor bonus
@@ -115,6 +122,7 @@ const modData = {
         "stats": {
             "PowerRatioBase": 0.249//initially added together accidentally to 0.747, but it is 24.9 OR 49.8
         },
+        "tags": [],
     },
     "Dangerous Ambush (Immobile)": {//this is a ratio base bonus, not a reactor bonus
         "rarity": "Ultimate",
@@ -124,9 +132,9 @@ const modData = {
         "category": "Arche Tech",
         "desc": "When landing a Skill Attack while the enemy is not targeting you, Skill Power +24.9%. On Skill Attack against an immobilized enemy, Skill Power +49.8%.",
         "stats": {
-            "PowerRatioBase": 0.498//initially added together accidentally to 0.747, but it is 24.9 OR 49.8
-            // "PowerRatioBase": 0.2988
+            "PowerRatioBase": 0.498//this gets modified by the immobile uptime slider under the enemy tab
         },
+        "tags": [],
     },
     "Weaken Recovery": {
         "rarity": "Ultimate",
@@ -138,6 +146,7 @@ const modData = {
         "stats": {
             "EnemyRecovery": -0.50
         },
+        "tags": [],
     },
     "Multitalented (Dimension)": {
         "rarity": "Ultimate",
@@ -149,6 +158,7 @@ const modData = {
         "stats": {
             "SkillCooldown": -0.205,
         },
+        "tags": [],
     },
     "Multitalented (Fusion)": {
         "rarity": "Ultimate",
@@ -161,6 +171,7 @@ const modData = {
             "SkillCost": -0.061,
             "SkillDuration": 0.061,
         },
+        "tags": [],
     },
     "Multitalented (Tech)": {
         "rarity": "Ultimate",
@@ -173,6 +184,7 @@ const modData = {
             "SkillRange": 0.15,
             "PowerModifierBase": 0.15,
         },
+        "tags": [],
     },
     "Multitalented (Singular)": {
         "rarity": "Ultimate",
@@ -188,6 +200,7 @@ const modData = {
             "PowerModifierChill": 0.30,
             "PowerModifierNonAttribute": 0.30
         },
+        "tags": [],
     },
     "Passionate Sponsor": {
         "rarity": "Ultimate",
@@ -200,6 +213,7 @@ const modData = {
             "PowerModifierBase": 0.75,
             "FirearmATK%": 0.75
         },
+        "tags": [],
     },
     "Gladiator": {
         "rarity": "Ultimate",
@@ -209,6 +223,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When defeating enemies with a Charged Sub Attack, -100% remaining Cooldown of the Sub Attack.",
         "stats": {},
+        "tags": [],
     },
     "Technique Manual": {//seems to ignore DR, not boosted by any boosts, just a plain %HP as a separate instance of dmg
         "rarity": "Ultimate",
@@ -218,6 +233,7 @@ const modData = {
         "category": "Arche Tech",
         "desc": "Landing a skill attack deals 46% of own Max HP as additional damage to the target (Cooldown 8s against the same target).",
         "stats": {},//could be pretty spicy on ajax but probably not. Bad mod
+        "tags": [],
     },
     "Decimator": {
         "rarity": "Ultimate",
@@ -229,6 +245,7 @@ const modData = {
         "stats": {
             "PowerModifierBase": 0.50
         },
+        "tags": [],
     },
     "Conditional Recharge": {
         "rarity": "Ultimate",
@@ -238,6 +255,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When using skill, consumes 17.5% of Max HP and recovers 12.2% of Max Shield (However, neither happens when HP is 1 or lower).",
         "stats": {},
+        "tags": [],
     },
     "Preemptive Strike": {//doesn't do anything...? at least not in the lab, maybe bc they can't take dmg so it doesn't count
         "rarity": "Ultimate",
@@ -247,6 +265,7 @@ const modData = {
         "category": "Arche Tech",
         "desc": "On Skill Attack upon enemies with max HP, deals 8.5% of the skill damage incurred as additional damage on the target.",
         "stats": {},
+        "tags": [],
     },
     "Overwhelming HP": {//not using a custom function, but it might be prudent to add one later. Rn it is just using these flags to tell the calcs.getXYZ how to do the math
         "rarity": "Ultimate",
@@ -259,6 +278,7 @@ const modData = {
             "isShieldSetTo1": 1,
             "boostHPFromShield": 1
         },
+        "tags": [],
         "conversionRate": 0.198
     },
     "Overwhelming DEF": {//not using a custom function, but it might be prudent to add one later. Rn it is just using these flags to tell the calcs.getXYZ how to do the math
@@ -272,6 +292,7 @@ const modData = {
             "isHPSetTo1": 1,
             "boostDEFFromHP": 1
         },
+        "tags": [],
         "conversionRate": 0.247
     },
     "Overwhelming Shield": {//not using a custom function, but it might be prudent to add one later. Rn it is just using these flags to tell the calcs.getXYZ how to do the math
@@ -285,6 +306,7 @@ const modData = {
             "isHPSetTo1": 1,
             "boostShieldFromHP": 1
         },
+        "tags": [],
         "conversionRate": 0.268
     },
     "Heat Release": {
@@ -298,6 +320,7 @@ const modData = {
             "ResistanceFire%": 0.29,
             "ImmunityBurn": 1,
         },
+        "tags": [],
     },
     "Perfect Antivenom": {
         "rarity": "Ultimate",
@@ -310,6 +333,7 @@ const modData = {
             "ResistanceToxin%": 0.29,
             "ImmunityPoison": 1,
         },
+        "tags": [],
     },
     "Veteran's Tactics": {
         "rarity": "Ultimate",
@@ -319,6 +343,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When defeating an enemy, resets the cooldown of a random skill at a 2.1% chance.",
         "stats": {},
+        "tags": [],
     },
     "Antifreeze Solution": {
         "rarity": "Ultimate",
@@ -331,6 +356,7 @@ const modData = {
             "ResistanceChill%": 0.29,
             "ImmunityFrostbite": 1,
         },
+        "tags": [],
     },
     "Insulated Conductor": {
         "rarity": "Ultimate",
@@ -343,6 +369,7 @@ const modData = {
             "ResistanceElectricity%": 0.29,
             "ImmunityElectrocution": 1,
         },
+        "tags": [],
     },
     "MP Collector": {
         "rarity": "Ultimate",
@@ -352,6 +379,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When defeating an enemy, instantly recovers 12.2% of Max MP at 17% chance.",
         "stats": {},
+        "tags": [],
     },
     "Potent Collector": {
         "rarity": "Ultimate",
@@ -360,7 +388,8 @@ const modData = {
         "cost": 11,
         "category": "Support Tech",
         "desc": "When defeating an enemy, instantly recovers 12.2% of Custom Resources at a 17% chance. Characters with Custom Resources: -Ajax -Bunny -Gley -Kyle",
-     "stats": {},
+        "stats": {},
+        "tags": [],
     },
     "An Iron Will": {
         "rarity": "Ultimate",
@@ -372,6 +401,7 @@ const modData = {
         "stats": {
             "DEF%": 1.283
         },
+        "tags": [],
     },
     "Accelerated Driveshaft": {
         "rarity": "Ultimate",
@@ -383,6 +413,7 @@ const modData = {
         "stats": {
             "FireRate": 0.20
         },
+        "tags": [],
     },
     "Improve Driveshaft": {
         "rarity": "Ultimate",
@@ -394,6 +425,7 @@ const modData = {
         "stats": {
             "FirearmATK%": 0.26
         },
+        "tags": [],
     },
     "Midair Fire": {
         "rarity": "Ultimate",
@@ -406,6 +438,7 @@ const modData = {
             "DEF%": -0.321,
             "Accuracy": 0.321
         },
+        "tags": [],
     },
     "MP Plunder": {
         "rarity": "Ultimate",
@@ -415,6 +448,7 @@ const modData = {
         "category": "",
         "desc": "When defeating an enemy with a Charged Sub Attack, recovers 12.2% MP at a 34% chance.",
         "stats": {},
+        "tags": [],
     },
     "HP Plunder": {
         "rarity": "Ultimate",
@@ -424,6 +458,7 @@ const modData = {
         "category": "",
         "desc": "When defeating an enemy with a Charged Sub Attack, recovers 9% HP at a 34% chance.",
         "stats": {},
+        "tags": [],
     },
     "Iron Knuckle": {
         "rarity": "Ultimate",
@@ -433,6 +468,7 @@ const modData = {
         "category": "",
         "desc": "On Charged Sub Attack, Knockdown enemies (Cooldown 2.2s).",
         "stats": {},
+        "tags": [],
     },
     "Burst Absorption": {
         "rarity": "Ultimate",
@@ -444,6 +480,7 @@ const modData = {
         "stats": {
             "DEF%": 1.283
         },
+        "tags": [],
     },
     "Absolute Curse": {
         "rarity": "Ultimate",
@@ -453,6 +490,7 @@ const modData = {
         "category": "",
         "desc": "Upon Colossus Part removal, inflicts Dispel which removes buffs on Colossi.",
         "stats": {},
+        "tags": [],
     },
     "Mass Purification": {
         "rarity": "Ultimate",
@@ -462,6 +500,7 @@ const modData = {
         "category": "",
         "desc": "Upon Colossus Part destruction, grants Purification which removes debuffs to players within a 70m radius. (Cooldown 30s)",
         "stats": {},
+        "tags": [],
     },
     "Walk a Tightrope": {
         "rarity": "Ultimate",
@@ -474,6 +513,7 @@ const modData = {
             "PowerModifierBase": 0.30,
             "FirearmATK%": 0.30
         },
+        "tags": [],
     },
     "HP Collector": {
         "rarity": "Ultimate",
@@ -483,6 +523,7 @@ const modData = {
         "category": "Support Tech",
         "desc": "When defeating an enemy, instantly recovers 9% of Max HP (Cooldown 2s).",
         "stats": {},
+        "tags": [],
     },
     "Non-Attribute Syncytium": {
         "rarity": "Rare",
@@ -495,6 +536,7 @@ const modData = {
             "CritResist": 0.151,
             "PowerRatioNonAttribute": 0.102
         },
+        "tags": [],
     },
     "Electronic Syncytium": {
         "rarity": "Rare",
@@ -507,6 +549,7 @@ const modData = {
             "CritResist": 0.151,
             "PowerRatioElectric": 0.102
         },
+        "tags": [],
     },
     "Venom Syncytium": {
         "rarity": "Rare",
@@ -519,6 +562,7 @@ const modData = {
             "CritResist": 0.151,
             "PowerRatioToxic": 0.102
         },
+        "tags": [],
     },
     "Glacial Syncytium": {
         "rarity": "Rare",
@@ -531,6 +575,7 @@ const modData = {
             "CritResist": 0.151,
             "PowerRatioChill": 0.102
         },
+        "tags": [],
     },
     "Fire Syncytium": {
         "rarity": "Rare",
@@ -543,6 +588,7 @@ const modData = {
             "CritResist": 0.151,
             "PowerRatioFire": 0.102
         },
+        "tags": [],
     },
     "Safe Recovery": {
         "rarity": "Rare",
@@ -555,6 +601,7 @@ const modData = {
             "HPHeal": 0.172,
             "IncomingDamage": -0.045
         },
+        "tags": [],
     },
     "Amplification Control": {
         "rarity": "Rare",
@@ -567,6 +614,7 @@ const modData = {
             "SkillRange": 0.517,
             "Shield%": 0.365
         },
+        "tags": [],
     },
     "Autoimmunity": {
         "rarity": "Rare",
@@ -579,6 +627,7 @@ const modData = {
             "IncomingDamage": -0.105,
             "HPRecovery": 0.074
         },
+        "tags": [],
     },
     "Psychological Victory": {
         "rarity": "Rare",
@@ -591,6 +640,7 @@ const modData = {
             "IncomingDamage": -0.105,
             "MPRecovery": 0.074
         },
+        "tags": [],
     },
     "Weighing the Scales": {
         "rarity": "Rare",
@@ -603,6 +653,7 @@ const modData = {
             "Shield%": 0.851,
             "SkillCost": -0.037
         },
+        "tags": [],
     },
     "Battle of Stamina": {
         "rarity": "Rare",
@@ -615,6 +666,7 @@ const modData = {
             "HP%": 1.223,
             "SkillDuration": 0.088
         },
+        "tags": [],
     },
     "Iron Defense": {
         "rarity": "Rare",
@@ -627,6 +679,7 @@ const modData = {
             "DEF%": 0.898,
             "PowerModifierBase": 0.127
         },
+        "tags": [],
     },
     "Spear and Shield": {
         "rarity": "Rare",
@@ -639,6 +692,7 @@ const modData = {
             "DEF%": 0.898,
             "PowerRatioBase": 0.081
         },
+        "tags": [],
     },
     "Agony": {
         "rarity": "Rare",
@@ -651,6 +705,7 @@ const modData = {
             "MP%": 0.085,
             "DEF%": 0.385
         },
+        "tags": [],
     },
     "Second Wind": {
         "rarity": "Rare",
@@ -663,6 +718,7 @@ const modData = {
             "HPHeal": 0.215,
             "PowerRatioBase": -0.203
         },
+        "tags": [],
     },
     "Front Lines": {
         "rarity": "Rare",
@@ -675,6 +731,7 @@ const modData = {
             "SkillCritDamage": 0.646,
             "SkillCritRate": 0.277
         },
+        "tags": [],
     },
     "Emergency Measures": {
         "rarity": "Rare",
@@ -687,6 +744,7 @@ const modData = {
             "SkillCritRate": 0.646,
             "SkillCritDamage": 0.277
         },
+        "tags": [],
     },
     "Frugal Mindset": {
         "rarity": "Rare",
@@ -699,6 +757,7 @@ const modData = {
             "SkillRange": 0.225,
             "SkillCost": -0.085
         },
+        "tags": [],
     },
     "An Outstanding Investment": {
         "rarity": "Rare",
@@ -711,6 +770,7 @@ const modData = {
             "HPHeal": 0.074,
             "SkillDuration": 0.205
         },
+        "tags": [],
     },
     "MP Accelerant": {
         "rarity": "Rare",
@@ -723,6 +783,7 @@ const modData = {
             "SkillDuration": 0.205,
             "MP%": 0.037
         },
+        "tags": [],
     },
     "Time Distribution": {
         "rarity": "Rare",
@@ -735,6 +796,7 @@ const modData = {
             "SkillCooldown": -0.143,
             "HP%": 0.524
         },
+        "tags": [],
     },
     "Focus on Non-Attribute": {
         "rarity": "Rare",
@@ -747,6 +809,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerRatioNonAttribute": 0.772
         },
+        "tags": [],
     },
     "Focus on Toxic": {
         "rarity": "Rare",
@@ -759,6 +822,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerRatioToxic": 0.772
         },
+        "tags": [],
     },
     "Focus on Electric": {
         "rarity": "Rare",
@@ -771,6 +835,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerRatioElectric": 0.772
         },
+        "tags": [],
     },
     "Focus on Chill": {
         "rarity": "Rare",
@@ -783,6 +848,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerRatioChill": 0.772
         },
+        "tags": [],
     },
     "Focus on Fire": {
         "rarity": "Rare",
@@ -795,6 +861,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerRatioFire": 0.772
         },
+        "tags": [],
     },
     "Focus on Tech": {
         "rarity": "Rare",
@@ -807,6 +874,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerModifierTech": 0.682
         },
+        "tags": [],
     },
     "Focus on Dimension": {
         "rarity": "Rare",
@@ -819,6 +887,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerModifierDimension": 0.682
         },
+        "tags": [],
     },
     "Focus on Singular": {
         "rarity": "Rare",
@@ -831,6 +900,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerModifierSingular": 0.682
         },
+        "tags": [],
     },
     "Focus on Fusion": {
         "rarity": "Rare",
@@ -843,6 +913,7 @@ const modData = {
             "SkillCooldown": -0.061,
             "PowerModifierFusion": 0.682
         },
+        "tags": [],
     },
     "Non-Attribute Master": {
         "rarity": "Rare",
@@ -855,6 +926,7 @@ const modData = {
             "PowerRatioBase": 0.444,
             "PowerRatioNonAttribute": 0.19
         },
+        "tags": [],
     },
     "Toxic Master": {
         "rarity": "Rare",
@@ -867,6 +939,7 @@ const modData = {
             "PowerRatioBase": 0.444,
             "PowerRatioToxic": 0.19
         },
+        "tags": [],
     },
     "Electric Master": {
         "rarity": "Rare",
@@ -879,6 +952,7 @@ const modData = {
             "PowerRatioBase": 0.444,
             "PowerRatioElectric": 0.19
         },
+        "tags": [],
     },
     "Chill Master": {
         "rarity": "Rare",
@@ -891,6 +965,7 @@ const modData = {
             "PowerRatioBase": 0.444,
             "PowerRatioChill": 0.19
         },
+        "tags": [],
     },
     "Fire Master": {
         "rarity": "Rare",
@@ -903,6 +978,7 @@ const modData = {
             "PowerRatioBase": 0.444,
             "PowerRatioFire": 0.19
         },
+        "tags": [],
     },
     "Tech Master": {
         "rarity": "Rare",
@@ -915,6 +991,7 @@ const modData = {
             "PowerRatioBase": 0.496,
             "PowerModifierTech": 0.255
         },
+        "tags": [],
     },
     "Dimension Master": {
         "rarity": "Rare",
@@ -927,6 +1004,7 @@ const modData = {
             "PowerRatioBase": 0.496,
             "PowerModifierDimension": 0.255
         },
+        "tags": [],
     },
     "Singular Master": {
         "rarity": "Rare",
@@ -939,6 +1017,7 @@ const modData = {
             "PowerRatioBase": 0.496,
             "PowerModifierSingular": 0.255
         },
+        "tags": [],
     },
     "Fusion Master": {
         "rarity": "Rare",
@@ -951,6 +1030,7 @@ const modData = {
             "PowerRatioBase": 0.496,
             "PowerModifierFusion": 0.255
         },
+        "tags": [],
     },
     "Strengthen Recovery": {
         "rarity": "Rare",
@@ -963,6 +1043,7 @@ const modData = {
             "HPRecovery": 0.236,
             "OutgoingDamageMod": -0.07
         },
+        "tags": [],
     },
     "Pain Reliever": {
         "rarity": "Rare",
@@ -975,6 +1056,7 @@ const modData = {
             "IncomingDamage": -0.135,
             "OutgoingDamageMod": -0.10
         },
+        "tags": [],
     },
     "Defense Stance": {
         "rarity": "Rare",
@@ -987,6 +1069,7 @@ const modData = {
             "DEF%": 1.64,
             "OutgoingDamageMod": -0.07
         },
+        "tags": [],
     },
     "Shot Focus": {
         "rarity": "Rare",
@@ -999,6 +1082,7 @@ const modData = {
             "PowerModifierBase": -0.15,
             "FirearmATK%": 0.15
         },
+        "tags": [],
     },
     "Selective Recovery (HP)": {
         "rarity": "Rare",
@@ -1011,6 +1095,7 @@ const modData = {
             "HPRecovery": 0.24,
             "MPRecovery": -0.138
         },
+        "tags": [],
     },
     "Selective Recovery (MP)": {
         "rarity": "Rare",
@@ -1023,6 +1108,7 @@ const modData = {
             "MPRecovery": 0.60,
             "HPRecovery": -0.055
         },
+        "tags": [],
     },
     "Maximize Skill": {
         "rarity": "Rare",
@@ -1035,6 +1121,7 @@ const modData = {
             "PowerRatioBase": 0.876,
             "SkillCooldown": 0.50
         },
+        "tags": [],
     },
     "Maximize Power": {
         "rarity": "Rare",
@@ -1047,6 +1134,7 @@ const modData = {
             "PowerModifierBase": 0.961,
             "SkillCooldown": 0.50
         },
+        "tags": [],
     },
     "Maximize Range": {
         "rarity": "Rare",
@@ -1059,6 +1147,7 @@ const modData = {
             "PowerModifierBase": -0.20,
             "SkillRange": 0.944
         },
+        "tags": [],
     },
     "Maximize Duration": {
         "rarity": "Rare",
@@ -1071,6 +1160,7 @@ const modData = {
             "SkillDuration": 0.40,
             "PowerModifierBase": -0.211
         },
+        "tags": [],
     },
     "Maximize Conservation": {
         "rarity": "Rare",
@@ -1083,6 +1173,7 @@ const modData = {
             "SkillCost": -0.354,
             "PowerModifierBase": -0.20
         },
+        "tags": [],
     },
     "Sensory Dep (MP)": {
         "rarity": "Rare",
@@ -1095,6 +1186,7 @@ const modData = {
             "IncomingDamage": -0.135,
             "MP%": -0.06
         },
+        "tags": [],
     },
     "Sensory Dep (HP)": {
         "rarity": "Rare",
@@ -1107,6 +1199,7 @@ const modData = {
             "IncomingDamage": -0.135,
             "HP%": -0.05
         },
+        "tags": [],
     },
     "Maximize Toxic Resist": {
         "rarity": "Rare",
@@ -1119,6 +1212,7 @@ const modData = {
             "HP%": -0.053,
             "ResistanceToxin%": 1.80
         },
+        "tags": [],
     },
     "Maximize Electric Resist": {
         "rarity": "Rare",
@@ -1131,6 +1225,7 @@ const modData = {
             "HP%": -0.053,
             "ResistanceElectricity%": 1.80
         },
+        "tags": [],
     },
     "Maximize Chill Resist": {
         "rarity": "Rare",
@@ -1143,6 +1238,7 @@ const modData = {
             "HP%": -0.053,
             "ResistanceChill%": 1.80
         },
+        "tags": [],
     },
     "Maximize Fire Resist": {
         "rarity": "Rare",
@@ -1155,6 +1251,7 @@ const modData = {
             "HP%": -0.053,
             "ResistanceFire%": 1.80
         },
+        "tags": [],
     },
     "Stim Accelerant": {
         "rarity": "Rare",
@@ -1167,6 +1264,7 @@ const modData = {
             "HP%": 2.34,
             "MP%": -0.15
         },
+        "tags": [],
     },
     "Maximize Efficiency": {
         "rarity": "Rare",
@@ -1179,6 +1277,7 @@ const modData = {
             "SkillCost": -0.158,
             "MP%": -0.037
         },
+        "tags": [],
     },
     "MP Conversion": {
         "rarity": "Rare",
@@ -1191,6 +1290,7 @@ const modData = {
             "SkillCooldown": -0.365,
             "MP%": -0.15
         },
+        "tags": [],
     },
     "Skill Simplification": {
         "rarity": "Rare",
@@ -1203,6 +1303,7 @@ const modData = {
             "PowerModifierBase": 0.845,
             "MP%": -0.25
         },
+        "tags": [],
     },
     "Shield Conversion (MP)": {
         "rarity": "Rare",
@@ -1215,6 +1316,7 @@ const modData = {
             "MP%": 0.15,
             "Shield%": -0.73
         },
+        "tags": [],
     },
     "Shield Conversion (DEF)": {
         "rarity": "Rare",
@@ -1227,6 +1329,7 @@ const modData = {
             "DEF%": 1.668,
             "Shield%": -0.365
         },
+        "tags": [],
     },
     "HP Conversion (MP)": {
         "rarity": "Rare",
@@ -1239,6 +1342,7 @@ const modData = {
             "MP%": 0.20,
             "HP%": -0.50
         },
+        "tags": [],
     },
     "HP Conversion (DEF)": {
         "rarity": "Rare",
@@ -1251,6 +1355,7 @@ const modData = {
             "DEF%": 1.668,
             "HP%": -0.524
         },
+        "tags": [],
     },
     "HP Conversion (Shield)": {
         "rarity": "Rare",
@@ -1263,6 +1368,7 @@ const modData = {
             "Shield%": 1.58,
             "HP%": -0.524
         },
+        "tags": [],
     },
     "HP Amplification": {
         "rarity": "Rare",
@@ -1275,6 +1381,7 @@ const modData = {
             "HP%": 2.272,
             "Shield%": -0.365
         },
+        "tags": [],
     },
     "Polygenic Antibody": {
         "rarity": "Normal",
@@ -1289,6 +1396,7 @@ const modData = {
             "ResistanceToxin": 640.8,
             "ResistanceChill": 640.8,
         },
+        "tags": [],
     },
     "Power Increase": {
         "rarity": "Normal",
@@ -1300,6 +1408,7 @@ const modData = {
         "stats": {
             "PowerRatioBase": 0.65
         },
+        "tags": [],
     },
     "Arche Acceleration": {//this is projectile speed and falloff range, not effect range
         "rarity": "Normal",
@@ -1307,8 +1416,9 @@ const modData = {
         "type": "Descendant",
         "cost": 12,
         "category": "",
-        "desc": "Skill Projectil Speed & Projectile Range Increase Modifier +19.2%",
+        "desc": "Skill Projectile Speed & Projectile Range Increase Modifier +19.2%",
         "stats": {},
+        "tags": [],
     },
     "Enlightenment": {
         "rarity": "Normal",
@@ -1320,6 +1430,7 @@ const modData = {
         "stats": {
             "MP%": 0.152
         },
+        "tags": [],
     },
     "Medical Support": {
         "rarity": "Normal",
@@ -1331,6 +1442,7 @@ const modData = {
         "stats": {
             "HPHeal": 0.308
         },
+        "tags": [],
     },
     "Energy Collection": {
         "rarity": "Normal",
@@ -1342,6 +1454,7 @@ const modData = {
         "stats": {
             "MPRecovery": 0.577
         },
+        "tags": [],
     },
     "Skill Concentration": {
         "rarity": "Normal",
@@ -1353,6 +1466,7 @@ const modData = {
         "stats": {
             "SkillCritDamage": 1.154
         },
+        "tags": [],
     },
     "Skill Insight": {
         "rarity": "Normal",
@@ -1364,6 +1478,7 @@ const modData = {
         "stats": {
             "SkillCritRate": 1.154
         },
+        "tags": [],
     },
     "Tech Specialist": {
         "rarity": "Normal",
@@ -1375,6 +1490,7 @@ const modData = {
         "stats": {
             "PowerModifierTech": 0.761
         },
+        "tags": [],
     },
     "Dimension Specialist": {
         "rarity": "Normal",
@@ -1386,6 +1502,7 @@ const modData = {
         "stats": {
             "PowerModifierDimension": 0.761
         },
+        "tags": [],
     },
     "Singular Specialist": {
         "rarity": "Normal",
@@ -1397,6 +1514,7 @@ const modData = {
         "stats": {
             "PowerModifierSingular": 0.761
         },
+        "tags": [],
     },
     "Fusion Specialist": {
         "rarity": "Normal",
@@ -1408,6 +1526,7 @@ const modData = {
         "stats": {
             "PowerModifierFusion": 0.761
         },
+        "tags": [],
     },
     "Toxic Specialist": {
         "rarity": "Normal",
@@ -1419,6 +1538,7 @@ const modData = {
         "stats": {
             "PowerRatioToxic": 0.812
         },
+        "tags": [],
     },
     "Electric Specialist": {
         "rarity": "Normal",
@@ -1430,6 +1550,7 @@ const modData = {
         "stats": {
             "PowerRatioElectric": 0.812
         },
+        "tags": [],
     },
     "Chill Specialist": {
         "rarity": "Normal",
@@ -1441,6 +1562,7 @@ const modData = {
         "stats": {
             "PowerRatioChill": 0.812
         },
+        "tags": [],
     },
     "Fire Specialist": {
         "rarity": "Normal",
@@ -1452,6 +1574,7 @@ const modData = {
         "stats": {
             "PowerRatioFire": 0.812
         },
+        "tags": [],
     },
     "Non-Attribute Specialist": {
         "rarity": "Normal",
@@ -1463,6 +1586,7 @@ const modData = {
         "stats": {
             "PowerRatioNonAttribute": 0.812
         },
+        "tags": [],
     },
     "Toxic Antibody": {
         "rarity": "Normal",
@@ -1474,6 +1598,7 @@ const modData = {
         "stats": {
             "ResistanceToxin": 4614
         },
+        "tags": [],
     },
     "Skill Extension": {
         "rarity": "Normal",
@@ -1485,6 +1610,7 @@ const modData = {
         "stats": {
             "SkillDuration": 0.365
         },
+        "tags": [],
     },
     "Skill Expansion": {
         "rarity": "Normal",
@@ -1496,6 +1622,7 @@ const modData = {
         "stats": {
             "SkillRange": 0.923
         },
+        "tags": [],
     },
     "Increased DEF": {
         "rarity": "Normal",
@@ -1507,6 +1634,7 @@ const modData = {
         "stats": {
             "DEF%": 1.604
         },
+        "tags": [],
     },
     "Increased Shield": {
         "rarity": "Normal",
@@ -1518,6 +1646,7 @@ const modData = {
         "stats": {
             "Shield%": 1.519
         },
+        "tags": [],
     },
     "Increased HP": {
         "rarity": "Normal",
@@ -1529,6 +1658,7 @@ const modData = {
         "stats": {
             "HP%": 2.185
         },
+        "tags": [],
     },
     "Regeneration Boost": {
         "rarity": "Normal",
@@ -1540,6 +1670,7 @@ const modData = {
         "stats": {
             "HPRecovery": 0.231
         },
+        "tags": [],
     },
     "Electric Antibody": {
         "rarity": "Normal",
@@ -1551,6 +1682,7 @@ const modData = {
         "stats": {
             "ResistanceElectricity": 4614
         },
+        "tags": [],
     },
     "Cold Antibody": {
         "rarity": "Normal",
@@ -1562,6 +1694,7 @@ const modData = {
         "stats": {
             "ResistanceChill": 4614
         },
+        "tags": [],
     },
     "Heat Antibody": {
         "rarity": "Normal",
@@ -1573,6 +1706,7 @@ const modData = {
         "stats": {
             "ResistanceFire": 4614
         },
+        "tags": [],
     },
     "Technician": {
         "rarity": "Normal",
@@ -1584,6 +1718,7 @@ const modData = {
         "stats": {
             "PowerModifierBase": 0.508
         },
+        "tags": [],
     },
     "Strong Mentality": {
         "rarity": "Normal",
@@ -1595,6 +1730,7 @@ const modData = {
         "stats": {
             "SkillCost": -0.152
         },
+        "tags": [],
     },
     "Nimble Fingers": {
         "rarity": "Normal",
@@ -1606,6 +1742,7 @@ const modData = {
         "stats": {
             "SkillCooldown": -0.256
         },
+        "tags": [],
     },
     "Ironclad Defense": {
         "rarity": "Normal",
@@ -1617,6 +1754,7 @@ const modData = {
         "stats": {
             "CritResist": 0.269
         },
+        "tags": [],
     },
 
 
@@ -1636,6 +1774,7 @@ const modData = {
             "SkillCritDamage": 0.101,
             "FirearmCritDamage": 0.124,
         },
+        "tags": [],
     },
 
     "Non-Attribute Amplification": {
@@ -1649,6 +1788,7 @@ const modData = {
             "SkillCritDamage": -1.4,
             "PowerRatioNonAttribute": 0.654
         },
+        "tags": [],
     },
     "Fire Amplification": {
         "rarity": "Rare",
@@ -1661,6 +1801,7 @@ const modData = {
             "SkillCritDamage": -1.4,
             "PowerRatioFire": 0.654
         },
+        "tags": [],
     },
     "Chill Amplification": {
         "rarity": "Rare",
@@ -1673,6 +1814,7 @@ const modData = {
             "SkillCritDamage": -1.4,
             "PowerRatioChill": 0.654
         },
+        "tags": [],
     },
     "Electric Amplification": {
         "rarity": "Rare",
@@ -1685,6 +1827,7 @@ const modData = {
             "SkillCritDamage": -1.4,
             "PowerRatioElectric": 0.654
         },
+        "tags": [],
     },
     "Toxic Amplification": {
         "rarity": "Rare",
@@ -1697,6 +1840,7 @@ const modData = {
             "SkillCritDamage": -1.4,
             "PowerRatioToxic": 0.654
         },
+        "tags": [],
     },
 
     "Tech Amplification": {
@@ -1710,6 +1854,7 @@ const modData = {
             "SkillCritRate": -1.4,
             "PowerModifierTech": 0.613
         },
+        "tags": [],
     },
     "Fusion Amplification": {
         "rarity": "Rare",
@@ -1722,6 +1867,7 @@ const modData = {
             "SkillCritRate": -1.4,
             "PowerModifierFusion": 0.613
         },
+        "tags": [],
     },
     "Singular Amplification": {
         "rarity": "Rare",
@@ -1734,6 +1880,7 @@ const modData = {
             "SkillCritRate": -1.4,
             "PowerModifierSingular": 0.613
         },
+        "tags": [],
     },
     "Dimension Amplification": {
         "rarity": "Rare",
@@ -1746,6 +1893,7 @@ const modData = {
             "SkillCritRate": -1.4,
             "PowerModifierDimension": 0.613
         },
+        "tags": [],
     },
 
 
@@ -1760,6 +1908,7 @@ const modData = {
             "SkillCritDamage": 0.10,
             "PowerRatioNonAttribute": 0.287
         },
+        "tags": [],
     },
     "Fire Intensive": {
         "rarity": "Rare",
@@ -1772,6 +1921,7 @@ const modData = {
             "SkillCritDamage": 0.10,
             "PowerRatioFire": 0.287
         },
+        "tags": [],
     },
     "Chill Intensive": {
         "rarity": "Rare",
@@ -1784,6 +1934,7 @@ const modData = {
             "SkillCritDamage": 0.10,
             "PowerRatioChill": 0.287
         },
+        "tags": [],
     },
     "Electric Intensive": {
         "rarity": "Rare",
@@ -1796,6 +1947,7 @@ const modData = {
             "SkillCritDamage": 0.10,
             "PowerRatioElectric": 0.287
         },
+        "tags": [],
     },
     "Toxic Intensive": {
         "rarity": "Rare",
@@ -1808,6 +1960,7 @@ const modData = {
             "SkillCritDamage": 0.10,
             "PowerRatioToxic": 0.287
         },
+        "tags": [],
     },
 
     "Tech Intensive": {
@@ -1821,6 +1974,7 @@ const modData = {
             "SkillCritRate": 0.10,
             "PowerModifierTech": 0.269
         },
+        "tags": [],
     },
     "Fusion Intensive": {
         "rarity": "Xantic",
@@ -1833,6 +1987,7 @@ const modData = {
             "SkillCritRate": 0.10,
             "PowerModifierFusion": 0.269
         },
+        "tags": [],
     },
     "Singular Intensive": {
         "rarity": "Rare",
@@ -1845,6 +2000,7 @@ const modData = {
             "SkillCritRate": 0.10,
             "PowerModifierSingular": 0.269
         },
+        "tags": [],
     },
     "Dimension Intensive": {
         "rarity": "Rare",
@@ -1857,6 +2013,7 @@ const modData = {
             "SkillCritRate": 0.10,
             "PowerModifierDimension": 0.269
         },
+        "tags": [],
     },
 
 
@@ -1888,5 +2045,6 @@ const modData = {
             // "SkillCritRate": 0.10,
             // "PowerModifierDimension": 0.269
         },
+        "tags": [],
     },
 }
