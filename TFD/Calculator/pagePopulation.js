@@ -1046,26 +1046,17 @@ const formulasValues = {
         index[memory[globalRef.memory].headerStat] += memory[globalRef.memory].value;
         index[processor[globalRef.processor].headerStat] += processor[globalRef.processor].value;
 
-        // //pull substat data
-        // const subsArray = [
-        //     auxiliaryRolls[globalRef.auxiliarySub1].stats,auxiliaryRolls[globalRef.auxiliarySub2].stats,
-        //     sensorRolls[globalRef.sensorSub1].stats,sensorRolls[globalRef.sensorSub2].stats,
-        //     memoryRolls[globalRef.memorySub1].stats,memoryRolls[globalRef.memorySub2].stats,
-        //     processorRolls[globalRef.processorSub1].stats,processorRolls[globalRef.processorSub2].stats,
-        // ];
-        // formulasValues.pullStatsArray(index,subsArray);
+        index[Object.keys(auxiliaryRolls[globalRef.auxiliarySub1].stats)[0]] += globalRef.auxiliarySub1Value || 0;
+        index[Object.keys(auxiliaryRolls[globalRef.auxiliarySub2].stats)[0]] += globalRef.auxiliarySub2Value || 0;
 
-        index[globalRef.auxiliarySub1] += globalRef.auxiliarySub1Value || 0;
-        index[globalRef.auxiliarySub2] += globalRef.auxiliarySub2Value || 0;
+        index[Object.keys(sensorRolls[globalRef.sensorSub1].stats)[0]] += globalRef.sensorSub1Value || 0;
+        index[Object.keys(sensorRolls[globalRef.sensorSub2].stats)[0]] += globalRef.sensorSub2Value || 0;
 
-        index[globalRef.sensorSub1] += globalRef.sensorSub1Value || 0;
-        index[globalRef.sensorSub2] += globalRef.sensorSub2Value || 0;
+        index[Object.keys(memoryRolls[globalRef.memorySub1].stats)[0]] += globalRef.memorySub1Value || 0;
+        index[Object.keys(memoryRolls[globalRef.memorySub2].stats)[0]] += globalRef.memorySub2Value || 0;
 
-        index[globalRef.memorySub1] += globalRef.memorySub1Value || 0;
-        index[globalRef.memorySub2] += globalRef.memorySub2Value || 0;
-
-        index[globalRef.processorSub1] += globalRef.processorSub1Value || 0;
-        index[globalRef.processorSub2] += globalRef.processorSub2Value || 0;
+        index[Object.keys(processorRolls[globalRef.processorSub1].stats)[0]] += globalRef.processorSub1Value || 0;
+        index[Object.keys(processorRolls[globalRef.processorSub2].stats)[0]] += globalRef.processorSub2Value || 0;
 
         //later, look into doing this in a way that just has the parts provide a +1 to greatTable during the earlier pullstats section,
         //then no for loops are needed. low priority, but it'd be better
@@ -1078,8 +1069,12 @@ const formulasValues = {
         for (let entry of setListArray) {
             if (setCounter[entry] >= 2) {
                 pullStats(index,componentSetBonuses[entry]["2pc"].stats);
+                globalRef.current2piece = entry;
                 //we'll never reach a 4 set if we don't have a 2 sec, so we can include the 4set logic inside the 2set
-                if (setCounter[entry] === 4) {pullStats(index,componentSetBonuses[entry]["4pc"].stats);}
+                if (setCounter[entry] === 4) {
+                    pullStats(index,componentSetBonuses[entry]["4pc"].stats);
+                    globalRef.current4piece = entry;
+                }
             }
         }
 
@@ -1172,8 +1167,11 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
     // customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs);
     if (!isCycleCalcs) {
         basicsUpdates.updateMainFromFormulas(returnObject,tableReference);
+        // tooltips.loadTooltips();
         manipulateURL.updateURLparameters();//called also when a display tab is changed between player/weapon/enemy etc
-        if (globalRecords.URLImportCompleted) {moduleQueryFunctions.getModuleQueryResults();}
+        if (globalRecords.URLImportCompleted) {
+            moduleQueryFunctions.getModuleQueryResults();
+        }
         tooltips.loadTooltips();
     }
     else {
@@ -1227,5 +1225,6 @@ readSelection("boss").value = "Devourer";
 readSelection("bossPart").value = "Shoulder";
 userTriggers.updateSelectedBoss();
 globalRecords.URLImportCompleted = true;
+// updateFormulas();
 moduleQueryFunctions.getModuleQueryResults();
 userTriggers.toggleDisplayMode(globalRecords.currentDisplayMode);

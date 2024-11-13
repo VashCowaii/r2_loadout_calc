@@ -1,6 +1,8 @@
 const weaponSubstatList = {
     "": {
         "statName": "",
+        "stats": {},
+        "tags": [],
         "Sniper": [0,0],
         "Hand Cannon": [0,0],
         "Burst Rifle": [0,0],
@@ -8,6 +10,8 @@ const weaponSubstatList = {
     },
     "Firearm ATK": {
         "statName": "FirearmATK%",
+        "stats": {},
+        "tags": ["FirearmATK%"],
         "Sniper": [0.10,0.122],
         "Hand Cannon": [0.10,0.122],
         "Burst Rifle": [0.10,0.122],
@@ -15,6 +19,8 @@ const weaponSubstatList = {
     },
     "Fire ATK": {
         "statName": "FireATK",
+        "stats": {},
+        "tags": ["FireATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
@@ -22,6 +28,8 @@ const weaponSubstatList = {
     },
     "Chill ATK": {
         "statName": "ChillATK",
+        "stats": {},
+        "tags": ["ChillATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
@@ -29,6 +37,8 @@ const weaponSubstatList = {
     },
     "Electric ATK": {
         "statName": "ElectricATK",
+        "stats": {},
+        "tags": ["ElectricATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
@@ -36,6 +46,8 @@ const weaponSubstatList = {
     },
     "Toxic ATK": {
         "statName": "ToxicATK",
+        "stats": {},
+        "tags": ["ToxicATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
@@ -43,6 +55,8 @@ const weaponSubstatList = {
     },
     "Weak Point Damage": {
         "statName": "WeakPointDamage%",
+        "stats": {},
+        "tags": ["WeakPointDamage%"],
         "Sniper": [0.082,0.12],
         "Hand Cannon": [0.082,0.12],
         "Burst Rifle": [0.082,0.12],
@@ -50,6 +64,8 @@ const weaponSubstatList = {
     },
     "Critical Hit Rate": {
         "statName": "FirearmCritRate",
+        "stats": {},
+        "tags": ["FirearmCritRate"],
         "Sniper": [0.093,0.108],
         "Hand Cannon": [0.099,0.114],
         "Burst Rifle": [0.108,0.122],
@@ -57,6 +73,8 @@ const weaponSubstatList = {
     },
     "Critical Hit Damage": {
         "statName": "FirearmCritDamage",
+        "stats": {},
+        "tags": ["FirearmCritDamage"],
         "Sniper": [0.152,0.184],
         "Hand Cannon": [0.177,0.215],
         "Burst Rifle": [0.202,0.247],
@@ -64,6 +82,8 @@ const weaponSubstatList = {
     },
     "Status Effect Rate": {
         "statName": "StatusTriggerRate",
+        "stats": {},
+        "tags": ["StatusTriggerRate"],
         "Sniper": [0.164,0.24],
         "Hand Cannon": [0.164,0.24],
         "Burst Rifle": [0.164,0.24],
@@ -71,6 +91,8 @@ const weaponSubstatList = {
     },
     "Rounds per Magazine": {
         "statName": "MagazineSize",
+        "stats": {},
+        "tags": ["MagazineSize"],
         "Sniper": [0.082,0.12],
         "Hand Cannon": [0.082,0.12],
         "Burst Rifle": [0.082,0.12],
@@ -78,6 +100,8 @@ const weaponSubstatList = {
     },
     "Bonus ATK (Colossus)": {
         "statName": "ColossusATK",
+        "stats": {},
+        "tags": ["ColossusATK"],
         "Sniper": [16848,30393],
         "Hand Cannon": [6472,11676],
         "Burst Rifle": [1919,3462],
@@ -115,7 +139,8 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {},
+        "stats": {},
+        "tags": [],
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],
@@ -136,7 +161,8 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {},
+        "stats": {},
+        "tags": [],
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],
@@ -157,7 +183,8 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {},
+        "stats": {},
+        "tags": [],
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],
@@ -178,7 +205,8 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {},
+        "stats": {},
+        "tags": [],
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],
@@ -221,7 +249,8 @@ const sniperList = {
                 {"statType": "","statName": "+Skill Power (Opt.)/Stack","value": 0.16,"limit": null,"isModified": false,"isUnlabeledPercent": true},
             ],
         },
-        "subStats": {}
+        "stats": {},
+        "tags": ["FirearmATK%","PowerOptimization"],
     },
     "Blue Beetle": {
         "name": "Blue Beetle",
@@ -256,7 +285,8 @@ const sniperList = {
                 {"statType": "","statName": "Debuff Removal Chance","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
             ],
         },
-        "subStats": {}
+        "stats": {},
+        "tags": ["SkillCritRate"],
     },
     "Peace Maker": {
         "name": "Peace Maker",
@@ -273,7 +303,8 @@ const sniperList = {
         "customDPSBase": "peacemakerCalcsTier0",
         "customDPS": "",
         "desc": "When using a Dimension or Fusion skill, grants the unique ability Single Reload for Peace. When Single Reload for Peace is at Max Stacks, shooting while aiming rapidly fires all loaded rounds.",
-        "subStats": {},
+        "stats": {},
+        "tags": ["PowerRatioNonAttribute"],
         "weaponSettings": {
             "peacemakerStackCount": 5,
         },
@@ -328,7 +359,8 @@ const sniperList = {
                 {"statType": "","statName": "Shield Recovery","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
             ],
         },
-        "subStats": {}
+        "stats": {},
+        "tags": ["enemyDEFResistanceReduction"],
     },
 
 
@@ -349,7 +381,8 @@ const sniperList = {
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
-        "subStats": {},
+        "stats": {},
+        "tags": [],
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],

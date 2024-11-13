@@ -7,6 +7,21 @@
 </div> -->
 
 <!-- <li>Added URL logging for character-specific settings, like say Hailey's cold fury stack count. Those were pretty much the only things left that I didn't add to data persistence yet, but now that is done.</li> -->
+ <div>
+    <h1>Nov 12, 2024 - THE TOOLTIPS UPDATE</h1>
+    <ul>
+        <li>Finished adding tooltips to the entirety of the main stat column. Not only should there be a brief overview to the stat or how it is calculated, but it will also display a list of all currently selected items, abilities, etc. that CAN contribute to the stat so that way if you're getting numbers you're confused on maybe you forgot you have Secret Garden equipped, you can hover over Power Optimization and it'll tell you the bonus is coming from the Reactor Weapon Match like it should, but it'll also display Secret Garden's weapon ability. If you're curious about where that extra bit of DEF is coming from it'll tell you everything that can add it, so on and so forth.</li>
+        <li>Added a restriction ruleset on how the final crit damage multiplier is obtained for both skills and firearms, specifically regarding how it handles its decimal values.
+            <ul>
+                <li>There's still more to be done here to confirm this is how it actually works, but at a glance things line up how they should with the added rules. If it can be disproven, I'll revert this change, but until then we're rollin with it.</li>
+            </ul>
+        </li>
+        <li>Modified the restriction ruleset on how DEF, not RES, handles its decimals to be in-line with how CDMG handles theirs, which lines up for DEF stuff.</li>
+        <li>Removed the "SKILL ATTACK" category from the main column since it only served to house the colossus bonus skill atk stat, and moved it to the power ratios category next to power optimization instead.</li>
+        <li>Fixed an issue where some component substats would not get pulled properly, in particular things like MP recovery modifier or shield regen in combat. Things like HP, MP, and DEF have always worked though, the reason this happened was due to a disconnect in my earlier naming schemes that I changed later but didn't update in that code and never noticed until I was adding tooltips for them.</li>
+        <li>Fixed an issue where the UI displayed Esiemo's Madness buff as Skill Power not Power Optimization. The math still used it as Optimization like it should have.</li>
+    </ul>
+</div>
 
 <div>
     <h1>Nov 11, 2024</h1>
@@ -31,7 +46,7 @@
         <h3>General</h3>
         <li>Added the first batch of tooltips to the main stat column.
             <ul>
-                <li>Still more work to be done here and they haven't been added to everything just yet. Also, I'll have it so it'll not only tell you about the stat but also tell you everything in your gear that is adding to it</li>
+                <li>Still more work to be done here and they haven't been added to everything just yet. Also, later I'll have it so it'll not only tell you about the stat but also tell you everything in your gear that is adding to it</li>
             </ul>
         </li>
         <li>Added the structure needed to do keyword-color-tagging in descriptions. Now I just need to add all the keys. This is for stuff like Cold Fury in Hailey's Description, in-game it is changed to blue text and highlighted, and that's what this code will do.</li>

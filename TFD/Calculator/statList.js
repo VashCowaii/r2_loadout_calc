@@ -32,6 +32,8 @@ const greatTableKnowerOfAll = {
 
     //BASE OPTIMIZATION POWER BONUS
     "PowerOptimization": 0,
+    //SKILL ATK BONUSES
+    "SkillAttackColossus": 0,
     //SKILL POWER BOOST RATIOS
     "PowerRatioBase": 0,
     "PowerRatioNonAttribute": 0,"PowerRatioElectric": 0,"PowerRatioToxic": 0,"PowerRatioChill": 0,"PowerRatioFire": 0,
@@ -61,12 +63,12 @@ const greatTableKnowerOfAll = {
     "EnemyRecovery": 1,
     "SubAttackPower": 0,
 
-    "SkillAttackColossus": 0,
 
 
     //GUNS
     "ColossusATK": 0,
     "FirearmATK%": 0,
+    "BaseWeakPointBonus": 0,
     "WeakPointDamage%": 0,
 
     "StatusTriggerRate": 0,

@@ -4,7 +4,7 @@ let tooltipMath = {
         let tags = path.tags
         let newTagArray = [];
     
-        if (!type) {
+        if (!type) {//pushes the stats into the tags array to merge it all into one thing
             let stats = Object.keys(path.stats);
             for (entry of stats) {newTagArray.push(entry);}
         }
@@ -12,7 +12,7 @@ let tooltipMath = {
             let tags = path.tags
             for (entry of tags) {newTagArray.push(entry);}
         }
-        else {
+        else {//prime was only for remnant 2 but the functionality might be useful later so I kept it as is here
             let stats = Object.keys(path.primeStats);
             for (entry of stats) {newTagArray.push(entry);}
         }
@@ -28,67 +28,106 @@ let tooltipMath = {
     returnItemsWithStat(statistic) {
         //This is a function to go over every possible equipped item, check if it the item can at any point provide the target, and if so, return the item names.
         let htmlString = "";
-        let globalReference = globalRecords;
-        let accessoryReference = globalReference.accessories;
-        let consumableReference = globalReference.greatConsumableRecords;
-        let concoctionReference = globalReference.greatConcoctionRecords;
-        let weaponReference = globalReference.weapons;
-        let armorReference = globalReference.armor;
-        let traitReference = globalReference.greatTraitRecords
-        let classReference = globalReference.archs;
-    
-        htmlString += tooltipMath.checkItemForStat(amulets[accessoryReference.amulet],accessoryReference.amulet,statistic);
-        for (let i=1;i<=4;i++) {
-            htmlString += tooltipMath.checkItemForStat(rings[accessoryReference[`ring${i}`]],accessoryReference[`ring${i}`],statistic);
-        }
-        htmlString += tooltipMath.checkItemForStat(relics[accessoryReference.relic],accessoryReference.relic,statistic);
-        for (let i=1;i<=3;i++) {
-            htmlString += tooltipMath.checkItemForStat(fragments[accessoryReference[`fragment${i}`]],accessoryReference[`fragment${i}`],statistic);
-        }
-    
+        let characterRef = globalRecords.character;
+        let characterMods = characterRef.mods;
+        let componentRef = globalRecords.components;
+        let reactorRef = globalRecords.reactor;
+        let weaponRef = globalRecords.weapon;
 
-        for (let entry of consumableReference) {
-            htmlString += tooltipMath.checkItemForStat(quickUses[entry],entry,statistic);
+        const ratioTable = {
+            "Fire" : "PowerRatioFire",
+            "Non-Attribute" : "PowerRatioNonAttribute",
+            "Electric" : "PowerRatioElectric",
+            "Chill" : "PowerRatioChill",
+            "Toxic" : "PowerRatioToxic",
+            "Tech" : "PowerRatioTech",
+            "Singular" : "PowerRatioSingular",
+            "Dimension" : "PowerRatioDimension",
+            "Fusion": "PowerRatioFusion"
         }
-        for (let entry of concoctionReference) {
-            htmlString += tooltipMath.checkItemForStat(concoctions[entry],entry,statistic);
+    
+        //-----------------------------------------------//
+        //------------REACTOR--------------------------//
+        //-----------------------------------------------//
+        //reactor attribute/type
+        //we're creating a pseudo object for the reactor since reactors don't really have stats or tag options like other items do in my code
+        //the values themselves do not matter, we're just recreating the object structure that everything else has for it to use
+        const referenceTagsAttribute = {"stats": {[ratioTable[reactorRef.currentAttribute]]: 0,},"tags": []}
+        htmlString += tooltipMath.checkItemForStat(referenceTagsAttribute,`${reactorRef.currentAttribute} - Reactor Attribute`,statistic);
+        const referenceTagsType = {"stats": {[ratioTable[reactorRef.currentType]]: 0,}, "tags": []}
+        htmlString += tooltipMath.checkItemForStat(referenceTagsType,`${reactorRef.currentType} - Reactor Type`,statistic);
+        //reactor substats
+        htmlString += tooltipMath.checkItemForStat(reactorSubRolls[reactorRef.subRoll1],`${reactorRef.subRoll1} - Reactor`,statistic);
+        htmlString += tooltipMath.checkItemForStat(reactorSubRolls[reactorRef.subRoll2],`${reactorRef.subRoll2} - Reactor`,statistic);
+        //reactor weapon condition
+        const referenceTagsOptimization = {"stats": {"PowerOptimization": 0,},"tags": []}
+        htmlString += tooltipMath.checkItemForStat(referenceTagsOptimization,`Reactor Weapon Match`,statistic);
+
+        //-----------------------------------------------//
+        //------------CHARACTER MODS--------------------------//
+        //-----------------------------------------------//
+        //character mods
+        for (let i=3;i<=12;i++) {
+            htmlString += tooltipMath.checkItemForStat(modData[characterMods[i-1]],characterMods[i-1],statistic);
         }
 
-        htmlString += tooltipMath.checkItemForStat(primaries[weaponReference.primary],weaponReference.primary,statistic);
-        htmlString += tooltipMath.checkItemForStat(rangedMutators[weaponReference.primaryMutator],weaponReference.primaryMutator,statistic);
-        htmlString += primaries[weaponReference.primary].builtIN ? tooltipMath.checkItemForStat(builtInPrimary[primaries[weaponReference.primary].builtIN],primaries[weaponReference.primary].builtIN,statistic)
-        : tooltipMath.checkItemForStat(rangedMods[weaponReference.primaryMod],weaponReference.primaryMod,statistic);
-        htmlString += tooltipMath.checkItemForStat(melees[weaponReference.melee],weaponReference.melee,statistic);
-        htmlString += tooltipMath.checkItemForStat(meleeMutators[weaponReference.meleeMutator],weaponReference.meleeMutator,statistic);
-        htmlString += melees[weaponReference.melee].builtIN ? tooltipMath.checkItemForStat(builtInMelee[melees[weaponReference.melee].builtIN],melees[weaponReference.melee].builtIN,statistic)
-        : "";
-        htmlString += tooltipMath.checkItemForStat(secondaries[weaponReference.secondary],weaponReference.secondary,statistic);
-        htmlString += tooltipMath.checkItemForStat(rangedMutators[weaponReference.secondaryMutator],weaponReference.secondaryMutator,statistic);
-        htmlString += secondaries[weaponReference.secondary].builtIN ? tooltipMath.checkItemForStat(builtInSecondary[secondaries[weaponReference.secondary].builtIN],secondaries[weaponReference.secondary].builtIN,statistic)
-        : tooltipMath.checkItemForStat(rangedMods[weaponReference.secondaryMod],weaponReference.secondaryMod,statistic);
-        htmlString += tooltipMath.checkItemForStat(helmets[armorReference.helmet],armorReference.helmet,statistic);
-        htmlString += tooltipMath.checkItemForStat(chests[armorReference.chest],armorReference.chest,statistic);
-        htmlString += tooltipMath.checkItemForStat(legs[armorReference.leg],armorReference.leg,statistic);
-        htmlString += tooltipMath.checkItemForStat(hands[armorReference.hand],armorReference.hand,statistic);
-    
-        for (let i=0;i<traitReference.length;i++) {
-            htmlString += tooltipMath.checkItemForStat(traits[traitReference[i].name],traitReference[i].name,statistic,"trait");
+        //-----------------------------------------------//
+        //------------ABILITIES--------------------------//
+        //-----------------------------------------------//
+        const selectedCharacter = characterRef.currentCharacter;
+        const arrayRef = characterRef.abilityArray;
+        const abilityRefs = characters[selectedCharacter].abilities;
+
+        for (let i=1;i<=5;i++) {
+            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+            const abilityString = `ability${i}`;
+
+            // formulasValues.pullStats(index,abilityRefs[abilityString][path].stats);
+
+            htmlString += tooltipMath.checkItemForStat(abilityRefs[abilityString][path],`Skill ${i} - ${abilityRefs[abilityString][path].name}`,statistic);
         }
-    
-    
-        htmlString += tooltipMath.checkItemForStat(classInfo[classReference.one.class],classInfo[classReference.one.class].primePerk,statistic,"prime");
-        htmlString += tooltipMath.checkItemForStat(classInfo[classReference.one.class].abilities[classReference.one.ability],classReference.one.ability,statistic);
-        for (let i=1;i<=4;i++) {
-            htmlString += tooltipMath.checkItemForStat(classInfo[classReference.one.class].passives[`passive${i}`],classInfo[classReference.one.class].passives[`passive${i}`].name,statistic);
+
+        //-----------------------------------------------//
+        //------------COMPONENTS--------------------------//
+        //-----------------------------------------------//
+        // componentSetBonuses
+        htmlString += tooltipMath.checkItemForStat(componentSetBonuses[componentRef.current2piece]["2pc"],`${componentRef.current2piece} - 2pc`,statistic);
+        htmlString += tooltipMath.checkItemForStat(componentSetBonuses[componentRef.current4piece]["4pc"],`${componentRef.current4piece} - 4pc`,statistic);
+        //component base stat
+        htmlString += tooltipMath.checkItemForStat(auxiliary[componentRef.auxiliary],`${componentRef.auxiliary} - Auxiliary`,statistic);
+        htmlString += tooltipMath.checkItemForStat(sensor[componentRef.sensor],`${componentRef.sensor} - Sensor`,statistic);
+        htmlString += tooltipMath.checkItemForStat(memory[componentRef.memory],`${componentRef.memory} - Memory`,statistic);
+        htmlString += tooltipMath.checkItemForStat(processor[componentRef.processor],`${componentRef.processor} - Processor`,statistic);
+        //component substats
+        htmlString += tooltipMath.checkItemForStat(auxiliaryRolls[componentRef.auxiliarySub1],`${componentRef.auxiliarySub1} - Auxiliary`,statistic);
+        htmlString += tooltipMath.checkItemForStat(auxiliaryRolls[componentRef.auxiliarySub2],`${componentRef.auxiliarySub2} - Auxiliary`,statistic);
+        htmlString += tooltipMath.checkItemForStat(sensorRolls[componentRef.sensorSub1],`${componentRef.sensorSub1} - Sensor`,statistic);
+        htmlString += tooltipMath.checkItemForStat(sensorRolls[componentRef.sensorSub2],`${componentRef.sensorSub2} - Sensor`,statistic);
+        htmlString += tooltipMath.checkItemForStat(memoryRolls[componentRef.memorySub1],`${componentRef.memorySub1} - Memory`,statistic);
+        htmlString += tooltipMath.checkItemForStat(memoryRolls[componentRef.memorySub2],`${componentRef.memorySub2} - Memory`,statistic);
+        htmlString += tooltipMath.checkItemForStat(processorRolls[componentRef.processorSub1],`${componentRef.processorSub1} - Processor`,statistic);
+        htmlString += tooltipMath.checkItemForStat(processorRolls[componentRef.processorSub2],`${componentRef.processorSub2} - Processor`,statistic);
+
+        //-----------------------------------------------//
+        //------------WEAPON--------------------------//
+        //-----------------------------------------------//
+        //weapon mods
+        let modArrayRef = weaponRef.mods;
+        const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
+        for (let i=1;i<=10;i++) {
+            let modName = modArrayRef[i-1]
+            let path = weaponModsCategory[modName];
+            htmlString += tooltipMath.checkItemForStat(path,modName,statistic);
         }
-    
-        htmlString += tooltipMath.checkItemForStat(classInfo[classReference.two.class].abilities[classReference.two.ability],classReference.two.ability,statistic);
-        for (let i=1;i<=4;i++) {
-            htmlString += tooltipMath.checkItemForStat(classInfo[classReference.two.class].passives[`passive${i}`],classInfo[classReference.two.class].passives[`passive${i}`].name,statistic);
-        }
-    
-        // classReference
-    
+        //weapon substat rolls
+        htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll1],`${weaponRef.subRoll1} - Weapon Substat 1`,statistic);
+        htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll2],`${weaponRef.subRoll2} - Weapon Substat 2`,statistic);
+        htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll3],`${weaponRef.subRoll3} - Weapon Substat 3`,statistic);
+        htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll4],`${weaponRef.subRoll4} - Weapon Substat 4`,statistic);
+        //weapon ability if applicable
+        const weaponName = weaponRef.currentWeapon;
+        htmlString += tooltipMath.checkItemForStat(sniperList[weaponName],`${weaponName} - Weapon Ability`,statistic);
+
     
         return htmlString;
     },

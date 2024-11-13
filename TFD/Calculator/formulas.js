@@ -117,6 +117,7 @@ const calcs = {
         let baseSkillPower = (11724.62 * powerOptimization * skillDependentModifier + index.SkillAttackColossus) * basePowerRatio;
         for (let type of abilityTypeArray) {baseSkillPower *= (1 + index[`PowerRatio${type.replace(/-/g, "")}`]);}
 
+        // return calcs.customTruncate(baseSkillPower + 0.00001,4);
         return baseSkillPower;
     },
     getResistanceBasedDR(index,typeName) {
@@ -129,21 +130,26 @@ const calcs = {
 
         let sqRoot = Math.sqrt(currentResistValue);
         let initialValue = 1 - (drConstant/(drConstant + sqRoot))
-        if (typeName === "DEF") {initialValue = calcs.customCeiling(initialValue,0.00001);}
+        // if (typeName === "DEF") {initialValue = calcs.customCeiling(initialValue,0.00001);}
+        if (typeName === "DEF") {initialValue += 0.00001;}
         const endValue = 1 - calcs.customTruncate(initialValue,4);
         
         return endValue;
     },
     getCritComposites(returnObject) {
         const Rate = returnObject.totalSkillCritRate;
-        const Damage = returnObject.totalSkillCritDamage;
+        // console.log(returnObject.totalSkillCritDamage)
+        // const Damage = returnObject.totalSkillCritDamage;
+        const Damage = calcs.customTruncate(returnObject.totalSkillCritDamage + 0.00001,4);
         const Composite = 1 + (Rate * (Damage-1));
 
         return {Rate,Damage,Composite}
     },
     getFirearmCritComposites(returnObject) {
         const Rate = returnObject.totalFirearmCritRate;
-        const Damage = returnObject.totalFirearmCritDamage;
+        // const Damage = returnObject.totalFirearmCritDamage;
+        // console.log(returnObject.totalFirearmCritDamage)
+        const Damage = calcs.customTruncate(returnObject.totalFirearmCritDamage + 0.00001,4);
         const Composite = 1 + (Rate * (Damage-1));
 
         return {Rate,Damage,Composite}
@@ -4060,6 +4066,8 @@ const customDamage = {
         const avgPerShot = weaponDamage.AVG + weaponDamageElemental.AVG;
 
         const totalAVGGun = avgPerShot * actualMagSize;
+
+        // if (!isCycleCalcs) {console.log(weaponDamageElemental.perCrit)}
 
         let rowInjectionFirearmElemental = [
             {"name": "Element","value": activeElements[0],"unit": ""},
