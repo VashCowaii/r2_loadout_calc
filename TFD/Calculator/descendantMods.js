@@ -739,7 +739,7 @@ const modData = {
         "type": "Descendant",
         "cost": 16,
         "category": "Luck",
-        "desc": "Skill Critical Hit Rate +64.7%, Skill Critical Hit Damage +27.7%.",
+        "desc": "Skill Critical Hit Rate +64.6%, Skill Critical Hit Damage +27.7%.",
         "stats": {
             "SkillCritRate": 0.646,
             "SkillCritDamage": 0.277
