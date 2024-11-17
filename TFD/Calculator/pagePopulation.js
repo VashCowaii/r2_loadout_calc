@@ -102,6 +102,9 @@ const userTriggers = {
             const lunaMP = +readSelection("teamBuffsLunaMP").value;
             const enhancement = readSelection("teamBuffsLunaEnhancement").value;
 
+            // <option value="Purple">Purple + Red</option>
+            // <option value="Purple">Purple + Blue</option>
+
             const abilitiesPath = characters.Luna.abilities;
 
             const excitingPath = isLunaAggressive ? abilitiesPath.ability2["Aggressive Melody"] : abilitiesPath.ability2.base;
@@ -115,7 +118,9 @@ const userTriggers = {
                 const secondary = isLunaAggressive ? "FirearmCritRateBase" : "SkillCritRateBaseBonus";
                 const third = isLunaAggressive ? "FirearmCritDamageBase" : "SkillCritDamage";
 
-                if (enhancement === "Red") {
+                console.log(enhancement)
+
+                if (enhancement.includes("Red")) {
                     const primaryAmount = (lunaMP * excitingPath.powerMods[isLunaAggressive ? "firearmATKBonusRateEnhanced" : "powerRatioRateEnhanced"])/100;
                     teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
                     teamRef.stats[secondary] = excitingPath.powerMods[isLunaAggressive ? "firearmCritRateBonus" : "baseSkillRateBonus"];
@@ -130,7 +135,7 @@ const userTriggers = {
             //BLUE
             if (readSelection("teamBuffsLunaRelaxing").checked) {
                 //right now blue doesn't do anything in the code as it's hard to quantify MP regen aspects and I haven't gotten to that stuff yet
-                if (enhancement === "Blue") {
+                if (enhancement.includes("Blue")) {
                     // const primaryAmount = relaxingPath.powerMods.cooldownBonusEnhanced;
                     // teamRef.stats.SkillCooldown = primaryAmount;
                 }
@@ -143,7 +148,7 @@ const userTriggers = {
             if (readSelection("teamBuffsLunaCheerful").checked) {
                 //regular bonuses
                 if (!isLunaAggressive) {
-                    if (enhancement === "Purple") {
+                    if (enhancement.includes("Purple")) {
                         const primaryAmount = cheerfulPath.powerMods.cooldownBonusEnhanced;
                         teamRef.stats.SkillCooldown = primaryAmount;
                     }
