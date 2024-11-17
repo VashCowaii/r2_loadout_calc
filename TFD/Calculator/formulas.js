@@ -201,12 +201,12 @@ const calcs = {
         return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
     getFirearmWeakpoint(index,weaponRef) {
-        const baseWPMulti = weaponRef.baseWeakPoint;
+        const baseWPMulti = weaponRef.baseWeakPoint + index.BaseWeakPointBonus;
         const weakpointBonus = index["WeakPointDamage%"];
 
         const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
-        const totalWPBonus = globalRecords.useWeakspots && bossPartWPBonus != 0 ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1;
+        const totalWPBonus = calcs.customTruncate((globalRecords.useWeakspots && bossPartWPBonus != 0 ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1) + 0.00001,4);
 
         return {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus}
     },
@@ -684,7 +684,9 @@ const customDamage = {
             ]
             let rowInjectionLastStand = isLastStand ? [
                 {"name": "Last Stand Multi","value": lastStandMulti,"unit": "x"},
-                {"name": "Last Stand DMG","value": lastStandDamage,"unit": ""},
+                {"name": "Last Stand Hit","value": damage.perHit * lastStandMulti,"unit": ""},
+                {"name": "Last Stand Crit","value": damage.perCrit * lastStandMulti,"unit": ""},
+                {"name": "Last Stand AVG","value": lastStandDamage,"unit": ""},
             ] : [];
             let rowInjectionDPS = [
                 {"name": "SUM Total AVG","value": totalImpactDamage4,"unit": ""},
@@ -4038,6 +4040,759 @@ const customDamage = {
     },
     viessaSphereCalcsCohesionStarter(index,returnObject,isCycleCalcs,nameOverride) {
         customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Cold Cohesion")
+    },
+
+    //LUNA
+    //ability 1
+    lunaPresenceCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        index.PowerModifierBase += settingsRef.lunaPresenceStacks * 0.01;
+    },
+    lunaPresenceCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+    
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Power Mod","value": finalPowerModifier,"unit": "%"},
+            //     {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
+            //     {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "PROJECTILE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": "",},
+                {"header": "PERFECT PITCH","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "sliderElemID": ["lunaPresenceStacks",0,25,1,"Stacks Count"],//"rowInjection": [rowInjection,""],},
+                    "condition": nameOverride,"desc": ""},
+                {"header": "BULLET RECOVERY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaPresenceCalcsSurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.lunaPresenceCalcs(index,returnObject,isCycleCalcs,"Noise Surge");
+    },
+    //ability 2
+    lunaExcitingCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const powerModBuff = settingsRef.lunaIsExcitingEnhanced ? abilityMods.powerModBonusEnhanced : abilityMods.powerModBonus;
+
+        index.PowerModifierBase += settingsRef.lunaIsExcitingUsed ? powerModBuff : 0;
+    },
+    lunaExcitingCalcsTier0MercyStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.lunaExcitingCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
+    },
+    lunaExcitingCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsExcitingEnhanced;
+
+        const powerModBuff = settingsRef.lunaIsExcitingUsed ? enhancementCheck ? abilityMods.powerModBonusEnhanced : abilityMods.powerModBonus : 0;
+
+        const maxMP = returnObject.displayMP;
+        const MPModifier = settingsRef.lunaIsExcitingUsed ? enhancementCheck ? abilityMods.powerRatioRateEnhanced : abilityMods.powerRatioRate : 0;
+        const powerRatioBonus = calcs.customTruncate(((maxMP * MPModifier)/100) + 0.00001,4);
+
+        if (!isCycleCalcs) {
+            const rowInjectionSelf = [
+                {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
+            ]
+            const rowInjectionAllies = [
+                {"name": "+Base Power Ratio","value": powerRatioBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsExcitingUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsExcitingEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "SPEAKER","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride != "Singer's Mercy","desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "EXCITING PERFORMANCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionSelf,""],
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "EXCITING PERFORMANCE [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionSelf,""],
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "EXCITING SOUND","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionAllies,""],
+                    "condition": enhancementCheck,"desc": "This is the buff your allies receive."},
+                {"header": "EXCITING SOUND [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionAllies,""],
+                    "condition": !enhancementCheck,"desc": "This is the buff your allies receive."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Max MP",maxMP,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {powerRatioBonus}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaExcitingCalcsMercyStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.lunaExcitingCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
+    },
+    lunaExcitingCalcsTier0SurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const currentStacks = settingsRef.lunaLargoStacks;
+
+        index.SkillCritRateBaseBonus += settingsRef.lunaIsExcitingUsed ? currentStacks * abilityMods.largoCritStack : 0;
+    },
+    lunaExcitingCalcsSurgeStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsExcitingEnhanced;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const currentSkillBase = enhancementCheck ? abilityMods.baseEnhanced : abilityMods.base;
+        const skillPowerModifier = currentSkillBase + sumModifierBonus;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const avgDmgPerHit = damage.AVG;
+
+        const maxMP = returnObject.displayMP;
+
+        if (!isCycleCalcs) {
+
+            const rowInjectionLargo = [
+                {"name": "+Skill Crit Rate","value": settingsRef.lunaIsExcitingUsed ? settingsRef.lunaLargoStacks * abilityMods.largoCritStack : 0,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsExcitingUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsExcitingEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "SKILL EFFECT [ENH.]","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "LARGO","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionLargo,""],
+                    "sliderElemID": ["lunaLargoStacks",0,26,1,"Stacks Count"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaExcitingCalcsAggressiveTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Aggressive Melody"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const powerModBuff = settingsRef.lunaIsExcitingEnhanced ? abilityMods.powerModBonusEnhanced : abilityMods.powerModBonus;
+
+        index.PowerModifierBase += settingsRef.lunaIsExcitingUsed ? powerModBuff : 0;
+    },
+    lunaExcitingCalcsAggressive(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Aggressive Melody"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsExcitingEnhanced;
+
+        const powerModBuff = settingsRef.lunaIsExcitingUsed ? enhancementCheck ? abilityMods.powerModBonusEnhanced : abilityMods.powerModBonus : 0;
+
+        const maxMP = returnObject.displayMP;
+        const MPModifier = settingsRef.lunaIsExcitingUsed ? enhancementCheck ? abilityMods.firearmATKBonusRateEnhanced : abilityMods.firearmATKBonusRate : 0;
+        const powerRatioBonus = calcs.customTruncate(((maxMP * MPModifier)/100) + 0.00001,4);
+
+        // console.log(powerRatioBonus)
+
+        const firearmATKBonus = 0
+
+        if (!isCycleCalcs) {
+            console.log(powerRatioBonus,maxMP * MPModifier,MPModifier,maxMP)
+            const rowInjectionSelf = [
+                {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
+            ]
+            const rowInjectionAllies = [
+                {"name": "+Firearm ATK","value": powerRatioBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsExcitingUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsExcitingEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "EXCITING PERFORMANCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionSelf,""],
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "EXCITING PERFORMANCE [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionSelf,""],
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "EXCITING SOUND","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionAllies,""],
+                    "condition": enhancementCheck,"desc": "This is the buff your allies receive."},
+                {"header": "EXCITING SOUND [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionAllies,""],
+                    "condition": !enhancementCheck,"desc": "This is the buff your allies receive."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Max MP",maxMP,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {firearmATKBonus}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 3
+    lunaRelaxingCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsRelaxingEnhanced;
+
+        // const powerModBuff = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.65 : 0.20 : 0;
+
+        const maxMP = returnObject.displayMP;
+        // const MPModifier = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.075 : 0.035 : 0;
+        // const powerRatioBonus = (maxMP * MPModifier)/100;
+
+        if (!isCycleCalcs) {
+            // const rowInjectionSelf = [
+            //     {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
+            // ]
+            // const rowInjectionAllies = [
+            //     {"name": "+Base Power Ratio","value": powerRatioBonus,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsRelaxingUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsRelaxingEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "SPEAKER","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride != "Singer's Mercy","desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "RELAXING PERFORMANCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "RELAXING PERFORMANCE [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "RELAXING SOUND","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": enhancementCheck,"desc": "This is the buff your allies receive."},
+                {"header": "RELAXING SOUND [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": !enhancementCheck,"desc": "This is the buff your allies receive."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Max MP",maxMP,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaRelaxingCalcsMercyStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        customDamage.lunaRelaxingCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
+    },
+    lunaRelaxingCalcsTier0SurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const currentStacks = settingsRef.lunaCrescendoStacks;
+
+        index.SkillCritDamage += settingsRef.lunaIsRelaxingUsed ? currentStacks * abilityMods.crescendoCritStack : 0;
+    },
+    lunaRelaxingCalcsSurgeStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsRelaxingEnhanced;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const currentSkillBase = enhancementCheck ? abilityMods.baseEnhanced : abilityMods.base;
+        const skillPowerModifier = currentSkillBase + sumModifierBonus;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const avgDmgPerHit = damage.AVG;
+
+        const maxMP = returnObject.displayMP;
+
+        if (!isCycleCalcs) {
+
+            const rowInjectionLargo = [
+                {"name": "+Skill Crit DMG","value": settingsRef.lunaIsRelaxingUsed ? settingsRef.lunaCrescendoStacks * abilityMods.crescendoCritStack : 0,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsRelaxingUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsRelaxingEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "SKILL EFFECT [ENH.]","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "CRESCENDO","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionLargo,""],
+                    "sliderElemID": ["lunaCrescendoStacks",0,26,1,"Stacks Count"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    lunaCheerfulCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+    },
+    lunaCheerfulCalcsTier0MercyStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        customDamage.lunaCheerfulCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
+    },
+    lunaCheerfulCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsCheerfulEnhanced;
+
+        // const powerModBuff = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.65 : 0.20 : 0;
+
+        const maxMP = returnObject.displayMP;
+        // const MPModifier = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.075 : 0.035 : 0;
+        // const powerRatioBonus = (maxMP * MPModifier)/100;
+
+        if (!isCycleCalcs) {
+            // const rowInjectionSelf = [
+            //     {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
+            // ]
+            // const rowInjectionAllies = [
+            //     {"name": "+Base Power Ratio","value": powerRatioBonus,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsCheerfulUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsCheerfulEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "SPEAKER","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride != "Singer's Mercy","desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "CHEERFUL PERFORMANCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "CHEERFUL PERFORMANCE [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "CHEERFUL SOUND","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": enhancementCheck,"desc": "This is the buff your allies receive."},
+                {"header": "CHEERFUL SOUND [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": !enhancementCheck,"desc": "This is the buff your allies receive."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Max MP",maxMP,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaCheerfulCalcsMercyStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        customDamage.lunaCheerfulCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
+    },
+    lunaCheerfulCalcsTier0SurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const currentStacks = settingsRef.lunaForteStacks;
+
+        index.PowerModifierBase += settingsRef.lunaIsCheerfulUsed ? currentStacks * abilityMods.fortePowerModStack : 0;
+    },
+    lunaCheerfulCalcsSurgeStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Noise Surge"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsCheerfulEnhanced;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const currentSkillBase = enhancementCheck ? abilityMods.baseEnhanced : abilityMods.base;
+        const skillPowerModifier = currentSkillBase + sumModifierBonus;
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const avgDmgPerHit = damage.AVG;
+
+        const maxMP = returnObject.displayMP;
+
+        if (!isCycleCalcs) {
+
+            const rowInjectionLargo = [
+                {"name": "+Skill Power Mod","value": settingsRef.lunaIsCheerfulUsed ? settingsRef.lunaForteStacks * abilityMods.fortePowerModStack : 0,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsCheerfulUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsCheerfulEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "SKILL EFFECT [ENH.]","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "FORTE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "rowInjection": [rowInjectionLargo,""],
+                    "sliderElemID": ["lunaForteStacks",0,26,1,"Stacks Count"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaCheerfulCalcsAggressiveTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Aggressive Melody"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        // const powerModBuff = settingsRef.lunaIsCheerfulEnhanced ? 0.242 : 0.076;
+
+        // index["WeakPointDamage%"] += settingsRef.lunaIsCheerfulUsed ? powerModBuff : 0;
+    },
+    lunaCheerfulCalcsAggressive(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Aggressive Melody"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const enhancementCheck = settingsRef.lunaIsCheerfulEnhanced;
+
+        // const powerModBuff = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.65 : 0.20 : 0;
+
+        const maxMP = returnObject.displayMP;
+        // const MPModifier = settingsRef.lunaIsRelaxingUsed ? enhancementCheck ? 0.075 : 0.035 : 0;
+        // const powerRatioBonus = (maxMP * MPModifier)/100;
+
+        if (!isCycleCalcs) {
+            // const rowInjectionSelf = [
+            //     {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
+            // ]
+            // const rowInjectionAllies = [
+            //     {"name": "+Base Power Ratio","value": powerRatioBonus,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "ENHANCEMENT","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "toggleElemID": ["lunaIsCheerfulUsed","Use this Buff?"],
+                    "toggleElemID2": ["lunaIsCheerfulEnhanced","Is Enhanced?"],
+                    "condition": false,"desc": ""},
+                {"header": "NOTE SUCCESS","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+                {"header": "NOTE FAILURE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": false,"desc": ""},
+
+                {"header": "CHEERFUL PERFORMANCE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": enhancementCheck,"desc": ""},
+                {"header": "CHEERFUL PERFORMANCE [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionSelf,""],
+                    "condition": !enhancementCheck,"desc": ""},
+                {"header": "CHEERFUL SOUND","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": enhancementCheck,"desc": "This is the buff your allies receive."},
+                {"header": "CHEERFUL SOUND [ENH.]","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    // "rowInjection": [rowInjectionAllies,""],
+                    "condition": !enhancementCheck,"desc": "This is the buff your allies receive."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Max MP",maxMP,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //passive
+    lunaImprovCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Power Mod","value": finalPowerModifier,"unit": "%"},
+            //     {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
+            //     {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "VIVACE","value": null,"modifier": null,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
+                    "condition": nameOverride != "Nimble Footsteps","desc": "",
+                    "sliderElemID": ["lunaNimbleStacks",0,20,1,"Stacks Count"],//"rowInjection": [rowInjection,""],},
+                    },
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${abilityMap.desc}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    lunaImprovCalcsNimbleStarterTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Luna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Nimble Footsteps"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const currentStacks = settingsRef.lunaNimbleStacks;
+        index.SprintSpeedBonus += currentStacks * abilityMods.movementStackBonus;
+        index.SkillRange += currentStacks * abilityMods.rangeStackBonus;
+    },
+    lunaImprovCalcsNimbleStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.lunaImprovCalcs(index,returnObject,isCycleCalcs,"Nimble Footsteps");
+    },
+    lunaImprovCalcsSurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.lunaImprovCalcs(index,returnObject,isCycleCalcs,"Noise Surge");
     },
 
 

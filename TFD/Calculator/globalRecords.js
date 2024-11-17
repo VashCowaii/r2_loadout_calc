@@ -74,6 +74,11 @@ let globalRecords = {
         "currentBossPartType": "",
         "currentBossPartWP": 0,
     },
+    "teamBuffs": {
+        "stats": {},
+        "tags": [],
+        "Luna": {},
+    },
     "currentDisplayMode": 1,
     "weaponCritCeiling": 0,
     "skillCritCeiling": 0,

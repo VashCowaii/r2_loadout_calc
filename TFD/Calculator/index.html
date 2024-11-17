@@ -243,7 +243,88 @@
                 <div class="abilityDamageTabHolder" id="teamBreakdownTabHolders" style="display: none;"><!-- TEAM BREAKDOWN CONTAINERS -->
 
                     <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;width: 100%;"> 
-                        <div class="advancedCategoryHeader" style="border: none;">Team options coming soon.</div>
+                        <!-- <div class="advancedCategoryHeader" style="border: none;">Team options coming soon.</div> -->
+
+                        <div class="teamBuffBoxHolder">
+                            <!-- the buff toggle -->
+                            <div class="statisticSettingsRow hasHoverTooltip">
+                                <span class="statsRowName">Luna Buffs</span>
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statsRowToggle">
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="useTeamBuffsLuna" onchange="userTriggers.updateTeamBuffsObject()">
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="teamBuffBreakdownHolder" id="teamBuffsLunaBox" style="display: none;">
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                    <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                        <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
+                                        <div style="padding-right: 5px;">Aggressive Melody</div>
+                                        <div class="totalHealingValue">
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaAggressive" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
+                                        <!-- <div class="totalHealingHeader">Input Luna's MP</div> -->
+                                        <div style="padding-right: 5px;">Input Luna's MP</div>
+                                        <div class="totalHealingValue">
+                                            <input type="number" class="traitLevelInput" id="teamBuffsLunaMP" min="300" max="900" step=".01" value="637.55" onchange="userTriggers.updateTeamBuffsObject()">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="teamBuffTable">
+                                    <tr>
+                                        <th>Buff</th>
+                                        <th>Is Active</th>
+                                        <th>Enhance</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Exciting (Red)</th>
+                                        <td>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaExciting" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <span class="toggleSlider"></span>
+                                            </label>
+                                        </td>
+                                        <td rowspan="3">
+                                             <select id="teamBuffsLunaEnhancement" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <option value="None">None</option>
+                                                <option value="Red">Red</option>
+                                                <option value="Blue">Blue</option>
+                                                <option value="Purple">Purple</option>
+                                             </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Relaxing (Blue)</th>
+                                        <td>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaRelaxing" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <span class="toggleSlider"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cheerful (Purple)</th>
+                                        <td>
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaCheerful" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <span class="toggleSlider"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
@@ -318,7 +399,7 @@
 
             <div class="basicsBoxModsHolder">
 
-                <div class="descSelectorInfoHolder"><!-- this is the html for all the breakdown tabs that populate the upper right box -->
+                <div class="descSelectorInfoHolder"><!-- this is the html for all the breakdown tabs that populate the upper right box above the mods -->
 
                     <div class="breakdownTab" id="characterBreakdownTab" style="display: flex;">
                         <div class="breakdownTabHeader">DESCENDANT</div>

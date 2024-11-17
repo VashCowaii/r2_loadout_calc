@@ -1,0 +1,16 @@
+.footerIconTable {
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    outline: 2px solid white;
+    box-sizing: border-box;
+    margin-top: 3px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* object-fit: contain; */
+}
+.buildsPageHeader {
+    white-space: normal;
+    font-size: 25px;
+}

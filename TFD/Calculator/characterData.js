@@ -3815,6 +3815,751 @@ const characters = {
             }
         }
     },
+    "Luna": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_015_A01.png",
+        "name": "Luna",
+        "baseStats": {
+            "HP": 1243,
+            "Shield": 619,
+            "ShieldInCombat": 4.08,
+            "ShieldOutCombat": 4.88,
+            "DEF": 2139,
+            "ResistanceFire": 13,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 11,
+            "ResistanceToxin": 11,
+            "MP": 300,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.15,
+            "CritDamage": 1.2,
+        },
+        "characterSettings": {
+            "lunaPresenceStacks": 25,
+            "lunaIsExcitingUsed": true,
+            "lunaIsExcitingEnhanced": true,
+            "lunaLargoStacks": 26,
+            "lunaIsRelaxingUsed": true,
+            "lunaIsRelaxingEnhanced": true,
+            "lunaCrescendoStacks": 26,
+            "lunaIsCheerfulUsed": true,
+            "lunaIsCheerfulEnhanced": true,
+            "lunaForteStacks": 26,
+            "lunaNimbleStacks": 20,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Stage Presence",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_01.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "desc": "Equips a Unique Weapon. It will be unequipped when MP is fully depleted or when all bullets have been fired.<br>When the Unique Weapon is equipped, Notes activates, allowing the use of skills. Notes can be hit through shooting and skill use. If the skill button is not pressed at the right time, the skill will fail to activate. Failing to hit Notes through shooting significantly decreases MP.<br>Successfully hitting Notes grants Perfect Pitch stacks, and loses stacks when a note is missed or incorrectly entered.",
+                    "powerMods": {
+                        "base": 193.4/100,
+                    },
+                    "customDPSBase": "lunaPresenceCalcsTier0",
+                    "customDPS": "lunaPresenceCalcs",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
+                    "returnStatOptions": {
+                        "AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 8,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
+                            {"statType": "","statName": "MP Decrease/Miss","value": -50,"limit": null,"isModified": false},
+                        ],
+                        "PROJECTILE": [],
+                        "PERFECT PITCH": [
+                            {"statType": "","statName": "+Power Modifier/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 25,"limit": null,"isModified": false},
+                        ],
+                        "BULLET RECOVERY": [
+                            {"statType": "","statName": "On Exciting Act","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Relaxing Act","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Cheerful Act","value": 10,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Noise Surge": {
+                    "name": "Stage Presence",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_01.png",
+                    "type": ["Non-Attribute","Tech"],
+                    "desc": "Equips a Unique Weapon. It will be unequipped when MP is fully depleted or when all bullets have been fired.<br>When the Unique Weapon is equipped, Notes activates, allowing the use of skills. Notes can be hit through shooting and skill use. If the skill button is not pressed at the right time, the skill will fail to activate. Failing to hit Notes through shooting significantly decreases MP.<br>Successfully hitting Notes grants Perfect Pitch stacks, and loses stacks when a note is missed or incorrectly entered.",
+                    "powerMods": {
+                        "base": 193.4/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "lunaPresenceCalcsSurgeStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 10,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                            {"statType": "","statName": "MP Decrease/Miss","value": -45,"limit": null,"isModified": false},
+                        ],
+                        "PROJECTILE": [],
+                        "PERFECT PITCH": [],
+                        "BULLET RECOVERY": [
+                            {"statType": "","statName": "On Exciting Surge","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Relaxing Surge","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Cheerful Surge","value": 10,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Exciting Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_02.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Exciting Performance to self, and grants Exciting Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "powerModBonus": 0.204,
+                        "powerModBonusEnhanced": 0.647,
+                        "powerRatioRate": 0.0352,
+                        "powerRatioRateEnhanced": 0.0753,
+                        "baseSkillRateBonus": 0.35,
+                        "baseSkillMultiBonus": 0.50,//not actually base, this is %
+                    },
+                    "customDPSBase": "lunaExcitingCalcsTier0",
+                    "customDPS": "lunaExcitingCalcs",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
+                    "returnStatOptions": {
+                        "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 6,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 8,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.204,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.647,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING SOUND": [
+                            {"statType": "","statName": "+Power Ratio (%MaxMP)","value": 0.0352,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING SOUND [ENH.]": [
+                            {"statType": "","statName": "+Power Ratio (%MaxMP)","value": 0.0753,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit DMG (%)","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate (Base)","value": 0.35,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Singer's Mercy": {
+                    "name": "Exciting Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R04_02.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Exciting Performance to self, and sets up a speaker to grant Exciting Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "powerModBonus": 0.204,
+                        "powerModBonusEnhanced": 0.647,
+                        "powerRatioRate": 0.0352,
+                        "powerRatioRateEnhanced": 0.0753,
+                    },
+                    "customDPSBase": "lunaExcitingCalcsTier0MercyStarter",
+                    "customDPS": "lunaExcitingCalcsMercyStarter",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
+                    "returnStatOptions": {
+                        "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [
+                            {"statType": "duration","statName": "Duration","value": 7,"limit": null,"isModified": true},
+                        ],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 10,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 25,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.204,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.647,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING SOUND": [
+                            {"statType": "","statName": "+Power Ratio (%MaxMP)","value": 0.0352,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING SOUND [ENH.]": [
+                            {"statType": "","statName": "+Power Ratio (%MaxMP)","value": 0.0753,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit DMG (Base)","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate (Base)","value": 0.35,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Aggressive Melody": {
+                    "name": "Exciting Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R03_02.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Exciting Performance to self, and grants Exciting Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "powerModBonus": 0.204,
+                        "powerModBonusEnhanced": 0.647,
+                        "firearmATKBonusRate": 0.0365,
+                        "firearmATKBonusRateEnhanced": 0.0386,
+                        "firearmCritRateBonus": 0.078,
+                        "firearmCritDMGBonus": 0.36,
+                    },
+                    "customDPSBase": "lunaExcitingCalcsAggressiveTier0",
+                    "customDPS": "lunaExcitingCalcsAggressive",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
+                    "returnStatOptions": {
+                        "Allies - +Firearm ATK" : "firearmATKBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 6,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 8,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.204,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier","value": 0.647,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "EXCITING SOUND": [
+                            {"statType": "","statName": "+FirearmATK (%MaxMP)","value": 0.037,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "EXCITING SOUND [ENH.]": [
+                            {"statType": "","statName": "+FirearmATK (%MaxMP)","value": 0.0386,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit DMG (Base)","value": 0.36,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate (Base)","value": 0.078,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Noise Surge": {
+                    "name": "Exciting Surge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R01_02.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Upon successfully hitting the Note, deals damage to nearby enemies, and grants self the Largo effect which stacks.<br>Failing to hit the Note decreases stacks. Should the note be incorrect, the stacks are reset. At 0 stacks, the Largo effect is removed.",
+                    "powerMods": {
+                        "base": 144.0/100,
+                        "baseEnhanced": 148.0/100,
+                        "largoCritStack": 0.01,
+                    },
+                    "customDPSBase": "lunaExcitingCalcsTier0SurgeStarter",
+                    "customDPS": "lunaExcitingCalcsSurgeStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 0,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SKILL EFFECT [ENH.]": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                            {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "LARGO": [
+                            {"statType": "","statName": "+Skill Crit Rate/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Relaxing Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_03.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Relaxing Performance to self, and grants Relaxing Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "lunaRelaxingCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 8,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
+                        ],
+                        "RELAXING PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Recovery/Hit","value": 0.008,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "RELAXING PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Recovery/Hit","value": 0.043,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "RELAXING SOUND": [
+                            {"statType": "","statName": "MP Recovery/s","value": 0.007,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "RELAXING SOUND [ENH.]": [
+                            {"statType": "","statName": "MP Recovery","value": 0.13,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery/s","value": 0.026,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Cost Decrease","value": -0.561,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Singer's Mercy": {
+                    "name": "Relaxing Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R04_03.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Relaxing Performance to self, and grants Relaxing Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "lunaRelaxingCalcsMercyStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [
+                            {"statType": "duration","statName": "Duration","value": 7,"limit": null,"isModified": true},
+                        ],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 12,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "RELAXING PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Recovery/Hit","value": 0.008,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "RELAXING PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Recovery/Hit","value": 0.043,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "RELAXING SOUND": [
+                            {"statType": "","statName": "MP Recovery/s","value": 0.007,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "RELAXING SOUND [ENH.]": [
+                            {"statType": "","statName": "MP Recovery","value": 0.13,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery/s","value": 0.026,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Cost Decrease","value": -0.561,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Noise Surge": {
+                    "name": "Relaxing Surge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R01_03.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Upon successfully hitting the Note, deals damage to nearby enemies, and grants self the Crescendo effect which stacks.<br>Failing to hit the Note decreases stacks. Should the note be incorrect, the stacks are reset. At 0 stacks, the Crescendo effect is removed.",
+                    "powerMods": {
+                        "base": 144.0/100,
+                        "baseEnhanced": 148.0/100,
+                        "crescendoCritStack": 0.01,
+                    },
+                    "customDPSBase": "lunaRelaxingCalcsTier0SurgeStarter",
+                    "customDPS": "lunaRelaxingCalcsSurgeStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 0,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SKILL EFFECT [ENH.]": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                            {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CRESCENDO": [
+                            {"statType": "","statName": "+Skill Crit DMG/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Cheerful Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_04.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Cheerful Performance to self. Cheerful Performance acquires Inspiration Gauge when hitting enemies while hitting notes.<br>Grants Cheerful Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "cooldownBonus": -0.10,
+                        "cooldownBonusEnhanced": -0.409,
+                    },
+                    "customDPSBase": "lunaCheerfulCalcsTier0",
+                    "customDPS": "lunaCheerfulCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 8,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 80,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 1,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 2,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL SOUND": [
+                            {"statType": "","statName": "Cooldown Decrease","value": -0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL SOUND [ENH.]": [
+                            {"statType": "","statName": "Cooldown Decrease","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Cooldown Decrease","value": -0.409,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Singer's Mercy": {
+                    "name": "Cheerful Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R04_04.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Cheerful Performance to self. Cheerful Performance acquires Inspiration Gauge when hitting enemies while hitting notes.<br>Grants Cheerful Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "cooldownBonus": -0.10,
+                        "cooldownBonusEnhanced": -0.10,
+                    },
+                    "customDPSBase": "lunaCheerfulCalcsTier0MercyStarter",
+                    "customDPS": "lunaCheerfulCalcsMercyStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [
+                            {"statType": "duration","statName": "Duration","value": 7,"limit": null,"isModified": true},
+                        ],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 7,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 80,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 1,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 2,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL SOUND": [
+                            {"statType": "","statName": "Cooldown Decrease","value": -0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL SOUND [ENH.]": [
+                            {"statType": "","statName": "Cooldown Decrease","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Cooldown Decrease","value": -0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Aggressive Melody": {
+                    "name": "Cheerful Act",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R03_04.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Grants Cheerful Performance to self. Cheerful Performance acquires Inspiration Gauge when hitting enemies while hitting notes.<br>Grants Cheerful Sound to allies within range.<br>When using an Enhanced Skill, increases the effects further.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "baseWeakpointBonus": 0.076,
+                        "baseWeakpointBonusEnhanced": 0.242,
+
+                    },
+                    "customDPSBase": "lunaCheerfulCalcsAggressiveTier0",
+                    "customDPS": "lunaCheerfulCalcsAggressive",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Allies - +Power Ratio" : "powerRatioBonus",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "SPEAKER": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 8,"limit": 2.5,"isModified": true},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 80,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL PERFORMANCE": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 1,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL PERFORMANCE [ENH.]": [
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Inspiration /Hit","value": 2,"limit": null,"isModified": false},
+                        ],
+                        "CHEERFUL SOUND": [
+                            {"statType": "","statName": "+Weak Point Damage","value": 0.076,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "CHEERFUL SOUND [ENH.]": [
+                            {"statType": "","statName": "+Weak Point Damage","value": 0.242,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm Penetration","value": 50,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Noise Surge": {
+                    "name": "Cheerful Surge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R01_04.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "Upon successfully hitting the Note, deals damage to nearby enemies, and grants self the Forte effect which stacks.<br>Failing to hit the Note decreases stacks. Should the note be incorrect, the stacks are reset. At 0 stacks, the Forte effect is removed.",
+                    "powerMods": {
+                        "base": 144.0/100,
+                        "baseEnhanced": 148.0/100,
+                        "fortePowerModStack": 0.01,
+                    },
+                    "customDPSBase": "lunaCheerfulCalcsTier0SurgeStarter",
+                    "customDPS": "lunaCheerfulCalcsSurgeStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "ENHANCEMENT": [],
+                        "NOTE SUCCESS": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 0,"limit": null,"isModified": false},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "NOTE FAILURE": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SKILL EFFECT [ENH.]": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                            {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "FORTE": [
+                            {"statType": "","statName": "+Skill Power Mod/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Improvisation",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_00.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "When using a skill to hit the Note, Inspiration Gauge goes up. When the Inspiration Gauge maxes out, an Enhanced Skill can be used.<br>Using an Enhanced Skill consumes the entire gauge. However, when failing to hit the Note, inspiration gauge goes down and the skill fails to activate.<br>While Out of Combat for a certain period of time, Inspiration Gauge depletes.",
+                    "powerMods": {
+                        "base": 0/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "lunaImprovCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Gauge Limit","value": 14,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "VIVACE": [],
+                    },
+                },
+                "Nimble Footsteps": {
+                    "name": "Nimble Footsteps",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_R02_Rune.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "When using a skill to hit the Note, Inspiration Gauge goes up. When the Inspiration Gauge maxes out, an Enhanced Skill can be used.<br>Using an Enhanced Skill consumes the entire gauge. However, when failing to hit the Note, inspiration gauge goes down and the skill fails to activate.<br>While Out of Combat for a certain period of time, Inspiration Gauge depletes.<br>When using a skill to buff allies, grants self Vivace.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "movementStackBonus": 0.01,
+                        "rangeStackBonus": 0.10,
+                    },
+                    "customDPSBase": "lunaImprovCalcsNimbleStarterTier0",
+                    "customDPS": "lunaImprovCalcsNimbleStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Gauge Limit","value": 14,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "VIVACE": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 20,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Required Stacks","value": 2,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Movement Speed/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Range/Stack","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Noise Surge": {
+                    "name": "Improvisation",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_015_A01_00.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "When using a skill to hit the Note, Inspiration Gauge goes up. When the Inspiration Gauge maxes out, an Enhanced Skill can be used.<br>Using an Enhanced Skill consumes the entire gauge. However, when failing to hit the Note, inspiration gauge goes down and the skill fails to activate.<br>While Out of Combat for a certain period of time, Inspiration Gauge depletes.",
+                    "powerMods": {
+                        "base": 0/100,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "lunaImprovCalcsSurgeStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Gauge Limit","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            }
+        }
+    },
 
 
     ...localInsertion

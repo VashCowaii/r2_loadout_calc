@@ -43,7 +43,7 @@ const modData = {
         "type": "Descendant",
         "cost": 12,
         "category": "Support Tech",
-        "desc": "When using skill, grants 1 stack of Arche Concretion for 20s, when using Enhanced Skill, grants 10 stacks (up to 30 stacks). Arche concreation reduces all Attribute power by -22% exclusing Non-Attribute ATK, Movement Speed, and Firearm ATK, regardless of the number of stacks. Per stack granted, DEF +2.1% and MP +1.3%. However, when using Roll or Grappling Hook, all stacks will be removed.",
+        "desc": "When using skill, grants 1 stack of Arche Concretion for 20s, when using Enhanced Skill, grants 10 stacks (up to 30 stacks). Arche concreation reduces all Attribute power by -22% excluding Non-Attribute ATK, Movement Speed, and Firearm ATK, regardless of the number of stacks. Per stack granted, DEF +2.1% and MP +1.3%. However, when using Roll or Grappling Hook, all stacks will be removed.",
         "stats": {
             "PowerRatioChill": -0.22,
             "PowerRatioElectric": -0.22,
