@@ -118,8 +118,6 @@ const userTriggers = {
                 const secondary = isLunaAggressive ? "FirearmCritRateBase" : "SkillCritRateBaseBonus";
                 const third = isLunaAggressive ? "FirearmCritDamageBase" : "SkillCritDamage";
 
-                console.log(enhancement)
-
                 if (enhancement.includes("Red")) {
                     const primaryAmount = (lunaMP * excitingPath.powerMods[isLunaAggressive ? "firearmATKBonusRateEnhanced" : "powerRatioRateEnhanced"])/100;
                     teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
@@ -161,7 +159,7 @@ const userTriggers = {
                 else {
                     const primaryEnhancement = "BaseWeakPointBonus";
                     //we are adding to the BASE weakpoint before % bonuses here
-                    if (enhancement === "Purple") {
+                    if (enhancement.includes("Purple")) {
                         const primaryAmount = cheerfulPath.powerMods.baseWeakpointBonusEnhanced;
                         teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
                     }
