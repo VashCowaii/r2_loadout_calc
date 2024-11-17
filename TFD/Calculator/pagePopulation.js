@@ -65,6 +65,8 @@ const userTriggers = {
         manipulateURL.updateURLparameters();//purely so the selected display tab will update within the URL, without needing to update formulas
     },
     updateGeneralSettings() {
+        //it's called a crit ceiling here in the code bc of what I used to think it was
+        //it's not a ceiling, nor does it behave like one in the code, I just never updated the name here
         globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value;
         globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value;
         globalRecords.ambushImmobileSlider = readSelection("ambushImmobileSlider").value;
@@ -73,11 +75,112 @@ const userTriggers = {
         globalRecords.useCrits = readSelection("useCrits").checked;
         globalRecords.useFirearmPhysical = readSelection("useFirearmPhysical").checked;
 
+        //modifies the stored base ratio bonus of ambush based on the slider input
         readSelection("ambushImmobileSliderDisplay").innerHTML = globalRecords.ambushImmobileSlider + "%";
         modData["Dangerous Ambush (Immobile)"].stats.PowerRatioBase = 0.498 * (+globalRecords.ambushImmobileSlider/100)
 
         readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
+
+        updateFormulas();
+    },
+    updateTeamBuffsObject(input1) {
+        const teamRef = globalRecords.teamBuffs;
+        //reset the object
+        teamRef.stats = {};
+
+        //LUNA STATS
+        if (readSelection("useTeamBuffsLuna").checked) {
+            if (globalRecords.character.currentCharacter === "Luna") {
+                readSelection("useTeamBuffsLuna").checked = false;
+                alert("You already have Luna as your selected character, as such, the Luna team buff option has been disabled.");
+                return;
+            }
+            readSelection("teamBuffsLunaBox").style.display = "flex";
+
+            const isLunaAggressive = readSelection("teamBuffsLunaAggressive").checked;
+            const lunaMP = +readSelection("teamBuffsLunaMP").value;
+            const enhancement = readSelection("teamBuffsLunaEnhancement").value;
+
+            // <option value="Purple">Purple + Red</option>
+            // <option value="Purple">Purple + Blue</option>
+
+            const abilitiesPath = characters.Luna.abilities;
+
+            const excitingPath = isLunaAggressive ? abilitiesPath.ability2["Aggressive Melody"] : abilitiesPath.ability2.base;
+            const relaxingPath = abilitiesPath.ability3.base;
+            const cheerfulPath = isLunaAggressive ? abilitiesPath.ability4["Aggressive Melody"] : abilitiesPath.ability4.base;
+
+            //RED
+            if (readSelection("teamBuffsLunaExciting").checked) {
+                //these checks let me handle aggressive vs non-aggressive luna without an additional if-set on exciting
+                const primaryEnhancement = isLunaAggressive ? "FirearmATK%" : "PowerRatioBase";
+                const secondary = isLunaAggressive ? "FirearmCritRateBase" : "SkillCritRateBaseBonus";
+                const third = isLunaAggressive ? "FirearmCritDamageBase" : "SkillCritDamage";
+
+                if (enhancement.includes("Red")) {
+                    const primaryAmount = (lunaMP * excitingPath.powerMods[isLunaAggressive ? "firearmATKBonusRateEnhanced" : "powerRatioRateEnhanced"])/100;
+                    teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
+                    teamRef.stats[secondary] = excitingPath.powerMods[isLunaAggressive ? "firearmCritRateBonus" : "baseSkillRateBonus"];
+                    teamRef.stats[third] = excitingPath.powerMods[isLunaAggressive ? "firearmCritDMGBonus" : "baseSkillMultiBonus"];
+                }
+                else {
+                    const primaryAmount = (lunaMP * excitingPath.powerMods[isLunaAggressive ? "firearmATKBonusRate" : "powerRatioRate"])/100;
+                    teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
+                    console.log(teamRef.stats[primaryEnhancement])
+                }
+            }
+            //BLUE
+            if (readSelection("teamBuffsLunaRelaxing").checked) {
+                //right now blue doesn't do anything in the code as it's hard to quantify MP regen aspects and I haven't gotten to that stuff yet
+                if (enhancement.includes("Blue")) {
+                    // const primaryAmount = relaxingPath.powerMods.cooldownBonusEnhanced;
+                    // teamRef.stats.SkillCooldown = primaryAmount;
+                }
+                else {
+                    // const primaryAmount = relaxingPath.powerMods.cooldownBonus;
+                    // teamRef.stats.SkillCooldown = primaryAmount;
+                }
+            }
+            //PURPLE
+            if (readSelection("teamBuffsLunaCheerful").checked) {
+                //regular bonuses
+                if (!isLunaAggressive) {
+                    if (enhancement.includes("Purple")) {
+                        const primaryAmount = cheerfulPath.powerMods.cooldownBonusEnhanced;
+                        teamRef.stats.SkillCooldown = primaryAmount;
+                    }
+                    else {
+                        const primaryAmount = cheerfulPath.powerMods.cooldownBonus;
+                        teamRef.stats.SkillCooldown = primaryAmount;
+                    }
+                }
+                //aggressive melody bonuses
+                else {
+                    const primaryEnhancement = "BaseWeakPointBonus";
+                    //we are adding to the BASE weakpoint before % bonuses here
+                    if (enhancement.includes("Purple")) {
+                        const primaryAmount = cheerfulPath.powerMods.baseWeakpointBonusEnhanced;
+                        teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
+                    }
+                    else {
+                        const primaryAmount = cheerfulPath.powerMods.baseWeakpointBonus;
+                        teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
+                    }
+                }
+            }
+
+
+
+        }
+        else {
+            readSelection("teamBuffsLunaBox").style.display = "none";
+        }
+        // "teamBuffs": {
+        //     "stats": {},
+        //     "tags": [],
+        //     "Luna": {},
+        // },
         updateFormulas();
     },
     updateSelectedFocus(elementID) {
@@ -850,6 +953,33 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
+        Luna(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {
+                settingsRef.lunaPresenceStacks = +readSelection("lunaPresenceStacks").value;
+            }//1
+            if (arrayRef[1] === 0) {}//2
+            else if (arrayRef[1] === "Noise Surge") {
+                settingsRef.lunaLargoStacks = +readSelection("lunaLargoStacks").value;
+            }
+                settingsRef.lunaIsExcitingUsed = readSelection("lunaIsExcitingUsed").checked;
+                settingsRef.lunaIsExcitingEnhanced = readSelection("lunaIsExcitingEnhanced").checked;
+            if (arrayRef[2] === 0) {}//3
+            else if (arrayRef[2] === "Noise Surge") {
+                settingsRef.lunaCrescendoStacks = +readSelection("lunaCrescendoStacks").value;
+            }
+                settingsRef.lunaIsRelaxingUsed = readSelection("lunaIsRelaxingUsed").checked;
+                settingsRef.lunaIsRelaxingEnhanced = readSelection("lunaIsRelaxingEnhanced").checked;
+            if (arrayRef[3] === 0) {}//4
+            else if (arrayRef[3] === "Noise Surge") {
+                settingsRef.lunaForteStacks = +readSelection("lunaForteStacks").value;
+            }
+                settingsRef.lunaIsCheerfulUsed = readSelection("lunaIsCheerfulUsed").checked;
+                settingsRef.lunaIsCheerfulEnhanced = readSelection("lunaIsCheerfulEnhanced").checked;
+            if (arrayRef[4] === 0) {}//passive
+            else if (arrayRef[4] === "Nimble Footsteps") {
+                settingsRef.lunaNimbleStacks = +readSelection("lunaNimbleStacks").value;
+            }
+        },
         Viessa(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {}//1
             if (arrayRef[1] === 0) {}//2
@@ -1096,6 +1226,11 @@ const formulasValues = {
             formulasValues.pullStats(index,abilityRefs[`ability${i}`][path].stats);
         }
     },
+    pullTeamBuffsStats(index) {
+        //the teambuffs object is populated in userTriggers.updateTeamBuffsObject()
+        const teamRef = globalRecords.teamBuffs;
+        formulasValues.pullStats(index,teamRef.stats);
+    },
     //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
     pullStats(index,path) {
         for (let elements in path) {
@@ -1131,6 +1266,7 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullAbilityStats(tableReference);
     formulasValues.pullWeaponStats(tableReference);
+    formulasValues.pullTeamBuffsStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
     const {baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield} = calcs.getShield(tableReference,characterRef);

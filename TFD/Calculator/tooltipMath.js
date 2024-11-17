@@ -33,6 +33,7 @@ let tooltipMath = {
         let componentRef = globalRecords.components;
         let reactorRef = globalRecords.reactor;
         let weaponRef = globalRecords.weapon;
+        let teamRef = globalRecords.teamBuffs;
 
         const ratioTable = {
             "Fire" : "PowerRatioFire",
@@ -127,6 +128,12 @@ let tooltipMath = {
         //weapon ability if applicable
         const weaponName = weaponRef.currentWeapon;
         htmlString += tooltipMath.checkItemForStat(sniperList[weaponName],`${weaponName} - Weapon Ability`,statistic);
+
+
+        //-----------------------------------------------//
+        //------------TEAM BUFFS--------------------------//
+        //-----------------------------------------------//
+        htmlString += tooltipMath.checkItemForStat(teamRef,`Team Buffs Option`,statistic);
 
     
         return htmlString;

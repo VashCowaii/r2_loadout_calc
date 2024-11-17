@@ -733,7 +733,7 @@ const impactRounds = {
          "FirearmATK%": -0.15,
       },
       "tags": [],
-      "desc": "Firearm Critical Hit Rate +8%, Firearm ATK -4%"
+      "desc": "Firearm Critical Hit Rate +29%, Firearm ATK -15%"
    },
    "Poison Priority": {
       "rarity": "Rare",

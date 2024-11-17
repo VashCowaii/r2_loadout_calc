@@ -72,6 +72,7 @@ const augments = {
         "desc": "Modifies Grenade Throw to be charged up to 3 times. Grenade charges once whenever a certain amount of ammo is consumed.",
         "skillOverrides": ["Explosive Stacks",0,0,0,0]
     },
+    
     //Bunny
     "High-Voltage": {
         "rarity": "Transcendant",
@@ -370,6 +371,44 @@ const augments = {
         "category": "Viessa",
         "desc": "Throws a projectile forward that spawns a blizzard where it lands.",
         "skillOverrides": [0,0,0,"Glacial Cloud",0]
+    },
+
+    //LUNA
+    "Singer's Mercy": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Luna",
+        "desc": "When using skill, sets up a Speaker that grants buffs to allies within range.",
+        "skillOverrides": [0,"Singer's Mercy","Singer's Mercy","Singer's Mercy",0]
+    },
+    "Aggressive Melody": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Luna",
+        "desc": "Changes Passionate Stage and Delightful Stage effects to increase Firearm Damage and Weak Point Damage.",
+        "skillOverrides": [0,"Aggressive Melody",0,"Aggressive Melody",0]
+    },
+    "Nimble Footsteps": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Luna",
+        "desc": "Granting a buff to allies increases Luna's Movement Speed and Skill Range.",
+        "skillOverrides": [0,0,0,0,"Nimble Footsteps"]
+    },
+    "Noise Surge": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 7,
+        "category": "Luna",
+        "desc": "When using skills, deals damage to nearby enemies but doesn't buff allies. Grants a stackable buff to Luna that is enhanced with each stack.",
+        "skillOverrides": ["Noise Surge","Noise Surge","Noise Surge","Noise Surge","Noise Surge"]
     },
 
 
