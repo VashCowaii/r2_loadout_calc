@@ -991,27 +991,41 @@
     display: flex;
     flex-direction: column;
 }
+.bossDataBreakdownBoxRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.playerSettingsBoxBorderless {
+    border: none;
+}
 .bossDataHeader {
     width: 100%;
     font-size: 20px;
 }
+.bossDataHeaderBig {
+    width: 100%;
+    font-size: 30px;
+}
 .bossDataCritResist {
     width: 100%;
-    font-size: 15px;
+    font-size: 20px;
 }
 .bossDataPartsRow {
-    width: 100%;
+    width: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
     box-sizing: border-box;
-    /* border-top: 1px solid #434343; */
+    /* border: 1px solid green; */
     padding: 2px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .bossDataPartsBox {
-    width: 15%;
+    width: 100%;
     height: 100%;
     border-radius: 5px;
     border: 1px solid #434343;
@@ -1068,11 +1082,12 @@
     padding: 5px;
 }
 .bossDataCritResistAttributes {
-    width: 100%;
+    width: 40%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+
 }
 .bossDataBox {
     width: 100%;
@@ -1105,6 +1120,38 @@
     align-items: center;
     flex-direction: column;
 }
+/* .statsRowName */
+.statsRowNameDetailed {
+    /* width: calc(100% - 150px); */
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* white-space: normal; */
+    white-space: nowrap;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    flex-grow: 1;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1155,6 +1202,125 @@
 
 
 
+
+
+.bulletEntryRowContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #434343; */
+    /* margin: 2px; */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.bulletEntryRowHeaderBox {
+    width: 100%;
+    font-size: 12px;
+    text-align: left;
+    display: flex;
+    /* border-bottom: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+}
+.attributeRowBoxWeapons {
+    /* border: 1px solid red; */
+    border-top: 1px solid #434343;
+    box-sizing: border-box;
+    /* margin: 2px; */
+}
+.attributeRowStarterWeapons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.bulletEntryRowHeaderArrow {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    box-sizing: border-box;
+    text-align: right;
+    justify-content: right;
+    align-items: center;
+    padding-right: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.bulletEntryRowHeaderArrow:hover {
+    color: lightblue;
+}
+.bulletEntryRowBody {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.weaponBulletArrayGraph {
+    width: 100%;
+    height: 230px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color:#434343;
+    box-sizing: border-box;
+    padding: 2px;
+}
+/* .weaponBulletArrayPoint {
+    fill: red;
+} */
+
+.weaponBulletArrayPoint:hover {
+    fill: lightskyblue;
+}
+.bulletTooltip {
+    width: 100%;
+    box-sizing: border-box;
+}
+.tooltipHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.bulletSelectorInputWeapons {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    color: white;
+    background-color: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    padding-right: 4px;
+    /* border: none; */
+    border: 2px solid #434343;
+    border-radius: 5px;
+    /* border-radius: 10px; */
+    font-size: 20px;
+    
+    background: transparent;
+    box-sizing: border-box;
+}
+.bulletSelectorIDRowBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.toggleArrowBox {
+    font-size: 25px;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
 
 
 
@@ -1215,6 +1381,13 @@
     width: 100%;
 }
 
+.bossDataBreakdownBoxRow {
+    flex-direction: column;
+}
+.bossDataCritResistAttributes,.bossDataPartsRow {
+    width: 100%;
+}
+
 }
 
 
@@ -1253,6 +1426,7 @@
 .laundry,.coldfury,.towed,.uniqueweapon,.cryo,.devotionmark,.singlereloadforpeace,.pestcontrol,.closecall,
 .overclock,.weakenregeneration,.overkill,.grenadethrow,.powerunitchange,.burn,.loadmastery,.changemastery,
 .tractiongrenade,.necrosis,.toxicsense,.purification,.corrosion,.room0trauma,.toxicpuddle,.toxicreaction,.panic,
-.plaguebodyarmor,.despair,.toxicswamp,.venom-injected,.toxicfootprints,.putrid,.nightmare {
+.plaguebodyarmor,.despair,.toxicswamp,.venom-injected,.toxicfootprints,.putrid,.nightmare,
+.flamezones,.flamezone,.tasteofaggression,.giantfireball,.smallfireballs,.poweroffire {
     color: #1488fd;
 }
