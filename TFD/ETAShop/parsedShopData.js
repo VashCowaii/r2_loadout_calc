@@ -8,121 +8,121 @@ let etaData = {
         "A": [
           {
             "name": "Yujin Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_014_A01"
+            "image": "icon_research_character_cellplan_014_a01"
           },
           {
             "name": "Enzo Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_013_A01"
+            "image": "icon_research_character_catalystplan_013_a01"
           },
           {
             "name": "Thunder Cage Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_SMG_1005_A001"
+            "image": "icon_research_weapon_syncytium_smg_1005_a001"
           },
           {
             "name": "King's Guard Lance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_br_1005_a001"
           },
           {
             "name": "Divine Punishment Blueprint",
-            "image": "Icon_Research_WeaponPlan_AR_1006_A001"
+            "image": "icon_research_weaponplan_ar_1006_a001"
           },
           {
             "name": "Enduring Legacy Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1005_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1005_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Leather Matte Yellow",
-            "image": "Icon_PaintCharacter_Sunglow_Leather_Matte"
+            "image": "icon_paintcharacter_sunglow_leather_matte"
           },
           {
             "name": "Metal Celeste Gray",
-            "image": "Icon_PaintCharacter_Celeste_Metal_Matte"
+            "image": "icon_paintcharacter_celeste_metal_matte"
           },
           {
             "name": "Bright Matte Sky",
-            "image": "Icon_PaintCharacter_Danube_NonMetal_Matte"
+            "image": "icon_paintcharacter_danube_nonmetal_matte"
           },
           {
             "name": "Basic Black",
-            "image": "Icon_PaintHair_BasicBlack"
+            "image": "icon_painthair_basicblack"
           }
         ],
         "B": [
           {
             "name": "Smithereens Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_hg_1006_a001"
           },
           {
             "name": "Secret Garden Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1005_a001"
           },
           {
             "name": "Fallen Hope Blueprint",
-            "image": "Icon_Research_Weaponplan_AR_1005_A001"
+            "image": "icon_research_weaponplan_ar_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Descendant Slots +{0}",
-            "image": "Icon_Expansion_CharSlot"
+            "image": "icon_expansion_charslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Blue Black",
-            "image": "Icon_PaintCharacter_BlueBlack_Clearcoat"
+            "image": "icon_paintcharacter_blueblack_clearcoat"
           },
           {
             "name": "Matte Violet",
-            "image": "Icon_PaintCharacter_VividViolet_NonMetal_Matte"
+            "image": "icon_paintcharacter_vividviolet_nonmetal_matte"
           },
           {
             "name": "Matte Titanium Silver",
-            "image": "Icon_PaintCharacter_RegentGray_Metal_Matte"
+            "image": "icon_paintcharacter_regentgray_metal_matte"
           },
           {
             "name": "Basic White",
-            "image": "Icon_PaintHair_BasicWhite"
+            "image": "icon_painthair_basicwhite"
           }
         ],
         "C": null
@@ -131,121 +131,121 @@ let etaData = {
         "A": [
           {
             "name": "Yujin Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_014_A01"
+            "image": "icon_research_character_cellplan_014_a01"
           },
           {
             "name": "Enzo Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_013_A01"
+            "image": "icon_research_character_catalystplan_013_a01"
           },
           {
             "name": "Thunder Cage Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_SMG_1005_A001"
+            "image": "icon_research_weapon_syncytium_smg_1005_a001"
           },
           {
             "name": "King's Guard Lance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_br_1005_a001"
           },
           {
             "name": "Divine Punishment Blueprint",
-            "image": "Icon_Research_WeaponPlan_AR_1006_A001"
+            "image": "icon_research_weaponplan_ar_1006_a001"
           },
           {
             "name": "Enduring Legacy Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1005_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1005_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Leather Matte Yellow",
-            "image": "Icon_PaintCharacter_Sunglow_Leather_Matte"
+            "image": "icon_paintcharacter_sunglow_leather_matte"
           },
           {
             "name": "Metal Celeste Gray",
-            "image": "Icon_PaintCharacter_Celeste_Metal_Matte"
+            "image": "icon_paintcharacter_celeste_metal_matte"
           },
           {
             "name": "Bright Matte Sky",
-            "image": "Icon_PaintCharacter_Danube_NonMetal_Matte"
+            "image": "icon_paintcharacter_danube_nonmetal_matte"
           },
           {
             "name": "Basic Black",
-            "image": "Icon_PaintHair_BasicBlack"
+            "image": "icon_painthair_basicblack"
           }
         ],
         "B": [
           {
             "name": "Smithereens Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_hg_1006_a001"
           },
           {
             "name": "Secret Garden Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1005_a001"
           },
           {
             "name": "Fallen Hope Blueprint",
-            "image": "Icon_Research_Weaponplan_AR_1005_A001"
+            "image": "icon_research_weaponplan_ar_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Descendant Slots +{0}",
-            "image": "Icon_Expansion_CharSlot"
+            "image": "icon_expansion_charslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Blue Black",
-            "image": "Icon_PaintCharacter_BlueBlack_Clearcoat"
+            "image": "icon_paintcharacter_blueblack_clearcoat"
           },
           {
             "name": "Matte Violet",
-            "image": "Icon_PaintCharacter_VividViolet_NonMetal_Matte"
+            "image": "icon_paintcharacter_vividviolet_nonmetal_matte"
           },
           {
             "name": "Matte Titanium Silver",
-            "image": "Icon_PaintCharacter_RegentGray_Metal_Matte"
+            "image": "icon_paintcharacter_regentgray_metal_matte"
           },
           {
             "name": "Basic White",
-            "image": "Icon_PaintHair_BasicWhite"
+            "image": "icon_painthair_basicwhite"
           }
         ],
         "C": null
@@ -254,121 +254,121 @@ let etaData = {
         "A": [
           {
             "name": "Blair Code",
-            "image": "Icon_Research_CharacterPlan_009_A01"
+            "image": "icon_research_characterplan_009_a01"
           },
           {
             "name": "Ajax Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_002_A01"
+            "image": "icon_research_character_cellplan_002_a01"
           },
           {
             "name": "Last Dagger Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_HG_1005_A001"
+            "image": "icon_research_weapon_tube_hg_1005_a001"
           },
           {
             "name": "Nazeistra's Devotion Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HC_1007_A001"
+            "image": "icon_research_weapon_syncytiumplan_hc_1007_a001"
           },
           {
             "name": "Greg's Reversed Fate Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1006_a001"
           },
           {
             "name": "Python Blueprint",
-            "image": "Icon_Research_Weaponplan_SMG_1006_A001"
+            "image": "icon_research_weaponplan_smg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Coral Blue",
-            "image": "Icon_PaintCharacter_BondiBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_bondiblue_nonmetal_matte"
           },
           {
             "name": "Matte Jewelry Blue",
-            "image": "Icon_PaintCharacter_Turquoise_NonMetal_Matte"
+            "image": "icon_paintcharacter_turquoise_nonmetal_matte"
           },
           {
             "name": "Bright Matte Gray",
-            "image": "Icon_PaintCharacter_AthensGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_athensgray_nonmetal_matte"
           },
           {
             "name": "Platinum Gold",
-            "image": "Icon_PaintHair_Yellow5"
+            "image": "icon_painthair_yellow5"
           }
         ],
         "B": [
           {
             "name": "Restored Relic Blueprint",
-            "image": "Icon_Research_WeaponPlan_LNC_1006_A001"
+            "image": "icon_research_weaponplan_lnc_1006_a001"
           },
           {
             "name": "Piercing Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1006_a001"
           },
           {
             "name": "Executor Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_sg_1006_a001"
           },
           {
             "name": "Clairvoyance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_br_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Dark Gray",
-            "image": "Icon_PaintCharacter_ShuttleGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_shuttlegray_nonmetal_matte"
           },
           {
             "name": "Bright Leather Green",
-            "image": "Icon_PaintCharacter_Conifer_Leather_Matte"
+            "image": "icon_paintcharacter_conifer_leather_matte"
           },
           {
             "name": "Matte Mud Brown",
-            "image": "Icon_PaintCharacter_Millbrook_NonMetal_Matte"
+            "image": "icon_paintcharacter_millbrook_nonmetal_matte"
           },
           {
             "name": "Platinum Silver",
-            "image": "Icon_PaintHair_Yellow6"
+            "image": "icon_painthair_yellow6"
           }
         ],
         "C": null
@@ -377,121 +377,121 @@ let etaData = {
         "A": [
           {
             "name": "Sharen Stabilizer",
-            "image": "Icon_Research_Character_Stablizer_008_A01"
+            "image": "icon_research_character_stablizer_008_a01"
           },
           {
             "name": "Kyle Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_011_A01"
+            "image": "icon_research_character_catalystplan_011_a01"
           },
           {
             "name": "Fallen Hope Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_AR_1005_A001"
+            "image": "icon_research_weapon_syncytium_ar_1005_a001"
           },
           {
             "name": "Blue Beetle Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1006_a001"
           },
           {
             "name": "Secret Garden Blueprint",
-            "image": "Icon_Research_Weaponplan_TR_1005_A001"
+            "image": "icon_research_weaponplan_tr_1005_a001"
           },
           {
             "name": "Perforator Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1008_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1008_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Matte Deep White",
-            "image": "Icon_PaintCharacter_Westar_NonMetal_Matte"
+            "image": "icon_paintcharacter_westar_nonmetal_matte"
           },
           {
             "name": "Matte Cement Gray",
-            "image": "Icon_PaintCharacter_Tapa_NonMetal_Matte"
+            "image": "icon_paintcharacter_tapa_nonmetal_matte"
           },
           {
             "name": "Matte Grassy Green",
-            "image": "Icon_PaintCharacter_ThatchGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_thatchgreen_nonmetal_matte"
           },
           {
             "name": "Midnight Purple",
-            "image": "Icon_PaintHair_Pink1"
+            "image": "icon_painthair_pink1"
           }
         ],
         "B": [
           {
             "name": "Luna Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_015_A01"
+            "image": "icon_research_character_catalystplan_015_a01"
           },
           {
             "name": "Wave of Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SCR_1005_A001"
+            "image": "icon_research_weaponplan_scr_1005_a001"
           },
           {
             "name": "Divine Punishment Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_AR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_ar_1006_a001"
           },
           {
             "name": "Enduring Legacy Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1005_a001"
           },
           {
             "name": "Afterglow Sword Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Pale Gold",
-            "image": "Icon_PaintCharacter_Sisal_Metal_Matte"
+            "image": "icon_paintcharacter_sisal_metal_matte"
           },
           {
             "name": "Leather Matte Orange",
-            "image": "Icon_PaintCharacter_Wenge_Leather_Matte"
+            "image": "icon_paintcharacter_wenge_leather_matte"
           },
           {
             "name": "Plastic Matte Pistachio",
-            "image": "Icon_PaintCharacter_Rainee_Plastic_Matte"
+            "image": "icon_paintcharacter_rainee_plastic_matte"
           },
           {
             "name": "Wine Pink",
-            "image": "Icon_PaintHair_Pink4"
+            "image": "icon_painthair_pink4"
           }
         ],
         "C": null
@@ -500,121 +500,121 @@ let etaData = {
         "A": [
           {
             "name": "Valby Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_010_A01"
+            "image": "icon_research_character_cellplan_010_a01"
           },
           {
             "name": "Lepic Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_001_A01"
+            "image": "icon_research_character_stablizerplan_001_a01"
           },
           {
             "name": "Thunder Cage Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_SMG_1005_A001"
+            "image": "icon_research_weapon_tube_smg_1005_a001"
           },
           {
             "name": "Python Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_smg_1006_a001"
           },
           {
             "name": "Last Dagger Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_HG_1005_A001"
+            "image": "icon_research_weapon_syncytium_hg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_hg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Matte Silk Gray",
-            "image": "Icon_PaintCharacter_Silk_NonMetal_Matte"
+            "image": "icon_paintcharacter_silk_nonmetal_matte"
           },
           {
             "name": "Matte Sand",
-            "image": "Icon_PaintCharacter_Tan_NonMetal_Matte"
+            "image": "icon_paintcharacter_tan_nonmetal_matte"
           },
           {
             "name": "Matte Gray",
-            "image": "Icon_PaintCharacter_FrenchGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_frenchgray_nonmetal_matte"
           },
           {
             "name": "Shiny Emerald",
-            "image": "Icon_PaintHair_Turquoise4"
+            "image": "icon_painthair_turquoise4"
           }
         ],
         "B": [
           {
             "name": "Greg's Reversed Fate Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_TR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_tr_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1006_a001"
           },
           {
             "name": "Clairvoyance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_br_1006_a001"
           },
           {
             "name": "King's Guard Lance Blueprint",
-            "image": "Icon_Research_Weaponplan_BR_1005_A001"
+            "image": "icon_research_weaponplan_br_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Marble White",
-            "image": "Icon_PaintCharacter_LightCararra_Metal_Matte"
+            "image": "icon_paintcharacter_lightcararra_metal_matte"
           },
           {
             "name": "Matte Indigo Blue",
-            "image": "Icon_PaintCharacter_MoodyBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_moodyblue_nonmetal_matte"
           },
           {
             "name": "Matte Light Green",
-            "image": "Icon_PaintCharacter_LimaGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_limagreen_nonmetal_matte"
           },
           {
             "name": "Deep Blue",
-            "image": "Icon_PaintHair_Blue1"
+            "image": "icon_painthair_blue1"
           }
         ],
         "C": null
@@ -623,121 +623,121 @@ let etaData = {
         "A": [
           {
             "name": "Sharen Enhanced Cells",
-            "image": "Icon_Research_Character_Cell_008_A01"
+            "image": "icon_research_character_cell_008_a01"
           },
           {
             "name": "Esiemo Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_012_A01"
+            "image": "icon_research_character_cellplan_012_a01"
           },
           {
             "name": "Wave of Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1005_a001"
           },
           {
             "name": "Perforator Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1008_A001"
+            "image": "icon_research_weaponplan_hc_1008_a001"
           },
           {
             "name": "Peace Maker Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1010_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1010_a001"
           },
           {
             "name": "Clairvoyance Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_BR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_br_1006_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Clear Red-Orange",
-            "image": "Icon_PaintCharacter_RedOrange_Leather_Coated"
+            "image": "icon_paintcharacter_redorange_leather_coated"
           },
           {
             "name": "Sun-Kissed Beige",
-            "image": "Icon_PaintCharacter_SkinColor3_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor3_plastic_matte"
           },
           {
             "name": "Matte Candlelight Yellow",
-            "image": "Icon_PaintCharacter_Candlelight_Plastic_Matte"
+            "image": "icon_paintcharacter_candlelight_plastic_matte"
           },
           {
             "name": "Natural Yellow",
-            "image": "Icon_PaintHair_Yellow2"
+            "image": "icon_painthair_yellow2"
           }
         ],
         "B": [
           {
             "name": "Gley Code",
-            "image": "Icon_Research_CharacterPlan_007_A01"
+            "image": "icon_research_characterplan_007_a01"
           },
           {
             "name": "Restored Relic Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_LNC_1006_A001"
+            "image": "icon_research_weapon_tubeplan_lnc_1006_a001"
           },
           {
             "name": "Nazeistra's Devotion Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1007_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1007_a001"
           },
           {
             "name": "Secret Garden Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_TR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_tr_1005_a001"
           },
           {
             "name": "Blue Beetle Blueprint",
-            "image": "Icon_Research_WeaponPlan_SCR_1006_A001"
+            "image": "icon_research_weaponplan_scr_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Shiny Metal Ivory",
-            "image": "Icon_PaintCharacter_LightIvory_Shiny"
+            "image": "icon_paintcharacter_lightivory_shiny"
           },
           {
             "name": "Real Matte Black",
-            "image": "Icon_PaintCharacter_RealBlack_StrongMatte"
+            "image": "icon_paintcharacter_realblack_strongmatte"
           },
           {
             "name": "Matte Red",
-            "image": "Icon_PaintCharacter_RoofTerracotta_NonMetal_Matte"
+            "image": "icon_paintcharacter_roofterracotta_nonmetal_matte"
           },
           {
             "name": "Natural Brown",
-            "image": "Icon_PaintHair_Red2"
+            "image": "icon_painthair_red2"
           }
         ],
         "C": null
@@ -746,121 +746,121 @@ let etaData = {
         "A": [
           {
             "name": "Jayber Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_005_A01"
+            "image": "icon_research_character_catalystplan_005_a01"
           },
           {
             "name": "Viessa Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_003_A01"
+            "image": "icon_research_character_stablizerplan_003_a01"
           },
           {
             "name": "Thunder Cage Blueprint",
-            "image": "Icon_Research_WeaponPlan_SMG_1005_A001"
+            "image": "icon_research_weaponplan_smg_1005_a001"
           },
           {
             "name": "Fallen Hope Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_AR_1005_A001"
+            "image": "icon_research_weapon_fiber_ar_1005_a001"
           },
           {
             "name": "Piercing Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SR_1006_A001"
+            "image": "icon_research_weaponplan_sr_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_MG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_mg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Coat Red",
-            "image": "Icon_PaintCharacter_TorchRed_Clearcoat"
+            "image": "icon_paintcharacter_torchred_clearcoat"
           },
           {
             "name": "Bright Metal Gray",
-            "image": "Icon_PaintCharacter_GreenWhite_Metal_Matte"
+            "image": "icon_paintcharacter_greenwhite_metal_matte"
           },
           {
             "name": "Matte Light Black",
-            "image": "Icon_PaintCharacter_MineShaft_NonMetal_Matte"
+            "image": "icon_paintcharacter_mineshaft_nonmetal_matte"
           },
           {
             "name": "Ghost Brown",
-            "image": "Icon_PaintHair_Red6"
+            "image": "icon_painthair_red6"
           }
         ],
         "B": [
           {
             "name": "Smithereens Blueprint",
-            "image": "Icon_Research_WeaponPlan_SG_1005_A001"
+            "image": "icon_research_weaponplan_sg_1005_a001"
           },
           {
             "name": "King's Guard Lance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_br_1005_a001"
           },
           {
             "name": "Executor Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1006_a001"
           },
           {
             "name": "Afterglow Sword Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Green",
-            "image": "Icon_PaintCharacter_VidaLocaGreen_Clearcoat"
+            "image": "icon_paintcharacter_vidalocagreen_clearcoat"
           },
           {
             "name": "Matte Willow Green",
-            "image": "Icon_PaintCharacter_WillowGrove_NonMetal_Matte"
+            "image": "icon_paintcharacter_willowgrove_nonmetal_matte"
           },
           {
             "name": "Matte Blue Gray",
-            "image": "Icon_PaintCharacter_WaikawaGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_waikawagray_nonmetal_matte"
           },
           {
             "name": "Purple Ghost",
-            "image": "Icon_PaintHair_Blue6"
+            "image": "icon_painthair_blue6"
           }
         ],
         "C": null
@@ -869,121 +869,121 @@ let etaData = {
         "A": [
           {
             "name": "Blair Spiral Catalyst",
-            "image": "Icon_Research_Character_Catalyst_009_A01"
+            "image": "icon_research_character_catalyst_009_a01"
           },
           {
             "name": "Valby Code",
-            "image": "Icon_Research_CharacterPlan_010_A01"
+            "image": "icon_research_characterplan_010_a01"
           },
           {
             "name": "Last Dagger Blueprint",
-            "image": "Icon_Research_WeaponPlan_HG_1005_A001"
+            "image": "icon_research_weaponplan_hg_1005_a001"
           },
           {
             "name": "Divine Punishment Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_AR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_ar_1006_a001"
           },
           {
             "name": "Smithereens Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SG_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sg_1005_a001"
           },
           {
             "name": "Piercing Light Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Matte Yellow",
-            "image": "Icon_PaintCharacter_SharonYellow_NonMetal_Matte"
+            "image": "icon_paintcharacter_sharonyellow_nonmetal_matte"
           },
           {
             "name": "Clear Bright Gray",
-            "image": "Icon_PaintCharacter_BrightGray_Clearcoat"
+            "image": "icon_paintcharacter_brightgray_clearcoat"
           },
           {
             "name": "Matte Stone Gray",
-            "image": "Icon_PaintCharacter_Stonewall_NonMetal_Matte"
+            "image": "icon_paintcharacter_stonewall_nonmetal_matte"
           },
           {
             "name": "Void Ash",
-            "image": "Icon_PaintHair_Purple6"
+            "image": "icon_painthair_purple6"
           }
         ],
         "B": [
           {
             "name": "Hailey Enhanced Cell DNA",
-            "image": "Icon_Research_Character_CellPlan_016_A01"
+            "image": "icon_research_character_cellplan_016_a01"
           },
           {
             "name": "Python Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_smg_1006_a001"
           },
           {
             "name": "Blue Beetle Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SCR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_scr_1006_a001"
           },
           {
             "name": "Peace Maker Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1010_A001"
+            "image": "icon_research_weaponplan_hc_1010_a001"
           },
           {
             "name": "Nazeistra's Devotion Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1007_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1007_a001"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Matte Gray",
-            "image": "Icon_PaintCharacter_NormalGray_Metal_Matte"
+            "image": "icon_paintcharacter_normalgray_metal_matte"
           },
           {
             "name": "Metal Matte Red",
-            "image": "Icon_PaintCharacter_TallPoppy_Metal_Matte"
+            "image": "icon_paintcharacter_tallpoppy_metal_matte"
           },
           {
             "name": "Matte Pink",
-            "image": "Icon_PaintCharacter_Mojo_NonMetal_Matte"
+            "image": "icon_paintcharacter_mojo_nonmetal_matte"
           },
           {
             "name": "Pinky Platinum",
-            "image": "Icon_PaintHair_Pink5"
+            "image": "icon_painthair_pink5"
           }
         ],
         "C": null
@@ -992,121 +992,121 @@ let etaData = {
         "A": [
           {
             "name": "Enzo Code",
-            "image": "Icon_Research_CharacterPlan_013_A01"
+            "image": "icon_research_characterplan_013_a01"
           },
           {
             "name": "Gley Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_007_A01"
+            "image": "icon_research_character_catalystplan_007_a01"
           },
           {
             "name": "Executor Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_sg_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1006_a001"
           },
           {
             "name": "Restored Relic Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_LNC_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_lnc_1006_a001"
           },
           {
             "name": "Afterglow Sword Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Plastic Cobalt Blue",
-            "image": "Icon_PaintCharacter_CobaltBlue_ToyPlastic"
+            "image": "icon_paintcharacter_cobaltblue_toyplastic"
           },
           {
             "name": "Leather Matte Brown",
-            "image": "Icon_PaintCharacter_CongoBrown_Leather_Matte"
+            "image": "icon_paintcharacter_congobrown_leather_matte"
           },
           {
             "name": "Bright Gray",
-            "image": "Icon_PaintCharacter_QuillGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_quillgray_nonmetal_matte"
           },
           {
             "name": "Midnight Void",
-            "image": "Icon_PaintHair_Purple1"
+            "image": "icon_painthair_purple1"
           }
         ],
         "B": [
           {
             "name": "The Final Masterpiece Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_hg_1006_a001"
           },
           {
             "name": "Greg's Reversed Fate Blueprint",
-            "image": "Icon_Research_WeaponPlan_TR_1006_A001"
+            "image": "icon_research_weaponplan_tr_1006_a001"
           },
           {
             "name": "Wave of Light Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SCR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_scr_1005_a001"
           },
           {
             "name": "Perforator Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1008_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1008_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Bright Sky",
-            "image": "Icon_PaintCharacter_Spray_NonMetal_Matte"
+            "image": "icon_paintcharacter_spray_nonmetal_matte"
           },
           {
             "name": "Matte Orange",
-            "image": "Icon_PaintCharacter_LonestarOrange_NonMetal_Matte"
+            "image": "icon_paintcharacter_lonestarorange_nonmetal_matte"
           },
           {
             "name": "Milk Tea Beige",
-            "image": "Icon_PaintCharacter_SkinColor1_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor1_plastic_matte"
           },
           {
             "name": "Natural Green",
-            "image": "Icon_PaintHair_Green2"
+            "image": "icon_painthair_green2"
           }
         ],
         "C": null
@@ -1115,121 +1115,121 @@ let etaData = {
         "A": [
           {
             "name": "Yujin Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_014_A01"
+            "image": "icon_research_character_cellplan_014_a01"
           },
           {
             "name": "Enzo Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_013_A01"
+            "image": "icon_research_character_catalystplan_013_a01"
           },
           {
             "name": "Thunder Cage Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_SMG_1005_A001"
+            "image": "icon_research_weapon_syncytium_smg_1005_a001"
           },
           {
             "name": "King's Guard Lance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_br_1005_a001"
           },
           {
             "name": "Divine Punishment Blueprint",
-            "image": "Icon_Research_WeaponPlan_AR_1006_A001"
+            "image": "icon_research_weaponplan_ar_1006_a001"
           },
           {
             "name": "Enduring Legacy Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1005_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1005_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Leather Matte Yellow",
-            "image": "Icon_PaintCharacter_Sunglow_Leather_Matte"
+            "image": "icon_paintcharacter_sunglow_leather_matte"
           },
           {
             "name": "Metal Celeste Gray",
-            "image": "Icon_PaintCharacter_Celeste_Metal_Matte"
+            "image": "icon_paintcharacter_celeste_metal_matte"
           },
           {
             "name": "Bright Matte Sky",
-            "image": "Icon_PaintCharacter_Danube_NonMetal_Matte"
+            "image": "icon_paintcharacter_danube_nonmetal_matte"
           },
           {
             "name": "Basic Black",
-            "image": "Icon_PaintHair_BasicBlack"
+            "image": "icon_painthair_basicblack"
           }
         ],
         "B": [
           {
             "name": "Smithereens Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_hg_1006_a001"
           },
           {
             "name": "Secret Garden Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1005_a001"
           },
           {
             "name": "Fallen Hope Blueprint",
-            "image": "Icon_Research_Weaponplan_AR_1005_A001"
+            "image": "icon_research_weaponplan_ar_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Descendant Slots +{0}",
-            "image": "Icon_Expansion_CharSlot"
+            "image": "icon_expansion_charslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Blue Black",
-            "image": "Icon_PaintCharacter_BlueBlack_Clearcoat"
+            "image": "icon_paintcharacter_blueblack_clearcoat"
           },
           {
             "name": "Matte Violet",
-            "image": "Icon_PaintCharacter_VividViolet_NonMetal_Matte"
+            "image": "icon_paintcharacter_vividviolet_nonmetal_matte"
           },
           {
             "name": "Matte Titanium Silver",
-            "image": "Icon_PaintCharacter_RegentGray_Metal_Matte"
+            "image": "icon_paintcharacter_regentgray_metal_matte"
           },
           {
             "name": "Basic White",
-            "image": "Icon_PaintHair_BasicWhite"
+            "image": "icon_painthair_basicwhite"
           }
         ],
         "C": null
@@ -1238,121 +1238,121 @@ let etaData = {
         "A": [
           {
             "name": "Blair Code",
-            "image": "Icon_Research_CharacterPlan_009_A01"
+            "image": "icon_research_characterplan_009_a01"
           },
           {
             "name": "Ajax Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_002_A01"
+            "image": "icon_research_character_cellplan_002_a01"
           },
           {
             "name": "Last Dagger Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_HG_1005_A001"
+            "image": "icon_research_weapon_tube_hg_1005_a001"
           },
           {
             "name": "Nazeistra's Devotion Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HC_1007_A001"
+            "image": "icon_research_weapon_syncytiumplan_hc_1007_a001"
           },
           {
             "name": "Greg's Reversed Fate Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1006_a001"
           },
           {
             "name": "Python Blueprint",
-            "image": "Icon_Research_Weaponplan_SMG_1006_A001"
+            "image": "icon_research_weaponplan_smg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Coral Blue",
-            "image": "Icon_PaintCharacter_BondiBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_bondiblue_nonmetal_matte"
           },
           {
             "name": "Matte Jewelry Blue",
-            "image": "Icon_PaintCharacter_Turquoise_NonMetal_Matte"
+            "image": "icon_paintcharacter_turquoise_nonmetal_matte"
           },
           {
             "name": "Bright Matte Gray",
-            "image": "Icon_PaintCharacter_AthensGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_athensgray_nonmetal_matte"
           },
           {
             "name": "Platinum Gold",
-            "image": "Icon_PaintHair_Yellow5"
+            "image": "icon_painthair_yellow5"
           }
         ],
         "B": [
           {
             "name": "Restored Relic Blueprint",
-            "image": "Icon_Research_WeaponPlan_LNC_1006_A001"
+            "image": "icon_research_weaponplan_lnc_1006_a001"
           },
           {
             "name": "Piercing Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1006_a001"
           },
           {
             "name": "Executor Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_sg_1006_a001"
           },
           {
             "name": "Clairvoyance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_br_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Dark Gray",
-            "image": "Icon_PaintCharacter_ShuttleGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_shuttlegray_nonmetal_matte"
           },
           {
             "name": "Bright Leather Green",
-            "image": "Icon_PaintCharacter_Conifer_Leather_Matte"
+            "image": "icon_paintcharacter_conifer_leather_matte"
           },
           {
             "name": "Matte Mud Brown",
-            "image": "Icon_PaintCharacter_Millbrook_NonMetal_Matte"
+            "image": "icon_paintcharacter_millbrook_nonmetal_matte"
           },
           {
             "name": "Platinum Silver",
-            "image": "Icon_PaintHair_Yellow6"
+            "image": "icon_painthair_yellow6"
           }
         ],
         "C": null
@@ -1361,121 +1361,121 @@ let etaData = {
         "A": [
           {
             "name": "Sharen Stabilizer",
-            "image": "Icon_Research_Character_Stablizer_008_A01"
+            "image": "icon_research_character_stablizer_008_a01"
           },
           {
             "name": "Kyle Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_011_A01"
+            "image": "icon_research_character_catalystplan_011_a01"
           },
           {
             "name": "Fallen Hope Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_AR_1005_A001"
+            "image": "icon_research_weapon_syncytium_ar_1005_a001"
           },
           {
             "name": "Blue Beetle Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1006_a001"
           },
           {
             "name": "Secret Garden Blueprint",
-            "image": "Icon_Research_Weaponplan_TR_1005_A001"
+            "image": "icon_research_weaponplan_tr_1005_a001"
           },
           {
             "name": "Perforator Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1008_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1008_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Matte Deep White",
-            "image": "Icon_PaintCharacter_Westar_NonMetal_Matte"
+            "image": "icon_paintcharacter_westar_nonmetal_matte"
           },
           {
             "name": "Matte Cement Gray",
-            "image": "Icon_PaintCharacter_Tapa_NonMetal_Matte"
+            "image": "icon_paintcharacter_tapa_nonmetal_matte"
           },
           {
             "name": "Matte Grassy Green",
-            "image": "Icon_PaintCharacter_ThatchGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_thatchgreen_nonmetal_matte"
           },
           {
             "name": "Midnight Purple",
-            "image": "Icon_PaintHair_Pink1"
+            "image": "icon_painthair_pink1"
           }
         ],
         "B": [
           {
             "name": "Luna Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_015_A01"
+            "image": "icon_research_character_catalystplan_015_a01"
           },
           {
             "name": "Wave of Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SCR_1005_A001"
+            "image": "icon_research_weaponplan_scr_1005_a001"
           },
           {
             "name": "Divine Punishment Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_AR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_ar_1006_a001"
           },
           {
             "name": "Enduring Legacy Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1005_a001"
           },
           {
             "name": "Afterglow Sword Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Pale Gold",
-            "image": "Icon_PaintCharacter_Sisal_Metal_Matte"
+            "image": "icon_paintcharacter_sisal_metal_matte"
           },
           {
             "name": "Leather Matte Orange",
-            "image": "Icon_PaintCharacter_Wenge_Leather_Matte"
+            "image": "icon_paintcharacter_wenge_leather_matte"
           },
           {
             "name": "Plastic Matte Pistachio",
-            "image": "Icon_PaintCharacter_Rainee_Plastic_Matte"
+            "image": "icon_paintcharacter_rainee_plastic_matte"
           },
           {
             "name": "Wine Pink",
-            "image": "Icon_PaintHair_Pink4"
+            "image": "icon_painthair_pink4"
           }
         ],
         "C": null
@@ -1484,121 +1484,121 @@ let etaData = {
         "A": [
           {
             "name": "Valby Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_010_A01"
+            "image": "icon_research_character_cellplan_010_a01"
           },
           {
             "name": "Lepic Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_001_A01"
+            "image": "icon_research_character_stablizerplan_001_a01"
           },
           {
             "name": "Thunder Cage Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_SMG_1005_A001"
+            "image": "icon_research_weapon_tube_smg_1005_a001"
           },
           {
             "name": "Python Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_smg_1006_a001"
           },
           {
             "name": "Last Dagger Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_HG_1005_A001"
+            "image": "icon_research_weapon_syncytium_hg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_hg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Matte Silk Gray",
-            "image": "Icon_PaintCharacter_Silk_NonMetal_Matte"
+            "image": "icon_paintcharacter_silk_nonmetal_matte"
           },
           {
             "name": "Matte Sand",
-            "image": "Icon_PaintCharacter_Tan_NonMetal_Matte"
+            "image": "icon_paintcharacter_tan_nonmetal_matte"
           },
           {
             "name": "Matte Gray",
-            "image": "Icon_PaintCharacter_FrenchGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_frenchgray_nonmetal_matte"
           },
           {
             "name": "Shiny Emerald",
-            "image": "Icon_PaintHair_Turquoise4"
+            "image": "icon_painthair_turquoise4"
           }
         ],
         "B": [
           {
             "name": "Greg's Reversed Fate Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_TR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_tr_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1006_a001"
           },
           {
             "name": "Clairvoyance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_br_1006_a001"
           },
           {
             "name": "King's Guard Lance Blueprint",
-            "image": "Icon_Research_Weaponplan_BR_1005_A001"
+            "image": "icon_research_weaponplan_br_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Marble White",
-            "image": "Icon_PaintCharacter_LightCararra_Metal_Matte"
+            "image": "icon_paintcharacter_lightcararra_metal_matte"
           },
           {
             "name": "Matte Indigo Blue",
-            "image": "Icon_PaintCharacter_MoodyBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_moodyblue_nonmetal_matte"
           },
           {
             "name": "Matte Light Green",
-            "image": "Icon_PaintCharacter_LimaGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_limagreen_nonmetal_matte"
           },
           {
             "name": "Deep Blue",
-            "image": "Icon_PaintHair_Blue1"
+            "image": "icon_painthair_blue1"
           }
         ],
         "C": null
@@ -1607,121 +1607,121 @@ let etaData = {
         "A": [
           {
             "name": "Sharen Enhanced Cells",
-            "image": "Icon_Research_Character_Cell_008_A01"
+            "image": "icon_research_character_cell_008_a01"
           },
           {
             "name": "Esiemo Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_012_A01"
+            "image": "icon_research_character_cellplan_012_a01"
           },
           {
             "name": "Wave of Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1005_a001"
           },
           {
             "name": "Perforator Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1008_A001"
+            "image": "icon_research_weaponplan_hc_1008_a001"
           },
           {
             "name": "Peace Maker Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1010_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1010_a001"
           },
           {
             "name": "Clairvoyance Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_BR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_br_1006_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Clear Red-Orange",
-            "image": "Icon_PaintCharacter_RedOrange_Leather_Coated"
+            "image": "icon_paintcharacter_redorange_leather_coated"
           },
           {
             "name": "Sun-Kissed Beige",
-            "image": "Icon_PaintCharacter_SkinColor3_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor3_plastic_matte"
           },
           {
             "name": "Matte Candlelight Yellow",
-            "image": "Icon_PaintCharacter_Candlelight_Plastic_Matte"
+            "image": "icon_paintcharacter_candlelight_plastic_matte"
           },
           {
             "name": "Natural Yellow",
-            "image": "Icon_PaintHair_Yellow2"
+            "image": "icon_painthair_yellow2"
           }
         ],
         "B": [
           {
             "name": "Gley Code",
-            "image": "Icon_Research_CharacterPlan_007_A01"
+            "image": "icon_research_characterplan_007_a01"
           },
           {
             "name": "Restored Relic Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_LNC_1006_A001"
+            "image": "icon_research_weapon_tubeplan_lnc_1006_a001"
           },
           {
             "name": "Nazeistra's Devotion Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1007_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1007_a001"
           },
           {
             "name": "Secret Garden Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_TR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_tr_1005_a001"
           },
           {
             "name": "Blue Beetle Blueprint",
-            "image": "Icon_Research_WeaponPlan_SCR_1006_A001"
+            "image": "icon_research_weaponplan_scr_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Shiny Metal Ivory",
-            "image": "Icon_PaintCharacter_LightIvory_Shiny"
+            "image": "icon_paintcharacter_lightivory_shiny"
           },
           {
             "name": "Real Matte Black",
-            "image": "Icon_PaintCharacter_RealBlack_StrongMatte"
+            "image": "icon_paintcharacter_realblack_strongmatte"
           },
           {
             "name": "Matte Red",
-            "image": "Icon_PaintCharacter_RoofTerracotta_NonMetal_Matte"
+            "image": "icon_paintcharacter_roofterracotta_nonmetal_matte"
           },
           {
             "name": "Natural Brown",
-            "image": "Icon_PaintHair_Red2"
+            "image": "icon_painthair_red2"
           }
         ],
         "C": null
@@ -1730,121 +1730,121 @@ let etaData = {
         "A": [
           {
             "name": "Jayber Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_005_A01"
+            "image": "icon_research_character_catalystplan_005_a01"
           },
           {
             "name": "Viessa Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_003_A01"
+            "image": "icon_research_character_stablizerplan_003_a01"
           },
           {
             "name": "Thunder Cage Blueprint",
-            "image": "Icon_Research_WeaponPlan_SMG_1005_A001"
+            "image": "icon_research_weaponplan_smg_1005_a001"
           },
           {
             "name": "Fallen Hope Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_AR_1005_A001"
+            "image": "icon_research_weapon_fiber_ar_1005_a001"
           },
           {
             "name": "Piercing Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SR_1006_A001"
+            "image": "icon_research_weaponplan_sr_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_MG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_mg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Coat Red",
-            "image": "Icon_PaintCharacter_TorchRed_Clearcoat"
+            "image": "icon_paintcharacter_torchred_clearcoat"
           },
           {
             "name": "Bright Metal Gray",
-            "image": "Icon_PaintCharacter_GreenWhite_Metal_Matte"
+            "image": "icon_paintcharacter_greenwhite_metal_matte"
           },
           {
             "name": "Matte Light Black",
-            "image": "Icon_PaintCharacter_MineShaft_NonMetal_Matte"
+            "image": "icon_paintcharacter_mineshaft_nonmetal_matte"
           },
           {
             "name": "Ghost Brown",
-            "image": "Icon_PaintHair_Red6"
+            "image": "icon_painthair_red6"
           }
         ],
         "B": [
           {
             "name": "Smithereens Blueprint",
-            "image": "Icon_Research_WeaponPlan_SG_1005_A001"
+            "image": "icon_research_weaponplan_sg_1005_a001"
           },
           {
             "name": "King's Guard Lance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_br_1005_a001"
           },
           {
             "name": "Executor Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1006_a001"
           },
           {
             "name": "Afterglow Sword Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Green",
-            "image": "Icon_PaintCharacter_VidaLocaGreen_Clearcoat"
+            "image": "icon_paintcharacter_vidalocagreen_clearcoat"
           },
           {
             "name": "Matte Willow Green",
-            "image": "Icon_PaintCharacter_WillowGrove_NonMetal_Matte"
+            "image": "icon_paintcharacter_willowgrove_nonmetal_matte"
           },
           {
             "name": "Matte Blue Gray",
-            "image": "Icon_PaintCharacter_WaikawaGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_waikawagray_nonmetal_matte"
           },
           {
             "name": "Purple Ghost",
-            "image": "Icon_PaintHair_Blue6"
+            "image": "icon_painthair_blue6"
           }
         ],
         "C": null
@@ -1853,121 +1853,121 @@ let etaData = {
         "A": [
           {
             "name": "Blair Spiral Catalyst",
-            "image": "Icon_Research_Character_Catalyst_009_A01"
+            "image": "icon_research_character_catalyst_009_a01"
           },
           {
             "name": "Valby Code",
-            "image": "Icon_Research_CharacterPlan_010_A01"
+            "image": "icon_research_characterplan_010_a01"
           },
           {
             "name": "Last Dagger Blueprint",
-            "image": "Icon_Research_WeaponPlan_HG_1005_A001"
+            "image": "icon_research_weaponplan_hg_1005_a001"
           },
           {
             "name": "Divine Punishment Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_AR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_ar_1006_a001"
           },
           {
             "name": "Smithereens Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SG_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sg_1005_a001"
           },
           {
             "name": "Piercing Light Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Matte Yellow",
-            "image": "Icon_PaintCharacter_SharonYellow_NonMetal_Matte"
+            "image": "icon_paintcharacter_sharonyellow_nonmetal_matte"
           },
           {
             "name": "Clear Bright Gray",
-            "image": "Icon_PaintCharacter_BrightGray_Clearcoat"
+            "image": "icon_paintcharacter_brightgray_clearcoat"
           },
           {
             "name": "Matte Stone Gray",
-            "image": "Icon_PaintCharacter_Stonewall_NonMetal_Matte"
+            "image": "icon_paintcharacter_stonewall_nonmetal_matte"
           },
           {
             "name": "Void Ash",
-            "image": "Icon_PaintHair_Purple6"
+            "image": "icon_painthair_purple6"
           }
         ],
         "B": [
           {
             "name": "Hailey Enhanced Cell DNA",
-            "image": "Icon_Research_Character_CellPlan_016_A01"
+            "image": "icon_research_character_cellplan_016_a01"
           },
           {
             "name": "Python Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_smg_1006_a001"
           },
           {
             "name": "Blue Beetle Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SCR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_scr_1006_a001"
           },
           {
             "name": "Peace Maker Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1010_A001"
+            "image": "icon_research_weaponplan_hc_1010_a001"
           },
           {
             "name": "Nazeistra's Devotion Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1007_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1007_a001"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Matte Gray",
-            "image": "Icon_PaintCharacter_NormalGray_Metal_Matte"
+            "image": "icon_paintcharacter_normalgray_metal_matte"
           },
           {
             "name": "Metal Matte Red",
-            "image": "Icon_PaintCharacter_TallPoppy_Metal_Matte"
+            "image": "icon_paintcharacter_tallpoppy_metal_matte"
           },
           {
             "name": "Matte Pink",
-            "image": "Icon_PaintCharacter_Mojo_NonMetal_Matte"
+            "image": "icon_paintcharacter_mojo_nonmetal_matte"
           },
           {
             "name": "Pinky Platinum",
-            "image": "Icon_PaintHair_Pink5"
+            "image": "icon_painthair_pink5"
           }
         ],
         "C": null
@@ -1976,121 +1976,121 @@ let etaData = {
         "A": [
           {
             "name": "Enzo Code",
-            "image": "Icon_Research_CharacterPlan_013_A01"
+            "image": "icon_research_characterplan_013_a01"
           },
           {
             "name": "Gley Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_007_A01"
+            "image": "icon_research_character_catalystplan_007_a01"
           },
           {
             "name": "Executor Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_sg_1006_a001"
           },
           {
             "name": "Albion Cavalry Gun Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1006_a001"
           },
           {
             "name": "Restored Relic Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_LNC_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_lnc_1006_a001"
           },
           {
             "name": "Afterglow Sword Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Plastic Cobalt Blue",
-            "image": "Icon_PaintCharacter_CobaltBlue_ToyPlastic"
+            "image": "icon_paintcharacter_cobaltblue_toyplastic"
           },
           {
             "name": "Leather Matte Brown",
-            "image": "Icon_PaintCharacter_CongoBrown_Leather_Matte"
+            "image": "icon_paintcharacter_congobrown_leather_matte"
           },
           {
             "name": "Bright Gray",
-            "image": "Icon_PaintCharacter_QuillGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_quillgray_nonmetal_matte"
           },
           {
             "name": "Midnight Void",
-            "image": "Icon_PaintHair_Purple1"
+            "image": "icon_painthair_purple1"
           }
         ],
         "B": [
           {
             "name": "The Final Masterpiece Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_hg_1006_a001"
           },
           {
             "name": "Greg's Reversed Fate Blueprint",
-            "image": "Icon_Research_WeaponPlan_TR_1006_A001"
+            "image": "icon_research_weaponplan_tr_1006_a001"
           },
           {
             "name": "Wave of Light Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SCR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_scr_1005_a001"
           },
           {
             "name": "Perforator Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1008_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1008_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Bright Sky",
-            "image": "Icon_PaintCharacter_Spray_NonMetal_Matte"
+            "image": "icon_paintcharacter_spray_nonmetal_matte"
           },
           {
             "name": "Matte Orange",
-            "image": "Icon_PaintCharacter_LonestarOrange_NonMetal_Matte"
+            "image": "icon_paintcharacter_lonestarorange_nonmetal_matte"
           },
           {
             "name": "Milk Tea Beige",
-            "image": "Icon_PaintCharacter_SkinColor1_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor1_plastic_matte"
           },
           {
             "name": "Natural Green",
-            "image": "Icon_PaintHair_Green2"
+            "image": "icon_painthair_green2"
           }
         ],
         "C": null
@@ -2106,129 +2106,129 @@ let etaData = {
         "A": [
           {
             "name": "Enzo Enhanced Cells",
-            "image": "Icon_Research_Character_Cell_013_A01"
+            "image": "icon_research_character_cell_013_a01"
           },
           {
             "name": "Yujin Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_014_A01"
+            "image": "icon_research_character_catalystplan_014_a01"
           },
           {
             "name": "Thunder Cage Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_SMG_1005_A001"
+            "image": "icon_research_weapon_fiber_smg_1005_a001"
           },
           {
             "name": "Divine Punishment Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_AR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_ar_1006_a001"
           },
           {
             "name": "Frost Watcher Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1009_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1009_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Matte Mud Brown",
-            "image": "Icon_PaintCharacter_Millbrook_NonMetal_Matte"
+            "image": "icon_paintcharacter_millbrook_nonmetal_matte"
           },
           {
             "name": "Clear Green",
-            "image": "Icon_PaintCharacter_VidaLocaGreen_Clearcoat"
+            "image": "icon_paintcharacter_vidalocagreen_clearcoat"
           },
           {
             "name": "Clear Red-Orange",
-            "image": "Icon_PaintCharacter_RedOrange_Leather_Coated"
+            "image": "icon_paintcharacter_redorange_leather_coated"
           }
         ],
         "B": [
           {
             "name": "Lepic Code",
-            "image": "Icon_Research_CharacterPlan_001_A01"
+            "image": "icon_research_characterplan_001_a01"
           },
           {
             "name": "Nazeistra's Devotion Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1007_A001"
+            "image": "icon_research_weaponplan_hc_1007_a001"
           },
           {
             "name": "Python Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SMG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_smg_1006_a001"
           },
           {
             "name": "Afterglow Sword Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Descendant Slots +{0}",
-            "image": "Icon_Expansion_CharSlot"
+            "image": "icon_expansion_charslot"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Plastic Matte Black",
-            "image": "Icon_PaintCharacter_NormalBlack_Plastic_Matte"
+            "image": "icon_paintcharacter_normalblack_plastic_matte"
           },
           {
             "name": "Matte Orange",
-            "image": "Icon_PaintCharacter_LonestarOrange_NonMetal_Matte"
+            "image": "icon_paintcharacter_lonestarorange_nonmetal_matte"
           },
           {
             "name": "Glossy Cerise Pink",
-            "image": "Icon_PaintCharacter_Cerise_Leather_Coated"
+            "image": "icon_paintcharacter_cerise_leather_coated"
           },
           {
             "name": "Pinky Platinum",
-            "image": "Icon_PaintHair_Pink5"
+            "image": "icon_painthair_pink5"
           }
         ],
         "C": [
@@ -2251,7 +2251,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -2259,129 +2259,129 @@ let etaData = {
         "A": [
           {
             "name": "Valby Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_010_A01"
+            "image": "icon_research_character_stablizerplan_010_a01"
           },
           {
             "name": "Gley Enhanced Cells",
-            "image": "Icon_Research_Character_Cell_007_A01"
+            "image": "icon_research_character_cell_007_a01"
           },
           {
             "name": "Last Dagger Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_HG_1005_A001"
+            "image": "icon_research_weapon_fiber_hg_1005_a001"
           },
           {
             "name": "Piercing Light Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_sr_1006_a001"
           },
           {
             "name": "Secret Garden Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_TR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_tr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Milk Tea Beige",
-            "image": "Icon_PaintCharacter_SkinColor1_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor1_plastic_matte"
           },
           {
             "name": "Bright Leather Green",
-            "image": "Icon_PaintCharacter_Conifer_Leather_Matte"
+            "image": "icon_paintcharacter_conifer_leather_matte"
           },
           {
             "name": "Matte Willow Green",
-            "image": "Icon_PaintCharacter_WillowGrove_NonMetal_Matte"
+            "image": "icon_paintcharacter_willowgrove_nonmetal_matte"
           }
         ],
         "B": [
           {
             "name": "Hailey Enhanced Cell DNA",
-            "image": "Icon_Research_Character_CellPlan_016_A01"
+            "image": "icon_research_character_cellplan_016_a01"
           },
           {
             "name": "Esiemo Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_012_A01"
+            "image": "icon_research_character_stablizerplan_012_a01"
           },
           {
             "name": "Restored Relic Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_LNC_1006_A001"
+            "image": "icon_research_weapon_fiberplan_lnc_1006_a001"
           },
           {
             "name": "Wave of Light Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SCR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_scr_1005_a001"
           },
           {
             "name": "Executor Blueprint",
-            "image": "Icon_Research_Weaponplan_SG_1006_A001"
+            "image": "icon_research_weaponplan_sg_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Light Black",
-            "image": "Icon_PaintCharacter_MineShaft_NonMetal_Matte"
+            "image": "icon_paintcharacter_mineshaft_nonmetal_matte"
           },
           {
             "name": "Matte Deep White",
-            "image": "Icon_PaintCharacter_Westar_NonMetal_Matte"
+            "image": "icon_paintcharacter_westar_nonmetal_matte"
           },
           {
             "name": "Metal Matte Gold",
-            "image": "Icon_PaintCharacter_Pizazz_Metal_Matte"
+            "image": "icon_paintcharacter_pizazz_metal_matte"
           },
           {
             "name": "Shiny Emerald",
-            "image": "Icon_PaintHair_Turquoise4"
+            "image": "icon_painthair_turquoise4"
           }
         ],
         "C": [
@@ -2404,7 +2404,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -2412,129 +2412,129 @@ let etaData = {
         "A": [
           {
             "name": "Ajax Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_002_A01"
+            "image": "icon_research_character_catalystplan_002_a01"
           },
           {
             "name": "Kyle Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_011_A01"
+            "image": "icon_research_character_stablizerplan_011_a01"
           },
           {
             "name": "Jayber Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_005_A01"
+            "image": "icon_research_character_cellplan_005_a01"
           },
           {
             "name": "Fallen Hope Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_AR_1005_A001"
+            "image": "icon_research_weapon_tube_ar_1005_a001"
           },
           {
             "name": "Greg's Reversed Fate Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_TR_1006_A001"
+            "image": "icon_research_weapon_syncytium_tr_1006_a001"
           },
           {
             "name": "Perforator Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HC_1008_A001"
+            "image": "icon_research_weapon_syncytiumplan_hc_1008_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Shiny Metal Red",
-            "image": "Icon_PaintCharacter_MilanoRed_Shiny"
+            "image": "icon_paintcharacter_milanored_shiny"
           },
           {
             "name": "Clear Coat Red",
-            "image": "Icon_PaintCharacter_TorchRed_Clearcoat"
+            "image": "icon_paintcharacter_torchred_clearcoat"
           },
           {
             "name": "Clear Bright White",
-            "image": "Icon_PaintCharacter_EcruWhite_Clearcoat"
+            "image": "icon_paintcharacter_ecruwhite_clearcoat"
           },
           {
             "name": "Void Ash",
-            "image": "Icon_PaintHair_Purple6"
+            "image": "icon_painthair_purple6"
           }
         ],
         "B": [
           {
             "name": "Viessa Code",
-            "image": "Icon_Research_CharacterPlan_003_A01"
+            "image": "icon_research_characterplan_003_a01"
           },
           {
             "name": "Albion Cavalry Gun Blueprint",
-            "image": "Icon_Research_Weaponplan_MG_1006_A001"
+            "image": "icon_research_weaponplan_mg_1006_a001"
           },
           {
             "name": "Divine Punishment Blueprint",
-            "image": "Icon_Research_WeaponPlan_AR_1006_A001"
+            "image": "icon_research_weaponplan_ar_1006_a001"
           },
           {
             "name": "Blue Beetle Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SCR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_scr_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Shiny Metal Silver",
-            "image": "Icon_PaintCharacter_ShinySilver_Shiny"
+            "image": "icon_paintcharacter_shinysilver_shiny"
           },
           {
             "name": "Matte Red",
-            "image": "Icon_PaintCharacter_RoofTerracotta_NonMetal_Matte"
+            "image": "icon_paintcharacter_roofterracotta_nonmetal_matte"
           },
           {
             "name": "Sand Dust Beige",
-            "image": "Icon_PaintCharacter_SkinColor2_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor2_plastic_matte"
           },
           {
             "name": "Deep Blue",
-            "image": "Icon_PaintHair_Blue1"
+            "image": "icon_painthair_blue1"
           }
         ],
         "C": [
@@ -2557,7 +2557,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -2565,129 +2565,129 @@ let etaData = {
         "A": [
           {
             "name": "Enzo Stabilizer",
-            "image": "Icon_Research_Character_Stablizer_013_A01"
+            "image": "icon_research_character_stablizer_013_a01"
           },
           {
             "name": "Thunder Cage Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_SMG_1005_A001"
+            "image": "icon_research_weapon_syncytium_smg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Blueprint",
-            "image": "Icon_Research_Weaponplan_HG_1006_A001"
+            "image": "icon_research_weaponplan_hg_1006_a001"
           },
           {
             "name": "King's Guard Lance Blueprint",
-            "image": "Icon_Research_Weaponplan_BR_1005_A001"
+            "image": "icon_research_weaponplan_br_1005_a001"
           },
           {
             "name": "Frost Watcher Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SCR_1009_A001"
+            "image": "icon_research_weapon_syncytiumplan_scr_1009_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Metal Matte White",
-            "image": "Icon_PaintCharacter_Delta_NonMetal_Matte"
+            "image": "icon_paintcharacter_delta_nonmetal_matte"
           },
           {
             "name": "Real Matte Black",
-            "image": "Icon_PaintCharacter_RealBlack_StrongMatte"
+            "image": "icon_paintcharacter_realblack_strongmatte"
           },
           {
             "name": "Matte Titanium Silver",
-            "image": "Icon_PaintCharacter_RegentGray_Metal_Matte"
+            "image": "icon_paintcharacter_regentgray_metal_matte"
           }
         ],
         "B": [
           {
             "name": "Lepic Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_001_A01"
+            "image": "icon_research_character_cellplan_001_a01"
           },
           {
             "name": "Hailey Spiral Catalyst Link",
-            "image": "Icon_Research_Character_CatalystPlan_016_A01"
+            "image": "icon_research_character_catalystplan_016_a01"
           },
           {
             "name": "Smithereens Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SG_1005_A001"
+            "image": "icon_research_weapon_fiberplan_sg_1005_a001"
           },
           {
             "name": "King's Guard Lance Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_BR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_br_1005_a001"
           },
           {
             "name": "Clairvoyance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_br_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Bright Metal Gray",
-            "image": "Icon_PaintCharacter_GreenWhite_Metal_Matte"
+            "image": "icon_paintcharacter_greenwhite_metal_matte"
           },
           {
             "name": "Clear Blue Black",
-            "image": "Icon_PaintCharacter_BlueBlack_Clearcoat"
+            "image": "icon_paintcharacter_blueblack_clearcoat"
           },
           {
             "name": "Real Matte Deep Navy",
-            "image": "Icon_PaintCharacter_DeepNavy_NonMetal_Matte"
+            "image": "icon_paintcharacter_deepnavy_nonmetal_matte"
           },
           {
             "name": "Purple Ghost",
-            "image": "Icon_PaintHair_Blue6"
+            "image": "icon_painthair_blue6"
           }
         ],
         "C": [
@@ -2710,7 +2710,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -2718,129 +2718,129 @@ let etaData = {
         "A": [
           {
             "name": "Luna Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_015_A01"
+            "image": "icon_research_character_stablizerplan_015_a01"
           },
           {
             "name": "Valby Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_010_A01"
+            "image": "icon_research_character_catalystplan_010_a01"
           },
           {
             "name": "Hailey Stabilizer Component",
-            "image": "Icon_Research_Character_StablizerPlan_016_A01"
+            "image": "icon_research_character_stablizerplan_016_a01"
           },
           {
             "name": "Nazeistra's Devotion Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HC_1007_A001"
+            "image": "icon_research_weapon_syncytiumplan_hc_1007_a001"
           },
           {
             "name": "Piercing Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_sr_1006_a001"
           },
           {
             "name": "Wave of Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SCR_1005_A001"
+            "image": "icon_research_weaponplan_scr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Fog Blue",
-            "image": "Icon_PaintCharacter_BlueChill_Clearcoat"
+            "image": "icon_paintcharacter_bluechill_clearcoat"
           },
           {
             "name": "Shiny Metal Ivory",
-            "image": "Icon_PaintCharacter_LightIvory_Shiny"
+            "image": "icon_paintcharacter_lightivory_shiny"
           },
           {
             "name": "Clear White",
-            "image": "Icon_PaintCharacter_EarlyDawn_Clearcoat"
+            "image": "icon_paintcharacter_earlydawn_clearcoat"
           }
         ],
         "B": [
           {
             "name": "Esiemo Code",
-            "image": "Icon_Research_CharacterPlan_012_A01"
+            "image": "icon_research_characterplan_012_a01"
           },
           {
             "name": "Greg's Reversed Fate Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_TR_1006_A001"
+            "image": "icon_research_weapon_fiber_tr_1006_a001"
           },
           {
             "name": "Python Blueprint",
-            "image": "Icon_Research_Weaponplan_SMG_1006_A001"
+            "image": "icon_research_weaponplan_smg_1006_a001"
           },
           {
             "name": "Enduring Legacy Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_MG_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_mg_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Grassy Green",
-            "image": "Icon_PaintCharacter_ThatchGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_thatchgreen_nonmetal_matte"
           },
           {
             "name": "Matte Blue Gray",
-            "image": "Icon_PaintCharacter_WaikawaGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_waikawagray_nonmetal_matte"
           },
           {
             "name": "Clear Bright White",
-            "image": "Icon_PaintCharacter_EcruWhite_Clearcoat"
+            "image": "icon_paintcharacter_ecruwhite_clearcoat"
           },
           {
             "name": "Purple Blue",
-            "image": "Icon_PaintHair_Blue5"
+            "image": "icon_painthair_blue5"
           }
         ],
         "C": [
@@ -2863,7 +2863,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -2871,129 +2871,129 @@ let etaData = {
         "A": [
           {
             "name": "Gley Stabilizer",
-            "image": "Icon_Research_Character_Stablizer_007_A01"
+            "image": "icon_research_character_stablizer_007_a01"
           },
           {
             "name": "Ajax Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_002_A01"
+            "image": "icon_research_character_stablizerplan_002_a01"
           },
           {
             "name": "Last Dagger Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_HG_1005_A001"
+            "image": "icon_research_weapon_tube_hg_1005_a001"
           },
           {
             "name": "Restored Relic Blueprint",
-            "image": "Icon_Research_WeaponPlan_LNC_1006_A001"
+            "image": "icon_research_weaponplan_lnc_1006_a001"
           },
           {
             "name": "Afterglow Sword Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Metal Marble White",
-            "image": "Icon_PaintCharacter_LightCararra_Metal_Matte"
+            "image": "icon_paintcharacter_lightcararra_metal_matte"
           },
           {
             "name": "Bright Gray",
-            "image": "Icon_PaintCharacter_QuillGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_quillgray_nonmetal_matte"
           },
           {
             "name": "Bright Matte Gold",
-            "image": "Icon_PaintCharacter_TexasRose_Metal_Matte"
+            "image": "icon_paintcharacter_texasrose_metal_matte"
           },
           {
             "name": "Natural Yellow",
-            "image": "Icon_PaintHair_Yellow2"
+            "image": "icon_painthair_yellow2"
           }
         ],
         "B": [
           {
             "name": "Yujin Code",
-            "image": "Icon_Research_CharacterPlan_014_A01"
+            "image": "icon_research_characterplan_014_a01"
           },
           {
             "name": "Hailey Data Chip",
-            "image": "Icon_Research_CharacterPlan_016_A01"
+            "image": "icon_research_characterplan_016_a01"
           },
           {
             "name": "The Final Masterpiece Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_HG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_hg_1006_a001"
           },
           {
             "name": "Blue Beetle Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1006_a001"
           },
           {
             "name": "Perforator Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1008_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1008_a001"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Clear Bright Gray",
-            "image": "Icon_PaintCharacter_BrightGray_Clearcoat"
+            "image": "icon_paintcharacter_brightgray_clearcoat"
           },
           {
             "name": "Matte Sand",
-            "image": "Icon_PaintCharacter_Tan_NonMetal_Matte"
+            "image": "icon_paintcharacter_tan_nonmetal_matte"
           },
           {
             "name": "Shiny Metal Gold",
-            "image": "Icon_PaintCharacter_ShinyGold_Shiny"
+            "image": "icon_paintcharacter_shinygold_shiny"
           },
           {
             "name": "Basic Black",
-            "image": "Icon_PaintHair_BasicBlack"
+            "image": "icon_painthair_basicblack"
           }
         ],
         "C": [
@@ -3016,7 +3016,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3024,129 +3024,129 @@ let etaData = {
         "A": [
           {
             "name": "Viessa Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_003_A01"
+            "image": "icon_research_character_cellplan_003_a01"
           },
           {
             "name": "Jayber Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_005_A01"
+            "image": "icon_research_character_stablizerplan_005_a01"
           },
           {
             "name": "Albion Cavalry Gun Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1006_a001"
           },
           {
             "name": "Wave of Light Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SCR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_scr_1005_a001"
           },
           {
             "name": "Clairvoyance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_br_1006_a001"
           },
           {
             "name": "Energy Activator Blueprint",
-            "image": "Icon_Enchant_Rune_PowerActivaterPlan"
+            "image": "icon_enchant_rune_poweractivaterplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Plastic Matte Pistachio",
-            "image": "Icon_PaintCharacter_Rainee_Plastic_Matte"
+            "image": "icon_paintcharacter_rainee_plastic_matte"
           },
           {
             "name": "Shiny Metal Red",
-            "image": "Icon_PaintCharacter_MilanoRed_Shiny"
+            "image": "icon_paintcharacter_milanored_shiny"
           },
           {
             "name": "Plastic Cobalt Blue",
-            "image": "Icon_PaintCharacter_CobaltBlue_ToyPlastic"
+            "image": "icon_paintcharacter_cobaltblue_toyplastic"
           }
         ],
         "B": [
           {
             "name": "Kyle Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_011_A01"
+            "image": "icon_research_character_cellplan_011_a01"
           },
           {
             "name": "Piercing Light Blueprint",
-            "image": "Icon_Research_Weaponplan_SR_1006_A001"
+            "image": "icon_research_weaponplan_sr_1006_a001"
           },
           {
             "name": "Executor Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_SG_1006_A001"
+            "image": "icon_research_weapon_syncytium_sg_1006_a001"
           },
           {
             "name": "Peace Maker Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1010_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1010_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Descendant Slots +{0}",
-            "image": "Icon_Expansion_CharSlot"
+            "image": "icon_expansion_charslot"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Matte Stone Gray",
-            "image": "Icon_PaintCharacter_Stonewall_NonMetal_Matte"
+            "image": "icon_paintcharacter_stonewall_nonmetal_matte"
           },
           {
             "name": "Sun-Kissed Beige",
-            "image": "Icon_PaintCharacter_SkinColor3_Plastic_Matte"
+            "image": "icon_paintcharacter_skincolor3_plastic_matte"
           },
           {
             "name": "Matte Pink",
-            "image": "Icon_PaintCharacter_Mojo_NonMetal_Matte"
+            "image": "icon_paintcharacter_mojo_nonmetal_matte"
           },
           {
             "name": "Basic White",
-            "image": "Icon_PaintHair_BasicWhite"
+            "image": "icon_painthair_basicwhite"
           }
         ],
         "C": [
@@ -3169,7 +3169,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3177,129 +3177,129 @@ let etaData = {
         "A": [
           {
             "name": "Lepic Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_001_A01"
+            "image": "icon_research_character_catalystplan_001_a01"
           },
           {
             "name": "Luna Code",
-            "image": "Icon_Research_CharacterPlan_015_A01"
+            "image": "icon_research_characterplan_015_a01"
           },
           {
             "name": "Nazeistra's Devotion Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1007_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1007_a001"
           },
           {
             "name": "Greg's Reversed Fate Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_TR_1006_A001"
+            "image": "icon_research_weapon_tube_tr_1006_a001"
           },
           {
             "name": "Python Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_smg_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Alternative White",
-            "image": "Icon_PaintCharacter_SpringWood_NonMetal_Matte"
+            "image": "icon_paintcharacter_springwood_nonmetal_matte"
           },
           {
             "name": "Real Matte Black",
-            "image": "Icon_PaintCharacter_RealBlack_StrongMatte"
+            "image": "icon_paintcharacter_realblack_strongmatte"
           },
           {
             "name": "Matte Yellow",
-            "image": "Icon_PaintCharacter_SharonYellow_NonMetal_Matte"
+            "image": "icon_paintcharacter_sharonyellow_nonmetal_matte"
           }
         ],
         "B": [
           {
             "name": "Gley Code",
-            "image": "Icon_Research_CharacterPlan_007_A01"
+            "image": "icon_research_characterplan_007_a01"
           },
           {
             "name": "Hailey Enhanced Cell DNA",
-            "image": "Icon_Research_Character_CellPlan_016_A01"
+            "image": "icon_research_character_cellplan_016_a01"
           },
           {
             "name": "Fallen Hope Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_AR_1005_A001"
+            "image": "icon_research_weapon_syncytium_ar_1005_a001"
           },
           {
             "name": "Wave of Light Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SCR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_scr_1005_a001"
           },
           {
             "name": "Enduring Legacy Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_MG_1005_A001"
+            "image": "icon_research_weapon_fiberplan_mg_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Bright Matte Sky",
-            "image": "Icon_PaintCharacter_Danube_NonMetal_Matte"
+            "image": "icon_paintcharacter_danube_nonmetal_matte"
           },
           {
             "name": "Matte Violet",
-            "image": "Icon_PaintCharacter_VividViolet_NonMetal_Matte"
+            "image": "icon_paintcharacter_vividviolet_nonmetal_matte"
           },
           {
             "name": "Bright Matte Gray",
-            "image": "Icon_PaintCharacter_AthensGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_athensgray_nonmetal_matte"
           },
           {
             "name": "Bright Gold",
-            "image": "Icon_PaintHair_Yellow4"
+            "image": "icon_painthair_yellow4"
           }
         ],
         "C": [
@@ -3322,7 +3322,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3330,129 +3330,129 @@ let etaData = {
         "A": [
           {
             "name": "Yujin Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_014_A01"
+            "image": "icon_research_character_cellplan_014_a01"
           },
           {
             "name": "Gley Spiral Catalyst",
-            "image": "Icon_Research_Character_Catalyst_007_A01"
+            "image": "icon_research_character_catalyst_007_a01"
           },
           {
             "name": "Hailey Data Chip",
-            "image": "Icon_Research_CharacterPlan_016_A01"
+            "image": "icon_research_characterplan_016_a01"
           },
           {
             "name": "Last Dagger Polymer Syncytium",
-            "image": "Icon_Research_Weapon_Syncytium_HG_1005_A001"
+            "image": "icon_research_weapon_syncytium_hg_1005_a001"
           },
           {
             "name": "Smithereens Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_SG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_sg_1005_a001"
           },
           {
             "name": "Frost Watcher Blueprint",
-            "image": "Icon_Research_WeaponPlan_SCR_1009_A001"
+            "image": "icon_research_weaponplan_scr_1009_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Leather Matte Brown",
-            "image": "Icon_PaintCharacter_CongoBrown_Leather_Matte"
+            "image": "icon_paintcharacter_congobrown_leather_matte"
           },
           {
             "name": "Plastic Matte Black",
-            "image": "Icon_PaintCharacter_NormalBlack_Plastic_Matte"
+            "image": "icon_paintcharacter_normalblack_plastic_matte"
           },
           {
             "name": "Real Matte Deep Red",
-            "image": "Icon_PaintCharacter_DeepRed_NonMetal_Matte"
+            "image": "icon_paintcharacter_deepred_nonmetal_matte"
           },
           {
             "name": "Platinum Gold",
-            "image": "Icon_PaintHair_Yellow5"
+            "image": "icon_painthair_yellow5"
           }
         ],
         "B": [
           {
             "name": "Ajax Code",
-            "image": "Icon_Research_CharacterPlan_002_A01"
+            "image": "icon_research_characterplan_002_a01"
           },
           {
             "name": "The Final Masterpiece Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_hg_1006_a001"
           },
           {
             "name": "King's Guard Lance Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_BR_1005_A001"
+            "image": "icon_research_weapon_tubeplan_br_1005_a001"
           },
           {
             "name": "Peace Maker Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HC_1010_A001"
+            "image": "icon_research_weapon_fiberplan_hc_1010_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Echo Swamp Brown",
-            "image": "Icon_PaintCharacter_Armadillo_StrongMatte"
+            "image": "icon_paintcharacter_armadillo_strongmatte"
           },
           {
             "name": "Matte Gray",
-            "image": "Icon_PaintCharacter_FrenchGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_frenchgray_nonmetal_matte"
           },
           {
             "name": "Shiny Metal Ivory",
-            "image": "Icon_PaintCharacter_LightIvory_Shiny"
+            "image": "icon_paintcharacter_lightivory_shiny"
           },
           {
             "name": "Platinum Silver",
-            "image": "Icon_PaintHair_Yellow6"
+            "image": "icon_painthair_yellow6"
           }
         ],
         "C": [
@@ -3475,7 +3475,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3483,129 +3483,129 @@ let etaData = {
         "A": [
           {
             "name": "Valby Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_010_A01"
+            "image": "icon_research_character_cellplan_010_a01"
           },
           {
             "name": "Thunder Cage Blueprint",
-            "image": "Icon_Research_WeaponPlan_SMG_1005_A001"
+            "image": "icon_research_weaponplan_smg_1005_a001"
           },
           {
             "name": "Restored Relic Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_LNC_1006_A001"
+            "image": "icon_research_weapon_tubeplan_lnc_1006_a001"
           },
           {
             "name": "Blue Beetle Blueprint",
-            "image": "Icon_Research_WeaponPlan_SCR_1006_A001"
+            "image": "icon_research_weaponplan_scr_1006_a001"
           },
           {
             "name": "Executor Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_SG_1006_A001"
+            "image": "icon_research_weapon_tube_sg_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Bright Sky",
-            "image": "Icon_PaintCharacter_Spray_NonMetal_Matte"
+            "image": "icon_paintcharacter_spray_nonmetal_matte"
           },
           {
             "name": "Matte Coral Blue",
-            "image": "Icon_PaintCharacter_BondiBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_bondiblue_nonmetal_matte"
           },
           {
             "name": "Matte Light Green",
-            "image": "Icon_PaintCharacter_LimaGreen_NonMetal_Matte"
+            "image": "icon_paintcharacter_limagreen_nonmetal_matte"
           }
         ],
         "B": [
           {
             "name": "Kyle Code",
-            "image": "Icon_Research_CharacterPlan_011_A01"
+            "image": "icon_research_characterplan_011_a01"
           },
           {
             "name": "Jayber Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_005_A01"
+            "image": "icon_research_character_cellplan_005_a01"
           },
           {
             "name": "Albion Cavalry Gun Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_MG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_mg_1006_a001"
           },
           {
             "name": "Perforator Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1008_A001"
+            "image": "icon_research_weaponplan_hc_1008_a001"
           },
           {
             "name": "Secret Garden Blueprint",
-            "image": "Icon_Research_Weaponplan_TR_1005_A001"
+            "image": "icon_research_weaponplan_tr_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Matte Gold",
-            "image": "Icon_PaintCharacter_Pizazz_Metal_Matte"
+            "image": "icon_paintcharacter_pizazz_metal_matte"
           },
           {
             "name": "Leather Matte Orange",
-            "image": "Icon_PaintCharacter_Wenge_Leather_Matte"
+            "image": "icon_paintcharacter_wenge_leather_matte"
           },
           {
             "name": "Matte Jewelry Blue",
-            "image": "Icon_PaintCharacter_Turquoise_NonMetal_Matte"
+            "image": "icon_paintcharacter_turquoise_nonmetal_matte"
           },
           {
             "name": "Dark Brown",
-            "image": "Icon_PaintHair_Red1"
+            "image": "icon_painthair_red1"
           }
         ],
         "C": [
@@ -3628,7 +3628,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3636,129 +3636,129 @@ let etaData = {
         "A": [
           {
             "name": "Esiemo Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_012_A01"
+            "image": "icon_research_character_catalystplan_012_a01"
           },
           {
             "name": "Luna Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_015_A01"
+            "image": "icon_research_character_cellplan_015_a01"
           },
           {
             "name": "Viessa Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_003_A01"
+            "image": "icon_research_character_catalystplan_003_a01"
           },
           {
             "name": "Fallen Hope Blueprint",
-            "image": "Icon_Research_Weaponplan_AR_1005_A001"
+            "image": "icon_research_weaponplan_ar_1005_a001"
           },
           {
             "name": "Divine Punishment Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_AR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_ar_1006_a001"
           },
           {
             "name": "Peace Maker Blueprint",
-            "image": "Icon_Research_Weaponplan_HC_1010_A001"
+            "image": "icon_research_weaponplan_hc_1010_a001"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Leather Matte Yellow",
-            "image": "Icon_PaintCharacter_Sunglow_Leather_Matte"
+            "image": "icon_paintcharacter_sunglow_leather_matte"
           },
           {
             "name": "Metal Matte White",
-            "image": "Icon_PaintCharacter_Delta_NonMetal_Matte"
+            "image": "icon_paintcharacter_delta_nonmetal_matte"
           },
           {
             "name": "Shiny Metal Gold",
-            "image": "Icon_PaintCharacter_ShinyGold_Shiny"
+            "image": "icon_paintcharacter_shinygold_shiny"
           }
         ],
         "B": [
           {
             "name": "Enzo Stabilizer",
-            "image": "Icon_Research_Character_Stablizer_013_A01"
+            "image": "icon_research_character_stablizer_013_a01"
           },
           {
             "name": "Nazeistra's Devotion Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1007_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1007_a001"
           },
           {
             "name": "Executor Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_SG_1006_A001"
+            "image": "icon_research_weapon_fiber_sg_1006_a001"
           },
           {
             "name": "Clairvoyance Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_BR_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_br_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Metal Matte Red",
-            "image": "Icon_PaintCharacter_TallPoppy_Metal_Matte"
+            "image": "icon_paintcharacter_tallpoppy_metal_matte"
           },
           {
             "name": "Clear Pink",
-            "image": "Icon_PaintCharacter_HotPink_Clearcoat"
+            "image": "icon_paintcharacter_hotpink_clearcoat"
           },
           {
             "name": "Matte Silk Gray",
-            "image": "Icon_PaintCharacter_Silk_NonMetal_Matte"
+            "image": "icon_paintcharacter_silk_nonmetal_matte"
           },
           {
             "name": "Orange Sunset",
-            "image": "Icon_PaintHair_Red4"
+            "image": "icon_painthair_red4"
           }
         ],
         "C": [
@@ -3781,7 +3781,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3789,129 +3789,129 @@ let etaData = {
         "A": [
           {
             "name": "Valby Code",
-            "image": "Icon_Research_CharacterPlan_010_A01"
+            "image": "icon_research_characterplan_010_a01"
           },
           {
             "name": "Ajax Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_002_A01"
+            "image": "icon_research_character_cellplan_002_a01"
           },
           {
             "name": "Thunder Cage Nano Tube",
-            "image": "Icon_Research_Weapon_Tube_SMG_1005_A001"
+            "image": "icon_research_weapon_tube_smg_1005_a001"
           },
           {
             "name": "The Final Masterpiece Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_HG_1006_A001"
+            "image": "icon_research_weapon_fiberplan_hg_1006_a001"
           },
           {
             "name": "Blue Beetle Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SCR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_scr_1006_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Matte Cement Gray",
-            "image": "Icon_PaintCharacter_Tapa_NonMetal_Matte"
+            "image": "icon_paintcharacter_tapa_nonmetal_matte"
           },
           {
             "name": "Shiny Light Yellow",
-            "image": "Icon_PaintCharacter_ShinyLiteYellow_Metal_Matte"
+            "image": "icon_paintcharacter_shinyliteyellow_metal_matte"
           },
           {
             "name": "Matte Red",
-            "image": "Icon_PaintCharacter_RoofTerracotta_NonMetal_Matte"
+            "image": "icon_paintcharacter_roofterracotta_nonmetal_matte"
           },
           {
             "name": "Orange Sunrise",
-            "image": "Icon_PaintHair_Red5"
+            "image": "icon_painthair_red5"
           }
         ],
         "B": [
           {
             "name": "Kyle Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_011_A01"
+            "image": "icon_research_character_catalystplan_011_a01"
           },
           {
             "name": "Hailey Spiral Catalyst Link",
-            "image": "Icon_Research_Character_CatalystPlan_016_A01"
+            "image": "icon_research_character_catalystplan_016_a01"
           },
           {
             "name": "Smithereens Blueprint",
-            "image": "Icon_Research_WeaponPlan_SG_1005_A001"
+            "image": "icon_research_weaponplan_sg_1005_a001"
           },
           {
             "name": "Divine Punishment Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_AR_1006_A001"
+            "image": "icon_research_weapon_tubeplan_ar_1006_a001"
           },
           {
             "name": "Piercing Light Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1006_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1006_a001"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Shiny Metal Silver",
-            "image": "Icon_PaintCharacter_ShinySilver_Shiny"
+            "image": "icon_paintcharacter_shinysilver_shiny"
           },
           {
             "name": "Matte Pale Gold",
-            "image": "Icon_PaintCharacter_Sisal_Metal_Matte"
+            "image": "icon_paintcharacter_sisal_metal_matte"
           },
           {
             "name": "Shiny Light Pink",
-            "image": "Icon_PaintCharacter_ShinyLitePink_Metal_Matte"
+            "image": "icon_paintcharacter_shinylitepink_metal_matte"
           },
           {
             "name": "Natural Brown",
-            "image": "Icon_PaintHair_Red2"
+            "image": "icon_painthair_red2"
           }
         ],
         "C": [
@@ -3934,7 +3934,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -3942,129 +3942,129 @@ let etaData = {
         "A": [
           {
             "name": "Jayber Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_005_A01"
+            "image": "icon_research_character_catalystplan_005_a01"
           },
           {
             "name": "Lepic Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_001_A01"
+            "image": "icon_research_character_stablizerplan_001_a01"
           },
           {
             "name": "Enzo Code",
-            "image": "Icon_Research_CharacterPlan_013_A01"
+            "image": "icon_research_characterplan_013_a01"
           },
           {
             "name": "Albion Cavalry Gun Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1006_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1006_a001"
           },
           {
             "name": "Python Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SMG_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_smg_1006_a001"
           },
           {
             "name": "Perforator Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_HC_1008_A001"
+            "image": "icon_research_weapon_tubeplan_hc_1008_a001"
           },
           {
             "name": "Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_F04"
+            "image": "icon_item_void_key_f04"
           },
           {
             "name": "Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_F08"
+            "image": "icon_item_void_key_f08"
           },
           {
             "name": "Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_F07"
+            "image": "icon_item_void_key_f07"
           },
           {
             "name": "Advanced Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_Super_F03"
+            "image": "icon_item_void_key_super_f03"
           },
           {
             "name": "Advanced Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_Super_F05"
+            "image": "icon_item_void_key_super_f05"
           },
           {
             "name": "Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_01_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_01_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Matte Red",
-            "image": "Icon_PaintCharacter_RoofTerracotta_NonMetal_Matte"
+            "image": "icon_paintcharacter_roofterracotta_nonmetal_matte"
           },
           {
             "name": "Enamel Deep Green",
-            "image": "Icon_PaintCharacter_DeepGreen_Clearcoat"
+            "image": "icon_paintcharacter_deepgreen_clearcoat"
           },
           {
             "name": "Metal Celeste Gray",
-            "image": "Icon_PaintCharacter_Celeste_Metal_Matte"
+            "image": "icon_paintcharacter_celeste_metal_matte"
           }
         ],
         "B": [
           {
             "name": "Yujin Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_014_A01"
+            "image": "icon_research_character_stablizerplan_014_a01"
           },
           {
             "name": "Last Dagger Blueprint",
-            "image": "Icon_Research_WeaponPlan_HG_1005_A001"
+            "image": "icon_research_weaponplan_hg_1005_a001"
           },
           {
             "name": "Secret Garden Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_TR_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_tr_1005_a001"
           },
           {
             "name": "Afterglow Sword Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_SR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_sr_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_F06"
+            "image": "icon_item_void_key_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_Super_F02"
+            "image": "icon_item_void_key_super_f02"
           },
           {
             "name": "Advanced Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_Super_F01"
+            "image": "icon_item_void_key_super_f01"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Alternative White",
-            "image": "Icon_PaintCharacter_SpringWood_NonMetal_Matte"
+            "image": "icon_paintcharacter_springwood_nonmetal_matte"
           },
           {
             "name": "Shiny Light Blue",
-            "image": "Icon_PaintCharacter_ShinyLiteBlue_Metal_Matte"
+            "image": "icon_paintcharacter_shinyliteblue_metal_matte"
           },
           {
             "name": "Clear Pink",
-            "image": "Icon_PaintCharacter_HotPink_Clearcoat"
+            "image": "icon_paintcharacter_hotpink_clearcoat"
           },
           {
             "name": "Wine Pink",
-            "image": "Icon_PaintHair_Pink4"
+            "image": "icon_painthair_pink4"
           }
         ],
         "C": [
@@ -4087,7 +4087,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       },
@@ -4095,129 +4095,129 @@ let etaData = {
         "A": [
           {
             "name": "Viessa Stabilizer Blueprint",
-            "image": "Icon_Research_Character_StablizerPlan_003_A01"
+            "image": "icon_research_character_stablizerplan_003_a01"
           },
           {
             "name": "Esiemo Enhanced Cells Blueprint",
-            "image": "Icon_Research_Character_CellPlan_012_A01"
+            "image": "icon_research_character_cellplan_012_a01"
           },
           {
             "name": "Fallen Hope Synthetic Fiber",
-            "image": "Icon_Research_Weapon_Fiber_AR_1005_A001"
+            "image": "icon_research_weapon_fiber_ar_1005_a001"
           },
           {
             "name": "Smithereens Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_SG_1005_A001"
+            "image": "icon_research_weapon_syncytiumplan_sg_1005_a001"
           },
           {
             "name": "King's Guard Lance Synthetic Fiber Blueprint",
-            "image": "Icon_Research_Weapon_FiberPlan_BR_1005_A001"
+            "image": "icon_research_weapon_fiberplan_br_1005_a001"
           },
           {
             "name": "Crystallization Catalyst Blueprint",
-            "image": "Icon_Enchant_Rune_CrystallizingFocusPlan"
+            "image": "icon_enchant_rune_crystallizingfocusplan"
           },
           {
             "name": "Shape Stabilizer Form 1",
-            "image": "Icon_Item_Void_Key_F02"
+            "image": "icon_item_void_key_f02"
           },
           {
             "name": "Shape Stabilizer Form 5",
-            "image": "Icon_Item_Void_Key_F03"
+            "image": "icon_item_void_key_f03"
           },
           {
             "name": "Shape Stabilizer Form 8",
-            "image": "Icon_Item_Void_Key_F05"
+            "image": "icon_item_void_key_f05"
           },
           {
             "name": "Advanced Shape Stabilizer Form 2",
-            "image": "Icon_Item_Void_Key_Super_F06"
+            "image": "icon_item_void_key_super_f06"
           },
           {
             "name": "Advanced Shape Stabilizer Form 4",
-            "image": "Icon_Item_Void_Key_Super_F04"
+            "image": "icon_item_void_key_super_f04"
           },
           {
             "name": "Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_02_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_02_difficult_01"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Candlelight Yellow",
-            "image": "Icon_PaintCharacter_Candlelight_Plastic_Matte"
+            "image": "icon_paintcharacter_candlelight_plastic_matte"
           },
           {
             "name": "Matte Indigo Blue",
-            "image": "Icon_PaintCharacter_MoodyBlue_NonMetal_Matte"
+            "image": "icon_paintcharacter_moodyblue_nonmetal_matte"
           },
           {
             "name": "Bright Matte Gold",
-            "image": "Icon_PaintCharacter_TexasRose_Metal_Matte"
+            "image": "icon_paintcharacter_texasrose_metal_matte"
           }
         ],
         "B": [
           {
             "name": "Luna Spiral Catalyst Blueprint",
-            "image": "Icon_Research_Character_CatalystPlan_015_A01"
+            "image": "icon_research_character_catalystplan_015_a01"
           },
           {
             "name": "Hailey Stabilizer Component",
-            "image": "Icon_Research_Character_StablizerPlan_016_A01"
+            "image": "icon_research_character_stablizerplan_016_a01"
           },
           {
             "name": "Restored Relic Polymer Syncytium Blueprint",
-            "image": "Icon_Research_Weapon_SyncytiumPlan_LNC_1006_A001"
+            "image": "icon_research_weapon_syncytiumplan_lnc_1006_a001"
           },
           {
             "name": "Greg's Reversed Fate Blueprint",
-            "image": "Icon_Research_WeaponPlan_TR_1006_A001"
+            "image": "icon_research_weaponplan_tr_1006_a001"
           },
           {
             "name": "Enduring Legacy Nano Tube Blueprint",
-            "image": "Icon_Research_Weapon_TubePlan_MG_1005_A001"
+            "image": "icon_research_weapon_tubeplan_mg_1005_a001"
           },
           {
             "name": "Shape Stabilizer Form 3",
-            "image": "Icon_Item_Void_Key_F01"
+            "image": "icon_item_void_key_f01"
           },
           {
             "name": "Advanced Shape Stabilizer Form 6",
-            "image": "Icon_Item_Void_Key_Super_F08"
+            "image": "icon_item_void_key_super_f08"
           },
           {
             "name": "Advanced Shape Stabilizer Form 7",
-            "image": "Icon_Item_Void_Key_Super_F07"
+            "image": "icon_item_void_key_super_f07"
           },
           {
             "name": "Ultra-Precision Code Breaker",
-            "image": "Icon_Fc_Item_CodeAnalyzer_03_Difficult_01"
+            "image": "icon_fc_item_codeanalyzer_03_difficult_01"
           },
           {
             "name": "Equipment Slots +{0}",
-            "image": "Icon_Expansion_EquipmentInvenSlot"
+            "image": "icon_expansion_equipmentinvenslot"
           },
           {
             "name": "Storage Slots +{0}",
-            "image": "Icon_Expansion_WarehouseSlot"
+            "image": "icon_expansion_warehouseslot"
           },
           {
             "name": "Matte Dark Gray",
-            "image": "Icon_PaintCharacter_ShuttleGray_NonMetal_Matte"
+            "image": "icon_paintcharacter_shuttlegray_nonmetal_matte"
           },
           {
             "name": "Clear White",
-            "image": "Icon_PaintCharacter_EarlyDawn_Clearcoat"
+            "image": "icon_paintcharacter_earlydawn_clearcoat"
           },
           {
             "name": "Metal Matte Gray",
-            "image": "Icon_PaintCharacter_NormalGray_Metal_Matte"
+            "image": "icon_paintcharacter_normalgray_metal_matte"
           },
           {
             "name": "Ghost Brown",
-            "image": "Icon_PaintHair_Red6"
+            "image": "icon_painthair_red6"
           }
         ],
         "C": [
@@ -4240,7 +4240,7 @@ let etaData = {
           "Bundle_Rotation_17",
           {
             "name": "Colotoys \"Infernal Walker\"",
-            "image": "Icon_Back_037A"
+            "image": "icon_back_037a"
           }
         ]
       }
