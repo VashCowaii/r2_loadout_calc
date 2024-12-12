@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/TFD/tfdEta.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>ETA Shop Schedule</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="TFD Home">
+    <meta
+      property="og:description"
+      content="A breakdown on the ETA shop offerings for the whole season."
+    />
+    <meta
+      property="description"
+      content="A breakdown on the ETA shop offerings for the whole season."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="TFD Home" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFD Home" />
+    <meta
+      name="twitter:description"
+      content="A breakdown on the ETA shop offerings for the whole season."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+  <div id="tooltip" class="tooltip"></div>
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="main">
+        <div class="theGreatBox">
+            <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+    
+            <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+    
+            <div class="mainGridRow" style="display: flex;width: 100%;">
+    
+                <!-- <div class="displayBuffer"></div> -->
+    
+                <div class="mainDisplayBox">
+                  <div class="etaShopHeader">ETA Shop Offerings</div>
+
+                  <!-- <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div> -->
+                  
+                  <div class="shopOfferingsBodyBox">
+                    <div class="tooltipHeader">Week Selection</div>
+                    <div class="bulletSelectorIDRowBox">
+                      <div class="toggleArrowBox" onclick="shop.updateShopDate(-1)">&#9664;</div>
+                      <div class="traitLevelDisplay">
+                          <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="1" step="1" value="1" onchange="shop.updateShopDate()">
+                      </div> 
+                      <div class="toggleArrowBox" onclick="shop.updateShopDate(1)">&#9654;</div>
+                    </div>
+                    <div class="tooltipHeader" id="dateDisplayHeader">asdf</div>
+                    <br>
+                    <div class="offeringsMainRow">
+                      <div class="shopOptionsBox">
+                        <div class="tooltipHeaderShop">Infiltration Exchange</div>
+                        <div class="iconDisplayBoxHolder" id="shopA">asdf</div>
+                      </div>
+                      <div class="shopOptionsBox">
+                        <div class="tooltipHeaderShop">Supplies Exchange</div>
+                        <div class="iconDisplayBoxHolder" id="shopB">asdf</div>
+                      </div>
+                      <!-- <div class="shopOptionsBox">
+                        <div class="tooltipHeaderShop">Battle Exchange</div>
+                        <div class="iconDisplayBoxHolder" id="shopC">asdf</div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                
+    
+            </div>
+    
+            <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+    
+        </div>
+    
+        <footer class="generalFooter" id="footerPlaceholder"></footer>
+    </div>
+
+
+<!-- script/data calls -->
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+<script src="/MainJS/buildTime.js"></script>
+
+<script src="/TFD/Calculator/tooltipStorage.js"></script>
+<script src="/TFD/Calculator/tooltipMath.js"></script>
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+<!-- <script src="/TFD/VashBuilds/videosDB.js"></script> -->
+<script src="/TFD/ETAShop/parsedShopData.js"></script>
+<script src="/TFD/ETAShop/populateShopData.js"></script>
+
+
+</body>
+
+</html>

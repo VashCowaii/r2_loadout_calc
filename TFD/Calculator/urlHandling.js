@@ -150,7 +150,8 @@ let manipulateURL = {
     const weaponSubKeys2 = Object.keys(weaponSubstatList);
     let concatenatedWeapon2 = ``;
 
-    const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+    // const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+    const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
     const weaponModsKeys = Object.keys(weaponModsCategory);
 
     for (let i=1;i<=10;i++) {
@@ -541,7 +542,7 @@ let manipulateURL = {
           const weaponSubKeys2 = Object.keys(weaponSubstatList);
           let concatenatedWeapon2 = ``;
 
-          const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
+          const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
           const weaponModsKeys = Object.keys(weaponModsCategory);
 
           for (let i=1;i<=10;i++) {

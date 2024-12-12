@@ -68,12 +68,15 @@ const greatTableKnowerOfAll = {
     //GUNS
     "ColossusATK": 0,
     "FirearmATK%": 0,
+    "FirearmATK%OnHit": 0,
     "BaseWeakPointBonus": 0,
     "WeakPointDamage%": 0,
 
+    "BulletCostWeapon": 1,
     "StatusTriggerRate": 0,
 
     "FireRate": 0,
+    "FireRateMulti": 0,
     "Accuracy": 1,
     "Recoil": 1,
     "ReloadSpeed": 0,

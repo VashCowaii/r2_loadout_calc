@@ -161,7 +161,7 @@ const basicsUpdates = {
             {"statName": "baseWPMulti","statCoverName": "Base Weak Point","tooltip":"This is the base weak point multiplier of your weapon before flat or % bonuses factor.","relevantTags": [],"isNotAPercent": true,"roundAnyways": true},
             {"statName": "weakpointBonus","statCoverName": "+Weak Point %","tooltip":"This is a % multiplier against the sum total base weak point multiplier of your weapon.","relevantTags": ["WeakPointDamage%"],"isNotAPercent": false,"condition": (returnObject.baseWPMulti != 0)},
             {"statName": "bossPartWPBonus","statCoverName": "+End Part Bonus","tooltip":"This is an enemy and part specific bonus applied after all bonuses, as a flat addition to your end-total weak point multiplier. For example, shooting the knee of a colossus might give a different bonus than shooting a shoulder.<br><br><span>You need to adjust which enemy and part you have selected under the ENEMY tab for accurate numbers here</span><br><br>Watch the weapon damage calculation video for a better breakdown on this info.","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.baseWPMulti != 0)},
-            {"statName": "totalWPBonus","statCoverName": "Total Weak Point Multi","tooltip":"The sum total weak point multiplier for your weapon.<br><br><span>TotalWPMulti = ((weaponBase + flatBonuses) * (1 + %WeakPointBonuses)) + EndPartBonus","relevantTags": ["WeakPointDamage%"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.baseWPMulti != 0)},
+            {"statName": "totalWPBonus","statCoverName": "Total Weak Point Multi","tooltip":"The sum total weak point multiplier for your weapon.<br><br><span>TotalWPMulti = ((weaponBase + flatBonuses) * (1 + %WeakPointBonuses)) + EndPartBonus</span>","relevantTags": ["WeakPointDamage%"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.baseWPMulti != 0)},
         ]
         wpGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
         readSelection("basicsInnerBox").innerHTML += wpGunHTMLRowsHTML ? wpGunHTML + wpGunHTMLRowsHTML + "<br>" : "";
@@ -314,6 +314,9 @@ substatColorMods = [
 	"overclock","weaken regeneration","grenade throw","overkill","power unit change","burn","load mastery","change mastery",
 	"traction grenade","necrosis","toxic sense","purification","corrosion","room 0 trauma","toxic puddle","toxic reaction","panic",
 	"plague bodyarmor","despair","toxic swamp","venom-injected","toxic footprints","putric","nightmare",
+
+    //blair
+    "flame zones","flame zone","taste of aggression","giant fireball","small fireballs","power of fire",
 ]
 // List all exclusion cases here
 // \s = any whitespace character
