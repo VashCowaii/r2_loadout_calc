@@ -110,7 +110,6 @@ let shop = {
         let weeksKeys = Object.keys(scheduleObject);
         let weekCount = weeksKeys.length;
         readSelection("bulletSelectorInputWeapons").max = weekCount
-        console.log(weekCount)
 
         if (adjustment) {shop.selectedWeek = Math.max(1,Math.min(weekCount,shop.selectedWeek + adjustment));}
         else if (override) {shop.selectedWeek = override}
@@ -142,7 +141,6 @@ let shop = {
         }
 
         for (let entry of shopArray) {
-            console.log(current)
             let currentArray = currentObject[entry];
             let boxPath = readSelection(`shop${entry}`);
             if (currentArray === null) {
