@@ -1,104 +1,241 @@
 //Shorthand for selecting an element by ID. Follow up with .value or .innerHTML, etc.
 function readSelection(elemID) {return document.getElementById(elemID);}
 
-    // const readSelection = document.getElementById;
+readSelection("bossDataBox").innerHTML = "";
+const typeImages = {
+    "Burst": "/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png",
+    "Pierce": "/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png",
+    "Crush": "/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png",
+}
+const difficulty = {
+    "Normal": "(N)",
+    "Hard": "(H)",
+    "VeryHard": "(A)",
+}
+let bossStatKeyLibaryCategory = {
+    "": "",
+    "Movespeed": "Movement",
+    "Aim Movespeed": "Movement",
+    "Berserk Movespeed": "Movement",
+    "Movement Destruction": "Movement",
+    "Crit Chance": "Damage",
+    "Crit Damage": "Damage",
+    "Firearm Crit Resist": "Resist",
+    "Skill Crit Resist": "Resist",
+    "Max Common Gauge": "Frenzy",
+    "Penetration Resist": "Resist",
+    "Max Rage Rate": "Rage",
+    "Penetration": "Damage",
+    "HP": "HP",
+    "Shield": "Shield",
+    "DEF": "Resist",
+    "Non-Attribute": "Resist",
+    "Fire": "Resist",
+    "Chill": "Resist",
+    "Electric": "Resist",
+    "Toxic": "Resist",
+    "ATK": "Damage",
+    "Fire ATK": "Damage",
+    "Chill ATK": "Damage",
+    "Electric ATK": "Damage",
+    "Toxic ATK": "Damage",
+    "HP Recovery Interval": "HP",
+    "HP Recovery": "HP",
+    "HP Recovery In Combat": "HP",
+    "Shield Recovery Interval": "Shield",
+    "Shield Recovery": "Shield",
+    "Shield Recovery In Combat": "Shield",
+    "Max Stagger HP and Rate": "Stagger",
+    "Max Stagger HP Rate": "Stagger",
+    "Max Stagger Rate": "Stagger",
+    "Stagger Decrease Rate": "Stagger",
+    "Stagger Decrease Delay": "Stagger",
+    "Time Limit": "",
+    "Max Frenzy Rate": "Frenzy",
+    "Frenzy Damage Rate": "Damage",
+    "Frenzy Decrease Delay": "Frenzy",
+    "Frenzy Decrease Rate": "Frenzy",
+    "Frenzy Duration": "Frenzy",
+    "Rage Damage Rate": "Damage",
+    "Rage Decrease Rage": "Rage",
+    "Max Rage Gauge": "Rage",
+    "Colossus Level": "",
+}
+
+const bossKeys = Object.keys(bossData);
+const listArray = [];
+for (let boss in bossData) {
+    let current = bossData[boss];
+    let displayName = current.realName + " " + difficulty[current.difficulty];
+    listArray.push(displayName)
+    current.displayName = displayName;
+}
+
+let dropdown = readSelection("bossList")
+
+listArray.reverse().forEach(optionText => {
+    const optionElement = document.createElement("option");
+    optionElement.value = optionText.toLowerCase();
+    optionElement.textContent = optionText;
+    dropdown.appendChild(optionElement);
+});
+
+
+function generateBossData() {
     readSelection("bossDataBox").innerHTML = "";
+    readSelection("bossDataTable").innerHTML = "";
+    let currentBoss = dropdown.value;
+    let currentPlayers = readSelection("playerCountSlider").value;
+    readSelection("playerCountDisplay").innerHTML = currentPlayers;
 
-
-
-    const typeImages = {
-        "Burst": "/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png",
-        "Pierce": "/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png",
-        "Crush": "/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png",
+    //assign the current boss
+    let currentEntry = null;
+    for (let boss in bossData) {
+        let current = bossData[boss];
+        if (current.displayName.toLowerCase() === currentBoss) {currentEntry = current;break;}
     }
 
+    //weak point data
+    let partsString = `<div class="bossDataHeader">WP MODS</div>`;
+    const partsRef = currentEntry.weaknessKeys;
+    const partsRefKeys = Object.keys(partsRef);
+    for (let part of partsRefKeys) {
+        let partName = partsRef[part].name.toUpperCase();
+        partsString += `
+        <div class="bossResistBoxHolder">
+            <img class="bossWeaknessIcon" src="${typeImages[partsRef[part].type]}">
+            <div>${partName}</div>
+            ${partName === "BODY" ? "" :
+            `<span class="rowTraceLine"></span>
+            <span class="bossResistValue">+${partsRef[part].wpMod.toFixed(3)}x</span>`}
+        </div>
+        `
+    }
 
+    let basicStats = currentEntry.levelKeys[currentPlayers];
+    let bossLevel = basicStats.lvl;
+    let bossStats = basicStats.lvlStats;
 
+    readSelection("selectedBossImage").src = `/TFD/TFDImages/Bosses/${currentEntry.smallIcon}.png`
 
-    const bossKeys = Object.keys(bosses);
+    // <img class="breakdownDisplayIcon" src="${ '/TFD/TFDImages/Bosses/' + currentEntry.bigIcon + '.png'}"></img>
 
-
-    for (let entry of bossKeys) {
-
-        const bossRef = bosses[entry];
-        const currentBoss = bosses[entry].shortName;
-        if (currentBoss === "NONE") {continue;}
-        console.log(bossRef.skillCrit)
-
-        let partsString = ``;
-        const partsRef = bossRef.parts;
-        const partsRefKeys = Object.keys(partsRef);
-
-
-        for (let part of partsRefKeys) {
-            partsString += `
-            <div class="bossDataPartsBox">
-                <div class="bossDataHeaderBody">
-                    ${partsRef[part].name.toUpperCase()}
-                    <img class="bossWeaknessIcon" src="${typeImages[partsRef[part].type]}">
-                </div>
-                <div class="totalHealingBox">
-                    <div class="totalHealingBoxHalf hasHoverTooltip">
-                        <div class="totalHealingHeaderBoss">+WeakPt.</div>
-                        <div class="totalHealingValueBoss">+${partsRef[part].wpMod.toFixed(3)}x</div>
-                    </div>
-                </div>
-            </div>
-            `
-        }
-
-
-        readSelection("bossDataBox").innerHTML += `
-        <div class="bossDataMainHolder"> <!-- EXECUTIONER -->
-                <div class="breakdownDisplayImageBoxBoss">
-                    <img class="breakdownDisplayIcon" src="${bossRef.image}">
-                </div>
+    // <div class="bossDataCritResist" style="white-space:normal;">${currentEntry.note}</div>
+    // <div class="bossDataHeader">${currentEntry.realName.toUpperCase()}</div>
+    readSelection("bossDataBox").innerHTML += `
+        <div class="bossDataMainHolder">
                 <div class="bossDataBreakdownBox">
-                    <div class="bossDataHeader">${currentBoss.toUpperCase()}</div>
-                    <div class="bossDataCritResist">Skill/Gun Crit Resist: ${(bossRef.skillCrit*100).toFixed(0)}% / ${(bossRef.gunCrit*100).toFixed(0)}%</div>
-                    <div class="bossDataCritResist" style="white-space:normal;">${bossRef.note}</div>
+                    <div class="bossDataHeaderBig">SUMMARY STATS</div>
+                    <div class="bossDataCritResist">HP: ${bossStats.HP.toLocaleString()} - Shield: ${bossStats.Shield.toLocaleString()}</div>
 
-                    <div class="bossDataCritResistAttributes">
-                        <!-- def -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Def.png">
-                            <span class="bossResistValue">${bossRef.DEF.toLocaleString()}</span>
+                    <div class="bossDataBreakdownBoxRow">
+                        <div class="bossDataCritResistAttributes">
+                            <div class="bossDataHeader">RESISTS</div>
+                            <div class="bossResistBoxHolder">
+                                <div>Firearm Crit</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${currentEntry.stats["Firearm Crit Resist"].toFixed(0)}%</span>
+                            </div>
+                            <div class="bossResistBoxHolder">
+                                <div>Skill Crit</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${currentEntry.stats["Skill Crit Resist"].toFixed(0)}%</span>
+                            </div>
+
+
+                            <!-- def -->
+                            <div class="bossResistBoxHolder">
+                                <div>DEF</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.DEF.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Def.png">
+                            </div>
+
+                            <!-- non attribute -->
+                            <div class="bossResistBoxHolder">
+                                <div>Non-Attribute</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats["Non-Attribute"].toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_000.png">
+                            </div>
+
+                            <!-- fire -->
+                            <div class="bossResistBoxHolder">
+                                <div>Fire</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Fire.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_001.png">
+                            </div>
+                            <!-- chill -->
+                            <div class="bossResistBoxHolder">
+                                <div>Chill</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Chill.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_003.png">
+                            </div>
+                            <!-- Elec -->
+                            <div class="bossResistBoxHolder">
+                                <div>Electric</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Electric.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_002.png">
+                            </div>
+                            <!-- toxin -->
+                            <div class="bossResistBoxHolder">
+                                <div>Toxic</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Toxic.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_004.png">
+                            </div>
                         </div>
 
-                        <!-- non attribute -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_000.png">
-                            <span class="bossResistValue">${bossRef["Non-Attribute"].toLocaleString()}</span>
-                        </div>
-
-                        <!-- fire -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_001.png">
-                            <span class="bossResistValue">${bossRef.Fire.toLocaleString()}</span>
-                        </div>
-
-                        <!-- Elec -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_002.png">
-                            <span class="bossResistValue">${bossRef.Electric.toLocaleString()}</span>
-                        </div>
-
-                        <!-- chill -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_003.png">
-                            <span class="bossResistValue">${bossRef.Chill.toLocaleString()}</span>
-                        </div>
-
-                        <!-- toxin -->
-                        <div class="bossResistBoxHolder">
-                            <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_004.png">
-                            <span class="bossResistValue">${bossRef.Toxic.toLocaleString()}</span>
-                        </div>
+                        <div class="bossDataPartsRow">${partsString}</div>
                     </div>
-
-                    <div class="bossDataPartsRow">${partsString}</div>
                     <!-- asdf -->
                 </div>
             </div>
-        `
+        `;
+
+    let rowObject = {
+        ...currentEntry.stats,
+        ...bossStats
     }
+    let rowObjectKeys = Object.keys(rowObject);
+    let rowString = "<div class='bossDataHeaderBig'>DETAILED STATS</div>";
+    let stringCategories = {
+        
+        "Damage": "",
+        "HP": "",
+        "Shield": "",
+        "Resist": "",
+        "Stagger": "",
+        "Frenzy": "",
+        "Rage": "",
+
+        "Movement": "",
+        "Misc": "",
+    }
+    const stringKeys = Object.keys(stringCategories);
+
+    for (let entry of rowObjectKeys) {
+        let stringCategory = bossStatKeyLibaryCategory[entry] || "Misc";
+        stringCategories[stringCategory] += `<div class="statsRowNameDetailed">${entry}<span class="rowTraceLine"></span><span>${rowObject[entry].toLocaleString()}</span></div>`
+    }
+
+    for (let key of stringKeys) {
+        current = stringCategories[key];
+
+        if (current) {
+            rowString += `<div class='bossDataHeader'>${key.toUpperCase()}</div>`;
+            rowString += current
+        }
+    }
+        
+
+    readSelection("bossDataBoxHalves").innerHTML = "";
+
+
+    readSelection("bossDataTable").innerHTML += rowString;
+}
+
+generateBossData();
