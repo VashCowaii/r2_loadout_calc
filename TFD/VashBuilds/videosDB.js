@@ -7,6 +7,7 @@
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
+    {"author": "Vash","topic": "Sharen Build Guide","isYTVid": true,"date": 20241209,"embedLink": "m2hcB56e4e0","contentType": "Build","isOutdated": false,"entityArray": ["Sharen"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Luna Team Guide","isYTVid": true,"date": 20241116,"embedLink": "MLO6rvdcV3Q","contentType": "Build","isOutdated": false,"entityArray": ["Luna","Lepic","Freyna","Kyle"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "The Real DEF Formula","isYTVid": true,"date": 20241109,"embedLink": "7fWFPwAflMI","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Viessa is Bait","isYTVid": true,"date": 20241031,"embedLink": "L4qpU8ThiXg","contentType": "Build","isOutdated": false,"entityArray": ["Viessa"],"pinnedCommentFlag": false},
