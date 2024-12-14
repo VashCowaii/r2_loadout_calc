@@ -1327,7 +1327,7 @@ const formulasValues = {
         let pullStats = formulasValues.pullStats;
 
         //add the main stats of each component
-        console.log(globalRef.auxiliary)
+        // console.log(globalRef.auxiliary)
         index[auxiliary[globalRef.auxiliary].headerStat] += auxiliary[globalRef.auxiliary].value;
         index[sensor[globalRef.sensor].headerStat] += sensor[globalRef.sensor].value;
         index[memory[globalRef.memory].headerStat] += memory[globalRef.memory].value;
