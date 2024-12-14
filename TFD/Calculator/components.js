@@ -22,6 +22,7 @@ const componentImagePrefixes = {
     "Tomb Vanguard": "Icon_Item_Acc_Gravewalker_T2_",
     "Distorted Resolve": "Icon_Item_Acc_DeathStalker_T3_",
     "Invader": "Icon_Item_Acc_A006_T2_",
+    "Hunter": "Icon_Item_Acc_Ark_T3_",
 }
 
 
@@ -207,6 +208,14 @@ const auxiliary = {
         "value": 646,
         "stats": {},
         "tags": ["HP"],
+        "rarity": "Ultimate",
+        "imageSuffix": "01"
+    },
+    "Hunter": {
+        "headerStat": "Shield",
+        "value": 275,
+        "stats": {},
+        "tags": ["Shield"],
         "rarity": "Ultimate",
         "imageSuffix": "01"
     },
@@ -433,6 +442,14 @@ const sensor = {
         "value": 484,
         "stats": {},
         "tags": ["HP"],
+        "rarity": "Ultimate",
+        "imageSuffix": "02"
+    },
+    "Hunter": {
+        "headerStat": "DEF",
+        "value": 3512,
+        "stats": {},
+        "tags": ["DEF"],
         "rarity": "Ultimate",
         "imageSuffix": "02"
     },
@@ -679,6 +696,14 @@ const memory = {
         "rarity": "Ultimate",
         "imageSuffix": "03"
     },
+    "Hunter": {
+        "headerStat": "Shield",
+        "value": 206,
+        "stats": {},
+        "tags": ["Shield"],
+        "rarity": "Ultimate",
+        "imageSuffix": "03"
+    },
 }
 const memoryRolls = {
     "": {
@@ -907,6 +932,14 @@ const processor = {
         "imageSuffix": "04"
     },
     "Invader": {
+        "headerStat": "HP",
+        "value": 646,
+        "stats": {},
+        "tags": ["HP"],
+        "rarity": "Ultimate",
+        "imageSuffix": "04"
+    },
+    "Hunter": {
         "headerStat": "HP",
         "value": 646,
         "stats": {},
@@ -1323,6 +1356,24 @@ const componentSetBonuses = {
                 "SkillDuration": 0.21,
                 "PowerModifierTech": 0.041,
                 "PowerModifierDimension": 0.041,
+            },
+            "tags": [],
+        },
+    },
+    "Hunter": {
+        "2pc": {
+            "desc": "Skill Cooldown -4%",
+            "stats": {
+                "SkillCooldown": -0.04
+            },
+            "tags": [],
+        },
+        "4pc": {
+            "desc": "MP Recovery In Combat +0.12<br>MP Recovery Out of Combat +1.03<br>Acquire “Arche Shield” when MP is at 50% or lower. While having “Arche Shield,” “Firearm ATK” -12%, but removes “Arche Shield” upon a hit, recover MP +30% (Cooldown 5s)",
+            "stats": {
+                "MPInCombat": 0.12,
+                "MPOutCombat": 1.03,
+                "FirearmATK%": -0.12,
             },
             "tags": [],
         },

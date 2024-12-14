@@ -112,9 +112,13 @@ const calcs = {
         const powerOptimization = index.PowerOptimization;
         skillDependentModifier = skillDependentModifier || 1;
 
+        const reactorLevel = globalRecords.reactor.level;
+        const reactorLevelBonuses = [0, 331.829, 663.658, 995.487, 1327.316, 1659.144];
+        const baseValue = 11060.963;
+        const baseSkillPowerValue = baseValue + reactorLevelBonuses[reactorLevel];
+
         const basePowerRatio = 1 + index.PowerRatioBase;
-        // let baseSkillPower = (11060.96 * powerOptimization + index.SkillAttackColossus) * basePowerRatio;//uncomment when verifying resistances on an unenhanced reactor
-        let baseSkillPower = (11724.62 * powerOptimization * skillDependentModifier + index.SkillAttackColossus) * basePowerRatio;
+        let baseSkillPower = (baseSkillPowerValue * powerOptimization * skillDependentModifier + index.SkillAttackColossus) * basePowerRatio;
         for (let type of abilityTypeArray) {baseSkillPower *= (1 + index[`PowerRatio${type.replace(/-/g, "")}`]);}
 
         // return calcs.customTruncate(baseSkillPower + 0.00001,4);
@@ -124,7 +128,9 @@ const calcs = {
         const currentBoss = globalRecords.boss.currentBoss;
         const reductionValue = index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
         const resistReduction = 1 + reductionValue;
-        const currentResistValue = bosses[currentBoss][typeName] * resistReduction;
+
+        let basicStats = bossData[currentBoss].levelKeys[globalRecords.playerCount].lvlStats;
+        const currentResistValue = basicStats[typeName] * resistReduction;
 
         const drConstant = 150;
 
@@ -147,8 +153,6 @@ const calcs = {
     },
     getFirearmCritComposites(returnObject) {
         const Rate = returnObject.totalFirearmCritRate;
-        // const Damage = returnObject.totalFirearmCritDamage;
-        // console.log(returnObject.totalFirearmCritDamage)
         const Damage = calcs.customTruncate(returnObject.totalFirearmCritDamage + 0.00001,4);
         const Composite = 1 + (Rate * (Damage-1));
 
@@ -190,13 +194,15 @@ const calcs = {
         const baseFirearmATK = weaponRef.baseATK;
 
         const attackPercent = index["FirearmATK%"];
+        const onHitBonus = index["FirearmATK%OnHit"];//while called onhit it's more of an enemy debuff
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
         const physicalTypeBonus = globalRecords.boss.enemyType === "Colossus" ? 0.20 : 0.10;
         const physicalTypeMulti = weaknessCheck ? physicalTypeBonus : 0;
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
-        const totalFirearmATK = (firearmAttributeConversionBase + index.ColossusATK) * (1 + physicalTypeMulti);
+        const postHitATK = firearmAttributeConversionBase + (baseFirearmATK * onHitBonus);
+        const totalFirearmATK = (postHitATK + index.ColossusATK) * (1 + physicalTypeMulti);
 
         return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
@@ -250,8 +256,10 @@ const calcs = {
             activeElementsDamage.push(0);
         }
         else {
-            const damageSubAttribute = calcs.getFirearmElementalSpread(index,activeElements[0],preElementDamage,critFirearm)
-            activeElementsDamage.push(damageSubAttribute.perHit);
+            for (let entry of activeElements) {
+                const damageSubAttribute = calcs.getFirearmElementalSpread(index,entry,preElementDamage,critFirearm)
+                activeElementsDamage.push(damageSubAttribute.perHit);
+            }
         }
 
         return {activeElements,activeElementsDamage}
@@ -259,10 +267,10 @@ const calcs = {
 }
 
 const calcsUIHelper = {
-    addHealingBoxCluster(name,value,unit) {
+    addHealingBoxCluster(name,value,unit,id) {
         const displayValue = unit ? value * (unit === "%" ? 100 : 1) : value;
         return `
-        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip" id="${id || ""}">
             <div class="totalHealingHeader">${name}</div>
             <div class="totalHealingValueBoss">${(displayValue).toLocaleString()}${unit}</div>
         </div>
@@ -280,7 +288,7 @@ const calcsUIHelper = {
             function getInjectionString(path) {
                 if (path && path[0].length) {
                     let returnString = `<div class="totalHealingBoxBreakdownRows">`
-                    for (let entry2 of path[0]) {returnString += addRow(entry2.name,entry2.value,entry2.unit);}
+                    for (let entry2 of path[0]) {returnString += addRow(entry2.name,entry2.value,entry2.unit,entry2.id || null);}
                     returnString += `</div>`
                     return returnString;
                 }
@@ -341,7 +349,7 @@ const calcsUIHelper = {
 
 let localInsertionDamage = localCheck ? {} : customDamageLocal;
 const customDamage = {
-    callAbilityFunctionsTier0(index,isCycleCalcs) {
+    callAbilityFunctionsTier0(index,isCycleCalcs,modArrayOverride,weaponModOverride) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -356,13 +364,36 @@ const customDamage = {
             if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index,null,isCycleCalcs);}
         }
 
-        const absentBreakdownWeapon = `<span class="missingBreakdownHeadsup"><br>
+        const absentBreakdownWeapon = `<span class="missingBreakdownHeadsup">
         No unique weapon ability found/supported for the current selection</span>`;
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
         if (currentWeaponRef.customDPSBase) {customDamage[currentWeaponRef.customDPSBase](index,null,isCycleCalcs);}
-        else {readSelection(`weaponBreakdownBody1`).innerHTML = absentBreakdownWeapon}
+        else if (!currentWeaponRef.customDPSBase && !isCycleCalcs) {readSelection(`weaponBreakdownBody1`).innerHTML = absentBreakdownWeapon}
+
+        limitedAbilityBonuses = [];
+        limitedWeaponBonuses = [];
+
+        // const currentWeaponMods = weaponModOverride ? weaponModOverride : globalRecords.weapon.mods;
+        const currentWeaponMods = globalRecords.weapon.mods;
+        const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
+        for (let entry of currentWeaponMods) {
+            let path = weaponModsCategory[entry];
+            if (path.complexBonus) {
+
+                //if this is a nonstacking cooldown based effect, then make the initial time passed the amount of the cooldown so it can apply to the first shot
+                //otherwise set it to 0 so time can accrue normally
+                let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
+
+                limitedWeaponBonuses.push({
+                    "timesUsed": 0,"timePassed": initialTimePassed,
+                    "bonusArray": [...path.complexBonus] 
+                })
+            }
+        }
+
+        return {limitedAbilityBonuses,limitedWeaponBonuses}
     },
-    callAbilityFunctions(index,returnObject,isCycleCalcs) {
+    callAbilityFunctions(index,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -400,8 +431,11 @@ const customDamage = {
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
-        if (currentWeaponRef.customDPS) {customDamage[currentWeaponRef.customDPS](index,returnObject,isCycleCalcs);}
-        else {customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,currentWeaponRef);}
+        if (currentWeaponRef.customDPS) {returnValuesObject.weapon = customDamage[currentWeaponRef.customDPS](index,returnObject,isCycleCalcs);}
+        else {
+            returnValuesObject.weapon = customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,currentWeaponRef,limitedWeaponBonuses);
+        }
+        // else {readSelection(`weaponBreakdownBody1`).innerHTML = "No weapon found"}
 
         return returnValuesObject;
     },
@@ -866,7 +900,7 @@ const customDamage = {
         const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
         const damageZone = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierZone);
 
-        const turretInterval = 1/0.6;
+        const turretInterval = 1/abilityMods.shotInterval;
         const zoneInterval = 1/0.3
 
         const turretCount = nameOverride ? 2 : 1;
@@ -3979,7 +4013,7 @@ const customDamage = {
 
         const avgDmgPerHit = damage.AVG;
 
-        const iceNeedleModifierArray = [0,0.117,0.159,0.199,0.237];
+        const iceNeedleModifierArray = [0,1.585,1.795,1.995,2.185];
         let iceNeedleDamage = null;
         let iceNeedleModifier = null;
         let iceNeedleDPS = null;
@@ -4032,6 +4066,18 @@ const customDamage = {
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
+    viessaSphereCalcsABS0StarterTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Viessa;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Absolute-Zero"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+
+        index.SkillCritRateBaseBonus += abilityMods.skillCritBonus;
+    },
     viessaSphereCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
         customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
     },
@@ -4052,7 +4098,9 @@ const customDamage = {
         const abilityTypeArray = abilityMap.type;
         const abilityMods = abilityMap.powerMods;
 
-        index.PowerModifierBase += settingsRef.lunaPresenceStacks * 0.01;
+        let stackValue = abilityMods.powerModBonus;
+
+        index.PowerModifierBase += settingsRef.lunaPresenceStacks * stackValue;
     },
     lunaPresenceCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Luna;
@@ -4082,12 +4130,13 @@ const customDamage = {
             //     {"name": "+Toxin Res%","value": finalToxinRes,"unit": "%"},
             //     {"name": "+Shield%/s","value": finalShieldRegen,"unit": "%"},
             // ]
+            let maxStacks = abilityMods.stackLimit;
 
             const breakdownArray = [
                 {"header": "PROJECTILE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "condition": false,"desc": "",},
                 {"header": "PERFECT PITCH","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                    "sliderElemID": ["lunaPresenceStacks",0,25,1,"Stacks Count"],//"rowInjection": [rowInjection,""],},
+                    "sliderElemID": ["lunaPresenceStacks",0,maxStacks,1,"Stacks Count"],//"rowInjection": [rowInjection,""],},
                     "condition": nameOverride,"desc": ""},
                 {"header": "BULLET RECOVERY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "condition": false,"desc": ""},
@@ -4233,6 +4282,7 @@ const customDamage = {
         const maxMP = returnObject.displayMP;
 
         if (!isCycleCalcs) {
+            let stackLimit = abilityMods.stackLimit;
 
             const rowInjectionLargo = [
                 {"name": "+Skill Crit Rate","value": settingsRef.lunaIsExcitingUsed ? settingsRef.lunaLargoStacks * abilityMods.largoCritStack : 0,"unit": "%"},
@@ -4254,7 +4304,7 @@ const customDamage = {
                     "condition": !enhancementCheck,"desc": ""},
                 {"header": "LARGO","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "rowInjection": [rowInjectionLargo,""],
-                    "sliderElemID": ["lunaLargoStacks",0,26,1,"Stacks Count"],
+                    "sliderElemID": ["lunaLargoStacks",0,stackLimit,1,"Stacks Count"],
                     "condition": false,"desc": ""},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
@@ -4307,7 +4357,7 @@ const customDamage = {
         const firearmATKBonus = 0
 
         if (!isCycleCalcs) {
-            console.log(powerRatioBonus,maxMP * MPModifier,MPModifier,maxMP)
+            // console.log(powerRatioBonus,maxMP * MPModifier,MPModifier,maxMP)
             const rowInjectionSelf = [
                 {"name": "+Power Modifier","value": powerModBuff,"unit": "%"},
             ]
@@ -4462,6 +4512,7 @@ const customDamage = {
         const maxMP = returnObject.displayMP;
 
         if (!isCycleCalcs) {
+            let stackLimit = abilityMods.stackLimit;
 
             const rowInjectionLargo = [
                 {"name": "+Skill Crit DMG","value": settingsRef.lunaIsRelaxingUsed ? settingsRef.lunaCrescendoStacks * abilityMods.crescendoCritStack : 0,"unit": "%"},
@@ -4483,7 +4534,7 @@ const customDamage = {
                     "condition": !enhancementCheck,"desc": ""},
                 {"header": "CRESCENDO","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "rowInjection": [rowInjectionLargo,""],
-                    "sliderElemID": ["lunaCrescendoStacks",0,26,1,"Stacks Count"],
+                    "sliderElemID": ["lunaCrescendoStacks",0,stackLimit,1,"Stacks Count"],
                     "condition": false,"desc": ""},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
@@ -4621,6 +4672,7 @@ const customDamage = {
         const maxMP = returnObject.displayMP;
 
         if (!isCycleCalcs) {
+            let stackLimit = abilityMods.stackLimit;
 
             const rowInjectionLargo = [
                 {"name": "+Skill Power Mod","value": settingsRef.lunaIsCheerfulUsed ? settingsRef.lunaForteStacks * abilityMods.fortePowerModStack : 0,"unit": "%"},
@@ -4642,7 +4694,7 @@ const customDamage = {
                     "condition": !enhancementCheck,"desc": ""},
                 {"header": "FORTE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "rowInjection": [rowInjectionLargo,""],
-                    "sliderElemID": ["lunaForteStacks",0,26,1,"Stacks Count"],
+                    "sliderElemID": ["lunaForteStacks",0,stackLimit,1,"Stacks Count"],
                     "condition": false,"desc": ""},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
@@ -4796,8 +4848,7 @@ const customDamage = {
     },
 
 
-
-
+    
     //LE GUNS
     generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef) {
         const settingsRef = weaponRef.weaponSettings;
@@ -4824,38 +4875,40 @@ const customDamage = {
 
         // if (!isCycleCalcs) {console.log(weaponDamageElemental.perCrit)}
 
-        let rowInjectionFirearmElemental = [
-            {"name": "Element","value": activeElements[0],"unit": ""},
-            {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
-            {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
-            {"name": "AVG","value": weaponDamageElemental.AVG,"unit": ""},
-        ]
-        if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
-        const rowInjectionSums = [
-            {"name": "Magazine","value": magazineSize,"unit": ""},
-            {"name": "AVG/Shot","value": avgPerShot,"unit": ""},
-            {"name": "SUM AVG","value": totalAVGGun,"unit": ""},
-        ]
-        const breakdownArray = [
-            {"header": "FIREARM DAMAGE","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
-                "condition": false,"desc": "Part-specific <span>Weak Point Modifiers</span>, and <span>Type Bonuses</span>, will automatically adjust based on the part selected, unless forcibly disabled in settings."},
-            {"header": "FIREARM ATTRIBUTE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                "rowInjection": [rowInjectionFirearmElemental,""],//"rowInjection2": [rowInjectionSums,"SUM"],//"rowInjection3": [rowInjectionSums,""],
-                "condition": !rowInjectionFirearmElemental.length,"desc": ""},
-            {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                "rowInjection": [rowInjectionSums,""],
-                "condition": false,"desc": ""},
+        if (!isCycleCalcs) {
+            let rowInjectionFirearmElemental = [
+                {"name": "Element","value": activeElements[0],"unit": ""},
+                {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
+                {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
+                {"name": "AVG","value": weaponDamageElemental.AVG,"unit": ""},
+            ]
+            if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
+            const rowInjectionSums = [
+                {"name": "Magazine","value": magazineSize,"unit": ""},
+                {"name": "AVG/Shot","value": avgPerShot,"unit": ""},
+                {"name": "SUM AVG","value": totalAVGGun,"unit": ""},
+            ]
+            const breakdownArray = [
+                {"header": "FIREARM DAMAGE","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": "Part-specific <span>Weak Point Modifiers</span>, and <span>Type Bonuses</span>, will automatically adjust based on the part selected, unless forcibly disabled in settings."},
+                {"header": "FIREARM ATTRIBUTE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionFirearmElemental,""],//"rowInjection2": [rowInjectionSums,"SUM"],//"rowInjection3": [rowInjectionSums,""],
+                    "condition": !rowInjectionFirearmElemental.length,"desc": ""},
+                {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionSums,""],
+                    "condition": false,"desc": ""},
 
-            // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML += `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
-        </div>
-        `;
+                // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML += `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
+            </div>
+            `;
+        }
     },
     secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Secret Garden"];
@@ -4894,10 +4947,11 @@ const customDamage = {
         const weaponRef = sniperList["Blue Beetle"];
         const settingsRef = weaponRef.weaponSettings;
 
-        index.SkillCritRate += settingsRef.arcaneWaveActive ? 0.30 : 0;
+        const critBonus = 1.15;
+        index.SkillCritRate += settingsRef.arcaneWaveActive ? critBonus : 0;
 
         const rowInjection = [
-            {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? 0.30 : 0,"unit": "%"},
+            {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
         ]
         const breakdownArray = [
             {"header": "ARCANE ENERGY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","toggleElemID": ["arcaneWaveActive","Use +Skill Crit Rate?"],"rowInjection": [rowInjection,""],
@@ -5356,7 +5410,7 @@ let moduleQueryFunctions = {
                 newModArray1[indexToModify] = entry;
 
                 queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
                 )
             }
         }
@@ -5367,7 +5421,7 @@ let moduleQueryFunctions = {
                 newModArray1[indexToModify] = entry;
 
                 queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1).returnObject[targetReturnValue],"category": modData[entry].category}
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[targetReturnValue],"category": modData[entry].category}
                 )
             }
         }

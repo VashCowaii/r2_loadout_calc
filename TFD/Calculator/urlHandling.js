@@ -97,7 +97,7 @@ let manipulateURL = {
     const reactorSubKeys = Object.keys(reactorSubRolls);
     const ammoKeys = Object.keys(reactorAmmoList);
     
-    const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}${globalRecords.reactor.weaponMatched ? 1 : 0}${globalRecords.currentDisplayMode}`;
+    const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}${reactorRef.weaponMatched ? 1 : 0}${globalRecords.currentDisplayMode}${reactorRef.level}${reactorRef.isUltimate ? 1 : 0}`;
 
     urlObject.r.push(concatenatedType,reactorRef.subRoll1Value.toFixed(3),reactorRef.subRoll2Value.toFixed(3));
 
@@ -463,6 +463,7 @@ let manipulateURL = {
             reactorRef.currentTypeID = `reactor${reactorRef.currentType}`;
             reactorRef.currentAmmoType = ammoKeys[+urlReactor[0][2]];
             reactorRef.currentAmmoTypeID = `reactor${reactorRef.currentAmmoType}`,
+            
 
             reactorRef.subRoll1 = reactorSubKeys[+`${urlReactor[0][3]}${urlReactor[0][4]}`];
             reactorRef.subRoll2 = reactorSubKeys[+`${urlReactor[0][5]}${urlReactor[0][6]}`];
@@ -470,6 +471,9 @@ let manipulateURL = {
             reactorRef.weaponMatched = +urlReactor[0][7] === 1 ? true : false;//reactor optimization condition
             readSelection("USEReactorOptimization").checked = reactorRef.weaponMatched;
             globalRecords.currentDisplayMode = +urlReactor[0][8] || 1;
+
+            readSelection("reactorLevelSlider").value = +urlReactor[0][9] || 2;
+            readSelection("USEReactorUltimate").checked = +urlReactor[0][10] ? true : false;
 
             reactorRef.subRoll1Value = +urlReactor[1];
             reactorRef.subRoll2Value = +urlReactor[2];

@@ -7,6 +7,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0,0],
         "Burst Rifle": [0,0],
         "Scout Rifle": [0,0],
+        "Machine Gun": [0,0],
     },
     "Firearm ATK": {
         "statName": "FirearmATK%",
@@ -16,6 +17,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.10,0.122],
         "Burst Rifle": [0.10,0.122],
         "Scout Rifle": [0.10,0.122],
+        "Machine Gun": [0.10,0.122],
     },
     "Fire ATK": {
         "statName": "FireATK",
@@ -25,6 +27,7 @@ const weaponSubstatList = {
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
+        "Machine Gun": [944,1702],
     },
     "Chill ATK": {
         "statName": "ChillATK",
@@ -34,6 +37,7 @@ const weaponSubstatList = {
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
+        "Machine Gun": [944,1702],
     },
     "Electric ATK": {
         "statName": "ElectricATK",
@@ -43,6 +47,7 @@ const weaponSubstatList = {
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
+        "Machine Gun": [944,1702],
     },
     "Toxic ATK": {
         "statName": "ToxicATK",
@@ -52,6 +57,7 @@ const weaponSubstatList = {
         "Hand Cannon": [3236,5838],
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
+        "Machine Gun": [944,1702],
     },
     "Weak Point Damage": {
         "statName": "WeakPointDamage%",
@@ -61,6 +67,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.082,0.12],
         "Burst Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
+        "Machine Gun": [0.082,0.12],
     },
     "Critical Hit Rate": {
         "statName": "FirearmCritRate",
@@ -70,6 +77,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.099,0.114],
         "Burst Rifle": [0.108,0.122],
         "Scout Rifle": [0.119,0.133],
+        "Machine Gun": [0.13,0.143],
     },
     "Critical Hit Damage": {
         "statName": "FirearmCritDamage",
@@ -79,6 +87,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.177,0.215],
         "Burst Rifle": [0.202,0.247],
         "Scout Rifle": [0.268,0.327],
+        "Machine Gun": [0.338,0.411],
     },
     "Status Effect Rate": {
         "statName": "StatusTriggerRate",
@@ -88,6 +97,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.164,0.24],
         "Burst Rifle": [0.164,0.24],
         "Scout Rifle": [0.164,0.24],
+        "Machine Gun": [0.164,0.24],
     },
     "Rounds per Magazine": {
         "statName": "MagazineSize",
@@ -97,6 +107,7 @@ const weaponSubstatList = {
         "Hand Cannon": [0.082,0.12],
         "Burst Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
+        "Machine Gun": [0.082,0.12],
     },
     "Bonus ATK (Colossus)": {
         "statName": "ColossusATK",
@@ -106,6 +117,7 @@ const weaponSubstatList = {
         "Hand Cannon": [6472,11676],
         "Burst Rifle": [1919,3462],
         "Scout Rifle": [5263,9494],
+        "Machine Gun": [1887,3404],
     },
     // "Recoil": {
     //     "statName": "Recoil",
@@ -124,15 +136,20 @@ const weaponSubstatList = {
     // },
 }
 
+let weaponsInsertion = localCheck ? {} : weaponsLocal;
 const sniperList = {
     "": {
+        "name": "",
+        "rarity": "Ultimate",
         "baseATK": 0,
         "baseCritRate": 0.00,
         "baseCritDamage": 1,
         "baseWeakPoint": 1,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
-        "magazine": 0,
+        "baseFireRate": 1,
+        "baseReloadTime": 1,
+        "magazine": 1,
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
         "image": "/images/Remnant/clear.png",
@@ -148,13 +165,18 @@ const sniperList = {
     },
     "Perforator": {
         "name": "Perforator",
+        "rarity": "Ultimate",
         "baseATK": 67092,
         "baseCritRate": 0.20,
         "baseCritDamage": 2.0,
         "baseWeakPoint": 2.25,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 100,
+        "baseReloadTime": 1.6,
         "magazine": 6,
+
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1008_A001.png",
@@ -170,13 +192,18 @@ const sniperList = {
     },
     "Afterglow Sword": {
         "name": "Afterglow Sword",
+        "rarity": "Ultimate",
         "baseATK": 114206,
         "baseCritRate": 0.50,
         "baseCritDamage": 2,
         "baseWeakPoint": 1.8,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
-        "magazine": 6,
+
+        "baseFireRate": 67,
+        "baseReloadTime": 2.5,
+        "magazine": 12,
+
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1005_A001.png",
@@ -192,13 +219,14 @@ const sniperList = {
     },
     "Piercing Light": {
         "name": "Piercing Light",
+        "rarity": "Ultimate",
         "baseATK": 193437,
         "baseCritRate": 0.40,
         "baseCritDamage": 1.2,
         "baseWeakPoint": 2,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
-        "magazine": 6,
+        "magazine": 11,
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1006_A001.png",
@@ -215,13 +243,18 @@ const sniperList = {
 
     "Secret Garden": {
         "name": "Secret Garden",
+        "rarity": "Ultimate",
         "baseATK": 10534,
         "baseCritRate": 0.50,
         "baseCritDamage": 2.25,
         "baseWeakPoint": 1.5,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 120,
+        "baseReloadTime": 1.6,
         "magazine": 48,
+
         "ammoType": "Special",
         "weaponType": "Burst Rifle",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_TR_1005_A001.png",
@@ -254,13 +287,20 @@ const sniperList = {
     },
     "Blue Beetle": {
         "name": "Blue Beetle",
+        "rarity": "Ultimate",
         "baseATK": 29468,
         "baseCritRate": 0.25,
         "baseCritDamage": 1.80,
         "baseWeakPoint": 1.5,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 197.8858,//190.2439,//197.08,//200,
+
+        "baseReloadTime": 2,
+
         "magazine": 16,
+
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1006_A001.png",
@@ -290,13 +330,18 @@ const sniperList = {
     },
     "Peace Maker": {
         "name": "Peace Maker",
+        "rarity": "Ultimate",
         "baseATK": 32471,
         "baseCritRate": 0.50,
         "baseCritDamage": 2.5,
         "baseWeakPoint": 1.20,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 133,
+        "baseReloadTime": 1.35,
         "magazine": 8,
+
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1010_A001.png",
@@ -326,16 +371,17 @@ const sniperList = {
             ],
         },
     },
-
-
     "Nazeistra's Devotion": {
         "name": "Nazeistra's Devotion",
+        "rarity": "Ultimate",
         "baseATK": 38461,
         "baseCritRate": 0.45,
         "baseCritDamage": 2.25,
         "baseWeakPoint": 1.7,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+        "baseFireRate": 150,
+        "baseReloadTime": 1.5,
         "magazine": 8,
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -363,18 +409,20 @@ const sniperList = {
         "tags": ["enemyDEFResistanceReduction"],
     },
 
-
-
-
     "Assassin's Edge": {
         "name": "Assassin's Edge",
+        "rarity": "Rare",
         "baseATK": 40788,
         "baseCritRate": 0.40,
         "baseCritDamage": 2.0,
         "baseWeakPoint": 2.0,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 120,//625.0,
+        "baseReloadTime": 1.4,
         "magazine": 9,
+
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1001_A001.png",
@@ -388,61 +436,5 @@ const sniperList = {
             "BASIC": [],
         },
     },
-
-    // //purple snipers
-    // "Different Dream": {
-    //     "baseATK": 110259,
-    //     "baseCritRate": 0.55,
-    //     "baseCritDamage": 1.8,
-    //     "baseWeakPoint": 5,
-    //     "crush": 0.10,
-    //     "ammoType": "HighPowered",
-    //     "weaponType": "Sniper",
-    //     "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1007_A001.png",
-    //     "subStats": {}
-    // },
-    // "Forest Gaze": {
-    //     "baseATK": 133703,
-    //     "baseCritRate": 0.50,
-    //     "baseCritDamage": 2,
-    //     "baseWeakPoint": 1.5,
-    //     "crush": 0.10,
-    //     "ammoType": "HighPowered",
-    //     "weaponType": "Sniper",
-    //     "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1001_A001.png",
-    //     "subStats": {}
-    // },
-    // "Supermoon Z-15": {
-    //     "baseATK": 101392,
-    //     "baseCritRate": 0.50,
-    //     "baseCritDamage": 2,
-    //     "baseWeakPoint": 1.5,
-    //     "crush": 0.10,
-    //     "ammoType": "HighPowered",
-    //     "weaponType": "Sniper",
-    //     "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1002_A001.png",
-    //     "subStats": {}
-    // },
-    // "Recipient Unknown": {
-    //     "baseATK": 132590,
-    //     "baseCritRate": 0.45,
-    //     "baseCritDamage": 1.8,
-    //     "baseWeakPoint": 1.5,
-    //     "crush": 0.10,
-    //     "ammoType": "HighPowered",
-    //     "weaponType": "Sniper",
-    //     "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1003_A001.png",
-    //     "subStats": {}
-    // },
-    // "Belief": {
-    //     "baseATK": 92167,
-    //     "baseCritRate": 0.45,
-    //     "baseCritDamage": 1.8,
-    //     "baseWeakPoint": 1.7,
-    //     "crush": 0.10,
-    //     "ammoType": "HighPowered",
-    //     "weaponType": "Sniper",
-    //     "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1004_A001.png",
-    //     "subStats": {}
-    // },
+    ...weaponsInsertion
 }

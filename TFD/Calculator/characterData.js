@@ -1841,7 +1841,7 @@ const characters = {
                             {"statType": "cost","statName": "MP Cost","value": 65,"limit": null,"isModified": true},
                         ],
                         "EXPLOSION": [
-                            {"statType": "","statName": "+Movement Speed","value": 1.2,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Movement Speed","value": 1600,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Explosion Range","value": 6,"limit": 2,"isModified": true},
                         ],
                         "RUNNING": [],
@@ -1879,7 +1879,7 @@ const characters = {
                             {"statType": "cost","statName": "MP Cost","value": 80,"limit": null,"isModified": true},
                         ],
                         "EXPLOSION": [
-                            {"statType": "","statName": "+Movement Speed","value": 1.2,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Movement Speed","value": 1600,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Explosion Range","value": 8,"limit": 2,"isModified": true},
                             {"statType": "","statName": "+DMG/Unused Bombs","value": 0.044,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
@@ -2740,6 +2740,7 @@ const characters = {
                     "powerMods": {
                         "base": 100/100,
                         "zone": 104.9/100,
+                        "shotInterval": 0.4,
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberAssaultCalcs",
@@ -2982,7 +2983,7 @@ const characters = {
                     "type": ["Non-Attribute","Singular"],
                     "desc": "Detonates a summonded Turret, granting Overhaul. The self-destruction releases multiple fragments nearby, dealing Explosion DMG.<br>While Overhaul is active, new turrets are summoned with their respective Turret Zones activated.",
                     "powerMods": {
-                        "base": 501.1/100,
+                        "base": 2011/100,
                     },
                     "customDPSBase": "",
                     "customDPS": "jayberReactivateCalcs",
@@ -3014,7 +3015,7 @@ const characters = {
                     "type": ["Non-Attribute","Singular"],
                     "desc": "Detonates a summonded Turret, granting Overhaul. The self-destruction deals explosive damage to nearby enemies and creates a Lightning AOE.<br>While Overhaul is active, new turrets are summoned with their respective Turret Zones activated.",
                     "powerMods": {
-                        "base": 140.5/100,
+                        "base": 1440.5/100,
                         "continuous": 262.0/100,
                     },
                     "customDPSBase": "",
@@ -3032,6 +3033,7 @@ const characters = {
                         "BASIC": [
                             {"statType": "cooldown","statName": "Cooldown","value": 80,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Skill Power Mod","value": 0.048,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "EXPLOSION": [
                             {"statType": "range","statName": "Explosion Range","value": 6,"limit": 2,"isModified": true},
@@ -3228,8 +3230,8 @@ const characters = {
                         "FROST ROAD": [
                             {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
                             {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
-                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Shield Recovery/s","value": 0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "ICE SHACKLE": [
                             {"statType": "","statName": "On Contact","value": 2,"limit": null,"isModified": false},
@@ -3263,8 +3265,8 @@ const characters = {
                             {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
                             {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
-                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Shield Recovery/s","value": 0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "ICE SHACKLE": [],
                         "FROSTBITE": [
@@ -3297,8 +3299,8 @@ const characters = {
                         "FROST ROAD": [
                             {"statType": "duration","statName": "Duration","value": 19,"limit": null,"isModified": true},
                             {"statType": "range","statName": "Range","value": 2,"limit": 2,"isModified": true},
-                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "+Shield Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Shield Recovery/s","value": 0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "ICE SHACKLE": [],
                         "FROSTBITE": [],
@@ -3344,7 +3346,7 @@ const characters = {
                     "type": ["Chill","Fusion"],
                     "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill.",
                     "powerMods": {
-                        "base": 1149.0/100,
+                        "base": 3247/100,
                         "cooldown": 20,
                     },
                     "customDPSBase": "",
@@ -3376,7 +3378,7 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill. On Critical Hits, inflicts Frostbite on the enemy.",
                     "powerMods": {
-                        "base": 1131.6/100,
+                        "base": 3194.8/100,
                         "cooldown": 20,
                     },
                     "customDPSBase": "",
@@ -3408,7 +3410,7 @@ const characters = {
                     "type": ["Chill","Fusion"],
                     "desc": "Launches Chill forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill.",
                     "powerMods": {
-                        "base": 973.2/100,
+                        "base": 2719.6/100,
                         "cooldown": 20,
                     },
                     "customDPSBase": "",
@@ -3440,8 +3442,8 @@ const characters = {
                     "type": ["Chill","Fusion"],
                     "desc": "Throws a Chill Zone forward. Inflicts damage and Ice Shackle on enemies that come into contact with the Chill Zone.",
                     "powerMods": {
-                        "base": 293.4/100,
-                        "cooldown": 20,
+                        "base": 680.2/100,
+                        "cooldown": 15,
                     },
                     "customDPSBase": "",
                     "customDPS": "viessaColdSnapCalcsWatchStarter",
@@ -3453,7 +3455,7 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
                         ],
                         "CHILL": [
@@ -3475,10 +3477,10 @@ const characters = {
                     "type": ["Chill","Tech"],
                     "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Shackle on enemies.",
                     "powerMods": {
-                        "base": 1845.3/100,
+                        "base": 2717.9/100,
                         "baseContinuous": 1435.2/100,
                         "duration": 6,
-                        "interval": 2,
+                        "interval": 1,
                         "cooldown": 60,
                     },
                     "customDPSBase": "",
@@ -3501,14 +3503,15 @@ const characters = {
                         ],
                         "BLIZZARD": [
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
                         ],
                         "BURST": [
                             {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
                         ],
                         "ICE SHACKLE": [
-                            {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Cont. DMG","value": 3,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Burst DMG","value": 4,"limit": null,"isModified": false},
                         ],
                         "FROSTBITE": [],
                         "ICE NEEDLE": [],
@@ -3521,10 +3524,10 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. On Critical Hit, inflicts Frostbite on the enemy.",
                     "powerMods": {
-                        "base": 1950.0/100,
+                        "base": 2875/100,
                         "baseContinuous": 1516.7/100,
                         "duration": 6,
-                        "interval": 2,
+                        "interval": 1,
                         "cooldown": 60,
                     },
                     "customDPSBase": "",
@@ -3545,7 +3548,7 @@ const characters = {
                         ],
                         "BLIZZARD": [
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
                         ],
                         "BURST": [
@@ -3565,10 +3568,10 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "desc": "Creates a Blizzard at a designated location. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Needle on enemies.",
                     "powerMods": {
-                        "base": 1826.7/100,
+                        "base": 2690.1/100,
                         "baseContinuous": 1422.2/100,
                         "duration": 6,
-                        "interval": 2,
+                        "interval": 1,
                         "cooldown": 60,
                     },
                     "customDPSBase": "",
@@ -3589,7 +3592,7 @@ const characters = {
                         ],
                         "BLIZZARD": [
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
                         ],
                         "BURST": [
@@ -3610,10 +3613,10 @@ const characters = {
                     "type": ["Chill","Tech"],
                     "desc": "Throws a projectile forward to create a Blizzard. Enemies within the Blizzard take continuous damage. When the Blizzard ends, it explodes and deals Burst DMG to nearby enemies. Inflicts Ice Shackle on enemies.<br>[NOTE] This just gives a 10s shorter cooldown. That's it.",
                     "powerMods": {
-                        "base": 1845.3/100,
+                        "base": 2717.9/100,
                         "baseContinuous": 1435.2/100,
                         "duration": 6,
-                        "interval": 2,
+                        "interval": 1,
                         "cooldown": 50,
                     },
                     "customDPSBase": "",
@@ -3634,14 +3637,15 @@ const characters = {
                         ],
                         "BLIZZARD": [
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Interval (s)","value": 2,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "range","statName": "Continuous Range","value": 4,"limit": 2.5,"isModified": true},
                         ],
                         "BURST": [
                             {"statType": "range","statName": "Burst Range","value": 6,"limit": 2.5,"isModified": true},
                         ],
                         "ICE SHACKLE": [
-                            {"statType": "","statName": "On DMG","value": 2,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Cont. DMG","value": 2,"limit": null,"isModified": false},
+                            {"statType": "","statName": "On Burst DMG","value": 3,"limit": null,"isModified": false},
                         ],
                         "FROSTBITE": [],
                         "ICE NEEDLE": [],
@@ -3669,15 +3673,15 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
                             {"statType": "","statName": "Minimum Trigger LvL","value": 2,"limit": null,"isModified": false},
                         ],
                         "PROJECTILE": [
                             {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
                         ],
                         "ICE SHACKLE": [
-                            {"statType": "duration","statName": "Base","value": 5,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "LvL 4","value": 8,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration Base","value": 5,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration LvL 4","value": 8,"limit": null,"isModified": true},
                         ],
                         "FROSTBITE": [],
                         "ICE NEEDLE": [],
@@ -3701,19 +3705,21 @@ const characters = {
                     "type": ["Chill","Singular"],
                     "desc": "When a skill lands a Critical Hit, creates an Ice Sphere that orbits nearby. The Ice Sphere created flies to nearby enemies, dealing damage on hit and Burst damage to nearby enemies. On Critical Hits, inflict Frostbite on the enemy.",
                     "powerMods": {
-                        "base": 352.5/100,
+                        "base": 478/100,
+                        "skillCritBonus": 0.20,
                     },
-                    "customDPSBase": "",
+                    "customDPSBase": "viessaSphereCalcsABS0StarterTier0",
                     "customDPS": "viessaSphereCalcsABS0Starter",
                     "stats": {},
-                    "tags": [],
+                    "tags": ["SkillCritRateBaseBonus"],
                     "returnStatOptions": {
                         "AVG/Hit" : "avgDmgPerHit",
                     },
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Skill Crit Rate","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
                         ],
                         "PROJECTILE": [
                             {"statType": "range","statName": "Explosion Range","value": 1.5,"limit": 2.5,"isModified": true},
@@ -3756,10 +3762,10 @@ const characters = {
                         "FROSTBITE": [],
                         "ICE NEEDLE": [
                             {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
-                            {"statType": "","statName": "LvL 1","value": 0.117,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "LvL 2","value": 0.159,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "LvL 3","value": 0.199,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "LvL 4","value": 0.237,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "LvL 1","value": 1.585,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "LvL 2","value": 1.795,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "LvL 3","value": 1.995,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "LvL 4","value": 2.185,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "EFFECT": [],
                         "EFFECT (COLOSSUS)": [],
@@ -3835,16 +3841,16 @@ const characters = {
             "CritDamage": 1.2,
         },
         "characterSettings": {
-            "lunaPresenceStacks": 25,
+            "lunaPresenceStacks": 13,
             "lunaIsExcitingUsed": true,
             "lunaIsExcitingEnhanced": true,
-            "lunaLargoStacks": 26,
+            "lunaLargoStacks": 13,
             "lunaIsRelaxingUsed": true,
             "lunaIsRelaxingEnhanced": true,
-            "lunaCrescendoStacks": 26,
+            "lunaCrescendoStacks": 13,
             "lunaIsCheerfulUsed": true,
             "lunaIsCheerfulEnhanced": true,
-            "lunaForteStacks": 26,
+            "lunaForteStacks": 13,
             "lunaNimbleStacks": 20,
         },
         "abilities": {
@@ -3856,6 +3862,8 @@ const characters = {
                     "desc": "Equips a Unique Weapon. It will be unequipped when MP is fully depleted or when all bullets have been fired.<br>When the Unique Weapon is equipped, Notes activates, allowing the use of skills. Notes can be hit through shooting and skill use. If the skill button is not pressed at the right time, the skill will fail to activate. Failing to hit Notes through shooting significantly decreases MP.<br>Successfully hitting Notes grants Perfect Pitch stacks, and loses stacks when a note is missed or incorrectly entered.",
                     "powerMods": {
                         "base": 193.4/100,
+                        "powerModBonus": 0.02,
+                        "stackLimit": 13,
                     },
                     "customDPSBase": "lunaPresenceCalcsTier0",
                     "customDPS": "lunaPresenceCalcs",
@@ -3867,14 +3875,14 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "cooldown","statName": "Cooldown","value": 8,"limit": null,"isModified": true},
+                            {"statType": "cooldown","statName": "Cooldown","value": 2,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
-                            {"statType": "","statName": "MP Decrease/Miss","value": -50,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Decrease/Miss","value": -10,"limit": null,"isModified": false},
                         ],
                         "PROJECTILE": [],
                         "PERFECT PITCH": [
-                            {"statType": "","statName": "+Power Modifier/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "","statName": "Max Stacks","value": 25,"limit": null,"isModified": false},
+                            {"statType": "","statName": "+Power Modifier/Stack","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 13,"limit": null,"isModified": false},
                         ],
                         "BULLET RECOVERY": [
                             {"statType": "","statName": "On Exciting Act","value": 10,"limit": null,"isModified": false},
@@ -3901,9 +3909,9 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "cooldown","statName": "Cooldown","value": 10,"limit": null,"isModified": true},
+                            {"statType": "cooldown","statName": "Cooldown","value": 2,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
-                            {"statType": "","statName": "MP Decrease/Miss","value": -45,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP Decrease/Miss","value": -10,"limit": null,"isModified": false},
                         ],
                         "PROJECTILE": [],
                         "PERFECT PITCH": [],
@@ -4089,7 +4097,8 @@ const characters = {
                     "powerMods": {
                         "base": 144.0/100,
                         "baseEnhanced": 148.0/100,
-                        "largoCritStack": 0.01,
+                        "largoCritStack": 0.02,
+                        "stackLimit": 13,
                     },
                     "customDPSBase": "lunaExcitingCalcsTier0SurgeStarter",
                     "customDPS": "lunaExcitingCalcsSurgeStarter",
@@ -4117,11 +4126,12 @@ const characters = {
                             {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
                             {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "LARGO": [
-                            {"statType": "","statName": "+Skill Crit Rate/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate/Stack","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
-                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Stacks","value": 13,"limit": null,"isModified": false},
                         ],
                     },
                 },
@@ -4235,7 +4245,8 @@ const characters = {
                     "powerMods": {
                         "base": 144.0/100,
                         "baseEnhanced": 148.0/100,
-                        "crescendoCritStack": 0.01,
+                        "crescendoCritStack": 0.02,
+                        "stackLimit": 13,
                     },
                     "customDPSBase": "lunaRelaxingCalcsTier0SurgeStarter",
                     "customDPS": "lunaRelaxingCalcsSurgeStarter",
@@ -4263,11 +4274,12 @@ const characters = {
                             {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
                             {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "CRESCENDO": [
-                            {"statType": "","statName": "+Skill Crit DMG/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit DMG/Stack","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
-                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Stacks","value": 13,"limit": null,"isModified": false},
                         ],
                     },
                 },
@@ -4434,7 +4446,8 @@ const characters = {
                     "powerMods": {
                         "base": 144.0/100,
                         "baseEnhanced": 148.0/100,
-                        "fortePowerModStack": 0.01,
+                        "fortePowerModStack": 0.02,
+                        "stackLimit": 13,
                     },
                     "customDPSBase": "lunaCheerfulCalcsTier0SurgeStarter",
                     "customDPS": "lunaCheerfulCalcsSurgeStarter",
@@ -4462,11 +4475,12 @@ const characters = {
                             {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
                             {"statType": "","statName": "Shield Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "MP Recovery","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "FORTE": [
-                            {"statType": "","statName": "+Skill Power Mod/Stack","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Power Mod/Stack","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "duration","statName": "Duration","value": 14.5,"limit": null,"isModified": true},
-                            {"statType": "","statName": "Max Stacks","value": 26,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Stacks","value": 13,"limit": null,"isModified": false},
                         ],
                     },
                 },
@@ -4489,10 +4503,8 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "","statName": "Gauge Limit","value": 14,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Gauge Limit","value": 10,"limit": null,"isModified": false},
                             {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
                         ],
                         "VIVACE": [],
@@ -4517,10 +4529,8 @@ const characters = {
                     "displayStats": [],
                     "displayStatsALT": {
                         "BASIC": [
-                            {"statType": "","statName": "Gauge Limit","value": 14,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Gauge Limit","value": 10,"limit": null,"isModified": false},
                             {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
                         ],
                         "VIVACE": [
@@ -4551,8 +4561,6 @@ const characters = {
                         "BASIC": [
                             {"statType": "","statName": "Gauge Limit","value": 10,"limit": null,"isModified": false},
                             {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "-On Note Success","value": 1,"limit": null,"isModified": false},
-                            {"statType": "","statName": "+Recovery on Enhanced end","value": 4,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
                         ],
                     },

@@ -114,7 +114,7 @@
 
                 <div class="modeSelectionBoxHolder">
 
-                    <div class="modeSelectionSelectorBox" id="modeSelection1" onclick="userTriggers.toggleDisplayMode(1)">Player</div>
+                    <div class="modeSelectionSelectorBox" id="modeSelection1" onclick="userTriggers.toggleDisplayMode(1)">Skills</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection2" onclick="userTriggers.toggleDisplayMode(2)">Weapon</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection3" onclick="userTriggers.toggleDisplayMode(3)">Enemy</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection4" onclick="userTriggers.toggleDisplayMode(4)">Team</div>
@@ -174,10 +174,7 @@
                 
 
                 <div class="abilityDamageTabHolder" id="weaponBreakdownTabHolders" style="display: none;"><!-- WEAPON BREAKDOWN CONTAINERS -->
-                    <div class="abilityBreakdownTab" style="display: flex;flex-direction: column;">
-                        <div style="width: 100%;white-space: normal;display: flex;" class="smolText">
-                            Weapon mode is a work in progress, and is primarily for use with abilities that utilize the mods of your currently equipped weapon.
-                        </div>
+                    <div class="abilityBreakdownTab" style="display: flex;flex-direction: column;max-height: 770px;">
                         <div class="abilityBreakdownHeader" id="weaponBreakdownHeader1"></div>
                         <div class="abilityBreakdownTypeHeader" id="weaponBreakdownTypeHeader1"></div>
                         <div class="abilityBreakdownBody" id="weaponBreakdownBody1"></div>
@@ -188,9 +185,13 @@
                 <div class="abilityDamageTabHolder" id="enemyBreakdownTabHolders" style="display: none;"><!-- ENEMY BREAKDOWN CONTAINERS -->
 
                     <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;width: 100%;"> 
-                        <div class="advancedCategoryHeader" style="border: none;">ENEMY</div>
+                        <!-- <div class="advancedCategoryHeader" style="border: none;">ENEMY</div> -->
+                        <div style="width: 100%;object-fit:cover;">
+                            <img src="" alt="boss image" id="enemySettingsPicture" style="width: 35%;object-fit: cover;">
+                        </div>
                         <!-- <div class="selectionSelectorBoxesBossTargetStats"> -->
-                        <div class="totalHealingBox"><!-- enemy settings -->
+                            <div class="advancedCategoryHeader" style="border: none;">SELECT</div>
+                        <div class="totalHealingBox hasHoverTooltip" id="resistTargetExplainer"><!-- enemy settings -->
                             <div class="selectSelectorTitle">&nbsp;RESISTS:&nbsp;</div>
                             <div class="presetsSelectorBox">
                                 <input class="selectSelector" id="boss" list="bossList" onchange="userTriggers.updateSelectedBoss()">
@@ -198,7 +199,7 @@
                             </div>
                         </div>
     
-                        <div class="totalHealingBox" style="margin-top: 2px;">
+                        <div class="totalHealingBox hasHoverTooltip" style="margin-top: 2px;" id="partTargetExplainer">
                             <div class="selectSelectorTitle">&nbsp;TARGET:&nbsp;</div>
                             <div class="presetsSelectorBox">
                                 <input class="selectSelector" id="bossPart" list="bossPartList" onchange="userTriggers.updateSelectedBoss(true)">
@@ -207,35 +208,40 @@
                         </div>
 
                         <div class="totalHealingBox">
-                            <div class="statsRowName" style="display: flex;justify-content: center;">Part Weakness:&nbsp;<span id="bossPartWeakness">100%</span></div>
+                            <div class="statsRowName" style="display: flex;justify-content: center;">Current Target Weakness:&nbsp;<span id="bossPartWeakness">asdf</span></div>
                         </div>
                         <div class="totalHealingBox">
-                            <div class="statsRowName" style="display: flex;justify-content: center;">+End Weak Point:&nbsp;<span id="bossPartWeakPointBonus">100%</span></div>
+                            <div class="statsRowName" style="display: flex;justify-content: center;">+End Weak Point:&nbsp;<span id="bossPartWeakPointBonus">asdf</span></div>
                         </div>
                         <!-- </div> -->
 
-                        <div class="totalHealingBox">
+                        <div class="totalHealingBox hasHoverTooltip" id="playerCountExplainer">
+                            <div class="statsRowName">Player Count:&nbsp;<span id="playerCountDisplay">1</span></div>
+                            <div class="statsRowToggle">
+                                <input type="range" id="playerCountSlider" name="slider" min="1" max="4" value="1" step="1" onchange="userTriggers.updateGeneralSettings();userTriggers.updateSelectedBoss()">
+                            </div>
+                        </div>
+
+                        <div class="totalHealingBox hasHoverTooltip" id="immobileUptimeExplainer">
                             <div class="statsRowName">Time Spent Immobile:&nbsp;<span id="ambushImmobileSliderDisplay">100%</span></div>
                             <div class="statsRowToggle">
                                 <input type="range" id="ambushImmobileSlider" name="slider" min="0" max="100" value="100" step="1" onchange="userTriggers.updateGeneralSettings()">
                             </div>
                         </div>
 
-                        <div class="totalHealingBox">
+                        <div class="totalHealingBox hasHoverTooltip" id="gunCritResExplainer">
                             <div class="statsRowName">Weapon Crit Resist:&nbsp;<span id="weaponCritCeilingDisplay">0%</span></div>
                             <div class="statsRowToggle">
                                 <input type="range" id="weaponCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
                             </div>
                         </div>
-                        <div class="totalHealingBox">
+                        <div class="totalHealingBox hasHoverTooltip" id="skillCritResExplainer">
                             <div class="statsRowName">Skill Crit Resist:&nbsp;<span id="skillCritCeilingDisplay">0%</span></div>
                             <div class="statsRowToggle">
                                 <input type="range" id="skillCritCeiling" name="slider" min="-100" max="0" value="0" step="1" onchange="userTriggers.updateGeneralSettings()">
                             </div>
                         </div>
-                        <div style="width: 100%;object-fit: cover;">
-                            <img src="" alt="boss image" id="enemySettingsPicture" style="width: 100%;object-fit: cover;">
-                        </div>
+                        <div class="bossDataBox" id="bossDataBox"></div>
                     </div>
                 </div>
 
@@ -410,7 +416,7 @@
                             <div class="selectionSelectorBoxes" style="margin: 5px;margin-bottom: 16px;">
                                 <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
                                 <div class="presetsSelectorBox">
-                                    <input class="selectSelector" id="character" list="characterList" onchange="userTriggers.updateSelectedCharacter()"> <!--selector-->
+                                    <input class="selectSelector hasHoverTooltip" id="character" list="characterList" onchange="userTriggers.updateSelectedCharacter()"> <!--selector-->
                                     <datalist id="characterList"></datalist>
                                 </div>
                             </div>
@@ -494,9 +500,8 @@
                     <div class="breakdownTab" id="settingsBreakdownTab">
                         <div class="breakdownTabHeader">GENERAL SETTINGS</div>
                         <div class="breakdownTabBody">
-                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                            <div class="statisticSettingsRow hasHoverTooltip" id="allowWPExplainer">
                                 <span class="statsRowName">Allow Weak Points?</span>
-                                <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
                                         <input type="checkbox" class="toggleCheckbox" id="useWeakspots" onchange="userTriggers.updateGeneralSettings()" checked>
@@ -504,9 +509,8 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                            <div class="statisticSettingsRow hasHoverTooltip" id="allowCritsExplainer">
                                 <span class="statsRowName">Allow Crits?</span>
-                                <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
                                         <input type="checkbox" class="toggleCheckbox" id="useCrits" onchange="userTriggers.updateGeneralSettings()" checked>
@@ -514,9 +518,8 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="statisticSettingsRow hasHoverTooltip" id="">
+                            <div class="statisticSettingsRow hasHoverTooltip" id="allowTypeBonusExplainer">
                                 <span class="statsRowName">Allow Physical Bonus?</span>
-                                <!-- <span class="rowTraceLine"></span> -->
                                 <div class="statsRowToggle">
                                     <label class="toggleContainer">
                                         <input type="checkbox" class="toggleCheckbox" id="useFirearmPhysical" onchange="userTriggers.updateGeneralSettings()" checked>
@@ -530,10 +533,10 @@
                     </div>
                     <div class="breakdownTab" id="reactorBreakdownTab">
                         <div class="breakdownTabHeader">REACTOR</div>
-                        <div class="breakdownTabBody">
+                        <div class="breakdownTabBody" style="justify-content: space-evenly;">
 
                             <div class="componentBreakdownIconBox">
-                                <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="reactorBreakdownIcon">
+                                <img class="reactorBreakdownIconReactorBG" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="reactorBreakdownIcon">
                             </div>
 
                             <div class="reactorSelectorMainBox">
@@ -577,9 +580,9 @@
 
                             </div>
 
-                            <div class="componentHeaderRow" style="margin: 0;padding: 0;">Weapon Conditions</div>
+                            <!-- <div class="componentHeaderRow" style="margin: 0;padding: 0;">Weapon Conditions</div> -->
                             <div class="reactorSelectorMainBox" style="margin: 0;padding: 0;">
-                                <div class="selectionSelectorBoxesReactorIcons">
+                                <div class="selectionSelectorBoxesReactorIcons hasHoverTooltip" id="reactorAmmoTypeExplainer">
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_A_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorGeneral','General')" id="reactorGeneral">
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_B_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorSpecial','Special')" id="reactorSpecial">
                                     <img class="reactorRowIcons" src="/TFD/TFDImages/AmmoColors/Icon_RunesClass_Mini_C_Color.png" onclick="userTriggers.updateReactorSelections(3,'reactorImpact','Impact')" id="reactorImpact">
@@ -587,15 +590,39 @@
                                 </div>
                             </div>
                             <!-- <br> -->
-                            <div class="totalHealingBox" style="margin: 0;padding: 0;">
-                                <div class="totalHealingBoxHalf hasHoverTooltip">
-                                    <div style="padding-right: 5px;">Reactor Weapon Matched</div>
-                                    <label class="toggleContainer">
+
+                            <div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip" id="ultimateReactorExplainer">
+                                    <div class="totalHealingHeader">Ultimate</div>
+                                    <div class="totalHealingValue" id="" style="border: none;">
+                                        <label class="toggleContainer">
+                                            <!-- <div style="padding-right: 5px;">Weapon Condition</div> -->
+                                            <input type="checkbox" class="toggleCheckbox" id="USEReactorUltimate" onchange="userTriggers.updateReactorSelections()" checked> <!--math toggle-->
+                                            <span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="totalHealingBoxHalf hasHoverTooltip" id="weaponConditionExplainer">
+                                    <div class="totalHealingHeader">Condition</div>
+                                    <div class="totalHealingValue" id="" style="border: none;">
+                                        <label class="toggleContainer">
+                                        <!-- <div style="padding-right: 5px;">Weapon Condition</div> -->
                                         <input type="checkbox" class="toggleCheckbox" id="USEReactorOptimization" onchange="userTriggers.updateReactorSelections()" checked> <!--math toggle-->
                                         <span class="toggleSlider"></span>
-                                    </label>
+                                    </label></div>
                                 </div>
                             </div>
+
+
+                            <div class="totalHealingBox hasHoverTooltip" id="reactorLevelExplainer" style="z-index: 1;">
+                                <div class="statsRowNameReactorLevel">Level:</div>
+                                <div class="statsRowToggle">
+                                    <input type="range" id="reactorLevelSlider" name="slider" min="0" max="5" value="2" step="1" onchange="userTriggers.updateReactorSelections()">
+                                </div>
+                                <div class="statsRowNameReactorLevel"><span id="reactorLevelDisplay">2</span></div>
+                            </div>
+
+                            
 
                             <!-- <div class="reactorBreakdownIconBox">
                                 <img class="reactorBreakdownIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="reactorBreakdownIcon">
@@ -614,7 +641,7 @@
                             <div class="selectionSelectorBoxes">
                                 <div class="selectSelectorTitle">&nbsp;SELECT:&nbsp;</div>
                                 <div class="presetsSelectorBox">
-                                    <input class="selectSelector" id="auxiliary" list="auxiliaryList" onchange="userTriggers.updateComponentSelections()"> <!--selector-->
+                                    <input class="selectSelector" id="auxiliary" list="auxiliaryList" onchange="userTriggers.updateComponentSelections()">
                                     <datalist id="auxiliaryList"></datalist>
                                 </div>
                             </div>
@@ -1256,6 +1283,8 @@
 <script src="/TFD/Calculator/characterData.js"></script> <!-- character data -->
 
 <script src="/TFD/Calculator/statList.js"></script>
+<script src="/TFD/Calculator/conditions.js"></script>
+<script src="/TFD/Calculator/formulasBullets.js"></script>
 <script src="/TFD/Calculator/formulas.js"></script>
 <script src="/TFD/Calculator/tooltipStorage.js"></script>
 <script src="/TFD/Calculator/tooltipMath.js"></script>
@@ -1265,7 +1294,8 @@
 <script src="/TFD/Calculator/globalRecords.js"></script>
 <script src="/TFD/Calculator/reactors.js"></script> <!-- reactor data -->
 <script src="/TFD/Calculator/components.js"></script> <!-- Component data -->
-<script src="/TFD/Calculator/bossData.js"></script>
+<script src="/TFD/Calculator/bossDataCustom.js"></script>
+<script src="/TFD/Calculator/parsedBossData.js"></script>
 <script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
@@ -1273,6 +1303,7 @@
 <script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/specialRounds.js"></script> <!-- weapon mod data -->
+<script src="/TFD/Calculator/WeaponMods/generalRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/createHTML.js"></script> 
 <script src="/TFD/Calculator/urlHandling.js"></script> 
 <script src="/TFD/Calculator/pagePopulation.js"></script>

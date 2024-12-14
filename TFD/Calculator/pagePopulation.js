@@ -12,14 +12,34 @@ for (let i=1;i<=12;i++) {
     }
     readSelection("basicsBoxModsHolder").innerHTML += createHTML.modSlotBox(i,typeString);
 }
-
 for (let i=21;i<=30;i++) {
     let typeString = "modSlotBoxHolder";
     readSelection("basicsBoxWeaponModsHolder").innerHTML += createHTML.modSlotBox(i,typeString);
 }
 
+//since we changed how boss data is compiled I am using this for now to recreate an object
+let bosses = {...Vulgus};
+const difficulty = {
+    "Normal": "(N)",
+    "Hard": "(H)",
+    "VeryHard": "(A)",
+}
+const typeImages = {
+    "Burst": "/TFD/TFDImages/PhysIcons/Icon_Weak_Burst.png",
+    "Pierce": "/TFD/TFDImages/PhysIcons/Icon_Weak_Piercing.png",
+    "Crush": "/TFD/TFDImages/PhysIcons/Icon_Weak_Crush.png",
+    "": "/TFD/TFDImages/Stat Icons/Icon_Stat_Pc_Sd.png",
+}
+for (let entry in bossData) {
+    let current = bossData[entry];
+    let displayName = current.realName + " " + difficulty[current.difficulty];
 
-const userTriggers = {
+    current.displayName = displayName;
+    bosses[displayName] = "1";
+}
+bossData = {...bossData,...Vulgus}
+
+const userTriggers = { 
     toggleDisplayMode(modeAssigned) {
         globalRecords.currentDisplayMode = modeAssigned;
         const currentMode = modeAssigned;
@@ -75,12 +95,15 @@ const userTriggers = {
         globalRecords.useCrits = readSelection("useCrits").checked;
         globalRecords.useFirearmPhysical = readSelection("useFirearmPhysical").checked;
 
+        globalRecords.playerCount = +readSelection("playerCountSlider").value;
+
         //modifies the stored base ratio bonus of ambush based on the slider input
         readSelection("ambushImmobileSliderDisplay").innerHTML = globalRecords.ambushImmobileSlider + "%";
         modData["Dangerous Ambush (Immobile)"].stats.PowerRatioBase = 0.498 * (+globalRecords.ambushImmobileSlider/100)
 
         readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
+        readSelection("playerCountDisplay").innerHTML = globalRecords.playerCount;
 
         updateFormulas();
     },
@@ -294,8 +317,9 @@ const userTriggers = {
         "HighPowered": highPowerRounds,
         "Impact": impactRounds,
         "Special": specialRounds,
-        // "General": generalRounds
+        "General": generalRounds
     },
+    
     updateSelectedWeapon(parentCall,isImportedValue) {
         let currentWeapon = readSelection("characterWeapon");
         const weaponRef = globalRecords.weapon;
@@ -327,6 +351,17 @@ const userTriggers = {
             if (!isImportedValue) {weaponRef.currentWeapon = currentWeapon.value;}
             else {currentWeapon.value = weaponRef.currentWeapon}
         }
+
+
+        //modify the ulty toggle by what the weapon is in regards to ulty/rare
+        //and then also modify the reactor ammo type for the same reasons
+        //these will only get triggered to forcibly change the stats when updateSelectedWeapon happens so that way people can still toggle
+        //various things to see differences.
+        const ammoType = sniperList[currentWeapon.value].ammoType;
+        readSelection("USEReactorUltimate").checked = sniperList[currentWeapon.value].rarity === "Ultimate";
+        userTriggers.updateReactorSelections(3,`reactor${ammoType}`,ammoType);
+        // General,Special,Impact,HighPowered
+        // reactorGeneral,reactorSpecial,reactorImpact,reactorHighPowered
 
         const currentWeaponImage = sniperList[currentWeapon.value].image;
         weaponRef.currentWeaponType = sniperList[currentWeapon.value].weaponType;
@@ -433,7 +468,7 @@ const userTriggers = {
         const lists = {
             "1": ["reactorNonAttribute","reactorFire","reactorElectric","reactorChill","reactorToxic"],
             "2": ["reactorDimension","reactorFusion","reactorSingular","reactorTech"],
-            "3": ["reactorGeneral","reactorSpecial","reactorImpact","reactorHighPowered"],
+            "3": ["reactorGeneral","reactorSpecial","reactorImpact","reactorHighPowered"], 
         }
         const primaryList = ["reactorNonAttribute","reactorFire","reactorElectric","reactorChill","reactorToxic"];
         const secondaryList = ["reactorDimension","reactorFusion","reactorSingular","reactorTech"];
@@ -524,6 +559,14 @@ const userTriggers = {
         globalRef.subRoll2Value = +sub2Value.value;
 
         globalRef.weaponMatched = readSelection("USEReactorOptimization").checked;
+        globalRef.isUltimate = readSelection("USEReactorUltimate").checked;
+
+        if (!globalRef.isUltimate) {
+            readSelection("reactorLevelSlider").value = Math.min(2,+readSelection("reactorLevelSlider").value)
+        }
+
+        globalRef.level = +readSelection("reactorLevelSlider").value;
+        readSelection("reactorLevelDisplay").innerHTML = globalRef.level;
         // readSelection("USEReactorOptimization").checked = globalRef.weaponMatched;
 
         updateFormulas();
@@ -790,11 +833,33 @@ const userTriggers = {
     },
     updateSelectedBoss() {
         if (!bosses[readSelection("boss").value]) {readSelection("boss").value = "None (True Damage)"}
+        let currentPlayers = globalRecords.playerCount;
+
+        
+        //assign the current boss
+        let currentEntry = null;
+        let currentName = "";
+        for (let boss in bossData) {
+            // console.log(boss)
+            let current = bossData[boss];
+            // console.log(current.realName)
+            if (current.displayName === readSelection("boss").value) {
+                currentName = boss;
+                currentEntry = current;
+                break;
+            }
+        }
+
+
+        let basicStats = currentEntry.levelKeys[currentPlayers];
+        let bossStats = basicStats.lvlStats;
+        let generalStats = currentEntry.stats;
+
         const critPath = bosses[readSelection("boss").value];
-        const partsPath = critPath.parts;
+        const partsPath = currentEntry.weaknessKeys;
         const partsArray = Object.keys(partsPath);
 
-        if (globalRecords.boss.currentBoss != readSelection("boss").value) {
+        if (globalRecords.boss.currentBoss != currentName) {
             readSelection(`bossPart`).value = partsArray[1];
             const partDisplayList = document.getElementById(`bossPartList`);
             partDisplayList.innerHTML = '';
@@ -803,24 +868,116 @@ const userTriggers = {
         }
         if (!partsPath[readSelection("bossPart").value]) {readSelection("bossPart").value = partsArray[0]}
 
-        globalRecords.boss.currentBoss = readSelection("boss").value;
-        globalRecords.boss.enemyType = critPath.enemyType,
+        globalRecords.boss.currentBoss = currentName;
+        globalRecords.boss.enemyType = currentEntry.enemyType,
         globalRecords.boss.currentBossPart = readSelection("bossPart").value;
         globalRecords.boss.currentBossPartType = partsPath[readSelection("bossPart").value].type;
         globalRecords.boss.currentBossPartWP = partsPath[readSelection("bossPart").value].wpMod;
 
-        readSelection("enemySettingsPicture").src = `${critPath.image}`;
+        readSelection("enemySettingsPicture").src = `/TFD/TFDImages/Bosses/${currentEntry.smallIcon}.png`;
         // readSelection("enemySettingsPictureBox").style.backgroundSize = "cover";  
 
         readSelection("bossPartWeakness").innerHTML = globalRecords.boss.currentBossPartType;
         readSelection("bossPartWeakPointBonus").innerHTML = globalRecords.boss.currentBossPartWP;
         
-        globalRecords.weaponCritCeiling = -critPath.gunCrit*100;
-        globalRecords.skillCritCeiling = -critPath.skillCrit*100;
-        readSelection("weaponCritCeiling").value = -critPath.gunCrit*100;
-        readSelection("skillCritCeiling").value = -critPath.skillCrit*100;
-        readSelection("weaponCritCeilingDisplay").innerHTML = -critPath.gunCrit*100 + "%";
-        readSelection("skillCritCeilingDisplay").innerHTML = -critPath.skillCrit*100 + "%";
+        globalRecords.weaponCritCeiling = -currentEntry.stats["Firearm Crit Resist"];
+        globalRecords.skillCritCeiling = -currentEntry.stats["Skill Crit Resist"];
+        readSelection("weaponCritCeiling").value = -currentEntry.stats["Firearm Crit Resist"];
+        readSelection("skillCritCeiling").value = -currentEntry.stats["Skill Crit Resist"];
+        readSelection("weaponCritCeilingDisplay").innerHTML = -currentEntry.stats["Firearm Crit Resist"] + "%";
+        readSelection("skillCritCeilingDisplay").innerHTML = -currentEntry.stats["Skill Crit Resist"] + "%";
+
+
+
+        //weak point data
+        let partsString = `<div class="bossDataHeader">WP MODS</div>`;
+        const partsRef = currentEntry.weaknessKeys;
+        const partsRefKeys = Object.keys(partsRef);
+        for (let part of partsRefKeys) {
+            let partName = partsRef[part].name.toUpperCase();
+            partsString += `
+            <div class="bossResistBoxHolder">
+                <img class="bossWeaknessIcon" src="${typeImages[partsRef[part].type]}">
+                <div>${partName}</div>
+                ${partName === "BODY" ? "" :
+                `<span class="rowTraceLine"></span>
+                <span class="bossResistValue">+${partsRef[part].wpMod.toFixed(3)}x</span>`}
+            </div>
+            `
+        }
+        readSelection("bossDataBox").innerHTML = `
+        <div class="bossDataMainHolder" style="border:none">
+                <div class="bossDataBreakdownBox">
+                    <div class="bossDataHeaderBig">SUMMARY STATS</div>
+                    <div class="bossDataCritResist">HP: ${bossStats.HP.toLocaleString()} - Shield: ${bossStats.Shield.toLocaleString()}</div>
+
+                    <div class="bossDataBreakdownBoxRow">
+                        <div class="bossDataCritResistAttributes">
+                            <div class="bossDataHeader">RESISTS</div>
+                            <div class="bossResistBoxHolder">
+                                <div>Firearm Crit</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${currentEntry.stats["Firearm Crit Resist"].toFixed(0)}%</span>
+                            </div>
+                            <div class="bossResistBoxHolder">
+                                <div>Skill Crit</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${currentEntry.stats["Skill Crit Resist"].toFixed(0)}%</span>
+                            </div>
+
+
+                            <!-- def -->
+                            <div class="bossResistBoxHolder">
+                                <div>DEF</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.DEF.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Def.png">
+                            </div>
+
+                            <!-- non attribute -->
+                            <div class="bossResistBoxHolder">
+                                <div>Non-Attribute</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats["Non-Attribute"].toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_000.png">
+                            </div>
+
+                            <!-- fire -->
+                            <div class="bossResistBoxHolder">
+                                <div>Fire</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Fire.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_001.png">
+                            </div>
+                            <!-- chill -->
+                            <div class="bossResistBoxHolder">
+                                <div>Chill</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Chill.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_003.png">
+                            </div>
+                            <!-- Elec -->
+                            <div class="bossResistBoxHolder">
+                                <div>Electric</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Electric.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_002.png">
+                            </div>
+                            <!-- toxin -->
+                            <div class="bossResistBoxHolder">
+                                <div>Toxic</div>
+                                <span class="rowTraceLine"></span>
+                                <span class="bossResistValue">${bossStats.Toxic.toLocaleString()}</span>
+                                <img class="bossWeaknessIcon" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_004.png">
+                            </div>
+                        </div>
+
+                        <div class="bossDataPartsRow">${partsString}</div>
+                    </div>
+                    <!-- asdf -->
+                </div>
+            </div>
+        `;
 
         updateFormulas();
     },
@@ -888,7 +1045,6 @@ const pagePopulation = {
         {"Name": "weaponSub4List", "DataSet": weaponSubstatList},
 
         {"Name": "bossList", "DataSet": bosses},
-
     ],
     populateGear(elemID,collection) {
         const select = readSelection(elemID);
@@ -1171,6 +1327,7 @@ const formulasValues = {
         let pullStats = formulasValues.pullStats;
 
         //add the main stats of each component
+        console.log(globalRef.auxiliary)
         index[auxiliary[globalRef.auxiliary].headerStat] += auxiliary[globalRef.auxiliary].value;
         index[sensor[globalRef.sensor].headerStat] += sensor[globalRef.sensor].value;
         index[memory[globalRef.memory].headerStat] += memory[globalRef.memory].value;
@@ -1251,7 +1408,7 @@ const formulasValues = {
 }
 
 
-function updateFormulas(isCycleCalcs,modArrayOverride) {
+function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? 1.6 : 1;
     const characterRef = characters[globalRecords.character.currentCharacter].baseStats
@@ -1260,7 +1417,7 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
 
     formulasValues.pullModStats(tableReference,modArrayOverride);
     
-    customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs);
+    const {limitedAbilityBonuses,limitedWeaponBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
     formulasValues.pullReactorStats(tableReference);
     formulasValues.pullComponentStats(tableReference);
@@ -1298,7 +1455,7 @@ function updateFormulas(isCycleCalcs,modArrayOverride) {
         baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK,
 
     }
-    returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs)}
+    returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses)}
 
     // customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs);
     if (!isCycleCalcs) {
@@ -1357,7 +1514,7 @@ else {
 }
 
 userTriggers.updateSelectedBoss();
-readSelection("boss").value = "Devourer";
+readSelection("boss").value = "Devourer (H)";
 readSelection("bossPart").value = "Shoulder";
 userTriggers.updateSelectedBoss();
 globalRecords.URLImportCompleted = true;

@@ -19,7 +19,23 @@ const tooltipStorage = {
     "partTargetExplainer": "This allows you to target a specific part on the enemy. So say you're shooting Devourer, what part are you shooting? His body? His shoulder? Specify it.<br><br>If you select a weak point as your target, then the weapon damage will be assumed as weak point hits.<br><br>Physical type bonuses(crush, pierce, burst) are automatically adjusted and factored based on the enemy type and part selected.",
 
 
+    "reactorLevelExplainer": "Reactors can range from level 0, unenhanced, up to level 5. Both regular reactors and ultimate reactors can reach level 2, but only ultimate reactors can reach level 5.",
+    "ultimateReactorExplainer": "When toggled on this tells the calculator your reactor is Ultimate, meaning the optimization bonus will be 60% instead of 40%.<br><br>When swapping to a new weapon selection in the Weapon tab, this toggle will be flipped on or off automatically based on the weapon's rarity.",
+    "weaponConditionExplainer": "Leave this toggled on if you want to include the weapon optimization condition. On regular reactors, this is a 40% bonus whereas on Ultimate reactors a 60% bonus.",
+    "reactorAmmoTypeExplainer": "This is automatically adjusted as you select new weapons in the calculator.<br>To select a weapon, open the \"Weapon\" tab.<br><br>However, there are some skills that can be modified by this selection, like Lepic's Overkill or Freyna's Baptism that have ammotype dependent fire rate options.",
 
+
+    // "reactorNonAttribute": "Non-Attribute",
+    // "reactorFire": "Fire",
+    // "reactorElectric": "Electric",
+    // "reactorChill": "Chill",
+    // "reactorToxic": "Toxic",
+
+
+    // "reactorDimension": "Dimension",
+    // "reactorFusion": "Fusion",
+    // "reactorSingular": "Singular",
+    // "reactorTech": "Tech",
 
 
 
