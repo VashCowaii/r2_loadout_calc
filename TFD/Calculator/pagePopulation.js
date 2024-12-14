@@ -1410,7 +1410,8 @@ const formulasValues = {
 
 function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
-    tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? 1.6 : 1;
+    const optBonus = globalRecords.reactor.isUltimate ? 1.6 : 1.4;
+    tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? optBonus : 1;
     const characterRef = characters[globalRecords.character.currentCharacter].baseStats
     const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
     const globalRef = globalRecords.character.abilities;
