@@ -12,6 +12,8 @@ let globalRecords = {
         "currentAmmoType": "Impact",
         "currentAmmoTypeID": "reactorImpact",
         "weaponMatched": true,
+        "isUltimate": true,
+        "level": 2,
     },
     "components": {
         "auxiliary": "Slayer",
@@ -68,7 +70,7 @@ let globalRecords = {
         "subRoll4Value": 0,
     },
     "boss": {
-        "currentBoss": "Devourer",
+        "currentBoss": "VoidBattle_Devourer_Hard",
         "enemyType": "Colossus",
         "currentBossPart": "",
         "currentBossPartType": "",
@@ -86,5 +88,14 @@ let globalRecords = {
     "useWeakspots": true,
     "useCrits": true,
     "useFirearmPhysical": true,
+    "playerCount": 1,
+
+
+
+
+
+    "lists": {
+        "components": [],
+    }
 
 }
