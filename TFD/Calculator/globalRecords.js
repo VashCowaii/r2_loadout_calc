@@ -85,6 +85,7 @@ let globalRecords = {
     "weaponCritCeiling": 0,
     "skillCritCeiling": 0,
     "ambushImmobileSlider": 100,
+    "weakPointHitRate": 100,
     "useWeakspots": true,
     "useCrits": true,
     "useFirearmPhysical": true,

@@ -411,6 +411,61 @@ const augments = {
         "skillOverrides": ["Noise Surge","Noise Surge","Noise Surge","Noise Surge","Noise Surge"]
     },
 
+    //SHAREN
+    "Battlesuit Melting Rounds": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Sharen",
+        "desc": "Modifies to stackable skill. Decreases the enemy's Electric Resistance and DEF instead of stunning them.",
+        "skillOverrides": [0,0,"Battlesuit Melting Rounds",0,0]
+    },
+    "Void Domination": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Sharen",
+        "desc": "Increases the targeting range of Flash Shortsword. Increases enemy targeting speed.",
+        "skillOverrides": [0,0,0,"Void Domination",0]
+    },
+    "Overcharged Edge": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Sharen",
+        "desc": "Modifies Active Camouflage to consume Shields insted of MP. Ambush damage increases by the amount of Shields consumed.",
+        "skillOverrides": [0,"Overcharged Edge",0,0,"Overcharged Edge"]
+    },
+    "Release Cutting Force": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Sharen",
+        "desc": "Modifies Cutoff Beam so that it can be unleashed as Sword Aura.",
+        "skillOverrides": ["Release Cutting Force",0,0,0,0]
+    },
+    "Ambushed": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Ultimate Sharen",
+        "desc": "Modifies so that killing an enemy in Active Camouflage returns the user to the same state. In Active Camouflage, agility increases, and Shock Bomb skill is converted to an attack skill.",
+        "skillOverrides": [0,"Ambushed","Ambushed",0,"Ambushed"]
+    },
+    "Area Suppression": {
+        "rarity": "Transcendant",
+        "polarity": "Cerulean",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Ultimate Sharen",
+        "desc": "Changes the skill to scatter Shortswords around. Each Shortsword deals independent damage.",
+        "skillOverrides": [0,0,0,"Area Suppression",0]
+    },
 
     ...localInsertionAugments
 }

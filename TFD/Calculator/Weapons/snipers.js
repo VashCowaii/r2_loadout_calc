@@ -226,7 +226,11 @@ const sniperList = {
         "baseWeakPoint": 2,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 48,
+        "baseReloadTime": 2.6,
         "magazine": 11,
+
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1006_A001.png",
@@ -240,7 +244,6 @@ const sniperList = {
             "BASIC": [],
         },
     },
-
     "Secret Garden": {
         "name": "Secret Garden",
         "rarity": "Ultimate",
@@ -262,7 +265,7 @@ const sniperList = {
             "gardenStackCount": 3,
         },
         "customDPSBase": "secretGardenCalcsTier0",
-        "customDPS": "",
+        "customDPS": "skipThisWeaponCalcs",
         "desc": "When using a Dimension skill, recovers Custom Resource with a set chance. When using a Tech Skill, grants the unique ability Pest Control with a set chance.",
         "displayStatsALT": {
             "BASIC": [
@@ -295,10 +298,8 @@ const sniperList = {
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
 
-        "baseFireRate": 197.8858,//190.2439,//197.08,//200,
-
+        "baseFireRate": 200,
         "baseReloadTime": 2,
-
         "magazine": 16,
 
         "ammoType": "Impact",
@@ -380,9 +381,11 @@ const sniperList = {
         "baseWeakPoint": 1.7,
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
+
         "baseFireRate": 150,
         "baseReloadTime": 1.5,
         "magazine": 8,
+
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
         "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1007_A001.png",
@@ -419,7 +422,7 @@ const sniperList = {
         "physicalType": "Burst",
         "physicalTypeBonus": 0.10,
 
-        "baseFireRate": 120,//625.0,
+        "baseFireRate": 120,
         "baseReloadTime": 1.4,
         "magazine": 9,
 

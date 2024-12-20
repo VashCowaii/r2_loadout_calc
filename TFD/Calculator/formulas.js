@@ -190,8 +190,9 @@ const calcs = {
         return {perHit,perCrit,AVG}
     },
 
-    getFirearmATK(index,weaponRef) {
+    getFirearmATK(index,weaponRef,uniqueMulti) {
         const baseFirearmATK = weaponRef.baseATK;
+        uniqueMulti = uniqueMulti || 1;
 
         const attackPercent = index["FirearmATK%"];
         const onHitBonus = index["FirearmATK%OnHit"];//while called onhit it's more of an enemy debuff
@@ -201,20 +202,24 @@ const calcs = {
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
-        const postHitATK = firearmAttributeConversionBase + (baseFirearmATK * onHitBonus);
+        const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
         const totalFirearmATK = (postHitATK + index.ColossusATK) * (1 + physicalTypeMulti);
 
         return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
     getFirearmWeakpoint(index,weaponRef) {
-        const baseWPMulti = weaponRef.baseWeakPoint + index.BaseWeakPointBonus;
+        const baseWPMulti = weaponRef.baseWeakPoint;
+        const flatWPBonus = index.BaseWeakPointBonus;
         const weakpointBonus = index["WeakPointDamage%"];
 
         const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
-        const totalWPBonus = calcs.customTruncate((globalRecords.useWeakspots && bossPartWPBonus != 0 ? baseWPMulti * (1 + weakpointBonus) + bossPartWPBonus : 1) + 0.00001,4);
+        const totalWPBonus = calcs.customTruncate((globalRecords.useWeakspots && bossPartWPBonus != 0 ? (baseWPMulti + flatWPBonus) * (1 + weakpointBonus) + bossPartWPBonus : 1) + 0.00001,4);
 
-        return {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus}
+        const wpHitRate = globalRecords.weakPointHitRate/100;
+        const wpAveraged = 1 + (wpHitRate * Math.max(0,totalWPBonus-1));
+
+        return {baseWPMulti,flatWPBonus,weakpointBonus,bossPartWPBonus,totalWPBonus,wpHitRate,wpAveraged}
     },
     getFirearmCrit(index,weaponRef) {
         const baseFirearmCritRate = weaponRef.baseCritRate;
@@ -356,11 +361,14 @@ const customDamage = {
         //ability array handling is done within userTriggers.updateSelectedMod
         const arrayRef = globalRef.abilityArray;
         const abilityRefs = characters[selectedCharacter].abilities;
+        
 
         for (let i=1;i<=5;i++) {
             const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
 
             const currentPath = abilityRefs[`ability${i}`][path];
+            currentPath.complexBonus = [];
+
             if (currentPath.customDPSBase) {customDamage[currentPath.customDPSBase](index,null,isCycleCalcs);}
         }
 
@@ -372,9 +380,9 @@ const customDamage = {
 
         limitedAbilityBonuses = [];
         limitedWeaponBonuses = [];
+        limitedWeaponAbilityBonuses = [];
 
-        // const currentWeaponMods = weaponModOverride ? weaponModOverride : globalRecords.weapon.mods;
-        const currentWeaponMods = globalRecords.weapon.mods;
+        const currentWeaponMods = weaponModOverride || globalRecords.weapon.mods;
         const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
         for (let entry of currentWeaponMods) {
             let path = weaponModsCategory[entry];
@@ -383,17 +391,61 @@ const customDamage = {
                 //if this is a nonstacking cooldown based effect, then make the initial time passed the amount of the cooldown so it can apply to the first shot
                 //otherwise set it to 0 so time can accrue normally
                 let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
+                let firstIsSkipped = (path.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+
+                let complexBonusArray = [];
+
+                for (let bonuses of path.complexBonus) {
+                    let newArrayEntry = {
+                        ...bonuses
+                    }
+                    newArrayEntry.stats = [...bonuses.stats]
+                    complexBonusArray.push(newArrayEntry);
+                }
 
                 limitedWeaponBonuses.push({
-                    "timesUsed": 0,"timePassed": initialTimePassed,
-                    "bonusArray": [...path.complexBonus] 
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                    "bonusArray": complexBonusArray 
+                })
+                limitedWeaponAbilityBonuses.push({
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                    "bonusArray": complexBonusArray
                 })
             }
         }
+        for (let i=1;i<=5;i++) {
+            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+            const currentPath = abilityRefs[`ability${i}`][path];
 
-        return {limitedAbilityBonuses,limitedWeaponBonuses}
+            // console.log(currentPath.complexBonus)
+
+            if (currentPath.complexBonus.length) {
+                let initialTimePassed = currentPath.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPath.complexBonus[0].cooldown : 0;
+                let firstIsSkipped = (currentPath.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+                let complexBonusArray = [];
+
+                for (let bonuses of currentPath.complexBonus) {
+                    let newArrayEntry = {
+                        ...bonuses
+                    }
+                    newArrayEntry.stats = [...bonuses.stats]
+                    complexBonusArray.push(newArrayEntry);
+                }
+
+
+                limitedWeaponAbilityBonuses.push({
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                    "bonusArray": complexBonusArray
+                })
+                // customDamage[currentPath.customDPSBase](index,null,isCycleCalcs);
+            }
+        }
+
+        // console.log(limitedWeaponAbilityBonuses)
+
+        return {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses}
     },
-    callAbilityFunctions(index,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses) {
+    callAbilityFunctions(index,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -416,7 +468,7 @@ const customDamage = {
             const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
 
             const currentPath = abilityRefs[`ability${i}`][path];
-            if (currentPath.customDPS) {returnValuesObject[`ability${i}`] = customDamage[currentPath.customDPS](index,returnObject,isCycleCalcs);}
+            if (currentPath.customDPS) {returnValuesObject[`ability${i}`] = customDamage[currentPath.customDPS](index,returnObject,isCycleCalcs,null,limitedWeaponAbilityBonuses);}
             else if (!currentPath.customDPSBase && !isCycleCalcs) {readSelection(`abilityBreakdownBody${i}`).innerHTML = absentBreakdown;}
             else {returnValuesObject[`ability${i}`] = {};}
         }
@@ -521,7 +573,7 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     kyleRepulsionCalcsInstinctStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.kyleRepulsionCalcs(index,returnObject,isCycleCalcs,"Collision Instinct");
+        return customDamage.kyleRepulsionCalcs(index,returnObject,isCycleCalcs,"Collision Instinct");
     },
     //ability 2
     kyleBulwarkCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
@@ -669,7 +721,7 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     kyleSpurtCalcsEruptionStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.kyleSpurtCalcs(index,returnObject,isCycleCalcs,"Self-Directed Eruption");
+        return customDamage.kyleSpurtCalcs(index,returnObject,isCycleCalcs,"Self-Directed Eruption");
     },
     //ability 4
     kyleThrustersCalcs(index,returnObject,isCycleCalcs,nameOverride) {
@@ -1592,6 +1644,28 @@ const customDamage = {
         }
     },
     //ability 4
+    freynaBaptismSkillBase(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Freyna;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage} );
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        return {damageSkill,skillPowerModifier};
+    },
     freynaBaptismCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Freyna;
         const settingsRef = characterRef.characterSettings;
@@ -1607,46 +1681,71 @@ const customDamage = {
 
         const basicInfo = {baseSkillPower,abilityDR,crit};
 
-        const skillPowerModifier = abilityMods.base + sumModifierBonus;
         const skillPowerModifierTrauma = abilityMods.trauma + sumModifierBonus;
         const skillPowerModifierPanic = abilityMods.panic + sumModifierBonus;
     
-        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
         const damageTrauma = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierTrauma);
         const damagePanic = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierPanic);
 
         const rollDuration = 1.35;
-        const firingWindowBase = abilityMods.duration * (1 + index.SkillDuration);
-        const actualFiringWindow = firingWindowBase - rollDuration;
 
-        const currentAmmoType = globalRecords.reactor.currentAmmoType;
-        const weaponModsPath = globalRecords.weapon.mods;
-        let isSharpPrecision = false;
-        for (let entry of weaponModsPath) {if (entry === "Sharp Precision Shot") {isSharpPrecision = true;break;}}
-        const baseRate = 60/451;//gap between shots with 0 fire rate active from any source.
-        const {shotCount,firingWindowDuration,excessWasted} = customDamage.skillBasedFireRateMath(index,actualFiringWindow,baseRate,isSharpPrecision,currentAmmoType);
+        const baseDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const normalDuration = baseDuration - rollDuration;
 
-
-
+        const settingsObject = {
+            limitedWeaponAbilityBonuses,
+            "isStaticRate": false,
+            "referenceFunction": customDamage.freynaBaptismSkillBase,
+            "wastedTimeSkill": rollDuration,//roll duration for cancel
+            "skillOnly": true,
+        }
+        const baseFireRate = 451;
         const magazine = abilityMods.magazine * (1 + index.MagazineSize);
-        const usableMagazine = Math.floor(magazine);
-        const possibleShots = Math.min(usableMagazine,shotCount)
+        const actualMagSize = Math.floor(magazine);
+        //this is purely to fake out the bulletsArray returned so we can still see the total upper value on shots possible
+        //and then trim it by duration array slice, and then math.min with the actual mag size, so the fake value is never truly used
+        const fakeMagSize = 150;
 
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,fakeMagSize,currentWeaponRef,settingsObject).bulletsArray;
+
+        //trim the bullets array by the allowed duration specified above
+        for (let i=0;i<bulletsArray.length;i++) {
+            if (bulletsArray[i].timePassed > normalDuration) {
+                bulletsArray = bulletsArray.slice(0,i);
+            }
+        }
+
+        const possibleShots = bulletsArray.length;
+        const actualShots = Math.min(possibleShots,actualMagSize);
+        
+
+        let sumBulletDamage = 0;
+        for (let entry of bulletsArray) {sumBulletDamage += entry.SkillDamage.AVG;}
+
+
+
+        //trauma
         const avgPerTraumaTick = damageTrauma.AVG;
-        const totalAVGTrauma = Math.floor(actualFiringWindow) * damageTrauma.AVG;
-        const avgPerShot = damage.AVG;
-        const totalAVGGun = possibleShots * damage.AVG;
-        const avgGunDPS = (possibleShots * damage.AVG) / actualFiringWindow;
-        const avgTotalDPS = (possibleShots * damage.AVG + totalAVGTrauma) / actualFiringWindow;
-        const SUMTotalAVG = possibleShots * damage.AVG + totalAVGTrauma;
+        const totalAVGTrauma = Math.floor(normalDuration) * damageTrauma.AVG;
+
+        //baptism
+        const avgPerShot = sumBulletDamage / actualShots;
+        const totalAVGGun = sumBulletDamage;
+
+        const avgGunDPS = totalAVGGun / baseDuration;
+        const avgTotalDPS = (totalAVGGun + totalAVGTrauma) / baseDuration;
+
+        const SUMTotalAVG = totalAVGGun + totalAVGTrauma;
 
         if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray,true);
             let rowInjection = [
-                {"name": "Firing Window","value": firingWindowBase,"unit": "s"},
+                {"name": "Firing Window","value": baseDuration,"unit": "s"},
                 {"name": "Roll Cancel","value": -rollDuration,"unit": "s"},
-                {"name": "Actual","value": actualFiringWindow,"unit": "s"},
-                {"name": "Magazine","value": usableMagazine,"unit": " shots"},
-                {"name": "Time for","value": shotCount,"unit": " shots"},
+                {"name": "Actual","value": normalDuration,"unit": "s"},
+                {"name": "Magazine","value": actualMagSize,"unit": " shots"},
+                {"name": "Time for","value": possibleShots,"unit": " shots"},
             ]
             let rowInjectionSUMS = [
                 {"name": "SUM Total AVG","value": SUMTotalAVG,"unit": ""},
@@ -1656,15 +1755,16 @@ const customDamage = {
             ]
 
             const breakdownArray = [
-                {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [possibleShots,totalAVGGun],
-                    "rowInjection": [rowInjection,"Benefits from Fire Rate and Rounds Per Magazine stats."],
-                    "condition": false,"desc": ""},
+                // {"header": "UNIQUE WEAPON","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [possibleShots,totalAVGGun],
+                //     "rowInjection": [rowInjection,"Benefits from Fire Rate and Rounds Per Magazine stats."],
+                //     "condition": false,"desc": ""},
                 {"header": "TRAUMA","value": damageTrauma,"modifier": skillPowerModifierTrauma,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "condition": false,"desc": ""},
                 {"header": "NIGHTMARE","value": damagePanic,"modifier": skillPowerModifierPanic,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
                     "condition": nameOverride,"desc": "Will not apply to the host of Room 0 Trauma, but only to those around them.<br>If another nearby also has Room 0 Trauma, then it can apply to both as both apply to the other."},
                 {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "","isDOT": false,"ticksDOT": 0,"intervalDOT": 0,
-                    "rowInjection": [rowInjectionSUMS,""],
+                    "rowInjection": [rowInjection,""],
+                    "rowInjection2": [rowInjectionSUMS,""],
                     "condition": false,"desc": "Only Baptism + Trauma damage is factored here. The cut-off for these numbers is when you run out of Baptism ammo."},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
@@ -1672,7 +1772,24 @@ const customDamage = {
             const addRow = calcsUIHelper.addHealingBoxCluster;
             readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
             ${addRow("Power",baseSkillPower,"")}
-            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="basicsSummaryBox">
+                ${graphString}
+            </div>
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1,null,null,true)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeaponsSkill" min="1" max="${actualShots}" step="1" value="1" onchange="bullets.updateExpandedBullet(null,null,null,true)">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1,null,null,true)">&#9654;</div>
+                </div>
+                ${bulletArrayString}
+            </div>
+            <div class="basicsSummaryBox">
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
@@ -1821,10 +1938,10 @@ const customDamage = {
         settingsRef.blastStacksPowerBonus = totalBombsMulti;
     },
     esiemoBlastCalcsTier0CreativeStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Creative Explosion");
+        return customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Creative Explosion");
     },
     esiemoBlastCalcsTier0ClusterStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Cluster Bomb");
+        return customDamage.esiemoBlastCalcsTier0(index,returnObject,isCycleCalcs,"Cluster Bomb");
     },
     esiemoBlastCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Esiemo;
@@ -1868,7 +1985,7 @@ const customDamage = {
         return customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,"Creative Explosion");
     },
     esiemoClusterCalcs(index,returnObject,isCycleCalcs) {
-        customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,null,0.15,"Cluster Bomb");
+        return customDamage.esiemoBlastCalcs(index,returnObject,isCycleCalcs,null,0.15,"Cluster Bomb");
         // const characterRef = characters.Esiemo;
         // const settingsRef = characterRef.characterSettings;
 
@@ -2493,7 +2610,8 @@ const customDamage = {
         }
     },
     //ability 4
-    haileyZenithCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+    //this is the skill only reference function and damage calculation
+    haileyZenithSkillBase(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Hailey;
         const settingsRef = characterRef.characterSettings;
         const skillPlacement = 4;
@@ -2501,75 +2619,104 @@ const customDamage = {
         const abilityTypeArray = abilityMap.type;
         const abilityMods = abilityMap.powerMods;
 
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
         const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
         const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-        const crit = calcs.getCritComposites(returnObject);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage});
 
         const basicInfo = {baseSkillPower,abilityDR,crit};
         const skillPowerModifier = abilityMods.base + sumModifierBonus;
         const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
 
-        const magazineSize = abilityMods.magazine * (1+index.MagazineSize) + index.haileyExtraShots;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        return {damageSkill,skillPowerModifier};
+    },
+    //this is the cryo dmg reference function
+    haileyZenithCryoBase(constructorObject) {
+        let perHit = 0;
+        let perCrit = 0;
+        let AVG = 0;
+
+        // let elementKeys = Object.keys(constructorObject.elementalDamage);
+        for (let element in constructorObject.elementalDamage) {
+            let currentElement = constructorObject.elementalDamage[element];
+
+            perHit += currentElement.perHit || 0;
+            perCrit += currentElement.perCrit || 0;
+            AVG += currentElement.AVG || 0;
+        }
+
+        perHit += constructorObject.damage;
+        perCrit += constructorObject.damageCrit;
+        AVG += constructorObject.damageAVG;
+
+        perHit *= 0.5;
+        perCrit *= 0.5;
+        AVG *= 0.5;
+
+        constructorObject.damageAVGTotal += AVG;
+        let cryoDescriptionString = "Cryo takes the end total of all firearm sourced damage, cuts it in half, and displays it as a separate, non-crit number regardless of crit state."
+
+        return {"name": "Cryo","desc": cryoDescriptionString,perHit,perCrit,AVG}
+    },
+    haileyZenithCalcs(index,returnObject,isCycleCalcs,nameOverride,limitedWeaponAbilityBonuses) {
+        const characterRef = characters.Hailey;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+
+        const magazineSize = abilityMods.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = Math.floor(magazineSize);
+        const baseFireRate = abilityMods.fireRate;
 
-        const totalAVGSkill = damageSkill.AVG * actualMagSize;
+        const settingsObject = {
+            "atkMulti": abilityMods.firearmATKMulti,
+            limitedWeaponAbilityBonuses,
+            "isStaticRate": true,
+            "referenceFunction": customDamage.haileyZenithSkillBase,
+            "specialGunFunction": customDamage.haileyZenithCryoBase,
+        }
 
-        //WEAPON MATH
-        const zenithMultiplier = abilityMods.firearmATKMulti;
-        const preElementDamage = returnObject.firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
-        const damage = (preElementDamage * zenithMultiplier + returnObject.firearmColossusATK) * (1 + returnObject.physicalTypeMulti);
-        const physDR = calcs.getResistanceBasedDR(index,"DEF");
-        const baseDamage = damage * physDR * returnObject.totalWPBonus;
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
 
-        const critFirearm = calcs.getFirearmCritComposites(returnObject);
-        const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
 
-        const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm);
-        const weaponDamageElemental = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[0],critFirearm);
-
-        const cryoDamageHit = (baseDamage + activeElementsDamage[0])/2;
-        const weaponDamageCryo = calcs.getCompositeFirearmDamageSpread(cryoDamageHit,critFirearm);
-
-        const totalAVGGun = ((weaponDamage.AVG + weaponDamageElemental.AVG) * actualMagSize) + (weaponDamageCryo.AVG * Math.min(9,actualMagSize));
-        const totalAVGSum = totalAVGSkill + totalAVGGun;
-
-        const avgSkillHit = damageSkill.AVG;
-        const avgGunPerHit = weaponDamage.AVG + weaponDamageElemental.AVG + weaponDamageCryo.AVG;
+        let totalAVGSkill = 0;
+        let totalAVGGun = 0;
+        let totalAVGSum = 0;
+        const totalShots = bulletsArray.length;
+        for (let entry of bulletsArray) {
+            totalAVGSkill += entry.SkillDamage.AVG;
+            totalAVGGun += entry.damageAVG + entry.avgTotalBonusElem + entry.specialGunFunction.AVG;
+            totalAVGSum += entry.damageAVGTotal// + entry.SkillDamage.AVG;
+        }
+        const avgPerHitTotal = totalAVGSum/totalShots;
+        const avgGunPerHit = totalAVGGun/totalShots;
+        const avgSkillHit = totalAVGSkill/totalShots;
 
         
         if (!isCycleCalcs) {
-            let rowInjectionFirearmElemental = [
-                {"name": "Element","value": activeElements[0],"unit": ""},
-                {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
-                {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
-            ]
-            if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
-            const rowInjectionCryo = [
-                {"name": "Max Procs","value": 9,"unit": "x"},
-                {"name": "Hit","value": weaponDamageCryo.perHit,"unit": ""},
-                {"name": "Crit","value": weaponDamageCryo.perCrit,"unit": ""},
-                {"name": "AVG","value": weaponDamageCryo.AVG,"unit": ""},
-            ]
-            const rowInjectionSums = [
-                {"name": "SUM Firearm AVG","value": totalAVGGun,"unit": ""},
-            ]
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray,true);
+
             const rowInjectionTotalSum = [
+                {"name": "Magazine","value": magazineSize,"unit": ""},
+                {"name": "Total Fired","value": totalShots,"unit": ""},
+                {"name": "Total AVG/Shot","value": avgPerHitTotal,"unit": ""},
                 {"name": "SUM Zenith AVG per Cast","value": totalAVGSum,"unit": ""},
             ]
 
             const breakdownArray = [
-                {"header": "SUPERCOOLED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                {"header": "SUPERCOOLED","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
                     "sliderElemID": ["haileySupercooledStacks",0,12,1,"Supercooled Stacks"],
-                    "condition": !nameOverride,"desc": ""},
-                {"header": "UNIQUE WEAPON - SKILL SPLIT","value": damageSkill,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [actualMagSize,totalAVGSkill],
-                    "condition": false,"desc": ""},
-                {"header": "UNIQUE WEAPON - FIREARM SPLIT","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
-                    "rowInjection": [rowInjectionFirearmElemental,"Firearm Element"],"rowInjection2": [rowInjectionCryo,"Firearm Cryo DMG"],"rowInjection3": [rowInjectionSums,""],
-                    "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info."},
+                    "condition": nameOverride != "Supercooled Kuiper Round","desc": ""},
                 {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
                     "rowInjection": [rowInjectionTotalSum,""],
-                    "condition": false,"desc": ""},
+                    "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info.<br>Skill and Firearm DMG scale separately with their respective mods."},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
             
@@ -2577,14 +2724,30 @@ const customDamage = {
             readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
             ${addRow("Power",baseSkillPower,"")}
             <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${graphString}
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1,null,null,true)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeaponsSkill" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet(null,null,null,true)">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1,null,null,true)">&#9654;</div>
+                </div>
+
+                ${bulletArrayString}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
         }
         else {
-            return {avgSkillHit,avgGunPerHit,totalAVGSkill,totalAVGGun,totalAVGSum}
+            return {avgSkillHit,avgGunPerHit,avgPerHitTotal,totalAVGSkill,totalAVGGun,totalAVGSum}
         }
     },
     haileyZenithCalcsSuperStarterTier0(index,returnObject,isCycleCalcs,nameOverride) {
@@ -2602,7 +2765,7 @@ const customDamage = {
         index["WeakPointDamage%"] += totalBonus;
     },
     haileyZenithCalcsSuperStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.haileyZenithCalcs(index,returnObject,isCycleCalcs,"Supercooled Kuiper Round");
+        return customDamage.haileyZenithCalcs(index,returnObject,isCycleCalcs,"Supercooled Kuiper Round");
     },
     //ability 5
     haileyRetreatCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
@@ -2718,7 +2881,7 @@ const customDamage = {
         index.PowerModifierBase += settingsRef.lepicOverclockBonus ? powerModBonus : 0;
     },
     lepicOverclockCalcsTier0NerveStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.lepicOverclockCalcsTier0(index,returnObject,isCycleCalcs,"Nerve Infiltration");
+        return customDamage.lepicOverclockCalcsTier0(index,returnObject,isCycleCalcs,"Nerve Infiltration");
         //lepicOverclockBonus is used for all applicable bonuses related to 2nd ability that can get away with a toggle
     },
     lepicOverclockCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
@@ -2910,6 +3073,66 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     //ability 4
+    //this is the skill only reference function and damage calculation
+    LepicOverkillSkillBase(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage});
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        return {damageSkill,skillPowerModifier};
+    },
+    LepicOverkillFieldBase(constructorObject,index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Lepic;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage});
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const continuousInterval = abilityMods.interval;
+        const ticks = Math.floor(continuousDuration/continuousInterval);
+
+        const totalTickDamage = damageDOT.AVG * ticks;
+
+        let perHit = damageDOT.perHit;
+        let perCrit = damageDOT.perCrit;
+        let AVG = damageDOT.AVG;
+
+        constructorObject.damageAVGTotal += totalTickDamage;
+        let cryoDescriptionString = "Overkill leaves AOE fields behind that deal continuous damage for a duration.";
+
+        return {"name": "Overkill&nbsp;TICKS","desc": cryoDescriptionString,perHit,perCrit,AVG,ticks,totalTickDamage}
+    },
     lepicOverkillCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Lepic;
         const settingsRef = characterRef.characterSettings;
@@ -2918,82 +3141,99 @@ const customDamage = {
         const abilityTypeArray = abilityMap.type;
         const abilityMods = abilityMap.powerMods;
 
-        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
         const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
-        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
-        const crit = calcs.getCritComposites(returnObject);
-
-        const basicInfo = {baseSkillPower,abilityDR,crit};
-
-        const skillPowerModifier = abilityMods.base + sumModifierBonus;
-        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
-
-        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
-        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
 
         const totalMP = returnObject.displayMP;
         const continuousCost = abilityMods.continuousCost * (1 + index.SkillCost);
-        const allowedMPDuration = Math.ceil(totalMP/continuousCost)
+        const allowedMPDuration = Math.ceil(totalMP/continuousCost);
 
-
+        const magazineSize = 50;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = magazineSize;
+        const baseFireRate = abilityMods.fireRate;
         const rollDuration = 1.06;
-        const normalDuration = abilityMods.skillDuration * (1 + index.SkillDuration) - rollDuration;
-        const baseSkillDuration = settingsRef.lepicOverclockMPRestrictions ? Math.min(allowedMPDuration,normalDuration) : normalDuration;
 
-        const currentAmmoType = globalRecords.reactor.currentAmmoType;
-        const weaponModsPath = globalRecords.weapon.mods;
-        let isSharpPrecision = false;
-        for (let entry of weaponModsPath) {if (entry === "Sharp Precision Shot") {isSharpPrecision = true;break;}}
-        const baseRate = 60/46;//gap between shots with 0 fire rate active from any source.
-        // const baseRate = 1.26;//gap between shots with 0 fire rate active from any source.
-        const {shotCount,excessWasted} = customDamage.skillBasedFireRateMath(index,baseSkillDuration,baseRate,isSharpPrecision,currentAmmoType);
+        const settingsObject = {
+            limitedWeaponAbilityBonuses,
+            "isStaticRate": false,
+            "referenceFunction": customDamage.LepicOverkillSkillBase,
+            "specialSkillFunction": customDamage.LepicOverkillFieldBase,
+            "wastedTimeSkill": rollDuration,//roll duration for cancel
+            "skillOnly": true,
+        }
 
-        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
-        const continuousInterval = abilityMods.interval;
-        const ticksPerShot = Math.floor(continuousDuration/continuousInterval);
-        const continuousTicks = ticksPerShot * shotCount;
-
-        const overkillAVGperHit4 = damage.AVG;
-        const overkillTotalShotDamage4 = damage.AVG * shotCount;
-        const overkillShotCount = shotCount
-        const continuousAVGperTick4 = damageDOT.AVG;
-        const continuousTotalDamage4 = damageDOT.AVG * continuousTicks;
-
-
-        const sumTotalDamage4 = overkillTotalShotDamage4 + continuousTotalDamage4;
-        const dpsPerShot4 = (damage.AVG + ticksPerShot * damageDOT.AVG) / continuousDuration;
-        const dpsPerCast4 = (overkillTotalShotDamage4 + continuousTotalDamage4) / (baseSkillDuration + continuousDuration);
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
 
 
         
+        const baseDuration = abilityMods.skillDuration * (1 + index.SkillDuration);
+        const normalDuration = baseDuration - rollDuration;
+        //restrict duration by mp costs based on the toggle state
+        const baseSkillDuration = settingsRef.lepicOverclockMPRestrictions ? Math.min(allowedMPDuration,normalDuration) : normalDuration;
+        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const totalDuration = baseDuration + continuousDuration;
+
+        //trim the bullets array by the allowed duration specified above
+        for (let i=0;i<bulletsArray.length;i++) {
+            if (bulletsArray[i].timePassed > baseSkillDuration) {
+                bulletsArray = bulletsArray.slice(0,i);
+            }
+        }
+
+        let sumBulletDamage = 0;
+        let sumTickDamage = 0;
+        let totalTicks = 0;
+        let totalShots = bulletsArray.length;
+
+        let firstTickCount = 0;
+
+        for (let entry of bulletsArray) {
+            sumBulletDamage += entry.SkillDamage.AVG;
+            totalTicks += entry.specialSkillFunction.ticks;
+            sumTickDamage += entry.specialSkillFunction.totalTickDamage;
+
+            if (!firstTickCount) {firstTickCount += entry.specialSkillFunction.ticks;}
+        }
+
+
+        //impact
+        const overkillAVGperHit4 = sumBulletDamage/totalShots;
+        const overkillTotalShotDamage4 = sumBulletDamage;
+        //dot
+        const continuousAVGperTick4 = sumTickDamage/totalTicks;
+        const tickDamagePerShot = continuousAVGperTick4 * firstTickCount;
+        const continuousTotalDamage4 = sumTickDamage;
+        //sum
+        const totalPerShot = tickDamagePerShot + overkillAVGperHit4;
+        const sumTotalDamage4 = sumTickDamage + sumBulletDamage;
+        //dps
+        const dpsPerShot4 = totalPerShot/continuousDuration;
+        const dpsPerCast4 = sumTotalDamage4/totalDuration;
+
+        const excessWasted = baseSkillDuration - bulletsArray[bulletsArray.length-1].timePassed;
+
+
         if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray,true);
+
             let rowInjectionOverkill = [
                 {"name": "-Roll Duration","value": -rollDuration,"unit": ""},
                 {"name": "Usable Duration","value": baseSkillDuration,"unit": ""},
-                {"name": "Excess/Wasted","value": excessWasted,"unit": ""},
-                {"name": "Shots","value": shotCount,"unit": ""},
-            ]
-            let Continuous = [
-                {"name": "DOT Duration","value": continuousDuration,"unit": ""},
-                {"name": "Interval","value": continuousInterval,"unit": ""},
-                {"name": "Total Ticks","value": continuousTicks,"unit": ""},
+                {"name": "Excess","value": excessWasted,"unit": "s"},
+                {"name": "Shots","value": totalShots,"unit": ""},
             ]
             let SUM = [
                 {"name": "SUM AVG DMG per Cast","value": sumTotalDamage4,"unit": ""},
+                {"name": "Roll Duration","value": rollDuration,"unit": "s"},
                 {"name": "DPS Per Shot","value": dpsPerShot4,"unit": ""},
                 {"name": "DPS Per Cast","value": dpsPerCast4,"unit": ""},
             ]
 
             const breakdownArray = [
-                {"header": "OVERKILL","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [shotCount,overkillTotalShotDamage4],
+                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
                     "toggleElemID": ["lepicOverclockMPRestrictions","Restrict Duration by MP?"],
                     "rowInjection": [rowInjectionOverkill,""],
-                    "condition": false,"desc": "Overkill benefits from Fire Rate modifiers on your selected weapon in the calculator. If shot count doesn't line up, make sure you have Fire Rate UP and Sharp Precision Shot selected."},
-                {"header": "CONTINUOUS DAMAGE","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [continuousTicks,continuousTotalDamage4],
-                    "rowInjection": [Continuous,""],
-                    "condition": false,"desc": ""},
-                {"header": "SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                    "rowInjection": [SUM,""],
+                    "rowInjection2": [SUM,""],
                     "condition": false,"desc": "This number assumes you are roll canceling the starting animation."},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
@@ -3002,7 +3242,23 @@ const customDamage = {
             readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
             ${addRow("Power",baseSkillPower,"")}
             <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${graphString}
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1,null,null,true)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeaponsSkill" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet(null,null,null,true)">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1,null,null,true)">&#9654;</div>
+                </div>
+
+                ${bulletArrayString}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
@@ -3146,9 +3402,27 @@ const customDamage = {
         const powerModBonus = abilityMap.powerMods["PowerModifierBase"];
         const skillRangebonus = abilityMap.powerMods["SkillRange"];
 
+        const baseBonusDuration = 5;
+        const durationBonus = 1 + index.SkillDuration;
+        const totalDuration = baseBonusDuration * durationBonus;
+
         if (settingsRef.lepicFirearmMasterBonus) {
-            index.PowerModifierBase += powerModBonus;
-            index.SkillRange += skillRangebonus;
+            // index.PowerModifierBase += powerModBonus;
+            // index.SkillRange += skillRangebonus;
+            abilityMap.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "PowerModifierBase","value": powerModBonus,"subStackValue": null},
+                    ],
+                    "bonusName": "Firearm Master",
+                    "oneTimeOrStack": "duration",
+                    "limit": 1,
+                    "cooldown": 60,
+                    "duration": totalDuration,
+                    "conditions": [],
+                    "skipFirstShot": false,
+                }
+            ]
         }
     },
     lepicFirearmMasterCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
@@ -3297,10 +3571,10 @@ const customDamage = {
         index.SprintSpeedBonus += settingsRef.bunnySoLSpeed ? bonus : 0;
     },
     bunnySpeedCalcsTier0SpeedTransitionStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Electric Transition");
+        return customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Electric Transition");
     },
     bunnySpeedCalcsTier0SpeedBionicStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Bionic Fuel");
+        return customDamage.bunnySpeedCalcsTier0Speed(index,returnObject,isCycleCalcs,"Bionic Fuel");
     },
     bunnySpeedCalcs(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Bunny;
@@ -3895,13 +4169,13 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     viessaColdSnapCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+        return customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
     },
     viessaColdSnapCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+        return customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
     },
     viessaColdSnapCalcsWatchStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Cold Snap Watch");
+        return customDamage.viessaColdSnapCalcs(index,returnObject,isCycleCalcs,"Cold Snap Watch");
     },
     //ability 4
     viessaBlizzardCalcs(index,returnObject,isCycleCalcs,nameOverride) {
@@ -3983,13 +4257,13 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     viessaBlizzardCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+        return customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
     },
     viessaBlizzardCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+        return customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
     },
     viessaBlizzardCalcsCloudStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Glacial Cloud")
+        return customDamage.viessaBlizzardCalcs(index,returnObject,isCycleCalcs,"Glacial Cloud")
     },
     //passive
     viessaSphereCalcs(index,returnObject,isCycleCalcs,nameOverride) {
@@ -4079,13 +4353,13 @@ const customDamage = {
         index.SkillCritRateBaseBonus += abilityMods.skillCritBonus;
     },
     viessaSphereCalcsABS0Starter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
+        return customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Absolute-Zero");
     },
     viessaSphereCalcsHypoStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
+        return customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Hypothermia");
     },
     viessaSphereCalcsCohesionStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Cold Cohesion")
+        return customDamage.viessaSphereCalcs(index,returnObject,isCycleCalcs,"Cold Cohesion")
     },
 
     //LUNA
@@ -4174,7 +4448,7 @@ const customDamage = {
         index.PowerModifierBase += settingsRef.lunaIsExcitingUsed ? powerModBuff : 0;
     },
     lunaExcitingCalcsTier0MercyStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.lunaExcitingCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
+        return customDamage.lunaExcitingCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
     },
     lunaExcitingCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Luna;
@@ -4473,7 +4747,7 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     lunaRelaxingCalcsMercyStarter(index,returnObject,isCycleCalcs,nameOverride) {
-        customDamage.lunaRelaxingCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
+        return customDamage.lunaRelaxingCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
     },
     lunaRelaxingCalcsTier0SurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Luna;
@@ -4564,7 +4838,7 @@ const customDamage = {
         const abilityMods = abilityMap.powerMods;
     },
     lunaCheerfulCalcsTier0MercyStarter(index,returnObject,isCycleCalcs,nameOverride) { 
-        customDamage.lunaCheerfulCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
+        return customDamage.lunaCheerfulCalcsTier0(index,returnObject,isCycleCalcs,"Singer's Mercy");
     },
     lunaCheerfulCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
         const characterRef = characters.Luna;
@@ -4633,7 +4907,7 @@ const customDamage = {
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
     },
     lunaCheerfulCalcsMercyStarter(index,returnObject,isCycleCalcs,nameOverride) { 
-        customDamage.lunaCheerfulCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
+        return customDamage.lunaCheerfulCalcs(index,returnObject,isCycleCalcs,"Singer's Mercy");
     },
     lunaCheerfulCalcsTier0SurgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Luna;
@@ -4847,67 +5121,450 @@ const customDamage = {
         return customDamage.lunaImprovCalcs(index,returnObject,isCycleCalcs,"Noise Surge");
     },
 
+    //SHAREN
+    //ability 1
+    sharenCutoffCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
 
-    
-    //LE GUNS
-    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef) {
-        const settingsRef = weaponRef.weaponSettings;
 
-        const magazineSize = weaponRef.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
-        const actualMagSize = Math.floor(magazineSize);
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
 
+        const basicInfo = {baseSkillPower,abilityDR,crit};
 
-        //WEAPON MATH
-        const preElementDamage = returnObject.firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
-        const damage = (preElementDamage + returnObject.firearmColossusATK) * (1 + returnObject.physicalTypeMulti);
-        const physDR = calcs.getResistanceBasedDR(index,"DEF");
-        const baseDamage = damage * physDR * returnObject.totalWPBonus;
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
 
-        const critFirearm = calcs.getFirearmCritComposites(returnObject);
-        const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
 
-        const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm);
-        const weaponDamageElemental = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[0],critFirearm);
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
 
-        const avgPerShot = weaponDamage.AVG + weaponDamageElemental.AVG;
+        const avgDmgPerHit= damage.AVG;
 
-        const totalAVGGun = avgPerShot * actualMagSize;
-
-        // if (!isCycleCalcs) {console.log(weaponDamageElemental.perCrit)}
+        const avgDmgPerTick = damageDOT.AVG;
+        const totalTickDamageElectric = damageDOTBreakdown.totalTickDamage;
 
         if (!isCycleCalcs) {
-            let rowInjectionFirearmElemental = [
-                {"name": "Element","value": activeElements[0],"unit": ""},
-                {"name": "Hit","value": weaponDamageElemental.perHit,"unit": ""},
-                {"name": "Crit","value": weaponDamageElemental.perCrit,"unit": ""},
-                {"name": "AVG","value": weaponDamageElemental.AVG,"unit": ""},
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
             ]
-            if (activeElements[0] === "None") {rowInjectionFirearmElemental = [];}
-            const rowInjectionSums = [
-                {"name": "Magazine","value": magazineSize,"unit": ""},
-                {"name": "AVG/Shot","value": avgPerShot,"unit": ""},
-                {"name": "SUM AVG","value": totalAVGGun,"unit": ""},
-            ]
-            const breakdownArray = [
-                {"header": "FIREARM DAMAGE","value": weaponDamage,"FirearmATK": damage,"hasCritAVG": true,"unit": "",
-                    "condition": false,"desc": "Part-specific <span>Weak Point Modifiers</span>, and <span>Type Bonuses</span>, will automatically adjust based on the part selected, unless forcibly disabled in settings."},
-                {"header": "FIREARM ATTRIBUTE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                    "rowInjection": [rowInjectionFirearmElemental,""],//"rowInjection2": [rowInjectionSums,"SUM"],//"rowInjection3": [rowInjectionSums,""],
-                    "condition": !rowInjectionFirearmElemental.length,"desc": ""},
-                {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                    "rowInjection": [rowInjectionSums,""],
-                    "condition": false,"desc": ""},
 
-                // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    // "sliderElemID": ["blairActiveZones",0,7,1,"Active Zones"],
+                    // "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTROCUTION","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageElectric],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
             ];
-            const bodyString = `weaponBreakdownBody1`;
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
             
             const addRow = calcsUIHelper.addHealingBoxCluster;
-            readSelection(`weaponBreakdownBody1`).innerHTML += `
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
             <div class="basicsSummaryBox" id="lepicResultsBox">
-                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
             `;
+        }
+        else {
+            return {avgDmgPerTick,totalTickDamageElectric,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    sharenCutoffCalcsReleaseStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenCutoffCalcs(index,returnObject,isCycleCalcs,"Release Cutting Force");
+    },
+    //ability 2
+    sharenActiveCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        // const stacks = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+        // const totalModBonus = abilityMods.powerModBonus * stacks;
+        // index.PowerModifierBase += settingsRef.blairUseExtinguish ? totalModBonus : 0;
+
+        if (settingsRef.sharenAmbushActive) {
+            index.SkillCritRateBaseBonus += abilityMods.skillCritBonus;
+            index.FirearmCritRateBase += abilityMods.firearmCritBonus;
+        }
+
+
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Valid Zones","value": stacks,"unit": ""},
+            //     {"name": "Max MP Recovered","value": 0.08 * stacks,"unit": "%"},
+            //     {"name": "+Power Modifier%","value": totalModBonus,"unit": "%"},
+            // ]
+
+            const breakdownArray = [
+                {"header": "ACTIVE CAMOUFLAGE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["sharenCamoActive","Use Camo?"],
+                    // "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+                {"header": "AMBUSH","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["sharenAmbushActive","Use Ambush?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    sharenActiveCalcsTier0EdgeStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenActiveCalcsTier0(index,returnObject,isCycleCalcs,"Overcharged Edge");
+    },
+    sharenActiveCalcsTier0AmbushedStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`].Ambushed;
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (settingsRef.sharenCamoActive) {index.SkillCooldown += abilityMods.cooldownBonus;}
+
+        return customDamage.sharenActiveCalcsTier0(index,returnObject,isCycleCalcs,"Ambushed");
+    },
+    //ability 3
+    sharenNutsCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (nameOverride === "Battlesuit Melting Rounds" && settingsRef.sharenMeltingActive) {
+            index.enemyDEFResistanceReduction += -0.40;
+            index.enemyElectricResistanceReduction += -0.40;
+        }
+    },
+    sharenNutsCalcsTier0BattleStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenNutsCalcsTier0(index,returnObject,isCycleCalcs,"Battlesuit Melting Rounds");
+    },
+    sharenNutsCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit= damage.AVG;
+
+
+        if (!isCycleCalcs) {
+
+            let referencedDMG = nameOverride ? null : damage;
+            let referencedMod = nameOverride ? null : skillPowerModifier;
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": referencedDMG,"modifier": referencedMod,"hasCritAVG": true,"unit": "",
+                    // "toggleElemID": ["sharenAmbushActive","Use Ambush?"],
+                    // "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+                {"header": "STUN","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride,"desc": ""},
+                {"header": "MELTING BATTLESUIT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["sharenMeltingActive","Use Melting?"],
+                    "condition": nameOverride != "Battlesuit Melting Rounds","desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+    },
+    sharenNutsCalcsBattlesuitStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenNutsCalcs(index,returnObject,isCycleCalcs,"Battlesuit Melting Rounds");
+    },
+    sharenNutsCalcsAmbushedStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`].Ambushed;
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const avgDmgPerHit= damage.AVG;
+
+        const avgDmgPerTick = damageDOT.AVG;
+        const totalTickDamageElectric = damageDOTBreakdown.totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    // "sliderElemID": ["blairActiveZones",0,7,1,"Active Zones"],
+                    // "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTROCUTION","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageElectric],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick,totalTickDamageElectric,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    sharenFlashCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const hitsOnTarget = abilityMods.maxHits;
+
+        const avgDmgPerHit= damage.AVG;
+        const totalHitsDMG = damage.AVG * hitsOnTarget;
+
+        const avgDmgPerTick = damageDOT.AVG;
+        const totalTickDamageElectric = damageDOTBreakdown.totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [hitsOnTarget,totalHitsDMG],
+                    // "sliderElemID": ["blairActiveZones",0,7,1,"Active Zones"],
+                    // "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "ELECTROCUTION","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageElectric],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerTick,totalTickDamageElectric,avgDmgPerHit,totalHitsDMG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    sharenFlashCalcsVoidStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenFlashCalcs(index,returnObject,isCycleCalcs,"Void Domination");
+    },
+    sharenFlashCalcsAreaStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenFlashCalcs(index,returnObject,isCycleCalcs,"Area Suppression");
+    },
+    //passive
+    sharenAssassinCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Sharen;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        // const stacks = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+        // const totalModBonus = abilityMods.powerModBonus * stacks;
+        // index.PowerModifierBase += settingsRef.blairUseExtinguish ? totalModBonus : 0;
+
+        //the 15% bonus is a multi, seemingly like zenith, applies to the attribute conversion base amount but nothing else
+        //confirm it doesn't touch faction attack later
+        //additive to active camo's bonus so 2 + .15
+        //overcharged edge is a 2.5 multi + .5 which would consume 50% shields not a fixed amount, also additive with the 15% bonus
+
+        if (!isCycleCalcs) {
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["sharenTargetBonus","Use Bonus?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    sharenAssassinCalcsTier0OverchargedStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenAssassinCalcsTier0(index,returnObject,isCycleCalcs,"Overcharged Edge");
+    },
+    sharenAssassinCalcsTier0AmbushedStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.sharenAssassinCalcsTier0(index,returnObject,isCycleCalcs,"Ambushed");
+    },
+
+
+    //LE GUNS
+    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
+    const settingsRef = weaponRef.weaponSettings;
+
+    const magazineSize = weaponRef.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
+    const actualMagSize = Math.floor(magazineSize);
+    const baseRateValue = weaponRef.baseFireRate;
+    let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef).bulletsArray;
+
+    let totalAVGGun = 0;
+    const totalShots = bulletsArray.length;
+    for (let entry of bulletsArray) {
+        totalAVGGun += entry.damageAVGTotal;
+    }
+    let avgPerShot = totalAVGGun/totalShots;
+
+    if (!isCycleCalcs) {
+        let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray);
+
+        const rowInjectionSums = [
+            {"name": "Magazine","value": magazineSize,"unit": "","id": "totalMagazineWeapons"},
+            {"name": "Total Fired","value": totalShots,"unit": "","id": "totalShotsFiredWeapons"},
+            {"name": "AVG/Shot","value": avgPerShot,"unit": "","id": "avgPerShotWeapons"},
+            {"name": "SUM AVG","value": totalAVGGun,"unit": "","id": "totalAVGWeapons"},
+        ]
+        const breakdownArray = [
+            {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                "rowInjection": [rowInjectionSums,""],
+                "condition": false,"desc": ""},
+            // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
+        ];
+        const bodyString = `weaponBreakdownBody1`;
+        
+        
+        const addRow = calcsUIHelper.addHealingBoxCluster;
+        readSelection(`weaponBreakdownBody1`).innerHTML += `
+        <br>
+        <div class="abilityBreakdownDescription" style="color:lightblue">Reload factors will be added next week.</div>
+        <div class="basicsSummaryBox">
+            ${graphString}
+            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
+        </div>
+        <div class="basicsSummaryBox">
+        <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+            
+            <div class="tooltipHeader">Selection</div>
+            <div class="bulletSelectorIDRowBox">
+
+                <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1)">&#9664;</div>
+                <div class="traitLevelDisplay">
+                    <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet()">
+                </div> 
+                <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1)">&#9654;</div>
+            </div>
+            ${bulletArrayString}
+        </div>
+        `;
+        // <div class="tooltipHeader">Bullet Selection</div>
         }
     },
     secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
@@ -4921,27 +5578,29 @@ const customDamage = {
         index.PowerOptimization += currentBonus;
         index["FirearmATK%"] += currentBonus;
 
-        const rowInjection = [
-            {"name": "+Firearm ATK %","value": currentBonus,"unit": "%"},
-            {"name": "+Skill Power Optimization","value": currentBonus,"unit": "%"},
-        ]
-        const breakdownArray = [
-            {"header": "DIMENSION SKILL","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-            {"header": "PEST CONTROL","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["gardenStackCount",0,3,1,"Stack Count"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Secret Garden",true)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
-        `;
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "+Firearm ATK %","value": currentBonus,"unit": "%"},
+                {"name": "+Skill Power Optimization","value": currentBonus,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "DIMENSION SKILL","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "PEST CONTROL","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["gardenStackCount",0,3,1,"Stack Count"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Secret Garden",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
     },
     blueBeetleCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Blue Beetle"];
@@ -4950,57 +5609,61 @@ const customDamage = {
         const critBonus = 1.15;
         index.SkillCritRate += settingsRef.arcaneWaveActive ? critBonus : 0;
 
-        const rowInjection = [
-            {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
-        ]
-        const breakdownArray = [
-            {"header": "ARCANE ENERGY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","toggleElemID": ["arcaneWaveActive","Use +Skill Crit Rate?"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-            {"header": "PURIFICATION","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Blue Beetle",true)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
-        `;
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "ARCANE ENERGY","value": null,"modifier": null,"hasCritAVG": null,"unit": "","toggleElemID": ["arcaneWaveActive","Use +Skill Crit Rate?"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "PURIFICATION","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Blue Beetle",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
     },
     peacemakerCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Peace Maker"];
         const settingsRef = weaponRef.weaponSettings;
 
         const currentStacks = +settingsRef.peacemakerStackCount;
-        const stackBonusRef = [0.00,0.05,0.145,0.24,0.335,0.43]
-        const currentBonus = stackBonusRef[currentStacks]
+        const stackBonusRef = [0.00,0.05,0.145,0.24,0.335,0.43];
+        const currentBonus = stackBonusRef[currentStacks];
 
         index.PowerRatioNonAttribute += currentBonus;
 
-        const rowInjection = [
-            {"name": "+Non-Attribute Power Ratio","value": currentBonus,"unit": "%"},
-        ]
-        const breakdownArray = [
-            {"header": "SINGLE RELOAD FOR PEACE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["peacemakerStackCount",0,5,1,"Stack Count"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-            {"header": "AIMING AT MAX STACKS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Peace Maker",true)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
-        `;
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "+Non-Attribute Power Ratio","value": currentBonus,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "SINGLE RELOAD FOR PEACE","value": null,"modifier": null,"hasCritAVG": null,"unit": "","sliderElemID": ["peacemakerStackCount",0,5,1,"Stack Count"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "AIMING AT MAX STACKS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Peace Maker",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
     },
     nazDevotionCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponName = "Nazeistra's Devotion"
@@ -5011,27 +5674,36 @@ const customDamage = {
         const currentAmount = settingsRef.defDebuffActive ? defDebuff : 0;
         index.enemyDEFResistanceReduction += currentAmount;
 
-        const rowInjection = [
-            {"name": "-Enemy DEF%","value": currentAmount,"unit": "%"},
-        ]
-        const breakdownArray = [
-            {"header": "DEVOTION MARK","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "toggleElemID": ["defDebuffActive","Use DEF Debuff?"],"rowInjection": [rowInjection,""],
-                "condition": false,"desc": ""},
-            {"header": "ON ALLIED HIT","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
-                "condition": false,"desc": ""},
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML = `
-        <div class="basicsSummaryBox" id="lepicResultsBox">
-        <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,weaponName,true)}
-        </div>
-        <div class="abilityBreakdownHeader">DESCRIPTION</div>
-        <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
-        `;
+        if (!isCycleCalcs) {
+            const rowInjection = [
+                {"name": "-Enemy DEF%","value": currentAmount,"unit": "%"},
+            ]
+            const breakdownArray = [
+                {"header": "DEVOTION MARK","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["defDebuffActive","Use DEF Debuff?"],"rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "ON ALLIED HIT","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,weaponName,true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
+    skipThisWeaponCalcs(index,returnObject,isCycleCalcs) {
+        if (!isCycleCalcs) {
+            readSelection(`weaponBreakdownBody1`).innerHTML += `<br><br>
+            <div class="abilityBreakdownDescription">This weapon has its damage breakdown disabled, but it will be enabled soon.<br>Burst rifles are complicated.</div>
+            `;
+        }
     },
     ...localInsertionDamage
 }
@@ -5076,7 +5748,8 @@ let conditionalHelpers = {
                 else if (statType === "magazine") {if (isModifiedByIndex) {statValue *= (1 + index.MagazineSize);}}
                 if (entry.isUnlabeledPercent) {unit = "%";}
 
-                rowString += addRow("",statName,statValue,isRounded,unit);
+                let tooltipID = entry.tooltipID || "";
+                rowString += addRow(tooltipID,statName,statValue,isRounded,unit);
                 if (limit) {rowString += addRow("","Max Range",limit,true,"%");}
 
             }
@@ -5264,12 +5937,19 @@ let moduleQueryFunctions = {
         const abilityArray = characterRef.abilityArray;
         const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
 
-        let newModArray1 = [...currentCharacterMods];
-        let newModArray2 = [...currentCharacterMods].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
-        characterRef.modQueryOptions = [...currentCharacterMods].slice(2);
+        const globalWeapon = globalRecords.weapon;
+        const currentWeaponRef = sniperList[globalWeapon.currentWeapon];
+        const currentWeaponMods = globalWeapon.mods;
+        const currentAmmoType = currentWeaponRef.ammoType;
+        const currentWeaponType = currentWeaponRef.weaponType;
 
-        const modKeyReference = Object.keys(modData);
+        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,}
 
+        //character stuff ignores the first 2 slots, whereas weapon stuff does not
+        let isWeaponBased = queryType.toLowerCase().includes("weapon");
+        let newModArray1 = [...typeRef2[queryType]];
+        let newModArray2 = isWeaponBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
+        characterRef.modQueryOptions = isWeaponBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);
 
         // Array of strings that will be the option names
         const queryLister = readSelection("queryModList");
@@ -5289,7 +5969,7 @@ let moduleQueryFunctions = {
             for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
         }
 
-        if (queryType === "Ability") {
+        if (queryType === "Ability" || queryType === "Ability - Weapon Based") {
             const abilityLister = readSelection("queryAbilityList");
             const abilityOptionLister = readSelection("queryAbilityOptionList");
 
@@ -5363,19 +6043,33 @@ let moduleQueryFunctions = {
     },
     getModuleQueryResults() {
         //never allow a blank query, default to ability if all else fails
-        const typeRef = {"Ability": "","Stat": ""}
+        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "",}
         if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
         const queryType = readSelection("queryType").value;
 
         const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections(queryType);
         moduleQueryFunctions.clearInvalidQuerySelections();
+
         const characterRef = globalRecords.character;
         const currentCharacter = characterRef.currentCharacter;
         const currentCharacterMods = characterRef.mods;
         const abilityArray = characterRef.abilityArray;
         const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
 
-        let newModArray1 = [...currentCharacterMods];
+        const globalWeapon = globalRecords.weapon;
+        const currentWeaponRef = sniperList[globalWeapon.currentWeapon];
+        const currentWeaponMods = globalWeapon.mods;
+        const currentAmmoType = currentWeaponRef.ammoType;
+        const currentWeaponType = currentWeaponRef.weaponType;
+
+
+        let isWeaponBased = queryType.toLowerCase().includes("weapon");
+        //for assigning the right mod selection that is currently equipped
+        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,}
+        const typeRefCategory = {"Ability": modData,"Stat": modData,"Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],}
+        const modLists = typeRefCategory[queryType];
+
+        let newModArray1 = [...typeRef2[queryType]];
         const modSelection = readSelection("queryMod").value;
         //abort invalid or empty queries
         if (modSelection === "" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
@@ -5384,19 +6078,20 @@ let moduleQueryFunctions = {
         }
 
 
-
-        const indexToModify = characterRef.modQueryOptions.indexOf(modSelection) + 2;
-        const modKeyReference = Object.keys(modData);
+        //character stuff ignores the first 2 slots, whereas weapon stuff does not
+        const indexToModify = isWeaponBased ? characterRef.modQueryOptions.indexOf(modSelection) : characterRef.modQueryOptions.indexOf(modSelection) + 2;
+        const modKeyReference = Object.keys(modLists);
         const abilityTarget = `ability${selectedAbilityIndexReference+1}`;
         const targetReturnValue = `${selectedAbilityOptionPath}`;
 
 
         newModArray1[indexToModify] = "";
         const modCategoriesHolder = [];
+        //create the set of categories that will help us determine when to skip things
         for (let entry of newModArray1) {
-            if (modData[entry]) {
-                if (modData[entry].category === "") {continue;}
-                modCategoriesHolder.push(modData[entry].category);
+            if (modLists[entry]) {
+                if (modLists[entry].category === "") {continue;}
+                modCategoriesHolder.push(modLists[entry].category);
             }
         }
         const categorySet = new Set(modCategoriesHolder);
@@ -5406,22 +6101,45 @@ let moduleQueryFunctions = {
         let queryResultsArray = [];
         if (queryType === "Ability") {
             for (let entry of modKeyReference) {
-                if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
+                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
                 newModArray1[indexToModify] = entry;
 
                 queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": modData[entry].category}
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
+                )
+            }
+        }
+        else if (queryType === "Ability - Weapon Based") {
+            for (let entry of modKeyReference) {
+                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
+
+                const inclusionSet = new Set(modLists[entry].inclusion);
+                const exclusionSet = new Set(modLists[entry].exclusion);
+
+                // console.log(newModArray1);
+
+                //if the inclusion filter is set with an actual entry, and the weapon type doesn't match it, skip it (example: sniper type but a shotgun mod, we skip that mod)
+                if (modLists[entry].inclusion.length>0 && !inclusionSet.has(currentWeaponType)) {continue;}
+                //otherwise, if there an exclusion filter set for the mod and we DO match it, then skip it
+                else if (modLists[entry].exclusion.length>0 && exclusionSet.has(currentWeaponType)) {continue;}
+
+                newModArray1[indexToModify] = entry;
+
+                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
+
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
                 )
             }
         }
         else if (queryType === "Stat") {
             console.log(targetReturnValue)
             for (let entry of modKeyReference) {
-                if (categorySet.has(modData[entry].category) || modSet.has(entry) || entry === "") {continue}
+                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
                 newModArray1[indexToModify] = entry;
 
                 queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[targetReturnValue],"category": modData[entry].category}
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[targetReturnValue],"category": modLists[entry].category}
                 )
             }
         }

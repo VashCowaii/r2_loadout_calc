@@ -90,6 +90,7 @@ const userTriggers = {
         globalRecords.weaponCritCeiling = readSelection("weaponCritCeiling").value;
         globalRecords.skillCritCeiling = readSelection("skillCritCeiling").value;
         globalRecords.ambushImmobileSlider = readSelection("ambushImmobileSlider").value;
+        globalRecords.weakPointHitRate = +readSelection("weakPointHitRate").value;
 
         globalRecords.useWeakspots = readSelection("useWeakspots").checked;
         globalRecords.useCrits = readSelection("useCrits").checked;
@@ -104,6 +105,7 @@ const userTriggers = {
         readSelection("weaponCritCeilingDisplay").innerHTML = globalRecords.weaponCritCeiling + "%";
         readSelection("skillCritCeilingDisplay").innerHTML = globalRecords.skillCritCeiling + "%";
         readSelection("playerCountDisplay").innerHTML = globalRecords.playerCount;
+        readSelection("weakPointHitRateDisplay").innerHTML = globalRecords.weakPointHitRate + "%";
 
         updateFormulas();
     },
@@ -1109,6 +1111,19 @@ const settings = {
         //     if (arrayRef[3] === 0) {}//4
         //     if (arrayRef[4] === 0) {}//passive
         // },
+        Sharen(settingsRef,arrayRef) {
+            if (arrayRef[0] === 0) {}//1
+            settingsRef.sharenCamoActive = readSelection("sharenCamoActive").checked;
+            settingsRef.sharenAmbushActive = readSelection("sharenAmbushActive").checked;
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {}//3
+            else if (arrayRef[2] === "Battlesuit Melting Rounds") {
+                settingsRef.sharenMeltingActive = readSelection("sharenMeltingActive").checked;
+            }
+            if (arrayRef[3] === 0) {}//4
+            settingsRef.sharenTargetBonus = readSelection("sharenTargetBonus").checked;
+            if (arrayRef[4] === 0) {}//passive
+        },
         Luna(settingsRef,arrayRef) {
             if (arrayRef[0] === 0) {
                 settingsRef.lunaPresenceStacks = +readSelection("lunaPresenceStacks").value;
@@ -1277,11 +1292,11 @@ const formulasValues = {
             pullStats(index,path);
         }
     },
-    pullWeaponStats(index) {
+    pullWeaponStats(index,weaponModOverride) {
         let pullStats = formulasValues.pullStats;
 
         //weapon mods
-        let modArrayRef = globalRecords.weapon.mods;
+        let modArrayRef = weaponModOverride || globalRecords.weapon.mods;
         const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
         for (let i=0;i<=9;i++) {
             let path = weaponModsCategory[modArrayRef[i]].stats;
@@ -1418,12 +1433,12 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
 
     formulasValues.pullModStats(tableReference,modArrayOverride);
     
-    const {limitedAbilityBonuses,limitedWeaponBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
+    const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
     formulasValues.pullReactorStats(tableReference);
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullAbilityStats(tableReference);
-    formulasValues.pullWeaponStats(tableReference);
+    formulasValues.pullWeaponStats(tableReference,weaponModOverride);
     formulasValues.pullTeamBuffsStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
@@ -1436,7 +1451,7 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
         totalHPRecoveryModifier,totalHPHealModifier} = calcs.getRecovery(tableReference,characterRef);
     const {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(tableReference,characterRef);
 
-    const {baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus} = calcs.getFirearmWeakpoint(tableReference,currentWeaponRef);
+    const {baseWPMulti,flatWPBonus,weakpointBonus,bossPartWPBonus,totalWPBonus,wpHitRate,wpAveraged} = calcs.getFirearmWeakpoint(tableReference,currentWeaponRef);
     const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableReference,currentWeaponRef);
     const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableReference,currentWeaponRef);
 
@@ -1451,12 +1466,12 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
         shieldRecoveryModifier,baseCharacterShieldInCombat,baseShieldInCombatBonus,totalShieldInCombat,baseCharacterShieldOutCombat,baseShieldOutCombatBonus,totalShieldOutCombat,
         totalHPRecoveryModifier,totalHPHealModifier,
         baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage,
-        baseWPMulti,weakpointBonus,bossPartWPBonus,totalWPBonus,
+        baseWPMulti,flatWPBonus,weakpointBonus,bossPartWPBonus,totalWPBonus,wpHitRate,wpAveraged,
         baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage,
         baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK,
 
     }
-    returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses)}
+    returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses)}
 
     // customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs);
     if (!isCycleCalcs) {
