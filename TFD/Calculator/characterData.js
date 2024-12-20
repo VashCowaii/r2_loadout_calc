@@ -2542,17 +2542,17 @@ const characters = {
                             {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
                         ],
-                        "UNIQUE WEAPON": [
-                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
-                        ],
+                        "UNIQUE WEAPON": [],
                         "TRAUMA": [
                             {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
                             {"statType": "","statName": "ATK Decrease","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "Recovery Decrease","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
-                        "SUM": [],
+                        "SUM": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
                     },
                 },
                 "Contagion": {
@@ -2586,16 +2586,16 @@ const characters = {
                             {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
                         ],
-                        "UNIQUE WEAPON": [
-                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
-                        ],
+                        "UNIQUE WEAPON": [],
                         "TRAUMA": [
                             {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
                             {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
                         ],
-                        "SUM": [],
+                        "SUM": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
                     },
                 },
             },
