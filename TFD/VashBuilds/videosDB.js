@@ -7,6 +7,10 @@
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
+    {"author": "Vash","topic": "ETA Shop Schedule","isYTVid": true,"date": 20241219,"embedLink": "_TWbFXO5GCc","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Calculator Guide","isYTVid": true,"date": 20241218,"embedLink": "MIvm0u6152U","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Abyss Hailey Build","isYTVid": true,"date": 20241217,"embedLink": "Fp5z5LTqOek","contentType": "Build","isOutdated": false,"entityArray": ["Hailey"],"pinnedCommentFlag": false},
+
     {"author": "Vash","topic": "Sharen Build Guide","isYTVid": true,"date": 20241209,"embedLink": "m2hcB56e4e0","contentType": "Build","isOutdated": false,"entityArray": ["Sharen"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Luna Team Guide","isYTVid": true,"date": 20241116,"embedLink": "MLO6rvdcV3Q","contentType": "Build","isOutdated": false,"entityArray": ["Luna","Lepic","Freyna","Kyle"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "The Real DEF Formula","isYTVid": true,"date": 20241109,"embedLink": "7fWFPwAflMI","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},

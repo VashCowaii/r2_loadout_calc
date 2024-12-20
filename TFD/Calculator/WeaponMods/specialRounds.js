@@ -28,11 +28,22 @@ const specialRounds =  {
         "category": "Special Mod",
         "stats": {
             "FireRate": 0.20,
-            // "FireRate": -0.40, //this will be added in with functions, not via a flat value
-            "Recoil": -0.50,
-            "FirearmATK%": 0.60
         },
-        "tags": [],
+        "complexBonus": [
+         {
+            "stats": [
+               {"name": "FireRate","value": -0.04,"subStackValue": null},
+               {"name": "Recoil","value": -0.05,"subStackValue": null},
+               {"name": "FirearmATK%","value": 0.06,"subStackValue": null},
+            ],
+            "oneTimeOrStack": "stack",
+            "bonusName": "Sharp Precision Shot (General)",
+            "limit": 10,
+            "cooldown": 0.5,
+            // "cooldown": 0.55,
+         }
+      ],
+        "tags": ["Recoil","FirearmATK%"],
         "desc": "Base Fire Rate -20%. While pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.5s (up to 10 stacks)."
     },
     // "Lethal Finish": {//
@@ -52,9 +63,20 @@ const specialRounds =  {
         "category": "Special Mod",
         "stats": {
             "FireRate": 0.10,
-            "FirearmATK%": 0.90
+            // "FirearmATK%": 0.90
         },
-        "tags": [],
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmATK%","value": 0.015,"subStackValue": null},
+                ],
+                "bonusName": "Mental Focus (Special)",
+                "oneTimeOrStack": "stack",
+                "limit": 60,
+                "cooldown": 0,
+            }
+        ],
+        "tags": ["FirearmATK%"],
         "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +1.5% for 2s (up to 60 stacks). Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
     },
     "Real-Life Fighter": {//
@@ -65,9 +87,20 @@ const specialRounds =  {
         "category": "Special Mod",
         "stats": {
             "Accuracy": -0.20,
-            "FirearmATK%": 1
         },
-        "tags": [],
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmATK%","value": 0.10,"subStackValue": null},
+                ],
+                "bonusName": "Real-life Fighter (Special)",
+                "oneTimeOrStack": "stack",
+                "limit": 10,
+                "cooldown": 0,
+                "conditions": ["isWeakpoint"],
+            }
+        ],
+        "tags": ["FirearmATK%"],
         "desc": "Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks). But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
     },
     "Analysis Master": {//
@@ -89,10 +122,23 @@ const specialRounds =  {
         "cost": 15,
         "category": "Special Mod",
         "stats": {
-            "haileyExtraShots": 3,
         },
-        "tags": [],
-        "desc": "When landing a Firearm Critical Hit, rounds are not consumed for 3s (Cooldown 25s)."
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "BulletCostWeapon","value": -1,"subStackValue": null},
+                ],
+                "bonusName": "Spray and Pray",
+                "oneTimeOrStack": "duration",
+                "limit": 1,
+                "cooldown": 15,
+                "duration": 3,
+                // "conditions": ["isWeakpoint"],
+                "skipFirstShot": true,
+            }
+        ],
+        "tags": ["BulletCostWeapon","MagazineSize"],
+        "desc": "When landing a Firearm Critical Hit, rounds are not consumed for 3s (Cooldown 15s)."
     },
     // "Brisk Walk": {//
     //     "rarity": "Ultimate",
@@ -131,7 +177,7 @@ const specialRounds =  {
         "cost": 15,
         "category": "Special Mod",
         "stats": {
-            "FirearmATK%": 0.26
+            "FirearmATK%OnHit": 0.26
         },
         "tags": [],
         "desc": "When attacking enemies inflicted with Frostbite, Firearm ATK +26%"
@@ -143,7 +189,7 @@ const specialRounds =  {
         "cost": 15,
         "category": "Special Mod",
         "stats": {
-            "FirearmATK%": 0.26
+            "FirearmATK%OnHit": 0.26
         },
         "tags": [],
         "desc": "When attacking enemies inflicted with Burn, Firearm ATK +26%"
@@ -155,7 +201,7 @@ const specialRounds =  {
         "cost": 15,
         "category": "Special Mod",
         "stats": {
-            "FirearmATK%": 0.26
+            "FirearmATK%OnHit": 0.26
         },
         "tags": [],
         "desc": "When attacking enemies inflicted with Electrocution, Firearm ATK +26%"
@@ -167,7 +213,7 @@ const specialRounds =  {
         "cost": 15,
         "category": "Special Mod",
         "stats": {
-            "FirearmATK%": 0.26
+            "FirearmATK%OnHit": 0.26
         },
         "tags": [],
         "desc": "When attacking enemies inflicted with Poison, Firearm ATK +26%"

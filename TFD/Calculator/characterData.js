@@ -303,12 +303,14 @@ const characters = {
                         "base": 3627.4/100,
                         "firearmATKMulti": 1.50,
                         "magazine": 4,
+                        "fireRate": 70,
                     },
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgSkillHit",
                         "Skill - Total AVG" : "totalAVGSKill",
                         "Gun - AVG/Hit" : "avgGunPerHit",
                         "Gun - Total AVG" : "totalAVGGun",
+                        "Total - AVG/Shot" : "avgPerHitTotal",
                         "SUM Total AVG" : "totalAVGSum",
                     },
                     "displayStats": [],
@@ -318,13 +320,10 @@ const characters = {
                             {"statType": "","statName": "Max CDR when finished","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                         "SUPERCOOLED": [],
-                        "UNIQUE WEAPON - SKILL SPLIT": [],
-                        "UNIQUE WEAPON - FIREARM SPLIT": [
-                            {"statType": "","statName": "+Firearm ATK Multi","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                            {"statType": "magazine","statName": "Magazine","value": 4,"limit": null,"isModified": true},
+                        "UNIQUE WEAPON - SUM": [
+                            {"statType": "","statName": "+Firearm ATK Multi","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true,"tooltipID": "haileyZenithATKMulti"},
                             {"statType": "","statName": "MP Recovery/Weak Point Shot","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
-                        "UNIQUE WEAPON - SUM": [],
                     },
                 },
                 "Supercooled Kuiper Round": {
@@ -342,7 +341,8 @@ const characters = {
                         "base": 3627.4/100,
                         "firearmATKMulti": 1.25,
                         "magazine": 4,
-                        "weakpointStackBonus": 0.097
+                        "weakpointStackBonus": 0.097,
+                        "fireRate": 70,
                     },
                     "returnStatOptions": {
                         "Skill - AVG/Hit" : "avgSkillHit",
@@ -366,7 +366,7 @@ const characters = {
                         ],
                         "UNIQUE WEAPON - SKILL SPLIT": [],
                         "UNIQUE WEAPON - FIREARM SPLIT": [
-                            {"statType": "","statName": "+Firearm ATK Multi","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm ATK Multi","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true,"tooltipID": "haileyZenithATKMulti"},
                             {"statType": "magazine","statName": "Magazine","value": 4,"limit": null,"isModified": true},
                             {"statType": "","statName": "Shield Recovery/WP Shot","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
@@ -976,7 +976,8 @@ const characters = {
                         "skillDuration": 8,
                         "duration": 4,
                         "interval": 0.5,
-                        "continuousCost": 30
+                        "continuousCost": 30,
+                        "fireRate": 46
                     },
                     "customDPSBase": "",
                     "customDPS": "lepicOverkillCalcs",
@@ -1080,6 +1081,7 @@ const characters = {
                     "customDPS": "lepicFirearmMasterCalcs",
                     "stats": {},
                     "tags": ["PowerModifierBase","SkillRange"],
+                    "complexBonus": [],
                     "returnStatOptions": {
                     },
                     "displayStats": [],
@@ -1829,7 +1831,7 @@ const characters = {
                     "customDPSBase": "esiemoArcheCalcsMadnessTier0",
                     "customDPS": "esiemoArcheCalcs",//
                     "stats": {},
-                    "tags": ["Power Optimization","DEF%","SprintSpeedBonus","FirearmATK%"],
+                    "tags": ["PowerOptimization","DEF%","SprintSpeedBonus","FirearmATK%"],
                     "returnStatOptions": {
                         "Running - AVG/Hit" : "avgDmgPerHitRun",
                         "Explosion - AVG/Hit" : "avgDmgPerHit",
@@ -2493,10 +2495,7 @@ const characters = {
                             {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
                             {"statType": "cost","statName": "MP Cost","value": 55,"limit": null,"isModified": true},
                         ],
-                        "UNIQUE WEAPON": [
-                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
-                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
-                        ],
+                        "UNIQUE WEAPON": [],
                         "TRAUMA": [
                             {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
@@ -2506,7 +2505,10 @@ const characters = {
                             {"statType": "","statName": "Interval (s)","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
                         ],
-                        "SUM": [],
+                        "SUM": [
+                            {"statType": "magazine","statName": "Magazine","value": 45,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
                     },
                 },
                 "Neurotoxin Synthesis": {
@@ -4562,6 +4564,502 @@ const characters = {
                             {"statType": "","statName": "Gauge Limit","value": 10,"limit": null,"isModified": false},
                             {"statType": "","statName": "+On Note Success","value": 1,"limit": null,"isModified": false},
                             {"statType": "duration","statName": "Time before Decay","value": 20,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            }
+        }
+    },
+    "Sharen": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_008_U01.png",
+        "baseStats": {
+            "HP": 841,
+            "Shield": 537,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 2325,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 13,
+            "ResistanceToxin": 11,
+            "MP": 169,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.20,
+            "CritDamage": 1.4,
+        },
+        "name": "Sharen",
+        "characterSettings": {
+            "sharenCamoActive": true,
+            "sharenAmbushActive": true,
+            "sharenMeltingActive": true,
+            "sharenTargetBonus": true,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Cutoff Beam",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_01.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Inflicts damage and Electrocution on enemies in front of Cutoff Beam.",
+                    "powerMods": {
+                        "base": 1364.5/100,
+                        "baseDOT": 114.7/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenCutoffCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Beam - AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 4.4,"limit": 1.50,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Release Cutting Force": {
+                    "name": "Release Cutting Force",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_R01_Rune.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Fires a Cutoff Beam forward to deal damage and inflict Electrocution on the enemy.",
+                    "powerMods": {
+                        "base": 645.1/100,
+                        "baseDOT": 32.9/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenCutoffCalcsReleaseStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Beam - AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 4.5,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 1.0,"limit": 1.50,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Active Camouflage",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_02.png",
+                    "type": ["Electric","Dimension"],
+                    "desc": "Activates Active Camouflage, which hides self from enemy sight. Attacking an enemy while in this state immediately ends Active Camouflage and activates Ambush.",
+                    "powerMods": {
+                        "dmgMulti": 2,
+                        "skillCritBonus": 0.22,
+                        "firearmCritBonus": 0.22,
+                    },
+                    "customDPSBase": "sharenActiveCalcsTier0",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["SkillCritRateBaseBonus","FirearmCritRateBase"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
+                        ],
+                        "ACTIVE CAMOUFLAGE": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "AMBUSH": [
+                            {"statType": "","statName": "Outgoing DMG Increase","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Overcharged Edge": {
+                    "name": "Overcharged Edge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_R02_Rune.png",
+                    "type": ["Electric","Dimension"],
+                    "desc": "Consume the current Shield to activate Active Camouflage. Attacking an enemy ends Active Camouflage and initiates Ambush. DMG of Ambush increases proportionally to the amount of Shield consumed.",
+                    "powerMods": {
+                        "dmgMulti": 1.5,
+                        "skillCritBonus": 0.22,
+                        "firearmCritBonus": 0.22,
+                    },
+                    "customDPSBase": "sharenActiveCalcsTier0EdgeStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Shield Cost","value": 0.50,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Minimum Shield Required","value": 0.15,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "ACTIVE CAMOUFLAGE": [
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "AMBUSH": [
+                            {"statType": "","statName": "Outgoing DMG Increase","value": 1.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max from Lost Shield","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Ambushed": {
+                    "name": "Active Camouflage",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_02.png",
+                    "type": ["Electric","Dimension"],
+                    "desc": "Activates Active Camouflage, which hides self from enemy sight. Attacking an enemy while in this state immediately ends Active Camouflage and activates Ambush.",
+                    "powerMods": {
+                        "dmgMulti": 2,
+                        "skillCritBonus": 0.22,
+                        "firearmCritBonus": 0.22,
+                        "cooldownBonus": -0.3,
+                    },
+                    "customDPSBase": "sharenActiveCalcsTier0AmbushedStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["SkillCritRateBaseBonus","FirearmCritRateBase"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "ACTIVE CAMOUFLAGE": [
+                            {"statType": "duration","statName": "Duration","value": 6,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Cooldown Reduction","value": -0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "AMBUSH": [
+                            {"statType": "","statName": "Outgoing DMG Increase","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Skill Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm Crit Rate","value": 0.22,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Shock Nuts",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_03.png",
+                    "type": ["Electric","Dimension"],
+                    "desc": "Fires built-in Impact Rounds from the arm forward inflicting stun.",
+                    "powerMods": {
+                        "base": 288.7/100,
+                    },
+                    "customDPSBase": "sharenNutsCalcsTier0",
+                    "customDPS": "sharenNutsCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Impact - AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 20,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 4,"limit": 2,"isModified": true},
+                        ],
+                        "STUN": [
+                            {"statType": "duration","statName": "Duration","value": 5.3,"limit": null,"isModified": true},
+                        ],
+                        "MELTING BATTLESUIT": [],
+                    },
+                },
+                "Battlesuit Melting Rounds": {
+                    "name": "Battlesuit Melting Rounds",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_R04_Rune.png",
+                    "type": ["Electric","Dimension"],
+                    "desc": "Fires a projectile at a high angle, inflicting Melting Battlesuit on enemies within range.",
+                    "powerMods": {
+                        "base": 0/100,
+                    },
+                    "customDPSBase": "sharenNutsCalcsTier0BattleStarter",
+                    "customDPS": "sharenNutsCalcsBattlesuitStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 2,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 30,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 30,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2,"isModified": true},
+                        ],
+                        "STUN": [],
+                        "MELTING BATTLESUIT": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "-Enemy DEF","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "-Enemy Elec RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Ambushed": {
+                    "name": "Frangible Rounds",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_03.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Fires Frangible Rounds embedded in the arm forward, dealing damage to enemies and inflicting the Electrocution effect.",
+                    "powerMods": {
+                        "base": 1009.9/100,
+                        "baseDOT": 144.3/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenNutsCalcsAmbushedStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Rounds - AVG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 14,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 16,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Flash Shortsword",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_04.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Generates multiple Shortswords and fires them at a designated target. Enemies hit take Burst damage and are inflicted with Electrocution. Fire using the attack button and cancel using the aim button. Canceling does not trigger a cooldown",
+                    "powerMods": {
+                        "base": 289.7/100,
+                        "baseDOT": 31.9/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                        "maxHits": 10,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenFlashCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Beam - AVG/Hit" : "avgDmgPerHit",
+                        "SUM Total AVG" : "totalHitsDMG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Max Targets","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Hits/Enemy","value": 10,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 2.5,"limit": 2,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Void Domination": {
+                    "name": "Void Domination",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_R03_Rune.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Generates multiple Shortswords and fires them at a designated target. Enemies hit take Burst damage and are inflicted with Electrocution. Fire using the attack button and cancel using the aim button. Canceling does not trigger a cooldown",
+                    "powerMods": {
+                        "base": 262.8/100,
+                        "baseDOT": 18.8/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                        "maxHits": 2,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenFlashCalcsVoidStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Beam - AVG/Hit" : "avgDmgPerHit",
+                        "SUM Total AVG" : "totalHitsDMG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 45,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Max Targets","value": 20,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Hits/Enemy","value": 2,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 2.5,"limit": 2,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Area Suppression": {
+                    "name": "Area Suppression",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_R05_Rune.png",
+                    "type": ["Electric","Fusion"],
+                    "desc": "Scatters multiple Shortswords around. Critical hits reduce the cooldown. Deals damage to hit enemies and applies the Electrocution effect.",
+                    "powerMods": {
+                        "base": 184.5/100,
+                        "baseDOT": 52.7/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 3,
+                        "maxHits": 10,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "sharenFlashCalcsAreaStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Electric - AVG/Tick" : "avgDmgPerTick",
+                        "Electric - Total" : "totalTickDamageElectric",
+                        "Beam - AVG/Hit" : "avgDmgPerHit",
+                        "SUM Total AVG" : "totalHitsDMG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 60,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 40,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Max Targets","value": 20,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Hits/Enemy","value": 10,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Cooldown per Crit","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "HP% per Crit","value": 1,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 0.9,"limit": 2,"isModified": true},
+                        ],
+                        "ELECTROCUTION": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Assassinator",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_00.png",
+                    "type": ["Electric"],
+                    "desc": "When in Ambush state, killing an enemy by using a skill resets the Active Camouflage cooldown. This effect gains a cooldown. When attacking, increases DMG against enemies who are not targeting the caster.",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "sharenAssassinCalcsTier0",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "DMG Multi Untargeted","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Overcharged Edge": {
+                    "name": "Assassinator",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_00.png",
+                    "type": ["Electric"],
+                    "desc": "When in Ambush state, killing an enemy by using a skill resets the Overcharged Edge cooldown. This effect gains a cooldown. When attacking, increases DMG against enemies who are not targeting the caster.",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "sharenAssassinCalcsTier0OverchargedStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "DMG Multi Untargeted","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Ambushed": {
+                    "name": "Caught in Ambush",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_008_A01_00.png",
+                    "type": ["Electric"],
+                    "desc": "When defeating an enemy or landing a critical hit in the Active Camouflage state, there is a 30% chance to re-enter Active Camouflage. While in Active Camouflage state, using a skill to kill an enemy returns the user to the Active Camouflage stat. When attacking, increases DMG against enemies who are not targeting the caster.",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "sharenAssassinCalcsTier0AmbushedStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 45,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "DMG Multi Untargeted","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                     },
                 },

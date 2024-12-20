@@ -139,31 +139,31 @@
 
 
                 <div class="abilityDamageTabHolder" id="centerAbilityBreakdownTabHolders"><!-- ABILITY BREAKDOWN CONTAINERS -->
-                    <div class="abilityBreakdownTab" id="abilityBreakdownTab1">
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab1" style="display: flex;flex-direction: column;max-height: 710px;">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader1"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader1"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody1"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownFooter1"></div>
                     </div>
-                    <div class="abilityBreakdownTab" id="abilityBreakdownTab2">
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab2" style="display: flex;flex-direction: column;max-height: 710px;">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader2"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader2"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody2"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownFooter2"></div>
                     </div>
-                    <div class="abilityBreakdownTab" id="abilityBreakdownTab3">
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab3" style="display: flex;flex-direction: column;max-height: 710px;">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader3"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader3"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody3"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownFooter3"></div>
                     </div>
-                    <div class="abilityBreakdownTab" id="abilityBreakdownTab4">
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab4" style="display: flex;flex-direction: column;max-height: 710px;">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader4"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader4"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody4"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownFooter4"></div>
                     </div>
-                    <div class="abilityBreakdownTab" id="abilityBreakdownTab5">
+                    <div class="abilityBreakdownTab" id="abilityBreakdownTab5" style="display: flex;flex-direction: column;max-height: 710px;">
                         <div class="abilityBreakdownHeader" id="abilityBreakdownHeader5"></div>
                         <div class="abilityBreakdownTypeHeader" id="abilityBreakdownTypeHeader5"></div>
                         <div class="abilityBreakdownBody" id="abilityBreakdownBody5"></div>
@@ -355,9 +355,10 @@
                                             <div class="selectionSelectorBoxes" style="margin: 3px;">
                                                 <div class="selectSelectorTitle">TYPE:</div>
                                                 <div class="presetsSelectorBox">
-                                                    <input class="selectSelector" id="queryType" list="queryTypeList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                                    <input class="selectSelector hasHoverTooltip" id="queryType" list="queryTypeList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
                                                     <datalist id="queryTypeList">
                                                         <option>Ability</option>
+                                                        <option>Ability - Weapon Based</option>
                                                         <option>Stat</option>
                                                     </datalist>
                                                 </div>
@@ -500,6 +501,14 @@
                     <div class="breakdownTab" id="settingsBreakdownTab">
                         <div class="breakdownTabHeader">GENERAL SETTINGS</div>
                         <div class="breakdownTabBody">
+
+                            <div class="statisticSettingsRow hasHoverTooltip" id="weakPointHitRateExplainer">
+                                <div class="statsRowName">Weak Point HitRate:&nbsp;<span id="weakPointHitRateDisplay">100%</span></div>
+                                <div class="statsRowToggle">
+                                    <input type="range" id="weakPointHitRate" name="slider" min="0" max="100" value="100" step="1" onchange="userTriggers.updateGeneralSettings()">
+                                </div>
+                            </div>
+
                             <div class="statisticSettingsRow hasHoverTooltip" id="allowWPExplainer">
                                 <span class="statsRowName">Allow Weak Points?</span>
                                 <div class="statsRowToggle">
