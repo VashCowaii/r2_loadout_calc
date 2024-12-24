@@ -84,7 +84,9 @@ const impactRounds = {
             "oneTimeOrStack": "stack",
             "limit": 10,
             "cooldown": 0.4,
-            // "cooldown": 0.448,
+            // "accrualDelay": 0.048,
+            // "cooldown": 0.43,
+            // "cooldown": 0.445,
          }
       ],
       "tags": ["Recoil","FirearmATK%"],
@@ -1215,26 +1217,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Firearm ATK +32%"
    },   
-   
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    "Charge Amplification": {
       "rarity": "Rare",
       "polarity": "Malachite",
@@ -1265,4 +1247,182 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Firearm ATK +21%, Firearm Critical Hit Damage +10%"
    }, 
+
+
+
+   "Overwhelm": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "TypeBonus","value": 0.0581,"subStackValue": null},
+               {"name": "WeakPointDamage%","value": 0.04,"subStackValue": null},
+            ],
+            "bonusName": "Overwhelm",
+            "oneTimeOrStack": "durationStack",
+            "limit": 10,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isAdvantage"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["TypeBonus","WeakPointDamage%"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon hitting with Advantage Affinity, increases Weak Point Damage by 4% and Advantage Affinity Dammage Coefficient by 5.81% for 5 seconds (max 10 stacks, loses 2 stacks on failure, cooldown 20s)."
+   },
+   "Heat Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "FireATK%Bonus","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Heat Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["FireATK%Bonus"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Chill Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Cerulean",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ChillATK%Bonus","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Chill Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ChillATK%Bonus"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Electric Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Xantic",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ElectricATK%Bonus","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Electric Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ElectricATK%Bonus"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Toxic Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ToxicATK%Bonus","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Toxic Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ToxicATK%Bonus"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Ultra-Precision Strike": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "WeakPointDamage%","value": 0.045,"subStackValue": null},
+            ],
+            "bonusName": "Ultra-Precision Strike",
+            "oneTimeOrStack": "durationStack",
+            "limit": 20,
+            "cooldown": 15,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isAdvantage"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["WeakPointDamage%"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Successful Advantage Affinity: Weak Point Damage +4.5% for 5s (up to 20 stacks, cooldown 15s). Failed Weak Point Attack during the effect: Firearm ATK -1.95% (up to 20 stacks)."
+   },
 }

@@ -10,7 +10,7 @@
 
 
 .prismRowDescription,.comboInnerDisplayRow,.componentDescription,.breakdownDescriptionBox,.missingBreakdownHeadsup,.abilityBreakdownDescription,.totalHealingHeaderBoss,.totalHealingValueBoss,.bossDataCritResist,.abilityBreakdownGeneralMessage,
-.bossResistBoxHolder,.bossResistValue,.smolText,.modsQueryResultsRowName,.breakdownRowInjectionHeader,.breakdownRowInjectionHeaderBulletSim {
+.bossResistBoxHolder,.bossResistValue,.smolText,.modsQueryResultsRowName,.breakdownRowInjectionHeader,.breakdownRowInjectionHeaderBulletSim,.reactorZoneRowName {
     font-family: "Montserrat-Light";
 }
 

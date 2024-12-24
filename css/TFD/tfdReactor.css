@@ -1,0 +1,723 @@
+.mainGridRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 600px; */
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    /* border: 1px solid red; */
+
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat; */
+    overflow: hidden;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #0d0c0c 100%),url("/images/TFD/etaBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.displayBuffer {
+    width: 35%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.mainDisplayBox {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    /* border: 2px solid #434343; */
+
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat; */
+    /* border-radius: 10px; */
+
+    box-sizing: border-box;
+    /* margin: 4px; */
+    /* padding: 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainDisplayHalves {
+    display: flex;
+    flex-direction: column;
+}
+.mainLastsRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid #434343;
+    border-bottom: 2px solid #434343;
+    /* border: 2px solid #434343; */
+    padding: 4px;
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 10px; */
+}
+.mainLastsRowTitles {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 4px;
+    /* white-space: normal; */
+    flex-wrap: wrap;
+}
+
+
+.r2HomeYTEmbed {
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* object-fit: contain; */
+}
+.videoHeader, .mainSelectionHeader {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    padding: 3px;
+    /* text-decoration: none; */
+    /* border-top: 1px solid #434343; */
+}
+.mainSelectionHeader {
+    font-size: 18px;
+    width: auto;
+    /* padding: 4px; */
+    /* height: 100%; */
+    box-sizing: border-box;
+    white-space: nowrap;
+    border: 2px solid #434343;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    margin: 2px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    color: white;
+}
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 2;
+    grid-row: 5;
+    border: 1px solid #434343;
+    font-size: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.updateWarningBar {
+    border: 3px solid white;
+    color: #e06666;
+    /* height: 80px; */
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.r2HomeBanner {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+.footerIconTable {
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    outline: 2px solid white;
+    box-sizing: border-box;
+    margin-top: 3px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* object-fit: contain; */
+}
+.buildsPageHeader {
+    white-space: normal;
+    font-size: 25px;
+}
+
+
+
+
+
+
+.etaShopHeader {
+    width: 100%;
+    font-size: 30px;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.shopOfferingsBodyBox {
+    width: 100%;
+    max-height: 95%;
+    /* border: 1px solid yellow; */
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.offeringsMainRow {
+    width: 100%;
+    height: auto;
+    /* height: 100%; */
+    /* max-height: 81%; */
+    /* max-height: 450px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow-y: auto; */
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    padding: 15px;
+}
+.shopOptionsBox {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    /* max-height: 100%; */
+    /* max-height: 300px; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: start;
+    align-items: center;
+    /* overflow-y: auto; */
+    /* border: 1px solid #434343; */
+    overflow: hidden;
+    /* border: 1px solid red; */
+    /* padding: 2px; */
+    border-radius: 5px;
+
+
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-color: #0d0c0c; */
+
+}
+
+.itemBoxHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    /* padding: 5px; */
+    border: 1px solid #434343;
+    background-color: #1e1e1e;
+    margin: 1px;
+    border-radius: 5px;
+    /* object-fit: fill; */
+    /* max-height: 450px;
+    overflow-y: auto; */
+    overflow: hidden;
+
+}
+.shopItemIcon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    scale: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* object-fit: contain;
+    width: 20px;
+    height: 20px; */
+}
+.iconDisplayBoxHolder {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+}
+/* .bulletSelectorIDRowBox {
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    background-color: #1e1e1e;
+} */
+.bulletSelectorIDRowBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid lightblue; */
+}
+.traitLevelDisplay {
+    background-color: #1e1e1e;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.tooltipHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.tooltipHeaderIconRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+}
+.tooltip {
+    width: auto;
+}
+.mapZoneAreaBox {
+    width: 100%;
+    max-width: 300px;
+    height: 280px;
+    max-height: 280px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #434343;
+    margin: 2px;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-color: #0d0c0c;
+}
+.tooltipHeaderContainer {
+    position: relative;
+    max-width: 300px;
+}
+.tooltipHeaderShop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border-bottom: 2px solid #434343; */
+    object-fit: contain;
+}
+.tooltipHeaderShopBanner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 43px;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border-bottom: 2px solid #434343; */
+    object-fit: contain;
+    z-index: 1;
+    position: absolute;
+    top: 50%; /* Adjust to your preference */
+    left: 50%; /* Adjust to your preference */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: snow;
+
+    line-height: 0.9;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+                   0 0 20px rgba(5, 5, 5, 0.6),
+                   0 0 30px rgba(5, 5, 5, 0.4),
+                   0 0 40px rgba(10, 10, 10, 0.2);
+}
+.tooltipHeaderZoneBanner {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border-bottom: 2px solid #434343; */
+    object-fit: contain;
+    z-index: 0;
+    /* position: relative; */
+}
+
+
+
+.bossResistBoxHolderReactorZone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    /* padding: 5px; */
+    width: 100%;
+}
+.rowTraceLine {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #434343;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.reactorZoneRowName,.reactorZoneRowNameVeryBad,.reactorZoneRowNameVeryGood {
+    font-size: 14px;
+}
+.reactorZoneRowNameVeryBad {
+    color: #ae897c;
+}
+.reactorZoneRowNameVeryGood {
+    color: lightgreen;
+}
+.farmRateTextAdjustment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+    width: auto;
+}
+
+
+.selectionSelectorBoxesReactorIcons {
+    width: 100%;
+    max-width: 200px;
+    /* height: 20px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+    /* padding-top: 3px;
+    padding-bottom: 3px; */
+    padding: 10px;
+    border: 2px solid #434343;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+}
+
+.reactorIconStaticRows {
+    display: flex;
+    border: 1px solid lightblue;
+    border-top: none;
+    border-bottom: none;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.reactorIconStaticRowsStatic {
+    display: flex;
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.reactorIconStaticRowsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.bossResistValue {
+    font-size: 14px;
+    padding-right: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .shopOfferingsBodyBox {
+        max-height: 100%;
+    }
+    .iconDisplayBoxHolder {
+        height: 100%;
+        max-height: none;
+    }
+    .shopOptionsBox {
+        width: 100%;
+    }
+    .offeringsMainRow {
+        flex-direction: column;
+        height: auto;
+        max-height: auto;
+    }
+    .settingsBoxHolder {
+        flex-direction: column;
+    }
+    .playerSettingsBox {
+        width: 100%;
+    }
+    .tripleBarIcon {
+        display: flex;
+    }
+    .dropbtnHidden {
+        display: none;
+    }
+    .mainLastsRow {
+        flex-direction: column;
+        border: 2px solid #434343;
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    }
+    .mainDisplayHalves {
+        flex-direction: column;
+        width: 100%;
+    }
+    .r2HomeYTEmbed {
+        width: 100%;
+        height: 250px;
+    }
+    .mainDisplayBox {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .displayBuffer {
+        width: 0%;
+        height: 40%;
+    }
+    .mainGridRow{
+        /* height: 750px; */
+        height: auto;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #0d0c0c 100%),url("/images/TFD/etaBackground.png");
+        background-position: center;
+    }
+
+
+    .basicsBox,.classAndArmor,.accessoriesBox,.consumablesBox,.weaponsBox,.traitsBox,.advancedStatsBox {
+        width: 100%;
+        min-width: 100%;
+    }
+    .basicsBox {
+        height: auto;
+    }
+    .advancedStatsBox {
+        height: auto;
+    }
+    .advancedCategoryBoxHolder {
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+    }
+    .advancedCategoryBox {
+        width: 100%;
+        min-width: 100%;
+        height: 350px;
+    }
+
+    .shieldsFiller,.miscFiller {
+        height: 0%;
+    }
+
+    .traitContainer {
+        height: 40px;
+        max-width: 100%;
+    }
+    .traitButtonImage {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        object-fit: contain;
+    }
+
+    .classAndArmor{order: 0;}
+    .traitsBox {order: 1;height: auto;}
+    .basicsBox {order: 2;}
+    .advancedStatsBox {order: 3;}
+    .damageStatsBox {order: 4;}
+    .filtersMegaBox {order: 5;}
+
+    .advancedCategoryBox.advStatsMobileAdjustment {
+        height: auto;
+        min-height: 0;
+    }
+
+    .advancedHealingBox {
+        height: 10%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 0%;
+        font-size: 15px;
+        /* background-color: #666666; */
+        background-color: #434343;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .theGreatBox {
+        padding-left: 0px;
+        /* padding-top: 6%; */
+        box-sizing: border-box;
+    }
+    .togglesRowBox {
+        height: 23px;
+    }
+    .togglesCheckBox,.advancedDRCheckBox,.shieldsCheckBox {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+    }
+
+
+    .advancedSummaryThirds {
+        flex-direction: column;
+    }
+    .advancedSummaryStat {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+        justify-content: left;
+    }
+    .advancedSummaryValue {
+        width: 100%;
+        font-size: 20px;
+        padding-right: 1%;
+    }
+
+    .exportText {
+        font-size: 13px;
+    }
+
+    .filtersBoxHolder {
+        flex-direction: column;
+    }
+    .filtersBoxQuarters,.filtersBoxHalf {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        max-height: 400px;
+    }
+    .resultsBoxHalf {
+        width: 100%;
+        margin: 0;
+        /* height: auto;
+        max-height: 400px; */
+    }
+
+    .filtersTagsRowContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+    .filtersTagName {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .comboConcoctionsBox,.comboQuickUseBox {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .updateWarningBar {
+        width: auto;
+        white-space: normal;
+    }
+
+    .selectSelector {
+        font-size: 14px;
+    }
+
+    .havocInfoContainer {
+        min-width: 100%;
+    }
+}

@@ -69,6 +69,7 @@ const greatTableKnowerOfAll = {
     "ColossusATK": 0,
     "FirearmATK%": 0,
     "FirearmATK%OnHit": 0,
+    "TypeBonus": 0,
     "BaseWeakPointBonus": 0,
     "WeakPointDamage%": 0,
 
@@ -83,7 +84,7 @@ const greatTableKnowerOfAll = {
     "MagazineSize": 0,
 
     "FireATK": 0,
-    "FireATK%": 0,
+    "FireATK%": 0,//% only is conversion btw
     "FireATK%Bonus": 0,
     "ToxicATK": 0,
     "ToxicATK%": 0,
