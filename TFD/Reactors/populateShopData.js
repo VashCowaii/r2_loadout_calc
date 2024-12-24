@@ -631,7 +631,7 @@ let reactorFunctions = {
 
 
 reactorFunctions.createScheduleObject();
-console.log(reactorFunctions.scheduleObject)
+// console.log(reactorFunctions.scheduleObject)
 
 reactorFunctions.updateRotationDisplay(null,currentWeekNow);
 
