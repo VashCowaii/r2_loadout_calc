@@ -553,20 +553,32 @@ let reactorFunctions = {
                 let attributeFound = currentAttribute==="";
                 let typeFound = currentType==="";
                 let componentFound = currentComponent==="";
+
+                let part1Match = false;
+                let part2Match = false;
                 if (!targetFound) {
                     if (currentStatic.length>1) {
-                        if (currentStatic[0] === currentAttribute) {attributeFound = true;}
-                        if (currentStatic[1] === currentType) {typeFound = true;}
+                        let attributeFound1 = currentAttribute==="";
+                        let typeFound1 = currentType==="";
+                        if (currentStatic[0] === currentAttribute) {attributeFound1 = true;}
+                        if (currentStatic[1] === currentType) {typeFound1 = true;}
+                        if (attributeFound1 && typeFound1) {part1Match = true;}
                     }
                     if (currentZoneWeeks.length>1) {
-                        if (currentZoneWeeks[0] === currentAttribute) {attributeFound = true;}
-                        if (currentZoneWeeks[1] === currentType) {typeFound = true;}
+                        let attributeFound2 = currentAttribute==="";
+                        let typeFound2 = currentType==="";
+                        if (currentZoneWeeks[0] === currentAttribute) {attributeFound2 = true;}
+                        if (currentZoneWeeks[1] === currentType) {typeFound2 = true;}
+                        if (attributeFound2 && typeFound2) {part2Match = true;}
                     }
                     else {
-                        if (currentZoneWeeks[0] === currentComponent) {componentFound = true;}
+                        if (currentZoneWeeks[0] === currentComponent) {
+                            part2Match = true;
+                            componentFound = true;
+                        }
                     }
                 }
-                if (attributeFound && typeFound && componentFound) {targetFound = true;}
+                if (part1Match || part2Match) {targetFound = true;}
                 if (!targetFound) {continue;}
 
                 let imageString = currentStatic.length > 1 ? `
