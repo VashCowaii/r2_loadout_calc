@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="stylesheet" href="/css/TFD/tfdReactor.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>Reactor Farming</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="TFD Home">
+    <meta
+      property="og:description"
+      content="A filterable table for target farming reactors in The First Descendant."
+    />
+    <meta
+      property="description"
+      content="A filterable table for target farming reactors in The First Descendant."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="TFD Home" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFD Home" />
+    <meta
+      name="twitter:description"
+      content="A filterable table for target farming reactors in The First Descendant."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+  <div id="tooltip" class="tooltip"></div>
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="main">
+        <div class="theGreatBox">
+            <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+    
+            <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+    
+            <div class="mainGridRow" style="display: flex;width: 100%;">
+    
+                <!-- <div class="displayBuffer"></div> -->
+    
+                <div class="mainDisplayBox">
+                  <div class="etaShopHeader">Reactor Farming</div>
+
+                  <!-- <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div> -->
+                  
+                  <div class="shopOfferingsBodyBox">
+                    <div class="tooltipHeader">Week Selection</div>
+                    <div class="bulletSelectorIDRowBox">
+                      <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(-1)">&#9664;</div>
+                      <div class="traitLevelDisplay">
+                          <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="1" step="1" value="1" onchange="reactorFunctions.updateRotationDisplay()">
+                      </div> 
+                      <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(1)">&#9654;</div>
+                    </div>
+                    <div class="tooltipHeader" id="dateDisplayHeader">asdf</div>
+
+                    <div class="tooltipHeaderIconRow">
+                      <div class="selectionSelectorBoxesReactorIcons">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Sd.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorAttrBlank','')" id="reactorAttrBlank">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_000.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorNonAttribute','Non-Attribute')" id="reactorNonAttribute">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_001.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorFire','Fire')" id="reactorFire">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_002.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorElectric','Electric')" id="reactorElectric">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_003.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorChill','Chill')" id="reactorChill">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_004.png" onclick="reactorFunctions.updateRotationFilters(1,'reactorToxic','Toxic')" id="reactorToxic">
+                      </div>
+                      <div class="selectionSelectorBoxesReactorIcons">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Sd.png" onclick="reactorFunctions.updateRotationFilters(2,'reactorBlank','')" id="reactorBlank">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheDimension.png" onclick="reactorFunctions.updateRotationFilters(2,'reactorDimension','Dimension')" id="reactorDimension">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheFusion.png" onclick="reactorFunctions.updateRotationFilters(2,'reactorFusion','Fusion')" id="reactorFusion">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheSingular.png" onclick="reactorFunctions.updateRotationFilters(2,'reactorSingular','Singular')" id="reactorSingular">
+                          <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_DamageFloater_ArcheTech.png" onclick="reactorFunctions.updateRotationFilters(2,'reactorTech','Tech')" id="reactorTech">
+                      </div>
+                      <div class="selectionSelectorBoxesReactorIcons">
+                        <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Stat_Pc_Sd.png" onclick="reactorFunctions.updateRotationFilters(3,'componentBlank','')" id="componentBlank">
+                        <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Acc_01.png" onclick="reactorFunctions.updateRotationFilters(3,'componentAuxiliary','Auxiliary')" id="componentAuxiliary">
+                        <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Acc_02.png" onclick="reactorFunctions.updateRotationFilters(3,'componentSensor','Sensor')" id="componentSensor">
+                        <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Acc_03.png" onclick="reactorFunctions.updateRotationFilters(3,'componentMemory','Memory')" id="componentMemory">
+                        <img class="reactorRowIcons hasHoverTooltip" src="/TFD/TFDImages/DamageTypes/Icon_Acc_04.png" onclick="reactorFunctions.updateRotationFilters(3,'componentProcessor','Processor')" id="componentProcessor">
+                      </div>
+                    </div>
+                    <div class="tooltipHeaderIconRow">
+                      <div class="selectionSelectorBoxesReactorIcons" style="height: auto;padding: 1px;justify-content: space-evenly;">
+                        <div class="reactorZoneRowNameVeryGood farmRateTextAdjustment hasHoverTooltip" id="goodFarm">Good</div>
+                        <div class="reactorZoneRowName farmRateTextAdjustment hasHoverTooltip" id="okFarm">Ok</div>
+                        <div class="reactorZoneRowNameVeryBad farmRateTextAdjustment hasHoverTooltip" id="badFarm">Shit</div>
+                      </div>
+                    </div>
+                    <!-- <br> -->
+                    <div class="offeringsMainRow">
+                      <div class="shopOptionsBox">
+                        <div class="iconDisplayBoxHolder" id="shopA">asdf</div>
+                      </div>
+                      <!-- <div class="shopOptionsBox">
+                        <div class="tooltipHeaderShop">Battle Exchange</div>
+                        <div class="iconDisplayBoxHolder" id="shopC">asdf</div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                
+    
+            </div>
+    
+            <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+    
+        </div>
+    
+        <footer class="generalFooter" id="footerPlaceholder"></footer>
+    </div>
+
+
+<!-- script/data calls -->
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+<script src="/MainJS/buildTime.js"></script>
+
+<script src="/TFD/Reactors/tooltipStorage.js"></script>
+<script src="/TFD/Reactors/tooltipMath.js"></script>
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+<!-- <script src="/TFD/VashBuilds/videosDB.js"></script> -->
+<script src="/TFD/Calculator/reactors.js"></script>
+<script src="/TFD/Reactors/parsedReactorData.js"></script>
+<script src="/TFD/Reactors/populateShopData.js"></script>
+
+
+</body>
+
+</html>

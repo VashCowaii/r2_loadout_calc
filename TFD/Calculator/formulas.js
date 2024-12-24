@@ -197,15 +197,19 @@ const calcs = {
         const attackPercent = index["FirearmATK%"];
         const onHitBonus = index["FirearmATK%OnHit"];//while called onhit it's more of an enemy debuff
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
-        const physicalTypeBonus = globalRecords.boss.enemyType === "Colossus" ? 0.20 : 0.10;
-        const physicalTypeMulti = weaknessCheck ? physicalTypeBonus : 0;
+
+        const baseAdvantage = 1 + weaponRef.physicalTypeBonus + (globalRecords.boss.enemyType === "Colossus" ? 0.10 : 0);
+        const bonusAdvantage = index.TypeBonus;
+        const endAdvantage = calcs.customTruncate((baseAdvantage * (1 + bonusAdvantage) + 0.00001),4);
+        const physicalTypeBonus = endAdvantage-1;
+        const physicalTypeMulti = weaknessCheck ? endAdvantage : 1;
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
-        const totalFirearmATK = (postHitATK + index.ColossusATK) * (1 + physicalTypeMulti);
+        const totalFirearmATK = (postHitATK + index.ColossusATK) * physicalTypeMulti;
 
-        return {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
+        return {baseFirearmATK,attackPercent,physicalTypeBonus,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
     getFirearmWeakpoint(index,weaponRef) {
         const baseWPMulti = weaponRef.baseWeakPoint;
@@ -391,6 +395,9 @@ const customDamage = {
                 //if this is a nonstacking cooldown based effect, then make the initial time passed the amount of the cooldown so it can apply to the first shot
                 //otherwise set it to 0 so time can accrue normally
                 let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
+                if (path.complexBonus[0].oneTimeOrStack === "stack" && path.complexBonus[0].accrualDelay) {
+                    initialTimePassed -= path.complexBonus[0].accrualDelay
+                }
                 let firstIsSkipped = (path.complexBonus[0].skipFirstShot || false) ? -1 : 0;
 
                 let complexBonusArray = [];

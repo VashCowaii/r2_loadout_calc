@@ -95,7 +95,6 @@ const bullets = {
 
                     if (bonusEntry.oneTimeOrStack === "duration") {
                         let isDurationActive = false; // Tracks if the effect is within its duration window
-                        let reversedBonus = false;
                     
                         // Handle Duration-Based Effects
                         if (!isDurationActive && entry.timePassed >= 0 && entry.timePassed <= bonusEntry.duration) {
@@ -129,6 +128,51 @@ const bullets = {
                             isDurationActive = true;
                             //reset the times used when toggling the duration based effect off for the future
                             entry.timesUsed = 0;
+                        }
+                    }
+                    else if (bonusEntry.oneTimeOrStack === "durationStack") {
+                        //durationStack needs these two params under each entry in complexBonus
+                        // "isDurationActive": true,
+                        // "isCooldownActive": false,
+                        //duration must be set to true to start with
+                    
+                        // Handle Duration-Based Effects
+                        if (bonusEntry.isDurationActive && !bonusEntry.isCooldownActive && entry.timePassed >= 0 && entry.timePassed <= bonusEntry.duration) {
+
+                            if (entry.timesUsed < bonusEntry.limit) {
+                                entry.timesUsed += 1;//Count this use
+
+                                //if this is a duration based effect that triggers by a shot but doesn't apply to it, then skip bonuses on this shot
+                                if (entry.timesUsed <= 0) {}
+                                else {
+                                    // Apply bonuses while duration is active
+                                    bullets.applyStats(bonusEntry, tableCopy, constructorObject, entry.timesUsed, reversedBonus);
+                                }
+                            }
+                        }
+                
+                        // Check if duration has expired
+                        if (bonusEntry.isDurationActive && !bonusEntry.isCooldownActive && entry.timePassed > bonusEntry.duration) {
+                            bonusEntry.isDurationActive = false;
+                            bonusEntry.isCooldownActive = true;
+
+                            entry.timePassed -= bonusEntry.duration;//remove the duration to start the cooldown, but since it is duration based that means the time leftover still counts towards the cooldown, hence why no reset to 0 here
+
+                            //since this is a bonus that stacks within a fixed duration, we need to remove all benefits of all stacks based on the timesUsed number before going on cooldown
+                            for (let stat of bonusEntry.stats) {
+                                tableCopy[stat.name] -= (stat.value * entry.timesUsed);
+                            }
+                            entry.timesUsed = 0;
+                        }
+                
+                        // Handle Cooldown
+                        if (!bonusEntry.isDurationActive && bonusEntry.isCooldownActive && entry.timePassed >= bonusEntry.cooldown) {
+
+                            //TODO: might need to set the timepassed to exactly 0 here instead of subtracting the cooldown, as on some effects that could actually cause a problem since the effect is triggered
+                            //on the next shot rather than immediately off cooldown and there is a difference sometimes
+                            entry.timePassed -= bonusEntry.cooldown; // Decrement time for next activation
+                            bonusEntry.isCooldownActive = false;
+                            bonusEntry.isDurationActive = true; // Reactivate duration after cooldown
                         }
                     }
                     else if (bonusEntry.cooldown !== 0) {

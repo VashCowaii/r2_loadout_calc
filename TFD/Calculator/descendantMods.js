@@ -1897,7 +1897,7 @@ const modData = {
     },
 
 
-    "Non-Attribute Intensive": {
+    "Non-Attribute Integration": {
         "rarity": "Rare",
         "polarity": "Malachite",
         "type": "Descendant",
@@ -1910,7 +1910,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Fire Intensive": {
+    "Fire Integration": {
         "rarity": "Rare",
         "polarity": "Almandine",
         "type": "Descendant",
@@ -1923,7 +1923,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Chill Intensive": {
+    "Chill Integration": {
         "rarity": "Rare",
         "polarity": "Cerulean",
         "type": "Descendant",
@@ -1936,7 +1936,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Electric Intensive": {
+    "Electric Integration": {
         "rarity": "Rare",
         "polarity": "Xantic",
         "type": "Descendant",
@@ -1949,7 +1949,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Toxic Intensive": {
+    "Toxic Integration": {
         "rarity": "Rare",
         "polarity": "Rutile",
         "type": "Descendant",
@@ -1963,7 +1963,7 @@ const modData = {
         "tags": [],
     },
 
-    "Tech Intensive": {
+    "Tech Integration": {
         "rarity": "Rare",
         "polarity": "Almandine",
         "type": "Descendant",
@@ -1976,7 +1976,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Fusion Intensive": {
+    "Fusion Integration": {
         "rarity": "Xantic",
         "polarity": "Almandine",
         "type": "Descendant",
@@ -1989,7 +1989,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Singular Intensive": {
+    "Singular Integration": {
         "rarity": "Rare",
         "polarity": "Almandine",
         "type": "Descendant",
@@ -2002,7 +2002,7 @@ const modData = {
         },
         "tags": [],
     },
-    "Dimension Intensive": {
+    "Dimension Integration": {
         "rarity": "Rare",
         "polarity": "Malachite",
         "type": "Descendant",
