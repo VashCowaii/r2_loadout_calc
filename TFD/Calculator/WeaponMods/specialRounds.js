@@ -8,6 +8,8 @@ const specialRounds =  {
         "desc": "Select a mod above.",
         "stats": {},
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
     },
 
     //GOLD
@@ -44,6 +46,8 @@ const specialRounds =  {
          }
       ],
         "tags": ["Recoil","FirearmATK%"],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Base Fire Rate -20%. While pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.5s (up to 10 stacks)."
     },
     // "Lethal Finish": {//
@@ -77,6 +81,8 @@ const specialRounds =  {
             }
         ],
         "tags": ["FirearmATK%"],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +1.5% for 2s (up to 60 stacks). Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
     },
     "Real-Life Fighter": {//
@@ -101,6 +107,8 @@ const specialRounds =  {
             }
         ],
         "tags": ["FirearmATK%"],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks). But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
     },
     "Analysis Master": {//
@@ -113,6 +121,8 @@ const specialRounds =  {
             "enemyCritResistReductionFirearm": -0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "On hit, enemy's Firearm Critical Hit Resistance -25% for 10s. (Cooldown 10s)."
     },
     "Spray and Pray": {//
@@ -138,6 +148,8 @@ const specialRounds =  {
             }
         ],
         "tags": ["BulletCostWeapon","MagazineSize"],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When landing a Firearm Critical Hit, rounds are not consumed for 3s (Cooldown 15s)."
     },
     // "Brisk Walk": {//
@@ -159,6 +171,8 @@ const specialRounds =  {
             "FirearmATK%": 0.318
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When defeating an enemy, Firearm ATK +10.6% for 5s at a 100% chance (up to 3 stacks).<br>Max stacks assumed when selected."
     },
     // "Hardline Suppression": {//
@@ -180,6 +194,8 @@ const specialRounds =  {
             "FirearmATK%OnHit": 0.26
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When attacking enemies inflicted with Frostbite, Firearm ATK +26%"
     },
     "Fire Conductor": {//
@@ -192,6 +208,8 @@ const specialRounds =  {
             "FirearmATK%OnHit": 0.26
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When attacking enemies inflicted with Burn, Firearm ATK +26%"
     },
     "Electric Conductor": {//
@@ -204,6 +222,8 @@ const specialRounds =  {
             "FirearmATK%OnHit": 0.26
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When attacking enemies inflicted with Electrocution, Firearm ATK +26%"
     },
     "Toxic Conductor": {//
@@ -216,6 +236,8 @@ const specialRounds =  {
             "FirearmATK%OnHit": 0.26
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "When attacking enemies inflicted with Poison, Firearm ATK +26%"
     },
     // "Quick Freezer": {//
@@ -270,6 +292,8 @@ const specialRounds =  {
             "FireRate": 0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Toxic ATK +80%, Fire Rate -25%"
     },
     "Electric Gunbarrel": {//
@@ -283,6 +307,8 @@ const specialRounds =  {
             "FireRate": 0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Electric ATK +80, Fire Rate -25%"
     },
     "Refrigerate Gunbarrel": {//
@@ -296,6 +322,8 @@ const specialRounds =  {
             "FireRate": 0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Chill ATK +80%, Fire Rate -25%"
     },
     "Superheated Gunbarrel": {//
@@ -309,6 +337,8 @@ const specialRounds =  {
             "FireRate": 0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire ATK +80%, Fire Rate -25%"
     },
     "Hit Rate Insight": {//
@@ -322,6 +352,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Accuracy +30%, Firearm Critical Hit rate +1.5%"
     },
     "Aiming Compensation": {//
@@ -335,6 +367,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Accuracy +30%, Firearm Critical Hit Damage +5%"
     },
     "Weak Point Aiming": {//
@@ -348,6 +382,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Accuracy +30%, Weak Point Damage +2%"
     },
     "Deadeye": {//
@@ -361,6 +397,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Accuracy +30%, Firearm ATK +1%"
     },
     "Reload Insight": {//
@@ -374,6 +412,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Reload Time Modifier +25%, Firearm Critical Hit Rate +1.5%"
     },
     "Reload Focus": {//
@@ -387,6 +427,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Reload Time Modifier +25%, Firearm Critical Hit Damage 5%"
     },
     "Consume Magazines": {//
@@ -400,6 +442,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Reload Time Modifier +25%, Weak Point Damage +2%"
     },
     "Reload Expert": {//
@@ -413,6 +457,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Reload Time Modifier +25%, Firearm ATK +1%"
     },
     "Insight Stabilizer": {//
@@ -426,6 +472,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Recoil -30% Firearm Critical Hit Rate +1.5%"
     },
     "Concentration Stabilizer": {//
@@ -439,6 +487,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Recoil -30%, Firearm Critical Hit Damage +5%"
     },
     "Fixed Shot": {//
@@ -452,6 +502,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Recoil -30%, Weak Point Damage +2%"
     },
     "Stance Stabilizer": {//
@@ -465,6 +517,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Recoil -30%, Firearm ATK +1%"
     },
     "Rapid Fire Insight": {//
@@ -478,6 +532,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire Rate +20% Firearm Critical Hit Rate +1.5%"
     },
     "Fire Rate Concentration": {//
@@ -491,6 +547,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire Rate +20%, Firearm Critical Hit Damage +5%"
     },
     "Weak Point Quick Fire": {//
@@ -504,6 +562,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire Rate +20%, Weak Point Damage +2%"
     },
     "Bullet Rain": {//
@@ -517,6 +577,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire Rate +20%, Firearm ATK +1%"
     },
     "Insight Support Ammo": {//
@@ -530,6 +592,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds per Magazine +30%, Firearm Critical Hit Rate +1.5%"
     },
     "Concentrate Support Ammo": {//
@@ -543,6 +607,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds per Magazine +30%, Firearm Critical Hit Damage +5%"
     },
     "Maximize Weight Balance": {//
@@ -556,6 +622,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds per Magazine +30%, Weak Point Damage +2%"
     },
     "Weapon Tuning": {//
@@ -569,6 +637,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds per Magazine +30%, Firearm ATK +1%"
     },
     "Insight Focus": {//
@@ -582,6 +652,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Rate +14.5%, Firearm Critical Hit Damage +5%"
     },
     "Adventurer": {//
@@ -595,6 +667,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Rate +14.5%, Weak Point Damage +1%"
     },
     "Marksman": {//
@@ -608,6 +682,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Rate +14.5%, Firearm ATK +1%"
     },
     "Target Detection": {//
@@ -621,6 +697,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Damage +22.6%, Weak Point Damage +2%"
     },
     "Commando Marksmanship": {//
@@ -634,6 +712,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Damage +22.6%, Firearm ATK +1%"
     },
     "Fatal Critical": {//
@@ -647,6 +727,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Damage +22.6%, Firearm Critical Hit Rate +1.5%"
     },
     "Weak Point Detection": {//
@@ -660,6 +742,8 @@ const specialRounds =  {
             "FirearmATK%": 0.01
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Weak Point Damage +20%, Firearm ATK +1%"
     },
     "Focus Fire": {//
@@ -673,6 +757,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Weak Point Damage +20%, Firearm Critical Hit Damage +5%"
     },
     "Weak Point Insight": {//
@@ -686,6 +772,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Weak Point Damage +20%, Firearm  Critical Hit Rate +1.5%"
     },
     "Anti-Matter Round": {//
@@ -699,6 +787,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.05
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +26%, Firearm Critical Hit Damage +5%"
     },
     "Pinpoint Shot": {//
@@ -712,6 +802,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.02
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +26%, Weak Point Damage +2%"
     },
     "Sharpshooter": {//
@@ -725,6 +817,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.015
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +26%, Firearm Critical Hit Rate +1.5%"
     },
     "Have Aiming": {//
@@ -738,6 +832,8 @@ const specialRounds =  {
             "Accuracy": -0.20
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Weak Point Damage +40%, Accuracy -20%"
     },
     // "Special Rounds Compulsive": {//
@@ -760,6 +856,8 @@ const specialRounds =  {
             "WeakPointDamage%": -0.10
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds Per Magazine +39%, Weak Point Damage -10%"
     },
     "Edging Shot": {//
@@ -773,6 +871,8 @@ const specialRounds =  {
             "FirearmATK%": -0.15,
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Rate +32%, Firearm ATK -15%"
     },
     "Poison Priority": {//
@@ -786,6 +886,8 @@ const specialRounds =  {
             "ReloadSpeed": -0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Toxic ATK +50%, Reload Time Modifier -30%"
     },
     "Electric Priority": {//
@@ -799,6 +901,8 @@ const specialRounds =  {
             "ReloadSpeed": -0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Electric ATK +50%, Reload Time Modifier -30%"
     },
     "Chill Priority": {//
@@ -812,6 +916,8 @@ const specialRounds =  {
             "ReloadSpeed": -0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Chill ATK +50%, Reload Time Modifier -30%"
     },
     "Fire Priority": {//
@@ -825,6 +931,8 @@ const specialRounds =  {
             "ReloadSpeed": -0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire ATK +50%, Reload Time Modifire -30%"
     },
     "Concentration Priority": {
@@ -838,6 +946,8 @@ const specialRounds =  {
             "ReloadSpeed": -0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Damage +47%, Reload Time Modifier -30%"
     },
     "Action and Reaction": {
@@ -851,6 +961,8 @@ const specialRounds =  {
             "Recoil": 0.20
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +61%, Recoil +20%"
     },
     "Slow Art": {
@@ -864,6 +976,8 @@ const specialRounds =  {
             "FireRate": 0.25
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +62, Fire Rate -25%"
     },
 
@@ -908,6 +1022,8 @@ const specialRounds =  {
             "WeakPointDamage%": 0.35
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Weak Point Damage +35%"
     },
     // "Colon Special Forces": {//
@@ -929,6 +1045,8 @@ const specialRounds =  {
             "FirearmCritDamage": 0.488
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Damage +48.8%"
     },
     "Expand Weapon Charge": {//
@@ -941,6 +1059,8 @@ const specialRounds =  {
             "MagazineSize": 0.49
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Rounds per Magazine +49%"
     },
     "Recycling Genius": {//
@@ -953,6 +1073,8 @@ const specialRounds =  {
             "ReloadSpeed": 0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Reload Time Modifier +30%"
     },
     // "Better Weapon Weight": {//
@@ -983,6 +1105,8 @@ const specialRounds =  {
             "ChillATK%": 0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Adds Chill ATK equal to 30% of Firearm ATK"
     },
     // "Hawk-Eye": {
@@ -1004,6 +1128,8 @@ const specialRounds =  {
             "FirearmCritRate": 0.37
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm Critical Hit Rate +37%"
     },
     "Electric Enhancement": {//
@@ -1016,6 +1142,8 @@ const specialRounds =  {
             "ElectricATK%": 0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Adds Electric ATK equal to 30% of Firearm ATK"
     },
     "Toxic Enhancement": {//
@@ -1028,6 +1156,8 @@ const specialRounds =  {
             "ToxicATK%": 0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Adds Toxic ATK equal to 30% of Firearm ATK"
     },
     "Fire Enhancement": {//
@@ -1040,6 +1170,8 @@ const specialRounds =  {
             "FireATK%": 0.30
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Adds Fire ATK equal to 30% of Firearm ATK"
     },
     // "Vibration Absorption": {
@@ -1061,6 +1193,8 @@ const specialRounds =  {
             "FireRate": -0.25,
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Fire Rate +25%"
     },
     "Rifling Reinforcement": {
@@ -1073,6 +1207,8 @@ const specialRounds =  {
             "FirearmATK%": 0.32,
         },
         "tags": [],
+        "inclusion": [],
+        "exclusion": [],
         "desc": "Firearm ATK +32%"
     },  
 
@@ -1103,6 +1239,8 @@ const specialRounds =  {
          "FirearmCritDamage": -0.34
       },
       "tags": [],
+      "inclusion": [],
+        "exclusion": [],
       "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -34%"
    }, 
    "Bullet Integration": {
@@ -1116,6 +1254,8 @@ const specialRounds =  {
         "FirearmCritDamage": 0.10
       },
       "tags": [],
+      "inclusion": [],
+        "exclusion": [],
       "desc": "Firearm ATK +27%, Firearm Critical Hit Damage +10%"
    }, 
 }

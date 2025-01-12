@@ -448,6 +448,26 @@ const customDamage = {
             }
         }
 
+        const currentPath = currentWeaponRef;
+        if (currentPath.complexBonus && currentPath.complexBonus.length) {
+            let initialTimePassed = currentPath.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPath.complexBonus[0].cooldown : 0;
+            let firstIsSkipped = (currentPath.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+            let complexBonusArray = [];
+
+            for (let bonuses of currentPath.complexBonus) {
+                let newArrayEntry = {
+                    ...bonuses
+                }
+                newArrayEntry.stats = [...bonuses.stats];
+                complexBonusArray.push(newArrayEntry);
+            }
+
+            limitedWeaponBonuses.push({
+                "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                "bonusArray": complexBonusArray 
+            });
+        }
+
         // console.log(limitedWeaponAbilityBonuses)
 
         return {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses}
@@ -498,9 +518,6 @@ const customDamage = {
 
         return returnValuesObject;
     },
-
-
-
 
 
     //Kyle
@@ -1705,6 +1722,7 @@ const customDamage = {
             "referenceFunction": customDamage.freynaBaptismSkillBase,
             "wastedTimeSkill": rollDuration,//roll duration for cancel
             "skillOnly": true,
+            "shellCountOverride": 1,
         }
         const baseFireRate = 451;
         const magazine = abilityMods.magazine * (1 + index.MagazineSize);
@@ -1722,8 +1740,14 @@ const customDamage = {
                 bulletsArray = bulletsArray.slice(0,i);
             }
         }
+        //save the length of the bullet array to remember how many shots you actually have time for
+        const timeFor = bulletsArray.length;
+        //and then if the possible exceeds the mag size, trim the array AGAIN to cut off the extra bullets
+        if (bulletsArray.length > actualMagSize) {
+            bulletsArray = bulletsArray.slice(0,actualMagSize);
+        }
 
-        const possibleShots = bulletsArray.length;
+        const possibleShots = timeFor;
         const actualShots = Math.min(possibleShots,actualMagSize);
         
 
@@ -2687,6 +2711,7 @@ const customDamage = {
             "isStaticRate": true,
             "referenceFunction": customDamage.haileyZenithSkillBase,
             "specialGunFunction": customDamage.haileyZenithCryoBase,
+            "shellCountOverride": 1,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
@@ -3166,6 +3191,7 @@ const customDamage = {
             "specialSkillFunction": customDamage.LepicOverkillFieldBase,
             "wastedTimeSkill": rollDuration,//roll duration for cancel
             "skillOnly": true,
+            "shellCountOverride": 1,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
@@ -3430,6 +3456,9 @@ const customDamage = {
                     "skipFirstShot": false,
                 }
             ]
+        }
+        else {
+            abilityMap.complexBonus = [];
         }
     },
     lepicFirearmMasterCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
@@ -5514,6 +5543,494 @@ const customDamage = {
     },
 
 
+    //BLAIR
+    //ability 1
+    blairBlazeCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageZoneBreakdown = calcs.getDoTTotalBreakdown(index,damage.AVG,abilityMods.interval,abilityMods.duration);
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const avgDmgPerZone= damage.AVG;
+        const totalTickDamageZone = damageZoneBreakdown.totalTickDamage;
+
+        const avgDmgPerBurn = damageDOT.AVG;
+        const totalTickDamageBurn = damageDOTBreakdown.totalTickDamage;
+
+        const activeZones = settingsRef.blairActiveZones;
+
+        const sumTotalAVG = (totalTickDamageZone * activeZones) + totalTickDamageBurn;
+
+        if (!isCycleCalcs) {
+            let rowInjectionZone = [
+                {"name": "Zone Duration","value": damageZoneBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageZoneBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageZoneBreakdown.totalTicks,"unit": ""},
+            ]
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "FLAME ZONE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageZoneBreakdown.totalTicks,totalTickDamageZone * activeZones],
+                    "sliderElemID": ["blairActiveZones",0,7,1,"Active Zones"],
+                    "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageBurn],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": "[Note] If burn is applied faster than the interval of once per second, then the burn damage will not take place until you stop refreshing it."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerBurn,totalTickDamageBurn,avgDmgPerZone,totalTickDamageZone,sumTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    blairBlazeCalcsBombStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairBlazeCalcs(index,returnObject,isCycleCalcs,"Incendiary Bomb");
+    },
+    blairBlazeCalcsClassicStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairBlazeCalcs(index,returnObject,isCycleCalcs,"Classic Chef");
+    },
+    blairBlazeCalcsBackStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairBlazeCalcs(index,returnObject,isCycleCalcs,"Backdraft");
+    },
+    //ability 2
+    blairExtinguishCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const stacks = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+        const totalModBonus = abilityMods.powerModBonus * stacks;
+
+        index.PowerModifierBase += settingsRef.blairUseExtinguish ? totalModBonus : 0;
+
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Valid Zones","value": stacks,"unit": ""},
+                {"name": "Max MP Recovered","value": 0.08 * stacks,"unit": "%"},
+                {"name": "+Power Modifier%","value": totalModBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "TASTE OF AGGRESSION","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["blairUseExtinguish","Use Bonus?"],
+                    "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    blairExtinguishCalcsTier0BackStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Backdraft"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const stacks = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+
+        const totalWPBonus = abilityMods.weakPointBonus * stacks;
+        const totalATKBonus = abilityMods.ATKBonus * stacks;
+
+        index["BaseWeakPointBonus"] += settingsRef.blairUseExtinguish ? totalWPBonus : 0;
+        index["FirearmATK%"] += settingsRef.blairUseExtinguish ? totalATKBonus : 0;
+
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Valid Zones","value": stacks,"unit": ""},
+                {"name": "Max MP Recovered","value": 0.08 * stacks,"unit": "%"},
+                {"name": "+Weak Point Base","value": totalWPBonus,"unit": "%"},
+                {"name": "+Firearm ATK","value": totalATKBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "POWER OF FIRE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["blairUseExtinguish","Use Bonus?"],
+                    "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    //ability 3
+    blairTasteCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageZoneBreakdown = calcs.getDoTTotalBreakdown(index,damage.AVG,abilityMods.interval,abilityMods.duration);
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const avgDmgPerZone= damage.AVG;
+        const totalTickDamageZone = damageZoneBreakdown.totalTickDamage;
+
+        const avgDmgPerBurn = damageDOT.AVG;
+        const totalTickDamageBurn = damageDOTBreakdown.totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjectionZone = [
+                {"name": "Blast Duration","value": damageZoneBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageZoneBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageZoneBreakdown.totalTicks,"unit": ""},
+            ]
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageZoneBreakdown.totalTicks,totalTickDamageZone],
+                    "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageBurn],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": "[Note] If burn is applied faster than the interval of once per second, then the burn damage will not take place until you stop refreshing it."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerBurn,totalTickDamageBurn,avgDmgPerZone,totalTickDamageZone}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    blairDeadlyCalcs(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifierGiant = abilityMods.baseFireball + sumModifierBonus;
+        const skillPowerModifierSmall = abilityMods.baseFireballSmall + sumModifierBonus;
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damageFireball = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierGiant);
+        const damageFireballSmall = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierSmall);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageZoneBreakdown = calcs.getDoTTotalBreakdown(index,damage.AVG,abilityMods.interval,abilityMods.duration);
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const bigFireballDamage = damageFireball.AVG;
+        const smallFireballDamage = damageFireballSmall.AVG;
+
+        const avgDmgPerZone= damage.AVG;
+        const totalTickDamageZone = damageZoneBreakdown.totalTickDamage;
+        const avgDmgPerBurn = damageDOT.AVG;
+        const totalTickDamageBurn = damageDOTBreakdown.totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjectionZone = [
+                {"name": "Zone Duration","value": damageZoneBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageZoneBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageZoneBreakdown.totalTicks,"unit": ""},
+            ]
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "GIANT FIREBALL","value": damageFireball,"modifier": skillPowerModifierGiant,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "SMALL FIREBALL","value": damageFireballSmall,"modifier": skillPowerModifierSmall,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+
+                {"header": "FLAME ZONE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageZoneBreakdown.totalTicks,totalTickDamageZone],
+                    "rowInjection": [rowInjectionZone,""],
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageBurn],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": "[Note] If burn is applied faster than the interval of once per second, then the burn damage will not take place until you stop refreshing it."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerBurn,totalTickDamageBurn,avgDmgPerZone,totalTickDamageZone,smallFireballDamage,bigFireballDamage}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    blairDeadlyCalcsTrulyStarter(index,returnObject,isCycleCalcs,nameOverride) { 
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Truly Deadly Cuisine"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifierGiant = abilityMods.baseFireball + sumModifierBonus;
+
+        const skillPowerModifierDOT = abilityMods.baseDOT + sumModifierBonus;
+
+        const damageFireball = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierGiant);
+
+        const damageDOT = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierDOT);
+
+        const damageDOTBreakdown = calcs.getDoTTotalBreakdown(index,damageDOT.AVG,abilityMods.intervalDOT,abilityMods.durationDOT);
+        // {durationDOT,totalTicks,intervalDOT,totalTickDamage}
+
+        const bigFireballDamage = damageFireball.AVG;
+
+        const avgDmgPerBurn = damageDOT.AVG;
+        const totalTickDamageBurn = damageDOTBreakdown.totalTickDamage;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "DOT Duration","value": damageDOTBreakdown.durationDOT,"unit": ""},
+                {"name": "Interval (s)","value": damageDOTBreakdown.intervalDOT,"unit": ""},
+                {"name": "Total Ticks","value": damageDOTBreakdown.totalTicks,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "GIANT FIREBALL","value": damageFireball,"modifier": skillPowerModifierGiant,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "BURN","value": damageDOT,"modifier": skillPowerModifierDOT,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [damageDOTBreakdown.totalTicks,totalTickDamageBurn],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerBurn,totalTickDamageBurn,bigFireballDamage}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    blairDeadlyCalcsClassicStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairDeadlyCalcs(index,returnObject,isCycleCalcs,"Classic Chef")
+    },
+    blairDeadlyCalcsBackStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairDeadlyCalcs(index,returnObject,isCycleCalcs,"Backdraft")
+    },
+    //passive
+    blairPitCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+            // "critRateBonus": 0.05,
+            // "critDamageBonus": 0.10,
+            // "stackLimit": 7
+
+        const zoneCount = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+
+        index.SkillCritRateBaseBonus += zoneCount * abilityMods.critRateBonus;
+        index.SkillCritDamageBaseBonus += settingsRef.blairTargetBurning ? abilityMods.critDamageBonus : 0;
+
+
+
+        if (!isCycleCalcs) {
+            let rowInjectionRate = [
+                {"name": "Valid Zones","value": zoneCount,"unit": ""},
+                {"name": "+Flat Crit Rate","value": zoneCount * abilityMods.critRateBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL CRIT DAMAGE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["blairTargetBurning","Target is Burning?"],
+                    "condition": false,"desc": ""},
+                {"header": "SKILL CRIT RATE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionRate,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    blairPitCalcsTier0ClassicStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.blairPitCalcsTier0(index,returnObject,isCycleCalcs,"Classic Chef")
+    },
+    blairPitCalcsTier0BackStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Blair;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Backdraft"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const zoneCount = Math.min(abilityMods.stackLimit,settingsRef.blairActiveZones);
+
+        index.FirearmCritRateBase += zoneCount * abilityMods.critRateBonus;
+        index.FirearmCritDamageBase += settingsRef.blairTargetBurning ? abilityMods.critDamageBonus : 0;
+
+        if (!isCycleCalcs) {
+            let rowInjectionRate = [
+                {"name": "Valid Zones","value": zoneCount,"unit": ""},
+                {"name": "+Flat Crit Rate","value": zoneCount * abilityMods.critRateBonus,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "FIREARM CRIT DAMAGE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["blairTargetBurning","Target is Burning?"],
+                    "condition": false,"desc": ""},
+                {"header": "FIREARM CRIT RATE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionRate,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+
+
     //LE GUNS
     generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
     const settingsRef = weaponRef.weaponSettings;
@@ -5572,7 +6089,10 @@ const customDamage = {
         </div>
         `;
         // <div class="tooltipHeader">Bullet Selection</div>
-        }
+    }
+    else {
+        return {avgPerShot,totalAVGGun}
+    }
     },
     secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Secret Garden"];
@@ -5705,6 +6225,61 @@ const customDamage = {
             `;
         }
     },
+
+
+    smithereensCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Smithereens"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.allHitsBonus) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "ShellCapacityBase","value": 4,"subStackValue": null},
+                        {"name": "FirearmCritRateBase","value": 1,"subStackValue": null},
+                        {"name": "FirearmCritDamageBase","value": 0.10,"subStackValue": null},
+                    ],
+                    "bonusName": "Smithereens Bonus",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": [],
+                    "skipFirstShot": false,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "LANDED ALL BULLETS","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["allHitsBonus","Use All Bonuses?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "AMPLIFICATION","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Smithereens",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
+
     skipThisWeaponCalcs(index,returnObject,isCycleCalcs) {
         if (!isCycleCalcs) {
             readSelection(`weaponBreakdownBody1`).innerHTML += `<br><br>
@@ -5715,7 +6290,10 @@ const customDamage = {
     ...localInsertionDamage
 }
 
-
+const weaponTargetReferences = {
+    "Shot - AVG/Hit": "avgPerShot",
+    "SUM Magazine DMG": "totalAVGGun",
+}
 
 
 
@@ -5950,7 +6528,7 @@ let moduleQueryFunctions = {
         const currentAmmoType = currentWeaponRef.ammoType;
         const currentWeaponType = currentWeaponRef.weaponType;
 
-        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,}
+        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,"Weapon": currentWeaponMods,}
 
         //character stuff ignores the first 2 slots, whereas weapon stuff does not
         let isWeaponBased = queryType.toLowerCase().includes("weapon");
@@ -5973,9 +6551,13 @@ let moduleQueryFunctions = {
             if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
         }
         if (!isValidMod) {
-            for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
+            let backupFound = false;
+            for (let entry of newModArray2) {
+                if (entry != "") {readSelection("queryMod").value = entry;backupFound = true;break;}
+            }
+            if (!backupFound) {readSelection("queryMod").value = "";}
         }
-
+        
         if (queryType === "Ability" || queryType === "Ability - Weapon Based") {
             const abilityLister = readSelection("queryAbilityList");
             const abilityOptionLister = readSelection("queryAbilityOptionList");
@@ -6022,6 +6604,30 @@ let moduleQueryFunctions = {
 
             return {selectedAbilityIndexReference,selectedAbilityOptionPath}
         }
+        else if (queryType === "Weapon") {
+            //STAT OPTION RETURN KEYS
+            readSelection("queryAbilityBoxHolder").style.display = "none";
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
+            const statRefs = weaponTargetReferences;
+
+            const optionKeys = Object.keys(statRefs);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
+            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
         else if (queryType === "Stat") {
             //STAT OPTION RETURN KEYS
             readSelection("queryAbilityBoxHolder").style.display = "none";
@@ -6050,7 +6656,7 @@ let moduleQueryFunctions = {
     },
     getModuleQueryResults() {
         //never allow a blank query, default to ability if all else fails
-        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "",}
+        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "",}
         if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
         const queryType = readSelection("queryType").value;
 
@@ -6072,8 +6678,8 @@ let moduleQueryFunctions = {
 
         let isWeaponBased = queryType.toLowerCase().includes("weapon");
         //for assigning the right mod selection that is currently equipped
-        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,}
-        const typeRefCategory = {"Ability": modData,"Stat": modData,"Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],}
+        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,"Weapon": currentWeaponMods,}
+        const typeRefCategory = {"Ability": modData,"Stat": modData,"Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],"Weapon": userTriggers.weaponTypeModList[currentAmmoType],}
         const modLists = typeRefCategory[queryType];
 
         let newModArray1 = [...typeRef2[queryType]];
@@ -6136,6 +6742,29 @@ let moduleQueryFunctions = {
 
                 queryResultsArray.push(
                     {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
+                )
+            }
+        }
+        else if (queryType === "Weapon") {
+            for (let entry of modKeyReference) {
+                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
+
+                const inclusionSet = new Set(modLists[entry].inclusion);
+                const exclusionSet = new Set(modLists[entry].exclusion);
+
+                // console.log(newModArray1);
+
+                //if the inclusion filter is set with an actual entry, and the weapon type doesn't match it, skip it (example: sniper type but a shotgun mod, we skip that mod)
+                if (modLists[entry].inclusion.length>0 && !inclusionSet.has(currentWeaponType)) {continue;}
+                //otherwise, if there an exclusion filter set for the mod and we DO match it, then skip it
+                else if (modLists[entry].exclusion.length>0 && exclusionSet.has(currentWeaponType)) {continue;}
+
+                newModArray1[indexToModify] = entry;
+
+                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
+
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
                 )
             }
         }
