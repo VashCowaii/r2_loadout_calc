@@ -8,6 +8,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0,0],
         "Scout Rifle": [0,0],
         "Machine Gun": [0,0],
+        "Shotgun": [0,0],
     },
     "Firearm ATK": {
         "statName": "FirearmATK%",
@@ -18,6 +19,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.10,0.122],
         "Scout Rifle": [0.10,0.122],
         "Machine Gun": [0.10,0.122],
+        "Shotgun": [0.10,0.122],
     },
     "Fire ATK": {
         "statName": "FireATK",
@@ -28,6 +30,7 @@ const weaponSubstatList = {
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
+        "Shotgun": [1001,1806],
     },
     "Chill ATK": {
         "statName": "ChillATK",
@@ -38,6 +41,7 @@ const weaponSubstatList = {
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
+        "Shotgun": [1001,1806],
     },
     "Electric ATK": {
         "statName": "ElectricATK",
@@ -48,6 +52,7 @@ const weaponSubstatList = {
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
+        "Shotgun": [1001,1806],
     },
     "Toxic ATK": {
         "statName": "ToxicATK",
@@ -58,6 +63,7 @@ const weaponSubstatList = {
         "Burst Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
+        "Shotgun": [1001,1806],
     },
     "Weak Point Damage": {
         "statName": "WeakPointDamage%",
@@ -68,6 +74,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
         "Machine Gun": [0.082,0.12],
+        "Shotgun": [0.082,0.12],
     },
     "Critical Hit Rate": {
         "statName": "FirearmCritRate",
@@ -78,6 +85,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.108,0.122],
         "Scout Rifle": [0.119,0.133],
         "Machine Gun": [0.13,0.143],
+        "Shotgun": [0.08,0.098],
     },
     "Critical Hit Damage": {
         "statName": "FirearmCritDamage",
@@ -88,6 +96,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.202,0.247],
         "Scout Rifle": [0.268,0.327],
         "Machine Gun": [0.338,0.411],
+        "Shotgun": [0.091,0.111],
     },
     "Status Effect Rate": {
         "statName": "StatusTriggerRate",
@@ -98,6 +107,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.164,0.24],
         "Scout Rifle": [0.164,0.24],
         "Machine Gun": [0.164,0.24],
+        "Shotgun": [0.164,0.24],
     },
     "Rounds per Magazine": {
         "statName": "MagazineSize",
@@ -108,6 +118,7 @@ const weaponSubstatList = {
         "Burst Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
         "Machine Gun": [0.082,0.12],
+        "Shotgun": [0.082,0.12],
     },
     "Bonus ATK (Colossus)": {
         "statName": "ColossusATK",
@@ -118,6 +129,7 @@ const weaponSubstatList = {
         "Burst Rifle": [1919,3462],
         "Scout Rifle": [5263,9494],
         "Machine Gun": [1887,3404],
+        "Shotgun": [2002,3612],
     },
     // "Recoil": {
     //     "statName": "Recoil",
@@ -147,9 +159,12 @@ const sniperList = {
         "baseWeakPoint": 1,
         "physicalType": "Crush",
         "physicalTypeBonus": 0.10,
+
         "baseFireRate": 1,
         "baseReloadTime": 1,
         "magazine": 1,
+        "shellCount": 1,
+
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
         "image": "/images/Remnant/clear.png",
@@ -176,6 +191,7 @@ const sniperList = {
         "baseFireRate": 100,
         "baseReloadTime": 1.6,
         "magazine": 6,
+        "shellCount": 1,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -203,6 +219,7 @@ const sniperList = {
         "baseFireRate": 67,
         "baseReloadTime": 2.5,
         "magazine": 12,
+        "shellCount": 1,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -230,6 +247,7 @@ const sniperList = {
         "baseFireRate": 48,
         "baseReloadTime": 2.6,
         "magazine": 11,
+        "shellCount": 1,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -257,6 +275,7 @@ const sniperList = {
         "baseFireRate": 120,
         "baseReloadTime": 1.6,
         "magazine": 48,
+        "shellCount": 4,
 
         "ammoType": "Special",
         "weaponType": "Burst Rifle",
@@ -301,6 +320,7 @@ const sniperList = {
         "baseFireRate": 200,
         "baseReloadTime": 2,
         "magazine": 16,
+        "shellCount": 1,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -342,6 +362,7 @@ const sniperList = {
         "baseFireRate": 133,
         "baseReloadTime": 1.35,
         "magazine": 8,
+        "shellCount": 1,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -385,6 +406,7 @@ const sniperList = {
         "baseFireRate": 150,
         "baseReloadTime": 1.5,
         "magazine": 8,
+        "shellCount": 1,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -425,6 +447,7 @@ const sniperList = {
         "baseFireRate": 120,
         "baseReloadTime": 1.4,
         "magazine": 9,
+        "shellCount": 1,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -437,6 +460,44 @@ const sniperList = {
         "weaponSettings": {},
         "displayStatsALT": {
             "BASIC": [],
+        },
+    },
+    "Smithereens": {
+        "name": "Smithereens",
+        "rarity": "Ultimate",
+        "baseATK": 14562,
+        "baseCritRate": 0.01,
+        "baseCritDamage": 1.10,
+        "baseWeakPoint": 1.0,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 150,
+        "baseReloadTime": 1.6,
+        "magazine": 15,
+        "shellCount": 10,
+
+        "ammoType": "HighPowered",
+        "weaponType": "Shotgun",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_SG_1005_A001.png",
+        "customDPSBase": "smithereensCalcsTier0",
+        "customDPS": "",
+        "desc": "On hitting the enemy with all fired bullets, increases the Firearm Critical Hit Rate and Firearm Critical Hit Damage of the attack. Upon landing a Critical Hit on an enemy, grants the Firearm's unique ability Amplification",
+        "stats": {},
+        "tags": ["ShellCapacityBase","FirearmCritRateBase","FirearmCritDamageBase"],
+        "weaponSettings": {
+            "allHitsBonus": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "LANDED ALL BULLETS": [
+                {"statType": "","statName": "+Base Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Base Crit DMG","value": 0.10,"limit": null,"isModified": false},
+            ],
+            "AMPLIFICATION": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Shell Capacity","value": 4,"limit": null,"isModified": false},
+            ],
         },
     },
     ...weaponsInsertion

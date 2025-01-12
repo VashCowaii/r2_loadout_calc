@@ -8,7 +8,8 @@ const bullets = {
     },
     applyStats(bonusEntry, tableCopy, constructorObject, timesUsed, reversedBonus) {
         for (let stat of bonusEntry.stats) {
-            tableCopy[stat.name] += stat.value;
+            const valueToGive = stat.subStackValue && timesUsed>1 ? stat.subStackValue : stat.value;
+            tableCopy[stat.name] += valueToGive;
             //if we flip the bonus to only be applied on the single shot and not after, then push the bonus to memory to reverse later
             if (reversedBonus) {constructorObject.bonusesMemory.push([stat.name, stat.value]);}
         }
@@ -31,6 +32,7 @@ const bullets = {
         let specialSkillFunction = settingsObject ? settingsObject.specialSkillFunction : null; 
         let wastedTimeSkill = settingsObject ? settingsObject.wastedTimeSkill || 0 : 0; 
         let skillOnly = settingsObject ? settingsObject.skillOnly : false; 
+        let shellCountOverride = settingsObject ? settingsObject.shellCountOverride : null;
         // referenceFunction(index,returnObject,isCycleCalcs,nameOverride)
 
         for (let entry of bonusReference) {
@@ -219,6 +221,7 @@ const bullets = {
             const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableCopy,weaponRef,atkMulti);
             const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableCopy,weaponRef);
             const {baseWPMulti,weakpointBonus,bossPartWPBonus,wpAveraged} = calcs.getFirearmWeakpoint(tableCopy,weaponRef);
+            const shellCount = Math.floor(shellCountOverride ? shellCountOverride : (weaponRef.shellCount + tableCopy.ShellCapacityBase) * (1 + tableCopy.ShellCapacity))
 
             const preElementDamage = firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
             const damage = totalFirearmATK;
@@ -248,12 +251,13 @@ const bullets = {
             const skillDamage = referenceFunction ? referenceFunction(tableCopy,returnObject,isCycleCalcs,nameOverride) : 0;
             const skillDMGObject = skillDamage != 0 ? skillDamage.damageSkill : 0;
             const avgPerShot = weaponDamage.AVG// + weaponDamageElemental.AVG;
+            constructorObject.shellCount = shellCount;
             constructorObject.totalATK = skillOnly ? 0 : totalFirearmATK;
             constructorObject.damage = skillOnly ? 0 : weaponDamage.perHit;
             constructorObject.damageCrit = skillOnly ? 0 : weaponDamage.perCrit;
             constructorObject.damageAVG = skillOnly ? 0 : weaponDamage.AVG;
             constructorObject.avgTotalBonusElem = skillOnly ? 0 : avgTotalBonusElem;
-            constructorObject.damageAVGTotal = (skillOnly ? 0 : weaponDamage.AVG + avgTotalBonusElem) + (skillDamage != 0 ? skillDamage.damageSkill.AVG : 0);
+            constructorObject.damageAVGTotal = (skillOnly ? 0 : weaponDamage.AVG + avgTotalBonusElem) * shellCount + (skillDamage != 0 ? skillDamage.damageSkill.AVG : 0);
             constructorObject.SkillDamage = skillDamage != 0 ? skillDamage.damageSkill : 0;
             constructorObject.SkillDamageMod = skillDamage != 0 ? skillDamage.skillPowerModifier : 0;
             constructorObject.wasFree = tableCopy.BulletCostWeapon === 0;
@@ -344,6 +348,8 @@ const bullets = {
 
         for (let i=0;i<bulletsArray.length;i++) {
             // console.log(bulletsArray[i].specialSkillFunction)
+            // shellCount
+            let currentBullet = bulletsArray[i];
 
             let headerString = `<div class="totalHealingBoxBreakdownRows">
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
@@ -366,20 +372,24 @@ const bullets = {
                 <div class="totalHealingBoxBreakdownRows">
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">ATK</div>
-                        <div class="totalHealingValueBoss">${bulletsArray[i].totalATK.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentBullet.totalATK.toFixed(2)}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">DMG/Hit</div>
-                        <div class="totalHealingValueBoss">${bulletsArray[i].damage.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentBullet.damage.toFixed(2)}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">DMG/Crit</div>
-                        <div class="totalHealingValueBoss">${bulletsArray[i].damageCrit.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentBullet.damageCrit.toFixed(2)}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">AVG/Hit</div>
-                        <div class="totalHealingValueBoss">${bulletsArray[i].damageAVG.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentBullet.damageAVG.toFixed(2)}</div>
                     </div>
+                    ${currentBullet.shellCount > 1 ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">Shells</div>
+                        <div class="totalHealingValueBoss">${currentBullet.shellCount.toFixed(0)}</div>
+                    </div>` : ""}
                 </div>` : "";
             let specialATKString = bulletsArray[i].specialGunFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialGunFunction.name}</div>
                 <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialGunFunction.desc}</div>

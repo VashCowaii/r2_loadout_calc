@@ -5066,7 +5066,582 @@ const characters = {
             }
         }
     },
-
+    "Blair": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_009_A01.png",
+        "baseStats": {
+            "HP": 1334,
+            "Shield": 526,
+            "ShieldInCombat": 4.08,
+            "ShieldOutCombat": 4.88,
+            "DEF": 2139,
+            "ResistanceFire": 13,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 11,
+            "ResistanceToxin": 11,
+            "MP": 187,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.20,
+            "CritDamage": 1.3,
+        },
+        "name": "Blair",
+        "characterSettings": {
+            "blairActiveZones": 5,
+            "blairUseExtinguish": true,
+            "blairTargetBurning": true,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Blaze Up",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_A01_01.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Spews fire and creates a flame zone on the ground. Enemies standing in the flame zone receive continuous damage and are inflicted with burn.",
+                    "powerMods": {
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "blairBlazeCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "SUM Total AVG" : "sumTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Cooldown","value": 12,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 19,"limit": null,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Incendiary Bomb": {
+                    "name": "Incendiary Bomb",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R01_Rune.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Throws flames and creates a Flame Zone where it lands. Enemies standing in the flame zone receive continuous damage and are inflicted with burn.",
+                    "powerMods": {
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "blairBlazeCalcsBombStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "SUM Total AVG" : "sumTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Cooldown","value": 12,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 22,"limit": null,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 2.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Classic Chef": {
+                    "name": "Blaze Up",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R04_01.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Spews fire and creates a flame zone on the ground. Enemies standing in the flame zone receive continuous damage and are inflicted with burn.",
+                    "powerMods": {
+                        "base": 36.4/100,
+                        "baseDOT": 40.45/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "blairBlazeCalcsClassicStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "SUM Total AVG" : "sumTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Cooldown","value": 12,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 25,"limit": null,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Backdraft": {
+                    "name": "Blaze Up",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R03_01.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Spews fire and creates a flame zone on the ground. Enemies standing in the flame zone receive continuous damage and are inflicted with burn.",
+                    "powerMods": {
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "blairBlazeCalcsBackStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "SUM Total AVG" : "sumTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Cooldown","value": 12,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 25,"limit": null,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Extinguish",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_A01_02.png",
+                    "type": ["Fire","Singular"],
+                    "desc": "Recovers MP based on the number of Flame Zones currently active, and grants Taste of Aggression on recovery. Flame Zones summoned earlier are pulled from first.",
+                    "powerMods": {
+                        "powerModBonus": 0.06,
+                        "stackLimit": 5
+                    },
+                    "customDPSBase": "blairExtinguishCalcsTier0",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["PowerModifierBase"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 22,"limit": null,"isModified": true},
+                        ],
+                        "TASTE OF AGGRESSION": [
+                            {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP%/Stack","value": 0.08,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Power Modifier/Stack","value": 0.06,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Backdraft": {
+                    "name": "Extinguish",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R03_02.png",
+                    "type": ["Fire","Singular"],
+                    "desc": "Recovers MP based on the number of Flame Zones currently active, and grants Power of Fire on recovery. Flame Zones summoned earlier are pulled from first.",
+                    "powerMods": {
+                        "weakPointBonus": 0.06,
+                        "ATKBonus": 0.05,
+                        "stackLimit": 5
+                    },
+                    "customDPSBase": "blairExtinguishCalcsTier0BackStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["BaseWeakPointBonus","FirearmATK%"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 22,"limit": null,"isModified": true},
+                        ],
+                        "POWER OF FIRE": [
+                            {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MP%/Stack","value": 0.08,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Weak Point Base/Stack","value": 0.06,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Firearm ATK/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 20,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Burn Taste",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_A01_03.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Fires flame forward. Enemies hit by the flame take continuous damage and are inflicted with Burn.",
+                    "powerMods": {
+                        "base": 152.5/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 0.30,
+                        "intervalDOT": 1,
+                        "duration": 4.5,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "blairTasteCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Flame - AVG/Tick" : "avgDmgPerZone",
+                        "Flame - Total" : "totalTickDamageZone",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 30,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "duration","statName": "Interval","value": 0.30,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 4.5,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Deadly Cuisine",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_A01_04.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Fires a Giant Fireball forward. On explosion, the Giant Fireball deals Burst damage to nearby enemies and divides into multiple Small Fireballs, which create additional explosions.<br>Small Fireballs deal burst damage and inflict Burn on nearby enemies, and create Flame Zones.",
+                    "powerMods": {
+                        "baseFireball": 407.1/100,
+                        "baseFireballSmall": 616.8/100,
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "blairDeadlyCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "Fireballs - Small AVG/Hit" : "smallFireballDamage",
+                        "Fireballs - Giant AVG/Hit" : "bigFireballDamage",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 120,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                        ],
+                        "GIANT FIREBALL": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SMALL FIREBALL": [
+                            {"statType": "","statName": "Amount","value": 3,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Truly Deadly Cuisine": {
+                    "name": "Truly Deadly Cuisine",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R02_Rune.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Fires a Giant Fireball forward. On explosion, the Giant Fireball deals Burst damage to nearby enemies and divides into multiple Small Fireballs, which create additional explosions.<br>Small Fireballs deal burst damage and inflict Burn on nearby enemies, and create Flame Zones.",
+                    "powerMods": {
+                        "baseFireball": 6934.4/100,
+                        "baseDOT": 40.5/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "blairDeadlyCalcsTrulyStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Fireballs - Small AVG/Hit" : "smallFireballDamage",
+                        "Fireballs - Giant AVG/Hit" : "bigFireballDamage",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 70,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                        ],
+                        "GIANT FIREBALL": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Classic Chef": {
+                    "name": "Deadly Cuisine",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R04_04.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Fires a Giant Fireball forward. On explosion, the Giant Fireball deals Burst damage to nearby enemies and divides into multiple Small Fireballs, which create additional explosions.<br>Small Fireballs deal burst damage and inflict Burn on nearby enemies, and create Flame Zones.",
+                    "powerMods": {
+                        "baseFireball": 358.3/100,
+                        "baseFireballSmall": 504.5/100,
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "blairDeadlyCalcsClassicStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "Fireballs - Small AVG/Hit" : "smallFireballDamage",
+                        "Fireballs - Giant AVG/Hit" : "bigFireballDamage",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 120,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                        ],
+                        "GIANT FIREBALL": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SMALL FIREBALL": [
+                            {"statType": "","statName": "Amount","value": 5,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Backdraft": {
+                    "name": "Deadly Cuisine",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R03_04.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "Fires a Giant Fireball forward. On explosion, the Giant Fireball deals Burst damage to nearby enemies and divides into multiple Small Fireballs, which create additional explosions.<br>Small Fireballs deal burst damage and inflict Burn on nearby enemies, and create Flame Zones.",
+                    "powerMods": {
+                        "baseFireball": 407.1/100,
+                        "baseFireballSmall": 616.8/100,
+                        "base": 36.4/100,
+                        "baseDOT": 40.5/100,
+                        "interval": 1,
+                        "intervalDOT": 1,
+                        "duration": 15,
+                        "durationDOT": 5,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "blairDeadlyCalcsBackStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Burn - AVG/Tick" : "avgDmgPerBurn",
+                        "Burn - Total" : "totalTickDamageBurn",
+                        "Zone - AVG/Tick" : "avgDmgPerZone",
+                        "Zone - Total" : "totalTickDamageZone",
+                        "Fireballs - Small AVG/Hit" : "smallFireballDamage",
+                        "Fireballs - Giant AVG/Hit" : "bigFireballDamage",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 120,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                        ],
+                        "GIANT FIREBALL": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 2.5,"isModified": true},
+                        ],
+                        "SMALL FIREBALL": [
+                            {"statType": "","statName": "Amount","value": 3,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "FLAME ZONE": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Range","value": 3.5,"limit": 2.5,"isModified": true},
+                        ],
+                        "BURN": [
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Pitmaster",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_A01_00.png",
+                    "type": ["Fire"],
+                    "desc": "When attacking enemies inflicted with Burn, increases Skill Critical Hit Damage.<br>Increases Skill Critical Hit Rate based on the number of Flame Zones created on the battlefield.",
+                    "powerMods": {
+                        "critRateBonus": 0.05,
+                        "critDamageBonus": 0.10,
+                        "stackLimit": 5
+                    },
+                    "customDPSBase": "blairPitCalcsTier0",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["SkillCritRateBaseBonus","SkillCritDamageBaseBonus"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "SKILL CRIT DAMAGE": [
+                            {"statType": "","statName": "Base Increase","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "SKILL CRIT RATE": [
+                            {"statType": "","statName": "Flat Increase/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Classic Chef": {
+                    "name": "Pitmaster",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R04_00.png",
+                    "type": ["Fire"],
+                    "desc": "When attacking enemies inflicted with Burn, increases Skill Critical Hit Damage.<br>Increases Skill Critical Hit Rate based on the number of Flame Zones created on the battlefield.",
+                    "powerMods": {
+                        "critRateBonus": 0.05,
+                        "critDamageBonus": 0.10,
+                        "stackLimit": 7
+                    },
+                    "customDPSBase": "blairPitCalcsTier0ClassicStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["SkillCritRateBaseBonus","SkillCritDamageBaseBonus"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "SKILL CRIT DAMAGE": [
+                            {"statType": "","statName": "Base Increase","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "SKILL CRIT RATE": [
+                            {"statType": "","statName": "Flat Increase/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 7,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Backdraft": {
+                    "name": "Pitmaster",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_009_R03_00.png",
+                    "type": ["Fire"],
+                    "desc": "When attacking enemies inflicted with Burn, increases Firearm Critical Hit Damage.<br>Increases Firearm Critical Hit Rate based on the number of Flame Zones created on the battlefield.",
+                    "powerMods": {
+                        "critRateBonus": 0.05,
+                        "critDamageBonus": 0.10,
+                        "stackLimit": 5
+                    },
+                    "customDPSBase": "blairPitCalcsTier0BackStarter",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["FirearmCritRateBase","FirearmCritDamageBase"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "FIREARM CRIT DAMAGE": [
+                            {"statType": "","statName": "Base Increase","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "FIREARM CRIT RATE": [
+                            {"statType": "","statName": "Flat Increase/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            }
+        }
+    },
 
     ...localInsertion
 }

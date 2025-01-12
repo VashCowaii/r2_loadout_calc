@@ -327,14 +327,14 @@ const userTriggers = {
         const weaponRef = globalRecords.weapon;
         if (!sniperList[currentWeapon.value]) {currentWeapon.value = "";}
 
-        //If the character is actually different, then update the possible augment mod selections so people don't create errors.
-        //Also clear the currently selected augment so it doesn't fuck with the new character's math and ability array
-
-        if (sniperList[currentWeapon.value].ammoType != sniperList[weaponRef.currentWeapon].ammoType) {
+        //if the new weapon is a diff ammo or weapon type, clear the mod options so as to avoid many many errors that would follow due to mismatched mod collections
+        if (sniperList[currentWeapon.value].ammoType != sniperList[weaponRef.currentWeapon].ammoType
+        || sniperList[currentWeapon.value].weaponType != sniperList[weaponRef.currentWeapon].weaponType) {
             if (!isImportedValue) {weaponRef.currentWeapon = currentWeapon.value;}
             else {currentWeapon.value = weaponRef.currentWeapon}
 
             const ammoTypeModList = userTriggers.weaponTypeModList[sniperList[currentWeapon.value].ammoType];
+            const weaponType = sniperList[currentWeapon.value].weaponType;
 
             console.log("inner reached")
             for (let i=21;i<=30;i++) {
@@ -345,7 +345,7 @@ const userTriggers = {
                 const augDisplayList = document.getElementById(`mod${i}List`);
                 augDisplayList.innerHTML = '';
 
-                pagePopulation.populateGear(`mod${i}List`,ammoTypeModList);
+                pagePopulation.populateGearRestricted(`mod${i}List`,ammoTypeModList,weaponType);
 
             }
         }
@@ -723,7 +723,6 @@ const userTriggers = {
     },
     updateSelectedMod(modSlot,parentCall,parentIsCharacterUpdate,isImportedValue) {
         let inputRef = readSelection(`mod${modSlot}`);
-        // const weaponModsCategory = sniperList[globalRecords.weapon.currentWeapon].ammoType === "HighPowered" ? highPowerRounds : impactRounds;
         const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
 
         let categoryRef = null;
@@ -1078,6 +1077,31 @@ const pagePopulation = {
         //   }
         // }
     },
+    populateGearRestricted(elemID,collection,restrictionName) {
+        const select = readSelection(elemID);
+        // if (collection != traits) {
+          for (const gear in collection) {
+            if (collection.hasOwnProperty(gear)) {
+                let current = collection[gear]
+                // console.log(current)
+                //if the inclusion restriction is NOT met, then skip this mod entry
+                if (current.inclusion.length) {
+                    let inclusionSet = new Set(current.inclusion);
+                    if (!inclusionSet.has(restrictionName)) {continue}
+                }
+                //but if the exclusion restriction IS met, then skip it as well
+                else if (current.exclusion.length) {
+                    let exclusionSet = new Set(current.exclusion);
+                    if (exclusionSet.has(restrictionName)) {continue}
+                }
+
+                //otherwise add the option
+                const option = document.createElement("option");
+                option.text = gear;
+                select.appendChild(option);
+            }
+          }
+    },
     pagePopulation() {
         let populate = pagePopulation.populateGear;
         for (let entry of pagePopulation.dataListsList) {
@@ -1265,6 +1289,18 @@ const settings = {
                 settingsRef.haileyDistanceBar4 = +readSelection("haileyDistanceBar4").value;
             }//passive
         },
+        Blair(settingsRef,arrayRef) {
+            settingsRef.blairActiveZones = +readSelection("blairActiveZones").value;
+            if (arrayRef[0] === 0) {}//1
+    
+            settingsRef.blairUseExtinguish = readSelection("blairUseExtinguish").checked;
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+    
+            settingsRef.blairTargetBurning = readSelection("blairTargetBurning").checked;
+            if (arrayRef[4] === 0) {}//passive
+        },
         "Secret Garden"(settingsRef,arrayRef) {
             settingsRef.gardenStackCount = +readSelection("gardenStackCount").value
         },
@@ -1276,6 +1312,13 @@ const settings = {
         },
         "Nazeistra's Devotion"(settingsRef,arrayRef) {
             settingsRef.defDebuffActive = readSelection("defDebuffActive").checked
+        },
+        "Smithereens"(settingsRef,arrayRef) {
+            settingsRef.allHitsBonus = readSelection("allHitsBonus").checked
+        },
+        "Enduring Legacy"(settingsRef,arrayRef) {
+            settingsRef.quenchingBonusActive = readSelection("quenchingBonusActive").checked;
+            settingsRef.enduringTargetBurning = readSelection("enduringTargetBurning").checked;
         },
         ...localInsertionSettings
     }

@@ -74,6 +74,8 @@ const greatTableKnowerOfAll = {
     "WeakPointDamage%": 0,
 
     "BulletCostWeapon": 1,
+    "ShellCapacity": 0,
+    "ShellCapacityBase": 0,
     "StatusTriggerRate": 0,
 
     "FireRate": 0,

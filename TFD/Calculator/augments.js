@@ -467,5 +467,42 @@ const augments = {
         "skillOverrides": [0,0,0,"Area Suppression",0]
     },
 
+    //BLAIR
+    "Classic Chef": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Blair",
+        "desc": "Modifies the increase to Skill Critical Hit Rate to 7 based on the Flame Zone count. Using Deadly Cuisine increases the number of Flame Zones created to 5.",
+        "skillOverrides": ["Classic Chef",0,0,"Classic Chef","Classic Chef"]
+    },
+    "Backdraft": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 4,
+        "category": "Blair",
+        "desc": "MP Heal increases Weak Point Damage and Firearm ATK instead of Skill Power. Flame Zones increase Firearm Crit factors instead of Skill.",
+        "skillOverrides": ["Backdraft","Backdraft",0,"Backdraft","Backdraft"]
+    },
+    "Truly Deadly Cuisine": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Blair",
+        "desc": "Significantly increases the damage of Giant Fireball. When Giant Fireball explodes, Small Fireballs and Flame Zones do not spawn.",
+        "skillOverrides": [0,0,0,"Truly Deadly Cuisine",0]
+    },
+    "Incendiary Bomb": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Blair",
+        "desc": "Throws a projectile forward that spawns a Flame Zone where it lands.",
+        "skillOverrides": ["Incendiary Bomb",0,0,0,0]
+    },
     ...localInsertionAugments
 }

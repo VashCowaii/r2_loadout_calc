@@ -63,16 +63,7 @@ const highPowerRounds = {
         // "inclusion": [],
         // "exclusion": [],
     // },
-    // "Unstoppable Smasher (Shotty)": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 11,
-    //     "category": "Special Mod, ShotGun",
-    //     "desc": "When defeating an enemy, Shell Capacity +30% for 5s at a 33% chance.",
-        // "inclusion": [],
-        // "exclusion": [],
-    // },
+    
     "Strengthen First Shot": {
         "rarity": "Ultimate",
         "polarity": "Malachite",
@@ -157,16 +148,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Auto-Reload (Shotty)": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Cerulean",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod, ShotGun",
-    //     "desc": "When changing weapons, auto-reloads stored weapon (Cooldown 10s)",
-        // "inclusion": [],
-        // "exclusion": [],
-    // },
     "Electric Conductor": {
         "rarity": "Ultimate",
         "polarity": "Xantic",
@@ -389,38 +370,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Hit Rate Insight (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 13,
-    //     "category": "Accuracy, ShotGun",
-    //     "desc": "Accuracy +30%, Firearm Critical Hit Rate +3%"
-    // },
-    // "Hit Rate Focus (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 13,
-    //     "category": "Accuracy, ShotGun",
-    //     "desc": "Accuracy +30%, Firearm Critical Hit Damage +3%"
-    // },
-    // "Weak Point Aiming (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 13,
-    //     "category": "Accuracy, ShotGun",
-    //     "desc": "Accuracy +30%, Weak Point Damage +2%"
-    // },
-    // "Deadeye (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 13,
-    //     "category": "Accuracy, ShotGun",
-    //     "desc": "Accuracy +30%, Firearm ATK +1%"
-    // },
     "Reload insight": {
         "rarity": "Rare",
         "polarity": "Cerulean",
@@ -796,14 +745,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     }, 
-    // "Targeted Vulnerability (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "Firearm Critical Hit Damage, Shotgun",
-    //     "desc": "Weak Point Damge +40%, Accuracy -20%"
-    // }, 
     "Weak Point Detection": {
         "rarity": "Rare",
         "polarity": "Malachite",
@@ -889,46 +830,7 @@ const highPowerRounds = {
     //     "category": "ATK, Launcher",
     //     "desc": "Explosive ATK +26%, Firearm Critical Hit Rate +1%"
     // },
-    // "Action and Reaction (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "ATK, Shotgun",
-    //     "desc": "Firearm ATK +61%, Recoil +20%"
-    // },
-    // "Slow Art (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "ATK, Shotgun",
-    //     "desc": "Firearm ATK +48%, Fire Rate -25%"
-    // },
-    // "Anti-matter Round (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Shotgun",
-    //     "desc": "Firearm ATK +26%, Firearm Critical Hit Damage +13%"
-    // },
-    // "Pinpoint Shot (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Shotgun",
-    //     "desc": "Firearm ATK +26%, Weak Point Damage +2%"
-    // },
-    // "Sharpshooter (Shotty)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Shotgun",
-    //     "desc": "Firearm ATK +26%, Firearm Critical Hit Rate +3%"
-    // },
+    
     "Action and Reaction (Sniper)": {
         "rarity": "Rare",
         "polarity": "Malachite",
@@ -1094,14 +996,7 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Shell UP (Shotty)": {
-    //     "rarity": "Normal",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 6,
-    //     "category": "Shotgun",
-    //     "desc": "Shell Capacity +33%"
-    // },
+    
     // "Recycling Genius": {
     //     "rarity": "Normal",
     //     "polarity": "Cerulean",
@@ -1223,17 +1118,6 @@ const highPowerRounds = {
     //         "Recoil": -0.45
     //     }
     // },
-    // "Fire Rate UP": {
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 12,
-    //     "category": "Fire Rate",
-    //     "desc": "Fire Rate +25%",
-    //     "stats": {
-    //         "FireRate": -0.25
-    //     }
-    // },
     // "Rifling Reinforcement (Launcher)": {
     //     "rarity": "Normal",
     //     "polarity": "Malachite",
@@ -1242,14 +1126,7 @@ const highPowerRounds = {
     //     "category": "Launcher",
     //     "desc": "Explosive ATK +32%"
     // },
-    // "Rifling Reinforcement (Shotty)": {
-    //     "rarity": "Normal",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "Shotgun",
-    //     "desc": "Firearm ATK +32%"
-    // },
+    
     "Rifling Reinforcement (Sniper)": {
         "rarity": "Normal",
         "polarity": "Malachite",
@@ -1313,18 +1190,7 @@ const highPowerRounds = {
         "inclusion": ["Sniper"],
         "exclusion": [],
     },
-    // "Charge Amplification (Shotgun)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 0,
-    //     "category": "Firearm Critical Hit Damage",
-    //     "desc": "Firearm ATK +40%, Firearm Critical Hit Damage -30%",
-    //     "stats": {
-    //         "FirearmATK%": 0.40,
-    //         "FirearmCritDamage": -0.30
-    //     }
-    // },
+    
     // "Charge Amplification (Launcher)": {
     //     "rarity": "Rare",
     //     "polarity": "Malachite",
@@ -1352,18 +1218,6 @@ const highPowerRounds = {
         "inclusion": ["Sniper"],
         "exclusion": [],
     },
-    // "Bullet Integration (Shotgun)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 0,
-    //     "category": "Firearm Critical Hit Damage",
-    //     "desc": "Firearm ATK +10%, Firearm Critical Hit Damage +10%",
-    //     "stats": {
-    //         "FirearmATK%": 0.10,
-    //         "FirearmCritDamage": 0.10
-    //     }
-    // },
     // "Bullet Integration (Launcher)": {
     //     "rarity": "Rare",
     //     "polarity": "Malachite",
@@ -1376,4 +1230,271 @@ const highPowerRounds = {
     //         "FirearmCritDamage": 0.10
     //     }
     // },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Unstoppable Smasher (Shotgun)": {//TODO: complexBonus key later
+        "rarity": "Ultimate",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 11,
+        "category": "Special Mod",
+        "desc": "When defeating an enemy, Shell Capacity +30% for 5s at a 33% chance.",
+        "stats": {},
+        "tags": ["ShellCapacity"],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    // "Auto-Reload (Shotgun)": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Cerulean",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When changing weapons, auto-reloads stored weapon (Cooldown 10s)",
+    //     "stats": {},
+    //     "tags": [],
+    //     "inclusion": ["Shotgun"],
+    //     "exclusion": [],
+    // },
+    "Hit Rate Insight (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 13,
+        "category": "Accuracy",
+        "desc": "Accuracy +30%, Firearm Critical Hit Rate +3%",
+        "stats": {
+            "Accuracy": 0.30,
+            "FirearmCritRate": 0.03,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Hit Rate Focus (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 13,
+        "category": "Accuracy",
+        "desc": "Accuracy +30%, Firearm Critical Hit Damage +13%",
+        "stats": {
+            "Accuracy": 0.30,
+            "FirearmCritDamage": 0.13,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Weak Point Aiming (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 13,
+        "category": "Accuracy",
+        "desc": "Accuracy +30%, Weak Point Damage +2%",
+        "stats": {
+            "Accuracy": 0.30,
+            "WeakPointDamage%": 0.02,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Deadeye (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 13,
+        "category": "Accuracy",
+        "desc": "Accuracy +30%, Firearm ATK +1%",
+        "stats": {
+            "Accuracy": 0.30,
+            "FirearmATK%": 0.01,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Targeted Vulnerability (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Weak Point Damage +40%, Accuracy -20%",
+        "stats": {
+            "Accuracy": -0.20,
+            "WeakPointDamage%": 0.4,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    }, 
+    "Action and Reaction (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "ATK",
+        "desc": "Firearm ATK +61%, Recoil +20%",
+        "stats": {
+            "Recoil": 0.20,
+            "FirearmATK%": 0.61,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Slow Art (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "ATK",
+        "desc": "Firearm ATK +48%, Fire Rate -25%",
+        "stats": {
+            "FireRate": 0.25,
+            "FirearmATK%": 0.48,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Anti-Matter Round (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Firearm ATK +26%, Firearm Critical Hit Damage +13%",
+        "stats": {
+            "FirearmCritDamage": 0.13,
+            "FirearmATK%": 0.26,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Pinpoint Shot (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Firearm ATK +26%, Weak Point Damage +2%",
+        "stats": {
+            "WeakPointDamage%": 0.02,
+            "FirearmATK%": 0.26,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Sharpshooter (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Firearm ATK +26%, Firearm Critical Hit Rate +3%",
+        "stats": {
+            "FirearmCritRate": 0.03,
+            "FirearmATK%": 0.26,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Shell UP": {
+        "rarity": "Normal",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 6,
+        "category": "",
+        "desc": "Shell Capacity +33%",
+        "stats": {
+            "ShellCapacity": 0.33,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Rifling Reinforcement (Shotgun)": {
+        "rarity": "Normal",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "",
+        "desc": "Firearm ATK +32%",
+        "stats": {
+            "FirearmATK%": 0.32,
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Charge Amplification (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Firearm ATK +40%, Firearm Critical Hit Damage -30%",
+        "stats": {
+            "FirearmATK%": 0.40,
+            "FirearmCritDamage": -0.30
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+    "Bullet Integration (Shotgun)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Firearm ATK +10%, Firearm Critical Hit Damage +10%",
+        "stats": {
+            "FirearmATK%": 0.10,
+            "FirearmCritDamage": 0.10
+        },
+        "tags": [],
+        "inclusion": ["Shotgun"],
+        "exclusion": [],
+    },
+
+
+
+
+
+
+    "Fire Rate UP": {
+        "rarity": "Normal",
+        "polarity": "Xantic",
+        "type": "High-Power Rounds",
+        "cost": 12,
+        "category": "Fire Rate",
+        "stats": {
+            "FireRate": -0.25,
+        },
+        "tags": [],
+        "inclusion": [],
+        "exclusion": [],
+        "desc": "Fire Rate +25%"
+    },
 }
