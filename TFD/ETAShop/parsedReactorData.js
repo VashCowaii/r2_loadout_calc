@@ -2971,8 +2971,8 @@ let reactorRotation = {
         "failed"
       ],
       "static": [
-        "Blazer",
-        "Singular"
+        "Electricity",
+        "Tech"
       ],
       "mapName": "Key_UI_Map_Local_ForestOfTheDead",
       "mapNameReal": "Echo Swamp"
@@ -4725,8 +4725,8 @@ let reactorRotation = {
         "failed"
       ],
       "static": [
-        "Glacier",
-        "Dimension"
+        "Electricity",
+        "Tech"
       ],
       "mapName": "Key_UI_Map_Local_DawnSnowyfield",
       "mapNameReal": "White-night Gulch"

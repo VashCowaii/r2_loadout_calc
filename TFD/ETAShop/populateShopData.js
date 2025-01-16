@@ -45,7 +45,7 @@ for (let entry of scheduleKeys) {
 
     //this is the amount of time that differs from the schedule start date to the actual start of the eta shop.
     //this could easily change between season to season
-    let startDateAdjustment = shopDuration
+    let startDateAdjustment = shopDuration - 86400; 
     let currentStart = current.epoch + startDateAdjustment;
     
 

@@ -2554,18 +2554,18 @@ let bossData = {
     "difficulty": "Hard",
     "levelKeys": {
       "1": {
-        "lvl": 121,
+        "lvl": 119,
         "lvlStats": {
-          "HP": 35338969,
-          "Shield": 15145273,
+          "HP": 11685419,
+          "Shield": 5008037,
           "DEF": 182156,
           "Non-Attribute": 182156,
           "Fire": 182156,
           "Chill": 279427,
           "Electric": 86251,
           "Toxic": 454297,
-          "ATK": 510,
-          "Toxic ATK": 576,
+          "ATK": 353,
+          "Toxic ATK": 399,
           "HP Recovery Interval": 0.1,
           "HP Recovery": 0,
           "HP Recovery In Combat": 0,
@@ -2575,30 +2575,30 @@ let bossData = {
           "Max Stagger HP and Rate": 0.3,
           "Max Stagger HP Rate": 0.55,
           "Max Stagger Rate": 1,
-          "Stagger Decrease Rate": 0.08,
-          "Stagger Decrease Delay": 12,
+          "Stagger Decrease Rate": 0.04,
+          "Stagger Decrease Delay": 16,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.6,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
           "Frenzy Duration": 40,
-          "Colossus Level": 121
+          "Colossus Level": 119
         }
       },
       "2": {
-        "lvl": 121,
+        "lvl": 120,
         "lvlStats": {
-          "HP": 35338969,
-          "Shield": 15145273,
+          "HP": 23370838,
+          "Shield": 10016073,
           "DEF": 182156,
           "Non-Attribute": 182156,
           "Fire": 182156,
           "Chill": 279427,
           "Electric": 86251,
           "Toxic": 454297,
-          "ATK": 510,
-          "Toxic ATK": 576,
+          "ATK": 432,
+          "Toxic ATK": 488,
           "HP Recovery Interval": 0.1,
           "HP Recovery": 0,
           "HP Recovery In Combat": 0,
@@ -2608,22 +2608,22 @@ let bossData = {
           "Max Stagger HP and Rate": 0.3,
           "Max Stagger HP Rate": 0.55,
           "Max Stagger Rate": 1,
-          "Stagger Decrease Rate": 0.08,
-          "Stagger Decrease Delay": 12,
+          "Stagger Decrease Rate": 0.06,
+          "Stagger Decrease Delay": 14,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.6,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
           "Frenzy Duration": 40,
-          "Colossus Level": 121
+          "Colossus Level": 120
         }
       },
       "3": {
         "lvl": 121,
         "lvlStats": {
-          "HP": 35338969,
-          "Shield": 15145273,
+          "HP": 31399852,
+          "Shield": 13457079,
           "DEF": 182156,
           "Non-Attribute": 182156,
           "Fire": 182156,
@@ -2644,7 +2644,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.08,
           "Stagger Decrease Delay": 12,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.6,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2655,8 +2655,8 @@ let bossData = {
       "4": {
         "lvl": 122,
         "lvlStats": {
-          "HP": 47118625,
-          "Shield": 20193697,
+          "HP": 37694900,
+          "Shield": 16154957,
           "DEF": 182156,
           "Non-Attribute": 182156,
           "Fire": 182156,
@@ -2677,7 +2677,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.1,
           "Stagger Decrease Delay": 10,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.6,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2686,7 +2686,7 @@ let bossData = {
         }
       }
     },
-    "minimumTeam": 3,
+    "minimumTeam": 1,
     "attackType": "Demonic",
     "bigIcon": "UI_VoidBattle_Information_Obstructer_Item_C",
     "smallIcon": "Icon_VoidBattle_EpicMonster_Obstructer",
@@ -2775,7 +2775,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.04,
           "Stagger Decrease Delay": 16,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.25,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2786,8 +2786,8 @@ let bossData = {
       "2": {
         "lvl": 124,
         "lvlStats": {
-          "HP": 25450874,
-          "Shield": 12725437,
+          "HP": 26308006,
+          "Shield": 13154003,
           "DEF": 188058,
           "Non-Attribute": 188058,
           "Fire": 89384,
@@ -2808,7 +2808,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.06,
           "Stagger Decrease Delay": 14,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.25,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2819,8 +2819,8 @@ let bossData = {
       "3": {
         "lvl": 125,
         "lvlStats": {
-          "HP": 34995588,
-          "Shield": 17497794,
+          "HP": 35346078,
+          "Shield": 17673040,
           "DEF": 188058,
           "Non-Attribute": 188058,
           "Fire": 89384,
@@ -2841,7 +2841,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.08,
           "Stagger Decrease Delay": 12,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.25,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2874,7 +2874,7 @@ let bossData = {
           "Stagger Decrease Rate": 0.1,
           "Stagger Decrease Delay": 10,
           "Time Limit": 10,
-          "Max Frenzy Rate": 0.25,
+          "Max Frenzy Rate": 0.33,
           "Frenzy Damage Rate": 1,
           "Frenzy Decrease Delay": 10,
           "Frenzy Decrease Rate": 0.01,
@@ -2883,14 +2883,14 @@ let bossData = {
         }
       }
     },
-    "minimumTeam": 4,
+    "minimumTeam": 1,
     "attackType": "Glacier",
     "bigIcon": "UI_VoidBattle_Information_FrostWalker_Item_C",
     "smallIcon": "Icon_VoidBattle_EpicMonster_FrostWalker",
     "stats": {
       "Movespeed": 400,
       "Aim Movespeed": 200,
-      "Berserk Movespeed": 400,
+      "Berserk Movespeed": 0,
       "Movement Destruction": 100,
       "Crit Chance": 30,
       "Crit Damage": 1.5,
@@ -3714,6 +3714,193 @@ let bossData = {
       }
     },
     "weaknessKeyName": "InfernalWalker_HitPoint",
+    "enemyType": "Colossus"
+  },
+  "VoidBattle_Defiler_VeryHard": {
+    "name": "Defiler",
+    "realName": "Defiler",
+    "key": "Key_EpicBoss_Defiler",
+    "difficulty": "VeryHard",
+    "levelKeys": {
+      "1": {
+        "lvl": 147,
+        "lvlStats": {
+          "HP": 45722742,
+          "Shield": 30481828,
+          "DEF": 295262,
+          "Non-Attribute": 295262,
+          "Fire": 295262,
+          "Chill": 1529457,
+          "Electric": 38688,
+          "Toxic": 6885510,
+          "ATK": 423,
+          "Toxic ATK": 986,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Max Stagger HP and Rate": 0.25,
+          "Max Stagger HP Rate": 0.4,
+          "Max Stagger Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Time Limit": 10,
+          "Rage Damage Rate": 0.235,
+          "Rage Decrease Rage": 1,
+          "Max Rage Gauge": 0.5,
+          "Colossus Level": 147
+        }
+      },
+      "2": {
+        "lvl": 148,
+        "lvlStats": {
+          "HP": 80423756,
+          "Shield": 53615837,
+          "DEF": 295262,
+          "Non-Attribute": 295262,
+          "Fire": 295262,
+          "Chill": 1529457,
+          "Electric": 38688,
+          "Toxic": 6885510,
+          "ATK": 581,
+          "Toxic ATK": 1357,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Max Stagger HP and Rate": 0.25,
+          "Max Stagger HP Rate": 0.4,
+          "Max Stagger Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Time Limit": 10,
+          "Rage Damage Rate": 0.235,
+          "Rage Decrease Rage": 1,
+          "Max Rage Gauge": 0.5,
+          "Colossus Level": 148
+        }
+      },
+      "3": {
+        "lvl": 149,
+        "lvlStats": {
+          "HP": 110584676,
+          "Shield": 73723117,
+          "DEF": 295262,
+          "Non-Attribute": 295262,
+          "Fire": 295262,
+          "Chill": 1529457,
+          "Electric": 38688,
+          "Toxic": 6885510,
+          "ATK": 740,
+          "Toxic ATK": 1727,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Max Stagger HP and Rate": 0.25,
+          "Max Stagger HP Rate": 0.4,
+          "Max Stagger Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Time Limit": 10,
+          "Rage Damage Rate": 0.235,
+          "Rage Decrease Rage": 1,
+          "Max Rage Gauge": 0.5,
+          "Colossus Level": 149
+        }
+      },
+      "4": {
+        "lvl": 150,
+        "lvlStats": {
+          "HP": 147492717,
+          "Shield": 98328478,
+          "DEF": 295262,
+          "Non-Attribute": 295262,
+          "Fire": 295262,
+          "Chill": 1529457,
+          "Electric": 38688,
+          "Toxic": 6885510,
+          "ATK": 899,
+          "Toxic ATK": 2098,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Max Stagger HP and Rate": 0.25,
+          "Max Stagger HP Rate": 0.4,
+          "Max Stagger Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Time Limit": 10,
+          "Rage Damage Rate": 0.235,
+          "Rage Decrease Rage": 1,
+          "Max Rage Gauge": 0.5,
+          "Colossus Level": 150
+        }
+      }
+    },
+    "minimumTeam": 1,
+    "attackType": "Demonic",
+    "bigIcon": "UI_VoidBattle_Information_Defiler_Item_C",
+    "smallIcon": "Icon_VoidBattle_EpicMonster_Defiler",
+    "stats": {
+      "Movespeed": 400,
+      "Aim Movespeed": 350,
+      "Movement Destruction": 100,
+      "Crit Chance": 30,
+      "Crit Damage": 1.5,
+      "Firearm Crit Resist": 60,
+      "Skill Crit Resist": 40,
+      "Penetration Resist": 100000,
+      "Max Rage Rate": 100000,
+      "Penetration": 1
+    },
+    "weaknessKeys": {
+      "Body": {
+        "name": "Body",
+        "type": "Burst",
+        "wpMod": 0
+      },
+      "Left Circulatory System": {
+        "name": "Left Circulatory System",
+        "type": "Pierce",
+        "wpMod": 0.25
+      },
+      "Right Circulatory System": {
+        "name": "Right Circulatory System",
+        "type": "Pierce",
+        "wpMod": 0.25
+      },
+      "Balancer": {
+        "name": "Balancer",
+        "type": "Crush",
+        "wpMod": 0.25
+      },
+      "Core Cover": {
+        "name": "Core Cover",
+        "type": "Pierce",
+        "wpMod": 0.25
+      },
+      "Core": {
+        "name": "Core",
+        "type": "Pierce",
+        "wpMod": 0.25
+      },
+      "Sensor": {
+        "name": "Sensor",
+        "type": "Crush",
+        "wpMod": 0.5
+      }
+    },
+    "weaknessKeyName": "Defiler_HitPoint",
     "enemyType": "Colossus"
   }
 }
