@@ -6290,6 +6290,9 @@ const customDamage = {
     ...localInsertionDamage
 }
 
+//normally return targets are specified in character objects, but since weapons as a generalized target don't, I need to do this instead
+//so refer to this in the future if we add more targets to general weapon breakdowns, but also, remember later to do a localInsertionTargets
+//based on weapons with unique effects such as gregs
 const weaponTargetReferences = {
     "Shot - AVG/Hit": "avgPerShot",
     "SUM Magazine DMG": "totalAVGGun",

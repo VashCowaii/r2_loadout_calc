@@ -2100,7 +2100,7 @@ let etaData = {
   "RotationShopSchedule_2": {
     "epoch": 1733209200,
     "date": "2024-12-03T07:00:00.000Z",
-    "shopDurationSeconds": 259200,
+    "shopDurationSeconds": 345600,
     "weeksObject": {
       "Week1": {
         "A": [
@@ -3147,6 +3147,10 @@ let etaData = {
           {
             "name": "Basic White",
             "image": "icon_painthair_basicwhite"
+          },
+          {
+            "name": "Sigvore's Proof Polymer Syncytium Blueprint",
+            "image": "icon_research_weapon_syncytiumplan_lnc_1005_a001"
           }
         ],
         "C": [
@@ -3170,6 +3174,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -3238,6 +3264,10 @@ let etaData = {
           {
             "name": "Matte Yellow",
             "image": "icon_paintcharacter_sharonyellow_nonmetal_matte"
+          },
+          {
+            "name": "Sigvore's Proof Synthetic Fiber Blueprint",
+            "image": "icon_research_weapon_fiberplan_lnc_1005_a001"
           }
         ],
         "B": [
@@ -3323,6 +3353,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -3391,6 +3443,10 @@ let etaData = {
           {
             "name": "Platinum Gold",
             "image": "icon_painthair_yellow5"
+          },
+          {
+            "name": "Sigvore's Proof Blueprint",
+            "image": "icon_research_weaponplan_lnc_1005_a001"
           }
         ],
         "B": [
@@ -3476,6 +3532,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -3606,6 +3684,10 @@ let etaData = {
           {
             "name": "Dark Brown",
             "image": "icon_painthair_red1"
+          },
+          {
+            "name": "Sigvore's Proof Nano Tube Blueprint",
+            "image": "icon_research_weapon_tubeplan_lnc_1005_a001"
           }
         ],
         "C": [
@@ -3629,6 +3711,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -3697,6 +3801,10 @@ let etaData = {
           {
             "name": "Shiny Metal Gold",
             "image": "icon_paintcharacter_shinygold_shiny"
+          },
+          {
+            "name": "Sigvore's Proof Synthetic Fiber Blueprint",
+            "image": "icon_research_weapon_fiberplan_lnc_1005_a001"
           }
         ],
         "B": [
@@ -3782,6 +3890,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -3850,6 +3980,10 @@ let etaData = {
           {
             "name": "Orange Sunrise",
             "image": "icon_painthair_red5"
+          },
+          {
+            "name": "Sigvore's Proof Polymer Syncytium Blueprint",
+            "image": "icon_research_weapon_syncytiumplan_lnc_1005_a001"
           }
         ],
         "B": [
@@ -3935,6 +4069,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -4065,6 +4221,10 @@ let etaData = {
           {
             "name": "Wine Pink",
             "image": "icon_painthair_pink4"
+          },
+          {
+            "name": "Sigvore's Proof Blueprint",
+            "image": "icon_research_weaponplan_lnc_1005_a001"
           }
         ],
         "C": [
@@ -4088,6 +4248,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       },
@@ -4156,6 +4338,10 @@ let etaData = {
           {
             "name": "Bright Matte Gold",
             "image": "icon_paintcharacter_texasrose_metal_matte"
+          },
+          {
+            "name": "Sigvore's Proof Nano Tube Blueprint",
+            "image": "icon_research_weapon_tubeplan_lnc_1005_a001"
           }
         ],
         "B": [
@@ -4241,6 +4427,28 @@ let etaData = {
           {
             "name": "Colotoys \"Infernal Walker\"",
             "image": "icon_back_037a"
+          },
+          "Bundle_Rotation_Defiler_01",
+          "Bundle_Rotation_Defiler_02",
+          "Bundle_Rotation_Defiler_03",
+          "Bundle_Rotation_Defiler_04",
+          "Bundle_Rotation_Defiler_05",
+          "Bundle_Rotation_Defiler_06",
+          "Bundle_Rotation_Defiler_07",
+          "Bundle_Rotation_Defiler_08",
+          "Bundle_Rotation_Defiler_09",
+          "Bundle_Rotation_Defiler_10",
+          "Bundle_Rotation_Defiler_11",
+          "Bundle_Rotation_Defiler_12",
+          "Bundle_Rotation_Defiler_13",
+          "Bundle_Rotation_Defiler_14",
+          "Bundle_Rotation_Defiler_15",
+          "Bundle_Rotation_Defiler_16",
+          "Bundle_Rotation_Defiler_17",
+          "Bundle_Rotation_Defiler_18",
+          {
+            "name": "Colotoys \"Defiler\"",
+            "image": "icon_back_038a"
           }
         ]
       }
