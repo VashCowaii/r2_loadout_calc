@@ -5210,6 +5210,7 @@ const customDamage = {
             const addRow = calcsUIHelper.addHealingBoxCluster;
             readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
             <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
@@ -6030,6 +6031,404 @@ const customDamage = {
         }
     },
 
+    //INES
+    //ability 1
+    inesChainCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive1 ? abilityMods.baseBonus : 0);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+        const totalBounces = abilityMods.baseBounces + Math.floor(Math.min(2,index.SkillRange)/abilityMods.rangePerBounce);
+        const SUMTotalAVG = damage.AVG * totalBounces;  
+
+
+        const baseCooldown = abilityMods.cooldown;
+        const {cooldown,interval,DPS} = calcs.getDPSPerSkillInterval(index,damage.AVG*totalBounces,baseCooldown,null)
+        const avgDPSPerCast = DPS;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Total Bounces","value": totalBounces,"unit": ""},
+            ]
+            let rowInjection2 = [
+                {"name": "DPS per Cast","value": avgDPSPerCast,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "CHAIN LIGHTNING","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalBounces,SUMTotalAVG],
+                    "toggleElemID": ["inesConductorActive1","Conductor Active?"],
+                    "rowInjection": [rowInjection,""],
+                    "rowInjection2": [rowInjection2,"DPS evaluations take the sum total DMG from all bounces and spread them across the cooldown of the ability."],
+                    "condition": false,"desc": ""},
+                {"header": "CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,avgDPSPerCast,SUMTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    inesChainCalcsHoundsStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.inesChainCalcs(index,returnObject,isCycleCalcs,"Time of the Hunting Hounds")
+    },
+    //ability 2
+    inesLightningCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive2 ? abilityMods.baseBonus : 0);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        
+        const avgDmgPerHit = damage.AVG;
+
+        const totalBounces = abilityMods.baseBounces + Math.floor(Math.min(2,index.SkillRange)/0.5);
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Total Targets","value": totalBounces,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["inesConductorActive2","Conductor Active?"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 3
+    inesDischargeCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const dischargeMultiplier = settingsRef.inesDischargePerfect ? 2 : 1;
+        const skillPowerModifier = (abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive3 ? abilityMods.baseBonus : 0)) * dischargeMultiplier;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        
+        const avgDmgPerHit = damage.AVG;
+
+        // const SUMTotalAVG = damage.AVG * totalBounces;
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Discharge Multi","value": dischargeMultiplier,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["inesConductorActive3","Conductor Active?"],
+                    "toggleElemID2": ["inesDischargePerfect","Perfect Release?"],
+                    "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    inesDischargeCalcsHoundsStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Time of the Hunting Hounds"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const dischargeMultiplier = 1;
+        const skillPowerModifier = (abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive3 ? abilityMods.baseBonus : 0)) * dischargeMultiplier;
+        const skillPowerModifierPierce = (abilityMods.basePierce + sumModifierBonus + (settingsRef.inesConductorActive3 ? abilityMods.baseBonus : 0)) * dischargeMultiplier;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        const damagePierce = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+        
+        const avgDmgPerPierce = damagePierce.AVG;
+        const avgDmgPerHit = damage.AVG;
+
+        // const SUMTotalAVG = damage.AVG * totalBounces;
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["inesConductorActive3","Conductor Active?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "PIERCE","value": damagePierce,"modifier": skillPowerModifierPierce,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerPierce,avgDmgPerHit}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //ability 4
+    inesSnareCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive4 ? abilityMods.baseBonus : 0);
+        const skillPowerModifierSnare = abilityMods.baseSnare + sumModifierBonus + (settingsRef.inesConductorActive4 ? abilityMods.baseBonus : 0);
+        const skillPowerModifierCoil = abilityMods.baseCoil + sumModifierBonus + (settingsRef.inesConductorActive4 ? abilityMods.baseBonus : 0);
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);//projectile
+        const damageSnare = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierSnare);//snare
+        const damageCoil = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifierCoil);//coil
+
+
+        const totalBounces = abilityMods.baseBounces + Math.floor(Math.min(2,index.SkillRange)/0.5);
+        
+        const avgDmgPerHit = damage.AVG;
+        const avgDmgPerHitSnare = damageSnare.AVG;
+        const avgDmgPerHitCoil = damageCoil.AVG;
+
+        const snareDuration = abilityMods.snareDuration * (1 + index.SkillDuration);
+        const totalSnareTicks = Math.floor(snareDuration / abilityMods.snareInterval);
+        const totalAVGSnare = avgDmgPerHitSnare * totalSnareTicks;
+
+        const coilTicks = Math.floor(snareDuration / abilityMods.coilInterval);
+        const totalAVGCoil = avgDmgPerHitCoil * coilTicks;
+
+        const SUMTotalAVG = avgDmgPerHit + totalAVGSnare + totalAVGCoil;
+
+        // const SUMTotalAVG = damage.AVG * totalBounces;
+
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Discharge Multi","value": dischargeMultiplier,"unit": ""},
+            // ]
+
+            const breakdownArray = [
+                {"header": "PROJECTILE","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["inesConductorActive4","Conductor Active?"],
+                    "condition": false,"desc": ""},
+                {"header": "THUNDER SNARE","value": damageSnare,"modifier": skillPowerModifierSnare,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [totalSnareTicks,totalAVGSnare],
+                    // "toggleElemID": ["inesConductorActive3","Conductor Active?"],
+                    // "toggleElemID2": ["inesDischargePerfect","Perfect Release?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "SHORT CIRCUIT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "CURRENT COILS","value": damageCoil,"modifier": skillPowerModifierCoil,"hasCritAVG": true,"unit": "","magazineTypeWeapon": [coilTicks,totalAVGCoil],
+                    "condition": false,"desc": ""},
+                {"header": "CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${addRow("Power",baseSkillPower,"")}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit,avgDmgPerHitSnare,totalAVGSnare,avgDmgPerHitCoil,totalAVGCoil,SUMTotalAVG}
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    //passive
+    inesPlasmaCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        //right now this is the only function in the game that needs max MP BEFORE mp is established which is after the tier 0 calls
+        //later if another tier0 call requires a max mp value this could be tricky, but that is unlikely to happen on a character more than once here
+        //so for ines we're probably fine
+        if (!nameOverride) {
+            const {displayMP} = calcs.getMP(index,characters[globalRecords.character.currentCharacter].baseStats)
+            index.SkillCritRateBaseBonus += (0.065 * displayMP)/100;
+        }
+    },
+    inesPlasmaCalcsTier0BallStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.inesPlasmaCalcsTier0(index,returnObject,isCycleCalcs,"Plasma Ball");
+    },
+    inesPlasmaCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Ines;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        // //DEALT 3879
+        // //max mp at base is 300
+        // let mpMax = returnObject.displayMP;
+        // //crit rate is 34.5%
+        // let dmgMulti = returnObject.totalSkillCritRate * 46;
+        // let dmgRate = mpMax/(mpMax*0.12);
+
+        // let endDamage = mpMax * dmgMulti * dmgRate - mpMax; 
+
+        if (!isCycleCalcs) {
+            // let rowInjection = [
+            //     {"name": "Total Bounces","value": totalBounces,"unit": ""},
+            // ]
+
+            const breakdownArray = [
+                {"header": "SKILL CRIT AGAINST CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    // "sliderElemID": ["keelanErosionStacks",0,5,1,"Stacks Count"],
+                    // "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": nameOverride,"desc": ""},
+                {"header": "FIREARM CRIT AGAINST CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride,"desc": ""},
+                {"header": "SKILL HIT AGAINST CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride != "Plasma Ball","desc": ""},
+                {"header": "DARK CURRENT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": "We've confirmed the actual game code uses randomized numbers for each damage instance. As such, it is not worth trying to calculate due to how little damage it actually does."},
+                {"header": "INFLICTING CONDUCTOR","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    // "sliderElemID": ["keelanAgilityStacks",0,4,1,"Stacks Count"],
+                    // "rowInjection": [rowInjection,"Bonuses are modified by the flame zone count setting on the first ability."],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {
+                // avgDmgPerHit,SUMTotalAVG 
+            }
+        }
+        // <div class="abilityBreakdownGeneralMessage">asdf.</div>
+    },
+    inesPlasmaCalcsBallStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.inesPlasmaCalcs(index,returnObject,isCycleCalcs,"Plasma Ball");
+    },
 
     //LE GUNS
     generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
@@ -6530,13 +6929,34 @@ let moduleQueryFunctions = {
         const currentWeaponMods = globalWeapon.mods;
         const currentAmmoType = currentWeaponRef.ammoType;
         const currentWeaponType = currentWeaponRef.weaponType;
+        const reactorRef = globalRecords.reactor;
+        const weaponRef = globalRecords.weapon;
 
-        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,"Weapon": currentWeaponMods,}
+        const typeRef2 = {
+            "Ability": currentCharacterMods,
+            "Stat": currentCharacterMods,
+            "Ability - Weapon Based": currentWeaponMods,
+            "Weapon": currentWeaponMods,
+            "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
+            "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+        }
+
+
+
+        // const weaponRef = globalRecords.weapon;
+        // const overrideCheck = weaponSubstatOverride && weaponSubstatOverride.length;
+        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[0] : weaponRef.subRoll1].statName] += weaponRef.subRoll1Value;
+        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[1] : weaponRef.subRoll2].statName] += weaponRef.subRoll2Value;
+        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[2] : weaponRef.subRoll3].statName] += weaponRef.subRoll3Value;
+        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[3] : weaponRef.subRoll4].statName] += weaponRef.subRoll4Value;
 
         //character stuff ignores the first 2 slots, whereas weapon stuff does not
         let isWeaponBased = queryType.toLowerCase().includes("weapon");
+        let isReactorBased = queryType.toLowerCase().includes("reactor");
         let newModArray1 = [...typeRef2[queryType]];
-        let newModArray2 = isWeaponBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
+        let newModArray2 = isWeaponBased ? [...typeRef2[queryType]] 
+        : (isReactorBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2));//to exclude the first 2 mods, the augment and the subattack mod
+        //but if it is still an ability based query but uses reactors, skip the slice as we need every entry in the array.
         characterRef.modQueryOptions = isWeaponBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);
 
         // Array of strings that will be the option names
@@ -6561,7 +6981,7 @@ let moduleQueryFunctions = {
             if (!backupFound) {readSelection("queryMod").value = "";}
         }
         
-        if (queryType === "Ability" || queryType === "Ability - Weapon Based") {
+        if (queryType === "Ability" || queryType === "Ability - Weapon Based" || queryType === "Ability - Reactor Roll") {
             const abilityLister = readSelection("queryAbilityList");
             const abilityOptionLister = readSelection("queryAbilityOptionList");
 
@@ -6607,7 +7027,7 @@ let moduleQueryFunctions = {
 
             return {selectedAbilityIndexReference,selectedAbilityOptionPath}
         }
-        else if (queryType === "Weapon") {
+        else if (queryType === "Weapon" || queryType === "Weapon - Substat") {
             //STAT OPTION RETURN KEYS
             readSelection("queryAbilityBoxHolder").style.display = "none";
             const abilityOptionLister = readSelection("queryAbilityOptionList");
@@ -6659,7 +7079,7 @@ let moduleQueryFunctions = {
     },
     getModuleQueryResults() {
         //never allow a blank query, default to ability if all else fails
-        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "",}
+        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "","Ability - Reactor Roll": "","Weapon - Substat": "",}
         if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
         const queryType = readSelection("queryType").value;
 
@@ -6677,12 +7097,28 @@ let moduleQueryFunctions = {
         const currentWeaponMods = globalWeapon.mods;
         const currentAmmoType = currentWeaponRef.ammoType;
         const currentWeaponType = currentWeaponRef.weaponType;
+        const reactorRef = globalRecords.reactor;
+        const weaponRef = globalRecords.weapon;
 
 
         let isWeaponBased = queryType.toLowerCase().includes("weapon");
         //for assigning the right mod selection that is currently equipped
-        const typeRef2 = {"Ability": currentCharacterMods,"Stat": currentCharacterMods,"Ability - Weapon Based": currentWeaponMods,"Weapon": currentWeaponMods,}
-        const typeRefCategory = {"Ability": modData,"Stat": modData,"Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],"Weapon": userTriggers.weaponTypeModList[currentAmmoType],}
+        const typeRef2 = {
+            "Ability": currentCharacterMods,
+            "Stat": currentCharacterMods,
+            "Ability - Weapon Based": currentWeaponMods,
+            "Weapon": currentWeaponMods,
+            "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
+            "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+        }
+        const typeRefCategory = {
+            "Ability": modData,
+            "Stat": modData,
+            "Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],
+            "Weapon": userTriggers.weaponTypeModList[currentAmmoType],
+            "Ability - Reactor Roll": reactorSubRolls,
+            "Weapon - Substat": weaponSubstatList,
+        }
         const modLists = typeRefCategory[queryType];
 
         let newModArray1 = [...typeRef2[queryType]];
@@ -6748,6 +7184,25 @@ let moduleQueryFunctions = {
                 )
             }
         }
+        else if (queryType === "Ability - Reactor Roll") {
+            for (let entry of modKeyReference) {
+
+                if (entry === "") {continue;}
+                //assign the cycled value to the index spot of the array for each cycle
+                newModArray1[indexToModify] = entry;
+
+                const value = updateFormulas(true,null,null,newModArray1).returnObject[abilityTarget][targetReturnValue];
+
+                queryResultsArray.push(
+                    {
+                        "modName":entry,
+                        "returnedValue":value,
+                        "category": modLists[entry].category
+                    }
+
+                )
+            }
+        }
         else if (queryType === "Weapon") {
             for (let entry of modKeyReference) {
                 if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
@@ -6771,6 +7226,19 @@ let moduleQueryFunctions = {
                 )
             }
         }
+        else if (queryType === "Weapon - Substat") {
+            for (let entry of modKeyReference) {
+                if (entry === "") {continue}
+
+                newModArray1[indexToModify] = entry;
+
+                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
+
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,null,null,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
+                )
+            }
+        }
         else if (queryType === "Stat") {
             console.log(targetReturnValue)
             for (let entry of modKeyReference) {
@@ -6790,15 +7258,18 @@ let moduleQueryFunctions = {
 
         let referencePoint = {};
         for (let entry of queryResultsArray) {
+            // if (entry.modName === "") {continue}
             if (entry.modName === modSelection) {
                 referencePoint = {...entry};
                 queryResultsArray.splice(queryResultsArray.indexOf(entry),1)
                 break;
             }
         }
+
         const highestValue = queryResultsArray[0].returnedValue
         const lowestValue = queryResultsArray[queryResultsArray.length-1].returnedValue;
         const referenceValue = referencePoint.returnedValue;
+        // console.log(referenceValue)modSelection
         
         // Get the container for the table
         const table = document.getElementById('moduleQueryBoxHolder');

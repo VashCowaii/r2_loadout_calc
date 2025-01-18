@@ -504,5 +504,25 @@ const augments = {
         "desc": "Throws a projectile forward that spawns a Flame Zone where it lands.",
         "skillOverrides": ["Incendiary Bomb",0,0,0,0]
     },
+
+    //INES
+    "Plasma Ball": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Ines",
+        "desc": "Removes the increase Skill Critical Hit Rate bonus. Instead, creates a barrier of plasma at regular intervals.",
+        "skillOverrides": [0,0,0,0,"Plasma Ball"]
+    },
+    "Time of the Hunting Hounds": {
+        "rarity": "Transcendant",
+        "polarity": "Rutile",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Ines",
+        "desc": "Changes to a skill that quickly dashes toward enemies. Deals damage and inflicts Conductor on all enemies in the path. Reduces the number of bounces on Chain Lighthing and modifies it to be stackable. Modifies the arches type of the modified skills to Tech.",
+        "skillOverrides": ["Time of the Hunting Hounds",0,"Time of the Hunting Hounds",0,0]
+    },
     ...localInsertionAugments
 }

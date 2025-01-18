@@ -792,42 +792,6 @@ const userTriggers = {
             userTriggers.updateSelectedCharacter();
         }
 
-
-
-        // const characterRef = globalRecords.character;
-        // const currentCharacter = characterRef.currentCharacter;
-        // const currentCharacterMods = characterRef.mods;
-        // const abilityArray = characterRef.abilityArray;
-        // const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
-
-        // let newModArray1 = [...currentCharacterMods];
-        // let newModArray2 = [...currentCharacterMods].slice(2);//to exclude the first 2 mods, the augment and the subattack mod
-        // characterRef.modQueryOptions = [...currentCharacterMods].slice(2);
-        // console.log(characterRef.modQueryOptions)
-
-        // const modKeyReference = Object.keys(modData);
-
-
-        // // Array of strings that will be the option names
-        // const queryLister = readSelection("queryModList");
-        // queryLister.innerHTML = "";
-        // // Loop through the array and create option elements
-        // newModArray2.forEach(function(optionName) {
-        //     const option = document.createElement("option");
-        //     // option.value = optionName.toLowerCase().replace(/\s+/g, '-'); // Set a value (optional)
-        //     option.textContent = optionName; // Set the display name
-        //     queryLister.appendChild(option); // Append the option to the select element
-        // });
-
-        // let isValidMod = false;
-        // for (let entry of newModArray2) {
-        //     if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
-        // }
-        // if (!isValidMod) {
-        //     for (let entry of newModArray2) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
-        // }
-
-
         if (globalRecords.character.currentCharacter != "") {settings.updateCharacterSettings(globalRecords.character.currentCharacter,true);}
         if (!parentCall) {updateFormulas();}
         
@@ -1301,6 +1265,19 @@ const settings = {
             settingsRef.blairTargetBurning = readSelection("blairTargetBurning").checked;
             if (arrayRef[4] === 0) {}//passive
         },
+        Ines(settingsRef,arrayRef) {
+            settingsRef.inesConductorActive1 = readSelection("inesConductorActive1").checked;
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {
+                settingsRef.inesConductorActive2 = readSelection("inesConductorActive2").checked;
+            }//2
+            settingsRef.inesConductorActive3 = readSelection("inesConductorActive3").checked;
+            if (arrayRef[2] === 0) {
+                settingsRef.inesDischargePerfect = readSelection("inesDischargePerfect").checked;
+            }//3
+            if (arrayRef[3] === 0) {}//4
+            if (arrayRef[4] === 0) {}//passive
+        },
         "Secret Garden"(settingsRef,arrayRef) {
             settingsRef.gardenStackCount = +readSelection("gardenStackCount").value
         },
@@ -1335,7 +1312,7 @@ const formulasValues = {
             pullStats(index,path);
         }
     },
-    pullWeaponStats(index,weaponModOverride) {
+    pullWeaponStats(index,weaponModOverride,weaponSubstatOverride) {
         let pullStats = formulasValues.pullStats;
 
         //weapon mods
@@ -1350,17 +1327,30 @@ const formulasValues = {
         // pullStats(index,modArrayRef)
 
         const weaponRef = globalRecords.weapon;
-        index[weaponSubstatList[weaponRef.subRoll1].statName] += weaponRef.subRoll1Value;
-        index[weaponSubstatList[weaponRef.subRoll2].statName] += weaponRef.subRoll2Value;
-        index[weaponSubstatList[weaponRef.subRoll3].statName] += weaponRef.subRoll3Value;
-        index[weaponSubstatList[weaponRef.subRoll4].statName] += weaponRef.subRoll4Value;
-    },
-    pullReactorStats(index) {
-        let reactorRef = globalRecords.reactor;
-        // let pullStats = formulasValues.pullStats;
+        const overrideCheck = weaponSubstatOverride && weaponSubstatOverride.length;
 
-        index[reactorSubRolls[reactorRef.subRoll1].statName] += reactorRef.subRoll1Value;
-        index[reactorSubRolls[reactorRef.subRoll2].statName] += reactorRef.subRoll2Value;
+        const rollName1 = weaponSubstatList[overrideCheck ? weaponSubstatOverride[0] : weaponRef.subRoll1];
+        const rollName2 = weaponSubstatList[overrideCheck ? weaponSubstatOverride[1] : weaponRef.subRoll2];
+        const rollName3 = weaponSubstatList[overrideCheck ? weaponSubstatOverride[2] : weaponRef.subRoll3];
+        const rollName4 = weaponSubstatList[overrideCheck ? weaponSubstatOverride[3] : weaponRef.subRoll4];
+
+        //if the cycles are active and this isn't a UI calculation, then assume the highest possible value when going through each substat.
+        const weaponType = sniperList[weaponRef.currentWeapon].weaponType;
+        index[rollName1.statName] += overrideCheck ? rollName1[weaponType][1] : weaponRef.subRoll1Value;
+        index[rollName2.statName] += overrideCheck ? rollName2[weaponType][1] : weaponRef.subRoll2Value;
+        index[rollName3.statName] += overrideCheck ? rollName3[weaponType][1] : weaponRef.subRoll3Value;
+        index[rollName4.statName] += overrideCheck ? rollName4[weaponType][1] : weaponRef.subRoll4Value;
+    },
+    pullReactorStats(index,reactorRollsOverride) {
+        let reactorRef = globalRecords.reactor;
+
+        //if this is just a UI calc then use the user inputs on values for reactor substats, OTHERWISE
+        //if this is midcycles, then assume the maximum value for the sake of comparisons
+        const overrideCheck = reactorRollsOverride && reactorRollsOverride.length;
+        const rollName1 = reactorSubRolls[overrideCheck ? reactorRollsOverride[0] : reactorRef.subRoll1];
+        const rollName2 = reactorSubRolls[overrideCheck ? reactorRollsOverride[1] : reactorRef.subRoll2];
+        index[rollName1.statName] += overrideCheck ? (rollName1.maximum<0 ? rollName1.minimum : rollName1.maximum) : reactorRef.subRoll1Value;
+        index[rollName2.statName] += overrideCheck ? (rollName2.maximum<0 ? rollName2.minimum : rollName2.maximum) : reactorRef.subRoll2Value;
 
         const ratioTable = {
             "Fire" : "PowerRatioFire",
@@ -1376,9 +1366,6 @@ const formulasValues = {
 
         index[ratioTable[reactorRef.currentAttribute]] += 0.2;
         index[ratioTable[reactorRef.currentType]] += 0.2;
-
-        // currentAttribute
-        // currentType
     },
     pullComponentStats(index) {
         const globalRef = globalRecords.components;
@@ -1466,22 +1453,23 @@ const formulasValues = {
 }
 
 
-function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride) {
+function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorRollsOverride,weaponSubstatOverride) {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     const optBonus = globalRecords.reactor.isUltimate ? 1.6 : 1.4;
     tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? optBonus : 1;
     const characterRef = characters[globalRecords.character.currentCharacter].baseStats
     const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
     const globalRef = globalRecords.character.abilities;
+    const reactorRef = globalRecords.reactor;
 
     formulasValues.pullModStats(tableReference,modArrayOverride);
+    formulasValues.pullComponentStats(tableReference);
     
     const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
-    formulasValues.pullReactorStats(tableReference);
-    formulasValues.pullComponentStats(tableReference);
+    formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
     formulasValues.pullAbilityStats(tableReference);
-    formulasValues.pullWeaponStats(tableReference,weaponModOverride);
+    formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride);
     formulasValues.pullTeamBuffsStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
