@@ -1159,7 +1159,7 @@ const characters = {
                     "type": ["Electric","Fusion"],
                     "desc": "Creates a Thrill Bomb that targets the nearest enemy within range, dealing damage. This damage increases proportionally to the amount of Electricity retained. Inflicts Electrocution on enemies hit.",
                     "powerMods": {
-                        "base": 93.8/100,
+                        "base": 156.6/100,
                         "baseElec": 55.9/100,
                     },
                     "customDPS": "bunnyThrillCalcs",
@@ -5636,6 +5636,390 @@ const characters = {
                         "FIREARM CRIT RATE": [
                             {"statType": "","statName": "Flat Increase/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                             {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            }
+        }
+    },
+    "Ines": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_018_A01.png",
+        "baseStats": {
+            "HP": 934,
+            "Shield": 413,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 1860,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 13,
+            "ResistanceToxin": 11,
+            "MP": 300,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.15,
+            "CritDamage": 1.5,
+        },
+        "name": "Ines",
+        "characterSettings": {
+            "inesConductorActive1": true,
+            "inesConductorActive2": true,
+            "inesConductorActive3": true,
+            "inesDischargePerfect": true,
+            "inesConductorActive4": true,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Chain Lightning",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_A01_01.png",
+                    "type": ["Electric","Singular"],
+                    "desc": "Fires Chain Lightning forward. Chain Lightning bounces between multiple enemies, to deal damage and inflict Conductor on enemies hit. When attacking enemies with Conductor, deals increased damage.",
+                    "powerMods": {
+                        "base": 207.7/100,
+                        "baseBonus": 51.9/100,
+                        "baseBounces": 7,
+                        "rangePerBounce": 0.4,
+                        "cooldown": 7,
+                        // "interval": 1,
+                        // "intervalDOT": 1,
+                        // "duration": 15,
+                        // "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesChainCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                        "DPS per Cast": "avgDPSPerCast",
+                        "SUM Total AVG" : "SUMTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 7,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 35,"limit": null,"isModified": true},
+                        ],
+                        "CHAIN LIGHTNING": [
+                            {"statType": "","statName": "Movement Speed","value": 10000,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Bounces","value": 7,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Range per Bounce Bonus","value": 0.4,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+                "Time of the Hunting Hounds": {
+                    "name": "Floating Lightning",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_R02_01.png",
+                    "type": ["Electric","Tech"],
+                    "desc": "Fires Floating Lightning forward. Floating Lightning slowly moves between multiple enemies, to deal damage and inflict Conductor on enemies hit. When attacking enemies with Conductor, deals increased damage.",
+                    "powerMods": {
+                        "base": 255.5/100,
+                        "baseBonus": 63.9/100,
+                        "baseBounces": 4,
+                        "rangePerBounce": 0.6,
+                        "cooldown": 5,
+                        // "interval": 1,
+                        // "intervalDOT": 1,
+                        // "duration": 15,
+                        // "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesChainCalcsHoundsStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                        "DPS per Cast": "avgDPSPerCast",
+                        "SUM Total AVG" : "SUMTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": " Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 5,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 15,"limit": null,"isModified": true},
+                        ],
+                        "CHAIN LIGHTNING": [
+                            {"statType": "","statName": "Movement Speed","value": 5000,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Bounces","value": 4,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Range per Bounce Bonus","value": 0.6,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Lightning Conductor",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_A01_02.png",
+                    "type": ["Electric","Tech"],
+                    "desc": "Creates Current Coils on nearby enemies, to deal damage. Creates Current Coils on all enemies with Conductor, to deal damage. Inflicts conductor on those hit. When attacking enemies with Conductor, deals increase damage.",
+                    "powerMods": {
+                        "base": 424/100,//424.87/100,//445.91
+                        "baseBonus": 106/100,
+                        "baseBounces": 3,//called bounces bc of earlier skills, this is the max targets
+                        "rangePerBounce": 0.5,
+                        // "interval": 1,
+                        // "intervalDOT": 1,
+                        // "duration": 15,
+                        // "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesLightningCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 10,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 75,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 15,"limit": 2,"isModified": true},
+                            {"statType": "","statName": "Max Targets","value": 3,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Range per Target Bonus","value": 0.5,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Discharge",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_A01_03.png",
+                    "type": ["Electric","Singular"],
+                    "desc": "Charges her hand with electricity and thrusts it forward to release a bolt of lightning. Charging the current increases the damage and range. Releasing the charge at the peak deals the most damage. Inflicts Conductor on enemies hit. When attacking enemies with Conductor, deals increased damage.",
+                    "powerMods": {
+                        "base": 3684/100,//424.87/100,//445.91
+                        "baseBonus": 921/100,
+                        "baseBounces": 3,//called bounces bc of earlier skills, this is the max targets
+                        "rangePerBounce": 0.5,
+                        // "interval": 1,
+                        // "intervalDOT": 1,
+                        // "duration": 15,
+                        // "durationDOT": 5,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesDischargeCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Plasma Cost","value": 75,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Plasma Charge Cost","value": 30,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Charge Interval","value": 0.1,"limit": null,"isModified": false},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Max DMG Increase","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "range","statName": "Min Range","value": 8,"limit": 2,"isModified": true},
+                            {"statType": "range","statName": "Max Range","value": 20,"limit": 2,"isModified": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+                "Time of the Hunting Hounds": {
+                    "name": "Snare Acrobatics",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_R02_03.png",
+                    "type": ["Electric","Tech"],
+                    "desc": "Charges both hands with electricity which travels forward, to pierce enemies andd cause a Lightning Blast at the destination dealing damage to the area. Charging the current increases the damage and range. Inflicts Conductor on enemies hit. When attacking enemies with Conductor, deals increased damage.",
+                    "powerMods": {
+                        "base": 3752.7/100,//424.87/100,//445.91
+                        "basePierce": 632.7/100,//424.87/100,//445.91
+                        "baseBonus": 468.6/100,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesDischargeCalcsHoundsStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Pierce" : "avgDmgPerPierce",
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Plasma Cost","value": 150,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Plasma Charge Cost","value": 30,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Charge Interval","value": 0.1,"limit": null,"isModified": false},
+                        ],
+                        "PIERCE": [],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Min Distance","value": 10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Distance","value": 25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max DMG Increase","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "range","statName": "Min Range Radius","value": 8,"limit": 2,"isModified": true},
+                            {"statType": "range","statName": "Max Range Radius","value": 20,"limit": 2,"isModified": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Snare Hunter",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_A01_04.png",
+                    "type": ["Electric","Tech"],
+                    "desc": "Throws a Plasma Acceleration Coil forward and creates a Thunder Snare at the point of impact for a period of time. When using skill, grants Short Circuit. While active, Dark Current deals more damage at the Max Damage Rate. Inflicts Conductor on enemies hit by the Thunder Snare. Thunder Snare creates Current Coils on nearby enemies to deal damage. When attacking enemies with Conductor, deals increase damage.",
+                    "powerMods": {
+                        "base": 392.7/100,//projectile
+                        "baseBonus": 16.4/100,//conductor
+                        "baseBounces": 3,//called bounces bc of earlier skills, this is the max targets
+                        "rangePerBounce": 0.5,
+                        "baseSnare": 52.4/100,
+                        "snareDuration": 10,
+                        "snareInterval": 0.5,
+                        "baseCoil": 65.5/100,
+                        "coilInterval": 2.4,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "inesSnareCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Projectile - AVG/Hit" : "avgDmgPerHit",
+                        "Snare - AVG/Hit" : "avgDmgPerHit",
+                        "Snare - Total DMG" : "avgDmgPerHit",
+                        "Coil - AVG/Hit" : "avgDmgPerHit",
+                        "Coil - Total DMG" : "avgDmgPerHit",
+                        "SUM Total AVG" : "SUMTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 30,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Plasma Cost","value": 350,"limit": null,"isModified": true},
+                        ],
+                        "PROJECTILE": [],
+                        "THUNDER SNARE": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Interval","value": 0.5,"limit": null,"isModified": false},
+                            {"statType": "range","statName": "Range","value": 7.5,"limit": 2,"isModified": true},
+                        ],
+                        "SHORT CIRCUIT": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "","statName": "+Movement Speed%","value": 0.5,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CURRENT COILS": [
+                            {"statType": "range","statName": "Range","value": 15,"limit": 2,"isModified": true},
+                            {"statType": "duration","statName": "Interval","value": 2.4,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Max Targets","value": 3,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Range per Target Bonus","value": 0.5,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "CONDUCTOR": [
+                            {"statType": "duration","statName": "Duration","value": 30,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Plasma Oscillation",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_A01_00.png",
+                    "type": ["Electric"],
+                    "desc": "Skill Critical Hit Rate increases as Max MP increases. Skill Critical Hits against enemies with Conductor have a chance to restore MP. Firearm or Skill Criticial Hits on an enemy with conductor have a chance to cause Dark Current. Killing an enemy with Conductor or the effect expiring still triggers Dark Current. Dark Current deals a portion of its damage to nearby targets based on Max MP, inflicts Conductor on enemies hit. Charges Plasma whenever you inflict Conductor on an enemy.",
+                    "powerMods": {
+                        // "critRateBonus": 0.05,
+                        // "critDamageBonus": 0.10,
+                        // "stackLimit": 5,
+
+                        // "base": 207.7/100,
+                        // "baseBonus": 51.9/100,
+                        // "baseBounces": 7,
+                        // "rangePerBounce": 0.4,
+                    },
+                    "customDPSBase": "inesPlasmaCalcsTier0",
+                    "customDPS": "inesPlasmaCalcs",//inesPlasmaCalcs
+                    "stats": {},
+                    "tags": ["SkillCritRateBaseBonus"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "+Base Crit Rate by MP%","value": 0.065,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "SKILL CRIT AGAINST CONDUCTOR": [
+                            {"statType": "","statName": "Chance to Recover","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP% Recovered","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Dark Current Trigger Rate","value": 1.0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "FIREARM CRIT AGAINST CONDUCTOR": [
+                            {"statType": "","statName": "Dark Current Trigger Rate","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "SKILL HIT AGAINST CONDUCTOR": [],
+                        "DARK CURRENT": [
+                            {"statType": "","statName": "DMG Multi by Crit Rate","value": 46,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MIN Rate by Max MP","value": 0.12,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MIN Rate Max","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max DMG Rate","value": 1.0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Hits","value": 3,"limit": null,"isModified": false},
+                        ],
+                        "INFLICTING CONDUCTOR": [
+                            {"statType": "","statName": "Plasma Charge %","value": 0.025,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Plasma Ball": {
+                    "name": "Plasma Ball",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_018_R01_Rune.png",
+                    "type": ["Electric"],
+                    "desc": "Skill Critical Hits against enemies with Conductor have a chance to restore MP. Skill Hits on an enemy with conductor have a chance to cause Dark Current. Killing an enemy with Conductor or the effect expiring still triggers Dark Current. Dark Current deals a portion of its damage to nearby targets based on Max MP, inflicts Conductor on enemies hit. Charges Plasma whenever you inflict Conductor on an enemy. Generates a Plasma Ball at regular intervals based on your max MP. Taking damage reduces the durability of Plasma Ball, and disappears when its durability reaches 0.",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "inesPlasmaCalcsTier0BallStarter",
+                    "customDPS": "inesPlasmaCalcsBallStarter",//inesPlasmaCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 65,"limit": null,"isModified": true},
+                        ],
+                        "SKILL CRIT AGAINST CONDUCTOR": [],
+                        "FIREARM CRIT AGAINST CONDUCTOR": [],
+                        "SKILL HIT AGAINST CONDUCTOR": [
+                            {"statType": "","statName": "Chance to Recover","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP% Recovered","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Dark Current Trigger Rate","value": 1.0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "DARK CURRENT": [
+                            {"statType": "","statName": "DMG Multi by Crit Rate","value": 68,"limit": null,"isModified": false},
+                            {"statType": "","statName": "MIN Rate by Max MP","value": 0.12,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MIN Rate Max","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max DMG Rate","value": 1.0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Max Hits","value": 2,"limit": null,"isModified": false},
+                        ],
+                        "INFLICTING CONDUCTOR": [
+                            {"statType": "","statName": "Plasma Charge %","value": 0.025,"limit": null,"isModified": false,"isUnlabeledPercent": true},
                         ],
                     },
                 },
