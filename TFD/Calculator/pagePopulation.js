@@ -1275,6 +1275,7 @@ const settings = {
             if (arrayRef[2] === 0) {
                 settingsRef.inesDischargePerfect = readSelection("inesDischargePerfect").checked;
             }//3
+            settingsRef.inesConductorActive4 = readSelection("inesConductorActive4").checked;
             if (arrayRef[3] === 0) {}//4
             if (arrayRef[4] === 0) {}//passive
         },
