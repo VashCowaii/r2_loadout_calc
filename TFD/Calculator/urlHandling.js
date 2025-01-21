@@ -64,6 +64,7 @@ let manipulateURL = {
         // "trait": [],
         "r": [],//reactor
         "g": [],//gun + stats
+        "co": [],//weapon cores
         "ch": [],//character + mods
         "gm": [],//gun mods only
 
@@ -96,8 +97,30 @@ let manipulateURL = {
     const typeKeys = Object.keys(typeList);
     const reactorSubKeys = Object.keys(reactorSubRolls);
     const ammoKeys = Object.keys(reactorAmmoList);
+
+    // globalRecords.boss.currentBoss = currentName;
+    // globalRecords.boss.enemyType = currentEntry.enemyType,
+    // globalRecords.boss.currentBossPart = readSelection("bossPart").value;
+
+    // "boss": {
+    //     "currentBoss": "VoidBattle_Devourer_Hard",
+    //     "enemyType": "Colossus",
+    //     "currentBossPart": "",
+    //     "currentBossPartType": "",
+    //     "currentBossPartWP": 0,
+    // },
+
+    let bossKeys = Object.keys(bossData);
+
+    const partsPath = bossData[globalRecords.boss.currentBoss].weaknessKeys;
+    const partsArray = Object.keys(partsPath);
+
+    let reactorTypeString = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}`;
+    let reactorSubsString = `${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}${reactorRef.weaponMatched ? 1 : 0}`;
+    let reactorMiscString1 = `${globalRecords.currentDisplayMode}${reactorRef.level}${reactorRef.isUltimate ? 1 : 0}`;
+    let reactorBossString = `${bossKeys.indexOf(globalRecords.boss.currentBoss).toString().padStart(2,'0')}${partsArray.indexOf(globalRecords.boss.currentBossPart).toString().padStart(2,'0')}`
     
-    const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}${reactorRef.weaponMatched ? 1 : 0}${globalRecords.currentDisplayMode}${reactorRef.level}${reactorRef.isUltimate ? 1 : 0}`;
+    const concatenatedType = `${reactorTypeString}${reactorSubsString}${reactorMiscString1}${reactorBossString}`;
 
     urlObject.r.push(concatenatedType,reactorRef.subRoll1Value.toFixed(3),reactorRef.subRoll2Value.toFixed(3));
 
@@ -115,6 +138,31 @@ let manipulateURL = {
       weaponRef.subRoll2Value != 0 ? weaponRef.subRoll2Value.toFixed(3) : "",
       weaponRef.subRoll3Value != 0 ? weaponRef.subRoll3Value.toFixed(3) : "",
       weaponRef.subRoll4Value != 0 ? weaponRef.subRoll4Value.toFixed(3) : "");
+
+
+    //WEAPON CORES
+    let coreRecord = weaponRef.coreArrayRecord;
+    let coreStorageString = "";
+
+    if (coreRecord) {
+      for (let i=0;i<5;i++) {
+        let currentCoreColor = coreRecord[i];
+        let currentStatObject = coreStatsReference[currentCoreColor];
+        let currentKeys = Object.keys(currentStatObject);
+
+        let currentSubName = weaponRef[`coreRoll${i+1}`];
+
+        coreStorageString += currentKeys.indexOf(currentSubName).toString().padStart(2,`0`);
+      }
+
+      urlObject.co.push(+coreStorageString ? coreStorageString : "",
+        weaponRef.coreRoll1Value != 0 ? weaponRef.coreRoll1Value.toFixed(2) : "",
+        weaponRef.coreRoll2Value != 0 ? weaponRef.coreRoll2Value.toFixed(2) : "",
+        weaponRef.coreRoll3Value != 0 ? weaponRef.coreRoll3Value.toFixed(2) : "",
+        weaponRef.coreRoll4Value != 0 ? weaponRef.coreRoll4Value.toFixed(2) : "",
+        weaponRef.coreRoll5Value != 0 ? weaponRef.coreRoll5Value.toFixed(2) : ""
+      )
+    }
     
 
     //CHARACTER AND CHARACTER MODS
@@ -423,6 +471,7 @@ let manipulateURL = {
         //   let urlTraits = feed.get("trait");
         let urlReactor = feed.get("r");
         let urlWeapon = feed.get("g");
+        let urlCores = feed.get("co");
         let urlCharacter = feed.get("ch");
         let urlWeaponMods = feed.get("gm");
 
@@ -475,6 +524,31 @@ let manipulateURL = {
             readSelection("reactorLevelSlider").value = +urlReactor[0][9] || 2;
             readSelection("USEReactorUltimate").checked = +urlReactor[0][10] ? true : false;
 
+
+
+            // let bossKeys = Object.keys(bossData);
+            // const partsPath = bossData[globalRecords.boss.currentBoss].weaknessKeys;
+            // const partsArray = Object.keys(partsPath);
+            // displayName
+
+            let bossKeys = Object.keys(bosses);
+            let bossDataKeys = Object.keys(bossData);
+            // bossData
+
+            globalRecords.boss.currentBoss = bossDataKeys[+`${urlReactor[0][11]}${urlReactor[0][12]}`];
+
+            const partsPath = bossData[globalRecords.boss.currentBoss].weaknessKeys;
+            const partsArray = Object.keys(partsPath);
+
+            globalRecords.boss.currentBossPart = partsArray[+`${urlReactor[0][13]}${urlReactor[0][14]}`];
+
+            // userTriggers.updateSelectedBoss();
+            readSelection("boss").value = bossData[globalRecords.boss.currentBoss].displayName;
+            readSelection("bossPart").value = globalRecords.boss.currentBossPart;
+            userTriggers.updateSelectedBoss();
+            
+            // let reactorBossString = `${bossKeys.indexOf(globalRecords.boss.currentBoss).toString().padStart(2,'0')}${partsArray.indexOf(globalRecords.boss.currentBossPart).toString().padStart(2,'0')}`
+
             reactorRef.subRoll1Value = +urlReactor[1];
             reactorRef.subRoll2Value = +urlReactor[2];
             userTriggers.updateReactorSelections(null,null,null,true);
@@ -494,12 +568,62 @@ let manipulateURL = {
             weaponRef.subRoll3 = weaponSubKeys[+`${urlWeapon[0][7]}${urlWeapon[0][8]}`];
             weaponRef.subRoll4 = weaponSubKeys[+`${urlWeapon[0][9]}${urlWeapon[0][10]}`];
 
-            weaponRef.subRoll1Value = +urlWeapon[1];
-            weaponRef.subRoll2Value = +urlWeapon[2];
-            weaponRef.subRoll3Value = +urlWeapon[3];
-            weaponRef.subRoll4Value = +urlWeapon[4];
+            weaponRef.subRoll1Value = +(urlWeapon[1] ?? 0);
+            weaponRef.subRoll2Value = +(urlWeapon[2] ?? 0);
+            weaponRef.subRoll3Value = +(urlWeapon[3] ?? 0);
+            weaponRef.subRoll4Value = +(urlWeapon[4] ?? 0);
 
             userTriggers.updateSelectedWeapon(false,true);
+        }
+        if (urlCores) {
+          const weaponRef = globalRecords.weapon;
+          urlCores = urlCores.split(",");
+
+          let coreRecord = weaponRef.coreArrayRecord;
+          let coreKeys = Object.keys(coreStatsReference);
+
+          weaponRef.coreRoll1 = Object.keys(coreStatsReference[coreRecord[0]])[+`${urlCores[0][0] ?? 0}${urlCores[0][1] ?? 0}`];
+          weaponRef.coreRoll2 = Object.keys(coreStatsReference[coreRecord[1]])[+`${urlCores[0][2] ?? 0}${urlCores[0][3] ?? 0}`];
+          weaponRef.coreRoll3 = Object.keys(coreStatsReference[coreRecord[2]])[+`${urlCores[0][4] ?? 0}${urlCores[0][5] ?? 0}`];
+          weaponRef.coreRoll4 = Object.keys(coreStatsReference[coreRecord[3]])[+`${urlCores[0][6] ?? 0}${urlCores[0][7] ?? 0}`];
+          weaponRef.coreRoll5 = Object.keys(coreStatsReference[coreRecord[4]])[+`${urlCores[0][8] ?? 0}${urlCores[0][9] ?? 0}`];
+
+
+          // userTriggers.updateSelectedWeapon(false,true);
+
+          weaponRef.coreRoll1Value = +(urlCores[1] ?? 0);
+          weaponRef.coreRoll2Value = +(urlCores[2] ?? 0);
+          weaponRef.coreRoll3Value = +(urlCores[3] ?? 0);
+          weaponRef.coreRoll4Value = +(urlCores[4] ?? 0);
+          weaponRef.coreRoll5Value = +(urlCores[5] ?? 0);
+
+          // console.log(weaponRef.coreRoll1Value)
+
+          userTriggers.updateSelectedWeapon(false,true);
+          // console.log(weaponRef.coreRoll1Value)
+          //WEAPON CORES
+          // let coreRecord = weaponRef.coreArrayRecord;
+          // let coreStorageString = "";
+
+          // if (coreRecord) {
+          //   for (let i=0;i<5;i++) {
+          //     let currentCoreColor = coreRecord[i];
+          //     let currentStatObject = coreStatsReference[currentCoreColor];
+          //     let currentKeys = Object.keys(currentStatObject);
+
+          //     let currentSubName = weaponRef[`coreRoll${i+1}`];
+
+          //     coreStorageString += currentKeys.indexOf(currentSubName).toString().padStart(2,`0`);
+          //   }
+
+          //   urlObject.co.push(+coreStorageString ? coreStorageString : "",
+          //     weaponRef.coreRoll1Value != 0 ? weaponRef.coreRoll1Value.toFixed(2) : "",
+          //     weaponRef.coreRoll2Value != 0 ? weaponRef.coreRoll2Value.toFixed(2) : "",
+          //     weaponRef.coreRoll3Value != 0 ? weaponRef.coreRoll3Value.toFixed(2) : "",
+          //     weaponRef.coreRoll4Value != 0 ? weaponRef.coreRoll4Value.toFixed(2) : "",
+          //     weaponRef.coreRoll5Value != 0 ? weaponRef.coreRoll5Value.toFixed(2) : ""
+          //   )
+          // }
         }
 
         if (urlCharacter) {

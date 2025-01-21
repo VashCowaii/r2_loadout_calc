@@ -1334,7 +1334,7 @@ const highPowerRounds = {
         "polarity": "Malachite",
         "type": "High-Power Rounds",
         "cost": 16,
-        "category": "Firearm Critical Hit Damage",
+        "category": "Weak Point Strike",
         "desc": "Weak Point Damage +40%, Accuracy -20%",
         "stats": {
             "Accuracy": -0.20,

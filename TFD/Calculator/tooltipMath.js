@@ -125,6 +125,12 @@ let tooltipMath = {
         htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll2],`${weaponRef.subRoll2} - Weapon Substat 2`,statistic);
         htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll3],`${weaponRef.subRoll3} - Weapon Substat 3`,statistic);
         htmlString += tooltipMath.checkItemForStat(weaponSubstatList[weaponRef.subRoll4],`${weaponRef.subRoll4} - Weapon Substat 4`,statistic);
+        //weapon core rolls
+        htmlString += tooltipMath.checkItemForStat(coreRainbow[weaponRef.coreRoll1],`${weaponRef.coreRoll1} - Weapon Core 1`,statistic)
+        htmlString += tooltipMath.checkItemForStat(coreRainbow[weaponRef.coreRoll2],`${weaponRef.coreRoll2} - Weapon Core 2`,statistic)
+        htmlString += tooltipMath.checkItemForStat(coreRainbow[weaponRef.coreRoll3],`${weaponRef.coreRoll3} - Weapon Core 3`,statistic)
+        htmlString += tooltipMath.checkItemForStat(coreRainbow[weaponRef.coreRoll4],`${weaponRef.coreRoll4} - Weapon Core 4`,statistic)
+        htmlString += tooltipMath.checkItemForStat(coreRainbow[weaponRef.coreRoll5],`${weaponRef.coreRoll5} - Weapon Core 5`,statistic)
         //weapon ability if applicable
         const weaponName = weaponRef.currentWeapon;
         htmlString += tooltipMath.checkItemForStat(sniperList[weaponName],`${weaponName} - Weapon Ability`,statistic);
@@ -143,7 +149,8 @@ let tooltipMath = {
         let statsString = "";
 
         for (let i=0;i<statArray.length;i++) {
-            statsString += tooltipMath.returnItemsWithStat(statArray[i])
+            statsString += tooltipMath.returnItemsWithStat(statArray[i]);
+            statsString += tooltipMath.returnItemsWithStat(`${statArray[i]}CORE`);
         }
 
         tooltipStorage[elemID] =

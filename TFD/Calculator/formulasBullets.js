@@ -1,6 +1,7 @@
 const bullets = {
-    getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate) {
-        const rateAdjustment = isStaticRate ? 0 : tableCopy.FireRate;
+    getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues) {
+        //cap fire rate at -95% in case we actually get that high later
+        const rateAdjustment = isStaticRate ? 0 : Math.max(-0.95,tableCopy.FireRate + (skipCoreValues ? 0 : tableCopy.FireRateCORE));
         const adjustedRateValue = baseRateValue / (1 + rateAdjustment);
         const modifiedRate = 60/adjustedRateValue;
 
@@ -15,6 +16,15 @@ const bullets = {
         }
         constructorObject.bonusesApplied.push(`${bonusEntry.bonusName} [x${timesUsed}]`);
     },
+    scrubCoreBonuses(tableCopy) {
+        //scrub the weapon core values from a unique weapon iteration
+        let tableKeys = Object.keys(tableCopy);
+        for (let entry of tableKeys) {
+            if (entry.includes("CORE")) {
+                tableCopy[entry] = 0;
+            }
+        }
+    },
     getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseRateValue,actualMagSize,weaponRef,settingsObject) {
         
         let shotCount = 0;
@@ -24,15 +34,26 @@ const bullets = {
         let bulletsArray = [];
         const tableCopy = {...index};
 
+        //this is a multiplier like zenith for firearmATK
         let atkMulti = settingsObject ? settingsObject.atkMulti || null : null;
+        //a switch to bring the loops over weapon bonuses that can modify abilities, or just weapon only bonuses
         let bonusReference = settingsObject ? settingsObject.limitedWeaponAbilityBonuses || limitedWeaponBonuses : limitedWeaponBonuses;
+        //is the fire rate fixed or modified
         let isStaticRate = settingsObject ? settingsObject.isStaticRate : false;
+        //reference skill dmg function
         let referenceFunction = settingsObject ? settingsObject.referenceFunction : null;
+        //special weapon functions like hailey cryo, applies to firearm dmg
         let specialGunFunction = settingsObject ? settingsObject.specialGunFunction : null; 
+        //special skill function for things like firearm master on lepic overkill
         let specialSkillFunction = settingsObject ? settingsObject.specialSkillFunction : null; 
+        //wasted time duration for things like roll cancel on lepic or freyna unique weapon
         let wastedTimeSkill = settingsObject ? settingsObject.wastedTimeSkill || 0 : 0; 
+        //a toggle for whether firearm dmg should be included in the resulting bullet array. Lepic, for example, is skill only.
         let skillOnly = settingsObject ? settingsObject.skillOnly : false; 
+        //Normally shell count is determined by the weapon reference, but overkill or zenith have a shell count of 1 instead of inheritance
         let shellCountOverride = settingsObject ? settingsObject.shellCountOverride : null;
+        //weapon cores don't apply to unique ability weapons, as such we need to scrub the values when we do this for abilities.
+        let skipCoreValues = settingsObject ? settingsObject.skipCoreValues : null;
         // referenceFunction(index,returnObject,isCycleCalcs,nameOverride)
 
         for (let entry of bonusReference) {
@@ -40,6 +61,7 @@ const bullets = {
             
             for (let bonusEntry of bonusBaseRef) {
                 //wastedTimeSkill is only for time wasted benefits like roll canceling on lepic overkill or freyna baptism
+                //this will be negated at the very end in another similar for loop
                 if (bonusEntry.duration) {bonusEntry.duration -= wastedTimeSkill;}
             }
         }
@@ -50,7 +72,7 @@ const bullets = {
 
         while (usedMagazine < actualMagSize) {
 
-            const snapshot = bullets.getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate);
+            const snapshot = bullets.getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues);
             // if (!isCycleCalcs) {console.log(snapshot.adjustedRateValue)}
             
             let constructorObject = {};
@@ -212,10 +234,14 @@ const bullets = {
             }
 
             if (constructorObject != {}) {
-                const snapshotPost = bullets.getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate);
+                const snapshotPost = bullets.getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues);
                 constructorObject.rateValue = snapshotPost.adjustedRateValue;
                 constructorObject.shotDelay = snapshotPost.modifiedRate;
             }
+
+
+            //scrub the weapon core values from a unique weapon iteration
+            if (skipCoreValues) {bullets.scrubCoreBonuses(tableCopy);}
 
 
             const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableCopy,weaponRef,atkMulti);
@@ -282,6 +308,16 @@ const bullets = {
                 for (let stat of constructorObject.bonusesMemory) {
                     tableCopy[stat[0]] -= stat[1];
                 }
+            }
+        }
+
+
+        //TODO: there might be something I'm forgetting besides the timeWasted stat here that might carry over between unique weapons and regular weapon simulation. Look into this later.
+        for (let entry of bonusReference) {
+            const bonusBaseRef = entry.bonusArray;
+            for (let bonusEntry of bonusBaseRef) {
+                //clear out the wasted time so it doesn't carry over on accident from a unique weapon, which it would otherwise
+                if (bonusEntry.duration) {bonusEntry.duration -= -wastedTimeSkill;}
             }
         }
 

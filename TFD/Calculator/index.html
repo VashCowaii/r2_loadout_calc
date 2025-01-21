@@ -501,6 +501,74 @@
 
                         </div>
                     </div>
+                    <div class="breakdownTab" id="weaponCoreTab">
+                        <div class="breakdownTabHeader">CORES</div>
+                        <div class="breakdownTabBody">
+
+                            <div class="reactorSelectorMainBox" style="justify-content: center;align-items: center;display: flex;height: 100%;">
+
+                                <!-- <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                                    <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="weaponCore1Icon">
+                                </div> -->
+
+                                <div class="selectionSelectorBoxesCore">
+                                    <img class="coreDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="coreRowIcon1">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="coreSub1" list="coreSub1List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="coreSub1List"></datalist>
+                                    </div>
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="coreSub1Value" min="0" max="1" step=".001" value="0" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesCore">
+                                    <img class="coreDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="coreRowIcon2">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="coreSub2" list="coreSub2List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="coreSub2List"></datalist>
+                                    </div>
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="coreSub2Value" min="0" max="1" step=".001" value="0" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesCore">
+                                    <img class="coreDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="coreRowIcon3">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="coreSub3" list="coreSub3List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="coreSub3List"></datalist>
+                                    </div>
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="coreSub3Value" min="0" max="1" step=".001" value="0" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesCore">
+                                    <img class="coreDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="coreRowIcon4">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="coreSub4" list="coreSub4List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="coreSub4List"></datalist>
+                                    </div>
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="coreSub4Value" min="0" max="1" step=".001" value="0" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+                                <div class="selectionSelectorBoxesCore">
+                                    <img class="coreDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="coreRowIcon5">
+                                    <div class="presetsSelectorBox">
+                                        <input class="selectSelector" id="coreSub5" list="coreSub5List" onchange="userTriggers.updateSelectedWeapon()"> 
+                                        <datalist id="coreSub5List"></datalist>
+                                    </div>
+                                    <div class="traitLevelDisplay">
+                                        <input type="number" class="traitLevelInput" id="coreSub5Value" min="0" max="1" step=".001" value="0" onchange="userTriggers.updateSelectedWeapon()">
+                                    </div> 
+                                </div>
+
+                                <!-- <div class="breakdownDescriptionBox" style="height: 100%;">Weapon Cores, unlike substats and modules, do not carry over to Unique Ability Weapons.</div> -->
+
+                            </div>
+                            <div class="breakdownDescriptionBox" style="height: 100%;display: flex;justify-content: center;align-items: center;">Weapon Cores, unlike substats and modules, do not carry over to Unique Ability Weapons.<br>Weapon cores only benefit weapons alone.</div>
+
+                        </div>
+                    </div>
                     <div class="breakdownTab" id="settingsBreakdownTab">
                         <div class="breakdownTabHeader">GENERAL SETTINGS</div>
                         <div class="breakdownTabBody">
@@ -1205,11 +1273,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="descendantOverviewBoxWeapon" id="descendantWeaponBoxHolder">
+                <div class="descendantOverviewBoxWeapon" id="descendantWeaponBoxHolder" onclick="userTriggers.updateSelectedFocus('characterWeaponBreakdownTab')">
                     <div class="descOverviewRow">
-                        <div class="descOverviewMiniBoxWeapon" onclick="userTriggers.updateSelectedFocus('characterWeaponBreakdownTab')">
+                        <div class="descOverviewMiniBoxWeapon">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Weapons/Icon_RW_SR_1005_A001.png" id="buttonsCharacterWeaponIcon">
                         </div>
+                    </div>
+                </div>
+                <div class="descendantOverviewBox" id="weaponCoreBoxHolder"> <!-- this is the html for the core tab button -->
+                    <div class="descOverviewRowCore">
+                        <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="weaponCore1Icon">
+                        </div>
+                        <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_002.png" id="weaponCore2Icon">
+                        </div>
+                        <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_003.png" id="weaponCore3Icon">
+                        </div>
+                        <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_004.png" id="weaponCore4Icon">
+                        </div>
+                        <div class="descOverviewMiniBoxCore" onclick="userTriggers.updateSelectedFocus('weaponCoreTab')">
+                            <img class="prismDisplayIcon" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_005.png" id="weaponCore5Icon">
+                        </div>
+                        <div class="coreRowTitleBox" id="coreBoxTitleText"></div>
                     </div>
                 </div>
 
@@ -1311,6 +1399,7 @@
 <script src="/TFD/Calculator/augments.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
+<script src="/TFD/Calculator/Weapons/cores.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- weapon mod data -->

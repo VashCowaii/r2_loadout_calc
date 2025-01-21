@@ -60,6 +60,7 @@ let globalRecords = {
         "currentWeapon": "Afterglow Sword",
         "currentWeaponType": "Sniper",
         "mods": ["","","","","","","","","",""],
+        "coreArrayRecord": null,
         "subRoll1": "Firearm ATK",
         "subRoll2": "Critical Hit Damage",
         "subRoll3": "Weak Point Damage",
@@ -68,6 +69,18 @@ let globalRecords = {
         "subRoll2Value": 0,
         "subRoll3Value": 0,
         "subRoll4Value": 0,
+
+        "coreRoll1": "",
+        "coreRoll2": "",
+        "coreRoll3": "",
+        "coreRoll4": "",
+        "coreRoll5": "",
+
+        "coreRoll1Value": 0,
+        "coreRoll2Value": 0,
+        "coreRoll3Value": 0,
+        "coreRoll4Value": 0,
+        "coreRoll5Value": 0,
     },
     "boss": {
         "currentBoss": "VoidBattle_Devourer_Hard",
