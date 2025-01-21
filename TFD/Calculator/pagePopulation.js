@@ -59,6 +59,7 @@ const userTriggers = {
         readSelection("basicsBoxWeaponModsHolder").style.display = weaponDisplay;
         readSelection("descendantWeaponBoxHolder").style.display = weaponDisplay;
         readSelection("weaponBreakdownTabHolders").style.display = weaponDisplay;
+        readSelection("weaponCoreBoxHolder").style.display = weaponDisplay;
 
         readSelection("enemyBreakdownTabHolders").style.display = enemyDisplay;
 
@@ -218,6 +219,7 @@ const userTriggers = {
             "processorBreakdownTab",
 
             "characterWeaponBreakdownTab",
+            "weaponCoreTab",
 
             "settingsBreakdownTab",
 
@@ -360,21 +362,91 @@ const userTriggers = {
         //these will only get triggered to forcibly change the stats when updateSelectedWeapon happens so that way people can still toggle
         //various things to see differences.
         const ammoType = sniperList[currentWeapon.value].ammoType;
-        readSelection("USEReactorUltimate").checked = sniperList[currentWeapon.value].rarity === "Ultimate";
+        // readSelection("USEReactorUltimate").checked = sniperList[currentWeapon.value].rarity === "Ultimate";
         userTriggers.updateReactorSelections(3,`reactor${ammoType}`,ammoType);
         // General,Special,Impact,HighPowered
         // reactorGeneral,reactorSpecial,reactorImpact,reactorHighPowered
 
         const currentWeaponImage = sniperList[currentWeapon.value].image;
+        const currentCoreArray = sniperList[currentWeapon.value].coreArray;
         weaponRef.currentWeaponType = sniperList[currentWeapon.value].weaponType;
 
         readSelection("characterWeaponBreakdownIcon").src = currentWeaponImage;
         readSelection("buttonsCharacterWeaponIcon").src = currentWeaponImage;
 
+        if (currentCoreArray) {
+            readSelection("coreBoxTitleText").innerHTML = "";
+            // weaponRef.coreArrayRecord = [...currentCoreArray];
+            for (let i=0;i<currentCoreArray.length;i++) {
+                let currentColor = currentCoreArray[i];
+                let currentColorRecord = weaponRef.coreArrayRecord ? weaponRef.coreArrayRecord[i] : "";
+
+                readSelection(`weaponCore${i+1}Icon`).src = coreImageReference[currentColor];
+                readSelection(`coreRowIcon${i+1}`).src = coreImageReference[currentColor];
+
+                let currentStatObject = coreStatsReference[currentColor];
+                let coreSubString = `coreSub${i+1}`;
+                let coreSubListString = `coreSub${i+1}List`;
+
+                //if the prior core record doesn't match the currently assigned slots, clear the dropdown and reassign it.
+                if (isImportedValue || currentColor != currentColorRecord) {
+                    readSelection(coreSubListString).innerHTML = "";
+                    pagePopulation.populateGear(coreSubListString,currentStatObject);
+                }
+                if (!currentStatObject[readSelection(coreSubString).value]) {readSelection(coreSubString).value = ""};
+
+                const sub1Value = readSelection(`coreSub${i+1}Value`);
+                if (weaponRef[`coreRoll${i+1}Value`] === 0 || readSelection(coreSubString).value != weaponRef[`coreRoll${i+1}`]) {sub1Value.value = currentStatObject[readSelection(coreSubString).value].range[1]>0 ? 10000000 : -10000000;}
+
+                if (!isImportedValue) {weaponRef[`coreRoll${i+1}`] = readSelection(coreSubString).value;}
+                else {readSelection(coreSubString).value = weaponRef[`coreRoll${i+1}`];}
+        
+                const roll1Min = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[0];
+                const roll1Max = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[1];
+        
+                sub1Value.min = roll1Min;
+                sub1Value.max = roll1Max;
+        
+                if (!isImportedValue) {sub1Value.value = Math.max(Math.min(+sub1Value.value,roll1Max),roll1Min);}
+                else {sub1Value.value = Math.max(Math.min(+weaponRef[`coreRoll${i+1}Value`],roll1Max),roll1Min);}
+        
+                weaponRef[`coreRoll${i+1}Value`] = +sub1Value.value;
+            }
+
+        }
+        else {
+            readSelection("coreBoxTitleText").innerHTML = "No Core Slots Found";
+            for (let i=0;i<5;i++) {
+                readSelection(`weaponCore${i+1}Icon`).src = coreImageReference.null;
+                readSelection(`coreRowIcon${i+1}`).src = coreImageReference.null;
+
+                readSelection(`coreSub${i+1}List`).innerHTML = "";
+                readSelection(`coreSub${i+1}`).value = "";
+                readSelection(`coreSub${i+1}Value`).value = 0;
+
+                weaponRef[`coreRoll${i+1}`] = '';
+                weaponRef[`coreRoll${i+1}Value`] = 0;
+            }
+        }
+        //assign the current array after all this is done.
+        weaponRef.coreArrayRecord = currentCoreArray ? [...currentCoreArray] : null;
+
+        // console.log(weaponRef)
+
         if (!weaponSubstatList[readSelection("weaponSub1").value]) {readSelection("weaponSub1").value = ""};
         if (!weaponSubstatList[readSelection("weaponSub2").value]) {readSelection("weaponSub2").value = ""};
         if (!weaponSubstatList[readSelection("weaponSub3").value]) {readSelection("weaponSub3").value = ""};
         if (!weaponSubstatList[readSelection("weaponSub4").value]) {readSelection("weaponSub4").value = ""};
+
+
+        const sub1Value = readSelection("weaponSub1Value");
+        const sub2Value = readSelection("weaponSub2Value");
+        const sub3Value = readSelection("weaponSub3Value");
+        const sub4Value = readSelection("weaponSub4Value");
+        if (weaponRef.subRoll1Value === 0 || readSelection("weaponSub1").value != weaponRef.subRoll1) {sub1Value.value = weaponSubstatList[readSelection("weaponSub1").value][weaponRef.currentWeaponType][1]>0 ? 10000000 : -10000000;}
+        if (weaponRef.subRoll2Value === 0 || readSelection("weaponSub2").value != weaponRef.subRoll2) {sub2Value.value = weaponSubstatList[readSelection("weaponSub2").value][weaponRef.currentWeaponType][1]>0 ? 10000000 : -10000000;}
+        if (weaponRef.subRoll3Value === 0 || readSelection("weaponSub3").value != weaponRef.subRoll3) {sub3Value.value = weaponSubstatList[readSelection("weaponSub3").value][weaponRef.currentWeaponType][1]>0 ? 10000000 : -10000000;}
+        if (weaponRef.subRoll4Value === 0 || readSelection("weaponSub4").value != weaponRef.subRoll4) {sub4Value.value = weaponSubstatList[readSelection("weaponSub4").value][weaponRef.currentWeaponType][1]>0 ? 10000000 : -10000000;}
 
         if (!isImportedValue) {
             weaponRef.subRoll1 = readSelection("weaponSub1").value;
@@ -388,16 +460,6 @@ const userTriggers = {
             readSelection("weaponSub3").value = weaponRef.subRoll3
             readSelection("weaponSub4").value = weaponRef.subRoll4
         }
-
-        const sub1Value = readSelection("weaponSub1Value");
-        const sub2Value = readSelection("weaponSub2Value");
-        const sub3Value = readSelection("weaponSub3Value");
-        const sub4Value = readSelection("weaponSub4Value");
-
-        if (weaponRef.subRoll1Value === 0) {sub1Value.value = 10000000;}
-        if (weaponRef.subRoll2Value === 0) {sub2Value.value = 10000000;}
-        if (weaponRef.subRoll3Value === 0) {sub3Value.value = 10000000;}
-        if (weaponRef.subRoll4Value === 0) {sub4Value.value = 10000000;}
 
         const roll1Min = weaponSubstatList[weaponRef.subRoll1][weaponRef.currentWeaponType][0];
         const roll1Max = weaponSubstatList[weaponRef.subRoll1][weaponRef.currentWeaponType][1];
@@ -516,10 +578,10 @@ const userTriggers = {
 
         //if the recorded value in settings is 0, or if we're changing the stat type, assume a max value(we're putting in a value that will be capped to the max)
         if (globalRef.subRoll1Value === 0 || globalRef.subRoll1 != readSelection("reactorSub1").value) {
-            sub1Value.value = 10000000;
+            sub1Value.value = reactorSubRolls[readSelection("reactorSub1").value].maximum>0 ? 10000000 : -10000000;
         }
         if (globalRef.subRoll2Value === 0 || globalRef.subRoll2 != readSelection("reactorSub2").value) {
-            sub2Value.value = 10000000;
+            sub2Value.value = reactorSubRolls[readSelection("reactorSub2").value].maximum>0 ? 10000000 : -10000000;
         }
         
         if (!isImportedValue) {
@@ -1313,7 +1375,7 @@ const formulasValues = {
             pullStats(index,path);
         }
     },
-    pullWeaponStats(index,weaponModOverride,weaponSubstatOverride) {
+    pullWeaponStats(index,weaponModOverride,weaponSubstatOverride,weaponCoreOverride) {
         let pullStats = formulasValues.pullStats;
 
         //weapon mods
@@ -1323,9 +1385,9 @@ const formulasValues = {
             let path = weaponModsCategory[modArrayRef[i]].stats;
             pullStats(index,path);
         }
-        //this was used when I had the stats baked into the weapon objects themselves, instead of allowing manual value input
-        // modArrayRef = sniperList[globalRecords.weapon.currentWeapon].subStats;
-        // pullStats(index,modArrayRef)
+        //this is for stats that are hardbaked into a weapon, like base attribute attack on weapons since that's a new thing separate from subs.
+        modArrayRef = sniperList[globalRecords.weapon.currentWeapon].stats;
+        pullStats(index,modArrayRef)
 
         const weaponRef = globalRecords.weapon;
         const overrideCheck = weaponSubstatOverride && weaponSubstatOverride.length;
@@ -1341,6 +1403,19 @@ const formulasValues = {
         index[rollName2.statName] += overrideCheck ? rollName2[weaponType][1] : weaponRef.subRoll2Value;
         index[rollName3.statName] += overrideCheck ? rollName3[weaponType][1] : weaponRef.subRoll3Value;
         index[rollName4.statName] += overrideCheck ? rollName4[weaponType][1] : weaponRef.subRoll4Value;
+
+        //WEAPON CORES
+        const coreOverrideCheck = weaponCoreOverride && weaponCoreOverride.length;
+        const coreName1 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[0] : weaponRef.coreRoll1];
+        const coreName2 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[1] : weaponRef.coreRoll2];
+        const coreName3 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[2] : weaponRef.coreRoll3];
+        const coreName4 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[3] : weaponRef.coreRoll4];
+        const coreName5 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[4] : weaponRef.coreRoll5];
+        index[coreName1.statName] += weaponRef.coreRoll1Value;//TODO: need to add the code for max values when an override is detected.
+        index[coreName2.statName] += weaponRef.coreRoll2Value;
+        index[coreName3.statName] += weaponRef.coreRoll3Value;
+        index[coreName4.statName] += weaponRef.coreRoll4Value;
+        index[coreName5.statName] += weaponRef.coreRoll5Value;
     },
     pullReactorStats(index,reactorRollsOverride) {
         let reactorRef = globalRecords.reactor;
@@ -1559,12 +1634,16 @@ else {
     readSelection("characterWeapon").value = "";
     userTriggers.updateSelectedWeapon();
     updateFormulas();
+    userTriggers.updateSelectedBoss();
+    readSelection("boss").value = "Devourer (H)";//"Devourer (H)";
+    readSelection("bossPart").value = "";//"Shoulder";
+    userTriggers.updateSelectedBoss();
 }
 
-userTriggers.updateSelectedBoss();
-readSelection("boss").value = "Devourer (H)";
-readSelection("bossPart").value = "Shoulder";
-userTriggers.updateSelectedBoss();
+// userTriggers.updateSelectedBoss();
+// readSelection("boss").value = "Devourer (H)";
+// readSelection("bossPart").value = "Shoulder";
+// userTriggers.updateSelectedBoss();
 globalRecords.URLImportCompleted = true;
 // updateFormulas();
 moduleQueryFunctions.getModuleQueryResults();

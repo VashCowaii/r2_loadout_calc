@@ -169,7 +169,7 @@ const calcs = {
     },
     getDPSPerSkillInterval(index,totalDamageDealt,baseCooldown,extraUsageDuration) {
         const cooldown = baseCooldown * Math.max(0.10,1 + index.SkillCooldown);//enforce the 90% CDR cap
-        const interval = cooldown + (extraUsageDuration || 0);
+        const interval = cooldown + (extraUsageDuration || 0);//extraDuration is basically an animation time where the cooldown starts AFTER the animation is over. So kyle thrusters, but not ines pingpong
         const DPS = totalDamageDealt/interval;
 
         return {cooldown,interval,DPS}
@@ -194,27 +194,27 @@ const calcs = {
         const baseFirearmATK = weaponRef.baseATK;
         uniqueMulti = uniqueMulti || 1;
 
-        const attackPercent = index["FirearmATK%"];
-        const onHitBonus = index["FirearmATK%OnHit"];//while called onhit it's more of an enemy debuff
+        const attackPercent = index["FirearmATK%"] + index["FirearmATK%CORE"];
+        const onHitBonus = index["FirearmATK%OnHit"] + index["FirearmATK%OnHitCORE"];//while called onhit it's more of an enemy debuff
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
 
         const baseAdvantage = 1 + weaponRef.physicalTypeBonus + (globalRecords.boss.enemyType === "Colossus" ? 0.10 : 0);
-        const bonusAdvantage = index.TypeBonus;
+        const bonusAdvantage = index.TypeBonus + index.TypeBonusCORE;
         const endAdvantage = calcs.customTruncate((baseAdvantage * (1 + bonusAdvantage) + 0.00001),4);
         const physicalTypeBonus = endAdvantage-1;
         const physicalTypeMulti = weaknessCheck ? endAdvantage : 1;
-        const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : index["ColossusATK"];
+        const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : (index["ColossusATK"] + index["ColossusATKCORE"]) * (1 + index["ColossusATK%"] + index["ColossusATK%CORE"]);
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
-        const totalFirearmATK = (postHitATK + index.ColossusATK) * physicalTypeMulti;
+        const totalFirearmATK = (postHitATK + firearmColossusATK) * physicalTypeMulti;
 
         return {baseFirearmATK,attackPercent,physicalTypeBonus,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
     getFirearmWeakpoint(index,weaponRef) {
         const baseWPMulti = weaponRef.baseWeakPoint;
-        const flatWPBonus = index.BaseWeakPointBonus;
-        const weakpointBonus = index["WeakPointDamage%"];
+        const flatWPBonus = index.BaseWeakPointBonus + index.BaseWeakPointBonusCORE;
+        const weakpointBonus = index["WeakPointDamage%"] + index["WeakPointDamage%CORE"];
 
         const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
@@ -229,11 +229,11 @@ const calcs = {
         const baseFirearmCritRate = weaponRef.baseCritRate;
         const baseFirearmCritDamage = weaponRef.baseCritDamage;
 
-        const baseFirearmCritRateBonus = index.FirearmCritRateBase;
-        const baseFirearmCritDamageBonus = index.FirearmCritDamageBase;
+        const baseFirearmCritRateBonus = index.FirearmCritRateBase + index.FirearmCritRateBaseCORE;
+        const baseFirearmCritDamageBonus = index.FirearmCritDamageBase + index.FirearmCritDamageBaseCORE;
 
-        const firearmCritRateBonus = index.FirearmCritRate;
-        const firearmCritDamageBonus = index.FirearmCritDamage;
+        const firearmCritRateBonus = index.FirearmCritRate + index.FirearmCritRateCORE;
+        const firearmCritDamageBonus = index.FirearmCritDamage + index.FirearmCritDamageCORE;
 
         const totalFirearmCritRatePreCap = (baseFirearmCritRate + baseFirearmCritRateBonus) * (1 + firearmCritRateBonus);
         const totalFirearmCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalFirearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100)) : 0;
@@ -244,7 +244,7 @@ const calcs = {
     },
     getFirearmElementalSpread(index,elementName,usableBase,critFirearm) {
         const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
-        const damageElementBase = ((usableBase) * index[`${elementName}ATK%`] + index[`${elementName}ATK`]) * (1 + index[`${elementName}ATK%Bonus`]) * elemDR;
+        const damageElementBase = ((usableBase) * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`]) * (1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) * elemDR;
 
         const perHit = damageElementBase;
         const perCrit = perHit * critFirearm.Damage;
@@ -256,10 +256,10 @@ const calcs = {
         let activeElements = [];
         let activeElementsDamage = [];
 
-        if (index["ChillATK%"] || index["ChillATK"]) {activeElements.push("Chill");}
-        if (index["ElectricATK%"] || index["ElectricATK"]) {activeElements.push("Electric");}
-        if (index["ToxicATK%"] || index["ToxicATK"]) {activeElements.push("Toxic");}
-        if (index["FireATK%"] || index["FireATK"]) {activeElements.push("Fire");}
+        if (index["ChillATK%"] || index["ChillATK"] || index["ChillATK%CORE"] || index["ChillATKCORE"]) {activeElements.push("Chill");}
+        if (index["ElectricATK%"] || index["ElectricATK"] || index["ElectricATK%CORE"] || index["ElectricATKCORE"]) {activeElements.push("Electric");}
+        if (index["ToxicATK%"] || index["ToxicATK"] || index["ToxicATK%CORE"] || index["ToxicATKCORE"]) {activeElements.push("Toxic");}
+        if (index["FireATK%"] || index["FireATK"] || index["FireATK%CORE"] || index["FireATKCORE"]) {activeElements.push("Fire");}
         if (!activeElements.length) {
             activeElements.push("None");
             activeElementsDamage.push(0);
@@ -1723,6 +1723,7 @@ const customDamage = {
             "wastedTimeSkill": rollDuration,//roll duration for cancel
             "skillOnly": true,
             "shellCountOverride": 1,
+            "skipCoreValues": true,
         }
         const baseFireRate = 451;
         const magazine = abilityMods.magazine * (1 + index.MagazineSize);
@@ -2712,6 +2713,7 @@ const customDamage = {
             "referenceFunction": customDamage.haileyZenithSkillBase,
             "specialGunFunction": customDamage.haileyZenithCryoBase,
             "shellCountOverride": 1,
+            "skipCoreValues": true,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
@@ -3179,7 +3181,7 @@ const customDamage = {
         const continuousCost = abilityMods.continuousCost * (1 + index.SkillCost);
         const allowedMPDuration = Math.ceil(totalMP/continuousCost);
 
-        const magazineSize = 50;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const magazineSize = 300;//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = magazineSize;
         const baseFireRate = abilityMods.fireRate;
         const rollDuration = 1.06;
@@ -3192,6 +3194,7 @@ const customDamage = {
             "wastedTimeSkill": rollDuration,//roll duration for cancel
             "skillOnly": true,
             "shellCountOverride": 1,
+            "skipCoreValues": true,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
@@ -6434,10 +6437,10 @@ const customDamage = {
     generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
     const settingsRef = weaponRef.weaponSettings;
 
-    const magazineSize = weaponRef.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
+    const magazineSize = weaponRef.magazine * (1+index.MagazineSize+index.MagazineSizeCORE);//it rounds down and floors the value, but I still want to show the decimal so people know.
     const actualMagSize = Math.floor(magazineSize);
-    const baseRateValue = weaponRef.baseFireRate;
-    let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef).bulletsArray;
+    const baseRateValue = weaponRef.baseFireRate; //index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject
+    let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,null).bulletsArray;
 
     let totalAVGGun = 0;
     const totalShots = bulletsArray.length;

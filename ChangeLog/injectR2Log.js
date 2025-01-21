@@ -1,2 +1,2 @@
-injectHTMLTemplate('remnantLog.html','remnantLogBody');
-injectHTMLTemplate('remnantToDo.html','remnantToDoList');
+injectHTMLTemplate('tfdLog.html','remnantLogBody');
+injectHTMLTemplate('tfdToDo.html','remnantToDoList');

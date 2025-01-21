@@ -1,5 +1,5 @@
 const greatTableKnowerOfAll = {
-
+    "": 0,
     "HP": 0,"HP%": 0,
     "HPRecovery": 0,
     "HPHeal": 0,//same as outgoing heal
@@ -47,8 +47,6 @@ const greatTableKnowerOfAll = {
     "SkillCritRate": 0,"SkillCritDamage": 0,
     "SkillCritRateBaseBonus": 0,"SkillCritDamageBaseBonus": 0,
     
-
-    "Accuracy": 1,
     "OutgoingDamageMod": 1,
 
 
@@ -66,46 +64,45 @@ const greatTableKnowerOfAll = {
 
 
     //GUNS
-    "ColossusATK": 0,
-    "FirearmATK%": 0,
-    "FirearmATK%OnHit": 0,
-    "TypeBonus": 0,
-    "BaseWeakPointBonus": 0,
-    "WeakPointDamage%": 0,
+    "ColossusATK": 0,"ColossusATKCORE": 0,
+    "ColossusATK%": 0,"ColossusATK%CORE": 0,
+    "FirearmATK%": 0,"FirearmATK%CORE": 0,
+    "FirearmATK%OnHit": 0,"FirearmATK%OnHitCORE": 0,
+    "TypeBonus": 0,"TypeBonusCORE": 0,
+    "BaseWeakPointBonus": 0,"BaseWeakPointBonusCORE": 0,
+    "WeakPointDamage%": 0,"WeakPointDamage%CORE": 0,
 
-    "BulletCostWeapon": 1,
-    "ShellCapacity": 0,
-    "ShellCapacityBase": 0,
-    "StatusTriggerRate": 0,
+    "BulletCostWeapon": 1,"BulletCostWeaponCORE": 1,
+    "ShellCapacity": 0,"ShellCapacityCORE": 0,
+    "ShellCapacityBase": 0,"ShellCapacityBaseCORE": 0,
+    "StatusTriggerRate": 0,"StatusTriggerRateCORE": 0,
 
-    "FireRate": 0,
-    "FireRateMulti": 0,
-    "Accuracy": 1,
-    "Recoil": 1,
-    "ReloadSpeed": 0,
-    "MagazineSize": 0,
+    "FireRate": 0,"FireRateCORE": 0,
+    "FireRateMulti": 0,"FireRateMultiCORE": 0,
+    "Accuracy": 1,"AccuracyCORE": 1,
+    "Recoil": 1,"RecoilCORE": 1,
+    "ReloadSpeed": 0,"ReloadSpeedCORE": 0,
+    "MagazineSize": 0,"MagazineSizeCORE": 0,
 
-    "FireATK": 0,
-    "FireATK%": 0,//% only is conversion btw
-    "FireATK%Bonus": 0,
-    "ToxicATK": 0,
-    "ToxicATK%": 0,
-    "ToxicATK%Bonus": 0,
-    "ChillATK": 0,
-    "ChillATK%": 0,
-    "ChillATK%Bonus": 0,
-    "ElectricATK": 0,
-    "ElectricATK%": 0,//enhancement
-    "ElectricATK%Bonus": 0,//priority/gunbarrel
+    "SwapSpeed": 0,"SwapSpeedCORE": 0,
 
-    "FirearmCritRate": 0,
-    "FirearmCritRateBase": 0,
-    "FirearmCritDamage": 0,
-    "FirearmCritDamageBase": 0,
+    "FireATK": 0,"FireATKCORE": 0,
+    "FireATK%": 0,"FireATK%CORE": 0,//% only is conversion btw
+    "FireATK%Bonus": 0,"FireATK%BonusCORE": 0,
+    "ToxicATK": 0,"ToxicATKCORE": 0,
+    "ToxicATK%": 0,"ToxicATK%CORE": 0,
+    "ToxicATK%Bonus": 0,"ToxicATK%BonusCORE": 0,
+    "ChillATK": 0,"ChillATKCORE": 0,
+    "ChillATK%": 0,"ChillATK%CORE": 0,
+    "ChillATK%Bonus": 0,"ChillATK%BonusCORE": 0,
+    "ElectricATK": 0,"ElectricATKCORE": 0,
+    "ElectricATK%": 0,"ElectricATK%CORE": 0,//enhancement
+    "ElectricATK%Bonus": 0,"ElectricATK%BonusCORE": 0,//priority/gunbarrel
 
-
-    "haileyExtraShots": 0,//specific to hailey impact rounds builds
-
+    "FirearmCritRate": 0,"FirearmCritRateCORE": 0,
+    "FirearmCritRateBase": 0,"FirearmCritRateBaseCORE": 0,
+    "FirearmCritDamage": 0,"FirearmCritDamageCORE": 0,
+    "FirearmCritDamageBase": 0,"FirearmCritDamageBaseCORE": 0,
 
     //COLOSSUS/ENEMY MODIFIERS APPLIED BY PLAYERS
     "enemyCritResistReductionFirearm": 0,

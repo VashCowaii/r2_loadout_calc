@@ -6,7 +6,11 @@
 
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Weapon Core Math","isYTVid": true,"date": 20250119,"embedLink": "kZvQT4r6Vjg","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Ines Guide","isYTVid": true,"date": 20250110,"embedLink": "Z4CVhuHwUm8","contentType": "Build","isOutdated": false,"entityArray": ["Ines"],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Blair Guide","isYTVid": true,"date": 20250110,"embedLink": "upDvrT2wydI","contentType": "Build","isOutdated": false,"entityArray": ["Blair"],"pinnedCommentFlag": false},
 
+    {"author": "Vash","topic": "Reactor Schedule","isYTVid": true,"date": 20241224,"embedLink": "EsGqjM2D2Pk","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "ETA Shop Schedule","isYTVid": true,"date": 20241219,"embedLink": "_TWbFXO5GCc","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Calculator Guide","isYTVid": true,"date": 20241218,"embedLink": "MIvm0u6152U","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Abyss Hailey Build","isYTVid": true,"date": 20241217,"embedLink": "Fp5z5LTqOek","contentType": "Build","isOutdated": false,"entityArray": ["Hailey"],"pinnedCommentFlag": false},
