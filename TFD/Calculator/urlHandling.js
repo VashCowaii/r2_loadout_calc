@@ -535,12 +535,12 @@ let manipulateURL = {
             let bossDataKeys = Object.keys(bossData);
             // bossData
 
-            globalRecords.boss.currentBoss = bossDataKeys[+`${urlReactor[0][11]}${urlReactor[0][12]}`];
+            globalRecords.boss.currentBoss = bossDataKeys[+`${urlReactor[0][11] || 0}${urlReactor[0][12] || 0}`];
 
             const partsPath = bossData[globalRecords.boss.currentBoss].weaknessKeys;
             const partsArray = Object.keys(partsPath);
 
-            globalRecords.boss.currentBossPart = partsArray[+`${urlReactor[0][13]}${urlReactor[0][14]}`];
+            globalRecords.boss.currentBossPart = partsArray[+`${urlReactor[0][13] || 0}${urlReactor[0][14] || 0}`];
 
             // userTriggers.updateSelectedBoss();
             readSelection("boss").value = bossData[globalRecords.boss.currentBoss].displayName;
