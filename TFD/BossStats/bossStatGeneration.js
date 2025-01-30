@@ -45,20 +45,24 @@ let bossStatKeyLibaryCategory = {
     "Shield Recovery Interval": "Shield",
     "Shield Recovery": "Shield",
     "Shield Recovery In Combat": "Shield",
-    "Max Stagger HP and Rate": "Stagger",
-    "Max Stagger HP Rate": "Stagger",
+
+    "Minimum Stagger Rate": "Stagger",
+    "Maximum Stagger Rate": "Stagger",
     "Max Stagger Rate": "Stagger",
     "Stagger Decrease Rate": "Stagger",
     "Stagger Decrease Delay": "Stagger",
+    "Stagger Damage Rate": "Stagger",
+    "Stagger Cooldown": "Stagger",
+
     "Time Limit": "",
-    "Max Frenzy Rate": "Frenzy",
-    "Frenzy Damage Rate": "Damage",
+    "Frenzy Conversion Ratio": "Frenzy",
+    "Frenzy Damage Rate": "Frenzy",
     "Frenzy Decrease Delay": "Frenzy",
     "Frenzy Decrease Rate": "Frenzy",
     "Frenzy Duration": "Frenzy",
-    "Rage Damage Rate": "Damage",
-    "Rage Decrease Rage": "Rage",
-    "Max Rage Gauge": "Rage",
+    "Rage Damage Rate": "Rage",
+    "Rage Decrease Rate": "Rage",
+    "Rage Conversion Ratio": "Rage",
     "Colossus Level": "",
 }
 
@@ -116,17 +120,42 @@ function generateBossData() {
     let bossLevel = basicStats.lvl;
     let bossStats = basicStats.lvlStats;
 
-    readSelection("selectedBossImage").src = `/TFD/TFDImages/Bosses/${currentEntry.smallIcon}.png`
+    readSelection("selectedBossImage").src = `/TFD/TFDImages/Bosses/${currentEntry.smallIcon}.png`;
 
-    // <img class="breakdownDisplayIcon" src="${ '/TFD/TFDImages/Bosses/' + currentEntry.bigIcon + '.png'}"></img>
+    let frenzyRangeString = "";
+    let frenzyCheck = bossStats["Frenzy Conversion Ratio"];
+    const sumHPValue = bossStats.HP + bossStats.Shield;
+    if (frenzyCheck) {
+        let frenzyHP = sumHPValue * frenzyCheck;
+        frenzyRangeString += `<div class="bossDataCritResist">Frenzy: ${(+frenzyHP.toFixed(0)).toLocaleString()}</div>`
+    }
+
+    let rageRangeString = "";
+    let rageCheck = bossStats["Rage Conversion Ratio"];//Max Rage Gauge  //Max Rage Rate
+    if (rageCheck) {
+        let frenzyHP = sumHPValue * rageCheck;
+        rageRangeString += `<div class="bossDataCritResist">Rage: ${(+frenzyHP.toFixed(0)).toLocaleString()}</div>`
+    }
+    let staggerRangeString = "";
+    let staggerCheck = bossStats["Minimum Stagger Rate"];//Max Rage Gauge  //Max Rage Rate
+    if (staggerCheck) {
+        let minHP = sumHPValue * bossStats["Minimum Stagger Rate"];
+        let maxHP = sumHPValue * bossStats["Maximum Stagger Rate"];
+        staggerRangeString += `<div class="bossDataCritResist">Stagger: [${(+minHP.toFixed(0)).toLocaleString()} ~ ${(+maxHP.toFixed(0)).toLocaleString()}]</div>`
+    }
+
+    // <div class="bossDataHeaderBig">EHP: ${(bossStats.HP + bossStats.Shield).toLocaleString()}</div>
 
     // <div class="bossDataCritResist" style="white-space:normal;">${currentEntry.note}</div>
-    // <div class="bossDataHeader">${currentEntry.realName.toUpperCase()}</div>
     readSelection("bossDataBox").innerHTML += `
         <div class="bossDataMainHolder">
                 <div class="bossDataBreakdownBox">
-                    <div class="bossDataHeaderBig">SUMMARY STATS</div>
+                    <div class="bossDataHeaderBig">SUMMARY STATS LvL ${bossStats["Colossus Level"]}</div>
                     <div class="bossDataCritResist">HP: ${bossStats.HP.toLocaleString()} - Shield: ${bossStats.Shield.toLocaleString()}</div>
+                    ${frenzyRangeString}
+                    ${rageRangeString}
+                    ${staggerRangeString}
+                    
 
                     <div class="bossDataBreakdownBoxRow">
                         <div class="bossDataCritResistAttributes">
