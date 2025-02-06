@@ -1,0 +1,40 @@
+.centeredTableHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.erosionHeaderBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+
+
+
+
+.selectedBossImageContainer {
+    min-width: 30%;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    box-sizing: border-box;
+    padding: 3px;
+}
+.selectedBossImage {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+    border: none;
+}
+.bossDataHeaderBig {
+    white-space: normal;
+}
