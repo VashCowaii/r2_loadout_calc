@@ -12,7 +12,11 @@ const generalRounds =  {
       "exclusion": [],
    },
 
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    //gold
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    "Sharp Precision Shot": {
       "rarity": "Ultimate",
       "polarity": "Xantic",
@@ -21,9 +25,6 @@ const generalRounds =  {
       "category": "Special Mod",
       "stats": {
          "FireRate": 0.20,
-         // "FireRate": -0.40, //this will be added in with functions, not via a flat value
-         // "Recoil": -0.50,
-         // "FirearmATK%": 0.60
       },
       "complexBonus": [
          {
@@ -34,9 +35,11 @@ const generalRounds =  {
             ],
             "oneTimeOrStack": "stack",
             "bonusName": "Sharp Precision Shot (General)",
+            "clearOnReload": true,
             "limit": 10,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 0.5,
-            // "cooldown": 0.55,
          }
       ],
       "tags": ["Recoil","FirearmATK%"],
@@ -44,16 +47,35 @@ const generalRounds =  {
       "exclusion": [],
       "desc": "Base Fire Rate -20%. While Pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.5s (up to 10 stacks)."
    },
-   // "Lethal Finish": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Almandine",
-   //    "type": "General Rounds",
-   //    "cost": 6,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "tags": [],
-   //    "desc": "When firing a firearm, ammo with an additional 30% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -10s. However, the firearm's base Weak Point Damage is fixed at 100%."
-   // },
+   "Lethal Finish": {//done
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "desc": "When firing a firearm, ammo with an additional 60% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -12.4s However, the firearm's base Weak Point Damage is Fixed at 100%",
+      "stats": {
+         "WeakPointOverride": 1,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "FirearmCritRateBase","value": 0.60,"subStackValue": null},
+               ],
+               "bonusName": "Lethal Finish (High-Powered)",
+               "oneTimeOrStack": "cooldown",
+               "limit": 1,
+               "isDurationActive": true,
+               "isCooldownActive": false,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               "cooldown": 15,
+         }
+      ],
+      "tags": ["FirearmCritRateBase","WeakPointOverride"],
+      "inclusion": [],
+      "exclusion": [],
+   },
    "Mental Focus": {
       "rarity": "Ultimate",
       "polarity": "Malachite",
@@ -70,7 +92,14 @@ const generalRounds =  {
             ],
             "bonusName": "Mental Focus (General)",
             "oneTimeOrStack": "stack",
+            "duration": 2,
+            "cooldown": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "clearOnReload": true,
             "limit": 150,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 0,
          }
       ],
@@ -79,7 +108,7 @@ const generalRounds =  {
       "exclusion": [],
       "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +1% for 2s (up to 150 stacks) Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
    },
-   "Real-Life Fighter": {
+   "Real-life Fighter": {
       "rarity": "Ultimate",
       "polarity": "Malachite",
       "type": "General Rounds",
@@ -95,8 +124,11 @@ const generalRounds =  {
             ],
             "bonusName": "Real-life Fighter (General)",
             "oneTimeOrStack": "stack",
+            "decayDuration": 5,
             "limit": 10,
             "cooldown": 0,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "conditions": ["isWeakpoint"],
          }
       ],
@@ -134,7 +166,12 @@ const generalRounds =  {
             "limit": 1,
             "cooldown": 15,
             "duration": 3,
-            // "conditions": ["isWeakpoint"],
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "bonusWasApplied": false,
+            "conditions": ["isReloaded"],
          }
       ],
       "tags": ["BulletCostWeapon","MagazineSize"],
@@ -272,12 +309,191 @@ const generalRounds =  {
       "exclusion": [],
       "desc": "When attacking enemies inflicted with Burn, Firearm ATK +26%"
    },
+   "Overwhelm": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "TypeBonusCORE","value": 0.0581,"subStackValue": null},
+               {"name": "WeakPointDamage%CORE","value": 0.04,"subStackValue": null},
+            ],
+            "bonusName": "Overwhelm",
+            "oneTimeOrStack": "duration",
+            "limit": 10,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isAdvantage"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["TypeBonusCORE","WeakPointDamage%CORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon hitting with Advantage Affinity, increases Weak Point Damage by 4% and Advantage Affinity Dammage Coefficient by 5.81% for 5 seconds (max 10 stacks, loses 2 stacks on failure, cooldown 20s)."
+   },
+   "Heat Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "FireATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Heat Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["FireATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Chill Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Cerulean",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ChillATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Chill Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ChillATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Electric Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Xantic",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ElectricATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Electric Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ElectricATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Toxic Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ToxicATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Toxic Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ToxicATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Ultra-Precision Strike": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "WeakPointDamage%","value": 0.045,"subStackValue": null},
+            ],
+            "bonusName": "Ultra-Precision Strike",
+            "oneTimeOrStack": "duration",
+            "limit": 20,
+            "cooldown": 15,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isAdvantage"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["WeakPointDamage%CORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Successful Advantage Affinity: Weak Point Damage +4.5% for 5s (up to 20 stacks, cooldown 15s). Failed Weak Point Attack during the effect: Firearm ATK -1.95% (up to 20 stacks)."
+   },
 
 
 
 
 
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    //PURPLES
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    "Bullet Integration": {
       "rarity": "Rare",
       "polarity": "Malachite",
@@ -1016,8 +1232,12 @@ const generalRounds =  {
 
 
 
-       
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------  
    //BLUES
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
+
    // "Colon Special Forces": {
    //    "rarity": "Normal",
    //    "polarity": "Malachite",
@@ -1242,6 +1462,15 @@ const generalRounds =  {
       "exclusion": [],
       "desc": "Firearm ATK +32%"
    },
+
+
+
+
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
+   //MODS ADDED LATER
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
 
 
 

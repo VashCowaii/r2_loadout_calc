@@ -40,9 +40,11 @@ const specialRounds =  {
             ],
             "oneTimeOrStack": "stack",
             "bonusName": "Sharp Precision Shot (General)",
+            "clearOnReload": true,
             "limit": 10,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 0.5,
-            // "cooldown": 0.55,
          }
       ],
         "tags": ["Recoil","FirearmATK%"],
@@ -50,67 +52,67 @@ const specialRounds =  {
         "exclusion": [],
         "desc": "Base Fire Rate -20%. While pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.5s (up to 10 stacks)."
     },
-    // "Lethal Finish": {//
-    //     "rarity": "Ultimate",
-    //     "polarity": "Almandine",
-    //     "type": "Special Rounds",
-    //     "cost": 16,
-    //     "category": "Special Mod",
-    //     "stats": {},
-    //     "desc": "When firing a firearm, ammo with an additional 60% Critical Hit Rate is fired (Cooldown 15s). When defeating an enemy with the enhanced bullet, module cooldown -12.4s. However, the firearm's base Weak Point Damage is fixed at 100%."
-    // },
-    "Mental Focus": {//
-        "rarity": "Ultimate",
-        "polarity": "Malachite",
-        "type": "Special Rounds",
-        "cost": 16,
-        "category": "Special Mod",
-        "stats": {
-            "FireRate": 0.10,
-            // "FirearmATK%": 0.90
-        },
-        "complexBonus": [
-            {
-                "stats": [
-                    {"name": "FirearmATK%","value": 0.015,"subStackValue": null},
-                ],
-                "bonusName": "Mental Focus (Special)",
-                "oneTimeOrStack": "stack",
-                "limit": 60,
-                "cooldown": 0,
-            }
-        ],
-        "tags": ["FirearmATK%"],
-        "inclusion": [],
-        "exclusion": [],
-        "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +1.5% for 2s (up to 60 stacks). Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
-    },
-    "Real-Life Fighter": {//
-        "rarity": "Ultimate",
-        "polarity": "Malachite",
-        "type": "Special Rounds",
-        "cost": 16,
-        "category": "Special Mod",
-        "stats": {
-            "Accuracy": -0.20,
-        },
-        "complexBonus": [
-            {
-                "stats": [
-                    {"name": "FirearmATK%","value": 0.10,"subStackValue": null},
-                ],
-                "bonusName": "Real-life Fighter (Special)",
-                "oneTimeOrStack": "stack",
-                "limit": 10,
-                "cooldown": 0,
-                "conditions": ["isWeakpoint"],
-            }
-        ],
-        "tags": ["FirearmATK%"],
-        "inclusion": [],
-        "exclusion": [],
-        "desc": "Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks). But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
-    },
+    "Mental Focus": {//done
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "Special Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "stats": {
+         "FireRate": 0.10,
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "FirearmATK%","value": 0.015,"subStackValue": null},
+            ],
+            "bonusName": "Mental Focus (Special)",
+            "oneTimeOrStack": "stack",
+            "duration": 2,
+            "cooldown": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "clearOnReload": true,
+            "limit": 60,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "cooldown": 0,
+         }
+      ],
+      "tags": ["FirearmATK%"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +1.5% for 2s (up to 60 stacks). Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
+   },
+    "Real-life Fighter": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "Special Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "stats": {
+         "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "FirearmATK%","value": 0.10,"subStackValue": null},
+            ],
+            "bonusName": "Real-life Fighter (Special)",
+            "oneTimeOrStack": "stack",
+            "decayDuration": 5,
+            "limit": 10,
+            "cooldown": 0,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "conditions": ["isWeakpoint"],
+         }
+      ],
+      "tags": ["FirearmATK%"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks). But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
+   },
     "Analysis Master": {//
         "rarity": "Ultimate",
         "polarity": "Rutile",
@@ -134,19 +136,23 @@ const specialRounds =  {
         "stats": {
         },
         "complexBonus": [
-            {
-                "stats": [
-                    {"name": "BulletCostWeapon","value": -1,"subStackValue": null},
-                ],
-                "bonusName": "Spray and Pray",
-                "oneTimeOrStack": "duration",
-                "limit": 1,
-                "cooldown": 15,
-                "duration": 3,
-                // "conditions": ["isWeakpoint"],
-                "skipFirstShot": true,
-            }
-        ],
+         {
+            "stats": [
+               {"name": "BulletCostWeapon","value": -1,"subStackValue": null},
+            ],
+            "bonusName": "Spray and Pray",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 15,
+            "duration": 3,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "bonusWasApplied": false,
+            // "conditions": ["isReloaded"],
+         }
+      ],
         "tags": ["BulletCostWeapon","MagazineSize"],
         "inclusion": [],
         "exclusion": [],
@@ -1258,4 +1264,35 @@ const specialRounds =  {
         "exclusion": [],
       "desc": "Firearm ATK +27%, Firearm Critical Hit Damage +10%"
    }, 
+
+
+   "Lethal Finish": {//done
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "Special Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "desc": "When firing a firearm, ammo with an additional 60% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -12.4s However, the firearm's base Weak Point Damage is Fixed at 100%",
+      "stats": {
+         "WeakPointOverride": 1,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "FirearmCritRateBase","value": 0.60,"subStackValue": null},
+               ],
+               "bonusName": "Lethal Finish (High-Powered)",
+               "oneTimeOrStack": "cooldown",
+               "limit": 1,
+               "isDurationActive": true,
+               "isCooldownActive": false,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               "cooldown": 15,
+         }
+      ],
+      "tags": ["FirearmCritRateBase","WeakPointOverride"],
+      "inclusion": [],
+      "exclusion": [],
+   },
 }

@@ -12,8 +12,12 @@ const impactRounds = {
       "exclusion": [],
    },
 
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    //golds
-   "Mental Focus": {
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
+   "Mental Focus": {//done
       "rarity": "Ultimate",
       "polarity": "Malachite",
       "type": "Impact Rounds",
@@ -29,7 +33,14 @@ const impactRounds = {
             ],
             "bonusName": "Mental Focus (Impact)",
             "oneTimeOrStack": "stack",
+            "duration": 2,
+            "cooldown": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "clearOnReload": true,
             "limit": 30,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 0,
          }
       ],
@@ -38,7 +49,7 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Base Fire Rate -10%. When firing a firearm, Firearm ATK +3% for 2s (up to 30 stacks) Removes effect when reloading or changing firearm.<br>Max stacks assumed when selected."
    },
-   "Real-life Fighter": {
+   "Real-life Fighter": {//done
       "rarity": "Ultimate",
       "polarity": "Malachite",
       "type": "Impact Rounds",
@@ -54,8 +65,11 @@ const impactRounds = {
             ],
             "bonusName": "Real-life Fighter (Impact)",
             "oneTimeOrStack": "stack",
+            "decayDuration": 5,
             "limit": 10,
             "cooldown": 0,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "conditions": ["isWeakpoint"],
          }
       ],
@@ -64,7 +78,7 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Base Accuracy -20%. On dealing Weak Point DMG, Firearm ATK +10% for 5s (up to 10 stacks) But loses 2 stacks per failed Weak Point Attack.<br>Max stacks assumed when selected."
    },
-   "Sharp Precision Shot": {
+   "Sharp Precision Shot": {//done
       "rarity": "Ultimate",
       "polarity": "Xantic",
       "type": "Impact Rounds",
@@ -82,11 +96,11 @@ const impactRounds = {
             ],
             "bonusName": "Sharp Precision Shot (Impact)",
             "oneTimeOrStack": "stack",
+            "clearOnReload": true,
             "limit": 10,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 0.4,
-            // "accrualDelay": 0.048,
-            // "cooldown": 0.43,
-            // "cooldown": 0.445,
          }
       ],
       "tags": ["Recoil","FirearmATK%"],
@@ -94,25 +108,7 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Base Fire Rate -20%. While Pulling the trigger, Fire Rate +4%, Recoil -5%, and Firearm ATK +6% every 0.4s (up to 10 stacks)."
    },
-   // "Lethal Finish": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Almandine",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When firing a firearm, ammo with an additional 30% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -10s However, the firearm's base Weak Point Damage is fixed at 100%"
-   // },
-   // "Defense Master": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When defeating an enemy, DEF +128.3% for 10s (Cooldown 25s)"
-   // },
-   "Payout": {
+   "Payout": {//done
       "rarity": "Ultimate",
       "polarity": "Xantic",
       "type": "Impact Rounds",
@@ -130,7 +126,11 @@ const impactRounds = {
             "limit": 1,
             "cooldown": 15,
             "duration": 3,
-            "conditions": ["isWeakpoint"],
+            "currentStacks": -1,
+            "timePassedEntry": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isWeakpoint","hasFirearmDamage"],
             "skipFirstShot": true,
          }
       ],
@@ -169,6 +169,10 @@ const impactRounds = {
             "bonusName": "Weak Point Expansion (Impact)",
             "oneTimeOrStack": "cooldown",
             "limit": 1,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
             "cooldown": 5,
          }
       ],
@@ -177,33 +181,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "On Weak Point hit, Weak Point Damage +140% (cooldown 5s)"
    },
-   // "Hardline Suppression": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 11,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "On Weak Point hit, 18% Chance to Knockdown target"
-   // },
-   // "Dopaminergic Activate": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Almandine",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "On Weak Point hit, Firearm Critical Hit Rate +45.5%, Firearm Critical Hit Damage +69.7% (Cooldown 5s)"
-   // },
-   // "Better Weapon Weight [U]": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "Weapon Change Speed +25% When changing weapons, DEF +32% for 5s (cooldown 15s)"
-   // },
    "Electric Conductor": {
       "rarity": "Ultimate",
       "polarity": "Xantic",
@@ -260,44 +237,13 @@ const impactRounds = {
         "exclusion": [],
       "desc": "When attacking enemies inflicted with Burn, Firearm ATK +26%"
    },
-   // "Venom Injector": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 5,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When defeating an enemy inflicted with Poison, inflicts Poison on other enemies within 3 m of the target for 5s (Cooldown 20s)"
-   // },
-   // "Remote Generator": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Xantic",
-   //    "type": "Impact Rounds",
-   //    "cost": 5,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When defeating an enemy inflicted with Electrocution, inflicts Electrocution on other enemies within 3 m of the target for 3s (Cooldown 20s)"
-   // },
-   // "Quick Freezer ": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Cerulean",
-   //    "type": "Impact Rounds",
-   //    "cost": 5,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When defeating an enemy inflicted with Frostbite, inflicts Frostbite on other enemies within 3m of the target for 0.8s (Cooldown 5s)"
-   // },
-   // "Heat Incinerator": {
-   //    "rarity": "Ultimate",
-   //    "polarity": "Almandine",
-   //    "type": "Impact Rounds",
-   //    "cost": 5,
-   //    "category": "Special Mod",
-   //    "stats": {},
-   //    "desc": "When defeating an enemy inflicted wtih Burn, inflicts Burn on other enemies within 3 m of the target for 5s (Cooldown 20s)"
-   // },
 
+
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    //purples
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    "Toxic Gunbarrel": {
       "rarity": "Rare",
       "polarity": "Rutile",
@@ -853,15 +799,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Weak Point Damage +40%, Accuracy -20%"
    },
-   // "Impact Rounds Compulsive": {
-   //    "rarity": "Rare",
-   //    "polarity": "Xantic",
-   //    "type": "Impact Rounds",
-   //    "cost": 4,
-   //    "category": "Rounds per Magazine",
-   //    "stats": {},
-   //    "desc": "Max Impact Rounds +15%, Movement Speed -5%"
-   // },
    "Compulsive Magazine": {
       "rarity": "Rare",
       "polarity": "Cerulean",
@@ -998,25 +935,12 @@ const impactRounds = {
       "desc": "Firearm ATK +62%, Fire Rate -25%"
    },
 
+
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    //BLUES
-   // "Special Round Projectile Modification": {
-   //    "rarity": "Normal",
-   //    "polarity": "Xantic",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "Rounds Conversion",
-   //    "stats": {},
-   //    "desc": "When acquiring dropped Special Rounds, change to 1 Impact Round for every 60 Rounds."
-   // },
-   // "General Round Projectile Modification": {
-   //    "rarity": "Normal",
-   //    "polarity": "Xantic",
-   //    "type": "Impact Rounds",
-   //    "cost": 5,
-   //    "category": "Rounds Conversion",
-   //    "stats": {},
-   //    "desc": "When acquiring dropped General Rounds, change to 1 Impact Round for every 100 Rounds."
-   // },
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    "Weak Point Sight": {
       "rarity": "Normal",
       "polarity": "Malachite",
@@ -1031,15 +955,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Weak Point Damage +35%"
    },
-   // "Colon Special Forces": {
-   //    "rarity": "Normal",
-   //    "polarity": "Malachite",
-   //    "type": "Impact Rounds",
-   //    "cost": 6,
-   //    "category": "",
-   //    "stats": {},
-   //    "desc": "5% Movement Speed When Aiming"
-   // },
    "Better Concentration": {
       "rarity": "Normal",
       "polarity": "Almandine",
@@ -1082,24 +997,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Reload Time Modifier +30%"
    },
-   // "Better Weapon Weight": {
-   //    "rarity": "Normal",
-   //    "polarity": "Almandine",
-   //    "type": "Impact Rounds",
-   //    "cost": 4,
-   //    "category": "",
-   //    "stats": {},
-   //    "desc": "Weapon Change Speed +6%"
-   // },
-   // "Expand Impact Magazine": {
-   //    "rarity": "Normal",
-   //    "polarity": "Xantic",
-   //    "type": "Impact Rounds",
-   //    "cost": 4,
-   //    "category": "",
-   //    "stats": {},
-   //    "desc": "Max Impact Rounds +13%"
-   // },
    "Chill Enhancement": {
       "rarity": "Normal",
       "polarity": "Cerulean",
@@ -1114,15 +1011,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Adds Chill ATK equal to 30% of Firearm ATK"
    },
-   // "Hawk-Eye": {
-   //    "rarity": "Normal",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 4,
-   //    "category": "",
-   //    "stats": {},
-   //    "desc": "Accuracy +11%"
-   // },
    "Better Insight": {
       "rarity": "Normal",
       "polarity": "Almandine",
@@ -1179,15 +1067,6 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Adds Fire ATK equal to 30% of Firearm ATK"
    },
-   // "Vibration Absorption": {
-   //    "rarity": "Normal",
-   //    "polarity": "Rutile",
-   //    "type": "Impact Rounds",
-   //    "cost": 4,
-   //    "category": "",
-   //    "stats": {},
-   //    "desc": "Recoil -11%"
-   // },
    "Fire Rate UP": {
       "rarity": "Normal",
       "polarity": "Xantic",
@@ -1196,7 +1075,6 @@ const impactRounds = {
       "category": "Fire Rate",
       "stats": {
          "FireRate": -0.25,
-         // "FireRate": -0.245,
       },
       "tags": [],
       "inclusion": [],
@@ -1217,6 +1095,19 @@ const impactRounds = {
       "exclusion": [],
       "desc": "Firearm ATK +32%"
    },   
+
+
+
+
+
+
+
+
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
+   //MODS ADDED LATER
+   //---------------------------------------------------------------
+   //---------------------------------------------------------------
    "Charge Amplification": {
       "rarity": "Rare",
       "polarity": "Malachite",
@@ -1261,21 +1152,23 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "TypeBonus","value": 0.0581,"subStackValue": null},
-               {"name": "WeakPointDamage%","value": 0.04,"subStackValue": null},
+               {"name": "TypeBonusCORE","value": 0.0581,"subStackValue": null},
+               {"name": "WeakPointDamage%CORE","value": 0.04,"subStackValue": null},
             ],
             "bonusName": "Overwhelm",
-            "oneTimeOrStack": "durationStack",
+            "oneTimeOrStack": "duration",
             "limit": 10,
             "cooldown": 20,
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": ["isAdvantage"],
             "skipFirstShot": true,
          }
       ],
-      "tags": ["TypeBonus","WeakPointDamage%"],
+      "tags": ["TypeBonusCORE","WeakPointDamage%CORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Upon hitting with Advantage Affinity, increases Weak Point Damage by 4% and Advantage Affinity Dammage Coefficient by 5.81% for 5 seconds (max 10 stacks, loses 2 stacks on failure, cooldown 20s)."
@@ -1291,7 +1184,7 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "FireATK%Bonus","value": 0.896,"subStackValue": null},
+               {"name": "FireATK%BonusCORE","value": 0.896,"subStackValue": null},
             ],
             "bonusName": "Heat Circulation",
             "oneTimeOrStack": "duration",
@@ -1300,11 +1193,13 @@ const impactRounds = {
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
             "skipFirstShot": true,
          }
       ],
-      "tags": ["FireATK%Bonus"],
+      "tags": ["FireATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
@@ -1320,7 +1215,7 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "ChillATK%Bonus","value": 0.896,"subStackValue": null},
+               {"name": "ChillATK%BonusCORE","value": 0.896,"subStackValue": null},
             ],
             "bonusName": "Chill Circulation",
             "oneTimeOrStack": "duration",
@@ -1329,11 +1224,13 @@ const impactRounds = {
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
             "skipFirstShot": true,
          }
       ],
-      "tags": ["ChillATK%Bonus"],
+      "tags": ["ChillATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
@@ -1349,7 +1246,7 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "ElectricATK%Bonus","value": 0.896,"subStackValue": null},
+               {"name": "ElectricATK%BonusCORE","value": 0.896,"subStackValue": null},
             ],
             "bonusName": "Electric Circulation",
             "oneTimeOrStack": "duration",
@@ -1358,11 +1255,13 @@ const impactRounds = {
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
             "skipFirstShot": true,
          }
       ],
-      "tags": ["ElectricATK%Bonus"],
+      "tags": ["ElectricATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
@@ -1378,7 +1277,7 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "ToxicATK%Bonus","value": 0.896,"subStackValue": null},
+               {"name": "ToxicATK%BonusCORE","value": 0.896,"subStackValue": null},
             ],
             "bonusName": "Toxic Circulation",
             "oneTimeOrStack": "duration",
@@ -1387,11 +1286,13 @@ const impactRounds = {
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
             "skipFirstShot": true,
          }
       ],
-      "tags": ["ToxicATK%Bonus"],
+      "tags": ["ToxicATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
@@ -1407,22 +1308,238 @@ const impactRounds = {
       "complexBonus": [
          {
             "stats": [
-               {"name": "WeakPointDamage%","value": 0.045,"subStackValue": null},
+               {"name": "WeakPointDamage%CORE","value": 0.045,"subStackValue": null},
             ],
             "bonusName": "Ultra-Precision Strike",
-            "oneTimeOrStack": "durationStack",
+            "oneTimeOrStack": "duration",
             "limit": 20,
             "cooldown": 15,
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": ["isAdvantage"],
             "skipFirstShot": true,
          }
       ],
-      "tags": ["WeakPointDamage%"],
+      "tags": ["WeakPointDamage%CORE"],
       "inclusion": [],
       "exclusion": [],
       "desc": "Successful Advantage Affinity: Weak Point Damage +4.5% for 5s (up to 20 stacks, cooldown 15s). Failed Weak Point Attack during the effect: Firearm ATK -1.95% (up to 20 stacks)."
    },
+   "Lethal Finish": {//done
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "Impact Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "desc": "When firing a firearm, ammo with an additional 60% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -12.4s However, the firearm's base Weak Point Damage is Fixed at 100%",
+      "stats": {
+         "WeakPointOverride": 1,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "FirearmCritRateBase","value": 0.60,"subStackValue": null},
+               ],
+               "bonusName": "Lethal Finish (High-Powered)",
+               "oneTimeOrStack": "cooldown",
+               "limit": 1,
+               "isDurationActive": true,
+               "isCooldownActive": false,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               "cooldown": 15,
+         }
+      ],
+      "tags": ["FirearmCritRateBase","WeakPointOverride"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   //GOLDS
+   // "Defense Master": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 6,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "When defeating an enemy, DEF +128.3% for 10s (Cooldown 25s)"
+   // },
+   // "Hardline Suppression": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 11,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "On Weak Point hit, 18% Chance to Knockdown target"
+   // },
+   // "Dopaminergic Activate": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Almandine",
+   //    "type": "Impact Rounds",
+   //    "cost": 6,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "On Weak Point hit, Firearm Critical Hit Rate +45.5%, Firearm Critical Hit Damage +69.7% (Cooldown 5s)"
+   // },
+   // "Better Weapon Weight [U]": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 6,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "Weapon Change Speed +25% When changing weapons, DEF +32% for 5s (cooldown 15s)"
+   // },
+   // "Venom Injector": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 5,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "When defeating an enemy inflicted with Poison, inflicts Poison on other enemies within 3 m of the target for 5s (Cooldown 20s)"
+   // },
+   // "Remote Generator": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Xantic",
+   //    "type": "Impact Rounds",
+   //    "cost": 5,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "When defeating an enemy inflicted with Electrocution, inflicts Electrocution on other enemies within 3 m of the target for 3s (Cooldown 20s)"
+   // },
+   // "Quick Freezer ": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Cerulean",
+   //    "type": "Impact Rounds",
+   //    "cost": 5,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "When defeating an enemy inflicted with Frostbite, inflicts Frostbite on other enemies within 3m of the target for 0.8s (Cooldown 5s)"
+   // },
+   // "Heat Incinerator": {
+   //    "rarity": "Ultimate",
+   //    "polarity": "Almandine",
+   //    "type": "Impact Rounds",
+   //    "cost": 5,
+   //    "category": "Special Mod",
+   //    "stats": {},
+   //    "desc": "When defeating an enemy inflicted wtih Burn, inflicts Burn on other enemies within 3 m of the target for 5s (Cooldown 20s)"
+   // },
+
+
+
+
+
+
+
+   //PURPLES
+   // "Impact Rounds Compulsive": {
+   //    "rarity": "Rare",
+   //    "polarity": "Xantic",
+   //    "type": "Impact Rounds",
+   //    "cost": 4,
+   //    "category": "Rounds per Magazine",
+   //    "stats": {},
+   //    "desc": "Max Impact Rounds +15%, Movement Speed -5%"
+   // },
+
+
+
+
+
+
+
+
+   //BLUES
+   // "Special Round Projectile Modification": {
+   //    "rarity": "Normal",
+   //    "polarity": "Xantic",
+   //    "type": "Impact Rounds",
+   //    "cost": 6,
+   //    "category": "Rounds Conversion",
+   //    "stats": {},
+   //    "desc": "When acquiring dropped Special Rounds, change to 1 Impact Round for every 60 Rounds."
+   // },
+   // "General Round Projectile Modification": {
+   //    "rarity": "Normal",
+   //    "polarity": "Xantic",
+   //    "type": "Impact Rounds",
+   //    "cost": 5,
+   //    "category": "Rounds Conversion",
+   //    "stats": {},
+   //    "desc": "When acquiring dropped General Rounds, change to 1 Impact Round for every 100 Rounds."
+   // },
+   // "Colon Special Forces": {
+   //    "rarity": "Normal",
+   //    "polarity": "Malachite",
+   //    "type": "Impact Rounds",
+   //    "cost": 6,
+   //    "category": "",
+   //    "stats": {},
+   //    "desc": "5% Movement Speed When Aiming"
+   // },
+   // "Better Weapon Weight": {
+   //    "rarity": "Normal",
+   //    "polarity": "Almandine",
+   //    "type": "Impact Rounds",
+   //    "cost": 4,
+   //    "category": "",
+   //    "stats": {},
+   //    "desc": "Weapon Change Speed +6%"
+   // },
+   // "Expand Impact Magazine": {
+   //    "rarity": "Normal",
+   //    "polarity": "Xantic",
+   //    "type": "Impact Rounds",
+   //    "cost": 4,
+   //    "category": "",
+   //    "stats": {},
+   //    "desc": "Max Impact Rounds +13%"
+   // },
+   // "Hawk-Eye": {
+   //    "rarity": "Normal",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 4,
+   //    "category": "",
+   //    "stats": {},
+   //    "desc": "Accuracy +11%"
+   // },
+   // "Vibration Absorption": {
+   //    "rarity": "Normal",
+   //    "polarity": "Rutile",
+   //    "type": "Impact Rounds",
+   //    "cost": 4,
+   //    "category": "",
+   //    "stats": {},
+   //    "desc": "Recoil -11%"
+   // },
+
+
+
+
+
+
+
+
 }

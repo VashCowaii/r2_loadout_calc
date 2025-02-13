@@ -81,6 +81,11 @@ let globalRecords = {
         "coreRoll3Value": 0,
         "coreRoll4Value": 0,
         "coreRoll5Value": 0,
+
+        "USEWeaponReloads": true,
+        "USEMagazineCount": 1,
+        "USEWeaponReloadsCustom": false,
+        "USEWeaponReloadsCustomTimer": 1,
     },
     "boss": {
         "currentBoss": "VoidBattle_Devourer_Hard",
@@ -92,7 +97,10 @@ let globalRecords = {
     "teamBuffs": {
         "stats": {},
         "tags": [],
-        "Luna": {},
+    },
+    "enemyBuffs": {
+        "stats": {},
+        "tags": [],
     },
     "currentDisplayMode": 1,
     "weaponCritCeiling": 0,

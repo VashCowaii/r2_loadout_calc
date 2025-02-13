@@ -31,7 +31,8 @@ const greatTableKnowerOfAll = {
     "SkillRange": 0,
 
     //BASE OPTIMIZATION POWER BONUS
-    "PowerOptimization": 0,
+    "PowerOptimization": 0,"PowerOptimizationCORE": 0,//core bonuses are not applied to unique weapons. This isn't actually from a core, rather something like Secret Garden, but it needs to skip unique weapons so we use CORE suffix here
+    "TemporarySkillMultiplier": 0,//for use with dynamic scaling skill dependent modifiers for the getTotalSkillPower function. Otherwise, this stat should always be 0, shit will break if that is not the case.
     //SKILL ATK BONUSES
     "SkillAttackColossus": 0,
     //SKILL POWER BOOST RATIOS
@@ -66,23 +67,31 @@ const greatTableKnowerOfAll = {
     //GUNS
     "ColossusATK": 0,"ColossusATKCORE": 0,
     "ColossusATK%": 0,"ColossusATK%CORE": 0,
+    "VulgusATK": 0,"VulgusATKCORE": 0,
+    "VulgusATK%": 0,"VulgusATK%CORE": 0,
     "FirearmATK%": 0,"FirearmATK%CORE": 0,
+    "ExplosiveATK%": 0,"ExplosiveATK%CORE": 0,
+    "ExplosionRadius%": 0,"ExplosionRadius%CORE": 0,
     "FirearmATK%OnHit": 0,"FirearmATK%OnHitCORE": 0,
     "TypeBonus": 0,"TypeBonusCORE": 0,
     "BaseWeakPointBonus": 0,"BaseWeakPointBonusCORE": 0,
     "WeakPointDamage%": 0,"WeakPointDamage%CORE": 0,
+    "WeakPointOverride": 0,"WeakPointOverrideCORE": 0,
 
     "BulletCostWeapon": 1,"BulletCostWeaponCORE": 1,
     "ShellCapacity": 0,"ShellCapacityCORE": 0,
     "ShellCapacityBase": 0,"ShellCapacityBaseCORE": 0,
     "StatusTriggerRate": 0,"StatusTriggerRateCORE": 0,
+    "StatusTriggerRateBase": 0,"StatusTriggerRateBaseCORE": 0,
 
     "FireRate": 0,"FireRateCORE": 0,
+    "FireRateOverride": 0,
     "FireRateMulti": 0,"FireRateMultiCORE": 0,
     "Accuracy": 1,"AccuracyCORE": 1,
     "Recoil": 1,"RecoilCORE": 1,
     "ReloadSpeed": 0,"ReloadSpeedCORE": 0,
     "MagazineSize": 0,"MagazineSizeCORE": 0,
+    "SkipReload": 0,"SkipReloadCORE": 0,
 
     "SwapSpeed": 0,"SwapSpeedCORE": 0,
 
@@ -108,11 +117,11 @@ const greatTableKnowerOfAll = {
     "enemyCritResistReductionFirearm": 0,
     "enemyCritResistReductionSkill": 0,
 
-    "enemyDEFResistanceReduction": 0,
-    "enemyNonAttributeResistanceReduction": 0,
-    "enemyElectricResistanceReduction": 0,
-    "enemyToxicResistanceReduction": 0,
-    "enemyChillResistanceReduction": 0,
-    "enemyFireResistanceReduction": 0,
+    "enemyDEFResistanceReduction": 0,"enemyDEFResistanceReductionCORE": 0,
+    "enemyNonAttributeResistanceReduction": 0,"enemyNonAttributeResistanceReductionCORE": 0,
+    "enemyElectricResistanceReduction": 0,"enemyElectricResistanceReductionCORE": 0,
+    "enemyToxicResistanceReduction": 0,"enemyToxicResistanceReductionCORE": 0,
+    "enemyChillResistanceReduction": 0,"enemyChillResistanceReductionCORE": 0,
+    "enemyFireResistanceReduction": 0,"enemyFireResistanceReductionCORE": 0,
 
 }

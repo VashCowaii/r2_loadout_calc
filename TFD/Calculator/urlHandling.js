@@ -505,6 +505,7 @@ let manipulateURL = {
             const ammoKeys = Object.keys(reactorAmmoList);
             
             urlReactor = urlReactor.split(",");
+            if (!urlReactor[0]) {urlReactor[0] = "";}
 
             reactorRef.currentAttribute = attributeKeys[+urlReactor[0][0]];
             reactorRef.currentAttributeID = `reactor${reactorRef.currentAttribute.replace(/-/g, "")}`;
@@ -519,10 +520,10 @@ let manipulateURL = {
 
             reactorRef.weaponMatched = +urlReactor[0][7] === 1 ? true : false;//reactor optimization condition
             readSelection("USEReactorOptimization").checked = reactorRef.weaponMatched;
-            globalRecords.currentDisplayMode = +urlReactor[0][8] || 1;
+            globalRecords.currentDisplayMode = +urlReactor[0][8] ?? 1;
 
-            readSelection("reactorLevelSlider").value = +urlReactor[0][9] || 2;
-            readSelection("USEReactorUltimate").checked = +urlReactor[0][10] ? true : false;
+            readSelection("reactorLevelSlider").value = +urlReactor[0][9] ?? 2;
+            readSelection("USEReactorUltimate").checked = (+urlReactor[0][10] ?? 1) ? true : false;
 
 
 
@@ -543,14 +544,19 @@ let manipulateURL = {
             globalRecords.boss.currentBossPart = partsArray[+`${urlReactor[0][13] || 0}${urlReactor[0][14] || 0}`];
 
             // userTriggers.updateSelectedBoss();
-            readSelection("boss").value = bossData[globalRecords.boss.currentBoss].displayName;
-            readSelection("bossPart").value = globalRecords.boss.currentBossPart;
-            userTriggers.updateSelectedBoss();
+            let bossValueRef = bossData[globalRecords.boss.currentBoss].displayName;
+            let partValueRef = globalRecords.boss.currentBossPart;
+            userTriggers.updateSelectedBoss(true);
+            readSelection("boss").value = bossValueRef;
+            readSelection("bossPart").value = partValueRef;
+            userTriggers.updateSelectedBoss(true);
             
             // let reactorBossString = `${bossKeys.indexOf(globalRecords.boss.currentBoss).toString().padStart(2,'0')}${partsArray.indexOf(globalRecords.boss.currentBossPart).toString().padStart(2,'0')}`
 
-            reactorRef.subRoll1Value = +urlReactor[1];
-            reactorRef.subRoll2Value = +urlReactor[2];
+            if (!urlReactor[1]) {urlReactor[1] = "";}
+            if (!urlReactor[2]) {urlReactor[2] = "";}
+            reactorRef.subRoll1Value = +urlReactor[1] || 0;
+            reactorRef.subRoll2Value = +urlReactor[2] || 0;
             userTriggers.updateReactorSelections(null,null,null,true);
         }
 

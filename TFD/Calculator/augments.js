@@ -524,5 +524,61 @@ const augments = {
         "desc": "Changes to a skill that quickly dashes toward enemies. Deals damage and inflicts Conductor on all enemies in the path. Reduces the number of bounces on Chain Lighthing and modifies it to be stackable. Modifies the arches type of the modified skills to Tech.",
         "skillOverrides": ["Time of the Hunting Hounds",0,"Time of the Hunting Hounds",0,0]
     },
+
+    //GLEY
+    "Predator Instinct": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Gley",
+        "desc": "Using a firearm while Frenzied gradually increases Firearm ATK.",
+        "skillOverrides": ["Predator Instinct",0,0,0,0]
+    },
+    "Blood and Iron": {
+        "rarity": "Transcendant",
+        "polarity": "Xantic",
+        "type": "Descendant",
+        "cost": 5,
+        "category": "Gley",
+        "desc": "Life Spheres can no longer be acquired with the Thirst effect. Instead, Power of Life can be obtained when attacks land Firearm Critical Hits.",
+        "skillOverrides": [0,0,0,0,"Blood and Iron"]
+    },
+    "Massive Sanguification": {
+        "rarity": "Transcendant",
+        "polarity": "Almandine",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Gley",
+        "desc": "Modifies Life Siphon to allow the absorption of Life Spheres during the Non-Frenzied state.",
+        "skillOverrides": [0,"Massive Sanguification",0,0,0]
+    },
+    "Explosive Life": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 6,
+        "category": "Gley",
+        "desc": "The chance to create a Life Sphere is slightly increased. Detonates all nearby Life Spheres to deal damage instead of absorbing HP. Recovers Power of Life based on the number of spheres exploded.",
+        "skillOverrides": [0,"Explosive Life",0,0,"Explosive Life"]
+    },
+    "Demonic Modification": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Gley",
+        "desc": "Unique Weapon has a fixed Fire Rate and consumes HP based on the duration of True Aim. Bullets deal additional damage proportional to the HP consumed, and attacking Weak Points increases the chance of HP Recovery.",
+        "skillOverrides": [0,0,0,"Demonic Modification",0]
+    },
+    "Super Senses": {
+        "rarity": "Transcendant",
+        "polarity": "Malachite",
+        "type": "Descendant",
+        "cost": 3,
+        "category": "Gley",
+        "desc": "Modifies the effects of Frenzied state's Maximize Lethality. Fire Rate becomes fixed, but Duration increases significantly.",
+        "skillOverrides": [0,0,"Super Senses",0,0]
+    },
     ...localInsertionAugments
 }

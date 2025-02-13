@@ -191,16 +191,16 @@ let tableGeneration = {
             levelString += `<tr class="attackRow">
                 <td data-name="Level:">${level}</td>
 
-                <td data-name="Non-Attribute Power:">${(+currentReference["Non-Attribute Power"]*100).toFixed(1)}%</td>
-                <td data-name="Fire Power:">${(+currentReference["Fire Power"]*100).toFixed(1)}%</td>
-                <td data-name="Chill Power:">${(+currentReference["Chill Power"]*100).toFixed(1)}%</td>
-                <td data-name="Electric Power:">${(+currentReference["Electric Power"]*100).toFixed(1)}%</td>
-                <td data-name="Toxic Power:">${(+currentReference["Toxic Power"]*100).toFixed(1)}%</td>
+                <td data-name="Non-Attribute Power:">${(+currentReference["PowerRatioNonAttribute"]*100).toFixed(1)}%</td>
+                <td data-name="Fire Power:">${(+currentReference["PowerRatioFire"]*100).toFixed(1)}%</td>
+                <td data-name="Chill Power:">${(+currentReference["PowerRatioChill"]*100).toFixed(1)}%</td>
+                <td data-name="Electric Power:">${(+currentReference["PowerRatioElectric"]*100).toFixed(1)}%</td>
+                <td data-name="Toxic Power:">${(+currentReference["PowerRatioToxic"]*100).toFixed(1)}%</td>
 
-                <td data-name="Firearm Fire%:">${(+currentReference["Firearm Fire%"]*100).toFixed(1)}%</td>
-                <td data-name="Firearm Chill%:">${(+currentReference["Firearm Chill%"]*100).toFixed(1)}%</td>
-                <td data-name="Firearm Electric%:">${(+currentReference["Firearm Electric%"]*100).toFixed(1)}%</td>
-                <td data-name="Firearm Toxic%:">${(+currentReference["Firearm Toxin%"]*100).toFixed(1)}%</td>
+                <td data-name="Firearm Fire%:">${(+currentReference["FireATK%Bonus"]*100).toFixed(1)}%</td>
+                <td data-name="Firearm Chill%:">${(+currentReference["ChillATK%Bonus"]*100).toFixed(1)}%</td>
+                <td data-name="Firearm Electric%:">${(+currentReference["ElectricATK%Bonus"]*100).toFixed(1)}%</td>
+                <td data-name="Firearm Toxic%:">${(+currentReference["ToxicATK%Bonus"]*100).toFixed(1)}%</td>
             </tr>`
         }
 
