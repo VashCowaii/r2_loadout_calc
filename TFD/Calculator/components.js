@@ -1001,6 +1001,7 @@ const componentSetBonuses = {
             "stats": {},
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Supernova": {
         "2pc": {
@@ -1018,6 +1019,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Annihilation": {
         "2pc": {
@@ -1036,6 +1038,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Slayer": {
         "2pc": {
@@ -1054,6 +1057,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Polar Night": {
         "2pc": {
@@ -1068,9 +1072,11 @@ const componentSetBonuses = {
             "stats": {
                 //TODO: weapon crit dmg
                 "SkillCritDamage": 0.60,
+                "FirearmCritDamage": 0.17,
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Venom Essence": {
         "2pc": {
@@ -1088,6 +1094,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Bravery": {
         "2pc": {
@@ -1105,6 +1112,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Frozen Heart": {
         "2pc": {
@@ -1121,6 +1129,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Volcanic": {
         "2pc": {
@@ -1137,6 +1146,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Hungry Sonic": {
         "2pc": {
@@ -1154,6 +1164,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Acrobat": {
         "2pc": {
@@ -1172,6 +1183,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Swamp Recon": {
         "2pc": {
@@ -1189,6 +1201,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Veteran Marksman": {
         "2pc": {
@@ -1206,6 +1219,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Predator": {
         "2pc": {
@@ -1223,6 +1237,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Glacial": {
         "2pc": {
@@ -1240,6 +1255,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Decimator": {
         "2pc": {
@@ -1257,6 +1273,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Battle Aesthetics": {
         "2pc": {
@@ -1274,6 +1291,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "Tomb Vanguard": {
         "2pc": {
@@ -1291,6 +1309,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Rare",
     },
     "DEF Support": {
         "2pc": {
@@ -1303,6 +1322,7 @@ const componentSetBonuses = {
             "stats": {},
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Shield Support": {
         "2pc": {
@@ -1315,6 +1335,7 @@ const componentSetBonuses = {
             "stats": {},
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "HP Support": {
         "2pc": {
@@ -1327,6 +1348,7 @@ const componentSetBonuses = {
             "stats": {},
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Distorted Resolve": {
         "2pc": {
@@ -1341,6 +1363,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Invader": {
         "2pc": {
@@ -1359,6 +1382,7 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
     "Hunter": {
         "2pc": {
@@ -1377,5 +1401,6 @@ const componentSetBonuses = {
             },
             "tags": [],
         },
+        "rarity": "Ultimate",
     },
 }

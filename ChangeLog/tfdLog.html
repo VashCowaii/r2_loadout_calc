@@ -6,6 +6,122 @@
     </ul>
 </div> -->
 <div>
+    <h1>Feb 13, 2024 - THE DPS UPDATE [Part 1]</h1>
+    <ul>
+        <h3>CORES X</h3>
+        <li>Updated and added values for all cores up to Tier X</li>
+
+        <h3>COMPARISONS</h3>
+        <li>Added AVG DPS as an option for weapons comparison aspects.</li>
+        <li>Added the ability to compare weapon core choices against all others in the comparison tool. The comparisons will only show other options based on the color of the core slot you're comparing against, versus what you have selected in that slot already.</li>
+        <li>Added "buttons" to click/tap on the comparisons for easily accessed swaps between targets, instead of needing to use the dropdown every time. This is currently available for the following comparison types:
+            <ul>
+                <li>Abilities</li>
+                <li>Abilities - Weapon Based</li>
+                <li>Abilities - Reactor Rolls</li>
+                <li>Character Stats</li>
+                <li>Weapons - Mods</li>
+                <li>Weapons - Substats</li>
+                <li>Weapons - Cores</li>
+            </ul>
+        </li>
+        <li>Updated handling on the following comparisons to ignore duplicates of the stat in the other slot so it doesn't try to tell you to equip colossus ATK twice anymore:
+            <ul>
+                <li>Reactor Rolls</li>
+                <li>Weapon Substats</li>
+            </ul>
+        </li>
+
+        <h3>RELOAD & DPS</h3>
+        <li>Added DPS metrics to all currently supported weapons with the exception of Burst Rifles, which will come later.</li>
+        <li>Added the ability to specify whether you want your weapon to be evaluated with a reload afterwards for the sake of DPS.</li>
+        <li>Added the ability to specify the number of magazines you want to use when factoring your weapon damage across a larger spread of reloads and time.</li>
+        <li>Added the ability to specify an early breakpoint for reloading. So if you want to only shoot for 2 seconds then immediately reload, you can toggle custom reloads and specify that time.</li>
+
+        <h3>GENERAL & CALC</h3>
+        <li>Added the following new statistics to weapon substats and cores:
+            <ul>
+                <li>Bonus ATK (Vulgus) [subs]</li>
+                <li>Bonus ATK (Vulgus) [core]</li>
+            </ul>
+        </li>
+        <li>Added Void Erosion Purge modifiers to the Buffs tab under enemy buffs so you can select level 21-30 modifier penalties to apply to your build if you want to build around that specifically.</li>
+        <li>Added missing mods, or improved functionality relating to the newly added reload code, on the following weapon modules:
+            <ul>
+                <li>Descendant Roll (New)</li>
+                <li>Recycling Genius (New)</li>
+                <li>Dopaminergic Activate (New)</li>
+                <li>Lethal Finish (New)</li>
+
+                <li>Strengthen First Shot</li>
+                <li>Firing Fiesta</li>
+            </ul>
+        </li>
+        <li>Updated the following mod functionality for use with Bullet Simulations, whereas before they gave flat bonuses which were not accurate:
+            <ul>
+                <li>Accelerated Driveshaft</li>
+                <li>Improve Driveshaft</li>
+            </ul>
+        </li>
+        <li>Improved conditionals on the following modules:
+            <ul>
+                <li>Payout - now only applies to bullet simulations that include firearm damage. Skills that only deal skill damage, can't proc it, but skills that do, will.</li>
+            </ul>
+        </li>
+        <li>Added the following new weapons:
+            <ul>
+                <li>Python</li>
+                <li>Blue Blood Bloomer</li>
+                <li>Firefly</li>
+            </ul>
+        </li>
+        <li>Added the following new enemy selections:
+            <ul>
+                <li>Lgn. [260] Truth</li>
+                <li>Lgn. [260] Immortality</li>
+                <li>Lgn. [260] Darkness</li>
+            </ul>
+        </li>
+        <li>Clicking a mod row will now auto-focus the text input related to that module. Also, when entering a mod name into the aforementioned text box, after submitting the new mod name, the displayed mod tab will cycle to the next module and also auto-focus the next text box. This should help cycle inputs faster and make it less tedious.</li>
+        <li>Ultimate weapon ability bonuses will no longer apply to unique weapons within the calculator. AKA: Secret Garden will no longer populate within unique ability weapons, as it doesn't in game either.</li>
+        <li>Weapon substats now recolor according to their rarity bracket: blue, purple, and gold.</li>
+        <li>Reactor, weapon, and component tabs now recolor based on their rarity, between Ultimate and Purple</li>
+        <li>Added the perfect release damage multiplier toggle to Ines' 3rd ability when Time of the Hunting Hounds is equipped, in-line with recent fixes to the game.</li>
+
+        <h3>REACTOR FARMS</h3>
+        <li>Updated farm ratings on some locations.</li>
+        <li>Fixed an error that prevented component filters from functioning properly.</li>
+
+        <h3>EROSIONS</h3>
+        <li>Updated the erosion level modifiers to reflect the recent changes to on-attribute scaling for firearms.</li>
+
+        <h3>FIXES, CHANGES & OPTIMIZATION</h3>
+        <li>Updated the "Team" tab name to "Buffs" instead.</li>
+        <li>Optimized handling for limited duration ability weapon like Overkill, Baptism, etc. Before we were doing things in a way that could cause some major lag as each input was modified, now that shouldn't be an issue anymore.</li>
+        <li>Fixed an issue where some modules with special functions would apply to a unique weapon, but not a regular weapon afterwards, if a character with a unique weapon was equipped.</li>
+        <li>Fixed an issue where if a build was loaded from an existing link URL parameter, the boss parts list wouldn't populate properly based on the selected boss until the boss was removed and reselected.</li>
+        <li>Fixed an issue where skill duration on a reactor roll didn't always properly factor on some skills that were calculated early for bonuses</li>
+        <li>Fixed an issue where if no weapon was selected, the bullet chart still tried to chart out each shot, but couldn't, and would display errors on the browser console. This was purely visual and didn't impact performance in any way, but I had meant to fix this for a while.</li>
+        <li>Fixed an error where if you tried to select the same reactor substat twice on a single reactor, it could break the comparison function. Results would still generate, but the result it was comparing against was the same for each one afterwards even if you changed it something different.</li>
+        <li>Fixed an issue where Fusion Integration didn't have a rarity specified, and when selected didn't color the mod slot correctly.</li>
+        <li>Fixed an issue where Fusion and Singular integration displayed the incorrect polarity symbols.</li>
+        <li>Further improved bullet simulation logic across the board, added the ability to handle various different things that we'll talk about later.</li>
+    </ul>
+</div>
+<div>
+    <h1>Feb 6, 2024</h1>
+    <ul>
+        <h3>EROSIONS</h3>
+        <li>Added a new page to the resources tab that breaks down every modifier in each Void Erosion Purge level.</li>
+    </ul>
+</div>
+<div>
+    <h1>Jan 30, 2024</h1>
+    <ul>
+        <li>Added colossus stagger, frenzy, and rage values/ranges.</li>
+    </ul>
+</div>
+<div>
     <h1>Jan 22, 2024</h1>
     <ul>
         <li>Fixed an issue where old links prior to yesterday's update, didn't always populate correctly due to missing the new URL paramters</li>

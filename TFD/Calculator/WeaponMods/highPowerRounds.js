@@ -12,21 +12,12 @@ const highPowerRounds = {
         "exclusion": [],
     },
 
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     //GOLDS
-    // "Defense Master": {//NA
-    //     "rarity": "Ultimate",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "Special Mod",
-    //     "desc": "When defeating an enemy, DEF +120% for 10s (Cooldown 15s)",
-    //     "stats": {
-    //         "DEF%": 1.2
-    //     },
-        // "inclusion": [],
-        // "exclusion": [],
-    // },
-    "Real-Life Fighter": {
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
+    "Real-Life Fighter": {//done for reloads
         "rarity": "Ultimate",
         "polarity": "Malachite",
         "type": "High-Power Rounds",
@@ -45,6 +36,9 @@ const highPowerRounds = {
                 "oneTimeOrStack": "stack",
                 "limit": 10,
                 "cooldown": 0,
+                "duration": 5,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
                 "conditions": ["isWeakpoint"],
             }
         ],
@@ -52,19 +46,7 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Lethal Finish": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Almandine",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "Special Mod",
-    //     "desc": "When firing a firearm, ammo with an additional 45% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -12.4s However, the firearm's base Weak Point Damage is Fixed at 100%",
-    //     "stats": {},//NA for now
-        // "inclusion": [],
-        // "exclusion": [],
-    // },
-    
-    "Strengthen First Shot": {
+    "Strengthen First Shot": {//done for reloads
         "rarity": "Ultimate",
         "polarity": "Malachite",
         "type": "High-Power Rounds",
@@ -81,7 +63,10 @@ const highPowerRounds = {
                 "bonusName": "Strengthen First Shot",
                 "oneTimeOrStack": "cooldown",
                 "limit": 1,
-                "cooldown": 30,//having it at 30 for now until I can add reload factors
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "conditions": ["isReloaded"],
+                "cooldown": 10,
             }
         ],
         "tags": ["FirearmATK%"],
@@ -102,18 +87,7 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Descendant Roll": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When rolling, auto-reloads the active wepon at a 100% chance (Cooldown 15s)",
-    //     "stats": {},//NA for now
-        // "inclusion": [],
-        // "exclusion": [],
-    // },
-    "Weak Point Expansion": {
+    "Weak Point Expansion": {//done for reloads
         "rarity": "Ultimate",
         "polarity": "Malachite",
         "type": "High-Power Rounds",
@@ -129,14 +103,19 @@ const highPowerRounds = {
                 "bonusName": "Weak Point Expansion (High-Powered)",
                 "oneTimeOrStack": "cooldown",
                 "limit": 1,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
                 "cooldown": 10,
+                "conditions": ["isWeakpoint"],
             }
         ],
         "tags": ["WeakPointDamage%"],
         "inclusion": [],
         "exclusion": [],
     },
-    "Dopaminergic Activate": {
+    "Dopaminergic Activate": {//done for reloads
         "rarity": "Ultimate",
         "polarity": "Almandine",
         "type": "High-Power Rounds",
@@ -144,7 +123,24 @@ const highPowerRounds = {
         "category": "Special Mod",
         "desc": "On Weak Point hit, Firearm Critical Hit Rate +45.5%, Firearm Critical Hit Damage +59.3% (Cooldown 10s)",
         "stats": {},
-        "tags": [],
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmCritRate","value": 0.455,"subStackValue": null},
+                    {"name": "FirearmCritDamage","value": 0.593,"subStackValue": null},
+                ],
+                "bonusName": "Dopaminergic Activate (High-Powered)",
+                "oneTimeOrStack": "cooldown",
+                "limit": 1,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "cooldown": 10,
+                "conditions": ["isWeakpoint"],
+            }
+        ],
+        "tags": ["FirearmCritRate","FirearmCritDamage"],
         "inclusion": [],
         "exclusion": [],
     },
@@ -204,52 +200,19 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Quick Freezer": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Cerulean",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When defeating an enemy inflicted wtih Frostbite, inflicts Frostbite on other enemies within 8m of the target for 0.8s (Cooldown 20s)",
-    //     "stats": {},
-    // "inclusion": [],
-        // "exclusion": [],
-    // },
-    // "Venom Injector": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When defeating an enemy inflicted with Poison, inflicts Poison on other enemies within 8m of the target for 5s (Cooldown 20s)",
-    //     "stats": {},
-    // "inclusion": [],
-        // "exclusion": [],
-    // },
-    // "Remote Generator": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When defeating an enemy inficted with Electrocution, inflicts Electrocution on other enemies within 8m of the target for 3s (Cooldown 20s)",
-    //     "stats": {},
-    // "inclusion": [],
-        // "exclusion": [],
-    // },
-    // "Heat Incinerator": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Almandine",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When defeating an enemy inflicted with Burn, inflicts Burn on other enemies within 8m of the target for 5s (Cooldown 20s)",
-    //     "stats": {},
-    // "inclusion": [],
-        // "exclusion": [],
-    // },
 
+
+
+
+
+
+
+
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     //PURPLES
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     "Toxic Gunbarrel": {
         "rarity": "Rare",
         "polarity": "Rutile",
@@ -319,7 +282,7 @@ const highPowerRounds = {
         "desc": "Toxic ATK +50%, Reload Time Modifier -30%",
         "stats": {
             "ToxicATK%Bonus": 0.50,
-            "Reload": -0.30
+            "ReloadSpeed": -0.30
         },
         "tags": [],
         "inclusion": [],
@@ -334,7 +297,7 @@ const highPowerRounds = {
         "desc": "Electric ATK +50%, Reload Time Modifier -30%",
         "stats": {
             "ElectricATK%Bonus": 0.50,
-            "Reload": -0.30
+            "ReloadSpeed": -0.30
         },
         "tags": [],
         "inclusion": [],
@@ -349,7 +312,7 @@ const highPowerRounds = {
         "desc": "Chill ATK +50%, Reload Time Modifier -30%",
         "stats": {
             "ChillATK%Bonus": 0.50,
-            "Reload": -0.30
+            "ReloadSpeed": -0.30
         },
         "tags": [],
         "inclusion": [],
@@ -364,7 +327,7 @@ const highPowerRounds = {
         "desc": "Fire ATK +50%, Reload Time Modifier -30%",
         "stats": {
             "FireATK%Bonus": 0.50,
-            "Reload": -0.30
+            "ReloadSpeed": -0.30
         },
         "tags": [],
         "inclusion": [],
@@ -378,7 +341,7 @@ const highPowerRounds = {
         "category": "Reload Time Modifier",
         "desc": "Reload Time Modifier +25%, Firearm Critical Hit Rate +1%",
         "stats": {
-            "Reload": 0.25,
+            "ReloadSpeed": 0.25,
             "FirearmCritDamage": 0.01
         },
         "tags": [],
@@ -393,7 +356,7 @@ const highPowerRounds = {
         "category": "Reload Time Modifier",
         "desc": "Reload Time Modifier +25%, Firearm Critical Hit Damage +3.5%",
         "stats": {
-            "Reload": 0.25,
+            "ReloadSpeed": 0.25,
             "FirearmCritDamage": 0.035
         },
         "tags": [],
@@ -408,7 +371,7 @@ const highPowerRounds = {
         "category": "Reload Time Modifier",
         "desc": "Reload Time Modifier +25%, Weak Point Damage +2%",
         "stats": {
-            "Reload": 0.25,
+            "ReloadSpeed": 0.25,
             "WeakPointDamage%": 0.02
         },
         "tags": [],
@@ -423,7 +386,7 @@ const highPowerRounds = {
         "category": "Reload Time Modifier",
         "desc": "Reload Time Modifier +25%, Firearm ATK +1%",
         "stats": {
-            "Reload": 0.25,
+            "ReloadSpeed": 0.25,
             "FirearmATK%": 0.01
         },
         "tags": [],
@@ -694,7 +657,7 @@ const highPowerRounds = {
         "desc": "Firearm Critical Hit Damage +33.9%, Reload Time Modifier -30%",
         "stats": {
             "FirearmCritDamage": 0.339,
-            "Reload": -0.30
+            "ReloadSpeed": -0.30
         },
         "tags": [],
         "inclusion": [],
@@ -790,47 +753,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Action and Reaction (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "ATK, Launcher",
-    //     "desc": "Explosive ATK +61%, Recoil 20%"
-    // },
-    // "Slow Art (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "ATK, Launcher",
-    //     "desc": "Explosive ATK +44%, Fire Rate -25%"
-    // },
-    // "Anti-Matter Round (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Launcher",
-    //     "desc": "Explosive ATK +26%, Firearm Critical Hit Damage +3.5%"
-    // },
-    // "Pinpoint Shot (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Launcher",
-    //     "desc": "Explosive ATK +26%, Weak Point Damage +2%"
-    // },
-    // "Sharp Shooter (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 15,
-    //     "category": "ATK, Launcher",
-    //     "desc": "Explosive ATK +26%, Firearm Critical Hit Rate +1%"
-    // },
-    
     "Action and Reaction (Sniper)": {
         "rarity": "Rare",
         "polarity": "Malachite",
@@ -906,45 +828,12 @@ const highPowerRounds = {
         "inclusion": ["Sniper"],
         "exclusion": [],
     },
-    // "High-Power Rounds Compulsive": {
-    //     "rarity": "Rare",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 14,
-    //     "category": "",
-    //     "desc": "Max High-Power Rounds +60%, Movement Speed -20%",
-    //     "stats": {}
-    // },
 
-
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     //BLUES
-    // "Impact Round Charge Improvement": {
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 6,
-    //     "category": "Rounds Conversion",
-    //     "desc": "When acquiring dropped Impact Rounds, change to 1 High-Power Round for every 25 Rounds.",
-    //     "stats": {}
-    // },
-    // "Special Round Charge Improvement": {
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 6,
-    //     "category": "Rounds Conversion",
-    //     "desc": "When acquiring dropped Special Rounds, change to 1 High-Power Round for every 120 Rounds.",
-    //     "stats": {}
-    // },
-    // "General Round Charge Improvement": {
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 6,
-    //     "category": "Rounds Conversion",
-    //     "desc": "When acquiring dropped General Rounds, change to 1 High-Power Round for every 200 Rounds.",
-    //     "stats": {}
-    // },
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     "Weak Point Sight": {
         "rarity": "Normal",
         "polarity": "Malachite",
@@ -959,15 +848,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Colon Special Forces": {
-    //     "rarity": "Normal",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 11,
-    //     "category": "",
-    //     "desc": "+20% Movement Speed When Aiming",
-    //     "stats": {}//NA for now
-    // },
     "Better Concentration": {
         "rarity": "Normal",
         "polarity": "Almandine",
@@ -996,27 +876,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    
-    // "Recycling Genius": {
-    //     "rarity": "Normal",
-    //     "polarity": "Cerulean",
-    //     "type": "High-Power Rounds",
-    //     "cost": 14,
-    //     "category": "",
-    //     "desc": "Reload Time Modifier +30%",
-    //     "stats": {
-    //         "ReloadSpeed": 0.30
-    //     }
-    // },
-    // "Better Weapon Weight": {
-    //     "rarity": "Normal",
-    //     "polarity": "Almandine",
-    //     "type": "High-Power Rounds",
-    //     "cost": 11,
-    //     "category": "",
-    //     "desc": "Weapon Change Speed +25%",
-    //     "stats": {}//NA for now
-    // },
     "Chill Enhancement": {
         "rarity": "Normal",
         "polarity": "Cerulean",
@@ -1031,17 +890,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Hawk-Eye": {
-    //     "rarity": "Normal",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 14,
-    //     "category": "",
-    //     "desc": "Accuracy +45%",
-    //     "stats": {
-    //         "Accuracy": 0.45
-    //     }
-    // },
     "Better Insight": {
         "rarity": "Normal",
         "polarity": "Almandine",
@@ -1056,15 +904,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Expand High-Power Magazine": {
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "High-Power Rounds",
-    //     "cost": 14,
-    //     "category": "",
-    //     "desc": "Max High-Power Rounds +50%",
-    //     "stats": {}//NA for now
-    // },
     "Electric Enhancement": {
         "rarity": "Normal",
         "polarity": "Xantic",
@@ -1107,26 +946,6 @@ const highPowerRounds = {
         "inclusion": [],
         "exclusion": [],
     },
-    // "Vibration Absorption": {
-    //     "rarity": "Normal",
-    //     "polarity": "Rutile",
-    //     "type": "High-Power Rounds",
-    //     "cost": 14,
-    //     "category": "",
-    //     "desc": "Recoil -45%",
-    //     "stats": {
-    //         "Recoil": -0.45
-    //     }
-    // },
-    // "Rifling Reinforcement (Launcher)": {
-    //     "rarity": "Normal",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 16,
-    //     "category": "Launcher",
-    //     "desc": "Explosive ATK +32%"
-    // },
-    
     "Rifling Reinforcement (Sniper)": {
         "rarity": "Normal",
         "polarity": "Malachite",
@@ -1170,11 +989,13 @@ const highPowerRounds = {
 
 
 
-
-
-
-
-
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
+    //MODS ADDED LATER
+    //The order here does actually matter for the sake of URL parameters,
+    //so mods added later get added AFTER in the topdown order
+    //---------------------------------------------------------------
+    //---------------------------------------------------------------
     "Charge Amplification (Sniper)": {
         "rarity": "Rare",
         "polarity": "Malachite",
@@ -1190,19 +1011,6 @@ const highPowerRounds = {
         "inclusion": ["Sniper"],
         "exclusion": [],
     },
-    
-    // "Charge Amplification (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 0,
-    //     "category": "Firearm Critical Hit Damage",
-    //     "desc": "Firearm ATK +40%, Firearm Critical Hit Damage -30%",
-    //     "stats": {
-    //         "FirearmATK%": 0.40,
-    //         "FirearmCritDamage": -0.30
-    //     }
-    // },
     "Bullet Integration (Sniper)": {
         "rarity": "Rare",
         "polarity": "Malachite",
@@ -1218,33 +1026,6 @@ const highPowerRounds = {
         "inclusion": ["Sniper"],
         "exclusion": [],
     },
-    // "Bullet Integration (Launcher)": {
-    //     "rarity": "Rare",
-    //     "polarity": "Malachite",
-    //     "type": "High-Power Rounds",
-    //     "cost": 0,
-    //     "category": "Firearm Critical Hit Damage",
-    //     "desc": "Firearm Explosive ATK +13%, Firearm Critical Hit Damage +10%",
-    //     "stats": {
-    //         "FirearmATK%": 0.13,
-    //         "FirearmCritDamage": 0.10
-    //     }
-    // },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "Unstoppable Smasher (Shotgun)": {//TODO: complexBonus key later
         "rarity": "Ultimate",
         "polarity": "Rutile",
@@ -1257,18 +1038,6 @@ const highPowerRounds = {
         "inclusion": ["Shotgun"],
         "exclusion": [],
     },
-    // "Auto-Reload (Shotgun)": {
-    //     "rarity": "Ultimate",
-    //     "polarity": "Cerulean",
-    //     "type": "High-Power Rounds",
-    //     "cost": 10,
-    //     "category": "Special Mod",
-    //     "desc": "When changing weapons, auto-reloads stored weapon (Cooldown 10s)",
-    //     "stats": {},
-    //     "tags": [],
-    //     "inclusion": ["Shotgun"],
-    //     "exclusion": [],
-    // },
     "Hit Rate Insight (Shotgun)": {
         "rarity": "Rare",
         "polarity": "Rutile",
@@ -1497,4 +1266,620 @@ const highPowerRounds = {
         "exclusion": [],
         "desc": "Fire Rate +25%"
     },
+    "Recycling Genius": {
+        "rarity": "Normal",
+        "polarity": "Cerulean",
+        "type": "High-Power Rounds",
+        "cost": 14,
+        "category": "",
+        "desc": "Reload Time Modifier +30%",
+        "stats": {
+            "ReloadSpeed": 0.30,
+        },
+        "tags": [],
+        "inclusion": [],
+        "exclusion": [],
+    },
+    "Descendant Roll": {
+        "rarity": "Ultimate",
+        "polarity": "Cerulean",
+        "type": "High-Power Rounds",
+        "cost": 10,
+        "category": "Special Mod",
+        "desc": "When rolling, auto-reloads the active weapon at a 100% chance (Cooldown 15s)<br><br>Right now this mod, in the calc, functions to just skip a reload on a cooldown.",
+        "stats": {
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "SkipReload","value": 1,"subStackValue": null},
+                ],
+                "bonusName": "Descendant Roll",
+                "oneTimeOrStack": "cooldown",
+                "limit": 1,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "conditions": ["isEndOfMagazine"],
+                "cooldown": 15,
+            }
+        ],
+        "tags": ["SkipReload"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+    "Lethal Finish": {
+        "rarity": "Ultimate",
+        "polarity": "Almandine",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Special Mod",
+        "desc": "When firing a firearm, ammo with an additional 45% Critical Hit Rate are fired (Cooldown 15s). When defeating an enemy with the additional attack, module cooldown is -12.4s However, the firearm's base Weak Point Damage is Fixed at 100%",
+        "stats": {
+            "WeakPointOverride": 1,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmCritRateBase","value": 0.45,"subStackValue": null},
+                ],
+                "bonusName": "Lethal Finish (High-Powered)",
+                "oneTimeOrStack": "cooldown",
+                "limit": 1,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "cooldown": 15,
+                // "conditions": ["isWeakpoint"],
+            }
+        ],
+        "tags": ["FirearmCritRateBase","WeakPointOverride"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+
+
+
+
+
+    "Overwhelm": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "High-Power Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "TypeBonusCORE","value": 0.0581,"subStackValue": null},
+               {"name": "WeakPointDamage%CORE","value": 0.04,"subStackValue": null},
+            ],
+            "bonusName": "Overwhelm",
+            "oneTimeOrStack": "duration",
+            "limit": 10,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
+            "conditions": ["isAdvantage"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["TypeBonusCORE","WeakPointDamage%CORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon hitting with Advantage Affinity, increases Weak Point Damage by 4% and Advantage Affinity Dammage Coefficient by 5.81% for 5 seconds (max 10 stacks, loses 2 stacks on failure, cooldown 20s)."
+   },
+   "Heat Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Almandine",
+      "type": "High-Power Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "FireATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Heat Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["FireATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Chill Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Cerulean",
+      "type": "High-Power Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ChillATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Chill Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ChillATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Electric Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Xantic",
+      "type": "High-Power Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ElectricATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Electric Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ElectricATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+   "Toxic Circulation": {
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "High-Power Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "ToxicATK%BonusCORE","value": 0.896,"subStackValue": null},
+            ],
+            "bonusName": "Toxic Circulation",
+            "oneTimeOrStack": "duration",
+            "limit": 1,
+            "cooldown": 20,
+            "duration": 5,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "currentStacks": 0,
+            "timePassedEntry": 0,
+            "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["ToxicATK%BonusCORE"],
+      "inclusion": [],
+      "exclusion": [],
+      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Charge Amplification (Launcher)": {//done
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Explosive ATK +40%, Firearm Critical Hit Damage -30%",
+        "stats": {
+            // "ExplosiveATK%": 0.40,
+            "FirearmATK%": 0.40,
+            "FirearmCritDamage": -0.30
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Bullet Integration (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Firearm Critical Hit Damage",
+        "desc": "Firearm Explosive ATK +13%, Firearm Critical Hit Damage +10%",
+        "stats": {
+            // "ExplosiveATK%": 0.13,
+            "FirearmATK%": 0.13,
+            "FirearmCritDamage": 0.10
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Action and Reaction (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "ATK",
+        "desc": "Explosive ATK +61%, Recoil 20%",
+        "stats": {
+            // "ExplosiveATK%": 0.61,
+            "FirearmATK%": 0.61,
+            "Recoil": -0.20,
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Slow Art (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "ATK",
+        "desc": "Explosive ATK +44%, Fire Rate -25%",
+        "stats": {
+            // "ExplosiveATK%": 0.44,
+            "FirearmATK%": 0.44,
+            "FireRate": 0.25
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Anti-Matter Round (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Explosive ATK +26%, Firearm Critical Hit Damage +3.5%",
+        "stats": {
+            // "ExplosiveATK%": 0.26,
+            "FirearmATK%": 0.26,
+            "FirearmCritDamage": 0.035
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Pinpoint Shot (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Explosive ATK +26%, Weak Point Damage +2%",
+        "stats": {
+            // "ExplosiveATK%": 0.26,
+            "FirearmATK%": 0.26,
+            "WeakPointDamage%": 0.02
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Sharp Shooter (Launcher)": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "ATK",
+        "desc": "Explosive ATK +26%, Firearm Critical Hit Rate +1%",
+        "stats": {
+            // "ExplosiveATK%": 0.26,
+            "FirearmATK%": 0.26,
+            "FirearmCritRate": 0.01
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+
+
+    "Rifling Reinforcement (Launcher)": {
+        "rarity": "Normal",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "",
+        "desc": "Explosive ATK +32%",
+        "stats": {
+            // "ExplosiveATK%": 0.32,
+            "FirearmATK%": 0.32,
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Increased Radius": {
+        "rarity": "Normal",
+        "polarity": "Xantic",
+        "type": "High-Power Rounds",
+        "cost": 9,
+        "category": "",
+        "desc": "Explosion Radius +32%",
+        "stats": {
+            "ExplosionRadius%": 0.32
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+    "Ammo Optimization": {
+        "rarity": "Rare",
+        "polarity": "Xantic",
+        "type": "High-Power Rounds",
+        "cost": 9,
+        "category": "Expand Amplification",
+        "desc": "Explosion Radius +25.6%, Rounds per Magazine +10%",
+        "stats": {
+            "ExplosionRadius%": 0.256,
+            "MagazineSize": 0.10
+        },
+        "tags": [],
+        "inclusion": ["Launcher"],
+        "exclusion": [],
+    },
+
+
+
+
+    "TestMod HighPowered": {
+        "rarity": "Normal",
+        "polarity": "Cerulean",
+        "type": "High-Power Rounds",
+        "cost": 14,
+        "category": "",
+        "desc": "ladeedadeeda remove this later",
+        "stats": {
+            // "ReloadSpeed": -0.50,
+            "FireRate": -0.25
+        },
+        "tags": [],
+        "inclusion": [],
+        "exclusion": [],
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //GOLDS
+    // "Defense Master": {//NA
+    //     "rarity": "Ultimate",
+    //     "polarity": "Rutile",
+    //     "type": "High-Power Rounds",
+    //     "cost": 16,
+    //     "category": "Special Mod",
+    //     "desc": "When defeating an enemy, DEF +120% for 10s (Cooldown 15s)",
+    //     "stats": {
+    //         "DEF%": 1.2
+    //     },
+    //      "inclusion": [],
+    //      "exclusion": [],
+    // },
+    // "Auto-Reload (Shotgun)": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Cerulean",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When changing weapons, auto-reloads stored weapon (Cooldown 10s)",
+    //     "stats": {},
+    //     "tags": [],
+    //     "inclusion": ["Shotgun"],
+    //     "exclusion": [],
+    // },
+    // "Quick Freezer": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Cerulean",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When defeating an enemy inflicted wtih Frostbite, inflicts Frostbite on other enemies within 8m of the target for 0.8s (Cooldown 20s)",
+    //     "stats": {},
+    // "inclusion": [],
+        // "exclusion": [],
+    // },
+    // "Venom Injector": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Rutile",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When defeating an enemy inflicted with Poison, inflicts Poison on other enemies within 8m of the target for 5s (Cooldown 20s)",
+    //     "stats": {},
+    // "inclusion": [],
+        // "exclusion": [],
+    // },
+    // "Remote Generator": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When defeating an enemy inficted with Electrocution, inflicts Electrocution on other enemies within 8m of the target for 3s (Cooldown 20s)",
+    //     "stats": {},
+    // "inclusion": [],
+        // "exclusion": [],
+    // },
+    // "Heat Incinerator": {
+    //     "rarity": "Ultimate",
+    //     "polarity": "Almandine",
+    //     "type": "High-Power Rounds",
+    //     "cost": 10,
+    //     "category": "Special Mod",
+    //     "desc": "When defeating an enemy inflicted with Burn, inflicts Burn on other enemies within 8m of the target for 5s (Cooldown 20s)",
+    //     "stats": {},
+    // "inclusion": [],
+        // "exclusion": [],
+    // },
+
+
+
+
+    //PURPLES
+    // "High-Power Rounds Compulsive": {
+    //     "rarity": "Rare",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 14,
+    //     "category": "",
+    //     "desc": "Max High-Power Rounds +60%, Movement Speed -20%",
+    //     "stats": {}
+    // },
+
+
+    //BLUES
+    // "Impact Round Charge Improvement": {
+    //     "rarity": "Normal",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 6,
+    //     "category": "Rounds Conversion",
+    //     "desc": "When acquiring dropped Impact Rounds, change to 1 High-Power Round for every 25 Rounds.",
+    //     "stats": {}
+    // },
+    // "Special Round Charge Improvement": {
+    //     "rarity": "Normal",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 6,
+    //     "category": "Rounds Conversion",
+    //     "desc": "When acquiring dropped Special Rounds, change to 1 High-Power Round for every 120 Rounds.",
+    //     "stats": {}
+    // },
+    // "General Round Charge Improvement": {
+    //     "rarity": "Normal",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 6,
+    //     "category": "Rounds Conversion",
+    //     "desc": "When acquiring dropped General Rounds, change to 1 High-Power Round for every 200 Rounds.",
+    //     "stats": {}
+    // },
+    // "Colon Special Forces": {
+    //     "rarity": "Normal",
+    //     "polarity": "Malachite",
+    //     "type": "High-Power Rounds",
+    //     "cost": 11,
+    //     "category": "",
+    //     "desc": "+20% Movement Speed When Aiming",
+    //     "stats": {}//NA for now
+    // },
+    // "Better Weapon Weight": {
+    //     "rarity": "Normal",
+    //     "polarity": "Almandine",
+    //     "type": "High-Power Rounds",
+    //     "cost": 11,
+    //     "category": "",
+    //     "desc": "Weapon Change Speed +25%",
+    //     "stats": {}//NA for now
+    // },
+    // "Hawk-Eye": {
+    //     "rarity": "Normal",
+    //     "polarity": "Rutile",
+    //     "type": "High-Power Rounds",
+    //     "cost": 14,
+    //     "category": "",
+    //     "desc": "Accuracy +45%",
+    //     "stats": {
+    //         "Accuracy": 0.45
+    //     }
+    // },
+    // "Expand High-Power Magazine": {
+    //     "rarity": "Normal",
+    //     "polarity": "Xantic",
+    //     "type": "High-Power Rounds",
+    //     "cost": 14,
+    //     "category": "",
+    //     "desc": "Max High-Power Rounds +50%",
+    //     "stats": {}//NA for now
+    // },
+    // "Vibration Absorption": {
+    //     "rarity": "Normal",
+    //     "polarity": "Rutile",
+    //     "type": "High-Power Rounds",
+    //     "cost": 14,
+    //     "category": "",
+    //     "desc": "Recoil -45%",
+    //     "stats": {
+    //         "Recoil": -0.45
+    //     }
+    // },
 }

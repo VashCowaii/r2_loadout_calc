@@ -25,6 +25,11 @@ const tooltipStorage = {
     "reactorAmmoTypeExplainer": "This is automatically adjusted as you select new weapons in the calculator.<br>To select a weapon, open the \"Weapon\" tab.<br><br>However, there are some skills that can be modified by this selection, like Lepic's Overkill or Freyna's Baptism that have ammotype dependent fire rate options.",
 
 
+    "reloadsToUseBarBox": "Do you want to include reloads in the math? The primary benefit of doing so is the ability to see how reload speed can impact DPS, both short and long term.",
+    "magsToUseBarBox": "Specify how many magazines you want to use, while also factoring reloads.<br><br>This setting is ignored if reloads are disabled.",
+    "customReloadBarBox": "Toggling this on will enable early reloads based on a time you specify. The time input is made available whenever this option is toggled.",
+    "customReloadTimeBarBox": "This is the amount of time that will be allowed before an early reload is triggered. If shooting the full mag might take 5 seconds, but you specify 2 seconds of firing time(Wave of Light) then if the next shot would exceed 2 seconds, it triggers a reload instead.",
+
     "weakPointHitRateExplainer": "This modifies the rate at which you actually hit the weakpoint you are targeting. As such, it will act like crit rate does to crit damage, but to weak point damage, meaning your weak point hit rate will be averaged against your weak point damage that exceeds the base 1x multiplier.<br><br>This method of approximating hit rate is semi-flawed, but there aren't really any other reasonable ways to do this short of letting you specify on an individual level: which bullets hit or didn't.<br>This is the best compromise I can offer for now.",
     // "reactorNonAttribute": "Non-Attribute",
     // "reactorFire": "Fire",

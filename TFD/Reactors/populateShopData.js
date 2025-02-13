@@ -50,6 +50,9 @@ let rotationBanners = {
     "FORTRESS": "/TFD/TFDImages/RotationZones/Image_RotationDrop_F05.png",
 }
 
+let valbyFarmString = "Get valby and modify your cooldown/duration to allow for infinite usage of her 3rd skill, then circle the inside of the outpost without ever hurting the boss but while still destroying the terminals. Run down the clock, and as long as the boss survives reactors will keep dropping.";
+let resetFarmString = "Using someone like Freyna, start the mission, drop a puddle kill the monsters and reset.<br><br>A good farm, but resets are required in order to make it usable.";
+
 let cssValue = {
     "-1": "reactorZoneRowNameVeryBad",
     "0": "reactorZoneRowName",
@@ -124,7 +127,7 @@ let farmRating = {
         "tooltip": [
             {
                 "missionName": "Large Nuclear Reactor",
-                "farmDesc": "Using someone like Freyna, start the mission, drop a puddle kill the monsters and reset.<br><br>A good farm, but resets are required in order to make it usable."
+                "farmDesc": resetFarmString,
             }
         ],
     },
@@ -138,11 +141,11 @@ let farmRating = {
         ],
     },
     "Vermilion Waste": {
-        "worth": -1,
+        "worth": 0,
         "tooltip": [
             {
-                "missionName": "N/A",
-                "farmDesc": "No known worthwhile farms. This area sucks overall."
+                "missionName": "Vulgus Strategic Outpost",
+                "farmDesc": valbyFarmString,
             }
         ],
     },
@@ -183,11 +186,11 @@ let farmRating = {
         ],
     },
     "Hatchery": {
-        "worth": -1,
+        "worth": 0,
         "tooltip": [
             {
-                "missionName": "N/A",
-                "farmDesc": "No known worthwhile farms. This area sucks overall."
+                "missionName": "Outpost",
+                "farmDesc": resetFarmString
             }
         ],
     },
@@ -344,7 +347,7 @@ let farmRating = {
         "tooltip": [
             {
                 "missionName": "Outpost",
-                "farmDesc": "Similar to Defense Line, get valby and modify your cooldown/duration to allow for infinite usage of her 3rd skill, then circle the inside of the outpost without ever hurting the boss but while still destroying the terminals. Run down the clock, and as long as the boss survives reactors will keep dropping.<br><br>Use little to no range on Valby for this one."
+                "farmDesc": valbyFarmString+"<br><br>Use little to no range on Valby for this one."
             },
             {
                 "missionName": "Commanding Ground",
@@ -384,7 +387,7 @@ let farmRating = {
         "tooltip": [
             {
                 "missionName": "Outpost",
-                "farmDesc": "Get valby and modify your cooldown/duration to allow for infinite usage of her 3rd skill, then circle the inside of the outpost without ever hurting the boss but while still destroying the terminals. Run down the clock, and as long as the boss survives reactors will keep dropping.<br><br>Also a decent gold farm."
+                "farmDesc": valbyFarmString+"<br><br>Also a decent gold farm.",
             }
         ],
     },
@@ -527,6 +530,7 @@ let reactorFunctions = {
         let currentAttribute = reactorRef.currentAttribute;
         let currentType = reactorRef.currentType
         let currentComponent = reactorRef.componentType
+        console.log(currentComponent)
 
         const mapNames = Object.keys(reactorFunctions.scheduleObject);
         let bodyString = '';
@@ -556,29 +560,53 @@ let reactorFunctions = {
 
                 let part1Match = false;
                 let part2Match = false;
+                let part3Match = false;
                 if (!targetFound) {
                     if (currentStatic.length>1) {
                         let attributeFound1 = currentAttribute==="";
                         let typeFound1 = currentType==="";
+                        let componentFound1 = currentComponent==="";
                         if (currentStatic[0] === currentAttribute) {attributeFound1 = true;}
                         if (currentStatic[1] === currentType) {typeFound1 = true;}
-                        if (attributeFound1 && typeFound1) {part1Match = true;}
+                        if (currentZoneWeeks[0] === currentComponent) {componentFound1 = true;part3Match = true;}
+                        if (attributeFound1 && typeFound1) {part1Match = true;componentFound = false;}
                     }
                     if (currentZoneWeeks.length>1) {
                         let attributeFound2 = currentAttribute==="";
                         let typeFound2 = currentType==="";
-                        if (currentZoneWeeks[0] === currentAttribute) {attributeFound2 = true;}
+                        let componentFound2 = currentComponent==="";
+                        if (currentZoneWeeks[0] === currentAttribute || currentZoneWeeks[0] === currentComponent) {attributeFound2 = true;}
                         if (currentZoneWeeks[1] === currentType) {typeFound2 = true;}
-                        if (attributeFound2 && typeFound2) {part2Match = true;}
+                        // if (currentZoneWeeks[0] === currentComponent) {componentFound2 = true;}
+                        if (currentZoneWeeks[0] === currentComponent) {componentFound2 = true;part3Match = true;}
+                        if (attributeFound2 && typeFound2) {part2Match = true;componentFound = false;}
+
+                        
                     }
-                    else {
-                        if (currentZoneWeeks[0] === currentComponent) {
-                            part2Match = true;
-                            componentFound = true;
-                        }
+                    else if (currentZoneWeeks.length === 1) {
+                        if (currentZoneWeeks[0] === currentComponent && currentComponent != "") {part3Match = true;}
                     }
                 }
-                if (part1Match || part2Match) {targetFound = true;}
+                
+                let attributeChecker = currentAttribute!="";
+                let typeChecker = currentType!="";
+                let componentChecker = currentComponent!="";
+
+                let simpleMatch = part1Match || part2Match;
+                let matchResult = null;
+
+                if (!componentChecker) {matchResult = simpleMatch;}
+                else {
+                    if (!attributeChecker && !typeChecker) {
+                        matchResult = part3Match;
+                    }
+                    else {
+                        matchResult = simpleMatch && part3Match;
+                    }
+                }
+
+                
+                if (matchResult) {targetFound = true;}
                 if (!targetFound) {continue;}
 
                 let imageString = currentStatic.length > 1 ? `

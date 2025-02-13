@@ -112,8 +112,10 @@ const userTriggers = {
     },
     updateTeamBuffsObject(input1) {
         const teamRef = globalRecords.teamBuffs;
+        const enemyRef = globalRecords.enemyBuffs;
         //reset the object
         teamRef.stats = {};
+        enemyRef.stats = {};
 
         //LUNA STATS
         if (readSelection("useTeamBuffsLuna").checked) {
@@ -195,21 +197,32 @@ const userTriggers = {
                     }
                 }
             }
-
-
-
         }
         else {
             readSelection("teamBuffsLunaBox").style.display = "none";
         }
-        // "teamBuffs": {
-        //     "stats": {},
-        //     "tags": [],
-        //     "Luna": {},
-        // },
+
+        //EROSION MODIFIERS
+        if (readSelection("useTeamErosionModifier").checked) {
+            if (!readSelection("boss").value.toLowerCase().includes("lgn.")) {
+                readSelection("useTeamErosionModifier").checked = false;
+                alert("The calculator will only allow erosion modifiers to be enabled when you have a Legion enemy targeted.\n\nReturn to this tab after selecting a Legion enemy in the Enemy Tab.");
+                return;
+            }
+            readSelection("teamBuffsErosionBox").style.display = "flex";
+
+            const erosionLevel = Math.floor(Math.min(30,Math.max(1,+readSelection("teamBuffsErosionLevel").value)));
+            readSelection("teamBuffsErosionLevel").value = erosionLevel;
+
+            enemyRef.stats = {...enemyRef.stats,...erosionModsData[erosionLevel]}
+        }
+        else {
+            readSelection("teamBuffsErosionBox").style.display = "none";
+        }
         updateFormulas();
     },
     updateSelectedFocus(elementID) {
+        // userTriggers.updateSelectedFocus('mod3BreakdownTab')
         const list = [
             "characterBreakdownTab",
             "reactorBreakdownTab",
@@ -251,6 +264,18 @@ const userTriggers = {
             readSelection(name).style.display = "none";
         }
         readSelection(elementID).style.display = "flex";
+
+        function removeStringSegment(string) {return string.replace("BreakdownTab","");}
+
+        //if this is a mod breakdown, focus the input selector of that specific mod when someone clicks for that tab.
+        let newName = removeStringSegment(elementID);
+        if (elementID.includes("mod")) {readSelection(newName).focus();}
+        else if (elementID.includes("character")) {readSelection(newName).focus();}
+        else if (elementID.includes("auxiliary")) {readSelection(newName).focus();}
+        else if (elementID.includes("sensor")) {readSelection(newName).focus();}
+        else if (elementID.includes("memory")) {readSelection(newName).focus();}
+        else if (elementID.includes("processor")) {readSelection(newName).focus();}
+        else if (elementID.includes("Core")) {readSelection("coreSub1").focus()}
     },
     updateSelectedCharacter(isImportedValue) {
         //clear invalid inputs
@@ -323,10 +348,25 @@ const userTriggers = {
         "Special": specialRounds,
         "General": generalRounds
     },
+    "rarityColorRef": {
+        "Ultimate": `linear-gradient(to bottom right, #7b6337, transparent, transparent, transparent)`,
+        "Rare": `linear-gradient(to bottom right, #652d7f, transparent, transparent, transparent)`,
+    },
     
     updateSelectedWeapon(parentCall,isImportedValue) {
         let currentWeapon = readSelection("characterWeapon");
         const weaponRef = globalRecords.weapon;
+
+        weaponRef.USEWeaponReloads = readSelection("USEWeaponReloads").checked;
+        readSelection("USEMagazineCount").value = Math.floor(Math.min(5,Math.max(1,+readSelection("USEMagazineCount").value)));
+        weaponRef.USEMagazineCount = Math.min(5,Math.max(1,+readSelection("USEMagazineCount").value));
+        weaponRef.USEWeaponReloadsCustom = readSelection("USEWeaponReloadsCustom").checked;
+        readSelection("USEWeaponReloadsCustomTimer").value = Math.min(10,Math.max(0.1,+readSelection("USEWeaponReloadsCustomTimer").value));
+        weaponRef.USEWeaponReloadsCustomTimer = +readSelection("USEWeaponReloadsCustomTimer").value;
+
+        readSelection("reloadSettingsBarBox").style.display = weaponRef.USEWeaponReloads ? "flex" : "none";
+        readSelection("customReloadTimeBarBox").style.display = weaponRef.USEWeaponReloadsCustom ? "flex" : "none";
+
         if (!sniperList[currentWeapon.value]) {currentWeapon.value = "";}
 
         //if the new weapon is a diff ammo or weapon type, clear the mod options so as to avoid many many errors that would follow due to mismatched mod collections
@@ -362,10 +402,22 @@ const userTriggers = {
         //these will only get triggered to forcibly change the stats when updateSelectedWeapon happens so that way people can still toggle
         //various things to see differences.
         const ammoType = sniperList[currentWeapon.value].ammoType;
+        const rarity = sniperList[currentWeapon.value].rarity;
         // readSelection("USEReactorUltimate").checked = sniperList[currentWeapon.value].rarity === "Ultimate";
         userTriggers.updateReactorSelections(3,`reactor${ammoType}`,ammoType);
         // General,Special,Impact,HighPowered
         // reactorGeneral,reactorSpecial,reactorImpact,reactorHighPowered
+
+
+        if (userTriggers.rarityColorRef[rarity]) {
+            readSelection("characterWeaponBreakdownTab").style.background = userTriggers.rarityColorRef[rarity];
+            readSelection("descendantWeaponBoxHolder").style.background = userTriggers.rarityColorRef[rarity];
+        }
+        else {
+            readSelection("characterWeaponBreakdownTab").style.background = "none";
+        }
+
+
 
         const currentWeaponImage = sniperList[currentWeapon.value].image;
         const currentCoreArray = sniperList[currentWeapon.value].coreArray;
@@ -376,12 +428,14 @@ const userTriggers = {
 
         if (currentCoreArray) {
             readSelection("coreBoxTitleText").innerHTML = "";
+            readSelection("coreBoxTitleTextQuery").innerHTML = "";
             // weaponRef.coreArrayRecord = [...currentCoreArray];
             for (let i=0;i<currentCoreArray.length;i++) {
                 let currentColor = currentCoreArray[i];
                 let currentColorRecord = weaponRef.coreArrayRecord ? weaponRef.coreArrayRecord[i] : "";
 
                 readSelection(`weaponCore${i+1}Icon`).src = coreImageReference[currentColor];
+                readSelection(`weaponCore${i+1}IconQuery`).src = coreImageReference[currentColor];
                 readSelection(`coreRowIcon${i+1}`).src = coreImageReference[currentColor];
 
                 let currentStatObject = coreStatsReference[currentColor];
@@ -401,8 +455,9 @@ const userTriggers = {
                 if (!isImportedValue) {weaponRef[`coreRoll${i+1}`] = readSelection(coreSubString).value;}
                 else {readSelection(coreSubString).value = weaponRef[`coreRoll${i+1}`];}
         
-                const roll1Min = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[0];
-                const roll1Max = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[1];
+                const negativeCheck = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[1]<0;
+                const roll1Min = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[negativeCheck ? 1 : 0];
+                const roll1Max = currentStatObject[weaponRef[`coreRoll${i+1}`]].range[negativeCheck ? 0 : 1];
         
                 sub1Value.min = roll1Min;
                 sub1Value.max = roll1Max;
@@ -416,6 +471,7 @@ const userTriggers = {
         }
         else {
             readSelection("coreBoxTitleText").innerHTML = "No Core Slots Found";
+            readSelection("coreBoxTitleTextQuery").innerHTML = "No Core Slots Found";
             for (let i=0;i<5;i++) {
                 readSelection(`weaponCore${i+1}Icon`).src = coreImageReference.null;
                 readSelection(`coreRowIcon${i+1}`).src = coreImageReference.null;
@@ -492,10 +548,42 @@ const userTriggers = {
             sub4Value.value = Math.max(Math.min(+weaponRef.subRoll4Value,roll4Max),roll4Min);
         }
 
+        for (let i=1;i<=4;i++) {//color assignments
+            let minimum = +readSelection(`weaponSub${i}Value`).min;
+            let maximum = +readSelection(`weaponSub${i}Value`).max;
+            let value = +readSelection(`weaponSub${i}Value`).value;
+            let rangeThreshold = (maximum - minimum)*0.40;
+
+            readSelection(`weaponSub${i}Value`).style.textShadow = "1px 1px 2px rgba(0, 0, 0, 1)";
+            readSelection(`weaponSub${i}`).style.textShadow = "1px 1px 2px rgba(0, 0, 0, 1)";
+
+            if (value >= (minimum + rangeThreshold*2)) {//gold
+                readSelection(`weaponSub${i}`).style.color = "#f7db78";
+                readSelection(`weaponSub${i}Value`).style.color = "#f7db78";
+                
+            }
+            else if (value >= (minimum + rangeThreshold)) {//purple
+                readSelection(`weaponSub${i}`).style.color = "#d487f5";
+                readSelection(`weaponSub${i}Value`).style.color = "#d487f5";
+            }
+            else if (value >= minimum) {//blue
+                readSelection(`weaponSub${i}`).style.color = "#53b7f7";
+                readSelection(`weaponSub${i}Value`).style.color = "#53b7f7";
+            }
+            else {//white
+                readSelection(`weaponSub${i}`).style.color = "white";
+                readSelection(`weaponSub${i}Value`).style.color = "white";
+            }
+        }
+
         weaponRef.subRoll1Value = +sub1Value.value;
         weaponRef.subRoll2Value = +sub2Value.value;
         weaponRef.subRoll3Value = +sub3Value.value;
         weaponRef.subRoll4Value = +sub4Value.value;
+
+        for (let i=1;i<=4;i++) {
+            readSelection(`queryWeaponSubName${i}`).innerHTML = weaponRef[`subRoll${i}`] || "No Input";
+        }
 
         // characterWeaponBreakdownIcon
         // buttonsCharacterWeaponIcon
@@ -595,6 +683,9 @@ const userTriggers = {
             sub2Value.value = globalRef.subRoll2Value;
         }
 
+        readSelection("queryReactorName1").innerHTML = globalRef.subRoll1 || "No input";
+        readSelection("queryReactorName2").innerHTML = globalRef.subRoll2 || "No input";
+
 
         if (reactorSubRolls[globalRef.subRoll1].minimum > 0) {
             //set the min/max values the user will be able to work with, based on the min and max of the actual substat roll
@@ -624,6 +715,9 @@ const userTriggers = {
 
         globalRef.weaponMatched = readSelection("USEReactorOptimization").checked;
         globalRef.isUltimate = readSelection("USEReactorUltimate").checked;
+        let rarityColor = globalRef.isUltimate ? "Ultimate" : "Rare";
+        readSelection("buttonsReactorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColor];
+        readSelection("reactorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColor];
 
         if (!globalRef.isUltimate) {
             readSelection("reactorLevelSlider").value = Math.min(2,+readSelection("reactorLevelSlider").value)
@@ -694,6 +788,21 @@ const userTriggers = {
 
         if (globalRef.processorSub1Value === 0 || globalRef.processorSub1 != readSelection("processorSub1").value) {processorSub1Value.value = 10000000;}
         if (globalRef.processorSub2Value === 0 || globalRef.processorSub2 != readSelection("processorSub2").value) {processorSub2Value.value = 10000000;}
+
+
+        let rarityColorAux = componentSetBonuses[readSelection("auxiliary").value].rarity;
+        let rarityColorSensor = componentSetBonuses[readSelection("sensor").value].rarity;
+        let rarityColorMemory = componentSetBonuses[readSelection("memory").value].rarity;
+        let rarityColorProcessor = componentSetBonuses[readSelection("processor").value].rarity;
+        readSelection("buttonsAuxiliaryIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("buttonsSensorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("buttonsMemoryIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("buttonsProcessorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
+
+        readSelection("auxiliaryBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("sensorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("memoryBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("processorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
 
         globalRef.auxiliary = readSelection("auxiliary").value;
         globalRef.auxiliarySub1 = readSelection("auxiliarySub1").value;
@@ -842,6 +951,17 @@ const userTriggers = {
         readSelection(`modSlotName${modSlot}`).style.background = `linear-gradient(135deg, ${rarityColorCode}, rgba(255, 0, 0, 0) 50%), linear-gradient(315deg, ${rarityColorCode}, rgba(0, 0, 255, 0) 50%)`;
         readSelection(`modSlotPolarityIcon${modSlot}`).src = polarityImagePath;
         readSelection(`mod${modSlot}Desc`).innerHTML = desc;
+        if (+modSlot < 21 && +modSlot > 2) {
+            readSelection(`queryCharacterModName${modSlot}`).innerHTML = inputRef.value || "No Input";
+            readSelection(`characterMod${modSlot}IconQuery`).src = polarityImagePath;
+            readSelection(`queryCharacterBoxHolder${modSlot}`).style.background = `linear-gradient(135deg, ${rarityColorCode}, rgba(255, 0, 0, 0) 50%), linear-gradient(315deg, ${rarityColorCode}, rgba(0, 0, 255, 0) 50%)`;
+        }
+        else if (+modSlot>=21) {
+            readSelection(`queryWeaponModName${+modSlot-20}`).innerHTML = inputRef.value || "No Input";
+            readSelection(`weaponMod${+modSlot-20}IconQuery`).src = polarityImagePath;
+            readSelection(`queryWeaponBoxHolder${+modSlot-20}`).style.background = `linear-gradient(135deg, ${rarityColorCode}, rgba(255, 0, 0, 0) 50%), linear-gradient(315deg, ${rarityColorCode}, rgba(0, 0, 255, 0) 50%)`;
+        }
+
 
         //pass the mod value to records, and then update forms
         if (+modSlot < 21) {
@@ -855,10 +975,21 @@ const userTriggers = {
         }
 
         if (globalRecords.character.currentCharacter != "") {settings.updateCharacterSettings(globalRecords.character.currentCharacter,true);}
-        if (!parentCall) {updateFormulas();}
+        if (!parentCall) {
+            updateFormulas();
+
+            if (inputRef.value != ""){
+                let slotCall = +modSlot;
+                if (slotCall === 12) {slotCall -= 11}
+                else if (slotCall === 30) {slotCall -= 9}
+                else {slotCall += 1}
+                userTriggers.updateSelectedFocus(`mod${slotCall}BreakdownTab`);
+            }
+            // "mod12BreakdownTab",
+        }
         
     },
-    updateSelectedBoss() {
+    updateSelectedBoss(isParentCall) {
         if (!bosses[readSelection("boss").value]) {readSelection("boss").value = "None (True Damage)"}
         let currentPlayers = globalRecords.playerCount;
 
@@ -1006,7 +1137,9 @@ const userTriggers = {
             </div>
         `;
 
-        updateFormulas();
+        if (!isParentCall) {
+            updateFormulas();
+        }
     },
 }
 
@@ -1334,9 +1467,8 @@ const settings = {
                 settingsRef.inesConductorActive2 = readSelection("inesConductorActive2").checked;
             }//2
             settingsRef.inesConductorActive3 = readSelection("inesConductorActive3").checked;
-            if (arrayRef[2] === 0) {
-                settingsRef.inesDischargePerfect = readSelection("inesDischargePerfect").checked;
-            }//3
+            settingsRef.inesDischargePerfect = readSelection("inesDischargePerfect").checked;
+            if (arrayRef[2] === 0) {}//3
             settingsRef.inesConductorActive4 = readSelection("inesConductorActive4").checked;
             if (arrayRef[3] === 0) {}//4
             if (arrayRef[4] === 0) {}//passive
@@ -1359,6 +1491,9 @@ const settings = {
         "Enduring Legacy"(settingsRef,arrayRef) {
             settingsRef.quenchingBonusActive = readSelection("quenchingBonusActive").checked;
             settingsRef.enduringTargetBurning = readSelection("enduringTargetBurning").checked;
+        },
+        "Python"(settingsRef,arrayRef) {
+            settingsRef.usePythonBonus = readSelection("usePythonBonus").checked;
         },
         ...localInsertionSettings
     }
@@ -1398,11 +1533,12 @@ const formulasValues = {
         const rollName4 = weaponSubstatList[overrideCheck ? weaponSubstatOverride[3] : weaponRef.subRoll4];
 
         //if the cycles are active and this isn't a UI calculation, then assume the highest possible value when going through each substat.
+        //also, if a stat is a negative stat, the assumption needs to be the "lowest" aka more negative stat for a maximum value
         const weaponType = sniperList[weaponRef.currentWeapon].weaponType;
-        index[rollName1.statName] += overrideCheck ? rollName1[weaponType][1] : weaponRef.subRoll1Value;
-        index[rollName2.statName] += overrideCheck ? rollName2[weaponType][1] : weaponRef.subRoll2Value;
-        index[rollName3.statName] += overrideCheck ? rollName3[weaponType][1] : weaponRef.subRoll3Value;
-        index[rollName4.statName] += overrideCheck ? rollName4[weaponType][1] : weaponRef.subRoll4Value;
+        index[rollName1.statName] += overrideCheck ? (rollName1[weaponType][1]>0 ? rollName1[weaponType][1] : rollName1[weaponType][0]) : weaponRef.subRoll1Value;
+        index[rollName2.statName] += overrideCheck ? (rollName2[weaponType][1]>0 ? rollName2[weaponType][1] : rollName2[weaponType][0]) : weaponRef.subRoll2Value;
+        index[rollName3.statName] += overrideCheck ? (rollName3[weaponType][1]>0 ? rollName3[weaponType][1] : rollName3[weaponType][0]) : weaponRef.subRoll3Value;
+        index[rollName4.statName] += overrideCheck ? (rollName4[weaponType][1]>0 ? rollName4[weaponType][1] : rollName4[weaponType][0]) : weaponRef.subRoll4Value;
 
         //WEAPON CORES
         const coreOverrideCheck = weaponCoreOverride && weaponCoreOverride.length;
@@ -1411,11 +1547,11 @@ const formulasValues = {
         const coreName3 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[2] : weaponRef.coreRoll3];
         const coreName4 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[3] : weaponRef.coreRoll4];
         const coreName5 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[4] : weaponRef.coreRoll5];
-        index[coreName1.statName] += weaponRef.coreRoll1Value;//TODO: need to add the code for max values when an override is detected.
-        index[coreName2.statName] += weaponRef.coreRoll2Value;
-        index[coreName3.statName] += weaponRef.coreRoll3Value;
-        index[coreName4.statName] += weaponRef.coreRoll4Value;
-        index[coreName5.statName] += weaponRef.coreRoll5Value;
+        index[coreName1.statName] += coreOverrideCheck ? (coreName1.range[1]>0 ? coreName1.range[1] : coreName1.range[0]) : weaponRef.coreRoll1Value;//TODO: need to add the code for max values when an override is detected.
+        index[coreName2.statName] += coreOverrideCheck ? (coreName2.range[1]>0 ? coreName2.range[1] : coreName2.range[0]) : weaponRef.coreRoll2Value;
+        index[coreName3.statName] += coreOverrideCheck ? (coreName3.range[1]>0 ? coreName3.range[1] : coreName3.range[0]) : weaponRef.coreRoll3Value;
+        index[coreName4.statName] += coreOverrideCheck ? (coreName4.range[1]>0 ? coreName4.range[1] : coreName4.range[0]) : weaponRef.coreRoll4Value;
+        index[coreName5.statName] += coreOverrideCheck ? (coreName5.range[1]>0 ? coreName5.range[1] : coreName5.range[0]) : weaponRef.coreRoll5Value;
     },
     pullReactorStats(index,reactorRollsOverride) {
         let reactorRef = globalRecords.reactor;
@@ -1507,7 +1643,9 @@ const formulasValues = {
     pullTeamBuffsStats(index) {
         //the teambuffs object is populated in userTriggers.updateTeamBuffsObject()
         const teamRef = globalRecords.teamBuffs;
+        const enemyRef = globalRecords.enemyBuffs;
         formulasValues.pullStats(index,teamRef.stats);
+        formulasValues.pullStats(index,enemyRef.stats);
     },
     //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
     pullStats(index,path) {
@@ -1529,7 +1667,7 @@ const formulasValues = {
 }
 
 
-function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorRollsOverride,weaponSubstatOverride) {
+function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorRollsOverride,weaponSubstatOverride,weaponCoreOverride) {
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     const optBonus = globalRecords.reactor.isUltimate ? 1.6 : 1.4;
     tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? optBonus : 1;
@@ -1540,12 +1678,12 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorR
 
     formulasValues.pullModStats(tableReference,modArrayOverride);
     formulasValues.pullComponentStats(tableReference);
+    formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
     
     const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
-    formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
     formulasValues.pullAbilityStats(tableReference);
-    formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride);
+    formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride,weaponCoreOverride);
     formulasValues.pullTeamBuffsStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);

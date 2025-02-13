@@ -101,23 +101,12 @@
             
             <div class="prismColumn" style="width: 100%;"><!-- PLACEHOLDER -->
 
-                <!-- <div class="totalHealingBox" style="margin: 0;padding: 0;">
-                    <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
-                        Character Mode&nbsp;
-                        <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" id="displayModeToggle" onchange="userTriggers.toggleDisplayMode()">
-                            <span class="toggleSlider"></span>
-                        </label>
-                        &nbsp;Weapon Mode
-                    </div>
-                </div> -->
-
                 <div class="modeSelectionBoxHolder">
 
                     <div class="modeSelectionSelectorBox" id="modeSelection1" onclick="userTriggers.toggleDisplayMode(1)">Skills</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection2" onclick="userTriggers.toggleDisplayMode(2)">Weapon</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection3" onclick="userTriggers.toggleDisplayMode(3)">Enemy</div>
-                    <div class="modeSelectionSelectorBox" id="modeSelection4" onclick="userTriggers.toggleDisplayMode(4)">Team</div>
+                    <div class="modeSelectionSelectorBox" id="modeSelection4" onclick="userTriggers.toggleDisplayMode(4)">Buffs</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection5" onclick="userTriggers.toggleDisplayMode(5)">Compare</div>
                     <!-- <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
                         Character Mode&nbsp;
@@ -177,6 +166,63 @@
                     <div class="abilityBreakdownTab" style="display: flex;flex-direction: column;max-height: 770px;">
                         <div class="abilityBreakdownHeader" id="weaponBreakdownHeader1"></div>
                         <div class="abilityBreakdownTypeHeader" id="weaponBreakdownTypeHeader1"></div>
+
+                        <!-- totalHealingBox totalHealingBoxHalf-->
+                        <!-- totalHealingBoxBreakdownRows totalHealingBoxHalfBreakdownRows -->
+                        <div class="totalHealingBoxBreakdownRows" style="border-bottom: 2px solid #434343;box-sizing: border-box;padding: 2px;">
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip" style="display: flex;justify-content: center;flex-direction: column;align-items: center;" id="reloadsToUseBarBox">
+                                <div style="padding-right: 5px;">Use Reloads? [?]</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEWeaponReloads" onchange="userTriggers.updateSelectedWeapon()" checked>
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="totalHealingBoxBreakdownRows" style="border-bottom: 2px solid #434343;box-sizing: border-box;padding: 2px;" id="reloadSettingsBarBox">
+                            <!-- <div class="abilityBreakdownGeneralMessage">Hover or tap each setting for more information on what each one does</div> -->
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip" style="display: flex;justify-content: center;flex-direction: column;align-items: center;" id="magsToUseBarBox">
+                                <div style="padding-right: 5px;">Mags to Use:</div>
+                                <div class="traitLevelDisplay">
+                                    <input type="number" class="bulletSelectorInputWeapons" id="USEMagazineCount" min="1" max="5" step="1" value="1" onchange="userTriggers.updateSelectedWeapon()">
+                                </div> 
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip" style="display: flex;justify-content: center;flex-direction: column;align-items: center;" id="customReloadBarBox">
+                                <div style="padding-right: 5px;">Use Custom Reload</div>
+                                <label class="toggleContainer">
+                                    <input type="checkbox" class="toggleCheckbox" id="USEWeaponReloadsCustom" onchange="userTriggers.updateSelectedWeapon()">
+                                    <span class="toggleSlider"></span>
+                                </label>
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip" style="display: flex;justify-content: center;flex-direction: column;align-items: center;" id="customReloadTimeBarBox">
+                                <div style="padding-right: 5px;">Reload After:</div>
+                                <div class="traitLevelDisplay">
+                                    <input type="number" class="bulletSelectorInputWeapons" id="USEWeaponReloadsCustomTimer" min="0.1" max="10" step=".1" value="2" onchange="userTriggers.updateSelectedWeapon()" style="width: 60px;">s
+                                </div> 
+                            </div>
+                        </div>
+
+
+                        <!-- ${entry.toggleElemID ? 
+                            `<div class="totalHealingBox">
+                                <div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div style="padding-right: 5px;">${entry.toggleElemID[1] ? entry.toggleElemID[1] : "Include in Character Statistics?"}</div>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}(\`${characterName}\`)" ${settingsRef[entry.toggleElemID[0]] ? "checked" : ""}>
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                                ${entry.toggleElemID2 ? 
+                                `<div class="totalHealingBoxHalf hasHoverTooltip">
+                                    <div style="padding-right: 5px;">${entry.toggleElemID2[1] ? entry.toggleElemID2[1] : "Include in Character Statistics?"}</div>
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="${entry.toggleElemID2[0]}" onchange="settings.${!isWeapon ? "updateCharacterSettings" : "updateWeaponSettings"}(\`${characterName}\`)" ${settingsRef[entry.toggleElemID2[0]] ? "checked" : ""}>
+                                        <span class="toggleSlider"></span>
+                                    </label>
+                                </div>` : ""}
+                            </div>` : ""} -->
+
+
                         <div class="abilityBreakdownBody" id="weaponBreakdownBody1"></div>
                         <div class="abilityBreakdownBody" id="weaponBreakdownFooter1"></div>
                     </div>
@@ -247,90 +293,139 @@
 
 
                 <div class="abilityDamageTabHolder" id="teamBreakdownTabHolders" style="display: none;"><!-- TEAM BREAKDOWN CONTAINERS -->
+                    
 
-                    <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;width: 100%;"> 
-                        <!-- <div class="advancedCategoryHeader" style="border: none;">Team options coming soon.</div> -->
+                    <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;width: 100%;">
 
+                        <div class="abilityBreakdownGeneralMessage">The Buffs tab UI will be getting redone this week so just hang tight for that and use this in the meantime.</div>
                         <div class="teamBuffBoxHolder">
                             <!-- the buff toggle -->
-                            <div class="statisticSettingsRow hasHoverTooltip">
-                                <span class="statsRowName">Luna Buffs</span>
-                                <!-- <span class="rowTraceLine"></span> -->
-                                <div class="statsRowToggle">
-                                    <label class="toggleContainer">
-                                        <input type="checkbox" class="toggleCheckbox" id="useTeamBuffsLuna" onchange="userTriggers.updateTeamBuffsObject()">
-                                        <span class="toggleSlider"></span>
-                                    </label>
+                            <div class="traitMegaTitleHeaderTeamBuffs">ALLIED BUFFS</div>
+                            <div>
+                                <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Characters</div>
+                                <div class="statisticSettingsRow hasHoverTooltip">
+                                    <span class="statsRowNameBuffs">Luna</span>
+                                    <span class="rowTraceLine"></span>
+                                    <div class="statsRowToggle">
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="useTeamBuffsLuna" onchange="userTriggers.updateTeamBuffsObject()">
+                                            <span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
                                 </div>
+                                <div class="teamBuffBreakdownHolder" id="teamBuffsLunaBox" style="display: none;">
+                                    <!-- <span class="rowTraceLine"></span> -->
+                                    <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                        <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                            <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
+                                            <div style="padding-right: 5px;">Aggressive Melody</div>
+                                            <div class="totalHealingValue">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaAggressive" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
+                                            <!-- <div class="totalHealingHeader">Input Luna's MP</div> -->
+                                            <div style="padding-right: 5px;">Input Luna's MP</div>
+                                            <div class="totalHealingValue">
+                                                <input type="number" class="traitLevelInput" id="teamBuffsLunaMP" min="300" max="900" step=".01" value="637.55" onchange="userTriggers.updateTeamBuffsObject()">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table class="teamBuffTable">
+                                        <tr>
+                                            <th>Buff</th>
+                                            <th>Is Active</th>
+                                            <th>Enhance</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Exciting (Red)</th>
+                                            <td>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaExciting" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </td>
+                                            <td rowspan="3">
+                                                <select id="teamBuffsLunaEnhancement" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <option value="None">None</option>
+                                                    <option value="Red">Red</option>
+                                                    <option value="Blue">Blue</option>
+                                                    <option value="Purple">Purple</option>
+                                                    <option value="Purple + Red">Purple + Red</option>
+                                                    <option value="Purple + Blue">Purple + Blue</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Relaxing (Blue)</th>
+                                            <td>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaRelaxing" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Cheerful (Purple)</th>
+                                            <td>
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaCheerful" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+
+
+                                <!-- <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Weapons</div> -->
                             </div>
 
-                            <div class="teamBuffBreakdownHolder" id="teamBuffsLunaBox" style="display: none;">
-                                <!-- <span class="rowTraceLine"></span> -->
-                                <div class="statisticSettingsRow" style="box-sizing: border-box;">
-                                    <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
-                                        <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
-                                        <div style="padding-right: 5px;">Aggressive Melody</div>
-                                        <div class="totalHealingValue">
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaAggressive" onchange="userTriggers.updateTeamBuffsObject()">
-                                                <span class="toggleSlider"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
-                                        <!-- <div class="totalHealingHeader">Input Luna's MP</div> -->
-                                        <div style="padding-right: 5px;">Input Luna's MP</div>
-                                        <div class="totalHealingValue">
-                                            <input type="number" class="traitLevelInput" id="teamBuffsLunaMP" min="300" max="900" step=".01" value="637.55" onchange="userTriggers.updateTeamBuffsObject()">
-                                        </div>
+                            <div class="traitMegaTitleHeaderTeamBuffs">ENEMY BUFFS</div>
+                            <div>
+                                <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Activity Modifiers</div>
+                                <div class="statisticSettingsRow hasHoverTooltip">
+                                    <span class="statsRowNameBuffs">Void&nbsp;Erosion&nbsp;Purge</span>
+                                    <span class="rowTraceLine"></span>
+                                    <div class="statsRowToggle">
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="useTeamErosionModifier" onchange="userTriggers.updateTeamBuffsObject()">
+                                            <span class="toggleSlider"></span>
+                                        </label>
                                     </div>
                                 </div>
+                                <div class="teamBuffBreakdownHolder" id="teamBuffsErosionBox" style="display: none;">
+                                    <!-- <span class="rowTraceLine"></span> -->
+                                    <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                        <!-- <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                            <div style="padding-right: 5px;">Aggressive Melody</div>
+                                            <div class="totalHealingValue">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaAggressive" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                        <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
+                                            <!-- <div class="totalHealingHeader">Input Luna's MP</div> -->
+                                            <div style="padding-right: 5px;">Input Erosion Level</div>
+                                            <div class="totalHealingValue">
+                                                <input type="number" class="traitLevelInput" id="teamBuffsErosionLevel" min="21" max="30" step="1" value="30" onchange="userTriggers.updateTeamBuffsObject()" style="max-width: 200px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="abilityBreakdownGeneralMessage">Erosion modifiers are available from levels 21 through 30. You'll see the bonuses populate in the stats column when this is toggled on.<br><br>20 and under, nobody cares.</div>
 
-                                <table class="teamBuffTable">
-                                    <tr>
-                                        <th>Buff</th>
-                                        <th>Is Active</th>
-                                        <th>Enhance</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Exciting (Red)</th>
-                                        <td>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaExciting" onchange="userTriggers.updateTeamBuffsObject()">
-                                                <span class="toggleSlider"></span>
-                                            </label>
-                                        </td>
-                                        <td rowspan="3">
-                                             <select id="teamBuffsLunaEnhancement" onchange="userTriggers.updateTeamBuffsObject()">
-                                                <option value="None">None</option>
-                                                <option value="Red">Red</option>
-                                                <option value="Blue">Blue</option>
-                                                <option value="Purple">Purple</option>
-                                                <option value="Purple + Red">Purple + Red</option>
-                                                <option value="Purple + Blue">Purple + Blue</option>
-                                             </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Relaxing (Blue)</th>
-                                        <td>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaRelaxing" onchange="userTriggers.updateTeamBuffsObject()">
-                                                <span class="toggleSlider"></span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Cheerful (Purple)</th>
-                                        <td>
-                                            <label class="toggleContainer">
-                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsLunaCheerful" onchange="userTriggers.updateTeamBuffsObject()">
-                                                <span class="toggleSlider"></span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                </table>
 
+                                </div>
+
+
+                                <!-- <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Weapons</div> -->
                             </div>
                         </div>
                         
@@ -359,10 +454,11 @@
                                                     <datalist id="queryTypeList">
                                                         <option>Ability</option>
                                                         <option>Ability - Weapon Based</option>
-                                                        <option>Stat</option>
-                                                        <option>Weapon</option>
                                                         <option>Ability - Reactor Roll</option>
+                                                        <option>Weapon</option>
                                                         <option>Weapon - Substat</option>
+                                                        <option>Weapon - Cores</option>
+                                                        <option>Stat</option>
                                                     </datalist>
                                                 </div>
                                             </div>
@@ -384,10 +480,149 @@
                                             </div>
         
                                             <div class="selectionSelectorBoxes" style="margin: 3px;">
-                                                <div class="selectSelectorTitle">MOD:</div>
+                                                <div class="selectSelectorTitle" id="queryCycledTargetName">MOD:</div>
                                                 <div class="presetsSelectorBox">
                                                     <input class="selectSelector" id="queryMod" list="queryModList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
                                                     <datalist id="queryModList"></datalist>
+                                                </div>
+                                            </div>
+
+                                            <div class="descendantOverviewBoxQueries" id=""> 
+                                                <!-- CORES -->
+                                                <div class="descOverviewRowCore" id="queriesCoreSelectionRow">
+                                                    <div class="descOverviewMiniBoxCore" onclick="moduleQueryFunctions.updateQueryCoreSelected(1)">
+                                                        <img class="prismDisplayIconQueries" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_001.png" id="weaponCore1IconQuery">
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxCore" onclick="moduleQueryFunctions.updateQueryCoreSelected(2)">
+                                                        <img class="prismDisplayIconQueries" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_002.png" id="weaponCore2IconQuery">
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxCore" onclick="moduleQueryFunctions.updateQueryCoreSelected(3)">
+                                                        <img class="prismDisplayIconQueries" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_003.png" id="weaponCore3IconQuery">
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxCore" onclick="moduleQueryFunctions.updateQueryCoreSelected(4)">
+                                                        <img class="prismDisplayIconQueries" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_004.png" id="weaponCore4IconQuery">
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxCore" onclick="moduleQueryFunctions.updateQueryCoreSelected(5)">
+                                                        <img class="prismDisplayIconQueries" src="/TFD/TFDImages/Cores/Icon_Cores_Type_Big_005.png" id="weaponCore5IconQuery">
+                                                    </div>
+                                                    <div class="coreRowTitleBox" id="coreBoxTitleTextQuery"></div>
+                                                </div>
+                                                <!-- REACTOR SUBS -->
+                                                <div class="descOverviewRowComparisons" id="queriesReactorSelectionRow">
+                                                    <div class="descOverviewMiniBoxReactorQuery" onclick="moduleQueryFunctions.updateQueryReactorSelected(1)" id="queryReactorBoxHolder1">
+                                                        <div class="queryReactorTitle">Reactor Sub 1:</div>
+                                                        <div class="queryReactorName" id="queryReactorName1">Skill ATK (Colossus)</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQuery" onclick="moduleQueryFunctions.updateQueryReactorSelected(2)" id="queryReactorBoxHolder2">
+                                                        <div class="queryReactorTitle">Reactor Sub 2:</div>
+                                                        <div class="queryReactorName" id="queryReactorName2">Skill ATK (Colossus)</div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- CHARACTER MODS -->
+                                                <div class="descOverviewRowComparisonsFlexRow" id="queriesCharacterModSelectionRow">
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(3)" id="queryCharacterBoxHolder3">
+                                                        <div class="queryReactorTitle">3:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod3IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName3">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(4)" id="queryCharacterBoxHolder4">
+                                                        <div class="queryReactorTitle">4:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod4IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName4">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(5)" id="queryCharacterBoxHolder5">
+                                                        <div class="queryReactorTitle">5:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod5IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName5">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(6)" id="queryCharacterBoxHolder6">
+                                                        <div class="queryReactorTitle">6:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod6IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName6">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(7)" id="queryCharacterBoxHolder7">
+                                                        <div class="queryReactorTitle">7:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod7IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName7">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(8)" id="queryCharacterBoxHolder8">
+                                                        <div class="queryReactorTitle">8:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod8IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName8">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(9)" id="queryCharacterBoxHolder9">
+                                                        <div class="queryReactorTitle">9:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod9IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName9">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(10)" id="queryCharacterBoxHolder10">
+                                                        <div class="queryReactorTitle">10:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod10IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName10">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(11)" id="queryCharacterBoxHolder11">
+                                                        <div class="queryReactorTitle">11:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod11IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName11">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryCharacterModSelected(12)" id="queryCharacterBoxHolder12">
+                                                        <div class="queryReactorTitle">12:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="characterMod12IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryCharacterModName12">No Input</div>
+                                                    </div>
+                                                </div>
+                                                <!-- Weapon MODS -->
+                                                <div class="descOverviewRowComparisonsFlexRow" id="queriesWeaponModSelectionRow">
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(1)" id="queryWeaponBoxHolder1">
+                                                        <div class="queryReactorTitle">1:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod1IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName1">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(2)" id="queryWeaponBoxHolder2">
+                                                        <div class="queryReactorTitle">2:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod2IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName2">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(3)" id="queryWeaponBoxHolder3">
+                                                        <div class="queryReactorTitle">3:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod3IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName3">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(4)" id="queryWeaponBoxHolder4">
+                                                        <div class="queryReactorTitle">4:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod4IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName4">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(5)" id="queryWeaponBoxHolder5">
+                                                        <div class="queryReactorTitle">5:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod5IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName5">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(6)" id="queryWeaponBoxHolder6">
+                                                        <div class="queryReactorTitle">6:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod6IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName6">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(7)" id="queryWeaponBoxHolder7">
+                                                        <div class="queryReactorTitle">7:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod7IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName7">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(8)" id="queryWeaponBoxHolder8">
+                                                        <div class="queryReactorTitle">8:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod8IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName8">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(9)" id="queryWeaponBoxHolder9">
+                                                        <div class="queryReactorTitle">9:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod9IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName9">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponModSelected(10)" id="queryWeaponBoxHolder10">
+                                                        <div class="queryReactorTitle">10:<img class="prismDisplayIconQueriesModPolarities" src="/TFD/TFDImages/Polarities/Icon_RunesCapacity_Mini_000_Picto.png" id="weaponMod10IconQuery"></div>
+                                                        <div class="queryReactorName" id="queryWeaponModName10">No Input</div>
+                                                    </div>
+                                                </div>
+                                                <!-- Weapon SUBSTATS -->
+                                                <div class="descOverviewRowComparisonsFlexRow" id="queriesWeaponSubSelectionRow">
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponSubSelected(1)" id="queryWeaponSubBoxHolder1">
+                                                        <div class="queryReactorTitle">Sub 1:</div>
+                                                        <div class="queryReactorName" id="queryWeaponSubName1">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponSubSelected(2)" id="queryWeaponSubBoxHolder2">
+                                                        <div class="queryReactorTitle">Sub 2:</div>
+                                                        <div class="queryReactorName" id="queryWeaponSubName2">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponSubSelected(3)" id="queryWeaponSubBoxHolder3">
+                                                        <div class="queryReactorTitle">Sub 3:</div>
+                                                        <div class="queryReactorName" id="queryWeaponSubName3">No Input</div>
+                                                    </div>
+                                                    <div class="descOverviewMiniBoxReactorQueryWrappable" onclick="moduleQueryFunctions.updateQueryWeaponSubSelected(4)" id="queryWeaponSubBoxHolder4">
+                                                        <div class="queryReactorTitle">Sub 4:</div>
+                                                        <div class="queryReactorName" id="queryWeaponSubName4">No Input</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1254,21 +1489,21 @@
                         <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('characterBreakdownTab')">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/CharacterIcons/Icon_PC_List_001_U01.png" id="buttonsCharacterIcon">
                         </div>
-                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('auxiliaryBreakdownTab')">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('auxiliaryBreakdownTab')" id="buttonsAuxiliaryIconUIBox">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_01.png" id="buttonsAuxiliaryIcon">
                         </div>
-                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('sensorBreakdownTab')">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('sensorBreakdownTab')" id="buttonsSensorIconUIBox">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_02.png" id="buttonsSensorIcon">
                         </div>
                     </div>
                     <div class="descOverviewRow">
-                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('reactorBreakdownTab')">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('reactorBreakdownTab')" id="buttonsReactorIconUIBox">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Reactors/Icon_Reactor_003_Tech.png" id="buttonsReactorIcon">
                         </div>
-                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('memoryBreakdownTab')">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('memoryBreakdownTab')" id="buttonsMemoryIconUIBox">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_03.png" id="buttonsMemoryIcon">
                         </div>
-                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('processorBreakdownTab')">
+                        <div class="descOverviewMiniBox" onclick="userTriggers.updateSelectedFocus('processorBreakdownTab')" id="buttonsProcessorIconUIBox">
                             <img class="prismDisplayIcon" src="/TFD/TFDImages/Components/Icon_Item_Acc_Default_04.png" id="buttonsProcessorIcon">
                         </div>
                     </div>
@@ -1317,19 +1552,14 @@
         </div> -->
 
         <div class="mainGridRow3" style="display: flex;width: 100%;border: none;background: none;margin-bottom: 2px;">
-
             <!-- <div class="tfdSettingsMainBox">
                 <div class="advancedStatsTitleHeader" style="padding-top: 0;">MOD COMPARISONS</div>
-
                 <div class="survivabilityContainer">
-
                     <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;flex-direction: column;">
                         <div class="breakdownTab" style="display: flex;">
-
                             <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;">
                                 <div class="breakdownTabHeader">Ability Targets:</div>
                                 <div class="breakdownTabBody">
-
                                     <div class="abilityBreakdownGeneralMessage">You need at least one mod equipped on your character in slots 3-12 order to see a breakdown generate.<br>Transcendent and Sub-Attack mods cannot be compared.</div>
                                     <div class="selectionSelectorBoxes" style="margin: 3px;">
                                         <div class="selectSelectorTitle">ABILITY:</div>
@@ -1338,7 +1568,6 @@
                                             <datalist id="queryAbilityList"></datalist>
                                         </div>
                                     </div>
-
                                     <div class="selectionSelectorBoxes" style="margin: 3px;">
                                         <div class="selectSelectorTitle">ASPECT:</div>
                                         <div class="presetsSelectorBox">
@@ -1346,7 +1575,6 @@
                                             <datalist id="queryAbilityOptionList"></datalist>
                                         </div>
                                     </div>
-
                                     <div class="selectionSelectorBoxes" style="margin: 3px;">
                                         <div class="selectSelectorTitle">MOD:</div>
                                         <div class="presetsSelectorBox">
@@ -1356,13 +1584,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        
-
                         <div class="modQueryResultsBoxHolder" id="moduleQueryBoxHolder"></div>
                     </div>
-
                 </div>
             </div> -->
         </div>
@@ -1400,6 +1624,7 @@
 <script src="/TFD/Calculator/subAttack.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/Weapons/cores.js"></script> <!-- weapon data -->
+<script src="/TFD/Calculator/parsedErosionData.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- weapon mod data -->

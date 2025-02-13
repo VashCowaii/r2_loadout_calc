@@ -101,6 +101,9 @@ const calcs = {
     customCeiling(value, precision = 0.00001) {
         return Math.ceil(value / precision) * precision;
     },
+    clamp(value,floor,ceiling) {
+        return Math.min(ceiling,Math.max(floor,value))
+    },
 
 
     getTotalSkillPowerModifier(index,abilityTypeArray) {
@@ -109,7 +112,7 @@ const calcs = {
         return sumModifierBonus;
     },
     getTotalSkillPower(index,abilityTypeArray,skillDependentModifier) {
-        const powerOptimization = index.PowerOptimization;
+        const powerOptimization = index.PowerOptimization + index.PowerOptimizationCORE;
         skillDependentModifier = skillDependentModifier || 1;
 
         const reactorLevel = globalRecords.reactor.level;
@@ -119,15 +122,16 @@ const calcs = {
 
         const basePowerRatio = 1 + index.PowerRatioBase;
         let baseSkillPower = (baseSkillPowerValue * powerOptimization * skillDependentModifier + index.SkillAttackColossus) * basePowerRatio;
-        for (let type of abilityTypeArray) {baseSkillPower *= (1 + index[`PowerRatio${type.replace(/-/g, "")}`]);}
+        for (let type of abilityTypeArray) {baseSkillPower *= Math.max(0.001,1 + index[`PowerRatio${type.replace(/-/g, "")}`]);}
 
         // return calcs.customTruncate(baseSkillPower + 0.00001,4);
         return baseSkillPower;
     },
     getResistanceBasedDR(index,typeName) {
         const currentBoss = globalRecords.boss.currentBoss;
-        const reductionValue = index[`enemy${typeName.replace(/-/g, '')}ResistanceReduction`];
-        const resistReduction = 1 + reductionValue;
+        const resistString = `enemy${typeName.replace(/-/g, '')}ResistanceReduction`;
+        const reductionValue = index[resistString] + index[resistString+"CORE"];
+        const resistReduction = Math.max(0,1 + reductionValue);
 
         let basicStats = bossData[currentBoss].levelKeys[globalRecords.playerCount].lvlStats;
         const currentResistValue = basicStats[typeName] * resistReduction;
@@ -190,6 +194,13 @@ const calcs = {
         return {perHit,perCrit,AVG}
     },
 
+    getReloadTime(index,baseReloadTime,weaponRef) {
+        const reloadComposite = calcs.clamp(index.ReloadSpeed + index.ReloadSpeedCORE,-0.30,0.90);
+        //positive numbers are speed boosts, negative is bad. A reload time divided by a larger number makes it smaller, but a smaller number makes it bigger, etc.
+        let reloadTime = (baseReloadTime - weaponRef.ZoomInHoldDelayTime) / (1 + reloadComposite);
+
+        return reloadTime;
+    },
     getFirearmATK(index,weaponRef,uniqueMulti) {
         const baseFirearmATK = weaponRef.baseATK;
         uniqueMulti = uniqueMulti || 1;
@@ -198,12 +209,16 @@ const calcs = {
         const onHitBonus = index["FirearmATK%OnHit"] + index["FirearmATK%OnHitCORE"];//while called onhit it's more of an enemy debuff
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
 
-        const baseAdvantage = 1 + weaponRef.physicalTypeBonus + (globalRecords.boss.enemyType === "Colossus" ? 0.10 : 0);
+        const colossusCheck = globalRecords.boss.enemyType === "Colossus";
+        const baseAdvantage = 1 + weaponRef.physicalTypeBonus + (colossusCheck ? 0.10 : 0);
         const bonusAdvantage = index.TypeBonus + index.TypeBonusCORE;
         const endAdvantage = calcs.customTruncate((baseAdvantage * (1 + bonusAdvantage) + 0.00001),4);
         const physicalTypeBonus = endAdvantage-1;
         const physicalTypeMulti = weaknessCheck ? endAdvantage : 1;
-        const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : (index["ColossusATK"] + index["ColossusATKCORE"]) * (1 + index["ColossusATK%"] + index["ColossusATK%CORE"]);
+
+        const colossusFactionSum = (index["ColossusATK"] + index["ColossusATKCORE"]) * (1 + index["ColossusATK%"] + index["ColossusATK%CORE"]);
+        const vulgusFactionSum = (index["VulgusATK"] + index["VulgusATKCORE"]) * (1 + index["VulgusATK%"] + index["VulgusATK%CORE"]);
+        const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : colossusCheck ? colossusFactionSum : vulgusFactionSum;
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
@@ -218,7 +233,8 @@ const calcs = {
 
         const bossPartWPBonus = globalRecords.boss.currentBossPartWP;
 
-        const totalWPBonus = calcs.customTruncate((globalRecords.useWeakspots && bossPartWPBonus != 0 ? (baseWPMulti + flatWPBonus) * (1 + weakpointBonus) + bossPartWPBonus : 1) + 0.00001,4);
+        //some mods like lethal finish can lock the weak point modifier to a value, in this case 1x, but those still include the boss part bonus
+        const totalWPBonus = index.WeakPointOverride ? 1 + bossPartWPBonus : calcs.customTruncate((globalRecords.useWeakspots && bossPartWPBonus != 0 ? (baseWPMulti + flatWPBonus) * (1 + weakpointBonus) + bossPartWPBonus : 1) + 0.00001,4);
 
         const wpHitRate = globalRecords.weakPointHitRate/100;
         const wpAveraged = 1 + (wpHitRate * Math.max(0,totalWPBonus-1));
@@ -238,13 +254,13 @@ const calcs = {
         const totalFirearmCritRatePreCap = (baseFirearmCritRate + baseFirearmCritRateBonus) * (1 + firearmCritRateBonus);
         const totalFirearmCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalFirearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100)) : 0;
 
-        const totalFirearmCritDamage = (baseFirearmCritDamage + baseFirearmCritDamageBonus) * (1 + firearmCritDamageBonus);
+        const totalFirearmCritDamage = Math.max(1,(baseFirearmCritDamage + baseFirearmCritDamageBonus) * (1 + firearmCritDamageBonus));
 
         return {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage}
     },
     getFirearmElementalSpread(index,elementName,usableBase,critFirearm) {
         const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
-        const damageElementBase = ((usableBase) * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`]) * (1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) * elemDR;
+        const damageElementBase = ((usableBase) * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`]) * Math.max(0,1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) * elemDR;
 
         const perHit = damageElementBase;
         const perCrit = perHit * critFirearm.Damage;
@@ -387,39 +403,84 @@ const customDamage = {
         limitedWeaponAbilityBonuses = [];
 
         const currentWeaponMods = weaponModOverride || globalRecords.weapon.mods;
+        const currentCharacterMods = modArrayOverride || globalRecords.character.mods;
         const weaponModsCategory = userTriggers.weaponTypeModList[sniperList[globalRecords.weapon.currentWeapon].ammoType];
+        //weapon mods
         for (let entry of currentWeaponMods) {
             let path = weaponModsCategory[entry];
             if (path.complexBonus) {
 
                 //if this is a nonstacking cooldown based effect, then make the initial time passed the amount of the cooldown so it can apply to the first shot
                 //otherwise set it to 0 so time can accrue normally
-                let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
-                if (path.complexBonus[0].oneTimeOrStack === "stack" && path.complexBonus[0].accrualDelay) {
-                    initialTimePassed -= path.complexBonus[0].accrualDelay
-                }
+                // let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
+                // if (path.complexBonus[0].oneTimeOrStack === "stack" && path.complexBonus[0].accrualDelay) {
+                //     initialTimePassed -= path.complexBonus[0].accrualDelay
+                // }
                 let firstIsSkipped = (path.complexBonus[0].skipFirstShot || false) ? -1 : 0;
 
-                let complexBonusArray = [];
+                let complexBonusArrayWeapons = [];
+                let complexBonusArrayAbilities = [];
 
                 for (let bonuses of path.complexBonus) {
                     let newArrayEntry = {
                         ...bonuses
                     }
                     newArrayEntry.stats = [...bonuses.stats]
-                    complexBonusArray.push(newArrayEntry);
+                    complexBonusArrayWeapons.push({...newArrayEntry});
+                    complexBonusArrayAbilities.push({...newArrayEntry});
                 }
 
                 limitedWeaponBonuses.push({
-                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
-                    "bonusArray": complexBonusArray 
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": 0,"timeOfReload": 0,
+                    "reloadTimePassed": 0,"reloadTimeApplied": false,
+                    "bonusArray": [...complexBonusArrayWeapons] 
                 })
                 limitedWeaponAbilityBonuses.push({
-                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
-                    "bonusArray": complexBonusArray
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": 0,"timeOfReload": 0,
+                    "reloadTimePassed": 0,"reloadTimeApplied": false,
+                    "bonusArray": [...complexBonusArrayAbilities]
                 })
             }
         }
+        //character mods
+        for (let entry of currentCharacterMods) {
+            let path = modData[entry];
+            //TODO: Right now this accounts for trans mods AND sub attack mods on the first two loops. Possibly change this later.
+            if (path && path.complexBonus) {
+
+                //if this is a nonstacking cooldown based effect, then make the initial time passed the amount of the cooldown so it can apply to the first shot
+                //otherwise set it to 0 so time can accrue normally
+                // let initialTimePassed = path.complexBonus[0].oneTimeOrStack === "cooldown" ? path.complexBonus[0].cooldown : 0;
+                // if (path.complexBonus[0].oneTimeOrStack === "stack" && path.complexBonus[0].accrualDelay) {
+                //     initialTimePassed -= path.complexBonus[0].accrualDelay
+                // }
+                let firstIsSkipped = (path.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+
+                let complexBonusArrayWeapons = [];
+                let complexBonusArrayAbilities = [];
+
+                for (let bonuses of path.complexBonus) {
+                    let newArrayEntry = {
+                        ...bonuses
+                    }
+                    newArrayEntry.stats = [...bonuses.stats]
+                    complexBonusArrayWeapons.push({...newArrayEntry});
+                    complexBonusArrayAbilities.push({...newArrayEntry});
+                }
+
+                limitedWeaponBonuses.push({
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": 0,"timeOfReload": 0,
+                    "reloadTimePassed": 0,"reloadTimeApplied": false,
+                    "bonusArray": [...complexBonusArrayWeapons] 
+                })
+                limitedWeaponAbilityBonuses.push({
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": 0,"timeOfReload": 0,
+                    "reloadTimePassed": 0,"reloadTimeApplied": false,
+                    "bonusArray": [...complexBonusArrayAbilities]
+                })
+            }
+        }
+        //abilities
         for (let i=1;i<=5;i++) {
             const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
             const currentPath = abilityRefs[`ability${i}`][path];
@@ -429,26 +490,34 @@ const customDamage = {
             if (currentPath.complexBonus.length) {
                 let initialTimePassed = currentPath.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPath.complexBonus[0].cooldown : 0;
                 let firstIsSkipped = (currentPath.complexBonus[0].skipFirstShot || false) ? -1 : 0;
-                let complexBonusArray = [];
+                
+                let complexBonusArrayWeapons = [];
+                let complexBonusArrayAbilities = [];
 
                 for (let bonuses of currentPath.complexBonus) {
                     let newArrayEntry = {
                         ...bonuses
                     }
                     newArrayEntry.stats = [...bonuses.stats]
-                    complexBonusArray.push(newArrayEntry);
+                    complexBonusArrayWeapons.push({...newArrayEntry});
+                    complexBonusArrayAbilities.push({...newArrayEntry});
                 }
 
 
                 limitedWeaponAbilityBonuses.push({
                     "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
-                    "bonusArray": complexBonusArray
+                    "bonusArray": [...complexBonusArrayAbilities]
+                })
+                limitedWeaponBonuses.push({
+                    "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                    "bonusArray": [...complexBonusArrayWeapons]
                 })
                 // customDamage[currentPath.customDPSBase](index,null,isCycleCalcs);
             }
         }
 
         const currentPath = currentWeaponRef;
+        //ultimate weapon abilities
         if (currentPath.complexBonus && currentPath.complexBonus.length) {
             let initialTimePassed = currentPath.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPath.complexBonus[0].cooldown : 0;
             let firstIsSkipped = (currentPath.complexBonus[0].skipFirstShot || false) ? -1 : 0;
@@ -510,7 +579,7 @@ const customDamage = {
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
-        if (currentWeaponRef.customDPS) {returnValuesObject.weapon = customDamage[currentWeaponRef.customDPS](index,returnObject,isCycleCalcs);}
+        if (currentWeaponRef.customDPS) {returnValuesObject.weapon = customDamage[currentWeaponRef.customDPS](index,returnObject,isCycleCalcs,currentWeaponRef,limitedWeaponBonuses);}
         else {
             returnValuesObject.weapon = customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,currentWeaponRef,limitedWeaponBonuses);
         }
@@ -1724,16 +1793,18 @@ const customDamage = {
             "skillOnly": true,
             "shellCountOverride": 1,
             "skipCoreValues": true,
+            "noReloads": true,
+            "durationRestriction": baseDuration,
         }
         const baseFireRate = 451;
         const magazine = abilityMods.magazine * (1 + index.MagazineSize);
         const actualMagSize = Math.floor(magazine);
         //this is purely to fake out the bulletsArray returned so we can still see the total upper value on shots possible
         //and then trim it by duration array slice, and then math.min with the actual mag size, so the fake value is never truly used
-        const fakeMagSize = 150;
+        // const fakeMagSize = 150;
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
-        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,fakeMagSize,currentWeaponRef,settingsObject).bulletsArray;
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
 
         //trim the bullets array by the allowed duration specified above
         for (let i=0;i<bulletsArray.length;i++) {
@@ -2714,6 +2785,7 @@ const customDamage = {
             "specialGunFunction": customDamage.haileyZenithCryoBase,
             "shellCountOverride": 1,
             "skipCoreValues": true,
+            "noReloads": true,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
@@ -2727,7 +2799,7 @@ const customDamage = {
         for (let entry of bulletsArray) {
             totalAVGSkill += entry.SkillDamage.AVG;
             totalAVGGun += entry.damageAVG + entry.avgTotalBonusElem + entry.specialGunFunction.AVG;
-            totalAVGSum += entry.damageAVGTotal// + entry.SkillDamage.AVG;
+            totalAVGSum += entry.damageAVGTotal;
         }
         const avgPerHitTotal = totalAVGSum/totalShots;
         const avgGunPerHit = totalAVGGun/totalShots;
@@ -3181,10 +3253,17 @@ const customDamage = {
         const continuousCost = abilityMods.continuousCost * (1 + index.SkillCost);
         const allowedMPDuration = Math.ceil(totalMP/continuousCost);
 
-        const magazineSize = 300;//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const magazineSize = 2;//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = magazineSize;
         const baseFireRate = abilityMods.fireRate;
         const rollDuration = 1.06;
+
+        const baseDuration = abilityMods.skillDuration * (1 + index.SkillDuration);
+        const normalDuration = baseDuration - rollDuration;
+        //restrict duration by mp costs based on the toggle state
+        const baseSkillDuration = settingsRef.lepicOverclockMPRestrictions ? Math.min(allowedMPDuration,normalDuration) : normalDuration;
+        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
+        const totalDuration = baseDuration + continuousDuration;
 
         const settingsObject = {
             limitedWeaponAbilityBonuses,
@@ -3195,19 +3274,12 @@ const customDamage = {
             "skillOnly": true,
             "shellCountOverride": 1,
             "skipCoreValues": true,
+            "noReloads": true,
+            "durationRestriction": baseDuration,
         }
 
         const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
         let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
-
-
-        
-        const baseDuration = abilityMods.skillDuration * (1 + index.SkillDuration);
-        const normalDuration = baseDuration - rollDuration;
-        //restrict duration by mp costs based on the toggle state
-        const baseSkillDuration = settingsRef.lepicOverclockMPRestrictions ? Math.min(allowedMPDuration,normalDuration) : normalDuration;
-        const continuousDuration = abilityMods.duration * (1 + index.SkillDuration);
-        const totalDuration = baseDuration + continuousDuration;
 
         //trim the bullets array by the allowed duration specified above
         for (let i=0;i<bulletsArray.length;i++) {
@@ -3304,52 +3376,6 @@ const customDamage = {
             return {overkillAVGperHit4,overkillTotalShotDamage4,continuousAVGperTick4,continuousTotalDamage4,dpsPerShot4,dpsPerCast4,sumTotalDamage4}
         }
         // <div class="abilityBreakdownGeneralMessage">asdf.</div>
-    },
-    skillBasedFireRateMath(index,firingWindowDuration,delayBetweenShots,isSharpPrecision,currentAmmoType) {
-        const fireRate = index.FireRate;//the flat, non-dynamic fire rate bonuses/negatives from equipped mods, before something like sharp precision kicks in.
-    
-        const baseRate = delayBetweenShots;//gap between shots with 0 fire rate active from any source.
-        const modifiedRate = baseRate * (1 + fireRate);//modified time between shots with -20% penalty and +25% boost
-    
-        const reductionPerStack = baseRate * 0.04;//4% reduction of the base time per stack
-        const maxStacks = 10;
-        const sharpAmmoTypeDelays = {
-            "General": 0.5,
-            "Special": 0.5,
-            "Impact": 0.4,
-            "HighPowered": 0
-        }
-        const stackDelay = sharpAmmoTypeDelays[currentAmmoType];//Are we using Sharp Precision from green ammo, or from white/orange.
-    
-        let timePassed = 0;
-        let shotCount = 1;//start at 1, bc the first shot is considered instantaneous
-        let excessWasted = 0;
-    
-        if (isSharpPrecision) {
-            while (timePassed < firingWindowDuration) {
-                const stacks = Math.min(Math.floor(timePassed / stackDelay), maxStacks);
-                const currentRate = modifiedRate - stacks * reductionPerStack;//time between shots with the stacks applied
-                const nextShotTime = timePassed + currentRate;//time for the next shot
-    
-                if (nextShotTime <= firingWindowDuration) {
-                    shotCount++;
-                    timePassed = nextShotTime;//passed to the time of the next shot
-                }
-                else {
-                    excessWasted = firingWindowDuration - nextShotTime;
-                    break;
-                }
-            }
-        }
-        else {
-            const floatCount = firingWindowDuration/(modifiedRate);
-            shotCount += Math.floor(floatCount);
-            durationDiff = floatCount - Math.floor(floatCount);
-            excessWasted = durationDiff;
-        }
-    
-    
-        return {shotCount,firingWindowDuration,excessWasted};
     },
     lepicOverkillCalcsEfficiency(index,returnObject,isCycleCalcs,nameOverride) {
         const characterRef = characters.Lepic;
@@ -3455,6 +3481,10 @@ const customDamage = {
                     "limit": 1,
                     "cooldown": 60,
                     "duration": totalDuration,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
                     "conditions": [],
                     "skipFirstShot": false,
                 }
@@ -6226,7 +6256,7 @@ const customDamage = {
 
         const basicInfo = {baseSkillPower,abilityDR,crit};
 
-        const dischargeMultiplier = 1;
+        const dischargeMultiplier = settingsRef.inesDischargePerfect ? 2 : 1;
         const skillPowerModifier = (abilityMods.base + sumModifierBonus + (settingsRef.inesConductorActive3 ? abilityMods.baseBonus : 0)) * dischargeMultiplier;
         const skillPowerModifierPierce = (abilityMods.basePierce + sumModifierBonus + (settingsRef.inesConductorActive3 ? abilityMods.baseBonus : 0)) * dischargeMultiplier;
 
@@ -6239,9 +6269,15 @@ const customDamage = {
         // const SUMTotalAVG = damage.AVG * totalBounces;
 
         if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Discharge Multi","value": dischargeMultiplier,"unit": ""},
+            ]
+
             const breakdownArray = [
                 {"header": "SKILL EFFECT","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
                     "toggleElemID": ["inesConductorActive3","Conductor Active?"],
+                    "toggleElemID2": ["inesDischargePerfect","Perfect Release?"],
+                    "rowInjection": [rowInjection,""],
                     // "rowInjection": [rowInjection,""],
                     "condition": false,"desc": ""},
                 {"header": "PIERCE","value": damagePierce,"modifier": skillPowerModifierPierce,"hasCritAVG": true,"unit": "",
@@ -6434,67 +6470,78 @@ const customDamage = {
     },
 
     //LE GUNS
-    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
-    const settingsRef = weaponRef.weaponSettings;
+    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,referencedFromUniqueParent) {
+        const settingsRef = weaponRef.weaponSettings;
 
-    const magazineSize = weaponRef.magazine * (1+index.MagazineSize+index.MagazineSizeCORE);//it rounds down and floors the value, but I still want to show the decimal so people know.
-    const actualMagSize = Math.floor(magazineSize);
-    const baseRateValue = weaponRef.baseFireRate; //index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject
-    let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,null).bulletsArray;
+        const magazineSize = weaponRef.magazine * (1+index.MagazineSize+index.MagazineSizeCORE);//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = Math.floor(magazineSize);
+        const baseRateValue = weaponRef.baseFireRate; //index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject
 
-    let totalAVGGun = 0;
-    const totalShots = bulletsArray.length;
-    for (let entry of bulletsArray) {
-        totalAVGGun += entry.damageAVGTotal;
-    }
-    let avgPerShot = totalAVGGun/totalShots;
+        const settingsObject = {limitedWeaponBonuses}
 
-    if (!isCycleCalcs) {
-        let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray);
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject).bulletsArray;
 
-        const rowInjectionSums = [
-            {"name": "Magazine","value": magazineSize,"unit": "","id": "totalMagazineWeapons"},
-            {"name": "Total Fired","value": totalShots,"unit": "","id": "totalShotsFiredWeapons"},
-            {"name": "AVG/Shot","value": avgPerShot,"unit": "","id": "avgPerShotWeapons"},
-            {"name": "SUM AVG","value": totalAVGGun,"unit": "","id": "totalAVGWeapons"},
-        ]
-        const breakdownArray = [
-            {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
-                "rowInjection": [rowInjectionSums,""],
-                "condition": false,"desc": ""},
-            // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
-        ];
-        const bodyString = `weaponBreakdownBody1`;
-        
-        
-        const addRow = calcsUIHelper.addHealingBoxCluster;
-        readSelection(`weaponBreakdownBody1`).innerHTML += `
-        <br>
-        <div class="abilityBreakdownDescription" style="color:lightblue">Reload factors will be added next week.</div>
-        <div class="basicsSummaryBox">
-            ${graphString}
-            ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
-        </div>
-        <div class="basicsSummaryBox">
-        <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+        let totalAVGGun = 0;
+        let reloadEntries = 0;
+        for (let entry of bulletsArray) {
+            if (entry.reloadState) {reloadEntries++;continue;}
+            totalAVGGun += entry.damageAVGTotal;
+        }
+        const totalShots = bulletsArray.length - reloadEntries;
+        let avgPerShot = totalAVGGun/totalShots;
+        const totalTimePassed = bulletsArray.length ? bulletsArray[bulletsArray.length-1].timePassed : 1;
+        const totalAVGDPS = weaponRef.name==="" ? 0 : totalAVGGun/totalTimePassed;
+
+        if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray);
+
+            const rowInjectionSums = [
+                {"name": "Magazine","value": magazineSize,"unit": "","id": "totalMagazineWeapons"},
+                {"name": "Total Fired","value": totalShots,"unit": "","id": "totalShotsFiredWeapons"},
+                {"name": "AVG/Shot","value": avgPerShot,"unit": "","id": "avgPerShotWeapons"},
+                {"name": "SUM AVG","value": totalAVGGun,"unit": "","id": "totalAVGWeapons"},
+                {"name": "AVG DPS","value": totalAVGDPS,"unit": "","id": "totalAVGWeaponsDPS"},
+            ]
+            const breakdownArray = [
+                {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionSums,""],
+                    "condition": false,"desc": ""},
+                // "magazineTypeWeapon": [actualMagSize,weaponDamage.AVG],
+            ];
+            const bodyString = `weaponBreakdownBody1`;
             
-            <div class="tooltipHeader">Selection</div>
-            <div class="bulletSelectorIDRowBox">
-
-                <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1)">&#9664;</div>
-                <div class="traitLevelDisplay">
-                    <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet()">
-                </div> 
-                <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1)">&#9654;</div>
+            // <div class="abilityBreakdownDescription" style="color:lightblue">Reload factors will be added next week.</div>
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML += `
+            ${weaponRef.magazine===0 ? `<div class="missingWeaponDisplayBox" style="color:lightcoral">SELECT A WEAPON TO SEE BULLET SIMULATION INFO.</div>` :
+            `<br>
+            <div class="basicsSummaryBox">
+                ${graphString}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,null,index,returnObject,weaponRef.name,true)}
             </div>
-            ${bulletArrayString}
-        </div>
-        `;
-        // <div class="tooltipHeader">Bullet Selection</div>
-    }
-    else {
-        return {avgPerShot,totalAVGGun}
-    }
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="${totalShots+reloadEntries}" step="1" value="1" onchange="bullets.updateExpandedBullet()">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1)">&#9654;</div>
+                </div>
+                ${bulletArrayString}
+            </div>
+            `}`;
+            // <div class="tooltipHeader">Bullet Selection</div>
+        }
+        else {
+            return {avgPerShot,totalAVGDPS,totalAVGGun,totalShots,reloadEntries,magazineSize,totalTimePassed}
+        }
+
+        if (referencedFromUniqueParent) {
+            return {avgPerShot,totalAVGDPS,totalAVGGun,totalShots,reloadEntries,magazineSize,totalTimePassed,graphParams:!isCycleCalcs ? bullets.getActiveBulletGraph(bulletsArray) : null}
+        }
     },
     secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Secret Garden"];
@@ -6504,7 +6551,7 @@ const customDamage = {
         const stackBonusRef = [0.00,0.05,0.21,0.37]
         const currentBonus = stackBonusRef[currentStacks]
 
-        index.PowerOptimization += currentBonus;
+        index.PowerOptimizationCORE += currentBonus;
         index["FirearmATK%"] += currentBonus;
 
         if (!isCycleCalcs) {
@@ -6646,6 +6693,8 @@ const customDamage = {
                     "limit": 1,
                     "cooldown": 0,
                     "duration": 0,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
                     "conditions": [],
                     "skipFirstShot": false,
                 }
@@ -6681,7 +6730,61 @@ const customDamage = {
             `;
         }
     },
+    pythonCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Python"];
+        const settingsRef = weaponRef.weaponSettings;
 
+        if (settingsRef.usePythonBonus) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "enemyToxicResistanceReductionCORE","value": -0.036,"subStackValue": -0.013},
+                        {"name": "enemyNonAttributeResistanceReductionCORE","value": -0.02,"subStackValue": -0.01},
+                    ],
+                    "bonusName": "Python Instinct",
+                    "oneTimeOrStack": "stack",
+                    "duration": 2,
+                    "cooldown": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "clearOnReload": true,
+                    "limit": 28,
+                    "currentStacks": -1,
+                    "skipFirstShot": true,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "conditions": ["isWeakpoint"],
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "PREY","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["usePythonBonus","Use Prey?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Python",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
     skipThisWeaponCalcs(index,returnObject,isCycleCalcs) {
         if (!isCycleCalcs) {
             readSelection(`weaponBreakdownBody1`).innerHTML += `<br><br>
@@ -6697,6 +6800,7 @@ const customDamage = {
 //based on weapons with unique effects such as gregs
 const weaponTargetReferences = {
     "Shot - AVG/Hit": "avgPerShot",
+    "SUM AVG DPS": "totalAVGDPS",
     "SUM Magazine DMG": "totalAVGGun",
 }
 
@@ -6921,6 +7025,8 @@ let moduleQueryFunctions = {
         }
     },
     getUpdatedQueryModSelections(queryType) {
+        //this function is purely for populating the correct Target dropdown info based on what is provided
+        //but no actual math is done here, that's in the next function that calls this one
         const characterRef = globalRecords.character;
         const currentCharacter = characterRef.currentCharacter;
         const currentCharacterMods = characterRef.mods;
@@ -6942,16 +7048,19 @@ let moduleQueryFunctions = {
             "Weapon": currentWeaponMods,
             "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
             "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+            "Weapon - Cores": [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`],
         }
 
-
-
-        // const weaponRef = globalRecords.weapon;
-        // const overrideCheck = weaponSubstatOverride && weaponSubstatOverride.length;
-        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[0] : weaponRef.subRoll1].statName] += weaponRef.subRoll1Value;
-        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[1] : weaponRef.subRoll2].statName] += weaponRef.subRoll2Value;
-        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[2] : weaponRef.subRoll3].statName] += weaponRef.subRoll3Value;
-        // index[weaponSubstatList[overrideCheck ? weaponSubstatOverride[3] : weaponRef.subRoll4].statName] += weaponRef.subRoll4Value;
+        //queryCycledTargetName queryCycledTargetName
+        const queryCycledTargetNames = {
+            "Ability": "MOD",
+            "Stat": "STAT",
+            "Ability - Weapon Based": "MOD",
+            "Weapon": "MOD",
+            "Ability - Reactor Roll": "SUB",
+            "Weapon - Substat": "SUB",
+            "Weapon - Cores": "CORE",
+        }
 
         //character stuff ignores the first 2 slots, whereas weapon stuff does not
         let isWeaponBased = queryType.toLowerCase().includes("weapon");
@@ -6960,7 +7069,7 @@ let moduleQueryFunctions = {
         let newModArray2 = isWeaponBased ? [...typeRef2[queryType]] 
         : (isReactorBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2));//to exclude the first 2 mods, the augment and the subattack mod
         //but if it is still an ability based query but uses reactors, skip the slice as we need every entry in the array.
-        characterRef.modQueryOptions = isWeaponBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);
+        characterRef.modQueryOptions = (isWeaponBased || isReactorBased) ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);
 
         // Array of strings that will be the option names
         const queryLister = readSelection("queryModList");
@@ -6983,6 +7092,8 @@ let moduleQueryFunctions = {
             }
             if (!backupFound) {readSelection("queryMod").value = "";}
         }
+        
+        readSelection("queryCycledTargetName").innerHTML = queryCycledTargetNames[queryType];
         
         if (queryType === "Ability" || queryType === "Ability - Weapon Based" || queryType === "Ability - Reactor Roll") {
             const abilityLister = readSelection("queryAbilityList");
@@ -7030,7 +7141,7 @@ let moduleQueryFunctions = {
 
             return {selectedAbilityIndexReference,selectedAbilityOptionPath}
         }
-        else if (queryType === "Weapon" || queryType === "Weapon - Substat") {
+        else if (queryType === "Weapon" || queryType === "Weapon - Substat" || queryType === "Weapon - Cores") {
             //STAT OPTION RETURN KEYS
             readSelection("queryAbilityBoxHolder").style.display = "none";
             const abilityOptionLister = readSelection("queryAbilityOptionList");
@@ -7080,14 +7191,86 @@ let moduleQueryFunctions = {
             return {selectedAbilityIndexReference,selectedAbilityOptionPath}
         }
     },
+    updateQueryCoreSelected(imageElementID) {
+        const weaponRef = globalRecords.weapon;
+        const typeRef2 = [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`];
+
+        readSelection("queryMod").value = typeRef2[imageElementID-1];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryReactorSelected(imageElementID) {
+        const reactorRef = globalRecords.reactor;
+        // queryReactorName1     "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
+        const typeRef2 = [`${reactorRef.subRoll1 || "No input"}`,`${reactorRef.subRoll2 || "No input"}`];
+
+        readSelection("queryMod").value = typeRef2[imageElementID-1];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryWeaponSubSelected(imageElementID) {
+        const weaponRef = globalRecords.weapon;
+        // queryReactorName1     "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
+        const typeRef2 = [`${weaponRef.subRoll1 || "No input"}`,`${weaponRef.subRoll2 || "No input"}`,`${weaponRef.subRoll3 || "No input"}`,`${weaponRef.subRoll4 || "No input"}`];
+
+        readSelection("queryMod").value = typeRef2[imageElementID-1];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryCharacterModSelected(imageElementID) {
+        const modsRef = globalRecords.character.mods;
+        const typeRef2 = [
+            `${modsRef[2] || "No input"}`,
+            `${modsRef[3] || "No input"}`,
+            `${modsRef[4] || "No input"}`,
+            `${modsRef[5] || "No input"}`,
+            `${modsRef[6] || "No input"}`,
+            `${modsRef[7] || "No input"}`,
+            `${modsRef[8] || "No input"}`,
+            `${modsRef[9] || "No input"}`,
+            `${modsRef[10] || "No input"}`,
+            `${modsRef[11] || "No input"}`,
+        ];
+
+        //-3 here bc the offset is 2 to start with on the modsRef, but it's gonna be -1 for a 0starter then -2 for the offset, so -3
+        readSelection("queryMod").value = typeRef2[imageElementID-3];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryWeaponModSelected(imageElementID) {
+        const modsRef = globalRecords.weapon.mods;
+        const typeRef2 = [
+            `${modsRef[0] || "No input"}`,
+            `${modsRef[1] || "No input"}`,
+            `${modsRef[2] || "No input"}`,
+            `${modsRef[3] || "No input"}`,
+            `${modsRef[4] || "No input"}`,
+            `${modsRef[5] || "No input"}`,
+            `${modsRef[6] || "No input"}`,
+            `${modsRef[7] || "No input"}`,
+            `${modsRef[8] || "No input"}`,
+            `${modsRef[9] || "No input"}`,
+        ];
+
+        //-3 here bc the offset is 2 to start with on the modsRef, but it's gonna be -1 for a 0starter then -2 for the offset, so -3
+        readSelection("queryMod").value = typeRef2[imageElementID-1];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
     getModuleQueryResults() {
         //never allow a blank query, default to ability if all else fails
-        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "","Ability - Reactor Roll": "","Weapon - Substat": "",}
+        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "","Ability - Reactor Roll": "","Weapon - Substat": "","Weapon - Cores": "",}
         if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
         const queryType = readSelection("queryType").value;
 
         const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections(queryType);
         moduleQueryFunctions.clearInvalidQuerySelections();
+
+        const displayBoxElemIDs = [
+            "queriesCoreSelectionRow",
+            "queriesReactorSelectionRow",
+            "queriesCharacterModSelectionRow",
+            "queriesWeaponModSelectionRow",
+            "queriesWeaponSubSelectionRow",
+        ]
+        for (let entry of displayBoxElemIDs) {
+            readSelection(entry).style.display = "none";
+        }
 
         const characterRef = globalRecords.character;
         const currentCharacter = characterRef.currentCharacter;
@@ -7103,8 +7286,11 @@ let moduleQueryFunctions = {
         const reactorRef = globalRecords.reactor;
         const weaponRef = globalRecords.weapon;
 
+        // const currentWeaponImage = sniperList[currentWeapon.value].image;
+        const currentCoreArray = sniperList[globalWeapon.currentWeapon].coreArray;
 
-        let isWeaponBased = queryType.toLowerCase().includes("weapon");
+
+        let isWeaponBased = queryType.toLowerCase().includes("weapon") || queryType.toLowerCase().includes("reactor");
         //for assigning the right mod selection that is currently equipped
         const typeRef2 = {
             "Ability": currentCharacterMods,
@@ -7113,6 +7299,7 @@ let moduleQueryFunctions = {
             "Weapon": currentWeaponMods,
             "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
             "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+            "Weapon - Cores": [weaponRef.coreRoll1,weaponRef.coreRoll2,weaponRef.coreRoll3,weaponRef.coreRoll4,weaponRef.coreRoll5],
         }
         const typeRefCategory = {
             "Ability": modData,
@@ -7121,6 +7308,7 @@ let moduleQueryFunctions = {
             "Weapon": userTriggers.weaponTypeModList[currentAmmoType],
             "Ability - Reactor Roll": reactorSubRolls,
             "Weapon - Substat": weaponSubstatList,
+            "Weapon - Cores": coreRainbow,
         }
         const modLists = typeRefCategory[queryType];
 
@@ -7131,15 +7319,22 @@ let moduleQueryFunctions = {
             readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the target you selected:<br>- Doesn't have any mods equipped to compare against<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
             return;
         }
+        else if (queryType === "Weapon - Cores" && !currentCoreArray) {
+            readSelection("moduleQueryBoxHolder").innerHTML = "Your currently selected weapon does not have cores assigned within the calculator.<br><br>This is either because it is a non-ultimate weapon, or Vash hasn't assigned slots to this weapon yet.<br>If the latter, ping Vash in discord and let him know.";
+            return;
+        }
 
 
         //character stuff ignores the first 2 slots, whereas weapon stuff does not
+        // console.log(characterRef.modQueryOptions)
         const indexToModify = isWeaponBased ? characterRef.modQueryOptions.indexOf(modSelection) : characterRef.modQueryOptions.indexOf(modSelection) + 2;
+        // console.log(indexToModify)
         const modKeyReference = Object.keys(modLists);
         const abilityTarget = `ability${selectedAbilityIndexReference+1}`;
         const targetReturnValue = `${selectedAbilityOptionPath}`;
 
 
+        let oldReference = newModArray1[indexToModify];
         newModArray1[indexToModify] = "";
         const modCategoriesHolder = [];
         //create the set of categories that will help us determine when to skip things
@@ -7153,16 +7348,46 @@ let moduleQueryFunctions = {
         const modSet = new Set(newModArray1);
         readSelection("moduleQueryBoxHolder").innerHTML = "";
 
+        // console.log(indexToModify)
         let queryResultsArray = [];
         if (queryType === "Ability") {
+            const characterRef = globalRecords.character;
+            const currentCharacter = characterRef.currentCharacter;
+            const arrayRef = characterRef.abilityArray[selectedAbilityIndexReference+1];
+            const arrayResult = arrayRef===0 ? "base" : arrayRef;
+            const typeSet = new Set(characters[currentCharacter].abilities[abilityTarget][arrayResult].type);
+
             for (let entry of modKeyReference) {
-                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
+                let currentModRef = modLists[entry];
+
+
+                if (currentModRef.inclusion) {
+                    let inclusionSkipFound = false;
+                    for (let inclusion of currentModRef.inclusion) {
+                        if (!typeSet.has(inclusion)) {
+                            inclusionSkipFound = true;
+                            break;
+                        }
+                    }
+                    if (inclusionSkipFound) {continue;}
+                }
+
+                
+                if (categorySet.has(currentModRef.category) || modSet.has(entry) || entry === "") {continue}
                 newModArray1[indexToModify] = entry;
 
                 queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
+                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": currentModRef.category}
                 )
             }
+
+            readSelection("queriesCharacterModSelectionRow").style.display = "flex";
+            for (let i=3;i<=12;i++) {
+                readSelection(`queryCharacterBoxHolder${i}`).style.border = "none";
+                readSelection(`queryCharacterBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
         else if (queryType === "Ability - Weapon Based") {
             for (let entry of modKeyReference) {
@@ -7186,11 +7411,21 @@ let moduleQueryFunctions = {
                     {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
                 )
             }
+            readSelection("queriesWeaponModSelectionRow").style.display = "flex";
+            for (let i=1;i<=10;i++) {
+                readSelection(`queryWeaponBoxHolder${i}`).style.border = "none";
+                readSelection(`queryWeaponBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
         else if (queryType === "Ability - Reactor Roll") {
             for (let entry of modKeyReference) {
 
-                if (entry === "") {continue;}
+                const inclusionSet = new Set(newModArray1);
+                if (entry === "" && oldReference != "") {continue;}
+                else if (inclusionSet.has(entry) && entry != "") {continue;}
+                
                 //assign the cycled value to the index spot of the array for each cycle
                 newModArray1[indexToModify] = entry;
 
@@ -7205,6 +7440,14 @@ let moduleQueryFunctions = {
 
                 )
             }
+            //UI updates for the buttons we added for comparisons, grey out shit unused, highlight the current selection, etc.
+            readSelection("queriesReactorSelectionRow").style.display = "flex";
+            for (let i=1;i<=2;i++) {
+                readSelection(`queryReactorBoxHolder${i}`).style.border = "none";
+                readSelection(`queryReactorBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryReactorBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryReactorBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
         else if (queryType === "Weapon") {
             for (let entry of modKeyReference) {
@@ -7228,22 +7471,58 @@ let moduleQueryFunctions = {
                     {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
                 )
             }
+
+            readSelection("queriesWeaponModSelectionRow").style.display = "flex";
+            for (let i=1;i<=10;i++) {
+                readSelection(`queryWeaponBoxHolder${i}`).style.border = "none";
+                readSelection(`queryWeaponBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
         else if (queryType === "Weapon - Substat") {
+            let inclusionSet = new Set(newModArray1);
             for (let entry of modKeyReference) {
-                if (entry === "") {continue}
+                if (entry === "" || inclusionSet.has(entry)) {continue}
 
                 newModArray1[indexToModify] = entry;
-
-                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
 
                 queryResultsArray.push(
                     {"modName":entry,"returnedValue":updateFormulas(true,null,null,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
                 )
             }
+            readSelection("queriesWeaponSubSelectionRow").style.display = "flex";
+            for (let i=1;i<=4;i++) {
+                readSelection(`queryWeaponSubBoxHolder${i}`).style.border = "none";
+                readSelection(`queryWeaponSubBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryWeaponSubBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryWeaponSubBoxHolder${indexToModify+1}`).style.opacity = "1";
+        }
+        else if (queryType === "Weapon - Cores") {
+            let currentSlotColor = currentCoreArray[indexToModify];
+            for (let entry of modKeyReference) {
+                let currentEntry = modLists[entry];
+
+                if (entry==="" && oldReference != "") {continue;}//Skipped empty entry when target was not blank
+                else if (currentEntry.color != currentSlotColor && currentSlotColor != "Rainbow" && entry!="") {continue;}//Skipped color that did not match and wasn't rainbow
+
+                newModArray1[indexToModify] = entry;
+
+                queryResultsArray.push(
+                    {"modName":entry,"returnedValue":updateFormulas(true,null,null,null,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
+                )
+            }
+
+            readSelection("queriesCoreSelectionRow").style.display = "flex";
+            for (let i=1;i<=5;i++) {
+                readSelection(`weaponCore${i}IconQuery`).style.border = "none";
+                readSelection(`weaponCore${i}IconQuery`).style.opacity = "0.3";
+            }
+            readSelection(`weaponCore${indexToModify+1}IconQuery`).style.border = "1px solid white";
+            readSelection(`weaponCore${indexToModify+1}IconQuery`).style.opacity = "1";
         }
         else if (queryType === "Stat") {
-            console.log(targetReturnValue)
             for (let entry of modKeyReference) {
                 if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
                 newModArray1[indexToModify] = entry;
@@ -7252,20 +7531,33 @@ let moduleQueryFunctions = {
                     {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[targetReturnValue],"category": modLists[entry].category}
                 )
             }
+            readSelection("queriesCharacterModSelectionRow").style.display = "flex";
+            for (let i=3;i<=12;i++) {
+                readSelection(`queryCharacterBoxHolder${i}`).style.border = "none";
+                readSelection(`queryCharacterBoxHolder${i}`).style.opacity = "0.3";
+            }
+            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.border = "1px solid white";
+            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
-
-
-        // console.log(queryResultsArray)
+        
 
         queryResultsArray.sort((a, b) => b.returnedValue - a.returnedValue); // Sort in ascending order
 
         let referencePoint = {};
+        //if this is a core selection, remove the "1 - " prefix from it, and if this is an empty core, treat it as an empty string instead of "no input"
+        let newModSelectionName = queryType === "Weapon - Cores" ? (modSelection.slice(4)!="No input" ? modSelection.slice(4) : "") : modSelection!="No input" ? modSelection : "";
+        let foundRef = false;
         for (let entry of queryResultsArray) {
-            // if (entry.modName === "") {continue}
-            if (entry.modName === modSelection) {
+            if (entry.modName === "" && newModSelectionName != "") {
+                queryResultsArray.splice(queryResultsArray.indexOf(entry),1);
+                continue;
+            }
+            // if (entry.modName === "") {con}
+            if (!foundRef && entry.modName === newModSelectionName) {
                 referencePoint = {...entry};
-                queryResultsArray.splice(queryResultsArray.indexOf(entry),1)
-                break;
+                queryResultsArray.splice(queryResultsArray.indexOf(entry),1);
+                foundRef = true;
+                // break;
             }
         }
 

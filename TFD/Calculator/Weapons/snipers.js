@@ -10,6 +10,8 @@ const weaponSubstatList = {
         "Machine Gun": [0,0],
         "Shotgun": [0,0],
         "Assault Rifle": [0,0],
+        "Submachine Gun": [0,0],
+        "Launcher": [0,0],
     },
     "Firearm ATK": {
         "statName": "FirearmATK%",
@@ -22,6 +24,9 @@ const weaponSubstatList = {
         "Machine Gun": [0.10,0.122],
         "Shotgun": [0.10,0.122],
         "Assault Rifle": [0.10,0.122],
+        "Submachine Gun": [0.10,0.122],
+        // "Launcher": [0,0],
+        "Launcher": [0.10,0.122],
     },
     "Fire ATK": {
         "statName": "FireATK",
@@ -34,6 +39,8 @@ const weaponSubstatList = {
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
         "Assault Rifle": [931,1679],
+        "Submachine Gun": [680,1226],
+        "Launcher": [8220,14829],
     },
     "Chill ATK": {
         "statName": "ChillATK",
@@ -46,6 +53,8 @@ const weaponSubstatList = {
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
         "Assault Rifle": [931,1679],
+        "Submachine Gun": [680,1226],
+        "Launcher": [8220,14829],
     },
     "Electric ATK": {
         "statName": "ElectricATK",
@@ -58,6 +67,8 @@ const weaponSubstatList = {
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
         "Assault Rifle": [931,1679],
+        "Submachine Gun": [680,1226],
+        "Launcher": [8220,14829],
     },
     "Toxic ATK": {
         "statName": "ToxicATK",
@@ -70,6 +81,8 @@ const weaponSubstatList = {
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
         "Assault Rifle": [931,1679],
+        "Submachine Gun": [680,1226],
+        "Launcher": [8220,14829],
     },
     "Weak Point Damage": {
         "statName": "WeakPointDamage%",
@@ -82,6 +95,8 @@ const weaponSubstatList = {
         "Machine Gun": [0.082,0.12],
         "Shotgun": [0.082,0.12],
         "Assault Rifle": [0.082,0.12],
+        "Submachine Gun": [0.082,0.12],
+        "Launcher": [0.082,0.12],
     },
     "Critical Hit Rate": {
         "statName": "FirearmCritRate",
@@ -94,6 +109,8 @@ const weaponSubstatList = {
         "Machine Gun": [0.13,0.143],
         "Shotgun": [0.08,0.098],
         "Assault Rifle": [0.14,0.152],
+        "Submachine Gun": [0.119,0.133],
+        "Launcher": [0.093,0.108],
     },
     "Critical Hit Damage": {
         "statName": "FirearmCritDamage",
@@ -106,6 +123,8 @@ const weaponSubstatList = {
         "Machine Gun": [0.338,0.411],
         "Shotgun": [0.091,0.111],
         "Assault Rifle": [0.369,0.449],
+        "Submachine Gun": [0.302,0.368],
+        "Launcher": [0.152,0.184],
     },
     "Status Effect Rate": {
         "statName": "StatusTriggerRate",
@@ -118,6 +137,8 @@ const weaponSubstatList = {
         "Machine Gun": [0.164,0.24],
         "Shotgun": [0.164,0.24],
         "Assault Rifle": [0.164,0.24],
+        "Submachine Gun": [0.164,0.24],
+        "Launcher": [0.164,0.24],
     },
     "Rounds per Magazine": {
         "statName": "MagazineSize",
@@ -130,6 +151,8 @@ const weaponSubstatList = {
         "Machine Gun": [0.082,0.12],
         "Shotgun": [0.082,0.12],
         "Assault Rifle": [0.082,0.12],
+        "Submachine Gun": [0.082,0.12],
+        "Launcher": [0.082,0.12],
     },
     "Bonus ATK (Colossus)": {
         "statName": "ColossusATK",
@@ -142,6 +165,22 @@ const weaponSubstatList = {
         "Machine Gun": [1887,3404],
         "Shotgun": [2002,3612],
         "Assault Rifle": [1862,3357],
+        "Submachine Gun": [1360,2453],
+        "Launcher": [16439,29657],
+    },
+    "Bonus ATK (Vulgus)": {
+        "statName": "VulgusATK",
+        "stats": {},
+        "tags": ["VulgusATK"],
+        "Sniper": [16848,30393],
+        "Hand Cannon": [6472,11676],
+        "Burst Rifle": [1919,3462],
+        "Scout Rifle": [5263,9494],
+        "Machine Gun": [1887,3404],
+        "Shotgun": [2002,3612],
+        "Assault Rifle": [1862,3357],
+        "Submachine Gun": [1360,2453],
+        "Launcher": [16439,29657],
     },
     // "Recoil": {
     //     "statName": "Recoil",
@@ -173,15 +212,16 @@ const sniperList = {
         "physicalTypeBonus": 0.10,
 
         "baseFireRate": 1,
-        "baseReloadTime": 1,
-        "magazine": 1,
+        "baseReloadTime": 2,
+        "magazine": 0,
         "shellCount": 1,
-
         "coreArray": null,
+        "RangedInTime": 0.5,
+        "ZoomInHoldDelayTime": 0.5,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
-        "image": "/images/Remnant/clear.png",
+        "image": "/TFD/TFDImages/Weapons/NO WEAPON EQUIPPED.png",
         "customDPSBase": "",
         "customDPS": "",
         "desc": "",
@@ -207,6 +247,8 @@ const sniperList = {
         "magazine": 6,
         "shellCount": 1,
         "coreArray": ["Rainbow","Red","Green","Green","Purple"],
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -236,6 +278,8 @@ const sniperList = {
         "magazine": 12,
         "shellCount": 1,
         "coreArray": ["Rainbow","Red","Yellow","Yellow","Purple"],
+        "RangedInTime": 0.3,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -265,6 +309,8 @@ const sniperList = {
         "magazine": 11,
         "shellCount": 1,
         "coreArray": ["Rainbow","Blue","Green","Yellow","Yellow"],
+        "RangedInTime": 0.3,
+        "ZoomInHoldDelayTime": 0.45,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -296,6 +342,8 @@ const sniperList = {
         "magazine": 48,
         "shellCount": 4,
         "coreArray": ["Rainbow","Red","Yellow","Yellow","Purple"],
+        "RangedInTime": 0.185,
+        "ZoomInHoldDelayTime": 0.385,
 
         "ammoType": "Special",
         "weaponType": "Burst Rifle",
@@ -342,6 +390,8 @@ const sniperList = {
         "magazine": 16,
         "shellCount": 1,
         "coreArray": ["Rainbow","Orange","Blue","Green","Yellow"],
+        "RangedInTime": 0.28,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -387,6 +437,8 @@ const sniperList = {
         "magazine": 8,
         "shellCount": 1,
         "coreArray": ["Rainbow","Red","Green","Yellow","Yellow"],
+        "RangedInTime": 0.23,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -432,6 +484,8 @@ const sniperList = {
         "magazine": 8,
         "shellCount": 1,
         "coreArray": ["Rainbow","Green","Yellow","Yellow","Purple"],
+        "RangedInTime": 0.22,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -475,6 +529,8 @@ const sniperList = {
         "shellCount": 1,
 
         "coreArray": null,
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -504,6 +560,8 @@ const sniperList = {
         "magazine": 15,
         "shellCount": 10,
         "coreArray": ["Rainbow","Orange","Yellow","Yellow","Purple"],
+        "RangedInTime": 0.16,
+        "ZoomInHoldDelayTime": 0.368,
         
 
         "ammoType": "HighPowered",
@@ -531,6 +589,7 @@ const sniperList = {
     },
     //purple scout rifles
     "Hero's Scar": {
+        "rarity": "Rare",
         "name": "Hero's Scar",
         "baseATK": 29225,
         "baseCritRate": 0.10,
@@ -544,6 +603,8 @@ const sniperList = {
         "magazine": 20,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.17,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -559,6 +620,7 @@ const sniperList = {
         },
     },
     "Silly Weeper": {
+        "rarity": "Rare",
         "name": "Silly Weeper",
         "baseATK": 83359,
         "baseCritRate": 0.20,
@@ -572,6 +634,8 @@ const sniperList = {
         "magazine": 8,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.17,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -587,6 +651,7 @@ const sniperList = {
         },
     },
     "Nightmare Hound": {
+        "rarity": "Rare",
         "name": "Nightmare Hound",
         "baseATK": 39963,
         "baseCritRate": 0.05,
@@ -600,6 +665,8 @@ const sniperList = {
         "magazine": 18,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.17,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -615,6 +682,7 @@ const sniperList = {
         },
     },
     "The Age Of Innovation": {
+        "rarity": "Rare",
         "name": "The Age Of Innovation",
         "baseATK": 33102,
         "baseCritRate": 0.07,
@@ -628,6 +696,8 @@ const sniperList = {
         "magazine": 15,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.17,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -643,6 +713,7 @@ const sniperList = {
         },
     },
     "Sonic Co-op": {
+        "rarity": "Rare",
         "name": "Sonic Co-op",
         "baseATK": 21431,
         "baseCritRate": 0.20,
@@ -656,6 +727,8 @@ const sniperList = {
         "magazine": 25,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.28,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "Impact",
         "weaponType": "Scout Rifle",
@@ -672,6 +745,7 @@ const sniperList = {
     },
     //more purple HC's
     "Explorer's Path": {
+        "rarity": "Rare",
         "name": "Explorer's Path",
         "baseATK": 55281,
         "baseCritRate": 0.27,
@@ -685,6 +759,8 @@ const sniperList = {
         "magazine": 9,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.23,
+        "ZoomInHoldDelayTime": 0.43,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -700,6 +776,7 @@ const sniperList = {
         },
     },
     "Burning Hound": {
+        "rarity": "Rare",
         "name": "Burning Hound",
         "baseATK": 41726,
         "baseCritRate": 0.32,
@@ -713,6 +790,8 @@ const sniperList = {
         "magazine": 12,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -728,6 +807,7 @@ const sniperList = {
         },
     },
     "Immediate Execution": {
+        "rarity": "Rare",
         "name": "Immediate Execution",
         "baseATK": 36920,
         "baseCritRate": 0.32,
@@ -741,6 +821,8 @@ const sniperList = {
         "magazine": 12,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.4,
 
         "ammoType": "Impact",
         "weaponType": "Hand Cannon",
@@ -773,6 +855,8 @@ const sniperList = {
         "magazine": 12,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.35,
+        "ZoomInHoldDelayTime": 0.48,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -802,6 +886,8 @@ const sniperList = {
         "magazine": 7,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.3,
+        "ZoomInHoldDelayTime": 0.35,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -831,6 +917,8 @@ const sniperList = {
         "magazine": 9,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.34,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -860,6 +948,8 @@ const sniperList = {
         "magazine": 9,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.33,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -889,6 +979,8 @@ const sniperList = {
         "magazine": 9,
         "shellCount": 1,
         "coreArray": null,
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.3,
 
         "ammoType": "HighPowered",
         "weaponType": "Sniper",
@@ -902,6 +994,115 @@ const sniperList = {
         "displayStatsALT": {
             "BASIC": [],
         },
+    },
+
+    //gen rounds ammo
+    "Blue Blood Bloomer": {
+        "rarity": "Rare",
+        "name": "Blue Blood Bloomer",
+        "baseATK": 8978,
+        "baseCritRate": 0.12,
+        "baseCritDamage": 1.5,
+        "baseWeakPoint": 1.0,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 1000,
+        "baseReloadTime": 1.32,
+        "magazine": 27,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.148,
+        "ZoomInHoldDelayTime": 0.348,
+
+        "ammoType": "General",
+        "weaponType": "Submachine Gun",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1002_A001.png",
+        "weaponSettings": {},
+        "customDPSBase": "",
+        "customDPS": "",
+        "desc": "",
+        "displayStatsALT": {
+            "BASIC": [],
+         },
+        "stats": {},
+        "tags": [],
+    },
+    "Python": {
+        "rarity": "Ultimate",
+        "name": "Python",
+        "baseATK": 11908,
+        "baseCritRate": 0.05,
+        "baseCritDamage": 1.3,
+        "baseWeakPoint": 2.0,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 923,
+        "baseReloadTime": 1.50,
+        "magazine": 30,
+        "shellCount": 1,
+        "coreArray": ["Rainbow","Orange","Green","Yellow","Yellow"],
+        "RangedInTime": 0.148,
+        "ZoomInHoldDelayTime": 0.348,
+
+        "ammoType": "General",
+        "weaponType": "Submachine Gun",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1006_A001.png",
+        "weaponSettings": {
+            "usePythonBonus": true,
+        },
+        "customDPSBase": "pythonCalcsTier0",
+        "customDPS": "",
+        "desc": "On hitting a Weak Point, inflicts the unique ability Prey on the target enemy.<br>Currently this weapon ability is bugged in-game, and the starting stacks are swapped in some places. The calculator accounts for this.",
+        "displayStatsALT": {
+            "BASIC": [],
+            "PREY": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 28,"limit": null,"isModified": false},
+
+                {"statType": "","statName": "-Enemy NA Resist (1st)","value": -0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy NA Resist /Stack","value": -0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                {"statType": "","statName": "-Enemy Toxin Resist (1st)","value": -0.036,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy Toxin Resist /Stack","value": -0.013,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "stats": {
+            "ToxicATK": 6669,
+        },
+        "tags": [],
+    },
+    "Firefly": {
+        "rarity": "Rare",
+        "name": "Firefly",
+        "baseATK": 9237,
+        "baseCritRate": 0.20,
+        "baseCritDamage": 1.2,
+        "baseWeakPoint": 1.0,
+        "physicalType": "Burst",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 857,
+        "baseReloadTime": 1.35,
+        "magazine": 35,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.148,
+        "ZoomInHoldDelayTime": 0.348,
+
+        "ammoType": "General",
+        "weaponType": "Submachine Gun",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1007_A001.png",
+        "weaponSettings": {},
+        "customDPSBase": "",
+        "customDPS": "",
+        "desc": "",
+        "displayStatsALT": {
+            "BASIC": [],
+         },
+        "stats": {},
+        "tags": [],
     },
     ...weaponsInsertion
 }
