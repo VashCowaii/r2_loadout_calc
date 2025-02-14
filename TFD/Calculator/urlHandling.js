@@ -546,10 +546,12 @@ let manipulateURL = {
             // userTriggers.updateSelectedBoss();
             let bossValueRef = bossData[globalRecords.boss.currentBoss].displayName;
             let partValueRef = globalRecords.boss.currentBossPart;
-            userTriggers.updateSelectedBoss(true);
+
             readSelection("boss").value = bossValueRef;
+            userTriggers.updateSelectedBoss();
+            
             readSelection("bossPart").value = partValueRef;
-            userTriggers.updateSelectedBoss(true);
+            userTriggers.updateSelectedBoss();
             
             // let reactorBossString = `${bossKeys.indexOf(globalRecords.boss.currentBoss).toString().padStart(2,'0')}${partsArray.indexOf(globalRecords.boss.currentBossPart).toString().padStart(2,'0')}`
 
