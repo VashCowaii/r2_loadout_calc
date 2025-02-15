@@ -1,7 +1,7 @@
 const bullets = {
     getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues) {
-        //cap fire rate at -95% in case we actually get that high later
-        const rateAdjustment = isStaticRate ? 0 : Math.max(-0.95,tableCopy.FireRate + (skipCoreValues ? 0 : tableCopy.FireRateCORE));
+        //cap fire rate at -90% in case we actually get that high later
+        const rateAdjustment = isStaticRate ? 0 : Math.max(-0.90,tableCopy.FireRate + (skipCoreValues ? 0 : tableCopy.FireRateCORE));
         const adjustedRateValue = baseRateValue / (1 + rateAdjustment);
         const modifiedRate = 60/adjustedRateValue;
 
