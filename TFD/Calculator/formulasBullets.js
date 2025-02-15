@@ -7,6 +7,8 @@ const bullets = {
 
         return {adjustedRateValue,modifiedRate}
     },
+
+    //          bonusEntry, tableCopy,          null,       null,       false,          true
     applyStats(bonusEntry, tableCopy, constructorObject, timesUsed, reversedBonus, invertBonusRemoval) {
         for (let stat of bonusEntry.stats) {
             const valueToGive = stat.subStackValue && timesUsed>1 ? stat.subStackValue : stat.value;
@@ -324,7 +326,7 @@ const bullets = {
                         }
                     }
                     //if this is based on shots fired instead of cooldown effects
-                    else if (priorShotCount != shotCount && (bonusEntry.currentStacks < bonusEntry.limit && bonusEntry.oneTimeOrStack === "stack")) {
+                    else if (priorShotCount != shotCount && (bonusEntry.currentStacks < bonusEntry.limit && bonusEntry.oneTimeOrStack === "stack" && !bonusEntry.isCharged)) {
                         // "decayDuration": 2,
                         // "clearOnReload": true,
 
@@ -334,6 +336,26 @@ const bullets = {
                         bonusEntry.currentStacks += 1;
                         //apply all stats for this bonus
                         if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);}
+                    }
+                    else if (priorShotCount != shotCount && (bonusEntry.currentStacks <= bonusEntry.limit && bonusEntry.oneTimeOrStack === "stackPop" && bonusEntry.isCharged)) {
+                        bonusEntry.timePassedEntry = timePassed;
+
+                        if ((conditionFailed && bonusEntry.currentStacks < bonusEntry.limit)
+                            || (!conditionFailed && bonusEntry.currentStacks != bonusEntry.limit) ) {
+                            bonusEntry.currentStacks += 1;
+                        }
+
+                        // console.log(bonusEntry.currentStacks,conditionFailed)
+
+                        if (bonusEntry.currentStacks === bonusEntry.limit && !conditionFailed) {
+                            reversedBonus = true;
+                            bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);
+
+                            // bonusEntry.currentStacks = bonusEntry.skipFirstShot ? -1 : 0;
+                            bonusEntry.currentStacks = 0;
+                        }
+                        //apply all stats for this bonus
+                        // else if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);}
                     }
             
                     //increment timePassed only for the bonuses still on cooldown
@@ -407,7 +429,14 @@ const bullets = {
 
                 //increment the used magazine so far but accounting for bullet cost factors
                 let durationRestrictionModifier = durationRestriction>0 && durationRestriction!=undefined && durationRestriction!=null ? timePassed<durationRestriction : false;
-                usedMagazine += durationRestrictionModifier ? 0 : Math.max(0,1 * tableCopy.BulletCostWeapon);
+
+                const baseBulletCost = Math.max(0,1 * tableCopy.BulletCostWeapon);
+                const magazineLossOverride = (tableCopy.BulletCostWeaponMagazineOverride + tableCopy.BulletCostWeaponMagazineOverrideCORE) > 0 ? actualMagSize : 1;
+                // console.log((index.BulletCostWeaponMagazineOverride + index.BulletCostWeaponMagazineOverrideCORE))
+                const trueBulletCost = baseBulletCost * magazineLossOverride;
+
+                //BulletCostWeaponMagazineOverrideCORE
+                usedMagazine += durationRestrictionModifier ? 0 : trueBulletCost;
             }
 
             //store the reload buffer injection to use later if needed
@@ -470,10 +499,6 @@ const bullets = {
                 timeSinceReload = timePassed;
                 timeOfLastReload = timePassed;//-delayReference;
 
-
-                // "RangedInTime": 0.2,
-        // "ZoomInHoldDelayTime": 0.4,
-
                 reloadDurationOffset += timeToPass// + delayReference//*2;
 
                 //if we're not at the limit for magazines to shoot, reset the shots fired to 0, AKA: reload
@@ -487,10 +512,12 @@ const bullets = {
                         for (let bonusEntry of bonusBaseRef) {
                             bonusEntry.reloadTimePassed = reloadDurationOffset;
                             bonusEntry.timeOfReload = timeOfReload;
-                            reloadDurationOffset = 0;
                             bonusEntry.reloadTimeApplied = false;
                         }
                     }
+                    //we had issues regarding bonuses not recognizing reloads and it's bc I was resetting the durationOffset inside the loop above
+                    //do not move it, it's good here, I'm just dumb and didn't set it here to begin with.
+                    reloadDurationOffset = 0;
                     
                 }
             }
