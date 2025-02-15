@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/Remnant2/bossDamage.css">
+  <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+  <link rel="stylesheet" href="/css/Remnant2/substat.css">
+  <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+  <link rel="stylesheet" href="/TFD/tfdCalc.css">
+  <link rel="Icon" href="/images/Cowaii.png">
+  <title>TFD Boss Stats</title> <!-- Browser Tab title -->
+
+  <meta property="og:title" content="TFD Build Calc">
+  <meta
+    property="og:description"
+    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+  />
+  <meta
+    property="description"
+    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+  />
+  <meta
+    property="og:image"
+    content="https://cowaii.io/images/madPrince.png"
+  />
+  <meta
+    property="og:url"
+    content="https://cowaii.io/"
+  />
+  <meta property="og:site_name" content="TFD Build Calc" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TFD Build Calc" />
+  <meta
+    name="twitter:description"
+    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+  />
+  <meta
+    name="twitter:image"
+    content="https://cowaii.io/images/madPrince.png"
+  />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    
+    <div id="tooltip" class="tooltip"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+    <div class="theGreatBox">
+        <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <!-- <div><img src="images/madPrince.png" alt="Home Page MadPrince"></div> -->
+        <!-- <div class="siteTitleHeader">Boss Damage [WIP]<br>
+            <div class="filtersInstructionsBox">I have the info for more bosses, but that is data entry I will do later. For now I'd rather publish this little bit and get feedback on UI and functionality.</div>
+        </div> -->
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+            <div class="settingsBoxHolder">
+
+                <div class="playerSettingsBox" style="width: auto;"><!--Mode Toggles/Boss Selection/List Settings-->
+
+                    <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox"><!--Boss mode selection-->
+                        <div>Boss Selection</div>
+                        <div class="statisticSettingsRow">
+                            <div class="statsRowToggle" style="width: 100%;">
+                                <select id="bossList" class="bossSelector" onchange="generateBossData()"></select>
+                            </div>
+                        </div>
+                        <div class="selectedBossImageContainer">
+                            <img src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_InfernalWalker_Info.png" class="selectedBossImage hasHoverTooltip" alt="Selected Boss Image" id="selectedBossImage">
+                        </div>
+                    </div>
+
+                    <div style="font-size: 20px;">SETTINGS</div>
+                    <!-- <div>Boss Settings</div>
+                    <div class="statisticSettingsRow hasHoverTooltip" id="bossBuffExplainer">
+                        <span class="statsRowName">Include Boss-Buffs</span>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <label class="toggleContainer">
+                                <input type="checkbox" class="toggleCheckbox" id="useBuffs" onchange="userSettings.updateUserInputs()">
+                                <span class="toggleSlider"></span>
+                            </label>
+                        </div>
+                    </div> -->
+
+                    <!-- <div>Player Settings</div> -->
+                    <div class="filtersInstructionsBox">Some factors like team-count can modify stats on the colossi</div>
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName">Players:&nbsp;<span id="playerCountDisplay">1</span>
+                        <span class="rowTraceLine"></span>
+                        <div class="statsRowToggle">
+                            <input type="range" id="playerCountSlider" name="slider" min="1" max="4" value="1" step="1" onchange="generateBossData()">
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+                <div class="playerSettingsBox playerSettingsBoxBorderless"><!--Boss/Player settings-->
+                  <div class="bossDataBox" id="bossDataBox"></div>
+                    
+
+                  <div class="bossDataBox" id="bossDataBoxHalves"></div>
+
+                    
+                </div>
+            </div>
+
+            <!-- <div class="filtersInstructionsBox">Click any attack name to expand a description and additional info</div> -->
+            
+            <div class="tableHolder" id="bossDataTable" style="flex-direction: column;display: flex;max-width: 700px;">
+            <!-- <table class="attacksTable">
+                <thead id="mainListHeaders"></thead>
+
+                <tbody id="attackListDisplay"></tbody>
+            </table> -->
+            </div>
+        </div>
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+
+<script src="/TFD/Calculator/parsedBossData.js"></script>
+<script src="/TFD/BossStats/bossStatGeneration.js"></script> 
+
+<!-- <script src="/Remnant2/BossDamage/urlHandling.js"></script> -->
+<!-- <script src="/MainJS/Tooltips/tooltips.js"></script> -->
+<!-- <script src="/Remnant2/BossDamage/scaling.js"></script> -->
+<script src="/MainJS/buildTime.js"></script>
+
+</body>
+</html> 

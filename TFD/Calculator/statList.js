@@ -78,6 +78,10 @@ const greatTableKnowerOfAll = {
     "WeakPointDamage%": 0,"WeakPointDamage%CORE": 0,
     "WeakPointOverride": 0,"WeakPointOverrideCORE": 0,
 
+    "WeaponUniqueMultiplier": 0,"WeaponUniqueMultiplierCORE": 0,
+    "independentScalar": 0,"independentScalarCORE": 0,
+    "BulletCostWeaponMagazineOverride": 0,"BulletCostWeaponMagazineOverrideCORE": 0,
+
     "BulletCostWeapon": 1,"BulletCostWeaponCORE": 1,
     "ShellCapacity": 0,"ShellCapacityCORE": 0,
     "ShellCapacityBase": 0,"ShellCapacityBaseCORE": 0,

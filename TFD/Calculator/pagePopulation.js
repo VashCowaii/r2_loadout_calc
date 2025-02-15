@@ -1547,11 +1547,16 @@ const formulasValues = {
         const coreName3 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[2] : weaponRef.coreRoll3];
         const coreName4 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[3] : weaponRef.coreRoll4];
         const coreName5 = coreRainbow[coreOverrideCheck ? weaponCoreOverride[4] : weaponRef.coreRoll5];
-        index[coreName1.statName] += coreOverrideCheck ? (coreName1.range[1]>0 ? coreName1.range[1] : coreName1.range[0]) : weaponRef.coreRoll1Value;//TODO: need to add the code for max values when an override is detected.
-        index[coreName2.statName] += coreOverrideCheck ? (coreName2.range[1]>0 ? coreName2.range[1] : coreName2.range[0]) : weaponRef.coreRoll2Value;
-        index[coreName3.statName] += coreOverrideCheck ? (coreName3.range[1]>0 ? coreName3.range[1] : coreName3.range[0]) : weaponRef.coreRoll3Value;
-        index[coreName4.statName] += coreOverrideCheck ? (coreName4.range[1]>0 ? coreName4.range[1] : coreName4.range[0]) : weaponRef.coreRoll4Value;
-        index[coreName5.statName] += coreOverrideCheck ? (coreName5.range[1]>0 ? coreName5.range[1] : coreName5.range[0]) : weaponRef.coreRoll5Value;
+        // index[coreName1.statName] += coreOverrideCheck ? (coreName1.range[1]>0 ? coreName1.range[1] : coreName1.range[0]) : weaponRef.coreRoll1Value;
+        // index[coreName2.statName] += coreOverrideCheck ? (coreName2.range[1]>0 ? coreName2.range[1] : coreName2.range[0]) : weaponRef.coreRoll2Value;
+        // index[coreName3.statName] += coreOverrideCheck ? (coreName3.range[1]>0 ? coreName3.range[1] : coreName3.range[0]) : weaponRef.coreRoll3Value;
+        // index[coreName4.statName] += coreOverrideCheck ? (coreName4.range[1]>0 ? coreName4.range[1] : coreName4.range[0]) : weaponRef.coreRoll4Value;
+        // index[coreName5.statName] += coreOverrideCheck ? (coreName5.range[1]>0 ? coreName5.range[1] : coreName5.range[0]) : weaponRef.coreRoll5Value;
+        index[coreName1.statName] += coreOverrideCheck ? coreName1.range[1] : weaponRef.coreRoll1Value;
+        index[coreName2.statName] += coreOverrideCheck ? coreName2.range[1] : weaponRef.coreRoll2Value;
+        index[coreName3.statName] += coreOverrideCheck ? coreName3.range[1] : weaponRef.coreRoll3Value;
+        index[coreName4.statName] += coreOverrideCheck ? coreName4.range[1] : weaponRef.coreRoll4Value;
+        index[coreName5.statName] += coreOverrideCheck ? coreName5.range[1] : weaponRef.coreRoll5Value;
     },
     pullReactorStats(index,reactorRollsOverride) {
         let reactorRef = globalRecords.reactor;
@@ -1679,11 +1684,11 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorR
     formulasValues.pullModStats(tableReference,modArrayOverride);
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
+    formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride,weaponCoreOverride);
     
     const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
     formulasValues.pullAbilityStats(tableReference);
-    formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride,weaponCoreOverride);
     formulasValues.pullTeamBuffsStats(tableReference);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);

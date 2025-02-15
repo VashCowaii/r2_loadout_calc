@@ -12,6 +12,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0,0],
         "Submachine Gun": [0,0],
         "Launcher": [0,0],
+        "Beam Rifle": [0,0],
+        "Handgun": [0,0],
     },
     "Firearm ATK": {
         "statName": "FirearmATK%",
@@ -27,6 +29,8 @@ const weaponSubstatList = {
         "Submachine Gun": [0.10,0.122],
         // "Launcher": [0,0],
         "Launcher": [0.10,0.122],
+        "Beam Rifle": [0.10,0.122],
+        "Handgun": [0.10,0.122],
     },
     "Fire ATK": {
         "statName": "FireATK",
@@ -41,6 +45,8 @@ const weaponSubstatList = {
         "Assault Rifle": [931,1679],
         "Submachine Gun": [680,1226],
         "Launcher": [8220,14829],
+        "Beam Rifle": [1101,1986],
+        "Handgun": [683,1232],
     },
     "Chill ATK": {
         "statName": "ChillATK",
@@ -55,6 +61,8 @@ const weaponSubstatList = {
         "Assault Rifle": [931,1679],
         "Submachine Gun": [680,1226],
         "Launcher": [8220,14829],
+        "Beam Rifle": [1101,1986],
+        "Handgun": [683,1232],
     },
     "Electric ATK": {
         "statName": "ElectricATK",
@@ -69,6 +77,8 @@ const weaponSubstatList = {
         "Assault Rifle": [931,1679],
         "Submachine Gun": [680,1226],
         "Launcher": [8220,14829],
+        "Beam Rifle": [1101,1986],
+        "Handgun": [683,1232],
     },
     "Toxic ATK": {
         "statName": "ToxicATK",
@@ -83,6 +93,8 @@ const weaponSubstatList = {
         "Assault Rifle": [931,1679],
         "Submachine Gun": [680,1226],
         "Launcher": [8220,14829],
+        "Beam Rifle": [1101,1986],
+        "Handgun": [683,1232],
     },
     "Weak Point Damage": {
         "statName": "WeakPointDamage%",
@@ -97,6 +109,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0.082,0.12],
         "Submachine Gun": [0.082,0.12],
         "Launcher": [0.082,0.12],
+        "Beam Rifle": [0.082,0.12],
+        "Handgun": [0.082,0.12],
     },
     "Critical Hit Rate": {
         "statName": "FirearmCritRate",
@@ -111,6 +125,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0.14,0.152],
         "Submachine Gun": [0.119,0.133],
         "Launcher": [0.093,0.108],
+        "Beam Rifle": [0.119,0.133],
+        "Handgun": [0.119,0.133],
     },
     "Critical Hit Damage": {
         "statName": "FirearmCritDamage",
@@ -125,6 +141,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0.369,0.449],
         "Submachine Gun": [0.302,0.368],
         "Launcher": [0.152,0.184],
+        "Beam Rifle": [0.302,0.368],
+        "Handgun": [0.302,0.368],
     },
     "Status Effect Rate": {
         "statName": "StatusTriggerRate",
@@ -139,6 +157,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0.164,0.24],
         "Submachine Gun": [0.164,0.24],
         "Launcher": [0.164,0.24],
+        "Beam Rifle": [0.164,0.24],
+        "Handgun": [0.164,0.24],
     },
     "Rounds per Magazine": {
         "statName": "MagazineSize",
@@ -153,6 +173,8 @@ const weaponSubstatList = {
         "Assault Rifle": [0.082,0.12],
         "Submachine Gun": [0.082,0.12],
         "Launcher": [0.082,0.12],
+        "Beam Rifle": [0.082,0.12],
+        "Handgun": [0.082,0.12],
     },
     "Bonus ATK (Colossus)": {
         "statName": "ColossusATK",
@@ -167,6 +189,8 @@ const weaponSubstatList = {
         "Assault Rifle": [1862,3357],
         "Submachine Gun": [1360,2453],
         "Launcher": [16439,29657],
+        "Beam Rifle": [2202,3972],
+        "Handgun": [1366,2465],
     },
     "Bonus ATK (Vulgus)": {
         "statName": "VulgusATK",
@@ -181,6 +205,8 @@ const weaponSubstatList = {
         "Assault Rifle": [1862,3357],
         "Submachine Gun": [1360,2453],
         "Launcher": [16439,29657],
+        "Beam Rifle": [2202,3972],
+        "Handgun": [1366,2465],
     },
     // "Recoil": {
     //     "statName": "Recoil",

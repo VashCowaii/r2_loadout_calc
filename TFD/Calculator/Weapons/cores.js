@@ -126,6 +126,7 @@ const coreGreen = {
         "stats": {},
         "tags": ["FireRateCORE"],
         "range": [-0.01,-0.20],
+        // "range": [-0.20,-0.01],
         "color": "Green",
     },
     "Reload Speed": {
@@ -148,7 +149,7 @@ const coreYellow = {
         "statName": "RecoilCORE",
         "stats": {},
         "tags": ["RecoilCORE"],
-        "range": [-0.92,-0.05],
+        "range": [-0.05,-0.92],
         "color": "Yellow",
     },
     "Weapon Change Speed": {

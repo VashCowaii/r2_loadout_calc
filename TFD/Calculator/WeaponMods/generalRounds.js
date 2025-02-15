@@ -328,6 +328,8 @@ const generalRounds =  {
             "limit": 10,
             "cooldown": 20,
             "duration": 5,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
             "conditions": ["isAdvantage"],
@@ -357,6 +359,8 @@ const generalRounds =  {
             "limit": 1,
             "cooldown": 20,
             "duration": 5,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
@@ -388,6 +392,8 @@ const generalRounds =  {
             "duration": 5,
             "isDurationActive": true,
             "isCooldownActive": false,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
             "skipFirstShot": true,
          }
@@ -415,6 +421,8 @@ const generalRounds =  {
             "limit": 1,
             "cooldown": 20,
             "duration": 5,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
@@ -444,6 +452,8 @@ const generalRounds =  {
             "limit": 1,
             "cooldown": 20,
             "duration": 5,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
             "conditions": [],//TODO: add checks to locate sources of burn within the player loadout and make it a condition
@@ -473,6 +483,8 @@ const generalRounds =  {
             "limit": 20,
             "cooldown": 15,
             "duration": 5,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
             "conditions": ["isAdvantage"],
