@@ -828,8 +828,8 @@ const Vulgus = {
             "Penetration": 0
         },
         "weaknessKeys": {
-            "Body (None)": {"name": "Body","type": "Pierce","wpMod": 0},
-            "Generic .50 (Pierce)": {"name": "N/A","type": "Burst","wpMod": 0.50},
+            "Body (None)": {"name": "Body","type": "Burst","wpMod": 0},
+            "Generic .50 (Burst)": {"name": "N/A","type": "Burst","wpMod": 0.50},
         },
         "weaknessKeyName": "",
         "enemyType": "Vulgus"
@@ -992,8 +992,8 @@ const Vulgus = {
             "Penetration": 0
         },
         "weaknessKeys": {
-            "Body (None)": {"name": "Body","type": "Burst","wpMod": 0},
-            "Generic .50 (Pierce)": {"name": "N/A","type": "Crush","wpMod": 0.50},
+            "Body (None)": {"name": "Body","type": "Crush","wpMod": 0},
+            "Generic .50 (Crush)": {"name": "N/A","type": "Crush","wpMod": 0.50},
         },
         "weaknessKeyName": "",
         "enemyType": "Vulgus"
@@ -1156,7 +1156,7 @@ const Vulgus = {
             "Penetration": 0
         },
         "weaknessKeys": {
-            "Body (None)": {"name": "Body","type": "Crush","wpMod": 0},
+            "Body (None)": {"name": "Body","type": "Pierce","wpMod": 0},
             "Generic .50 (Pierce)": {"name": "N/A","type": "Pierce","wpMod": 0.50},
         },
         "weaknessKeyName": "",

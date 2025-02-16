@@ -12,16 +12,16 @@
   <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
   <link rel="stylesheet" href="/TFD/tfdCalc.css">
   <link rel="Icon" href="/images/Cowaii.png">
-  <title>TFD Boss Stats</title> <!-- Browser Tab title -->
+  <title>TFD Enemy Stats</title> <!-- Browser Tab title -->
 
-  <meta property="og:title" content="TFD Build Calc">
+  <meta property="og:title" content="TFD Enemy Stats">
   <meta
     property="og:description"
-    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    content="Comprehensive stats for Enemies in The First Descendant."
   />
   <meta
     property="description"
-    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    content="Comprehensive stats for Enemies in The First Descendant."
   />
   <meta
     property="og:image"
@@ -31,13 +31,13 @@
     property="og:url"
     content="https://cowaii.io/"
   />
-  <meta property="og:site_name" content="TFD Build Calc" />
+  <meta property="og:site_name" content="TFD Enemy Stats" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="TFD Build Calc" />
+  <meta name="twitter:title" content="TFD Enemy Stats" />
   <meta
     name="twitter:description"
-    content="Comprehensive stats for Intercept Bosses in The First Descendant."
+    content="Comprehensive stats for Enemies in The First Descendant."
   />
   <meta
     name="twitter:image"
@@ -78,14 +78,14 @@
                 <div class="playerSettingsBox" style="width: auto;"><!--Mode Toggles/Boss Selection/List Settings-->
 
                     <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox"><!--Boss mode selection-->
-                        <div>Boss Selection</div>
+                        <div>Enemy Selection</div>
                         <div class="statisticSettingsRow">
                             <div class="statsRowToggle" style="width: 100%;">
                                 <select id="bossList" class="bossSelector" onchange="generateBossData()"></select>
                             </div>
                         </div>
-                        <div class="selectedBossImageContainer">
-                            <img src="/TFD/TFDImages/Bosses/Icon_VoidBattle_EpicMonster_InfernalWalker_Info.png" class="selectedBossImage hasHoverTooltip" alt="Selected Boss Image" id="selectedBossImage">
+                        <div class="selectedBossImageContainer" style="height: auto;">
+                            <img src="/TFD/TFDImages/Bosses/que.png" class="selectedBossImage hasHoverTooltip" alt="Selected Boss Image" id="selectedBossImage" style="width: 100px;height: auto;">
                         </div>
                     </div>
 
@@ -103,8 +103,8 @@
                     </div> -->
 
                     <!-- <div>Player Settings</div> -->
-                    <div class="filtersInstructionsBox">Some factors like team-count can modify stats on the colossi</div>
-                    <div class="statisticSettingsRow">
+                    <div class="filtersInstructionsBox" style="display: none;">Some factors like team-count can modify stats on the colossi</div>
+                    <div class="statisticSettingsRow" style="display: none;">
                         <div class="statsRowName">Players:&nbsp;<span id="playerCountDisplay">1</span>
                         <span class="rowTraceLine"></span>
                         <div class="statsRowToggle">
@@ -112,17 +112,28 @@
                         </div>
                       </div>
                     </div>
+                    <div class="statisticSettingsRow">
+                        <div class="statsRowName" style="padding-left: 0;margin-left: 0;width: auto;">Enemy&nbsp;Level:&nbsp;<span id="enemyLevelDisplay">1</span>
+                        <!-- <span class="rowTraceLine"></span> -->
+                        <div class="statsRowToggle">
+                            <input type="range" id="enemyLevelSlider" name="slider" min="0" max="1" value="1" step="5" onchange="generateBossData()">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealing%Row">
+                        <div style="padding-right: 5px;">Enemy Level&nbsp;<span id="enemyLevelDisplay">1</span></div>
+                        <div class="totalHealingValue">
+                            <input type="number" class="traitLevelInput" id="enemyLevelSlider" min="1" max="400" step="1" value="1" onchange="generateBossData()" style="max-width: 200px;">
+                        </div>
+                    </div> -->
+                  </div>
 
-                </div>
+                <!-- </div> -->
 
-                <div class="playerSettingsBox playerSettingsBoxBorderless"><!--Boss/Player settings-->
-                  <div class="bossDataBox" id="bossDataBox"></div>
-                    
-
-                  <div class="bossDataBox" id="bossDataBoxHalves"></div>
-
-                    
-                </div>
+                  <div class="playerSettingsBox playerSettingsBoxBorderless"><!--Boss/Player settings-->
+                    <div class="bossDataBox" id="bossDataBox"></div>
+                    <div class="bossDataBox" id="bossDataBoxHalves"></div>
+                  </div>
             </div>
 
             <!-- <div class="filtersInstructionsBox">Click any attack name to expand a description and additional info</div> -->
@@ -147,8 +158,8 @@
 <script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
 <script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
 
-<script src="/TFD/Calculator/parsedBossData.js"></script>
-<script src="/TFD/BossStats/bossStatGeneration.js"></script> 
+<script src="/TFD/Calculator/parsedMonsterData.js"></script>
+<script src="/TFD/Enemies/bossStatGeneration.js"></script> 
 
 <!-- <script src="/Remnant2/BossDamage/urlHandling.js"></script> -->
 <!-- <script src="/MainJS/Tooltips/tooltips.js"></script> -->
