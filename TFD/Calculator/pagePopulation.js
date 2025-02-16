@@ -1498,7 +1498,7 @@ const settings = {
         "Last Dagger"(settingsRef,arrayRef) {
             settingsRef.useLethalDagger = readSelection("useLethalDagger").checked;
             settingsRef.useDaggerStrike = readSelection("useDaggerStrike").checked;
-        }
+        },
         ...localInsertionSettings
     }
 
