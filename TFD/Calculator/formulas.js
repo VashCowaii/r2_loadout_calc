@@ -6804,7 +6804,7 @@ const customDamage = {
                     ],
                     "bonusName": "Lethal Dagger",
                     "oneTimeOrStack": "stack",
-                    "duration": 0,
+                    "duration": 15,
                     "cooldown": 0,
                     "isDurationActive": true,
                     "isCooldownActive": false,
