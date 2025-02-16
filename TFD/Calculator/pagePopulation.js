@@ -1495,6 +1495,10 @@ const settings = {
         "Python"(settingsRef,arrayRef) {
             settingsRef.usePythonBonus = readSelection("usePythonBonus").checked;
         },
+        "Last Dagger"(settingsRef,arrayRef) {
+            settingsRef.useLethalDagger = readSelection("useLethalDagger").checked;
+            settingsRef.useDaggerStrike = readSelection("useDaggerStrike").checked;
+        }
         ...localInsertionSettings
     }
 
