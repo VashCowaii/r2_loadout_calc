@@ -1161,7 +1161,7 @@ const sniperList = {
         "stats": {},
         "tags": [],
         "weaponSettings": {
-            "useLethalDagger": false,
+            "useLethalDagger": true,
             "useDaggerStrike": false,
         },
         "displayStatsALT": {
