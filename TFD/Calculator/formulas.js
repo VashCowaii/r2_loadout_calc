@@ -203,7 +203,9 @@ const calcs = {
     },
     getFirearmATK(index,weaponRef,uniqueMulti) {
         const baseFirearmATK = weaponRef.baseATK;
+        const needlessBullshitAmount = baseFirearmATK * (index.independentScalar + index.independentScalarCORE);
         uniqueMulti = uniqueMulti || 1;
+        uniqueMulti += index.WeaponUniqueMultiplier + index.WeaponUniqueMultiplierCORE;
 
         const attackPercent = index["FirearmATK%"] + index["FirearmATK%CORE"];
         const onHitBonus = index["FirearmATK%OnHit"] + index["FirearmATK%OnHitCORE"];//while called onhit it's more of an enemy debuff
@@ -222,7 +224,7 @@ const calcs = {
 
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
-        const totalFirearmATK = (postHitATK + firearmColossusATK) * physicalTypeMulti;
+        const totalFirearmATK = (postHitATK + firearmColossusATK) * physicalTypeMulti + needlessBullshitAmount;
 
         return {baseFirearmATK,attackPercent,physicalTypeBonus,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK}
     },
@@ -260,7 +262,12 @@ const calcs = {
     },
     getFirearmElementalSpread(index,elementName,usableBase,critFirearm) {
         const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
-        const damageElementBase = ((usableBase) * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`]) * Math.max(0,1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) * elemDR;
+        const givenElementBase = usableBase * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`];
+        const needlessBullshitAmount = givenElementBase * (index.independentScalar + index.independentScalarCORE);
+        const damageElementBase = (givenElementBase * Math.max(0,1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) + needlessBullshitAmount) * elemDR;
+
+
+
 
         const perHit = damageElementBase;
         const perCrit = perHit * critFirearm.Damage;
@@ -6779,6 +6786,87 @@ const customDamage = {
             <div class="basicsSummaryBox">
             <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
                 ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Python",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
+    lastDaggerTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Last Dagger"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.useLethalDagger) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                       {"name": "FirearmCritRateBaseCORE","value": 0.022,"subStackValue": 0.022},
+                    ],
+                    "bonusName": "Lethal Dagger",
+                    "oneTimeOrStack": "stack",
+                    "duration": 0,
+                    "cooldown": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "clearOnReload": false,
+                    "limit": 30,
+                    "currentStacks": 0,
+                    // "skipFirstShot": true,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+        if (settingsRef.useDaggerStrike) {
+            const Magazine = Math.floor(weaponRef.magazine * (1 + index.MagazineSize + index.MagazineSizeCORE));
+            const multiCoeff = 1.16;
+            const atkScalar = Magazine * multiCoeff;
+
+            weaponRef.complexBonus.push(
+                {
+                    "stats": [
+                        {"name": "independentScalarCORE","value": atkScalar,"subStackValue": null},
+                        {"name": "BulletCostWeaponMagazineOverrideCORE","value": 1,"subStackValue": null},
+                    ],
+                    "bonusName": "Last Dagger (Strike)",
+                    "oneTimeOrStack": "stackPop",
+                    "isCharged": true,
+                    "limit": 30,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "conditions": ["isReloaded"],
+                    "cooldown": 0,
+                    "duration": 0,
+                }
+            )
+        }
+
+
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "LETHAL DAGGER","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["useLethalDagger","Use Lethal Dagger?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "STRIKE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["useDaggerStrike","Use Strike?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Last Dagger",true)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>

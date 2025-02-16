@@ -542,7 +542,7 @@ const sniperList = {
     "Assassin's Edge": {
         "name": "Assassin's Edge",
         "rarity": "Rare",
-        "baseATK": 40788,
+        "baseATK": 44604,
         "baseCritRate": 0.40,
         "baseCritDamage": 2.0,
         "baseWeakPoint": 2.0,
@@ -617,7 +617,7 @@ const sniperList = {
     "Hero's Scar": {
         "rarity": "Rare",
         "name": "Hero's Scar",
-        "baseATK": 29225,
+        "baseATK": 33071,
         "baseCritRate": 0.10,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 1.5,
@@ -648,7 +648,7 @@ const sniperList = {
     "Silly Weeper": {
         "rarity": "Rare",
         "name": "Silly Weeper",
-        "baseATK": 83359,
+        "baseATK": 97131,
         "baseCritRate": 0.20,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 1.5,
@@ -710,7 +710,7 @@ const sniperList = {
     "The Age Of Innovation": {
         "rarity": "Rare",
         "name": "The Age Of Innovation",
-        "baseATK": 33102,
+        "baseATK": 33103,
         "baseCritRate": 0.07,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 1.5,
@@ -741,7 +741,7 @@ const sniperList = {
     "Sonic Co-op": {
         "rarity": "Rare",
         "name": "Sonic Co-op",
-        "baseATK": 21431,
+        "baseATK": 24917,
         "baseCritRate": 0.20,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 1.5,
@@ -773,7 +773,7 @@ const sniperList = {
     "Explorer's Path": {
         "rarity": "Rare",
         "name": "Explorer's Path",
-        "baseATK": 55281,
+        "baseATK": 63596,
         "baseCritRate": 0.27,
         "baseCritDamage": 1.3,
         "baseWeakPoint": 2.0,
@@ -835,7 +835,7 @@ const sniperList = {
     "Immediate Execution": {
         "rarity": "Rare",
         "name": "Immediate Execution",
-        "baseATK": 36920,
+        "baseATK": 39206,
         "baseCritRate": 0.32,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 2.0,
@@ -1026,7 +1026,7 @@ const sniperList = {
     "Blue Blood Bloomer": {
         "rarity": "Rare",
         "name": "Blue Blood Bloomer",
-        "baseATK": 8978,
+        "baseATK": 11408,
         "baseCritRate": 0.12,
         "baseCritDamage": 1.5,
         "baseWeakPoint": 1.0,
@@ -1102,7 +1102,7 @@ const sniperList = {
     "Firefly": {
         "rarity": "Rare",
         "name": "Firefly",
-        "baseATK": 9237,
+        "baseATK": 10879,
         "baseCritRate": 0.20,
         "baseCritDamage": 1.2,
         "baseWeakPoint": 1.0,
@@ -1129,6 +1129,69 @@ const sniperList = {
          },
         "stats": {},
         "tags": [],
+    },
+
+
+    //handgun
+    "Last Dagger": {
+        "name": "Last Dagger",
+        "rarity": "Ultimate",
+        "baseATK": 14095,
+
+        "baseCritRate": 0.12,
+        "baseCritDamage": 2.0,
+        "baseWeakPoint": 1.6,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 600,
+        "baseReloadTime": 1.2,
+        "magazine": 12,
+        "shellCount": 1,
+        "coreArray": ["Rainbow","Orange","Orange","Green","Green"],
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.45,
+
+        "ammoType": "General",
+        "weaponType": "Handgun",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_HG_1005_A001.png",
+        "customDPSBase": "lastDaggerTier0Calcs",
+        "customDPS": "",//
+        "desc": "When hitting an enemy, grants the Unique Abilities Patience and Lethal Dagger.\nPatience is reset on reload at max stacks, and grants Strike.\nStrike consumes all rounds, and fires Enhanced Rounds.\nWhen Strike is removed, grants Steps.",
+        "stats": {},
+        "tags": [],
+        "weaponSettings": {
+            "useLethalDagger": false,
+            "useDaggerStrike": false,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "LETHAL DAGGER": [
+                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "PATIENCE": [
+            //     {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+            //     {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+            //     {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            //     {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            // ],
+            "STRIKE": [
+                // {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                // {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+                // {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                // {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "ANCIENT FIRE": [
+            //     {"statType": "","statName": "Trigger Rate","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            //     {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": false},
+            //     {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+            //     {"statType": "","statName": "%Firearm DMG","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            // ],
+            // "FIREARM SUM": [],
+        },
     },
     ...weaponsInsertion
 }
