@@ -4593,7 +4593,7 @@ const characters = {
             "sharenCamoActive": true,
             "sharenAmbushActive": true,
             "sharenMeltingActive": true,
-            "sharenTargetBonus": true,
+            "sharenTargetBonus": false,
         },
         "abilities": {
             "ability1": {
@@ -4675,7 +4675,7 @@ const characters = {
                     "type": ["Electric","Dimension"],
                     "desc": "Activates Active Camouflage, which hides self from enemy sight. Attacking an enemy while in this state immediately ends Active Camouflage and activates Ambush.",
                     "powerMods": {
-                        "dmgMulti": 2,
+                        "dmgMulti": 1,
                         "skillCritBonus": 0.22,
                         "firearmCritBonus": 0.22,
                     },
@@ -4743,7 +4743,7 @@ const characters = {
                     "type": ["Electric","Dimension"],
                     "desc": "Activates Active Camouflage, which hides self from enemy sight. Attacking an enemy while in this state immediately ends Active Camouflage and activates Ambush.",
                     "powerMods": {
-                        "dmgMulti": 2,
+                        "dmgMulti": 1,
                         "skillCritBonus": 0.22,
                         "firearmCritBonus": 0.22,
                         "cooldownBonus": -0.3,
@@ -5000,6 +5000,7 @@ const characters = {
                     "type": ["Electric"],
                     "desc": "When in Ambush state, killing an enemy by using a skill resets the Active Camouflage cooldown. This effect gains a cooldown. When attacking, increases DMG against enemies who are not targeting the caster.",
                     "powerMods": {
+                        "dmgMulti": 0.15,
                     },
                     "customDPSBase": "sharenAssassinCalcsTier0",
                     "customDPS": "",
@@ -5023,6 +5024,7 @@ const characters = {
                     "type": ["Electric"],
                     "desc": "When in Ambush state, killing an enemy by using a skill resets the Overcharged Edge cooldown. This effect gains a cooldown. When attacking, increases DMG against enemies who are not targeting the caster.",
                     "powerMods": {
+                        "dmgMulti": 0.15,
                     },
                     "customDPSBase": "sharenAssassinCalcsTier0OverchargedStarter",
                     "customDPS": "",
@@ -5046,6 +5048,7 @@ const characters = {
                     "type": ["Electric"],
                     "desc": "When defeating an enemy or landing a critical hit in the Active Camouflage state, there is a 30% chance to re-enter Active Camouflage. While in Active Camouflage state, using a skill to kill an enemy returns the user to the Active Camouflage stat. When attacking, increases DMG against enemies who are not targeting the caster.",
                     "powerMods": {
+                        "dmgMulti": 0.15,
                     },
                     "customDPSBase": "sharenAssassinCalcsTier0AmbushedStarter",
                     "customDPS": "",

@@ -97,6 +97,7 @@ let globalRecords = {
     "teamBuffs": {
         "stats": {},
         "tags": [],
+        "complexBonus": [],
     },
     "enemyBuffs": {
         "stats": {},

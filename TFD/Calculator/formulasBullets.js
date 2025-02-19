@@ -335,7 +335,7 @@ const bullets = {
                         bonusEntry.timePassedEntry = timePassed;
                         bonusEntry.currentStacks += 1;
                         //apply all stats for this bonus
-                        if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);}
+                        if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus)}
                     }
                     else if (priorShotCount != shotCount && (bonusEntry.currentStacks <= bonusEntry.limit && bonusEntry.oneTimeOrStack === "stackPop" && bonusEntry.isCharged)) {
                         bonusEntry.timePassedEntry = timePassed;

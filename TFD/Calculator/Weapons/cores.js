@@ -136,6 +136,14 @@ const coreGreen = {
         "range": [0.02,0.74],
         "color": "Green",
     },
+    "Beam Charge Speed": {
+        "statName": "BeamChargeSpeedCORE",
+        "stats": {},
+        "tags": ["FireRateCORE"],
+        "range": [0.03,0.98],
+        // "range": [-0.20,-0.01],
+        "color": "Green",
+    },
 }
 const coreYellow = {
     "": {

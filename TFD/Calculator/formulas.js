@@ -113,7 +113,7 @@ const calcs = {
     },
     getTotalSkillPower(index,abilityTypeArray,skillDependentModifier) {
         const powerOptimization = index.PowerOptimization + index.PowerOptimizationCORE;
-        skillDependentModifier = skillDependentModifier || 1;
+        skillDependentModifier = (skillDependentModifier || 1) + index.CharacterSkillMultiplier;
 
         const reactorLevel = globalRecords.reactor.level;
         const reactorLevelBonuses = [0, 331.829, 663.658, 995.487, 1327.316, 1659.144];
@@ -200,6 +200,12 @@ const calcs = {
         let reloadTime = (baseReloadTime - weaponRef.ZoomInHoldDelayTime) / (1 + reloadComposite);
 
         return reloadTime;
+    },
+    getBeamChargeTime(index,baseChargeTime,weaponRef) {
+        const chargeComposite = calcs.clamp(index.BeamChargeSpeed + index.BeamChargeSpeedCORE,-0.30,10);
+        //positive numbers are speed boosts, negative is bad. A reload time divided by a larger number makes it smaller, but a smaller number makes it bigger, etc.
+
+        return baseChargeTime / (1 + chargeComposite);
     },
     getFirearmATK(index,weaponRef,uniqueMulti) {
         const baseFirearmATK = weaponRef.baseATK;
@@ -531,6 +537,28 @@ const customDamage = {
             let complexBonusArray = [];
 
             for (let bonuses of currentPath.complexBonus) {
+                let newArrayEntry = {
+                    ...bonuses
+                }
+                newArrayEntry.stats = [...bonuses.stats];
+                complexBonusArray.push(newArrayEntry);
+            }
+
+            limitedWeaponBonuses.push({
+                "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                "bonusArray": complexBonusArray 
+            });
+        }
+
+
+        // globalRecords.teamBuffs.complexBonus
+        const teamBonusRef = globalRecords.teamBuffs.complexBonus;
+        if (teamBonusRef && teamBonusRef.length) {
+            let initialTimePassed = teamBonusRef[0].oneTimeOrStack === "cooldown" ? teamBonusRef[0].cooldown : 0;
+            let firstIsSkipped = (teamBonusRef[0].skipFirstShot || false) ? -1 : 0;
+            let complexBonusArray = [];
+
+            for (let bonuses of teamBonusRef) {
                 let newArrayEntry = {
                     ...bonuses
                 }
@@ -5281,6 +5309,50 @@ const customDamage = {
         if (settingsRef.sharenAmbushActive) {
             index.SkillCritRateBaseBonus += abilityMods.skillCritBonus;
             index.FirearmCritRateBase += abilityMods.firearmCritBonus;
+
+
+            //this is the skill dmg multiplier
+            index.CharacterSkillMultiplier += abilityMods.dmgMulti;
+
+
+            //this type of bonus will only apply to the first shot since only Ambushed has the ability to reset the ambush effect
+            let oneTimeBonus = {
+                "stats": [
+                    {"name": "WeaponUniqueMultiplierCORE","value": abilityMods.dmgMulti,"subStackValue": null},
+                ],
+                "bonusName": "Ambush (Active Camo)",
+                "oneTimeOrStack": "cooldown",
+                "limit": 1,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "conditions": ["isReloaded"],
+                "cooldown": 1,
+            };
+
+            //this type of bonus will apply to every shot
+            let repeatedBonus = {
+                "stats": [
+                    {"name": "WeaponUniqueMultiplierCORE","value": abilityMods.dmgMulti,"subStackValue": null},
+                ],
+                "bonusName": "Ambush (Ambushed)",
+                "oneTimeOrStack": "duration",
+                "limit": 1,
+                "cooldown": 0.05,
+                "duration": 999,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "conditions": ["isReloaded"],
+                "skipFirstShot": false,
+            }
+
+
+
+            abilityMap.complexBonus = [nameOverride==="Ambushed" ? repeatedBonus : oneTimeBonus]
+        }
+        else {
+            abilityMap.complexBonus = []
         }
 
 
@@ -5554,12 +5626,57 @@ const customDamage = {
         //additive to active camo's bonus so 2 + .15
         //overcharged edge is a 2.5 multi + .5 which would consume 50% shields not a fixed amount, also additive with the 15% bonus
 
+
+        if (settingsRef.sharenTargetBonus) {
+            //this is the skill dmg multiplier
+            index.CharacterSkillMultiplier += abilityMods.dmgMulti;
+
+            // //this type of bonus will only apply to the first shot since only Ambushed has the ability to reset the ambush effect
+            // let oneTimeBonus = {
+            //     "stats": [
+            //         {"name": "WeaponUniqueMultiplierCORE","value": abilityMods.dmgMulti,"subStackValue": null},
+            //     ],
+            //     "bonusName": "Assassinator",
+            //     "oneTimeOrStack": "cooldown",
+            //     "limit": 1,
+            //     "currentStacks": 0,
+            //     "timePassedEntry": 0,
+            //     "conditions": ["isReloaded"],
+            //     "cooldown": 1,
+            // };
+
+            //this type of bonus will apply to every shot
+
+            //ASSASSINATOR NOTE: this doesn't have a cooldown and applies to ALL damage if the target isn't after you. So in essence, this bonus SHOULD apply to all shots, unlike ambushed
+            let repeatedBonus = {
+                "stats": [
+                    {"name": "WeaponUniqueMultiplierCORE","value": abilityMods.dmgMulti,"subStackValue": null},
+                ],
+                "bonusName": "Assassinator",
+                "oneTimeOrStack": "duration",
+                "limit": 1,
+                "cooldown": 0.05,
+                "duration": 999,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "conditions": ["isReloaded"],
+                "skipFirstShot": false,
+            }
+
+            abilityMap.complexBonus = [repeatedBonus]
+        }
+        else {
+            abilityMap.complexBonus = []
+        }
+
         if (!isCycleCalcs) {
 
             const breakdownArray = [
                 {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
                     "toggleElemID": ["sharenTargetBonus","Use Bonus?"],
-                    "condition": false,"desc": ""},
+                    "condition": false,"desc": "The non-targeted bonus will default to off, so make sure you turn it on if you ever want to include it."},
             ];
             const bodyString = `abilityBreakdownBody${skillPlacement}`;
             
@@ -7441,7 +7558,7 @@ let moduleQueryFunctions = {
         if (queryType === "Ability") {
             const characterRef = globalRecords.character;
             const currentCharacter = characterRef.currentCharacter;
-            const arrayRef = characterRef.abilityArray[selectedAbilityIndexReference+1];
+            const arrayRef = characterRef.abilityArray[selectedAbilityIndexReference];
             const arrayResult = arrayRef===0 ? "base" : arrayRef;
             const typeSet = new Set(characters[currentCharacter].abilities[abilityTarget][arrayResult].type);
 
