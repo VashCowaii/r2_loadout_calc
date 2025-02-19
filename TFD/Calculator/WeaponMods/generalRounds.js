@@ -1487,26 +1487,26 @@ const generalRounds =  {
 
 
 
-   "Core Testing Mod (Throwaway later)": {
-      "rarity": "Normal",
-      "polarity": "Malachite",
-      "type": "General Rounds",
-      "cost": 16,
-      "category": "",
-      "stats": {
-         // "FireRate": -0.12-.12-.12-.12,
+   // "Core Testing Mod (Throwaway later)": {
+   //    "rarity": "Normal",
+   //    "polarity": "Malachite",
+   //    "type": "General Rounds",
+   //    "cost": 16,
+   //    "category": "",
+   //    "stats": {
+   //       // "FireRate": -0.12-.12-.12-.12,
 
-         // "ElectricATK": 9560,
-         "FireATK%Bonus": 0.12,
-         // "MagazineSize": 0.26,
-         // "ColossusATK%": 1.5,
-         // "FirearmATK%": 0.17,
-         // "FirearmCritDamage": 0.11,
-         // "WeakPointDamage%": 0.11,
-      },
-      "tags": [],
-      "inclusion": [],
-      "exclusion": [],
-      "desc": "If you see this mod on the live site, ping vash in discord to delete it bc he is dumb and forgot to remove it."
-   },
+   //       // "ElectricATK": 9560,
+   //       "FireATK%Bonus": 0.12,
+   //       // "MagazineSize": 0.26,
+   //       // "ColossusATK%": 1.5,
+   //       // "FirearmATK%": 0.17,
+   //       // "FirearmCritDamage": 0.11,
+   //       // "WeakPointDamage%": 0.11,
+   //    },
+   //    "tags": [],
+   //    "inclusion": [],
+   //    "exclusion": [],
+   //    "desc": "If you see this mod on the live site, ping vash in discord to delete it bc he is dumb and forgot to remove it."
+   // },
 }

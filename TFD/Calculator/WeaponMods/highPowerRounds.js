@@ -1674,21 +1674,21 @@ const highPowerRounds = {
 
 
 
-    "TestMod HighPowered": {
-        "rarity": "Normal",
-        "polarity": "Cerulean",
-        "type": "High-Power Rounds",
-        "cost": 14,
-        "category": "",
-        "desc": "ladeedadeeda remove this later",
-        "stats": {
-            // "ReloadSpeed": -0.50,
-            "FireRate": -0.25
-        },
-        "tags": [],
-        "inclusion": [],
-        "exclusion": [],
-    },
+    // "TestMod HighPowered": {
+    //     "rarity": "Normal",
+    //     "polarity": "Cerulean",
+    //     "type": "High-Power Rounds",
+    //     "cost": 14,
+    //     "category": "",
+    //     "desc": "ladeedadeeda remove this later",
+    //     "stats": {
+    //         // "ReloadSpeed": -0.50,
+    //         "FireRate": -0.25
+    //     },
+    //     "tags": [],
+    //     "inclusion": [],
+    //     "exclusion": [],
+    // },
 
 
 
