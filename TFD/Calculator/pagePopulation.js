@@ -219,7 +219,61 @@ const userTriggers = {
         else {
             readSelection("teamBuffsErosionBox").style.display = "none";
         }
+
+
+
+        //INVERSION ATTRIBUTE MODIFIERS
+        if (readSelection("useTeamInversionModifier").checked) {
+            // "complexBonus": [
+            readSelection("teamBuffsInversionBox").style.display = "flex";
+
+            const selectedAttribute = readSelection("teamBuffsAttributeEnhancement").value;
+
+            const attributeKeys = {
+                "Fire": "FireATK%CORE",
+                "Chill": "ChillATK%CORE",
+                "Electric": "ElectricATK%CORE",
+                "Toxic": "FireATK%CORE",
+            }
+
+
+            teamRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": attributeKeys[selectedAttribute],"value": 0.048,"subStackValue": null},
+                    ],
+                    "bonusName": "Inversions (Attribute)",
+                    "oneTimeOrStack": "stack",
+                    "duration": 30,
+                    "cooldown": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "clearOnReload": true,
+                    "limit": 5,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                }
+            ]
+
+            // const erosionLevel = Math.floor(Math.min(30,Math.max(1,+readSelection("teamBuffsErosionLevel").value)));
+            // readSelection("teamBuffsErosionLevel").value = erosionLevel;
+
+            // enemyRef.stats = {...enemyRef.stats,...erosionModsData[erosionLevel]}
+            console.log(readSelection("teamBuffsAttributeEnhancement").value)
+        }
+        else {
+            readSelection("teamBuffsInversionBox").style.display = "none";
+            teamRef.complexBonus = [];
+        }
+
+
+
         updateFormulas();
+
+
+
+
     },
     updateSelectedFocus(elementID) {
         // userTriggers.updateSelectedFocus('mod3BreakdownTab')

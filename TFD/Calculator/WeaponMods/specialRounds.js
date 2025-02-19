@@ -991,15 +991,6 @@ const specialRounds =  {
 
 
     //BLUES
-    // "Superconductivity Charge": {//done
-    //     "rarity": "Normal",
-    //     "polarity": "Xantic",
-    //     "type": "Special Rounds",
-    //     "cost": 16,
-    //     "category": "Beam Rifle",
-    //     "stats": {},
-    //     "desc": "Beam Rifle Charging Speed 40%"
-    // },
     // "Impact Round Magazine Replacement": {//
     //     "rarity": "Normal",
     //     "polarity": "Xantic",
@@ -1235,35 +1226,35 @@ const specialRounds =  {
 
 
     "Charge Amplification": {
-      "rarity": "Rare",
-      "polarity": "Malachite",
-      "type": "Special Rounds",
-      "cost": 0,
-      "category": "Firearm Critical Hit Damage",
-      "stats": {
-         "FirearmATK%": 0.67,
-         "FirearmCritDamage": -0.34
-      },
-      "tags": [],
-      "inclusion": [],
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Special Rounds",
+        "cost": 0,
+        "category": "Firearm Critical Hit Damage",
+        "stats": {
+            "FirearmATK%": 0.67,
+            "FirearmCritDamage": -0.34
+        },
+        "tags": [],
+        "inclusion": [],
         "exclusion": [],
-      "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -34%"
-   }, 
-   "Bullet Integration": {
-      "rarity": "Rare",
-      "polarity": "Malachite",
-      "type": "Special Rounds",
-      "cost": 0,
-      "category": "Firearm Critical Hit Damage",
-      "stats": {
-         "FirearmATK%": 0.27,
-        "FirearmCritDamage": 0.10
-      },
-      "tags": [],
-      "inclusion": [],
+        "desc": "Firearm ATK +67%, Firearm Critical Hit Damage -34%"
+    }, 
+    "Bullet Integration": {
+        "rarity": "Rare",
+        "polarity": "Malachite",
+        "type": "Special Rounds",
+        "cost": 0,
+        "category": "Firearm Critical Hit Damage",
+        "stats": {
+            "FirearmATK%": 0.27,
+            "FirearmCritDamage": 0.10
+        },
+        "tags": [],
+        "inclusion": [],
         "exclusion": [],
-      "desc": "Firearm ATK +27%, Firearm Critical Hit Damage +10%"
-   }, 
+        "desc": "Firearm ATK +27%, Firearm Critical Hit Damage +10%"
+    }, 
 
 
    "Lethal Finish": {//done
@@ -1295,4 +1286,152 @@ const specialRounds =  {
       "inclusion": [],
       "exclusion": [],
    },
+
+
+
+   "Superconductivity Charge": {
+        "rarity": "Normal",
+        "polarity": "Xantic",
+        "type": "Special Rounds",
+        "cost": 16,
+        "category": "",
+        "stats": {
+            "BeamChargeSpeed": 0.40,
+        },
+        "tags": [],
+        "inclusion": ["Beam Rifle"],
+        "exclusion": [],
+        "desc": "Beam Rifle Charging Speed 40%"
+    },
+
+
+
+    "High Voltage Plasma": {
+        "rarity": "Ultimate",
+        "polarity": "Xantic",
+        "type": "Special Rounds",
+        "cost": 13,
+        "category": "Battle Proficiency",
+        "stats": {},
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "enemyDEFResistanceReductionCORE","value": -0.015,"subStackValue": null},
+                    {"name": "ElectricATK%BonusCORE","value": 0.016,"subStackValue": null},
+                ],
+                "bonusName": "High Voltage Plasma",
+                "oneTimeOrStack": "stack",
+                "duration": 2,
+                "cooldown": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "clearOnReload": true,
+                "skipFirstShot": true,
+                "limit": 20,
+                "currentStacks": -1,
+                "timePassedEntry": 0,
+                "cooldown": 0,
+            }
+        ],
+        "tags": ["enemyDEFResistanceReductionCORE%","ElectricATK%BonusCORE%"],
+        "inclusion": ["Beam Rifle"],
+        "exclusion": [],
+        "desc": "When hitting the same target consecutively, increases your Electric ATK by +1.6% and reduces the target's DEF by -1.5% (up to 20 stacks; stacks reset upon failing to hit the same target, reloading, or ending your firing)."
+    },
+    "Corrosive Plasma": {
+        "rarity": "Ultimate",
+        "polarity": "Rutile",
+        "type": "Special Rounds",
+        "cost": 13,
+        "category": "Battle Proficiency",
+        "stats": {},
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "enemyDEFResistanceReductionCORE","value": -0.015,"subStackValue": null},
+                    {"name": "ToxicATK%BonusCORE","value": 0.016,"subStackValue": null},
+                ],
+                "bonusName": "Corrosive Plasma",
+                "oneTimeOrStack": "stack",
+                "duration": 2,
+                "cooldown": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "clearOnReload": true,
+                "skipFirstShot": true,
+                "limit": 20,
+                "currentStacks": -1,
+                "timePassedEntry": 0,
+                "cooldown": 0,
+            }
+        ],
+        "tags": ["enemyDEFResistanceReductionCORE%","ToxicATK%BonusCORE%"],
+        "inclusion": ["Beam Rifle"],
+        "exclusion": [],
+        "desc": "When hitting the same target consecutively, increases your Electric ATK by +1.6% and reduces the target's DEF by -1.5% (up to 20 stacks; stacks reset upon failing to hit the same target, reloading, or ending your firing)."
+    },
+    "Supercooled Plasma": {
+        "rarity": "Ultimate",
+        "polarity": "Cerulean",
+        "type": "Special Rounds",
+        "cost": 13,
+        "category": "Battle Proficiency",
+        "stats": {},
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "enemyDEFResistanceReductionCORE","value": -0.015,"subStackValue": null},
+                    {"name": "ChillATK%BonusCORE","value": 0.016,"subStackValue": null},
+                ],
+                "bonusName": "Supercooled Plasma",
+                "oneTimeOrStack": "stack",
+                "duration": 2,
+                "cooldown": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "clearOnReload": true,
+                "skipFirstShot": true,
+                "limit": 20,
+                "currentStacks": -1,
+                "timePassedEntry": 0,
+                "cooldown": 0,
+            }
+        ],
+        "tags": ["enemyDEFResistanceReductionCORE%","ChillATK%BonusCORE%"],
+        "inclusion": ["Beam Rifle"],
+        "exclusion": [],
+        "desc": "When hitting the same target consecutively, increases your Electric ATK by +1.6% and reduces the target's DEF by -1.5% (up to 20 stacks; stacks reset upon failing to hit the same target, reloading, or ending your firing)."
+    },
+    "Superheated Plasma": {
+        "rarity": "Ultimate",
+        "polarity": "Almandine",
+        "type": "Special Rounds",
+        "cost": 13,
+        "category": "Battle Proficiency",
+        "stats": {},
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "enemyDEFResistanceReductionCORE","value": -0.015,"subStackValue": null},
+                    {"name": "FireATK%BonusCORE","value": 0.016,"subStackValue": null},
+                ],
+                "bonusName": "Superheated Plasma",
+                "oneTimeOrStack": "stack",
+                "duration": 2,
+                "cooldown": 0,
+                "isDurationActive": true,
+                "isCooldownActive": false,
+                "clearOnReload": true,
+                "skipFirstShot": true,
+                "limit": 20,
+                "currentStacks": -1,
+                "timePassedEntry": 0,
+                "cooldown": 0,
+            }
+        ],
+        "tags": ["enemyDEFResistanceReductionCORE%","FireATK%BonusCORE%"],
+        "inclusion": ["Beam Rifle"],
+        "exclusion": [],
+        "desc": "When hitting the same target consecutively, increases your Electric ATK by +1.6% and reduces the target's DEF by -1.5% (up to 20 stacks; stacks reset upon failing to hit the same target, reloading, or ending your firing)."
+    },
 }

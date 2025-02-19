@@ -427,6 +427,36 @@
 
                                 <!-- <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Weapons</div> -->
                             </div>
+
+
+                            <div class="traitMegaTitleHeaderTeamBuffs">INVERSION BUFFS</div>
+                            <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Inversion Attributes</div>
+                                <div class="statisticSettingsRow hasHoverTooltip">
+                                    <span class="statsRowNameBuffs">Inversion&nbsp;Attribute&nbsp;Bonus</span>
+                                    <span class="rowTraceLine"></span>
+                                    <div class="statsRowToggle">
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="useTeamInversionModifier" onchange="userTriggers.updateTeamBuffsObject()">
+                                            <span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            <div class="teamBuffBreakdownHolder" id="teamBuffsInversionBox" style="display: none;">
+                                <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                    <div class="totalHealingBoxHalf hasHoverTooltip">
+                                        <div style="padding-right: 5px;">Inversion Bonus</div>
+                                        <div class="totalHealingValue">
+                                            <select id="teamBuffsAttributeEnhancement" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <option value="Fire">Fire</option>
+                                                <option value="Chill">Chill</option>
+                                                <option value="Electric">Electric</option>
+                                                <option value="Toxic">Toxic</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         
                     </div>

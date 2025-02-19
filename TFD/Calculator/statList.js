@@ -32,7 +32,7 @@ const greatTableKnowerOfAll = {
 
     //BASE OPTIMIZATION POWER BONUS
     "PowerOptimization": 0,"PowerOptimizationCORE": 0,//core bonuses are not applied to unique weapons. This isn't actually from a core, rather something like Secret Garden, but it needs to skip unique weapons so we use CORE suffix here
-    "TemporarySkillMultiplier": 0,//for use with dynamic scaling skill dependent modifiers for the getTotalSkillPower function. Otherwise, this stat should always be 0, shit will break if that is not the case.
+    "CharacterSkillMultiplier": 0,//for use with dynamic scaling skill dependent modifiers for the getTotalSkillPower function. Otherwise, this stat should always be 0, shit will break if that is not the case.
     //SKILL ATK BONUSES
     "SkillAttackColossus": 0,
     //SKILL POWER BOOST RATIOS
@@ -78,8 +78,8 @@ const greatTableKnowerOfAll = {
     "WeakPointDamage%": 0,"WeakPointDamage%CORE": 0,
     "WeakPointOverride": 0,"WeakPointOverrideCORE": 0,
 
-    "WeaponUniqueMultiplier": 0,"WeaponUniqueMultiplierCORE": 0,
-    "independentScalar": 0,"independentScalarCORE": 0,
+    "WeaponUniqueMultiplier": 0,"WeaponUniqueMultiplierCORE": 0,//this is for stuff like hailey's zenith or beam multipliers
+    "independentScalar": 0,"independentScalarCORE": 0,//this is for flat nonscaling amounts that get added in after type and faction, but before crit and weak point, like last dagger
     "BulletCostWeaponMagazineOverride": 0,"BulletCostWeaponMagazineOverrideCORE": 0,
 
     "BulletCostWeapon": 1,"BulletCostWeaponCORE": 1,
@@ -91,6 +91,7 @@ const greatTableKnowerOfAll = {
     "FireRate": 0,"FireRateCORE": 0,
     "FireRateOverride": 0,
     "FireRateMulti": 0,"FireRateMultiCORE": 0,
+    "BeamChargeSpeed": 0,"BeamChargeSpeedCORE": 0,
     "Accuracy": 1,"AccuracyCORE": 1,
     "Recoil": 1,"RecoilCORE": 1,
     "ReloadSpeed": 0,"ReloadSpeedCORE": 0,
