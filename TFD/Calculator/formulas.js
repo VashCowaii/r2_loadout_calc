@@ -266,22 +266,20 @@ const calcs = {
 
         return {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage}
     },
-    getFirearmElementalSpread(index,elementName,usableBase,critFirearm) {
+    getFirearmElementalSpread(index,elementName,usableBase,critFirearm,wpAveraged) {
         const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
         const givenElementBase = usableBase * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`];
         const needlessBullshitAmount = givenElementBase * (index.independentScalar + index.independentScalarCORE);
         const damageElementBase = (givenElementBase * Math.max(0,1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) + needlessBullshitAmount) * elemDR;
 
 
-
-
-        const perHit = damageElementBase;
+        const perHit = damageElementBase * wpAveraged;
         const perCrit = perHit * critFirearm.Damage;
         const AVG = perHit * critFirearm.Composite;
 
         return {perHit,perCrit,AVG}
     },
-    getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm) {
+    getActiveFirearmAttributesArrays(index,preElementDamage,critFirearm,wpAveraged) {
         let activeElements = [];
         let activeElementsDamage = [];
 
@@ -295,7 +293,7 @@ const calcs = {
         }
         else {
             for (let entry of activeElements) {
-                const damageSubAttribute = calcs.getFirearmElementalSpread(index,entry,preElementDamage,critFirearm)
+                const damageSubAttribute = calcs.getFirearmElementalSpread(index,entry,preElementDamage,critFirearm,wpAveraged)
                 activeElementsDamage.push(damageSubAttribute.perHit);
             }
         }
@@ -872,9 +870,8 @@ const customDamage = {
         const magForceDamage = magForce * magPowerModifier;
         const skillPowerModifier = abilityMods.base + sumModifierBonus;
 
-        let isLastStand = false;
-        for (let entry of globalRecords.character.mods) {if (entry === "Last Stand") {isLastStand = true;}}
-        let lastStandMulti = isLastStand ? 0.085 + (Math.min(10000,returnObject.displayShield)/10000) * 0.17 : 1;
+        let isLastStand = index.LastStandActive;
+        let lastStandMulti = isLastStand ? 0.085 + (Math.min(10000,returnObject.displayShield)/10000) * 0.425 : 1;
 
         const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier,magForceDamage);
 
@@ -898,8 +895,8 @@ const customDamage = {
             ]
             let rowInjectionLastStand = isLastStand ? [
                 {"name": "Last Stand Multi","value": lastStandMulti,"unit": "x"},
-                {"name": "Last Stand Hit","value": damage.perHit * lastStandMulti,"unit": ""},
-                {"name": "Last Stand Crit","value": damage.perCrit * lastStandMulti,"unit": ""},
+                {"name": "Last Stand Hit","value": Math.floor(damage.perHit) * lastStandMulti,"unit": ""},
+                {"name": "Last Stand Crit","value": Math.floor(damage.perCrit) * lastStandMulti,"unit": ""},
                 {"name": "Last Stand AVG","value": lastStandDamage,"unit": ""},
             ] : [];
             let rowInjectionDPS = [

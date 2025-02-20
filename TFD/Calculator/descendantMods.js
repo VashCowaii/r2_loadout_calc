@@ -2392,6 +2392,7 @@ const modData = {
         "category": "Arche Tech",
         "desc": "ONLY FACTORS ON KYLE THRUSTERS<br>On Skill Attack, consumes all Shield to deal additional damage on top of damage dealt. Deals 8.5% additional damage, which can increase up to 17% based on the amount of Shield consumed (max 10,000)<br>Once triggered, recovers Shield by 1.5% of Max Shield every second for 30s.",
         "stats": {
+            "LastStandActive": 1,
             // "SkillCritRate": 0.10,
             // "PowerModifierDimension": 0.269
         },

@@ -30,6 +30,9 @@ const greatTableKnowerOfAll = {
     "SkillDuration": 0,
     "SkillRange": 0,
 
+    //OBSCUR MOD REFERENCES FOR CHECKS
+    "LastStandActive": 0,
+
     //BASE OPTIMIZATION POWER BONUS
     "PowerOptimization": 0,"PowerOptimizationCORE": 0,//core bonuses are not applied to unique weapons. This isn't actually from a core, rather something like Secret Garden, but it needs to skip unique weapons so we use CORE suffix here
     "CharacterSkillMultiplier": 0,//for use with dynamic scaling skill dependent modifiers for the getTotalSkillPower function. Otherwise, this stat should always be 0, shit will break if that is not the case.

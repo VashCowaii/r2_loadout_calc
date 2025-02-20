@@ -385,7 +385,10 @@ const bullets = {
 
             const critFirearm = calcs.getFirearmCritComposites({totalFirearmCritRate,totalFirearmCritDamage});
             const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
-            const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(tableCopy,preElementDamage,critFirearm);
+
+            //* wpAveraged
+            // console.log(wpAveraged)
+            const {activeElements,activeElementsDamage} = calcs.getActiveFirearmAttributesArrays(tableCopy,preElementDamage,critFirearm,wpAveraged);
             const elementalDamage = {
                 Chill: 0,
                 Electric: 0,

@@ -849,14 +849,14 @@ const userTriggers = {
         let rarityColorMemory = componentSetBonuses[readSelection("memory").value].rarity;
         let rarityColorProcessor = componentSetBonuses[readSelection("processor").value].rarity;
         readSelection("buttonsAuxiliaryIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("buttonsSensorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("buttonsMemoryIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("buttonsProcessorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("buttonsSensorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorSensor];
+        readSelection("buttonsMemoryIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorMemory];
+        readSelection("buttonsProcessorIconUIBox").style.background = userTriggers.rarityColorRef[rarityColorProcessor];
 
         readSelection("auxiliaryBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("sensorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("memoryBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
-        readSelection("processorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorAux];
+        readSelection("sensorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorSensor];
+        readSelection("memoryBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorMemory];
+        readSelection("processorBreakdownTab").style.background = userTriggers.rarityColorRef[rarityColorProcessor];
 
         globalRef.auxiliary = readSelection("auxiliary").value;
         globalRef.auxiliarySub1 = readSelection("auxiliarySub1").value;
