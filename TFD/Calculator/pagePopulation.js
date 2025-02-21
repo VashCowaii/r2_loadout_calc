@@ -1527,6 +1527,16 @@ const settings = {
             if (arrayRef[3] === 0) {}//4
             if (arrayRef[4] === 0) {}//passive
         },
+        Gley(settingsRef,arrayRef) {
+            settingsRef.gleyFrenzyActive = readSelection("gleyFrenzyActive").checked;
+            if (arrayRef[0] === 0) {}//1
+            if (arrayRef[1] === 0) {}//2
+            settingsRef.gleyAmmoBuff = readSelection("gleyAmmoBuff").checked;
+            if (arrayRef[2] === 0) {}//3
+            if (arrayRef[3] === 0) {}//4
+            settingsRef.gleyHPBar = +readSelection("gleyHPBar").value
+            if (arrayRef[4] === 0) {}//passive
+        },
         "Secret Garden"(settingsRef,arrayRef) {
             settingsRef.gardenStackCount = +readSelection("gardenStackCount").value
         },

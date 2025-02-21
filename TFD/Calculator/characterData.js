@@ -6029,6 +6029,444 @@ const characters = {
             }
         }
     },
+    "Gley": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_007_U01.png",
+        "baseStats": {
+            "HP": 934,
+            "Shield": 413,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 1860,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 13,
+            "ResistanceToxin": 11,
+            "MP": 300,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.05,
+            "CritDamage": 1.2,
+        },
+        "name": "Gley",
+        "characterSettings": {
+            "gleyFrenzyActive": true,
+            "gleyAmmoBuff": true,
+            "gleyHPBar": 100,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Frenzied",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_01.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "In Frenzied state, increases Firearm ATK and Penetration, but reduces HP Recovery.",
+                    "powerMods": {
+                        "firearmATKBonus": 0.15,
+                    },
+                    "customDPSBase": "gleyFrenziedCalcsTier0",
+                    // "customDPS": "",
+                    "stats": {},
+                    "tags": ["FirearmATK%"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 1,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.10,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Firearm ATK%","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Explosive ATK%","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Penetration","value": 51,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-Incoming HP Recovery%","value": -0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "DMG Received Increase","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+                "Predator Instinct": {
+                    "name": "Predator Instinct",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R03_Rune.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "In Frenzied state, Firearm ATK gradually increases based on how long a Firearm is fired.",
+                    "powerMods": {
+                        "firearmATKBonus": 0.15,
+                    },
+                    "customDPSBase": "gleyFrenziedCalcsTier0PredatorStarter",
+                    // "customDPS": "",
+                    "stats": {},
+                    "tags": ["FirearmATK%"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 1,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.05,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "FRENZIED": [
+                            {"statType": "duration","statName": "Lvl.1 Firing Time","value": 1,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Lvl.2 Firing Time","value": 2,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Lvl.1 Firearm ATK+","value": 0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Lvl.2 Firearm ATK+","value": 0.21,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Penetration","value": 51,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-Incoming HP Recovery%","value": -0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "DMG Received Increase","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Life Siphon",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_02.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "desc": "Deals damage to targets within range and recovers HP. Recovered amount increases based on the number of enemies hit. In frenzied state, deals increased DMG proportionally to HP. In non-frenzied state, gains Vigor. Vigor stacks proportionally to the number of enemies hit.",
+                    "powerMods": {
+                        "base": 327.5/100,
+                        "baseFrenzied": 467.7/100,
+                        "skillPowerBonus": 0.10,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "gleySiphonCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Power of Life cost","value": 3,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 6,"limit": 3,"isModified": true},
+                            {"statType": "","statName": "Health Recovery/Hit","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Power / 10%HP Consumed","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "NON-FRENZIED": [
+                            {"statType": "","statName": "-Incoming DMG","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 11,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 10,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Massive Sanguification": {
+                    "name": "Massive Sanguification",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R02_Rune.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "desc": "When In frenzied state, deals damage to enemies within range, with DMG increasing even more if current HP is low. Additionally acquires a certain amount of Power of Life. When in non-frenzied state, recovers HP proportionally to the number of enemies within range and absorbs Life Spheres if any exist within the effect range.",
+                    "powerMods": {
+                        "base": 0/100,//leave this so the dmg function doesn't break when non-frenzied is toggled on
+                        "baseFrenzied": 230.6/100,
+                        "skillPowerBonus": 0.10,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "gleySiphonCalcsMassStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 20,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.15,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 12,"limit": 3,"isModified": true},
+                        ],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Power / 10%HP Consumed","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Power of Life","value": 3,"limit": null,"isModified": false,},
+                        ],
+                        "NON-FRENZIED": [
+                            {"statType": "","statName": "Health Recovery/Hit","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+                "Explosive Life": {
+                    "name": "Explosive Life",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R05_Rune.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "desc": "Detonates all spawned Life Spheres to deal damage. In frenzied state, deals increased DMG proportionally to HP. In non-frenzied state, gains Vigor. Vigor stacks proportionally to the number of enemies hit. The skill cannot be used if there are no Life Spheres nearby to detonate.",
+                    "powerMods": {
+                        "base": 370.5/100,
+                        "baseFrenzied": 600.8/100,
+                        "skillPowerBonus": 0.10,
+                    },
+                    // "customDPSBase": "",
+                    "customDPS": "gleySiphonCalcsExplosiveStarter",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 8,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Power of Life cost","value": 2,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "range","statName": "Range","value": 4,"limit": 3,"isModified": true},
+                        ],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Power / 10%HP Consumed","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "NON-FRENZIED": [
+                            {"statType": "","statName": "-Incoming DMG","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 11,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Max Stacks","value": 10,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Increased Sensory",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_03.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "When in Frenzied state, applies Maxmize Lethality during which bullets are not consumed. When in Non-Frenzied state, applies Maximize Recovery during which Life Sphere generation is increased.",
+                    "powerMods": {
+                        "baseDuration": 5,
+                    },
+                    "customDPSBase": "gleySensoryCalcsTier0",
+                    "customDPS": "",//inesDischargeCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {},
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 40,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.05,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "MAXIMIZE LETHALITY": [
+                            {"statType": "","statName": "Cost/Shot","value": 0,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "-Movement Speed","value": -0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "MAXIMIZE RECOVERY": [
+                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Life Sphere Rate","value": 0.60,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery Amount","value": 0.08,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+                "Super Senses": {
+                    "name": "Super Senses",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R01_Rune.png",
+                    "type": ["Non-Attribute","Singular"],
+                    "desc": "When in Frenzied state, applies Maxmize Lethality during which bullets are not consumed and Fire Rate is fixed. When in Non-Frenzied state, applies Maximize Recovery during which Life Sphere Drop Rate and Recovery increase for a certain period of time.",
+                    "powerMods": {
+                        "baseDuration": 8,
+                    },
+                    "customDPSBase": "gleySensoryCalcsTier0SuperStarter",
+                    "customDPS": "",//inesDischargeCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {},
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 40,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.05,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                        ],
+                        "MAXIMIZE LETHALITY": [
+                            {"statType": "","statName": "Cost/Shot","value": 0,"limit": null,"isModified": false},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Fixed Fire Rate","value": 48,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-Movement Speed","value": -0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "MAXIMIZE RECOVERY": [
+                            {"statType": "","statName": "+Movement Speed","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Life Sphere Rate","value": 0.60,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery Amount","value": 0.08,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                        ],
+                        // "ENEMIES WITH CONDUCTOR": [],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Massacre",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_04.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "desc": "Equip a Unique Weapon. The number of bullets loaded is affected by the amount of Power of Life owned. When hitting an enemy with the Unique Weapon, deals damage and inflicts additional effects. In Frenzied state, increases additional DMG proportionally to HP. In Non-Frenzied state, inflicts Stun on enemies that are hit.",
+                    "powerMods": {
+                        "base": 68.9/100,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "gleyMassCalcs",//inesSnareCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Skill - AVG/Hit" : "avgSkillHit",
+                        "Skill - Total AVG" : "totalAVGSKill",
+                        "Gun - AVG/Hit" : "avgGunPerHit",
+                        "Gun - Total AVG" : "totalAVGGun",
+                        "Total - AVG/Shot" : "avgPerHitTotal",
+                        "SUM Total AVG" : "totalAVGSum",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 1,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "HP Cost","value": 0.15,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Minimum PoL Stacks","value": 3,"limit": null,"isModified": false},
+                        ],
+                        "UNIQUE WEAPON - SUM": [],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Power / 10%HP Consumed","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "NON-FRENZIED": [
+                            {"statType": "duration","statName": "Stun Duration","value": 3.5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+                "Demonic Modification": {
+                    "name": "Demonic Modification",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R06_Rune.png",
+                    "type": ["Non-Attribute","Dimension"],
+                    "desc": "Equip a Unique Weapon. The number of bullets loaded is affected by the amount of Power of Life owned and the weapon has a fixed fire rate. HP is drained continuously when using True Aim, but the damage of the next bullet greatly increases and there is a chance to recover HP when hitting a Weak Point. In Frenzied state, increases additional DMG proportionally to HP. In Non-Frenzied state, inflicts Stun on enemies that are hit.",
+                    "powerMods": {
+                        "base": 373.9/100,
+                    },
+                    // "customDPSBase": "blairBlazeCalcsTier0",
+                    "customDPS": "gleyMassCalcsModificationStarter",//inesSnareCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Skill - AVG/Hit" : "avgSkillHit",
+                        "Skill - Total AVG" : "totalAVGSKill",
+                        "Gun - AVG/Hit" : "avgGunPerHit",
+                        "Gun - Total AVG" : "totalAVGGun",
+                        "Total - AVG/Shot" : "avgPerHitTotal",
+                        "SUM Total AVG" : "totalAVGSum",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 2,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "True Aim HP/Interval","value": 0.15,"limit": null,"isModified": true,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "True Aim Interval","value": 0.1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "Minimum PoL Stacks","value": 1,"limit": null,"isModified": false},
+
+                            {"statType": "","statName": "+Power / True Aim","value": 0.158,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery Chance on WP Hit","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Extra Chance / True Aim ","value": 0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery ","value": 0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "UNIQUE WEAPON - SUM": [],
+                        "FRENZIED": [
+                            {"statType": "","statName": "+Power / 10%HP Consumed","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "NON-FRENZIED": [
+                            {"statType": "duration","statName": "Stun Duration","value": 3.5,"limit": null,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Thirst",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_00.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "Cannot have Shields or MP. In Non-Frenzied state, reduces Incoming DMG. Defeated enemies have a chance to drop Life Spheres, which upon contact, grant Power of Life. Upon acquiring Power of Life, recovers HP",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "gleyThirstCalcsTier0",//inesPlasmaCalcsTier0
+                    "customDPS": "",//inesPlasmaCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "HP SPECIFICATION": [],
+                        "FRENZIED": [],
+                        "NON-FRENZIED": [
+                            {"statType": "","statName": "Incoming DMG Reduction","value": 0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "LIFE SPHERE": [
+                            {"statType": "","statName": "Spawn Rate","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery Amount","value": 0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Power of Life/Sphere","value": 1,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Blood and Iron": {
+                    "name": "Blood and Iron",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_R04_Rune.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "When Firearm attack deals a Critical Hit, increases Power of Life. This effect gains a cooldown.",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "gleyThirstCalcsTier0IronStarter",//inesPlasmaCalcsTier0
+                    "customDPS": "",//inesPlasmaCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 5,"limit": null,"isModified": true},
+                        ],
+                        "HP SPECIFICATION": [],
+                        "FRENZIED": [],
+                        "NON-FRENZIED": [],
+                        "LIFE SPHERE": [],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "Chance on Crit","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Power of Life/Activation","value": 1,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+                "Explosive Life": {
+                    "name": "Thirst",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_007_A01_00.png",
+                    "type": ["Non-Attribute"],
+                    "desc": "Cannot have Shields or MP. In Non-Frenzied state, reduces Incoming DMG. Defeated enemies have a chance to drop Life Spheres, which upon contact, grant Power of Life. Upon acquiring Power of Life, recovers HP",
+                    "powerMods": {
+                    },
+                    "customDPSBase": "gleyThirstCalcsTier0ExplosiveStarter",//inesPlasmaCalcsTier0
+                    "customDPS": "",//inesPlasmaCalcs
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [],
+                        "HP SPECIFICATION": [],
+                        "FRENZIED": [],
+                        "NON-FRENZIED": [
+                            {"statType": "","statName": "Incoming DMG Reduction","value": 0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "LIFE SPHERE": [
+                            {"statType": "","statName": "Spawn Rate","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP Recovery Amount","value": 0.04,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Power of Life/Sphere","value": 1,"limit": null,"isModified": false},
+                        ],
+                    },
+                },
+            }
+        }
+    },
 
     ...localInsertion
 }

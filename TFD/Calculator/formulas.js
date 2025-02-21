@@ -6590,6 +6590,603 @@ const customDamage = {
         return customDamage.inesPlasmaCalcs(index,returnObject,isCycleCalcs,"Plasma Ball");
     },
 
+
+    //GLEY
+    //ability 1
+    gleyFrenziedCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (settingsRef.gleyFrenzyActive) {
+            index["FirearmATK%"] += abilityMods.firearmATKBonus;
+            //TODO: later when I get DR factors, add in the incoming dmg increase amount, same bucket as incoming final dmg modifiers
+        }
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "FRENZIED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["gleyFrenzyActive","Frenzy Active?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    gleyFrenziedCalcsTier0PredatorStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 1;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Predator Instinct"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+
+        if (settingsRef.gleyFrenzyActive) {
+            //the lvl 2 stack isn't adding to the lvl 1 stack, it's going FROM the lvl1 bonus to the lvl2 bonus so not 15 + 21 but 15 + 6 to equal 21
+            //yes this is stupid
+            abilityMap.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.15,"subStackValue": 0.06},
+                    ],
+                    "oneTimeOrStack": "stack",
+                    "bonusName": "Predator Instinct (Gley)",
+                    "limit": 2,
+                    "cooldown": 1,
+                }
+            ]
+        }
+        else {
+            abilityMap.complexBonus = [];
+        }
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "FRENZIED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["gleyFrenzyActive","Frenzy Active?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    //ability 2
+    gleySiphonCalcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 2;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const frenzyCheck = settingsRef.gleyFrenzyActive;
+        //when gley has a 1HP mod active, it still gives a bonus but the minimum of 10% on top of the base 10% when you're at 100% HP
+        //otherwise, do the math as normal.
+        const forcedHPOverride = index.isHPSetTo1>0;
+        const powerBonus = frenzyCheck ? 1.10 + (forcedHPOverride ? 10 : (100 - settingsRef.gleyHPBar))/100 : null;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray,powerBonus);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites(returnObject);
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+
+        const skillPowerModifier = (frenzyCheck ? abilityMods.baseFrenzied : abilityMods.base) + sumModifierBonus;
+
+        const damage = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        const avgDmgPerHit = damage.AVG;
+
+        //TODO: add another slider on the non-frenzied display row for when we add DR factors, since it gives DR per stack
+
+        if (!isCycleCalcs) {
+            let rowInjection = [
+                {"name": "Current Power Bonus","value": powerBonus-1,"unit": "%"},
+            ]
+
+            const breakdownArray = [
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    // "rowInjection": [rowInjectionBonus,"Bonus Damage"],
+                    "condition": false,"desc": ""},
+                {"header": "FRENZIED","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjection,""],
+                    "condition": !frenzyCheck,"desc": "Gley's %HP can be specified on her Passive to modify the damage across skills."},
+                {"header": "NON-FRENZIED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": frenzyCheck,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgDmgPerHit}
+        }
+    },
+    gleySiphonCalcsMassStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.gleySiphonCalcs(index,returnObject,isCycleCalcs,"Massive Sanguification");
+    },
+    gleySiphonCalcsExplosiveStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.gleySiphonCalcs(index,returnObject,isCycleCalcs,"Explosive Life");
+    },
+    //ability 3
+    gleySensoryCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const powerModBonus = abilityMap.powerMods["PowerModifierBase"];
+        const skillRangebonus = abilityMap.powerMods["SkillRange"];
+
+        const baseBonusDuration = abilityMods.baseDuration;
+        const durationBonus = 1 + index.SkillDuration;
+        const totalDuration = baseBonusDuration * durationBonus;
+
+        if (settingsRef.gleyFrenzyActive && settingsRef.gleyAmmoBuff) {
+            // index.PowerModifierBase += powerModBonus;
+            // index.SkillRange += skillRangebonus;
+            // console.log("ladeedadeeda")
+            abilityMap.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "BulletCostWeapon","value": -1,"subStackValue": null},
+                    ],
+                    "bonusName": "Maximize Lethality",
+                    "oneTimeOrStack": "duration",
+                    "limit": 1,
+                    "cooldown": 60,
+                    "duration": totalDuration,
+                    "conditions": [],
+                    "skipFirstShot": false,
+                    "isDurationActive": true,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                }
+            ]
+        }
+        else {
+            //TODO: add the sprint speed bonuses here later, low priority
+            abilityMap.complexBonus = [];
+        }
+
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "MAXIMIZE LETHALITY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["gleyAmmoBuff","Use Ammo Buff?"],
+                    "condition": false,"desc": ""},
+                {"header": "MAXIMIZE RECOVERY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    gleySensoryCalcsTier0SuperStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 3;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Super Senses"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const baseBonusDuration = abilityMods.baseDuration;
+        const durationBonus = 1 + index.SkillDuration;
+        const totalDuration = baseBonusDuration * durationBonus;
+
+        if (settingsRef.gleyFrenzyActive && settingsRef.gleyAmmoBuff) {
+            // index.PowerModifierBase += powerModBonus;
+            // index.SkillRange += skillRangebonus;
+            // console.log("ladeedadeeda")
+            abilityMap.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "BulletCostWeapon","value": -1,"subStackValue": null},
+                        {"name": "FireRateOverride","value": 48,"subStackValue": null},
+                    ],
+                    "bonusName": "Super Senses (Gley)",
+                    "oneTimeOrStack": "durationInitial",
+                    "limit": 1,
+                    "cooldown": 120,
+                    "duration": totalDuration,
+                    "conditions": [],
+                    "skipFirstShot": false,
+                }
+            ]
+        }
+        else {
+            //TODO: add the sprint speed bonuses here later, low priority
+            abilityMap.complexBonus = [];
+        }
+
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "MAXIMIZE LETHALITY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "toggleElemID": ["gleyAmmoBuff","Use Ammo Buff?"],
+                    "condition": false,"desc": ""},
+                {"header": "MAXIMIZE RECOVERY","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    //ability 4
+    //this is the skill only reference function and damage calculation
+    gleyMassSkillBase(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
+        const frenzyCheck = settingsRef.gleyFrenzyActive;
+        const forcedHPOverride = index.isHPSetTo1>0;
+        const powerBonus = frenzyCheck ? 1.10 + (forcedHPOverride ? 10 : (100 - settingsRef.gleyHPBar))/100 : null;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray,powerBonus);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage});
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        return {damageSkill,skillPowerModifier};
+    },
+    gleyMassSkillBaseDemonic(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Demonic Modification"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const {totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(index,characterRef.baseStats);
+
+        const frenzyCheck = settingsRef.gleyFrenzyActive;
+        const forcedHPOverride = index.isHPSetTo1>0;
+        const powerBonus = frenzyCheck ? 1.10 + (forcedHPOverride ? 10 : (100 - settingsRef.gleyHPBar))/100 : null;
+
+        const sumModifierBonus = calcs.getTotalSkillPowerModifier(index,abilityTypeArray);
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray,powerBonus);
+        const abilityDR = calcs.getResistanceBasedDR(index,abilityTypeArray[0]);
+        const crit = calcs.getCritComposites({totalSkillCritRate,totalSkillCritDamage});
+
+        const basicInfo = {baseSkillPower,abilityDR,crit};
+        const skillPowerModifier = abilityMods.base + sumModifierBonus;
+        const damageSkill = calcs.getCompositeDamageSpread(basicInfo,skillPowerModifier);
+
+        return {damageSkill,skillPowerModifier};
+    },
+    gleyMassCalcs(index,returnObject,isCycleCalcs,nameOverride,limitedWeaponAbilityBonuses) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+
+        const magazineSize = 10;//abilityMods.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = Math.floor(magazineSize);
+        const weaponName = globalRecords.weapon.currentWeapon;
+        const baseFireRate = weaponName ? sniperList[weaponName].baseFireRate : 1;//abilityMods.fireRate;
+
+        const frenzyCheck = settingsRef.gleyFrenzyActive;
+        const settingsObject = {
+            // "atkMulti": abilityMods.firearmATKMulti,
+            limitedWeaponAbilityBonuses,
+            // "isStaticRate": false,
+            "referenceFunction": frenzyCheck ? customDamage.gleyMassSkillBase : null,
+            "wastedTimeSkill": 1.083333,//animation time, still counts for the duration on 3
+            // "specialGunFunction": customDamage.haileyZenithCryoBase,
+            "shellCountOverride": 1,
+            "skipCoreValues": true,
+            "noReloads": true,
+        }
+
+        const currentWeaponRef = sniperList[globalRecords.weapon.currentWeapon];
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
+
+
+        let totalAVGSkill = 0;
+        let totalAVGGun = 0;
+        let totalAVGSum = 0;
+        const totalShots = bulletsArray.length;
+        for (let entry of bulletsArray) {
+            totalAVGSkill += entry.SkillDamage.AVG;
+            totalAVGGun += entry.damageAVG + entry.avgTotalBonusElem;
+            totalAVGSum += entry.damageAVGTotal// + entry.SkillDamage.AVG;
+        }
+        const avgPerHitTotal = totalAVGSum/totalShots;
+        const avgGunPerHit = totalAVGGun/totalShots;
+        const avgSkillHit = totalAVGSkill/totalShots;
+
+        
+        if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray,true);
+
+            const rowInjectionTotalSum = [
+                {"name": "Magazine","value": magazineSize,"unit": ""},
+                {"name": "Total Fired","value": totalShots,"unit": ""},
+                {"name": "Total AVG/Shot","value": avgPerHitTotal,"unit": ""},
+                {"name": "SUM Massacre AVG per Cast","value": totalAVGSum,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "rowInjection": [rowInjectionTotalSum,""],
+                    "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info.<br>Skill and Firearm DMG scale separately with their respective mods."},
+                // {"header": "FRENZIED","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                //     "rowInjection": [rowInjection,""],
+                //     "condition": !frenzyCheck,"desc": "Gley's %HP can be specified on her Passive to modify the damage across skills."},
+                // {"header": "NON-FRENZIED","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                //     "condition": frenzyCheck,"desc": ""},
+                // {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                //     "rowInjection": [rowInjectionTotalSum,""],
+                //     "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info.<br>Skill and Firearm DMG scale separately with their respective mods."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${graphString}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1,null,null,true)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeaponsSkill" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet(null,null,null,true)">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1,null,null,true)">&#9654;</div>
+                </div>
+
+                ${bulletArrayString}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgSkillHit,avgGunPerHit,avgPerHitTotal,totalAVGSkill,totalAVGGun,totalAVGSum
+                // avgSkillHit,avgGunPerHit,avgPerHitTotal,totalAVGSkill,totalAVGGun,totalAVGSum
+            }
+        }
+    },
+    gleyMassCalcsModificationStarter(index,returnObject,isCycleCalcs,nameOverride,limitedWeaponAbilityBonuses) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 4;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`]["Demonic Modification"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        const baseSkillPower = calcs.getTotalSkillPower(index,abilityTypeArray);
+
+        const magazineSize = 10;//abilityMods.magazine * (1+index.MagazineSize);//it rounds down and floors the value, but I still want to show the decimal so people know.
+        const actualMagSize = Math.floor(magazineSize);
+        const weaponName = globalRecords.weapon.currentWeapon;
+        const baseFireRate = 16.75;//60; //60 is the actual fire rate, however the whole point of modification is to get the scaling charge bonus, so the fire rate is modified to account for that.
+
+        //3.68333/3.583333 to charge to full
+        const frenzyCheck = settingsRef.gleyFrenzyActive;
+        const settingsObject = {
+            "atkMulti": 5.74,
+            limitedWeaponAbilityBonuses,
+            "isStaticRate": true,
+            "wastedTimeSkill": 1.083333,//animation time, still counts for the duration on 3
+            "referenceFunction": frenzyCheck ? customDamage.gleyMassSkillBaseDemonic : null,
+            "shellCountOverride": 1,
+            "skipCoreValues": true,
+            "noReloads": true,
+        }
+
+        const currentWeaponRef = {...sniperList[globalRecords.weapon.currentWeapon]};
+        //demonic modification overrides the advatange type, from w/e the has to Burst.
+        //BUG: the game will say the burst bonus is 20%, however it's probably just adding in 10% burst and adding the inherited 10% from the initial weapon, but it does not actually reach 20%
+        currentWeaponRef.physicalType = "Burst";
+
+        // console.log(currentWeaponRef)
+        let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,nameOverride,baseFireRate,actualMagSize,currentWeaponRef,settingsObject).bulletsArray;
+
+
+        let totalAVGSkill = 0;
+        let totalAVGGun = 0;
+        let totalAVGSum = 0;
+        const totalShots = bulletsArray.length;
+        for (let entry of bulletsArray) {
+            totalAVGSkill += entry.SkillDamage.AVG;
+            totalAVGGun += entry.damageAVG + entry.avgTotalBonusElem;
+            totalAVGSum += entry.damageAVGTotal// + entry.SkillDamage.AVG;
+        }
+        const avgPerHitTotal = totalAVGSum/totalShots;
+        const avgGunPerHit = totalAVGGun/totalShots;
+        const avgSkillHit = totalAVGSkill/totalShots;
+
+        
+        if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = bullets.getActiveBulletGraph(bulletsArray,true);
+
+            const rowInjectionTotalSum = [
+                {"name": "Magazine","value": magazineSize,"unit": ""},
+                {"name": "Total Fired","value": totalShots,"unit": ""},
+                {"name": "Total AVG/Shot","value": avgPerHitTotal,"unit": ""},
+                {"name": "SUM Massacre AVG per Cast","value": totalAVGSum,"unit": ""},
+            ]
+
+            const breakdownArray = [
+                {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "rowInjection": [rowInjectionTotalSum,""],
+                    "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info.<br>Skill and Firearm DMG scale separately with their respective mods."},
+                // {"header": "FRENZIED","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                //     "rowInjection": [rowInjection,""],
+                //     "condition": !frenzyCheck,"desc": "Gley's %HP can be specified on her Passive to modify the damage across skills."},
+                // {"header": "NON-FRENZIED","value": damage,"modifier": skillPowerModifier,"hasCritAVG": true,"unit": "",
+                //     "condition": frenzyCheck,"desc": ""},
+                // {"header": "UNIQUE WEAPON - SUM","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                //     "rowInjection": [rowInjectionTotalSum,""],
+                //     "condition": false,"desc": "Must adjust the enemy and part targeted under the <span>ENEMY</span> tab for accurate values.<br>See Weapon DMG video for more info.<br>Skill and Firearm DMG scale separately with their respective mods."},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            ${addRow("Power",baseSkillPower,"")}
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${graphString}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="basicsSummaryBox">
+            <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                
+                <div class="tooltipHeader">Selection</div>
+                <div class="bulletSelectorIDRowBox">
+
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1,null,null,true)">&#9664;</div>
+                    <div class="traitLevelDisplay">
+                        <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeaponsSkill" min="1" max="${totalShots}" step="1" value="1" onchange="bullets.updateExpandedBullet(null,null,null,true)">
+                    </div> 
+                    <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1,null,null,true)">&#9654;</div>
+                </div>
+
+                ${bulletArrayString}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {avgSkillHit,avgGunPerHit,avgPerHitTotal,totalAVGSkill,totalAVGGun,totalAVGSum
+                // avgSkillHit,avgGunPerHit,avgPerHitTotal,totalAVGSkill,totalAVGGun,totalAVGSum
+            }
+        }
+    },
+    //passive
+    gleyThirstCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const characterRef = characters.Gley;
+        const settingsRef = characterRef.characterSettings;
+        const skillPlacement = 5;
+        const abilityMap = characterRef.abilities[`ability${skillPlacement}`][nameOverride ? nameOverride : "base"];
+        const abilityTypeArray = abilityMap.type;
+        const abilityMods = abilityMap.powerMods;
+
+        if (!settingsRef.gleyFrenzyActive) {
+        //     //TODO: later when I get DR factors, add in the incoming dmg reduction amount, same bucket as incoming final dmg modifiers
+        }
+
+
+        if (!isCycleCalcs) {
+            const breakdownArray = [
+                {"header": "HP SPECIFICATION","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "sliderElemID": ["gleyHPBar",10,100,10,"%HP Remaining"],
+                    "condition": false,"desc": ""},
+                {"header": "FRENZIED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride,"desc": "Allows specification of remaining %HP for skills that deal bonus damage proportionally"},
+                {"header": "NON-FRENZIED","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride === "Blood and Iron" || nameOverride != "Explosive Life","desc": ""},
+                {"header": "LIFE SPHERE","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride === "Blood and Iron" || nameOverride != "Explosive Life","desc": ""},
+                {"header": "SKILL EFFECT","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "condition": nameOverride != "Blood and Iron","desc": "Allows specification of remaining %HP for skills that deal bonus damage proportionally"},
+            ];
+            const bodyString = `abilityBreakdownBody${skillPlacement}`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`abilityBreakdownBody${skillPlacement}`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,abilityMap.displayStatsALT,index,returnObject,characterRef.name)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(abilityMap.desc)}</div>
+            `;
+        }
+        else {
+            return {}
+        }
+    },
+    gleyThirstCalcsTier0IronStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.gleyThirstCalcsTier0(index,returnObject,isCycleCalcs,"Blood and Iron");
+    },
+    gleyThirstCalcsTier0ExplosiveStarter(index,returnObject,isCycleCalcs,nameOverride) {
+        return customDamage.gleyThirstCalcsTier0(index,returnObject,isCycleCalcs,"Explosive Life");
+    },
+
     //LE GUNS
     generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,referencedFromUniqueParent) {
         const settingsRef = weaponRef.weaponSettings;

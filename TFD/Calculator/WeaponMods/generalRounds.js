@@ -487,7 +487,7 @@ const generalRounds =  {
             "timePassedEntry": 0,
             "isDurationActive": true,
             "isCooldownActive": false,
-            "conditions": ["isAdvantage"],
+            "conditions": ["isWeakpoint"],
             "skipFirstShot": true,
          }
       ],
@@ -556,7 +556,7 @@ const generalRounds =  {
       "polarity": "Xantic",
       "type": "General Rounds",
       "cost": 16,
-      "category": "Attribute ATK ",
+      "category": "Attribute ATK",
       "stats": {
          "ElectricATK%Bonus": 0.80,
          "FireRate": 0.25
@@ -1301,7 +1301,14 @@ const generalRounds =  {
       "cost": 16,
       "category": "",
       "stats": {
-         "FirearmCritDamage": 0.748
+         "FirearmCritDamage": 0.748,
+
+
+         // "FirearmCritRateBase": 0.29,
+         // "FirearmCritRate": 0.20,
+
+         // "FirearmATK%": 0.20,
+         // "BaseWeakPointBonus": 0.15,
       },
       "tags": [],
       "inclusion": [],
