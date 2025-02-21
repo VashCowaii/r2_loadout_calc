@@ -1319,14 +1319,14 @@ const impactRounds = {
             "isCooldownActive": false,
             "currentStacks": -1,
             "timePassedEntry": 0,
-            "conditions": ["isAdvantage"],
+            "conditions": ["isWeakpoint"],
             "skipFirstShot": true,
          }
       ],
       "tags": ["WeakPointDamage%CORE"],
       "inclusion": [],
       "exclusion": [],
-      "desc": "Successful Advantage Affinity: Weak Point Damage +4.5% for 5s (up to 20 stacks, cooldown 15s). Failed Weak Point Attack during the effect: Firearm ATK -1.95% (up to 20 stacks)."
+      "desc": "Successful Weak Point Attack: Weak Point Damage +4.5% for 5s (up to 20 stacks, cooldown 15s). Failed Weak Point Attack during the effect: Firearm ATK -1.95% (up to 20 stacks)."
    },
    "Lethal Finish": {//done
       "rarity": "Ultimate",
