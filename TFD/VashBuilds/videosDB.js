@@ -6,7 +6,9 @@
 
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "How Beam Rifles Work","isYTVid": true,"date": 20250223,"embedLink": "uLeQuxZ169c","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
+    {"author": "Vash","topic": "EXCAVA [Boss Nuke]","isYTVid": true,"date": 20250223,"embedLink": "46rj3jCbplE","contentType": "Build","isOutdated": false,"entityArray": ["Gley","EXCAVA"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Last Dagger [Boss Nuke]","isYTVid": true,"date": 20250220,"embedLink": "MsQCnxgNrhI","contentType": "Build","isOutdated": false,"entityArray": ["Gley","Last Dagger"],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "Smithereens Nuke [Sharen]","isYTVid": true,"date": 20250218,"embedLink": "9mPo1Cu9OqY","contentType": "Build","isOutdated": false,"entityArray": ["Sharen","Smithereens"],"pinnedCommentFlag": false},
 
