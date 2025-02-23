@@ -1485,6 +1485,41 @@ const generalRounds =  {
 
 
 
+   "Tenacious Hunter": {
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "stats": {
+      },
+      "complexBonus": [
+         {
+            "stats": [
+               {"name": "WeakPointDamage%","value": 0.10,"subStackValue": 0.05},
+            ],
+            "bonusName": "Tenacious Hunter",
+            "oneTimeOrStack": "duration",
+            "limit": 20,
+            "cooldown": 15,
+            "duration": 3,
+            "currentStacks": -1,
+            "timePassedEntry": 0,
+            "isDurationActive": true,
+            "isCooldownActive": false,
+            "conditions": ["isWeakpoint"],
+            "skipFirstShot": true,
+         }
+      ],
+      "tags": ["WeakPointDamage%CORE"],
+      "inclusion": ["Handgun"],
+      "exclusion": [],
+      "desc": "Upon reloading, Weak Point Damage increases by +5% for 3 seconds. While the effect is active, each successful weak point attack further increases Weak Point Damage by +5% (up to 20 stacks, cooldown 15 seconds)."
+   },
+
+
+
+
    //---------------------------------------------------------------
    //---------------------------------------------------------------
    //MODS ADDED LATER

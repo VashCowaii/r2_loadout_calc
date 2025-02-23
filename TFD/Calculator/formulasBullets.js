@@ -357,6 +357,34 @@ const bullets = {
                         //apply all stats for this bonus
                         // else if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);}
                     }
+                    else if (priorShotCount != shotCount && (bonusEntry.currentStacks <= bonusEntry.limit && bonusEntry.oneTimeOrStack === "stackPopStacker" && bonusEntry.isCharged)) {
+                        bonusEntry.timePassedEntry = timePassed;
+
+
+
+                        // "limit": 15,
+                        // "stackerStacks": 3,
+                        // "currentStacks": 0,
+                        // "currentStacksStacker": 0,
+
+                        if ((conditionFailed && bonusEntry.currentStacks < bonusEntry.limit)
+                            || (!conditionFailed && bonusEntry.currentStacks != bonusEntry.limit) ) {
+                            bonusEntry.currentStacks += 1;
+                        }
+
+                        // console.log(bonusEntry.currentStacks,conditionFailed)
+
+                        if (bonusEntry.currentStacks === bonusEntry.limit && !conditionFailed && bonusEntry.currentStacksStacker < bonusEntry.stackerStacksLimit) {
+                            // reversedBonus = true;
+                            bonusEntry.currentStacksStacker++;
+                            bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacksStacker, reversedBonus);
+
+                            // bonusEntry.currentStacks = bonusEntry.skipFirstShot ? -1 : 0;
+                            bonusEntry.currentStacks = 0;
+                        }
+                        //apply all stats for this bonus
+                        // else if (!conditionFailed) {bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);}
+                    }
             
                     //increment timePassed only for the bonuses still on cooldown
                     bonusEntry.timePassedEntry += currentRate;
@@ -420,12 +448,12 @@ const bullets = {
                 constructorObject.damageAVGTotal = (skillOnly ? 0 : weaponDamage.AVG + avgTotalBonusElem) * shellCount + (skillDamage != 0 ? skillDamage.damageSkill.AVG : 0);
                 constructorObject.SkillDamage = skillDamage != 0 ? skillDamage.damageSkill : 0;
                 constructorObject.SkillDamageMod = skillDamage != 0 ? skillDamage.skillPowerModifier : 0;
-                constructorObject.wasFree = tableCopy.BulletCostWeapon === 0;
+                constructorObject.wasFree = (tableCopy.BulletCostWeapon + tableCopy.BulletCostWeaponCORE) === 0;
 
                 constructorObject.elementalDamage = skillOnly ? 0 : elementalDamage;
 
                 //shit like Hailey's cryo
-                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject);}
+                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject,shotCount);}
                 if (specialSkillFunction) {constructorObject.specialSkillFunction = specialSkillFunction(constructorObject,tableCopy,returnObject,isCycleCalcs,nameOverride);}
 
                 priorShotCount = shotCount;
@@ -433,7 +461,10 @@ const bullets = {
                 //increment the used magazine so far but accounting for bullet cost factors
                 let durationRestrictionModifier = durationRestriction>0 && durationRestriction!=undefined && durationRestriction!=null ? timePassed<durationRestriction : false;
 
-                const baseBulletCost = Math.max(0,1 * tableCopy.BulletCostWeapon);
+                //TODO: right now I'm using the costCORE stat as a multiplier agains the regular cost stat so in cases like gley with excava, excava does not counteract the standard cost
+                //with every grenade shot and accidentally consume magazine during the infinite ammo duration. Later if we have multiple conflicting sources of bullet cost effects
+                //I will need to redo my cost logic. Prayge that doesn't happen.
+                const baseBulletCost = Math.max(0,1 * tableCopy.BulletCostWeapon * (1 + tableCopy.BulletCostWeaponCORE));
                 const magazineLossOverride = (tableCopy.BulletCostWeaponMagazineOverride + tableCopy.BulletCostWeaponMagazineOverrideCORE) > 0 ? actualMagSize : 1;
                 // console.log((index.BulletCostWeaponMagazineOverride + index.BulletCostWeaponMagazineOverrideCORE))
                 const trueBulletCost = baseBulletCost * magazineLossOverride;
@@ -450,7 +481,7 @@ const bullets = {
             const customReloadChecker = customReloadsAllowed && timeOfNextShotCheck;
             // if (customReloadsAllowed) {console.log(timeSinceReload-timeOfLastReload,customReloadTimer)}
             
-            const reloadsChecker = reloadsAllowed && magsUsed != MagCount && (usedMagazine === actualMagSize || customReloadChecker);
+            const reloadsChecker = reloadsAllowed && magsUsed != MagCount && (usedMagazine >= actualMagSize || customReloadChecker);
             if (tableCopy.SkipReload>0 && isEndOfMagazine && reloadsChecker) {
                 usedMagazine = 0;
                 magsUsed++;
