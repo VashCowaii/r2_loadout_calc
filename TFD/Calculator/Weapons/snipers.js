@@ -1193,5 +1193,400 @@ const sniperList = {
             // "FIREARM SUM": [],
         },
     },
+
+
+    //beam rifles
+    "Clairvoyance": {
+        "name": "Clairvoyance",
+        "rarity": "Ultimate",
+        "baseATK": 13362,
+
+        "baseCritRate": 0.20,
+        "baseCritDamage": 2.0,
+        "baseWeakPoint": 1,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 400,
+        "baseReloadTime": 2.20,
+        "magazine": 40,
+        "shellCount": 1,
+        "coreArray": ["Rainbow","Blue","Green","Yellow","Yellow"],
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.45,
+
+        "ammoType": "Special",
+        "weaponType": "Beam Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1006_A001.png",
+        "customDPSBase": "clairTier0Calcs",
+        "customDPS": "",//lanceTier0Calcs
+        "desc": "Hitting an enemy with a Stage 2 Beam inflicts Void Gaze on the target.\nHitting an enemy with a Stage 3 Beam inflicts Appalled Calling on the target. This effect is considered to be the same effect as Frostbite in some modes.",
+        "stats": {
+            "ChillATK": 2539,
+        },
+        "tags": [],
+        "weaponSettings": {
+            "clairUseResShred": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "VOID GAZE": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "APPALLED CALLING": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Action SPD","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "ChargeLevelData": [
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 0
+            },
+            {
+                "ChargeAmount": 1.5,
+                "ChargeRate": 1,
+                "DischargeRate": 0.7,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1
+            },
+            {
+                "ChargeAmount": 1.5,
+                "ChargeRate": 1,
+                "DischargeRate": 0.9,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1.15
+            },
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0.5,
+                "DamageMultiplier": 1.6
+            }
+        ],
+    },
+    "Dimensional Bridge": {
+        "name": "Dimensional Bridge",
+        "rarity": "Rare",
+        "baseATK": 14839,
+
+        "baseCritRate": 0.01,
+        "baseCritDamage": 1.2,
+        "baseWeakPoint": 1,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 500,
+        "baseReloadTime": 1.95,
+        "magazine": 30,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.45,
+
+        "ammoType": "Special",
+        "weaponType": "Beam Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1007_A001.png",
+        "customDPSBase": "genericBeamRifleTier0Calcs",
+        "customDPS": "",
+        "desc": "",
+        "stats": {
+        },
+        "tags": [],
+        "weaponSettings": {
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "ChargeLevelData": [
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 0
+            },
+            {
+                "ChargeAmount": 1.2,
+                "ChargeRate": 1,
+                "DischargeRate": 0.8,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1
+            },
+            {
+                "ChargeAmount": 1.2,
+                "ChargeRate": 1,
+                "DischargeRate": 1,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1.75
+            },
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0.3,
+                "DamageMultiplier": 2.5
+            }
+        ],
+    },
+    "Burning 44": {
+        "name": "Burning 44",
+        "rarity": "Rare",
+        "baseATK": 16204,
+
+        "baseCritRate": 0.10,
+        "baseCritDamage": 1.5,
+        "baseWeakPoint": 1,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 500,
+        "baseReloadTime": 2.01,
+        "magazine": 50,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.25,
+        "ZoomInHoldDelayTime": 0.45,
+
+        "ammoType": "Special",
+        "weaponType": "Beam Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1004_A001.png",
+        "customDPSBase": "genericBeamRifleTier0Calcs",
+        "customDPS": "",
+        "desc": "",
+        "stats": {
+        },
+        "tags": [],
+        "weaponSettings": {
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "ChargeLevelData": [
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 0
+            },
+            {
+                "ChargeAmount": 1.3,
+                "ChargeRate": 1,
+                "DischargeRate": 0.8,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1
+            },
+            {
+                "ChargeAmount": 1.6,
+                "ChargeRate": 1,
+                "DischargeRate": 1,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1.1
+            },
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0.3,
+                "DamageMultiplier": 1.2
+            }
+        ],
+    },
+    "Dogma 21": {
+        "name": "Dimensional Bridge",
+        "rarity": "Rare",
+        "baseATK": 22042,
+
+        "baseCritRate": 0.01,
+        "baseCritDamage": 1.5,
+        "baseWeakPoint": 1,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 300,
+        "baseReloadTime": 2.31,
+        "magazine": 40,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.29,
+        "ZoomInHoldDelayTime": 0.49,
+
+        "ammoType": "Special",
+        "weaponType": "Beam Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1001_A001.png",
+        "customDPSBase": "genericBeamRifleTier0Calcs",
+        "customDPS": "",
+        "desc": "",
+        "stats": {
+        },
+        "tags": [],
+        "weaponSettings": {
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "ChargeLevelData": [
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 0
+            },
+            {
+                "ChargeAmount": 1.3,
+                "ChargeRate": 1,
+                "DischargeRate": 0.8,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1
+            },
+            {
+                "ChargeAmount": 1.6,
+                "ChargeRate": 1,
+                "DischargeRate": 1,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1.1
+            },
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0.3,
+                "DamageMultiplier": 1.2
+            }
+        ],
+    },
+    "Moon Fragment": {
+        "name": "Moon Fragment",
+        "rarity": "Common",
+        "baseATK": 10589,
+
+        "baseCritRate": 0.05,
+        "baseCritDamage": 1.2,
+        "baseWeakPoint": 1,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 600,
+        "baseReloadTime": 1.82,
+        "magazine": 27,
+        "shellCount": 1,
+        "coreArray": null,
+        "RangedInTime": 0.29,
+        "ZoomInHoldDelayTime": 0.49,
+
+        "ammoType": "Special",
+        "weaponType": "Beam Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1003_A001.png",
+        "customDPSBase": "genericBeamRifleTier0Calcs",
+        "customDPS": "",
+        "desc": "",
+        "stats": {
+        },
+        "tags": [],
+        "weaponSettings": {
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "ChargeLevelData": [
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 0
+            },
+            {
+                "ChargeAmount": 0.4,
+                "ChargeRate": 1,
+                "DischargeRate": 0.9,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1
+            },
+            {
+                "ChargeAmount": 0.4,
+                "ChargeRate": 1,
+                "DischargeRate": 1.1,
+                "SteadyDuration": 0,
+                "DamageMultiplier": 1.2
+            },
+            {
+                "ChargeAmount": 0,
+                "ChargeRate": 0,
+                "DischargeRate": 0,
+                "SteadyDuration": 0.2,
+                "DamageMultiplier": 1.4
+            }
+        ],
+    },
+
+
+    //assault rifles
+    "EXCAVA": {
+        "name": "EXCAVA",
+        "rarity": "Ultimate",
+        "baseATK": 14937,
+        "baseCritRate": 0.03,
+        "baseCritDamage": 1.20,
+        "baseWeakPoint": 1.4,
+        "physicalType": "Pierce",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 588,
+        "baseReloadTime": 2,
+        "magazine": 36,
+        "shellCount": 1,
+
+        "coreArray": ["Rainbow","Rainbow","Blue","Green","Green"],
+        "RangedInTime": 0.2,
+        "ZoomInHoldDelayTime": 0.4,
+
+        "ammoType": "General",
+        "weaponType": "Assault Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_AR_1008_A001.png",
+        "customDPSBase": "excavaTier0Calcs",
+        "customDPS": "excavaCalcs",
+        "desc": "Hitting an enemy grants the unique effect Voltage Charge.\nWhen Voltage Charge reaches max stacks, it changes to the unique effect Energy Grenade.\nWhile Energy Grenade is active, fires an Energy Grenade when shooting while aiming, which deals increased damage based on the number of stacks. Hitting an enemy with the Energy Grenade inflicts Voltage Accumulation.",
+        "weaponSettings": {
+            "useEnergyGrenade": true,
+            "useAimingLauncher": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "ENERGY GRENADE": [
+                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+
+                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Crit Rate BASE","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Crit Rate BASE/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                // {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "VOLTAGE ACCUMULATION": [
+                {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Enemy ELEC RES","value": -0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy ELEC RES/Stack","value": -0.035,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "WHILE AIMING": [
+                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Ammo cost per Shot","value": -5,"limit": null,"isModified": false},
+            ],
+            "FIREARM SUM": [],
+        },
+        "stats": {
+            "ElectricATK": 9560,
+        },
+        "tags": [],
+    },
+
     ...weaponsInsertion
 }

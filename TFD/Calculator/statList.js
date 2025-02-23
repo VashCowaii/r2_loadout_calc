@@ -85,7 +85,7 @@ const greatTableKnowerOfAll = {
     "independentScalar": 0,"independentScalarCORE": 0,//this is for flat nonscaling amounts that get added in after type and faction, but before crit and weak point, like last dagger
     "BulletCostWeaponMagazineOverride": 0,"BulletCostWeaponMagazineOverrideCORE": 0,
 
-    "BulletCostWeapon": 1,"BulletCostWeaponCORE": 1,
+    "BulletCostWeapon": 1,"BulletCostWeaponCORE": 0,
     "ShellCapacity": 0,"ShellCapacityCORE": 0,
     "ShellCapacityBase": 0,"ShellCapacityBaseCORE": 0,
     "StatusTriggerRate": 0,"StatusTriggerRateCORE": 0,

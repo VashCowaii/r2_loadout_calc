@@ -405,6 +405,7 @@ const userTriggers = {
     "rarityColorRef": {
         "Ultimate": `linear-gradient(to bottom right, #7b6337, transparent, transparent, transparent)`,
         "Rare": `linear-gradient(to bottom right, #652d7f, transparent, transparent, transparent)`,
+        "Common": `linear-gradient(to bottom right, #11528e, transparent, transparent, transparent)`,
     },
     
     updateSelectedWeapon(parentCall,isImportedValue) {
@@ -1562,6 +1563,13 @@ const settings = {
         "Last Dagger"(settingsRef,arrayRef) {
             settingsRef.useLethalDagger = readSelection("useLethalDagger").checked;
             settingsRef.useDaggerStrike = readSelection("useDaggerStrike").checked;
+        },
+        "Clairvoyance"(settingsRef,arrayRef) {
+            settingsRef.clairUseResShred = readSelection("clairUseResShred").checked;
+        },
+        "EXCAVA"(settingsRef,arrayRef) {
+            settingsRef.useEnergyGrenade = readSelection("useEnergyGrenade").checked;
+            settingsRef.useAimingLauncher = readSelection("useAimingLauncher").checked;
         },
         ...localInsertionSettings
     }

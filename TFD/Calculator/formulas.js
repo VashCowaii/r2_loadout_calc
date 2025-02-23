@@ -207,6 +207,53 @@ const calcs = {
 
         return baseChargeTime / (1 + chargeComposite);
     },
+    getBeamChargeRifleBonuses(index,returnObject,isCycleCalcs,nameOverride,weaponRef) {
+        let bonusArray = [];
+
+        if (weaponRef.ChargeLevelData) {
+            let dataReference = weaponRef.ChargeLevelData;
+
+            const level1Charge = calcs.getBeamChargeTime(index,dataReference[1].ChargeAmount,weaponRef);
+            const level2Charge = calcs.getBeamChargeTime(index,dataReference[2].ChargeAmount,weaponRef) + level1Charge;
+
+            const level1Multi = dataReference[2].DamageMultiplier - 1;
+            const level2Multi = dataReference[3].DamageMultiplier - 1 - level1Multi;
+
+            bonusArray = [
+                {
+                    "stats": [
+                       {"name": "WeaponUniqueMultiplierCORE","value": level1Multi,"subStackValue": null},
+                    ],
+                    "bonusName": "Beam Rifle Charge (LvL 1)",
+                    "oneTimeOrStack": "stack",
+                    "clearOnReload": true,
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "clearOnReload": true,
+                    "cooldown": level1Charge,
+                },
+                {
+                    "stats": [
+                       {"name": "WeaponUniqueMultiplierCORE","value": level2Multi,"subStackValue": null},
+                    ],
+                    "bonusName": "Beam Rifle Charge (LvL 2)",
+                    "oneTimeOrStack": "stack",
+                    "clearOnReload": true,
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "clearOnReload": true,
+                    "cooldown": level2Charge,
+                },
+            ]
+        }
+        else {
+            bonusArray = [];
+        }
+        
+        return bonusArray;
+    },
     getFirearmATK(index,weaponRef,uniqueMulti) {
         const baseFirearmATK = weaponRef.baseATK;
         const needlessBullshitAmount = baseFirearmATK * (index.independentScalar + index.independentScalarCORE);
@@ -260,7 +307,7 @@ const calcs = {
         const firearmCritDamageBonus = index.FirearmCritDamage + index.FirearmCritDamageCORE;
 
         const totalFirearmCritRatePreCap = (baseFirearmCritRate + baseFirearmCritRateBonus) * (1 + firearmCritRateBonus);
-        const totalFirearmCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalFirearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100)) : 0;
+        const totalFirearmCritRate = globalRecords.useCrits ? Math.max(0,Math.min(totalFirearmCritRatePreCap,1)) * (1 + (+globalRecords.weaponCritCeiling/100) * (1 + index.enemyCritResistReductionFirearm)) : 0;
 
         const totalFirearmCritDamage = Math.max(1,(baseFirearmCritDamage + baseFirearmCritDamageBonus) * (1 + firearmCritDamageBonus));
 
@@ -7188,14 +7235,15 @@ const customDamage = {
     },
 
     //LE GUNS
-    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,referencedFromUniqueParent) {
+    generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,referencedFromUniqueParent,settingsToSpread) {
         const settingsRef = weaponRef.weaponSettings;
+        settingsToSpread = settingsToSpread ?? {};
 
         const magazineSize = weaponRef.magazine * (1+index.MagazineSize+index.MagazineSizeCORE);//it rounds down and floors the value, but I still want to show the decimal so people know.
         const actualMagSize = Math.floor(magazineSize);
         const baseRateValue = weaponRef.baseFireRate; //index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject
 
-        const settingsObject = {limitedWeaponBonuses}
+        const settingsObject = {limitedWeaponBonuses, ...settingsToSpread}
 
         let bulletsArray = bullets.getActiveBulletArray(index,returnObject,isCycleCalcs,null,baseRateValue,actualMagSize,weaponRef,settingsObject).bulletsArray;
 
@@ -7260,6 +7308,26 @@ const customDamage = {
         if (referencedFromUniqueParent) {
             return {avgPerShot,totalAVGDPS,totalAVGGun,totalShots,reloadEntries,magazineSize,totalTimePassed,graphParams:!isCycleCalcs ? bullets.getActiveBulletGraph(bulletsArray) : null}
         }
+    },
+    genericBeamRifleTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const currentWeapon = globalRecords.weapon.currentWeapon;
+        const weaponRef = sniperList[currentWeapon];
+        const settingsRef = weaponRef.weaponSettings;
+        let chargeDataResult = null;
+
+        if (weaponRef.ChargeLevelData) {
+            chargeDataResult = calcs.getBeamChargeRifleBonuses(index,returnObject,isCycleCalcs,nameOverride,weaponRef);
+            weaponRef.complexBonus = [...chargeDataResult];
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+        if (!isCycleCalcs) {
+            readSelection(`weaponBreakdownBody1`).innerHTML = ``;
+        }
+
+        return chargeDataResult;
     },
     secretGardenCalcsTier0(index,returnObject,isCycleCalcs) {
         const weaponRef = sniperList["Secret Garden"];
@@ -7584,6 +7652,215 @@ const customDamage = {
             `;
         }
     },
+    clairTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Clairvoyance"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        //call to assign the beam charge time bonuses
+        let chargeDataResult = customDamage.genericBeamRifleTier0Calcs(index,returnObject,isCycleCalcs,nameOverride);
+        //weaponRef.complexBonus will be created as an array, empty or not, here, so PUSH after this, don't assign
+
+        if (settingsRef.clairUseResShred) {
+            //TODO: if clair changes to a diff charge amount per stack, redo this.
+            //also remember that the second stack does not actually add anything else, it's just the same res shred bonus.
+            weaponRef.complexBonus.push(
+                {
+                    "stats": [
+                       {"name": "enemyChillResistanceReductionCORE","value": -0.40,"subStackValue": null},
+                    ],
+                    "bonusName": "Void Gaze / Calling",
+                    "oneTimeOrStack": "stack",
+                    "clearOnReload": true,
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": chargeDataResult[0].cooldown,
+                }
+            )
+        }
+
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "VOID GAZE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["clairUseResShred","Use RES Shred?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "APPALLED CALLING","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Clairvoyance",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
+
+    //this function is used as the specialGunFunction in bullet sims for the sake of the grenade every 15th shot.
+    excavaGrenadeCalcsBase(constructorObject,shotCount) {
+        let perHit = 0;
+        let perCrit = 0;
+        let AVG = 0;
+
+        const is15shots = shotCount % 15 === 0;
+        if (is15shots) {
+            const shotMultiplier = 2.2;
+
+            perHit = constructorObject.damage * shotMultiplier;
+            perCrit = constructorObject.damageCrit * shotMultiplier;
+            AVG = constructorObject.damageAVG * shotMultiplier;
+
+            constructorObject.damageAVGTotal += AVG;
+        }
+
+        let cryoDescriptionString = "Every 15 shots EXCAVA gains a grenade that is fired in the next shot. This is the damage of that grenade."
+        return {"name": "Excava Grenade","desc": cryoDescriptionString,perHit,perCrit,AVG}
+    },
+    excavaTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["EXCAVA"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.useEnergyGrenade) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "FirearmCritRateBaseCORE","value": 0.05,"subStackValue": null},
+                        // {"name": "enemyElectricResistanceReductionCORE","value": -0.03,"subStackValue": -0.035},
+                    ],
+                    "bonusName": "EXCAVA (Energy Grenade)",
+                    "oneTimeOrStack": "stackPopStacker",
+                    "isCharged": true,
+                    "limit": 15,
+                    "stackerStacksLimit": 3,
+                    "currentStacks": 0,
+                    "currentStacksStacker": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+
+        if (settingsRef.useAimingLauncher) {
+            //this is the bullet cost penalty of shooting a nade
+            weaponRef.complexBonus.push(
+                {
+                    "stats": [
+                        {"name": "BulletCostWeaponCORE","value": 4,"subStackValue": null},
+                    ],
+                    "bonusName": "EXCAVA (Aiming Launcher)",
+                    "oneTimeOrStack": "stackPop",
+                    "isCharged": true,
+                    "limit": 15,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                },
+                {
+                    "stats": [
+                        {"name": "enemyElectricResistanceReductionCORE","value": -0.03,"subStackValue": -0.035},
+                    ],
+                    "bonusName": "EXCAVA (Voltage Accumulation)",
+                    "oneTimeOrStack": "stackPopStacker",
+                    "isCharged": true,
+                    "limit": 15,
+                    "stackerStacksLimit": 3,
+                    "currentStacks": -1,
+                    "currentStacksStacker": 0,
+                    "timePassedEntry": 0,
+                    "skipFirstShot": true,
+                    "cooldown": 0,
+                    "duration": 0,
+                },
+            )
+        }
+
+    },
+    excavaCalcs(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
+        const settingsRef = weaponRef.weaponSettings;
+
+        let settingsToSpread = settingsRef.useAimingLauncher ? {
+            "specialGunFunction": customDamage.excavaGrenadeCalcsBase,
+        } : null;
+
+        let {avgPerShot,totalAVGDPS,totalAVGGun,totalShots,reloadEntries,magazineSize,totalTimePassed,graphParams} = customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,true,settingsToSpread);
+
+        if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = graphParams;
+
+            const rowInjectionSums = [
+                {"name": "Magazine","value": magazineSize,"unit": "","id": "totalMagazineWeapons"},
+                {"name": "Total Fired","value": totalShots,"unit": "","id": "totalShotsFiredWeapons"},
+                {"name": "AVG/Shot","value": avgPerShot,"unit": "","id": "avgPerShotWeapons"},
+                {"name": "SUM AVG","value": totalAVGGun,"unit": "","id": "totalAVGWeapons"},
+                {"name": "AVG DPS","value": totalAVGDPS,"unit": "","id": "totalAVGWeaponsDPS"},
+            ]
+
+            const breakdownArray = [
+                {"header": "ENERGY GRENADE","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["useEnergyGrenade","Use EG Crit Bonus?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "VOLTAGE ACCUMULATION","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "WHILE AIMING","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["useAimingLauncher","Use Aiming Launcher?"],
+                    "condition": false,"desc": ""},
+                {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionSums,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"EXCAVA",true)}
+            </div>
+
+
+            ${weaponRef.magazine===0 ? `<div class="missingWeaponDisplayBox" style="color:lightcoral">SELECT A WEAPON TO SEE BULLET SIMULATION INFO.</div>` :
+                `<br>
+                <div class="basicsSummaryBox">
+                    ${graphString}
+                </div>
+                <div class="basicsSummaryBox">
+                <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                    <div class="tooltipHeader">Selection</div>
+                    <div class="bulletSelectorIDRowBox">
+    
+                        <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1)">&#9664;</div>
+                        <div class="traitLevelDisplay">
+                            <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="${totalShots+reloadEntries}" step="1" value="1" onchange="bullets.updateExpandedBullet()">
+                        </div> 
+                        <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1)">&#9654;</div>
+                    </div>
+                    ${bulletArrayString}
+                </div>
+                `}
+            `;
+        }
+        else {
+            return {avgPerShot,totalAVGDPS,totalAVGGun}
+        }
+    },
+
     skipThisWeaponCalcs(index,returnObject,isCycleCalcs) {
         if (!isCycleCalcs) {
             readSelection(`weaponBreakdownBody1`).innerHTML += `<br><br>
