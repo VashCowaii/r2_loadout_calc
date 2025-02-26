@@ -409,7 +409,7 @@ const bullets = {
             const preElementDamage = firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
             const damage = totalFirearmATK;
             const physDR = calcs.getResistanceBasedDR(tableCopy,"DEF");
-            const baseDamage = damage * physDR * wpAveraged;
+            const baseDamage = Math.floor(damage * wpAveraged) * physDR;
 
             const critFirearm = calcs.getFirearmCritComposites({totalFirearmCritRate,totalFirearmCritDamage});
             const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
@@ -773,6 +773,16 @@ const bullets = {
                             <div class="totalHealingHeader">AVG/Hit</div>
                             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.AVG.toFixed(2)}</div>
                         </div>
+                        ${!bulletsArray[i].specialGunFunction.ticks ? "" : `
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                                <div class="totalHealingHeader">Ticks</div>
+                                <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.ticks.toFixed(2)}</div>
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                                <div class="totalHealingHeader">SUM AVG</div>
+                                <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.totalTickDamage.toFixed(2)}</div>
+                            </div>
+                                `}
                     </div>` : "";
                 let specialSkillString = bulletsArray[i].specialSkillFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialSkillFunction.name}</div>
                 <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialSkillFunction.desc}</div>

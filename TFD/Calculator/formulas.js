@@ -7860,6 +7860,61 @@ const customDamage = {
             return {avgPerShot,totalAVGDPS,totalAVGGun}
         }
     },
+    waveTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Wave of Light"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.useSolarHalo) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "FirearmCritRateBaseCORE","value": 1,"subStackValue": null},
+                        {"name": "FirearmATK%OnHitCORE","value": 0.10,"subStackValue": null},
+                    ],
+                    "bonusName": "Solar & Lunar Halo",
+                    "oneTimeOrStack": "duration",
+                    "limit": 1,
+                    "cooldown": 0.5,
+                    "duration": 2,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "bonusWasApplied": false,
+                    "conditions": ["isReloaded","hasFirearmDamage"],//"hasFirearmDamage",
+                    // "skipFirstShot": true,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "SOLAR HALO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["useSolarHalo","Use Reloaded Buff?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "LUNAR HALO","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Wave of Light",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
 
     skipThisWeaponCalcs(index,returnObject,isCycleCalcs) {
         if (!isCycleCalcs) {
