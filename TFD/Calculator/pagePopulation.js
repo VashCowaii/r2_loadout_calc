@@ -1571,6 +1571,12 @@ const settings = {
             settingsRef.useEnergyGrenade = readSelection("useEnergyGrenade").checked;
             settingsRef.useAimingLauncher = readSelection("useAimingLauncher").checked;
         },
+        "The Final Masterpiece"(settingsRef,arrayRef) {
+            settingsRef.usePoisonGrenade = readSelection("usePoisonGrenade").checked;
+        },
+        "Wave of Light"(settingsRef,arrayRef) {
+            settingsRef.useSolarHalo = readSelection("useSolarHalo").checked;
+        },
         ...localInsertionSettings
     }
 

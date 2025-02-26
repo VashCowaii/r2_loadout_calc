@@ -1588,5 +1588,48 @@ const sniperList = {
         "tags": [],
     },
 
+    "Wave of Light": {
+        "name": "Wave of Light",
+        "baseATK": 36141,
+        "baseCritRate": 0.10,
+        "baseCritDamage": 1.80,
+        "baseWeakPoint": 1.8,
+        "physicalType": "Crush",
+        "physicalTypeBonus": 0.10,
+
+        "baseFireRate": 250,
+        "baseReloadTime": 2.2,
+        "magazine": 12,
+        "shellCount": 1,
+        "coreArray": ["Rainbow","Orange","Green","Yellow","Purple"],
+        "RangedInTime": 0.28,
+        "ZoomInHoldDelayTime": 0.3,
+
+        "ammoType": "Impact",
+        "weaponType": "Scout Rifle",
+        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1005_A001.png",
+        "weaponSettings": {
+            "useSolarHalo": true,
+        },
+        "customDPSBase": "waveTier0Calcs",
+        "customDPS": "",
+        "desc": "",
+        "displayStatsALT": {
+            "BASIC": [],
+            "SOLAR HALO": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Recoil","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+BASE Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "LUNAR HALO": [
+                {"statType": "","statName": "+FirearmATK % Debuff","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "FIREARM SUM": [],
+        },
+        "stats": {
+            "FireATK": 24215,
+        },
+        "tags": ["FirearmCritRateBaseCORE","FirearmATK%OnHitCORE"],
+    },
     ...weaponsInsertion
 }
