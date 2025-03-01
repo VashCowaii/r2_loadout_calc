@@ -547,7 +547,9 @@ let manipulateURL = {
             let bossValueRef = bossData[globalRecords.boss.currentBoss].displayName;
             let partValueRef = globalRecords.boss.currentBossPart;
 
+            userTriggers.updateSelectedBoss();
             readSelection("boss").value = bossValueRef;
+            readSelection("bossPart").value = partValueRef;
             userTriggers.updateSelectedBoss();
             
             readSelection("bossPart").value = partValueRef;

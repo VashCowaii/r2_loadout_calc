@@ -26,15 +26,57 @@ const componentImagePrefixes = {
 }
 
 
-const auxiliary = {
-    "": {
+// const compSetsObject  = {
+//     // [auxiliary, sensor, memory, processor]
+//     "": {
+//         "headerStatArray": "DEF",
+//         "value": 0,
+//         "stats": {},
+//         "tags": [],
+//         "rarity": "Empty",
+//         "imageSuffix": "01"
+//     }
+// }
+
+
+const blankSet = [
+    {"": {
         "headerStat": "DEF",
         "value": 0,
         "stats": {},
         "tags": [],
         "rarity": "Empty",
         "imageSuffix": "01"
-    },
+    }},
+    {"": {
+        "headerStat": "DEF",
+        "value": 0,
+        "stats": {},
+        "tags": [],
+        "rarity": "Empty",
+        "imageSuffix": "02"
+    }},
+    {"": {
+        "headerStat": "DEF",
+        "value": 0,
+        "stats": {},
+        "tags": [],
+        "rarity": "Empty",
+        "imageSuffix": "03"
+    }},
+    {"": {
+        "headerStat": "DEF",
+        "value": 0,
+        "stats": {},
+        "tags": [],
+        "rarity": "Empty",
+        "imageSuffix": "04"
+    }}
+]
+
+
+const auxiliary = {
+    ...blankSet[0],
     "Hungry Sonic": {
         "headerStat": "DEF",
         "value": 3512,
@@ -261,14 +303,7 @@ const auxiliaryRolls = {
 }
 
 const sensor = {
-    "": {
-        "headerStat": "DEF",
-        "value": 0,
-        "stats": {},
-        "tags": [],
-        "rarity": "Empty",
-        "imageSuffix": "02"
-    },
+    ...blankSet[1],
     "Hungry Sonic": {
         "headerStat": "Shield",
         "value": 275,
@@ -512,14 +547,7 @@ const sensorRolls = {
 }
 
 const memory = {
-    "": {
-        "headerStat": "DEF",
-        "value": 0,
-        "stats": {},
-        "tags": [],
-        "rarity": "Empty",
-        "imageSuffix": "03"
-    },
+    ...blankSet[2],
     "Hungry Sonic": {
         "headerStat": "Shield",
         "value": 275,
@@ -755,14 +783,7 @@ const memoryRolls = {
 }
 
 const processor = {
-    "": {
-        "headerStat": "DEF",
-        "value": 0,
-        "stats": {},
-        "tags": [],
-        "rarity": "Empty",
-        "imageSuffix": "04"
-    },
+    ...blankSet[3],
     "Hungry Sonic": {
         "headerStat": "HP",
         "value": 484,
@@ -1012,7 +1033,7 @@ const componentSetBonuses = {
             "tags": [],
         },
         "4pc": {
-            "desc": "Fusion Skill Power Modifier +12%.<br>On Electric Skill Attack upon an enemy inflicted with Electrocution, activates Executioner's Thunderbolt at the target's location, dealing additional Electric damage equivalent to 100% of Skill Power Modifier (cooldown 2s) at a 50% chance.<br>Note: The damage per bolt is your skill power * 1 + skill and electric power modifier. It's pretty fuckin awful.",
+            "desc": "Fusion Skill Power Modifier +12%\nOn Electric Skill Attack upon an enemy activates Executioner's Thunderbolt at the target's location,\ndealing additional Electric damage equivalent to 100% of Skill Power Modifier (Cooldown 2s) at a 50% chance.<br>Note: The damage per bolt is your skill power * 1 + skill and electric power modifier. It's pretty fuckin awful.",
             "stats": {
                 "SkillCost": 0.15,
                 "PowerRatioBase": 0.261
@@ -1069,8 +1090,7 @@ const componentSetBonuses = {
         },
         "4pc": {
             "desc": "For each Frostbite stack inflicted upon enemies, Firearm Critical Hit Damage +1.7%, Skill Critical Hit Damage +6% (up to 10 stacks, 5s duration) at a 30% chance. When defeating enemies inflicted with Frostbite, inflicts additional damage equivalent to 12.2% of the enemy's Max HP on enemies within a 2.5m radius at a 30% chance.",
-            "stats": {
-                //TODO: weapon crit dmg
+            "stats": {//Note to self, the HP% dmg it deals is not % from the target killed, but the %HP of each target around them hit by the AOE, individually.
                 "SkillCritDamage": 0.60,
                 "FirearmCritDamage": 0.17,
             },
@@ -1090,6 +1110,7 @@ const componentSetBonuses = {
             "desc": "Tactical Rifle, Assault Rifle Firearm Attribute Effect Trigger Rate +12%. For each Poison stack inflicted upon enemies, Firearm ATK +2%, Skill Power Modifier +0.7% for 5s at a 30% chance (up to 10 stacks, 5s duration).",
             "stats": {
                 //TODO: effect trigger rate stats
+                "FirearmATK%": 0.20,//assuming max stacks
                 "PowerModifierBase": 0.07,//assuming max stacks
             },
             "tags": [],
@@ -1098,17 +1119,16 @@ const componentSetBonuses = {
     },
     "Bravery": {
         "2pc": {
-            "desc": "HP Recovery +1.8%<br>Max Shield +11.9%",
+            "desc": "Max Shield +11.8%",
             "stats": {
-                "HPRecovery": 0.018,
-                "Shield%": 0.119
+                "Shield%": 0.118
             },
             "tags": [],
         },
         "4pc": {
-            "desc": "Skill Duration +6.6%<br>35% chance to reduce a random skill's cooldown by -1.63s each time an enemy inflicted with Stun is defeated.",
+            "desc": "Skill Cost -5.7%\n20% chance to reduce a random skill's cooldown by 1s each time an enemy is defeated.",
             "stats": {
-                "SkillDuration": 0.066
+                "SkillCost": -0.057
             },
             "tags": [],
         },
@@ -1118,14 +1138,16 @@ const componentSetBonuses = {
         "2pc": {
             "desc": "Sniper Rifle, Scout Rifle Critical Hit Rate 5%",
             "stats": {
-                //TODO: weapon type specific crit bonuses
+                "PowerRatioNonAttribute": 0.062,
             },
             "tags": [],
         },
         "4pc": {
-            "desc": "Skill Cooldown -4.7%. Granting a buff to allies adds a stack of Frozen Heart Energy effect to self (Cooldown 1s). At 4 effect stacks, Frozen Heart Energy converts to Frozen Heart Essence effect. Frozen Heart Essence: Firearm Weak Point DMG +7.7%, Skill Critical Hit Rate +28%, Firearm Critical Hit Rate +7.9% for 10s.",
-            "stats": {//TODO: weapon type specific weakpoint bonuses, can bother with it later
-                "SkillCritRate": 0.28
+            "desc": "Skill Cooldown -4.7%<br>Acquiring Custom Resource stacks Frozen Heart Energy effect by 1 (Cooldown 3s, up to 3 stacks)<br>Frozen Heart Energy: Max Shield +6.2% for 15s<br>On Skill Attack by Frozen Heart Energy with 3 stacks, enemies hit by the skill gets Frozen Heart Essence state<br>Frozen Heart Essence: Incoming Damage Modifier +3% for 10s",
+            "stats": {
+                "SkillCooldown": -0.047,
+                "Shield%": 0.186,
+                //TODO: enemy incoming dmg increase modifiers.
             },
             "tags": [],
         },
@@ -1140,27 +1162,67 @@ const componentSetBonuses = {
             "tags": [],
         },
         "4pc": {
-            "desc": "Handgun, Hand Cannon, Shotgun ATK +6.6%. Charged Sub Attack Damage +6.6%. After Reload, Skill Power +3.5% for 5s (up to 3 stacks), this effect is removed when using a skill.",
-            "stats": {//TODO: weapon type specific ATK bonuses, can bother with it later, same with sub attack stuff
-                "PowerRatioBase": 0.105,
+            "desc": "Handgun ATK+10.3%\nHand Cannon ATK +10.3%\nShotgun ATK +5.2%\nAfter reload, Skill Power +4.3% for 10s (Up to 3 stacks)",
+            "stats": {
+                "PowerRatioBase": 0.129,
             },
-            "tags": [],
+            "tags": ["FirearmATK%"],
+            "complexBonus": [
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.103,"subStackValue": null},
+                    ],
+                    "bonusName": "Volcanic (Handgun Bonus) ",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": ["isHandgun"],
+                },
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.103,"subStackValue": null},
+                    ],
+                    "bonusName": "Volcanic (Hand Cannon Bonus) ",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": ["isHandCannon"],
+                },
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.103,"subStackValue": null},
+                    ],
+                    "bonusName": "Volcanic (Shotgun Bonus) ",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": ["isShotgun"],
+                }
+            ]
         },
         "rarity": "Ultimate",
     },
     "Hungry Sonic": {
         "2pc": {
-            "desc": "Toxin Resistance +2.8%",
+            "desc": "MP Recovery Modifier +12%",
             "stats": {
-                "ResistanceToxin%": 0.028
+                "MPRecovery": 0.12,
             },
             "tags": [],
         },
         "4pc": {
-            "desc": "When using Skill, grants 1 stack of Efflux(up to 50 stacks, lasts for 20s). When using Enhanced Skill, grants self 1 stack of Wave (up to 10 stacks, lasts for 120s) and 10 stacks of Efflux. Wave recovers MP by 0.2% per stack when hitting an enemy with a unique weapon. At 50 stacks of Efflux, converts to Tuning (lasts for 200s). Tuning: Skill Duration +1.79% proportional to Max MP, MP Heal Modifier by +2.83%.",
+            "desc": "When using skill, Efflux 1 stack (up to 5 stacks, Duration 20s)<br>Efflux: Max MP +0.6%<br></br>When buffing allies except for the player with Efflux 5 stacks,<br>Recover the target's HP by 10.9% (Cooldown 10s)",
             "stats": {
-                "SkillDuration": 0.0179,
-                "MPRecovery": 0.0283
+                "MP%": 0.03,
             },
             "tags": [],
         },
@@ -1261,15 +1323,15 @@ const componentSetBonuses = {
         "2pc": {
             "desc": "Firearm Critical Hit Rate +5.1%",
             "stats": {
-                //TODO: firearm crit stuff
+                "FirearmCritRate": 0.051,
             },
             "tags": [],
         },
         "4pc": {
             "desc": "Weak Point DMG +5.8%<br>Toxin Resistance +6.6%",
             "stats": {
-                "ResistanceToxin%": 0.066
-                //TODO: weakpoint stuff
+                "ResistanceToxin%": 0.066,
+                "WeakPointDamage%": 0.058,
             },
             "tags": [],
         },
@@ -1353,13 +1415,41 @@ const componentSetBonuses = {
     "Distorted Resolve": {
         "2pc": {
             "desc": "Assault Rifle ATK +5.6%<br>Submachine Gun ATK +5.6%",
-            "stats": {},//TODO: gun type specific atk bonuses
-            "tags": [],
+            "stats": {},
+            "tags": ["FirearmATK%"],
+            "complexBonus": [
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.056,"subStackValue": null},
+                    ],
+                    "bonusName": "Distorted Resolve (Assault Rifle Bonus) ",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": ["isAssault"],
+                },
+                {
+                    "stats": [
+                        {"name": "FirearmATK%","value": 0.056,"subStackValue": null},
+                    ],
+                    "bonusName": "Distorted Resolve (Submachine Gun Bonus) ",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "conditions": ["isSubmachine"],
+                },
+            ]
         },
         "4pc": {
-            "desc": "Increases Toxic Skill Power by up to +7.15% based on HP lost. When current HP is 1, Toxic Skill Power +14.3%.<br>Has a 5% chance to recover 3.2% Shield each time you inflict an enemy with a debuff. Successful part destruction grants 5 stacks of Exaltation which fires a guided projectile toward the colossus on Skill Attack (Cooldown 7s).<br>Deals additional Toxic damage equivalent to 9.7% of Skill Power and inflicts Desolation.<br>Desolation: All Colossus ATK -0.5% (up to 5 stacks, 30s duration)",
+            "desc": "Increases Skill Power by up to +14.3% based on HP lost relative to Max HP<br>Skill Power +14.3% when current HP is 1<br>Each time inflicting an enemy with Debuff, 100% chance of recovering Shield by 15% (Cooldown 15s)<br>When using skill, Exaltation 1 stack (up to 5 stacks, duration 15s)<br>Exaltation: On Skill Attack with 5 stacks, fire the nearest enemy with a guided projectile (Cooldown 7s)<br>Deal 4.5% of Skill Power as Additional DMG, inflicting Desolation to the hit target<br>Desolation: All ATK of Target -0.5% (up to 5 stacks, Duration 30s)",
             "stats": {
-                "PowerRatioToxic": 0.143
+                "PowerRatioBase": 0.143
             },
             "tags": [],
         },
@@ -1374,9 +1464,9 @@ const componentSetBonuses = {
             "tags": [],
         },
         "4pc": {
-            "desc": "When defeating an enemy, Skill Duration +2.1% (10s duration, up to 5 stacks, assumed active at all times in calculator).<br>Tech Skill Power Modifier +4.1%<br>Dimension Skill Power Modifier +4.1%",
+            "desc": "When defeating an enemy, Skill Duration +2.7%(Duration 30s, up to 5 stacks)<br>Tech Skill Power Modifier +4.1%<br>Dimension Skill Power Modifier +4.1%",
             "stats": {
-                "SkillDuration": 0.21,
+                "SkillDuration": 0.135,
                 "PowerModifierTech": 0.041,
                 "PowerModifierDimension": 0.041,
             },

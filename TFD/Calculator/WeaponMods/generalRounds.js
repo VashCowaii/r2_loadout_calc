@@ -401,7 +401,7 @@ const generalRounds =  {
       "tags": ["ChillATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
-      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+      "desc": "Upon inflicting the Frostbite effect, increase Chill ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
    },
    "Electric Circulation": {
       "rarity": "Ultimate",
@@ -432,7 +432,7 @@ const generalRounds =  {
       "tags": ["ElectricATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
-      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+      "desc": "Upon inflicting the Shock effect, increase Electric ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
    },
    "Toxic Circulation": {
       "rarity": "Ultimate",
@@ -463,7 +463,7 @@ const generalRounds =  {
       "tags": ["ToxicATK%BonusCORE"],
       "inclusion": [],
       "exclusion": [],
-      "desc": "Upon inflicting the Burn effect, increase Fire ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
+      "desc": "Upon inflicting the Poison effect, increase Toxic ATK by 89.6% for 5 seconds (cooldown 20 seconds)."
    },
    "Ultra-Precision Strike": {
       "rarity": "Ultimate",

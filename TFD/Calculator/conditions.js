@@ -19,4 +19,25 @@ const conditionalChecksWeapons = {
     hasFirearmDamage(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
         return cycleReferences.hasFirearmDamage
     },
+    isHandgun(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Handgun"
+    },
+    isHandCannon(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Hand Cannon"
+    },
+    isShotgun(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Shotgun"
+    },
+    isSniper(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Sniper Rifle"
+    },
+    isScout(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Scout Rifle"
+    },
+    isAssault(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Assault Rifle"
+    },
+    isSubmachine(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        return weaponRef.weaponType === "Submachine Gun"
+    },
 }

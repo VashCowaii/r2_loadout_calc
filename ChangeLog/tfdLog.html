@@ -6,6 +6,79 @@
     </ul>
 </div> -->
 <div>
+    <h1>March 1, 2024 - COMPONENTS 2.0 & WEAPONS UPDATE</h1>
+    <ul>
+        <li>Changed the way weapon statistics are retrieved within the calculator. This is mostly a back-end change, but it does mean we can add just about any weapon to the calculator with less than 5 seconds of work, excluding ultimate abilities. As such, we're adding more weapons in this update.</li>
+        <li>Added Enzo to the Buffs tab. You can toggle on Firearm Enhancement or Perfect Support. We'll adjust this later, but those are the bonuses all of you care about.</li>
+        <li>Added the following ultimate weapons to the weapons selection WITH their ultimate abilities:
+            <ul>
+                <li>Enduring Legacy</li>
+                <li>Perforator (Ability added)</li>
+            </ul>
+        </li>
+        <li>Added the following rare weapons to the weapon selection:
+            <ul>
+                <li>Tamer</li>
+                <li>Vestigial Organ</li>
+                <li>Death Roar</li>
+                <li>Eternal Willpower</li>
+                <li>Phantom Pain</li>
+                <li>Caligo's Horn</li>
+                <li>Magnus AA</li>
+                <li>Lion of Blue Mane</li>
+                <li>Unfinished Study</li>
+                <li>Rascal V-51</li>
+                <li>Alter Ego</li>
+                <li>Devil's Call</li>
+                <li>New Beginning</li>
+                <li>Rose of Aisha</li>
+                <li>Millennium Frost</li>
+                <li>Red Wolf</li>
+                <li>Guardian R4</li>
+                <li>Lightspeed Barrel</li>
+                <li>Fireworks</li>
+                <li>The Last Knight</li>
+                <li>Subconsciousness</li>
+                <li>In a Blink</li>
+            </ul>
+        </li>
+        <li>Added the following common weapons to the weapon selection:
+            <ul>
+                <li>Hungry Hound</li>
+                <li>Ominous Hound</li>
+                <li>Cygnus</li>
+                <li>Albinism</li>
+                <li>Tamed Beast</li>
+                <li>Gangster</li>
+            </ul>
+        </li>
+        <li>Updated the bonuses provided by the following component sets:
+            <ul>
+                <li>Bravery</li>
+                <li>Volcanic - now has weapon specific attack bonuses</li>
+                <li>Invader</li>
+                <li>Frozen Heart</li>
+                <li>Hungry Sonic</li>
+                <li>Distorted Resolve - now has weapon specific attack bonuses</li>
+                <li>Decimator</li>
+                <li>Venom Essence</li>
+            </ul>
+        </li>
+        <li>Updated Wave of Light ultimate ability to separate Lunar Halo from Solar Halo, meaning that Lunar falls off after 10s whereas Solar falls off after 2 seconds.</li>
+
+        <h3>EDGE CASE RELOAD FIXES</h3>
+        Finally figured out what was causing some weird bugs I could see after a reload. The bug caused microscopic timing errors in the DPS evaluations, and while minimal, it irked me. Now we're chilling though.
+        <li>Fixed an edge case for duration based effects that could expire during a reload but despite meeting the conditions to be applied again after the reload finished, did not actually get applied again.</li>
+        <li>Similar to the above, fixed an edge case where if expired during a reload, some duration based effects did not properly account for the ranged in time buffer when resetting their cooldowns.</li>
+        <li>Fixed an edge case where stacking effects with substack values that were not the same as the value applied on the first stack didn't always properly negate the right values after the effect expired during a reload.</li>
+        <li>Fixed an issue where stacking effects that trigger based on the first shot in a magazine but do not apply to that first shot itself, did not properly reset the stack count after a reload.</li>
+
+        <h3>FIXES</h3>
+        <li>Fixed an issue that prevented the weak point parts list from populating after loading a build from a prior URL.</li>
+        <li>Fixed a typo the circulation mods descriptions.</li>
+    </ul>
+</div>
+<div>
     <h1>Feb 26, 2024</h1>
     <ul>
         <li>Added Wave of Light and its ultimate weapon ability to the weapon selection</li>
