@@ -202,6 +202,61 @@ const userTriggers = {
             readSelection("teamBuffsLunaBox").style.display = "none";
         }
 
+        //ENZO
+        if (readSelection("useTeamBuffsEnzo").checked) {
+            if (globalRecords.character.currentCharacter === "Enzo") {
+                readSelection("useTeamBuffsEnzo").checked = false;
+                alert("You already have Enzo as your selected character, as such, the Enzo team buff option has been disabled.");
+                return;
+            }
+            readSelection("teamBuffsEnzoBox").style.display = "flex";
+
+            //Later when enzo is actually added to the calc as a character selection, I need to go back through here and assign the bonuses to his functions
+            //instead of manually input values
+
+            //TODO: do that.
+
+            // const isLunaAggressive = readSelection("teamBuffsLunaAggressive").checked;
+            // const lunaMP = +readSelection("teamBuffsLunaMP").value;
+            // const enhancement = readSelection("teamBuffsLunaEnhancement").value;
+
+            // // teamBuffsEnzoFirearmEnhancer
+            // // teamBuffsEnzoPerfectSupport
+
+            // // <option value="Purple">Purple + Red</option>
+            // // <option value="Purple">Purple + Blue</option>
+
+            // const abilitiesPath = characters.Luna.abilities;
+
+            // const excitingPath = isLunaAggressive ? abilitiesPath.ability2["Aggressive Melody"] : abilitiesPath.ability2.base;
+            // const relaxingPath = abilitiesPath.ability3.base;
+            // const cheerfulPath = isLunaAggressive ? abilitiesPath.ability4["Aggressive Melody"] : abilitiesPath.ability4.base;
+
+            if (readSelection("teamBuffsEnzoFirearmEnhancer").checked) {
+
+                //TODO: potential issue later if two bonuses can provide the same stat to the teamRef.stats object
+                //need to potentially define all stats as 0 first then += them in later.
+                    teamRef.stats.FirearmCritRateBase = 0.29;
+                    teamRef.stats.BaseWeakPointBonus = 0.15;
+
+                    // FirearmCritRateBase
+                    // BaseWeakPointBonus
+            }
+            if (readSelection("teamBuffsEnzoPerfectSupport").checked) {
+                // FirearmCritRate
+                // "FirearmATK%"
+
+                //TODO: potential issue later if two bonuses can provide the same stat to the teamRef.stats object
+                //need to potentially define all stats as 0 first then += them in later.
+                teamRef.stats.FirearmCritRate = 0.20;
+                teamRef.stats["FirearmATK%"] = 0.20;
+                
+            }
+        }
+        else {
+            readSelection("teamBuffsEnzoBox").style.display = "none";
+        }
+
         //EROSION MODIFIERS
         if (readSelection("useTeamErosionModifier").checked) {
             if (!readSelection("boss").value.toLowerCase().includes("lgn.")) {
@@ -251,6 +306,7 @@ const userTriggers = {
                     "clearOnReload": true,
                     "limit": 5,
                     "currentStacks": 0,
+                    // "skipFirstShot": true,
                     "timePassedEntry": 0,
                     "cooldown": 0,
                 }
@@ -267,13 +323,7 @@ const userTriggers = {
             teamRef.complexBonus = [];
         }
 
-
-
         updateFormulas();
-
-
-
-
     },
     updateSelectedFocus(elementID) {
         // userTriggers.updateSelectedFocus('mod3BreakdownTab')
@@ -1560,7 +1610,7 @@ const settings = {
         "Python"(settingsRef,arrayRef) {
             settingsRef.usePythonBonus = readSelection("usePythonBonus").checked;
         },
-        "Last Dagger"(settingsRef,arrayRef) {
+        "The Last Dagger"(settingsRef,arrayRef) {
             settingsRef.useLethalDagger = readSelection("useLethalDagger").checked;
             settingsRef.useDaggerStrike = readSelection("useDaggerStrike").checked;
         },
@@ -1576,6 +1626,10 @@ const settings = {
         },
         "Wave of Light"(settingsRef,arrayRef) {
             settingsRef.useSolarHalo = readSelection("useSolarHalo").checked;
+        },
+        "Perforator"(settingsRef,arrayRef) {
+            settingsRef.perfUseScanners = readSelection("perfUseScanners").checked;
+            settingsRef.perfUseDetect = readSelection("perfUseDetect").checked;
         },
         ...localInsertionSettings
     }
@@ -1767,11 +1821,10 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorR
     formulasValues.pullComponentStats(tableReference);
     formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
     formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride,weaponCoreOverride);
-    
-    const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
-
     formulasValues.pullAbilityStats(tableReference);
     formulasValues.pullTeamBuffsStats(tableReference);
+    
+    const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
     const {baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield} = calcs.getShield(tableReference,characterRef);

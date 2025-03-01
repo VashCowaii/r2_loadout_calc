@@ -5,7 +5,7 @@ const weaponSubstatList = {
         "tags": [],
         "Sniper": [0,0],
         "Hand Cannon": [0,0],
-        "Burst Rifle": [0,0],
+        "Tactical Rifle": [0,0],
         "Scout Rifle": [0,0],
         "Machine Gun": [0,0],
         "Shotgun": [0,0],
@@ -21,7 +21,7 @@ const weaponSubstatList = {
         "tags": ["FirearmATK%"],
         "Sniper": [0.10,0.122],
         "Hand Cannon": [0.10,0.122],
-        "Burst Rifle": [0.10,0.122],
+        "Tactical Rifle": [0.10,0.122],
         "Scout Rifle": [0.10,0.122],
         "Machine Gun": [0.10,0.122],
         "Shotgun": [0.10,0.122],
@@ -38,7 +38,7 @@ const weaponSubstatList = {
         "tags": ["FireATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
-        "Burst Rifle": [960,1731],
+        "Tactical Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
@@ -54,7 +54,7 @@ const weaponSubstatList = {
         "tags": ["ChillATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
-        "Burst Rifle": [960,1731],
+        "Tactical Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
@@ -70,7 +70,7 @@ const weaponSubstatList = {
         "tags": ["ElectricATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
-        "Burst Rifle": [960,1731],
+        "Tactical Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
@@ -86,7 +86,7 @@ const weaponSubstatList = {
         "tags": ["ToxicATK"],
         "Sniper": [8424,15196],
         "Hand Cannon": [3236,5838],
-        "Burst Rifle": [960,1731],
+        "Tactical Rifle": [960,1731],
         "Scout Rifle": [2631,4747],
         "Machine Gun": [944,1702],
         "Shotgun": [1001,1806],
@@ -102,7 +102,7 @@ const weaponSubstatList = {
         "tags": ["WeakPointDamage%"],
         "Sniper": [0.082,0.12],
         "Hand Cannon": [0.082,0.12],
-        "Burst Rifle": [0.082,0.12],
+        "Tactical Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
         "Machine Gun": [0.082,0.12],
         "Shotgun": [0.082,0.12],
@@ -118,7 +118,7 @@ const weaponSubstatList = {
         "tags": ["FirearmCritRate"],
         "Sniper": [0.093,0.108],
         "Hand Cannon": [0.099,0.114],
-        "Burst Rifle": [0.108,0.122],
+        "Tactical Rifle": [0.108,0.122],
         "Scout Rifle": [0.119,0.133],
         "Machine Gun": [0.13,0.143],
         "Shotgun": [0.08,0.098],
@@ -134,7 +134,7 @@ const weaponSubstatList = {
         "tags": ["FirearmCritDamage"],
         "Sniper": [0.152,0.184],
         "Hand Cannon": [0.177,0.215],
-        "Burst Rifle": [0.202,0.247],
+        "Tactical Rifle": [0.202,0.247],
         "Scout Rifle": [0.268,0.327],
         "Machine Gun": [0.338,0.411],
         "Shotgun": [0.091,0.111],
@@ -150,7 +150,7 @@ const weaponSubstatList = {
         "tags": ["StatusTriggerRate"],
         "Sniper": [0.164,0.24],
         "Hand Cannon": [0.164,0.24],
-        "Burst Rifle": [0.164,0.24],
+        "Tactical Rifle": [0.164,0.24],
         "Scout Rifle": [0.164,0.24],
         "Machine Gun": [0.164,0.24],
         "Shotgun": [0.164,0.24],
@@ -166,7 +166,7 @@ const weaponSubstatList = {
         "tags": ["MagazineSize"],
         "Sniper": [0.082,0.12],
         "Hand Cannon": [0.082,0.12],
-        "Burst Rifle": [0.082,0.12],
+        "Tactical Rifle": [0.082,0.12],
         "Scout Rifle": [0.082,0.12],
         "Machine Gun": [0.082,0.12],
         "Shotgun": [0.082,0.12],
@@ -182,7 +182,7 @@ const weaponSubstatList = {
         "tags": ["ColossusATK"],
         "Sniper": [16848,30393],
         "Hand Cannon": [6472,11676],
-        "Burst Rifle": [1919,3462],
+        "Tactical Rifle": [1919,3462],
         "Scout Rifle": [5263,9494],
         "Machine Gun": [1887,3404],
         "Shotgun": [2002,3612],
@@ -198,7 +198,7 @@ const weaponSubstatList = {
         "tags": ["VulgusATK"],
         "Sniper": [16848,30393],
         "Hand Cannon": [6472,11676],
-        "Burst Rifle": [1919,3462],
+        "Tactical Rifle": [1919,3462],
         "Scout Rifle": [5263,9494],
         "Machine Gun": [1887,3404],
         "Shotgun": [2002,3612],
@@ -223,6 +223,336 @@ const weaponSubstatList = {
     //     "Sniper": [0.114,0.165],
     //     "Hand Cannon": [0.114,0.165],
     // },
+}
+
+const sniperDataComplex = {
+    "Standard": {//blank, basically
+        "weaponSettings": {},
+        "customDPSBase": "",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "tags": [],
+    },
+    "StandardBeam": {//hooks any given beam rifle up to the generic beam calcs that pull the charge factors associated with that specific beam rifle
+        "weaponSettings": {},
+        "customDPSBase": "genericBeamRifleTier0Calcs",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [],
+        },
+        "tags": [],
+    },
+    "211073001": {//Secret Garden
+        "weaponSettings": {
+            "gardenStackCount": 3,
+        },
+        "customDPSBase": "secretGardenCalcsTier0",
+        "customDPS": "skipThisWeaponCalcs",
+        "displayStatsALT": {
+            "BASIC": [],
+            "DIMENSION SKILL": [
+                {"statType": "","statName": "Trigger Rate","value": 0.39,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "Resource Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "PEST CONTROL": [
+                {"statType": "","statName": "Trigger Rate","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Firearm ATK%","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Skill Power (Opt.)","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Firearm ATK%/Stack","value": 0.16,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Skill Power (Opt.)/Stack","value": 0.16,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "tags": ["FirearmATK%","PowerOptimization"],
+    },
+    "211083002": {//Blue Beetle
+        "weaponSettings": {
+            "arcaneWaveActive": true,
+        },
+        "customDPSBase": "blueBeetleCalcsTier0",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "Skill Cost","value": 0,"limit": null,"isModified": false},
+            ],
+            "ARCANE ENERGY": [
+                {"statType": "","statName": "Trigger Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Skill Crit Rate%","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "PURIFICATION": [
+                {"statType": "","statName": "Trigger Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Duration","value": 1,"limit": null,"isModified": false},
+                {"statType": "","statName": "Debuff Removal Chance","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "tags": ["SkillCritRate"],
+    },
+    "211023003": {//Peacemaker
+        "weaponSettings": {
+            "peacemakerStackCount": 5,
+        },
+        "customDPSBase": "peacemakerCalcsTier0",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "Reload Time Modifier","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "Recoil","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "SINGLE RELOAD FOR PEACE": [
+                {"statType": "","statName": "Trigger Rate","value": 1.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "Skill Cost","value": 0.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Non-Attribute Power Ratio","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Non-Attribute Power/Stack","value": 0.095,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "AIMING AT MAX STACKS": [
+                {"statType": "","statName": "Fire Rate","value": 545,"limit": null,"isModified": false},
+            ],
+        },
+        "tags": ["PowerRatioNonAttribute"],
+    },
+    "211023001": {//Nazeistra's Devotion
+        "weaponSettings": {
+            "defDebuffActive": false,//default to off, we don't want it skewing stuff like zenith math unless the user is content screwing themselves by enabling it
+        },
+        "customDPSBase": "nazDevotionCalcsTier0",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "Aim Recovery Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "DEVOTION MARK": [
+                {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "-DEF%","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "ON ALLIED HIT": [
+                {"statType": "","statName": "MP Cost","value": -65,"limit": null,"isModified": false},
+                {"statType": "","statName": "Shield Recovery","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "tags": ["enemyDEFResistanceReductionCORE"],
+    },
+    "211033001": {//Smithereens
+        "weaponSettings": {
+            "allHitsBonus": true,
+        },
+        "customDPSBase": "smithereensCalcsTier0",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [],
+            "LANDED ALL BULLETS": [
+                {"statType": "","statName": "+Base Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Base Crit DMG","value": 0.10,"limit": null,"isModified": false},
+            ],
+            "AMPLIFICATION": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Shell Capacity","value": 4,"limit": null,"isModified": false},
+            ],
+        },
+        "tags": ["ShellCapacityBaseCORE","FirearmCritRateBaseCORE","FirearmCritDamageBaseCORE"],
+    },
+    "211043002": {//Python
+        "weaponSettings": {
+            "usePythonBonus": true,
+        },
+        "customDPSBase": "pythonCalcsTier0",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [],
+            "PREY": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 28,"limit": null,"isModified": false},
+
+                {"statType": "","statName": "-Enemy NA Resist (1st)","value": -0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy NA Resist /Stack","value": -0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                {"statType": "","statName": "-Enemy Toxin Resist (1st)","value": -0.036,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy Toxin Resist /Stack","value": -0.013,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "tags": ["enemyNonAttributeResistanceReductionCORE","enemyToxicResistanceReductionCORE"],
+    },
+    "211013001": {//The Last Dagger
+        "customDPSBase": "lastDaggerTier0Calcs",
+        "customDPS": "",
+        "tags": ["FirearmCritRateBaseCORE"],
+        "weaponSettings": {
+            "useLethalDagger": true,
+            "useDaggerStrike": false,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "LETHAL DAGGER": [
+                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "PATIENCE": [
+            //     {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+            //     {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+            //     {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            //     {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            // ],
+            "STRIKE": [
+                // {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
+                // {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
+                // {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                // {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "FIREARM SUM": [],
+        },
+    },
+    "211123002": {//Clairvoyance
+        "customDPSBase": "clairTier0Calcs",
+        "customDPS": "",//lanceTier0Calcs
+        "tags": ["enemyChillResistanceReductionCORE"],
+        "weaponSettings": {
+            "clairUseResShred": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "VOID GAZE": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "APPALLED CALLING": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Action SPD","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+    },
+    "211063003": {//EXCAVA
+        "customDPSBase": "excavaTier0Calcs",
+        "customDPS": "excavaCalcs",
+        "weaponSettings": {
+            "useEnergyGrenade": true,
+            "useAimingLauncher": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "ENERGY GRENADE": [
+                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+
+                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Crit Rate BASE","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+Crit Rate BASE/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+
+                // {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "VOLTAGE ACCUMULATION": [
+                {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Enemy ELEC RES","value": -0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Enemy ELEC RES/Stack","value": -0.035,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "WHILE AIMING": [
+                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Ammo cost per Shot","value": -5,"limit": null,"isModified": false},
+            ],
+            "FIREARM SUM": [],
+        },
+        "tags": ["FirearmCritRateBaseCORE","enemyElectricResistanceReductionCORE"],
+    },
+    "211083001": {//Wave of Light
+        "weaponSettings": {
+            "useSolarHalo": true,
+        },
+        "customDPSBase": "waveTier0Calcs",
+        "customDPS": "",
+        "displayStatsALT": {
+            "BASIC": [],
+            "SOLAR HALO": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "Recoil","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "+BASE Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "LUNAR HALO": [
+                {"statType": "","statName": "+FirearmATK % Debuff","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            // "FIREARM SUM": [],
+        },
+        "tags": ["FirearmCritRateBaseCORE","FirearmATK%OnHitCORE"],
+    },
+    "211053001": {//Enduring Legacy
+        "customDPSBase": "enduringCalcsTier0",
+        "customDPS": "",
+        "weaponSettings": {
+            "quenchingBonusActive": true,
+            "enduringTargetBurning": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "ON HIT": [
+                {"statType": "","statName": "+Attribute Hit Rate Base","value": 0.06,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "QUENCHING": [
+                {"statType": "duration","statName": "Duration","value": 0.4,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Stacks","value": 50,"limit": null,"isModified": false},
+                {"statType": "","statName": "-Fire Resist First","value": -0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "-Fire Resist/Stack","value": -0.008,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "TARGET BURNING": [
+                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
+                {"statType": "","statName": "+Firearm OnHit ATK","value": 0.11,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+        },
+        "tags": ["FirearmATK%OnHitCORE","enemyFireResistanceReductionCORE"],
+    },
+    "211023002": {//Perforator
+        "customDPSBase": "perfTier0Calcs",
+        "customDPS": "perfCalcs",
+        "tags": ["WeakPointDamage%CORE"],
+        "weaponSettings": {
+            "perfUseScanners": true,
+            "perfUseDetect": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [],
+            "EXPLOSIVE SCANNER": [
+                {"statType": "","statName": "Created on Crit","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "Created on Weak Point","value": 1,"limit": null,"isModified": false},
+                {"statType": "range","statName": "Range","value": 5,"limit": null,"isModified": false},
+                {"statType": "","statName": "%Firearm DMG Done","value": 0.35,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "DETECT": [
+                {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
+                {"statType": "","statName": "+%Weak Point on Target","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "FIREARM SUM": [],
+        },
+    }
+}
+
+//pull special effects and tags for weapons that match and ID listed under complex effects
+for (let entry in sniperData) {
+    let current = sniperData[entry]
+    let currentID = current.ID;
+
+    if (sniperDataComplex[currentID]) {
+        sniperData[entry] = {
+            ...current,
+            ...sniperDataComplex[currentID]
+        }
+    }
+    else if (current.weaponType === "Beam Rifle") {
+        sniperData[entry] = {
+            ...current,
+            ...sniperDataComplex.StandardBeam
+        }
+    }
+    else {
+        sniperData[entry] = {
+            ...current,
+            ...sniperDataComplex.Standard
+        }
+    }
 }
 
 let weaponsInsertion = localCheck ? {} : weaponsLocal;
@@ -258,1378 +588,6 @@ const sniperList = {
             "BASIC": [],
         },
     },
-    "Perforator": {
-        "name": "Perforator",
-        "rarity": "Ultimate",
-        "baseATK": 67092,
-        "baseCritRate": 0.20,
-        "baseCritDamage": 2.0,
-        "baseWeakPoint": 2.25,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 100,
-        "baseReloadTime": 1.6,
-        "magazine": 6,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Red","Green","Green","Purple"],
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1008_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Afterglow Sword": {
-        "name": "Afterglow Sword",
-        "rarity": "Ultimate",
-        "baseATK": 114206,
-        "baseCritRate": 0.50,
-        "baseCritDamage": 2,
-        "baseWeakPoint": 1.8,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 67,
-        "baseReloadTime": 2.5,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Red","Yellow","Yellow","Purple"],
-        "RangedInTime": 0.3,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1005_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Piercing Light": {
-        "name": "Piercing Light",
-        "rarity": "Ultimate",
-        "baseATK": 193437,
-        "baseCritRate": 0.40,
-        "baseCritDamage": 1.2,
-        "baseWeakPoint": 2,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 48,
-        "baseReloadTime": 2.6,
-        "magazine": 11,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Blue","Green","Yellow","Yellow"],
-        "RangedInTime": 0.3,
-        "ZoomInHoldDelayTime": 0.45,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1006_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {
-            "ChillATK": 81244,
-        },
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Secret Garden": {
-        "name": "Secret Garden",
-        "rarity": "Ultimate",
-        "baseATK": 10534,
-        "baseCritRate": 0.50,
-        "baseCritDamage": 2.25,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 120,
-        "baseReloadTime": 1.6,
-        "magazine": 48,
-        "shellCount": 4,
-        "coreArray": ["Rainbow","Red","Yellow","Yellow","Purple"],
-        "RangedInTime": 0.185,
-        "ZoomInHoldDelayTime": 0.385,
-
-        "ammoType": "Special",
-        "weaponType": "Burst Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_TR_1005_A001.png",
-        "weaponSettings": {
-            "gardenStackCount": 3,
-        },
-        "customDPSBase": "secretGardenCalcsTier0",
-        "customDPS": "skipThisWeaponCalcs",
-        "desc": "When using a Dimension skill, recovers Custom Resource with a set chance. When using a Tech Skill, grants the unique ability Pest Control with a set chance.",
-        "displayStatsALT": {
-            "BASIC": [
-                {"statType": "","statName": "Skill Cost","value": 0,"limit": null,"isModified": false},
-            ],
-            "DIMENSION SKILL": [
-                {"statType": "","statName": "Trigger Rate","value": 0.39,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "Resource Recovery","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "PEST CONTROL": [
-                {"statType": "","statName": "Trigger Rate","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
-                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
-                {"statType": "","statName": "+Firearm ATK%","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Skill Power (Opt.)","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Firearm ATK%/Stack","value": 0.16,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Skill Power (Opt.)/Stack","value": 0.16,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-        },
-        "stats": {},
-        "tags": ["FirearmATK%","PowerOptimization"],
-    },
-    "Blue Beetle": {
-        "name": "Blue Beetle",
-        "rarity": "Ultimate",
-        "baseATK": 29468,
-        "baseCritRate": 0.25,
-        "baseCritDamage": 1.80,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 200,
-        "baseReloadTime": 2,
-        "magazine": 16,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Orange","Blue","Green","Yellow"],
-        "RangedInTime": 0.28,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1006_A001.png",
-        "weaponSettings": {
-            "arcaneWaveActive": true,
-        },
-        "customDPSBase": "blueBeetleCalcsTier0",
-        "customDPS": "",
-        "desc": "When using a Fusion skill, grants self the unique ability Arcane Energy with a set chance. When using a Singular skill, grants self the unique Ability Purification with a set chance.",
-        "displayStatsALT": {
-            "BASIC": [
-                {"statType": "","statName": "Skill Cost","value": 0,"limit": null,"isModified": false},
-            ],
-            "ARCANE ENERGY": [
-                {"statType": "","statName": "Trigger Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
-                {"statType": "","statName": "+Skill Crit Rate%","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "PURIFICATION": [
-                {"statType": "","statName": "Trigger Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "duration","statName": "Duration","value": 1,"limit": null,"isModified": false},
-                {"statType": "","statName": "Debuff Removal Chance","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-        },
-        "stats": {
-            "ElectricATK": 15029,
-        },
-        "tags": ["SkillCritRate"],
-    },
-    "Peace Maker": {
-        "name": "Peace Maker",
-        "rarity": "Ultimate",
-        "baseATK": 32471,
-        "baseCritRate": 0.50,
-        "baseCritDamage": 2.5,
-        "baseWeakPoint": 1.20,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 133,
-        "baseReloadTime": 1.35,
-        "magazine": 8,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Red","Green","Yellow","Yellow"],
-        "RangedInTime": 0.23,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1010_A001.png",
-        "customDPSBase": "peacemakerCalcsTier0",
-        "customDPS": "",
-        "desc": "When using a Dimension or Fusion skill, grants the unique ability Single Reload for Peace. When Single Reload for Peace is at Max Stacks, shooting while aiming rapidly fires all loaded rounds.",
-        "stats": {},
-        "tags": ["PowerRatioNonAttribute"],
-        "weaponSettings": {
-            "peacemakerStackCount": 5,
-        },
-        "displayStatsALT": {
-            "BASIC": [
-                {"statType": "","statName": "Reload Time Modifier","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "Recoil","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "SINGLE RELOAD FOR PEACE": [
-                {"statType": "","statName": "Trigger Rate","value": 1.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
-                {"statType": "","statName": "Max Stacks","value": 5,"limit": null,"isModified": false},
-                {"statType": "","statName": "Skill Cost","value": 0.00,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Non-Attribute Power Ratio","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Non-Attribute Power/Stack","value": 0.095,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "AIMING AT MAX STACKS": [
-                {"statType": "","statName": "Fire Rate","value": 545,"limit": null,"isModified": false},
-            ],
-        },
-    },
-    "Nazeistra's Devotion": {
-        "name": "Nazeistra's Devotion",
-        "rarity": "Ultimate",
-        "baseATK": 38461,
-        "baseCritRate": 0.45,
-        "baseCritDamage": 2.25,
-        "baseWeakPoint": 1.7,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 150,
-        "baseReloadTime": 1.5,
-        "magazine": 8,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Green","Yellow","Yellow","Purple"],
-        "RangedInTime": 0.22,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1007_A001.png",
-        "weaponSettings": {
-            "defDebuffActive": false,//default to off, we don't want it skewing stuff like zenith math unless the user is content screwing themselves by enabling it
-        },
-        "customDPSBase": "nazDevotionCalcsTier0",
-        "customDPS": "",
-        "desc": "On hitting an enemy's Weak Point, inflicts the unique ability Devotion Mark on the target. On hitting an ally, that ally's shield is restored at the cost of your MP. If your current MP is less than the MP cost, this effect is not triggered.",
-        "displayStatsALT": {
-            "BASIC": [
-                {"statType": "","statName": "Aim Recovery Speed","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "DEVOTION MARK": [
-                {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": false},
-                {"statType": "","statName": "-DEF%","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "ON ALLIED HIT": [
-                {"statType": "","statName": "MP Cost","value": -65,"limit": null,"isModified": false},
-                {"statType": "","statName": "Shield Recovery","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-        },
-        "stats": {},
-        "tags": ["enemyDEFResistanceReduction"],
-    },
-
-    "Assassin's Edge": {
-        "name": "Assassin's Edge",
-        "rarity": "Rare",
-        "baseATK": 44604,
-        "baseCritRate": 0.40,
-        "baseCritDamage": 2.0,
-        "baseWeakPoint": 2.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 120,
-        "baseReloadTime": 1.4,
-        "magazine": 9,
-        "shellCount": 1,
-
-        "coreArray": null,
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1001_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Smithereens": {
-        "name": "Smithereens",
-        "rarity": "Ultimate",
-        "baseATK": 14562,
-        "baseCritRate": 0.01,
-        "baseCritDamage": 1.10,
-        "baseWeakPoint": 1.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 150,
-        "baseReloadTime": 1.6,
-        "magazine": 15,
-        "shellCount": 10,
-        "coreArray": ["Rainbow","Orange","Yellow","Yellow","Purple"],
-        "RangedInTime": 0.16,
-        "ZoomInHoldDelayTime": 0.368,
-        
-
-        "ammoType": "HighPowered",
-        "weaponType": "Shotgun",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SG_1005_A001.png",
-        "customDPSBase": "smithereensCalcsTier0",
-        "customDPS": "",
-        "desc": "On hitting the enemy with all fired bullets, increases the Firearm Critical Hit Rate and Firearm Critical Hit Damage of the attack. Upon landing a Critical Hit on an enemy, grants the Firearm's unique ability Amplification",
-        "stats": {},
-        "tags": ["ShellCapacityBase","FirearmCritRateBase","FirearmCritDamageBase"],
-        "weaponSettings": {
-            "allHitsBonus": true,
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-            "LANDED ALL BULLETS": [
-                {"statType": "","statName": "+Base Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Base Crit DMG","value": 0.10,"limit": null,"isModified": false},
-            ],
-            "AMPLIFICATION": [
-                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "+Shell Capacity","value": 4,"limit": null,"isModified": false},
-            ],
-        },
-    },
-    //purple scout rifles
-    "Hero's Scar": {
-        "rarity": "Rare",
-        "name": "Hero's Scar",
-        "baseATK": 33071,
-        "baseCritRate": 0.10,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 240,
-        "baseReloadTime": 2.10,
-        "magazine": 20,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.17,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1001_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Silly Weeper": {
-        "rarity": "Rare",
-        "name": "Silly Weeper",
-        "baseATK": 97131,
-        "baseCritRate": 0.20,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 78,
-        "baseReloadTime": 2.10,
-        "magazine": 8,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.17,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1002_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Nightmare Hound": {
-        "rarity": "Rare",
-        "name": "Nightmare Hound",
-        "baseATK": 39963,
-        "baseCritRate": 0.05,
-        "baseCritDamage": 1.2,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 180,
-        "baseReloadTime": 2.24,
-        "magazine": 18,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.17,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1003_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "The Age Of Innovation": {
-        "rarity": "Rare",
-        "name": "The Age Of Innovation",
-        "baseATK": 33103,
-        "baseCritRate": 0.07,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 250,
-        "baseReloadTime": 2.10,
-        "magazine": 15,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.17,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1004_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Sonic Co-op": {
-        "rarity": "Rare",
-        "name": "Sonic Co-op",
-        "baseATK": 24917,
-        "baseCritRate": 0.20,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 300,
-        "baseReloadTime": 2.0,
-        "magazine": 25,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.28,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1008_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    //more purple HC's
-    "Explorer's Path": {
-        "rarity": "Rare",
-        "name": "Explorer's Path",
-        "baseATK": 63596,
-        "baseCritRate": 0.27,
-        "baseCritDamage": 1.3,
-        "baseWeakPoint": 2.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 120,//625.0,
-        "baseReloadTime": 1.4,
-        "magazine": 9,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.23,
-        "ZoomInHoldDelayTime": 0.43,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1002_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Burning Hound": {
-        "rarity": "Rare",
-        "name": "Burning Hound",
-        "baseATK": 41726,
-        "baseCritRate": 0.32,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.7,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 140,//625.0,
-        "baseReloadTime": 1.75,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1006_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Immediate Execution": {
-        "rarity": "Rare",
-        "name": "Immediate Execution",
-        "baseATK": 39206,
-        "baseCritRate": 0.32,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 2.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 171,//625.0,
-        "baseReloadTime": 1.75,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "Impact",
-        "weaponType": "Hand Cannon",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HC_1009_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-
-
-    // //purple snipers
-    "Different Dream": {
-        "name": "Different Dream",
-        "rarity": "Rare",
-        "baseATK": 110259,
-        "baseCritRate": 0.55,
-        "baseCritDamage": 1.8,
-        "baseWeakPoint": 5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 63,
-        "baseReloadTime": 2.15,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.35,
-        "ZoomInHoldDelayTime": 0.48,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1007_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Forest Gaze": {
-        "name": "Forest Gaze",
-        "rarity": "Rare",
-        "baseATK": 133703,
-        "baseCritRate": 0.50,
-        "baseCritDamage": 2,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 50,
-        "baseReloadTime": 2.52,
-        "magazine": 7,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.3,
-        "ZoomInHoldDelayTime": 0.35,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1001_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Supermoon Z-15": {
-        "name": "Supermoon Z-15",
-        "rarity": "Rare",
-        "baseATK": 101392,
-        "baseCritRate": 0.50,
-        "baseCritDamage": 2,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 66,
-        "baseReloadTime": 2.24,
-        "magazine": 9,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.34,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1002_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Recipient Unknown": {
-        "name": "Recipient Unknown",
-        "rarity": "Rare",
-        "baseATK": 132590,
-        "baseCritRate": 0.45,
-        "baseCritDamage": 1.8,
-        "baseWeakPoint": 1.5,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 72,
-        "baseReloadTime": 2.10,
-        "magazine": 9,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.33,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1003_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-    "Belief": {
-        "name": "Belief",
-        "rarity": "Rare",
-        "baseATK": 92167,
-        "baseCritRate": 0.45,
-        "baseCritDamage": 1.8,
-        "baseWeakPoint": 1.7,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 80,
-        "baseReloadTime": 2.31,
-        "magazine": 9,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "HighPowered",
-        "weaponType": "Sniper",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SR_1004_A001.png",
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {},
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-    },
-
-    //gen rounds ammo
-    "Blue Blood Bloomer": {
-        "rarity": "Rare",
-        "name": "Blue Blood Bloomer",
-        "baseATK": 11408,
-        "baseCritRate": 0.12,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 1000,
-        "baseReloadTime": 1.32,
-        "magazine": 27,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.148,
-        "ZoomInHoldDelayTime": 0.348,
-
-        "ammoType": "General",
-        "weaponType": "Submachine Gun",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1002_A001.png",
-        "weaponSettings": {},
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "displayStatsALT": {
-            "BASIC": [],
-         },
-        "stats": {},
-        "tags": [],
-    },
-    "Python": {
-        "rarity": "Ultimate",
-        "name": "Python",
-        "baseATK": 11908,
-        "baseCritRate": 0.05,
-        "baseCritDamage": 1.3,
-        "baseWeakPoint": 2.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 923,
-        "baseReloadTime": 1.50,
-        "magazine": 30,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Orange","Green","Yellow","Yellow"],
-        "RangedInTime": 0.148,
-        "ZoomInHoldDelayTime": 0.348,
-
-        "ammoType": "General",
-        "weaponType": "Submachine Gun",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1006_A001.png",
-        "weaponSettings": {
-            "usePythonBonus": true,
-        },
-        "customDPSBase": "pythonCalcsTier0",
-        "customDPS": "",
-        "desc": "On hitting a Weak Point, inflicts the unique ability Prey on the target enemy.<br>Currently this weapon ability is bugged in-game, and the starting stacks are swapped in some places. The calculator accounts for this.",
-        "displayStatsALT": {
-            "BASIC": [],
-            "PREY": [
-                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "Max Stacks","value": 28,"limit": null,"isModified": false},
-
-                {"statType": "","statName": "-Enemy NA Resist (1st)","value": -0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "-Enemy NA Resist /Stack","value": -0.01,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-
-                {"statType": "","statName": "-Enemy Toxin Resist (1st)","value": -0.036,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "-Enemy Toxin Resist /Stack","value": -0.013,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-        },
-        "stats": {
-            "ToxicATK": 6669,
-        },
-        "tags": [],
-    },
-    "Firefly": {
-        "rarity": "Rare",
-        "name": "Firefly",
-        "baseATK": 10879,
-        "baseCritRate": 0.20,
-        "baseCritDamage": 1.2,
-        "baseWeakPoint": 1.0,
-        "physicalType": "Burst",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 857,
-        "baseReloadTime": 1.35,
-        "magazine": 35,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.148,
-        "ZoomInHoldDelayTime": 0.348,
-
-        "ammoType": "General",
-        "weaponType": "Submachine Gun",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SMG_1007_A001.png",
-        "weaponSettings": {},
-        "customDPSBase": "",
-        "customDPS": "",
-        "desc": "",
-        "displayStatsALT": {
-            "BASIC": [],
-         },
-        "stats": {},
-        "tags": [],
-    },
-
-
-    //handgun
-    "Last Dagger": {
-        "name": "Last Dagger",
-        "rarity": "Ultimate",
-        "baseATK": 14095,
-
-        "baseCritRate": 0.12,
-        "baseCritDamage": 2.0,
-        "baseWeakPoint": 1.6,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 600,
-        "baseReloadTime": 1.2,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Orange","Orange","Green","Green"],
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.45,
-
-        "ammoType": "General",
-        "weaponType": "Handgun",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_HG_1005_A001.png",
-        "customDPSBase": "lastDaggerTier0Calcs",
-        "customDPS": "",//
-        "desc": "When hitting an enemy, grants the Unique Abilities Patience and Lethal Dagger.\nPatience is reset on reload at max stacks, and grants Strike.\nStrike consumes all rounds, and fires Enhanced Rounds.\nWhen Strike is removed, grants Steps.",
-        "stats": {},
-        "tags": [],
-        "weaponSettings": {
-            "useLethalDagger": true,
-            "useDaggerStrike": false,
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-            "LETHAL DAGGER": [
-                {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
-                {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
-                {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            // "PATIENCE": [
-            //     {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
-            //     {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
-            //     {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            //     {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            // ],
-            "STRIKE": [
-                // {"statType": "duration","statName": "Duration","value": 15,"limit": null,"isModified": false},
-                // {"statType": "","statName": "Max Stacks","value": 30,"limit": null,"isModified": false},
-                // {"statType": "","statName": "+Firearm Crit Rate Base","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                // {"statType": "","statName": "+Crit Rate/Stack","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            // "ANCIENT FIRE": [
-            //     {"statType": "","statName": "Trigger Rate","value": 0.25,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            //     {"statType": "duration","statName": "Duration","value": 3,"limit": null,"isModified": false},
-            //     {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
-            //     {"statType": "","statName": "%Firearm DMG","value": 0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            // ],
-            // "FIREARM SUM": [],
-        },
-    },
-
-
-    //beam rifles
-    "Clairvoyance": {
-        "name": "Clairvoyance",
-        "rarity": "Ultimate",
-        "baseATK": 13362,
-
-        "baseCritRate": 0.20,
-        "baseCritDamage": 2.0,
-        "baseWeakPoint": 1,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 400,
-        "baseReloadTime": 2.20,
-        "magazine": 40,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Blue","Green","Yellow","Yellow"],
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.45,
-
-        "ammoType": "Special",
-        "weaponType": "Beam Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1006_A001.png",
-        "customDPSBase": "clairTier0Calcs",
-        "customDPS": "",//lanceTier0Calcs
-        "desc": "Hitting an enemy with a Stage 2 Beam inflicts Void Gaze on the target.\nHitting an enemy with a Stage 3 Beam inflicts Appalled Calling on the target. This effect is considered to be the same effect as Frostbite in some modes.",
-        "stats": {
-            "ChillATK": 2539,
-        },
-        "tags": [],
-        "weaponSettings": {
-            "clairUseResShred": true,
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-            "VOID GAZE": [
-                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "APPALLED CALLING": [
-                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "-Action SPD","value": -0.90,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-        },
-        "ChargeLevelData": [
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 0
-            },
-            {
-                "ChargeAmount": 1.5,
-                "ChargeRate": 1,
-                "DischargeRate": 0.7,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1
-            },
-            {
-                "ChargeAmount": 1.5,
-                "ChargeRate": 1,
-                "DischargeRate": 0.9,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1.15
-            },
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0.5,
-                "DamageMultiplier": 1.6
-            }
-        ],
-    },
-    "Dimensional Bridge": {
-        "name": "Dimensional Bridge",
-        "rarity": "Rare",
-        "baseATK": 14839,
-
-        "baseCritRate": 0.01,
-        "baseCritDamage": 1.2,
-        "baseWeakPoint": 1,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 500,
-        "baseReloadTime": 1.95,
-        "magazine": 30,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.45,
-
-        "ammoType": "Special",
-        "weaponType": "Beam Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1007_A001.png",
-        "customDPSBase": "genericBeamRifleTier0Calcs",
-        "customDPS": "",
-        "desc": "",
-        "stats": {
-        },
-        "tags": [],
-        "weaponSettings": {
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-        "ChargeLevelData": [
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 0
-            },
-            {
-                "ChargeAmount": 1.2,
-                "ChargeRate": 1,
-                "DischargeRate": 0.8,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1
-            },
-            {
-                "ChargeAmount": 1.2,
-                "ChargeRate": 1,
-                "DischargeRate": 1,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1.75
-            },
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0.3,
-                "DamageMultiplier": 2.5
-            }
-        ],
-    },
-    "Burning 44": {
-        "name": "Burning 44",
-        "rarity": "Rare",
-        "baseATK": 16204,
-
-        "baseCritRate": 0.10,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 500,
-        "baseReloadTime": 2.01,
-        "magazine": 50,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.25,
-        "ZoomInHoldDelayTime": 0.45,
-
-        "ammoType": "Special",
-        "weaponType": "Beam Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1004_A001.png",
-        "customDPSBase": "genericBeamRifleTier0Calcs",
-        "customDPS": "",
-        "desc": "",
-        "stats": {
-        },
-        "tags": [],
-        "weaponSettings": {
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-        "ChargeLevelData": [
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 0
-            },
-            {
-                "ChargeAmount": 1.3,
-                "ChargeRate": 1,
-                "DischargeRate": 0.8,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1
-            },
-            {
-                "ChargeAmount": 1.6,
-                "ChargeRate": 1,
-                "DischargeRate": 1,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1.1
-            },
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0.3,
-                "DamageMultiplier": 1.2
-            }
-        ],
-    },
-    "Dogma 21": {
-        "name": "Dimensional Bridge",
-        "rarity": "Rare",
-        "baseATK": 22042,
-
-        "baseCritRate": 0.01,
-        "baseCritDamage": 1.5,
-        "baseWeakPoint": 1,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 300,
-        "baseReloadTime": 2.31,
-        "magazine": 40,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.29,
-        "ZoomInHoldDelayTime": 0.49,
-
-        "ammoType": "Special",
-        "weaponType": "Beam Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1001_A001.png",
-        "customDPSBase": "genericBeamRifleTier0Calcs",
-        "customDPS": "",
-        "desc": "",
-        "stats": {
-        },
-        "tags": [],
-        "weaponSettings": {
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-        "ChargeLevelData": [
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 0
-            },
-            {
-                "ChargeAmount": 1.3,
-                "ChargeRate": 1,
-                "DischargeRate": 0.8,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1
-            },
-            {
-                "ChargeAmount": 1.6,
-                "ChargeRate": 1,
-                "DischargeRate": 1,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1.1
-            },
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0.3,
-                "DamageMultiplier": 1.2
-            }
-        ],
-    },
-    "Moon Fragment": {
-        "name": "Moon Fragment",
-        "rarity": "Common",
-        "baseATK": 10589,
-
-        "baseCritRate": 0.05,
-        "baseCritDamage": 1.2,
-        "baseWeakPoint": 1,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 600,
-        "baseReloadTime": 1.82,
-        "magazine": 27,
-        "shellCount": 1,
-        "coreArray": null,
-        "RangedInTime": 0.29,
-        "ZoomInHoldDelayTime": 0.49,
-
-        "ammoType": "Special",
-        "weaponType": "Beam Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_BR_1003_A001.png",
-        "customDPSBase": "genericBeamRifleTier0Calcs",
-        "customDPS": "",
-        "desc": "",
-        "stats": {
-        },
-        "tags": [],
-        "weaponSettings": {
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-        },
-        "ChargeLevelData": [
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 0
-            },
-            {
-                "ChargeAmount": 0.4,
-                "ChargeRate": 1,
-                "DischargeRate": 0.9,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1
-            },
-            {
-                "ChargeAmount": 0.4,
-                "ChargeRate": 1,
-                "DischargeRate": 1.1,
-                "SteadyDuration": 0,
-                "DamageMultiplier": 1.2
-            },
-            {
-                "ChargeAmount": 0,
-                "ChargeRate": 0,
-                "DischargeRate": 0,
-                "SteadyDuration": 0.2,
-                "DamageMultiplier": 1.4
-            }
-        ],
-    },
-
-
-    //assault rifles
-    "EXCAVA": {
-        "name": "EXCAVA",
-        "rarity": "Ultimate",
-        "baseATK": 14937,
-        "baseCritRate": 0.03,
-        "baseCritDamage": 1.20,
-        "baseWeakPoint": 1.4,
-        "physicalType": "Pierce",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 588,
-        "baseReloadTime": 2,
-        "magazine": 36,
-        "shellCount": 1,
-
-        "coreArray": ["Rainbow","Rainbow","Blue","Green","Green"],
-        "RangedInTime": 0.2,
-        "ZoomInHoldDelayTime": 0.4,
-
-        "ammoType": "General",
-        "weaponType": "Assault Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_AR_1008_A001.png",
-        "customDPSBase": "excavaTier0Calcs",
-        "customDPS": "excavaCalcs",
-        "desc": "Hitting an enemy grants the unique effect Voltage Charge.\nWhen Voltage Charge reaches max stacks, it changes to the unique effect Energy Grenade.\nWhile Energy Grenade is active, fires an Energy Grenade when shooting while aiming, which deals increased damage based on the number of stacks. Hitting an enemy with the Energy Grenade inflicts Voltage Accumulation.",
-        "weaponSettings": {
-            "useEnergyGrenade": true,
-            "useAimingLauncher": true,
-        },
-        "displayStatsALT": {
-            "BASIC": [],
-            "ENERGY GRENADE": [
-                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-
-                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
-                {"statType": "","statName": "+Crit Rate BASE","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+Crit Rate BASE/Stack","value": 0.05,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-
-                // {"statType": "","statName": "-Chill RES","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "VOLTAGE ACCUMULATION": [
-                {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": false},
-                {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
-                {"statType": "","statName": "-Enemy ELEC RES","value": -0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "-Enemy ELEC RES/Stack","value": -0.035,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "WHILE AIMING": [
-                // {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "Ammo cost per Shot","value": -5,"limit": null,"isModified": false},
-            ],
-            "FIREARM SUM": [],
-        },
-        "stats": {
-            "ElectricATK": 9560,
-        },
-        "tags": [],
-    },
-
-    "Wave of Light": {
-        "name": "Wave of Light",
-        "baseATK": 36141,
-        "baseCritRate": 0.10,
-        "baseCritDamage": 1.80,
-        "baseWeakPoint": 1.8,
-        "physicalType": "Crush",
-        "physicalTypeBonus": 0.10,
-
-        "baseFireRate": 250,
-        "baseReloadTime": 2.2,
-        "magazine": 12,
-        "shellCount": 1,
-        "coreArray": ["Rainbow","Orange","Green","Yellow","Purple"],
-        "RangedInTime": 0.28,
-        "ZoomInHoldDelayTime": 0.3,
-
-        "ammoType": "Impact",
-        "weaponType": "Scout Rifle",
-        "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1005_A001.png",
-        "weaponSettings": {
-            "useSolarHalo": true,
-        },
-        "customDPSBase": "waveTier0Calcs",
-        "customDPS": "",
-        "desc": "",
-        "displayStatsALT": {
-            "BASIC": [],
-            "SOLAR HALO": [
-                {"statType": "duration","statName": "Duration","value": 2,"limit": null,"isModified": false},
-                {"statType": "","statName": "Recoil","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-                {"statType": "","statName": "+BASE Crit Rate","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            "LUNAR HALO": [
-                {"statType": "","statName": "+FirearmATK % Debuff","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
-            ],
-            // "FIREARM SUM": [],
-        },
-        "stats": {
-            "FireATK": 24215,
-        },
-        "tags": ["FirearmCritRateBaseCORE","FirearmATK%OnHitCORE"],
-    },
+    ...sniperData,
     ...weaponsInsertion
 }

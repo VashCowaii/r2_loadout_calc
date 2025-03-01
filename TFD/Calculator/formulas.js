@@ -260,7 +260,12 @@ const calcs = {
         uniqueMulti = uniqueMulti || 1;
         uniqueMulti += index.WeaponUniqueMultiplier + index.WeaponUniqueMultiplierCORE;
 
+
+        // let typeRef = weaponRef.weaponType;
         const attackPercent = index["FirearmATK%"] + index["FirearmATK%CORE"];
+        // + (typeRef==="Handgun" ? index["HandgunATK%"] : 0)
+        // + (typeRef==="Hand Cannon" ? index["HandCannonATK%"] : 0)
+        // + (typeRef==="Shotgun" ? index["ShotgunATK%"] : 0);
         const onHitBonus = index["FirearmATK%OnHit"] + index["FirearmATK%OnHitCORE"];//while called onhit it's more of an enemy debuff
         const weaknessCheck = globalRecords.useFirearmPhysical ? globalRecords.boss.currentBossPartType === weaponRef.physicalType : false;
 
@@ -275,6 +280,9 @@ const calcs = {
         const vulgusFactionSum = (index["VulgusATK"] + index["VulgusATKCORE"]) * (1 + index["VulgusATK%"] + index["VulgusATK%CORE"]);
         const firearmColossusATK = weaponRef.baseATK === 0 ? 0 : colossusCheck ? colossusFactionSum : vulgusFactionSum;
 
+        //TODO: check later if the new inversion bonuses have a %element conversion again, and if they do, check if they work with mental focus or not
+        //if not, I need to add a return stat for basically a conversionBase 2 that will not inherit atk from special effects
+        //on top of that, I'd need to add a new stat on the table for firearmATK that isn't onhit but isn't reg% either, again.
         const firearmAttributeConversionBase = baseFirearmATK * (1 + attackPercent);//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
         const postHitATK = (firearmAttributeConversionBase + (baseFirearmATK * onHitBonus)) * uniqueMulti;
         const totalFirearmATK = (postHitATK + firearmColossusATK) * physicalTypeMulti + needlessBullshitAmount;
@@ -313,12 +321,13 @@ const calcs = {
 
         return {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage}
     },
-    getFirearmElementalSpread(index,elementName,usableBase,critFirearm,wpAveraged) {
+    getFirearmElementalSpread(index,elementName,usableBase,critFirearm,wpAveraged,usableBase2) {
         const elemDR = calcs.getResistanceBasedDR(index,elementName) || 1;
         const givenElementBase = usableBase * (index[`${elementName}ATK%`] + index[`${elementName}ATK%CORE`]) + index[`${elementName}ATK`] + index[`${elementName}ATKCORE`];
         const needlessBullshitAmount = givenElementBase * (index.independentScalar + index.independentScalarCORE);
         const damageElementBase = (givenElementBase * Math.max(0,1 + index[`${elementName}ATK%Bonus`] + index[`${elementName}ATK%BonusCORE`]) + needlessBullshitAmount) * elemDR;
 
+        //TODO: see note under getFirearmATK, usableBase2 will be used to handle conversion amounts using a specific ATK% that is neither normal nor onHit enemy debuffs.
 
         const perHit = damageElementBase * wpAveraged;
         const perCrit = perHit * critFirearm.Damage;
@@ -595,6 +604,49 @@ const customDamage = {
             });
         }
 
+        const currentPathComps2 = componentSetBonuses[globalRecords.components.current2piece]["2pc"];
+        const currentPathComps4 = componentSetBonuses[globalRecords.components.current4piece]["4pc"];
+        console.log(globalRecords.components.current2piece,globalRecords.components.current4piece)
+        //component bonuses
+        if (currentPathComps2.complexBonus && currentPathComps2.complexBonus.length) {
+            let initialTimePassed = currentPathComps2.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPathComps2.complexBonus[0].cooldown : 0;
+            let firstIsSkipped = (currentPathComps2.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+            let complexBonusArray = [];
+
+            for (let bonuses of currentPathComps2.complexBonus) {
+                let newArrayEntry = {
+                    ...bonuses
+                }
+                newArrayEntry.stats = [...bonuses.stats];
+                complexBonusArray.push(newArrayEntry);
+            }
+
+            limitedWeaponBonuses.push({
+                "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                "bonusArray": complexBonusArray 
+            });
+        }
+        if (currentPathComps4.complexBonus && currentPathComps4.complexBonus.length) {
+            let initialTimePassed = currentPathComps4.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPathComps4.complexBonus[0].cooldown : 0;
+            let firstIsSkipped = (currentPathComps4.complexBonus[0].skipFirstShot || false) ? -1 : 0;
+            let complexBonusArray = [];
+
+            for (let bonuses of currentPathComps4.complexBonus) {
+                let newArrayEntry = {
+                    ...bonuses
+                }
+                newArrayEntry.stats = [...bonuses.stats];
+                complexBonusArray.push(newArrayEntry);
+            }
+
+            limitedWeaponBonuses.push({
+                "timesUsed": 0 + firstIsSkipped,"timePassed": initialTimePassed,
+                "bonusArray": complexBonusArray 
+            });
+        }
+
+
+        // globalRecords.components.current2piece
 
         // globalRecords.teamBuffs.complexBonus
         const teamBonusRef = globalRecords.teamBuffs.complexBonus;
@@ -7572,7 +7624,7 @@ const customDamage = {
         }
     },
     lastDaggerTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
-        const weaponRef = sniperList["Last Dagger"];
+        const weaponRef = sniperList["The Last Dagger"];
         const settingsRef = weaponRef.weaponSettings;
 
         if (settingsRef.useLethalDagger) {
@@ -7645,7 +7697,7 @@ const customDamage = {
             readSelection(`weaponBreakdownBody1`).innerHTML = `
             <div class="basicsSummaryBox">
             <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
-                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Last Dagger",true)}
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"The Last Dagger",true)}
             </div>
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
@@ -7871,10 +7923,10 @@ const customDamage = {
                         {"name": "FirearmCritRateBaseCORE","value": 1,"subStackValue": null},
                         {"name": "FirearmATK%OnHitCORE","value": 0.10,"subStackValue": null},
                     ],
-                    "bonusName": "Solar & Lunar Halo",
+                    "bonusName": "Solar Halo",
                     "oneTimeOrStack": "duration",
                     "limit": 1,
-                    "cooldown": 0.5,
+                    "cooldown": 0,
                     "duration": 2,
                     "currentStacks": 0,
                     "timePassedEntry": 0,
@@ -7883,7 +7935,24 @@ const customDamage = {
                     "bonusWasApplied": false,
                     "conditions": ["isReloaded","hasFirearmDamage"],//"hasFirearmDamage",
                     // "skipFirstShot": true,
-                }
+                },
+                {
+                    "stats": [
+                        {"name": "FirearmATK%OnHitCORE","value": 0.10,"subStackValue": null},
+                    ],
+                    "bonusName": "Lunar Halo",
+                    "oneTimeOrStack": "duration",
+                    "limit": 1,
+                    "cooldown": 0,
+                    "duration": 10,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "bonusWasApplied": false,
+                    "conditions": ["isReloaded","hasFirearmDamage"],//"hasFirearmDamage",
+                    // "skipFirstShot": true,
+                },
             ]
         }
         else {
@@ -7913,6 +7982,219 @@ const customDamage = {
             <div class="abilityBreakdownHeader">DESCRIPTION</div>
             <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
             `;
+        }
+    },
+    enduringCalcsTier0(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Enduring Legacy"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.quenchingBonusActive) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "enemyFireResistanceReductionCORE","value": -0.05,"subStackValue": -0.008},
+                    ],
+                    "bonusName": "Quenching (Enduring)",
+                    "oneTimeOrStack": "stack",
+                    "duration": 2,
+                    "cooldown": 0,
+                    "isDurationActive": true,
+                    "isCooldownActive": false,
+                    "clearOnReload": true,
+                    "limit": 50,
+                    "currentStacks": -1,
+                    "timePassedEntry": 0,
+                    
+                    
+                    
+                    // "clearOnReload": true,
+                    "currentStacks": 0,
+                    "timePassedEntry": 0,
+                    // "conditions": [],
+                    "skipFirstShot": true,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+
+
+    // "complexBonus": [
+    //      {
+            // "stats": [
+            //    {"name": "FirearmATK%","value": 0.01,"subStackValue": null},
+            // ],
+            // "bonusName": "Mental Focus (General)",
+            // "oneTimeOrStack": "stack",
+            // "duration": 2,
+            // "cooldown": 0,
+            // "isDurationActive": true,
+            // "isCooldownActive": false,
+            // "clearOnReload": true,
+            // "limit": 150,
+            // "currentStacks": 0,
+            // "timePassedEntry": 0,
+            // "cooldown": 0,
+    //      }
+    //   ],
+
+        //burning target bonus
+        if (settingsRef.enduringTargetBurning) {index["FirearmATK%OnHit"] += 0.11}
+
+        if (!isCycleCalcs) {
+            // const rowInjection = [
+            //     {"name": "+Skill Crit Rate","value": settingsRef.arcaneWaveActive ? critBonus : 0,"unit": "%"},
+            // ]
+            const breakdownArray = [
+                {"header": "ON HIT","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "condition": false,"desc": ""},
+                {"header": "QUENCHING","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["quenchingBonusActive","Use Quenching?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "TARGET BURNING","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["enduringTargetBurning","Target is Burning?"],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Enduring Legacy",true)}
+            </div>
+            <div class="abilityBreakdownHeader">DESCRIPTION</div>
+            <div class="abilityBreakdownDescription">${tooltips.updateSubstatColor(weaponRef.desc)}</div>
+            `;
+        }
+    },
+
+
+    //this function is used as the specialGunFunction in bullet sims for the sake of explosives created by perforator.
+    perfScannerCalcsBase(constructorObject,shotCount,baseDamageOnly,critFirearm,wpAveraged) {
+        let perHit = baseDamageOnly * 0.35;
+        let perCrit = perHit * critFirearm.Damage;
+        let AVG = perHit * critFirearm.Composite;
+
+        let critRate = critFirearm.Rate;
+        
+        let totalTickDamage = 0;
+        let ticks = 0;
+        if (critRate>0) {
+            ticks += 5;
+
+            //crits generate 5 scanner explosives, but the explosives can also crit, so we need to pass through
+            //the crit composite of the dmg but we also need to scale the composite against crit rate as a proportion
+            //because these explosives only generate when a crit happens, so it's not realistic to say these generate
+            //every single time. This is probably confusing for future me, but we have to scale by crit rate TWICE.
+            totalTickDamage += AVG * critRate * 5;
+        }
+        if (wpAveraged>1) {
+            ticks += 1;
+            
+            //weak point hits generate 1 scanner, as such the dmg we need to add is the crit composite like normal
+            //BUT, we need to scale the dmg added to AVG based on your weak point hit rate. So a hit rate of 0%
+            //will results in no dmg being added for the weak point hit scanner +1 creation. Otherwise, it scales normally.
+            totalTickDamage += AVG * (wpAveraged-1);
+        }
+
+        constructorObject.damageAVGTotal += totalTickDamage
+
+        let cryoDescriptionString = "Perforator generates explosives, 5 on crits, and 1 on Weak Point hits. The DMG added scales based on your crit rate for the 5, and your weak point hit rate for the 1."
+        return {"name": "Explosive Scanners","desc": cryoDescriptionString,perHit,perCrit,AVG,ticks,totalTickDamage}
+    },
+    perfTier0Calcs(index,returnObject,isCycleCalcs,nameOverride) {
+        const weaponRef = sniperList["Perforator"];
+        const settingsRef = weaponRef.weaponSettings;
+
+        if (settingsRef.perfUseDetect) {
+            weaponRef.complexBonus = [
+                {
+                    "stats": [
+                        {"name": "WeakPointDamage%CORE","value": 0.10,"subStackValue": null},
+                    ],
+                    "bonusName": "Perforator (Detect)",
+                    "oneTimeOrStack": "stack",
+                    "limit": 1,
+                    "currentStacks": -1,
+                    "timePassedEntry": 0,
+                    "cooldown": 0,
+                    "duration": 0,
+                    "skipFirstShot": true,
+                }
+            ]
+        }
+        else {
+            weaponRef.complexBonus = [];
+        }
+    },
+    perfCalcs(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses) {
+        const settingsRef = weaponRef.weaponSettings;
+
+        let settingsToSpread = settingsRef.perfUseScanners ? {
+            "specialGunFunction": customDamage.perfScannerCalcsBase,
+        } : null;
+
+        let {avgPerShot,totalAVGDPS,totalAVGGun,totalShots,reloadEntries,magazineSize,totalTimePassed,graphParams} = customDamage.generalizedWeaponBreakdown(index,returnObject,isCycleCalcs,weaponRef,limitedWeaponBonuses,true,settingsToSpread);
+
+        if (!isCycleCalcs) {
+            let {bulletArrayString,graphString} = graphParams;
+
+            const rowInjectionSums = [
+                {"name": "Magazine","value": magazineSize,"unit": "","id": "totalMagazineWeapons"},
+                {"name": "Total Fired","value": totalShots,"unit": "","id": "totalShotsFiredWeapons"},
+                {"name": "AVG/Shot","value": avgPerShot,"unit": "","id": "avgPerShotWeapons"},
+                {"name": "SUM AVG","value": totalAVGGun,"unit": "","id": "totalAVGWeapons"},
+                {"name": "AVG DPS","value": totalAVGDPS,"unit": "","id": "totalAVGWeaponsDPS"},
+            ]
+
+            const breakdownArray = [
+                {"header": "EXPLOSIVE SCANNER","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["perfUseScanners","Use Scanner DMG?"],
+                    // "rowInjection": [rowInjection,""],
+                    "condition": false,"desc": ""},
+                {"header": "DETECT","value": null,"modifier": null,"hasCritAVG": null,"unit": "",
+                    "toggleElemID": ["perfUseDetect","Use WP Bonus?"],
+                    "condition": false,"desc": ""},
+                {"header": "FIREARM SUM","value": null,"modifier": null,"hasCritAVG": true,"unit": "",
+                    "rowInjection": [rowInjectionSums,""],
+                    "condition": false,"desc": ""},
+            ];
+            const bodyString = `weaponBreakdownBody1`;
+            
+            const addRow = calcsUIHelper.addHealingBoxCluster;
+            readSelection(`weaponBreakdownBody1`).innerHTML = `
+            <div class="basicsSummaryBox" id="lepicResultsBox">
+            <div class="traitMegaTitleHeader">UNIQUE ABILITY</div>
+                ${calcsUIHelper.addHealingBoxRows(bodyString,breakdownArray,weaponRef.displayStatsALT,index,returnObject,"Perforator",true)}
+            </div>
+
+
+            ${weaponRef.magazine===0 ? `<div class="missingWeaponDisplayBox" style="color:lightcoral">SELECT A WEAPON TO SEE BULLET SIMULATION INFO.</div>` :
+                `<br>
+                <div class="basicsSummaryBox">
+                    ${graphString}
+                </div>
+                <div class="basicsSummaryBox">
+                <div class='weaponBreakdownSplitterHeader'>BULLET INFO</div>
+                    <div class="tooltipHeader">Selection</div>
+                    <div class="bulletSelectorIDRowBox">
+    
+                        <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(-1)">&#9664;</div>
+                        <div class="traitLevelDisplay">
+                            <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="${totalShots+reloadEntries}" step="1" value="1" onchange="bullets.updateExpandedBullet()">
+                        </div> 
+                        <div class="toggleArrowBox" onclick="bullets.updateExpandedBullet(1)">&#9654;</div>
+                    </div>
+                    ${bulletArrayString}
+                </div>
+                `}
+            `;
+        }
+        else {
+            return {avgPerShot,totalAVGDPS,totalAVGGun}
         }
     },
 

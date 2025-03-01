@@ -7,14 +7,14 @@ const bullets = {
 
         return {adjustedRateValue,modifiedRate}
     },
-
+    //bonusEntry, tableCopy, null, null, false,true
     //          bonusEntry, tableCopy,          null,       null,       false,          true
     applyStats(bonusEntry, tableCopy, constructorObject, timesUsed, reversedBonus, invertBonusRemoval) {
         for (let stat of bonusEntry.stats) {
             const valueToGive = stat.subStackValue && timesUsed>1 ? stat.subStackValue : stat.value;
             tableCopy[stat.name] += valueToGive * (invertBonusRemoval ? -1 : 1);
             //if we flip the bonus to only be applied on the single shot and not after, then push the bonus to memory to reverse later
-            if (reversedBonus) {constructorObject.bonusesMemory.push([stat.name, stat.value]);}
+            if (reversedBonus) {constructorObject.bonusesMemory.push([stat.name, valueToGive]);}
         }
         if (constructorObject) {
             constructorObject.bonusesApplied.push(`${bonusEntry.bonusName} [x${timesUsed}]`);
@@ -124,7 +124,8 @@ const bullets = {
             let constructorObject = {};
             
             let currentRate = snapshot.modifiedRate;//time between shots with the stacks applied
-            nextShotTime = timePassed + (reloadShotDelayApplied ? currentRate : weaponRef.RangedInTime);//time for the next shot
+            //time for the next shot, this will either be the actual fire rate delay OR it will be the ranged in time of the weapon after a reload
+            nextShotTime = timePassed + (reloadShotDelayApplied ? currentRate : weaponRef.RangedInTime);
             reloadShotDelayApplied = true;
             if (shotCount === 0) {nextShotTime = 0;}
             if (usedMagazine < actualMagSize) {
@@ -163,7 +164,7 @@ const bullets = {
                     let priorReloadTime = initialTimePassed;
                     if (bonusEntry.reloadTimePassed>0 && !bonusEntry.reloadTimeApplied) {
 
-                        bonusEntry.timePassedEntry += timePassed-bonusEntry.timeOfReload-currentRate + weaponRef.RangedInTime;
+                        bonusEntry.timePassedEntry += timePassed-bonusEntry.timeOfReload-currentRate// + weaponRef.RangedInTime;
                         //because we need the rate addition to reach the current time passed, and the difference in rates is already accounted for in the reload time passed
                         priorReloadTime = bonusEntry.timeOfReload;
                         bonusEntry.timeOfReload = 0;
@@ -189,7 +190,7 @@ const bullets = {
                     const entrySkipsFirstShot = bonusEntry.skipFirstShot;
                     if (clearReloadBonus || durationGapFailed) {
                         if (bonusEntry.oneTimeOrStack === "stack") {
-                            for (let i=0;i<bonusEntry.currentStacks;i++) {bullets.applyStats(bonusEntry, tableCopy, null, null, false,true);}
+                            for (let i=0;i<(bonusEntry.currentStacks - (entrySkipsFirstShot ? -1 : 0));i++) {bullets.applyStats(bonusEntry, tableCopy, null, i, false,true);}
                         }
                         bonusEntry.currentStacks = entrySkipsFirstShot ? -1 : 0;
                         bonusEntry.timePassedEntry = 0;
@@ -256,6 +257,32 @@ const bullets = {
                                 if (bonusEntry.bonusWasApplied != undefined){bonusEntry.bonusWasApplied = false;}
                             }
                             bonusEntry.currentStacks = 0;
+
+
+                            //if we are coming off a reload and the cooldown has been passed and we meet the conditions, then apply the bonus again(something like wave of light's solar halo weapon ability)
+                            //otherwise if it expires in a reload the reload doesn't check to see if it should apply again.
+                            if (bonusEntry.cooldown >= 0 && bonusEntry.timePassedEntry >= bonusEntry.cooldown) {
+                                const durationResetChecker2 = !bonusEntry.isDurationActive && bonusEntry.isCooldownActive && bonusEntry.timePassedEntry >= bonusEntry.cooldown && !conditionFailed;
+                                if (durationResetChecker2) {//!entrySkipsFirstShot && 
+                                    // if (bonusEntry.currentStacks === 0) {bonusEntry.timePassedEntry = 0;}
+                                    bonusEntry.timePassedEntry = 0; //since the effects are triggered by shots or reloads or w/e, reset the time passed to a fresh 0. Later if I have a cd based effect that isn't triggered by a shot, I might need -= bonusEntry.cooldown
+                                    bonusEntry.isDurationActive = true; //get the duration back on
+                                    bonusEntry.isCooldownActive = false; //close out the cooldown
+                                }
+
+                                if (bonusEntry.currentStacks < bonusEntry.limit && !conditionFailed) {
+                                    bonusEntry.currentStacks += 1;//Count this use
+    
+                                    //if this is a duration based effect that triggers by a shot but doesn't apply to it, then skip bonuses on this shot
+                                    if (bonusEntry.currentStacks <= 0) {}
+                                    else {
+                                        // Apply bonuses while duration is active
+                                        bullets.applyStats(bonusEntry, tableCopy, constructorObject, bonusEntry.currentStacks, reversedBonus);
+                                        //if this is something like a reload trigger, the reload trigger won't be true later, so I need to say the bonus was applied and remove it later
+                                        if (bonusEntry.bonusWasApplied != undefined){bonusEntry.bonusWasApplied = true;}
+                                    }
+                                }
+                            }
                         }
 
                         if (durationResetChecker) {
@@ -409,7 +436,9 @@ const bullets = {
             const preElementDamage = firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
             const damage = totalFirearmATK;
             const physDR = calcs.getResistanceBasedDR(tableCopy,"DEF");
-            const baseDamage = Math.floor(damage * wpAveraged) * physDR;
+            const baseDamage = damage * wpAveraged * physDR;
+
+            const baseDamageOnly = damage * physDR;
 
             const critFirearm = calcs.getFirearmCritComposites({totalFirearmCritRate,totalFirearmCritDamage});
             const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
@@ -453,7 +482,7 @@ const bullets = {
                 constructorObject.elementalDamage = skillOnly ? 0 : elementalDamage;
 
                 //shit like Hailey's cryo
-                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject,shotCount);}
+                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject,shotCount,baseDamageOnly,critFirearm,wpAveraged);}
                 if (specialSkillFunction) {constructorObject.specialSkillFunction = specialSkillFunction(constructorObject,tableCopy,returnObject,isCycleCalcs,nameOverride);}
 
                 priorShotCount = shotCount;

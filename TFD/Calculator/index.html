@@ -381,6 +381,42 @@
                                     </table>
 
                                 </div>
+                                <div class="statisticSettingsRow hasHoverTooltip">
+                                    <span class="statsRowNameBuffs">Enzo</span>
+                                    <span class="rowTraceLine"></span>
+                                    <div class="statsRowToggle">
+                                        <label class="toggleContainer">
+                                            <input type="checkbox" class="toggleCheckbox" id="useTeamBuffsEnzo" onchange="userTriggers.updateTeamBuffsObject()">
+                                            <span class="toggleSlider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="teamBuffBreakdownHolder" id="teamBuffsEnzoBox" style="display: none;">
+                                    <!-- <span class="rowTraceLine"></span> -->
+                                    <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                        <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                            <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
+                                            <div style="padding-right: 5px;">Firearm Enhancer</div>
+                                            <div class="totalHealingValue">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsEnzoFirearmEnhancer" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                            <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
+                                            <div style="padding-right: 5px;">Perfect Support</div>
+                                            <div class="totalHealingValue">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="teamBuffsEnzoPerfectSupport" onchange="userTriggers.updateTeamBuffsObject()">
+                                                    <span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
 
 
                                 <!-- <div class="traitMegaTitleHeaderTeamBuffsSubHeader">Weapons</div> -->
@@ -1655,6 +1691,7 @@
 <script src="/TFD/Calculator/descendantMods.js"></script> <!-- desc mod data -->
 <script src="/TFD/Calculator/Weapons/cores.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/parsedErosionData.js"></script> <!-- weapon data -->
+<script src="/TFD/Calculator/Weapons/snipersData.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/Weapons/snipers.js"></script> <!-- weapon data -->
 <script src="/TFD/Calculator/WeaponMods/highPowerRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/impactRounds.js"></script> <!-- weapon mod data -->
