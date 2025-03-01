@@ -236,8 +236,19 @@ const userTriggers = {
 
                 //TODO: potential issue later if two bonuses can provide the same stat to the teamRef.stats object
                 //need to potentially define all stats as 0 first then += them in later.
+                if (teamRef.stats.FirearmCritRateBase) {
+                    teamRef.stats.FirearmCritRateBase += 0.29;
+                }
+                else {
                     teamRef.stats.FirearmCritRateBase = 0.29;
+                }
+
+                if (teamRef.stats.BaseWeakPointBonus) {
+                    teamRef.stats.BaseWeakPointBonus += 0.15;
+                }
+                else {
                     teamRef.stats.BaseWeakPointBonus = 0.15;
+                }
 
                     // FirearmCritRateBase
                     // BaseWeakPointBonus
@@ -248,8 +259,20 @@ const userTriggers = {
 
                 //TODO: potential issue later if two bonuses can provide the same stat to the teamRef.stats object
                 //need to potentially define all stats as 0 first then += them in later.
-                teamRef.stats.FirearmCritRate = 0.20;
-                teamRef.stats["FirearmATK%"] = 0.20;
+
+                if (teamRef.stats.FirearmCritRate) {
+                    teamRef.stats.FirearmCritRate += 0.20;
+                }
+                else {
+                    teamRef.stats.FirearmCritRate = 0.20;
+                }
+
+                if (teamRef.stats["FirearmATK%"]) {
+                    teamRef.stats["FirearmATK%"] += 0.20;
+                }
+                else {
+                    teamRef.stats["FirearmATK%"] = 0.20;
+                }
                 
             }
         }
