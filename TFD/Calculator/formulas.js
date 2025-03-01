@@ -606,7 +606,6 @@ const customDamage = {
 
         const currentPathComps2 = componentSetBonuses[globalRecords.components.current2piece]["2pc"];
         const currentPathComps4 = componentSetBonuses[globalRecords.components.current4piece]["4pc"];
-        console.log(globalRecords.components.current2piece,globalRecords.components.current4piece)
         //component bonuses
         if (currentPathComps2.complexBonus && currentPathComps2.complexBonus.length) {
             let initialTimePassed = currentPathComps2.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPathComps2.complexBonus[0].cooldown : 0;
