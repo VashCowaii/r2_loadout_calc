@@ -155,7 +155,7 @@ const userTriggers = {
                 else {
                     const primaryAmount = (lunaMP * excitingPath.powerMods[isLunaAggressive ? "firearmATKBonusRate" : "powerRatioRate"])/100;
                     teamRef.stats[primaryEnhancement] = calcs.customTruncate(primaryAmount + 0.00001,4);
-                    console.log(teamRef.stats[primaryEnhancement])
+                    // console.log(teamRef.stats[primaryEnhancement])
                 }
             }
             //BLUE
@@ -459,6 +459,8 @@ const userTriggers = {
 
             readSelection(`damageAbilityIcon${i}`).src = abilityRefs[`ability${i}`][path].image;
             readSelection(`damageAbilityIcon${i}`).style.filter = color;
+            readSelection(`damageAbilityIcon${i}Comparisons`).src = abilityRefs[`ability${i}`][path].image;
+            readSelection(`damageAbilityIcon${i}Comparisons`).style.filter = color;
 
             readSelection(`abilityBreakdownHeader${i}`).innerHTML = abilityRefs[`ability${i}`][path].name.toUpperCase();
             let typeString = "";
@@ -884,6 +886,7 @@ const userTriggers = {
     },
     updateComponentSelections() {
         const globalRef = globalRecords.components;
+        // globalRecords.components.current4piece
 
         //Clear invalid or dupe roll selections
         userTriggers.checkInvalidComponentSelections();
@@ -1743,16 +1746,17 @@ const formulasValues = {
         index[ratioTable[reactorRef.currentAttribute]] += 0.2;
         index[ratioTable[reactorRef.currentType]] += 0.2;
     },
-    pullComponentStats(index) {
+    pullComponentStats(index,componentSetOverride) {
         const globalRef = globalRecords.components;
         let pullStats = formulasValues.pullStats;
+        const overrideCheck = componentSetOverride && componentSetOverride.length;
 
         //add the main stats of each component
         // console.log(globalRef.auxiliary)
-        index[auxiliary[globalRef.auxiliary].headerStat] += auxiliary[globalRef.auxiliary].value;
-        index[sensor[globalRef.sensor].headerStat] += sensor[globalRef.sensor].value;
-        index[memory[globalRef.memory].headerStat] += memory[globalRef.memory].value;
-        index[processor[globalRef.processor].headerStat] += processor[globalRef.processor].value;
+        index[auxiliary[overrideCheck ? componentSetOverride[0] : globalRef.auxiliary].headerStat] += auxiliary[overrideCheck ? componentSetOverride[0] : globalRef.auxiliary].value;
+        index[sensor[overrideCheck ? componentSetOverride[0] : globalRef.sensor].headerStat] += sensor[overrideCheck ? componentSetOverride[0] : globalRef.sensor].value;
+        index[memory[overrideCheck ? componentSetOverride[0] : globalRef.memory].headerStat] += memory[overrideCheck ? componentSetOverride[0] : globalRef.memory].value;
+        index[processor[overrideCheck ? componentSetOverride[0] : globalRef.processor].headerStat] += processor[overrideCheck ? componentSetOverride[0] : globalRef.processor].value;
 
         index[Object.keys(auxiliaryRolls[globalRef.auxiliarySub1].stats)[0]] += globalRef.auxiliarySub1Value || 0;
         index[Object.keys(auxiliaryRolls[globalRef.auxiliarySub2].stats)[0]] += globalRef.auxiliarySub2Value || 0;
@@ -1766,24 +1770,38 @@ const formulasValues = {
         index[Object.keys(processorRolls[globalRef.processorSub1].stats)[0]] += globalRef.processorSub1Value || 0;
         index[Object.keys(processorRolls[globalRef.processorSub2].stats)[0]] += globalRef.processorSub2Value || 0;
 
-        //later, look into doing this in a way that just has the parts provide a +1 to greatTable during the earlier pullstats section,
-        //then no for loops are needed. low priority, but it'd be better
-        const setListArray = Object.keys(componentSetBonuses);
-        const compArray = [globalRef.auxiliary,globalRef.sensor,globalRef.memory,globalRef.processor];
-        let setCounter = {};
-        //make a quick object with each key as a set name, then add to the count of each set as needed.
-        for (let entry of setListArray) {setCounter[entry] = 0;}
-        for (let item of compArray) {setCounter[item] += 1;}
-        for (let entry of setListArray) {
-            if (setCounter[entry] >= 2) {
-                pullStats(index,componentSetBonuses[entry]["2pc"].stats);
-                globalRef.current2piece = entry;
-                //we'll never reach a 4 set if we don't have a 2 sec, so we can include the 4set logic inside the 2set
-                if (setCounter[entry] === 4) {
-                    pullStats(index,componentSetBonuses[entry]["4pc"].stats);
-                    globalRef.current4piece = entry;
+        if (!overrideCheck) {
+            //later, look into doing this in a way that just has the parts provide a +1 to greatTable during the earlier pullstats section,
+            //then no for loops are needed. low priority, but it'd be better
+            const setListArray = Object.keys(componentSetBonuses);
+            const compArray = [globalRef.auxiliary,globalRef.sensor,globalRef.memory,globalRef.processor];
+            let setCounter = {};
+            //make a quick object with each key as a set name, then add to the count of each set as needed.
+            for (let entry of setListArray) {setCounter[entry] = 0;}
+            for (let item of compArray) {setCounter[item] += 1;}
+            let set2Found = false;
+            let set4Found = false;
+            for (let entry of setListArray) {
+                if (setCounter[entry] >= 2) {
+                    set2Found = true;
+                    pullStats(index,componentSetBonuses[entry]["2pc"].stats);
+                    globalRef.current2piece = entry;
+                    //we'll never reach a 4 set if we don't have a 2 sec, so we can include the 4set logic inside the 2set
+                    if (setCounter[entry] === 4) {
+                        set4Found = true;
+                        pullStats(index,componentSetBonuses[entry]["4pc"].stats);
+                        globalRef.current4piece = entry;
+                    }
                 }
             }
+            if (!set2Found) {globalRef.current2piece = "";}
+            if (!set4Found) {globalRef.current4piece = "";}
+        }
+        else {
+            pullStats(index,componentSetBonuses[componentSetOverride[0]]["2pc"].stats);
+            pullStats(index,componentSetBonuses[componentSetOverride[0]]["4pc"].stats);
+            // globalRef.current2piece = componentSetOverride[0];
+            // globalRef.current4piece = componentSetOverride[0];
         }
 
 
@@ -1830,8 +1848,16 @@ const formulasValues = {
     },
 }
 
+                                    //modArrayOverride,weaponModOverride,reactorRollsOverride,weaponSubstatOverride,weaponCoreOverride
+function updateFormulas(isCycleCalcs,overrideObject) {
 
-function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorRollsOverride,weaponSubstatOverride,weaponCoreOverride) {
+    const modArrayOverride = overrideObject ? overrideObject.modArrayOverride ?? null : null;
+    const weaponModOverride = overrideObject ? overrideObject.weaponModOverride ?? null : null;
+    const reactorRollsOverride = overrideObject ? overrideObject.reactorRollsOverride ?? null : null;
+    const weaponSubstatOverride = overrideObject ? overrideObject.weaponSubstatOverride ?? null : null;
+    const weaponCoreOverride = overrideObject ? overrideObject.weaponCoreOverride ?? null : null;
+    const componentSetOverride = overrideObject ? overrideObject.componentSetOverride ?? null : null;
+
     let tableReference = {...greatTableKnowerOfAll};//get a fresh table to work with
     const optBonus = globalRecords.reactor.isUltimate ? 1.6 : 1.4;
     tableReference.PowerOptimization += globalRecords.reactor.weaponMatched ? optBonus : 1;
@@ -1841,13 +1867,13 @@ function updateFormulas(isCycleCalcs,modArrayOverride,weaponModOverride,reactorR
     const reactorRef = globalRecords.reactor;
 
     formulasValues.pullModStats(tableReference,modArrayOverride);
-    formulasValues.pullComponentStats(tableReference);
+    formulasValues.pullComponentStats(tableReference,componentSetOverride);
     formulasValues.pullReactorStats(tableReference,reactorRollsOverride);
     formulasValues.pullWeaponStats(tableReference,weaponModOverride,weaponSubstatOverride,weaponCoreOverride);
     formulasValues.pullAbilityStats(tableReference);
     formulasValues.pullTeamBuffsStats(tableReference);
     
-    const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride);
+    const {limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses} = customDamage.callAbilityFunctionsTier0(tableReference,isCycleCalcs,modArrayOverride,weaponModOverride,componentSetOverride);
 
     const {baseCharacterHealth,baseHealthBonus,healthPercentBonus,totalHealth,displayHealth} = calcs.getHealth(tableReference,characterRef);
     const {baseCharacterShield,baseShieldBonus,shieldPercentBonus,totalShield,displayShield} = calcs.getShield(tableReference,characterRef);
@@ -1949,3 +1975,43 @@ globalRecords.URLImportCompleted = true;
 // updateFormulas();
 moduleQueryFunctions.getModuleQueryResults();
 userTriggers.toggleDisplayMode(globalRecords.currentDisplayMode);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// base chill res of 251,213
+// ~ 0.23033990122320540929197567992408 dmg TAKEN
+
+// Inversion is -20%
+// FW is 20%
+// Clair is 40%
+
+// 100,485.2 clair and inv no FW
+// 0.3212032659770396417923545897556 dmg TAKEN
+
+// 50,242.6 clair, inv, and FW
+// 0.40091021434520790334126491754841 dmg TAKEN

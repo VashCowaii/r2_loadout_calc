@@ -1035,8 +1035,7 @@ const componentSetBonuses = {
         "4pc": {
             "desc": "Fusion Skill Power Modifier +12%\nOn Electric Skill Attack upon an enemy activates Executioner's Thunderbolt at the target's location,\ndealing additional Electric damage equivalent to 100% of Skill Power Modifier (Cooldown 2s) at a 50% chance.<br>Note: The damage per bolt is your skill power * 1 + skill and electric power modifier. It's pretty fuckin awful.",
             "stats": {
-                "SkillCost": 0.15,
-                "PowerRatioBase": 0.261
+                "PowerModifierFusion": 0.12,
             },
             "tags": [],
         },
@@ -1051,7 +1050,7 @@ const componentSetBonuses = {
             "tags": [],
         },
         "4pc": {
-            "desc": "Firearm ATK increases proportionally to the ratio of Max HP to HP lost, up to 26%. When HP is 50% or lower, MP Recovery -22%, HP Recovery +16.4% for 10s (Cooldown 30s)",
+            "desc": "Firearm ATK increases proportionally to the ratio of Max HP to HP lost, up to 26%. When HP is 50% or lower, MP Recovery -22%, HP Recovery +16.4% for 10s (Cooldown 30s).<br>ATK bonus assumed maximum when selected.",
             "stats": {
                 "FirearmATK%": 0.26,
                 "MPRecovery": -0.22,

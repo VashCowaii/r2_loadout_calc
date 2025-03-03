@@ -441,7 +441,7 @@ const calcsUIHelper = {
 
 let localInsertionDamage = localCheck ? {} : customDamageLocal;
 const customDamage = {
-    callAbilityFunctionsTier0(index,isCycleCalcs,modArrayOverride,weaponModOverride) {
+    callAbilityFunctionsTier0(index,isCycleCalcs,modArrayOverride,weaponModOverride,componentSetOverride) {
         const globalRef = globalRecords.character;
         const selectedCharacter = globalRef.currentCharacter;
 
@@ -604,8 +604,9 @@ const customDamage = {
             });
         }
 
-        const currentPathComps2 = componentSetBonuses[globalRecords.components.current2piece]["2pc"];
-        const currentPathComps4 = componentSetBonuses[globalRecords.components.current4piece]["4pc"];
+        const compSetOverrideCheck = componentSetOverride && componentSetOverride.length;
+        const currentPathComps2 = componentSetBonuses[compSetOverrideCheck ? componentSetOverride[0] : globalRecords.components.current2piece]["2pc"];
+        const currentPathComps4 = componentSetBonuses[compSetOverrideCheck ? componentSetOverride[0] : globalRecords.components.current4piece]["4pc"];
         //component bonuses
         if (currentPathComps2.complexBonus && currentPathComps2.complexBonus.length) {
             let initialTimePassed = currentPathComps2.complexBonus[0].oneTimeOrStack === "cooldown" ? currentPathComps2.complexBonus[0].cooldown : 0;
@@ -8436,178 +8437,75 @@ let moduleQueryFunctions = {
             for (let entry of referenceArray) {if (entry != "") {readSelection("queryMod").value = entry;break;}}
         }
     },
-    getUpdatedQueryModSelections(queryType) {
-        //this function is purely for populating the correct Target dropdown info based on what is provided
-        //but no actual math is done here, that's in the next function that calls this one
-        const characterRef = globalRecords.character;
-        const currentCharacter = characterRef.currentCharacter;
-        const currentCharacterMods = characterRef.mods;
-        const abilityArray = characterRef.abilityArray;
-        const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
-
-        const globalWeapon = globalRecords.weapon;
-        const currentWeaponRef = sniperList[globalWeapon.currentWeapon];
-        const currentWeaponMods = globalWeapon.mods;
-        const currentAmmoType = currentWeaponRef.ammoType;
-        const currentWeaponType = currentWeaponRef.weaponType;
-        const reactorRef = globalRecords.reactor;
-        const weaponRef = globalRecords.weapon;
-
-        const typeRef2 = {
-            "Ability": currentCharacterMods,
-            "Stat": currentCharacterMods,
-            "Ability - Weapon Based": currentWeaponMods,
-            "Weapon": currentWeaponMods,
-            "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
-            "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
-            "Weapon - Cores": [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`],
-        }
-
-        //queryCycledTargetName queryCycledTargetName
-        const queryCycledTargetNames = {
-            "Ability": "MOD",
-            "Stat": "STAT",
-            "Ability - Weapon Based": "MOD",
-            "Weapon": "MOD",
-            "Ability - Reactor Roll": "SUB",
-            "Weapon - Substat": "SUB",
-            "Weapon - Cores": "CORE",
-        }
-
-        //character stuff ignores the first 2 slots, whereas weapon stuff does not
-        let isWeaponBased = queryType.toLowerCase().includes("weapon");
-        let isReactorBased = queryType.toLowerCase().includes("reactor");
-        let newModArray1 = [...typeRef2[queryType]];
-        let newModArray2 = isWeaponBased ? [...typeRef2[queryType]] 
-        : (isReactorBased ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2));//to exclude the first 2 mods, the augment and the subattack mod
-        //but if it is still an ability based query but uses reactors, skip the slice as we need every entry in the array.
-        characterRef.modQueryOptions = (isWeaponBased || isReactorBased) ? [...typeRef2[queryType]] : [...typeRef2[queryType]].slice(2);
-
-        // Array of strings that will be the option names
-        const queryLister = readSelection("queryModList");
-        queryLister.innerHTML = "";
-        // Loop through the array and create option elements
-        newModArray2.forEach(function(optionName) {
-            const option = document.createElement("option");
-            option.textContent = optionName; // Set the display name
-            queryLister.appendChild(option); // Append the option to the select element
-        });
-
-        let isValidMod = false;
-        for (let entry of newModArray2) {
-            if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
-        }
-        if (!isValidMod) {
-            let backupFound = false;
-            for (let entry of newModArray2) {
-                if (entry != "") {readSelection("queryMod").value = entry;backupFound = true;break;}
-            }
-            if (!backupFound) {readSelection("queryMod").value = "";}
-        }
-        
-        readSelection("queryCycledTargetName").innerHTML = queryCycledTargetNames[queryType];
-        
-        if (queryType === "Ability" || queryType === "Ability - Weapon Based" || queryType === "Ability - Reactor Roll") {
-            const abilityLister = readSelection("queryAbilityList");
-            const abilityOptionLister = readSelection("queryAbilityOptionList");
-
-            //ability array handling is done within userTriggers.updateSelectedMod
-            const arrayRef = characterRef.abilityArray;
-            const abilityRefs = characters[currentCharacter].abilities;
-
-            //ABILITY KEYS
-            let abilityRefArray = [];
-            for (let i=1;i<=5;i++) {
-                const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
-                const currentPath = abilityRefs[`ability${i}`][path];
-                abilityRefArray.push(currentPath.name);
-            }
-            const abilityRefSet = new Set(abilityRefArray);
-            readSelection("queryAbilityBoxHolder").style.display = "flex";
-            abilityLister.innerHTML = "";
-            abilityRefArray.forEach(function(optionName) {
-                const option = document.createElement("option");
-                option.textContent = optionName;
-                abilityLister.appendChild(option);
-            });
-            if (!abilityRefSet.has(readSelection("queryAbility").value)) {readSelection("queryAbility").value = abilityRefArray[0]}
-            const selectedAbilityIndexReference = abilityRefArray.indexOf(readSelection("queryAbility").value);
-            const selectedAbilityPath = abilityRefs[`ability${selectedAbilityIndexReference+1}`][arrayRef[selectedAbilityIndexReference] === 0 ? "base" : arrayRef[selectedAbilityIndexReference]];
-            const currentAbilityReturnOptions = selectedAbilityPath.returnStatOptions;
-
-            //ABILITY OPTION RETURN KEYS
-            const optionKeys = Object.keys(currentAbilityReturnOptions);
-            const optionKeysSet = new Set(optionKeys);
-            abilityOptionLister.innerHTML = "";
-            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
-            else {
-                optionKeys.forEach(function(optionName) {
-                    const option = document.createElement("option");
-                    option.textContent = optionName || "N/A (or not coded yet)";
-                    abilityOptionLister.appendChild(option);
-                });
-                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[optionKeys.length-1]}
-            }
-            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
-            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : currentAbilityReturnOptions[optionKeys[selectedAbilityOptionIndexReference]];
-
-            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
-        }
-        else if (queryType === "Weapon" || queryType === "Weapon - Substat" || queryType === "Weapon - Cores") {
-            //STAT OPTION RETURN KEYS
-            readSelection("queryAbilityBoxHolder").style.display = "none";
-            const abilityOptionLister = readSelection("queryAbilityOptionList");
-            const statRefs = weaponTargetReferences;
-
-            const optionKeys = Object.keys(statRefs);
-            const optionKeysSet = new Set(optionKeys);
-            abilityOptionLister.innerHTML = "";
-            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
-            else {
-                optionKeys.forEach(function(optionName) {
-                    const option = document.createElement("option");
-                    option.textContent = optionName || "N/A (or not coded yet)";
-                    abilityOptionLister.appendChild(option);
-                });
-                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
-            }
-            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
-            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
-            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
-
-            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
-        }
-        else if (queryType === "Stat") {
-            //STAT OPTION RETURN KEYS
-            readSelection("queryAbilityBoxHolder").style.display = "none";
-            const abilityOptionLister = readSelection("queryAbilityOptionList");
-            const statRefs = characterRef.statTargets;
-
-
-            const optionKeys = Object.keys(statRefs);
-            const optionKeysSet = new Set(optionKeys);
-            abilityOptionLister.innerHTML = "";
-            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
-            else {
-                optionKeys.forEach(function(optionName) {
-                    const option = document.createElement("option");
-                    option.textContent = optionName || "N/A (or not coded yet)";
-                    abilityOptionLister.appendChild(option);
-                });
-                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
-            }
-            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
-            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
-            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
-
-            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
-        }
-    },
     updateQueryCoreSelected(imageElementID) {
         const weaponRef = globalRecords.weapon;
         const typeRef2 = [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`];
 
         readSelection("queryMod").value = typeRef2[imageElementID-1];
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryAbilitySelected(imageElementID) {
+        // damageAbilityIcon1Comparisons //readSelection("centerAbilityImageRowComparisons").style.display = "flex";
+        // const weaponRef = globalRecords.weapon;
+        // const typeRef2 = [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`];
+
+
+        const characterRef = globalRecords.character;
+        const currentCharacter = characterRef.currentCharacter;
+        //ability array handling is done within userTriggers.updateSelectedMod
+        const arrayRef = characterRef.abilityArray;
+        const abilityRefs = characters[currentCharacter].abilities;
+
+        //ABILITY KEYS
+        let abilityRefArray = [];
+        for (let i=1;i<=5;i++) {
+            const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+            const currentPath = abilityRefs[`ability${i}`][path];
+            abilityRefArray.push(currentPath.name);
+        }
+        const abilityRefSet = new Set(abilityRefArray);
+
+        if (!abilityRefSet.has(readSelection("queryAbility").value)) {imageElementID = 1}
+        else if (!imageElementID) {
+            imageElementID = abilityRefArray.indexOf(readSelection("queryAbility").value) + 1;
+        }
+        readSelection("queryAbility").value = abilityRefArray[imageElementID-1];
+
+        for (let i=1;i<=5;i++) {
+            readSelection(`damageAbilityIcon${i}Comparisons`).style.border = "none";
+            readSelection(`damageAbilityIcon${i}Comparisons`).style.opacity = "0.3";
+        }
+        readSelection(`damageAbilityIcon${imageElementID}Comparisons`).style.border = "1px solid white";
+        readSelection(`damageAbilityIcon${imageElementID}Comparisons`).style.opacity = "1";
+
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryTypeSelected(imageElementID) {
+        let abilityRefArray = ["Ability","Weapon","Stat"];
+
+        readSelection("queryType").value = abilityRefArray[imageElementID-1];
+
+        for (let i=1;i<=3;i++) {
+            readSelection(`queryTypeSelectorDisplayBox${i}`).style.border = "none";
+            readSelection(`queryTypeSelectorDisplayBox${i}`).style.opacity = "0.3";
+        }
+        readSelection(`queryTypeSelectorDisplayBox${imageElementID}`).style.border = "1px solid white";
+        readSelection(`queryTypeSelectorDisplayBox${imageElementID}`).style.opacity = "1";
+
+        moduleQueryFunctions.getModuleQueryResults();
+    },
+    updateQueryGearSelected(imageElementID) {
+        let abilityRefArray = ["Character [Mods]","Reactor [Substats]","Weapon [Mods]","Weapon [Substats]","Weapon [Cores]","Component [Sets]"];
+
+        readSelection("queryTypeGear").value = abilityRefArray[imageElementID-1];
+
+        for (let i=1;i<=6;i++) {
+            readSelection(`queryTypeSelectorGearBox${i}`).style.border = "none";
+            readSelection(`queryTypeSelectorGearBox${i}`).style.opacity = "0.3";
+        }
+        readSelection(`queryTypeSelectorGearBox${imageElementID}`).style.border = "1px solid white";
+        readSelection(`queryTypeSelectorGearBox${imageElementID}`).style.opacity = "1";
+
         moduleQueryFunctions.getModuleQueryResults();
     },
     updateQueryReactorSelected(imageElementID) {
@@ -8664,13 +8562,184 @@ let moduleQueryFunctions = {
         readSelection("queryMod").value = typeRef2[imageElementID-1];
         moduleQueryFunctions.getModuleQueryResults();
     },
+    getUpdatedQueryModSelections(queryType,queryTypeGear) {
+        //this function is purely for populating the correct Target dropdown info based on what is provided
+        //but no actual math is done here, that's in the next function that calls this one
+        const characterRef = globalRecords.character;
+        const currentCharacter = characterRef.currentCharacter;
+        const currentCharacterMods = characterRef.mods;
+        const abilityArray = characterRef.abilityArray;
+        const currentAbilityBreakdown = characterRef.currentAbilityBreakdown;
+
+        const globalWeapon = globalRecords.weapon;
+        const currentWeaponRef = sniperList[globalWeapon.currentWeapon];
+        const currentWeaponMods = globalWeapon.mods;
+        const currentAmmoType = currentWeaponRef.ammoType;
+        const currentWeaponType = currentWeaponRef.weaponType;
+        const reactorRef = globalRecords.reactor;
+        const weaponRef = globalRecords.weapon;
+
+        const typeRef3 = {
+            "Character [Mods]": currentCharacterMods,
+            "Weapon [Mods]": currentWeaponMods,
+            "Reactor [Substats]": [reactorRef.subRoll1,reactorRef.subRoll2],
+            "Weapon [Substats]": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+            "Weapon [Cores]": [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`],
+            "Component [Sets]": [globalRecords.components.current4piece],
+        }
+        // console.log(globalRecords.components.current4piece)
+
+        //character stuff ignores the first 2 slots, whereas weapon stuff does not
+        let isWeaponBased = !queryTypeGear.toLowerCase().includes("character");
+        let isReactorBased = queryTypeGear.toLowerCase().includes("reactor");
+        let newModArray1 = [...typeRef3[queryTypeGear]];
+        let newModArray2 = isWeaponBased ? [...typeRef3[queryTypeGear]] 
+        : (isReactorBased ? [...typeRef3[queryTypeGear]] : [...typeRef3[queryTypeGear]].slice(2));//to exclude the first 2 mods, the augment and the subattack mod
+        //but if it is still an ability based query but uses reactors, skip the slice as we need every entry in the array.
+        characterRef.modQueryOptions = (isWeaponBased || isReactorBased) ? [...typeRef3[queryTypeGear]] : [...typeRef3[queryTypeGear]].slice(2);
+
+        // Array of strings that will be the option names
+        const queryLister = readSelection("queryModList");
+        queryLister.innerHTML = "";
+        // Loop through the array and create option elements
+        newModArray2.forEach(function(optionName) {
+            const option = document.createElement("option");
+            option.textContent = optionName; // Set the display name
+            queryLister.appendChild(option); // Append the option to the select element
+        });
+
+        let isValidMod = false;
+        for (let entry of newModArray2) {
+            if (entry === readSelection("queryMod").value && entry != "") {isValidMod = true;break;}
+        }
+        if (!isValidMod) {
+            let backupFound = false;
+            for (let entry of newModArray2) {
+                if (entry != "") {readSelection("queryMod").value = entry;backupFound = true;break;}
+            }
+            if (!backupFound) {readSelection("queryMod").value = "";}
+        }
+        
+        if (queryType === "Ability") {
+            const abilityLister = readSelection("queryAbilityList");
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
+
+            //ability array handling is done within userTriggers.updateSelectedMod
+            const arrayRef = characterRef.abilityArray;
+            const abilityRefs = characters[currentCharacter].abilities;
+
+            //ABILITY KEYS
+            let abilityRefArray = [];
+            for (let i=1;i<=5;i++) {
+                const path = arrayRef[i-1] === 0 ? "base" : arrayRef[i-1];
+                const currentPath = abilityRefs[`ability${i}`][path];
+                abilityRefArray.push(currentPath.name);
+            }
+            const abilityRefSet = new Set(abilityRefArray);
+            // readSelection("queryAbilityBoxHolder").style.display = "flex";
+            abilityLister.innerHTML = "";
+            abilityRefArray.forEach(function(optionName) {
+                const option = document.createElement("option");
+                option.textContent = optionName;
+                abilityLister.appendChild(option);
+            });
+            if (!abilityRefSet.has(readSelection("queryAbility").value)) {readSelection("queryAbility").value = abilityRefArray[0]}
+            const selectedAbilityIndexReference = abilityRefArray.indexOf(readSelection("queryAbility").value);
+            const selectedAbilityPath = abilityRefs[`ability${selectedAbilityIndexReference+1}`][arrayRef[selectedAbilityIndexReference] === 0 ? "base" : arrayRef[selectedAbilityIndexReference]];
+            const currentAbilityReturnOptions = selectedAbilityPath.returnStatOptions;
+
+            //ABILITY OPTION RETURN KEYS
+            const optionKeys = Object.keys(currentAbilityReturnOptions);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[optionKeys.length-1]}
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : currentAbilityReturnOptions[optionKeys[selectedAbilityOptionIndexReference]];
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
+        else if (queryType === "Weapon") {
+            //STAT OPTION RETURN KEYS
+            readSelection("queryAbilityBoxHolder").style.display = "none";
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
+            const statRefs = weaponTargetReferences;
+
+            const optionKeys = Object.keys(statRefs);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
+            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
+        else if (queryType === "Stat") {
+            //STAT OPTION RETURN KEYS
+            readSelection("queryAbilityBoxHolder").style.display = "none";
+            const abilityOptionLister = readSelection("queryAbilityOptionList");
+            const statRefs = characterRef.statTargets;
+
+
+            const optionKeys = Object.keys(statRefs);
+            const optionKeysSet = new Set(optionKeys);
+            abilityOptionLister.innerHTML = "";
+            if (!optionKeys.length) {readSelection("queryAbilityOption").value = "N/A (or not coded yet)"}
+            else {
+                optionKeys.forEach(function(optionName) {
+                    const option = document.createElement("option");
+                    option.textContent = optionName || "N/A (or not coded yet)";
+                    abilityOptionLister.appendChild(option);
+                });
+                if (!optionKeysSet.has(readSelection("queryAbilityOption").value)) {readSelection("queryAbilityOption").value = optionKeys[0]}//default to the first return option if an invalid input was found
+            }
+            const selectedAbilityOptionIndexReference = optionKeys.indexOf(readSelection("queryAbilityOption").value);
+            const selectedAbilityOptionPath = !optionKeys.length ? "N/A (or not coded yet)" : statRefs[optionKeys[selectedAbilityOptionIndexReference]];
+            const selectedAbilityIndexReference = 0;//just so something is returned despite not being used on stat targets
+
+            return {selectedAbilityIndexReference,selectedAbilityOptionPath}
+        }
+    },
     getModuleQueryResults() {
         //never allow a blank query, default to ability if all else fails
-        const typeRef = {"Ability": "","Stat": "","Ability - Weapon Based": "","Weapon": "","Ability - Reactor Roll": "","Weapon - Substat": "","Weapon - Cores": "",}
+        const typeRef = {"Ability": "","Stat": "","Weapon": ""}
+        const gearRef = {"Character [Mods]": "","Reactor [Substats]": "","Weapon [Mods]": "","Weapon [Substats]": "","Weapon [Cores]": "","Component [Sets]": ""}
         if (typeRef[readSelection("queryType").value] === undefined) {readSelection("queryType").value = "Ability"}
+        if (gearRef[readSelection("queryTypeGear").value] === undefined) {readSelection("queryTypeGear").value = "Character [Mods]"}
         const queryType = readSelection("queryType").value;
+        const queryTypeGear = readSelection("queryTypeGear").value;
 
-        const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections(queryType);
+
+
+        // <option>Character Mods</option>
+        // <option>Reactor Substats</option>
+        // <option>Weapon Mods</option>
+        // <option>Weapon Substats</option>
+        // <option>Weapon Cores</option>
+        // <option>Component Sets</option>
+
+
+
+        if (queryType.toLowerCase().includes("ability")) {readSelection("centerAbilityImageRowComparisons").style.display = "flex";}
+        else {readSelection("centerAbilityImageRowComparisons").style.display = "none";}
+
+        const {selectedAbilityIndexReference,selectedAbilityOptionPath} = moduleQueryFunctions.getUpdatedQueryModSelections(queryType,queryTypeGear);
         moduleQueryFunctions.clearInvalidQuerySelections();
 
         const displayBoxElemIDs = [
@@ -8679,6 +8748,7 @@ let moduleQueryFunctions = {
             "queriesCharacterModSelectionRow",
             "queriesWeaponModSelectionRow",
             "queriesWeaponSubSelectionRow",
+            "componentComparisonWarning",
         ]
         for (let entry of displayBoxElemIDs) {
             readSelection(entry).style.display = "none";
@@ -8702,36 +8772,44 @@ let moduleQueryFunctions = {
         const currentCoreArray = sniperList[globalWeapon.currentWeapon].coreArray;
 
 
-        let isWeaponBased = queryType.toLowerCase().includes("weapon") || queryType.toLowerCase().includes("reactor");
+        let isWeaponBased = !queryTypeGear.toLowerCase().includes("character");;
         //for assigning the right mod selection that is currently equipped
         const typeRef2 = {
-            "Ability": currentCharacterMods,
-            "Stat": currentCharacterMods,
-            "Ability - Weapon Based": currentWeaponMods,
-            "Weapon": currentWeaponMods,
-            "Ability - Reactor Roll": [reactorRef.subRoll1,reactorRef.subRoll2],
-            "Weapon - Substat": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
-            "Weapon - Cores": [weaponRef.coreRoll1,weaponRef.coreRoll2,weaponRef.coreRoll3,weaponRef.coreRoll4,weaponRef.coreRoll5],
+            "Character [Mods]": currentCharacterMods,
+            "Weapon [Mods]": currentWeaponMods,
+            "Reactor [Substats]": [reactorRef.subRoll1,reactorRef.subRoll2],
+            "Weapon [Substats]": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+            "Weapon [Cores]": [weaponRef.coreRoll1,weaponRef.coreRoll2,weaponRef.coreRoll3,weaponRef.coreRoll4,weaponRef.coreRoll5],
+            "Component [Sets]": [globalRecords.components.current4piece],
         }
         const typeRefCategory = {
-            "Ability": modData,
-            "Stat": modData,
-            "Ability - Weapon Based": userTriggers.weaponTypeModList[currentAmmoType],
-            "Weapon": userTriggers.weaponTypeModList[currentAmmoType],
-            "Ability - Reactor Roll": reactorSubRolls,
-            "Weapon - Substat": weaponSubstatList,
-            "Weapon - Cores": coreRainbow,
+            "Character [Mods]": modData,
+            "Weapon [Mods]": userTriggers.weaponTypeModList[currentAmmoType],
+            "Reactor [Substats]": reactorSubRolls,
+            "Weapon [Substats]": weaponSubstatList,
+            "Weapon [Cores]": coreRainbow,
+            "Component [Sets]": componentSetBonuses,
         }
-        const modLists = typeRefCategory[queryType];
 
-        let newModArray1 = [...typeRef2[queryType]];
+        // "Component [Sets]": [globalRecords.components.current4piece],
+
+        // const typeRef3 = {
+        //     "Character [Mods]": currentCharacterMods,
+        //     "Weapon [Mods]": currentWeaponMods,
+        //     "Reactor [Substats]": [reactorRef.subRoll1,reactorRef.subRoll2],
+        //     "Weapon [Substats]": [weaponRef.subRoll1,weaponRef.subRoll2,weaponRef.subRoll3,weaponRef.subRoll4],
+        //     "Weapon [Cores]": [`1 - ${weaponRef.coreRoll1 || "No input"}`,`2 - ${weaponRef.coreRoll2 || "No input"}`,`3 - ${weaponRef.coreRoll3 || "No input"}`,`4 - ${weaponRef.coreRoll4 || "No input"}`,`5 - ${weaponRef.coreRoll5 || "No input"}`],
+        // }
+        const modLists = typeRefCategory[queryTypeGear];
+
+        let newModArray1 = [...typeRef2[queryTypeGear]];
         const modSelection = readSelection("queryMod").value;
         //abort invalid or empty queries
-        if (modSelection === "" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
+        if (modSelection === "" && queryTypeGear != "Component [Sets]" || selectedAbilityOptionPath === "N/A (or not coded yet)") {
             readSelection("moduleQueryBoxHolder").innerHTML = "No valid query could be completed under your current settings.<br><br>This is likely because the target you selected:<br>- Doesn't have any mods equipped to compare against<br>- Isn't meant to be optimized, maybe it just gives a bonus to other abilities<br>- Has not been coded with options to optimize around. Yet.";
             return;
         }
-        else if (queryType === "Weapon - Cores" && !currentCoreArray) {
+        else if (queryTypeGear === "Weapon [Cores]" && !currentCoreArray) {
             readSelection("moduleQueryBoxHolder").innerHTML = "Your currently selected weapon does not have cores assigned within the calculator.<br><br>This is either because it is a non-ultimate weapon, or Vash hasn't assigned slots to this weapon yet.<br>If the latter, ping Vash in discord and let him know.";
             return;
         }
@@ -8762,128 +8840,82 @@ let moduleQueryFunctions = {
 
         // console.log(indexToModify)
         let queryResultsArray = [];
-        if (queryType === "Ability") {
-            const characterRef = globalRecords.character;
-            const currentCharacter = characterRef.currentCharacter;
-            const arrayRef = characterRef.abilityArray[selectedAbilityIndexReference];
-            const arrayResult = arrayRef===0 ? "base" : arrayRef;
-            const typeSet = new Set(characters[currentCharacter].abilities[abilityTarget][arrayResult].type);
 
-            for (let entry of modKeyReference) {
-                let currentModRef = modLists[entry];
-
-
-                if (currentModRef.inclusion) {
-                    let inclusionSkipFound = false;
-                    for (let inclusion of currentModRef.inclusion) {
-                        if (!typeSet.has(inclusion)) {
-                            inclusionSkipFound = true;
-                            break;
-                        }
-                    }
-                    if (inclusionSkipFound) {continue;}
-                }
-
-                
-                if (categorySet.has(currentModRef.category) || modSet.has(entry) || entry === "") {continue}
-                newModArray1[indexToModify] = entry;
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[abilityTarget][targetReturnValue],"category": currentModRef.category}
-                )
-            }
-
-            readSelection("queriesCharacterModSelectionRow").style.display = "flex";
-            for (let i=3;i<=12;i++) {
-                readSelection(`queryCharacterBoxHolder${i}`).style.border = "none";
-                readSelection(`queryCharacterBoxHolder${i}`).style.opacity = "0.3";
-            }
-            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.border = "1px solid white";
-            readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.opacity = "1";
+        let overrideObject = {
+            modArrayOverride: queryTypeGear === "Character [Mods]" ? newModArray1 : null,
+            weaponModOverride: queryTypeGear === "Weapon [Mods]" ? newModArray1 : null,
+            reactorRollsOverride: queryTypeGear === "Reactor [Substats]" ? newModArray1 : null,
+            weaponSubstatOverride: queryTypeGear === "Weapon [Substats]" ? newModArray1 : null,
+            weaponCoreOverride: queryTypeGear === "Weapon [Cores]" ? newModArray1 : null,
+            componentSetOverride: queryTypeGear === "Component [Sets]" ? newModArray1 : null,
         }
-        else if (queryType === "Ability - Weapon Based") {
-            for (let entry of modKeyReference) {
+
+
+        let inclusionSetSubs = new Set(newModArray1);
+        let currentSlotColor = currentCoreArray && indexToModify<currentCoreArray.length ? currentCoreArray[indexToModify] : null;
+        for (let entry of modKeyReference) {
+            //skip logic
+            if (queryTypeGear === "Character [Mods]") {
+                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
+            }
+            else if (queryTypeGear === "Weapon [Mods]") {
                 if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
 
                 const inclusionSet = new Set(modLists[entry].inclusion);
                 const exclusionSet = new Set(modLists[entry].exclusion);
 
                 // console.log(newModArray1);
-
                 //if the inclusion filter is set with an actual entry, and the weapon type doesn't match it, skip it (example: sniper type but a shotgun mod, we skip that mod)
                 if (modLists[entry].inclusion.length>0 && !inclusionSet.has(currentWeaponType)) {continue;}
                 //otherwise, if there an exclusion filter set for the mod and we DO match it, then skip it
                 else if (modLists[entry].exclusion.length>0 && exclusionSet.has(currentWeaponType)) {continue;}
-
-                newModArray1[indexToModify] = entry;
-
-                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue],"category": modLists[entry].category}
-                )
             }
-            readSelection("queriesWeaponModSelectionRow").style.display = "flex";
-            for (let i=1;i<=10;i++) {
-                readSelection(`queryWeaponBoxHolder${i}`).style.border = "none";
-                readSelection(`queryWeaponBoxHolder${i}`).style.opacity = "0.3";
+            else if (queryTypeGear === "Weapon [Substats]") {
+                if (entry === "" || inclusionSetSubs.has(entry)) {continue}
             }
-            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.border = "1px solid white";
-            readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.opacity = "1";
-        }
-        else if (queryType === "Ability - Reactor Roll") {
-            for (let entry of modKeyReference) {
+            else if (queryTypeGear === "Weapon [Cores]") {
+                let currentEntry = modLists[entry];
 
-                const inclusionSet = new Set(newModArray1);
+                if (entry==="" && oldReference != "") {continue;}//Skipped empty entry when target was not blank
+                else if (currentEntry.color != currentSlotColor && currentSlotColor != "Rainbow" && entry!="") {continue;}//Skipped color that did not match and wasn't rainbow
+            }
+            else if (queryTypeGear === "Reactor [Substats]") {
                 if (entry === "" && oldReference != "") {continue;}
-                else if (inclusionSet.has(entry) && entry != "") {continue;}
-                
-                //assign the cycled value to the index spot of the array for each cycle
-                newModArray1[indexToModify] = entry;
-
-                const value = updateFormulas(true,null,null,newModArray1).returnObject[abilityTarget][targetReturnValue];
-
-                queryResultsArray.push(
-                    {
-                        "modName":entry,
-                        "returnedValue":value,
-                        "category": modLists[entry].category
-                    }
-
-                )
+                else if (inclusionSetSubs.has(entry) && entry != "") {continue;}
             }
-            //UI updates for the buttons we added for comparisons, grey out shit unused, highlight the current selection, etc.
+            else if (queryTypeGear === "Component [Sets]") {
+                if (inclusionSetSubs.has(entry) && entry != "") {continue;}
+            }
+
+
+            newModArray1[indexToModify] = entry;
+
+            let queryChecked = updateFormulas(true,overrideObject).returnObject;
+            let queryEntry = null;
+
+            if (queryType === "Weapon") {queryEntry = queryChecked.weapon[targetReturnValue];}
+            else if (queryType === "Ability") {queryEntry = queryChecked[abilityTarget][targetReturnValue];}
+            else {queryEntry = queryChecked[targetReturnValue];}
+
+            // console.log(queryEntry)
+            queryResultsArray.push(
+                {"modName":entry,"returnedValue":queryEntry,"category": modLists[entry].category}
+            )
+        }
+
+        // if (queryTypeGear === "Weapon") {}
+        // else if (queryTypeGear === "Weapon") {}
+        if (queryTypeGear === "Reactor [Substats]") {
             readSelection("queriesReactorSelectionRow").style.display = "flex";
             for (let i=1;i<=2;i++) {
                 readSelection(`queryReactorBoxHolder${i}`).style.border = "none";
                 readSelection(`queryReactorBoxHolder${i}`).style.opacity = "0.3";
             }
+            // console.log(indexToModify)
             readSelection(`queryReactorBoxHolder${indexToModify+1}`).style.border = "1px solid white";
             readSelection(`queryReactorBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
-        else if (queryType === "Weapon") {
-            for (let entry of modKeyReference) {
-                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
-
-                const inclusionSet = new Set(modLists[entry].inclusion);
-                const exclusionSet = new Set(modLists[entry].exclusion);
-
-                // console.log(newModArray1);
-
-                //if the inclusion filter is set with an actual entry, and the weapon type doesn't match it, skip it (example: sniper type but a shotgun mod, we skip that mod)
-                if (modLists[entry].inclusion.length>0 && !inclusionSet.has(currentWeaponType)) {continue;}
-                //otherwise, if there an exclusion filter set for the mod and we DO match it, then skip it
-                else if (modLists[entry].exclusion.length>0 && exclusionSet.has(currentWeaponType)) {continue;}
-
-                newModArray1[indexToModify] = entry;
-
-                // console.log(updateFormulas(true,null,newModArray1).returnObject[abilityTarget][targetReturnValue])
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
-                )
-            }
-
+        else if (queryTypeGear === "Weapon [Mods]") {
             readSelection("queriesWeaponModSelectionRow").style.display = "flex";
             for (let i=1;i<=10;i++) {
                 readSelection(`queryWeaponBoxHolder${i}`).style.border = "none";
@@ -8892,17 +8924,7 @@ let moduleQueryFunctions = {
             readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.border = "1px solid white";
             readSelection(`queryWeaponBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
-        else if (queryType === "Weapon - Substat") {
-            let inclusionSet = new Set(newModArray1);
-            for (let entry of modKeyReference) {
-                if (entry === "" || inclusionSet.has(entry)) {continue}
-
-                newModArray1[indexToModify] = entry;
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,null,null,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
-                )
-            }
+        else if (queryTypeGear === "Weapon [Substats]") {
             readSelection("queriesWeaponSubSelectionRow").style.display = "flex";
             for (let i=1;i<=4;i++) {
                 readSelection(`queryWeaponSubBoxHolder${i}`).style.border = "none";
@@ -8911,21 +8933,7 @@ let moduleQueryFunctions = {
             readSelection(`queryWeaponSubBoxHolder${indexToModify+1}`).style.border = "1px solid white";
             readSelection(`queryWeaponSubBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
-        else if (queryType === "Weapon - Cores") {
-            let currentSlotColor = currentCoreArray[indexToModify];
-            for (let entry of modKeyReference) {
-                let currentEntry = modLists[entry];
-
-                if (entry==="" && oldReference != "") {continue;}//Skipped empty entry when target was not blank
-                else if (currentEntry.color != currentSlotColor && currentSlotColor != "Rainbow" && entry!="") {continue;}//Skipped color that did not match and wasn't rainbow
-
-                newModArray1[indexToModify] = entry;
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,null,null,null,null,newModArray1).returnObject.weapon[targetReturnValue],"category": modLists[entry].category}
-                )
-            }
-
+        else if (queryTypeGear === "Weapon [Cores]") {
             readSelection("queriesCoreSelectionRow").style.display = "flex";
             for (let i=1;i<=5;i++) {
                 readSelection(`weaponCore${i}IconQuery`).style.border = "none";
@@ -8934,15 +8942,7 @@ let moduleQueryFunctions = {
             readSelection(`weaponCore${indexToModify+1}IconQuery`).style.border = "1px solid white";
             readSelection(`weaponCore${indexToModify+1}IconQuery`).style.opacity = "1";
         }
-        else if (queryType === "Stat") {
-            for (let entry of modKeyReference) {
-                if (categorySet.has(modLists[entry].category) || modSet.has(entry) || entry === "") {continue}
-                newModArray1[indexToModify] = entry;
-
-                queryResultsArray.push(
-                    {"modName":entry,"returnedValue":updateFormulas(true,newModArray1,null).returnObject[targetReturnValue],"category": modLists[entry].category}
-                )
-            }
+        else if (queryTypeGear === "Character [Mods]"){
             readSelection("queriesCharacterModSelectionRow").style.display = "flex";
             for (let i=3;i<=12;i++) {
                 readSelection(`queryCharacterBoxHolder${i}`).style.border = "none";
@@ -8951,13 +8951,22 @@ let moduleQueryFunctions = {
             readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.border = "1px solid white";
             readSelection(`queryCharacterBoxHolder${indexToModify+1}`).style.opacity = "1";
         }
+        else if (queryTypeGear === "Component [Sets]"){
+            readSelection("componentComparisonWarning").style.display = "flex";
+        }
+        // else if (queryTypeGear === "Weapon") {}
+
+        componentComparisonWarning
+
+
+
         
 
-        queryResultsArray.sort((a, b) => b.returnedValue - a.returnedValue); // Sort in ascending order
+        queryResultsArray.sort((a, b) => b.returnedValue - a.returnedValue);//sort in ascending order
 
         let referencePoint = {};
         //if this is a core selection, remove the "1 - " prefix from it, and if this is an empty core, treat it as an empty string instead of "no input"
-        let newModSelectionName = queryType === "Weapon - Cores" ? (modSelection.slice(4)!="No input" ? modSelection.slice(4) : "") : modSelection!="No input" ? modSelection : "";
+        let newModSelectionName = queryTypeGear === "Weapon [Cores]" ? (modSelection.slice(4)!="No input" ? modSelection.slice(4) : "") : modSelection!="No input" ? modSelection : "";
         let foundRef = false;
         for (let entry of queryResultsArray) {
             if (entry.modName === "" && newModSelectionName != "") {

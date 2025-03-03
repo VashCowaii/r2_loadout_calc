@@ -506,6 +506,28 @@
     margin: 1px;
     background: linear-gradient(135deg, #434343, rgba(255, 0, 0, 0) 50%), linear-gradient(315deg, #434343, rgba(0, 0, 255, 0) 50%);
 }
+.descOverviewMiniBoxComparisonsTypeSelector {
+    height: 30px;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descOverviewMiniBoxComparisonsGearSelector {
+    height: 45px;
+    width: auto;
+    box-sizing: border-box;
+    border: 1px solid #434343;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 15px;
+}
 .queryReactorTitle {
     width: 100%;
     font-size: 20px;
