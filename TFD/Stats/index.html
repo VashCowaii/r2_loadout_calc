@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/Remnant2/bossDamage.css">
+  <link rel="stylesheet" href="/css/Remnant2/calculator.css">
+  <link rel="stylesheet" href="/css/Remnant2/substat.css">
+  <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+  <link rel="stylesheet" href="/TFD/tfdCalc.css">
+  <link rel="stylesheet" href="/css/TFD/erosion.css">
+  <link rel="Icon" href="/images/Cowaii.png">
+  <title>TFD Stat Lookup</title> <!-- Browser Tab title -->
+
+  <meta property="og:title" content="TFD Statistics">
+  <meta
+    property="og:description"
+    content="Details on the many individual statistics within The First Descendant."
+  />
+  <meta
+    property="description"
+    content="Details on the many individual statistics within The First Descendant."
+  />
+  <meta
+    property="og:image"
+    content="https://cowaii.io/images/madPrince.png"
+  />
+  <meta
+    property="og:url"
+    content="https://cowaii.io/"
+  />
+  <meta property="og:site_name" content="TFD Statistics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TFD Statistics" />
+  <meta
+    name="twitter:description"
+    content="Details on the many individual statistics within The First Descendant."
+  />
+  <meta
+    name="twitter:image"
+    content="https://cowaii.io/images/madPrince.png"
+  />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    
+    <div id="tooltip" class="tooltip"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+<div class="main">
+    <div class="theGreatBox">
+        <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+        <!-- <div><img src="images/madPrince.png" alt="Home Page MadPrince"></div> -->
+        <!-- <div class="siteTitleHeader">Boss Damage [WIP]<br>
+            <div class="filtersInstructionsBox">I have the info for more bosses, but that is data entry I will do later. For now I'd rather publish this little bit and get feedback on UI and functionality.</div>
+        </div> -->
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+            <div class="erosionHeaderBox">
+
+                <!-- <div class="playerSettingsBox" style="width: auto;">Mode Toggles/Boss Selection/List Settings -->
+
+                    <!-- <div class="bossSelectionOverviewBox" id="bossSelectionOverviewBox"> -->
+                        <!-- <div>Void Erosion Stat Modifiers</div> -->
+                        <div class="bossDataHeaderBig">Statistic Lookup</div>
+                        <!-- <div class="statisticSettingsRow">
+                            <div class="statsRowToggle" style="width: 100%;">
+                                <select id="bossList" class="bossSelector" onchange="generateBossData()"></select>
+                            </div>
+                        </div> -->
+                        <div class="selectedBossImageContainer" style="border: none;">
+                            <img src="/TFD/TFDImages/Bosses/que.png" class="selectedBossImage hasHoverTooltip" alt="Selected Boss Image">
+                        </div>
+                    <!-- </div> -->
+
+                <!-- </div> -->
+            </div>
+
+            <!-- <div class="filtersInstructionsBox">Click any attack name to expand a description and additional info</div> -->
+            <!-- <table class="attacksTable">
+                <thead id="mainListHeaders"></thead>
+
+                <tbody id="attackListDisplay"></tbody>
+            </table> -->
+            <!-- </div> -->
+            <div class="filtersInstructionsBox" style="max-width: 600px;">This is a lookup feature that parses the stats that the game itself uses. This is to help players understand the upper and lower bounds of a given statistic, as well as how bonuse get applied.<br><br>Note some statistics are never displayed on the user-side, and as such only have internal names that might look funky.<br><br>Enter text into the box below to search.</div>
+            
+            <div class="selectionSelectorBoxes" style="max-width: 300px;">
+              <div class="selectSelectorTitle">SEARCH:&nbsp;</div>
+              <div class="presetsSelectorBox">
+                  <input class="selectSelector hasHoverTooltip" id="statFilterBoxInput" style="width: 100%;" oninput="tableGeneration.generateInitialTable()">
+              </div>
+            </div>
+            
+            
+            <div class="tableHolder" id="attackListDisplay" style="flex-wrap: wrap;display: flex;justify-content: center;align-items: center;"></div>
+        </div>
+
+        <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+
+    </div>
+
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectTFDHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+
+<script src="/TFD/Calculator/parsedStatsData.js"></script>
+<script src="/TFD/Stats/bossStatGeneration.js"></script> 
+
+<!-- <script src="/Remnant2/BossDamage/urlHandling.js"></script> -->
+<!-- <script src="/MainJS/Tooltips/tooltips.js"></script> -->
+<!-- <script src="/Remnant2/BossDamage/scaling.js"></script> -->
+<script src="/MainJS/buildTime.js"></script>
+
+</body>
+</html> 
