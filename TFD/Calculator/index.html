@@ -101,7 +101,7 @@
             
             <div class="prismColumn" style="width: 100%;"><!-- PLACEHOLDER -->
 
-                <div class="modeSelectionBoxHolder">
+                <div class="modeSelectionBoxHolder"><!-- TABS SELECTION -->
 
                     <div class="modeSelectionSelectorBox" id="modeSelection1" onclick="userTriggers.toggleDisplayMode(1)">Skills</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection2" onclick="userTriggers.toggleDisplayMode(2)">Weapon</div>
@@ -501,7 +501,7 @@
 
                 <div class="abilityDamageTabHolder" id="comparisonBreakdownTabHolders" style="display: none;"><!-- COMPARISON CONTAINERS -->
                     <div class="tfdSettingsMainBox">
-                        <div class="advancedStatsTitleHeader" style="padding-top: 0;">MOD COMPARISONS</div>
+                        <!-- <div class="advancedStatsTitleHeader" style="padding-top: 0;">MOD COMPARISONS</div> -->
         
                         <div class="survivabilityContainer">
         
@@ -512,32 +512,83 @@
                                         <div class="breakdownTabHeader">Comparison Targets:</div>
                                         <div class="breakdownTabBody">
         
-                                            <div class="abilityBreakdownGeneralMessage">You need at least one mod equipped on your character in slots 3-12 order to see a breakdown generate.<br>Transcendent and Sub-Attack mods cannot be compared.</div>
-                                            <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                            <!-- <div class="abilityBreakdownGeneralMessage">You need at least one mod equipped on your character in slots 3-12 order to see a breakdown generate.<br>Transcendent and Sub-Attack mods cannot be compared.</div> -->
+
+
+                                            <div class="descOverviewRow" style="border-bottom: 2px solid #434343;">
+                                                <div class="descOverviewMiniBoxComparisonsTypeSelector" onclick="moduleQueryFunctions.updateQueryTypeSelected(1)" id="queryTypeSelectorDisplayBox1" style="opacity: 1;border: 1px solid white;">
+                                                    Ability
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsTypeSelector" onclick="moduleQueryFunctions.updateQueryTypeSelected(2)" id="queryTypeSelectorDisplayBox2" style="opacity: 0.3;border: none;">
+                                                    Weapon
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsTypeSelector" onclick="moduleQueryFunctions.updateQueryTypeSelected(3)" id="queryTypeSelectorDisplayBox3" style="opacity: 0.3;border: none;">
+                                                    Character
+                                                </div>
+                                            </div>
+                                            <div class="selectionSelectorBoxes" style="display: none;">
                                                 <div class="selectSelectorTitle">TYPE:</div>
                                                 <div class="presetsSelectorBox">
                                                     <input class="selectSelector hasHoverTooltip" id="queryType" list="queryTypeList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
                                                     <datalist id="queryTypeList">
                                                         <option>Ability</option>
-                                                        <option>Ability - Weapon Based</option>
-                                                        <option>Ability - Reactor Roll</option>
                                                         <option>Weapon</option>
-                                                        <option>Weapon - Substat</option>
-                                                        <option>Weapon - Cores</option>
                                                         <option>Stat</option>
                                                     </datalist>
                                                 </div>
                                             </div>
-
-                                            <div class="selectionSelectorBoxes" style="margin: 3px;" id="queryAbilityBoxHolder">
+                                            
+                                            <div class="selectionSelectorBoxes" style="margin: 3px;display: none;" id="queryAbilityBoxHolder"> <!-- hidden, but used still so don't delete it -->
                                                 <div class="selectSelectorTitle">ABILITY:</div>
                                                 <div class="presetsSelectorBox">
                                                     <input class="selectSelector" id="queryAbility" list="queryAbilityList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
                                                     <datalist id="queryAbilityList"></datalist>
                                                 </div>
                                             </div>
+                                            <div class="abilityDamageDisplayImageBox" id="centerAbilityImageRowComparisons" style="border-bottom: 2px solid #434343;margin: none;">
+                                                <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_01.png" id="damageAbilityIcon1Comparisons" onclick="moduleQueryFunctions.updateQueryAbilitySelected(1)" style="opacity: 1;border: 1px solid white;">
+                                                <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_02.png" id="damageAbilityIcon2Comparisons" onclick="moduleQueryFunctions.updateQueryAbilitySelected(2)" style="opacity: 0.3;border: none;">
+                                                <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_03.png" id="damageAbilityIcon3Comparisons" onclick="moduleQueryFunctions.updateQueryAbilitySelected(3)" style="opacity: 0.3;border: none;">
+                                                <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_04.png" id="damageAbilityIcon4Comparisons" onclick="moduleQueryFunctions.updateQueryAbilitySelected(4)" style="opacity: 0.3;border: none;">
+                                                <img class="abilityDamageRowIcon" src="/TFD/TFDImages/SkillIcons/Icon_Skill_001_A01_00.png" id="damageAbilityIcon5Comparisons" onclick="moduleQueryFunctions.updateQueryAbilitySelected(5)" style="opacity: 0.3;border: none;">
+                                            </div>
         
-                                            <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                            <div class="selectionSelectorBoxes" style="margin: 3px;display: none;">
+                                                <div class="selectSelectorTitle">GEAR:</div>
+                                                <div class="presetsSelectorBox">
+                                                    <input class="selectSelector hasHoverTooltip" id="queryTypeGear" list="queryTypeListGear" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
+                                                    <datalist id="queryTypeListGear">
+                                                        <option>Character [Mods]</option>
+                                                        <option>Reactor [Substats]</option>
+                                                        <option>Weapon [Mods]</option>
+                                                        <option>Weapon [Substats]</option>
+                                                        <option>Weapon [Cores]</option>
+                                                        <option>Component [Sets]</option>
+                                                    </datalist>
+                                                </div>
+                                            </div>
+                                            <div class="descOverviewRow" style="flex-wrap: wrap;height: auto;margin-bottom: 3px;border-bottom: 2px solid #434343;padding: 3px;">
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(1)" id="queryTypeSelectorGearBox1" style="opacity: 1;border: 1px solid white;">
+                                                    Char.<br>[Mods]
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(2)" id="queryTypeSelectorGearBox2" style="opacity: 0.3;border: none;">
+                                                    Reactor<br>[Substats]
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(3)" id="queryTypeSelectorGearBox3" style="opacity: 0.3;border: none;">
+                                                    Weapon<br>[Mods]
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(4)" id="queryTypeSelectorGearBox4" style="opacity: 0.3;border: none;">
+                                                    Weapon<br>[Substats]
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(5)" id="queryTypeSelectorGearBox5" style="opacity: 0.3;border: none;">
+                                                    Weapon<br>[Cores]
+                                                </div>
+                                                <div class="descOverviewMiniBoxComparisonsGearSelector" onclick="moduleQueryFunctions.updateQueryGearSelected(6)" id="queryTypeSelectorGearBox6" style="opacity: 0.3;border: none;">
+                                                    Comp.<br>[Sets]
+                                                </div>
+                                            </div>
+
+                                            <div class="selectionSelectorBoxes" style="margin-top: 5px;margin-bottom: 5px;">
                                                 <div class="selectSelectorTitle">ASPECT:</div>
                                                 <div class="presetsSelectorBox">
                                                     <input class="selectSelector" id="queryAbilityOption" list="queryAbilityOptionList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
@@ -545,7 +596,7 @@
                                                 </div>
                                             </div>
         
-                                            <div class="selectionSelectorBoxes" style="margin: 3px;">
+                                            <div class="selectionSelectorBoxes" style="margin: 3px;display: none;">
                                                 <div class="selectSelectorTitle" id="queryCycledTargetName">MOD:</div>
                                                 <div class="presetsSelectorBox">
                                                     <input class="selectSelector" id="queryMod" list="queryModList" style="width: 100%;" onchange="moduleQueryFunctions.getModuleQueryResults()">
@@ -690,6 +741,8 @@
                                                         <div class="queryReactorName" id="queryWeaponSubName4">No Input</div>
                                                     </div>
                                                 </div>
+
+                                                <div class="abilityBreakdownGeneralMessage" style="color: #93CCEA;" id="componentComparisonWarning">Component comparisons only compare full sets.<br><br>Even if you have 2pc annihilation on, it will act as if you do not, and then it will compare fully equipped sets for everything.<br>Component comparisons get really fucking complicated otherwise.</div>
                                             </div>
                                         </div>
                                     </div>

@@ -1774,5 +1774,40 @@ let sniperData = {
     "desc": "",
     "stats": {},
     "ChargeLevelData": []
+  },
+  "FrostWatcher": {
+    "name": "FrostWatcher",
+    "ID": "211083004",
+    "rarity": "Ultimate",
+    "baseATK": 45777,
+    "baseCritRate": 0.06,
+    "baseCritDamage": 1.8,
+    "baseWeakPoint": 1.35,
+    "physicalType": "Crush",
+    "physicalTypeBonus": 0.1,
+    "baseFireRate": 150,
+    "baseReloadTime": 2.15,
+    "magazine": 21,
+    "shellCount": 1,
+    "coreArray": [
+      "Rainbow",
+      "Orange",
+      "Blue",
+      "Green",
+      "Purple"
+    ],
+    "RangedInTime": 0.35,
+    "ZoomInHoldDelayTime": 0.4,
+    "ReloadType": "Magazine",
+    "ammoType": "Impact",
+    "weaponType": "Scout Rifle",
+    "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1009_A001.png",
+    "desc": "On landing a Critical Hit on an enemy at a certain distance, the unique ability Cold Surveillance is applied to the target.\nHitting the Weak Point of an enemy at a certain distance grants self the unique effect Subzero Sensation.\nDefeating an enemy grants self the unique effect Chill Synchronization.\nWhile Chill Synchronization is active, ignores the Movement Speed reduction by Hailey's Cold Fury.",
+    "stats": {
+      "ChillATK": 16480,
+
+      // "enemyChillResistanceReductionCORE": -0.40 - 0.20 - 0.20,
+    },
+    "ChargeLevelData": []
   }
 }
