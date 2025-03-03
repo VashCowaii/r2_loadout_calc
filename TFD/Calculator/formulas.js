@@ -8725,17 +8725,6 @@ let moduleQueryFunctions = {
         const queryType = readSelection("queryType").value;
         const queryTypeGear = readSelection("queryTypeGear").value;
 
-
-
-        // <option>Character Mods</option>
-        // <option>Reactor Substats</option>
-        // <option>Weapon Mods</option>
-        // <option>Weapon Substats</option>
-        // <option>Weapon Cores</option>
-        // <option>Component Sets</option>
-
-
-
         if (queryType.toLowerCase().includes("ability")) {readSelection("centerAbilityImageRowComparisons").style.display = "flex";}
         else {readSelection("centerAbilityImageRowComparisons").style.display = "none";}
 
