@@ -765,7 +765,7 @@ const highPowerRounds = {
             "Recoil": 0.20
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Slow Art (Sniper)": {
@@ -780,7 +780,7 @@ const highPowerRounds = {
             "FireRate": 0.25
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Anti-matter Round (Sniper)": {
@@ -795,7 +795,7 @@ const highPowerRounds = {
             "FirearmCritDamage": 0.035
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Pinpoint Shot (Sniper)": {
@@ -810,7 +810,7 @@ const highPowerRounds = {
             "WeakPointDamage%": 0.01
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Sharpshooter (Sniper)": {
@@ -825,7 +825,7 @@ const highPowerRounds = {
             "FirearmCritRate": 0.01
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
 
@@ -957,7 +957,7 @@ const highPowerRounds = {
             "FirearmATK%": 0.32
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
 
@@ -1008,7 +1008,7 @@ const highPowerRounds = {
             "FirearmCritDamage": -0.20
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Bullet Integration (Sniper)": {
@@ -1023,7 +1023,7 @@ const highPowerRounds = {
             "FirearmCritDamage": 0.20
         },
         "tags": [],
-        "inclusion": ["Sniper"],
+        "inclusion": ["Sniper Rifle"],
         "exclusion": [],
     },
     "Unstoppable Smasher (Shotgun)": {//TODO: complexBonus key later
