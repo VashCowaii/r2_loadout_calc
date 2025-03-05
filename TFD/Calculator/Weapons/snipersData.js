@@ -1804,9 +1804,7 @@ let sniperData = {
     "image": "/TFD/TFDImages/Weapons/Icon_RW_SCR_1009_A001.png",
     "desc": "On landing a Critical Hit on an enemy at a certain distance, the unique ability Cold Surveillance is applied to the target.\nHitting the Weak Point of an enemy at a certain distance grants self the unique effect Subzero Sensation.\nDefeating an enemy grants self the unique effect Chill Synchronization.\nWhile Chill Synchronization is active, ignores the Movement Speed reduction by Hailey's Cold Fury.",
     "stats": {
-      "ChillATK": 16480,
-
-      // "enemyChillResistanceReductionCORE": -0.40 - 0.20 - 0.20,
+      "ChillATK": 16480
     },
     "ChargeLevelData": []
   }
