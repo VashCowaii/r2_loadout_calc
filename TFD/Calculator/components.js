@@ -1456,9 +1456,9 @@ const componentSetBonuses = {
     },
     "Invader": {
         "2pc": {
-            "desc": "Max Shield +11.9%",
+            "desc": "Skill Effect Range +7.2%",
             "stats": {
-                "Shield%": 0.119
+                "SkillRange": 0.072
             },
             "tags": [],
         },
