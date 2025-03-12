@@ -118,6 +118,12 @@ let shop = {
         readSelection("bulletSelectorInputWeapons").value = week;
 
 
+        if (!current) {
+            readSelection("dateDisplayHeader").innerHTML = `Waiting for new schedule<br><br>If you see this, Vash will update the page soon.`;
+            readSelection("shopA").innerHTML = "Waiting for new schedule<br><br>If you see this, Vash will update the page soon.";
+            readSelection("shopB").innerHTML = "Waiting for new schedule<br><br>If you see this, Vash will update the page soon.";
+            return;
+        }
 
         let startDate = shop.epochToDateString(current.start);
         let endDate = shop.epochToDateString(current.end);
