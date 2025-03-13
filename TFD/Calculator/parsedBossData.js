@@ -197,6 +197,314 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "Gravewalker_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.32",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.61",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.32",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.61",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Flamebuster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "3.3",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.46",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Gunfire_Berserk_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.85",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Gunfire_Berserk_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.85",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Gunfire_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.85",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Gunfire_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.85",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_Berserk_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0.23",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_Berserk_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0.23",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_BlindSpot_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.78",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_BlindSpot_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.78",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.05",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.46",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Javelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.05",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.46",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "GraveWalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "GraveWalker_SummonMinions_Both_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Gravewalker_Slugshot_L": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.66",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gravewalker_Slugshot_R": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.66",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "GraveWalker_FlameExplosion": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "GraveWalker_FlameExplosion_Berserk": {
+        "operationsArray": null,
+        "paramsArray": null
+      }
+    },
     "weaknessKeyName": "GraveWalker_HitPoint",
     "enemyType": "Colossus"
   },
@@ -386,6 +694,170 @@ let bossData = {
         "name": "Sensor",
         "type": "Burst",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "StunningBeauty_PhotonCannon": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.36",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_Promenade": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.48",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_LightningRoad": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_ThunderStamp": {
+        "operationsArray": [
+          {
+            "Electric ATK": "2.04",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.04",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_ElectricCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "StunningBeauty_Thunderbolt": {
+        "operationsArray": [
+          {
+            "Electric ATK": "2.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_JudgementEye": {
+        "operationsArray": [
+          {
+            "Electric ATK": "7.27",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_Teleport": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "StunningBeauty_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "StunningBeauty_ElectricDischarging": {
+        "operationsArray": null,
+        "paramsArray": null
       }
     },
     "weaknessKeyName": "StunningBeauty_HitPoint",
@@ -584,6 +1056,60 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "ExecutionerPlasmaBeam": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPBO": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaNet": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerThunderbolt": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerExecutionCall": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerGuillotine": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaPulse": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerBallLightning": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerECO": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaCharge": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerSummonMinionA": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerSummonMinionB": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerBerserkSummonMinionA": {
+        "operationsArray": null,
+        "paramsArray": null
+      }
+    },
     "weaknessKeyName": "Executioner_HitPoint",
     "enemyType": "Colossus"
   },
@@ -780,6 +1306,260 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "DeadBride_ChargeShot": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.11",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_ChargeShot_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.11",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_DeathParade": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.32",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_IceRoad": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_IceRoad_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_FrozenStamp": {
+        "operationsArray": [
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_FrozenStamp_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_CryoSpear": {
+        "operationsArray": [
+          {
+            "Chill ATK": "3.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.6",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_ColdCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_Snowstorm": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.39",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_TeleportRandom": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_SummonMinions_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_IceSpike": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.09",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.09",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Chill ATK": "0.83",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.83",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "DeadBride_HitPoint",
     "enemyType": "Colossus"
   },
@@ -969,6 +1749,300 @@ let bossData = {
         "name": "Sensor",
         "type": "Burst",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Devourer_PoisonShot": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisonShot_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomMissile": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.94",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.94",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.99",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisonCloud": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.42",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.42",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.85",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_InfectiousFist": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_InfectiousFist_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisoningDome": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.71",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.71",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.88",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_SummonMinion_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_ToxicCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_GenerateSpore": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomExplosion": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.18",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.18",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomBall": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "2.5",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Devourer_HitPoint",
@@ -1165,6 +2239,284 @@ let bossData = {
         "name": "Sensor",
         "type": "Crush",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Pyromaniac_FlameShot": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.64",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.64",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameThrow": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.53",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.53",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FTO_Berserk": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.06",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.06",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_BusterCall": {
+        "operationsArray": [
+          {
+            "Fire ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_BCO_Berserk": {
+        "operationsArray": [
+          {
+            "Fire ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_GroundBurster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "1.27",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.27",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "1.27",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.27",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit2",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FireSphere": {
+        "operationsArray": [
+          {
+            "Fire ATK": "2.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.7",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.7",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_HeatCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_SummonMinionA": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_SummonMinionB": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_BerserkSummonMinionA": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameNet": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0.34",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.34",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameRing": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Pyromaniac_HitPoint",
@@ -1368,6 +2720,441 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "SwampWalker_Gunfire_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_Berserk_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_Berserk_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_PoisonBuster": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_Berserk_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_Berserk_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_BlindSpot_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_BlindSpot_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Slugshot_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Slugshot_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "SwampWalker_SummonMinions_Both_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "SwampWalker_HitPoint",
     "enemyType": "Colossus"
   },
@@ -1562,6 +3349,211 @@ let bossData = {
         "name": "Rear Cover",
         "type": "Burst",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Hangedman_ElectroShot_Left": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.59",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.59",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_ElectroShot_Right": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.59",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.59",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_ElectricCannon": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.5",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_ElectricJavelin": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_ElectricJavelin_Berserk": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_Thunderbolt": {
+        "operationsArray": [
+          {
+            "Electric ATK": "0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_ChargingLaser": {
+        "operationsArray": [
+          {
+            "Electric ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.17",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_LightningThunder": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Hit"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Hangedman_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Hangedman_SummonMinion_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "HangedMan_HitPoint",
@@ -1760,6 +3752,60 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "ExecutionerPlasmaBeam": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPBO": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaNet": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerThunderbolt": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerExecutionCall": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerGuillotine": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaPulse": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerBallLightning": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerECO": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerPlasmaCharge": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerSummonMinionA": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerSummonMinionB": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "ExecutionerBerserkSummonMinionA": {
+        "operationsArray": null,
+        "paramsArray": null
+      }
+    },
     "weaknessKeyName": "Executioner_HitPoint",
     "enemyType": "Colossus"
   },
@@ -1956,6 +4002,260 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "DeadBride_ChargeShot": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.11",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_ChargeShot_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.11",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_DeathParade": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.32",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_IceRoad": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_IceRoad_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.41",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_FrozenStamp": {
+        "operationsArray": [
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_FrozenStamp_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_CryoSpear": {
+        "operationsArray": [
+          {
+            "Chill ATK": "3.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.6",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_ColdCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_Snowstorm": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.39",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.3",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_TeleportRandom": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "DeadBride_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_SummonMinions_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "DeadBride_IceSpike": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.09",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.09",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Chill ATK": "0.83",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.83",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Chill ATK": "5.98",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.33",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "DeadBride_HitPoint",
     "enemyType": "Colossus"
   },
@@ -2145,6 +4445,300 @@ let bossData = {
         "name": "Sensor",
         "type": "Burst",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Devourer_PoisonShot": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisonShot_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.86",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomMissile": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.94",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.94",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.99",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisonCloud": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.42",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.42",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.85",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_InfectiousFist": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_InfectiousFist_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_PoisoningDome": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.71",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.71",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.88",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_SummonMinion_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_ToxicCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Devourer_GenerateSpore": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomExplosion": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.18",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.18",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Devourer_VenomBall": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "2.5",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Devourer_HitPoint",
@@ -2341,6 +4935,284 @@ let bossData = {
         "name": "Sensor",
         "type": "Crush",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Pyromaniac_FlameShot": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.64",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.64",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameThrow": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.53",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.53",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FTO_Berserk": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.06",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.06",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_BusterCall": {
+        "operationsArray": [
+          {
+            "Fire ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_BCO_Berserk": {
+        "operationsArray": [
+          {
+            "Fire ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "3.31",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_GroundBurster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "1.27",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.27",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "1.27",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.27",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit2",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FireSphere": {
+        "operationsArray": [
+          {
+            "Fire ATK": "2.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.7",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.7",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_HeatCharge": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_SummonMinionA": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_SummonMinionB": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_BerserkSummonMinionA": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameNet": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0.34",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.34",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Pyromaniac_FlameRing": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Pyromaniac_HitPoint",
@@ -2544,6 +5416,441 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "SwampWalker_Gunfire_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_Berserk_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Gunfire_Berserk_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_PoisonBuster": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.14",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.89",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_Berserk_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_Berserk_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.8",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_BlindSpot_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Javelin_BlindSpot_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.96",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Slugshot_L": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_Slugshot_R": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.05",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.04",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "SwampWalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "SwampWalker_SummonMinions_Both_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "SwampWalker_HitPoint",
     "enemyType": "Colossus"
   },
@@ -2739,6 +6046,421 @@ let bossData = {
         "name": "Sensor",
         "type": "Pierce",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Obstructer_CorrosiveBlast": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.36",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.36",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_CorrosiveBlast_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.36",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.36",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidEnergyCreate": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Execute",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Execute"
+          },
+          {
+            "MaxHPRatio": "0.0005833333333333333",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidKill": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Explosion"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_Slice": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2.24",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2.24",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_CorrosiveBeam": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.58",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_CBO": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.15",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Obstructer_SummonMinion_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Obstructer_BallPoison": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "1.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.72",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.72",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.15",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.12",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidLockDown": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "4.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "4.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "MaxHPRatio": "0.026144444444444442",
+            "Type": "Float",
+            "EventType": "Event.EpicMonster.Obstructer.LockDown.Shackles.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.EpicMonster.Obstructer.LockDown.Shackles.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.EpicMonster.Obstructer.LockDown.Shackles.Activate"
+          },
+          {
+            "Stat_CurrentBerserkGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxBerserkGaugeBased.MaxBerserkGaugeBased_C",
+            "EventType": "Event.EpicMonster.Obstructer.LockDown.Shackles.GaugeUp",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.0015",
+            "Type": "Float",
+            "EventType": "Event.EpicMonster.Obstructer.LockDown.Shackles.GaugeUp"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidEnergyCreate_3P": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Execute",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Execute"
+          },
+          {
+            "MaxHPRatio": "0.0005833333333333333",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidEnergyCreate_2P": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Execute",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Execute"
+          },
+          {
+            "MaxHPRatio": "0.0005833333333333333",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Obstructer_VoidEnergyCreate_1P": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Execute",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Execute"
+          },
+          {
+            "MaxHPRatio": "0.0005833333333333333",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Obstructer_HitPoint",
@@ -2942,6 +6664,234 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "FrostWalker_Troit": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "FrostWalker_FreezeUp": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Hit"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_FreezeUp_Berserk": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Hit"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_ScissorsBeam_L": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.16",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_ScissorsBeam_R": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.16",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_Javelin_L": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.47",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_Javelin_R": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.02",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.47",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.6",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.6",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_RandomJavelin_L": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.23",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.34",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_RandomJavelin_R": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.23",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.34",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_BlindSpot_L": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_BlindSpot_R": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_Slugshot_L": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_Slugshot_R": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.72",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "FrostWalker_Troit_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "FrostWalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "FrostWalker_SummonMinions_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "FrostWalker_HitPoint",
     "enemyType": "Colossus"
   },
@@ -3138,6 +7088,221 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "MoltenFortress_LavaJavelin": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.16",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.16",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_LavaBuster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "1.94",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.94",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_VolcanicBomb": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.16",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.16",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.16",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.16",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_LavaExplosion": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_LavaExplosion_Berserk": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.19",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_VolcanoEruption": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "Fire ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "MaxHPRatio": "0.0003",
+            "Type": "Float"
+          }
+        ]
+      },
+      "MoltenFortress_SummonBeacons": {
+        "operationsArray": [
+          {
+            "Firearm ATK": "-0.35",
+            "EventType": "Event.Overlap",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Overlap",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.35",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.29",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "MoltenFortress_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "MoltenFortress_SummonMinions_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "MoltenFortress_HitPoint",
     "enemyType": "Colossus"
   },
@@ -3328,6 +7493,389 @@ let bossData = {
         "name": "Sensor",
         "type": "Burst",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Gluttony_IcicleShot": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.62",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.62",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.62",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.62",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_IcicleShot_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.62",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.62",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.62",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.62",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_CryoMissile": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_ShockWaveDiffution": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Gluttony_ShockWaveDiffution_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Gluttony_IceSniping": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.24",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_IceSniping_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.24",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.24",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.24",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_VoidBackDraft": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Explosion"
+          },
+          {
+            "Stat_CurrentCommonGauge": "0",
+            "EventType": "Event.Execute",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_VoidBackDraft_Berserk": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Explosion"
+          },
+          {
+            "Stat_CurrentCommonGauge": "0",
+            "EventType": "Event.Execute",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_GenerateDrill": {
+        "operationsArray": [
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-0.1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Chill ATK": "-1",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.5",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Overlap",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "-0.1",
+            "Type": "Float",
+            "EventType": "Event.Overlap"
+          },
+          {
+            "Stat_CurrentCommonGauge": "/Game/Blueprints/Gameplay/Common/Calculation/Value/MaxCommonGaugeBased.MaxCommonGaugeBased_C",
+            "EventType": "Event.Overlap1",
+            "ModOp": "Add"
+          },
+          {
+            "Multiply": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Overlap1"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit1",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_FrozenBall": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.8",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Stat_MaxHp": "",
+            "EventType": "Event.Hit",
+            "ModOp": "Add"
+          },
+          {
+            "Chill ATK": "0.8",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Stat_MaxHp": "",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Add"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_FrozenBall_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "0.8",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Stat_MaxHp": "",
+            "EventType": "Event.Hit",
+            "ModOp": "Add"
+          },
+          {
+            "Chill ATK": "0.8",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Multiply"
+          },
+          {
+            "Stat_MaxHp": "",
+            "EventType": "Event.Montage.HitDetect",
+            "ModOp": "Add"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_FreezingFist": {
+        "operationsArray": [
+          {
+            "Chill ATK": "1.26",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.26",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_FreezingFist_Berserk": {
+        "operationsArray": [
+          {
+            "Chill ATK": "1.26",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.26",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Gluttony_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Gluttony_SummonMinion_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
       }
     },
     "weaknessKeyName": "Gluttony_HitPoint",
@@ -3526,6 +8074,384 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "Deathstalker_DeathPierce": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_DeathPierce_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.13",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_InsanityStalking": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "MaxHPRatio": "0.0015",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_InsanityStalking_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.43",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "MaxHPRatio": "0.0015",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_MadExplosion": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "MaxHPRatio": "0.001",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "Toxic ATK": "-0.15",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.35",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.35",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_MadExplosion_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "MaxHPRatio": "0.0005",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "Toxic ATK": "-0.15",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.35",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.35",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_SpectralLeech": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Deathstalker_SpectralLeech_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Deathstalker_StalkersRiddle": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Overlap",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_StalkersTrap_Berserk": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "5.3",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "5.3",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Toxic ATK": "3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.4",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.1",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Overlap",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_TrapInvoking_Berserk": {
+        "operationsArray": [
+          {
+            "bIgnoreImmune": "True",
+            "Type": "Bool",
+            "EventType": "Event.Explosion"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Deathstalker_SummonMinions_Berserk": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Deathstalker_Teleport_Berserk": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Deathstalker_StalkersTrap_Defense_Berserk": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      }
+    },
     "weaknessKeyName": "DeathStalker_HitPoint",
     "enemyType": "Colossus"
   },
@@ -3711,6 +8637,465 @@ let bossData = {
         "name": "Brain",
         "type": "Pierce",
         "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "InfernalWalker_Flamebuster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "2.8",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_Flamebuster": {
+        "operationsArray": [
+          {
+            "Fire ATK": "2.8",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_BezierJavelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_BezierJavelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.87",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Javelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.63",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.78",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Javelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.63",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.78",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_RandomJavelin_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.5",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.7",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_RandomJavelin_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.5",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.7",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Gunfire_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.74",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Gunfire_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.74",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_Gunfire_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.74",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_Gunfire_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-1",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.74",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_SummonMinions": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "InfernalWalker_Slugshot_L": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Slugshot_R": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.84",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_FlameExplosion": {
+        "operationsArray": [
+          {
+            "Fire ATK": "0.26",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.37",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Javelin_Rage_BlindSpot_L": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.91",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.95",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Javelin_Rage_BlindSpot_R": {
+        "operationsArray": [
+          {
+            "Fire ATK": "-0.91",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.95",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_MegaBlast_L": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.22",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.61",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Fire ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.88",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "InfernalWalker_Rage_MegaBlast_R": {
+        "operationsArray": [
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Fire ATK": "-0.22",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.61",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Fire ATK": "-0.76",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.88",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.25",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Passive_InfernalWalker_RageMonitor": {
+        "operationsArray": null,
+        "paramsArray": null
       }
     },
     "weaknessKeyName": "InfernalWalker_HitPoint",
@@ -3900,7 +9285,912 @@ let bossData = {
         "wpMod": 0.5
       }
     },
+    "ActiveSkills": {
+      "Defiler_PoisonShot": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.81",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.81",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_InfectiousFist": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "1.6",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.6",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_PoisonCloud": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "0.75",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0.75",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.8",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_VenomMissile": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_Rage_VenomMissile": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.9",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_Rage_PoisoningDome": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.79",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Toxic ATK": "-0.92",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Defiler_Rage_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Defiler_VenomExplosion": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_Rage_VenomExplosion": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.45",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.17",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "StackRatio": "0.13",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_SporeIngest": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Defiler_Rage_SporeIngest": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Defiler_Rage_VenomRush": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "1.2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.55",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          },
+          {
+            "Movement Speed": "400",
+            "EventType": "Event.Activate",
+            "ModOp": "Add"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Defiler_Rage_VenomHaze": {
+        "operationsArray": [
+          {
+            "Toxic ATK": "-0.78",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.78",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.55",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Passive_Defiler_SporeMonitor": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "Passive_Defiler_VenomVapor": {
+        "operationsArray": null,
+        "paramsArray": null
+      },
+      "Passive_Defiler_RageMonitor": {
+        "operationsArray": null,
+        "paramsArray": null
+      }
+    },
     "weaknessKeyName": "Defiler_HitPoint",
+    "enemyType": "Colossus"
+  },
+  "VoidBattle_Tormentor_VeryHard": {
+    "name": "Tormentor",
+    "realName": "Tormentor",
+    "key": "Key_EpicBoss_Tormentor",
+    "difficulty": "VeryHard",
+    "levelKeys": {
+      "1": {
+        "lvl": 147,
+        "lvlStats": {
+          "HP": 57679659,
+          "Shield": 38453106,
+          "DEF": 193101,
+          "Non-Attribute": 295262,
+          "Fire": 1529457,
+          "Chill": 295262,
+          "Electric": 6885510,
+          "Toxic": 136929,
+          "ATK": 423,
+          "Electric ATK": 986,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Minimum Stagger Rate": 0.25,
+          "Maximum Stagger Rate": 0.4,
+          "Stagger Damage Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Stagger Cooldown": 10,
+          "Rage Conversion Ratio": 0.235,
+          "Rage Decrease Rate": 1,
+          "Rage Damage Rate": 0.25,
+          "Colossus Level": 147
+        }
+      },
+      "2": {
+        "lvl": 148,
+        "lvlStats": {
+          "HP": 111600837,
+          "Shield": 74400558,
+          "DEF": 193101,
+          "Non-Attribute": 295262,
+          "Fire": 1529457,
+          "Chill": 295262,
+          "Electric": 6885510,
+          "Toxic": 136929,
+          "ATK": 520,
+          "Electric ATK": 1213,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Minimum Stagger Rate": 0.25,
+          "Maximum Stagger Rate": 0.4,
+          "Stagger Damage Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Stagger Cooldown": 10,
+          "Rage Conversion Ratio": 0.235,
+          "Rage Decrease Rate": 1,
+          "Rage Damage Rate": 0.25,
+          "Colossus Level": 148
+        }
+      },
+      "3": {
+        "lvl": 149,
+        "lvlStats": {
+          "HP": 153453942,
+          "Shield": 102302628,
+          "DEF": 193101,
+          "Non-Attribute": 295262,
+          "Fire": 1529457,
+          "Chill": 295262,
+          "Electric": 6885510,
+          "Toxic": 136929,
+          "ATK": 617,
+          "Electric ATK": 1439,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Minimum Stagger Rate": 0.25,
+          "Maximum Stagger Rate": 0.4,
+          "Stagger Damage Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Stagger Cooldown": 10,
+          "Rage Conversion Ratio": 0.235,
+          "Rage Decrease Rate": 1,
+          "Rage Damage Rate": 0.25,
+          "Colossus Level": 149
+        }
+      },
+      "4": {
+        "lvl": 150,
+        "lvlStats": {
+          "HP": 186063416,
+          "Shield": 124042278,
+          "DEF": 193101,
+          "Non-Attribute": 295262,
+          "Fire": 1529457,
+          "Chill": 295262,
+          "Electric": 6885510,
+          "Toxic": 136929,
+          "ATK": 714,
+          "Electric ATK": 1666,
+          "HP Recovery Interval": 0.1,
+          "HP Recovery": 0,
+          "HP Recovery In Combat": 0,
+          "Shield Recovery Interval": 0.1,
+          "Shield Recovery": 0,
+          "Shield Recovery In Combat": 0,
+          "Minimum Stagger Rate": 0.25,
+          "Maximum Stagger Rate": 0.4,
+          "Stagger Damage Rate": 1,
+          "Stagger Decrease Rate": 0.1,
+          "Stagger Decrease Delay": 10,
+          "Stagger Cooldown": 10,
+          "Rage Conversion Ratio": 0.235,
+          "Rage Decrease Rate": 1,
+          "Rage Damage Rate": 0.25,
+          "Colossus Level": 150
+        }
+      }
+    },
+    "minimumTeam": 1,
+    "attackType": "Electricity",
+    "bigIcon": "UI_VoidBattle_Information_Tormentor_Item_C",
+    "smallIcon": "Icon_VoidBattle_EpicMonster_Tormentor",
+    "stats": {
+      "Movespeed": 550,
+      "Aim Movespeed": 500,
+      "Movement Destruction": 100,
+      "Crit Chance": 30,
+      "Crit Damage": 1.5,
+      "Firearm Crit Resist": 40,
+      "Skill Crit Resist": 40,
+      "Penetration Resist": 100000,
+      "Max Rage Rate": 100000,
+      "Penetration": 1
+    },
+    "weaknessKeys": {
+      "Body": {
+        "name": "Body",
+        "type": "Crush",
+        "wpMod": 0
+      },
+      "Shoulder": {
+        "name": "Shoulder",
+        "type": "Burst",
+        "wpMod": 0.25
+      },
+      "Core Cover": {
+        "name": "Core Cover",
+        "type": "Burst",
+        "wpMod": 0.375
+      },
+      "Core": {
+        "name": "Core",
+        "type": "Burst",
+        "wpMod": 0.375
+      },
+      "Balancer": {
+        "name": "Balancer",
+        "type": "Pierce",
+        "wpMod": 0.375
+      },
+      "Sensor": {
+        "name": "Sensor",
+        "type": "Pierce",
+        "wpMod": 0.5
+      }
+    },
+    "ActiveSkills": {
+      "Tormentor_BallLightning": {
+        "operationsArray": [
+          {
+            "Electric ATK": "1.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.3",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Explosion",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.78",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.78",
+            "EventType": "Event.Explosion2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_PlasmaNet": {
+        "operationsArray": [
+          {
+            "Electric ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "0",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_Rage_PlasmaCutting": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.15",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "ProjectileDataRowName": "Tormentor_Rage_PlasmaCutting_Projectile",
+            "Type": "Name"
+          }
+        ]
+      },
+      "Tormentor_PlasmaPulse": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.69",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.69",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_Rage_PlasmaPulse": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.69",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.69",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_PlasmaBeam": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.72",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.72",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_Rage_PlasmaBeam": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.72",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.72",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_Guillotine": {
+        "operationsArray": [
+          {
+            "Electric ATK": "1.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit2",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_Rage_Guillotine": {
+        "operationsArray": [
+          {
+            "Electric ATK": "1.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "1.5",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.5",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit2",
+            "ModOp": "Override"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      },
+      "Tormentor_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Tormentor_Rage_SummonMinion": {
+        "operationsArray": [],
+        "paramsArray": []
+      },
+      "Tormentor_PlasmaScatter": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "ProjectileDataRowName": "Tormentor_PlasmaScatter_Projectile",
+            "Type": "Name"
+          }
+        ]
+      },
+      "Tormentor_Rage_PlasmaScatter": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.55",
+            "EventType": "Event.Explosion",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "ProjectileDataRowName": "Tormentor_Rage_PlasmaScatter_Projectile",
+            "Type": "Name"
+          }
+        ]
+      },
+      "Tormentor_PlasmaOverflow": {
+        "operationsArray": [
+          {
+            "MaxHPRatio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "1",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "Ratio": "3.3",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "SpawnLimit": "3",
+            "Type": "Int"
+          },
+          {
+            "SpawnExpectCount": "1",
+            "Type": "Int"
+          }
+        ]
+      },
+      "Tormentor_Rage_PlasmaOverflow": {
+        "operationsArray": [
+          {
+            "MaxHPRatio": "0.5",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "bNeedDefStats": "True",
+            "Type": "Bool",
+            "EventType": "Event.Activate"
+          },
+          {
+            "DefRatio": "0.19305019305019305",
+            "Type": "Float",
+            "EventType": "Event.Activate"
+          },
+          {
+            "Ratio": "1.9411764705882353",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": [
+          {
+            "SpawnLimit": "3",
+            "Type": "Int"
+          },
+          {
+            "SpawnExpectCount": "1",
+            "Type": "Int"
+          }
+        ]
+      },
+      "Tormentor_Rage_ThunderStorm": {
+        "operationsArray": [
+          {
+            "Electric ATK": "-0.2",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-0.7",
+            "EventType": "Event.Hit",
+            "ModOp": "Multiply"
+          },
+          {
+            "Environmental Destruction (Skill)": "100",
+            "EventType": "Event.Hit",
+            "ModOp": "Override"
+          },
+          {
+            "Electric ATK": "-0.8",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Firearm ATK": "-1",
+            "EventType": "Event.Hit2",
+            "ModOp": "Multiply"
+          },
+          {
+            "Ratio": "0.2",
+            "Type": "Float",
+            "EventType": "Event.Period"
+          }
+        ],
+        "paramsArray": []
+      }
+    },
+    "weaknessKeyName": "Tormentor_HitPoint",
     "enemyType": "Colossus"
   }
 }
