@@ -145,6 +145,74 @@ let reactorRotation = {
         "Week36": [
           "Glacier",
           "Tech"
+        ],
+        "Week37": [
+          "Plain",
+          "Singular"
+        ],
+        "Week38": [
+          "Gyro"
+        ],
+        "Week39": [
+          "Sensor"
+        ],
+        "Week40": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week41": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week42": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week43": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week44": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week45": [
+          "Bracelet"
+        ],
+        "Week46": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week47": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week48": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week49": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week50": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week51": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week52": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week53": [
+          "Memory"
+        ],
+        "Week54": [
+          "Blazer",
+          "Dimension"
         ]
       },
       "zoneIDReal": "The Destruction",
@@ -326,6 +394,75 @@ let reactorRotation = {
         "Week36": [
           "Glacier",
           "Dimension"
+        ],
+        "Week37": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week38": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week39": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week40": [
+          "Bracelet"
+        ],
+        "Week41": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week42": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week43": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week44": [
+          "Plain",
+          "Singular"
+        ],
+        "Week45": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week46": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week47": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week48": [
+          "Plain",
+          "Tech"
+        ],
+        "Week49": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week50": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week51": [
+          "Memory"
+        ],
+        "Week52": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week53": [
+          "Sensor"
+        ],
+        "Week54": [
+          "Demonic",
+          "Tech"
         ]
       },
       "zoneIDReal": "The Fallen Theater",
@@ -499,6 +636,74 @@ let reactorRotation = {
         "Week36": [
           "Blazer",
           "Tech"
+        ],
+        "Week37": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week38": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week39": [
+          "Memory"
+        ],
+        "Week40": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week41": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week42": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week43": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week44": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week45": [
+          "Plain",
+          "Tech"
+        ],
+        "Week46": [
+          "Gyro"
+        ],
+        "Week47": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week48": [
+          "Sensor"
+        ],
+        "Week49": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week50": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week51": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week52": [
+          "Plain",
+          "Singular"
+        ],
+        "Week53": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week54": [
+          "Bracelet"
         ]
       },
       "zoneIDReal": "Grand Square",
@@ -672,6 +877,75 @@ let reactorRotation = {
         ],
         "Week36": [
           "Memory"
+        ],
+        "Week37": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week38": [
+          "Sensor"
+        ],
+        "Week39": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week40": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week41": [
+          "Bracelet"
+        ],
+        "Week42": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week43": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week44": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week45": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week46": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week47": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week48": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week49": [
+          "Gyro"
+        ],
+        "Week50": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week51": [
+          "Plain",
+          "Tech"
+        ],
+        "Week52": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week53": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week54": [
+          "Blazer",
+          "Tech"
         ]
       },
       "zoneIDReal": "Rockfall",
@@ -834,7 +1108,8 @@ let reactorRotation = {
           "Singular"
         ],
         "Week33": [
-          "Gyro"
+          "Blazer",
+          "Dimension"
         ],
         "Week34": [
           "Electricity",
@@ -847,6 +1122,75 @@ let reactorRotation = {
         "Week36": [
           "Plain",
           "Singular"
+        ],
+        "Week37": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week38": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week39": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week40": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week41": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week42": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week43": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week44": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week45": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week46": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week47": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week48": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week49": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week50": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week51": [
+          "Bracelet"
+        ],
+        "Week52": [
+          "Memory"
+        ],
+        "Week53": [
+          "Plain",
+          "Tech"
+        ],
+        "Week54": [
+          "Sensor"
         ]
       },
       "zoneIDReal": "Repository",
@@ -1014,6 +1358,76 @@ let reactorRotation = {
         "Week36": [
           "Demonic",
           "Singular"
+        ],
+        "Week37": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week38": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week39": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week40": [
+          "Bracelet"
+        ],
+        "Week41": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week42": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week43": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week44": [
+          "Plain",
+          "Tech"
+        ],
+        "Week45": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week46": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week47": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week48": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week49": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week50": [
+          "Memory"
+        ],
+        "Week51": [
+          "Plain",
+          "Singular"
+        ],
+        "Week52": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week53": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week54": [
+          "Electricity",
+          "Tech"
         ]
       },
       "zoneIDReal": "Restricted Zone",
@@ -1191,6 +1605,74 @@ let reactorRotation = {
         "Week36": [
           "Blazer",
           "Fusion"
+        ],
+        "Week37": [
+          "Sensor"
+        ],
+        "Week38": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week39": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week40": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week41": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week42": [
+          "Memory"
+        ],
+        "Week43": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week44": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week45": [
+          "Bracelet"
+        ],
+        "Week46": [
+          "Plain",
+          "Singular"
+        ],
+        "Week47": [
+          "Gyro"
+        ],
+        "Week48": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week49": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week50": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week51": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week52": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week53": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week54": [
+          "Glacier",
+          "Tech"
         ]
       },
       "zoneIDReal": "Ironworks",
@@ -1368,6 +1850,75 @@ let reactorRotation = {
         "Week36": [
           "Demonic",
           "Tech"
+        ],
+        "Week37": [
+          "Memory"
+        ],
+        "Week38": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week39": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week40": [
+          "Gyro"
+        ],
+        "Week41": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week42": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week43": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week44": [
+          "Plain",
+          "Tech"
+        ],
+        "Week45": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week46": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week47": [
+          "Plain",
+          "Singular"
+        ],
+        "Week48": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week49": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week50": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week51": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week52": [
+          "Sensor"
+        ],
+        "Week53": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week54": [
+          "Electricity",
+          "Singular"
         ]
       },
       "zoneIDReal": "Classified Area",
@@ -1530,8 +2081,8 @@ let reactorRotation = {
           "Dimension"
         ],
         "Week33": [
-          "Demonic",
-          "Fusion"
+          "Blazer",
+          "Singular"
         ],
         "Week34": [
           "Memory"
@@ -1541,8 +2092,77 @@ let reactorRotation = {
           "Dimension"
         ],
         "Week36": [
-          "Demonic",
+          "Glacier",
+          "Fusion"
+        ],
+        "Week37": [
+          "Plain",
+          "Tech"
+        ],
+        "Week38": [
+          "Blazer",
           "Dimension"
+        ],
+        "Week39": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week40": [
+          "Gyro"
+        ],
+        "Week41": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week42": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week43": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week44": [
+          "Plain",
+          "Singular"
+        ],
+        "Week45": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week46": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week47": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week48": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week49": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week50": [
+          "Sensor"
+        ],
+        "Week51": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week52": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week53": [
+          "Bracelet"
+        ],
+        "Week54": [
+          "Glacier",
+          "Singular"
         ]
       },
       "zoneIDReal": "The Lumber Yard",
@@ -1712,8 +2332,77 @@ let reactorRotation = {
           "Singular"
         ],
         "Week36": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week37": [
           "Glacier",
+          "Tech"
+        ],
+        "Week38": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week39": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week40": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week41": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week42": [
+          "Gyro"
+        ],
+        "Week43": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week44": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week45": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week46": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week47": [
+          "Plain",
+          "Tech"
+        ],
+        "Week48": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week49": [
+          "Electricity",
           "Singular"
+        ],
+        "Week50": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week51": [
+          "Bracelet"
+        ],
+        "Week52": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week53": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week54": [
+          "Sensor"
         ]
       },
       "zoneIDReal": "The Ruins",
@@ -1877,8 +2566,8 @@ let reactorRotation = {
           "Fusion"
         ],
         "Week34": [
-          "Glacier",
-          "Fusion"
+          "Blazer",
+          "Dimension"
         ],
         "Week35": [
           "Electricity",
@@ -1887,6 +2576,74 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Fusion"
+        ],
+        "Week37": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week38": [
+          "Sensor"
+        ],
+        "Week39": [
+          "Gyro"
+        ],
+        "Week40": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week41": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week42": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week43": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week44": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week45": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week46": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week47": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week48": [
+          "Bracelet"
+        ],
+        "Week49": [
+          "Plain",
+          "Tech"
+        ],
+        "Week50": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week51": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week52": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week53": [
+          "Memory"
+        ],
+        "Week54": [
+          "Plain",
+          "Singular"
         ]
       },
       "zoneIDReal": "Lost Supply Depot",
@@ -2066,6 +2823,75 @@ let reactorRotation = {
         "Week36": [
           "Demonic",
           "Fusion"
+        ],
+        "Week37": [
+          "Plain",
+          "Tech"
+        ],
+        "Week38": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week39": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week40": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week41": [
+          "Gyro"
+        ],
+        "Week42": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week43": [
+          "Bracelet"
+        ],
+        "Week44": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week45": [
+          "Memory"
+        ],
+        "Week46": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week47": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week48": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week49": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week50": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week51": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week52": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week53": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week54": [
+          "Plain",
+          "Singular"
         ]
       },
       "zoneIDReal": "Moonlight Lake",
@@ -2235,6 +3061,76 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Tech"
+        ],
+        "Week37": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week38": [
+          "Gyro"
+        ],
+        "Week39": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week40": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week41": [
+          "Memory"
+        ],
+        "Week42": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week43": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week44": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week45": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week46": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week47": [
+          "Plain",
+          "Tech"
+        ],
+        "Week48": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week49": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week50": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week51": [
+          "Plain",
+          "Singular"
+        ],
+        "Week52": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week53": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week54": [
+          "Demonic",
+          "Singular"
         ]
       },
       "zoneIDReal": "Timberfall",
@@ -2398,11 +3294,10 @@ let reactorRotation = {
           "Memory"
         ],
         "Week33": [
-          "Blazer",
-          "Dimension"
+          "Gyro"
         ],
         "Week34": [
-          "Plain",
+          "Blazer",
           "Tech"
         ],
         "Week35": [
@@ -2412,6 +3307,76 @@ let reactorRotation = {
         "Week36": [
           "Glacier",
           "Fusion"
+        ],
+        "Week37": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week38": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week39": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week40": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week41": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week42": [
+          "Plain",
+          "Singular"
+        ],
+        "Week43": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week44": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week45": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week46": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week47": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week48": [
+          "Bracelet"
+        ],
+        "Week49": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week50": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week51": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week52": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week53": [
+          "Sensor"
+        ],
+        "Week54": [
+          "Plain",
+          "Tech"
         ]
       },
       "zoneIDReal": "Misty Woods",
@@ -2587,6 +3552,75 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Singular"
+        ],
+        "Week37": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week38": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week39": [
+          "Bracelet"
+        ],
+        "Week40": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week41": [
+          "Sensor"
+        ],
+        "Week42": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week43": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week44": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week45": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week46": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week47": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week48": [
+          "Gyro"
+        ],
+        "Week49": [
+          "Plain",
+          "Singular"
+        ],
+        "Week50": [
+          "Plain",
+          "Tech"
+        ],
+        "Week51": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week52": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week53": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week54": [
+          "Plain",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Abandoned Zone",
@@ -2762,6 +3796,74 @@ let reactorRotation = {
         "Week36": [
           "Demonic",
           "Tech"
+        ],
+        "Week37": [
+          "Plain",
+          "Singular"
+        ],
+        "Week38": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week39": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week40": [
+          "Plain",
+          "Tech"
+        ],
+        "Week41": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week42": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week43": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week44": [
+          "Gyro"
+        ],
+        "Week45": [
+          "Sensor"
+        ],
+        "Week46": [
+          "Bracelet"
+        ],
+        "Week47": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week48": [
+          "Memory"
+        ],
+        "Week49": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week50": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week51": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week52": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week53": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week54": [
+          "Glacier",
+          "Fusion"
         ]
       },
       "zoneIDReal": "Muskeg Swamp",
@@ -2935,6 +4037,76 @@ let reactorRotation = {
         ],
         "Week36": [
           "Bracelet"
+        ],
+        "Week37": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week38": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week39": [
+          "Plain",
+          "Tech"
+        ],
+        "Week40": [
+          "Memory"
+        ],
+        "Week41": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week42": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week43": [
+          "Plain",
+          "Singular"
+        ],
+        "Week44": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week45": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week46": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week47": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week48": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week49": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week50": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week51": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week52": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week53": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week54": [
+          "Gyro"
         ]
       },
       "zoneIDReal": "Derelict Covert",
@@ -3116,6 +4288,75 @@ let reactorRotation = {
         "Week36": [
           "Glacier",
           "Singular"
+        ],
+        "Week37": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week38": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week39": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week40": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week41": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week42": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week43": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week44": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week45": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week46": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week47": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week48": [
+          "Gyro"
+        ],
+        "Week49": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week50": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week51": [
+          "Sensor"
+        ],
+        "Week52": [
+          "Bracelet"
+        ],
+        "Week53": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week54": [
+          "Blazer",
+          "Singular"
         ]
       },
       "zoneIDReal": "Vermilion Waste",
@@ -3280,7 +4521,7 @@ let reactorRotation = {
           "Singular"
         ],
         "Week34": [
-          "Gyro"
+          "Sensor"
         ],
         "Week35": [
           "Blazer",
@@ -3289,6 +4530,75 @@ let reactorRotation = {
         "Week36": [
           "Plain",
           "Tech"
+        ],
+        "Week37": [
+          "Memory"
+        ],
+        "Week38": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week39": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week40": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week41": [
+          "Bracelet"
+        ],
+        "Week42": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week43": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week44": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week45": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week46": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week47": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week48": [
+          "Plain",
+          "Singular"
+        ],
+        "Week49": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week50": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week51": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week52": [
+          "Gyro"
+        ],
+        "Week53": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week54": [
+          "Demonic",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Remnant",
@@ -3447,7 +4757,7 @@ let reactorRotation = {
           "Tech"
         ],
         "Week34": [
-          "Blazer",
+          "Glacier",
           "Singular"
         ],
         "Week35": [
@@ -3455,6 +4765,75 @@ let reactorRotation = {
         ],
         "Week36": [
           "Demonic",
+          "Singular"
+        ],
+        "Week37": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week38": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week39": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week40": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week41": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week42": [
+          "Memory"
+        ],
+        "Week43": [
+          "Gyro"
+        ],
+        "Week44": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week45": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week46": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week47": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week48": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week49": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week50": [
+          "Plain",
+          "Singular"
+        ],
+        "Week51": [
+          "Plain",
+          "Tech"
+        ],
+        "Week52": [
+          "Sensor"
+        ],
+        "Week53": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week54": [
+          "Electricity",
           "Singular"
         ]
       },
@@ -3631,6 +5010,75 @@ let reactorRotation = {
         "Week36": [
           "Plain",
           "Fusion"
+        ],
+        "Week37": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week38": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week39": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week40": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week41": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week42": [
+          "Sensor"
+        ],
+        "Week43": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week44": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week45": [
+          "Gyro"
+        ],
+        "Week46": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week47": [
+          "Bracelet"
+        ],
+        "Week48": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week49": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week50": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week51": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week52": [
+          "Plain",
+          "Tech"
+        ],
+        "Week53": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week54": [
+          "Glacier",
+          "Fusion"
         ]
       },
       "zoneIDReal": "The Mining Site",
@@ -3806,6 +5254,75 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Dimension"
+        ],
+        "Week37": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week38": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week39": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week40": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week41": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week42": [
+          "Sensor"
+        ],
+        "Week43": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week44": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week45": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week46": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week47": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week48": [
+          "Memory"
+        ],
+        "Week49": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week50": [
+          "Bracelet"
+        ],
+        "Week51": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week52": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week53": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week54": [
+          "Plain",
+          "Fusion"
         ]
       },
       "zoneIDReal": "Miragestone",
@@ -3979,6 +5496,74 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Tech"
+        ],
+        "Week37": [
+          "Bracelet"
+        ],
+        "Week38": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week39": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week40": [
+          "Plain",
+          "Singular"
+        ],
+        "Week41": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week42": [
+          "Plain",
+          "Tech"
+        ],
+        "Week43": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week44": [
+          "Sensor"
+        ],
+        "Week45": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week46": [
+          "Gyro"
+        ],
+        "Week47": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week48": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week49": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week50": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week51": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week52": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week53": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week54": [
+          "Memory"
         ]
       },
       "zoneIDReal": "The Mountaintops",
@@ -4162,6 +5747,76 @@ let reactorRotation = {
         "Week36": [
           "Blazer",
           "Singular"
+        ],
+        "Week37": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week38": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week39": [
+          "Plain",
+          "Singular"
+        ],
+        "Week40": [
+          "Memory"
+        ],
+        "Week41": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week42": [
+          "Plain",
+          "Tech"
+        ],
+        "Week43": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week44": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week45": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week46": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week47": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week48": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week49": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week50": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week51": [
+          "Gyro"
+        ],
+        "Week52": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week53": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week54": [
+          "Demonic",
+          "Fusion"
         ]
       },
       "zoneIDReal": "Moongrave Basin",
@@ -4328,12 +5983,12 @@ let reactorRotation = {
           "Tech"
         ],
         "Week33": [
-          "Glacier",
-          "Fusion"
+          "Electricity",
+          "Singular"
         ],
         "Week34": [
-          "Blazer",
-          "Dimension"
+          "Glacier",
+          "Fusion"
         ],
         "Week35": [
           "Blazer",
@@ -4341,6 +5996,75 @@ let reactorRotation = {
         ],
         "Week36": [
           "Gyro"
+        ],
+        "Week37": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week38": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week39": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week40": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week41": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week42": [
+          "Bracelet"
+        ],
+        "Week43": [
+          "Plain",
+          "Singular"
+        ],
+        "Week44": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week45": [
+          "Memory"
+        ],
+        "Week46": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week47": [
+          "Sensor"
+        ],
+        "Week48": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week49": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week50": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week51": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week52": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week53": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week54": [
+          "Glacier",
+          "Tech"
         ]
       },
       "zoneIDReal": "Observatory",
@@ -4516,6 +6240,75 @@ let reactorRotation = {
         "Week36": [
           "Plain",
           "Dimension"
+        ],
+        "Week37": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week38": [
+          "Plain",
+          "Tech"
+        ],
+        "Week39": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week40": [
+          "Plain",
+          "Singular"
+        ],
+        "Week41": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week42": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week43": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week44": [
+          "Gyro"
+        ],
+        "Week45": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week46": [
+          "Memory"
+        ],
+        "Week47": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week48": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week49": [
+          "Bracelet"
+        ],
+        "Week50": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week51": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week52": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week53": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week54": [
+          "Electricity",
+          "Fusion"
         ]
       },
       "zoneIDReal": "Shipment Base",
@@ -4691,7 +6484,7 @@ let reactorRotation = {
           "Dimension"
         ],
         "Week34": [
-          "Glacier",
+          "Blazer",
           "Singular"
         ],
         "Week35": [
@@ -4701,6 +6494,74 @@ let reactorRotation = {
         "Week36": [
           "Electricity",
           "Singular"
+        ],
+        "Week37": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week38": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week39": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week40": [
+          "Sensor"
+        ],
+        "Week41": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week42": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week43": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week44": [
+          "Bracelet"
+        ],
+        "Week45": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week46": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week47": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week48": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week49": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week50": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week51": [
+          "Memory"
+        ],
+        "Week52": [
+          "Plain",
+          "Tech"
+        ],
+        "Week53": [
+          "Gyro"
+        ],
+        "Week54": [
+          "Blazer",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Hatchery",
@@ -4869,6 +6730,75 @@ let reactorRotation = {
         ],
         "Week36": [
           "Blazer",
+          "Dimension"
+        ],
+        "Week37": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week38": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week39": [
+          "Bracelet"
+        ],
+        "Week40": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week41": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week42": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week43": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week44": [
+          "Memory"
+        ],
+        "Week45": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week46": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week47": [
+          "Plain",
+          "Singular"
+        ],
+        "Week48": [
+          "Sensor"
+        ],
+        "Week49": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week50": [
+          "Plain",
+          "Tech"
+        ],
+        "Week51": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week52": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week53": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week54": [
+          "Electricity",
           "Dimension"
         ]
       },
@@ -5039,6 +6969,75 @@ let reactorRotation = {
         "Week36": [
           "Demonic",
           "Dimension"
+        ],
+        "Week37": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week38": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week39": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week40": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week41": [
+          "Plain",
+          "Singular"
+        ],
+        "Week42": [
+          "Gyro"
+        ],
+        "Week43": [
+          "Bracelet"
+        ],
+        "Week44": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week45": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week46": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week47": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week48": [
+          "Plain",
+          "Tech"
+        ],
+        "Week49": [
+          "Memory"
+        ],
+        "Week50": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week51": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week52": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week53": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week54": [
+          "Demonic",
+          "Singular"
         ]
       },
       "zoneIDReal": "The Corrupted Zone",
@@ -5212,6 +7211,75 @@ let reactorRotation = {
         "Week36": [
           "Blazer",
           "Singular"
+        ],
+        "Week37": [
+          "Gyro"
+        ],
+        "Week38": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week39": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week40": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week41": [
+          "Plain",
+          "Singular"
+        ],
+        "Week42": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week43": [
+          "Sensor"
+        ],
+        "Week44": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week45": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week46": [
+          "Plain",
+          "Tech"
+        ],
+        "Week47": [
+          "Memory"
+        ],
+        "Week48": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week49": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week50": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week51": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week52": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week53": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week54": [
+          "Demonic",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Fractured Monolith",
@@ -5372,8 +7440,8 @@ let reactorRotation = {
           "Tech"
         ],
         "Week33": [
-          "Electricity",
-          "Dimension"
+          "Plain",
+          "Tech"
         ],
         "Week34": [
           "Glacier",
@@ -5385,6 +7453,75 @@ let reactorRotation = {
         ],
         "Week36": [
           "Gyro"
+        ],
+        "Week37": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week38": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week39": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week40": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week41": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week42": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week43": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week44": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week45": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week46": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week47": [
+          "Memory"
+        ],
+        "Week48": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week49": [
+          "Bracelet"
+        ],
+        "Week50": [
+          "Sensor"
+        ],
+        "Week51": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week52": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week53": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week54": [
+          "Electricity",
+          "Tech"
         ]
       },
       "zoneIDReal": "Forward Base",
@@ -5566,6 +7703,75 @@ let reactorRotation = {
         "Week36": [
           "Plain",
           "Tech"
+        ],
+        "Week37": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week38": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week39": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week40": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week41": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week42": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week43": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week44": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week45": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week46": [
+          "Sensor"
+        ],
+        "Week47": [
+          "Bracelet"
+        ],
+        "Week48": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week49": [
+          "Gyro"
+        ],
+        "Week50": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week51": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week52": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week53": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week54": [
+          "Demonic",
+          "Tech"
         ]
       },
       "zoneIDReal": "Starfall Road",
@@ -5743,6 +7949,75 @@ let reactorRotation = {
         "Week36": [
           "Glacier",
           "Tech"
+        ],
+        "Week37": [
+          "Sensor"
+        ],
+        "Week38": [
+          "Memory"
+        ],
+        "Week39": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week40": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week41": [
+          "Gyro"
+        ],
+        "Week42": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week43": [
+          "Plain",
+          "Tech"
+        ],
+        "Week44": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week45": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week46": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week47": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week48": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week49": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week50": [
+          "Plain",
+          "Singular"
+        ],
+        "Week51": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week52": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week53": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week54": [
+          "Blazer",
+          "Fusion"
         ]
       },
       "zoneIDReal": "The Aurora Forest",
@@ -5916,6 +8191,76 @@ let reactorRotation = {
         ],
         "Week36": [
           "Sensor"
+        ],
+        "Week37": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week38": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week39": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week40": [
+          "Plain",
+          "Tech"
+        ],
+        "Week41": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week42": [
+          "Bracelet"
+        ],
+        "Week43": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week44": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week45": [
+          "Plain",
+          "Singular"
+        ],
+        "Week46": [
+          "Memory"
+        ],
+        "Week47": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week48": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week49": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week50": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week51": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week52": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week53": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week54": [
+          "Electricity",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Frozen Valley",
@@ -6087,6 +8432,75 @@ let reactorRotation = {
         "Week36": [
           "Blazer",
           "Fusion"
+        ],
+        "Week37": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week38": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week39": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week40": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week41": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week42": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week43": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week44": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week45": [
+          "Plain",
+          "Tech"
+        ],
+        "Week46": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week47": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week48": [
+          "Blazer",
+          "Singular"
+        ],
+        "Week49": [
+          "Sensor"
+        ],
+        "Week50": [
+          "Gyro"
+        ],
+        "Week51": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week52": [
+          "Glacier",
+          "Dimension"
+        ],
+        "Week53": [
+          "Plain",
+          "Singular"
+        ],
+        "Week54": [
+          "Memory"
         ]
       },
       "zoneIDReal": "Fallen Ark",
@@ -6257,7 +8671,77 @@ let reactorRotation = {
           "Dimension"
         ],
         "Week36": [
-          "Bracelet"
+          "Electricity",
+          "Dimension"
+        ],
+        "Week37": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week38": [
+          "Plain",
+          "Singular"
+        ],
+        "Week39": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week40": [
+          "Plain",
+          "Fusion"
+        ],
+        "Week41": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week42": [
+          "Electricity",
+          "Fusion"
+        ],
+        "Week43": [
+          "Memory"
+        ],
+        "Week44": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week45": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week46": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week47": [
+          "Demonic",
+          "Dimension"
+        ],
+        "Week48": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week49": [
+          "Sensor"
+        ],
+        "Week50": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week51": [
+          "Electricity",
+          "Tech"
+        ],
+        "Week52": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week53": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week54": [
+          "Gyro"
         ]
       },
       "zoneIDReal": "Convertor Facility",
@@ -6424,11 +8908,81 @@ let reactorRotation = {
           "Tech"
         ],
         "Week35": [
-          "Memory"
+          "Blazer",
+          "Singular"
         ],
         "Week36": [
           "Electricity",
           "Fusion"
+        ],
+        "Week37": [
+          "Glacier",
+          "Singular"
+        ],
+        "Week38": [
+          "Bracelet"
+        ],
+        "Week39": [
+          "Electricity",
+          "Singular"
+        ],
+        "Week40": [
+          "Glacier",
+          "Tech"
+        ],
+        "Week41": [
+          "Plain",
+          "Tech"
+        ],
+        "Week42": [
+          "Blazer",
+          "Fusion"
+        ],
+        "Week43": [
+          "Plain",
+          "Dimension"
+        ],
+        "Week44": [
+          "Memory"
+        ],
+        "Week45": [
+          "Blazer",
+          "Dimension"
+        ],
+        "Week46": [
+          "Demonic",
+          "Singular"
+        ],
+        "Week47": [
+          "Demonic",
+          "Fusion"
+        ],
+        "Week48": [
+          "Plain",
+          "Singular"
+        ],
+        "Week49": [
+          "Demonic",
+          "Tech"
+        ],
+        "Week50": [
+          "Glacier",
+          "Fusion"
+        ],
+        "Week51": [
+          "Gyro"
+        ],
+        "Week52": [
+          "Electricity",
+          "Dimension"
+        ],
+        "Week53": [
+          "Blazer",
+          "Tech"
+        ],
+        "Week54": [
+          "Glacier",
+          "Dimension"
         ]
       },
       "zoneIDReal": "Defense Line",
