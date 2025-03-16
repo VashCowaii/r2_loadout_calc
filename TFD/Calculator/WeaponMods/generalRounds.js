@@ -1528,7 +1528,7 @@ const generalRounds =  {
    "Multi-Percussion Sight": {
       "rarity": "Rare",
       "polarity": "Rutile",
-      "type": "High-Power Rounds",
+      "type": "General Rounds",
       "cost": 15,
       "category": "Multi-Hit Chance",
       "desc": "Multi-Hit Chance +30%, Firearm Critical Hit Damage -120%",
@@ -1543,7 +1543,7 @@ const generalRounds =  {
    "Multi-Trigger Rifling": {
       "rarity": "Rare",
       "polarity": "Rutile",
-      "type": "High-Power Rounds",
+      "type": "General Rounds",
       "cost": 15,
       "category": "Multi-Hit Chance",
       "desc": "Multi-Hit Chance +40%, Fire Rate -30%",
@@ -1558,7 +1558,7 @@ const generalRounds =  {
    "Multi-Piercing Sights": {
       "rarity": "Rare",
       "polarity": "Rutile",
-      "type": "High-Power Rounds",
+      "type": "General Rounds",
       "cost": 15,
       "category": "Multi-Hit Chance",
       "desc": "Multi-Hit Damage +70%, Firearm Critical Hit Damage -120%",
@@ -1570,7 +1570,257 @@ const generalRounds =  {
       "inclusion": [],
       "exclusion": [],
    },
+   "Multi-Piercing Trigger": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "General Rounds",
+        "cost": 15,
+        "category": "Multi-Hit Damage",
+        "desc": "Multi-Hit Damage +30%, Multi-Hit Chance +10%",
+        "stats": {
+            "MultiShotChanceBASECORE": 0.10,
+            "MultiShotDamageCORE": 0.30
+        },
+        "tags": [],
+        "inclusion": [],
+        "exclusion": [],
+    },
 
+   "Multi-Hit Induction": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Special Mod",
+      "desc": "On hitting Weak Points, Multi-Hit Chance +5.7% for 5s (up to 10 stacks, -2 stacks per failed Weak Point Attack)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "MultiShotChanceBASECORE","value": 0.057,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Bullet (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 10,
+               "cooldown": 0,
+               "duration": 5,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               "conditions": ["isWeakpoint"],
+         }
+      ],
+      "tags": ["MultiShotChanceBASE"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+   "Multi-Bullet": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "On landing multi-hit, Multi-Hit Damage +5% for 3s (up to 3 stacks) and inflicts Deep Wounds on the target hit.<br>Deep Wounds inflict 3% of Firearm DMG at regular intervals for 3s (up to 3 stacks)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "MultiShotDamageCORE","value": 0.05,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Bullet (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 3,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               "conditions": ["isMultiHit"],
+         }
+      ],
+      "tags": ["MultiShotDamage"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+
+   "Multi-Sights (Singular)": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When using Singular skill, Firearm ATK +4% for 15s with a 100% chance (up to 3 stacks, these effects are stackable)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "FirearmATK%CORE","value": 0.04,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Sights (Singular) (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 15,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isMultiHit"],
+         }
+      ],
+      "tags": ["FirearmATK%"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+   "Multi-Sights (Fusion)": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When using Fusion skill Multi-Hit Damage +14% for 15s with a 100% chance (up to 3 stacks, these effects are stackable)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "MultiShotDamageCORE","value": 0.14,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Sights (Fusion) (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 15,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isMultiHit"],
+         }
+      ],
+      "tags": ["MultiShotDamage"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+
+   "Multi-Processor (Dimension)": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When using Dimension skill, Weak Point DMG +3% for 15s with a 100% chance, (up to 3 stacks, these effects are stackable)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "WeakPointDamage%CORE","value": 0.03,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Processor (Dimension) (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 15,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isMultiHit"],
+         }
+      ],
+      "tags": ["WeakPointDamage%"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+   "Multi-Processor (Tech)": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Malachite",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When using Tech skill Firearm Critical Hit DMG +8% for 15s with a 100% chance, (up to 3 stacks, these effects are stackable)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "FirearmCritDamageCORE","value": 0.08,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Processor (Tech) (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 15,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isMultiHit"],
+         }
+      ],
+      "tags": ["FirearmCritDamage"],
+      "inclusion": [],
+      "exclusion": [],
+   },
+
+   "Multi-Amplification": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When inflicting a debuff, Multi-Hit Chance +4% for 15s (up to 3 stacks)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "MultiShotChanceBASECORE","value": 0.04,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Bullet (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 3,
+               "cooldown": 0,
+               "duration": 0,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isWeakpoint"],
+         }
+      ],
+      "tags": ["MultiShotChanceBASE"],
+      "inclusion": ["Assault Rifle"],
+      "exclusion": [],
+   },
+   "Multi-Circulation": {//done for reloads
+      "rarity": "Ultimate",
+      "polarity": "Rutile",
+      "type": "General Rounds",
+      "cost": 16,
+      "category": "Battle Proficiency",
+      "desc": "When granting a buff or using a Recovery Skill on allies, Multi-Hit Damage +16.8% for 15s (up to 5 stacks)",
+      "stats": {
+         // "Accuracy": -0.20,
+      },
+      "complexBonus": [
+         {
+               "stats": [
+                  {"name": "MultiShotDamageCORE","value": 0.168,"subStackValue": null},
+               ],
+               "bonusName": "Multi-Bullet (High-Powered)",
+               "oneTimeOrStack": "stack",
+               "limit": 5,
+               "cooldown": 0,
+               "duration": 0,
+               "currentStacks": 0,
+               "timePassedEntry": 0,
+               // "conditions": ["isWeakpoint"],
+         }
+      ],
+      "tags": ["MultiShotDamage"],
+      "inclusion": ["Assault Rifle"],
+      "exclusion": [],
+   },
 
 
 
