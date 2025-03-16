@@ -6,6 +6,10 @@
 
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Serena is Stupid","isYTVid": true,"date": 20250315,"embedLink": "Qfb1I63QJ-U","contentType": "Build","isOutdated": false,"entityArray": ["Serena","A-TAMS"],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Wave of Light","isYTVid": true,"date": 20250226,"embedLink": "Yfo-yAsqqhQ","contentType": "Build","isOutdated": false,"entityArray": ["Hailey","Wave of Light"],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Blue Beetle","isYTVid": true,"date": 20250224,"embedLink": "fjcMZEc1ePs","contentType": "Build","isOutdated": false,"entityArray": ["Hailey","Blue Beetle"],"pinnedCommentFlag": false},
+
     {"author": "Vash","topic": "How Beam Rifles Work","isYTVid": true,"date": 20250223,"embedLink": "uLeQuxZ169c","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
     {"author": "Vash","topic": "EXCAVA [Boss Nuke]","isYTVid": true,"date": 20250223,"embedLink": "46rj3jCbplE","contentType": "Build","isOutdated": false,"entityArray": ["Gley","EXCAVA"],"pinnedCommentFlag": false},
