@@ -580,5 +580,27 @@ const augments = {
         "desc": "Modifies the effects of Frenzied state's Maximize Lethality. Fire Rate becomes fixed, but Duration increases significantly.",
         "skillOverrides": [0,0,"Super Senses",0,0]
     },
+
+
+
+    //SERENA
+    // "Divine Surge": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Rutile",
+    //     "type": "Descendant",
+    //     "cost": 3,
+    //     "category": "Serena",
+    //     "desc": "Flies forward, inflicting Knockback on enemnies in the path and deals large amounts of damage on landing. Additionally, creates a path of fire in her wake that deals continuous damage to enemies within range.",
+    //     "skillOverrides": [0,0,0,0,0] //0,0,0,"Divine Surge",0
+    // },
+    // "Hymn": {
+    //     "rarity": "Transcendant",
+    //     "polarity": "Rutile",
+    //     "type": "Descendant",
+    //     "cost": 5,
+    //     "category": "Serena",
+    //     "desc": "When used on the ground, creates a zone that increases the Jump of allies. When used in midair, temporarily increases the Movement Speed of nearby allies.",
+    //     "skillOverrides": [0,0,0,0,0] //0,0,"Hymn",0,0
+    // },
     ...localInsertionAugments
 }

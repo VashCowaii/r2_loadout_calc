@@ -66,6 +66,8 @@ let bossStatKeyLibaryCategory = {
     "Colossus Level": "",
 }
 
+let priorBoss = null;
+
 const bossKeys = Object.keys(bossData);
 const listArray = [];
 for (let boss in bossData) {
@@ -231,8 +233,9 @@ function generateBossData() {
     }
     let rowObjectKeys = Object.keys(rowObject);
     let rowString = "<div class='bossDataHeaderBig'>DETAILED STATS</div>";
+    let rowStringAttacks = ``;
+    let rowStringAttacks2 = ``;
     let stringCategories = {
-        
         "Damage": "",
         "HP": "",
         "Shield": "",
@@ -240,7 +243,6 @@ function generateBossData() {
         "Stagger": "",
         "Frenzy": "",
         "Rage": "",
-
         "Movement": "",
         "Misc": "",
     }
@@ -265,6 +267,137 @@ function generateBossData() {
 
 
     readSelection("bossDataTable").innerHTML += rowString;
+
+
+
+    //if the boss name actually changes, redo the attacks list
+    // let dropdown2 = readSelection("bossListAttacks");
+    // let attackKeys = Object.keys(currentEntry.ActiveSkills);
+    // if (priorBoss != currentBoss) {
+    //     // ActiveSkills
+    //     dropdown2.innerHTML = "";
+
+    //     attackKeys.forEach(optionText => {
+    //         const optionElement = document.createElement("option");
+    //         optionElement.value = optionText;
+    //         optionElement.textContent = optionText;
+    //         dropdown2.appendChild(optionElement);
+    //     });
+
+    //     //populate first entry by default
+    //     dropdown2.value = attackKeys[0];
+    // }
+
+    // priorBoss = currentBoss;
+    // const currentAttack = currentEntry.ActiveSkills[dropdown2.value]
+    // const currentOperations = currentAttack.operationsArray
+    // const currentParameters = currentAttack.paramsArray
+
+    // let attackTypeAttr = null;
+    // if (bossStats["Fire ATK"] != null) {attackTypeAttr = "Fire ATK";}
+    // else if (bossStats["Chill ATK"] != null) {attackTypeAttr = "Chill ATK";}
+    // else if (bossStats["Toxic ATK"] != null) {attackTypeAttr = "Toxic ATK";}
+    // else if (bossStats["Electric ATK"] != null) {attackTypeAttr = "Electric ATK";}
+
+    // let baseFirearmATK = bossStats["ATK"];
+    // let baseAttributeATK = bossStats[attackTypeAttr];
+    // let baseCritDMG = currentEntry.stats["Crit Damage"];
+    // let baseCritRate = currentEntry.stats["Crit Chance"];
+
+    // if (currentOperations && currentOperations.length) {
+    //     rowStringAttacks += ``;//<div style="white-space: normal;">Attack Modifiers</div>
+
+    //     let bonusesObject = {};
+    //     console.log(currentOperations)
+
+    //     for (let entry of currentOperations) {
+    //         let entryKeys = Object.keys(entry);
+
+    //         rowStringAttacks2 += `<div class="attacksStatDisplayBoxHolder">`
+
+    //         let FirearmATK = 0;
+    //         let AttributeATK = 0;
+    //         let bonusType = null;
+    //         let eventType = null;
+
+    //         // console.log(entryKeys)
+
+    //         for (let innerEntry of entryKeys) {
+    //             let currentInnerEntry = entry[innerEntry];
+
+    //             if (innerEntry === "Firearm ATK") {FirearmATK = +currentInnerEntry;}
+    //             else if (innerEntry === attackTypeAttr) {AttributeATK = +currentInnerEntry;}
+    //             else if (innerEntry === "EventType") {eventType = currentInnerEntry.split(".")[1]}
+    //             else if (innerEntry === "ModOp") {bonusType = currentInnerEntry;}
+
+    //             if (innerEntry === attackTypeAttr) {console.log("matching attribute found 2",AttributeATK)}
+    //             // rowStringAttacks2 += `<div class="statsRowNameDetailed">${innerEntry}<span class="rowTraceLine"></span><span>${currentInnerEntry}</span></div>`
+    //         }
+
+    //         if (bonusesObject[eventType] === undefined) {bonusesObject[eventType] = {
+    //             "Firearm ATK": null,
+    //             [attackTypeAttr]: null,
+    //             "Bonus Type": null,
+    //             "Event Type": eventType
+    //         };}
+    //         if (!!FirearmATK && eventType) {bonusesObject[eventType]["Firearm ATK"] = +(baseFirearmATK * (1 + FirearmATK)).toFixed(2)};
+    //         if (!!AttributeATK && eventType) {bonusesObject[eventType][attackTypeAttr] = +(baseAttributeATK * (1 + AttributeATK)).toFixed(2);};
+    //         bonusesObject[eventType]["Bonus Type"] = bonusType;
+    //         bonusesObject[eventType]["Event Type"] = eventType;
+
+
+
+    //         rowStringAttacks2 += `</div>`
+    //     }
+
+    //     let bonusKeys = Object.keys(bonusesObject);
+    //     for (let entry of bonusKeys) {
+    //         if (entry === "Period" || entry === "Activate") {continue;}
+
+    //         let physical = bonusesObject[entry]["Firearm ATK"];
+    //         let attribute = bonusesObject[entry][attackTypeAttr];
+    //         let SUM = +(physical + attribute).toFixed(2);
+    //         let SUMCrit = +(SUM * baseCritDMG).toFixed(2);
+    //         let SUMCritAVG = +(SUM * ((baseCritDMG-1)*(baseCritRate/100) + 1) ).toFixed(2)
+
+    //         rowStringAttacks += `
+    //             <div style="white-space: normal;">${entry}</div>
+    //             <div class="totalHealingBoxBreakdownRows">
+    //                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+    //                     <div class="totalHealingHeader">Firearm ATK</div>
+    //                     <div class="totalHealingValueBoss">${physical}</div>
+    //                 </div>
+    //                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+    //                     <div class="totalHealingHeader">${attackTypeAttr}</div>
+    //                     <div class="totalHealingValueBoss">${attribute}</div>
+    //                 </div>
+    //                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+    //                     <div class="totalHealingHeader">SUM</div>
+    //                     <div class="totalHealingValueBoss">${SUM}</div>
+    //                 </div>
+    //                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+    //                     <div class="totalHealingHeader">Crit</div>
+    //                     <div class="totalHealingValueBoss">${SUMCrit}</div>
+    //                 </div>
+    //                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+    //                     <div class="totalHealingHeader">AVG</div>
+    //                     <div class="totalHealingValueBoss">${SUMCritAVG}</div>
+    //                 </div>
+    //             </div>
+    //             <br>
+    //         `
+
+    //         // `<div style="white-space: normal;">Attack Modifiers</div>`
+    //     }
+
+
+
+    //     // console.log(bonusesObject)
+    // }
+    // if (currentParameters && currentParameters.length) {
+    //     rowStringAttacks += `<div style="white-space: normal;">Attack Parameters</div>`;
+    // }
+    // readSelection("bossAttacksTable").innerHTML = rowStringAttacks + rowStringAttacks2;
 }
 
 generateBossData();

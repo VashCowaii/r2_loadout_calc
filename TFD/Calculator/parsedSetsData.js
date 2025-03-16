@@ -1873,7 +1873,7 @@ let setsListData = {
             }
           ]
         },
-        "descKey": "Increases Skill Power by up to +14.3% based on HP lost relative to Max HP\nWhen current HP is 1, Skill Power +14.3%\nHas a 100% chance to recover 15% Shield each time you inflict an enemy with a debuff\nOn Skill Attack, grants 1 stacks of Exaltation (Up to5 stacks, 15s duration)\nOn skill hit at 5 stacks of Exaltation, fires a guided projectile toward the closest target (Cooldown 7s)\nDeals additional damage equivalent to 4.5% of Skill Power, and inflicts Desolation\nDesolation: All ATK of the target -0.5% (Up to 5 stacks, for 30s)"
+        "descKey": "Increases Skill Power by up to +14.3% based on HP lost relative to Max HP\nWhen current HP is 1, Skill Power +14.3%\nHas a 100% chance to recover 15% Shield each time you inflict an enemy with a debuff (Cooldown 15s)\nOn Skill Attack, grants 1 stacks of Exaltation (Up to5 stacks, 15s duration)\nOn skill hit at 5 stacks of Exaltation, fires a guided projectile toward the closest target (Cooldown 7s)\nDeals additional damage equivalent to 4.5% of Skill Power, and inflicts Desolation\nDesolation: All ATK of the target -0.5% (Up to 5 stacks, for 30s)"
       }
     },
     "name": "Distorted Resolve"
@@ -1994,5 +1994,367 @@ let setsListData = {
       }
     },
     "name": "Hunter"
+  },
+  "Ascending Armory": {
+    "bonusReferences": {
+      "0": null,
+      "2": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory00Tier3_Parts2",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/SetOptionAbility_Base.SetOptionAbility_Base_C",
+            "SubPathString": ""
+          },
+          "Operations": [
+            {
+              "Tag": {
+                "TagName": "Event.DuringActivate"
+              },
+              "Operation": {
+                "CalcClass": {
+                  "AssetPathName": "",
+                  "SubPathString": ""
+                },
+                "Params": [],
+                "Modifiers": [
+                  {
+                    "StatRefType": "EM1StatRefType::None",
+                    "StatType": "Skill Cost",
+                    "ModOp": "EM1StatModifierOp::Add",
+                    "Value": "-0.065"
+                  }
+                ],
+                "QueryTags": []
+              }
+            }
+          ],
+          "InvokeStatusEffects": [],
+          "SpawnAbilityActors": [],
+          "Params": []
+        },
+        "descKey": "Skill Cost -6.5%"
+      },
+      "4": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory00Tier3_Parts4",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/S2E2/SetOptionAbility_S2E2Accessory00.SetOptionAbility_S2E2Accessory00_C",
+            "SubPathString": ""
+          },
+          "Operations": [],
+          "InvokeStatusEffects": [],
+          "SpawnAbilityActors": [],
+          "Params": [
+            {
+              "Name": "AbilityCooltime",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "10"
+            },
+            {
+              "Name": "RoundsMaxRatio",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "0.1"
+            },
+            {
+              "Name": "RoundsMaxRatioVoidBattle",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "0.1"
+            }
+          ]
+        },
+        "descKey": "When reloading in mid-air, provides Supply Bullets (Cooldown 10s)\nField Supplies +10%\nIntercept Battle Supplies +10%"
+      }
+    },
+    "name": "Ascending Armory"
+  },
+  "Sprinting": {
+    "bonusReferences": {
+      "0": null,
+      "2": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory01Tier3_Parts2",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/SetOptionAbility_Base.SetOptionAbility_Base_C",
+            "SubPathString": ""
+          },
+          "Operations": [
+            {
+              "Tag": {
+                "TagName": "Event.DuringActivate"
+              },
+              "Operation": {
+                "CalcClass": {
+                  "AssetPathName": "",
+                  "SubPathString": ""
+                },
+                "Params": [],
+                "Modifiers": [
+                  {
+                    "StatRefType": "EM1StatRefType::None",
+                    "StatType": "Grappling Hook Charge Time Increase Ratio",
+                    "ModOp": "EM1StatModifierOp::Add",
+                    "Value": "-0.1"
+                  }
+                ],
+                "QueryTags": []
+              }
+            }
+          ],
+          "InvokeStatusEffects": [],
+          "SpawnAbilityActors": [],
+          "Params": []
+        },
+        "descKey": "Grappling Hook Charge Time -10%"
+      },
+      "4": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory01Tier3_Parts4",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/S2E2/SetOptionAbility_S2E2Accessory01.SetOptionAbility_S2E2Accessory01_C",
+            "SubPathString": ""
+          },
+          "Operations": [],
+          "InvokeStatusEffects": [
+            {
+              "Tag": {
+                "TagName": "Event.Activate"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory01",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            }
+          ],
+          "SpawnAbilityActors": [],
+          "Params": []
+        },
+        "descKey": "When using skill, grants 1 stacks of Agile (Up to 1 stacks, 30s duration)\nAgile: Movement Speed +10%"
+      }
+    },
+    "name": "Sprinting"
+  },
+  "Crusader Knights": {
+    "bonusReferences": {
+      "0": null,
+      "2": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory02Tier3_Parts2",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/SetOptionAbility_Base.SetOptionAbility_Base_C",
+            "SubPathString": ""
+          },
+          "Operations": [
+            {
+              "Tag": {
+                "TagName": "Event.DuringActivate"
+              },
+              "Operation": {
+                "CalcClass": {
+                  "AssetPathName": "",
+                  "SubPathString": ""
+                },
+                "Params": [],
+                "Modifiers": [
+                  {
+                    "StatRefType": "EM1StatRefType::None",
+                    "StatType": "Chill Resistance",
+                    "ModOp": "EM1StatModifierOp::Multiply",
+                    "Value": "0.06"
+                  }
+                ],
+                "QueryTags": []
+              }
+            }
+          ],
+          "InvokeStatusEffects": [],
+          "SpawnAbilityActors": [],
+          "Params": []
+        },
+        "descKey": "Chill Resistance +6%"
+      },
+      "4": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory02Tier3_Parts4",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/S2E2/SetOptionAbility_S2E2Accessory02.SetOptionAbility_S2E2Accessory02_C",
+            "SubPathString": ""
+          },
+          "Operations": [],
+          "InvokeStatusEffects": [
+            {
+              "Tag": {
+                "TagName": "Event.Execute"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_Purification_Debuff_All",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            },
+            {
+              "Tag": {
+                "TagName": "Event.Execute2"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory02",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            },
+            {
+              "Tag": {
+                "TagName": "Event.Character.SetOption.InitialCoolTime"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory02_InitialCoolTime",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            }
+          ],
+          "SpawnAbilityActors": [],
+          "Params": [
+            {
+              "Name": "Ratio",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "0.1"
+            },
+            {
+              "Name": "AbilityCooltime",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "10"
+            },
+            {
+              "Name": "AbilityCoolTimeShield",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "15"
+            },
+            {
+              "Name": "RemoveStackCount",
+              "Type": "EM1AbilityParamType::Int",
+              "Value": "-1"
+            },
+            {
+              "Name": "InitialCoolTime",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "5"
+            }
+          ]
+        },
+        "descKey": "Grants max stacks of Heavy Armor and removes 1 stacks when hit (Up to 5 stacks, cooldown 15s, effect cooldown after equipping/unequipping 5s)\nHeavy Armor: Incoming Damage Modifier -21%\nWhen hit, has a 10% chance to grant Purification to self (Cooldown 10s)"
+      }
+    },
+    "name": "Crusader Knights"
+  },
+  "Unpredictable": {
+    "bonusReferences": {
+      "0": null,
+      "2": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory03Tier3_Parts2",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/SetOptionAbility_Base.SetOptionAbility_Base_C",
+            "SubPathString": ""
+          },
+          "Operations": [],
+          "InvokeStatusEffects": [],
+          "SpawnAbilityActors": [],
+          "Params": []
+        },
+        "descKey": "No Effect"
+      },
+      "4": {
+        "abilityKey": {
+          "Name": "SetOptionAbility_S2E2Accessory03Tier3_Parts4",
+          "AbilityClass": {
+            "AssetPathName": "/Game/Blueprints/Equipment/SetOption/S2E2/SetOptionAbility_S2E2Accessory03.SetOptionAbility_S2E2Accessory03_C",
+            "SubPathString": ""
+          },
+          "Operations": [],
+          "InvokeStatusEffects": [
+            {
+              "Tag": {
+                "TagName": "Event.Receive"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory03_0",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            },
+            {
+              "Tag": {
+                "TagName": "Event.Receive1"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory03_1",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            },
+            {
+              "Tag": {
+                "TagName": "Event.Receive2"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory03_2",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            },
+            {
+              "Tag": {
+                "TagName": "Event.Character.SetOption.InitialCoolTime"
+              },
+              "InvokeStatusEffect": {
+                "StatusEffect": {
+                  "RowName": "StatusEffect_ACCSet_S2E2Accessory03_InitialCoolTime",
+                  "Table": null
+                },
+                "RemovalPolicy": "EM1AbilityCreatedObjectRemovalPolicy::RemoveWithThisAbility",
+                "Params": []
+              }
+            }
+          ],
+          "SpawnAbilityActors": [],
+          "Params": [
+            {
+              "Name": "AbilityCooltime",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "60"
+            },
+            {
+              "Name": "InitialCoolTime",
+              "Type": "EM1AbilityParamType::Float",
+              "Value": "10"
+            }
+          ]
+        },
+        "descKey": "Grants Unpredictable (Cooldown 60s, effect cooldown after equipping/unequipping 10s)\nUnpredictable: Randomly grants Resilience, Latent Strength, or Fierce Attack\nResilience: HP Recovery proportional to Max HP, when currently at full HP, Shield Recovery proportional to Max Shield\nContinuous Health Recovery +4.8%\nContinuous Shield Recovery +3.3%\n(Cooldown 10s)\nLatent Strength: Skill Power +21%\nSkill Cost -12%\n(Cooldown 20s)\nFierce Attack: Firearm ATK +25%\nReload Time Modifier +8%\n(Cooldown 30s)"
+      }
+    },
+    "name": "Unpredictable"
   }
 }

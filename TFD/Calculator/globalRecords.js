@@ -114,6 +114,20 @@ let globalRecords = {
     "playerCount": 1,
 
 
+    "paragonBoard": {
+        "activeNodes": 0,
+        "nodeLimit": 40,
+        "centerNode": 221,
+        "stats": {},
+        "tags": []
+    },
+
+    "skillSpecificWeaponFunctions": {
+        // "specialGunUltimateFunction": null,
+        "specialGunFunction": null,
+        "specialSkillFunction": null
+    },
+
 
 
 

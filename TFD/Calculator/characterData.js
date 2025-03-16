@@ -6468,5 +6468,245 @@ const characters = {
         }
     },
 
+
+    "Serena": {
+        "image": "/TFD/TFDImages/CharacterIcons/Icon_PC_List_019_A01.png",
+        "baseStats": {
+            "HP": 1402,
+            "Shield": 413,
+            "ShieldInCombat": 3.3,
+            "ShieldOutCombat": 3.96,
+            "DEF": 2325,
+            "ResistanceFire": 11,
+            "ResistanceChill": 11,
+            "ResistanceElectric": 13,
+            "ResistanceToxin": 11,
+            "MP": 243,
+            "MPInCombat": 0,
+            "MPOutCombat": 0.3,
+            "CritRate": 0.10,
+            "CritDamage": 1.3,
+        },
+        "name": "Serena",
+        "characterSettings": {
+            "serenaUseSacredShred": true,
+            "serenaUseAscension": true,
+            "serenaUse4thBonus": true,
+            "serenaSoarInAir": true,
+        },
+        "abilities": {
+            "ability1": {
+                "base": {
+                    "name": "Sacred Flame",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_019_A01_01.png",
+                    "type": ["Fire","Singular"],
+                    "desc": "Fires flames in the direction of the crosshairs to deal damage and inflict Repentance. On hitting ally, grants Blessing.<br>Repentance acts the same as Burn. Firearm attacks against enemies with Repentance have a chance to recover Rounds for the firearm in use. Additionally, when an enemy with Repentance is killed, inflicts Repentance on nearby enemies. Flames pierce terrain when used on the ground and explode when colliding with terrain when fired in mid-air.",
+                    "powerMods": {
+                        "base": 142.9/100,
+                        "baseDOT": 8.5/100,
+                        "intervalDOT": 1,
+                        "durationDOT": 10,
+                        "cooldown": 15,
+                        "fireShred": -0.20,
+                    },
+                    "customDPSBase": "serenaSacredCalcsTier0",
+                    "customDPS": "serenaSacredCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "Impact - AVG DMG/Hit" : "avgDmgPerHit",
+                        "Burn - AVG DMG/Tick" : "avgDmgPerHit",
+                        "Burn - Total AVG DMG" : "totalTickDamageBurn",
+                        "AVG DPS per Cast": "avgDPSPerCast",
+                        "SUM Total AVG" : "SUMTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 18,"limit": null,"isModified": true},
+                        ],
+                        "PROJECTILE": [
+                            {"statType": "range","statName": "Range","value": 7,"limit": 1.5,"isModified": true},
+                        ],
+                        "REPENTANCE": [
+                            {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": true},
+                            {"statType": "duration","statName": "Interval","value": 1,"limit": null,"isModified": false},
+                            {"statType": "","statName": "-Enemy Fire RES","value": -0.20,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Recovery Chance","value": 0.10,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Rounds Recovered","value": 0.02,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "range","statName": "Propagation Range","value": 7,"limit": 1.5,"isModified": true},
+                        ],
+                        "BLESSING": [
+                            {"statType": "duration","statName": "Duration","value": 8,"limit": null,"isModified": true},
+                            {"statType": "","statName": "HP Recovery Amount/s","value": 0.06,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+            },
+            "ability2": {
+                "base": {
+                    "name": "Ascension",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_019_A01_02.png",
+                    "type": ["Fire","Singular"],
+                    "desc": "Greatly decreases gravity while this skill is active. Firearm attacks whil in mid-air have additional effects depending on the Rounds in use. However, Jump and Grappling Hook charge times have been adjusted.",
+                    "powerMods": {
+                        "base": 393.3/100,
+                        "baseFirearm%": 150/100,
+                        "multiChance": 0.50,
+                        "multiDMG": 0.50,
+                    },
+                    "customDPSBase": "serenaAscensionCalcsTier0",
+                    "customDPS": "serenaAscensionCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        // "Impact - AVG DMG/Hit" : "avgDmgPerHit",
+                        // "Burn - AVG DMG/Tick" : "avgDmgPerHit",
+                        // "Burn - Total AVG DMG" : "totalTickDamageBurn",
+                        // "AVG DPS per Cast": "avgDPSPerCast",
+                        // "SUM Total AVG" : "SUMTotalAVG",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 3,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 10,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "Continous MP Cost","value": 9,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [
+                            {"statType": "","statName": "-Gravity","value": -0.85,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Grapple Charge Time Increase","value": -1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "GENERAL ROUNDS": [
+                            {"statType": "","statName": "+Multi-Hit Chance","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Multi-Hit DMG","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "IMPACT ROUNDS": [
+                            {"statType": "","statName": "ATK Falloff Distance Increase","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP Recovery on Crit","value": 0.12,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "SPECIAL ROUNDS": [
+                            {"statType": "","statName": "Firearm DMG AOE","value": 1.5,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "range","statName": "Range","value": 10,"limit": 1.5,"isModified": true},
+                            {"statType": "","statName": "Max Targets","value": 20,"limit": null,"isModified": false},
+                        ],
+                        "HIGH-POWER ROUNDS": [
+                            {"statType": "","statName": "Extra Fire DMG Chance","value": 0.50,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+            },
+            "ability3": {
+                "base": {
+                    "name": "Soar",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_019_A01_03.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "When used on the ground, Serena shoots into the air. When used mid-air, Serena moves quickly in the direction of movement and Reloads the currently equipped weapon. Additionally, Serena's number of Jumps is reset.",
+                    "powerMods": {
+                        "base": 715/100,
+                        "baseAir": 1042.8/100,
+                        "cooldown": 15,
+                    },
+                    "customDPSBase": "",
+                    "customDPS": "serenaSoarCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                        "AVG DPS per Cast": "avgDPSPerCast",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "Max Stacks","value": 3,"limit": null,"isModified": false},
+                            {"statType": "cooldown","statName": "Stack Cooldown","value": 15,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 10,"limit": null,"isModified": true},
+                        ],
+                        "SKILL EFFECT": [],
+                        "ON GROUND": [
+                            {"statType": "range","statName": "Impact Range","value": 3,"limit": 2,"isModified": true},
+                        ],
+                        "MID-AIR": [
+                            {"statType": "range","statName": "Impact Range","value": 5,"limit": 2,"isModified": true},
+                        ],
+                    },
+                },
+            },
+            "ability4": {
+                "base": {
+                    "name": "Redemption",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_019_A01_04.png",
+                    "type": ["Fire","Dimension"],
+                    "desc": "When used on the ground, removes all debuffs on Serena and all allies within range, and grants Prayer of Redeption. When used midair, grants Redemption's Judgement to self.",
+                    "powerMods": {
+                        "base": 0/100,
+                        "cooldown": 110,
+                        "ratio": 0.008
+                    },
+                    "customDPSBase": "serenaRedemptionCalcsTier0",
+                    "customDPS": "serenaRedemptionCalcs",
+                    "stats": {},
+                    "tags": [],
+                    "returnStatOptions": {
+                        "AVG DMG/Hit" : "avgDmgPerHit",
+                        "AVG DPS per Cast": "avgDPSPerCast",
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "cooldown","statName": "Cooldown","value": 110,"limit": null,"isModified": true},
+                            {"statType": "cost","statName": "MP Cost","value": 60,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Ground Range","value": 30,"limit": 2,"isModified": true},
+                        ],
+                        "PRAYER OF REDEMPTION": [
+                            {"statType": "duration","statName": "Duration","value": 5,"limit": null,"isModified": true},
+                            {"statType": "","statName": "Base Stacks","value": 5,"limit": null,"isModified": false},
+                            {"statType": "","statName": "DR/Stack","value": -0.18,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Stacks Lost/Hit","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "HP/Stack Removed","value": 0.12,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "MP/Stack Removed","value": 0.12,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "REDEMPTION'S JUDGMENT": [
+                            {"statType": "duration","statName": "Duration","value": 13,"limit": null,"isModified": true},
+                            {"statType": "range","statName": "Firearm AOE Range","value": 8,"limit": 2,"isModified": true},
+                            {"statType": "","statName": "AOE Chance","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Additional DMG","value": 0,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "%HP DMG Multi","value": 0.008,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                    },
+                },
+            },
+            "ability5": {
+                "base": {
+                    "name": "Divinity",
+                    "image": "/TFD/TFDImages/SkillIcons/Icon_Skill_019_A01_00.png",
+                    "type": ["Fire"],
+                    "desc": "Serena gains an additional stat bonus when firing a firearm in midair.",
+                    "powerMods": {
+                        "atkBonus": 0.45
+                    },
+                    "customDPSBase": "serenaDivinityCalcsTier0",
+                    "customDPS": "",
+                    "stats": {},
+                    "tags": ["FirearmATK%"],
+                    "returnStatOptions": {
+                    },
+                    "displayStats": [],
+                    "displayStatsALT": {
+                        "BASIC": [
+                            {"statType": "","statName": "+Firearm ATK%","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Explosive ATK%","value": 0.45,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "+Accuracy","value": 0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "-Recoil","value": -0.30,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                            {"statType": "","statName": "Weird bullshit stat","value": -0.15,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                        ],
+                        "FLIGHT TOGGLE": [],
+                    },
+                },
+            }
+        }
+    },
+
     ...localInsertion
 }

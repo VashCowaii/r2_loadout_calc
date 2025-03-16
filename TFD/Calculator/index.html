@@ -108,6 +108,7 @@
                     <div class="modeSelectionSelectorBox" id="modeSelection3" onclick="userTriggers.toggleDisplayMode(3)">Enemy</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection4" onclick="userTriggers.toggleDisplayMode(4)">Buffs</div>
                     <div class="modeSelectionSelectorBox" id="modeSelection5" onclick="userTriggers.toggleDisplayMode(5)">Compare</div>
+                    <div class="modeSelectionSelectorBox" id="modeSelection6" onclick="userTriggers.toggleDisplayMode(6)">Tuning</div>
                     <!-- <div class="totalHealingBoxHalfModeSelector hasHoverTooltip">
                         Character Mode&nbsp;
                         <label class="toggleContainer">
@@ -493,6 +494,23 @@
                                 </div>
                             </div>
 
+                            <div class="teamBuffBreakdownHolder">
+                                <!-- <span class="rowTraceLine"></span> -->
+                                <div class="statisticSettingsRow" style="box-sizing: border-box;">
+                                    <div class="totalHealingBoxHalf hasHoverTooltip" id="totalHealingFlatRow">
+                                        <!-- <div class="totalHealingHeader">Aggressive Melody</div> -->
+                                        <div style="padding-right: 5px;">Aerial Raider</div>
+                                        <div class="totalHealingValue">
+                                            <label class="toggleContainer">
+                                                <input type="checkbox" class="toggleCheckbox" id="teamBuffsAerialRaider" onchange="userTriggers.updateTeamBuffsObject()">
+                                                <span class="toggleSlider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
                         
                     </div>
@@ -758,12 +776,67 @@
                 </div>
 
 
+                <div class="abilityDamageTabHolder" id="paragonBreakdownTabHolders" style="display: none;"><!-- PARAGON BOARD CONTAINERS -->
+        
+                            <div class="advancedCategoryBoxHolder" id="tankStatsContainer" style="justify-content: center;flex-direction: column;">
+                                <div class="breakdownTab" style="display: flex;">
+        
+                                    <div class="advancedCategoryBox advStatsMobileAdjustment" style="justify-content: start;width: 100%;border: none;">
+                                        <!-- <div class="breakdownTabHeader">PARAGON BOARD</div> -->
+                                        
+                                        <div class="breakdownTabBody">
+        
+                                            <!-- <div class="abilityBreakdownGeneralMessage">You need at least one mod equipped on your character in slots 3-12 order to see a breakdown generate.<br>Transcendent and Sub-Attack mods cannot be compared.</div> -->
+                                            <div class="paragonBoardBoxHolderScroller">
+                                                <div class="paragonBoardHolderBox" id="paragonBoardHolderBox"></div>
+
+                                                <div class="paragonPointsSpentBox">
+                                                    Points Spent&nbsp;<span id="currentActiveNodesParagon">0/40</span>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="modQueryResultsBoxHolder"></div>
+                                        <div class="paragonSearchBoxHolder"> <!-- background-color: transparent; -->
+                                            <div class="paragonSearchBox">
+                                                <div class="selectionSelectorBoxes" style="max-width: 300px;margin: 0;padding: 0;">
+                                                    <div class="selectSelectorTitle">SEARCH:&nbsp;</div>
+                                                    <div class="presetsSelectorBox">
+                                                        <input class="selectSelector hasHoverTooltip" id="paragonStatFilterEntry" style="width: 100%;" oninput="userTriggers.toggleParagonGridUnit(221)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="paragonStatsMainBoxHolder">
+                                            <div class="paragonStatsHalvesBoxHolder">
+                                                <div class="breakdownTabHeader">CLAIMED</div>
+                                                <div class="paragonStatsBodyBox" id="paragonClaimedStatsBox"></div>
+                                            </div>
+                                            <div class="paragonStatsHalvesBoxHolder">
+                                                <div class="breakdownTabHeader">AVAILABLE</div>
+                                                <div class="paragonStatsBodyBox" id="paragonAvailableStatsBox"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                
+        
+                                
+                            </div>
+        
+                </div>
+
+
 
                 
             </div>
 
 
-            <div class="basicsBoxModsHolder">
+            <div class="basicsBoxModsHolder" id="basicsBoxModsHolderRightTab">
 
                 <div class="descSelectorInfoHolder"><!-- this is the html for all the breakdown tabs that populate the upper right box above the mods -->
 
@@ -1751,6 +1824,9 @@
 <script src="/TFD/Calculator/WeaponMods/specialRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/WeaponMods/generalRounds.js"></script> <!-- weapon mod data -->
 <script src="/TFD/Calculator/createHTML.js"></script> 
+<script src="/TFD/Calculator/parsedTileData.js"></script> 
+<script src="/TFD/Calculator/tuningStats.js"></script> 
+<script src="/TFD/Calculator/tuning.js"></script> 
 <script src="/TFD/Calculator/urlHandling.js"></script> 
 <script src="/TFD/Calculator/pagePopulation.js"></script>
 <script src="/MainJS/buildTime.js"></script>

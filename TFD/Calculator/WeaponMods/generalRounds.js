@@ -1521,6 +1521,66 @@ const generalRounds =  {
 
 
 
+
+
+
+
+   "Multi-Percussion Sight": {
+      "rarity": "Rare",
+      "polarity": "Rutile",
+      "type": "High-Power Rounds",
+      "cost": 15,
+      "category": "Multi-Hit Chance",
+      "desc": "Multi-Hit Chance +30%, Firearm Critical Hit Damage -120%",
+      "stats": {
+         "MultiShotChanceBASECORE": 0.30,
+         "FirearmCritDamage": -1.20
+      },
+      "tags": [],
+      "inclusion": [],
+      "exclusion": [],
+   },
+   "Multi-Trigger Rifling": {
+      "rarity": "Rare",
+      "polarity": "Rutile",
+      "type": "High-Power Rounds",
+      "cost": 15,
+      "category": "Multi-Hit Chance",
+      "desc": "Multi-Hit Chance +40%, Fire Rate -30%",
+      "stats": {
+         "MultiShotChanceBASECORE": 0.30,
+         "FireRate": 0.30
+      },
+      "tags": [],
+      "inclusion": [],
+      "exclusion": [],
+   },
+   "Multi-Piercing Sights": {
+      "rarity": "Rare",
+      "polarity": "Rutile",
+      "type": "High-Power Rounds",
+      "cost": 15,
+      "category": "Multi-Hit Chance",
+      "desc": "Multi-Hit Damage +70%, Firearm Critical Hit Damage -120%",
+      "stats": {
+         "MultiShotDamageBASECORE": 0.30,
+         "FirearmCritDamage": -1.20
+      },
+      "tags": [],
+      "inclusion": [],
+      "exclusion": [],
+   },
+
+
+
+
+
+
+
+
+
+
+
    //---------------------------------------------------------------
    //---------------------------------------------------------------
    //MODS ADDED LATER

@@ -33,11 +33,13 @@ const greatTableKnowerOfAll = {
     //OBSCUR MOD REFERENCES FOR CHECKS
     "LastStandActive": 0,
 
+    "SkillPowerBaseValue": 0,
     //BASE OPTIMIZATION POWER BONUS
     "PowerOptimization": 0,"PowerOptimizationCORE": 0,//core bonuses are not applied to unique weapons. This isn't actually from a core, rather something like Secret Garden, but it needs to skip unique weapons so we use CORE suffix here
     "CharacterSkillMultiplier": 0,//for use with dynamic scaling skill dependent modifiers for the getTotalSkillPower function. Otherwise, this stat should always be 0, shit will break if that is not the case.
     //SKILL ATK BONUSES
     "SkillAttackColossus": 0,
+    "SkillAttackColossus%": 0,
     //SKILL POWER BOOST RATIOS
     "PowerRatioBase": 0,
     "PowerRatioNonAttribute": 0,"PowerRatioElectric": 0,"PowerRatioToxic": 0,"PowerRatioChill": 0,"PowerRatioFire": 0,
@@ -80,6 +82,11 @@ const greatTableKnowerOfAll = {
     "BaseWeakPointBonus": 0,"BaseWeakPointBonusCORE": 0,
     "WeakPointDamage%": 0,"WeakPointDamage%CORE": 0,
     "WeakPointOverride": 0,"WeakPointOverrideCORE": 0,
+
+    "MultiShotChance": 0,"MultiShotChanceCORE": 0,
+    "MultiShotChanceBASE": 0,"MultiShotChanceBASECORE": 0,
+    "MultiShotDamage": 0,"MultiShotDamageCORE": 0,
+    "MultiShotDamageBASE": 0,"MultiShotDamageBASECORE": 0,
 
     "WeaponUniqueMultiplier": 0,"WeaponUniqueMultiplierCORE": 0,//this is for stuff like hailey's zenith or beam multipliers
     "independentScalar": 0,"independentScalarCORE": 0,//this is for flat nonscaling amounts that get added in after type and faction, but before crit and weak point, like last dagger
