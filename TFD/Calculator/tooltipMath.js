@@ -35,6 +35,7 @@ let tooltipMath = {
         let weaponRef = globalRecords.weapon;
         let teamRef = globalRecords.teamBuffs;
         let enemyRef = globalRecords.enemyBuffs;
+        const paragonRef = globalRecords.paragonBoard;
 
         const ratioTable = {
             "Fire" : "PowerRatioFire",
@@ -142,6 +143,13 @@ let tooltipMath = {
         //-----------------------------------------------//
         htmlString += tooltipMath.checkItemForStat(teamRef,`Team Buffs Option`,statistic);
         htmlString += tooltipMath.checkItemForStat(enemyRef,`Enemy Buffs Option`,statistic);
+
+        htmlString += tooltipMath.checkItemForStat(paragonRef,`Paragon Board (Arche Tuning)`,statistic);
+
+
+        // const paragonRef = globalRecords.paragonBoard;
+        // console.log(paragonRef.stats)
+        // formulasValues.pullStats(index,paragonRef.stats);
 
     
         return htmlString;

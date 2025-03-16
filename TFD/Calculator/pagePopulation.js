@@ -50,6 +50,7 @@ const userTriggers = {
         const enemyDisplay = currentMode === 3 ? "flex" : "none";
         const teamDisplay = currentMode === 4 ? "flex" : "none";
         const comparisonDisplay = currentMode === 5 ? "flex" : "none";
+        const paragonDisplay = currentMode === 6 ? "flex" : "none";
 
         readSelection("centerAbilityImageRow").style.display = characterDisplay;
         readSelection("centerAbilityBreakdownTabHolders").style.display = characterDisplay;
@@ -67,7 +68,9 @@ const userTriggers = {
 
         readSelection("comparisonBreakdownTabHolders").style.display = comparisonDisplay;
 
-        for (let i=1;i<=5;i++) {
+        readSelection("paragonBreakdownTabHolders").style.display = paragonDisplay;
+
+        for (let i=1;i<=6;i++) {
             readSelection(`modeSelection${i}`).style.color = "grey";
             readSelection(`modeSelection${i}`).style.border = "2px solid #434343";
             readSelection(`modeSelection${i}`).style.borderBottom = "none";
@@ -79,11 +82,194 @@ const userTriggers = {
         readSelection(`modeSelection${currentMode}`).style.borderBottom = "none";
         readSelection(`modeSelection${currentMode}`).style.borderTop = "none";
 
+        readSelection("basicsBoxModsHolderRightTab").style.display = "flex";
         if (currentMode === 1) {userTriggers.updateSelectedFocus('characterBreakdownTab');}
         else if (currentMode === 2) {userTriggers.updateSelectedFocus('characterWeaponBreakdownTab');}
-        else if (currentMode > 2) {userTriggers.updateSelectedFocus('settingsBreakdownTab');}
+        else if (currentMode > 2 && currentMode < 6) {userTriggers.updateSelectedFocus('settingsBreakdownTab');}
+        else {
+            readSelection("basicsBoxModsHolderRightTab").style.display = "none";
+        }
 
         manipulateURL.updateURLparameters();//purely so the selected display tab will update within the URL, without needing to update formulas
+    },
+    findCenterParagonPath(paragonGridAssignment, centerIndex) {
+        let visited = new Set();
+        let queue = [centerIndex];//start the queue with the center node which is 221 in this case
+    
+        while (queue.length > 0) {
+            let gridNumber = queue.shift();//get next node processing
+            if (visited.has(gridNumber)) continue;//skip if we've already been there
+            visited.add(gridNumber);
+    
+            let neighbors = [
+                gridNumber - 1,//left
+                gridNumber + 1,//right
+                gridNumber - 21,//up
+                gridNumber + 21//down
+            ];
+    
+            for (let neighbor of neighbors) {
+                if (paragonGridAssignment[neighbor]?.isActive && !visited.has(neighbor) && paragonGridAssignment.hasOwnProperty(neighbor)) {
+                    // Make sure we are not wrapping across rows
+                    if ((gridNumber % 21 === 0 && neighbor === gridNumber - 1) || 
+                        (gridNumber % 21 === 20 && neighbor === gridNumber + 1)) {
+                        continue;
+                    }
+                    queue.push(neighbor);
+                }
+            }
+        }
+    
+        return visited;
+    },
+    toggleParagonGridUnit(gridNumber) {
+        // paragonGridAssignment
+        let gridRef = paragonGridAssignment[gridNumber];
+
+        const paragonRef = globalRecords.paragonBoard;
+        const nodeLimit = paragonRef.nodeLimit;
+        const centerNode = paragonRef.centerNode;
+
+        if (gridNumber != centerNode) {
+            const currentCost = paragonGridAssignment[gridNumber].cost ?? 1;
+            if (!gridRef.isActive) {
+                //Extra context: we're running on a 21x21 grid
+                //if the left node is active and is NOT getting bumped up to a new row above, then be found
+                const leftCheck = paragonGridAssignment[gridNumber-1] && paragonGridAssignment[gridNumber-1].isActive && gridNumber != 1 && gridNumber % 21 != 0;
+                //if the right node is active and is NOT getting bumped to a row down below, then be found
+                const rightCheck = paragonGridAssignment[gridNumber+1] && paragonGridAssignment[gridNumber+1].isActive && gridNumber % 21 != 20;
+                //if we are on a row that isn't the first row and the node above us is active, then be found
+                const upCheck = gridNumber>21 && paragonGridAssignment[gridNumber-21] && paragonGridAssignment[gridNumber-21].isActive;
+                //if we are not on the last row and the row below is active, then be found.
+                const downCheck = gridNumber<(21*(21-1)) && paragonGridAssignment[gridNumber+21] && paragonGridAssignment[gridNumber+21].isActive;
+
+                const parentFound = leftCheck || rightCheck || upCheck || downCheck;
+
+                
+
+                if (parentFound && paragonRef.activeNodes+currentCost<=nodeLimit) {
+                    gridRef.isActive = !gridRef.isActive;
+                    paragonRef.activeNodes += currentCost;
+                    // currentActiveNodes
+
+                    // readSelection("currentActiveNodesParagon").innerHTML = `${paragonRef.activeNodes}/${nodeLimit}`;
+                    readSelection(`paragoneNode${gridNumber}`).style.opacity = 1;
+                }
+            }
+            else {
+                gridRef.isActive = !gridRef.isActive;
+                globalRecords.paragonBoard.activeNodes -= currentCost;
+                //add code to look for things to turn off.
+                // readSelection("currentActiveNodesParagon").innerHTML = `${paragonRef.activeNodes}/${nodeLimit}`;
+                readSelection(`paragoneNode${gridNumber}`).style.opacity = 0.3;
+            }
+        }
+
+        //finds and returns the nodes that could make a path to the center
+        let connectedNodes = userTriggers.findCenterParagonPath(paragonGridAssignment, centerNode);
+        //find and kill orphaned nodes that weren't found in the pathing
+
+        function fuzzyMatch(input, itemParam1, itemParam2) {//are we finding between two parameters something that matches the search value.
+            const search = input.toLowerCase();
+            return itemParam1.toLowerCase().includes(search) || itemParam2.toLowerCase().includes(search);
+        }
+        let searchValue = readSelection("paragonStatFilterEntry").value;
+
+        let displayClaimedObject = {};
+        let displayAvailableObject = {};
+
+        let statsObject = {};
+        for (let key in paragonGridAssignment) {
+            let currentNodeBonus = paragonGridAssignment[key];
+            let currentNodeElement = readSelection(`paragoneNode${key}`);
+
+            let searchResult = false;
+            let descriptionRef = currentNodeBonus.statsArray;
+            if (descriptionRef && descriptionRef.length && searchValue) {
+                for (let searchEntry in descriptionRef) {
+                    if (fuzzyMatch(searchValue,searchEntry ?? "","")) {searchResult = true; break;}
+                }
+                for (let searchEntry in currentNodeBonus.stats) {
+                    if (fuzzyMatch(searchValue,searchEntry ?? "","")) {searchResult = true; break;}
+                }
+            }
+            if (searchValue && fuzzyMatch(searchValue,currentNodeBonus.nodeTitle ?? "","")) {searchResult = true;}
+            
+            if (+key != centerNode && paragonGridAssignment[key].isActive && !connectedNodes.has(Number(key))) {//if the node is active but does NOT have a path to the center, then KEEL IT
+                currentNodeBonus.isActive = false;
+                currentNodeElement.style.opacity = +key === 221 ? 1 : 0.3;
+                globalRecords.paragonBoard.activeNodes -= currentNodeBonus.cost ?? 1;
+
+                currentNodeElement.classList.remove("paragonSearched");
+                if (searchResult) { 
+                    currentNodeElement.style.opacity = 1;
+                    currentNodeElement.classList.add("paragonSearched");
+                }
+
+                if (currentNodeBonus.statsArray) {
+                    for (let entry in currentNodeBonus.statsArray) {
+                        if (!displayAvailableObject[entry]) {displayAvailableObject[entry] = 0;}
+
+                        displayAvailableObject[entry] += currentNodeBonus.statsArray[entry];
+                    }
+                }
+            }
+            else if (+key != centerNode && paragonGridAssignment[key].isActive && connectedNodes.has(Number(key))) {//if the node is active AND pathed to the center, add it to the claimed and stats objects
+                if (currentNodeBonus.statsArray) {
+                    for (let entry in currentNodeBonus.statsArray) {
+                        if (!displayClaimedObject[entry]) {displayClaimedObject[entry] = 0;}
+                        displayClaimedObject[entry] += currentNodeBonus.statsArray[entry];
+
+                        currentNodeElement.classList.remove("paragonSearched");
+                    }
+                    for (let entry in currentNodeBonus.stats) {
+                        if (!statsObject[entry]) {statsObject[entry] = 0;}
+                        statsObject[entry] += currentNodeBonus.stats[entry];
+                    }
+                }
+            }
+            else {//if the node is neither active nor pathed to the middle, then add to the available object, but not the claimed nor stats
+                if (currentNodeBonus.statsArray) {
+                    for (let entry in currentNodeBonus.statsArray) {
+                        if (!displayAvailableObject[entry]) {displayAvailableObject[entry] = 0;}
+
+                        displayAvailableObject[entry] += currentNodeBonus.statsArray[entry];
+                    }
+                }
+
+                currentNodeElement.style.opacity = +key === 221 ? 1 : 0.3;
+                currentNodeElement.classList.remove("paragonSearched");
+
+                if (searchResult) {
+                    currentNodeElement.style.opacity = 1;
+
+                    currentNodeElement.classList.add("paragonSearched");
+                }
+            }
+
+        }
+
+        readSelection("paragonClaimedStatsBox").innerHTML = "";//reset le box
+        readSelection("paragonAvailableStatsBox").innerHTML = "";//reset le box
+        for (let entry in displayClaimedObject) {
+            let currentEntry = displayClaimedObject[entry];
+
+            readSelection("paragonClaimedStatsBox").innerHTML += `<div class="weaponBreakdownSplitterHeaderParagonTooltipRow">
+                    <div class="basicsDRContainer"><span class="basicsDRStat">${entry}</span><span class="rowTraceLine" style="border: none;"></span><span class="basicsDRValue">${(currentEntry * (!nonPercentValues[entry] ? 100 : 1)).toFixed(2)}${!nonPercentValues[entry] ? "%" : ""}</span></div>
+                    </div>`
+        }
+        for (let entry in displayAvailableObject) {
+            let currentEntry = displayAvailableObject[entry];
+
+            readSelection("paragonAvailableStatsBox").innerHTML += `<div class="weaponBreakdownSplitterHeaderParagonTooltipRow">
+                    <div class="basicsDRContainer"><span class="basicsDRStat">${entry}</span><span class="rowTraceLine" style="border: none;"></span><span class="basicsDRValue">${(currentEntry * (!nonPercentValues[entry] ? 100 : 1)).toFixed(2)}${!nonPercentValues[entry] ? "%" : ""}</span></div>
+                    </div>`
+        }
+        readSelection("currentActiveNodesParagon").innerHTML = `${paragonRef.activeNodes}/${nodeLimit}`;
+        paragonGridAssignment[centerNode].isActive = true;
+        globalRecords.paragonBoard.activeNodes = Math.max(0,globalRecords.paragonBoard.activeNodes);
+        paragonRef.stats = {...statsObject};
+        updateFormulas();
     },
     updateGeneralSettings() {
         //it's called a crit ceiling here in the code bc of what I used to think it was
@@ -346,6 +532,10 @@ const userTriggers = {
             teamRef.complexBonus = [];
         }
 
+        if (readSelection("teamBuffsAerialRaider").checked) {
+            teamRef.stats.MultiShotChanceBASECORE = 0.18;
+        }
+
         updateFormulas();
     },
     updateSelectedFocus(elementID) {
@@ -390,19 +580,22 @@ const userTriggers = {
         for (let name of list) {
             readSelection(name).style.display = "none";
         }
-        readSelection(elementID).style.display = "flex";
 
-        function removeStringSegment(string) {return string.replace("BreakdownTab","");}
+        if (elementID) {
+            readSelection(elementID).style.display = "flex";
 
-        //if this is a mod breakdown, focus the input selector of that specific mod when someone clicks for that tab.
-        let newName = removeStringSegment(elementID);
-        if (elementID.includes("mod")) {readSelection(newName).focus();}
-        else if (elementID.includes("character")) {readSelection(newName).focus();}
-        else if (elementID.includes("auxiliary")) {readSelection(newName).focus();}
-        else if (elementID.includes("sensor")) {readSelection(newName).focus();}
-        else if (elementID.includes("memory")) {readSelection(newName).focus();}
-        else if (elementID.includes("processor")) {readSelection(newName).focus();}
-        else if (elementID.includes("Core")) {readSelection("coreSub1").focus()}
+            function removeStringSegment(string) {return string.replace("BreakdownTab","");}
+
+            //if this is a mod breakdown, focus the input selector of that specific mod when someone clicks for that tab.
+            let newName = removeStringSegment(elementID);
+            if (elementID.includes("mod")) {readSelection(newName).focus();}
+            else if (elementID.includes("character")) {readSelection(newName).focus();}
+            else if (elementID.includes("auxiliary")) {readSelection(newName).focus();}
+            else if (elementID.includes("sensor")) {readSelection(newName).focus();}
+            else if (elementID.includes("memory")) {readSelection(newName).focus();}
+            else if (elementID.includes("processor")) {readSelection(newName).focus();}
+            else if (elementID.includes("Core")) {readSelection("coreSub1").focus()}
+        }
     },
     updateSelectedCharacter(isImportedValue) {
         //clear invalid inputs
@@ -1614,6 +1807,17 @@ const settings = {
             settingsRef.gleyHPBar = +readSelection("gleyHPBar").value
             if (arrayRef[4] === 0) {}//passive
         },
+        Serena(settingsRef,arrayRef) {
+            settingsRef.serenaUseSacredShred = readSelection("serenaUseSacredShred").checked;
+            if (arrayRef[0] === 0) {}//1
+            settingsRef.serenaUseAscension = readSelection("serenaUseAscension").checked;
+            if (arrayRef[1] === 0) {}//2
+            if (arrayRef[2] === 0) {}//3
+            settingsRef.serenaUse4thBonus = readSelection("serenaUse4thBonus").checked;
+            if (arrayRef[3] === 0) {}//4
+            settingsRef.serenaSoarInAir = readSelection("serenaSoarInAir").checked;
+            if (arrayRef[4] === 0) {}//passive
+        },
         "Secret Garden"(settingsRef,arrayRef) {
             settingsRef.gardenStackCount = +readSelection("gardenStackCount").value
         },
@@ -1656,6 +1860,9 @@ const settings = {
         "Perforator"(settingsRef,arrayRef) {
             settingsRef.perfUseScanners = readSelection("perfUseScanners").checked;
             settingsRef.perfUseDetect = readSelection("perfUseDetect").checked;
+        },
+        "A-TAMS"(settingsRef,arrayRef) {
+            settingsRef.useATAMSInfusion = readSelection("useATAMSInfusion").checked;
         },
         ...localInsertionSettings
     }
@@ -1828,6 +2035,11 @@ const formulasValues = {
         const enemyRef = globalRecords.enemyBuffs;
         formulasValues.pullStats(index,teamRef.stats);
         formulasValues.pullStats(index,enemyRef.stats);
+
+        //paragon board stat pull
+        const paragonRef = globalRecords.paragonBoard;
+        formulasValues.pullStats(index,paragonRef.stats);
+        // paragonRef.stats = {...statsObject};
     },
     //Shorthand for looping through an elements "stats" object and adding it to the corresponding master value
     pullStats(index,path) {
@@ -1883,11 +2095,13 @@ function updateFormulas(isCycleCalcs,overrideObject) {
     const {MPRecoveryModifier,baseCharacterMPInCombat,baseMPInCombatBonus,totalMPInCombat,baseCharacterMPOutCombat,baseMPOutCombatBonus,totalMPOutCombat,
         shieldRecoveryModifier,baseCharacterShieldInCombat,baseShieldInCombatBonus,totalShieldInCombat,baseCharacterShieldOutCombat,baseShieldOutCombatBonus,totalShieldOutCombat,
         totalHPRecoveryModifier,totalHPHealModifier} = calcs.getRecovery(tableReference,characterRef);
-    const {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(tableReference,characterRef);
+    const {baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRatePreCap,enemySkillCritResist,totalSkillCritRate,totalSkillCritDamage} = calcs.getSkillCrit(tableReference,characterRef);
 
     const {baseWPMulti,flatWPBonus,weakpointBonus,bossPartWPBonus,totalWPBonus,wpHitRate,wpAveraged} = calcs.getFirearmWeakpoint(tableReference,currentWeaponRef);
-    const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableReference,currentWeaponRef);
+    const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,
+        totalFirearmCritRatePreResist,enemyFirearmCritResist,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableReference,currentWeaponRef);
     const {baseFirearmATK,attackPercent,physicalTypeBonus,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableReference,currentWeaponRef);
+    const {baseMultiShotDMG,totalFirearmMultishotChance,totalFirearmMultishotMulti,avgMultishotBonus} = calcs.getFirearmMultishot(tableReference,currentWeaponRef);
 
 
     let returnObject = {
@@ -1899,10 +2113,11 @@ function updateFormulas(isCycleCalcs,overrideObject) {
         MPRecoveryModifier,baseCharacterMPInCombat,baseMPInCombatBonus,totalMPInCombat,baseCharacterMPOutCombat,baseMPOutCombatBonus,totalMPOutCombat,
         shieldRecoveryModifier,baseCharacterShieldInCombat,baseShieldInCombatBonus,totalShieldInCombat,baseCharacterShieldOutCombat,baseShieldOutCombatBonus,totalShieldOutCombat,
         totalHPRecoveryModifier,totalHPHealModifier,
-        baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRate,totalSkillCritDamage,
+        baseCharacterCritRate,baseCharacterCritDamage,baseCritRateBonus,baseCritDamageBonus,critRatePercentBonus,critDamagePercentBonus,totalSkillCritRatePreCap,enemySkillCritResist,totalSkillCritRate,totalSkillCritDamage,
         baseWPMulti,flatWPBonus,weakpointBonus,bossPartWPBonus,totalWPBonus,wpHitRate,wpAveraged,
-        baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage,
+        baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRatePreResist,enemyFirearmCritResist,totalFirearmCritRate,totalFirearmCritDamage,
         baseFirearmATK,attackPercent,physicalTypeBonus,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK,
+        baseMultiShotDMG,totalFirearmMultishotChance,totalFirearmMultishotMulti,avgMultishotBonus,
 
     }
     returnObject = {...returnObject,...customDamage.callAbilityFunctions(tableReference,returnObject,isCycleCalcs,limitedAbilityBonuses,limitedWeaponBonuses,limitedWeaponAbilityBonuses)}
@@ -1916,6 +2131,8 @@ function updateFormulas(isCycleCalcs,overrideObject) {
             moduleQueryFunctions.getModuleQueryResults();
         }
         tooltips.loadTooltips();
+
+        zoomer.applyZoomableToGraphs();
     }
     else {
         return {tableReference,returnObject}

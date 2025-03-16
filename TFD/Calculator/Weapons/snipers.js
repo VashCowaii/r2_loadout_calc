@@ -248,8 +248,8 @@ const sniperDataComplex = {
         "weaponSettings": {
             "gardenStackCount": 3,
         },
-        "customDPSBase": "secretGardenCalcsTier0",
-        "customDPS": "skipThisWeaponCalcs",
+        "customDPSBase": "secretGardenCalcsTier0",//secretGardenCalcsTier0
+        "customDPS": "",//skipThisWeaponCalcs
         "displayStatsALT": {
             "BASIC": [],
             "DIMENSION SKILL": [
@@ -525,6 +525,25 @@ const sniperDataComplex = {
                 {"statType": "duration","statName": "Duration","value": 10,"limit": null,"isModified": false},
                 {"statType": "","statName": "+%Weak Point on Target","value": -0.40,"limit": null,"isModified": false,"isUnlabeledPercent": true},
             ],
+            "FIREARM SUM": [],
+        },
+    },
+    "211093003": {//A-TAMS
+        "customDPSBase": "",
+        "customDPS": "atamsCalcs",
+        "tags": [""],
+        "weaponSettings": {
+            "useATAMSInfusion": true,
+        },
+        "displayStatsALT": {
+            "BASIC": [
+                {"statType": "","statName": "MP Cost/Interval","value": 0.022,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "Gauge Increase/Interval","value": 0.03,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "duration","statName": "Interval","value": 0.1,"limit": null,"isModified": false},
+                {"statType": "","statName": "Max Gauge","value": 1,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+                {"statType": "","statName": "Additional Firearm DMG","value": 2.60,"limit": null,"isModified": false,"isUnlabeledPercent": true},
+            ],
+            "INFUSION": [],
             "FIREARM SUM": [],
         },
     }

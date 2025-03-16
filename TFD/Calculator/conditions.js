@@ -3,6 +3,10 @@ const conditionalChecksWeapons = {
         //is the current damage selection meant to be a weakpoint hit or not
         return globalRecords.useWeakspots && returnObject.bossPartWPBonus > 0 ? true : false;
     },
+    isMultiHit(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
+        //do we even have a chance to do a multishot or not
+        return returnObject.avgMultishotBonus > 0 ? true : false;
+    },
     isAdvantage(index,returnObject,isCycleCalcs,weaponRef,cycleReferences) {
         //is the current damage selection meant to be a weakpoint hit or not.
         // console.log(weaponRef)

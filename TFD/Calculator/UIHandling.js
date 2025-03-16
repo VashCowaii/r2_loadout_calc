@@ -75,6 +75,8 @@ const basicsUpdates = {
             {"statName": "baseCritDamageBonus","statCoverName": "+Base Damage","tooltip":"A bonus to the base critical hit damage multiplier of your abilities, before any % bonuses are factored.","relevantTags": ["SkillCritDamageBaseBonus"],"isNotAPercent": true,"roundAnyways": true},
             {"statName": "critRatePercentBonus","statCoverName": "+% Crit Rate","tooltip":"A multiplier to your total base ability critical hit rate.","relevantTags": ["SkillCritRate"],"isNotAPercent": false},
             {"statName": "critDamagePercentBonus","statCoverName": "+% Crit Damage","tooltip":"A multiplier to your total base ability critical hit damage multiplier.","relevantTags": ["SkillCritDamage"],"isNotAPercent": false},
+            {"statName": "totalSkillCritRatePreCap","statCoverName": "Crit Rate Pre-Resist","tooltip":"The sum total critical hit rate for your skills before enemy skill critical hit resistance is factored in.<br><br>TotalCritRate = (characterBase + baseBonuses) * (1 + percentRateBonuses)","relevantTags": ["SkillCritRate","SkillCritRateBaseBonus"],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRatePreCap != returnObject.baseCharacterCritRate)},
+            {"statName": "enemySkillCritResist","statCoverName": "Enemy Resistance","tooltip":"The total enemy skill critical hit resistance that would apply to your skill critical hit rate as a multiplier.<br><br>EnemySkillCritResist = baseSkillCritResist * (1 + %ReductionDebuffs)","relevantTags": ["enemyCritResistReductionSkill"],"isNotAPercent": false,"condition": (returnObject.enemySkillCritResist != 0)},
             {"statName": "totalSkillCritRate","statCoverName": "Total Skill CR","tooltip":"The total critical hit rate of your abilities.<br><br><span>TotalCritRate = (characterBase + baseBonuses) * (1 + percentRateBonuses)</span>","relevantTags": ["SkillCritRate","SkillCritRateBaseBonus"],"isNotAPercent": false,"condition": (returnObject.totalSkillCritRate != returnObject.baseCharacterCritRate)},
             {"statName": "totalSkillCritDamage","statCoverName": "Total Skill CD","tooltip":"The total critical hit damage multiplier for your abilities.<br><br><span>TotalCritMulti = (characterBase + baseBonuses) * (1 + percentMultiBonuses)</span>","relevantTags": ["SkillCritDamage","SkillCritDamageBaseBonus"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalSkillCritDamage != returnObject.baseCharacterCritDamage)},
         ]
@@ -83,10 +85,11 @@ const basicsUpdates = {
 
 
         const ratioString = "Power Ratios each act as multipliers against all other relevant Ratios. So a Tech/Fire skill would gain Base Power Ratio, Tech Power Ratio, and Fire Power Ratio and all of them would act as individual multipliers for your end total skill power for the relevant skill.<br><br>It is important to remember that Power Ratios are not Power Modifiers, as Power Modifiers all add as one whereas Ratios do not."
-        const powerEquationString = "<br><br><span>ApplicableSkillPower = (reactorPower * (1 + PowerOptimizationBonuses) + FactionSkillATK) * RatioProductSum * SumSkillPowerModifier</span>"
+        const powerEquationString = "<br><br><span>ApplicableSkillPower = ((reactorPower + BasePowerBonus) * (1 + PowerOptimizationBonuses) + FactionSkillATK) * RatioProductSum * SumSkillPowerModifier</span>"
         let ratioHTML = "<div class='basicsDRheaderTitle'>POWER RATIO</div>";
         let ratioHTMLRowsHTML = '';
         rowsListings = [
+            {"statName": "SkillPowerBaseValue","statCoverName": "Base Power Bonus","tooltip":"This is the base power bonuses added to your reactor skill power base before ANY bonus applies." + powerEquationString,"relevantTags": ["SkillPowerBaseValue"],"isNotAPercent": true,"roundAnyways": true,"condition": (index.SkillPowerBaseValue != 0)},
             {"statName": "PowerOptimization","statCoverName": "Power Optimization","tooltip":"Power Optimization applies as a multiplier against the base skill power provided by your reactor, but before any Faction Skill ATK bonuses." + powerEquationString,"relevantTags": ["PowerOptimization"],"isNotAPercent": true,"roundAnyways": true,"condition": (index.PowerOptimization != 1)},
             {"statName": "SkillAttackColossus","statCoverName": "+ATK vs. Colossus","tooltip":"Faction Skill ATK bonuses add in after the Optimization Bonus Multiplier, but before all Ratio or Modifier bonuses take place." + powerEquationString,"relevantTags": ["SkillAttackColossus"],"isNotAPercent": true,"roundAnyways": true,"condition": (index.SkillAttackColossus != 0)},
             {"statName": "PowerRatioBase","statCoverName": "Base Power Ratio","tooltip":ratioString,"relevantTags": ["PowerRatioBase"],"isNotAPercent": true,"roundAnyways": true,"condition": (index.PowerRatioBase != 0)},
@@ -138,6 +141,9 @@ const basicsUpdates = {
         // readSelection("basicsInnerBox").innerHTML += skillAttackHTMLRowsHTML ? skillAttackHTML + skillAttackHTMLRowsHTML + "<br>" : "";
 
 
+        // const totalFirearmCritRatePreResist = Math.max(0,Math.min(totalFirearmCritRatePreCap,1));
+        // const enemyFirearmCritResist = (+globalRecords.weaponCritCeiling/100) * (1 + index.enemyCritResistReductionFirearm)
+        // totalFirearmCritRatePreResist,enemyFirearmCritResist
 
         let critGunHTML = "<div class='basicsDRheaderTitle'>FIREARM CRIT</div>";
         let critGunHTMLRowsHTML = '';
@@ -148,7 +154,9 @@ const basicsUpdates = {
             {"statName": "baseFirearmCritDamageBonus","statCoverName": "+Base Damage","tooltip":"Flat bonuses to the base crit multiplier of your weapon before % bonuses are factored.","relevantTags": ["FirearmCritDamageBase"],"isNotAPercent": true,"roundAnyways": true},
             {"statName": "firearmCritRateBonus","statCoverName": "+% Crit Rate","tooltip":"A % multiplier against the sum total base crit rate for your weapon.","relevantTags": ["FirearmCritRate","FirearmCritRateCORE"],"isNotAPercent": false},
             {"statName": "firearmCritDamageBonus","statCoverName": "+% Crit Damage","tooltip":"A % multiplier against the sum total base crit multiplier for your weapon.","relevantTags": ["FirearmCritDamage","FirearmCritDamageCORE"],"isNotAPercent": false},
-            {"statName": "totalFirearmCritRate","statCoverName": "Total Weapon CR","tooltip":"The sum total critical hit rate for your weapon.<br><br>TotalCritRate = (weaponBase + flatBonuses) * (1 + %CritRateBonuses)","relevantTags": ["FirearmCritRate","FirearmCritRateBase"],"isNotAPercent": false,"condition": (returnObject.totalFirearmCritRate != returnObject.baseFirearmCritRate)},
+            {"statName": "totalFirearmCritRatePreResist","statCoverName": "Crit Rate Pre-Resist","tooltip":"The sum total critical hit rate for your weapon before enemy firearm critical hit resistance is factored in.<br><br>TotalCritRate = (weaponBase + flatBonuses) * (1 + %CritRateBonuses)","relevantTags": ["FirearmCritRate","FirearmCritRateBase"],"isNotAPercent": false,"condition": (returnObject.totalFirearmCritRatePreResist != returnObject.baseFirearmCritRate)},
+            {"statName": "enemyFirearmCritResist","statCoverName": "Enemy Resistance","tooltip":"The total enemy firearm critical hit resistance that would apply to your firearm critical hit rate as a multiplier.<br><br>EnemyFirearmCritResist = baseFirearmCritResist * (1 + %ReductionDebuffs)","relevantTags": ["enemyCritResistReductionFirearm"],"isNotAPercent": false,"condition": (returnObject.enemyFirearmCritResist != 0)},
+            {"statName": "totalFirearmCritRate","statCoverName": "Total Weapon CR","tooltip":"The sum total critical hit rate for your weapon.<br><br>TotalCritRate = (weaponBase + flatBonuses) * (1 + %CritRateBonuses) * (1 - EnemyFirearmCritResist)","relevantTags": ["FirearmCritRate","FirearmCritRateBase"],"isNotAPercent": false,"condition": (returnObject.totalFirearmCritRate != returnObject.baseFirearmCritRate)},
             {"statName": "totalFirearmCritDamage","statCoverName": "Total Weapon CD","tooltip":"The sum total critical hit multiplier for your weapon.<br><br>TotalCritMulti = (weaponBase + flatBonuses) * (1 + %CritDmgBonuses)","relevantTags": ["FirearmCritDamage","FirearmCritDamageBase"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalFirearmCritDamage != returnObject.baseFirearmCritDamage)},
         ]
         critGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
@@ -181,6 +189,20 @@ const basicsUpdates = {
         ]
         atkGunHTMLRowsHTML += expandRows(rowsListings,returnObject);
         readSelection("basicsInnerBox").innerHTML += atkGunHTMLRowsHTML ? atkGunHTML + atkGunHTMLRowsHTML + "<br>" : "";
+
+
+        let atkMultiHTML = "<div class='basicsDRheaderTitle'>FIREARM MULTI-HIT</div>";
+        let atkMultiHTMLRowsHTML = '';
+        rowsListings = [
+            // baseMultiShotDMG,totalFirearmMultishotChance,totalFirearmMultishotMulti,avgMultishotBonus
+            {"statName": "baseMultiShotDMG","statCoverName": "Base Weapon Multi DMG","tooltip":"The base multi-hit damage multiplier assigned to your weapon before any bonuses are applied.","relevantTags": [],"isNotAPercent": true},
+            {"statName": "totalFirearmMultishotChance","statCoverName": "Multishot Chance","tooltip":"The total % chance to proc an extra damage instance using the Multi-hit damage multiplier. Every 100% guarantees another instance.","relevantTags": ["MultiShotChance","MultiShotChanceBASE"],"isNotAPercent": false,"condition": (returnObject.totalFirearmMultishotChance != 0)},
+            {"statName": "totalFirearmMultishotMulti","statCoverName": "Multishot DMG Total","tooltip":"The total damage multiplier applied by every extra instance of damage gained by your multi-hit chance. Maximum of 1x multi.","relevantTags": ["MultiShotDamage","MultiShotDamageBASE"],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.totalFirearmMultishotMulti != returnObject.baseMultiShotDMG && returnObject.totalFirearmMultishotChance != 0)},
+            {"statName": "avgMultishotBonus","statCoverName": "Multishot DMG AVG","tooltip":"This is your multi-hit damage bonus averaged against your total mult-hit chance","relevantTags": [],"isNotAPercent": true,"roundAnyways": true,"condition": (returnObject.avgMultishotBonus != returnObject.baseMultiShotDMG && returnObject.totalFirearmMultishotChance != 0)},
+ 
+        ]
+        atkMultiHTMLRowsHTML += expandRows(rowsListings,returnObject);
+        readSelection("basicsInnerBox").innerHTML += atkMultiHTMLRowsHTML ? atkMultiHTML + atkMultiHTMLRowsHTML + "<br>" : "";
 
 
         let firearmAttributeHTML = "<div class='basicsDRheaderTitle'>FIREARM ATTRIBUTE</div>";

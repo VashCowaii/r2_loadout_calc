@@ -73,6 +73,8 @@ let manipulateURL = {
         "my": [],//memory
         "pr": [],//processor
 
+        "tu": [],//tuning, paragon boards
+
         // "settings": [],
         // "adv": [],
         "s": ["s"]
@@ -236,17 +238,39 @@ let manipulateURL = {
 
 
 
-    //REACTOR AND SUBSTATS
-    // const reactorRef = globalRecords.reactor;
 
-    // const attributeKeys = Object.keys(attributeList);
-    // const typeKeys = Object.keys(typeList);
-    // const reactorSubKeys = Object.keys(reactorSubRolls);
-    // const ammoKeys = Object.keys(reactorAmmoList);
+    // //PARAGON BOARD
+    // const usableNodes = globalRecords.paragonBoard.usableNodes;
+
+    // let bitString = usableNodes.map(node => paragonGridAssignment[node]?.isActive ? "1" : "0").join("");
+    // let binaryAsNumber = BigInt("0b" + bitString);
+    // let base36String = binaryAsNumber.toString(36).padStart(Math.ceil(bitString.length / 5), '0'); // Ensure no truncation
+    // urlObject.tu.push(base36String);
+
+
     
-    // const concatenatedType = `${attributeKeys.indexOf(reactorRef.currentAttribute)}${typeKeys.indexOf(reactorRef.currentType)}${ammoKeys.indexOf(reactorRef.currentAmmoType)}${reactorSubKeys.indexOf(reactorRef.subRoll1).toString().padStart(2,'0')}${reactorSubKeys.indexOf(reactorRef.subRoll2).toString().padStart(2,'0')}`;
+    // Export Process
+    const usableNodes = globalRecords.paragonBoard.usableNodes;
 
-    // urlObject.r.push(concatenatedType,reactorRef.subRoll1Value.toFixed(3),reactorRef.subRoll2Value.toFixed(3));
+    // Create the binary string of 167 bits (one for each usable node)
+    let bitString = usableNodes.map(node => paragonGridAssignment[node]?.isActive ? "1" : "0").join("");
+
+    // Convert the binary string to a byte array
+    let byteArray = [];
+    for (let i = 0; i < bitString.length; i += 8) {
+        let byte = bitString.slice(i, i + 8).padEnd(8, '0'); // Ensure every byte is 8 bits long
+        byteArray.push(parseInt(byte, 2));
+    }
+
+    // Convert the byte array to a Base64 string
+    let base64String = btoa(String.fromCharCode(...byteArray));
+
+    // Log the Base64 string and binary string for debugging
+    // console.log("Base64 String:", base64String);
+    // console.log("Binary String:", bitString);
+
+    // Store the Base64 string in the URL (assuming `urlObject` is the object storing your URL parameters)
+    urlObject.tu.push(base64String); // Store the Base64 string in the URL
 
 
 
@@ -254,125 +278,7 @@ let manipulateURL = {
 
 
 
-
-
-
-  
-    //   if (isExported) {
-    //     for (i=1;i<=traitRecord.length;i++) {
-    //       let traitName = traitRecord[i-1].name || "";
-    //       let traitLevel = traitRecord[i-1].level || "";
-    //       let concatenated = `${traitName}${traitLevel}`;
-    //       urlObject.trait.push(concatenated)
-    //     }
-    //   }
-    //   else {
-    //     for (i=1;i<=traitRecord.length;i++) {
-    //       let traitName = traitRecord[i-1].name || "";
-    //       let traitID = "00";
-    //       if (traits[traitName].placementID != "00") {traitID = traits[traitName].placementID}
-    //       if (traitID === "00") {continue}
-    //       let traitLevel = traitRecord[i-1].level || "";
-    //       let concatenated = `${traitID}${traitLevel.toString().padStart(2, '0')}`;
-    //       urlObject.trait += concatenated;
-    //     }
-    //   }
-  
-    //   let path = globalRecords.archs;
-    //   if (isExported) {urlObject.archetype.push(path.one.class,path.two.class,path.one.ability,path.two.ability);}
-    //   else {
-    //     urlObject.archetype = "";
-    //     if (classInfo[path.one.class].placementID != "00") {urlObject.archetype += classInfo[path.one.class].placementID + classInfo[path.one.class].abilities[path.one.ability].placementID;}
-    //     if (classInfo[path.two.class].placementID != "00") {urlObject.archetype += classInfo[path.two.class].placementID + classInfo[path.two.class].abilities[path.two.ability].placementID;}
-    //   }
-  
-    //   // path = globalRecords.armor;
-    //   const {helmet,chest,leg,hand} = globalRecords.armor;
-    //   if (isExported) {urlObject.armor.push(helmet,chest,leg,hand);}
-    //   else {
-    //     urlObject.armor = "";
-    //     if (helmets[helmet].placementID != "H00") {urlObject.armor += helmets[helmet].placementID}
-    //     if (chests[chest].placementID != "C00") {urlObject.armor += chests[chest].placementID}
-    //     if (legs[leg].placementID != "L00") {urlObject.armor += legs[leg].placementID}
-    //     if (hands[hand].placementID != "G00") {urlObject.armor += hands[hand].placementID}
-    //   }
-  
-    //   const {primary,primaryMutator,primaryMod,melee,meleeMutator,secondary,secondaryMutator,secondaryMod} = globalRecords.weapons;
-    //   if (isExported) {
-    //     urlObject.primary.push(primary,primaryMutator,primaryMod);
-    //     urlObject.melee.push(melee,meleeMutator);
-    //     urlObject.secondary.push(secondary,secondaryMutator,secondaryMod);
-    //   }
-    //   else {
-    //     urlObject.primary.push(pushCondition(primaries[primary].placementID,"00"));
-    //     urlObject.primary.push(pushCondition(rangedMutators[primaryMutator].placementID,"00"));
-    //     if (primaries[primary].builtIN === "") {urlObject.primary.push(pushCondition(rangedMods[primaryMod].placementID,"00"));}
-
-    //     urlObject.melee.push(pushCondition(melees[melee].placementID,"00"));
-    //     urlObject.melee.push(pushCondition(meleeMutators[meleeMutator].placementID,"00"));
-
-    //     urlObject.secondary.push(pushCondition(secondaries[secondary].placementID,"00"));
-    //     urlObject.secondary.push(pushCondition(rangedMutators[secondaryMutator].placementID,"00"));
-    //     if (secondaries[secondary].builtIN === "") {urlObject.secondary.push(pushCondition(rangedMods[secondaryMod].placementID,"00"));}
-    //   }
-  
-    //   if (isExported) {
-    //     path = globalRecords.greatConcoctionRecords;
-    //     for (i=0;i<path.length;i++) {urlObject.consumable.push(path[i])}
-    //     path = globalRecords.greatConsumableRecords;
-    //     for (i=0;i<path.length;i++) {urlObject.consumable.push(path[i])}
-    //   }
-    //   else {
-    //     urlObject.consumable = "";
-    //     path = globalRecords.greatConcoctionRecords;
-    //     for (i=0;i<path.length;i++) {if (concoctions[path[i]].placementID != "C00") {urlObject.consumable += concoctions[path[i]].placementID}}
-    //     path = globalRecords.greatConsumableRecords;
-    //     for (i=0;i<path.length;i++) {if (quickUses[path[i]].placementID != "Q00") {urlObject.consumable += quickUses[path[i]].placementID}}
-    //   }
-  
-    //   path = globalRecords.accessories;
-    //   if (isExported) {
-    //     urlObject.accessory.push(path.amulet);
-    //     for (i=1;i<=4;i++) {urlObject.accessory.push(path[`ring${i}`]);}
-    //   }
-    //   else {
-    //     urlObject.accessory = "";
-    //     if (amulets[path.amulet].placementID != "A000") {urlObject.accessory += amulets[path.amulet].placementID}
-    //     for (i=1;i<=4;i++) {if (rings[path[`ring${i}`]].placementID != "R000") {urlObject.accessory += rings[path[`ring${i}`]].placementID}}
-    //   }
       
-  
-    //   if (isExported) {
-    //     urlObject.relic.push(path.relic);
-    //     for (i=1;i<=3;i++) {
-    //       urlObject.relic.push(path[`fragment${i}`]);
-    //     }
-    //   }
-    //   else {
-    //     urlObject.relic = "";
-    //     if (relics[path.relic].placementID != "r00") {urlObject.relic += relics[path.relic].placementID}
-  
-    //     for (i=1;i<=3;i++) {
-    //       if (fragments[path[`fragment${i}`]].placementID != "F00") {urlObject.relic += fragments[path[`fragment${i}`]].placementID}
-    //     }
-    //   }
-  
-    //   urlObject.settings = ["","",""]//0 is general gear, 1 is concoctions, 2 is quick-use items
-    //   manipulateURL.updateGeneralToggles(isOverride);
-    //   let generalToggles = manipulateURL.generalToggles;
-    //   for (let entry of generalToggles) {exportSetting(entry.Name,"settings",isOverride,entry.expAlt,entry.arrayEntry);}
-    //   for (let i=0;i<urlObject.settings.length;i++) {globalRecords.urlObject.settings[i] = globalRecords.urlObject.settings[i].replace(/\.?0+$/, '');}//cut off trailing 0's to shorten URL
-
-    //   let nonBooleanValues = manipulateURL.nonBooleanValues;
-    //   let pushNonBooleans = manipulateURL.advPathHandling;
-    //   for (let entry of nonBooleanValues) {pushNonBooleans(globalRecords.urlObject,entry,isOverride);}
-
-    //   let generalToggles2 = manipulateURL.generalToggles2; urlObject.adv.push("");//Adds a blank string as a new entry. exportSetting on an ADV string looks at the last entry possible, aka this string we just pushed, and modifies that. Order matters here.
-    //   for (let entry of generalToggles2) {exportSetting(entry.Name,"adv",isOverride,entry.expAlt);}
-    //   urlObject.adv[urlObject.adv.length-1] = urlObject.adv[urlObject.adv.length-1].replace(/\.?0+$/, '');//remove trailing 0's from the last parameter, helps clear the URL length if no adv settings are active
-
-    //   let generalToggles3 = manipulateURL.generalToggles3; urlObject.adv.push("");
-    //   for (let entry of generalToggles3) {exportSetting(entry.Name,"adv",isOverride,entry.expAlt);}
   
       //Delete a given parameter if it stores no values, to reduce URL length
       const clearEmpty = manipulateURL.urlParamIsEmpty;
@@ -479,6 +385,7 @@ let manipulateURL = {
         let urlSensor = feed.get("sr");
         let urlMemory = feed.get("my");
         let urlProcessor = feed.get("pr");
+        let urlParagon = feed.get("tu");
         //   let urlArchs = feed.get("archetype");
         //   let urlArmor = feed.get("armor");
         //   let urlPrimary = feed.get("primary");
@@ -757,6 +664,43 @@ let manipulateURL = {
           // userTriggers.updateComponentSelections();
         }
         if (urlAuxiliary || urlSensor || urlMemory || urlProcessor) {userTriggers.updateComponentSelections();}
+
+        if (urlParagon) {
+          const paragonRef = globalRecords.paragonBoard;
+          const usableNodes = paragonRef.usableNodes;
+
+          // Decode the Base64 string back to a byte array
+          let byteArray = Array.from(atob(urlParagon), c => c.charCodeAt(0));
+
+          // Convert the byte array back to a binary string
+          let binaryString = byteArray.map(byte => byte.toString(2).padStart(8, '0')).join("");
+
+          // Log the binary string for debugging
+          // console.log("Decoded Binary String:", binaryString);
+
+          // Reset all nodes to inactive
+          for (let node of usableNodes) {
+              paragonGridAssignment[node].isActive = false;
+          }
+
+          // Activate nodes based on the binary string
+          for (let i = 0; i < binaryString.length; i++) {
+              if (binaryString[i] === "1") {
+                  let nodeNumber = usableNodes[i];
+                  // console.log(`Activating node ${nodeNumber}`);  // Log the node being activated
+                  paragonGridAssignment[nodeNumber].isActive = true;
+                  paragonRef.activeNodes += paragonGridAssignment[nodeNumber].cost ?? 1;
+                  readSelection(`paragoneNode${nodeNumber}`).style.opacity = 1;
+                  // readSelection("currentActiveNodesParagon").innerHTML = `${paragonRef.activeNodes}/${paragonRef.nodeLimit}`;
+              }
+          }
+          // paragonRef.activeNodes--;
+          readSelection("currentActiveNodesParagon").innerHTML = `${paragonRef.activeNodes}/${paragonRef.nodeLimit}`;
+
+          // updateFormulas();
+
+          userTriggers.toggleParagonGridUnit(221);
+        }
 
     //   if (urlSettings) {//SETTINGS/USAGE TOGGLES
     //     urlSettings = urlSettings.split(",");

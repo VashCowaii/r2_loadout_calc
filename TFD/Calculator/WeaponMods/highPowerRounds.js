@@ -1674,6 +1674,253 @@ const highPowerRounds = {
 
 
 
+
+
+
+
+
+
+
+
+    "Multi-Percussion Sight (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "Multi-Hit Chance",
+        "desc": "Multi-Hit Chance +30%, Firearm Critical Hit Damage -50%",
+        "stats": {
+            "MultiShotChanceBASECORE": 0.30,
+            "FirearmCritDamage": -0.50
+        },
+        "tags": [],
+        "inclusion": ["Sniper Rifle"],
+        "exclusion": [],
+    },
+    "Multi-Trigger Rifling (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "Multi-Hit Chance",
+        "desc": "Multi-Hit Chance +55%, Fire Rate -15%",
+        "stats": {
+            "MultiShotChanceBASECORE": 0.55,
+            "FireRate": 0.15
+        },
+        "tags": [],
+        "inclusion": ["Sniper Rifle"],
+        "exclusion": [],
+    },
+    "Multi-Piercing Sights (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "Multi-Hit Damage",
+        "desc": "Multi-Hit Damage +50%, Firearm Critical Hit Damage -50%",
+        "stats": {
+            "FirearmCritDamage": -0.50,
+            "MultiShotDamageCORE": 0.50
+        },
+        "tags": [],
+        "inclusion": ["Sniper Rifle"],
+        "exclusion": [],
+    },
+    "Multi-Piercing Trigger (Sniper)": {
+        "rarity": "Rare",
+        "polarity": "Rutile",
+        "type": "High-Power Rounds",
+        "cost": 15,
+        "category": "Multi-Hit Damage",
+        "desc": "Multi-Hit Damage +15%, Multi-Hit Chance +10%",
+        "stats": {
+            "MultiShotChanceBASECORE": 0.10,
+            "MultiShotDamageCORE": 0.15
+        },
+        "tags": [],
+        "inclusion": ["Sniper Rifle"],
+        "exclusion": [],
+    },
+
+    "Multi-Reload": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "After Reload, first shot's Multi-Hit Damage +328% (Cooldown 5s)",
+        "stats": {
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "MultiShotDamageCORE","value": 3.28,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Reload",
+                "oneTimeOrStack": "cooldown",
+                "limit": 1,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "conditions": ["isReloaded"],
+                "cooldown": 5,
+            }
+        ],
+        "tags": ["MultiShotDamage"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+    "Multi-Bullet": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "On landing multi-hit, Multi-Hit Damage +5% for 3s (up to 3 stacks) and inflicts Deep Wounds on the target hit.<br>Deep Wounds inflict 3% of Firearm DMG at regular intervals for 3s (up to 3 stacks)",
+        "stats": {
+            // "Accuracy": -0.20,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "MultiShotDamageCORE","value": 0.05,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Bullet (High-Powered)",
+                "oneTimeOrStack": "stack",
+                "limit": 3,
+                "cooldown": 0,
+                "duration": 3,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                "conditions": ["isMultiHit"],
+            }
+        ],
+        "tags": ["MultiShotDamage"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+
+    "Multi-Sights (Singular)": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "When using Singular skill, Firearm ATK +4% for 15s with a 100% chance (up to 3 stacks, these effects are stackable)",
+        "stats": {
+            // "Accuracy": -0.20,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmATK%CORE","value": 0.04,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Sights (Singular) (High-Powered)",
+                "oneTimeOrStack": "stack",
+                "limit": 3,
+                "cooldown": 0,
+                "duration": 15,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                // "conditions": ["isMultiHit"],
+            }
+        ],
+        "tags": ["FirearmATK%"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+    "Multi-Sights (Fusion)": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "When using Fusion skill Multi-Hit Damage +13% for 15s with a 100% chance (up to 3 stacks, these effects are stackable)",
+        "stats": {
+            // "Accuracy": -0.20,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "MultiShotDamageCORE","value": 0.13,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Sights (Fusion) (High-Powered)",
+                "oneTimeOrStack": "stack",
+                "limit": 3,
+                "cooldown": 0,
+                "duration": 15,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                // "conditions": ["isMultiHit"],
+            }
+        ],
+        "tags": ["MultiShotDamage"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+
+    "Multi-Processor (Dimension)": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "When using Dimension skill, Weak Point DMG +3% for 15s with a 100% chance, (up to 3 stacks, these effects are stackable)",
+        "stats": {
+            // "Accuracy": -0.20,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "WeakPointDamage%CORE","value": 0.03,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Processor (Dimension) (High-Powered)",
+                "oneTimeOrStack": "stack",
+                "limit": 3,
+                "cooldown": 0,
+                "duration": 15,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                // "conditions": ["isMultiHit"],
+            }
+        ],
+        "tags": ["WeakPointDamage%"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+    "Multi-Processor (Tech)": {//done for reloads
+        "rarity": "Ultimate",
+        "polarity": "Malachite",
+        "type": "High-Power Rounds",
+        "cost": 16,
+        "category": "Battle Proficiency",
+        "desc": "When using Tech skill Firearm Critical Hit DMG +4% for 15s with a 100% chance, (up to 3 stacks, these effects are stackable)",
+        "stats": {
+            // "Accuracy": -0.20,
+        },
+        "complexBonus": [
+            {
+                "stats": [
+                    {"name": "FirearmCritDamageCORE","value": 0.04,"subStackValue": null},
+                ],
+                "bonusName": "Multi-Processor (Tech) (High-Powered)",
+                "oneTimeOrStack": "stack",
+                "limit": 3,
+                "cooldown": 0,
+                "duration": 15,
+                "currentStacks": 0,
+                "timePassedEntry": 0,
+                // "conditions": ["isMultiHit"],
+            }
+        ],
+        "tags": ["FirearmCritDamage"],
+        "inclusion": [],
+        "exclusion": [],
+    },
+
+
+
+
     // "TestMod HighPowered": {
     //     "rarity": "Normal",
     //     "polarity": "Cerulean",

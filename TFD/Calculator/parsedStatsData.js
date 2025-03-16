@@ -7,7 +7,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 300,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         1,
@@ -127,7 +127,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 144,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -319,7 +319,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 402,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -343,7 +343,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 405,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -367,7 +367,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 404,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -439,10 +439,10 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 118,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 0,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
-        0.01,
+        0.03,
         100000
       ],
       "BonusesAdded": [
@@ -463,7 +463,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 200,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -487,7 +487,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 301,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -511,7 +511,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 100,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -583,7 +583,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 302,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -703,7 +703,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 403,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -751,7 +751,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 146,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1135,7 +1135,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 124,
     "UnitsDisplay": "Multiply",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         -0.3,
@@ -1255,7 +1255,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 102,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1375,7 +1375,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 307,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1399,7 +1399,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 308,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1423,7 +1423,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 309,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1447,7 +1447,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 310,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -1637,7 +1637,7 @@ let statListData = {
     "objectKey": "Stat_Penetration",
     "ID": 105000075,
     "PowerConstant": 1,
-    "SortOrder": 140,
+    "SortOrder": 141,
     "UnitsDisplay": "Plus",
     "UIDecimalPlaces": 2,
     "Limits": {
@@ -2191,7 +2191,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 405,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -2215,7 +2215,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 406,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -2239,7 +2239,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 407,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -3106,7 +3106,7 @@ let statListData = {
     "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
-        -1,
+        -0.9,
         100
       ],
       "BonusesAdded": [
@@ -3199,7 +3199,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 202,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -3726,7 +3726,7 @@ let statListData = {
     "ID": 105000167,
     "PowerConstant": 1,
     "SortOrder": 305,
-    "UnitsDisplay": "Multiply",
+    "UnitsDisplay": "Plus",
     "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
@@ -4111,7 +4111,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 168,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -4423,7 +4423,7 @@ let statListData = {
     "PowerConstant": 1,
     "SortOrder": 170,
     "UnitsDisplay": "Plus",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -5141,9 +5141,9 @@ let statListData = {
     "objectKey": "Stat_AdvantageCoefficient",
     "ID": 105000226,
     "PowerConstant": 1,
-    "SortOrder": 0,
+    "SortOrder": 135,
     "UnitsDisplay": "Multiply",
-    "UIDecimalPlaces": 2,
+    "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [
         0,
@@ -5160,13 +5160,61 @@ let statListData = {
     }
   },
   "105000227": {
-    "name": "Key_Stat_MultiHitChance",
-    "desc": "",
+    "name": "Multi-Hit Chance",
+    "desc": "Refers to a firearm's multi-hit chance. When a firearm hits, it deals additional damage based on that chance. Whenever the Multi-Hit Chance exceeds 100%, it guarantees one additional hit, and has a chance to trigger an additional multi-hit equal to the value above 100%.\nMulti-Hit Chance does not apply to Unique Weapons, unique effects of Ultimate Weapons, or pickup weapons.",
     "objectKey": "Stat_MultiHitChance",
     "ID": 105000227,
     "PowerConstant": 1,
-    "SortOrder": 0,
+    "SortOrder": 139,
     "UnitsDisplay": "Percent",
+    "UIDecimalPlaces": 3,
+    "Limits": {
+      "FlatValueLimit": [
+        0,
+        400
+      ],
+      "BonusesAdded": [
+        0,
+        0
+      ],
+      "BonusesMultiplied": [
+        0,
+        0
+      ]
+    }
+  },
+  "105000228": {
+    "name": "Gravity Modifier",
+    "desc": "A modifier that determines the gravitational force applied in the air. The lower the value, the slower you fall through the air.",
+    "objectKey": "Stat_GravityScaleCoefficient",
+    "ID": 105000228,
+    "PowerConstant": 1,
+    "SortOrder": 440,
+    "UnitsDisplay": "Multiply",
+    "UIDecimalPlaces": 3,
+    "Limits": {
+      "FlatValueLimit": [
+        -1,
+        1
+      ],
+      "BonusesAdded": [
+        0,
+        0
+      ],
+      "BonusesMultiplied": [
+        0,
+        0
+      ]
+    }
+  },
+  "105000229": {
+    "name": "Multi-Hit Damage",
+    "desc": "Refers to the multiplier applied to firearm damage by a multi-hit when a firearm hit triggers a multi-hit. Multi-hits trigger based on Multi-Hit Chance.",
+    "objectKey": "Stat_MultiHitDamageIncrease",
+    "ID": 105000229,
+    "PowerConstant": 1,
+    "SortOrder": 140,
+    "UnitsDisplay": "Multiply",
     "UIDecimalPlaces": 3,
     "Limits": {
       "FlatValueLimit": [

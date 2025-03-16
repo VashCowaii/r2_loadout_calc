@@ -1,11 +1,32 @@
 const bullets = {
-    getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues) {
+    getCurrentRateAdjustments(tableCopy,baseRateValue,isStaticRate,skipCoreValues,burstCount,burstCounter,isRecalledValue) {
+        const burstCheck = burstCount > 1;
+        let pulledFireRateValue = 60/baseRateValue;
+
+        if (burstCheck) {
+            let fractionalBonus = (pulledFireRateValue * 0.72)/burstCount;
+            let delayBonus = pulledFireRateValue * 0.28;
+
+            if (burstCounter === burstCount || (isRecalledValue && burstCounter === 0)) {
+                burstCounter = 0;
+                pulledFireRateValue = delayBonus + fractionalBonus;
+            }
+            else {
+                pulledFireRateValue = fractionalBonus;
+            }
+            if (!isRecalledValue) {burstCounter++}
+        }
+        pulledFireRateValue = 60/pulledFireRateValue;
+
+
         //cap fire rate at -90% in case we actually get that high later
         const rateAdjustment = isStaticRate ? 0 : Math.max(-0.90,tableCopy.FireRate + (skipCoreValues ? 0 : tableCopy.FireRateCORE));
-        const adjustedRateValue = baseRateValue / (1 + rateAdjustment);
+        const currentLimit = 2000;
+        const adjustedRateValue = Math.min(currentLimit,pulledFireRateValue / (1 + rateAdjustment));
         const modifiedRate = 60/adjustedRateValue;
+        // console.log(adjustedRateValue,modifiedRate,burstCounter)
 
-        return {adjustedRateValue,modifiedRate}
+        return {adjustedRateValue,modifiedRate,burstCounter}
     },
     //bonusEntry, tableCopy, null, null, false,true
     //          bonusEntry, tableCopy,          null,       null,       false,          true
@@ -38,10 +59,12 @@ const bullets = {
         let isStaticRate = settingsObject ? settingsObject.isStaticRate : false;
         //reference skill dmg function
         let referenceFunction = settingsObject ? settingsObject.referenceFunction : null;
+        //this is a function specifically for ultimate effects of weapons. Special gun functions are for shit like hailey cryo, special skill functions are for shit like lepic overkill DoT fields, this is ulty effects
+        let specialGunUltimateFunction = settingsObject ? settingsObject.specialGunUltimateFunction : null;
         //special weapon functions like hailey cryo, applies to firearm dmg
         let specialGunFunction = settingsObject ? settingsObject.specialGunFunction : null; 
         //special skill function for things like firearm master on lepic overkill
-        let specialSkillFunction = settingsObject ? settingsObject.specialSkillFunction : null; 
+        let specialSkillFunction = settingsObject ? settingsObject.specialSkillFunction : null;
         //wasted time duration for things like roll cancel on lepic or freyna unique weapon
         let wastedTimeSkill = settingsObject ? settingsObject.wastedTimeSkill || 0 : 0; 
         //a toggle for whether firearm dmg should be included in the resulting bullet array. Lepic, for example, is skill only.
@@ -57,7 +80,7 @@ const bullets = {
         let durationRestriction = settingsObject ? settingsObject.durationRestriction : 0;
         // referenceFunction(index,returnObject,isCycleCalcs,nameOverride)
 
-        return {atkMulti,bonusReference,isStaticRate,referenceFunction,specialGunFunction,specialSkillFunction,wastedTimeSkill,skillOnly,
+        return {atkMulti,bonusReference,isStaticRate,referenceFunction,specialGunUltimateFunction,specialGunFunction,specialSkillFunction,wastedTimeSkill,skillOnly,
             shellCountOverride,skipCoreValues,skipReloads,durationRestriction
         }
     },
@@ -73,7 +96,7 @@ const bullets = {
         let timeOfLastReload = 0;
 
         //get all the settings for this cycle established
-        const {atkMulti,bonusReference,isStaticRate,referenceFunction,specialGunFunction,specialSkillFunction,wastedTimeSkill,skillOnly,
+        const {atkMulti,bonusReference,isStaticRate,referenceFunction,specialGunUltimateFunction,specialGunFunction,specialSkillFunction,wastedTimeSkill,skillOnly,
             shellCountOverride,skipCoreValues,skipReloads,durationRestriction} = bullets.parseSettingsObject(settingsObject);
 
         for (let entry of bonusReference) {
@@ -107,6 +130,12 @@ const bullets = {
         //for something with a plain cooldown, like weak point expansion, the duration acts as if the reload isn't the same as waiting
         //so we need to track how much time is spent in the reload/ready state and use it to offset the durations used on cooldown effects
         let reloadDurationOffset = 0;
+
+        const burstCount = weaponRef.BurstCount;
+        // const burstCheck = weaponRef.BurstCount > 1;
+        let burstCounter = 0;
+        // console.log(burstCheck)
+    
         while (usedMagazine < actualMagSize) {
             let cyclesBaseFireRate = baseRateValue;
             let cyclesFixedRate = isStaticRate;
@@ -118,7 +147,8 @@ const bullets = {
                 cyclesFixedRate = true;
             }
 
-            const snapshot = bullets.getCurrentRateAdjustments(tableCopy,cyclesBaseFireRate,cyclesFixedRate,skipCoreValues);
+            const snapshot = bullets.getCurrentRateAdjustments(tableCopy,cyclesBaseFireRate,cyclesFixedRate,skipCoreValues,burstCount,burstCounter,false);
+            burstCounter = snapshot.burstCounter;
             // if (!isCycleCalcs) {console.log(snapshot.adjustedRateValue)}
             
             let constructorObject = {};
@@ -418,7 +448,7 @@ const bullets = {
                 }
             }
             if (constructorObject != {}) {
-                const snapshotPost = bullets.getCurrentRateAdjustments(tableCopy,cyclesBaseFireRate,cyclesFixedRate,skipCoreValues);
+                const snapshotPost = bullets.getCurrentRateAdjustments(tableCopy,cyclesBaseFireRate,cyclesFixedRate,skipCoreValues,burstCount,burstCounter,true);
                 constructorObject.rateValue = snapshotPost.adjustedRateValue;
                 constructorObject.shotDelay = snapshotPost.modifiedRate;
             }
@@ -431,6 +461,7 @@ const bullets = {
             const {baseFirearmATK,attackPercent,physicalTypeMulti,firearmColossusATK,firearmAttributeConversionBase,totalFirearmATK} = calcs.getFirearmATK(tableCopy,weaponRef,atkMulti);
             const {baseFirearmCritRate,baseFirearmCritDamage,baseFirearmCritRateBonus,baseFirearmCritDamageBonus,firearmCritRateBonus,firearmCritDamageBonus,totalFirearmCritRate,totalFirearmCritDamage} = calcs.getFirearmCrit(tableCopy,weaponRef);
             const {baseWPMulti,weakpointBonus,bossPartWPBonus,wpAveraged} = calcs.getFirearmWeakpoint(tableCopy,weaponRef);
+            const multishot = calcs.getFirearmMultishot(tableCopy,weaponRef);
             const shellCount = Math.floor(shellCountOverride ? shellCountOverride : (weaponRef.shellCount + tableCopy.ShellCapacityBase) * (1 + tableCopy.ShellCapacity))
 
             const preElementDamage = firearmAttributeConversionBase;//firearm attribute dmg can't benefit from faction attack or type bonuses or the zenithMultiplier
@@ -441,7 +472,7 @@ const bullets = {
             const baseDamageOnly = damage * physDR;
 
             const critFirearm = calcs.getFirearmCritComposites({totalFirearmCritRate,totalFirearmCritDamage});
-            const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm);
+            const weaponDamage = calcs.getCompositeFirearmDamageSpread(baseDamage,critFirearm,null,multishot);
 
             //* wpAveraged
             // console.log(wpAveraged)
@@ -456,9 +487,9 @@ const bullets = {
             let avgTotalBonusElem = 0;
             if (activeElements[0] != "None") {
                 for (let i=0;i<activeElements.length;i++) {
-                    elementalDamage[activeElements[i]] = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[i],critFirearm);
+                    elementalDamage[activeElements[i]] = calcs.getCompositeFirearmDamageSpread(activeElementsDamage[i],critFirearm,null,multishot);
                     //add the elem to the avg total sum of the shot so that way scaling elem bonuses still show up on the chart
-                    avgTotalBonusElem += elementalDamage[activeElements[i]] != 0 ? elementalDamage[activeElements[i]].AVG : 0;
+                    avgTotalBonusElem += elementalDamage[activeElements[i]] != 0 ? elementalDamage[activeElements[i]].AVG + elementalDamage[activeElements[i]].AVGMulti : 0;
                 }
                 
             }
@@ -468,22 +499,27 @@ const bullets = {
                 const skillDamage = referenceFunction ? referenceFunction(tableCopy,returnObject,isCycleCalcs,nameOverride) : 0;
                 const skillDMGObject = skillDamage != 0 ? skillDamage.damageSkill : 0;
                 const avgPerShot = weaponDamage.AVG// + weaponDamageElemental.AVG;
+                constructorObject.weaponDamage = weaponDamage;
                 constructorObject.shellCount = shellCount;
                 constructorObject.totalATK = skillOnly ? 0 : totalFirearmATK;
                 constructorObject.damage = skillOnly ? 0 : weaponDamage.perHit;
                 constructorObject.damageCrit = skillOnly ? 0 : weaponDamage.perCrit;
                 constructorObject.damageAVG = skillOnly ? 0 : weaponDamage.AVG;
                 constructorObject.avgTotalBonusElem = skillOnly ? 0 : avgTotalBonusElem;
-                constructorObject.damageAVGTotal = (skillOnly ? 0 : weaponDamage.AVG + avgTotalBonusElem) * shellCount + (skillDamage != 0 ? skillDamage.damageSkill.AVG : 0);
+                constructorObject.damageAVGTotal = (skillOnly ? 0 : weaponDamage.AVG + avgTotalBonusElem + weaponDamage.AVGMulti) * shellCount + (skillDamage != 0 ? skillDamage.damageSkill.AVG : 0);
                 constructorObject.SkillDamage = skillDamage != 0 ? skillDamage.damageSkill : 0;
                 constructorObject.SkillDamageMod = skillDamage != 0 ? skillDamage.skillPowerModifier : 0;
                 constructorObject.wasFree = (tableCopy.BulletCostWeapon + tableCopy.BulletCostWeaponCORE) === 0;
 
                 constructorObject.elementalDamage = skillOnly ? 0 : elementalDamage;
 
+                if (specialGunUltimateFunction) {constructorObject.specialGunUltimateFunction = specialGunUltimateFunction(constructorObject,shotCount,baseDamageOnly,critFirearm,wpAveraged,returnObject);}
+                // console.log(specialGunUltimateFunction)
                 //shit like Hailey's cryo
-                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject,shotCount,baseDamageOnly,critFirearm,wpAveraged);}
-                if (specialSkillFunction) {constructorObject.specialSkillFunction = specialSkillFunction(constructorObject,tableCopy,returnObject,isCycleCalcs,nameOverride);}
+                if (specialGunFunction) {constructorObject.specialGunFunction = specialGunFunction(constructorObject,shotCount,baseDamageOnly,critFirearm,wpAveraged,returnObject);}
+                // console.log(constructorObject.specialGunFunction)
+                if (specialSkillFunction) {constructorObject.specialSkillFunction = specialSkillFunction(constructorObject,tableCopy,returnObject,isCycleCalcs,nameOverride,shotCount,shellCount);}
+                // console.log(constructorObject.specialSkillFunction)
 
                 priorShotCount = shotCount;
 
@@ -520,6 +556,7 @@ const bullets = {
             }
             // reload fuckery - If reloads are allowed, inject into the bullets array, 2 entries for a reload start and end
             else if (reloadsChecker) {
+                burstCounter = -1;//reset the burst counter for burst rifles only.
                 reloadShotDelayApplied = false;
                 let delayReference = constructorObject.shotDelay;
                 let baseReference = timePassed + delayReference;
@@ -616,23 +653,39 @@ const bullets = {
 
         let attrKeys = Object.keys(bulletsArrayRef);
         for (let key of attrKeys) {
-            returnString += `${bulletsArrayRef[key] ? `<div class="totalHealingBoxBreakdownRows attributeRowBoxWeapons">
+            let currentRef = bulletsArrayRef[key];
+            returnString += `${currentRef ? `<div class="totalHealingBoxBreakdownRows attributeRowBoxWeapons">
                     <div class="totalHealingBoxHalfBreakdownRows attributeRowStarterWeapons hasHoverTooltip">
                         <div class="totalHealingHeader" style="border:none;">${key}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">DMG/Hit</div>
-                        <div class="totalHealingValueBoss">${bulletsArrayRef[key].perHit.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentRef.perHit.toFixed(2)}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">DMG/Crit</div>
-                        <div class="totalHealingValueBoss">${bulletsArrayRef[key].perCrit.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentRef.perCrit.toFixed(2)}</div>
                     </div>
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">AVG/Hit</div>
-                        <div class="totalHealingValueBoss">${bulletsArrayRef[key].AVG.toFixed(2)}</div>
+                        <div class="totalHealingValueBoss">${currentRef.AVG.toFixed(2)}</div>
                     </div>
-                </div>` : ""}`;
+                </div>
+                ${currentRef.AVGMulti ? `<div class="bulletSimMultiShotRowHeader">Multi-Hit Damage</div>
+                    <div class="totalHealingBoxBreakdownRows">
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">DMG/Multi-Hit</div>
+                            <div class="totalHealingValueBoss">${currentRef.perHitMulti.toFixed(2)}</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">DMG/Multi-Crit</div>
+                            <div class="totalHealingValueBoss">${currentRef.perCritMulti.toFixed(2)}</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">AVG/Multi-Hit</div>
+                            <div class="totalHealingValueBoss">${currentRef.AVGMulti.toFixed(2)}</div>
+                        </div>
+                    </div>` : ""}` : ""}`;
         }
 
         return returnString ? headerString + returnString : ""
@@ -786,6 +839,50 @@ const bullets = {
                             <div class="totalHealingHeader">Shells</div>
                             <div class="totalHealingValueBoss">${currentBullet.shellCount.toFixed(0)}</div>
                         </div>` : ""}
+                    </div>
+                    ${currentBullet.weaponDamage.AVGMulti ? `<div class="bulletSimMultiShotRowHeader">Multi-Hit Damage</div>
+                    <div class="totalHealingBoxBreakdownRows">
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">DMG/Multi-Hit</div>
+                            <div class="totalHealingValueBoss">${currentBullet.weaponDamage.perHitMulti.toFixed(2)}</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">DMG/Multi-Crit</div>
+                            <div class="totalHealingValueBoss">${currentBullet.weaponDamage.perCritMulti.toFixed(2)}</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">AVG/Multi-Hit</div>
+                            <div class="totalHealingValueBoss">${currentBullet.weaponDamage.AVGMulti.toFixed(2)}</div>
+                        </div>
+                    </div>` : ""}
+                    ` : "";
+
+                    // specialGunUltimateFunction
+                let specialATKUltimateString = bulletsArray[i].specialGunUltimateFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialGunUltimateFunction.name}</div>
+                <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialGunUltimateFunction.desc}</div>
+                <div class="totalHealingBoxBreakdownRows">
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">DMG/Hit</div>
+                        <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.perHit.toFixed(2)}</div>
+                    </div>
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">DMG/Crit</div>
+                        <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.perCrit.toFixed(2)}</div>
+                    </div>
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                        <div class="totalHealingHeader">AVG/Hit</div>
+                        <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.AVG.toFixed(2)}</div>
+                    </div>
+                    ${!bulletsArray[i].specialGunUltimateFunction.ticks ? "" : `
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">Ticks</div>
+                            <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.ticks.toFixed(2)}</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">SUM AVG</div>
+                            <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.totalTickDamage.toFixed(2)}</div>
+                        </div>
+                            `}
                     </div>` : "";
                 let specialATKString = bulletsArray[i].specialGunFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialGunFunction.name}</div>
                     <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialGunFunction.desc}</div>
@@ -869,6 +966,7 @@ const bullets = {
                         ${ATKString}
                         ${bullets.getAttributeRowStrings(bulletsArray[i].elementalDamage)}
                         ${specialATKString}
+                        ${specialATKUltimateString}
                         ${bulletsArray[i].bonusesApplied.length ? `<div class='weaponBreakdownSplitterHeader'>BONUSES</div>
                             <div style="white-space: normal">${bulletsArray[i].bonusesApplied}</div>` : ""}
                     </div>
@@ -894,6 +992,7 @@ const bullets = {
                         ${ATKString}
                         ${bullets.getAttributeRowStrings(bulletsArray[i].elementalDamage)}
                         ${specialATKString}
+                        ${specialATKUltimateString}
                         ${bulletsArray[i].bonusesApplied.length ? `<div class="totalHealingHeader">Bonuses applied to/on shot</div>
                             ${bulletsArray[i].bonusesApplied}` : ""}
                     </div>`;
@@ -902,19 +1001,21 @@ const bullets = {
         
         //kill the graph if there is no array
         const graphString = `
-        <svg class="weaponBulletArrayGraph">
-            <line x1="7.5%" y1="90%" x2="7.5%" y2="10%" stroke="black" /> <!-- Y-axis -->
-            <line x1="7.5%" y1="90%" x2="92.5%" y2="90%" stroke="black" /> <!-- X-axis -->
+        <div id="bulletsDisplayGraphBox${isSkill ? "Skill" : ""}" class="graphContainerbox">
+            <svg class="weaponBulletArrayGraph" id="bulletsDisplayGraph${isSkill ? "Skill" : ""}">
+                <line x1="7.5%" y1="90%" x2="7.5%" y2="10%" stroke="black" /> <!-- Y-axis -->
+                <line x1="7.5%" y1="90%" x2="92.5%" y2="90%" stroke="black" /> <!-- X-axis -->
 
-            <text x="50%" y="7.5%" fill="white" font-size="15" text-anchor="middle">DMG per Shot over Time</text>
-            <text x="-2.5%" y="10%" fill="white" font-size="15" text-anchor="middle" transform="rotate(-90, 50, 50)">DMG per Shot</text>
-            <text x="50%" y="97.5%" fill="white" font-size="15" text-anchor="middle">Time</text>
+                <text x="50%" y="7.5%" fill="white" font-size="15" text-anchor="middle">DMG per Shot over Time</text>
+                <text x="-2.5%" y="10%" fill="white" font-size="15" text-anchor="middle" transform="rotate(-90, 50, 50)">DMG per Shot</text>
+                <text x="50%" y="97.5%" fill="white" font-size="15" text-anchor="middle">Time</text>
 
-            <text x="7.5%" y="97.5%" fill="white" font-size="15" text-anchor="middle">0s</text>
-            <text x="92.5%" y="97.5%" fill="white" font-size="15" text-anchor="middle">${maxTime.toFixed(1)}s</text>
-            ${bulletsArray.length<=1 ? "" : lineString}
-            ${bulletsArray.length<=1 ? "" : pointString}
-        </svg>
+                <text x="7.5%" y="97.5%" fill="white" font-size="15" text-anchor="middle">0s</text>
+                <text x="92.5%" y="97.5%" fill="white" font-size="15" text-anchor="middle">${maxTime.toFixed(1)}s</text>
+                ${bulletsArray.length<=1 ? "" : lineString}
+                ${bulletsArray.length<=1 ? "" : pointString}
+            </svg>
+        </div>
         `;
 
         return {bulletArrayString,graphString}

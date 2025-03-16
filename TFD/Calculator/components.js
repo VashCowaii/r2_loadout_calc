@@ -23,6 +23,7 @@ const componentImagePrefixes = {
     "Distorted Resolve": "Icon_Item_Acc_DeathStalker_T3_",
     "Invader": "Icon_Item_Acc_A006_T2_",
     "Hunter": "Icon_Item_Acc_Ark_T3_",
+    "Ascending Armory": "Icon_Item_Acc_Ark_T3_",
 }
 
 
@@ -261,6 +262,14 @@ const auxiliary = {
         "rarity": "Ultimate",
         "imageSuffix": "01"
     },
+    "Ascending Armory": {
+        "headerStat": "Shield",
+        "value": 275,
+        "stats": {},
+        "tags": ["Shield"],
+        "rarity": "Ultimate",
+        "imageSuffix": "01"
+    },
 }
 const auxiliaryRolls = {
     "": {
@@ -481,6 +490,14 @@ const sensor = {
         "imageSuffix": "02"
     },
     "Hunter": {
+        "headerStat": "DEF",
+        "value": 3512,
+        "stats": {},
+        "tags": ["DEF"],
+        "rarity": "Ultimate",
+        "imageSuffix": "02"
+    },
+    "Ascending Armory": {
         "headerStat": "DEF",
         "value": 3512,
         "stats": {},
@@ -732,6 +749,14 @@ const memory = {
         "rarity": "Ultimate",
         "imageSuffix": "03"
     },
+    "Ascending Armory": {
+        "headerStat": "Shield",
+        "value": 206,
+        "stats": {},
+        "tags": ["Shield"],
+        "rarity": "Ultimate",
+        "imageSuffix": "03"
+    },
 }
 const memoryRolls = {
     "": {
@@ -961,6 +986,14 @@ const processor = {
         "imageSuffix": "04"
     },
     "Hunter": {
+        "headerStat": "HP",
+        "value": 646,
+        "stats": {},
+        "tags": ["HP"],
+        "rarity": "Ultimate",
+        "imageSuffix": "04"
+    },
+    "Ascending Armory": {
         "headerStat": "HP",
         "value": 646,
         "stats": {},
@@ -1487,6 +1520,22 @@ const componentSetBonuses = {
                 "MPInCombat": 0.12,
                 "MPOutCombat": 1.03,
                 "FirearmATK%": -0.12,
+            },
+            "tags": [],
+        },
+        "rarity": "Ultimate",
+    },
+    "Ascending Armory": {
+        "2pc": {
+            "desc": "Skill Cost -6.5%",
+            "stats": {
+                "SkillCost": -0.065
+            },
+            "tags": [],
+        },
+        "4pc": {
+            "desc": "When reloading in mid-air, provides Supply Bullets (cooldown 10s)<br>Field Supplies +10%<br>Intercept Battle Supplies +10%",
+            "stats": {
             },
             "tags": [],
         },
