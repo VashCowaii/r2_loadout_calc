@@ -1560,7 +1560,7 @@ const generalRounds =  {
       "polarity": "Rutile",
       "type": "General Rounds",
       "cost": 15,
-      "category": "Multi-Hit Chance",
+      "category": "Multi-Hit Damage",
       "desc": "Multi-Hit Damage +70%, Firearm Critical Hit Damage -120%",
       "stats": {
          "MultiShotDamageBASECORE": 0.30,
