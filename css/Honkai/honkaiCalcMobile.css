@@ -1,0 +1,294 @@
+@media (max-width: 768px) {
+.expandedDataHolderHolderBox {
+    flex-direction: column;
+}
+.characterSelectionsOverview {
+    flex-direction: row;
+    /* width: 100%;
+    max-width: 100%; */
+    /* overflow-x: scroll; */
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: visible;
+    padding-right: 20px;
+}
+
+.characterOverviewSelectionBoxHolder {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 20%; */
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.characterOverviewSelectionBoxHolder + .characterOverviewSelectionBoxHolder {
+    /* border-left: 2px solid white;
+    box-sizing: border-box; */
+}
+
+.characterMainCenterDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.expandedQuarters {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+.quartersBackgroundTransparent {
+    display: flex;
+}
+
+.characterMainCenterImage {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    scale: 8;
+    transform: translateY(15%);
+}
+
+
+
+.scrollHolderHorizontal {
+    height: auto;
+}
+
+.traceMainBoxHolder {
+    max-height: 300px;
+}
+.traceTypeDisplayBox,.traceContentBodyBox {
+    height: auto;
+}
+
+.traceContentBodyBox {
+    overflow: visible;
+    max-height: none;
+}
+
+
+
+.rightDescriptionBox {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
+
+.relicsMainPieceHolderBox {
+    justify-content: space-evenly;
+}
+.relicsPieceHolderBox {
+    width: 45%;
+    width: 300px;
+    min-width: 300px;
+    margin: 1px;
+}
+.relicsMainBoxHolder {
+    overflow:visible
+}
+.eidolonsMainBoxHolder {
+    overflow: visible;
+    height: auto;
+    width: 100%;
+}
+.eidolonRowBoxHolder {
+    width: 100%;
+    height: auto;
+    padding-left: 4px;
+}
+.rightDescriptionBoxEidolons  {
+    width: 100%;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.imageRowStatisticNameBox,.imageRowStatisticStatBox {
+    /* font-family: "Montserrat-Light"; */
+}
+
+
+
+.customMenuMainHolderBox {
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.customMenuSearchNote {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.characterMainCenterDisplayOverview {
+    /* width: 500px;
+    height: 263.6px; */
+    aspect-ratio: 500 / 263;
+    /* height: 100px; */
+    /* height: 500px; */
+    /* border: 1px solid green; */
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    /* overflow: hidden; */
+
+}
+
+
+
+.filtersMegaMegaBox {
+    width: 100%;
+    flex-direction: column;
+}
+.queryResultsCharacterImageItemsBox {
+    min-width: 200px;
+}
+.analyticsResultRowDMG {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.queryResultRowDMGAV {
+    justify-content: left;
+}
+.analyticsResultRowRelicsBox {
+    flex-direction: column;
+    width: 100%;
+}
+.queryResultsQuarterBox,.queryResultsQuarterBoxEquivalent {
+    width: 100%;
+}
+.analyticsResultRowDMGBarHolderOuter {
+    width: 100%;
+}
+.analyticsResultRowDMGBarHolder {
+    width: 100%;
+}
+
+.statFiltersRowHeader {
+    flex-wrap: wrap;
+}
+.clearInput {
+    position: relative;
+    width: 100%;
+    border: 2px solid #93ccea75;
+    border-top-right-radius: 10px;
+}
+
+.filterCharacterSelectionSwitchIcon {
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,0%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 1.4;
+    
+}
+.queryResultsQuarterCharacterImageBest {
+    transform:translate(0%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 1.5;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 768px) {
+    .paragonStatsMainBoxHolder {
+        flex-direction: column;
+    }
+    .paragonStatsHalvesBoxHolder,.paragonStatsBodyBox {
+        max-height: none;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+    }
+    .bossInfoColumnHolderBox {
+        flex-direction: column;
+    }
+    .basicsInnerBox {
+        height: auto;
+        max-height: auto;
+    }
+    .bossDataMainHolder,.bossDataPartsRow {
+        flex-direction: column;
+    }
+    .bossDataPartsBox {
+        width: 100%;
+    }
+    .selectionSelectorBoxesBossTargetStats {
+        flex-direction: column;
+        height: auto;
+    }
+
+.prismColumn {
+    width: 40%;
+    box-sizing: border-box;
+}
+.prismDisplayMainBox {
+    max-width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.basicsBox {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.basicsBoxModsHolder {
+    width: 100%;
+}
+
+.bossDataBreakdownBoxRow {
+    flex-direction: column;
+}
+.bossDataCritResistAttributes,.bossDataPartsRow {
+    width: 100%;
+}
+
+} */

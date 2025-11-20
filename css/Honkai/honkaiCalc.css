@@ -1,0 +1,5778 @@
+.smallFont,.actionDetailBody,.actionDetailBodyCenterTags,.totalHealingValueBoss,.actionDetailBodyDetailExpandHeader,.buffShieldHealthValueDisplay,.actionDetailBodyBuffSource,.actionDetailBodyInner,
+.traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
+.filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
+.rowSummaryDMGNameAndPercentACTIONBARSpent {
+    font-family: "Montserrat-Light";
+}
+
+/* SITE UPDATED BANNER */
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid #434343;
+    font-size: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.updateBannerBufferLeft {
+    grid-column: 1;
+    grid-row: 1;
+}
+.updateBannerBufferLeft {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* DEFAULT WHITE COLOR */
+div {
+    color: white;
+}
+
+.helpBarMegaBox {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    height: auto;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.blockoutBackgroundShutter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 90%;
+    z-index: 10000;
+    display: none;
+}
+
+.customMenuMainHolderBox {
+    position: fixed;
+    z-index: 10100;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    max-height: 80%;
+    box-sizing: border-box;
+
+
+    display: none;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    justify-content: top;
+    align-items: center;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+}
+.customMenuMainHolderBoxInner {
+    z-index: 10100;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+
+    /* display: none; */
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+    /* border: 2px solid #434343; */
+
+    background: linear-gradient(200deg, transparent,transparent,#0d393b3d);
+
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right; */
+    background-color: #0d0c0c;
+    /* background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%; */
+    /* background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat; */
+    justify-content: top;
+    align-items: center;
+    overflow-y: auto;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+}
+
+.customMenuMainHolderBox::before {
+    content: "";
+    position: absolute;
+    inset: 0.5%;
+    border-top-right-radius: 20px;
+    border: 2px solid #1e9a9e;
+    z-index: 10099;
+    transform: translate(-18px, 21px); 
+}
+.customMenuTitleRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    min-height: 40px;
+}
+.customMenuSearchTitleHolder {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.customMenuSearchTitle {
+    width: 100%;
+    font-size: 40px;
+    padding-left: 15px;
+}
+.customMenuCloseButton {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    /* transform: translateY(-50%); */
+    font-size: 18px;
+    color: #1e9a9e;
+    /* color: #434343; */
+    border: 2px solid #434343;
+    /* border: 2px solid #1e9a9e; */
+    border-top: none;
+    border-right: none;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+}
+.customMenuCloseButton:hover {
+    color: white;
+    background-color: #ffffff80;
+}
+.customMenuSearchBarBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.customMenuSearchBarBoxRelicValueInput {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.customMenuSearchNote {
+    width: 95%;
+    white-space: normal;
+    /* display: flex; */
+    justify-content: left;
+    /* align-items: center; */
+    font-size: 12px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #93CCEA;
+    padding: 5px;
+}
+.addEnemyExportNote {
+    width: 100%;
+    white-space: normal;
+    /* display: flex; */
+    justify-content: left;
+    /* align-items: center; */
+    font-size: 12px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #93CCEA;
+    padding: 2px;
+}
+.customMenuSearchNoteWarning {
+    width: 95%;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: lightcoral;
+}
+.customMenuSearchBarInput {
+    width: 60%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent);
+    /* width: 100%; */
+    width: auto;
+    min-width: 30px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+}
+.customMenuSearchBarInputRelicValues {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: linear-gradient(to right, #666666,transparent,transparent,transparent);
+    /* width: 100%; */
+    /* width: auto; */
+    min-width: 150px;
+    max-width: 150px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 2px;
+}
+.customMenuSearchBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 2px;
+    /* height: 100%; */
+    /* max-height: 100%; */
+    /* min-height: 100%; */
+    /* overflow-y: auto; */
+    justify-content: flex-start;
+    align-items: center;
+
+    /* border: 1px solid red; */
+}
+.customMenuResultRowBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.customMenuResultRowBox:hover {
+    opacity: 0.5;
+}
+.customMenuResultImgRounded {
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: black;
+    box-sizing: border-box;
+}
+.customMenuResultBodyBox {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customMenuResultBodyTitle {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 18px;
+    white-space: normal;
+}
+.customMenuResultBodyDesc {
+    width: 100%;
+    display: block;
+    justify-content: left;
+    align-items: flex-start;
+    overflow: hidden;
+    color: #18fcc8;
+    white-space: normal;
+    font-size: 15px;
+}
+
+
+
+
+.mainGridRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-color: #0d0c0c;
+    background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menuSwitcherBarTopBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; */
+    /* border: 2px solid #434343; */
+    border-top: none;
+    margin: 1px;
+}
+.menuSwitcherButtonTop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20%;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    opacity: 0.75;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.menuSwitcherButtonTop + .menuSwitcherButtonTop {
+    /* border-left: 2px solid #434343; */
+}
+.menuSwitcherButtonTop:hover {
+    background: #ffffff1A;
+}
+.smolLineDividerTopper {
+    width: 80%;
+    border-bottom: 1px solid #434343;
+}
+
+
+/* .characterOverviewSelectionBoxHolder {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 20%;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    opacity: 0.75;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.characterOverviewSelectionBoxHolder:hover {
+    background-color: #ffffff1A;
+}
+.characterOverviewSelectionBoxHolder + .characterOverviewSelectionBoxHolder {
+} */
+
+
+
+
+
+
+
+
+
+.hsrTeamIconBar {
+    /* grid-column: 2;
+    grid-row: 3; */
+    width: auto;
+    /* border-top: 1px solid #434343; */
+    /* border-bottom: 1px solid #434343; */
+    /* overflow: hidden; */
+    /* height: 40px; */
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(5px);
+    background: #1e1e1ea6;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: 1;
+}
+
+.teamLineBoxHolder {
+    position: relative;
+    width: 400px;
+    height: 65px;
+    overflow: hidden;
+
+    display: flex;
+    box-sizing: border-box;
+
+    justify-content: center;
+    align-items: center;
+    /* padding: 2px; */
+
+    /* backdrop-filter: blur(5px);
+    background: #1e1e1ea6;
+    border-radius: 4px; */
+    z-index: 1;
+
+}
+
+.teambarCurvedLineTop {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%); 
+    /* transform: translateY(-50%); */
+    top: -80%;
+    /* left: 50%; */
+    width: 400px;
+    height: 90px;
+    border-bottom: 2px solid #c0c1d6;
+    /* 434343 */
+    /* #c0c1d6 */
+    border-radius: 0 0 240px 50%/30px;
+    /* rotate: 92deg; */
+    /* transform: translateX(110px); */
+    z-index: 0;
+}
+
+.teamBarImgRounded {
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: black;
+    box-sizing: border-box;
+    position: relative;
+}
+.teamBarImgRounded:hover {
+    /* background-color: white; */
+    filter: brightness(1);
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+
+
+
+
+
+
+
+.expandedDataHolderHolderBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #434343; */
+    box-sizing: border-box;
+}
+.expandedDataHolderHolderBoxBattleView {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    max-height: 700px;
+    /* max-height: 800px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid #434343; */
+    box-sizing: border-box;
+}
+
+.expandedCharacterDataHolderBox {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+.expandedQuarters {
+    width: 20%;
+    height: 500px;
+    min-width: 250px;
+    /* border-right: 1px solid #434343;
+    border-left: 1px solid #434343; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* padding: 2px; */
+    z-index: 1;
+}
+.quartersBackgroundTransparent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 0;
+    display: none;
+}
+.expandedMiddle {
+    width: 56%;
+    height: 725px;
+}
+
+
+.characterSelectionsOverview {
+    /* border-right: 1px solid #434343 */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* display: flex; */
+    backdrop-filter: blur(5px);
+    background: #1e1e1ea6;
+    border-radius: 4px;
+}
+.characterOverviewSelectionBoxHolder {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 20%;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    opacity: 0.75;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.characterOverviewSelectionBoxHolder:hover {
+    background-color: #ffffff1A;
+}
+.characterOverviewSelectionBoxHolder + .characterOverviewSelectionBoxHolder {
+    /* border-top: 1px solid #c0c1d6; */
+}
+
+
+
+.characterMainCenterDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+.characterMainCenterImage {
+    width: 100%;
+    height: auto;
+    /* max-height: 600px; */
+    object-fit: contain;
+    z-index: 0;
+    overflow: hidden;
+    /* scale: 2; */
+    /* mask-image: linear-gradient(to right, transparent,transparent, black 40%, black 60%, transparent, transparent); */
+    /* transform: translateY(5%); */
+}
+
+.characterMainCenterDisplayOverviewHolderBox {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); */
+
+    /* mask-image:
+    linear-gradient(to top,    transparent, black 20%),
+    linear-gradient(to bottom, transparent, black 20%),
+    linear-gradient(to left,   transparent, black 20%),
+    linear-gradient(to right,  transparent, black 20%);
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100% 100%; */
+    
+    /* mask-composite: linear-gradient(to right, transparent, black 10%, black 90%, transparent) linear-gradient(to right, transparent, black 10%, black 90%, transparent); */
+    /* mask-image: radial-gradient(circle, black 10%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover; */
+}
+.characterMainCenterDisplayOverview {
+    width: 500px;
+    /* height: 281.25px; */
+    height: 263.6px;
+    /* height: 100px; */
+    /* height: 500px; */
+    /* border: 1px solid green; */
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+
+}
+.characterMainCenterImageBannerTesting {
+    /* width: 100%; */
+    /* height: 281.25px; */
+    width: 100%;
+    /* height: auto; */
+    /* max-height: 600px; */
+    object-fit: contain;
+    z-index: 0;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    /* transform-origin: center; */
+    /* scale: 2; */
+    /* mask-image: linear-gradient(to right, transparent,transparent, black 40%, black 60%, transparent, transparent); */
+    /* transform: translateY(5%); */
+}
+
+
+
+.characterSummaryStats {
+    /* border-left: 1px solid #434343; */
+}
+.characterBasicMenuStatsBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(5px);
+    background: #1e1e1ea6;
+    border-radius: 10px;
+}
+
+
+.characterDisplayLightconePreview {
+    margin-top: 5px;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* width: 100%;
+    height: 82px; */
+
+    max-width: 250px;
+    max-height: 81px;
+    width: 100%;
+    height: 100%;
+
+
+
+    border: 2px solid #c0c1d6;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+.testContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    max-width: 250px;
+    max-height: 81px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.characterDisplayLightconePreview2 {
+    margin-top: 5px;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* width: 100%;
+    height: 82px; */
+
+    max-width: 404px;
+    max-height: 128px;
+    min-width: 404px;
+    min-height: 128px;
+    width: 100%;
+    height: 100%;
+
+
+
+    /* border: 2px solid #c0c1d6; */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+.testContainer2 {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 404px;
+    max-height: 128px;
+    /* min-width: 404px;
+    min-height: 128px; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.characterDisplayLightconePreview3 {
+    margin-top: 5px;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* width: 100%;
+    height: 82px; */
+
+    max-width: 240px;
+    max-height: 280px;
+    min-width: 240px;
+    min-height: 280px;
+    width: 100%;
+    height: 100%;
+
+
+
+    /* border: 2px solid #c0c1d6; */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid grey;
+
+    
+}
+.testContainer3 {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 240px;
+    max-height: 280px;
+    /* min-width: 404px;
+    min-height: 128px; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.characterDisplayLightconePreview4 {
+    margin-top: 5px;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* width: 100%;
+    height: 82px; */
+
+    max-width: 240px;
+    max-height: 280px;
+    min-width: 240px;
+    min-height: 280px;
+    width: 100%;
+    height: 100%;
+
+
+
+    /* border: 2px solid #c0c1d6; */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid grey;
+}
+.testContainer4 {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 240px;
+    max-height: 280px;
+    /* min-width: 404px;
+    min-height: 128px; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.testContainer:hover {
+    opacity: 0.5;
+}
+.characterDisplayLightconePreviewImage {
+    transform-origin: center;
+    width: 100%;
+}
+.characterDisplayLightconePreviewText {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(to right, transparent,#272522,#272522,#272522);
+    padding-right: 4px;
+    white-space: normal;
+    font-size: 12px;
+}
+
+
+
+.characterDisplayNameAndElement {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+.characterDisplayNameAndElementItemNotAdded {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    color: rgb(255, 125, 125);
+}
+.relicStatsSelectionMainstatRow {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.relicStatsSelectionMainstatIconRow {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.characterDisplayNameBox {
+    font-size: 25px;
+    width: 85%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+}
+.characterDisplayElementBox {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+.relicsSetSelectionRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    object-fit: contain;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+.characterDisplayElement {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.characterDisplayElementRelicsIcon {
+    width: 33%;
+    max-width: 75px;
+    height: auto;
+    object-fit: contain;
+}
+.characterDisplayElementRelicsIcon:hover {
+    background-color: #c0c1d60D;
+}
+
+.characterDisplayElementWeaknessIconHolderBox,.characterDisplayElementWeaknessIconHolderBoxINSPECT,.characterDisplayLogStatIcon,.characterDisplayEnemyLineupBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 120px;
+    max-width: 120px;
+    position:absolute;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    /* border: 1px solid green; */
+}
+.characterDisplayElementWeaknessIconHolderBoxBattleSettings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 120px;
+    max-width: 120px;
+    /* position:absolute;
+    right: 0;
+    bottom: 50%; */
+    /* transform: translateY(50%); */
+    /* border: 1px solid green; */
+}
+.characterDisplayElementWeaknessIconHolderBoxINSPECT,.characterDisplayEnemyLineupBar {
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    transform: none;
+}
+.characterDisplayEnemyLineupCircleFill,.characterDisplayEnemyLineupCircleEmpty {
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    min-height: 10px;
+    min-width: 10px;
+    border: 1px solid green;
+}
+.characterDisplayEnemyLineupCircleEmpty {
+    background-color: transparent;
+    border: 1px solid white;
+}
+.characterDisplayEnemyLineupBarHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.characterDisplayEnemyLineupBar {
+    min-height: 15px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.characterDisplayElementWeaknessIcon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #c0c1d60D;
+}
+.characterDisplayRelicStatChoiceIcon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #c0c1d60D;
+}
+.characterDisplayRelicStatChoiceIconCHOSEN {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #FFFFFF80;
+    /* filter: invert(100%); */
+
+}
+.characterDisplayRelicStatChoiceIcon:hover {
+    background-color: #FFFFFF80;
+}
+.characterDisplayLogStatIcon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
+.characterDisplayLogStatIconSP {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    margin-left: -8px;
+    margin-right: -8px;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
+
+.characterDisplayPathAndNameBox {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #c0c1d633;
+}
+.characterDisplayPathNameBox {
+    width: 93%;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    white-space: normal;
+}
+.characterDisplayPathImageBox {
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+}
+.characterDisplayPathImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.characterDisplayStatsBasic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+}
+.imageRowStatisticBox1 {
+    background-color: #c0c1d60D;
+}
+.imageRowStatisticBoxMain {
+    background-color: #FFFFFF66;
+    border-left: 2px solid #f2a33c;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+.imageRowStatisticImageBox {
+    width: 10%;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    scale: 1.2;
+}
+.imageRowStatisticImageStatMenu {
+    width: 20px;
+    height: 20px;
+}
+.imageRowStatisticImageMain {
+    filter: invert(72%) sepia(63%) saturate(528%) hue-rotate(356deg) brightness(200%) contrast(91%) drop-shadow(1px 1px 4px rgba(0,0,0,1));
+    /* filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)); */
+}
+.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+    font-size: 16px;
+}
+.imageRowStatisticNameBoxMain {
+    color: #f2a33c;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    font-size: 21px;
+}
+.imageRowStatisticStatBox, .imageRowStatisticStatBoxMain {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2px;
+    font-size: 18px;
+}
+.imageRowStatisticStatBoxMain {
+    color: #f2a33c;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    font-size: 21px;
+}
+.imageRowStatisticStatBoxRollsEst {
+    color: black;
+    background-color: #6ee0b6;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    width: 13px;
+    height: 13px;
+}
+.imageRowStatisticStatBoxRollsEstEquivalent {
+    /* color: black; */
+    color: white;
+    /* background-color: #6ee0b6; */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    /* padding-left: 3px;
+    padding-right: 3px; */
+}
+.imageRowStatisticStatBoxRollsEstEquivalentChangeShown {
+    color: black;
+    background-color: #6ee0b6;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    /* padding-left: 3px;
+    padding-right: 3px; */
+}
+
+.rightDescriptionBox {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #18fcc8;
+    box-sizing: border-box;
+}
+.rightDescriptionBoxRelics {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #18fcc8;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin-top: 4px;
+}
+.descriptionNumberColor {
+    color: #dd9337;
+}
+.lighconeStarRatingRow {
+    width: 55%;
+    /* max-height: 15px; */
+    /* min-height: 20px; */
+    object-fit: contain;
+
+}
+.characterStarRatingHidden {
+    position: absolute;
+    z-index: 0;
+}
+.centerDisplayHolderBox {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1px solid#e1e1e4;
+    border-top: 1px solid#e1e1e4;
+    border-radius: 10px;
+}
+.lightconeImageCenterAdjustment {
+    width: 50%;
+    min-width: 200px;
+    height: auto;
+}
+.superimpositionHolderbox {
+    width: 90%;
+    /* background-color: #e1e1e4; */
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 2px solid #e1e1e4; */
+    overflow: hidden;
+}
+.superimpositionButton {
+    width: 20%;
+    color: #e1e1e4;
+}
+.superimpositionButton + .superimpositionButton {
+    border-left: 1px solid #e1e1e4;
+
+}
+
+.traceTypeDisplayBox {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.starAndSearchRow1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.starAndSearchRow2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.exportButtonIcon {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    filter: invert(100%);
+}
+.exportIconBoxHolder {
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.characterSearchButton {
+
+    font-size: 18px;
+    width: auto;
+    min-width: 40%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.addEnemyToWaveButton {
+    font-size: 18px;
+    width: auto;
+    /* min-width: 40%; */
+    box-sizing: border-box;
+    border-bottom-left-radius: 15px;
+    background-color: #cacacc80;
+    /* border: 1px solid #cacacc80; */
+    /* outline: 1px solid #e1e1e480; */
+    border-top: none;
+    border-right: none;
+    /* color: #e1e1e4; */
+    white-space: normal;
+    color: white;
+    /* margin: 2px; */
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position:absolute;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 0;
+    top: 0;
+}
+.addEnemyToWaveButtonBottom {
+    font-size: 18px;
+    width: auto;
+    /* min-width: 40%; */
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    background-color: #cacacc80;
+    /* border: 1px solid #cacacc80; */
+    /* outline: 1px solid #e1e1e480; */
+    border-bottom: none;
+    border-right: none;
+    /* color: #e1e1e4; */
+    white-space: normal;
+    color: white;
+    /* margin: 2px; */
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position:absolute;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 0;
+    bottom: 0;
+}
+.deleteEnemyFromWaveButtonBottom {
+    font-size: 18px;
+    width: auto;
+    /* min-width: 40%; */
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    /* background-color: #cacacc80; */
+    border: 1px solid #cacacc80;
+    /* outline: 1px solid #e1e1e480; */
+    border-bottom: none;
+    border-left: none;
+    /* color: #e1e1e4; */
+    white-space: normal;
+    color: lightcoral;
+    /* margin: 2px; */
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position:absolute;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 0;
+    bottom: 0;
+}
+.deleteEnemyFromWaveButtonBottom:hover {
+    background-color: rgba(255, 255, 255, 0.233);
+}
+.takeMeToBattleSettingsHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.characterSearchButtonDMGDetails,.characterSearchButtonDMGDetailsTurnInspect {
+    /* font-size: 20px;
+    width: 40%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #e1e1e4;
+    border: 1px solid #cacacc;
+    outline: 1px solid #e1e1e4;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #121212;
+    margin: 2px;
+    opacity: 0.5; */
+
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 6px;
+    padding-right: 6px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    margin-right: 4px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.characterSearchButton:hover, .characterSearchButtonDMGDetails:hover, .characterSearchButtonDMGDetailsTurnInspect:hover, .exportIconBoxHolder:hover,.addEnemyToWaveButton:hover,.addEnemyToWaveButtonBottom:hover {
+    opacity: 0.5;
+}
+.characterSearchButtonDMGDetailsTurnInspect {
+    position:absolute;
+    bottom: 5%;
+    right: 0;
+    width: 120px;
+    max-width: 120px;
+    margin: 0;
+}
+
+
+
+.characterSearchButtonRelicEdit {
+    font-size: 16px;
+    width: 30%;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 2px;
+    padding-right: 2px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.characterSearchButtonRelicEdit:hover {
+    opacity: 0.5;
+}
+.traceTypeDisplay {
+
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #121212;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    background-color: #ffffff;
+    margin: 2px;
+    opacity: 1;
+}
+.traceToughnessBox {
+    background-color: #cacacc1A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 3px;
+}
+.traceLevelBox {
+    /* background-color: #cacacc1A; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+.traceToughnessTitleBox {
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+    color: #dde0e2;
+    text-align: left;
+    padding-left: 4px;
+}
+.traceToughnessValueBox {
+    min-width: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #dcc491;
+    padding-right: 4px;
+    text-align: right;
+}
+.traceContentBodyBox {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-left: 4px;
+}
+.traceDisplayNameBox {
+    font-size: 25px;
+    width: 85%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+}
+.traceDisplayNameBoxAlt {
+    font-size: 25px;
+    width: 85%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 4px;
+    box-sizing: border-box;
+    border-left: 2px solid #dbc291;
+}
+.traceAttackTargetType {
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4px;
+    text-align: left;
+    color: #ffbf5a;
+    white-space: normal;
+}
+.relicSetNameEffect {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 0;
+    text-align: left;
+    color: #ffbf5a;
+    white-space: normal;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding-left: 4px;
+}
+.traceSkillLevel,.traceSkillLevelBlue {
+    min-width: 40px;
+    padding-right: 4px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+.traceSkillLevelBlue {
+    color: #2efff8;
+}
+
+
+
+
+.traceMainBoxHolder {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    /* outline: 1px solid white; */
+    /* outline-offset: -15px; */
+    /* border-radius: 50%; */
+    aspect-ratio: 1/1;
+    max-width: 600px;
+    /* overflow: hidden; */
+}
+
+.centerDisplayHolderBoxTraceSummary {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+.traceSummaryEntryBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.traceSummaryEntryImage {
+    width: 40px;
+    height: 40px;
+}
+
+
+.characterMainCenterImageTrace {
+    /* border: 1px solid white;
+    border: 1px solid white;
+    outline: 1px solid white;
+    outline-offset: 15px;
+    border-radius: 50%; */
+    /* width: 100%; */
+    /* max-width: 90%; */
+    /* width: 100%; */
+    /* height: auto;
+    object-fit: cover;
+    box-sizing: border-box; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translateY(-50%) translateX(50%) (0.7) ; */
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+
+    /* right: 10px; */
+    /* top: 50%;
+    transform: translateY(50%); */
+    /* font-size: 40px; */
+    
+}
+.characterMainCenterImageTraceReferenceHunt {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceRemembrance {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-26%,-25%) scale(1.45);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceNihility {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceHarmony {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-20%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferencePreservation {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceDestruction {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceAbundance {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.characterMainCenterImageTraceReferenceErudition {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    transform: translate(-20%,-21%) scale(1.4);
+    overflow: visible;
+}
+.hoveredTraceIcon:hover {
+    filter: brightness(5);
+    outline: 5px solid #1b86ff;
+    outline-offset: 5px;
+    border-radius: 50%;
+}
+.characterMinorTraceCircle {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: #e1e1e4;
+    border-radius: 50%;
+}
+.characterSkillTraceCircle {
+    background-color: #1e2137;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #928d85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.relicsMainBoxHolder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.relicsMainPieceHolderBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding: 2px;
+}
+.relicsPieceHolderBox {
+    width: 30%;
+    /* min-width: 150px; */
+    min-width: 300px;
+    /* height: 200px; */
+    height: auto;
+
+    /* border: 1px solid green; */
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 12px;
+    background-color: #c0c1d60D;
+
+}
+.relicsDividerLine {
+    width: 70%;
+    border: 1px solid #c0c1d6b6;
+}
+.relicsPieceHolderBox:hover {
+    /* background-color: #c0c1d60D; */
+}
+.relicSetHoverBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+/* .relicSetHoverBox:hover {
+    background-color: #c0c1d60D;
+} */
+
+.relicStatSelectionRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.relicStatSelectionSelector {
+    width: auto;
+    min-width: 100px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+.eidolonsMainBoxHolder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.eidolonRowBoxHolder { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    max-width: 400px;
+}
+.eidolonRowName {
+    font-size: 25px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.eidolonRowIconHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.eidolonRowIcon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    border: 2px solid #e1e1e4;
+    border-radius: 50%;
+}
+.rightDescriptionBoxEidolons {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding-left: 15px;
+}
+.eidolonRankRowHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.eidolonRankRowName {
+    font-size: 25px;
+    width: auto;;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+.eidolonRankHolderbox {
+    width: 100%;
+    max-width: 400px;
+    /* background-color: #e1e1e4; */
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 2px solid #e1e1e4; */
+    overflow: hidden;
+
+    /* filter: brightness(0.5); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainGridRowCharting {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-color: #0d0c0c;
+    background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.actionBarHolderbox {
+    width: auto;
+    height: 100%;
+    max-height: 700px;
+    min-height: 300px;
+    min-width: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.actionBarHeader {
+    width: 100%;
+    border-bottom: 2px solid #434343;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.actionLogScrollerVertical {
+    height: 100%;
+    /* max-height: 400px; */
+    max-height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+}
+.cycleEndBar {
+    width: 100%;
+    border: 2px solid #5f656b;
+    border-left: 2px solid #c6b285;
+    /* border-top: 2px solid #c6b285;
+    border-right: 2px solid #c6b285; */
+    /* border-bottom: 2px solid #c6b285; */
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top-right-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    min-height: 20px;
+}
+
+.turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    border: 2px solid #5f656b;
+    border-left: 2px solid #03dbd1;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top-right-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.hoverOpacity:hover {
+    opacity: 0.6;
+}
+.turnStarterBarEnemy {
+    border-left: 2px solid #ff5a3f;
+}
+.turnStarterBarUltimate {
+    border: 2px solid #21c1dd;
+    outline-offset: -4px;
+    outline: 2px solid #5f656b;
+    min-height: 25px;
+    max-height: 25px;
+}
+.turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {
+    min-height: 25px;
+    max-height: 25px;
+}
+.turnStarterBarMiniActionEnemy {
+    border-left: 2px solid #ff5a3f;
+}
+
+
+.turnOrderDisplayPreview, .turnOrderDisplayPreviewEnemyGlorp, .turnOrderDisplayPreviewUltimate, .turnOrderDisplayPreviewUltimateSummon .turnOrderDisplayPreviewEventIcon, .turnOrderDisplayPreviewEventAction {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    scale: 4;
+    transform:translate(20%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+.turnOrderDisplayPreviewEnemyGlorp {
+    scale: 1;
+    transform: none;
+    transform: translateX(50%);
+    mask-image: none;
+}
+.turnOrderDisplayPreviewUltimate {
+    transform:translate(40%,20%) ;
+    scale: 8;
+}
+.turnOrderDisplayPreviewUltimateSummon {
+    transform:translate(-50%,5%) ;
+    scale: 0.5;
+}
+.turnOrderDisplayPreviewEventAction {
+    transform:translate(80%,5%) ;
+    scale: 3;
+}
+.turnOrderDisplayPreviewEventIcon {
+    /* scale: 2;
+    transform:translate(60%,0%); */
+    transform:translate(-20%,5%) ;
+    scale: 0.5;
+}
+
+.turnOrderDisplayPreviewActionExpandRow {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* max-height: 30px; */
+    /* min-height: auto; */
+    position:relative;
+    /* position: absolute; */
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    /* transform:translate(40%,20%) ;
+    scale: 8; */
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+.turnOrderDisplayPreviewActionExpandRowIcon {
+    /* height: 100%;
+    max-height: 30px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #5f656b;
+    box-sizing: border-box; */
+
+    height: 100%;
+    max-height: 30px;
+    /* position: absolute; */
+    width: 100%;
+    max-width: 100px;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,5%) ;
+    /* mask-image: linear-gradient(to right, black 60%, transparent 100%); */
+    scale: 3;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+}
+.turnOrderDisplayPreviewActionExpandRowIconEnemy {
+    /* height: 100%;
+    max-height: 30px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #5f656b;
+    box-sizing: border-box; */
+
+    height: 100%;
+    max-height: 30px;
+    /* position: absolute; */
+    width: 100%;
+    max-width: 100px;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,-20%) ;
+    /* mask-image: linear-gradient(to right, black 60%, transparent 100%); */
+    scale: 1.5;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+}
+
+.weirdSideSemiCircleThinger, .weirdSideSemiCircleThingerAlly, .weirdSideSemiCircleThingerEnemy {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden; 
+    background-color: #28313a;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.weirdSideSemiCircleThingerAlly {
+    background-color: #0f636b;
+}
+.weirdSideSemiCircleThingerEnemy {
+    background-color: #8b3f35;
+}
+.turnOrderAVBox {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+}
+
+.weirdSideSemiCircleThingerAllySnapshotBox {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden; 
+    background-color: #0f636b;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    outline: 2px solid #0f636b;
+    outline-offset: 5px;
+}
+
+.miniActionNameBox, .miniActionNameBoxAdvance {
+    position: absolute;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    right: 10%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    text-align: right;
+}
+.miniActionNameBoxAdvance {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+.mainGraphOverviewHolderBox {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+    margin: 10px;
+    padding: 5px;
+    overflow:visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.graphUpperHeaderHolderBox {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #5f656b;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+
+
+
+.actualGraphHolderbox {
+    width: 100%;
+    height: 100%;
+    /* flex: 1 1 auto; */
+    max-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+    overflow-y: auto;
+    /* padding-left: 3px;
+    padding-right: 3px; */
+}
+
+.actualGraphHolderboxSPMain {
+    width: 100%;
+    /* height: 100%; */
+    /* flex: 1 1 auto; */
+    /* max-height: 100%; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* overflow-y: auto; */
+}
+
+
+
+
+
+
+
+
+
+.graphContainerbox {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 350px;
+    min-height: 350px;
+    /* margin: 5px; */
+    box-sizing: border-box;
+    padding: 5px;
+}
+.graphContainerboxSP {
+    overflow: hidden;
+    width: 100%;
+    /* height: 100%;
+    height: 350px;
+    min-height: 350px; */
+    /* margin: 5px; */
+    box-sizing: border-box;
+    padding: 5px;
+}
+.graphContainerboxUptime {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* height: 350px; */
+    min-height: 350px;
+    /* margin: 5px; */
+    box-sizing: border-box;
+    padding: 5px;
+}
+.weaponBulletArrayGraph {
+    /* width: 100%; */
+    width: auto;
+    /* height: 100%; */
+    height: auto;
+    max-height: 100%;
+    /* border: 2px solid black; */
+    /* border-radius: 5px; */
+    /* background-color:#434343; */
+    /* background-color:transparent; */
+    background-color: #0000007c;
+
+    box-sizing: border-box;
+    /* padding: 2px; */
+    /* border: 1px solid blue; */
+    border-top-right-radius: 15px;
+    overflow-x: scroll;
+    border: 2px solid #434343;
+    color: #2e0303;
+    /* border: 1px solid red; */
+}
+.weaponBulletArrayGraphUptime {
+    /* width: 100%; */
+    width: auto;
+    height: 100%;
+    /* height: auto; */
+    max-height: 100%;
+    /* border: 2px solid black; */
+    /* border-radius: 5px; */
+    /* background-color:#434343; */
+    /* background-color:transparent; */
+    background-color: #0000007c;
+
+    box-sizing: border-box;
+    /* padding: 2px; */
+    /* border: 1px solid blue; */
+    border-top-right-radius: 15px;
+    overflow-x: scroll;
+    border: 2px solid #434343;
+    color: #2e0303;
+    /* border: 1px solid red; */
+}
+.weaponBulletArrayGraphBuffStacks {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    max-height: 100%;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color:#434343;
+    background-color:transparent;
+    box-sizing: border-box;
+    padding: 2px;
+    /* border: 1px solid blue; */
+    overflow-x: scroll;
+    /* border: 1px solid red; */
+
+    /* background-color: #ffffff1A"; */
+    
+}
+.hoverFade:hover {
+    opacity: 0.6;
+}
+
+.buffTooltipHolderbox {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    box-sizing: border-box;
+}
+.buffTooltipBuffNameRow {
+    display: flex;
+
+}
+.buffNameHeaderRow {
+    width: 100%;
+    /* background-color: black; */
+    background-color: #ffffff1A;
+    color: white;
+    /* border-top: 2px solid #434343; */
+    display: flex;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-left: 3px;
+    /* color: #1488fd; */
+    color: #ffdb91;
+}
+
+
+
+
+
+
+
+
+
+
+.actionDetailsButton {
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* background: linear-gradient(to top, #1e1e1e, #1e1e1e, #0d0c0c); */
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e, transparent);
+    white-space: normal;
+
+    /* border: 2px solid grey; */
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0px 5px 0px 5px;
+}
+.actionDetailsButton:hover {
+    opacity: 0.6;
+}  
+.actionDetailMainHolderBox {
+    width: 100%;
+    height: 100%;
+    /* background-color: grey; */
+    background: linear-gradient(to top, #1e1e1e, #1e1e1e, #0d0c0c);
+    box-sizing: border-box;
+    /* max-height: 500px; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.actionDetailHeaderRow {
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.actionDetailHeaderRowDMGOverview {
+    width: 100%;
+    font-size: 24px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.detailHeaderName {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    white-space: normal;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.detailHeaderAV {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+.actionDetailHeaderRowCharacterImageBox {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    /* font-size: 30px; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+.actionDetailHeaderRowCharacterImageAndEnergyBox {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+}
+.actionDetailHeaderRowCharacterCustomValues {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: left;
+    /* border: 1px solid green; */
+}
+.actionDetailHeaderRowCharacterCustomValuesInner {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-left: 2px solid #434343;
+    margin-left: 15px;
+}
+.actionDetailHeaderRowCharacterImage {
+    height: 150%;
+    /* width: auto; */
+    object-fit: contain;
+    /* transform: translateY(15%) scale(0.85); */
+    /* transform: scale(0.90); */
+    /* border: 1px solid red; */
+    box-sizing: border-box; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+.actionDetailHeaderRowEnemyImage {
+    height: 100%;
+    /* width: auto; */
+    object-fit: contain;
+    /* transform: translateY(15%) scale(0.85); */
+    /* transform: scale(0.90); */
+    /* border: 1px solid red; */
+    box-sizing: border-box; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+.actionDetailHeaderRowCharacterEnergyImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* opacity: 0.8; */
+    position: absolute;
+    left: 0;
+}
+
+.actionDetailHeaderRowCharacterEnergyBox {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 4px solid grey;
+    background-color: #0d0c0c;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+.actionDetailHeaderRowCharacterEnergyValueBox {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* z-index: 1; */
+    position: absolute;
+    bottom: 0;
+}
+.actionDetailHeaderRowCharacterEnergyValue {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.479);
+    z-index: 2;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.actionDetailHeaderRowCharacterEnergyBoxEnergyShutter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* opacity: 0.5; */
+}
+
+.actionDetailBody {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.actionDetailBodyInner {
+    width: 100%;
+    /* display: flex; */
+}
+/* .actionDetailBodyIconBasedRow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} */
+.actionDetailBodyCenterTags {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 2px;
+    white-space: normal;
+}
+.actionDetailBodyEvent {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.actionDetailBodyDetailExpand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    background: linear-gradient(200deg, transparent,transparent, #0d393b3d);
+    border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A;
+}
+.actionDetailBodyDetailExpandBuffs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 4px;
+    white-space: normal;
+    flex-direction: column;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    border-left: 3px solid #ffffff1A;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-top-right-radius: 15px;
+    /* border: 1px solid green; */
+
+    /* #145053 */
+}
+.actionDetailBodyDetailExpandBuffsBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    /* background: linear-gradient(to bottom left, transparent, transparent,transparent,transparent, #0d393ba4); */
+    background: linear-gradient(200deg, transparent,transparent, #0d393b3d);
+    border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A;
+}
+.actionDetailBodyDetailExpandHeader {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border: 1px solid red; */
+    /* background-color: #ffffff1A; */
+    padding-left: 3px;
+    /* border: 3px solid red; */
+}
+
+.actionDetailBodyDetailExpandHeaderBackground, .actionDetailBodyDetailExpandHeaderBackgroundINNER {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border: 1px solid red; */
+    /* background-color: #ffffff1A; */
+    padding-left: 3px;
+    /* appearance: menulist-button; */
+    
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* flex-direction: column; */
+    /* list-style-type: unset; */
+}
+.actionDetailBodyDetailExpandHeaderBackgroundINNER {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+.buffNameBreakdownClickerHeaderBox {
+    width: auto;
+    /* background-color: #ffffff1A; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid green; */
+    box-sizing: border-box;
+}
+.buffNameBreakdownClickerHeaderBoxBUFFROW, .buffNameBreakdownClickerHeaderBoxBUFFROWOUTER {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #ffffff1A; */
+    /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+
+    width: 100%;
+    padding-left: 3px;
+    /* border: 1px solid red; */
+}
+.buffNameBreakdownClickerHeaderBoxBUFFROWOUTER {
+    padding-left: 0px;
+    flex-direction: column;
+    background-color: transparent;
+    background: transparent;
+    /* border: 1px solid yellow; */
+}
+.buffNameBreakdownClickerHeaderBoxSHIELDROW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #ffffff1A; */
+    width: 100%;
+    /* border: 1px solid red; */
+    border: 2px solid #ffffff;
+    position: relative;
+    height: 25px;
+    min-height: 25px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.buffNameBreakdownClickerHeaderBoxTOUGHNESSROW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #ffffff1A; */
+    width: 100%;
+    /* border: 1px solid red; */
+    /* border: 2px solid #ffffff; */
+    position: relative;
+    height: 15px;
+    min-height: 15px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.buffNameBreakdownClickerHeaderBoxHEALTHROW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: #ffffff1A; */
+    width: 100%;
+    /* border: 1px solid red; */
+    border: 2px solid #6A6D6F;
+    position: relative;
+    height: 25px;
+    min-height: 25px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.buffShieldHealthDisplayFilled {
+    background-color: #ffffff5b;
+    height: 100%;
+}
+.buffToughnessHealthDisplayFilled {
+    background-color: #ffffff;
+    height: 100%;
+}
+.buffShieldHealthDisplayMissing {
+    height: 100%;
+    /* border: 2px solid #ffffff; */
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;
+}
+.healthDisplayFilled {
+    /* background-color: #C84A32;
+    background-color: #993622; */
+    background: linear-gradient(to right, #C84A32, #993622);
+    height: 100%;
+    /* background: linear-gradient(to right, #D3FDFF, #39FFF9); */
+}
+.healthDisplayMissing {
+    height: 100%;
+    /* border: 2px solid #ffffff; */
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;
+}
+.buffShieldHealthValueDisplay,.buffToughnessHealthValueDisplay {
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* width: 70%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.479);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.buffToughnessHealthValueDisplay {
+    background-color: rgba(0, 0, 0, 0.644);
+    font-size: 14px;
+}
+.buffNameBreakdownClickerHeaderBoxBUFFNAME {
+    width: 100%;
+    /* background-color: #ffffff1A; */
+}
+.buffShieldIcon {
+    height: 30px;
+    width: 30px;
+    z-index: 0;
+    scale: 1.5;
+    transform: translateY(-7%);
+    padding-left: 2px;
+    padding-right: 2px;
+    /* border: 1px solid red; */
+}
+
+.actionDetailBodyBuffSource {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    box-sizing: border-box;
+    /* padding: 5px; */
+    padding-right: 10px;
+    white-space: normal;
+}
+.expandedBuffBodyIndented {
+    width: 100%;
+    /* padding-left: 1%; */
+    box-sizing: border-box;
+}
+.buffExpireIcon {
+    height: 20px;
+    width: 20px;
+    z-index: 0;
+    /* scale: 1.5; */
+}
+.buffNameBreakdownClickerHeaderBoxExpireHolder {
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+/* THAT I CONTINUE TO CALL THESE HEALING ROWS 2 FULL CALCULATOR PROJECTS LATER IS HILARIOUS TO ME */
+/* REMNANT 2 CALC HABITS WILL NEVER DIE LMAO */
+.totalHealingBoxBreakdownRows {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+}
+.totalHealingBoxHalfBreakdownRows {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.attributeRowStarterWeapons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: none;
+}
+.attributeRowBoxWeapons {
+    /* border: 1px solid red; */
+    border-top: 1px solid #434343;
+    box-sizing: border-box;
+    /* margin: 2px; */
+}
+.totalHealingHeader {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 16px;
+    border-bottom: 1px solid #434343;
+    /* border-top: 1px solid #434343; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.totalHealingValueBoss {
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    box-sizing: border-box;
+}
+
+
+.actionDetailsButtonIcon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* scale: 1;
+    transform:translate(20%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 1; */
+    /* transform: none;
+    transform: translateX(50%);
+    mask-image: none; */
+    filter: invert(1);
+}
+
+
+
+.graphsControllerRowBoxHolder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    /* border-bottom: 2px solid #5f656b; */
+}
+.graphsControllerBoxHolder {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    /* border-bottom: 2px solid #5f656b; */
+}
+.actualGraphControlsBoxBattleSummary {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 1px solid #5f656b;
+}
+
+.graphTypeButtonBoxHolder {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px 2px 10px;
+    font-size: 20px;
+    /* color: #0458b8; */
+}
+
+.BuffUptimeSelectionsMainBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.relicStatSelectionRowBuffUptime {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.BuffUptimeHeaderRow {
+    width: 100%;
+    justify-content: left;
+    text-align: left;
+    align-items: center;
+    /* padding-left: 5px; */
+    /* border: 1px solid red; */
+}
+.BuffUptimeSelectionSelector {
+    width: auto;
+    width: 200px;
+    max-width: 200px;
+    /* min-width: 150px; */
+}
+
+
+
+.totalHealingHeaderBigPPDMG {
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    padding: 0%;
+    font-size: 25px;
+    /* border-bottom: 1px solid #434343; */
+    /* border-top: 1px solid #434343; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* background-color: #0000007c; */
+}
+.totalHealingValueBossBigPPDMG {
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    padding: 0%;
+    padding: 5px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid black; */
+    box-sizing: border-box;
+    /* background-color: #ffffff1A; */
+    /* color: #ffdb91; */
+    color: lightcoral;
+    /* background-color: #0000007c; */
+}
+
+
+
+
+
+.actionSummaryMainHeaderRowHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* border: 1px solid red; */
+    position: relative;
+}
+.actionDetailBodyRowSummaryDMGBoxHolder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+.actionDetailBodyRowSummaryDMG {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+}
+.rowSummaryDMGNameAndPercent {
+    width: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 1;
+    background-color: #00000070;
+    padding: 0px 5px 0px 5px;
+    white-space: normal;
+}
+.rowSummaryDMGBarDynamic {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    /* right: 0; */
+    top: 0;
+    /* width: 50%; */
+    background-color: grey;
+    z-index: 0;
+}
+
+.totalHealingBoxHalfBreakdownRowsMAINDMGBOX {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 80%;
+    box-sizing: border-box;
+    /* padding-left: 2px;
+    padding-right: 2px; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* flex-direction: column; */
+    /* position: absolute; */
+    /* left: 10%; */
+    /* right: 10%; */
+    z-index: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* margin: 10px; */
+
+    background-color: #0000007c;
+    /* background-color: #ffffff28; */
+    /* border-top-right-radius: 15px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.expandedDataHolderHolderOptimize {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    /* max-height: 700px; */
+    /* max-height: 800px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.comparisonsDisplayHolderBox {
+    width: 100%;
+    height: 100%;
+    /* max-width: 500px; */
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-top: 2px solid #5f656b;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rotationBoxMainHolder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+
+    /* background-color: grey; */
+    /* background: linear-gradient(to top, #1e1e1e, #1e1e1e, #0d0c0c); */
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    padding: 5px;
+    overflow-y: auto;
+
+    /* border: 1px solid red; */
+}
+.rotationBoxInnerHolder {
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: ; */
+    /* background: linear-gradient(to top, #1e1e1e, #1e1e1e, #0d0c0c); */
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* border-top: 2px solid #5f656b; */
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.rotationsSectionRowHolder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21);
+}
+
+
+.rotationsConditionsBodyBox {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-sizing: border-box;
+    flex-direction: column;
+    /* border: 1px solid yellow; */
+}
+.rotationsSectionANDBoxHolder {
+    /* width: 100%; */
+    /* padding: 5px; */
+    max-width: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    /* border-left: 2px solid #5f656b; */
+    /* flex-direction: column; */
+    /* border: 1px solid green; */
+}
+.rotationsSectionConditionHolderBox {
+    /* width: 100%; */
+    /* padding: 5px; */
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    /* border-left: 2px solid #5f656b; */
+    /* flex-direction: column; */
+    /* border: 1px solid green; */
+}
+.rotationActionSelector {
+    width: auto;
+    /* margin-right: 2px; */
+    padding-left: 5px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* min-width: 150px; */
+}
+.rotationActionSelectorSub {
+    width: auto;
+    margin-right: 2px;
+    max-width: 300px;
+    /* min-width: 150px; */
+}
+.rotationConditionOperatorBox {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-bottom-left-radius: 10px;
+}
+
+
+
+
+
+.traceContentBodyBoxRotations {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-left: 4px;
+    font-size: 16px;
+    white-space: normal;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.traceContentBodyBoxRotationsWarning {
+    width: 100%;
+    /* height: 100%; */
+    /* max-height: 600px;
+    overflow-y: scroll; */
+    padding-left: 10px;
+    font-size: 13px;
+    white-space: normal;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: lightblue;
+    margin-bottom: 3px;
+}
+
+.traceContentBodyBoxRotationsWarningMissing {
+    width: 100%;
+    /* height: 100%; */
+    /* max-height: 600px;
+    overflow-y: scroll; */
+    padding-left: 10px;
+    font-size: 13px;
+    white-space: normal;
+    flex-direction: column;
+    /* justify-content: left;
+    align-items: center; */
+    text-align: left;
+    color: lightblue;
+    margin-bottom: 3px;
+}
+
+.rotationsConditionsRowHolder {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    /* padding: 4px; */
+    /* white-space: normal; */
+    /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+    /* border-left: 3px solid #ffffff1A; */
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-top-right-radius: 15px;
+    /* border: 1px solid red; */
+    width: auto;
+    /* flex-shrink: 1; */
+    
+}
+.rotationsConditionsRowHeader {
+    /* width: 100%; */
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    /* padding-left: 4px; */
+}
+.rotationsCharacterTargetPreviewBox {
+    /* width: 20%;
+    min-width: 20%; */
+    width: 120px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 40px;
+    max-height: 40px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+}
+.rotationsCharacterTargetPreviewBoxIcon {
+    width: 100%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,-20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    /* scale: 0.8; */
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+}
+
+
+.rotationsConditionsImageAdjacentHolderBox {
+    width: auto;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    box-sizing: border-box;
+    flex-direction: column;
+    /* border: 1px solid yellow; */
+}
+
+.rotationsConditionsRowHolderInner {
+    background: linear-gradient(to right, #ffffff1A,transparent, transparent, #ffffff1A);
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 15px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    padding-left: 4px;
+    padding-right: 8px;
+    max-width: 100%;
+}
+
+
+
+
+.rotationsOperatorAddButtonHolder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.rotationsOperatorAddButton {
+    font-size: 16px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rotationsOperatorAddButton:hover {
+    opacity: 0.5;
+}
+
+.rotationsPermaConditionsExpand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    background: linear-gradient(200deg, transparent,transparent, #0d393b3d);
+    border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A;
+
+}
+
+.rotationsPermaConditionsExpandHolder {
+    width: 100%;
+    height: 100%;
+    /* max-height: 600px; */
+    /* overflow-y: scroll; */
+    padding-left: 0px;
+    font-size: 13px;
+    white-space: normal;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: lightblue;
+    margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.queryResultTeamRowBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: left; */
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* background: linear-gradient(200deg, transparent,transparent,#0d393b3d); */
+    background: linear-gradient(200deg, #ffffff1A,transparent,transparent,#0d393b86);
+    border-top-right-radius: 20px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    border-left: 3px solid #434343;
+    /* border: 1px solid red; */
+    padding: 3px;
+    /* min-height: 100px; */
+    /* padding: 5px; */
+    /* white-space: normal; */
+    /* position: relative; */
+    /* border: 1px solid red; */
+}
+.analyticsResultRowDMGBarHolderOuter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    box-sizing: border-box;
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* border: 1px solid red; */
+}
+.analyticsResultRowDMGBarHolder {
+    width: 60%;
+    height: 10px;
+    min-height: 10px;
+    position:relative;
+    box-sizing: border-box;
+    border: 2px solid #5f656b;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.analyticsResultRowDMGBarRefPoint {
+    width: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    position: absolute;
+}
+.analyticsResultRowDMGBarLessThan {
+    background-color: red;
+    position: absolute;
+    height: 100%;
+}
+.analyticsResultRowDMGBarGreaterThan {
+    background-color: green;
+    position: absolute;
+    height: 100%;
+}
+
+
+
+.analyticsResultRowDMG {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 5px;
+}
+.analyticsResultRowRelicsBox {
+    width: 100%;
+    /* max-height: 50px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* min-height: 100px; */
+    /* border: 1px solid blue; */
+}
+.analyticsResultBestResultRowRelicsBox {
+    width: 100%;
+    /* max-height: 50px; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* min-height: 100px; */
+    /* border: 1px solid blue; */
+}
+.analyticsResultRowRelicsIcon {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+.queryResultsQuarterBox {
+    width: 24%;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    border-top-right-radius: 15px;
+    background: linear-gradient(200deg, #ffffff1A,transparent);
+}
+.queryResultsQuarterBoxEquivalent {
+    width: 24%;
+    height: 100%;
+    min-height: 60px;
+    /* max-height: 30px; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    border-top-right-radius: 15px;
+    background: linear-gradient(200deg, #ffffff1A,transparent);
+}
+.queryResultsBestBox {
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    border-top-right-radius: 15px;
+    background: linear-gradient(200deg, #ffffff1A,transparent);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.queryResultsQuarterCharacterImageBox {
+    width: 100%;
+    height: 100%;
+    max-height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    /* border: 1px solid red; */
+}
+.queryResultsQuarterCharacterImageBoxEquivalent {
+    width: 100%;
+    height: 100%;
+    max-height: 30px;
+    min-height: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.queryResultsQuarterCharacterImageBoxEquivalentBest {
+    /* width: 100%; */
+    height: 100%;
+    min-height: 75px;
+    overflow: hidden;
+    display: flex;
+    min-width: 100px;
+    /* flex-grow: 1; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.queryResultsCharSPDValue {
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queryResultsQuarterCharacterImage {
+
+    width: 100%;
+    max-width: 70%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(-10%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 0.8;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+.queryResultsQuarterCharacterImageBest {
+    width: 100%;
+    max-width: 70%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(-10%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 0.8;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+.queryResultsQuarterCharacterImageEquivalent {
+
+    width: 100%;
+    max-width: 70%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(-10%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 0.8;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.queryResultsCharacterImageItemsBox {
+    right: 0%;
+    top: 0%;
+    height: 100%;
+    /* min-height: 80px; */
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+}
+
+
+.queryResultsQuarterCharacterImageRelicsBox {
+    position: absolute;
+    right: 0%;
+    top: 3%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.queryResultsQuarterBoxMainstats {
+    width: auto;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    height: 50%;
+}
+.queryResultsQuarterBoxMainstatsEquivalent {
+    width: auto;
+    /* height: auto; */
+    height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    height: 100%;
+}
+.queryResultsQuarterBoxMainstatsEquivalentSubsRow {
+    width: 100%;
+    /* height: auto; */
+    height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.queryResultsQuarterBoxMainstatsEquivalentSubsRowBest {
+    /* width: 100%; */
+    /* height: auto; */
+    /* height: 30px; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid white; */
+}
+.queryResultsBestSubstatVertical {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queryResultsBestSubstatVerticalRow {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.analyticsResultRowRelicsIconSplitHolder {
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+}
+.analyticsResultRowLightconeIcon {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    /* border: 1px solid yellow; */
+}
+.analyticsResultRowRelicsIconHALVESLEFT {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    /* border: 1px solid yellow; */
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.analyticsResultRowRelicsIconHALVESLEFTLightcone {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    /* border: 1px solid yellow; */
+    margin-right: 5px;
+    /* margin-left: -10px; */
+}
+
+.analyticsResultEquivalentIconLeft,.analyticsResultEquivalentIconRight {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    /* border: 1px solid yellow; */
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.analyticsResultEquivalentIconRight {
+    margin-right: 0;;
+}
+
+
+.analyticsResultRowRelicsIconHALVESRIGHT {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    /* border: 1px solid blue; */
+    margin-left: -10px;
+}
+.analyticsResultRowRelicsIconMainstat, .analyticsResultRowRelicsIconMainstatEnd {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.analyticsResultRowRelicsIconMainstat {
+    margin-left: -10px;
+    margin-right: -10px;
+    scale: 0.9;
+}
+.analyticsResultRowRelicsIconMainstatEnd {
+    margin-left: -10px;
+}
+
+.analyticsResultSPDDisplayIcon {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+.queriesMainButtonsBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.queriesStartStopRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.queriesStartStopButton {
+    /* font-size: 20px;
+    width: 40%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #e1e1e4;
+    border: 1px solid #cacacc;
+    outline: 1px solid #e1e1e4;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #121212;
+    margin: 2px;
+    opacity: 0.5; */
+
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+
+.totalHealingBoxBreakdownRowsQueryStatRow {
+    width: 100%;
+    max-width: 70%;
+    height: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    border-bottom: 2px solid #434343;
+    border-top: 2px solid #434343;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.totalHealingBoxHalfBreakdownRowsQueryStat {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* padding-left: 2px;
+    padding-right: 2px; */
+}
+
+.queryBarGainText {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.queryResultRowDMGDamage {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.queryResultRowDMGAV {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FILTERS BABY */
+/* and yes most of the css is ripped from my R2 optimizer project bc I'm lazy as fuck */
+.filtersMegaBox {
+    /* background-color: #666666; */
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* min-width: 930px; */
+    max-width: 1280px;
+    height: 100%;
+    /* height: 830px; */
+    white-space: nowrap;
+    box-sizing: border-box;
+    /* grid-column: 1 / span 3;
+    grid-row: 6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
+}
+.filtersMegaMegaBox {
+    /* background-color: #666666; */
+    background-color: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    /* max-height: 650px; */
+    /* min-height: 650px; */
+
+    /* min-width: 930px; */
+    max-width: 1280px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    /* grid-column: 1 / span 3;
+    grid-row: 6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 1px solid yellow; */
+}
+.filtersConstraintsBox {
+    width: 100%;
+    /* border-radius: 10px;
+    border: 2px solid #666666; */
+    box-sizing: border-box;
+    font-size: 12px;
+    overflow: hidden;
+}
+.filtersMegaHeader {
+    width: 100%;
+    font-size: 30px;
+    background-color: #434343;
+}
+.filtersInstructionsBox {
+    font-size: 12px;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #93CCEA;
+}
+.filtersBoxHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.filtersAndTraitsHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.filtersOuterHeader {
+    width: auto;
+    box-sizing: border-box;
+    margin: 3px;
+    padding-top: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #434343;
+}
+.filtersBoxQuarters {
+    width: 25%;
+    height: 400px;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 5px;
+}
+.filtersQuarterHeader {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    border-bottom: 1px solid #666666;
+}
+.filtersQuarterDescription {
+    background-color: #434343;
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    font-size: 12px;
+    box-sizing: border-box;
+    /* overflow-y: auto; */
+    border-bottom: 1px solid #666666;
+}
+.statFiltersRowContainer {
+    height: 20px;
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 4px;
+}
+.statFiltersRowContainerSubstatsLimitsRow {
+    /* height: 50px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    /* border-radius: 15px; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 4px;
+    /* border: 1px solid red; */
+}
+.statFiltersSubstatLimitVerticalBox {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 23%;
+}
+.statFiltersSubstatLimitStatName {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statFiltersSubstatLimitStatHeader {
+    font-size: 12px;
+    height: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: right;
+    padding-right: 2px;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+.statFiltersSubstatLimitStatBase {
+    font-size: 11px;
+    height: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    padding-right: 2px;
+    align-items: center;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border: 1px solid red; */
+}
+.statFiltersRowHeader {
+    /* height: 20px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 25px;
+    position: relative;
+}
+.statFiltersRowHeaderSubstatsLocksRollValue {
+    /* height: 20px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+}
+.addEnemyWeaknessesHeader {
+    /* height: 20px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+    white-space: normal;
+}
+.statFiltersRowHeader2pcHeader {
+    /* height: 20px; */
+    width: 100%;
+    /* background-color: #434343; */
+    /* border: 1px solid #434343; */
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.statFiltersRowMiniHeader {
+    height: 20px;
+    /* background-color: #434343; */
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+.presetsTitle {
+    /* width: 30%; */
+    min-width: auto;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.presetsSelectorBox {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.weaponModMutatorAdjustment {
+    position: static;
+    height: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.presetsSelector {
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.tagInput {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color: white;
+    /* background-color: #d9d9d9; */
+    /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+    background: linear-gradient(to right, #ffffff50, transparent, transparent);
+    border: none;
+}
+.clearInput {
+    /* width: 80%;
+    min-width: 80%;
+    height: 100%; */
+    height: 100%;
+    box-sizing: border-box;
+    /* background-color: #434343; */
+    color: #93CCEA;
+    /* border: 1px solid #d9d9d9; */
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    /* border-radius: 7px; */
+    position: absolute;
+    font-size: 16px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid #93ccea75;
+    border-top: 0;
+    border-right: 0;
+    top: 0;
+    right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.clearInput:hover {
+    background-color: #ffffff2d;
+}
+.filterTagsContainer {
+    width: 100%;
+    /* height: 100%;
+    min-height: 100%; */
+    height: auto;
+
+
+
+    /* overflow-y: auto; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.filtersTagsRowContainer {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-bottom: 1px solid #666666;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.filtersTagName {
+    /* width: calc(100%-20px); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-left: 10px;
+    white-space: normal;
+}
+.filtersTagDelete {
+    width: 40px;
+    height: 100%;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    appearance: none;
+    border: none;
+    /* border-left: 1px solid #666666; */
+    /* border-left: 1px solid #666666; */
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.filterLocksContainerHolder {
+    width: 100%;
+    /* height: 100%; */
+    /* flex-grow: 1; */
+    max-height: 500px;
+    min-height: 500px;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 4px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* border: 1px solid red; */
+}
+.filterLocksContainer {
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    overflow: hidden;
+    /* min-height: 100%; */
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.locksBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* EXCLUSIONS AND INCLUSIONS */
+.filtersBoxHalf {
+    width: 100%;
+    /* max-width: 50%; */
+    /* height: 700px; */
+    height: auto;
+    /* max-height: 100%; */
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 5px; */
+    margin-left: 5px;
+    margin-right: 5px;
+    /* border: 1px solid blue; */
+    align-self: flex-start;
+    border: 2px solid #666666;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(200deg, #ffffff21,black,black, #0d393b7a);
+
+    /* border: 1px solid blue; */
+}
+.filtersBoxHalfSearchSettings {
+    width: 100%;
+    /* max-width: 50%; */
+    /* height: 700px; */
+    /* height: auto; */
+    /* max-height: 100%; */
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 5px; */
+    margin-top: 5px;
+    /* border: 1px solid blue; */
+    align-self: flex-start;
+    /* border: 2px solid #666666; */
+    overflow: hidden;
+    border-top-right-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(200deg, #ffffff21,black,black, #0d393b7a);
+
+    /* border: 1px solid blue; */
+}
+.occlusionsToggleBox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2px;
+    width: 100%;
+}
+.occlusionOption {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.comboDebugContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.comboDebugWindow{
+    width: 80%;
+    max-width: 600px;
+    background-color: black;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: left;
+    overflow-y: auto;
+    border-radius: 10px;
+    white-space: normal;
+    display: none;
+}
+
+.debugToggleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border-top: 1px solid #666666; */
+}
+/* .totalHealingBoxHalf {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+} */
+.totalHealingValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.cyclesSettingsHeader {
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    border-bottom: 1px solid #434343;
+}
+.resultsBoxHalf {
+    width: 100%;
+    max-width: 600px;
+    max-height: 850px;
+
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+}
+.queryProgressBarBox {
+    width: 100%;
+    max-width: 350px;
+    min-height: 20px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "Montserrat-Light";
+}
+.queryProgressBarBoxSubStep {
+    margin-top: 2px;
+    width: 100%;
+    max-width: 340px;
+    min-height: 7px;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "Montserrat-Light";
+}
+.counterDisplay {
+    font-family: "Montserrat-Light";
+    box-sizing: border-box;
+}
+.progressBar {
+    background-color: #93CCEA;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat-Light";
+}
+.progressInfo {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    mix-blend-mode: difference;
+    font-family: "Montserrat-Light";
+}
+
+.cyclesControlBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.cyclesControl {
+    width: 33%;
+    max-width: 175px;
+    height: 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.totalHealingBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.totalHealingBoxBreakdownRowsQueriesHeaders {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    box-sizing: border-box;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    border-bottom: 2px solid #434343;
+    border-top: 2px solid #434343;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.filterSelectorHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.filterRowHolder {
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+}
+
+
+
+.breakdownSelectorButtonQuerySettings {
+    width: auto;
+    /* min-width: 100%; */
+    height: auto;
+    white-space: normal;
+    /* background-color: #434343; */
+    background-color: transparent; 
+    color: white;
+    box-sizing: border-box;
+    /* border: 1px solid #d9d9d9; */
+    /* border: 2px solid #434343; */
+    padding: 0;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin: 2px;
+    /* border-radius: 12px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    /* border: 1px solid red; */
+}
+.breakdownSelectorButtonQuerySettings:hover {
+    background-color: #434343;
+}
+
+
+
+
+
+
+.cyclesSettingsBox {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    /* height: 50px; */
+}
+.statisticChoiceBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.statisticInputBox {
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.statisticSettingsContainer {
+    width: 100%;
+    height: auto;
+    /* max-height: 100%; */
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2px;
+    /* overflow-y: auto; */
+    /* border: 1px solid red; */
+}
+.statisticSettingsRow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+.statisticSettingsRowTechniquesBox {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+}
+.queriesSettingsTechniquesBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 2px solid #434343;
+    padding-left: 5px;
+    /* flex-direction: column; */
+}
+.statsRowName {
+    width: calc(100% - 150px);
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.statsRowNameTechniques {
+    width: auto;
+    height: auto;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.statsRowToggle {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.settingsImportDesc {
+    white-space: normal;
+    height: 50px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+
+.queryFiltersRelicSlotIcon {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.queryFiltersFilterRowIcon {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+.queryOcclusionsToggleRow {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+}
+.queryOcclusionsMainstatRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.querySettingsOcclusionWholeRowBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    border-top-right-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /* border: 1px solid red; */
+}
+.queriesSettingsWholeCategoryBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+    background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a);
+    border-top-right-radius: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+
+
+.filtersQuarterDescriptionDarkRow,.filtersQuarterDescriptionSettingsDisclaimer {
+    /* background-color: #434343; */
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    white-space: normal;
+    font-size: 12px;
+    box-sizing: border-box;
+    /* overflow-y: auto; */
+    /* border-bottom: 1px solid #666666; */
+    padding-left: 5px;
+}
+/* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+
+.filtersQuarterDescriptionSettingsDisclaimer {
+    color: lightcoral;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+
+
+
+.currentBestResultHolderBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.filterCharacterSelectionSwitch {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filterCharacterSelectionSwitchIconBox {
+    width: 20%;
+    overflow: hidden;
+    height: 100%;
+    max-height: 40px;
+    /* border: 1px solid blue; */
+    border-top-right-radius: 10px;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    box-sizing: border-box;
+}
+.filterCharacterSelectionSwitchIconBox:hover {
+    border: 2px solid white;
+}
+.filterCharacterSelectionSwitchIcon {
+    width: 100%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,-20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    /* scale: 0.8; */
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+
+
+.exportMenuMainBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.teamwideImportBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.teamwideImportBox + .teamwideImportBox {
+    margin-top: 4px;
+}
+.teamwideImportHeader {
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.teamwideImportBoxRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.characterImportBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+.importCharacterBoxItem {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: ; */
+    border-top-right-radius: 10px;
+    min-width: 22%;
+    padding: 2px;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    /* border: 1px solid red; */
+}
+.importWaveBoxItem {
+    width: auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: ; */
+    border-top-right-radius: 10px;
+    min-width: 22%;
+    padding: 2px;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    /* border: 1px solid red; */
+}
+.importWaveBoxItemWaveRow {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: ; */
+    border-top-right-radius: 10px;
+    min-width: 22%;
+    padding: 2px;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    /* border: 1px solid red; */
+}
+.importCharacterBoxHeader {
+    width: 100%;
+    font-size: 18px;
+    justify-content: left;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    border-bottom: 2px solid #434343;
+    padding-left: 2px;
+}
+.importWaveWaveName {
+    /* width: 100%; */
+    font-size: 18px;
+    justify-content: left;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    /* border-bottom: 2px solid #434343; */
+    padding-left: 2px;
+}
+.teamwideImportButton {
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.queriesBattleSettingsSummaryBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.addEnemyButtonHolder {
+    width: 100%;
+    max-width: 150px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addEnemyMenuHolderBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.enemyWaveSummaryHolder {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.enemyWaveEnemyDisplayBox {
+    width: 19%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    padding: 2px;
+
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+
+.characterSPDisplayBox {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 15px;
+    padding: 2px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+
+.enemyWaveEnemyIconAndLevelBox {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.enemyWaveEnemyIcon {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+.enemyWaveEnemyLevel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.enemyWaveEnemyLevelAndWeaknessBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.enemyAddWaveEditRow {
+    width: 100%;
+    min-height: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+
+    /* border: 1px solid red; */
+}
+.enemyAddWaveEditRowButton {
+    font-size: 14px;
+    width: auto;
+    /* height: 100%; */
+    /* min-width: 40%; */
+    box-sizing: border-box;
+    border-bottom-left-radius: 15px;
+    background-color: #cacacc80;
+    /* border: 1px solid #cacacc80; */
+    /* outline: 1px solid #e1e1e480; */
+    border-top: none;
+    border-right: none;
+    /* color: #e1e1e4; */
+    white-space: normal;
+    color: white;
+    /* margin: 2px; */
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position:absolute;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 0;
+    top: 0;
+}
+.enemyAddWaveEditRowButton:hover {
+    opacity: 0.5;
+}
+
+.enemyAddWaveEditRowMoveButton {
+    padding-left: 3px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+.enemyAddWaveEditRowMoveButton + .enemyAddWaveEditRowMoveButton {
+    margin-left: 10px;
+}
+.enemyAddWaveEditRowMoveButton:hover {
+    background-color: rgba(255, 255, 255, 0.212);
+}
+
+
+.enemyAddWaveClassAndAttackRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.enemyAddWaveClass {
+    /* width: 90%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 4px; */
+    text-align: center;
+    /* color: #ffbf5a; */
+    white-space: normal;
+    color: grey;
+}
+.enemyAddWaveAttack {
+    /* width: 90%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 4px; */
+    text-align: center;
+    color: #ffbf5a;
+    white-space: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.summaryCharacterBreakdownSummaryActionBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    /* overflow: hidden; */
+
+    background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21);
+}
+
+
+
+
+
+.summaryCharacterBreakdownPerCharBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-bottom: 1px solid #434343;
+    /* padding: 5px; */
+    overflow: hidden;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin: 2px;
+}
+
+
+.summaryCharacterBreakdownInnerRowBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.summaryCharacterBreakdownInnerRowHeader {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.summaryCharacterBreakdownInnerBarBoxHolder {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: left;
+    align-items: center;
+    /* margin: 2px; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-height: 14px;
+    height: 14px;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 5px;
+
+    /* border: 2px solid #434343; */
+    /* border-bottom: 1px solid #434343; */
+}
+.rowSummaryDMGBarDynamicACTIONBAR {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    /* right: 0; */
+    top: 0;
+    /* width: 50%; */
+    background-color: grey;
+    z-index: 0;
+}
+.rowSummaryDMGBarDynamicACTIONBARMIDDLE {
+    position: absolute;
+    height: 100%;
+    right: 50%;
+    box-sizing: border-box;
+    /* right: 0; */
+    top: 0;
+    border: 1px solid white;
+    /* width: 50%; */
+    z-index: 0;
+}
+.rowSummaryDMGNameAndPercentACTIONBAR {
+    width: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 1;
+    background-color: #00000070;
+    padding: 0px 5px 0px 5px;
+    font-size: 14px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+
+
+.rowSummaryDMGBarDynamicACTIONBARSPGained {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    /* right: 0; */
+    top: 0;
+    /* width: 50%; */
+    background-color: grey;
+    z-index: 0;
+}
+.rowSummaryDMGBarDynamicACTIONBARSPSpent {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    /* right: 0; */
+    top: 0;
+    /* width: 50%; */
+    background-color: grey;
+    z-index: 0;
+}
+
+
+.rowSummaryDMGNameAndPercentACTIONBARGained {
+    width: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 1;
+    background-color: #00000070;
+    padding: 0px 5px 0px 5px;
+    font-size: 14px;
+    white-space: normal;
+    box-sizing: border-box;
+}
