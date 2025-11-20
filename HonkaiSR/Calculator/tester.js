@@ -419,6 +419,7 @@ const customMenu = {
 
 
         // <option value="Blast">Blast</option>
+        // <option value="Bounce">Bounce</option>
         bodyElem.innerHTML = `
             <div class="statisticSettingsRow">
                 <div class="statsRowName">Name:</div>
@@ -451,7 +452,6 @@ const customMenu = {
                     <select class="relicStatSelectionSelector" id="addEnemyAttackTypeSelector">
                         <option value="Single Target">Single Target</option>
                         <option value="AoE">AoE</option>
-                        <option value="Bounce">Bounce</option>
                     </select>
                 </div>
             </div>
@@ -2072,7 +2072,7 @@ const userTriggers = {
             enemyStats[WeaknessIce] = weaknessOverrides.Ice ? 1 : 0;
             enemyStats[WeaknessFire] = weaknessOverrides.Fire ? 1 : 0;
             enemyStats[WeaknessPhysical] = weaknessOverrides.Physical ? 1 : 0;
-            console.log(enemyObject.stats)
+            // console.log(enemyObject.stats)
 
             // Object.assign(psuedoStats,enemyObject.stats);
             enemyObject.finalStats = updateFormulas(null,enemyStats);
