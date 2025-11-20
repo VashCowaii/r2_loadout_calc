@@ -1,0 +1,1 @@
+injectHTMLTemplate('/htmlTemplates/hsrNavbar.html','r2Navbar');
