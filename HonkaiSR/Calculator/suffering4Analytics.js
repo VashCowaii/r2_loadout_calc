@@ -1234,7 +1234,7 @@ const compare = {
                 
                                                         
                                                         const currentTotal = countedReached+countedSkip;
-                                                        if (countedReached >= 100000000) {
+                                                        if (countedReached >= 100000000 && !querySettings.ignoreQueryLimit) {
                                                             cyclesLoop.abortCycles();
                                                             alert(`The number of combos that will actually see battle(Valid Combos) has exceeded the limit 100 million combinations.\n\nPlease use stronger filters and try again.\nIn the future the limit will be increased as greater speeds and optimizations are achieved.`)
                                                             
