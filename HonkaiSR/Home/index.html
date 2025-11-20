@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiHome.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <link rel="stylesheet" href="/TFD/tfdCalc.css">
+    <link rel="Icon" href="/images/Cowaii.png">
+    <title>HSR Home</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="TFD Home">
+    <meta
+      property="og:description"
+      content="A hub for all of Vash Cowaii's TFD Calculators and Tools."
+    />
+    <meta
+      property="description"
+      content="A hub for all of Vash Cowaii's TFD Calculators and Tools."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="TFD Home" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="TFD Home" />
+    <meta
+      name="twitter:description"
+      content="A hub for all of Vash Cowaii's TFD Calculators and Tools."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/madPrince.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+<body>
+    
+
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="main">
+        <div class="theGreatBox">
+            <!-- <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div> -->
+    
+            <div id="r2Navbar" class="helpBarMegaBox"></div> 
+    
+            <div class="mainGridRow" style="display: flex;width: 100%;">
+    
+                <div class="displayBuffer"></div>
+    
+                <div class="mainDisplayBox">
+    
+                  <div class="mainDisplayHalves" style="width: 500px;">
+                    <div class="mainLastsRowTitles">
+                        <a class="mainSelectionHeader" href="/HonkaiSR/Calculator/" rel="noopener noreferrer">Calculator</a>
+                        <!-- <a class="mainSelectionHeader" href="/TFD/BossStats/" rel="noopener noreferrer">Boss Stats</a>
+                        <a class="mainSelectionHeader" href="/TFD/VashBuilds/" rel="noopener noreferrer">Vash's Builds</a>
+                        <a class="mainSelectionHeader" href="/TFD/ETAShop/" rel="noopener noreferrer">ETA Shop Schedule</a> -->
+                    </div>
+
+                      <!-- <a href="https://store.steampowered.com/app/2384074/Remnant_II__The_Forgotten_Kingdom/" rel="noopener noreferrer" target="_blank">The Forgotten Kingdom</a> -->
+
+                      <!-- <div class="mainLastsRow">
+                            <div>
+                                <div class="videoHeader">Latest Ultimate:&nbsp;&nbsp;&nbsp;</div>
+                                <div>Sharen</div>
+                                
+                            </div>
+                            <div>
+                                <div class="videoHeader">Patch Notes:&nbsp;&nbsp;&nbsp;</div>
+                                <a href="https://tfd.nexon.com/en/news?headlineId=1015" rel="noopener noreferrer" target="_blank">Nexon News</a>
+                            </div>
+                      </div> -->
+                    <div class="videoHeader">Latest HSR Video:</div>
+                    <iframe id="homepageYTEmbed" class="r2HomeYTEmbed" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                
+    
+            </div>
+    
+            <div class="updateBannerMegaBox">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+    
+        </div>
+    
+        <footer class="generalFooter" id="footerPlaceholder"></footer>
+    </div>
+
+
+<!-- script/data calls -->
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script> <!-- mobile nav bar handling -->
+<script src="/MainJS/buildTime.js"></script>
+<script src="/HonkaiSR/Home/videosDB.js"></script>
+<script src="/HonkaiSR/Home/currentVideo.js"></script>
+
+
+</body>
+
+</html>
