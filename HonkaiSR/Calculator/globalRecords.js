@@ -246,6 +246,8 @@ let globalRecords = {
         "failedAddedRolls": 1,
         "minimumAddedRoll": 1,
 
+        "ignoreQueryLimit": false,
+
 
         "queries5starSuperValue": 1,
         "queries5starHertaValue": 5,

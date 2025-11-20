@@ -3954,6 +3954,10 @@ const userTriggers = {
         querySettings.keepLightconeRank = keepLightconeRank;
 
 
+        const ignoreQueryLimit = readSelection("bypassLimit").checked;
+        querySettings.ignoreQueryLimit = ignoreQueryLimit;
+
+
         if (isBattleSetting) {userTriggers.getUpdatedBattleLog()}
     }
 }
