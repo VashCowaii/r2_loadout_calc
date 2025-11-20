@@ -2003,13 +2003,13 @@ const userTriggers = {
                 // {userFacingName: "", value: 1}
             ]
             for (let values of valuesToCheck) {
-                if (!values.value) {
+                if (!values.value || +values.value < 0) {
                     missingKeyValue = true;
                     missingValueString += values.userFacingName + ",";
                 }
             }
             if (missingKeyValue) {
-                alert(`Enemy could not be added, missing key definition values.\n\nValues missing:\n${missingValueString}`);
+                alert(`Enemy could not be added, missing key definition values or values were negative.\n\nValues missing/negative:\n${missingValueString}`);
                 return;
             }//we never want to construct an enemy unless the user has defined values on ALL parameters we would need
 
