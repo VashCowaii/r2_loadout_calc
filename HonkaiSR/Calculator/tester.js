@@ -2276,7 +2276,19 @@ const userTriggers = {
 
         const characterObject = globalRecords.character;
         const currentCharObject = characterObject[charSlot];
-        if (currentCharObject.name != updated && updated) {//if we're not loading a file, but the character actually changed, assume eidolons based on rarity
+
+        const slot1Conflict = characterObject.char1.name === updated && currentSlot != 1;
+        const slot2Conflict = characterObject.char2.name === updated && currentSlot != 2;
+        const slot3Conflict = characterObject.char3.name === updated && currentSlot != 3;
+        const slot4Conflict = characterObject.char4.name === updated && currentSlot != 4;
+
+        const duplicateCharacterExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
+        if (duplicateCharacterExists) {
+            alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
+            return;
+        }
+
+        if (currentCharObject.name != updated && updated && !duplicateCharacterExists) {//if we're not loading a file, but the character actually changed, assume eidolons based on rarity
             currentCharObject.name = updated;
             currentCharObject.rank = characters[updated].rarity === 4 || updated.toLowerCase().includes("trailblazer") ? 6 : 0;
             //TODO: later when I have imports/exports of character data, need to look into how I wanna handle this.
@@ -3488,6 +3500,22 @@ const userTriggers = {
             }
         }
         else {
+            const characterName = parsedData.name;
+            const characterObject = globalRecords.character;
+
+            const slot1Conflict = characterObject.char1.name === characterName && charSlot != "char1";
+            const slot2Conflict = characterObject.char2.name === characterName && charSlot != "char2";
+            const slot3Conflict = characterObject.char3.name === characterName && charSlot != "char3";
+            const slot4Conflict = characterObject.char4.name === characterName && charSlot != "char4";
+
+            const conflictExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
+
+            if (conflictExists) {
+                inputElem.value = "";
+                alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
+                return;
+            }
+
             globalRecords.character[charSlot] = parsedData;
             const trimmedNumber = +charSlot.replace("char","");
             userTriggers.updateCharacterSlotSelected(trimmedNumber);
