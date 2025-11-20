@@ -1655,7 +1655,7 @@ const customMenu = {
             if (action.logType === "EnemyDied") {//logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});
                 scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerAlly" : "weirdSideSemiCircleThingerEnemy"}"></div>
-                    <img src="/HonkaiSR/${action.isEnemy ? characters[action.enemyKilled].preview : `misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="${action.isEnemy ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewEnemyGlorp"}"/>
+                    <img src="/HonkaiSR/${action.isEnemy ? characters[action.enemyKilled].preview : `misc/${action.enemyKilled.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="${action.isEnemy ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewEnemyGlorp"}"/>
                     <div class="miniActionNameBox">Died</div>
                 </div>`;
             }
