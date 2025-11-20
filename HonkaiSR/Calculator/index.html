@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiHome.css"> -->
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css">
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>HSR Calculator</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="HSR Calculator">
+    <meta
+      property="og:description"
+      content="An overly complex battle sim and team optimizer for Honkai Star Rail."
+    />
+    <meta
+      property="description"
+      content="An overly complex battle sim and team optimizer for Honkai Star Rail."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="HSR Calculator" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HSR Calculator" />
+    <meta
+      name="twitter:description"
+      content="An overly complex battle sim and team optimizer for Honkai Star Rail."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+
+<body>
+    <div id="tooltip" class="tooltip tooltipHSR"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="blockoutBackgroundShutter" id="blockoutBackgroundShutter" onclick="customMenu.closeMenu()"></div>
+    <div class="customMenuMainHolderBox" id="customMenuMainHolderBox">
+        <div class="customMenuMainHolderBoxInner">
+            <div class="customMenuTitleRow">
+                <div class="customMenuSearchTitleHolder">
+                    <div class="weirdSideSemiCircleThingerAllySnapshotBox"></div>
+                    <div class="customMenuSearchTitle" id="customMenuSearchTitle"></div>
+                </div>
+                
+            </div>
+            <div class="customMenuCloseButton clickable" id="customMenuCloseButton" onclick="customMenu.closeMenu()">x</div>
+            <div class="customMenuSearchNote" id="customMenuSearchNote"></div>
+            <div class="customMenuSearchBarBox" id="customMenuSearchBarBox">
+                Search: <input class="customMenuSearchBarInput" id="customMenuSearchBarInput" maxlength="100" oninput="customMenu.updateSearchResults();">
+            </div>
+            <div class="customMenuSearchBody" id="customMenuSearchBody"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStats" style="display: none;"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStatsAttackData" style="display: none;"></div>
+        </div>
+    </div>
+
+
+<div class="main">
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">
+            <div>Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+            <div class="siteBetaWarningBox clickable" href="">SITE IS IN BETA, CLICK HERE FOR BETA DETAILS</div>
+        </div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+            <div class="hsrTeamIconBar">
+                <div class="menuSwitcherBarTopBox">
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)">Team</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton2" onclick="userTriggers.updateMainMenuDisplayed(2)">Battle View</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton3" onclick="userTriggers.updateMainMenuDisplayed(3)">Optimize</div>
+                </div>
+                <!-- <div class="smolLineDividerTopper"></div> -->
+                <div class="teamLineBoxHolder" id="teamBarHolderBox">
+                    <div class="teambarCurvedLineTop"></div>
+                    <img src="" class="teamBarImgRounded clickable" id="teamBarChar1IMG" onclick="userTriggers.updateCharacterSlotSelected(1)"/>
+                    <img src="" class="teamBarImgRounded clickable" id="teamBarChar2IMG" onclick="userTriggers.updateCharacterSlotSelected(2)"/>
+                    <img src="" class="teamBarImgRounded clickable" id="teamBarChar3IMG" onclick="userTriggers.updateCharacterSlotSelected(3)"/>
+                    <img src="" class="teamBarImgRounded clickable" id="teamBarChar4IMG" onclick="userTriggers.updateCharacterSlotSelected(4)"/>
+                </div>
+            
+            </div>
+
+            <div class="expandedDataHolderHolderBox" id="teamBoxMainHolderBox">
+
+                <div class="expandedQuarters scrollHolderHorizontal">
+                    <div class="characterSelectionsOverview scrollHolderHorizontalBody">
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(6)" id="characterDisplayClickerRotation">Rotation</div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(1)" id="characterDisplayClickerOverview" style="color: #ffdb91;">Overview</div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(2)" id="characterDisplayClickerLightcone">Light Cone</div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(3)" id="characterDisplayClickerTraces">Traces</div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(4)" id="characterDisplayClickerRelics">Relics</div>
+                        <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(5)" id="characterDisplayClickerEidolons">Eidolons</div>
+                        
+                        <!-- <div class="characterOverviewSelectionBoxHolder clickable" onclick="userTriggers.updateCharacterBreakdownClicked(5)" id="characterDisplayClickerEidolons">Compare</div> -->
+                    </div>
+                </div>
+
+                <div class="characterMainCenterDisplay expandedMiddle">
+                    <div class="characterMainCenterDisplayOverviewHolderBox" id="characterMainCenterDisplayOverview">
+                        <div class="characterMainCenterDisplayOverview">
+                                <img src="" class="characterMainCenterImageBannerTesting" id="characterMainCenterImageOverview"/>
+                        </div>
+                    </div>
+
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayLightcone" style="display: none;border: none;">
+                        <img src="" class="characterMainCenterImage lightconeImageCenterAdjustment" id="characterMainCenterImageLightcone"/>
+                    </div>
+
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayTraces" style="display: none;">
+                        <div class="traceMainBoxHolder" id="traceMainBoxHolder"></div>
+                        
+                    </div>
+                    <div class="centerDisplayHolderBoxTraceSummary" id="characterMainCenterDisplayTracesSummary">
+                        asdf
+                    </div>
+
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayRelics" style="display: none; border: none;">
+                        <div class="relicsMainBoxHolder" id="relicsMainBoxHolder">
+                            <div class="relicsMainPieceHolderBox" id="relicsMainPieceHolderBox"></div>
+                        </div>
+                    </div>
+
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayEidolons" style="display: none; border: none;flex-direction: column;">
+                        <div class="eidolonRankRowHolder">
+                            <div class="eidolonRankHolderbox">
+                                <div class="superimpositionButton clickable" id="eidolonRankButton0" onclick="userTriggers.updateEidolonRank(0)">0</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton1" onclick="userTriggers.updateEidolonRank(1)">1</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton2" onclick="userTriggers.updateEidolonRank(2)">2</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton3" onclick="userTriggers.updateEidolonRank(3)">3</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton4" onclick="userTriggers.updateEidolonRank(4)">4</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton5" onclick="userTriggers.updateEidolonRank(5)">5</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton6" onclick="userTriggers.updateEidolonRank(6)">6</div>
+                            </div>
+                        </div>
+                        <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder">
+                            
+                        </div>
+                    </div>
+
+                    <div class="centerDisplayHolderBox" id="characterMainCenterDisplayRotation" style="display: none; border: none;flex-direction: column;">
+                        
+                        <div class="rotationBoxMainHolder">
+
+                            <div class="traceContentBodyBoxRotationsWarningMissing" id="mainConditionsBoxHolderOverviewMissingWarning">
+                                If you're seeing this then conditions on this character can't be found for one of the following reasons:<br>
+                                <ul>
+                                    <li>This character hasn't been added to the calculator, at all, yet.</li>
+                                    <li>Or, Vash is dumb as hell and forgot to enable conditions on this character</li>
+                                </ul>
+                                If you believe conditions <i><b>should</b></i> be up and running on this character, join the discord and let Vash know.
+                            </div>
+
+                            <div class="rotationBoxInnerHolder" id="mainConditionsBoxHolderOverview">
+
+                                <div class="rotationsSectionRowHolder">
+                                    <!-- <div class="traceTypeDisplayBox">
+                                        <div class="traceTypeDisplay">Ultimate</div>
+                                    </div> -->
+                                    <div class="statFiltersRowHeader">Ultimate</div>
+                                    <div class="rotationsPermaConditionsExpandHolder" id="rotationsConditionsBoxUltimatePerma"></div>
+                                    <div class="traceContentBodyBoxRotationsWarning" id="rotationsConditionsWarningBoxUltimate"></div>
+                                    <div class="rotationsConditionsBodyBox" id="rotationsConditionsBodyBoxUltimate"></div>
+                                </div>
+
+                                
+                                <div class="rotationsSectionRowHolder">
+                                    <!-- <div class="traceTypeDisplayBox">
+                                        <div class="traceTypeDisplay">Skill</div>
+                                    </div> -->
+                                    <div class="statFiltersRowHeader">Skill</div>
+                                    <div class="rotationsPermaConditionsExpandHolder" id="rotationsConditionsBoxSkillPerma"></div>
+                                    <div class="traceContentBodyBoxRotationsWarning" id="rotationsConditionsWarningBoxSkill"></div>
+                                    <div class="rotationsConditionsBodyBox" id="rotationsConditionsBodyBoxSkill"></div>
+                                </div>
+                                
+                                <div class="rotationsSectionRowHolder">
+                                    <!-- <div class="traceTypeDisplayBox">
+                                        <div class="traceTypeDisplay">Basic ATK</div>
+                                    </div> -->
+                                    <div class="statFiltersRowHeader">Basic ATK</div>
+                                    <div class="traceContentBodyBoxRotationsWarning">Basic ATK is always called when skill conditions fail or do not exist.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="eidolonRankRowHolder">
+                            <div class="eidolonRankHolderbox">
+                                <div class="superimpositionButton clickable" id="eidolonRankButton0" onclick="userTriggers.updateEidolonRank(0)">0</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton1" onclick="userTriggers.updateEidolonRank(1)">1</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton2" onclick="userTriggers.updateEidolonRank(2)">2</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton3" onclick="userTriggers.updateEidolonRank(3)">3</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton4" onclick="userTriggers.updateEidolonRank(4)">4</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton5" onclick="userTriggers.updateEidolonRank(5)">5</div>
+                                <div class="superimpositionButton clickable" id="eidolonRankButton6" onclick="userTriggers.updateEidolonRank(6)">6</div>
+                            </div>
+                        </div>
+                        <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder">
+                            
+                        </div> -->
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="characterSummaryStats expandedQuarters">
+
+                    <!-- CHARACTER -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview">
+                        
+                        <div class="characterDisplayNameAndElement">
+                            <div class="characterDisplayNameBox" id="characterDisplayName" onchange="userTriggers.updateSelectedCharacter()">Archer</div>
+                            <div class="characterDisplayElementBox">
+                                <img src="" class="characterDisplayElement" id="characterDisplayElement"/>
+                            </div>
+                        </div>
+
+                        <div class="characterDisplayPathAndNameBox">
+                            <div class="characterDisplayPathImageBox">
+                                <img src="" class="characterDisplayPathImage" id="characterDisplayPathImage"/>
+                            </div>
+                            <div class="characterDisplayPathNameBox" id="characterDisplayPathName">The Hunt</div>
+                        </div>
+
+                        <div class="starAndSearchRow1">
+                            <div class="characterSearchButton clickable" id="characterSearchButton" onclick="customMenu.createCharacterSearchMenu()">Switch</div>
+                            <img src="" class="lighconeStarRatingRow" id="characterStarRatingImage"/>
+                        </div>
+
+                        <div class="characterDisplayAscension"></div>
+                        <div class="characterDisplayLevel"></div>
+                        <div class="characterDisplayStatsAndAbility"></div>
+                        <div class="characterDisplayStatsBasic" id="characterDisplayStatsBasic">
+                            <div class="imageRowStatisticBox1">
+                                <div class="imageRowStatisticImageBox"></div>
+                                <div class="imageRowStatisticNameBox"></div>
+                                <div class="imageRowStatisticStatBox"></div>
+
+                            </div>
+                            <div class="imageRowStatisticBox2">test</div>
+                        </div>
+                        
+                        <div class="characterDisplayLightconePreview clickable" onclick="userTriggers.updateCharacterBreakdownClicked(2)">
+                            <!-- Yeah you would, wouldn't you -->
+                                <div class="testContainer" id="testContainer"></div>
+                                <div class="characterDisplayLightconePreviewText" id="characterDisplayLightconePreviewImageText"></div>
+                        </div>
+                        <!-- <div class="testContainer" id="testContainer2"></div> -->
+
+                        <div class="starAndSearchRow2">
+                            <div class="exportIconBoxHolder clickable" id="characterSearchButton" onclick="customMenu.createCharacterExportScreen()">
+                                Export&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon"/>
+                            </div>
+                            <div class="characterSearchButton clickable" id="characterSearchButton" onclick="customMenu.createCharacterStatScreen()">Stats</div>
+                        </div>
+
+                    </div>
+                    <!-- LIGHTCONE -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayLightcone" style="display: none;">
+
+                        <div class="characterDisplayNameAndElement">
+                            <div class="characterDisplayNameBox" id="lightconeDisplayName">asdf</div>
+                            <div class="characterDisplayElementBox">
+                                <img src="" class="characterDisplayElement" id="characterDisplayElement"/>
+                            </div>
+                        </div>
+
+                        <div class="characterDisplayPathAndNameBox">
+                            <div class="characterDisplayPathImageBox">
+                                <img src="" class="characterDisplayPathImage" id="lightconeDisplayPathImage"/>
+                            </div>
+                            <div class="characterDisplayPathNameBox" id="lightconeDisplayPathName">asdf</div>
+                        </div>
+
+                        <div class="starAndSearchRow1">
+                            <div class="characterSearchButton clickable" id="lightconeSearchButton" onclick="customMenu.createLightconeSearchMenu()">Switch</div>
+                            <img src="" class="lighconeStarRatingRow" id="lightconeStarRatingImage"/>
+                        </div>
+
+                        <div class="characterDisplayAscension"></div>
+                        <div class="characterDisplayLevel"></div>
+                        <div class="characterDisplayStatsAndAbility"></div>
+                        <div class="characterDisplayStatsBasic" id="lightconeDisplayStatsBasic"></div>
+
+                        <div class="characterDisplayPathAndNameBox">
+                            <div class="characterDisplayPathNameBox" id="lightconeDisplaySkillName">asdf</div>
+                        </div>
+                        <div class="superimpositionHolderbox">
+                            <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="userTriggers.updateSuperimposition(1)">1</div>
+                            <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="userTriggers.updateSuperimposition(2)">2</div>
+                            <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="userTriggers.updateSuperimposition(3)">3</div>
+                            <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="userTriggers.updateSuperimposition(4)">4</div>
+                            <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="userTriggers.updateSuperimposition(5)">5</div>
+                        </div>
+                        <div class="rightDescriptionBox" id="lightconeSkillDescription"></div>
+
+                    </div>
+
+                    <!-- TRACES -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayTraces" style="display: none;">
+                        <div class="traceTypeDisplayBox">
+                            <div class="traceTypeDisplay" id="traceAttackType"></div>
+                        </div>
+                        <div class="traceContentBodyBox" id="traceContentBodyBox"></div>
+                    </div>
+
+                    <!-- RELICS -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayRelics" style="display: none;">
+                        <!-- <div class="characterDisplayNameAndElement">
+                            <div class="characterDisplayNameBox" id="lightconeDisplayName">asdf</div>
+                            <div class="characterDisplayElementBox">
+                                <img src="" class="characterDisplayElement" id="characterDisplayElement"/>
+                            </div>
+                        </div> -->
+
+                        <div class="relicsSetSelectionRow">
+                            <img src="" class="characterDisplayElementRelicsIcon clickable" id="relicSetIcon1" onclick="customMenu.createRelicSearchMenu(1)"/>
+                            <img src="" class="characterDisplayElementRelicsIcon clickable" id="relicSetIcon2" onclick="customMenu.createRelicSearchMenu(2)"/>
+                            <img src="" class="characterDisplayElementRelicsIcon clickable" id="relicSetIcon3" onclick="customMenu.createRelicSearchMenu(3)"/>
+                        </div>
+
+
+                        <!-- <div class="starAndSearchRow1">
+                            <div class="characterSearchButton clickable" id="" onclick="customMenu.createLightconeSearchMenu()">Switch</div>
+                        </div> -->
+
+                        <div class="relicSetHoverBox">
+                            <div class="traceLevelBox">
+                                <div class="relicSetNameEffect" id="relicSetName1">test</div>
+                            </div>
+                            <div class="rightDescriptionBoxRelics" id="relicSetDesc1">test</div>
+                        </div>
+
+                        <div class="relicSetHoverBox">
+                            <div class="traceLevelBox">
+                                <div class="relicSetNameEffect" id="relicSetName2">test</div>
+                            </div>
+                            <div class="rightDescriptionBoxRelics" id="relicSetDesc2">test</div>
+                        </div>
+
+                        <div class="relicSetHoverBox">
+                            <div class="traceLevelBox" id="relicsExtraSetNameHidden" style="display: none;">
+                                <div class="relicSetNameEffect" id="relicSetName3">test</div>
+                            </div>
+                            <div class="rightDescriptionBoxRelics" id="relicSetDesc3">test</div>
+                        </div>
+                    </div>
+
+                    <!-- EIDOLONS -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayEidolons" style="display: none;">
+                        <div class="traceContentBodyBox" id="eidolonContentBodyBox"></div>
+                    </div>
+
+                    <!-- ROTATION -->
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayRotation" style="display: none;">
+                        <!-- <div class="traceContentBodyBox" id="">test</div> -->
+                        <div class="traceTypeDisplayBox">
+                            <div class="traceTypeDisplay">Rotations Overview</div>
+                        </div>
+                        <div class="traceContentBodyBoxRotations">
+                            Rotations are, in part, already automatic. However, if you've played the game, you know that auto-play can be dumb as fuck and sometimes the same can apply here.
+                            <br><br>
+                            How do we fix that? User-defined conditions.
+                            <br><br>
+                            User-defined conditions allow you to set <i><b>dynamic</b></i> rotations for your characters.
+                            <br>- Want Robin to wait before using her team-wide advance?
+                            <br>- Want Archer to wait for more skill points?
+                            <br>- Want Saber to only Ult when Sunday's buffs are up?
+                            <br><br>
+                            These allow you to impose any restriction to achieve the aforementioned results. If a condition doesn't exist that you want, join the discord and let me know.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="expandedDataHolderHolderBoxBattleView" id="battleViewBoxMainHolderBox">
+                <div class="actionBarHolderbox">
+                    <div class="actionBarHeader">ACTIONS</div>
+                    <div class="actionLogScrollerVertical" id="actionLogScrollerVertical"></div>
+                </div>
+
+                <div class="mainGraphOverviewHolderBox">
+                    <div class="graphUpperHeaderHolderBox">
+                        <div class="actionDetailsButton clickable" id="expandButtonHeaderAction" onclick="userTriggers.updateBattleViewDisplayed('ActionExpand')">Action Details</div>
+                        <div class="actionDetailsButton clickable" id="expandButtonHeaderGraph" onclick="userTriggers.updateBattleViewDisplayed('GraphExpand')">
+                            <!-- Graphs & Charts -->
+                             Analytics
+                            <!-- <img src="/HonkaiSR/misc/graphs.png" class="actionDetailsButtonIcon"/> -->
+                        </div>
+                        <div class="actionDetailsButton clickable" id="expandButtonHeaderSettings" onclick="userTriggers.updateBattleViewDisplayed('SettingsExpand')">Battle Settings</div>
+                    </div>
+                    <div class="actionDetailMainHolderBox" id="actionDetailMainHolderBox"></div>
+                    
+                    <div class="graphsControllerRowBoxHolder" id="graphsControllerBoxHolder">
+                        <div class="graphsControllerBoxHolder">
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSummary" onclick="userTriggers.updateGraphViewDisplayed('Summary')">Summary</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewBuffs" onclick="userTriggers.updateGraphViewDisplayed('Buffs')">Uptime</div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="userTriggers.updateGraphViewDisplayed('Stat')">Stat</div> -->
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="alert('Stat view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Stat</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSP" onclick="userTriggers.updateGraphViewDisplayed('SP')">SP</div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="userTriggers.updateGraphViewDisplayed('Turns')">Turns</div> -->
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="alert('Turns view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Turns</div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="userTriggers.updateGraphViewDisplayed('Custom')">Custom</div> -->
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="alert('Custom view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Custom</div>
+                        </div>
+                        <div class="actualGraphControlsBoxBattleSummary" id="actualGraphControlsBoxBattleSummary">
+                            
+                            <div class="BuffUptimeSelectionsMainBox">
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Graph by:</div>
+                                    <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeGraphBy" onchange="graphs.createGraphsByBuffUptime()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Source Type:</div>
+                                    <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeSourceFrom" onchange="graphs.createGraphsByBuffUptime()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Source Name:</div>
+                                    <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeSourceName" onchange="graphs.createGraphsByBuffUptime()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Buff Name:</div>
+                                    <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeBuffName" onchange="graphs.createGraphsByBuffUptime()"></select>
+                                </div>
+                            </div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSummary" onclick="userTriggers.updateGraphViewDisplayed('Summary')">Summary</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewBuffs" onclick="userTriggers.updateGraphViewDisplayed('Buffs')">Uptime</div> -->
+                        </div>
+                    </div>
+                    <div class="actualGraphHolderbox" id="actualGraphHolderbox" style="display: none;"></div>
+
+                    <div class="actionDetailMainHolderBox" id="battleSettingsMainHolderBox" style="background: none;">
+                        <!-- <div class="filtersBoxHalf" id="searchSettingsHolder" style="height: 100%;"> -->
+                            <!-- <div class="cyclesSettingsHeader">Search Settings</div> -->
+                            
+                            <div class="cyclesSettingsBox">
+                                <div class="statisticSettingsContainer"> <!-- Search Settings Box -->
+                                    <div class="cyclesSettingsHeader">Battle Settings</div>
+                                    <div class="filtersQuarterDescriptionSettingsDisclaimer">BATTLE SETTINGS ARE SHARED WITH THE OPTIMIZER.</div>
+                                        <!-- <div>Techniques</div> -->
+                                    
+                                    <div class="filtersBoxHalfSearchSettings"><!-- technique settings -->
+                                        <div class="filtersQuarterDescriptionDarkRow" style="text-align: center;">Please note that adjusting settings in this window may cause lag for a brief moment. This is simply because the battle simulation is redone and graphs are too which take the longest.</div>
+                                        <div class="statFiltersRowHeader">Techniques</div>
+                                        <!-- <div class="filtersQuarterDescriptionDarkRow">If 2 or more characters have conflicting technique types, only the left-most allowed will trigger.</div> -->
+                                        <div class="statisticSettingsRow">
+                                            <div class="statsRowName">Allow Techniques</div>
+                                            <div class="statsRowToggle">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="queriesUseTechniques" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filtersQuarterDescriptionDarkRow">If 2 or more characters have conflicting technique types, only the left-most allowed will trigger.</div>
+                                        <div class="queriesSettingsTechniquesBox" id="queriesSettingsTechniquesBox">
+                                            <div class="statisticSettingsRowTechniquesBox">
+                                                <div class="statsRowNameTechniques">Char 1</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesUseTechniquesChar1" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRowTechniquesBox">
+                                                <div class="statsRowNameTechniques">Char 2</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesUseTechniquesChar2" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRowTechniquesBox">
+                                                <div class="statsRowNameTechniques">Char 3</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesUseTechniquesChar3" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRowTechniquesBox">
+                                                <div class="statsRowNameTechniques">Char 4</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesUseTechniquesChar4" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="filtersBoxHalfSearchSettings"><!-- battle settings -->
+                                        <div class="statFiltersRowHeader">Battle</div>
+                                        <div class="statisticSettingsRow">
+                                            <div class="statsRowName">Mode:&nbsp;</div>
+                                            <div class="statsRowToggle">
+                                                <!-- <input type="range" id="queriesCycleCountSlider" name="slider" min="0" max="6" value="4" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()"> -->
+                                                <select class="relicStatSelectionSelector" id="queriesModeSelector" onchange="userTriggers.updateQuerySearchSettings(true)">
+                                                    <option value="MOC">MOC</option>
+                                                    <!-- <option value="PF">PF</option>
+                                                    <option value="AS">AS</option>
+                                                    <option value="AA">AA</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="statisticSettingsRow">
+                                            <div class="statsRowName">Cycles to Run:&nbsp;<span id="cyclesToRunQueriesDisplay">1</span></div>
+                                            <div class="statsRowToggle">
+                                                <input type="range" id="queriesCycleCountSlider" name="slider" min="0" max="6" value="3" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings(true)">
+                                            </div>
+                                        </div>
+                                        <div class="statisticSettingsRow hasHoverTooltip" id="queriesExplainToughnessBattlestart">
+                                            <div class="statsRowName">Entry Toughness Reduction [?]</div>
+                                            <div class="statsRowToggle">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="queriesUseStartToughness" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filtersBoxHalfSearchSettings"><!-- battle settings -->
+                                        <div class="statFiltersRowHeader">
+                                            Enemies
+                                            <div class="addEnemyToWaveButton clickable" id="characterSearchButton" onclick="customMenu.createWaveImportsMenu()">Wave Import/Export</div>
+                                        </div>
+
+                                        <div class="statisticSettingsRow">
+                                            <div class="statsRowName">Wave Count:&nbsp;<span id="queriesTotalWavesDisplay">1</span></div>
+                                            <div class="statsRowToggle">
+                                                <input type="range" id="queriesTotalWavesSlider" name="slider" min="1" max="5" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings(true)">
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        
+                                        <!-- <div class="statisticSettingsRow hasHoverTooltip" id="queriesExplainToughnessBattlestart">
+                                            <div class="statsRowName">Entry Toughness Reduction [?]</div>
+                                            <div class="statsRowToggle">
+                                                <label class="toggleContainer">
+                                                    <input type="checkbox" class="toggleCheckbox" id="queriesUseStartToughness" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                    </div>
+
+                                    <div class="filtersBoxHalfSearchSettings"><!-- battle settings -->
+                                        <div class="statFiltersRowHeader">
+                                            Wave 1
+                                            <div class="addEnemyToWaveButton clickable" onclick="customMenu.createAddedEnemyMenu(1)">Add Enemy</div>
+                                        </div>
+
+                                        <div class="enemyWaveSummaryHolder" id="enemyWaveHolder1"></div>
+
+                                        <div class="statFiltersRowHeader" id="enemyWaveHolder2Header">
+                                            Wave 2
+                                            <div class="addEnemyToWaveButton clickable" onclick="customMenu.createAddedEnemyMenu(2)">Add Enemy</div>
+                                        </div>
+                                        <div class="enemyWaveSummaryHolder" id="enemyWaveHolder2"></div>
+
+                                        <div class="statFiltersRowHeader" id="enemyWaveHolder3Header">
+                                            Wave 3
+                                            <div class="addEnemyToWaveButton clickable" onclick="customMenu.createAddedEnemyMenu(3)">Add Enemy</div>
+                                        </div>
+                                        <div class="enemyWaveSummaryHolder" id="enemyWaveHolder3"></div>
+
+                                        <div class="statFiltersRowHeader" id="enemyWaveHolder4Header">
+                                            Wave 4
+                                            <div class="addEnemyToWaveButton clickable" onclick="customMenu.createAddedEnemyMenu(4)">Add Enemy</div>
+                                        </div>
+                                        <div class="enemyWaveSummaryHolder" id="enemyWaveHolder4"></div>
+
+                                        <div class="statFiltersRowHeader" id="enemyWaveHolder5Header">
+                                            Wave 5
+                                            <div class="addEnemyToWaveButton clickable" onclick="customMenu.createAddedEnemyMenu(5)">Add Enemy</div>
+                                        </div>
+                                        <div class="enemyWaveSummaryHolder" id="enemyWaveHolder5"></div>
+
+                                        <!-- <div class="statisticSettingsRow">
+                                            <div class="statsRowName">Wave Count:&nbsp;<span id="queriesTotalWavesDisplay">1</span></div>
+                                            <div class="statsRowToggle">
+                                                <input type="range" id="queriesTotalWavesSlider" name="slider" min="1" max="5" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings(true)">
+                                            </div>
+                                        </div> -->
+
+                                        
+                                        
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="expandedDataHolderHolderOptimize" id="optimizeBoxMainHolderBox">
+                <!-- <div class="comparisonsDisplayHolderBox clickable" onclick="compare.getUpdatedComparisons()">Test Button</div> -->
+                <!-- <div class="queriesMainButtonsBox">
+                    <div class="queriesStartStopRow">
+                        <div class="queriesStartStopButton clickable" id="optimizerStartButton" onclick="cyclesLoop.generationStartHSR()">Start</div>
+                        <div class="queriesStartStopButton clickable" id="optimizerEndButton" onclick="cyclesLoop.abortCycles()">Cancel</div>
+                    </div>
+
+                    <div class="totalHealingBoxBreakdownRowsQueryStatRow">
+                        <div class="totalHealingBoxHalfBreakdownRowsQueryStat hasHoverTooltip">
+                            <div class="totalHealingHeader">Battles:</div>
+                            <div class="totalHealingValueBoss" id="optimizerReachedBox">0</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRowsQueryStat hasHoverTooltip">
+                            <div class="totalHealingHeader">Skipped:</div>
+                            <div class="totalHealingValueBoss" id="optimizerSkippedBox">0</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRowsQueryStat hasHoverTooltip">
+                            <div class="totalHealingHeader">Open Threads:</div>
+                            <div class="totalHealingValueBoss">1</div>
+                        </div>
+                    </div>
+                    
+                    <div class="characterSearchButtonOptimize" id="optimizerTimeBox" onclick="">Time Taken: 0</div>
+                </div> -->
+
+
+                <!-- <div class="exportIconBoxHolder clickable" id="characterSearchButton" onclick="customMenu.createCharacterExportScreen()">
+                    Export&nbsp;
+                    <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon"/>
+                </div> -->
+
+
+                <div class="filtersMegaMegaBox">
+
+                    <div class="filtersBoxHolder" id="settingsBoxHolderVisibility"> <!-- Filters whole box -->
+                        <div class="filtersOuterHeader">FILTERS & SETTINGS</div>
+
+                        <!-- <div id="queryActiveSettings" style="display: none;font-size: 20px;">Settings cannot be modified while a query is active.</div> -->
+
+                        <div class="filterCharacterSelectionSwitch">
+                            <div class="filterCharacterSelectionSwitchIconBox">
+                                <img src="" class="filterCharacterSelectionSwitchIcon clickable" id="characterFiltersSwitchIcon1" onclick="userTriggers.updateCharacterSlotSelected(1)"/>
+                            </div>
+                            <div class="filterCharacterSelectionSwitchIconBox">
+                                <img src="" class="filterCharacterSelectionSwitchIcon clickable" id="characterFiltersSwitchIcon2" onclick="userTriggers.updateCharacterSlotSelected(2)"/>
+                            </div>
+                            <div class="filterCharacterSelectionSwitchIconBox">
+                                <img src="" class="filterCharacterSelectionSwitchIcon clickable" id="characterFiltersSwitchIcon3" onclick="userTriggers.updateCharacterSlotSelected(3)"/>
+                            </div>
+                            <div class="filterCharacterSelectionSwitchIconBox">
+                                <img src="" class="filterCharacterSelectionSwitchIcon clickable" id="characterFiltersSwitchIcon4" onclick="userTriggers.updateCharacterSlotSelected(4)"/>
+                            </div>
+                        </div>
+
+                        <div class="filterSelectorHolder" id="filterSelectorHolder">
+                            <!-- <div class="filterSelectionTitleText" id="statsFiltersHolderButton">STATS</div> -->
+                            <button type="button" class="breakdownSelectorButtonQuerySettings clickable" id="statsFiltersHolderButton" onclick="customHTML.updateSelectedFilterDisplay('statsFiltersHolder')">
+                                TAGS
+                            </button>
+                            <button type="button" class="breakdownSelectorButtonQuerySettings clickable" id="occlusionsFiltersHolderButton" onclick="customHTML.updateSelectedFilterDisplay('occlusionsFiltersHolder')">
+                                OCCLUSIONS
+                            </button>
+                            <button type="button" class="breakdownSelectorButtonQuerySettings clickable" id="locksFiltersHolderButton" onclick="customHTML.updateSelectedFilterDisplay('locksFiltersHolder')">
+                                LOCKS
+                            </button>
+                            <button type="button" class="breakdownSelectorButtonQuerySettings clickable" id="searchSettingsHolderButton" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">
+                                SETTINGS
+                            </button>
+                            <button type="button" class="breakdownSelectorButtonQuerySettings clickable" id="exportSettingsHolderButton" onclick="customMenu.createCharacterFiltersExportScreen()">
+                                EXPORT
+                            </button>
+                            <!-- <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('traitsSettingsHolder')">
+                                <div class="filterSelectionTitleText">ARCHS & TRAITS</div>
+                            </button> -->
+                            <!-- <button type="button" class="breakdownSelectorButton" onclick="advancedUpdates.updateSelectedFilterDisplay('prismSettingsHolder')">
+                                <div class="filterSelectionTitleText">PRISM</div>
+                            </button> -->
+                        </div>
+
+                        <div class="filterRowHolder" id="filterRowHolder">
+
+                            <div class="filtersBoxHalf" id="statsFiltersHolder"> <!-- Stats filters box -->
+                                <div class="statFiltersRowHeader">
+                                    TAGS
+                                    <input type="button" class="clearInput clickable" onclick="customHTML.clearTagsFilter()" value="Clear Tags">
+                                </div>
+                                <div class="filtersQuarterDescriptionDarkRow">Tag Filters are used to retrieve any and all items that ever use the stats you specify here. These apply first when used. Enter manually, or use presets. Or both. Both is good.<br><br><b>Smart Filters</b> do NOT work if you filter by tags.</div>
+                                <div class="filtersQuarterDescriptionDarkRow"><b style="color: lightcoral;">TAG FILTERS ARE DISABLED FOR THE BETA</b></div>
+                                <!-- <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">Presets:</div>
+                                    <div class="presetsSelectorBox"><select class="presetsSelector" id="tagPresets" onchange="filters.addPresets(`tagPresets`,`tagsBox`,`tags`,0)"></select></div>
+                                </div> -->
+                                <div class="statFiltersRowContainer">
+                                    <div class="presetsTitle">INPUT:</div>
+                                    <div class="presetsSelectorBox">
+                                        <input class="tagInput" id="tagInput" list="filterTagList" onchange="customHTML.addFilter(`tagInput`,`tagsBox`,`tagFilters`,maslowDisplayTagsReversed)" disabled>
+                                        <datalist id="filterTagList"></datalist>
+                                    </div>
+                                </div>
+                                <div class="filterLocksContainerHolder">
+                                    <div class="filterTagsContainer" id="tagsBox">No tags selected yet</div>
+                                </div>
+                            </div>
+
+                            <div class="filtersBoxHalf" id="occlusionsFiltersHolder" style="display: none;"> <!-- Occlusions filters box -->
+                                <div class="statFiltersRowHeader">
+                                    EXCLUSIONS & INCLUSIONS
+                                    <input type="button" class="clearInput clickable" onclick="customHTML.clearOcclusionsFilter()" value="Clear All Occlusions">
+                                </div>
+                                <div class="filtersQuarterDescriptionDarkRow">These filters are used to forcibly exclude or include specified items from generation.
+                                    <br><b>Exclusions</b> are used when you do not want to see an item(s) from a category in your results.
+                                    <br><b>Inclusions</b> are used when you ONLY want to see an item(s) from a category in your results.
+                                    <!-- <br>Example: you're running a Hardcore character, and you want to provide the only items you have, as the list for that category. -->
+                                </div>
+                                
+                                <!-- ALL ITEM OCCLUSION UI ELEMENTS -->
+                                <div class="filterLocksContainerHolder">
+                                    <div class="filterLocksContainer">
+                                        <!-- LIGHTCONE OCCLUSION -->
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Lightcones</div>
+                                            <div class="filtersQuarterDescriptionDarkRow">When left empty, lightcones will automatically exclude non-matching paths.</div>
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="lightconeOcclusion" onchange="customHTML.updateOcclusion(`lightcone`,`lightconeOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="lightconeOcclusionsInput" list="lightconeOcclusionsList" onchange="customHTML.addFilter(`lightconeOcclusionsInput`,`lightconeOcclusionsContainer`,`lightconeOcclusions`,lightcones)" >
+                                                                <datalist id="lightconeOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div id="lightconeOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- RELIC SETS OCCLUSION -->
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Relic Sets</div>
+                                            <!-- <div class="statFiltersRowMiniHeader">Armor</div> -->
+
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="armorSetOcclusion" onchange="customHTML.updateOcclusion(`armorSet`,`armorSetOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="armorSetOcclusionsInput" list="armorSetOcclusionsList" onchange="customHTML.addFilter(`armorSetOcclusionsInput`,`armorSetOcclusionsContainer`,`armorSetOcclusions`,finalSets.bodySets)" >
+                                                                <datalist id="armorSetOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="armorSetOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Planar</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Orb.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="planarSetOcclusion" onchange="customHTML.updateOcclusion(`planarSet`,`planarSetOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="planarSetOcclusionsInput" list="planarSetOcclusionsList" onchange="customHTML.addFilter(`planarSetOcclusionsInput`,`planarSetOcclusionsContainer`,`planarSetOcclusions`,finalSets.planarSets)" >
+                                                                <datalist id="planarSetOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="planarSetOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <!-- MAIN STAT -->
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Main Stats</div>
+                                            <!-- <div class="statFiltersRowMiniHeader">Body</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="mainstatBodyOcclusion" onchange="customHTML.updateOcclusion(`mainstatBody`,`mainstatBodyOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatBodyOcclusionsInput" list="mainstatBodyOcclusionsList" onchange="customHTML.addFilter(`mainstatBodyOcclusionsInput`,`mainstatBodyOcclusionsContainer`,`mainstatBodyOcclusions`,relics.Body.mainAffix)" >
+                                                                <datalist id="mainstatBodyOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatBodyOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Feet</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Feet.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="mainstatFeetOcclusion" onchange="customHTML.updateOcclusion(`mainstatFeet`,`mainstatFeetOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatFeetOcclusionsInput" list="mainstatFeetOcclusionsList" onchange="customHTML.addFilter(`mainstatFeetOcclusionsInput`,`mainstatFeetOcclusionsContainer`,`mainstatFeetOcclusions`,relics.Feet.mainAffix)" >
+                                                                <datalist id="mainstatFeetOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatFeetOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Orb</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Orb.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="mainstatOrbOcclusion" onchange="customHTML.updateOcclusion(`mainstatOrb`,`mainstatOrbOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatOrbOcclusionsInput" list="mainstatOrbOcclusionsList" onchange="customHTML.addFilter(`mainstatOrbOcclusionsInput`,`mainstatOrbOcclusionsContainer`,`mainstatOrbOcclusions`,relics['Planar Sphere'].mainAffix)" >
+                                                                <datalist id="mainstatOrbOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatOrbOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Rope</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Rope.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="mainstatRopeOcclusion" onchange="customHTML.updateOcclusion(`mainstatRope`,`mainstatRopeOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatRopeOcclusionsInput" list="mainstatRopeOcclusionsList" onchange="customHTML.addFilter(`mainstatRopeOcclusionsInput`,`mainstatRopeOcclusionsContainer`,`mainstatRopeOcclusions`,relics['Link Rope'].mainAffix)" >
+                                                                <datalist id="mainstatRopeOcclusionsList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatRopeOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filtersBoxHalf" id="locksFiltersHolder" style="display: none;"> <!-- Locks filters box -->
+                                <div class="statFiltersRowHeader">
+                                    LOCKS
+                                    <input type="button" class="clearInput clickable" onclick="customHTML.clearLocksFilter()" value="Clear All Locks">
+                                </div>
+                                <div class="filtersQuarterDescriptionDarkRow">Lock Filters are used to "lock" a slot into one specific item without ever letting it change.<br>Locking can trim off <b><i>trillions</i></b> of combinations - the more you lock, the faster this will go.
+                                    <!-- Locks CAN be blank, just type two hypens(--) and then hit enter. -->
+                                </div>
+                                <!-- ALL ITEM LOCK UI ELEMENTS -->
+                                <div class="filterLocksContainerHolder">
+                                    <div class="filterLocksContainer">
+
+                                        <!-- SUBSTAT -->
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Substats</div>
+                                            <div class="filtersQuarterDescriptionDarkRow">Substat locks are a bit unique compared to the others.<br>I allow you to set ranges on roll values allowed <b>from <i>ONLY ADDED</i> rolls</b>.</div>
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <!-- <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Exclusion</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="substatOcclusion" onchange="customHTML.updateOcclusion(`substat`,`substatOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                            <span class="occlusionOption">Inclusion</span>
+                                                        </div> -->
+                                                        <div class="statFiltersRowHeaderSubstatsLocksRollValue">Current Roll Values:&nbsp;<span class="clickable" id="substatsLocksRollValueDisplay" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">High</span></div>
+                                                        <div class="statFiltersRowContainerSubstatsLimitsRow">
+                                                            <div class="statFiltersSubstatLimitVerticalBox">
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat1IMG"/>
+                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat1Name">Stat 1</div>
+                                                                <!-- <div class="statFiltersSubstatLimitStatHeader">MAX</div>
+                                                                <div class="statFiltersSubstatLimitStatHeader">MIN</div> -->
+                                                                <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat1BaseRolls">Base: asdf</div>
+
+
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat1Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,1)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat1MaxDisplay">EST: 0</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat1Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,1)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat1MinDisplay">EST: 0</div>
+                                                            </div>
+
+                                                            <div class="statFiltersSubstatLimitVerticalBox">
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat2IMG"/>
+                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat2Name">Stat 2</div>
+                                                                <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat2BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat2Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,2)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat2MaxDisplay">EST: 0</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat2Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,2)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat2MinDisplay">EST: 0</div>
+                                                            </div>
+
+                                                            <div class="statFiltersSubstatLimitVerticalBox">
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat3IMG"/>
+                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat3Name">Stat 3</div>
+                                                                <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat3BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat3Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,3)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat3MaxDisplay">EST: 0</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat3Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,3)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat3MinDisplay">EST: 0</div>
+                                                            </div>
+
+                                                            <div class="statFiltersSubstatLimitVerticalBox">
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat4IMG"/>
+                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat4Name">Stat 4</div>
+                                                                <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat4BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat4Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,4)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat4MaxDisplay">EST: 0</div>
+                                                                <div class="statFiltersRowContainer">
+                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsSelectorBox">
+                                                                        <input type="number" class="tagInput" id="substatLocksStat4Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,4)" >
+                                                                    </div>
+                                                                </div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat4MinDisplay">EST: 0</div>
+                                                            </div>
+
+                                                            <!-- <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="substatOcclusionsInput" list="substatOcclusionsList" onchange="customHTML.addFilter(`substatOcclusionsInput`,`substatOcclusionsContainer`,`substatOcclusions`,relics['Link Rope'].subAffix)" >
+                                                                <datalist id="substatOcclusionsList"></datalist>
+                                                            </div> -->
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div id="substatOcclusionsContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Lightcones</div>
+                                            <!-- <div class="filtersQuarterDescriptionDarkRow">When left empty, lightcones will automatically exclude non-matching paths.</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="lightconeLocksInput" list="lightconeLocksList" onchange="customHTML.addFilter(`lightconeLocksInput`,`lightconeLocksContainer`,`lightconeLocks`,lightcones)" >
+                                                                <datalist id="lightconeLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div id="lightconeLocksContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Relic Sets</div>
+                                            <!-- <div class="statFiltersRowMiniHeader">Armor</div> -->
+
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowHeader2pcHeader">2pc #1</div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="armorSetLocks2pcInput" list="armorSetLocks2pcList" onchange="customHTML.addFilter(`armorSetLocks2pcInput`,`armorSetLocks2pcContainer`,`armorSetLocks2pc`,finalSets.bodySets)" >
+                                                                <datalist id="armorSetLocks2pcList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="armorSetLocks2pcContainer" class="locksBox"></div>
+                                            </div>
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowHeader2pcHeader">2pc #2</div>
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="armorSetLocks4pcInput" list="armorSetLocks4pcList" onchange="customHTML.addFilter(`armorSetLocks4pcInput`,`armorSetLocks4pcContainer`,`armorSetLocks4pc`,finalSets.bodySets)" >
+                                                                <datalist id="armorSetLocks4pcList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="armorSetLocks4pcContainer" class="locksBox"></div>
+                                            </div>
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Planar</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Orb.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="planarSetLocksInput" list="planarSetLocksList" onchange="customHTML.addFilter(`planarSetLocksInput`,`planarSetLocksContainer`,`planarSetLocks`,finalSets.planarSets)" >
+                                                                <datalist id="planarSetLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="planarSetLocksContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="queriesSettingsWholeCategoryBox">
+                                            <div class="statFiltersRowHeader">Main Stats</div>
+                                            <!-- <div class="statFiltersRowMiniHeader">Body</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatBodyLocksInput" list="mainstatBodyLocksList" onchange="customHTML.addFilter(`mainstatBodyLocksInput`,`mainstatBodyLocksContainer`,`mainstatBodyLocks`,relics.Body.mainAffix)" >
+                                                                <datalist id="mainstatBodyLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatBodyLocksContainer" class="locksBox"></div>
+                                            </div>
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Feet</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Feet.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatFeetLocksInput" list="mainstatFeetLocksList" onchange="customHTML.addFilter(`mainstatFeetLocksInput`,`mainstatFeetLocksContainer`,`mainstatFeetLocks`,relics.Feet.mainAffix)" >
+                                                                <datalist id="mainstatFeetLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatFeetLocksContainer" class="locksBox"></div>
+                                            </div>
+
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Orb</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Orb.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatOrbLocksInput" list="mainstatOrbLocksList" onchange="customHTML.addFilter(`mainstatOrbLocksInput`,`mainstatOrbLocksContainer`,`mainstatOrbLocks`,relics['Planar Sphere'].mainAffix)" >
+                                                                <datalist id="mainstatOrbLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatOrbLocksContainer" class="locksBox"></div>
+                                            </div>
+
+
+                                            <!-- <div class="statFiltersRowMiniHeader">Rope</div> -->
+                                            <div class="querySettingsOcclusionWholeRowBox">
+                                                <div class="occlusionsToggleBox">
+                                                    <img src="/HonkaiSR/misc/Rope.png" class="queryFiltersRelicSlotIcon"/>
+                                                    <div class="queryOcclusionsMainstatRow">
+                                                        <div class="statFiltersRowContainer">
+                                                            <div class="presetsTitle">INPUT:</div>
+                                                            <div class="presetsSelectorBox">
+                                                                <input class="tagInput" id="mainstatRopeLocksInput" list="mainstatRopeLocksList" onchange="customHTML.addFilter(`mainstatRopeLocksInput`,`mainstatRopeLocksContainer`,`mainstatRopeLocks`,relics['Link Rope'].mainAffix)" >
+                                                                <datalist id="mainstatRopeLocksList"></datalist>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="mainstatRopeLocksContainer" class="locksBox"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filtersBoxHalf" id="searchSettingsHolder" style="display: none;">
+                                <!-- <div class="cyclesSettingsHeader">Search Settings</div> -->
+                                <div class="cyclesSettingsBox">
+                                    <div class="statisticSettingsContainer"> <!-- Search Settings Box -->
+                                        <div class="cyclesSettingsHeader">Search Settings</div>
+                                        <div class="filtersQuarterDescriptionSettingsDisclaimer">BATTLE SETTINGS IN BATTLE VIEW ARE USED HERE</div>
+                                        <div class="takeMeToBattleSettingsHolder">
+                                            <div class="characterSearchButton clickable" id="characterSearchButton" onclick="userTriggers.openBattleSettings()">Take me to Battle Settings</div>
+                                        </div>
+
+
+                                        <div class="filtersBoxHalfSearchSettings"><!-- search settings -->
+                                            <div class="statFiltersRowHeader">Search</div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queries2pcMixingExplainer">
+                                                <div class="statsRowName">Relic set 2pc Mixing [?]</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesAllow2pcSearch" onchange="userTriggers.updateQuerySearchSettings()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="statisticSettingsRow hasHoverTooltip" id="queriesRollBundlingExplainer">
+                                                <div class="statsRowName">Relic Substat Increments:&nbsp;<span id="queriesRollsPerBundleDisplay">2</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesRollsPerBundle" name="slider" min="1" max="3" value="2" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="statisticSettingsRow hasHoverTooltip" id="queriesMinimumAddedRollExplainer">
+                                                <div class="statsRowName">Minimum Substat Added Rolls:&nbsp;<span id="queriesMinimumAddedRollDisplay">1</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesMinimumAddedRoll" name="slider" min="0" max="2" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div> -->
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesExplainBattlesWon">
+                                                <div class="statsRowName">Limit to Battles Won [?]</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesBattlesWonEnforce" onchange="userTriggers.updateQuerySearchSettings()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">Disable Query Length Limit (Bad Idea)</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="bypassLimit" onchange="filters.updateDodgeClass()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="filtersBoxHalfSearchSettings"><!-- relic settings -->
+                                            <div class="statFiltersRowHeader">Relics</div>
+                                            <div class="totalHealingBoxBreakdownRowsQueriesHeaders">
+                                                <div class="totalHealingBoxHalf hasHoverTooltip" id="finalBaseRollsExplainer">
+                                                    <div class="totalHealingBoxHalfBreakdownRowsQueryStat">Base Rolls:</div>
+                                                    <div class="totalHealingValue" style="border-bottom: none;font-size: 14px;" id="finalBaseRollsSettings">x</div>
+                                                </div>
+                                                <div class="totalHealingBoxHalf hasHoverTooltip" id="finalAddedRollsExplainer">
+                                                    <div class="totalHealingBoxHalfBreakdownRowsQueryStat">Added Rolls</div>
+                                                    <div class="totalHealingValue" style="border-bottom: none;" id="finalAddedRollsSettings">x</div>
+                                                </div>
+                                                <div class="totalHealingBoxHalf hasHoverTooltip" id="finalTotalRollsExplainer">
+                                                    <div class="totalHealingBoxHalfBreakdownRowsQueryStat">Usable Total</div>
+                                                    <div class="totalHealingValue" style="border-bottom: none;" id="finalUsableTotalSettings">x</div>
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesRelicRollValueExplainer">
+                                                <div class="statsRowName">Substat Roll Values:&nbsp;<span id="queriesSubstatRollValueDisplay">Mid</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesSubstatRollValue" name="slider" min="0" max="2" value="2" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesRollsPerRelicExplainer">
+                                                <div class="statsRowName">Rolls per Relic:&nbsp;<span id="queriesRollsPerRelicDisplay">4</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesRollsPerRelic" name="slider" min="4" max="5" value="4" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesUsableBaseRollExplainer">
+                                                <div class="statsRowName">Usable Base Rolls:&nbsp;<span id="queriesUsableBaseRollsDisplay">12</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesUsableBaseRolls" name="slider" min="12" max="24" value="12" step="4" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesFailedRollExplainer">
+                                                <div class="statsRowName">Failed Rolls per Relic:&nbsp;-<span id="queriesFailedAddedRollsDisplay">1</span>&nbsp;[?]</div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesFailedAddedRolls" name="slider" min="0" max="2" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="filtersBoxHalfSearchSettings"><!-- lightcone settings -->
+                                            <div class="statFiltersRowHeader">Lightcone Superimposition</div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">4-star:&nbsp;<span id="queries4starSuperValueDisplay">5</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queries4starSuperValue" name="slider" min="1" max="5" value="5" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">5-star (Herta Shop):&nbsp;<span id="queries5starHertaValueDisplay">5</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queries5starHertaValue" name="slider" min="1" max="5" value="5" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">5-star:&nbsp;<span id="queries5starSuperValueDisplay">1</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queries5starSuperValue" name="slider" min="1" max="5" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow hasHoverTooltip" id="queriesKeepLCSuperimpositionExplainer">
+                                                <div class="statsRowName">Keep Equipped Rank [?]</div>
+                                                <div class="statsRowToggle">
+                                                    <label class="toggleContainer">
+                                                        <input type="checkbox" class="toggleCheckbox" id="queriesKeepLightconeRank" onchange="userTriggers.updateQuerySearchSettings()"><span class="toggleSlider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filtersBoxHalfSearchSettings" style="display: none;"><!-- character (loop) settings -->
+                                            <div class="statFiltersRowHeader">Character Eidolons</div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">4-star:&nbsp;<span id="queriesSubstatRollValueDisplay">6</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesSubstatRollValue" name="slider" min="0" max="6" value="6" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">Trailblazer:&nbsp;<span id="queriesSubstatRollValueDisplay">6</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesSubstatRollValue" name="slider" min="0" max="6" value="6" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                            <div class="statisticSettingsRow">
+                                                <div class="statsRowName">5-star:&nbsp;<span id="queriesSubstatRollValueDisplay">0</span></div>
+                                                <div class="statsRowToggle">
+                                                    <input type="range" id="queriesSubstatRollValue" name="slider" min="0" max="6" value="1" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings()">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="resultsBoxHalf" id="filtersDisplayMegaBox">
+                        <div class="cyclesSettingsHeader">BUILD SEARCH</div>
+                        <!-- <div class="cyclesSettingsBox">
+                            <div class="cyclesControlBox">
+                                <span>Choose your target statistic:</span>
+                                <input class="statisticInputBox" id="statisticInput" list="statInputList" onchange="filters.updateTargetStat()">
+                                <datalist id="statInputList"></datalist>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="compositeQueryDisplaybox" id="compositeQueryDisplaybox"></div> -->
+                        <!-- <div class="queriesBattleSettingsSummaryBox"></div> -->
+                        <div class="totalHealingBox clickable hasHoverTooltip" onclick="userTriggers.openBattleSettings()" id="queriesBattleSettingsSummaryRowExplainer">
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingHeader">Total AV</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="queriesBattleSummaryMode" style="font-size: 18px;">0</span></div>
+                            </div>
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingHeader">Cycles</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="queriesBattleSummaryCycles" style="font-size: 18px;">0</span></div>
+                            </div>
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingHeader">Total AV</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="queriesBattleSummaryAV" style="font-size: 18px;">0</span></div>
+                            </div>
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingHeader">Techniques</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="queriesBattleSummaryTechniques" style="font-size: 18px;">0</span></div>
+                            </div>
+                        </div>
+
+                        <div class="totalHealingBoxBreakdownRowsQueriesHeaders">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="threadCountTooltip">
+                                <div class="totalHealingBoxHalfBreakdownRowsQueryStat">Open CPU Threads:</div>
+                                <div class="totalHealingValue" style="border-bottom: none;font-size: 14px;">
+                                    <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="compare.updateThreadCountDisplay()">
+                                    <span id="selectedThreadCount">4</span>
+                                    <span>/16&nbsp;[?]</span>
+                                </div>
+                            </div>
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingBoxHalfBreakdownRowsQueryStat hasHoverTooltip" id="smartSkipEnable">Enable Smart Skips</div>
+                                <div class="totalHealingValue" style="border-bottom: none;">
+                                    <label class="toggleContainer">
+                                        <input type="checkbox" class="toggleCheckbox" id="smartSkipsToggle" onchange="filters.updateDodgeClass()" checked disabled><span class="toggleSlider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="statisticSettingsRow hasHoverTooltip" id="threadCountTooltip">
+                                <span>Open CPU Threads:</span>
+                                <input type="range" id="settingsOpenThreads" name="slider" min="2" max="16" value="4" step="1" list="tickmarks" onchange="filters.updateDodgeClass()">
+                                <span id="selectedThreadCount">0</span>
+                                <span>/16&nbsp;[?]</span>
+                        </div> -->
+                        <!-- <div class="chromeWarning hasHoverTooltip">Queries have been optimized for <span>Google Chrome</span>. Firefox can be up to <span>2,000% slower.</span></div> -->
+                        <div class="cyclesControlBox">
+                            <button type="button" onclick="cyclesLoop.generationStartHSR()" id="cycleSTART" class="cyclesControl clickable" style="background-color: #90ee90;">START</button>
+                            <button type="button" onclick="cyclesLoop.abortCycles()" id="cycleSTOP" class="cyclesControl clickable" disabled>ABORT</button>
+                        </div>
+
+
+                        <span id="cycleProgressType">SETUP:</span> <!-- Both the setup steps and the cycle progress use this bar/UI -->
+                        <span id="cyclesTimeRemaining"></span>
+                        <!-- <div class="characterSearchButtonOptimize" id="optimizerTimeBox" onclick="">Time Taken: 0</div> -->
+                        <div class="queryProgressBarBox">
+                            <div class="progressBar" id="combinationsDisplayCount"></div>
+                            
+                            <div class="progressInfo">
+                                <span id="counterInt" class="counterDisplay">0</span> / <span id="comboCount" class="counterDisplay">0</span>
+                            </div>
+                        </div>
+                        <div class="characterSearchButtonOptimize" id="optimizerDistributedBox" onclick="">Distributed Combos: 0</div>
+
+                        <div class="queryProgressBarBoxSubStep" id="queriesCombosCounteHolderBox" style="display: none;">
+                            <div class="progressBar" id="combinationsCountedDisplayCount"></div>
+                            
+                            <!-- <div class="progressInfo">
+                                <span id="counterInt" class="counterDisplay">0</span> / <span id="comboCount" class="counterDisplay">0</span>
+                            </div> -->
+                        </div>
+                        <span class="hasHoverTooltip" id="lastFound"></span>
+
+                        <br>
+                        <!-- <div class='dpsFactorDisclaimer'>Testy tester text</div> -->
+                        
+                        <div class="totalHealingBox">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="evaluatedExplainer">
+                                <div class="totalHealingHeader">Total Combos Possible</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="optimizerTotalPossibleComboCount" style="font-size: 18px;">0</span></div>
+                            </div>
+                        </div>
+                        <div class="totalHealingBox">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="validCombosExplainer">
+                                <div class="totalHealingHeader hasHoverTooltip">Valid Combos</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="optimizerValidCombos" style="font-size: 18px;">0</span></div>
+                            </div>
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="smartSkipExplainer">
+                                <div class="totalHealingHeader hasHoverTooltip" id="">Smart Skips</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="optimizerSkippedBox" style="font-size: 18px;">0</span></div>
+                            </div>
+                            <div class="totalHealingBoxHalf">
+                                <div class="totalHealingHeader hasHoverTooltip" id="">Open Threads</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="openThreadsDisplay" style="font-size: 18px;">0</span>/<span id="maxThreadsDisplay" style="font-size: 18px;">0</span></div>
+                            </div>
+                        </div>
+                        <!-- <div class="totalHealingBox">
+                            <div class="totalHealingBoxHalf hasHoverTooltip" id="evaluatedExplainer">
+                                <div class="totalHealingHeader">Evaluated</div>
+                                <div class="totalHealingValue" style="border-bottom: none;"><span id="optimizerReachedBox" style="font-size: 18px;">0</span></div>
+                            </div>
+                            
+                        </div> -->
+
+
+                        <!-- <span>Currently Open Threads: <span id="openThreadsDisplay">0</span>/<span id="maxThreadsDisplay">0</span></span> -->
+                        <!-- <span>Distributed Combos: <span id="distributedCounter">0</span></span> -->
+                        <!-- <span>Smart Skips: <span id="skipsCounter">0</span></span> -->
+                        <!-- <div class="statFiltersRowHeader">Current Best Result</div> -->
+                        <span class="hasHoverTooltip" id="lastFound"></span>
+
+                        <div class="currentBestResultHolderBox" id="currentBestResultHolderBox"></div>
+                    </div>
+                </div>
+                
+
+                <!-- Debug console Toggle -->
+                <div class="debugToggleBox">
+                    <div style="padding-right: 5px;">Show Debug Console</div>
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="debugShow" onchange="compare.debugView()">
+                        <span class="toggleSlider"></span>
+                    </label>
+                </div>
+                <!-- Debug console box -->
+                <div class="comboDebugContainer">
+                    <div class="comboDebugWindow" id="comboDebug">.DEBUG VIEW</div>
+                </div>
+
+
+                <div class="comparisonsDisplayHolderBox" id="comparisonsDisplayHolderBox"></div>
+            </div>
+
+        </div>
+
+        <!-- <div class="buffTooltipHolderbox"></div> -->
+
+        <!-- <div class="characterMainCenterDisplayOverviewHolderBox" style="grid-row: 5;border: 2px solid blue;width: 404px;height: 720px;border-radius: 10px;overflow: hidden;">
+            <div class="characterMainCenterDisplayOverview" style="scale: 1.5;display: flex;justify-content: center;align-items: center;">
+                    <img src="" class="characterMainCenterImageBannerTesting" id="characterMainCenterImageOverview2"/>
+            </div>
+        </div> -->
+
+        <!-- <div class="" id="testContainer5" style="grid-row: 5;grid-column: 1;"></div>
+
+        <div style="grid-row: 5;grid-column: 2;">
+            <div class="characterDisplayLightconePreview2 clickable" onclick="userTriggers.updateCharacterBreakdownClicked(2)">
+                <div class="testContainer2" id="testContainer2" ></div>
+            </div>
+    
+            <div class="characterDisplayLightconePreview3 clickable" onclick="userTriggers.updateCharacterBreakdownClicked(2)">
+                <div class="testContainer3" id="testContainer3" ></div>
+            </div>
+    
+    
+            <div class="characterDisplayLightconePreview4 clickable" onclick="userTriggers.updateCharacterBreakdownClicked(2)">
+                <div class="testContainer4" id="testContainer4" ></div>
+            </div>
+        </div> -->
+        
+    
+
+    </div>
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+
+<!-- <script src="characterData.js"></script> -->
+<script src="dCharacters.js"></script>
+<script src="dLightcones.js"></script>
+<script src="dRelics.js"></script>
+<script src="dRelicSets.js"></script>
+
+
+<script src="statList.js"></script>
+<script src="_wavePresets.js"></script>
+<script src="formulas.js"></script>
+<script src="globalRecords.js"></script>
+<script src="customHTML.js"></script>
+
+<script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
+<script src="/HonkaiSR/Calculator/tooltipMath.js"></script>
+<!-- <script src="/TFD/Calculator/UIHandling.js"></script> -->
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+
+<script src="_prototypes.js"></script>
+<script src="su_Maslow.js"></script>
+<script src="suffering4Analytics.js"></script>
+<script src="suffering3_5Conditions.js"></script>
+<script src="suffering3Gear.js"></script>
+<script src="suffering2Char.js"></script>
+<script src="t_combos.js"></script>
+<script src="suffering1Sim.js"></script>
+<script src="testerValues.js"></script>
+<script src="tester.js"></script>
+<script src="pagePopulation.js"></script>
+
+<script src="/MainJS/buildTime.js"></script>
+
+
+<!-- <script src="/HonkaiSR/characters.js"></script>
+<script src="/HonkaiSR/testing.js"></script> -->
+
+</body>
+</html> 

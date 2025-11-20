@@ -1,23 +1,27 @@
 let tooltips = {
     updateSubstatColor(description) {
-        for (let substat of substatColorMods) {
-          //And if the description contains the looped substat ANYWHERE within it, proceed
-          if (description.toLowerCase().includes(substat) === true) {
-            let substatExclusion = "";
-            if (substatColorExclusions[substat] != undefined) {
-              //(?!) = lookahead is not [whatever you don't want to be next]
-              substatExclusion = `(?!${substatColorExclusions[substat]})`;
-              //This is to only find exclusion values based upon the specified substat. So fire = rate, status = effect, etc.
+        //substat colors aren't used on every calc, HSR calc already adjusts colors based on param indices in descriptions.
+        if (typeof substatColorMods !== "undefined") {
+            for (let substat of substatColorMods) {
+            //And if the description contains the looped substat ANYWHERE within it, proceed
+            if (description.toLowerCase().includes(substat) === true) {
+                let substatExclusion = "";
+                if (substatColorExclusions[substat] != undefined) {
+                //(?!) = lookahead is not [whatever you don't want to be next]
+                substatExclusion = `(?!${substatColorExclusions[substat]})`;
+                //This is to only find exclusion values based upon the specified substat. So fire = rate, status = effect, etc.
+                }
+                //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped. \s = whitespace character
+                let regEx = new RegExp(`\\b(${substat})${substatExclusion}\\b`, "gi");
+                description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
             }
-            //b = word boundary, g = global, i = case insensitive. Any \\ is just bc \ is an escape itself and needs to be escaped. \s = whitespace character
-            let regEx = new RegExp(`\\b(${substat})${substatExclusion}\\b`, "gi");
-            description = description.replace(regEx, `<span class="${substat.replace(/\s/g,"")}">${substat.toUpperCase()}</span>`);
-          }
+            }
+            //d= digit character, w = word character
+            let regExNumbers = new RegExp(`\\b(\\d[%\\w]*)`, "gi");
+            description = description.replace(regExNumbers, `<span class="numberTag">$&</span>`);
+            return description;
         }
-        //d= digit character, w = word character
-        let regExNumbers = new RegExp(`\\b(\\d[%\\w]*)`, "gi");
-        description = description.replace(regExNumbers, `<span class="numberTag">$&</span>`);
-        return description;
+        else {return description;}
     },
     hideTooltip() {
         const tooltip = document.getElementById('tooltip');

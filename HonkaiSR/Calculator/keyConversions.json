@@ -1,0 +1,81 @@
+{
+    "BreakDamageAddedRatioBase": "DamageBreak",
+    "BreakDamageAddedRatio": "DamageBreakUNUSED",
+    "StanceBreakAddedRatio": "SuperBreakMaybe",
+
+    "SPRatioBase": "EnergyRegenRate",
+    "SPRatio": "EnergyRegenRateUNUSED",
+    "MaxSP": "EnergyMax",
+    "SpecialMaxSP": "EnergyMaxSpecial",
+
+    "BaseAggro": "AggroBase",
+    "AggroAddedRatio": "Aggro%",
+
+    "AllDamageReduce": "DamageReduction",
+
+    "AllDamageTypeTakenRatio": "EnemyDMGTaken",
+
+    "ShieldAddedRatio": "Shield%",
+
+    "PhysicalAddedRatio": "DamagePhysical",
+    "FireAddedRatio": "DamageFire",
+    "IceAddedRatio": "DamageIce",
+    "ThunderAddedRatio": "DamageLightning",
+    "WindAddedRatio": "DamageWind",
+    "QuantumAddedRatio": "DamageQuantum",
+    "ImaginaryAddedRatio": "DamageImaginary",
+    "DotDamageAddedRatio": "DamageDOT",
+    "AllDamageTypeAddedRatio": "DamageAll",
+
+    "StatusProbabilityBase": "EffectHitRate",
+    "StatusProbability": "EffectHitRateUNUSED",
+    "StatusResistanceBase": "EffectRES",
+    "StatusResistance": "EffectRESUNUSED",
+
+    "CriticalChance": "CritRateBase",
+    "CriticalChanceBase": "CritRateBase",
+    "CriticalDamage": "CritDamageBase",
+    "CriticalDamageBase": "CritDamageBase",
+
+    "HealRatioBase": "HealingOutgoing",
+    "HealRatio": "HealingOutgoingUNUSED",
+    "HealTakenRatio": "HealingIncoming",
+
+    "HealRatioConvert": "HealingOutgoingConversionAmount",
+    
+    "BaseSpeed": "SPDBase",
+    "SpeedBase": "SPDBase",
+    "SpeedAddedRatio": "SPD%",
+    "SpeedDelta": "SPDFlat",
+    
+    "AttackBase": "ATKBase",
+    "BaseAttack": "ATKBase",
+    "AttackAddedRatio": "ATK%",
+    "AttackDelta": "ATKFlat",
+
+    "BaseHP": "HPBase",
+    "HPBase": "HPBase",
+    "HPDelta": "HPFlat",
+    "HPAddedRatio": "HP%",
+
+    "BaseDefence": "DEFBase",
+    "DefenceBase": "DEFBase",
+    "DefenceAddedRatio": "DEF%",
+    "DefenceDelta": "DEFFlat",
+
+    "PhysicalResistance": "ResistancePhysical",
+    "FireResistance": "ResistanceFire",
+    "IceResistance": "ResistanceIce",
+    "ThunderResistance": "ResistanceLightning",
+    "WindResistance": "ResistanceWind",
+    "QuantumResistance": "ResistanceQuantum",
+    "ImaginaryResistance": "ResistanceImaginary",
+
+    "PhysicalResistanceDelta": "ResistancePhysicalBonus",
+    "FireResistanceDelta": "ResistanceFireBonus",
+    "IceResistanceDelta": "ResistanceIceBonus",
+    "ThunderResistanceDelta": "ResistanceLightningBonus",
+    "WindResistanceDelta": "ResistanceWindBonus",
+    "QuantumResistanceDelta": "ResistanceQuantumBonus",
+    "ImaginaryResistanceDelta": "ResistanceImaginaryBonus"
+}

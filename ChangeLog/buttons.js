@@ -2,6 +2,7 @@ const buttons = {
     updateChangelog(logType) {
         let typeString = "";
 
+        if (logType === "HSR") {typeString = "hsr";document.getElementById("currentLogs").innerHTML = "HSR"}
         if (logType === "R2") {typeString = "remnant";document.getElementById("currentLogs").innerHTML = "Remnant 2"}
         if (logType === "TFD") {typeString = "tfd";document.getElementById("currentLogs").innerHTML = "TFD"}
 
