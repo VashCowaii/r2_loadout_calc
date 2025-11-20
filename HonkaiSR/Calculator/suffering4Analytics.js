@@ -559,7 +559,6 @@ const compare = {
         const char3FilteredLightcone = applyFilters(lightconeSets,char3Filters.lightconeOcclusions,char3Filters.lightcone,null,true,characters[charObjectRef.char3.name].path);
         const char4FilteredLightcone = applyFilters(lightconeSets,char4Filters.lightconeOcclusions,char4Filters.lightcone,null,true,characters[charObjectRef.char4.name].path);
         pushDebug(`FILTER: Lightcones - Completed`);
-        console.log(char1FilteredLightcone)
         yield;
         
 
