@@ -7786,19 +7786,9 @@ const turnLogic = {
     //Harmony
     "Tingyun": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
-            // const shortRef = this;
-            // let actionUsed = false;
-            // let characterName = "Tingyun";
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters[characterName].skills;
 
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
-            // let buffName = turnLogic[characterName].buffNames.benediction;
-            // let target = "char1";
-            // let buffCheck = battleData.nameBasedTurns[target].buffsObject[buffName];
 
 
             if (minimum && checkSkill(battleData,thisTurn)) {
@@ -7918,10 +7908,10 @@ const turnLogic = {
 
                 const updateBuff = battleActions.updateBuff;
                 let charValuesRef = logicRef.characterValuesBattle;
-                if (charValuesRef.charWithBenediction != null) {//if someone exists on the team right now with benediction
-                    let oldTarget = charValuesRef.charWithBenediction;
+                if (charValuesRef.charWithBenediction) {//if someone exists on the team right now with benediction
+                    let oldTarget = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
                     let beneRef = oldTarget.buffsObject[buffName];
-                    if (targetTurn.properName != charValuesRef.charWithBenediction.properName) {//if that someone does NOT match the current buff target
+                    if (targetTurn.properName != charValuesRef.charWithBenediction) {//if that someone does NOT match the current buff target
                         //benediction can only apply on the most recent target, so if we ever find a scenario where benediction is getting applied to a new target
                         //that does not match the last target she applied to, then we need to remove it
                         //however if the currently assigned target is nobody, then we never reach this point and it's chillin
@@ -7936,7 +7926,7 @@ const turnLogic = {
 
                 //then finally, for the love of god, apply the fucking buff.
                 updateBuff(battleData,targetTurn,buffSheet);
-                charValuesRef.charWithBenediction = targetTurn;//an ofcd assign the current benediction target
+                charValuesRef.charWithBenediction = targetTurn.name;//an ofcd assign the current benediction target
                 //the assignment of this char value tho is extremely important for her kit.
 
                 //major trace Nourished Joviality for spd boost
@@ -8057,7 +8047,7 @@ const turnLogic = {
 
                 let charValuesRef = logicRef.characterValuesBattle;
                 //atm we look for the ally with benediction, if nobody has it then we assume char1 gets the energy, always
-                let targetTurn = charValuesRef.charWithBenediction ?? battleData.nameBasedTurns.char1;
+                let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction ?? battleData.nameBasedTurns.char1.name];
                 //TODO:rn we just assume the first character is the one that should get the dmg buff which is reasonable
                 //however deciding that char1 should always get the energy is not always reasonable, sometimes
                 //there might be another character with a battle changing ultimate like say idk robin maybe(don't judge)
@@ -8175,8 +8165,8 @@ const turnLogic = {
 
                     let sourceTurn = generalInfo.sourceTurn;
                     let charValuesRef = ownerTurn.battleValues;
-                    let targetTurn = charValuesRef.charWithBenediction
-                    if (targetTurn === null) {return;}//if no character has benediction, can obv abort early.
+                    let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                    if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
                     let sourceCheck = sourceTurn.properName === targetTurn.properName;
                     if (!sourceCheck) {return;}//is the attack coming from an allied source
                     const benedictionDMG = this.benedictionDMG ??= turnLogic[characterName].skillFunctions.benedictionDMG
@@ -8193,8 +8183,8 @@ const turnLogic = {
                     let characterName = ownerTurn.properName;
 
                     let charValuesRef = ownerTurn.battleValues;
-                    let targetTurn = charValuesRef.charWithBenediction;
-                    if (targetTurn === null) {return;}//if no character has benediction, can obv abort early.
+                    let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                    if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
                     let sourceCheck = ownerTurn.turnState && generalInfo.dmgSlot === "Basic ATK";
                     if (!sourceCheck) {return;}//is the attack coming from tingyun
                     const talentDMG = this.talentDMG ??= turnLogic[characterName].skillFunctions.talentDMG
@@ -8260,8 +8250,8 @@ const turnLogic = {
     
                         let sourceTurn = generalInfo.sourceTurn;
                         let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = charValuesRef.charWithBenediction;
-                        if (targetTurn === null) {return;}//if no character has benediction, can obv abort early.
+                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
     
                         let sourceCheck = sourceTurn.properName === targetTurn.properName;
                         if (!sourceCheck) {return;}
@@ -8297,8 +8287,8 @@ const turnLogic = {
     
                         let sourceTurn = generalInfo.sourceTurn;
                         let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = charValuesRef.charWithBenediction;
-                        if (targetTurn === null) {return;}//if no character has benediction, can obv abort early.
+                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
     
                         let sourceCheck = sourceTurn.properName === targetTurn.properName;
                         if (!sourceCheck) {return;}
@@ -8316,8 +8306,8 @@ const turnLogic = {
     
                         let sourceTurn = generalInfo.sourceTurn;
                         let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = charValuesRef.charWithBenediction;
-                        if (targetTurn === null) {return;}//if no character has benediction, can obv abort early.
+                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
     
                         let sourceCheck = sourceTurn.properName === targetTurn.properName;
                         if (!sourceCheck || charValuesRef.benedictorKilledEnemy) {return;}//if this isn't the ally with benediction, or they've already killed within this turn, then abort
