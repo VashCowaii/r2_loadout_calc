@@ -635,13 +635,13 @@ const defaultConditions = {
                     "phase": "Any Part",
                     "state": true
                 },
-                {
-                    "type": "Buff",
-                    "target": "Self",
-                    "targetType": "Character",
-                    "buffName": "Benison of Paper and Rites",
-                    "state": true
-                },
+                // {
+                //     "type": "Buff",
+                //     "target": "Self",
+                //     "targetType": "Character",
+                //     "buffName": "Benison of Paper and Rites",
+                //     "state": true
+                // },
                 {
                     "type": "Character: State",
                     "target": "Self",
