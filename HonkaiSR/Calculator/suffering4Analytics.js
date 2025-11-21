@@ -4205,6 +4205,65 @@ const graphs = {
         shieldDisplayString += "</details>";
         overshieldDisplayString += "</details>";
 
+
+
+
+
+
+
+
+
+
+
+
+        const actionCountTotals = battleTotalsObject.Actions;
+        let actionCountDisplayString = `<details class="rotationsPermaConditionsExpand">
+        <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">ACTION COUNTS</summary>`;
+
+        for (let charEntry in actionCountTotals) {
+            const charActions = actionCountTotals[charEntry];
+
+            let entryLineStringer = "";
+            let totalCharacterActions = 0;
+            for (let dmgTypeEntry in charActions) {
+                totalCharacterActions += charActions[dmgTypeEntry];
+            }
+
+            const characterIconPath = "/HonkaiSR/" + (characters[charEntry] ? characters[charEntry].preview : (graphs.summonCustomImages[charEntry] ? graphs.summonCustomImages[charEntry] : graphs.enemyCustomImages["default"]))
+
+            for (let actionCountEntry in charActions) {
+                const currentActionCount = charActions[actionCountEntry];
+                const currentPercent = 100 * currentActionCount/totalCharacterActions
+
+                entryLineStringer += `
+                <div class="actionDetailBodyRowSummaryDMGBoxHolderACTIONBAR">
+                    <div class="rowSummaryDMGBarDynamicACTIONBAR" style="width:${currentPercent}%;background-color: ${dmgTypeColors[actionCountEntry]}"></div>
+                    <div class="rowSummaryDMGNameAndPercentACTIONBAR">${actionCountEntry}: ${currentActionCount.toLocaleString()} (${currentPercent.toLocaleString()}%)</div>
+                </div>
+                `;
+            }
+
+            let currentCharacterString = `<div class="summaryCharacterBreakdownPerCharBox">
+                <div class="summaryCharacterBreakdownInnerRowBox">
+                    <div class="summaryCharacterBreakdownInnerRowHeader">
+                        <div class="rotationsCharacterTargetPreviewBox">
+                            <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
+                        </div>
+                        ${charEntry}
+                    </div>
+                    
+                    <div class="summaryCharacterBreakdownInnerBarBoxHolder">
+                        ${entryLineStringer}
+                    </div>
+                </div>
+            `;
+
+            currentCharacterString += "</div>";
+
+            actionCountDisplayString += currentCharacterString;
+        }
+        actionCountDisplayString += "</details>";
+
         // {
         //     "DMG": {
         //         "Dan Heng • Permansor Terrae": {
@@ -4382,11 +4441,12 @@ const graphs = {
                         + divClose}
                 </div>
 
-                ${graphString}
-                ${dmgDisplayString}
-                ${overkillDisplayString}
-                ${healDisplayString + overhealDisplayString}
-                ${shieldDisplayString + overshieldDisplayString}
+                ${graphString +
+                dmgDisplayString +
+                overkillDisplayString +
+                actionCountDisplayString +
+                healDisplayString + overhealDisplayString +
+                shieldDisplayString + overshieldDisplayString}
                 `;
 
         // ${bulletsArray.length<=1 ? "" : lineString}
