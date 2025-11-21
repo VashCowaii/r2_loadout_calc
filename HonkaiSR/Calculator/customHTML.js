@@ -1593,7 +1593,27 @@ const conditionComparatorCharValueConversions = {
     "AVBase": "Base AV/Turn",
 }
 
-const conditionCharacterStatList = Object.keys(basicShorthand.reverseKeyMappings)
+let conditionCharacterStatList = Object.keys(greatTableKnowerOfAll);
+
+for (let i=conditionCharacterStatList.length-1;i>=0;i--) {
+    const currentValue = conditionCharacterStatList[i];
+
+    if (!currentValue) {
+        conditionCharacterStatList.splice(i,1);
+        continue;
+    }//we don't care about the blank entry we have on great table but we still need the blank entry itself there for index position used everywhere else
+
+    const convertedIndex = greatTableIndex[currentValue];
+
+    const group = basicShorthand.findStatObject(convertedIndex);
+    const set = group.sets[convertedIndex];
+    const detailedName = set.specific;
+
+    conditionCharacterStatList[i] = detailedName;
+}
+
+
+
 
 const rotationsUISuffering = {
     getConditionList(selected,conditionArray) {
