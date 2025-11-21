@@ -797,6 +797,15 @@
                                                 <div class="occlusionsToggleBox">
                                                     <img src="/HonkaiSR/misc/Body.png" class="queryFiltersRelicSlotIcon"/>
                                                     <div class="queryOcclusionsMainstatRow">
+
+                                                        <div class="queryOcclusionsToggleRow hasHoverTooltip" id="queries2pcMixingExplainer">
+                                                            <div class="occlusionOption">Relic set 2pc Mixing [?]</div>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="armorSetAllow2pcOcclusion" onchange="customHTML.updateOcclusion(`armorSetAllow2pc`,`armorSetAllow2pcOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                        </div>
+                                                        
                                                         <div class="queryOcclusionsToggleRow">
                                                             <span class="occlusionOption">Exclusion</span>
                                                             <label class="toggleContainer">
@@ -805,6 +814,17 @@
                                                             </label>
                                                             <span class="occlusionOption">Inclusion</span>
                                                         </div>
+                                                        <!-- <div class="queryOcclusionsToggleRow">
+                                                            <span class="occlusionOption">Relic set 2pc Mixing [?]</span>
+                                                            <label class="toggleContainer">
+                                                                <input type="checkbox" class="toggleCheckbox" id="armorSetOcclusion" onchange="customHTML.updateOcclusion(`armorSet`,`armorSetOcclusion`)">
+                                                                <span class="toggleSlider"></span>
+                                                            </label>
+                                                        </div> -->
+
+
+                                                        
+
                                                         <div class="statFiltersRowContainer">
                                                             <div class="presetsTitle">INPUT:</div>
                                                             <div class="presetsSelectorBox">
@@ -1249,14 +1269,6 @@
 
                                         <div class="filtersBoxHalfSearchSettings"><!-- search settings -->
                                             <div class="statFiltersRowHeader">Search</div>
-                                            <div class="statisticSettingsRow hasHoverTooltip" id="queries2pcMixingExplainer">
-                                                <div class="statsRowName">Relic set 2pc Mixing [?]</div>
-                                                <div class="statsRowToggle">
-                                                    <label class="toggleContainer">
-                                                        <input type="checkbox" class="toggleCheckbox" id="queriesAllow2pcSearch" onchange="userTriggers.updateQuerySearchSettings()"><span class="toggleSlider"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
                                             <!-- <div class="statisticSettingsRow hasHoverTooltip" id="queriesRollBundlingExplainer">
                                                 <div class="statsRowName">Relic Substat Increments:&nbsp;<span id="queriesRollsPerBundleDisplay">2</span>&nbsp;[?]</div>
                                                 <div class="statsRowToggle">
