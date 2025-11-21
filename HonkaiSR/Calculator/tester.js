@@ -1292,6 +1292,9 @@ const customMenu = {
         depositRef.order = [];
         let subCounter = 0;
         let currentCounter = 0;
+
+        let dupeSubFound = false;
+        let mainstatConflict = false;
         for (let entry of subStrings) {
             if (entry.name === "Main") {continue;}
             currentCounter++;
@@ -1306,15 +1309,15 @@ const customMenu = {
 
             if (entry.name === "Main") {
                 depositRef[`${part}Main`] = currentStatName;
-                for (let i=1;i<=4;i++) {
-                    if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName) {warningMessage.innerHTML += dupeMain;break;}
-                }
+                // for (let i=1;i<=4;i++) {
+                //     if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName) {warningMessage.innerHTML += dupeMain;break;}
+                // }
             }
             else {
                 subCounter += 1;
-                for (let i=1;i<=4;i++) {
-                    if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName && i-1 != entry.array) {warningMessage.innerHTML += dupeSub;break;}
-                }
+                // for (let i=1;i<=4;i++) {
+                //     if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName && i-1 != entry.array) {dupeSubFound = true;break;}
+                // }
 
                 depositRef[`${part}${subCounter}Stat`] = currentStatName;
 
@@ -1357,9 +1360,17 @@ const customMenu = {
                 depositRef[`${part}${subCounter}Value`] = +valueSelector.value;
             }
 
-            
+            const currentPartMainstat = depositRef[`${part}Main`];
+            for (let i=1;i<=4;i++) {
+                if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentPartMainstat) {mainstatConflict = true;}
+                if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName && i-1 != entry.array) {dupeSubFound = true;}
+            }
             // console.log(selectorRef.value)
         }
+
+
+        if (dupeSubFound) {warningMessage.innerHTML += dupeSub;}
+        if (mainstatConflict) {warningMessage.innerHTML += dupeMain;}
 
         if (!isSilent) {
             userTriggers.updateSelectedRelicStats(true);

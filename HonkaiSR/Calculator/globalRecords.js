@@ -258,7 +258,7 @@ let globalRecords = {
     "character": {
         "char1": {
             "name": "Saber",
-            "rank": 6,
+            "rank": 0,
             "lineup": 1,
             "lcName": "A Thankless Coronation",
             "lcRank": 1,
@@ -322,7 +322,7 @@ let globalRecords = {
         },
         "char2": {
             "name": "Sunday",
-            "rank": 1,
+            "rank": 0,
             "lineup": 1,
             "lcName": "A Grounded Ascent",
             "lcRank": 1,
