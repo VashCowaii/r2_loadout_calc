@@ -13,7 +13,7 @@ const compare = {
     updateThreadCountDisplay() {
         readSelection("selectedThreadCount").innerHTML = +readSelection("settingsOpenThreads").value;
     },
-    * getCharacterNeedsWants(querySettings,Needs,NeedsTeam,GivesTeam,AddTeamNeeds,planarSets,bodySets,lightconeSets) {
+    * getCharacterNeedsWants(querySettings,Needs,NeedsTeam,GivesTeam,AddTeamNeeds,planarSets,bodySets,lightconeSets,char2pcLock,char4pcLock,charHasBodyLock) {
         const allow2pc = querySettings.allow2pcSearch;
 
         for (let iLightcone = 0;iLightcone<lightconeSets.length;iLightcone++) {
@@ -49,8 +49,11 @@ const compare = {
                 }
                 const planar = {Item:currentPlanar,Gives:planarGives,GivesTeam:planarGivesTeam,Wants:planarWants,ValidSelf}
 
-                for (let i2pc = 0;i2pc<bodySets.length;i2pc++) {
-                    let current2pc1 = bodySets[i2pc];
+                const pc2Lock = char2pcLock.length;
+                const arrayToUse2pc = pc2Lock ? char2pcLock : bodySets;
+
+                for (let i2pc = 0;i2pc<arrayToUse2pc.length;i2pc++) {
+                    let current2pc1 = arrayToUse2pc[i2pc];
                     const maslow2pc1 = maslow[current2pc1]["2"];
                     // let lookingFor4PC = false;
                     const pc2Gives = new Set (maslow2pc1.gives);
@@ -64,10 +67,13 @@ const compare = {
                     }
                     const pc2 = {Item:current2pc1,Gives:pc2Gives,GivesTeam:pc2GivesTeam,Wants:pc2Wants,ValidSelf};
 
-                    if (allow2pc) {
-                        for (let i4pc = i2pc;i4pc<bodySets.length;i4pc++) {
+                    const pc4Lock = char4pcLock.length;
+                    if (allow2pc || pc4Lock || pc2Lock) {
+                        
+                        const arrayToUse4pc = pc4Lock ? char4pcLock : bodySets;
+                        for (let i4pc = pc4Lock || pc2Lock ? 0 : i2pc;i4pc<arrayToUse4pc.length;i4pc++) {
                             //4pc = 2pc here bc the 2pc + 2pc can match in order to make the 4pc, otherwise this is technically 2pc and 2pc separate, idk why I bother naming it like this
-                            let current2pc2 = bodySets[i4pc];
+                            let current2pc2 = arrayToUse4pc[i4pc];
                             const is4pc = current2pc2 === current2pc1;
                             // const SKIPAMOUNT = chestKeys.length * bootKeys.length * orbKeys.length * ropeKeys.length;
                             const maslow2pc2 = maslow[current2pc2][is4pc ? "4" : "2"];
@@ -87,7 +93,7 @@ const compare = {
                         }
                     }
                     else {//if 2pc mixing isn't allowed, bypass the entire loop for pc checks and directly feed the 2pc set into the 4pc as well to match it
-                        let current2pc2 = bodySets[i2pc];
+                        let current2pc2 = arrayToUse2pc[i2pc];
                         const is4pc = current2pc2 === current2pc1;
                         // const SKIPAMOUNT = chestKeys.length * bootKeys.length * orbKeys.length * ropeKeys.length;
                         const maslow2pc2 = maslow[current2pc2][is4pc ? "4" : "2"];
@@ -563,11 +569,35 @@ const compare = {
         
 
         pushDebug(`FILTER: Relics - Starting`);
+
+        // char12pcLock,char14pcLock,char1HasBodyLock
+        const char12pcLock = char1Filters.armorSetLocks2pc;
+        const char14pcLock = char1Filters.armorSetLocks4pc;
+        const char1HasBodyLock = char12pcLock.length && char14pcLock.length;
         const char1FilteredBody = applyFilters(bodySets,char1Filters.armorSetOcclusions,char1Filters.armorSet,null);
+
+        const char22pcLock = char2Filters.armorSetLocks2pc;
+        const char24pcLock = char2Filters.armorSetLocks4pc;
+        const char2HasBodyLock = char22pcLock.length && char24pcLock.length;
         const char2FilteredBody = applyFilters(bodySets,char2Filters.armorSetOcclusions,char2Filters.armorSet,null);
+
+        const char32pcLock = char3Filters.armorSetLocks2pc;
+        const char34pcLock = char3Filters.armorSetLocks4pc;
+        const char3HasBodyLock = char32pcLock.length && char34pcLock.length;
         const char3FilteredBody = applyFilters(bodySets,char3Filters.armorSetOcclusions,char3Filters.armorSet,null);
+
+        const char42pcLock = char4Filters.armorSetLocks2pc;
+        const char44pcLock = char4Filters.armorSetLocks4pc;
+        const char4HasBodyLock = char42pcLock.length && char44pcLock.length;
         const char4FilteredBody = applyFilters(bodySets,char4Filters.armorSetOcclusions,char4Filters.armorSet,null);
-        // console.log()
+
+        console.log(char42pcLock,char44pcLock)
+
+        // char1Filters
+
+        // armorSetLocks2pc: [],
+        // armorSetLocks4pc: [],
+
         pushDebug(`FILTER: Relics - Completed`);
         yield;
 
@@ -900,7 +930,7 @@ const compare = {
         let countedReached = 0;
         let lastSentCounted = 0;
         console.log("reached counting")
-        for (let char1Result of getNeeds(querySettings,char1Needs,char1NeedsTeam,char1GivesTeam,char1AddsTeamNeed,char1FilteredPlanar,char1FilteredBody,char1FilteredLightcone)) {
+        for (let char1Result of getNeeds(querySettings,char1Needs,char1NeedsTeam,char1GivesTeam,char1AddsTeamNeed,char1FilteredPlanar,char1FilteredBody,char1FilteredLightcone,char12pcLock,char14pcLock,char1HasBodyLock)) {
             // console.log("reached at all")
             const char1PlanarCheck = char1Result.planar;
             const char12pcCheck = char1Result.pc2;
@@ -917,7 +947,7 @@ const compare = {
             const char14pcGivesTeam = char14pcCheck.GivesTeam;
             const char1LightconeGivesTeam = char1Lightcone.GivesTeam;
 
-            for (let char2Result of getNeeds(querySettings,char2Needs,char2NeedsTeam,char2GivesTeam,char2AddsTeamNeed,char2FilteredPlanar,char2FilteredBody,char2FilteredLightcone)) {
+            for (let char2Result of getNeeds(querySettings,char2Needs,char2NeedsTeam,char2GivesTeam,char2AddsTeamNeed,char2FilteredPlanar,char2FilteredBody,char2FilteredLightcone,char22pcLock,char24pcLock,char2HasBodyLock)) {
                 const char2PlanarCheck = char2Result.planar;
                 const char22pcCheck = char2Result.pc2;
                 const char24pcCheck = char2Result.pc4;
@@ -933,7 +963,7 @@ const compare = {
                 const char24pcGivesTeam = char24pcCheck.GivesTeam;
                 const char2LightconeGivesTeam = char2Lightcone.GivesTeam;
 
-                for (let char3Result of getNeeds(querySettings,char3Needs,char3NeedsTeam,char3GivesTeam,char3AddsTeamNeed,char3FilteredPlanar,char3FilteredBody,char3FilteredLightcone)) {
+                for (let char3Result of getNeeds(querySettings,char3Needs,char3NeedsTeam,char3GivesTeam,char3AddsTeamNeed,char3FilteredPlanar,char3FilteredBody,char3FilteredLightcone,char32pcLock,char34pcLock,char3HasBodyLock)) {
                     const char3PlanarCheck = char3Result.planar;
                     const char32pcCheck = char3Result.pc2;
                     const char34pcCheck = char3Result.pc4;
@@ -949,7 +979,7 @@ const compare = {
                     const char34pcGivesTeam = char34pcCheck.GivesTeam;
                     const char3LightconeGivesTeam = char3Lightcone.GivesTeam;
 
-                    for (let char4Result of getNeeds(querySettings,char4Needs,char4NeedsTeam,char4GivesTeam,char4AddsTeamNeed,char4FilteredPlanar,char4FilteredBody,char4FilteredLightcone)) {
+                    for (let char4Result of getNeeds(querySettings,char4Needs,char4NeedsTeam,char4GivesTeam,char4AddsTeamNeed,char4FilteredPlanar,char4FilteredBody,char4FilteredLightcone,char42pcLock,char44pcLock,char4HasBodyLock)) {
                         const char4PlanarCheck = char4Result.planar;
                         const char42pcCheck = char4Result.pc2;
                         const char44pcCheck = char4Result.pc4;
@@ -1304,7 +1334,7 @@ const compare = {
         const queries5starSuperValue = querySettings.queries5starSuperValue;
         const queries4starSuperValue = querySettings.queries4starSuperValue;
 
-        for (let char1Result of getNeeds(querySettings,char1Needs,char1NeedsTeam,char1GivesTeam,char1AddsTeamNeed,char1FilteredPlanar,char1FilteredBody,char1FilteredLightcone)) {
+        for (let char1Result of getNeeds(querySettings,char1Needs,char1NeedsTeam,char1GivesTeam,char1AddsTeamNeed,char1FilteredPlanar,char1FilteredBody,char1FilteredLightcone,char12pcLock,char14pcLock,char1HasBodyLock)) {
             // console.log("reached at all")
             const char1PlanarCheck = char1Result.planar;
             const char12pcCheck = char1Result.pc2;
@@ -1329,7 +1359,7 @@ const compare = {
 
             
 
-            for (let char2Result of getNeeds(querySettings,char2Needs,char2NeedsTeam,char2GivesTeam,char2AddsTeamNeed,char2FilteredPlanar,char2FilteredBody,char2FilteredLightcone)) {
+            for (let char2Result of getNeeds(querySettings,char2Needs,char2NeedsTeam,char2GivesTeam,char2AddsTeamNeed,char2FilteredPlanar,char2FilteredBody,char2FilteredLightcone,char22pcLock,char24pcLock,char2HasBodyLock)) {
                 const char2PlanarCheck = char2Result.planar;
                 const char22pcCheck = char2Result.pc2;
                 const char24pcCheck = char2Result.pc4;
@@ -1346,7 +1376,7 @@ const compare = {
                 const char24pcGivesTeam = char24pcCheck.GivesTeam;
                 const char2LightconeGivesTeam = char2Lightcone.GivesTeam;
 
-                for (let char3Result of getNeeds(querySettings,char3Needs,char3NeedsTeam,char3GivesTeam,char3AddsTeamNeed,char3FilteredPlanar,char3FilteredBody,char3FilteredLightcone)) {
+                for (let char3Result of getNeeds(querySettings,char3Needs,char3NeedsTeam,char3GivesTeam,char3AddsTeamNeed,char3FilteredPlanar,char3FilteredBody,char3FilteredLightcone,char32pcLock,char34pcLock,char3HasBodyLock)) {
                     const char3PlanarCheck = char3Result.planar;
                     const char32pcCheck = char3Result.pc2;
                     const char34pcCheck = char3Result.pc4;
@@ -1363,7 +1393,7 @@ const compare = {
                     const char34pcGivesTeam = char34pcCheck.GivesTeam;
                     const char3LightconeGivesTeam = char3Lightcone.GivesTeam;
 
-                    for (let char4Result of getNeeds(querySettings,char4Needs,char4NeedsTeam,char4GivesTeam,char4AddsTeamNeed,char4FilteredPlanar,char4FilteredBody,char4FilteredLightcone)) {
+                    for (let char4Result of getNeeds(querySettings,char4Needs,char4NeedsTeam,char4GivesTeam,char4AddsTeamNeed,char4FilteredPlanar,char4FilteredBody,char4FilteredLightcone,char42pcLock,char44pcLock,char4HasBodyLock)) {
                         const char4PlanarCheck = char4Result.planar;
                         const char42pcCheck = char4Result.pc2;
                         const char44pcCheck = char4Result.pc4;
