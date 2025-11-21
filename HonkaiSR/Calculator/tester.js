@@ -1911,13 +1911,13 @@ const userTriggers = {
         // }
 
 
-        const traceSummaryBoxElem = readSelection("characterMainCenterDisplayTracesSummary");
-        if (elementID === 3) {//3 is Traces
-            traceSummaryBoxElem.style.display = "flex";
-        }
-        else {
-            traceSummaryBoxElem.style.display = "none";
-        }
+        // const traceSummaryBoxElem = readSelection("characterMainCenterDisplayTracesSummary");
+        // if (elementID === 3) {//3 is Traces
+        //     traceSummaryBoxElem.style.display = "flex";
+        // }
+        // else {
+        //     traceSummaryBoxElem.style.display = "none";
+        // }
 
         //mainStatsDisplay
     },
@@ -2397,7 +2397,7 @@ const userTriggers = {
 
 
         const traceSummaryBoxElem = readSelection("characterMainCenterDisplayTracesSummary");
-        traceSummaryBoxElem.style.display = "flex";
+        // traceSummaryBoxElem.style.display = "flex";
 
         const currentCharacterName = globalRecords.character[charSlot].name;
         const characterTraceRef = characters[currentCharacterName].traces;

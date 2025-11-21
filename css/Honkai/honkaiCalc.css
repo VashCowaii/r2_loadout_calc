@@ -1292,6 +1292,7 @@ div {
     align-items: center;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
     border-bottom: 1px solid#e1e1e4;
     border-top: 1px solid#e1e1e4;
     border-radius: 10px;
@@ -1696,11 +1697,16 @@ div {
 }
 
 .centerDisplayHolderBoxTraceSummary {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
+
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+
 }
 .traceSummaryEntryBox {
     display: flex;
