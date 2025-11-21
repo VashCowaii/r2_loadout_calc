@@ -3654,11 +3654,14 @@ const userTriggers = {
         const occlusionToggles = [
             {tableName: "lightcone",tableElem: "lightconeOcclusion"},
             {tableName: "armorSet",tableElem: "armorSetOcclusion"},
+            {tableName: "armorSetAllow2pc",tableElem: "armorSetAllow2pcOcclusion"},
             {tableName: "planarSet",tableElem: "planarSetOcclusion"},
             {tableName: "mainstatBody",tableElem: "mainstatBodyOcclusion"},
             {tableName: "mainstatFeet",tableElem: "mainstatFeetOcclusion"},
             {tableName: "mainstatOrb",tableElem: "mainstatOrbOcclusion"},
             {tableName: "mainstatRope",tableElem: "mainstatRopeOcclusion"},
+
+            
             // {tableName: "substat",tableElem: "substatOcclusion"},
         ];
 
@@ -3764,7 +3767,6 @@ const userTriggers = {
 
             // "querySettings": {
             //     "enforceBattlesWon": false,
-            //     "allow2pcSearch": false,
 
             //     "substatRollValue": "Mid",
             //     "rollsPerRelic": 4,
@@ -3977,11 +3979,6 @@ const userTriggers = {
         readSelection("finalBaseRollsSettings").innerHTML = usableBaseRolls + "/24";
         readSelection("finalAddedRollsSettings").innerHTML = ((rollsPerRelic - failedAddedRolls)*6) + "/" + (rollsPerRelic * 6);
         readSelection("finalUsableTotalSettings").innerHTML = ((rollsPerRelic - failedAddedRolls)*6 + usableBaseRolls) + "/" + (rollsPerRelic * 6 + 24)
-
-
-
-        const allow2pcSearch = readSelection("queriesAllow2pcSearch").checked;
-        querySettings.allow2pcSearch = allow2pcSearch;
 
 
         // const minimumAddedRoll = +readSelection("queriesMinimumAddedRoll").value;

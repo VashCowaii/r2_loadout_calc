@@ -57,6 +57,7 @@ let globalUI = {
 
             lightcone: false,
             armorSet: false,
+            armorSetAllow2pc: false,
             planarSet: false,
             mainstatBody: false,
             mainstatFeet: false,
@@ -93,6 +94,7 @@ let globalUI = {
 
             lightcone: false,
             armorSet: false,
+            armorSetAllow2pc: false,
             planarSet: false,
             mainstatBody: false,
             mainstatFeet: false,
@@ -129,6 +131,7 @@ let globalUI = {
 
             lightcone: false,
             armorSet: false,
+            armorSetAllow2pc: false,
             planarSet: false,
             mainstatBody: false,
             mainstatFeet: false,
@@ -165,6 +168,7 @@ let globalUI = {
 
             lightcone: false,
             armorSet: false,
+            armorSetAllow2pc: false,
             planarSet: false,
             mainstatBody: false,
             mainstatFeet: false,
@@ -237,7 +241,7 @@ let globalRecords = {
     },
     "querySettings": {
         "enforceBattlesWon": false,
-        "allow2pcSearch": false,
+        // "allow2pcSearch": false,
 
         "substatRollValue": "High",
         "rollsPerRelic": 4,
