@@ -3073,7 +3073,7 @@ const rotationsUISuffering = {
 
                     <div class="rotationsConditionsRowHeader">
                         <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-                            ${getConditionList("Character: State",conditionListArray)}
+                            ${getConditionList("Character: Special Value",conditionListValueArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
                             ${getConditionList(destination.target ?? "Self",conditionListChars)}
