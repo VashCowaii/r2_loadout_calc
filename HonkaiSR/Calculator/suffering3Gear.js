@@ -1772,56 +1772,38 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//abort non-owners
 
-                    const tempLogic = battleData.battleLogicTemp;
-                    tempLogic.battleIsntOverBuff ??= {};
-                    tempLogic.battleIsntOverBuff.Ready = true;
-                    tempLogic.battleIsntOverBuff.Rank = ownerRank;
-                    //even if multiple people own this lc in a single battle, it will be impossible to proc more than one instance of buff ever
-                    //bc a skill can only be cast on one's own turn, and the next person after will always consume the buff before they could cast theirs too
+                    const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
+                    if (!nextAllyTurn) {return;}
+
+                    if (!sourceTurn.battleIsntOverSkillEndSHEET) {
+                        let lcNameRef = "But the Battle Isn't Over";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        let values = rankParams[1];
+
+                        sourceTurn.battleIsntOverSkillEndSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: values,
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": lcNameRef,
+                            "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
+                    battleActions.updateBuff(battleData,nextAllyTurn,buffSheet);
+
+                    //confirmed it works like this by using the skill on a character when souldragon from dan was next, and archer was after souldragon.
+                    //the moment the skill ended, archer got the buff bc souldragon was not a valid entity for buffing.
                 },
                 "target": "self",
                 "listenerName": "But the Battle Isn't Over buff prep controller",
-                "owners": []
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownerRank = ownersSlots[sourceTurn.name]
-                    if (ownerRank || sourceTurn.isEnemy || (sourceTurn.isSummon && !sourceTurn.isMemosprite)) {return;}//THIS TIME WE ABORT IF OWNED, RARE CASE
-
-                    const tempLogic = battleData.battleLogicTemp.battleIsntOverBuff;
-                    if (!tempLogic || !tempLogic.Ready) {return;}//if the buff isn't ready or this logic doesn't exist yet, then abort
-
-                    let lcNameRef = "But the Battle Isn't Over";
-                    let lcPathing = lightcones[lcNameRef].params;
-                    let rankParams = lcPathing[tempLogic.Rank-1];
-                    tempLogic.Ready = false;
-                    let values = rankParams[1];
-                
-                    //TODO: look into where I could store the buffsheet, maybe battlelogic temp I guess
-                    //just an odd one bc I can't store the sheet on an owner since this can't proc on owners
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageAll],
-                        [DamageAll]: values,
-                        "source": lcNameRef,
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": lcNameRef,
-                        "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
-                        "AVApplied": battleData.sumAV,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "EndTurn"
-                    }
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-                    tempLogic.battleIsntOverBuffReady = false;
-                },
-                "target": "self",
-                "listenerName": "But the Battle Isn't Over buff application",
                 "owners": []
             },
         ],
