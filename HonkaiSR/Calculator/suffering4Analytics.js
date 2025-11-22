@@ -729,6 +729,30 @@ const compare = {
         const char4SubstatBounds3 = char4Filters.substat3;
         const char4SubstatBounds4 = char4Filters.substat4;
 
+
+
+        // totalRollPoolAdded
+        const char1MinimumTotal = char1SubstatBounds1[0] + char1SubstatBounds2[0] + char1SubstatBounds3[0] + char1SubstatBounds4[0];
+        const char2MinimumTotal = char2SubstatBounds1[0] + char2SubstatBounds2[0] + char2SubstatBounds3[0] + char2SubstatBounds4[0];
+        const char3MinimumTotal = char3SubstatBounds1[0] + char3SubstatBounds2[0] + char3SubstatBounds3[0] + char3SubstatBounds4[0];
+        const char4MinimumTotal = char4SubstatBounds1[0] + char4SubstatBounds2[0] + char4SubstatBounds3[0] + char4SubstatBounds4[0];
+
+        const char1ExceedsPoolValue = char1MinimumTotal > totalRollPoolAdded;
+        const char2ExceedsPoolValue = char2MinimumTotal > totalRollPoolAdded;
+        const char3ExceedsPoolValue = char3MinimumTotal > totalRollPoolAdded;
+        const char4ExceedsPoolValue = char4MinimumTotal > totalRollPoolAdded;
+
+        const anyoneExceedsPoolValue = char1ExceedsPoolValue || char2ExceedsPoolValue || char3ExceedsPoolValue || char4ExceedsPoolValue;
+
+        if (anyoneExceedsPoolValue) {
+            alert(`The following character(s) have minimum substat values that exceed the total added rolls possible within your settings.\n
+                ${(char1ExceedsPoolValue ? "[Char1]": "")+(char2ExceedsPoolValue ? "[Char2]": "")+(char3ExceedsPoolValue ? "[Char3]": "")+(char4ExceedsPoolValue ? "[Char4]": "")}
+                \nIf you are unable to change the floor value on any given stat related to these characters, then instead go to search settings and raise the total added rolls possible`);
+            cyclesLoop.abortCycles();
+            return;
+        }
+
+
         // substat1: [1,30],
         // substat2: [1,30],
         // substat3: [1,30],
