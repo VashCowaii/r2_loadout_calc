@@ -2159,34 +2159,65 @@ div {
 
 .turnOrderDisplayPreview, .turnOrderDisplayPreviewEnemyGlorp, .turnOrderDisplayPreviewUltimate, .turnOrderDisplayPreviewUltimateSummon .turnOrderDisplayPreviewEventIcon, .turnOrderDisplayPreviewEventAction {
     height: 100%;
+    /* max-height: 100%; */
     width: auto;
+    /* max-width: 100%; */
     object-fit: contain;
     scale: 4;
     transform:translate(20%,20%);
     mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    box-sizing: border-box;
+}
+.turnOrderDisplayPreview {
+    /* transform:translate(-20%,5%);
+    scale: 0.5; */
+    /* object-fit: none; */
+    /* scale: 3.7; */
+    height: 200px;
+    width: auto;
+    scale: 1;
+    transform:translate(-10%,20%);
+    /* background-color: white; */
 }
 .turnOrderDisplayPreviewEnemyGlorp {
-    scale: 1;
+    /* scale: 1;
     transform: none;
-    transform: translateX(50%);
+    transform: translateX(50%); */
     mask-image: none;
+    /* max-height: 100%; */
+    /* max-width: ; */
+
+    height: 60px;
+    width: auto;
+    scale: .8;
+    transform:translate(30%,0%);
 }
 .turnOrderDisplayPreviewUltimate {
-    transform:translate(40%,20%) ;
-    scale: 8;
+    /* transform:translate(40%,20%);
+    scale: 8; */
+
+    height: 200px;
+    width: auto;
+    scale: 0.9;
+    transform:translate(-10%,20%);
 }
 .turnOrderDisplayPreviewUltimateSummon {
-    transform:translate(-50%,5%) ;
+    transform:translate(-50%,5%);
     scale: 0.5;
 }
 .turnOrderDisplayPreviewEventAction {
-    transform:translate(80%,5%) ;
-    scale: 3;
+    /* transform:translate(80%,5%);
+    scale: 3; */
+
+    height: 90px;
+    width: auto;
+    scale: 0.7;
+    transform:translate(-10%,0%);
 }
 .turnOrderDisplayPreviewEventIcon {
     /* scale: 2;
     transform:translate(60%,0%); */
-    transform:translate(-20%,5%) ;
+    transform:translate(-20%,5%);
     scale: 0.5;
 }
 
