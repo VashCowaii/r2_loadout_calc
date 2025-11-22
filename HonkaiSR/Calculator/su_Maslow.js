@@ -148,7 +148,8 @@ const maslowCategoryRelics = {
         4: {
             gives: [],
             givesTeam: ["CritDMG"],
-            wants: ["TargetAllies"],
+            wants: [],
+            // wants: ["TargetAllies"],
             wantsTeam: [],
             addTeamWant: [],
         }
@@ -957,7 +958,7 @@ const maslowLightconesHarmony = {
         addTeamWant: [],
     },
     "Dance! Dance! Dance!": {
-        gives: [],
+        gives: ["Advance"],
         givesTeam: ["Advance"],
         wants: [],
         wantsTeam: [],
@@ -2429,7 +2430,7 @@ const maslowCharactersHarmony = {
         },
         6: {
             gives: [],
-            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD"],
+            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD","TargetAllies"],
             wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             addTeamWant: [],
@@ -2558,7 +2559,7 @@ const maslowCharactersPreservation = {
         // ["ATK%","DEF%","EffectRES","SPDFlat"]
         defaultTrashSub: "ATKFlat",
         0: {
-            gives: ["SummonSource","FUASource","Cleanse"],
+            gives: ["SummonSource","FUASource","Cleanse","ShieldSource"],
             givesTeam: ["ShieldSource","SummonAssign","Cleanse"],
             wants: ["ATK",...hasFUA,...isShielder,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             wantsTeam: ["ATK",...hasFUA,...isShielder,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],

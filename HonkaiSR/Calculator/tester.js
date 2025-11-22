@@ -942,11 +942,12 @@ const customMenu = {
                 //     <div class="actionDetailBodyCenterTags">Toughness: ${(enemyData.currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString()} --> ${enemyData.currentToughness.toLocaleString()}/${enemyData.maxToughness.toLocaleString()}</div>
                 //     `: ""}
 
+                const actualReductionDisplayText = hitData.toughnessBase ? (currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString() + " --> " : "";
                 toughnessString += `
                 <div class="buffNameBreakdownClickerHeaderBoxTOUGHNESSROW">
                     <div class="buffToughnessHealthDisplayFilled" style="width: ${toughnessRatio*100}%"></div>
                     <div class="buffShieldHealthDisplayMissing" style="width: ${100 - (toughnessRatio*100)}%"></div>
-                    <div class="buffToughnessHealthValueDisplay">Toughness: ${(currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString()} --> ${currentToughness.toLocaleString()}/${maxToughness.toLocaleString()}</div>
+                    <div class="buffToughnessHealthValueDisplay">Toughness: ${actualReductionDisplayText}${currentToughness.toLocaleString()}/${maxToughness.toLocaleString()}</div>
                 </div>`;
 
                 const enemyStatTable = enemyData.statTable;
@@ -978,10 +979,11 @@ const customMenu = {
 
             const breakString = currentAction.hitType === "SuperBreak" || currentAction.hitType === "Break" ? `
             <div class="totalHealingBoxBreakdownRows">
-                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                ${hitData.instanceMulti ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                     <div class="totalHealingHeader">Instance</div>
-                    <div class="totalHealingValueBoss">${(hitData.instanceMulti * 100).toLocaleString()}%</div>
-                </div>
+                    <div class="totalHealingValueBoss">${(hitData.instanceMulti * 100).toLocaleString() }%</div>
+                </div>` : ""}
+                
                 ${hitData.finalMulti > 1 ? `
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">Final Multi</div>
@@ -1088,10 +1090,11 @@ const customMenu = {
                         <div class="totalHealingHeader">${hitData.bonudDMGCustomRefName ?? "No ref given"} Multi</div>
                         <div class="totalHealingValueBoss">${(hitData.bonusDMGMulti * 100).toLocaleString() ?? 0}%</div>
                     </div>` : ""}
-                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                ${hitData.currentSplit ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                     <div class="totalHealingHeader">Split</div>
                     <div class="totalHealingValueBoss">${(hitData.currentSplit * 100).toLocaleString()}%</div>
-                </div>
+                </div>` : ""}
+                
                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                     <div class="totalHealingHeader">Multi</div>
                     <div class="totalHealingValueBoss">${(hitData.currentMulti * 100).toLocaleString()}%</div>
@@ -3195,7 +3198,9 @@ const userTriggers = {
                 case "EnergyChange":
                     // battleData.battleLog.push({logType: "EnergyChange", target: battleDataCharacterRow.properName, amount, oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, maximum, source:sourceName})
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
-                        <img src="/HonkaiSR/${characters[action.target].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.target].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>
                         <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
                         ${action.isOverflow ? "[OVERFLOW] " : ""}${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` [${action.source}]` : ""}
                     </div>`;
@@ -3238,7 +3243,9 @@ const userTriggers = {
 
                     // filter: brightness(0)
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
-                        <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>
                         ${SPString}
                         
                         
@@ -3272,11 +3279,15 @@ const userTriggers = {
                     // sourceOwner: buffSheet.sourceOwner
                     // console.log(action)
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
-                        ${action.sourceOwner != action.name ? `<img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>` : ""}
+                        ${action.sourceOwner != action.name ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>` : ""}
                         <img src="/HonkaiSR/misc/UpArrowBuffGain.png" class="characterDisplayLogStatIcon"/>
-                        ${action.name.toLowerCase().includes("enemy") ? `
-                            <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
-                        `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            ${action.name.toLowerCase().includes("enemy") ? `
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                            `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        </div>
                         
                         
                         <div class="actionDetailBody">
@@ -3292,11 +3303,15 @@ const userTriggers = {
                     // returnString = `<div class="actionDetailBody">--Lost${action.isShield ? ` [SHIELD]` : ""} buff "${action.buffName}" --> ${action.name} (${action.stacks} stack${action.stacks>1 ? "s" : ""}) -- Source: ${action.source}</div>`;
                     // console.log(action.buffName,action)
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
-                        ${action.sourceOwner != action.name ? `<img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>` : ""}
+                        ${action.sourceOwner != action.name ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            </div>` : ""}
                         <img src="/HonkaiSR/misc/DownArrowBuffLoss.png" class="characterDisplayLogStatIcon"/>
-                        ${action.name.toLowerCase().includes("enemy") ? `
-                            <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
-                        `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            ${action.name.toLowerCase().includes("enemy") ? `
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                            `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        </div>
                         
                         <div class="actionDetailBody">
                         ${action.isShield ? ` [SHIELD]` : ""} "${action.buffName}" (${action.stacks} stack${action.stacks>1 ? "s" : ""}) -- Source: ${action.source}</div>
@@ -3314,7 +3329,9 @@ const userTriggers = {
                     // returnString = `<div class="actionDetailBody">--${action.bodyText} -- Source: ${action.source}</div>`;
 
                     returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
-                        <img src="/HonkaiSR/${characters[action.sourceName].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.sourceName].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>
                         <img src="${action.imagePath}" class="characterDisplayLogStatIcon"/>
                         <div class="actionDetailBody">${action.bodyText}</div>
                     </div>`;
@@ -3404,12 +3421,36 @@ const userTriggers = {
                 case "HealAlly":
                     let hitDataHealing = action.hitData; //#C4FE50
                     const healColorOpening = `<span style="color:#C4FE50;">`;
-                    const healColorClose = `</span>`
-                    returnString = `<div class="actionDetailBody">
+                    const healColorClose = `</span>`;
+                    // returnString = `<div class="actionDetailBody">
+                    //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                    //     ${action.source} healed ${action.target} for&nbsp;${healColorOpening}${hitDataHealing.totalHealed.toLocaleString()}${healColorClose} ${hitDataHealing.overHeal ? `(Overheal ${hitDataHealing.overHeal.toLocaleString()})` : ""}
+                    // </div>`;
+
+                    returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
+
                         <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                        ${action.source} healed ${action.target} for&nbsp;${healColorOpening}${hitDataHealing.totalHealed.toLocaleString()}${healColorClose} ${hitDataHealing.overHeal ? `(Overheal ${hitDataHealing.overHeal.toLocaleString()})` : ""}
+
+                        
+                            ${action.target != action.source ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                <img src="/HonkaiSR/${characters[action.source] ? characters[action.source].icon : (graphs.summonCustomImages[action.source] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            </div>` : ""}
+                        
+                        <img src="/HonkaiSR/misc/IconHealRatio.png" class="characterDisplayLogStatIcon"/>
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            ${action.target.toLowerCase().includes("enemy") ? `
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                            `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        </div>
+                        
+                        
+                        <div class="actionDetailBody">
+                            for&nbsp;${healColorOpening}${hitDataHealing.totalHealed.toLocaleString()}${healColorClose} ${hitDataHealing.overHeal ? `(Overheal ${hitDataHealing.overHeal.toLocaleString()})` : ""}
+                        </div>
+
                     </div>`;
-                    // logToBattle(battleData,{logType: "HealAlly", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData});
+
+                    // logToBattle(battleData,{logType: "HealAlly", target: targetTurn.properName, source:sourceTurn.properName, hitData});
                     break;
                 case "EnemyCreated":
                     let enemyData = JSON.parse(action.turnRef);
