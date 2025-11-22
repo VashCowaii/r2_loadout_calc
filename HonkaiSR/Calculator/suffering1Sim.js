@@ -198,11 +198,47 @@ const sim = {
             //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
             //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
             // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-            if (!obj.isEnemy && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+            const objIsEvent = obj.isUniqueEvent && !obj.isMemosprite && !obj.isSummon;
+            const objIsEventOrEnemy = objIsEvent || obj.isEnemy;
+            if (!objIsEventOrEnemy && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
 
-            if (!obj.isEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
-            if (!obj.isEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-            if (!obj.isEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+            if (!objIsEventOrEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
+            if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+            if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+            return min;
+        });
+
+        // if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
+        //     //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
+        //     // console.log(`CYCLE --${battleData.currentCycle}-- END`);
+        //     battleData.currentCycle += 1;
+        //     // console.log(`CYCLE --${battleData.currentCycle}-- START`);
+
+        //     for (let AVentry of nextTurnAV) {
+        //         AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
+        //     }
+        //     battleData.sumAV += battleData.cycleAV;
+        //     battleData.cycleAV = 100;
+        //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
+            
+
+        //     return null;
+        // }
+        return nextOrder;
+    },
+    getNextQueuedAllyTurnBuffableOnly(battleData,isConditionCheck) {
+        const nextTurnAV = battleData.nextTurnAV;
+        let nextOrder = nextTurnAV.reduce((min, obj) => {
+            //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+            //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+            // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+            const objIsSummon = obj.isUniqueEvent && !obj.isMemosprite;
+            const isEnemyOrSummon = objIsSummon || obj.isEnemy;
+            if (!isEnemyOrSummon && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+            if (!isEnemyOrSummon && obj.AV < min.AV) {return obj;}//look for lowest action value first
+            if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+            if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
             return min;
         });
 

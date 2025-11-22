@@ -8367,7 +8367,8 @@ const turnLogic = {
             // let skillPointsCheck = currentSP > 3;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.bronyaAdvance, target: battleData.nameBasedTurns.char1, endTurn: true};
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.bronyaAdvance, target: null, endTurn: true};
+                returnSkillCall.target = battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
