@@ -1791,7 +1791,7 @@ const turnLogicLightcones = {
                     let sourceTurn = generalInfo.sourceTurn;
 
                     let ownerRank = ownersSlots[sourceTurn.name]
-                    if (ownerRank || sourceTurn.isEnemy) {return;}//THIS TIME WE ABORT IF OWNED, RARE CASE
+                    if (ownerRank || sourceTurn.isEnemy || (sourceTurn.isSummon && !sourceTurn.isMemosprite)) {return;}//THIS TIME WE ABORT IF OWNED, RARE CASE
 
                     const tempLogic = battleData.battleLogicTemp.battleIsntOverBuff;
                     if (!tempLogic || !tempLogic.Ready) {return;}//if the buff isn't ready or this logic doesn't exist yet, then abort

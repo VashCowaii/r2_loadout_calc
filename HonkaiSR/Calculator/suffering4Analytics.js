@@ -824,10 +824,10 @@ const compare = {
         globalRecords.currentWorstResult = null;
         // console.log()
 
-        pushDebug(`COMBOS: Char 1 - ${character1PossibleChecks.toLocaleString()}`);
-        pushDebug(`COMBOS: Char 2 - ${character2PossibleChecks.toLocaleString()}`);
-        pushDebug(`COMBOS: Char 3 - ${character3PossibleChecks.toLocaleString()}`);
-        pushDebug(`COMBOS: Char 4 - ${character4PossibleChecks.toLocaleString()}`);
+        pushDebug(`COMBOS: Char 1 - ${character1PossibleChecks.toLocaleString()} [${char1FilteredPlanar.length}][${char1BodyComboCount}][${char1FilteredChest.length}][${char1FilteredFeet.length}][${char1FilteredOrb.length}][${char1FilteredRope.length}][${char1FilteredLightcone.length}][${substatsSkipsPerCharacter}]`);
+        pushDebug(`COMBOS: Char 2 - ${character2PossibleChecks.toLocaleString()} [${char2FilteredPlanar.length}][${char2BodyComboCount}][${char2FilteredChest.length}][${char2FilteredFeet.length}][${char2FilteredOrb.length}][${char2FilteredRope.length}][${char2FilteredLightcone.length}][${substatsSkipsPerCharacter}]`);
+        pushDebug(`COMBOS: Char 3 - ${character3PossibleChecks.toLocaleString()} [${char3FilteredPlanar.length}][${char3BodyComboCount}][${char3FilteredChest.length}][${char3FilteredFeet.length}][${char3FilteredOrb.length}][${char3FilteredRope.length}][${char3FilteredLightcone.length}][${substatsSkipsPerCharacter}]`);
+        pushDebug(`COMBOS: Char 4 - ${character4PossibleChecks.toLocaleString()} [${char4FilteredPlanar.length}][${char4BodyComboCount}][${char4FilteredChest.length}][${char4FilteredFeet.length}][${char4FilteredOrb.length}][${char4FilteredRope.length}][${char4FilteredLightcone.length}][${substatsSkipsPerCharacter}]`);
         pushDebug(`COMBOS: Substat/Char Maximum (Pre-skips, already applied to chars) - ${substatsSkipsPerCharacter.toLocaleString()}`);
         pushDebug(`COMBOS: Substat Total Maximum (Pre-skips) - ${totalSubsSkipTeam.toLocaleString()}`);
         pushDebug(`COMBOS: TOTAL POSSIBLE - ${precalcComboCount}`);

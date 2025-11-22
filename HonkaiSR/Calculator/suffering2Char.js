@@ -169,7 +169,7 @@ const battleActions = {
         let buffName = buffSheet.buffName;
 
         
-
+        // console.log(sourceTurn)
         const buffExisted = buffRef[buffName] != undefined;
         const currentReference = buffRef[buffName] ??= spreadBuffSheet(buffSheet);
 

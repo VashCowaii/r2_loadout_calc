@@ -2208,6 +2208,15 @@ div {
     margin-top: 1px;
     flex-shrink: 0;
 }
+
+.turnOrderDisplayPreviewActionExpandRowIconBox {
+    height: 100%;
+    max-height: 40px;
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 .turnOrderDisplayPreviewActionExpandRowIcon {
     /* height: 100%;
     max-height: 30px;
