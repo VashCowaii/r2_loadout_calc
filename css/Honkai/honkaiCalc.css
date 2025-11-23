@@ -260,8 +260,8 @@ div {
     background: linear-gradient(to right, #666666,transparent,transparent,transparent);
     /* width: 100%; */
     /* width: auto; */
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 125px;
+    max-width: 125px;
     box-sizing: border-box;
     color: white;
     display: flex;
@@ -1222,6 +1222,30 @@ div {
     width: 13px;
     height: 13px;
 }
+.imageRowStatisticStatBoxRollsEst0Roll {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    width: 13px;
+    height: 13px;
+}
+.imageRowStatisticStatBoxRollsEstInvalid {
+    color: black;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    width: 13px;
+    height: 13px;
+}
 .imageRowStatisticStatBoxRollsEstEquivalent {
     /* color: black; */
     color: white;
@@ -1538,13 +1562,33 @@ div {
 
 .characterSearchButtonRelicEdit {
     font-size: 16px;
-    width: 30%;
+    width: 20%;
     height: 20px;
     box-sizing: border-box;
     border-radius: 15px;
     background-color: #121212;
     border: 1px solid #cacacc80;
     outline: 1px solid #e1e1e480;
+    padding-left: 2px;
+    padding-right: 2px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.characterSearchButtonRelicTotalSubsOverview {
+    font-size: 16px;
+    /* width: 20%; */
+    height: 20px;
+    box-sizing: border-box;
+    /* border-radius: 15px; */
+    /* background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480; */
     padding-left: 2px;
     padding-right: 2px;
     /* color: #e1e1e4; */

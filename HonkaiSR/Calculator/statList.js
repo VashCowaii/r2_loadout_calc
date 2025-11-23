@@ -1462,7 +1462,7 @@ let basicShorthand = {
 
         let adjustedValue = value - zeroBounds[0];//adjust the potential roll value pool by the base amount so we don't skew estimated roll counts
         let avgRoll = category.base + category.step;//have the avg roll value be equal to the MIDDLE roll, not the higher one. NEVER THE HIGHER ONE
-        let avgAmount = Math.round(adjustedValue/avgRoll);//then divide the total value pool by the avg roll value, which should give us the amount of rolls in the pool, rounded to the nearest whole
+        let avgAmount = Math.min(5,Math.round(adjustedValue/avgRoll));//then divide the total value pool by the avg roll value, which should give us the amount of rolls in the pool, rounded to the nearest whole
 
         return avgAmount;
 
