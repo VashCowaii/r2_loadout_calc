@@ -1989,7 +1989,7 @@ const maslowCharactersAbundance = {
         },
     },
     "Gallagher": {
-        defaultMainSubs: ["SPDFlat","Break","HP%","EffectRES"],
+        defaultMainSubs: ["SPDFlat","DamageBreak","HP%","EffectRES"],
         defaultTrashSub: "HPFlat",
         0: {
             gives: [],
