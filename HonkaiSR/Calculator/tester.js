@@ -368,6 +368,10 @@ const customMenu = {
         ];
         function addEnemyWeaknessToggles(entry) {
             const elementName = entry.element;
+
+            //beta started with resistance as a boolean to work with whether enemies were weak to or not, in order to tell if it was 0%, 20%, or 40%
+            //but I was made aware of some enemies that have no weakness but are still 0% res, and I forgot there are also enemies at 60% res when resistant rather than 40%
+            //so the boolean check is purely there for people who already exported enemy data with the boolean only resistance, so it can convert properly
             return `<div class="imageRowStatisticBox1">
                 <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/element/${entry.elementIcon}.png" class="imageRowStatisticImage"/></div>
                 <div class="imageRowStatisticNameBox" id="addEnemyWeakness${elementName}Box">
@@ -378,16 +382,47 @@ const customMenu = {
                         </label>
                     </div>
                 </div>
-                <div class="imageRowStatisticStatBox" id="addEnemyResistance${elementName}Box">
+                
+                <div class="statisticSettingsRow">
+                    <div class="statsRowName">RES %:&nbsp;<span id="addEnemyResistanceSliderDisplay${elementName}">20%</span></div>
                     <div class="statsRowToggle">
-                        Resistant&nbsp;
-                        <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" id="addEnemyResistance${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef.resistantTo[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
-                        </label>
+                        <input type="range" id="addEnemyResistanceSlider${elementName}" name="slider" min="0" max="60" value="${isEdit ? slotRef.weaknessOverrides[elementName] ? 0 : (slotRef.resistantTo[elementName] ?? 20) : (slotRef.weaknessOverrides[elementName] ? 0 : 20)}" step="20" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
                     </div>
                 </div>
-            </div>`
+
+            </div>`;
+
+            // <div class="imageRowStatisticStatBox" id="addEnemyResistance${elementName}Box">
+            //     <div class="statsRowToggle">
+            //         Resistant&nbsp;
+            //         <label class="toggleContainer">
+            //             <input type="checkbox" class="toggleCheckbox" id="addEnemyResistance${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef.resistantTo[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
+            //         </label>
+            //     </div>
+            // </div>
         }
+        // function addEnemyWeaknessToggles(entry) {
+        //     const elementName = entry.element;
+        //     return `<div class="imageRowStatisticBox1">
+        //         <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/element/${entry.elementIcon}.png" class="imageRowStatisticImage"/></div>
+        //         <div class="imageRowStatisticNameBox" id="addEnemyWeakness${elementName}Box">
+        //             <div class="statsRowToggle">
+        //                 Weakness&nbsp;
+        //                 <label class="toggleContainer">
+        //                     <input type="checkbox" class="toggleCheckbox" id="addEnemyWeakness${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef.weaknessOverrides[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
+        //                 </label>
+        //             </div>
+        //         </div>
+        //         <div class="imageRowStatisticStatBox" id="addEnemyResistance${elementName}Box">
+        //             <div class="statsRowToggle">
+        //                 Resistant&nbsp;
+        //                 <label class="toggleContainer">
+        //                     <input type="checkbox" class="toggleCheckbox" id="addEnemyResistance${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef.resistantTo[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
+        //                 </label>
+        //             </div>
+        //         </div>
+        //     </div>`
+        // }
         let weaknessString = "";
         for (let entry of weaknessToggleEntries) {
             weaknessString += addEnemyWeaknessToggles(entry);
@@ -469,8 +504,6 @@ const customMenu = {
             <div class="customMenuSearchNote">Enemy DEF is assigned automatically based on level selected</div>
 
             
-
-
             <div class="imageRowStatisticBox2">
                 <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
                 <div class="imageRowStatisticNameBox">ATK</div>
@@ -518,7 +551,7 @@ const customMenu = {
             </div>
 
             <div class="addEnemyWeaknessesHeader">Weaknesses & Resistance</div>
-            <div class="customMenuSearchNote">Enemies cannot be both weak and resistant to an element(other than with implanted weaknesses)</div>
+            <div class="customMenuSearchNote">Toggling a weakness will force the RES of that element to be 0.</div>
             ${weaknessString}
 
             ${!isEdit ? `
@@ -1952,19 +1985,14 @@ const userTriggers = {
 
 
         const weaknessToggleEntries = ["Fire","Ice","Imaginary","Physical","Quantum","Lightning","Wind"];
-        // addEnemyWeakness${elementName}Box
-        // addEnemyResistance${elementName}Box
-        //pondered hiding the checkboxes entirely when either was toggled, but opted for disabled instead, but the elements just add "Box" to the ID's if I decide later I want to hide them
 
         for (let element of weaknessToggleEntries) {
             const isWeak = readSelection(`addEnemyWeakness${element}`);
-            const isResistant = readSelection(`addEnemyResistance${element}`);
 
-            if (isWeak.checked) {isResistant.disabled = true;}
-            else {isResistant.disabled = false;}
-
-            if (isResistant.checked) {isWeak.disabled = true;}
-            else {isWeak.disabled = false;}
+            if (isWeak.checked) {
+                readSelection(`addEnemyResistanceSlider${element}`).value = 0;
+            }
+            readSelection(`addEnemyResistanceSliderDisplay${element}`).innerHTML = +readSelection(`addEnemyResistanceSlider${element}`).value;
         }
     },
     addEnemyToWave(waveID,waveIndex,pageloadUIAdjustment,leftOrRight,isExport) {
@@ -2034,14 +2062,12 @@ const userTriggers = {
 
             for (let element of weaknessToggleEntries) {
                 const isWeak = readSelection(`addEnemyWeakness${element}`);
-                const isResistant = readSelection(`addEnemyResistance${element}`);
+                const isResistant = +readSelection(`addEnemyResistanceSlider${element}`);
 
                 if (isWeak.checked) {
                     weaknessOverrides[element] = true;
                 }
-                else if (isResistant.checked) {
-                    resistantTo[element] = true;
-                }
+                resistantTo[element] = isResistant;
             }
 
 
@@ -2071,13 +2097,13 @@ const userTriggers = {
             enemyStats[EffectRES] = enemyEffectRES;
             enemyStats[DEFBase] = (enemyLvL*10) + 200;
 
-            enemyStats[ResistanceImaginary] = weaknessOverrides.Imaginary ? 0 : baseRes + (resistantTo.Imaginary ? 0.20 : 0);
-            enemyStats[ResistanceQuantum] = weaknessOverrides.Quantum ? 0 : baseRes + (resistantTo.Quantum ? 0.20 : 0);
-            enemyStats[ResistanceWind] = weaknessOverrides.Wind ? 0 : baseRes + (resistantTo.Wind ? 0.20 : 0);
-            enemyStats[ResistanceLightning] = weaknessOverrides.Lightning ? 0 : baseRes + (resistantTo.Lightning ? 0.20 : 0);
-            enemyStats[ResistanceIce] = weaknessOverrides.Ice ? 0 : baseRes + (resistantTo.Ice ? 0.20 : 0);
-            enemyStats[ResistanceFire] = weaknessOverrides.Fire ? 0 : baseRes + (resistantTo.Fire ? 0.20 : 0);
-            enemyStats[ResistancePhysical] = weaknessOverrides.Physical ? 0 : baseRes + (resistantTo.Physical ? 0.20 : 0);
+            enemyStats[ResistanceImaginary] = weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0);
+            enemyStats[ResistanceQuantum] = weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0);
+            enemyStats[ResistanceWind] = weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0);
+            enemyStats[ResistanceLightning] = weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0);
+            enemyStats[ResistanceIce] = weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0);
+            enemyStats[ResistanceFire] = weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0);
+            enemyStats[ResistancePhysical] = weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0);
 
             enemyStats[WeaknessImaginary] = weaknessOverrides.Imaginary ? 1 : 0;
             enemyStats[WeaknessQuantum] = weaknessOverrides.Quantum ? 1 : 0;
