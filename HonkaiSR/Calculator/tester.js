@@ -2890,9 +2890,11 @@ const userTriggers = {
         //we default to the graph view whenever a new battle is generated, since new battles would mean new actions as mentioned above
         //and it wouldn't make sense to default view to the first action in a new battle instead of a summary graph
 
-        // if (globalUI.currentBattleViewDisplayType = "ActionExpand") {
+        if (globalUI.currentBattleViewDisplayType === "ActionExpand") {
+            // console.log("this is reached somehow, fuck life and everything in it")
             userTriggers.updateBattleViewDisplayed("GraphExpand");
-        // }
+        }
+
         //tracks whatever graph was last selected, and renews it for the current battle, doesn't strictly have to be summary data
         userTriggers.updateGraphViewDisplayed(globalUI.currentGraphViewDisplayType)
     },
@@ -3552,7 +3554,9 @@ const userTriggers = {
         if (!skipEventBody) {
             displayBox.innerHTML += `<br><div class="actionDetailHeaderRow">Events</div>` + eventOpen + eventsString + eventClose;
         }
-        if (!silentUpdate) {userTriggers.updateBattleViewDisplayed("ActionExpand");}
+        // if (!silentUpdate) {
+        //     userTriggers.updateBattleViewDisplayed("GraphExpand");
+        // }
     },
     exportCharacterData(charSlot) {
         if (charSlot === "ALL") {
