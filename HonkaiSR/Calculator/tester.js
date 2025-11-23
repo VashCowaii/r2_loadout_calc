@@ -2062,12 +2062,12 @@ const userTriggers = {
 
             for (let element of weaknessToggleEntries) {
                 const isWeak = readSelection(`addEnemyWeakness${element}`);
-                const isResistant = +readSelection(`addEnemyResistanceSlider${element}`);
+                const isResistant = readSelection(`addEnemyResistanceSlider${element}`);
 
                 if (isWeak.checked) {
                     weaknessOverrides[element] = true;
                 }
-                resistantTo[element] = isResistant;
+                resistantTo[element] = +isResistant.value;
             }
 
 
@@ -2097,13 +2097,13 @@ const userTriggers = {
             enemyStats[EffectRES] = enemyEffectRES;
             enemyStats[DEFBase] = (enemyLvL*10) + 200;
 
-            enemyStats[ResistanceImaginary] = weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0);
-            enemyStats[ResistanceQuantum] = weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0);
-            enemyStats[ResistanceWind] = weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0);
-            enemyStats[ResistanceLightning] = weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0);
-            enemyStats[ResistanceIce] = weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0);
-            enemyStats[ResistanceFire] = weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0);
-            enemyStats[ResistancePhysical] = weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0);
+            enemyStats[ResistanceImaginary] = (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100;
+            enemyStats[ResistanceQuantum] = (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100;
+            enemyStats[ResistanceWind] = (weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0))/100;
+            enemyStats[ResistanceLightning] = (weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0))/100;
+            enemyStats[ResistanceIce] = (weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0))/100;
+            enemyStats[ResistanceFire] = (weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0))/100;
+            enemyStats[ResistancePhysical] = (weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0))/100;
 
             enemyStats[WeaknessImaginary] = weaknessOverrides.Imaginary ? 1 : 0;
             enemyStats[WeaknessQuantum] = weaknessOverrides.Quantum ? 1 : 0;
@@ -2889,7 +2889,10 @@ const userTriggers = {
         graphs.createSummaryDataCharts(battleData);
         //we default to the graph view whenever a new battle is generated, since new battles would mean new actions as mentioned above
         //and it wouldn't make sense to default view to the first action in a new battle instead of a summary graph
-        userTriggers.updateBattleViewDisplayed("GraphExpand");
+
+        // if (globalUI.currentBattleViewDisplayType = "ActionExpand") {
+            userTriggers.updateBattleViewDisplayed("GraphExpand");
+        // }
         //tracks whatever graph was last selected, and renews it for the current battle, doesn't strictly have to be summary data
         userTriggers.updateGraphViewDisplayed(globalUI.currentGraphViewDisplayType)
     },
