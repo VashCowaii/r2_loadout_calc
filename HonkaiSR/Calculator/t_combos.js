@@ -55,7 +55,6 @@ const cyclesLoop = {
         // cycles.endedClearMemory();
 
         if (!cycleWorker && globalRecords.workersRunning) {
-            globalRecords.resultsStorage = [];
             for (let i=1;i<=globalRecords.threadsAssignedCount;i++) {
                 workers[`cycleWorker${i}`].terminate();
             }
@@ -149,7 +148,8 @@ const cyclesLoop = {
         globalUI.cyclesAborted = true;
         globalUI.cyclesActive = false;
         cyclesLoop.generationStop(null,null);
-        readSelection("cyclesTimeRemaining").innerHTML = "Cycles forcibly aborted"
+        readSelection("cyclesTimeRemaining").innerHTML = "Cycles forcibly aborted";
+        globalRecords.resultsStorage = [];
     },
     filterEquivalents(globalResults) {
         // sortedResults.push({
@@ -317,6 +317,8 @@ const cyclesLoop = {
 
                 //was just for updating the actual "best combo so far" display on the R2 optimizer, can still use it here but a task for later
                 compare.displayCurrentResults(globalResults,null,null,reachedQueryEnd);
+
+                
                 // readSelection("comboTargetDisplay").innerHTML = `<div class="bestOptionsRow">Target Statistic: ${targetName}</div>`;
                 // readSelection(`lastFound`).innerHTML = `Last Loadout Found at #${counterInt.toLocaleString()}`
                 // readSelection(`comboDisplay`).innerHTML = `${[fragRef[CfragmentSet[0]],fragRef[CfragmentSet[1]],fragRef[CfragmentSet[2]]]}`;

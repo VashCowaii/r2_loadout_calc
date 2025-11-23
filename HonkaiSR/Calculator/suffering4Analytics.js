@@ -818,9 +818,6 @@ const compare = {
         // const char3SubsDefault = char3Maslow.defaultMainSubs;
         // const char4SubsDefault = char4Maslow.defaultMainSubs;
 
-
-
-        globalRecords.resultsStorage = [];
         readSelection("currentBestResultHolderBox").innerHTML = "";
 
 
@@ -920,7 +917,6 @@ const compare = {
         updateStep("Counting Valid Combinations, please wait...",false);
         yield;
 
-        // const displayCurrentResults = compare.displayCurrentResults;
         const assignTo = Object.assign;
         globalUI.startTime = performance.now();
         globalUI.lastMeasuredTime = globalUI.startTime;
@@ -1832,6 +1828,7 @@ const compare = {
         
     },
     displayCurrentResults(results,reached,skipped,isBattleEnd) {
+
         // globalUI.startTime = performance.now();
 
         // reachedBox.innerHTML = reached.toLocaleString();
@@ -1901,6 +1898,9 @@ const compare = {
                 <span class="queryResultRowDMGDamage">${isGainBest ? "+" : ""}${(100 * (currentEvalBest/refPoint - 1)).toLocaleString()}% (${currentEvalBest.toLocaleString()})</span>
                 <span class="queryResultRowDMGAV">[AV:${bestEntry.battleAV.toLocaleString()} C:${bestEntry.cycle}]</span>
             </div>
+            ${isBattleEnd ? `<div class="inspectOptimizerGearResultRow">
+                            <div class="inspectOptimizerGearResultButton clickable" onclick="customMenu.createOptimizerResultInspectMenu(${counter})">View Relics/Stats</div>
+                        </div>` : ""}
             <div class="analyticsResultRowDMGBarHolderOuter">
                 <div class="queryBarGainText">Total Gain/Loss</div>
                 <div class="analyticsResultRowDMGBarHolder">
@@ -1997,6 +1997,9 @@ const compare = {
                         <div class="analyticsResultRowDMG">
                             <span class="queryResultRowDMGDamage">${isGain ? "+" : ""}${(100 * (currentEval/refPoint - 1)).toLocaleString()}% (${currentEval.toLocaleString()})</span>
                             <span class="queryResultRowDMGAV">[AV:${entry.battleAV.toLocaleString()} C:${entry.cycle}]</span>
+                        </div>
+                        <div class="inspectOptimizerGearResultRow">
+                            <div class="inspectOptimizerGearResultButton clickable" onclick="customMenu.createOptimizerResultInspectMenu(${counter})">View Relics/Stats</div>
                         </div>
                         <div class="analyticsResultRowDMGBarHolderOuter">
                             <div class="queryBarGainText">Total Gain/Loss</div>
@@ -2260,8 +2263,7 @@ const compare = {
                 }
                 
                 counter++;
-                if (rowCounter>=limit || counter === results.length) {
-                    results.length = limit;
+                if (rowCounter>=limit || counter === results.length) {1
 
                     if (equivalentResultActive) {
                         equivalentContainer = `<details class="actionDetailBodyDetailExpandBuffs">
@@ -2280,7 +2282,6 @@ const compare = {
             }
 
             displayBox.innerHTML += resultsString;
-            globalRecords.resultsStorage = [];
         }
     },
 

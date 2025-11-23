@@ -1292,13 +1292,13 @@ const customHTML = {
         // style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);"
     },
 
-    queryResultsStandardRow(charSlot,charSPD,charSubs,charMaslow) {
+    queryResultsStandardRow(charSlot,charSPD,charSubs,charMaslow,isResultInspect) {
         const SPDIconPath = propertyImagePaths.SPD.icon;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
         const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
         const {BodyMain,FeetMain,SphereMain,RopeMain,name,planar,lcName} = charSlot;
-        return `<div class="queryResultsQuarterBox">
+        return `<div class="${isResultInspect ? "queryResultsQuarterBoxInspection" : "queryResultsQuarterBox"}">
             <div class="queryResultsQuarterCharacterImageBox">
                 <img src="/HonkaiSR/${characters[name].preview}" class="queryResultsQuarterCharacterImage"/>
                 
