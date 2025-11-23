@@ -4391,6 +4391,7 @@ const battleActions = {
 
         const targetStats = targetTurn.statTable;
         const sourceStats = sourceTurn.statTable;
+        // console.log(sourceTurn,targetTurn)
         const onTurnStats = emptyTableNeverAdd;
 
         const turnMerge = {targetTurn,sourceTurn}
@@ -5866,19 +5867,6 @@ const turnLogic = {
     //Abundance
     "Gallagher": {//ATKOBJECTS DONE
         logic(thisTurn,battleData) {//TODO: circle back for target logic for the skill
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
-            // const shortRef = this;
-            // const battleValues = shortRef.characterValuesBattle;
-            // let actionUsed = false;
-            // let statCalls = shortRef.characterValuesBattle;
-            // let shortCalls = shortRef.skillFunctions;
-            // let skillPathing = characters.Gallagher.skills;
-
-            // let allyWorthHealing = battleActions.findLowestHPAlly(battleData);
-            // let hpRatio = allyWorthHealing ? allyWorthHealing.currentHP / allyWorthHealing.maxHP : null;
-            // let healThreshold = 0.5;
-            // let shouldHeal = allyWorthHealing && hpRatio <= healThreshold;
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
             // let enhancedCheck = battleValues.nextBasicEnhanced;
@@ -5886,14 +5874,9 @@ const turnLogic = {
             // shouldHeal
             // !enhancedCheck
             if (minimum && checkSkill(battleData,thisTurn)) {
-                //is there an ally low enough, and if so, do we even have a skill point to put into play here
-                //then lastly, are we in an enhanced basic attack mode, bc that will heal everyone ANYWAYS.
-                //if everyone is full, it's impossible to pass this check, OR AT LEAST IT SHOULD BE
-                // let target = allyWorthHealing.name;
-                // actionUsed = true;
                 
                 const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.gallagherSkillHeal, target: null, endTurn: true};
-                returnSkillCall.target = battleActions.findLowestHPAlly(battleData)?.name ?? battleData.nameBasedTurns.char1;
+                returnSkillCall.target = battleActions.findLowestHPAlly(battleData) ?? battleData.nameBasedTurns.char1;
                 return returnSkillCall;
             }
 
