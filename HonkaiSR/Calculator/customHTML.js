@@ -704,11 +704,14 @@ const customHTML = {
     rowUniqueStatExceptions: {
         "Multiplier": {statName: "Final Multiplier", statUnit: "x"},
     },
-    createAlternatingStatRows(displayOrder,statLocation,isMainStat,substatRef,isStatMenuCreation) {
+    createAlternatingStatRows(displayOrder,statLocation,isMainStat,substatRef,isStatMenuCreation,rollArray) {
         let rowAlternating = 2
         let returnString = "";
 
         // console.log(displayOrder,statLocation)
+
+        let compositeRollCount = 0;
+        let loopCounter = 0;
         for (let entry of displayOrder) {
             const isUnique = customHTML.rowUniqueStatExceptions[entry];
 
@@ -746,7 +749,11 @@ const customHTML = {
             }
             else {
                 let subRolls = substatRef != null;
-                let estRolls = subRolls ? basicShorthand.estimateSubRolls(substatRef[statInternal],valuePre) : 0;
+                let estRolls = subRolls ? rollArray[loopCounter] : 0;
+
+                compositeRollCount += estRolls;
+                const potentiallyInvalid = compositeRollCount > 5;
+                
                 returnString += `
                 <div class="imageRowStatisticBox${rowAlternating}">
                     <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
@@ -754,7 +761,8 @@ const customHTML = {
                     <div class="imageRowStatisticStatBox">${(+valueRef ?? 0)}${unit}</div>
                     ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
                 </div>
-                `
+                `;
+                loopCounter++;
             }
         }
 

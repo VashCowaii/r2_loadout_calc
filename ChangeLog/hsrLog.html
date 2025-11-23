@@ -9,12 +9,36 @@
 <div>
     <h1>Nov 22th, 2025</h1>
     <ul>
+        <li>Relic substat percent value input now operates on percent values rather than decimal input. For the people that disliked typing .12 instead 12, you win.
+            <ul>
+                <li>This does NOT change how exports are handled. This is ONLY a user-facing change, and how values are actually processed is the exact same.</li>
+            </ul>
+        </li>
+        <li>Added roll restrictions to each substat relic. This is a little weird so let me explain.
+            <ul>
+                <li>As like before, when a stat is input, it will estimate on average the roll count that it would take to reach the value that you input on that substat.
+                    <ul>
+                        <li>As an example, a SPD value of exactly 13 would estimate 5 rolls to reach that point because with mixed high/mid/low values that is realistic</li>
+                    </ul>
+                </li>
+                <li>However, estimates don't really let us enforce a 5 maximum roll limit, so what would happen if someone enters in a higher value on the next substat?
+                    <ul>
+                        <li>In this case, it would look at the first value again, and it knows that on SPD the highest value per roll possible is 2.6, and 2.6 * 4 + (base roll 2.6) = 13 meaning that 4 rolls is the lowest possible roll value that could contain 13. At this point, the roll value state will change from the estimated 5 to the bounded 4</li>
+                        <li>Now the next value that you input will be evaluated in the same way. If you happened to input like 15% crit rate, it will be restricted instead to the highest possible crit rate value using 1 roll since only 1 roll was leftover from the SPD substat on this relic</li>
+                        <li>From top to bottom, substats will prioritize roll counts and restrict any subsequent rolls based on how many are leftover from those upper substats</li>
+                    </ul>
+                </li>
+                <li>In this way, we can ensure that users are not setting 4 rolls of crit rate at 15% each.</li>
+            </ul>
+        </li>
+        <li>Given the above note, I have also added roll count display values on the relic edit menu.</li>
         <li>Added the ability to customize enemy resistance values beyond the simple 20% and 40% that we allowed for before.
             <ul>
                 <li>This change was made since there are technically enemies in the game that aren't weak to an element in terms of toughness reduction, but still have 0% RES against that element. It's weird, but it happens. Also there are enemies that have 60% RES that I forgot about, and you can specify that amount now.</li>
             </ul>
         </li>
         <li>Changing a battle or enemy setting will no longer force the Battle View to be on the Analytics tab. If you just changed an enemy setting, you'll stay on the enemy settings page.</li>
+        <li>Fixed an issue where if a user input an extremely high or perfect 5x roll on a relic, the rolls count would improperly estimate how many rolls were actually on that relic.</li>
     </ul>
 </div>
 

@@ -66,6 +66,64 @@ const customMenu = {
         readSelection("customMenuSearchBarInput").focus();
         customMenu.updateSearchResults();
     },
+    restrictSubstatsAndReturnRolls(depositRef,partName,part) {
+        let totalAVGRollEst = 0;
+        let estSubstatArray = [];
+
+        // const nameConversions = userTriggers.relicSlotNameConversions;
+        let subStatRef = relics.Head.subAffix;
+
+        for (let i=1;i<=4;i++) {
+            const currentSlotDeposit = depositRef[`${part}${i}Stat`];
+            
+            let initialValue = depositRef[`${part}${i}Value`];
+
+            let estRolls = basicShorthand.estimateSubRolls(subStatRef[currentSlotDeposit],initialValue);
+            totalAVGRollEst += estRolls;
+            estSubstatArray.push(estRolls);
+        }
+
+        const potentialInvalidRolls = totalAVGRollEst > 5;
+        // console.log(potentialInvalidRolls,totalAVGRollEst)
+
+        let totalRestrictedRolls = 0;
+        for (let i=1;i<=4;i++) {
+
+            const currentSlotDeposit = depositRef[`${part}${i}Stat`];
+            const currentSubstatValueFamily = subStatRef[currentSlotDeposit];
+            let initialValue = depositRef[`${part}${i}Value`];
+
+            // let currentRollEst = estSubstatArray[i-1];
+            if (potentialInvalidRolls) {
+                const baseValue = currentSubstatValueFamily.base;
+                const stepValue = currentSubstatValueFamily.step;
+                const stepCount = currentSubstatValueFamily.stepsPossible;
+
+                const maxBaseRoll = baseValue + (stepValue * stepCount);
+
+                let highestPossibleMax = 0;
+                for (let z=0;z<=5;z++) {
+                    const maxUpperRange = maxBaseRoll * z + maxBaseRoll;
+
+                    if (totalRestrictedRolls + z > 5) {
+                        depositRef[`${part}${i}Value`] = maxBaseRoll * (z - 1) + maxBaseRoll;
+                        highestPossibleMax = z-1;
+                        totalRestrictedRolls += z-1;
+                        break;
+                    }
+                    else if (initialValue > maxUpperRange) {continue;}
+                    else {
+                        highestPossibleMax = z;
+                        totalRestrictedRolls += z;
+                        break;
+                    } 
+                }
+                estSubstatArray[i-1] = highestPossibleMax;
+            }
+        }
+
+        return estSubstatArray;
+    },
     //for creating individual piece stat adjustment menus
     createRelicDetailMenu(part) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
@@ -83,6 +141,7 @@ const customMenu = {
         globalUI.currentSearchVolume = part; 
 
         const nameConversions = userTriggers.relicSlotNameConversions;
+        const realPartName = nameConversions[part];
         let mainStatRef = relics[nameConversions[part]].mainAffix;
         let subStatRef = relics[nameConversions[part]].subAffix;
         let mainStatKeys = Object.keys(mainStatRef);
@@ -131,16 +190,50 @@ const customMenu = {
         }
         mainStatRowEntries += "</div>"
 
-        let decimalsNote = "% values are handled as decimals in this menu, so 12.4% = 0.124<br>";
+        let decimalsNote = `Roll count is priotized from <b style="color:white">top to bottom</b>. If you have 5 rolls on your last stat, but then you input 5 rolls on the first stat, it will put those 5 rolls on the top but then remove any rolls that go over 5 on all rolls after that.<br>`;
         let adjustNote = "The game hides decimal places on every stat, so while you may enter \"19\" on a flat DEF substat, you will see it change to 19.051896 because that is the real value.<br><br>The calc can adjust values properly for anything but SPD."
         let changeString = `onchange="customMenu.updateSelectedRelicStats()"`;
 
 
-        // const nameConversions = userTriggers.relicSlotNameConversions;
-        const slot1Conversion = depositRef[`${part}1Stat`];
-        const slot2Conversion = depositRef[`${part}2Stat`];
-        const slot3Conversion = depositRef[`${part}3Stat`];
-        const slot4Conversion = depositRef[`${part}4Stat`];
+
+
+        const rollArray = customMenu.restrictSubstatsAndReturnRolls(depositRef,realPartName,part);
+
+        let inputLoopString = "";
+        for (let i=1;i<=4;i++) {
+
+            const currentSlotDeposit = depositRef[`${part}${i}Stat`];
+
+            let currentValue = depositRef[`${part}${i}Value`];
+
+            const indexValue = greatTableIndex[currentSlotDeposit];
+            const statFamily = basicShorthand.findStatObject(indexValue);
+
+            const unit = statFamily.sets[indexValue].unit;
+            const isPercent = unit === "%";
+            // propertyImagePaths
+
+            const currentRollValue = rollArray[i-1];
+
+
+            inputLoopString += `<div class="relicStatSelectionRow">
+                <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub${i}" ${changeString}>${subStrings[i].string}</select>
+                <div class="customMenuSearchBarBoxRelicValueInput">
+                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub${i}Input" ${changeString} min="${subStatRef[currentSlotDeposit].bounds[0] * (isPercent ? 100 : 1)}" max="${subStatRef[currentSlotDeposit].bounds[1] * (isPercent ? 100 : 1)}" step="${subStatRef[currentSlotDeposit].step * (isPercent ? 100 : 1)}" value="${currentValue * (isPercent ? 100 : 1)}">
+                    ${isPercent ? "%" : ""}
+                </div>
+                ${currentRollValue > 0 ? `<div class="imageRowStatisticStatBoxRollsEst">${currentRollValue}</div>` : `<div class="imageRowStatisticStatBoxRollsEst0Roll"></div>`}
+            </div>`;
+
+            // <div class="relicStatSelectionRow">
+            //     <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub1" ${changeString}>${subStrings[1].string}</select>
+            //     <div class="customMenuSearchBarBoxRelicValueInput">
+            //         <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub1Input" ${changeString} min="${subStatRef[slot1Conversion].bounds[0]}" max="${subStatRef[slot1Conversion].bounds[1]}" step="${subStatRef[slot1Conversion].step}" value="${depositRef[`${part}1Value`]}">
+            //     </div>
+            // </div>
+        }
+
+        // ${subRolls && estRolls ? `<div class="${potentiallyInvalid ? "imageRowStatisticStatBoxRollsEstInvalid" : "imageRowStatisticStatBoxRollsEst"}">${estRolls}</div>` : ""}
         readSelection("customMenuSearchBody").innerHTML = `
             <div class="relicStatsSelectionMainstatRow">
                 <div class="characterDisplayNameBox">Main Stat: ${mainStatTitle}</div>
@@ -152,33 +245,7 @@ const customMenu = {
             </div>
             <div class="customMenuSearchNote">${decimalsNote}</div>
             <div class="customMenuSearchNoteWarning" id="relicStatWindowWarningMessage"></div>
-            <div class="relicStatSelectionRow">
-                <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub1" ${changeString}>${subStrings[1].string}</select>
-                <div class="customMenuSearchBarBoxRelicValueInput">
-                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub1Input" ${changeString} min="${subStatRef[slot1Conversion].bounds[0]}" max="${subStatRef[slot1Conversion].bounds[1]}" step="${subStatRef[slot1Conversion].step}" value="${depositRef[`${part}1Value`]}">
-                </div>
-            </div>
-
-            <div class="relicStatSelectionRow">
-                <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub2" ${changeString}>${subStrings[2].string}</select>
-                <div class="customMenuSearchBarBoxRelicValueInput">
-                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub2Input" ${changeString} min="${subStatRef[slot2Conversion].bounds[0]}" max="${subStatRef[slot2Conversion].bounds[1]}" step="${subStatRef[slot2Conversion].step}" value="${depositRef[`${part}2Value`]}">
-                </div>
-            </div>
-
-            <div class="relicStatSelectionRow">
-                <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub3" ${changeString}>${subStrings[3].string}</select>
-                <div class="customMenuSearchBarBoxRelicValueInput">
-                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub3Input" ${changeString} min="${subStatRef[slot3Conversion].bounds[0]}" max="${subStatRef[slot3Conversion].bounds[1]}" step="${subStatRef[slot3Conversion].step}" value="${depositRef[`${part}3Value`]}">
-                </div>
-            </div>
-
-            <div class="relicStatSelectionRow">
-                <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub4" ${changeString}>${subStrings[4].string}</select>
-                <div class="customMenuSearchBarBoxRelicValueInput">
-                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub4Input" ${changeString} min="${subStatRef[slot4Conversion].bounds[0]}" max="${subStatRef[slot4Conversion].bounds[1]}" step="${subStatRef[slot4Conversion].step}" value="${depositRef[`${part}4Value`]}">
-                </div>
-            </div>
+            ${inputLoopString}
             <div class="customMenuSearchNote">${adjustNote}</div>
         `;
 
@@ -1357,13 +1424,20 @@ const customMenu = {
 
                 depositRef[`${part}${subCounter}Stat`] = currentStatName;
 
-                let subs = subStatRef[currentStatName];
-                valueSelector.min = subs.bounds[0];
-                valueSelector.max = subs.bounds[1];
-                valueSelector.step = currentStatName === "SPDFlat" ? 0.1 : subs.step;//we can enforce steps on anything BUT speed, explained more a bit lower here
+                const indexValue = greatTableIndex[currentStatName];
+                const statFamily = basicShorthand.findStatObject(indexValue);
 
-                if (+valueSelector.value < subs.bounds[0]) {
-                    valueSelector.value = subs.bounds[0];}//for when we switch from like, 3% crit to SPD, so we don't accidentally keep 0.03 speed lmao, and actually swap to the minimum
+                const unit = statFamily.sets[indexValue].unit;
+                const isPercent = unit === "%";
+
+                let subs = subStatRef[currentStatName];
+                valueSelector.min = subs.bounds[0] * (isPercent ? 100 : 1);
+                valueSelector.max = subs.bounds[1] * (isPercent ? 100 : 1);
+                valueSelector.step = currentStatName === "SPDFlat" ? 0.1 : subs.step * (isPercent ? 100 : 1);//we can enforce steps on anything BUT speed, explained more a bit lower here
+
+                if (+valueSelector.value/(isPercent ? 100 : 1) < subs.bounds[0]) {
+                    valueSelector.value = subs.bounds[0] * (isPercent ? 100 : 1);
+                }//for when we switch from like, 3% crit to SPD, so we don't accidentally keep 0.03 speed lmao, and actually swap to the minimum
                 if (currentStatName != "SPDFlat" && subs.stepRatio === 8) {
                     let baseValue = subs.base;
                     let options = [baseValue];
@@ -1374,14 +1448,14 @@ const customMenu = {
 
                     for (let i=StepsLeft;i>=0;i--) {
                         let flipped = StepsLeft-i;
-                        options.push(+(baseValue + step*flipped).toFixed(7))
+                        options.push(+(baseValue + step*flipped).toFixed(7));
                     }
                     //the whole point of that shit was just to make it so if someone inputs DEF flat as 19 on their substat, then the calc will autocorrect it to 19.051896 as that's the only thing it could be if 19 was entered
                     //AKA: it's a way to derive the real decimal value of a given statistic without needing access to relic API fuckery
                     //THAT SAID, it DOES NOT WORK ON SPEED, speed shows no decimals, and the steps are 0.3 which means you could have multiple steps appear within the bounds of 1 speed, and that fuckin sucks
 
                     // console.log(valueSelector.value)
-                    valueSelector.value = +getClosestSTatStep(valueSelector.value,options).toFixed(7);
+                    valueSelector.value = (+getClosestSTatStep((valueSelector.value/(isPercent ? 100 : 1)),options) * (isPercent ? 100 : 1)).toFixed(7);
                     
 
                     // "base": 0.03456,
@@ -1393,7 +1467,9 @@ const customMenu = {
                     //     0.2592
                     // ]
                 }
-                depositRef[`${part}${subCounter}Value`] = +valueSelector.value;
+
+
+                depositRef[`${part}${subCounter}Value`] = +valueSelector.value /(isPercent ? 100 : 1);
             }
 
             const currentPartMainstat = depositRef[`${part}Main`];
@@ -1409,6 +1485,7 @@ const customMenu = {
         if (mainstatConflict) {warningMessage.innerHTML += dupeMain;}
 
         if (!isSilent) {
+            customMenu.createRelicDetailMenu(part);
             userTriggers.updateSelectedRelicStats(true);
             userTriggers.updateCharacterUI(updateFormulas(charSlot),+globalUI.currentCharacterDisplayed);
         }
@@ -2502,7 +2579,7 @@ const userTriggers = {
         relicDisplayBox.innerHTML = "";
 
         let currentCharRelicsRef = globalRecords.character[charSlot];
-
+        
 
 
         for (let piece of pieceKeys) {
@@ -2514,19 +2591,41 @@ const userTriggers = {
             let mainStatRef = relics[actualPieceName].mainAffix[mainStat].maxed;
             let subStatRef = relics[actualPieceName].subAffix;
 
+            let subRollArray = customMenu.restrictSubstatsAndReturnRolls(currentCharRelicsRef,actualPieceName,piece);
+
+            const displayOrder = [greatTableIndex[currentCharRelicsRef[`${piece}1Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}2Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}3Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}4Stat`]]];
+            const statDestination = {
+                [greatTableIndex[currentCharRelicsRef[`${piece}1Stat`]]]: currentCharRelicsRef[`${piece}1Value`],
+                [greatTableIndex[currentCharRelicsRef[`${piece}2Stat`]]]: currentCharRelicsRef[`${piece}2Value`],
+                [greatTableIndex[currentCharRelicsRef[`${piece}3Stat`]]]: currentCharRelicsRef[`${piece}3Value`],
+                [greatTableIndex[currentCharRelicsRef[`${piece}4Stat`]]]: currentCharRelicsRef[`${piece}4Value`]
+            };
+
+            // let compositeRollCount = 0;
+            // for (let entry of displayOrder) {
+            //     const statInternal = greatTableKeys[entry] ?? entry;
+
+            //     let valuePre = statDestination[entry];
+            //     // let valueRef = (valuePre * (isPercent ? 100 : 1))?.toFixed(3) || 0;
+    
+            //     let estRolls = basicShorthand.estimateSubRolls(subStatRef[statInternal],valuePre);
+
+            //     compositeRollCount += estRolls;
+            // }
+
+
             // greatTableIndex
             let mainRow = customHTML.createAlternatingStatRows([greatTableIndex[mainStat]],{[greatTableIndex[mainStat]]: mainStatRef},true);
             let statRows = customHTML.createAlternatingStatRows(
                 // currentPiece.order,
-                [greatTableIndex[currentCharRelicsRef[`${piece}1Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}2Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}3Stat`]],greatTableIndex[currentCharRelicsRef[`${piece}4Stat`]]],
-                {
-                    [greatTableIndex[currentCharRelicsRef[`${piece}1Stat`]]]: currentCharRelicsRef[`${piece}1Value`],
-                    [greatTableIndex[currentCharRelicsRef[`${piece}2Stat`]]]: currentCharRelicsRef[`${piece}2Value`],
-                    [greatTableIndex[currentCharRelicsRef[`${piece}3Stat`]]]: currentCharRelicsRef[`${piece}3Value`],
-                    [greatTableIndex[currentCharRelicsRef[`${piece}4Stat`]]]: currentCharRelicsRef[`${piece}4Value`]
-                },
+                displayOrder,
+                statDestination,
                 // currentPiece.stats,
-                false,subStatRef);
+                false,
+                subStatRef,
+                null,
+                subRollArray
+            );
 
             if (actualPieceName.toLowerCase().includes("sphere")) {
                 relicDisplayBox.innerHTML += `<div class="relicsDividerLine"></div>`
@@ -2536,6 +2635,7 @@ const userTriggers = {
             <div class="relicsPieceHolderBox clickable" onclick="customMenu.createRelicDetailMenu('${piece}')">
                 <div class="characterDisplayNameAndElement">
                     <div class="traceDisplayNameBox">${currentPieceName}</div>
+                    <div class="characterSearchButtonRelicTotalSubsOverview">${subRollArray[0] + subRollArray[1] + subRollArray[2] + subRollArray[3]}/5</div>
                     <div class="characterSearchButtonRelicEdit clickable" id="">Edit</div>
                 </div>
                 <div class="characterDisplayStatsBasic">
@@ -2891,7 +2991,8 @@ const userTriggers = {
         //and it wouldn't make sense to default view to the first action in a new battle instead of a summary graph
 
         if (globalUI.currentBattleViewDisplayType === "ActionExpand") {
-            // console.log("this is reached somehow, fuck life and everything in it")
+            //had a complaint that people didn't like the refresh to graph view after changing a setting, this is just making so we only refresh to graph view if action view was selected
+            //so after changing a setting, the settings menu will persist now
             userTriggers.updateBattleViewDisplayed("GraphExpand");
         }
 
