@@ -66,6 +66,310 @@ const customMenu = {
         readSelection("customMenuSearchBarInput").focus();
         customMenu.updateSearchResults();
     },
+    createOptimizerResultInspectMenu(resultIndex) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+
+        readSelection("customMenuSearchTitle").innerHTML = `Result ${resultIndex}`;
+        readSelection("customMenuSearchBarBox").style.display = "none";
+        readSelection("customMenuSearchNote").innerHTML = "This is a breakdown on the stats required for this result to work, as well as examples of what relics COULD look like on each piece in order to achieve stat distribution achieved.";
+
+        globalUI.currentSearchOpen = "OptimizerResult";
+        globalUI.currentSearchVolume = null;
+        // customMenu.updateSearchResults();
+        customMenu.createOptimizerResultDetail(resultIndex);
+    },
+    createOptimizerResultDetail(resultIndex) {
+        // if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+
+
+        const globalResults = globalRecords.resultsStorage;
+        const currentResult = globalResults[resultIndex];
+        const characterObject = currentResult.characterObject;
+
+        // console.log(currentResult.characterObject)
+        // {
+        //     battleDamageSUM: floor(simResult.battleDamageSUM),
+        //     battleAV: simResult.sumAV,
+        //     cycle: simResult.currentCycle,
+        //     teamSPD: simResult.teamSPD,
+
+        //     char1SPD: namedTurns.char1.initialSPD,
+        //     char2SPD: namedTurns.char2.initialSPD,
+        //     char3SPD: namedTurns.char3.initialSPD,
+        //     char4SPD: namedTurns.char4.initialSPD,
+
+        //     characterObject: comboDefined,
+        // }
+
+
+        // tableReference,returnObject
+        // console.log(statTableRef.tableReference)
+
+        let compositeCharacterString = `<div class="characterSearchButton clickable" id="characterSearchButton" onclick="userTriggers.useResultOnCurrentTeam(${resultIndex})">Apply this result to Current Team</div>`;
+        
+        for (let charSlot in characterObject) {
+            let currentCharacterString = ``;
+            const currentCharacter = characterObject[charSlot];
+            const returnMenu = updateFormulas(charSlot,null,characterObject,{...globalRecords.querySettings});
+            const menuStats = returnMenu.tableReference;
+            const compositeStats = returnMenu.returnObject;
+
+            const menuBoxDisplayOrder = [...Object.keys(menuStats),...Object.keys(compositeStats)].sort();
+            menuBoxDisplayOrder.splice(0,1);
+
+
+            const currentCharacterMenuString = `<details class="rotationsPermaConditionsExpand">
+            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Menu Stats</summary>
+            ${customHTML.createAlternatingStatRows(menuBoxDisplayOrder,{...menuStats,...compositeStats},null,null,true)}
+            </details>`;
+
+
+            let exampleRelicsString = "";
+
+            let pieceArray = ["Head","Hands","Body","Feet","Sphere","Rope"];
+            let conflictStatArray = [];
+
+            let conflictsObject = {};
+            const pieceConflictSum = {};
+            const pieceObject = {};
+            const newRelicsDistribution = {}
+
+            let pieceCounter = 0;
+            for (let entry of pieceArray) {
+                pieceCounter++;
+                newRelicsDistribution[entry] = {
+                    currentRolls: 5,
+                    sortPriority: pieceCounter,
+                    statsApplied: {},
+                    mainStat: currentCharacter[`${entry}Main`],
+                    pieceName: entry
+                }
+            }
+            const currentStatObject = currentCharacter.statObject;
+
+            for (let piece of pieceArray) {
+                const currentMaintstat = currentCharacter[`${piece}Main`];
+                conflictsObject[currentMaintstat] = (conflictsObject[currentMaintstat] ?? 0) + 1;
+            }
+
+            for (let statName in currentStatObject) {
+
+
+                let possiblePiecesArray = [];
+                for (let piece of pieceArray) {
+                    const currentMaintstat = currentCharacter[`${piece}Main`];
+                    if (currentMaintstat != statName) {possiblePiecesArray.push(piece)}
+                }
+
+
+                conflictStatArray.push({
+                    statName,
+                    conflictCount: conflictsObject[statName] ?? 0,
+                    possibleRelics: possiblePiecesArray,
+                    rollCount: currentStatObject[statName]
+                })
+            }
+
+            conflictStatArray.sort((a, b) => {return b.conflictCount - a.conflictCount;});
+            // console.log(conflictStatArray)
+
+            for (let entry of conflictStatArray) {
+                const currentPossiblePieces = entry.possibleRelics;
+
+                for (let pieceName of currentPossiblePieces) {
+                    const currentRelic = newRelicsDistribution[pieceName];
+
+                    const subsRemaining = currentRelic.currentRolls;
+
+                    const actualPossiblePieces = 6 - entry.conflictCount;
+                    const currentIncrement = Math.min(subsRemaining,Math.ceil(entry.rollCount / actualPossiblePieces));
+                    if (currentIncrement > 0) {
+                        entry.conflictCount += 1;
+                        entry.rollCount -= currentIncrement;
+                        // currentRelic.currentRolls -= currentIncrement;
+
+                        
+                        if (!currentRelic.statsApplied[entry.statName]) {
+                            currentRelic.currentRolls -= (currentIncrement - 1);
+                        }
+                        else {
+                            currentRelic.currentRolls -= currentIncrement;
+                        }
+                        currentRelic.statsApplied[entry.statName] = currentIncrement;
+                    }
+                }
+            }
+
+            // console.log(newRelicsDistribution)
+            const newFinalExampleArray = []
+            for (let entryName in newRelicsDistribution) {
+                const currentEntry = newRelicsDistribution[entryName];
+                newFinalExampleArray.push(currentEntry)
+            }
+            newFinalExampleArray.sort((a, b) => {return a.sortPriority - b.sortPriority;});
+            
+            exampleRelicsString += `<details class="rotationsPermaConditionsExpand">
+            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Example Relics</summary>`;
+
+
+
+
+            let currentCharRelicsRef = currentCharacter;
+
+            const querySettings = globalRecords.querySettings;
+
+            const substatRollValue = querySettings.substatRollValue === "High" ? 2 : (querySettings.substatRollValue === "Mid" ? 1 : 0);
+            let subStatRefInner = relics.Head.subAffix;
+            for (let piece of newFinalExampleArray) {
+                let currentPieceName = piece.pieceName//link rope -> just rope, otherwise leave the name as is.
+
+                let actualPieceName = userTriggers.relicSlotNameConversions[currentPieceName];
+
+
+                // newRelicsDistribution[entry] = {
+                //     currentRolls: 5,
+                //     sortPriority: pieceCounter,
+                //     statsApplied: {},
+                //     mainStat: currentCharacter[`${entry}Main`],
+                //     pieceName: entry
+                // }
+
+                const statsApplied = piece.statsApplied;
+                const statsAppliedKeys = Object.keys(statsApplied);
+
+                const stat1Name = statsAppliedKeys[0] ?? "";
+                let stat1Value = stat1Name ? statsApplied[stat1Name] : null;
+                if (stat1Value != null) {
+                    const subStatRef = subStatRefInner[stat1Name];
+                    stat1Value = stat1Value * (subStatRef.base + (subStatRef.step * substatRollValue))
+                } 
+
+                const stat2Name = statsAppliedKeys[1] ?? "";
+                let stat2Value = stat2Name ? statsApplied[stat2Name] : null;
+                if (stat2Value != null) {
+                    const subStatRef = subStatRefInner[stat2Name];
+                    stat2Value = stat2Value * (subStatRef.base + (subStatRef.step * substatRollValue))
+                } 
+
+                const stat3Name = statsAppliedKeys[2] ?? "";
+                let stat3Value = stat3Name ? statsApplied[stat3Name] : null;
+                if (stat3Value != null) {
+                    const subStatRef = subStatRefInner[stat3Name];
+                    stat3Value = stat3Value * (subStatRef.base + (subStatRef.step * substatRollValue))
+                } 
+
+                const stat4Name = statsAppliedKeys[3] ?? "";
+                let stat4Value = stat4Name ? statsApplied[stat4Name] : null;
+                if (stat4Value != null) {
+                    const subStatRef = subStatRefInner[stat4Name];
+                    stat4Value = stat4Value * (subStatRef.base + (subStatRef.step * substatRollValue))
+                } 
+
+                // console.log(statsApplied)
+
+                Object.assign(currentCharacter,{
+                    // [`${currentPieceName}Main`]: "HPFlat",
+                    [`${currentPieceName}1Stat`]: stat1Name,
+                    [`${currentPieceName}1Value`]: stat1Value,
+                    [`${currentPieceName}2Stat`]: stat2Name,
+                    [`${currentPieceName}2Value`]: stat2Value,
+                    [`${currentPieceName}3Stat`]: stat3Name,
+                    [`${currentPieceName}3Value`]: stat3Value,
+                    [`${currentPieceName}4Stat`]: stat4Name,
+                    [`${currentPieceName}4Value`]: stat4Value,
+                })
+
+
+
+
+                let currentPiece = currentCharRelicsRef[actualPieceName];
+                let mainStat = currentCharRelicsRef[`${currentPieceName}Main`];
+                let mainStatRef = relics[actualPieceName].mainAffix[mainStat].maxed;
+                let subStatRef = relics.Head.subAffix;
+
+                // let subRollArray = customMenu.restrictSubstatsAndReturnRolls(currentCharRelicsRef,actualPieceName,currentPieceName);
+                let subRollArray = [];
+
+                const displayOrder = [];
+                if (stat1Name) {
+                    displayOrder.push(greatTableIndex[currentCharRelicsRef[`${currentPieceName}1Stat`]]);
+                    subRollArray.push(statsApplied[stat1Name]-1);
+                };
+                if (stat2Name) {
+                    displayOrder.push(greatTableIndex[currentCharRelicsRef[`${currentPieceName}2Stat`]]);
+                    subRollArray.push(statsApplied[stat2Name]-1);
+                };
+                if (stat3Name) {
+                    displayOrder.push(greatTableIndex[currentCharRelicsRef[`${currentPieceName}3Stat`]]);
+                    subRollArray.push(statsApplied[stat3Name]-1);
+                };
+                if (stat4Name) {
+                    displayOrder.push(greatTableIndex[currentCharRelicsRef[`${currentPieceName}4Stat`]]);
+                    subRollArray.push(statsApplied[stat4Name]-1);
+                };
+                const statDestination = {
+                    ...(stat1Name ? {[greatTableIndex[currentCharRelicsRef[`${currentPieceName}1Stat`]]]: currentCharRelicsRef[`${currentPieceName}1Value`]} : {}),
+                    ...(stat2Name ? {[greatTableIndex[currentCharRelicsRef[`${currentPieceName}2Stat`]]]: currentCharRelicsRef[`${currentPieceName}2Value`]} : {}),
+                    ...(stat3Name ? {[greatTableIndex[currentCharRelicsRef[`${currentPieceName}3Stat`]]]: currentCharRelicsRef[`${currentPieceName}3Value`]} : {}),
+                    ...(stat4Name ? {[greatTableIndex[currentCharRelicsRef[`${currentPieceName}4Stat`]]]: currentCharRelicsRef[`${currentPieceName}4Value`]} : {})
+                };
+
+                // let compositeRollCount = 0;
+                // for (let entry of displayOrder) {
+                //     const statInternal = greatTableKeys[entry] ?? entry;
+
+                //     let valuePre = statDestination[entry];
+                //     // let valueRef = (valuePre * (isPercent ? 100 : 1))?.toFixed(3) || 0;
+        
+                //     let estRolls = basicShorthand.estimateSubRolls(subStatRef[statInternal],valuePre);
+
+                //     compositeRollCount += estRolls;
+                // }
+
+
+                // greatTableIndex
+                let mainRow = customHTML.createAlternatingStatRows([greatTableIndex[mainStat]],{[greatTableIndex[mainStat]]: mainStatRef},true);
+                let statRows = customHTML.createAlternatingStatRows(
+                    // currentPiece.order,
+                    displayOrder,
+                    statDestination,
+                    // currentPiece.stats,
+                    false,
+                    subStatRef,
+                    null,
+                    subRollArray
+                );
+
+                exampleRelicsString += `
+                <div class="relicsPieceHolderBoxQueriesResultInspect">
+                    <div class="characterDisplayNameAndElement">
+                        <div class="traceDisplayNameBox">${currentPieceName}</div>
+                    </div>
+                    <div class="characterDisplayStatsBasic">
+
+                        ${mainRow}
+                        ${statRows}
+                    </div>
+                </div>`;
+            }
+            exampleRelicsString += `</details>`;
+
+
+
+            currentCharacterString += `<div class="queryResultTeamRowBox">
+                <div class="analyticsResultRowRelicsBox">
+                    ${customHTML.queryResultsStandardRow(currentCharacter,currentResult[`${charSlot}SPD`],currentCharacter.statObject,maslow[currentCharacter.name].defaultMainSubs,true)}
+                </div>
+            </div>
+            ${currentCharacterMenuString + exampleRelicsString}`;
+            
+            compositeCharacterString += currentCharacterString;
+        }
+        
+        readSelection("customMenuSearchBody").innerHTML = compositeCharacterString;
+    },
     restrictSubstatsAndReturnRolls(depositRef,partName,part) {
         let totalAVGRollEst = 0;
         let estSubstatArray = [];
@@ -75,6 +379,10 @@ const customMenu = {
 
         for (let i=1;i<=4;i++) {
             const currentSlotDeposit = depositRef[`${part}${i}Stat`];
+            if (currentSlotDeposit === null) {
+                estSubstatArray.push(0);
+                continue;
+            }
             
             let initialValue = depositRef[`${part}${i}Value`];
 
@@ -90,6 +398,7 @@ const customMenu = {
         for (let i=1;i<=4;i++) {
 
             const currentSlotDeposit = depositRef[`${part}${i}Stat`];
+            if (currentSlotDeposit === null) {continue;}
             const currentSubstatValueFamily = subStatRef[currentSlotDeposit];
             let initialValue = depositRef[`${part}${i}Value`];
 
@@ -143,7 +452,7 @@ const customMenu = {
         const nameConversions = userTriggers.relicSlotNameConversions;
         const realPartName = nameConversions[part];
         let mainStatRef = relics[nameConversions[part]].mainAffix;
-        let subStatRef = relics[nameConversions[part]].subAffix;
+        let subStatRef = relics.Head.subAffix;
         let mainStatKeys = Object.keys(mainStatRef);
         let subStatKeys = Object.keys(subStatRef);
         // ["Head","Hands","Body","Feet","Sphere","Rope"]
@@ -1355,7 +1664,7 @@ const customMenu = {
 
         const nameConversions = userTriggers.relicSlotNameConversions;
         let mainStatRef = relics[nameConversions[part]].mainAffix;
-        let subStatRef = relics[nameConversions[part]].subAffix;
+        let subStatRef = relics.Head.subAffix;
         let mainStatKeys = Object.keys(mainStatRef);
         let subStatKeys = Object.keys(subStatRef);
 
@@ -1468,16 +1777,18 @@ const customMenu = {
                     // ]
                 }
 
-
                 depositRef[`${part}${subCounter}Value`] = +valueSelector.value /(isPercent ? 100 : 1);
             }
 
-            const currentPartMainstat = depositRef[`${part}Main`];
-            for (let i=1;i<=4;i++) {
-                if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentPartMainstat) {mainstatConflict = true;}
-                if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentStatName && i-1 != entry.array) {dupeSubFound = true;}
+        }
+
+        const currentPartMainstat = depositRef[`${part}Main`];
+        for (let i=1;i<=4;i++) {
+            const currentStatName = readSelection(`relicStatSelectionSelectorSub${i}`).value;
+            for (let z=i+1;z<=4;z++) {
+                if (readSelection(`relicStatSelectionSelectorSub${z}`).value === currentStatName) {dupeSubFound = true;}
             }
-            // console.log(selectorRef.value)
+            if (readSelection(`relicStatSelectionSelectorSub${i}`).value === currentPartMainstat) {mainstatConflict = true;}
         }
 
 
@@ -1486,7 +1797,9 @@ const customMenu = {
 
         if (!isSilent) {
             customMenu.createRelicDetailMenu(part);
-            userTriggers.updateSelectedRelicStats(true);
+            customMenu.updateSelectedRelicStats(true);//this one is obv for the edit menu
+            userTriggers.updateSelectedRelicStats();//this is for the relic page boxes, not the edit menu
+            
             userTriggers.updateCharacterUI(updateFormulas(charSlot),+globalUI.currentCharacterDisplayed);
         }
     },
@@ -2589,7 +2902,7 @@ const userTriggers = {
             let currentPiece = currentCharRelicsRef[actualPieceName];
             let mainStat = currentCharRelicsRef[`${piece}Main`];
             let mainStatRef = relics[actualPieceName].mainAffix[mainStat].maxed;
-            let subStatRef = relics[actualPieceName].subAffix;
+            let subStatRef = relics.Head.subAffix;
 
             let subRollArray = customMenu.restrictSubstatsAndReturnRolls(currentCharRelicsRef,actualPieceName,piece);
 
@@ -3803,6 +4116,24 @@ const userTriggers = {
 
         userTriggers.updateQuerySearchSettings(true);
     },
+    useResultOnCurrentTeam(resultIndex) {
+        const globalResults = globalRecords.resultsStorage;
+        const currentResult = globalResults[resultIndex];
+        const characterObject = currentResult.characterObject;
+
+
+        const parsedData = JSON.parse(JSON.stringify(characterObject));
+        globalRecords.character = parsedData;
+
+        for (let i=1;i<=4;i++) {
+            // const trimmedNumber = +charSlot.replace("char","");
+            userTriggers.updateCharacterSlotSelected(i);
+            userTriggers.updateCharacterBreakdownClicked(i);
+            userTriggers.updateSelectedCharacter(globalRecords.character[`char${i}`].name);
+            userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+            userTriggers.updateSelectedRelicStats();
+        }
+    },
 
     renewFiltersDisplayValues(isSubstatChange,substatChanged) {
 
@@ -4419,7 +4750,7 @@ const formulasValues = {
 
         if (querySettingsOverride) {//this is for query/search cycles when users are doing searches, where we base substats off of roll counts instead of hardset values specified by the user
             const substatRollValue = querySettingsOverride.substatRollValue;
-            const substatRef = relics.Feet.subAffix;
+            const substatRef = relics.Head.subAffix;
             const stepConversion = formulasValues.rollValueConversion;
             const currentStepCount = stepConversion[substatRollValue];
 
@@ -4427,7 +4758,16 @@ const formulasValues = {
             for (let entry in charTable) {
                 const currentRollValue = charTable[entry];
                 const currentSubRef = substatRef[entry];
+
+                // console.log(currentRollValue,currentSubRef)
                 index[greatTableIndex[entry]] += currentRollValue * (currentSubRef.base + currentSubRef.step * currentStepCount);
+
+                // console.log(greatTableIndex[entry],(currentRollValue * (currentSubRef.base + currentSubRef.step * currentStepCount)),currentSubRef,currentRollValue)
+
+
+
+
+
                 //this way we take the total rolls assigned to a given stat, and multiply it by the base roll amount + whatever amount the user specified for the steps, being low mid or high
             }
             // "HPFlat": {
@@ -4698,12 +5038,6 @@ const formulasValues = {
 
 
 
-// archer LC is 23046
-// archer himself is 1105
-
-// lc stats are calculated by taking the number of levels-1 * the step value added to the base value
-//example: archer LC at the last ascension has a base of 269.28 ATK and a step of 3.96
-//so we'd take 3.96 * (80 - 1) + 269.28 = 312.84 + 269.28 = 582.12
 
 
 

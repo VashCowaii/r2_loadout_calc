@@ -9,8 +9,16 @@
 <div>
     <h1>Nov 23th, 2025</h1>
     <ul>
+        <li>Added the ability to inspect a given result on the optimizer, and apply that result to the current team you have input on the battle simulator separate from the optimizer
+            <ul>
+                <li>When inspected, a result will show the in-game menu stats of each character that can be expanded if you care about them</li>
+                <li>Another option given is the ability to expand "Example Relics" specific to that character and the substats allotted them, giving you a general idea of the kind of relics it would take in order to make something like that result. The idea here is that if you get something that requires 5 crit dmg rolls per relic that's obv some bullshit, and you don't want that, but if all it takes is getting a single crit dmg roll on each relic that's really no big deal.</li>
+                <li>Lastly, if you click to apply that result, it will completely overwrite the lightcones, relics, and whatever other gear might be associated with a result in the future and replace your current selections in the team tab. This way you can apply a result and check what is going on in the battle in order to tell if you secretly fucked yourself on a rotation condition or not without having to guess.</li>
+            </ul>
+        </li>
         <li>Fixed an issue where Gallagher's skill heal still used a very old method in order to find who should be healed, resulting in some cases where no proper target could be found and cause an error.</li>
         <li>Fixed an issue where Gallagher's default desired substat for Break Effect was improperly defined.</li>
+        <li>Fixed an issue with detecting duplicate substats that I added yesterday that would sometimes not show the error when it should, or did show the error when it shouldn't</li>
     </ul>
 </div>
 

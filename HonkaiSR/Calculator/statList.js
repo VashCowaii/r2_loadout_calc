@@ -364,13 +364,26 @@ const pathImagePaths = {
     },
 }
 
+
+let subStatRefHead = relics.Head.subAffix;
+subStatRefHead[""] = {
+        "base": 0,
+        "step": 0,
+        "stepsPossible": 2,
+        "stepRatio": 8,
+        "bounds": [
+          0,
+          1
+        ]
+      }
+
 const initialPropertyPath = "/HonkaiSR/icon/property/";
 const noIconPath = "";
 const propertyImagePaths = {
     "": {
         "icon": noIconPath,
         "sets": {
-            "": {
+            [0]: {
                 "display": "Empty",
                 "specific": "Empty",
                 "unit": ""
