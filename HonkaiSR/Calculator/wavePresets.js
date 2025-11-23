@@ -1,5 +1,9 @@
 const vashWavePresets = {
-    "Glorp-ard": [[{"image":null,"entry":null,"name":"Glorp Elite","lvl":95,"hpBars":1,"toughnessBars":1,"stats":[0,95,395960000,0,0,0,718,0,0,0,1150,0,0,132,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0.2,0,0.2,0,0.2,0,0,0,1,0,1,0,1,0,0],"enemyTypeAttack":"Single Target","enemyType":"elite","weaknessOverrides":{"Lightning":true,"Wind":true,"Quantum":true},"resistantTo":{},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":395960000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":395960000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":132,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":132,"SPDActionValue":75.75757575757575,"CritRateFinal":0,"CritDamageFinal":0}},{"image":null,"entry":null,"name":"Glorp-ard","lvl":95,"hpBars":1,"toughnessBars":1,"stats":[0,95,400000000,0,0,0,718,0,0,0,1150,0,0,158,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,140,0,0,0,0,0,0,0,0,0,0.2,0,0.2,0,0,0,0,0,0.2,0,0,0,0.2,0,0,0,1,1,0,0,1,0,0],"enemyTypeAttack":"AoE","enemyType":"boss","weaknessOverrides":{"Fire":true,"Lightning":true,"Wind":true},"resistantTo":{},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":400000000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":400000000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":158,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":158,"SPDActionValue":63.29113924050633,"CritRateFinal":0,"CritDamageFinal":0}},{"image":null,"entry":null,"name":"Glorp Elite","lvl":95,"hpBars":1,"toughnessBars":1,"stats":[0,95,395960000,0,0,0,718,0,0,0,1150,0,0,132,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0.2,0,0.2,0,0.2,0,0,0,1,0,1,0,1,0,0],"enemyTypeAttack":"Single Target","enemyType":"elite","weaknessOverrides":{"Lightning":true,"Wind":true,"Quantum":true},"resistantTo":{},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":395960000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":395960000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":132,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":132,"SPDActionValue":75.75757575757575,"CritRateFinal":0,"CritDamageFinal":0}}]],
+    "Glorp-ard": [
+        [
+            {"image":null,"entry":null,"name":"Glorp Elite","lvl":95,"hpBars":1,"toughnessBars":1,"stats":
+                [0,95,395960000,0,0,0,718,0,0,0,1150,0,0,132,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0.2,0,0.2,0,0.2,0,0,0,1,0,1,0,1,0,0],"enemyTypeAttack":"Single Target","enemyType":"elite","weaknessOverrides":{"Lightning":true,"Wind":true,"Quantum":true},"resistantTo":{"Lightning":0,"Wind":0,"Quantum":0},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":395960000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":395960000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":132,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":132,"SPDActionValue":75.75757575757575,"CritRateFinal":0,"CritDamageFinal":0}},{"image":null,"entry":null,"name":"Glorp-ard","lvl":95,"hpBars":1,"toughnessBars":1,"stats":[0,95,400000000,0,0,0,718,0,0,0,1150,0,0,158,0,0,0,0,0,0,0,0,0.4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,140,0,0,0,0,0,0,0,0,0,0.2,0,0.2,0,0,0,0,0,0.2,0,0,0,0.2,0,0,0,1,1,0,0,1,0,0],"enemyTypeAttack":"AoE","enemyType":"boss","weaknessOverrides":{"Fire":true,"Lightning":true,"Wind":true},"resistantTo":{"Fire":0,"Lightning":0,"Wind":0},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":400000000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":400000000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":158,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":158,"SPDActionValue":63.29113924050633,"CritRateFinal":0,"CritDamageFinal":0}},{"image":null,"entry":null,"name":"Glorp Elite","lvl":95,"hpBars":1,"toughnessBars":1,"stats":[0,95,395960000,0,0,0,718,0,0,0,1150,0,0,132,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0.2,0,0,0,0,0,0,0,0.2,0,0.2,0,0.2,0,0,0,1,0,1,0,1,0,0],"enemyTypeAttack":"Single Target","enemyType":"elite","weaknessOverrides":{"Lightning":true,"Wind":true,"Quantum":true},"resistantTo":{"Lightning":0,"Wind":0,"Quantum":0},"finalStats":{"ATKBaseFinal":718,"ATKBonusPercent":0,"ATKBonusFlat":0,"ATKFinal":718,"HPBaseFinal":395960000,"HPBonusPercent":0,"HPBonusFlat":0,"HPFinal":395960000,"DEFBaseFinal":1150,"DEFBonusPercent":0,"DEFBonusFlat":0,"DEFFinal":1150,"SPDBaseFinal":132,"SPDBonusPercent":0,"SPDBonusFlat":0,"SPDFinal":132,"SPDActionValue":75.75757575757575,"CritRateFinal":0,"CritDamageFinal":0}}]
+    ],
     "quantumDoggo": [
         [
             {
@@ -136,7 +140,11 @@ const vashWavePresets = {
                     "Ice": true,
                     "Wind": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Physical": 0,
+                    "Ice": 0,
+                    "Wind": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
@@ -293,7 +301,11 @@ const vashWavePresets = {
                     "Lightning": true,
                     "Quantum": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Ice": 0,
+                    "Lightning": 0,
+                    "Quantum": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
@@ -450,7 +462,11 @@ const vashWavePresets = {
                     "Ice": true,
                     "Wind": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Physical": 0,
+                    "Ice": 0,
+                    "Wind": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
@@ -609,7 +625,11 @@ const vashWavePresets = {
                     "Ice": true,
                     "Wind": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Physical": 0,
+                    "Ice": 0,
+                    "Wind": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
@@ -766,7 +786,11 @@ const vashWavePresets = {
                     "Lightning": true,
                     "Quantum": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Ice": 0,
+                    "Lightning": 0,
+                    "Quantum": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
@@ -923,7 +947,11 @@ const vashWavePresets = {
                     "Ice": true,
                     "Wind": true
                 },
-                "resistantTo": {},
+                "resistantTo": {
+                    "Physical": 0,
+                    "Ice": 0,
+                    "Wind": 0
+                },
                 "finalStats": {
                     "ATKBaseFinal": 718,
                     "ATKBonusPercent": 0,
