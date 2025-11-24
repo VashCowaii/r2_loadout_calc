@@ -73,7 +73,7 @@ const customMenu = {
 
         readSelection("customMenuSearchTitle").innerHTML = `Result ${resultIndex}`;
         readSelection("customMenuSearchBarBox").style.display = "none";
-        readSelection("customMenuSearchNote").innerHTML = "This is a breakdown on the stats required for this result to work, as well as examples of what relics COULD look like on each piece in order to achieve stat distribution achieved.";
+        readSelection("customMenuSearchNote").innerHTML = "This is a breakdown on the stats required for this result to work, as well as examples of what relics COULD look like on each piece in order to the overall roll distribution.";
 
         globalUI.currentSearchOpen = "OptimizerResult";
         globalUI.currentSearchVolume = null;
