@@ -2420,6 +2420,7 @@ const userTriggers = {
         if (!pageloadUIAdjustment) {
             const enemyName = readSelection("addEnemyStatsName").value;
             const enemyATK = +readSelection("addEnemyStatsATK").value;
+            if (+readSelection("addEnemyStatsSPD").value > 300) {readSelection("addEnemyStatsSPD").value = 300;}
             const enemySPD = +readSelection("addEnemyStatsSPD").value;
             const enemyEffectRES = +readSelection("addEnemyStatsEffectRES").value;
             const enemyToughness = +readSelection("addEnemyStatsToughness").value;
