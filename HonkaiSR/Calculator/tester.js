@@ -408,19 +408,22 @@ const customMenu = {
                 const stepValue = currentSubstatValueFamily.step;
                 const stepCount = currentSubstatValueFamily.stepsPossible;
 
-                const maxBaseRoll = baseValue + (stepValue * stepCount);
+                const maxBaseRoll = +(baseValue + (stepValue * stepCount)).toFixed(7);
 
                 let highestPossibleMax = 0;
                 for (let z=0;z<=5;z++) {
-                    const maxUpperRange = maxBaseRoll * z + maxBaseRoll;
+                    const maxUpperRange = +(maxBaseRoll * z + maxBaseRoll).toFixed(7);
 
                     if (totalRestrictedRolls + z > 5) {
-                        depositRef[`${part}${i}Value`] = maxBaseRoll * (z - 1) + maxBaseRoll;
+                        depositRef[`${part}${i}Value`] = +(maxBaseRoll * (z - 1) + maxBaseRoll).toFixed(7);
                         highestPossibleMax = z-1;
                         totalRestrictedRolls += z-1;
                         break;
                     }
-                    else if (initialValue > maxUpperRange) {continue;}
+                    else if (initialValue > maxUpperRange) {
+                        // console.log(initialValue,maxUpperRange)
+                        continue;
+                    }
                     else {
                         highestPossibleMax = z;
                         totalRestrictedRolls += z;
@@ -528,7 +531,7 @@ const customMenu = {
             inputLoopString += `<div class="relicStatSelectionRow">
                 <select class="relicStatSelectionSelector" id="relicStatSelectionSelectorSub${i}" ${changeString}>${subStrings[i].string}</select>
                 <div class="customMenuSearchBarBoxRelicValueInput">
-                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub${i}Input" ${changeString} min="${subStatRef[currentSlotDeposit].bounds[0] * (isPercent ? 100 : 1)}" max="${subStatRef[currentSlotDeposit].bounds[1] * (isPercent ? 100 : 1)}" step="${subStatRef[currentSlotDeposit].step * (isPercent ? 100 : 1)}" value="${currentValue * (isPercent ? 100 : 1)}">
+                    <input type="number" class="customMenuSearchBarInputRelicValues" id="relicStatSelectionSelectorSub${i}Input" ${changeString} min="${+(subStatRef[currentSlotDeposit].bounds[0] * (isPercent ? 100 : 1)).toFixed(7)}" max="${+(subStatRef[currentSlotDeposit].bounds[1] * (isPercent ? 100 : 1)).toFixed(7)}" step="${+(subStatRef[currentSlotDeposit].step * (isPercent ? 100 : 1)).toFixed(7)}" value="${+(currentValue * (isPercent ? 100 : 1)).toFixed(7)}">
                     ${isPercent ? "%" : ""}
                 </div>
                 ${currentRollValue > 0 ? `<div class="imageRowStatisticStatBoxRollsEst">${currentRollValue}</div>` : `<div class="imageRowStatisticStatBoxRollsEst0Roll"></div>`}
@@ -1740,31 +1743,46 @@ const customMenu = {
                 const isPercent = unit === "%";
 
                 let subs = subStatRef[currentStatName];
-                valueSelector.min = subs.bounds[0] * (isPercent ? 100 : 1);
-                valueSelector.max = subs.bounds[1] * (isPercent ? 100 : 1);
-                valueSelector.step = currentStatName === "SPDFlat" ? 0.1 : subs.step * (isPercent ? 100 : 1);//we can enforce steps on anything BUT speed, explained more a bit lower here
 
-                if (+valueSelector.value/(isPercent ? 100 : 1) < subs.bounds[0]) {
-                    valueSelector.value = subs.bounds[0] * (isPercent ? 100 : 1);
+                const floorValue = subs.bounds[0];
+                const ceilingValue = subs.bounds[1];
+                const initialStepValue = subs.step;
+                const maxSteps = subs.stepsPossible;
+                const baseValue = subs.base;
+
+                valueSelector.min = +(floorValue * (isPercent ? 100 : 1)).toFixed(7);
+                valueSelector.max = +(ceilingValue * (isPercent ? 100 : 1)).toFixed(7);
+                valueSelector.step = currentStatName === "SPDFlat" ? 0.1 : +(initialStepValue * (isPercent ? 100 : 1)).toFixed(7);//we can enforce steps on anything BUT speed, explained more a bit lower here
+
+                const boundsCheckValue = +(+valueSelector.value/(isPercent ? 100 : 1)).toFixed(7)
+                if (boundsCheckValue < floorValue) {
+                    valueSelector.value = +(floorValue * (isPercent ? 100 : 1)).toFixed(7);
+                }//for when we switch from like, 3% crit to SPD, so we don't accidentally keep 0.03 speed lmao, and actually swap to the minimum
+                if (boundsCheckValue > ceilingValue) {
+                    valueSelector.value = +(ceilingValue * (isPercent ? 100 : 1)).toFixed(7);
                 }//for when we switch from like, 3% crit to SPD, so we don't accidentally keep 0.03 speed lmao, and actually swap to the minimum
                 if (currentStatName != "SPDFlat" && subs.stepRatio === 8) {
-                    let baseValue = subs.base;
                     let options = [baseValue];
                     
                     //the first 2 steps, and then the 8 steps that make up base, time 5 the max possible rolls on a single stat
-                    let StepsLeft = (subs.stepsPossible + subs.stepRatio)*5 + subs.stepsPossible;
-                    let step = subs.step
+                    let StepsLeft = (maxSteps + subs.stepRatio)*5 + maxSteps;
+                    let step = initialStepValue
 
                     for (let i=StepsLeft;i>=0;i--) {
                         let flipped = StepsLeft-i;
                         options.push(+(baseValue + step*flipped).toFixed(7));
                     }
+                    // console.log(options)
                     //the whole point of that shit was just to make it so if someone inputs DEF flat as 19 on their substat, then the calc will autocorrect it to 19.051896 as that's the only thing it could be if 19 was entered
                     //AKA: it's a way to derive the real decimal value of a given statistic without needing access to relic API fuckery
                     //THAT SAID, it DOES NOT WORK ON SPEED, speed shows no decimals, and the steps are 0.3 which means you could have multiple steps appear within the bounds of 1 speed, and that fuckin sucks
 
                     // console.log(valueSelector.value)
-                    valueSelector.value = (+getClosestSTatStep((valueSelector.value/(isPercent ? 100 : 1)),options) * (isPercent ? 100 : 1)).toFixed(7);
+
+                    // console.log(+valueSelector.value/(isPercent ? 100 : 1))
+                    const adjustedValue = +(+valueSelector.value/(isPercent ? 100 : 1)).toFixed(7)
+                    const closestValue = +getClosestSTatStep(adjustedValue,options);
+                    valueSelector.value = +(closestValue * (isPercent ? 100 : 1)).toFixed(7);
                     
 
                     // "base": 0.03456,
@@ -1777,7 +1795,7 @@ const customMenu = {
                     // ]
                 }
 
-                depositRef[`${part}${subCounter}Value`] = +valueSelector.value /(isPercent ? 100 : 1);
+                depositRef[`${part}${subCounter}Value`] = +(+valueSelector.value /(isPercent ? 100 : 1)).toFixed(7);
             }
 
         }
