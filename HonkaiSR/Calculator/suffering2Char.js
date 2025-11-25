@@ -7960,7 +7960,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.benedictionDMGADDEDATKOBJECT;
                 
                 let targetTurn = battleData.primaryTarget
-                battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Benediction");
+                if (targetTurn) {
+                    battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Benediction");
+                }
                 // battleData.addedDMGTallyAttack.push({
                 //     ...addedHit.hit
                 // })
@@ -8005,9 +8007,12 @@ const turnLogic = {
                 }
 
                 let ATKObject = ATKObjects.talentDMGADDEDATKOBJECT;
-                let targetTurn = battleData.primaryTarget
-                battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Violet Sparknado");
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                let targetTurn = battleData.primaryTarget;
+                if (targetTurn) {
+                    battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Violet Sparknado");
+                    battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                }
+                
 
                 // battleData.addedDMGTallyAttack.push({
                 //     ...addedHit.hit
