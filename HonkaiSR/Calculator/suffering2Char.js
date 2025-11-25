@@ -11277,7 +11277,7 @@ const turnLogic = {
                             this.saberCoreGainCRITDMGSHEET ??= {
                                 "stats": [CritDamageBase],
                                 [CritDamageBase]: 0.04,
-                                "source": "E1",
+                                "source": "Trace",
                                 "sourceOwner": characterName,
                                 "buffName": buffNames.crownStack,
                                 "duration": 1,
@@ -11599,7 +11599,7 @@ const turnLogic = {
                         const buffSheet = this.buffSheet ??= {
                             "stats": [DamageUltimate],
                             [DamageUltimate]: 0.60,
-                            "source": ownerTurn.properName,
+                            "source": "E1",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
                             "duration": 1,
