@@ -3291,9 +3291,7 @@ const userTriggers = {
 
         //creates the action order on the left
         customMenu.insertLogActions(battleData.battleLog);
-        //redoes the default first action expanded, if you click on action details, since obv on a new battle we have new actions
-        //would be weird af if we had old actions confusing peope
-        userTriggers.expandBattleLog(globalUI.defaultActionIndex);
+        
 
 
         //not gonna be necessary once we hook up more graphs later, but for now we log to console the tracking for debug purposes bc I'm too lazy to actually hook them up
@@ -3308,6 +3306,10 @@ const userTriggers = {
             //so after changing a setting, the settings menu will persist now
             userTriggers.updateBattleViewDisplayed("GraphExpand");
         }
+
+        //redoes the default first action expanded, if you click on action details, since obv on a new battle we have new actions
+        //would be weird af if we had old actions confusing peope
+        userTriggers.expandBattleLog(globalUI.defaultActionIndex,true);
 
         //tracks whatever graph was last selected, and renews it for the current battle, doesn't strictly have to be summary data
         userTriggers.updateGraphViewDisplayed(globalUI.currentGraphViewDisplayType)
@@ -3968,9 +3970,9 @@ const userTriggers = {
         if (!skipEventBody) {
             displayBox.innerHTML += `<br><div class="actionDetailHeaderRow">Events</div>` + eventOpen + eventsString + eventClose;
         }
-        // if (!silentUpdate) {
-        //     userTriggers.updateBattleViewDisplayed("GraphExpand");
-        // }
+        if (!silentUpdate && logIndex != null) {
+            userTriggers.updateBattleViewDisplayed("ActionExpand");
+        }
     },
     exportCharacterData(charSlot) {
         if (charSlot === "ALL") {
