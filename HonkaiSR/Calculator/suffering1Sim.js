@@ -719,7 +719,7 @@ const sim = {
                     eachListener.owners = ownerArray;
                     eachListener.completedCounter = 0;
 
-                    const currentSlots = eachListener.ownersSlots ??= {};
+                    const currentSlots = eachListener.ownersSlots = {};
 
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.rank;
@@ -741,7 +741,7 @@ const sim = {
             if (logicRef?.listeners && logicRef.listeners.length) {
                 for (let eachListener of logicRef.listeners) {
                     eachListener.owners = ownerArray;
-                    const currentSlots = eachListener.ownersSlots ??= {};
+                    const currentSlots = eachListener.ownersSlots = {};
 
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;
@@ -762,7 +762,7 @@ const sim = {
                 for (let eachListener of logicRef.listeners) {
                     eachListener.owners = ownerArray;
 
-                    const currentSlots = eachListener.ownersSlots ??= {};
+                    const currentSlots = eachListener.ownersSlots = {};
 
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;

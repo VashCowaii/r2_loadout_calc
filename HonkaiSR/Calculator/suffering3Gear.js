@@ -1888,7 +1888,7 @@ const turnLogicLightcones = {
                             "sourceOwner": sourceTurn.properName,
                             "buffName": this.buffNames.hymn,
                             "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
-                            "AVApplied": battleData.sumAV,
+                            "AVApplied": 0,
                             "maxStacks": 3,
                             "currentStacks": 1,
                             "decay": false,
