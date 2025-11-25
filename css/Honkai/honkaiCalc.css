@@ -2328,6 +2328,7 @@ div {
     /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
     /* transform:translate(40%,20%) ;
     scale: 8; */
+    white-space: normal;
     box-sizing: border-box;
     overflow: hidden;
     margin-top: 1px;

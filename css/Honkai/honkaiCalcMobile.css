@@ -213,6 +213,179 @@
     scale: 1.5;
 }
 
+
+
+
+
+
+
+
+.expandedDataHolderHolderBoxBattleView {
+    width: 100%;
+    /* height: 100%; */
+    max-height: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* border: 4px solid green; */
+    box-sizing: border-box;
+}
+.actionBarHolderbox {
+    height: 100%;
+    max-height: 250px;
+    min-height: 250px;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    border-bottom: 2px solid #434343;
+}
+.actionDetailHeaderRow {
+    flex-direction: column;
+}
+.detailHeaderAV {
+    font-size: 20px;
+}
+
+.actionDetailMainHolderBox {
+    height: auto;
+    /* min-height: 800px;
+    max-height: 800px; */
+    align-items: flex-start;
+}
+
+.actionDetailHeaderRowCharacterImageBox {
+    width: 100%;
+    /* height: 100%; */
+    /* min-height: 175px;
+    max-height: 175px; */
+    /* font-size: 30px; */
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+}
+.actionDetailHeaderRowCharacterImageAndEnergyBox {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 175px;
+    max-height: 175px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    /* border: 1px solid green; */
+}
+.actionDetailHeaderRowCharacterCustomValues {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+    justify-content: flex-start;
+    align-items: left;
+    box-sizing: border-box;
+    /* border: 3px solid green; */
+}
+.actionDetailHeaderRowCharacterCustomValuesInner {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-left: 2px solid #434343;
+    margin-left: 15px;
+}
+
+
+
+.actionDetailHeaderRowCharacterEnergyBox {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 4px solid grey;
+    background-color: #0d0c0c;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+
+.characterSearchButtonDMGDetailsTurnInspect {
+    right: 5%;
+}
+
+
+
+
+
+
+.mainGraphOverviewHolderBox {
+    width: 100%;
+    height: 100%;
+    /* max-height: 100%; */
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+    margin: 10px;
+    padding: 5px;
+    overflow:visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+.graphContainerbox {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    min-height: 0px;
+    /* margin: 5px; */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
+.graphsControllerBoxHolder {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    /* border-bottom: 2px solid #5f656b; */
+}
+
+
+
+.enemyWaveSummaryHolder {
+    flex-direction: column;
+}
+.enemyWaveEnemyDisplayBox {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
 }
 
 
