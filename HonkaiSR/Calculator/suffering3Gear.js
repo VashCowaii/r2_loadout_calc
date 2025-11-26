@@ -2371,11 +2371,12 @@ const turnLogicLightcones = {
                     }
 
 
-                    let buffName = this.buffNames.brocade;
+                    
                     if (!sourceTurn.timeWovenBrocadeSTACKSHEET) {
                         let lcNameRef = "Time Woven Into Gold";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
+                        const buffNames = turnLogicLightcones[lcNameRef].buffNames;
                         // let ownerName = sourceTurn.properName;
 
                         sourceTurn.timeWovenBrocadeSTACKSHEET = {
@@ -2383,7 +2384,7 @@ const turnLogicLightcones = {
                             [CritDamageBase]: rankParams[3],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": buffNames.brocade,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 6,
@@ -2397,7 +2398,7 @@ const turnLogicLightcones = {
                             [DamageBasic]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": this.buffNames.brocadeBasic,
+                            "buffName": buffNames.brocadeBasic,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 6,
@@ -2407,6 +2408,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.timeWovenBrocadeSTACKSHEET;
+                    let buffName = buffSheet.buffName;
                     
 
 
@@ -2466,13 +2468,12 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Time Woven Into Gold - Brocade Stacker",
                 "owners": [],
-                "buffNames": {
-                    "brocade": "Brocade Stack",
-                    "brocadeBasic": "Brocade BasicATK Bonus"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "brocade": "Brocade Stack",
+            "brocadeBasic": "Brocade BasicATK Bonus"
+        },
     },
     "Make Farewells More Beautiful": {
         logic(thisTurn,battleData) {},
