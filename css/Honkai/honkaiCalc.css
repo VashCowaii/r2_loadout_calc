@@ -918,6 +918,7 @@ div {
     display: flex;
     box-sizing: border-box;
     align-items: center;
+    padding-right: 5px;
 }
 .characterDisplayNameAndElementItemNotAdded {
     width: 100%;
@@ -1152,6 +1153,8 @@ div {
     justify-content: center;
     align-items: center;
     height: 25px;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 .imageRowStatisticBox1 {
     background-color: #c0c1d60D;
@@ -5484,6 +5487,20 @@ div {
     border: 2px solid white;
 }
 .filterCharacterSelectionSwitchIcon {
+    width: 100%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,-20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    /* scale: 0.8; */
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+.filterCharacterSelectionSwitchIconExportBox {
     width: 100%;
     object-fit: contain;
     /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */

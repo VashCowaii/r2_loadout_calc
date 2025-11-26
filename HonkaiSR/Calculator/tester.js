@@ -624,7 +624,7 @@ const customMenu = {
 
             characterExportString += `<div class="importCharacterBoxItem">
                 <div class="filterCharacterExportSwitchIconBox">
-                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIcon">
+                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}')">Import</div>
@@ -685,7 +685,7 @@ const customMenu = {
 
             characterExportString += `<div class="importCharacterBoxItem">
                 <div class="filterCharacterExportSwitchIconBox">
-                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIcon">
+                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}')">Import</div>
@@ -3319,7 +3319,7 @@ const userTriggers = {
             // char4:{...characterObject.char4}
         };
 
-        console.log(newBattleCharacterObject)
+        // console.log(newBattleCharacterObject)
 
         let battleData = sim.battleStart(newBattleCharacterObject,true,null,globalRecords.battleSettings);
         globalRecords.battleData = battleData;
