@@ -1153,7 +1153,7 @@ div {
     justify-content: center;
     align-items: center;
     height: 25px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     box-sizing: border-box;
 }
 .imageRowStatisticBox1 {
