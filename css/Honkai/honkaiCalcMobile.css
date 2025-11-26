@@ -207,6 +207,13 @@
     scale: 1.4;
     
 }
+.filterCharacterSelectionSwitchIconExportBox {
+    object-fit: contain;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(0%,-5%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    scale: 1.4;
+}
 .queryResultsQuarterCharacterImageBest {
     transform:translate(0%,20%);
     mask-image: linear-gradient(to right, black 70%, transparent 100%);
@@ -383,7 +390,16 @@
 }
 
 
-
+.statisticSettingsRow {
+    flex-direction: column;
+}
+.statsRowName {
+    white-space: nowrap;
+}
+.imageRowStatisticBox1,.imageRowStatisticBox2 {
+    max-height: none;
+    min-height: 40px;
+}
 
 
 }
