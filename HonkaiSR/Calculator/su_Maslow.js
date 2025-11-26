@@ -1721,7 +1721,7 @@ const maslowCharactersNihility = {
     //NIHILITY
     "Black Swan": {
         defaultMainSubs: ["SPDFlat","ATK%","EHR","Break"],
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["DOTSource","Shred","Vuln","Debuff"],
@@ -1774,7 +1774,7 @@ const maslowCharactersNihility = {
     },
     "Hysilens": {
         defaultMainSubs: ["SPDFlat","ATK%","EHR","Break"],
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["DOTSource","Shred","Vuln","Debuff"],
@@ -1827,7 +1827,7 @@ const maslowCharactersNihility = {
     },
     "Kafka": {
         defaultMainSubs: ["SPDFlat","ATK%","EHR","Break"],
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["DOTSource","Debuff","FUASource","ATK"],
@@ -1882,7 +1882,7 @@ const maslowCharactersNihility = {
         // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
         defaultMainSubs: ["SPDFlat","EHR","CritRateBase","CritDamageBase"],
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: "ATK%",
+        defaultTrashSub: ["ATK%"],
         0: {
             gives: [],
             givesTeam: ["PEN","WeaknessImplant","Shred","Debuff"],
@@ -1937,7 +1937,7 @@ const maslowCharactersNihility = {
 const maslowCharactersAbundance = {
     "Huohuo": {
         defaultMainSubs: ["SPDFlat","HP%","EffectRES","DamageBreak"],
-        defaultTrashSub: "HPFlat",
+        defaultTrashSub: ["HPFlat"],
         0: {
             gives: [],
             givesTeam: ["HealingSource","ATK"],
@@ -1990,7 +1990,7 @@ const maslowCharactersAbundance = {
     },
     "Gallagher": {
         defaultMainSubs: ["SPDFlat","DamageBreak","HP%","EffectRES"],
-        defaultTrashSub: "HPFlat",
+        defaultTrashSub: ["HPFlat"],
         0: {
             gives: [],
             givesTeam: ["HealingSource","Vuln"],
@@ -2046,7 +2046,7 @@ const maslowCharactersRemembrance = {
     //REMEMBRANCE
     "Castorice": {
         defaultMainSubs: ["CritRateBase","CritDamageBase","HP%","HPFlat"],
-        defaultTrashSub: "SPDFlat",
+        defaultTrashSub: ["SPDFlat"],
         0: {
             gives: [],
             givesTeam: ["TeamCountChange","HealingSource","MemoSource","PEN","Consume","Debuff"],
@@ -2099,7 +2099,7 @@ const maslowCharactersRemembrance = {
     },
     "Trailblazer - Remembrance": {
         defaultMainSubs: ["SPDFlat","CritDamageBase","HP%","ATK%"],
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["TeamCountChange","MemoSource","CritDMG","True","Advance"],
@@ -2152,7 +2152,7 @@ const maslowCharactersRemembrance = {
     },
     "Cyrene": {
         defaultMainSubs: ["SPDFlat","CritDamageBase","CritRateBase","HP%"],
-        defaultTrashSub: "HPFlat",
+        defaultTrashSub: ["HPFlat"],
         0: {
             gives: [],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
@@ -2217,7 +2217,7 @@ const maslowCharactersDestruction = {
         // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
         defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
         //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat","EffectRES"],
         0: {
             gives: [],
             givesTeam: [],
@@ -2275,7 +2275,7 @@ const maslowCharactersHarmony = {
         // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
         defaultMainSubs: ["HP%","EffectRES","SPDFlat","CritDamageBase"],
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: "DEF%",
+        defaultTrashSub: ["DEF%"],
         0: {
             gives: [],
             givesTeam: ["Advance","SkillPoints","CritDMG","CritRate","All","EnergyRegen"],
@@ -2330,7 +2330,7 @@ const maslowCharactersHarmony = {
         // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
         defaultMainSubs: ["HP%","EffectRES","SPDFlat","CritDamageBase"],
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: "DEF%",
+        defaultTrashSub: ["DEF%"],
         0: {
             gives: [],
             givesTeam: ["Advance","CritDMG","CritRate","All","DEF"],
@@ -2385,7 +2385,7 @@ const maslowCharactersHarmony = {
         // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
         defaultMainSubs: ["SPDFlat","ATK%","HP%","EffectRES"],
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen"],
@@ -2444,7 +2444,7 @@ const maslowCharactersHarmony = {
 
         
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: "HPFlat",
+        defaultTrashSub: ["HPFlat"],
         0: {
             gives: [],
             givesTeam: ["AdditionalDMG","PEN","Vuln"],
@@ -2499,7 +2499,7 @@ const maslowCharactersHarmony = {
         // ["SPDFlat","HP%","EffectRES","ATK%"]
         defaultMainSubs: ["SPDFlat","HP%","EffectRES","ATK%"],
         // ["ATK%","HP%","EffectRES","SPDFlat"]
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: [],
             givesTeam: ["Advance","CritDMG","FUA","All","ATK"],
@@ -2557,7 +2557,7 @@ const maslowCharactersPreservation = {
         // ["DEF%","EffectRES","SPDFlat","ATK%"]
         defaultMainSubs: ["DEF%","EffectRES","SPDFlat","ATK%"],
         // ["ATK%","DEF%","EffectRES","SPDFlat"]
-        defaultTrashSub: "ATKFlat",
+        defaultTrashSub: ["ATKFlat"],
         0: {
             gives: ["SummonSource","FUASource","Cleanse","ShieldSource"],
             givesTeam: ["ShieldSource","SummonAssign","Cleanse"],
