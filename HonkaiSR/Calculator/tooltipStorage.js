@@ -23,7 +23,9 @@ const tooltipStorage = {
 
     "finalBaseRollsExplainer": "This is out of 24, how many BASE substat rolls across all relics, are usable substats.<br>This amount is modified below.",
     "finalAddedRollsExplainer": "This represents how many ADDED substat rolls will land on usable substats, across all relics, using your current settings.<br><br>This value is obtained by doing the following:<br><b>(rollsPerRelic - failedPerRelic) * 6</b>",
-    "finalTotalRollsExplainer": "This number is simply the final base usable rolls, added together with the final added usable rolls.<br><br><b>Why bother even showing this number?</b><br>Because for some reason, theorycrafters across reddit, google sheets, and everywhere else, have a hard-on for very specific quantities of end-total usable subs.<br>If you can't tell, I think it's a fucking stupid metric."
+    "finalTotalRollsExplainer": "This number is simply the final base usable rolls, added together with the final added usable rolls.<br><br><b>Why bother even showing this number?</b><br>Because for some reason, theorycrafters across reddit, google sheets, and everywhere else, have a hard-on for very specific quantities of end-total usable subs.<br>If you can't tell, I think it's a fucking stupid metric.",
+
+    "rotationsDisableCharacterToggleExplainer": "By disabling the character here, the character will be excluded from all battle simulations other than inside the optimizer because if you are optimizing for less than 4 characters what the actual fuck is the point?<br>Obviously a larger appeal for this is for debugging purposes.<br><br>Please note that <b>Character 1 can never be disabled, even if toggled on.</b>",
 
 
 };  

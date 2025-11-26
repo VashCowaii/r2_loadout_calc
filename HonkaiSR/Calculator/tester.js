@@ -3015,6 +3015,8 @@ const userTriggers = {
         }
         readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
         readSelection(`characterFiltersSwitchIcon${currentSlot}`).style.filter = "brightness(1)";
+
+        readSelection("rotationsDisableCharacterToggle").checked = globalPathChar.disabled;
         // style="border: 2px solid #ffdb91;"
 
         readSelection("characterMainCenterImageOverview").src = "/HonkaiSR/" + charRef.portrait;
@@ -3290,9 +3292,9 @@ const userTriggers = {
         // let battleData = sim.battleStart(globalRecords.character,true);
 
         // console.log(globalRecords.character.char1)
-
-        for (let characterSlot in globalRecords.character) {
-            const currentChar = globalRecords.character[characterSlot];
+        const characterObject = globalRecords.character;
+        for (let characterSlot in characterObject) {
+            const currentChar = characterObject[characterSlot];
 
             const logicRef = turnLogic[currentChar.name];
             const ATKObjRef = logicRef?.ATKObjects;
@@ -3300,12 +3302,24 @@ const userTriggers = {
             if (logicRef && ATKObjRef) {logicRef.ATKObjects = {}}
             // turnLogic[currentChar.name] ? turnLogic[currentChar.name].ATKObjects = {};
         }
-        let battleData = sim.battleStart({
-            char1:{...globalRecords.character.char1},
-            char2:{...globalRecords.character.char2},
-            char3:{...globalRecords.character.char3},
-            char4:{...globalRecords.character.char4}
-        },true,null,globalRecords.battleSettings);
+
+        // globalRecords.character[charSlot].disabled
+
+        const newBattleCharacterObject = {
+            char1:{...characterObject.char1},
+            ...(characterObject.char2.disabled ? {} : {char2:{...characterObject.char2}}),
+            ...(characterObject.char3.disabled ? {} : {char3:{...characterObject.char3}}),
+            ...(characterObject.char4.disabled ? {} : {char4:{...characterObject.char4}})
+
+            // char1:{...characterObject.char1},
+            // char2:{...characterObject.char2},
+            // char3:{...characterObject.char3},
+            // char4:{...characterObject.char4}
+        };
+
+        console.log(newBattleCharacterObject)
+
+        let battleData = sim.battleStart(newBattleCharacterObject,true,null,globalRecords.battleSettings);
         globalRecords.battleData = battleData;
 
         //creates the action order on the left
@@ -4520,6 +4534,15 @@ const userTriggers = {
         const ignoreQueryLimit = readSelection("bypassLimit").checked;
         querySettings.ignoreQueryLimit = ignoreQueryLimit;
 
+
+        // rotationsDisableCharacterToggle
+
+        const characterIsIgnored = readSelection("rotationsDisableCharacterToggle").checked;
+
+        const slot = globalUI.currentCharacterDisplayed;
+        const charSlot = `char${slot}`;
+        globalRecords.character[charSlot].disabled = characterIsIgnored;
+        // console.log(globalRecords.character[charSlot])
 
         if (isBattleSetting) {userTriggers.getUpdatedBattleLog()}
     }

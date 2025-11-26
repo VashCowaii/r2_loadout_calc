@@ -5232,6 +5232,18 @@ div {
     box-sizing: border-box;
     border-bottom: 1px solid #434343;
 }
+.statisticSettingsRowCharacterDisable {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(27, 27, 27);
+    border-bottom: 2px solid #434343;
+    border-top: 2px solid #434343;
+}
 .statisticSettingsRowTechniquesBox {
     width: 25%;
     height: auto;
@@ -5268,6 +5280,18 @@ div {
     align-items: center;
     text-align: left;
 }
+.statsRowNameDisableCharacter {
+    /* width: calc(100% - 150px); */
+    height: 100%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    padding-left: 10px;
+    /* white-space: normal; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
 .statsRowNameTechniques {
     width: auto;
     height: auto;
@@ -5282,6 +5306,15 @@ div {
 }
 .statsRowToggle {
     width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+.statsRowToggleCharacterDisable {
+    /* width: 150px; */
     height: 100%;
     display: flex;
     justify-content: center;

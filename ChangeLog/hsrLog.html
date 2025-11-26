@@ -9,6 +9,13 @@
 <div>
     <h1>Nov 25th, 2025</h1>
     <ul>
+        <li>Added the ability to disable characters on the Battle View simulation.
+            <ul>
+                <li>This is mainly for debugging purposes and most of you won't give a shit, but please note that this will not disable them in the optimizer, only the Battle View.</li>
+                <li>Character 1 can never be disabled as there are numerous things that rely on not only one character being active, but also on a character being in slot 1.</li>
+                <li>This toggle can be found on the Rotations menu of each character, and is saved to each character's import/export data.</li>
+            </ul>
+        </li>
         <li>Added a limit on BASE SPD only, on custom enemies, at 300 max. Lookin at you, people who set enemy spd to 2k+ and crashed their browsers due to enemies taking nearly infinite actions.</li>
         <li>Fixed an issue that could occur when the first substat input was input higher than should be allowed. There were several problems that were tied to this, not gonna bother listing them out.</li>
         <li>Removed extra decimal places from substat entry displays after user input. This does not mean we don't use decimals anymore, I'm only talking about the floating point decimals that would appear so if you did Break Effect at 6.48% it would show 6.480000000003 or other shit like that.</li>

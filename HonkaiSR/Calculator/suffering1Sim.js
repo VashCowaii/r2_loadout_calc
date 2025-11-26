@@ -445,9 +445,9 @@ const sim = {
             "ultimateQueue": [],
             characterObject,
             char1: characterObject.char1.conditions,
-            char2: characterObject.char2.conditions,
-            char3: characterObject.char3.conditions,
-            char4: characterObject.char4.conditions,
+            char2: characterObject.char2?.conditions,
+            char3: characterObject.char3?.conditions,
+            char4: characterObject.char4?.conditions,
             "nameIndex": {},
             battleTable: {...battleTableKnowerOfAll},//overarching battle stats like skill point max
             battleTotal: {
@@ -510,6 +510,7 @@ const sim = {
         for (let i=charKeys.length-1;i>=0;i--) {
             const characterEntry = charKeys[i];
             let currentCharacter = characterObject[characterEntry];
+            if (!currentCharacter) {continue;}
             let properName = currentCharacter.name;
 
             const logicRef = turnLogic[properName];
