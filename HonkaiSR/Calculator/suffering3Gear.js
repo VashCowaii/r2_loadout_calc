@@ -1,4 +1,14 @@
 const turnLogicLightcones = {
+
+
+    // const customName = `${buffName} (${sourceTurn.properName})`;
+    // if (!buffNames[customName]) {buffNames[customName] = customName;}
+
+    // "buffNamesPerCharacter": {
+    //     "buff1": "Routed",
+    // }
+
+
     //HUNT HOONT HOONTER
     "The Hell Where Ideals Burn": {
         logic(thisTurn,battleData) {},
@@ -17,7 +27,7 @@ const turnLogicLightcones = {
                         [ATKP]: 0,
                         "source": lcNameRef,
                         "sourceOwner": "",
-                        "buffName": this.buffNames.hruntingStart,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.hruntingStart,
                         "duration": 1,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -47,9 +57,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "The Hell Where Ideals Burn - ATK% - Hrunting",
                 "owners": [],
-                "buffNames": {
-                    "hruntingStart": "Hrunting"
-                },
             },
             {
                 "trigger": "SkillEnd",
@@ -61,23 +68,21 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank || sourceTurn.whereIdealsBurnCOMPLETED) {return;}
 
-                    let buffName = this.buffNames.hruntingStack;
                     if (!sourceTurn.whereIdealsBurnSTACKSHEET) {
                         let lcNameRef = "The Hell Where Ideals Burn";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
 
                         let values = rankParams[3];
-                        let turnOverride = 1;
 
                         sourceTurn.whereIdealsBurnSTACKSHEET = {
                             "stats": [ATKP],
                             [ATKP]: values,
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "duration": turnOverride,
-                            "AVApplied": battleData.sumAV,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.hruntingStack,
+                            "duration": 1,
+                            "AVApplied": 0,
                             "maxStacks": 4,
                             "currentStacks": 1,
                             "decay": false,
@@ -85,6 +90,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.whereIdealsBurnSTACKSHEET;
+                    let buffName = buffSheet.buffName;
                     
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
 
@@ -102,12 +108,12 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "The Hell Where Ideals Burn - ATK% Stack - Hrunting Stack",
                 "owners": [],
-                "buffNames": {
-                    "hruntingStack": "Hrunting Stack"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "hruntingStart": "Hrunting",
+            "hruntingStack": "Hrunting Stack"
+        },
     },
     "Worrisome, Blissful": {
         logic(thisTurn,battleData) {},
@@ -127,7 +133,7 @@ const turnLogicLightcones = {
                         [DamageFUA]: 0,
                         "source": lcNameRef,
                         "sourceOwner": "",
-                        "buffName": this.buffNames.fuaDMG,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.fuaDMG,
                         "duration": 1,
                         "AVApplied": 0,
                         "maxStacks": 1,
@@ -152,9 +158,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Worrisome, Blissful fua buff",
                 "owners": [],
-                "buffNames": {
-                    "fuaDMG": "One At A Time"
-                },
             },
             {
                 "trigger": "AttackEnd",
@@ -168,7 +171,6 @@ const turnLogicLightcones = {
                     if (!generalInfo.ATKObject.isFUA) {return;}
 
                     const targetsGotHit = generalInfo.targetsGotHit;
-                    let buffName = this.buffNames.tame;
 
                     if (!sourceTurn.worrisomBlissfulTameSTACKSHEET) {
                         let lcNameRef = "Worrisome, Blissful";
@@ -181,7 +183,7 @@ const turnLogicLightcones = {
                             [CritDamageBase]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.tame,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 2,
@@ -193,6 +195,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.worrisomBlissfulTameSTACKSHEET;
+                    let buffName = buffSheet.buffName;
                     
 
                     const enemyTurns = battleData.enemyBasedTurns;
@@ -212,12 +215,12 @@ const turnLogicLightcones = {
                 "target": "enemy",
                 "listenerName": "Worrisome, Blissful - Tame stacker",
                 "owners": [],
-                "buffNames": {
-                    "tame": "Tame [Worrisome, Blissful]"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "fuaDMG": "One At A Time",
+            "tame": "Tame [Worrisome, Blissful]"
+        },
     },
     "Swordplay": {
         logic(thisTurn,battleData) {},
@@ -589,7 +592,7 @@ const turnLogicLightcones = {
                     if (!ownerRank) {return;}
 
                     let lcNameRef = "Incessant Rain";
-                    let buffName = this.buffNames.buff1;
+                    let buffName = this.buffName ??= turnLogicLightcones[lcNameRef].buffNames.buff1;
 
                     let debuffsCount = targetTurn.debuffCounter;
                     let buffCheck = sourceTurn.buffsObject[buffName];
@@ -627,9 +630,6 @@ const turnLogicLightcones = {
                 "listenerName": "Incessant Rain - Crit rate check",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {
-                    "buff1": "Incessant Rain CRIT Rate",
-                },
             },
             {
                 "trigger": "AttackEnd",
@@ -648,7 +648,6 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[charSlot];
                     if (!ownerRank) {return;}
 
-                    let buffName = this.buffNames.buff2;
                     if (!sourceTurn.incessantRainVULNSHEET) {
                         let lcNameRef = "Incessant Rain";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -660,7 +659,7 @@ const turnLogicLightcones = {
                             [VulnAll]: values,
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -671,6 +670,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.incessantRainVULNSHEET;
+                    let buffName = buffSheet.buffName;
                     const targetsAttacked = generalInfo.targetsGotHit;
                     
                     const enemyTurns = battleData.enemyBasedTurns;
@@ -692,12 +692,12 @@ const turnLogicLightcones = {
                 "listenerName": "Incessant Rain Aether Code controller",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {
-                    "buff2": "Aether Code"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "buff1": "Incessant Rain CRIT Rate",
+            "buff2": "Aether Code"
+        },
     },
     "Before the Tutorial Mission Starts": {
         logic(thisTurn,battleData) {},
@@ -758,7 +758,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Patience Is All You Need - temp logic",
                 "owners": [],
-                "buffNames": {},
             },
             {
                 "trigger": "AttackEnd",
@@ -770,7 +769,6 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank || sourceTurn.patienceIsAllSPDCompleted) {return;}
 
-                    let buffName = this.buffNames.spdStack;
                     if (!sourceTurn.patienceIsAllSPDCompleted) {
                         let lcNameRef = "Patience Is All You Need";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -781,7 +779,7 @@ const turnLogicLightcones = {
                             [SPDP]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.spdStack,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 3,
@@ -791,6 +789,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.patienceIsAllSTACKSHEET;
+                    let buffName = buffSheet.buffName;
                     
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
 
@@ -809,9 +808,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Patience Is All You Need - SPD% Stack",
                 "owners": [],
-                "buffNames": {
-                    "spdStack": "Patience Is All You Need"
-                },
             },
             {
                 "trigger": "AttackDMGEnd",
@@ -839,7 +835,7 @@ const turnLogicLightcones = {
                         //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                         const actionTags = ["DOT"];
 
-                        let buffName = this.buffNames.erode;
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.erode;
                         sourceTurn.patienceIsAllErodeDOTSHEET = {
                             "stats": null,
                             "source": lcNameRef,
@@ -896,12 +892,12 @@ const turnLogicLightcones = {
                 "target": "enemy",
                 "listenerName": "Patience Is All You Need - erode application",
                 "owners": [],
-                "buffNames": {
-                    "erode": "Erode"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "spdStack": "Patience Is All You Need",
+            "erode": "Erode"
+        },
     },
     // "Why Does the Ocean Sing": {
     //     logic(thisTurn,battleData) {},
@@ -1197,9 +1193,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Reforged Remembrance - hit enemy with dot checker",
                 "owners": [],
-                "buffNames": {
-                    "prophet": "Prophet [Reforged Remembrance]"
-                },
             },
         ],
         "buffNames": {
@@ -1227,7 +1220,11 @@ const turnLogicLightcones = {
                         let lcNameRef = "Whereabouts Should Dreams Rest";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
-                        let buffName = this.buffNames.buff1;
+                        const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+                        let buffName = buffNames.buff1;
+
+                        const customName = `${buffName} (${sourceTurn.properName})`;
+                        if (!buffNames[customName]) {buffNames[customName] = customName;}
 
                         sourceTurn.whereaboutsDreamsRestSPDDEBUFF = {
                             "stats": [SPDP],
@@ -1249,7 +1246,7 @@ const turnLogicLightcones = {
                             [VulnBreak]: rankParams[1],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName + " - " + sourceTurn.properName,
+                            "buffName": customName,
                             "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -1282,7 +1279,6 @@ const turnLogicLightcones = {
 
                     if (!buffCheck2 || (buffCheck2 && buffCheck2.duration != (turnState ? 3 : 2))) {
                         //if the character specific vuln debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
-                        buffSheet2.AVApplied = battleData.sumAV;
                         buffSheet2.duration = turnState ? 3 : 2;
                         battleActions.updateBuff(battleData,targetTurn,buffSheet2);
                     }
@@ -1293,12 +1289,14 @@ const turnLogicLightcones = {
                 "listenerName": "Whereabouts Should Dreams Rest - Break dmg check",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {
-                    "buff1": "Routed",
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "buff1": "Routed",
+        },
+        "buffNamesPerCharacter": {
+            "buff1": "Routed",
+        }
     },
     "A Thankless Coronation": {
         logic(thisTurn,battleData) {},
@@ -1317,7 +1315,7 @@ const turnLogicLightcones = {
                         let lcNameRef = "A Thankless Coronation";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
-                        let buffName = this.buffNames.buff1;
+                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
 
                         // greatTableIndex
                         // greatTableKeys
@@ -1347,9 +1345,6 @@ const turnLogicLightcones = {
                 "listenerName": "A Thankless Coronation - ult buff trigger",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {
-                    "buff1": "King of Knights",
-                },
             },
             {
                 "trigger": "UltimateEnd",
@@ -1373,7 +1368,9 @@ const turnLogicLightcones = {
                 "buffNames": {},
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "buff1": "King of Knights",
+        },
     },
     "On the Fall of an Aeon": {
         logic(thisTurn,battleData) {},
@@ -1786,7 +1783,7 @@ const turnLogicLightcones = {
                             [DamageAll]: values,
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": lcNameRef,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
                             "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -1808,6 +1805,7 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {
+            "nextAllyBuff": "But the Battle Isn't Over",
             // "buff2": "Aether Code"
             // "hruntingStack": "Hrunting Stack"
         },
@@ -1849,10 +1847,7 @@ const turnLogicLightcones = {
                 "owners": []
             },
         ],
-        "buffNames": {
-            // "buff2": "Aether Code"
-            // "hruntingStack": "Hrunting Stack"
-        },
+        "buffNames": {},
     },
     "A Grounded Ascent": {
         logic(thisTurn,battleData) {},
@@ -1886,7 +1881,7 @@ const turnLogicLightcones = {
                             [DamageAll]: values,
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": this.buffNames.hymn,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
                             "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
                             "AVApplied": 0,
                             "maxStacks": 3,
@@ -1943,12 +1938,10 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "A Grounded Ascent - buff application and SP regen",
                 "owners": [],
-                "buffNames": {
-                    "hymn": "Hymn - A Grounded Ascent"
-                }
             },
         ],
         "buffNames": {
+            "hymn": "Hymn - A Grounded Ascent"
             // "buff2": "Aether Code"
             // "hruntingStack": "Hrunting Stack"
         },
@@ -2043,7 +2036,7 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
                     let lcNameRef = "If Time Were a Flower";
 
-                    const updatePresage = turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     const namedTurns = battleData.nameBasedTurns;
 
                     const updateEnergy = battleActions.updateEnergy;
@@ -2083,6 +2076,9 @@ const turnLogicLightcones = {
             "buff2": "Presage (Countdown) [LC]",
             "buff3": "Presage Crit DMG [LC]",
         },
+        "buffNamesPerCharacter": {
+            "buff3": "Presage Crit DMG [LC]",
+        }
     },
     "Flowing Nightglow": {
         logic(thisTurn,battleData) {},
@@ -2502,7 +2498,6 @@ const turnLogicLightcones = {
                     }
 
 
-                    let buffName = this.buffNames.deathFlower;
                     if (!sourceTurn.makeFarewellsDeathFlowerSHEET) {
                         let lcNameRef = "Make Farewells More Beautiful";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -2514,7 +2509,7 @@ const turnLogicLightcones = {
                             [DEFShredAll]: rankParams[1],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.deathFlower,
                             "duration": 1,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -2524,6 +2519,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.makeFarewellsDeathFlowerSHEET;
+                    let buffName = buffSheet.buffNames;
                     
 
 
@@ -2556,9 +2552,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Make Farewells More Beautiful - ally hp lost listener",
                 "owners": [],
-                "buffNames": {
-                    "deathFlower": "Death Flower [LC]",
-                },
             },
             {
                 "trigger": "SummonOnFieldAdjustment",
@@ -2606,7 +2599,9 @@ const turnLogicLightcones = {
                 "owners": []
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "deathFlower": "Death Flower [LC]",
+        },
     },
     "To Evernight's Stars": {
         logic(thisTurn,battleData) {},
@@ -2700,9 +2695,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Make Farewells More Beautiful - ally hp lost listener",
                 "owners": [],
-                "buffNames": {
-                    "deathFlower": "Death Flower [LC]",
-                },
             },
             {
                 "trigger": "SummonOnFieldAdjustment",
@@ -3175,7 +3167,7 @@ const turnLogicLightcones = {
                     if (!ownerRank) {return;}
                     //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
 
-                    let buffName = this.buffNames.unjust;
+                    
                     if (!sourceTurn.inherentlyUnjustCRITDMGSHEET) {
                         let lcNameRef = "Inherently Unjust Destiny";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -3186,7 +3178,7 @@ const turnLogicLightcones = {
                             [CritDamageBase]: rankParams[1],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.unjust,
                             "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -3196,6 +3188,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.inherentlyUnjustCRITDMGSHEET;
+                    let buffName = buffSheet.buffNames;
                     
                     buffSheet.duration = sourceTurn.turnState ? 3 : 2;
                     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
@@ -3203,9 +3196,6 @@ const turnLogicLightcones = {
                 "target": "self",
                 "listenerName": "Inherently Unjust Destiny - ATK% Stack - Hrunting Stack",
                 "owners": [],
-                "buffNames": {
-                    "unjust": "Inherently Unjust Destiny"
-                },
             },
             {
                 "trigger": "HitEnemyStart",
@@ -3227,14 +3217,13 @@ const turnLogicLightcones = {
                         let lcNameRef = "Inherently Unjust Destiny";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
-                        let buffName = this.buffNames.unjustVuln;
 
                         sourceTurn.inherentlyUnjustDEBUFFSHEET = {
                             "stats": [VulnAll],
                             [VulnAll]: rankParams[4],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.unjustVuln,
                             "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -3250,15 +3239,15 @@ const turnLogicLightcones = {
                     battleActions.updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "The Ashblazing Grand Duke - Hit scaling",
+                "listenerName": "Inherently Unjust Destiny - Hit scaling",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {
-                    "unjustVuln": "Inherently Unjust Destiny"
-                },
             },
         ],
-        "buffNames": {},
+        "buffNames": {
+            "unjust": "Inherently Unjust Destiny",
+            "unjustVuln": "Inherently Unjust Destiny"
+        },
     },
     "Though Worlds Apart": {
         logic(thisTurn,battleData) {},
