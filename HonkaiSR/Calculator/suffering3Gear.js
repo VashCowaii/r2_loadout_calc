@@ -2071,6 +2071,7 @@ const turnLogicLightcones = {
                     let lcNameRef = "If Time Were a Flower";
                     const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     updatePresage(battleData,sourceTurn,ownerRank);
+                    battleActions.updateEnergy(battleData,12,sourceTurn,false,"If Time Were a Flower [FUA Started]");
                 },
                 "target": "self",
                 "listenerName": "If Time Were a Flower - FUA launched listener",
