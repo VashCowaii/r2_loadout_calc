@@ -612,38 +612,39 @@ const customMenu = {
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
 
+
+        let characterExportString = "";
+
+        const characterObject = globalRecords.character;
+
+        for (let i=1;i<=4;i++) {
+            const currentCharacter = characterObject[`char${i}`].name;
+            const iconPath = characters[currentCharacter].preview;
+            // console.log(iconPath)
+
+            characterExportString += `<div class="importCharacterBoxItem">
+                <div class="filterCharacterExportSwitchIconBox">
+                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIcon">
+                </div>
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char${i}')">Export</div>
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}')">Import</div>
+            </div>`;
+        }
+
         bodyElem.innerHTML = `
         <div class="exportMenuMainBox">
             <div class="teamwideImportBox">
-                <div class="teamwideImportHeader">Team</div>
                 <div class="teamwideImportBoxRow">
+                    <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('ALL')">Import</div>
                 </div>
             </div>
+
             <div class="teamwideImportBox">
                 <div class="teamwideImportHeader">Characters</div>
                 <div class="characterImportBox">
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 1</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char1')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char1')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 2</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char2')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char2')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 3</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char3')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char3')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 4</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char4')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char4')">Import</div>
-                    </div>
+                    ${characterExportString}
                 </div>
             </div>
 
@@ -672,11 +673,31 @@ const customMenu = {
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
 
+
+        let characterExportString = "";
+
+        const characterObject = globalRecords.character;
+
+        for (let i=1;i<=4;i++) {
+            const currentCharacter = characterObject[`char${i}`].name;
+            const iconPath = characters[currentCharacter].preview;
+            // console.log(iconPath)
+
+            characterExportString += `<div class="importCharacterBoxItem">
+                <div class="filterCharacterExportSwitchIconBox">
+                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIcon">
+                </div>
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char${i}')">Export</div>
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}')">Import</div>
+            </div>`;
+        }
+
+
         bodyElem.innerHTML = `
         <div class="exportMenuMainBox">
             <div class="teamwideImportBox">
-                <div class="teamwideImportHeader">Team Filters</div>
                 <div class="teamwideImportBoxRow">
+                    <div class="teamwideImportHeaderInner">Team Filters</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('ALL')">Import</div>
                 </div>
@@ -684,26 +705,7 @@ const customMenu = {
             <div class="teamwideImportBox">
                 <div class="teamwideImportHeader">Character Filters</div>
                 <div class="characterImportBox">
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 1</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char1')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char1')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 2</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char2')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char2')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 3</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char3')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char3')">Import</div>
-                    </div>
-                    <div class="importCharacterBoxItem">
-                        <div class="importCharacterBoxHeader">Char 4</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char4')">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char4')">Import</div>
-                    </div>
+                    ${characterExportString}
                 </div>
             </div>
 
@@ -4062,6 +4064,8 @@ const userTriggers = {
         }
 
         inputElem.value = "";
+
+        customMenu.createCharacterExportScreen();
         // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
         // userTriggers.updateSelectedRelicStats();
     },
@@ -4219,9 +4223,10 @@ const userTriggers = {
         const slot = globalUI.currentCharacterDisplayed;
         let charSlot = `char${slot}`;
         const charName = globalRecords.character[charSlot].name;
-        const maslowSubstats = maslow[charName].defaultMainSubs;
-        // defaultMainSubs: ["ATK%","DEF%","EffectRES","SPDFlat"],
-        // defaultTrashSub: "ATKFlat",
+        const charMaslowMain = maslow[charName];
+        const maslowSubstats = charMaslowMain.defaultMainSubs;
+        const maslowTrashStats = charMaslowMain.defaultTrashSub;
+
         const reverseKeyMappings = basicShorthand.reverseKeyMappings;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
@@ -4247,6 +4252,23 @@ const userTriggers = {
 
             
         }
+
+
+        let trashSubString = "";
+
+        for (let i=0;i<maslowTrashStats.length;i++) {
+            const currentStatInternal = maslowTrashStats[i];
+            const isLastStat = i === maslowTrashStats.length - 1;
+
+            const currentStatIndex = greatTableIndex[currentStatInternal];
+            const statFamilyName = mappedFamilies[currentStatIndex];
+            const currentStatFamily = propertyImagePaths[statFamilyName];
+            // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
+            const currentFamilySet = currentStatFamily.sets;
+
+            trashSubString += currentFamilySet[currentStatIndex].specific + (isLastStat ? "" : " > ");
+        }
+        readSelection("statFiltersRowContainerSubstatsTrashRow").innerHTML = trashSubString;
 
 
         const filterPath = globalUI.filters;
