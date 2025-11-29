@@ -246,7 +246,7 @@ let globalRecords = {
         "substatRollValue": "High",
         "rollsPerRelic": 4,
         "rollsPerBundle": 2,
-        "usableBaseRolls": 12,
+        "usableBaseRolls": 20,
         "failedAddedRolls": 1,
         "minimumAddedRoll": 1,
 

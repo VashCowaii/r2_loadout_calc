@@ -168,23 +168,39 @@ const compare = {
         }
     },
     sortByConflicts: (a, b) => b.conflictCount - a.conflictCount,
-    * getCharacterSubstatIteration(baseSubstatIncrements,querySettings,desiredStats,charSubsStarter,chestMain,bootMain,orbMain,ropeMain,charSubstatBounds1,charSubstatBounds2,charSubstatBounds3,charSubstatBounds4) {
+    * getCharacterSubstatIterationOLD(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,desiredStats,charSubsStarter,chestMain,bootMain,orbMain,ropeMain,charSubstatBounds1,charSubstatBounds2,charSubstatBounds3,charSubstatBounds4,charSubsTrash) {
         const desired1 = desiredStats[0];
         const desired2 = desiredStats[1];
         const desired3 = desiredStats[2];
         const desired4 = desiredStats[3];
 
+        const headMain = "HPFlat";
+        const handMain = "ATKFlat";
+
+        const usableBasePerSub = usableBaseSubstatPool / 4;
+        // console.log(usableBasePerSub)
+
+        /*
+            12 / 4 = 3 relics max, 3 conflicts
+            20 / 4 = 5 relics max, 1 conflict 
+        */
+
         //we need to know the total number of mainstat conflicts, PER stat desired
-        const mainstat1Conflicts = (desired1 === chestMain ? 1 : 0) + (desired1 === bootMain ? 1 : 0) + (desired1 === orbMain ? 1 : 0) + (desired1 === ropeMain ? 1 : 0);//desiredSet.has(chestMain);
-        const mainstat2Conflicts = (desired2 === chestMain ? 1 : 0) + (desired2 === bootMain ? 1 : 0) + (desired2 === orbMain ? 1 : 0) + (desired2 === ropeMain ? 1 : 0);//desiredSet.has(bootMain);
-        const mainstat3Conflicts = (desired3 === chestMain ? 1 : 0) + (desired3 === bootMain ? 1 : 0) + (desired3 === orbMain ? 1 : 0) + (desired3 === ropeMain ? 1 : 0);//desiredSet.has(orbMain);
-        const mainstat4Conflicts = (desired4 === chestMain ? 1 : 0) + (desired4 === bootMain ? 1 : 0) + (desired4 === orbMain ? 1 : 0) + (desired4 === ropeMain ? 1 : 0);//desiredSet.has(ropeMain);
+        const mainstat1Conflicts = Math.min(usableBasePerSub,(desired1 === chestMain ? 1 : 0) + (desired1 === bootMain ? 1 : 0) + (desired1 === orbMain ? 1 : 0) + (desired1 === ropeMain ? 1 : 0) + (desired1 === headMain ? 1 : 0) + (desired1 === handMain ? 1 : 0));
+        const mainstat2Conflicts = Math.min(usableBasePerSub,(desired2 === chestMain ? 1 : 0) + (desired2 === bootMain ? 1 : 0) + (desired2 === orbMain ? 1 : 0) + (desired2 === ropeMain ? 1 : 0) + (desired2 === headMain ? 1 : 0) + (desired2 === handMain ? 1 : 0));
+        const mainstat3Conflicts = Math.min(usableBasePerSub,(desired3 === chestMain ? 1 : 0) + (desired3 === bootMain ? 1 : 0) + (desired3 === orbMain ? 1 : 0) + (desired3 === ropeMain ? 1 : 0) + (desired3 === headMain ? 1 : 0) + (desired3 === handMain ? 1 : 0));
+        const mainstat4Conflicts = Math.min(usableBasePerSub,(desired4 === chestMain ? 1 : 0) + (desired4 === bootMain ? 1 : 0) + (desired4 === orbMain ? 1 : 0) + (desired4 === ropeMain ? 1 : 0) + (desired4 === headMain ? 1 : 0) + (desired4 === handMain ? 1 : 0));
+
+        const trash1 = charSubsTrash[0];
+        const trash1Conflicts = (trash1 === chestMain ? 1 : 0) + (trash1 === bootMain ? 1 : 0) + (trash1 === orbMain ? 1 : 0) + (trash1 === ropeMain ? 1 : 0) + (trash1 === headMain ? 1 : 0) + (trash1 === handMain ? 1 : 0);
 
         // defaultMainSubs: ["CritRateBase","CritDamageBase","ATK%","SPDFlat"],
         // defaultTrashSub: "ATKFlat",
 
         // const minimumAddedRollPerDesired = querySettings.minimumAddedRoll;
-        const subsPerItem = querySettings.rollsPerRelic - querySettings.failedAddedRolls;
+        const starterRollsPerRelic = querySettings.rollsPerRelic;
+        const failedRollsPerRelic = querySettings.failedAddedRolls;
+        const subsPerItem = starterRollsPerRelic - failedRollsPerRelic;
         const possibleSubs = subsPerItem * 6;// - (minimumAddedRollPerDesired * 4);
         // const usableSubs = possibleSubs - 1;
 
@@ -192,6 +208,8 @@ const compare = {
         const stat2TotalConflictOffset = mainstat2Conflicts*subsPerItem;
         const stat3TotalConflictOffset = mainstat3Conflicts*subsPerItem;
         const stat4TotalConflictOffset = mainstat4Conflicts*subsPerItem;
+
+        const trash1TotalConflictOffset = trash1Conflicts*subsPerItem;
 
         const sub1Max = charSubstatBounds1[1];
         const sub2Max = charSubstatBounds2[1];
@@ -206,14 +224,13 @@ const compare = {
         
 
         const min = Math.min;
+        const max = Math.max;
         const stat1MaxOffset = possibleSubs - min(possibleSubs,sub1Max);
         const stat2MaxOffset = possibleSubs - min(possibleSubs,sub2Max);
         const stat3MaxOffset = possibleSubs - min(possibleSubs,sub3Max);
         const stat4MaxOffset = possibleSubs - min(possibleSubs,sub4Max);
 
-        // console.log("max",sub1Max,sub2Max,sub3Max,sub4Max)
-        // console.log("min",sub1Min,sub2Min,sub3Min,sub4Min)
-        // console.log("offset",stat1MaxOffset,stat2MaxOffset,stat3MaxOffset,stat4MaxOffset)
+
 
         const substatsConflictSort = [
             {statName: desired1, conflictCount: mainstat1Conflicts, conflictOffset: stat1TotalConflictOffset, min: sub1Min, max: sub1Max, maxOffset: stat1MaxOffset, increment: baseSubstatIncrements[desired1]},
@@ -222,94 +239,854 @@ const compare = {
             {statName: desired4, conflictCount: mainstat4Conflicts, conflictOffset: stat4TotalConflictOffset, min: sub4Min, max: sub4Max, maxOffset: stat4MaxOffset, increment: baseSubstatIncrements[desired4]}
         ].sort(compare.sortByConflicts);
         // console.log(substatsConflictSort)
-        const increment = querySettings.rollsPerBundle;
+        // const increment = querySettings.rollsPerBundle;
         
+        const conflictNameArray = [headMain,handMain,chestMain,bootMain,orbMain,ropeMain];
 
         const sortedEntry1 = substatsConflictSort[0];
         const sortedEntry2 = substatsConflictSort[1];
         const sortedEntry3 = substatsConflictSort[2];
         const sortedEntry4 = substatsConflictSort[3];
 
-        const stat1StartSubs = min(possibleSubs - sortedEntry1.conflictOffset,possibleSubs,sortedEntry1.max);
-        // const loop1Offset = possibleSubs - stat1StartSubs;
-        //loop one starts with either the max possible sub count, or the max minus the conflicts difference, or the max specified by the user, whichever is LEAST
-        for (let stat1i = stat1StartSubs; stat1i >= sortedEntry1.min; stat1i -= (stat1i - sortedEntry1.min < sortedEntry1.increment && stat1i>sortedEntry1.min ? stat1i - sortedEntry1.min : sortedEntry1.increment)) {
-            // if (stat1i + sortedEntry2.min + sortedEntry3.min + sortedEntry4.min > possibleSubs) {continue;}
-            // const remainingSubs1 = stat1StartSubs - stat1i + sortedEntry1.conflictOffset + sortedEntry1.maxOffset;
-            const remainingSubs1 = possibleSubs - stat1i;
-            // const remainingSubs1 = stat1StartSubs - stat1i + loop1Offset;
+        const statName1 = sortedEntry1.statName;
+        const statName2 = sortedEntry2.statName;
+        const statName3 = sortedEntry3.statName;
+        const statName4 = sortedEntry4.statName;
 
+        let repeatsCheckerObject = {}
 
-            const stat2StartSubs = min(possibleSubs - sortedEntry2.conflictOffset,remainingSubs1,sortedEntry2.max);
-            // const loop2Offset = remainingSubs1 - stat2StartSubs;
-            for (let stat2i = stat2StartSubs; stat2i >= sortedEntry2.min; stat2i -= (stat2i - sortedEntry2.min < sortedEntry2.increment && stat2i > sortedEntry2.min ? stat2i - sortedEntry2.min : sortedEntry2.increment)) {
-                // if (stat1i + stat2i + sortedEntry3.min + sortedEntry4.min > possibleSubs) {continue;}
-                // const remainingSubs2 = stat2StartSubs - stat2i + loop2Offset;
-                const remainingSubs2 = possibleSubs - stat2i - stat1i;
+        const sorted1Min = sortedEntry1.min;
+        const sorted2Min = sortedEntry2.min;
+        const sorted3Min = sortedEntry3.min;
+        const sorted4Min = sortedEntry4.min;
 
-                const stat3StartSubs = min(possibleSubs - sortedEntry3.conflictOffset,remainingSubs2,sortedEntry3.max);
-                // const loop3Offset = remainingSubs2 - stat3StartSubs;
-                for (let stat3i = stat3StartSubs; stat3i >= sortedEntry3.min; stat3i -= (stat3i - sortedEntry3.min < sortedEntry3.increment && stat3i>sortedEntry3.min ? stat3i - sortedEntry3.min : sortedEntry3.increment)) {
-                    // if (stat1i + stat2i + stat3i + sortedEntry4.min > possibleSubs) {continue;}
-                    // const remainingSubs3 = stat3StartSubs - stat3i + loop3Offset;
-                    const remainingSubs3 = possibleSubs - stat3i - stat2i - stat1i;
-                    
-                    const stat4StartSubs = min(possibleSubs - sortedEntry4.conflictOffset,remainingSubs3,sortedEntry4.max);
-                    // console.log(stat4StartSubs + stat1i + stat2i + stat3i,stat4StartSubs,stat1i,stat2i,stat3i)
-                    const sumCompare = (stat4StartSubs + stat1i + stat2i + stat3i) > possibleSubs;
-                    if (sumCompare) {continue;}
-                    const baseTable = {...charSubsStarter};
+        const sorted1Max = sortedEntry1.max;
+        const sorted2Max = sortedEntry2.max;
+        const sorted3Max = sortedEntry3.max;
+        const sorted4Max = sortedEntry4.max;
 
-                    baseTable[sortedEntry1.statName] += stat1i;
-                    baseTable[sortedEntry2.statName] += stat2i;
-                    baseTable[sortedEntry3.statName] += stat3i;
-                    baseTable[sortedEntry4.statName] += stat4StartSubs;
-                    //TODO: this is omega fuckin cursed, I also dislike needing to spread every time but I'm also unsure if there is actually another way, look at this later
+        const sorted1Inc = sortedEntry1.increment;
+        const sorted2Inc = sortedEntry2.increment;
+        const sorted3Inc = sortedEntry3.increment;
+        const sorted4Inc = sortedEntry4.increment;
 
-                    yield baseTable;
-                }
-            }
+        const stat1StartSubs = min(possibleSubs - sortedEntry1.conflictOffset,possibleSubs,sorted1Max);
+
+        const stat1PossiblePieces = [];
+        const stat2PossiblePieces = [];
+        const stat3PossiblePieces = [];
+        const stat4PossiblePieces = [];
+        for (let i=0;i<conflictNameArray.length;i++) {
+            if (conflictNameArray[i] != statName1) {stat1PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName2) {stat2PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName3) {stat3PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName4) {stat4PossiblePieces.push(i);}
         }
 
 
-        // const stat1StartSubs = min(possibleSubs - sortedEntry1.conflictOffset,possibleSubs,sortedEntry1.max);
-        // //loop one starts with either the max possible sub count, or the max minus the conflicts difference, or the max specified by the user, whichever is LEAST
-        // for (let stat1i = stat1StartSubs; stat1i >= sortedEntry1.min; stat1i -= (stat1i - sortedEntry1.min < increment && stat1i>sortedEntry1.min ? stat1i - sortedEntry1.min : increment)) {
-        //     //then as long as the current value is greater than or equal to the user specified minimum, continue the loop
-        //     //when a loop finishes, subtract a roll amount that is equal to:
-        //     //  if the current stat roll count minus the minimum is less than the increment amount, but greater than the minimum, then subtract the diff, otherwise subtract the increment value
+        // const loop1Offset = possibleSubs - stat1StartSubs;
+        //loop one starts with either the max possible sub count, or the max minus the conflicts difference, or the max specified by the user, whichever is LEAST
+        for (let stat1i = stat1StartSubs; stat1i >= sorted1Min; stat1i -= (stat1i - sorted1Min < sorted1Inc && stat1i>sorted1Min ? stat1i - sorted1Min : sorted1Inc)) {
+            const remainingSubs1 = possibleSubs - stat1i;
+            const stat1NeededBaseRolls = min(6-mainstat1Conflicts,max(usableBasePerSub,1,Math.ceil(stat1i / subsPerItem)));
 
-        //     // const remainingSubs1 = stat1StartSubs - stat1i + sortedEntry1.conflictOffset + sortedEntry1.maxOffset;
-        //     const remainingSubs1 = stat1StartSubs - stat1i + sortedEntry1.conflictOffset + sortedEntry1.maxOffset;
-        //     // console.log(remainingSubs1)
-        //     //then the available roll count we pass to the next loop is the value loop 1 started with, adjusted by loop 1's current value, but compensated for whatever mainstat conflicts loop1 has, and user specified maximum offset diff
-        //     //this way even though the number of combos for loop 1 might be limited by user input or mainstat conflicts, we still pass the right number of rolls to the next loop based on how many rolls loop 1 consumes
+            const stat2StartSubs = min(possibleSubs - sortedEntry2.conflictOffset,remainingSubs1,sorted2Max);
+            for (let stat2i = stat2StartSubs; stat2i >= sorted2Min; stat2i -= (stat2i - sorted2Min < sorted2Inc && stat2i > sorted2Min ? stat2i - sorted2Min : sorted2Inc)) {
+                const remainingSubs2 = possibleSubs - stat2i - stat1i;
+                const stat2NeededBaseRolls = min(6-mainstat2Conflicts,max(usableBasePerSub,1,Math.ceil(stat2i / subsPerItem)));
 
-
-        //     const stat2StartSubs = min(possibleSubs - sortedEntry2.conflictOffset,remainingSubs1,sortedEntry2.max);
-        //     for (let stat2i = stat2StartSubs; stat2i >= sortedEntry2.min; stat2i -= (stat2i - sortedEntry2.min < increment && stat2i > sortedEntry2.min ? stat2i - sortedEntry2.min : increment)) {
-        //         const remainingSubs2 = stat2StartSubs - stat2i + sortedEntry2.conflictOffset + sortedEntry2.maxOffset;
-
-        //         const stat3StartSubs = min(possibleSubs - sortedEntry3.conflictOffset,remainingSubs2,sortedEntry3.max);
-        //         for (let stat3i = stat3StartSubs; stat3i >= sortedEntry3.min; stat3i -= (stat3i - sortedEntry3.min < increment && stat3i>sortedEntry3.min ? stat3i - sortedEntry3.min : increment)) {
-        //             const remainingSubs3 = stat3StartSubs - stat3i + sortedEntry3.conflictOffset + sortedEntry3.maxOffset;
+                const stat3StartSubs = min(possibleSubs - sortedEntry3.conflictOffset,remainingSubs2,sorted3Max);
+                for (let stat3i = stat3StartSubs; stat3i >= sorted3Min; stat3i -= (stat3i - sorted3Min < sorted3Inc && stat3i>sorted3Min ? stat3i - sorted3Min : sorted3Inc)) {
+                    const remainingSubs3 = possibleSubs - stat3i - stat2i - stat1i;
+                    const stat3NeededBaseRolls = min(6-mainstat3Conflicts,max(usableBasePerSub,1,Math.ceil(stat3i / subsPerItem)));
                     
-        //             const stat4StartSubs = min(possibleSubs - sortedEntry4.conflictOffset,remainingSubs3,sortedEntry4.max);
-        //             // console.log(stat4StartSubs + stat1i + stat2i + stat3i,stat4StartSubs,stat1i,stat2i,stat3i)
-        //             const sumCompare = (stat4StartSubs + stat1i + stat2i + stat3i) > possibleSubs;
-        //             if (sumCompare) {continue;}
-        //             const baseTable = {...charSubsStarter};
 
-        //             baseTable[sortedEntry1.statName] += stat1i;
-        //             baseTable[sortedEntry2.statName] += stat2i;
-        //             baseTable[sortedEntry3.statName] += stat3i;
-        //             baseTable[sortedEntry4.statName] += stat4StartSubs;
-        //             //TODO: this is omega fuckin cursed, I also dislike needing to spread every time but I'm also unsure if there is actually another way, look at this later
+                    //SUBSTAT #4, this would be the stat with the least amount of mainstat conflicts, and is derived by taking the values of the other 3 substats
+                    //since there is piss for reason to have ANOTHER loop inside here just for the 4th if we know for a fact it is only the remainder of the other 3
+                    const stat4StartSubs = max(sorted4Min,min(possibleSubs - sortedEntry4.conflictOffset,remainingSubs3,sorted4Max));
+                    const stat4NeededBaseRolls = min(6-mainstat4Conflicts,max(usableBasePerSub,1,Math.ceil(stat4StartSubs / subsPerItem)));
+                    // charSubsTrash
 
-        //             yield baseTable;
-        //         }
-        //     }
-        // }
+                    const totalBaseRollsNeeded = stat1NeededBaseRolls + stat2NeededBaseRolls + stat3NeededBaseRolls + stat4NeededBaseRolls;
+                    // console.log(totalBaseRollsNeeded,usableBaseSubstatPool)
+                    const isNotPossibleBaseRolls = totalBaseRollsNeeded > usableBaseSubstatPool;
+                    
+                    // console.log(stat4StartSubs + stat1i + stat2i + stat3i,stat4StartSubs,stat1i,stat2i,stat3i)
+                    const sumCompare = (stat4StartSubs + stat1i + stat2i + stat3i) > possibleSubs;
+                    if (sumCompare || isNotPossibleBaseRolls) {continue;}
+
+
+
+
+                    /*
+                        right now we ensure possible roll distributions by taking the amount of pieces that have mainstat conflicts, and whenever those stats in particular come up to iterate we ensure that the highest
+                        that they could start from since we start from the top, is the highest those conflicts would allow for, OR, the highest the total roll pool would allow for because there are times
+                        when total available rolls set by the user can be lower than the conflict ceiling on a given stat
+
+                        the conundrum with ensuring relics get filled is that while everything we do right now is still correct, filling a relic relies on reserving spots that may or may not be dictated by the user
+                        since right now we do allow the user to specify how many base rolls on a given relic were usable and it defaults to 12
+
+                        so if we still use that user specification then we have 12 slots to fill with base rolls first before we do added rolls 
+                        but we'd also need to ensure the the slot placement is based on how many added rolls could happen but also based on mainstat conflicts
+                        this is gonna be weird
+                    */
+
+
+                        // usableBaseSubstatPool,baseSubstatTableStarter
+
+
+
+                    const newPieceArray = [];
+                    let pieceCounter = 0;
+                    for (let entry of conflictNameArray) {
+                        pieceCounter++;
+                        newPieceArray.push({
+                            currentRolls: starterRollsPerRelic,
+                            slotsOpen: 4,
+                            sortPriority: pieceCounter,
+                            statsApplied: {},
+                            mainStat: entry,
+                        });
+                    }
+
+                    // const starterRollsPerRelic = querySettings.rollsPerRelic;
+                    // const failedRollsPerRelic = querySettings.failedAddedRolls;
+
+
+                    let newBasePool = usableBaseSubstatPool;
+                    let remainingSubsStat1 = stat1i;
+                    let remainingSubsBase1 = stat1NeededBaseRolls;
+                    for (let indexEntry of stat1PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat1 / remainingSubsBase1),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase1 && !remainingSubsStat1) {break;}
+                        if (!currentPiece.slotsOpen || !currentPiece.currentRolls) {continue;}
+
+
+                        if (currentIncrement > 0 && remainingSubsBase1 > 0) {
+                            remainingSubsStat1 -= currentIncrement;
+    
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (!currentPiece.statsApplied[statName1]) {
+                                remainingSubsBase1 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName1] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase1 > 0 && !currentPiece.statsApplied[statName1]) {
+                            remainingSubsBase1 -= 1;
+                            currentPiece.statsApplied[statName1] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat2 = stat2i;
+                    let remainingSubsBase2 = stat2NeededBaseRolls;
+                    for (let indexEntry of stat2PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat2 / remainingSubsBase2),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase2 && !remainingSubsStat2) {break;}
+                        if (!currentPiece.slotsOpen || !currentPiece.currentRolls) {continue;}
+
+
+                        if (currentIncrement > 0 && remainingSubsBase2 > 0) {
+                            remainingSubsStat2 -= currentIncrement;
+    
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (!currentPiece.statsApplied[statName2]) {
+                                remainingSubsBase2 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName2] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase2 > 0 && !currentPiece.statsApplied[statName2]) {
+                            remainingSubsBase2 -= 1;
+                            currentPiece.statsApplied[statName2] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat3 = stat3i;
+                    let remainingSubsBase3 = stat3NeededBaseRolls;
+                    for (let indexEntry of stat3PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat3 / remainingSubsBase3),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase3 && !remainingSubsStat3) {break;}
+                        if (!currentPiece.slotsOpen || !currentPiece.currentRolls) {continue;}
+
+                        if (currentIncrement > 0 && remainingSubsBase3 > 0) {
+                            remainingSubsStat3 -= currentIncrement;
+    
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (!currentPiece.statsApplied[statName3]) {
+                                remainingSubsBase3 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName3] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase3 > 0 && !currentPiece.statsApplied[statName3]) {
+                            remainingSubsBase3 -= 1;
+                            currentPiece.statsApplied[statName3] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat4 = stat4StartSubs;
+                    let remainingSubsBase4 = stat4NeededBaseRolls;
+                    for (let indexEntry of stat4PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat4 / remainingSubsBase4),currentPiece.currentRolls);
+
+                        if (!remainingSubsBase4 && !remainingSubsStat4) {break;}
+                        if (!currentPiece.slotsOpen || !currentPiece.currentRolls) {continue;}
+
+                        if (currentIncrement > 0 && remainingSubsBase4 > 0) {
+                            remainingSubsStat4 -= currentIncrement;
+    
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (!currentPiece.statsApplied[statName4]) {
+                                remainingSubsBase4 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName4] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase4 > 0 && !currentPiece.statsApplied[statName4]) {
+                            remainingSubsBase4 -= 1;
+                            currentPiece.statsApplied[statName4] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+
+
+                    //after the desired stats are filled in on their base rolls and added rolls, then this will loop over each supposed piece and fill in trash stats and use the rest of the rolls
+                    //rolls used will be based on the user defined rolls-per-relic stat though just keep in mind, so a "6" roll is not possible when rolls per relic is set to 4, only a 5 roll could take place (base + 4 rolls)
+                    for (let trashStatName of charSubsTrash) {
+
+                        for (let pieceObject of newPieceArray) {
+                            // if (!pieceObject.slotsOpen & !pieceObject.currentRolls) {continue;}
+                            if (!pieceObject.slotsOpen || trashStatName === pieceObject.mainStat) {continue;}
+
+                            const rollsToApply = pieceObject.currentRolls > 0 ? Math.ceil(pieceObject.currentRolls/pieceObject.slotsOpen) : 0;
+                            pieceObject.currentRolls -= rollsToApply;
+
+                            pieceObject.statsApplied[trashStatName] = 1 + rollsToApply;
+                            pieceObject.slotsOpen -= 1;
+                        }
+                    }
+
+
+                    // console.log(newPieceArray,remainingSubsStat1,remainingSubsStat2,remainingSubsStat3,remainingSubsStat4)
+
+                    // stat1i would represent the total added rolls desired in this loop
+                    // subsPerItem would be the total added rolls possible on EACH relic
+
+                    
+                    
+                    
+                    
+
+                    //not sure if we're actually gonna restrict this way, but this would ensure that the minimum base rolls required for a given combination does not exceed the
+                    //user defined base roll pool
+                    
+
+                    // const baseTable = {...charSubsStarter};
+                    const baseTable = {...baseSubstatTableStarter};
+
+
+                    for (let pieceObject of newPieceArray) {
+                        const currentPieceStats = pieceObject.statsApplied;
+
+                        for (let statName in currentPieceStats) {
+                            const currentStatValue = currentPieceStats[statName];
+
+                            baseTable[statName] += currentStatValue;
+                        }
+                    }
+
+                    let dupeKey = "";
+                    for (let statName in baseTable) {
+                        const currentRollValue = baseTable[statName];
+
+                        dupeKey += currentRollValue + "|";
+                    }
+
+                    if (!repeatsCheckerObject[dupeKey]) {repeatsCheckerObject[dupeKey] = 1;}
+                    else {continue;}
+
+                    // baseTable[statName1] += stat1i;
+                    // baseTable[statName2] += stat2i;
+                    // baseTable[statName3] += stat3i;
+                    // baseTable[statName4] += stat4StartSubs;
+
+                    // const remainingTrashRolls = possibleSubs - stat4StartSubs - stat3i - stat2i - stat1i;
+                    // baseTable[trash1] += min(possibleSubs - trash1TotalConflictOffset,remainingTrashRolls);
+
+                    //TODO: this is omega fuckin cursed, I also dislike needing to spread every time but I'm also unsure if there is actually another way, look at this later
+
+                    yield {baseTable,newPieceArray};
+                }
+            }
+        }
+        repeatsCheckerObject = null;//I have no actual clue if this will matter, but for the sake of the garbage collector, I'd prefer to clear the mapping BEFORE we exit this function at any given time just in case.
+    },
+//     * getCharacterSubstatIteration(baseSubstatIncrements,querySettings,desiredStats,charSubsStarter,chestMain,bootMain,orbMain,ropeMain,charSubstatBounds1,charSubstatBounds2,charSubstatBounds3,charSubstatBounds4,charSubsTrash) {
+//     const desired1 = desiredStats[0];
+//     const desired2 = desiredStats[1];
+//     const desired3 = desiredStats[2];
+//     const desired4 = desiredStats[3];
+
+//     const headMain = "HPFlat";
+//     const handMain = "ATKFlat";
+
+//     //we need to know the total number of mainstat conflicts, PER stat desired
+//     const mainstat1Conflicts = (desired1 === chestMain ? 1 : 0) + (desired1 === bootMain ? 1 : 0) + (desired1 === orbMain ? 1 : 0) + (desired1 === ropeMain ? 1 : 0) + (desired1 === headMain ? 1 : 0) + (desired1 === handMain ? 1 : 0);
+//     const mainstat2Conflicts = (desired2 === chestMain ? 1 : 0) + (desired2 === bootMain ? 1 : 0) + (desired2 === orbMain ? 1 : 0) + (desired2 === ropeMain ? 1 : 0) + (desired2 === headMain ? 1 : 0) + (desired2 === handMain ? 1 : 0);
+//     const mainstat3Conflicts = (desired3 === chestMain ? 1 : 0) + (desired3 === bootMain ? 1 : 0) + (desired3 === orbMain ? 1 : 0) + (desired3 === ropeMain ? 1 : 0) + (desired3 === headMain ? 1 : 0) + (desired3 === handMain ? 1 : 0);
+//     const mainstat4Conflicts = (desired4 === chestMain ? 1 : 0) + (desired4 === bootMain ? 1 : 0) + (desired4 === orbMain ? 1 : 0) + (desired4 === ropeMain ? 1 : 0) + (desired4 === headMain ? 1 : 0) + (desired4 === handMain ? 1 : 0);
+
+//     const trash1 = charSubsTrash[0];
+//     const trash1Conflicts = (trash1 === chestMain ? 1 : 0) + (trash1 === bootMain ? 1 : 0) + (trash1 === orbMain ? 1 : 0) + (trash1 === ropeMain ? 1 : 0) + (trash1 === headMain ? 1 : 0) + (trash1 === handMain ? 1 : 0);
+
+//     // defaultMainSubs: ["CritRateBase","CritDamageBase","ATK%","SPDFlat"],
+//     // defaultTrashSub: "ATKFlat",
+
+//     // const minimumAddedRollPerDesired = querySettings.minimumAddedRoll;
+//     const subsPerItem = querySettings.rollsPerRelic - querySettings.failedAddedRolls;
+//     const possibleSubs = subsPerItem * 6;// - (minimumAddedRollPerDesired * 4);
+//     // const usableSubs = possibleSubs - 1;
+
+//     const stat1TotalConflictOffset = mainstat1Conflicts*subsPerItem;
+//     const stat2TotalConflictOffset = mainstat2Conflicts*subsPerItem;
+//     const stat3TotalConflictOffset = mainstat3Conflicts*subsPerItem;
+//     const stat4TotalConflictOffset = mainstat4Conflicts*subsPerItem;
+
+//     const trash1TotalConflictOffset = trash1Conflicts*subsPerItem;
+
+//     const sub1Max = charSubstatBounds1[1];
+//     const sub2Max = charSubstatBounds2[1];
+//     const sub3Max = charSubstatBounds3[1];
+//     const sub4Max = charSubstatBounds4[1];
+
+//     const sub1Min = charSubstatBounds1[0];
+//     const sub2Min = charSubstatBounds2[0];
+//     const sub3Min = charSubstatBounds3[0];
+//     const sub4Min = charSubstatBounds4[0];
+
+    
+
+//     const min = Math.min;
+//     const stat1MaxOffset = possibleSubs - min(possibleSubs,sub1Max);
+//     const stat2MaxOffset = possibleSubs - min(possibleSubs,sub2Max);
+//     const stat3MaxOffset = possibleSubs - min(possibleSubs,sub3Max);
+//     const stat4MaxOffset = possibleSubs - min(possibleSubs,sub4Max);
+
+//     const substatsConflictSort = [
+//         {statName: desired1, conflictCount: mainstat1Conflicts, conflictOffset: stat1TotalConflictOffset, min: sub1Min, max: sub1Max, maxOffset: stat1MaxOffset, increment: baseSubstatIncrements[desired1]},
+//         {statName: desired2, conflictCount: mainstat2Conflicts, conflictOffset: stat2TotalConflictOffset, min: sub2Min, max: sub2Max, maxOffset: stat2MaxOffset, increment: baseSubstatIncrements[desired2]},
+//         {statName: desired3, conflictCount: mainstat3Conflicts, conflictOffset: stat3TotalConflictOffset, min: sub3Min, max: sub3Max, maxOffset: stat3MaxOffset, increment: baseSubstatIncrements[desired3]},
+//         {statName: desired4, conflictCount: mainstat4Conflicts, conflictOffset: stat4TotalConflictOffset, min: sub4Min, max: sub4Max, maxOffset: stat4MaxOffset, increment: baseSubstatIncrements[desired4]}
+//     ].sort(compare.sortByConflicts);
+//     // console.log(substatsConflictSort)
+//     // const increment = querySettings.rollsPerBundle;
+    
+
+//     const sortedEntry1 = substatsConflictSort[0];
+//     const sortedEntry2 = substatsConflictSort[1];
+//     const sortedEntry3 = substatsConflictSort[2];
+//     const sortedEntry4 = substatsConflictSort[3];
+
+//     const statName1 = sortedEntry1.statName;
+//     const statName2 = sortedEntry2.statName;
+//     const statName3 = sortedEntry3.statName;
+//     const statName4 = sortedEntry4.statName;
+
+//     // let repeatsCheckerObject = {}
+
+//     const sorted1Min = sortedEntry1.min;
+//     const sorted2Min = sortedEntry2.min;
+//     const sorted3Min = sortedEntry3.min;
+//     const sorted4Min = sortedEntry4.min;
+
+//     const sorted1Max = sortedEntry1.max;
+//     const sorted2Max = sortedEntry2.max;
+//     const sorted3Max = sortedEntry3.max;
+//     const sorted4Max = sortedEntry4.max;
+
+//     const sorted1Inc = sortedEntry1.increment;
+//     const sorted2Inc = sortedEntry2.increment;
+//     const sorted3Inc = sortedEntry3.increment;
+//     const sorted4Inc = sortedEntry4.increment;
+
+//     const stat1StartSubs = min(possibleSubs - sortedEntry1.conflictOffset,possibleSubs,sorted1Max);
+//     // const loop1Offset = possibleSubs - stat1StartSubs;
+//     //loop one starts with either the max possible sub count, or the max minus the conflicts difference, or the max specified by the user, whichever is LEAST
+//     for (let stat1i = stat1StartSubs; stat1i >= sorted1Min; stat1i -= (stat1i - sorted1Min < sorted1Inc && stat1i>sorted1Min ? stat1i - sorted1Min : sorted1Inc)) {
+//         const remainingSubs1 = possibleSubs - stat1i;
+
+
+//         const stat2StartSubs = min(possibleSubs - sortedEntry2.conflictOffset,remainingSubs1,sorted2Max);
+//         for (let stat2i = stat2StartSubs; stat2i >= sorted2Min; stat2i -= (stat2i - sorted2Min < sorted2Inc && stat2i > sorted2Min ? stat2i - sorted2Min : sorted2Inc)) {
+//             const remainingSubs2 = possibleSubs - stat2i - stat1i;
+
+//             const stat3StartSubs = min(possibleSubs - sortedEntry3.conflictOffset,remainingSubs2,sorted3Max);
+//             for (let stat3i = stat3StartSubs; stat3i >= sorted3Min; stat3i -= (stat3i - sorted3Min < sorted3Inc && stat3i>sorted3Min ? stat3i - sorted3Min : sorted3Inc)) {
+//                 const remainingSubs3 = possibleSubs - stat3i - stat2i - stat1i;
+                
+//                 const stat4StartSubs = Math.max(sorted4Min,min(possibleSubs - sortedEntry4.conflictOffset,remainingSubs3,sorted4Max));
+//                 // charSubsTrash
+
+
+                
+//                 // console.log(stat4StartSubs + stat1i + stat2i + stat3i,stat4StartSubs,stat1i,stat2i,stat3i)
+//                 const sumCompare = (stat4StartSubs + stat1i + stat2i + stat3i) > possibleSubs;
+//                 if (sumCompare) {continue;}
+
+
+
+
+//                 /*
+//                     right now we ensure possible roll distributions by taking the amount of pieces that have mainstat conflicts, and whenever those stats in particular come up to iterate we ensure that the highest
+//                     that they could start from since we start from the top, is the highest those conflicts would allow for, OR, the highest the total roll pool would allow for because there are times
+//                     when total available rolls set by the user can be lower than the conflict ceiling on a given stat
+
+//                     the conundrum with ensuring relics get filled is that while everything we do right now is still correct, filling a relic relies on reserving spots that may or may not be dictated by the user
+//                     since right now we do allow the user to specify how many base rolls on a given relic were usable and it defaults to 12
+
+//                     so if we still use that user specification then we have 12 slots to fill with base rolls first before we do added rolls 
+//                     but we'd also need to ensure the the slot placement is based on how many added rolls could happen but also based on mainstat conflicts
+//                     this is gonna be weird
+//                 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                 // const keyString = stat1i + "|" + stat2i + "|" + stat3i + "|" + stat4StartSubs;
+//                 // if (!repeatsCheckerObject[keyString]) {repeatsCheckerObject[keyString] = 1;}
+//                 // else {continue;}
+
+//                 const baseTable = {...charSubsStarter};
+
+//                 baseTable[statName1] += stat1i;
+//                 baseTable[statName2] += stat2i;
+//                 baseTable[statName3] += stat3i;
+//                 baseTable[statName4] += stat4StartSubs;
+
+//                 const remainingTrashRolls = possibleSubs - stat4StartSubs - stat3i - stat2i - stat1i;
+//                 baseTable[trash1] += min(possibleSubs - trash1TotalConflictOffset,remainingTrashRolls);
+
+//                 //TODO: this is omega fuckin cursed, I also dislike needing to spread every time but I'm also unsure if there is actually another way, look at this later
+
+//                 yield baseTable;
+//             }
+//         }
+//     }
+// },
+
+
+    * getCharacterSubstatIteration(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,desiredStats,charSubsStarter,chestMain,bootMain,orbMain,ropeMain,charSubstatBounds1,charSubstatBounds2,charSubstatBounds3,charSubstatBounds4,charSubsTrash) {
+        const desired1 = desiredStats[0];
+        const desired2 = desiredStats[1];
+        const desired3 = desiredStats[2];
+        const desired4 = desiredStats[3];
+
+        const headMain = "HPFlat";
+        const handMain = "ATKFlat";
+
+        const usableBasePerSub = usableBaseSubstatPool / 4;
+        // console.log(usableBasePerSub)
+
+        /*
+            12 / 4 = 3 relics max, 3 conflicts
+            20 / 4 = 5 relics max, 1 conflict 
+        */
+
+        //we need to know the total number of mainstat conflicts, PER stat desired
+        const mainstat1Conflicts = Math.max(6-usableBasePerSub,(desired1 === chestMain ? 1 : 0) + (desired1 === bootMain ? 1 : 0) + (desired1 === orbMain ? 1 : 0) + (desired1 === ropeMain ? 1 : 0) + (desired1 === headMain ? 1 : 0) + (desired1 === handMain ? 1 : 0));
+        const mainstat2Conflicts = Math.max(6-usableBasePerSub,(desired2 === chestMain ? 1 : 0) + (desired2 === bootMain ? 1 : 0) + (desired2 === orbMain ? 1 : 0) + (desired2 === ropeMain ? 1 : 0) + (desired2 === headMain ? 1 : 0) + (desired2 === handMain ? 1 : 0));
+        const mainstat3Conflicts = Math.max(6-usableBasePerSub,(desired3 === chestMain ? 1 : 0) + (desired3 === bootMain ? 1 : 0) + (desired3 === orbMain ? 1 : 0) + (desired3 === ropeMain ? 1 : 0) + (desired3 === headMain ? 1 : 0) + (desired3 === handMain ? 1 : 0));
+        const mainstat4Conflicts = Math.max(6-usableBasePerSub,(desired4 === chestMain ? 1 : 0) + (desired4 === bootMain ? 1 : 0) + (desired4 === orbMain ? 1 : 0) + (desired4 === ropeMain ? 1 : 0) + (desired4 === headMain ? 1 : 0) + (desired4 === handMain ? 1 : 0));
+
+        const trash1 = charSubsTrash[0];
+        const trash1Conflicts = (trash1 === chestMain ? 1 : 0) + (trash1 === bootMain ? 1 : 0) + (trash1 === orbMain ? 1 : 0) + (trash1 === ropeMain ? 1 : 0) + (trash1 === headMain ? 1 : 0) + (trash1 === handMain ? 1 : 0);
+
+        // defaultMainSubs: ["CritRateBase","CritDamageBase","ATK%","SPDFlat"],
+        // defaultTrashSub: "ATKFlat",
+
+        // const minimumAddedRollPerDesired = querySettings.minimumAddedRoll;
+        const starterRollsPerRelic = querySettings.rollsPerRelic;
+        const failedRollsPerRelic = querySettings.failedAddedRolls;
+        const subsPerItem = starterRollsPerRelic - failedRollsPerRelic;
+        const possibleSubs = subsPerItem * 6;// - (minimumAddedRollPerDesired * 4);
+        // const usableSubs = possibleSubs - 1;
+
+        const stat1TotalConflictOffset = mainstat1Conflicts*subsPerItem;
+        const stat2TotalConflictOffset = mainstat2Conflicts*subsPerItem;
+        const stat3TotalConflictOffset = mainstat3Conflicts*subsPerItem;
+        const stat4TotalConflictOffset = mainstat4Conflicts*subsPerItem;
+
+        const trash1TotalConflictOffset = trash1Conflicts*subsPerItem;
+
+        const sub1Max = charSubstatBounds1[1];
+        const sub2Max = charSubstatBounds2[1];
+        const sub3Max = charSubstatBounds3[1];
+        const sub4Max = charSubstatBounds4[1];
+
+        const sub1Min = charSubstatBounds1[0];
+        const sub2Min = charSubstatBounds2[0];
+        const sub3Min = charSubstatBounds3[0];
+        const sub4Min = charSubstatBounds4[0];
+
+        
+
+        const min = Math.min;
+        const max = Math.max;
+        const stat1MaxOffset = possibleSubs - min(possibleSubs,sub1Max);
+        const stat2MaxOffset = possibleSubs - min(possibleSubs,sub2Max);
+        const stat3MaxOffset = possibleSubs - min(possibleSubs,sub3Max);
+        const stat4MaxOffset = possibleSubs - min(possibleSubs,sub4Max);
+
+
+
+        const substatsConflictSort = [
+            {statName: desired1, conflictCount: mainstat1Conflicts, conflictOffset: stat1TotalConflictOffset, min: sub1Min, max: sub1Max, maxOffset: stat1MaxOffset, increment: baseSubstatIncrements[desired1]},
+            {statName: desired2, conflictCount: mainstat2Conflicts, conflictOffset: stat2TotalConflictOffset, min: sub2Min, max: sub2Max, maxOffset: stat2MaxOffset, increment: baseSubstatIncrements[desired2]},
+            {statName: desired3, conflictCount: mainstat3Conflicts, conflictOffset: stat3TotalConflictOffset, min: sub3Min, max: sub3Max, maxOffset: stat3MaxOffset, increment: baseSubstatIncrements[desired3]},
+            {statName: desired4, conflictCount: mainstat4Conflicts, conflictOffset: stat4TotalConflictOffset, min: sub4Min, max: sub4Max, maxOffset: stat4MaxOffset, increment: baseSubstatIncrements[desired4]}
+        ].sort(compare.sortByConflicts);
+        // console.log(substatsConflictSort)
+        // const increment = querySettings.rollsPerBundle;
+        
+        const conflictNameArray = [headMain,handMain,chestMain,bootMain,orbMain,ropeMain];
+
+        const sortedEntry1 = substatsConflictSort[0];
+        const sortedEntry2 = substatsConflictSort[1];
+        const sortedEntry3 = substatsConflictSort[2];
+        const sortedEntry4 = substatsConflictSort[3];
+
+        const statName1 = sortedEntry1.statName;
+        const statName2 = sortedEntry2.statName;
+        const statName3 = sortedEntry3.statName;
+        const statName4 = sortedEntry4.statName;
+
+        let repeatsCheckerObject = {}
+
+        const sorted1Min = sortedEntry1.min;
+        const sorted2Min = sortedEntry2.min;
+        const sorted3Min = sortedEntry3.min;
+        const sorted4Min = sortedEntry4.min;
+
+        const sorted1Max = sortedEntry1.max;
+        const sorted2Max = sortedEntry2.max;
+        const sorted3Max = sortedEntry3.max;
+        const sorted4Max = sortedEntry4.max;
+
+        const sorted1Inc = sortedEntry1.increment;
+        const sorted2Inc = sortedEntry2.increment;
+        const sorted3Inc = sortedEntry3.increment;
+        const sorted4Inc = sortedEntry4.increment;
+
+        const stat1StartSubs = min(possibleSubs - sortedEntry1.conflictOffset,possibleSubs,sorted1Max);
+
+        const stat1PossiblePieces = [];
+        const stat2PossiblePieces = [];
+        const stat3PossiblePieces = [];
+        const stat4PossiblePieces = [];
+        for (let i=0;i<conflictNameArray.length;i++) {
+            if (conflictNameArray[i] != statName1) {stat1PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName2) {stat2PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName3) {stat3PossiblePieces.push(i);}
+            if (conflictNameArray[i] != statName4) {stat4PossiblePieces.push(i);}
+        }
+
+
+        // const loop1Offset = possibleSubs - stat1StartSubs;
+        //loop one starts with either the max possible sub count, or the max minus the conflicts difference, or the max specified by the user, whichever is LEAST
+        for (let stat1i = stat1StartSubs; stat1i >= sorted1Min; stat1i -= (stat1i - sorted1Min < sorted1Inc && stat1i>sorted1Min ? stat1i - sorted1Min : sorted1Inc)) {
+            const remainingSubs1 = possibleSubs - stat1i;
+            const stat1NeededBaseRolls = min(6-sortedEntry1.conflictCount,max(usableBasePerSub,1,Math.ceil(stat1i / subsPerItem)));
+
+            const stat2StartSubs = min(possibleSubs - sortedEntry2.conflictOffset,remainingSubs1,sorted2Max);
+            for (let stat2i = stat2StartSubs; stat2i >= sorted2Min; stat2i -= (stat2i - sorted2Min < sorted2Inc && stat2i > sorted2Min ? stat2i - sorted2Min : sorted2Inc)) {
+                const remainingSubs2 = possibleSubs - stat2i - stat1i;
+                const stat2NeededBaseRolls = min(6-sortedEntry2.conflictCount,max(usableBasePerSub,1,Math.ceil(stat2i / subsPerItem)));
+
+                const stat3StartSubs = min(possibleSubs - sortedEntry3.conflictOffset,remainingSubs2,sorted3Max);
+                for (let stat3i = stat3StartSubs; stat3i >= sorted3Min; stat3i -= (stat3i - sorted3Min < sorted3Inc && stat3i>sorted3Min ? stat3i - sorted3Min : sorted3Inc)) {
+                    const remainingSubs3 = possibleSubs - stat3i - stat2i - stat1i;
+                    const stat3NeededBaseRolls = min(6-sortedEntry3.conflictCount,max(usableBasePerSub,1,Math.ceil(stat3i / subsPerItem)));
+                    
+
+                    //SUBSTAT #4, this would be the stat with the least amount of mainstat conflicts, and is derived by taking the values of the other 3 substats
+                    //since there is piss for reason to have ANOTHER loop inside here just for the 4th if we know for a fact it is only the remainder of the other 3
+                    const stat4StartSubs = max(sorted4Min,min(possibleSubs - sortedEntry4.conflictOffset,remainingSubs3,sorted4Max));
+                    const stat4NeededBaseRolls = min(6-sortedEntry4.conflictCount,max(usableBasePerSub,1,Math.ceil(stat4StartSubs / subsPerItem)));
+                    // charSubsTrash
+
+                    const totalBaseRollsNeeded = stat1NeededBaseRolls + stat2NeededBaseRolls + stat3NeededBaseRolls + stat4NeededBaseRolls;
+                    // console.log(totalBaseRollsNeeded,usableBaseSubstatPool)
+                    const isNotPossibleBaseRolls = totalBaseRollsNeeded > usableBaseSubstatPool;
+                    
+                    // console.log(stat4StartSubs + stat1i + stat2i + stat3i,stat4StartSubs,stat1i,stat2i,stat3i)
+                    const sumCompare = (stat4StartSubs + stat1i + stat2i + stat3i) > possibleSubs;
+                    if (sumCompare || isNotPossibleBaseRolls) {continue;}
+
+
+
+
+                    /*
+                        right now we ensure possible roll distributions by taking the amount of pieces that have mainstat conflicts, and whenever those stats in particular come up to iterate we ensure that the highest
+                        that they could start from since we start from the top, is the highest those conflicts would allow for, OR, the highest the total roll pool would allow for because there are times
+                        when total available rolls set by the user can be lower than the conflict ceiling on a given stat
+
+                        the conundrum with ensuring relics get filled is that while everything we do right now is still correct, filling a relic relies on reserving spots that may or may not be dictated by the user
+                        since right now we do allow the user to specify how many base rolls on a given relic were usable and it defaults to 12
+
+                        so if we still use that user specification then we have 12 slots to fill with base rolls first before we do added rolls 
+                        but we'd also need to ensure the the slot placement is based on how many added rolls could happen but also based on mainstat conflicts
+                        this is gonna be weird
+                    */
+
+
+                        // usableBaseSubstatPool,baseSubstatTableStarter
+
+
+
+                    const newPieceArray = [];
+                    let pieceCounter = 0;
+                    for (let entry of conflictNameArray) {
+                        pieceCounter++;
+                        newPieceArray.push({
+                            currentRolls: starterRollsPerRelic,
+                            slotsOpen: 4,
+                            sortPriority: pieceCounter,
+                            statsApplied: {},
+                            mainStat: entry,
+                        });
+                    }
+
+                    // const starterRollsPerRelic = querySettings.rollsPerRelic;
+                    // const failedRollsPerRelic = querySettings.failedAddedRolls;
+
+
+                    let newBasePool = usableBaseSubstatPool;
+                    let remainingSubsStat1 = stat1i;
+                    let remainingSubsBase1 = stat1NeededBaseRolls;
+                    for (let indexEntry of stat1PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat1 / remainingSubsBase1),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase1 && !remainingSubsStat1) {break;}
+                        if (!currentPiece.slotsOpen) {continue;}
+
+                        const statIsNotThereYet = currentPiece.statsApplied[statName1] == undefined;
+                        if (currentIncrement > 0 && remainingSubsBase1 > 0 && currentPiece.currentRolls > 0) {
+                            remainingSubsStat1 -= currentIncrement;
+
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (statIsNotThereYet) {
+                                remainingSubsBase1 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName1] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase1 > 0 && statIsNotThereYet) {
+                            remainingSubsBase1 -= 1;
+                            currentPiece.statsApplied[statName1] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat2 = stat2i;
+                    let remainingSubsBase2 = stat2NeededBaseRolls;
+                    for (let indexEntry of stat2PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat2 / remainingSubsBase2),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase2 && !remainingSubsStat2) {break;}
+                        if (!currentPiece.slotsOpen) {continue;}
+
+                        const statIsNotThereYet = currentPiece.statsApplied[statName2] == undefined;
+                        if (currentIncrement > 0 && remainingSubsBase2 > 0 && currentPiece.currentRolls > 0) {
+                            remainingSubsStat2 -= currentIncrement;
+
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (statIsNotThereYet) {
+                                remainingSubsBase2 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName2] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase2 > 0 && statIsNotThereYet) {
+                            remainingSubsBase2 -= 1;
+                            currentPiece.statsApplied[statName2] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat3 = stat3i;
+                    let remainingSubsBase3 = stat3NeededBaseRolls;
+                    for (let indexEntry of stat3PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat3 / remainingSubsBase3),currentPiece.currentRolls);
+                        
+                        if (!remainingSubsBase3 && !remainingSubsStat3) {break;}
+                        if (!currentPiece.slotsOpen) {continue;}
+
+                        const statIsNotThereYet = currentPiece.statsApplied[statName3] == undefined;
+                        if (currentIncrement > 0 && remainingSubsBase3 > 0 && currentPiece.currentRolls > 0) {
+                            remainingSubsStat3 -= currentIncrement;
+
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (statIsNotThereYet) {
+                                remainingSubsBase3 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName3] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase3 > 0 && statIsNotThereYet) {
+                            remainingSubsBase3 -= 1;
+                            currentPiece.statsApplied[statName3] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+                    let remainingSubsStat4 = stat4StartSubs;
+                    let remainingSubsBase4 = stat4NeededBaseRolls;
+                    for (let indexEntry of stat4PossiblePieces) {
+                        const currentPiece = newPieceArray[indexEntry];
+
+                        // stat1NeededBaseRolls
+                        // const currentIncrement = Math.min(remainingSubsStat1,Math.ceil(currentPiece.currentRolls / stat1NeededBaseRolls));
+                        const currentIncrement = min(Math.ceil(remainingSubsStat4 / remainingSubsBase4),currentPiece.currentRolls);
+
+                        if (!remainingSubsBase4 && !remainingSubsStat4) {break;}
+                        if (!currentPiece.slotsOpen) {continue;}
+
+                        const statIsNotThereYet = currentPiece.statsApplied[statName4] == undefined;
+                        if (currentIncrement > 0 && remainingSubsBase4 > 0 && currentPiece.currentRolls > 0) {
+                            remainingSubsStat4 -= currentIncrement;
+
+                            currentPiece.currentRolls -= currentIncrement;
+                            if (statIsNotThereYet) {
+                                remainingSubsBase4 -= 1;
+                                currentPiece.slotsOpen -= 1;
+                            }
+                            currentPiece.statsApplied[statName4] = currentIncrement + 1;
+                        }
+                        else if (currentIncrement === 0 && remainingSubsBase4 > 0 && statIsNotThereYet) {
+                            remainingSubsBase4 -= 1;
+                            currentPiece.statsApplied[statName4] = 1;
+                            currentPiece.slotsOpen -= 1;
+                        }
+                    }
+
+
+
+                    //after the desired stats are filled in on their base rolls and added rolls, then this will loop over each supposed piece and fill in trash stats and use the rest of the rolls
+                    //rolls used will be based on the user defined rolls-per-relic stat though just keep in mind, so a "6" roll is not possible when rolls per relic is set to 4, only a 5 roll could take place (base + 4 rolls)
+                    for (let trashStatName of charSubsTrash) {
+
+                        for (let pieceObject of newPieceArray) {
+                            // if (!pieceObject.slotsOpen & !pieceObject.currentRolls) {continue;}
+                            if (!pieceObject.slotsOpen || trashStatName === pieceObject.mainStat) {continue;}
+
+                            const rollsToApply = pieceObject.currentRolls > 0 ? Math.ceil(pieceObject.currentRolls/pieceObject.slotsOpen) : 0;
+                            pieceObject.currentRolls -= rollsToApply;
+
+                            pieceObject.statsApplied[trashStatName] = 1 + rollsToApply;
+                            pieceObject.slotsOpen -= 1;
+                        }
+                    }
+
+
+                    // console.log(newPieceArray,remainingSubsStat1,remainingSubsStat2,remainingSubsStat3,remainingSubsStat4)
+
+                    // stat1i would represent the total added rolls desired in this loop
+                    // subsPerItem would be the total added rolls possible on EACH relic
+
+                    
+                    
+                    
+                    
+
+                    //not sure if we're actually gonna restrict this way, but this would ensure that the minimum base rolls required for a given combination does not exceed the
+                    //user defined base roll pool
+                    
+
+                    // const baseTable = {...charSubsStarter};
+                    const baseTable = {...baseSubstatTableStarter};
+
+
+                    for (let pieceObject of newPieceArray) {
+                        const currentPieceStats = pieceObject.statsApplied;
+
+                        for (let statName in currentPieceStats) {
+                            const currentStatValue = currentPieceStats[statName];
+
+                            baseTable[statName] += currentStatValue;
+                        }
+                    }
+
+                    let dupeKey = "";
+                    for (let statName in baseTable) {
+                        const currentRollValue = baseTable[statName];
+
+                        dupeKey += currentRollValue + "|";
+                    }
+
+                    if (!repeatsCheckerObject[dupeKey]) {repeatsCheckerObject[dupeKey] = 1;}
+                    else {continue;}
+
+                    // baseTable[statName1] += stat1i;
+                    // baseTable[statName2] += stat2i;
+                    // baseTable[statName3] += stat3i;
+                    // baseTable[statName4] += stat4StartSubs;
+
+                    // const remainingTrashRolls = possibleSubs - stat4StartSubs - stat3i - stat2i - stat1i;
+                    // baseTable[trash1] += min(possibleSubs - trash1TotalConflictOffset,remainingTrashRolls);
+
+                    //TODO: this is omega fuckin cursed, I also dislike needing to spread every time but I'm also unsure if there is actually another way, look at this later
+
+                    yield {baseTable,newPieceArray};
+                }
+            }
+        }
+        repeatsCheckerObject = null;//I have no actual clue if this will matter, but for the sake of the garbage collector, I'd prefer to clear the mapping BEFORE we exit this function at any given time just in case.
     },
     * getUpdatedComparisons(battleData) {
         let charObjectRef = globalRecords.character;
@@ -418,13 +1195,13 @@ const compare = {
         // defaultMainSubs: ["CritRateBase","CritDamageBase","ATK%","SPDFlat"],
         // defaultTrashSub: "ATKFlat",
         const char1SubsDefault = char1Maslow.defaultMainSubs;
-        // const char1SubsTrash = char1Maslow.defaultTrashSub;
+        const char1SubsTrash = char1Maslow.defaultTrashSub;
         const char2SubsDefault = char2Maslow.defaultMainSubs;
-        // const char2SubsTrash = char2Maslow.defaultTrashSub;
+        const char2SubsTrash = char2Maslow.defaultTrashSub;
         const char3SubsDefault = char3Maslow.defaultMainSubs;
-        // const char3SubsTrash = char3Maslow.defaultTrashSub;
+        const char3SubsTrash = char3Maslow.defaultTrashSub;
         const char4SubsDefault = char4Maslow.defaultMainSubs;
-        // const char4SubsTrash = char4Maslow.defaultTrashSub;
+        const char4SubsTrash = char4Maslow.defaultTrashSub;
         
 
         // console.log(characterNeeds)
@@ -799,7 +1576,7 @@ const compare = {
         const char3SubsStarter = {...baseSubstatTableStarter};
         const char4SubsStarter = {...baseSubstatTableStarter};
 
-        const rollsPerBaseSubStarter = usableBaseSubstatPool/4; 
+        const rollsPerBaseSubStarter = usableBaseSubstatPool/4;
         for (let subEntry of char1SubsDefault) {
             char1SubsStarter[subEntry] = rollsPerBaseSubStarter;
         }
@@ -1268,20 +2045,20 @@ const compare = {
                                         countedSkip += compositeMainstatSkip ? char1MainSkipped * char2MainSkipped * char3MainSkipped * char4MainSkipped * totalSubsSkipTeam : 0;
 
 
-                                        let subsReached1 = 0
-                                        for (let char1Substats of getSubstats(baseSubstatIncrements,querySettings,char1SubsDefault,char1SubsStarter,char1Chest,char1Feet,char1Orb,char1Rope,char1SubstatBounds1,char1SubstatBounds2,char1SubstatBounds3,char1SubstatBounds4)) {
+                                        let subsReached1 = 0 
+                                        for (let char1Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char1SubsDefault,char1SubsStarter,char1Chest,char1Feet,char1Orb,char1Rope,char1SubstatBounds1,char1SubstatBounds2,char1SubstatBounds3,char1SubstatBounds4,char1SubsTrash)) {
                                             subsReached1 ++;
 
                                             let subsReached2 = 0;
-                                            for (let char2Substats of getSubstats(baseSubstatIncrements,querySettings,char2SubsDefault,char2SubsStarter,char2Chest,char2Feet,char2Orb,char2Rope,char2SubstatBounds1,char2SubstatBounds2,char2SubstatBounds3,char2SubstatBounds4)) {
+                                            for (let char2Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char2SubsDefault,char2SubsStarter,char2Chest,char2Feet,char2Orb,char2Rope,char2SubstatBounds1,char2SubstatBounds2,char2SubstatBounds3,char2SubstatBounds4,char2SubsTrash)) {
                                                 subsReached2++;
 
                                                 let subsReached3 = 0;
-                                                for (let char3Substats of getSubstats(baseSubstatIncrements,querySettings,char3SubsDefault,char3SubsStarter,char3Chest,char3Feet,char3Orb,char3Rope,char3SubstatBounds1,char3SubstatBounds2,char3SubstatBounds3,char3SubstatBounds4)) {
+                                                for (let char3Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char3SubsDefault,char3SubsStarter,char3Chest,char3Feet,char3Orb,char3Rope,char3SubstatBounds1,char3SubstatBounds2,char3SubstatBounds3,char3SubstatBounds4,char3SubsTrash)) {
                                                     subsReached3++;
 
                                                     let subsReached4 = 0;
-                                                    for (let char4Substats of getSubstats(baseSubstatIncrements,querySettings,char4SubsDefault,char4SubsStarter,char4Chest,char4Feet,char4Orb,char4Rope,char4SubstatBounds1,char4SubstatBounds2,char4SubstatBounds3,char4SubstatBounds4)) {
+                                                    for (let char4Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char4SubsDefault,char4SubsStarter,char4Chest,char4Feet,char4Orb,char4Rope,char4SubstatBounds1,char4SubstatBounds2,char4SubstatBounds3,char4SubstatBounds4,char4SubsTrash)) {
                                                         subsReached4++;
 
                                                         countedReached += 1;
@@ -1660,20 +2437,29 @@ const compare = {
 
 
                                         // let subsReached1 = 0
-                                        for (let char1Substats of getSubstats(baseSubstatIncrements,querySettings,char1SubsDefault,char1SubsStarter,char1Chest,char1Feet,char1Orb,char1Rope,char1SubstatBounds1,char1SubstatBounds2,char1SubstatBounds3,char1SubstatBounds4)) {
+                                        for (let char1Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char1SubsDefault,char1SubsStarter,char1Chest,char1Feet,char1Orb,char1Rope,char1SubstatBounds1,char1SubstatBounds2,char1SubstatBounds3,char1SubstatBounds4,char1SubsTrash)) {
                                             // subsReached1 ++;
+                                            const char1Subs = char1Substats.baseTable;
+                                            const char1NewPieceArray = char1Substats.newPieceArray;
+
 
                                             // let subsReached2 = 0;
-                                            for (let char2Substats of getSubstats(baseSubstatIncrements,querySettings,char2SubsDefault,char2SubsStarter,char2Chest,char2Feet,char2Orb,char2Rope,char2SubstatBounds1,char2SubstatBounds2,char2SubstatBounds3,char2SubstatBounds4)) {
+                                            for (let char2Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char2SubsDefault,char2SubsStarter,char2Chest,char2Feet,char2Orb,char2Rope,char2SubstatBounds1,char2SubstatBounds2,char2SubstatBounds3,char2SubstatBounds4,char2SubsTrash)) {
                                                 // subsReached2++;
+                                                const char2Subs = char2Substats.baseTable;
+                                                const char2NewPieceArray = char2Substats.newPieceArray;
 
                                                 // let subsReached3 = 0;
-                                                for (let char3Substats of getSubstats(baseSubstatIncrements,querySettings,char3SubsDefault,char3SubsStarter,char3Chest,char3Feet,char3Orb,char3Rope,char3SubstatBounds1,char3SubstatBounds2,char3SubstatBounds3,char3SubstatBounds4)) {
+                                                for (let char3Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char3SubsDefault,char3SubsStarter,char3Chest,char3Feet,char3Orb,char3Rope,char3SubstatBounds1,char3SubstatBounds2,char3SubstatBounds3,char3SubstatBounds4,char3SubsTrash)) {
                                                     // subsReached3++;
+                                                    const char3Subs = char3Substats.baseTable;
+                                                    const char3NewPieceArray = char3Substats.newPieceArray;
 
                                                     // let subsReached4 = 0;
-                                                    for (let char4Substats of getSubstats(baseSubstatIncrements,querySettings,char4SubsDefault,char4SubsStarter,char4Chest,char4Feet,char4Orb,char4Rope,char4SubstatBounds1,char4SubstatBounds2,char4SubstatBounds3,char4SubstatBounds4)) {
+                                                    for (let char4Substats of getSubstats(usableBaseSubstatPool,baseSubstatTableStarter,baseSubstatIncrements,querySettings,char4SubsDefault,char4SubsStarter,char4Chest,char4Feet,char4Orb,char4Rope,char4SubstatBounds1,char4SubstatBounds2,char4SubstatBounds3,char4SubstatBounds4,char4SubsTrash)) {
                                                         // subsReached4++;
+                                                        const char4Subs = char4Substats.baseTable;
+                                                        const char4NewPieceArray = char4Substats.newPieceArray;
 
                                                         // subsReached++;
                                                         assignTo(newObject.char1,{
@@ -1686,7 +2472,8 @@ const compare = {
                                                             "FeetMain": char1Feet,
                                                             "SphereMain": char1Orb,
                                                             "RopeMain": char1Rope,
-                                                            "statObject": char1Substats,
+                                                            "statObject": char1Subs,
+                                                            "pieceArray": char1NewPieceArray
                                                         });
                                                         assignTo(newObject.char2,{
                                                             "lcName": char2Lightcone.Item,
@@ -1698,7 +2485,8 @@ const compare = {
                                                             "FeetMain": char2Feet,
                                                             "SphereMain": char2Orb,
                                                             "RopeMain": char2Rope,
-                                                            "statObject": char2Substats,
+                                                            "statObject": char2Subs,
+                                                            "pieceArray": char2NewPieceArray
                                                         });
                                                         assignTo(newObject.char3,{
                                                             "lcName": char3Lightcone.Item,
@@ -1710,7 +2498,8 @@ const compare = {
                                                             "FeetMain": char3Feet,
                                                             "SphereMain": char3Orb,
                                                             "RopeMain": char3Rope,
-                                                            "statObject": char3Substats,
+                                                            "statObject": char3Subs,
+                                                            "pieceArray": char3NewPieceArray
                                                         });
                                                         assignTo(newObject.char4,{
                                                             "lcName": char4Lightcone.Item,
@@ -1722,7 +2511,8 @@ const compare = {
                                                             "FeetMain": char4Feet,
                                                             "SphereMain": char4Orb,
                                                             "RopeMain": char4Rope,
-                                                            "statObject": char4Substats,
+                                                            "statObject": char4Subs,
+                                                            "pieceArray": char4NewPieceArray
                                                         });
                 
                                                         // let simResult = sim.battleStart(newObject,false,querySettings);
@@ -3018,7 +3808,14 @@ const graphs = {
                 entityTypeArray.push(currentCharacter.lcName)
             }
         }
-        else {}
+        else if (currentEntityType === "Relic") {
+            // "2pc": "Scholar Lost in Erudition",
+            // "4pc": "Scholar Lost in Erudition",
+            for (let characterSlot in characterObject) {
+                const currentCharacter = characterObject[characterSlot];
+                entityTypeArray.push(currentCharacter["2pc"],currentCharacter["4pc"],currentCharacter.planar)
+            }
+        }
         const entityTypeSet = new Set (entityTypeArray);
 
         
@@ -3042,6 +3839,17 @@ const graphs = {
         }
         else if (currentEntityType === "Lightcone") {
             buffNamePlacement = turnLogicLightcones[buffGraphs.entityName]?.buffNames
+        }
+        else if (currentEntityType === "Relic") {
+            const logicPlacement = turnLogicRelics[buffGraphs.entityName];
+
+            const logic2 = logicPlacement["2pc"]?.buffNames;
+            const logic4 = logicPlacement["4pc"]?.buffNames;
+
+            buffNamePlacement = {
+                ...(logic2 ? logic2 : {}),
+                ...(logic4 ? logic4 : {}),
+            }
         }
         //loop through the buffNames object and push the true buff name
         for (let buffEntry in buffNamePlacement) {

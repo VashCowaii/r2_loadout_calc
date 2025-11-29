@@ -129,86 +129,89 @@ const customMenu = {
             let exampleRelicsString = "";
 
             let pieceArray = ["Head","Hands","Body","Feet","Sphere","Rope"];
-            let conflictStatArray = [];
+            const newPieceArray = currentCharacter.pieceArray;
+            // "pieceArray": char4NewPieceArray
 
-            let conflictsObject = {};
-            const pieceConflictSum = {};
-            const pieceObject = {};
-            const newRelicsDistribution = {}
+            // let conflictStatArray = [];
 
-            let pieceCounter = 0;
-            for (let entry of pieceArray) {
-                pieceCounter++;
-                newRelicsDistribution[entry] = {
-                    currentRolls: 5,
-                    sortPriority: pieceCounter,
-                    statsApplied: {},
-                    mainStat: currentCharacter[`${entry}Main`],
-                    pieceName: entry
-                }
-            }
-            const currentStatObject = currentCharacter.statObject;
+            // let conflictsObject = {};
+            // const pieceConflictSum = {};
+            // const pieceObject = {};
+            // const newRelicsDistribution = {}
 
-            for (let piece of pieceArray) {
-                const currentMaintstat = currentCharacter[`${piece}Main`];
-                conflictsObject[currentMaintstat] = (conflictsObject[currentMaintstat] ?? 0) + 1;
-            }
+            // let pieceCounter = 0;
+            // for (let entry of pieceArray) {
+            //     pieceCounter++;
+            //     newRelicsDistribution[entry] = {
+            //         currentRolls: 5,
+            //         sortPriority: pieceCounter,
+            //         statsApplied: {},
+            //         mainStat: currentCharacter[`${entry}Main`],
+            //         pieceName: entry
+            //     }
+            // }
+            // const currentStatObject = currentCharacter.statObject;
 
-            for (let statName in currentStatObject) {
+            // for (let piece of pieceArray) {
+            //     const currentMaintstat = currentCharacter[`${piece}Main`];
+            //     conflictsObject[currentMaintstat] = (conflictsObject[currentMaintstat] ?? 0) + 1;
+            // }
 
-
-                let possiblePiecesArray = [];
-                for (let piece of pieceArray) {
-                    const currentMaintstat = currentCharacter[`${piece}Main`];
-                    if (currentMaintstat != statName) {possiblePiecesArray.push(piece)}
-                }
+            // for (let statName in currentStatObject) {
 
 
-                conflictStatArray.push({
-                    statName,
-                    conflictCount: conflictsObject[statName] ?? 0,
-                    possibleRelics: possiblePiecesArray,
-                    rollCount: currentStatObject[statName]
-                })
-            }
+            //     let possiblePiecesArray = [];
+            //     for (let piece of pieceArray) {
+            //         const currentMaintstat = currentCharacter[`${piece}Main`];
+            //         if (currentMaintstat != statName) {possiblePiecesArray.push(piece)}
+            //     }
 
-            conflictStatArray.sort((a, b) => {return b.conflictCount - a.conflictCount;});
-            // console.log(conflictStatArray)
 
-            for (let entry of conflictStatArray) {
-                const currentPossiblePieces = entry.possibleRelics;
+            //     conflictStatArray.push({
+            //         statName,
+            //         conflictCount: conflictsObject[statName] ?? 0,
+            //         possibleRelics: possiblePiecesArray,
+            //         rollCount: currentStatObject[statName]
+            //     })
+            // }
 
-                for (let pieceName of currentPossiblePieces) {
-                    const currentRelic = newRelicsDistribution[pieceName];
+            // conflictStatArray.sort((a, b) => {return b.conflictCount - a.conflictCount;});
+            // // console.log(conflictStatArray)
 
-                    const subsRemaining = currentRelic.currentRolls;
+            // for (let entry of conflictStatArray) {
+            //     const currentPossiblePieces = entry.possibleRelics;
 
-                    const actualPossiblePieces = 6 - entry.conflictCount;
-                    const currentIncrement = Math.min(subsRemaining,Math.ceil(entry.rollCount / actualPossiblePieces));
-                    if (currentIncrement > 0) {
-                        entry.conflictCount += 1;
-                        entry.rollCount -= currentIncrement;
-                        // currentRelic.currentRolls -= currentIncrement;
+            //     for (let pieceName of currentPossiblePieces) {
+            //         const currentRelic = newRelicsDistribution[pieceName];
+
+            //         const subsRemaining = currentRelic.currentRolls;
+
+            //         const actualPossiblePieces = 6 - entry.conflictCount;
+            //         const currentIncrement = Math.min(subsRemaining,Math.ceil(entry.rollCount / actualPossiblePieces));
+            //         if (currentIncrement > 0) {
+            //             entry.conflictCount += 1;
+            //             entry.rollCount -= currentIncrement;
+            //             // currentRelic.currentRolls -= currentIncrement;
 
                         
-                        if (!currentRelic.statsApplied[entry.statName]) {
-                            currentRelic.currentRolls -= (currentIncrement - 1);
-                        }
-                        else {
-                            currentRelic.currentRolls -= currentIncrement;
-                        }
-                        currentRelic.statsApplied[entry.statName] = currentIncrement;
-                    }
-                }
-            }
+            //             if (!currentRelic.statsApplied[entry.statName]) {
+            //                 currentRelic.currentRolls -= (currentIncrement - 1);
+            //             }
+            //             else {
+            //                 currentRelic.currentRolls -= currentIncrement;
+            //             }
+            //             currentRelic.statsApplied[entry.statName] = currentIncrement;
+            //         }
+            //     }
+            // }
 
-            // console.log(newRelicsDistribution)
-            const newFinalExampleArray = []
-            for (let entryName in newRelicsDistribution) {
-                const currentEntry = newRelicsDistribution[entryName];
-                newFinalExampleArray.push(currentEntry)
-            }
-            newFinalExampleArray.sort((a, b) => {return a.sortPriority - b.sortPriority;});
+            // // console.log(newRelicsDistribution)
+            // const newFinalExampleArray = []
+            // for (let entryName in newRelicsDistribution) {
+            //     const currentEntry = newRelicsDistribution[entryName];
+            //     newFinalExampleArray.push(currentEntry)
+            // }
+            // newFinalExampleArray.sort((a, b) => {return a.sortPriority - b.sortPriority;});
             
             exampleRelicsString += `<details class="rotationsPermaConditionsExpand">
             <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Example Relics</summary>`;
@@ -222,9 +225,18 @@ const customMenu = {
 
             const substatRollValue = querySettings.substatRollValue === "High" ? 2 : (querySettings.substatRollValue === "Mid" ? 1 : 0);
             let subStatRefInner = relics.Head.subAffix;
-            for (let piece of newFinalExampleArray) {
-                let currentPieceName = piece.pieceName//link rope -> just rope, otherwise leave the name as is.
-
+            let pieceCounter = 0;
+            
+            for (let piece of newPieceArray) {
+                // {
+                //     currentRolls: starterRollsPerRelic,
+                //     slotsOpen: 4,
+                //     sortPriority: pieceCounter,
+                //     statsApplied: {},
+                //     mainStat: entry,
+                // }
+                let currentPieceName = pieceArray[pieceCounter];
+                pieceCounter++;
                 let actualPieceName = userTriggers.relicSlotNameConversions[currentPieceName];
 
 
@@ -759,7 +771,7 @@ const customMenu = {
                     <div class="statsRowToggle">
                         Weakness&nbsp;
                         <label class="toggleContainer">
-                            <input type="checkbox" class="toggleCheckbox" id="addEnemyWeakness${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef.weaknessOverrides[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
+                            <input type="checkbox" class="toggleCheckbox" id="addEnemyWeakness${elementName}" onchange="userTriggers.updateEnemyAddedMenuUI()" ${isEdit && slotRef?.weaknessOverrides[elementName] ? "checked" : ""}><span class="toggleSlider"></span>
                         </label>
                     </div>
                 </div>
@@ -767,7 +779,7 @@ const customMenu = {
                 <div class="statisticSettingsRow">
                     <div class="statsRowName">RES %:&nbsp;<span id="addEnemyResistanceSliderDisplay${elementName}">20%</span></div>
                     <div class="statsRowToggle">
-                        <input type="range" id="addEnemyResistanceSlider${elementName}" name="slider" min="0" max="60" value="${isEdit ? slotRef.weaknessOverrides[elementName] ? 0 : (slotRef.resistantTo[elementName] ?? 20) : (slotRef.weaknessOverrides[elementName] ? 0 : 20)}" step="20" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
+                        <input type="range" id="addEnemyResistanceSlider${elementName}" name="slider" min="0" max="60" value="${isEdit ? slotRef?.weaknessOverrides[elementName] ? 0 : (slotRef?.resistantTo[elementName] ?? 20) : (slotRef?.weaknessOverrides[elementName] ? 0 : 20)}" step="20" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
                     </div>
                 </div>
 

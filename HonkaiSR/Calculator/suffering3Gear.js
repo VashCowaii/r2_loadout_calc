@@ -3365,7 +3365,7 @@ const turnLogicRelics = {
                             "sourceOwner": "",
                             "buffName": buffName,
                             "duration": 1,
-                            "AVApplied": battleData.sumAV,
+                            "AVApplied": 0,
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
@@ -5513,8 +5513,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Rutilant Basic & Skill DMG",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -5594,8 +5592,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Salsotto Ult & FUA DMG",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -5695,8 +5691,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Broken Keel CRIT DMG",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
             "buffNamesPerCharacter": {
                 "basicSkillBuff": "Broken Keel CRIT DMG",
@@ -5752,8 +5746,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Lushaka ATK%",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -5814,8 +5806,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Penacony DMG Boost",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -5907,8 +5897,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Forge of the Kalpagni Lantern",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -5989,8 +5977,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "defBuff": "Belobog of the Architects",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -6071,8 +6057,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "breakBuff": "Talia: Kingdom of Banditry",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
         }
     },
@@ -6164,7 +6148,8 @@ const turnLogicRelics = {
                     if (!currentTurn.fleetAgelessATKSHEET) {
                         let relicNameRef = "Fleet of the Ageless";
                         let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
-                        let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames.basicSkillBuff;
+                        const buffNames = turnLogicRelics[relicNameRef]["2pc"].buffNames;
+                        let buffName = buffNames.basicSkillBuff;
                         let ownerName = currentTurn.properName;
                         let adjustedName = `${buffName} (${ownerName})`;
                         //custom name bc I can't just lushaka this bitch and make it stack
@@ -6172,6 +6157,8 @@ const turnLogicRelics = {
                         //irksome, but maybe I'll think of something later to fix this conundrum
                         //TODO: think of something and fix this conundrum :)
                         let turnOverride = 1;
+
+                        if (!buffNames[adjustedName]) {buffNames[adjustedName] = adjustedName;}
 
                         // let buffName = turnLogicRelics[relicNameRef][pcRef].buffNames.basicSkillBuff;
 
@@ -6252,8 +6239,6 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "basicSkillBuff": "Fleet of the Ageless ATK%",
-                // "pc4ShredQuantum": "Genius' DEF Shred(Quantum)",
-                // "hruntingStack": "Hrunting Stack"
             },
             "buffNamesPerCharacter": {
                 "basicSkillBuff": "Fleet of the Ageless ATK%",

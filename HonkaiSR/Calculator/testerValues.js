@@ -83,6 +83,8 @@ const customDisplayValuesLog = {
         {valueName: "Bonanza Attacks", refName: "bonanzaStacks", isBattleValue: true},
         // {valueName: "E6 Ult Counter", refName: "e2AdvanceCooldown", isBattleValue: true, requiresEidolon: 6},
     ], 
+
+    "Tingyun": [],
 }
 
 const permaConditionsTextLibrary = {
