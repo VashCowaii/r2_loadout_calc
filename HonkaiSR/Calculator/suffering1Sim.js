@@ -425,7 +425,7 @@ const sim = {
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
     },
-    battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride) {
+    battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride,battleSettings) {
         let battleData = {
             "isLoggyLogger": isLoggyLogger ?? false,
             "sumAV": 0,
@@ -499,6 +499,9 @@ const sim = {
         const getHP = calcs.getHPFinal;
         const getAggro = calcs.getAggroFinal;
 
+
+        // battleSettings.useTechniquesChar1
+
         const nameIndex = battleData.nameIndex;
         const characterObjectInner = battleData.characterObject;
         const namedTurns = battleData.nameBasedTurns;
@@ -507,6 +510,8 @@ const sim = {
         const allyPositions = battleData.allyPositions;
         const battleListeners = battleData.battleListeners;
         const allAlliesArray = battleData.allAlliesArray;
+
+        const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
         for (let i=charKeys.length-1;i>=0;i--) {
             const characterEntry = charKeys[i];
             let currentCharacter = characterObject[characterEntry];
@@ -514,6 +519,7 @@ const sim = {
             let properName = currentCharacter.name;
 
             const logicRef = turnLogic[properName];
+            logicRef.useTechnique = battleSettings[techSlotArray[i]]
             if (logicRef?.characterValuesBattle) {
                 logicRef.characterValuesBattle = {...logicRef.characterValues}//needed to avoid overlap between diff battles
             }
@@ -524,7 +530,6 @@ const sim = {
             const menuStats = statRefTemp.tableReference;
             menuStatsInner[characterEntry] = menuStats;
             //technically this is also needed for the sake of shit like Poet's 4pc spd check, but that's just a bonus of doing it this way(surely I thought that far ahead, trust)
-
             // nextTurnAV[characterEntry] = calcs.getSPDFinal(menuStats[characterEntry]);
             let SPDStats = getSPD(menuStats);
             const finalSPD = SPDStats.SPDFinal;
@@ -799,9 +804,8 @@ const sim = {
     },
     battleStart(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
         const startingEnergyPercent = 0.5;
-        let battleData = sim.battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride);
+        let battleData = sim.battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride,battleSettings);
 
-        
         battleData.cyclesMax = battleSettings.cyclesToRun + 1;
         battleData.techniquesAllowed = battleSettings.useTechniques;
         battleData.battleStartWeaknessReduction = battleSettings.useStartToughness;

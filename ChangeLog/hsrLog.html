@@ -7,6 +7,32 @@
 </div> -->
 
 <div>
+    <h1>Nov 27th, 2025 - The Big Search Update (Substats changes)</h1>
+    This changes how searches get handled in relation to substat iterations on each character. For most of you, this will reduce search sizes by about ~66%. That is a lot. If you chase perfect builds though nothing will change.<br>
+    Nothing was actually wrong with how I was doing it before, but the way we're handling it now is more faithful to search settings specified by the user.
+    <ul>
+        <li>Changed how searches are handled in order to be more faithful to settings, when it comes to substats.
+            <ul>
+                <li>Usable Base Rolls, a setting that didn't use to impact search size, now impacts search size by quite a lot.</li>
+                <li>Rolls per Relic modified search size before and still does, but is more impactful to the search size.</li>
+                <li>The optimizer will now fill out relics completely, this matters when say Robin is using ATK% body, feet, orb, and rope. Obviously you can't have ATK% on those 4 items, so what fills in instead? A trash stat.</li>
+                <li>Default trash stats have been assigned to each character that will populate by default</li>
+                <li>The user can now modify the aforementioned trash stats and specify priority so if you want ATK Flat to fill in before Effect RES does, then you can specify that.</li>
+            </ul>
+        </li>
+        <li>Given the above, I've adjusted the default Usable Base Rolls setting to 20, up from 12. 12 is way too restrictive now that Base Rolls actually impacts search sizes.
+            <ul>
+                <li>Please don't misunderstand though, even at 20 that will cut most search sizes in half. This is still a tremendous upgrade over before.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue that prevented relic-specific buffs from being chart options on Buff Uptime in Analytics. This is one I just straight up forgot to allow for so my bad.</li>
+        <li>Fixed an issue that prevented individual character Technique toggles from working properly. Team-wide tech toggle still worked, it was the individual ones only that broke.</li>
+        <li>Fixed an issue that prevented new enemies from being added to a wave. Existing enemies could still be edited, though.</li>
+        <li>Fixed an issue "Character: State" conditions could break on characters that didn't have any states to read.</li>
+    </ul>
+</div>
+
+<div>
     <h1>Nov 26th, 2025</h1>
     <ul>
         <li>Fixed Tribbie sig LC failing to apply energy gain on FUA attacks.</li>

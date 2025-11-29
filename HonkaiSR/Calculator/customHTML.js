@@ -1680,7 +1680,8 @@ const rotationsUISuffering = {
             const charObject = globalRecords.character;
             targetName = charObject[targetSlot].name;
         }
-        const currentRef = customDisplayValuesLog[targetName];
+        console.log(targetName);
+        const currentRef = customDisplayValuesLog[targetName ?? globalRecords.character.char1.name] ?? [];
 
         // "Saber": [
         //     {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true},
@@ -2896,7 +2897,7 @@ const rotationsUISuffering = {
         //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
         if (firstValidState != null) {
 
-            const currentRef = customDisplayValuesLog[characterName];
+            const currentRef = customDisplayValuesLog[characterName] ?? [];
             for (let battleEntry of currentRef) {
                 // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
                 // destination.stateName
