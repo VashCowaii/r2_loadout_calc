@@ -1680,7 +1680,7 @@ const rotationsUISuffering = {
             const charObject = globalRecords.character;
             targetName = charObject[targetSlot].name;
         }
-        console.log(targetName);
+        // console.log(targetName);
         const currentRef = customDisplayValuesLog[targetName ?? globalRecords.character.char1.name] ?? [];
 
         // "Saber": [
