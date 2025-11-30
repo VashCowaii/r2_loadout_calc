@@ -55,6 +55,8 @@ let globalUI = {
             mainstatOrbLocks: [],
             mainstatRopeLocks: [],
 
+            trashStatFilters: null,
+
             lightcone: false,
             armorSet: false,
             armorSetAllow2pc: false,
@@ -64,6 +66,11 @@ let globalUI = {
             mainstatOrb: false,
             mainstatRope: false,
             substat: false,
+
+            desired1: null,
+            desired2: null,
+            desired3: null,
+            desired4: null,
 
             substat1: [1,30],
             substat2: [1,30],
@@ -92,6 +99,8 @@ let globalUI = {
             mainstatOrbLocks: [],
             mainstatRopeLocks: [],
 
+            trashStatFilters: null,
+
             lightcone: false,
             armorSet: false,
             armorSetAllow2pc: false,
@@ -101,6 +110,11 @@ let globalUI = {
             mainstatOrb: false,
             mainstatRope: false,
             substat: false,
+
+            desired1: null,
+            desired2: null,
+            desired3: null,
+            desired4: null,
 
             substat1: [1,30],
             substat2: [1,30],
@@ -129,6 +143,8 @@ let globalUI = {
             mainstatOrbLocks: [],
             mainstatRopeLocks: [],
 
+            trashStatFilters: null,
+
             lightcone: false,
             armorSet: false,
             armorSetAllow2pc: false,
@@ -138,6 +154,11 @@ let globalUI = {
             mainstatOrb: false,
             mainstatRope: false,
             substat: false,
+
+            desired1: null,
+            desired2: null,
+            desired3: null,
+            desired4: null,
 
             substat1: [1,30],
             substat2: [1,30],
@@ -166,6 +187,8 @@ let globalUI = {
             mainstatOrbLocks: [],
             mainstatRopeLocks: [],
 
+            trashStatFilters: null,
+
             lightcone: false,
             armorSet: false,
             armorSetAllow2pc: false,
@@ -175,6 +198,11 @@ let globalUI = {
             mainstatOrb: false,
             mainstatRope: false,
             substat: false,
+
+            desired1: null,
+            desired2: null,
+            desired3: null,
+            desired4: null,
 
             substat1: [1,30],
             substat2: [1,30],

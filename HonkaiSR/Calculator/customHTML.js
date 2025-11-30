@@ -1129,32 +1129,93 @@ const customHTML = {
         let pathHTML = readSelection(filterBox);
         let table = globalUI.filters[`char${globalUI.currentCharacterDisplayed}`][filterTable];
         let filterHTML = customHTML.displayFilterHTML;
-        table.sort();
+
+        const isOrderedTable = filterBox.toLowerCase().includes("trash");
+        //might have other ordered tables later, but right now this is the only search related setting where order actually matters.
+        if (!isOrderedTable) {table.sort();}
+        
         pathHTML.innerHTML = "";
         for (let filterName in table) {
             pathHTML.innerHTML += filterHTML(table[filterName],filterBox,filterTable);
         }
     },
-    addFilter(filterID,filterBox,filterTable,compareTable) {//limit
+    addFilter(filterID,filterBox,filterTable,compareTable,limit) {
         let filterName = readSelection(filterID);
-        let table = globalUI.filters[`char${globalUI.currentCharacterDisplayed}`][filterTable];
+        const isTrashStat = filterTable.toLowerCase().includes("trash");
+        const charSlot = `char${globalUI.currentCharacterDisplayed}`;
+        const filterPath = globalUI.filters[charSlot];
+        let table = filterPath[filterTable];
+
+        if (isTrashStat && !filterPath[filterTable]) {
+            filterPath[filterTable] = [
+                ...maslow[globalRecords.character[charSlot].name].defaultTrashSub
+            ];
+            table = filterPath[filterTable];
+        }
+        console.log(table)
         //If we are submitting more than the allowed locks, don't do anything, don't add, etc
         // if (table.length>=limit) {filterName.value = "";return;}
+        if (table.length === limit) {
+            filterName.value = "";
+            return;
+        }
         const isStat = filterTable.toLowerCase().includes("stat");
 
         // console.log(isStat ? basicShorthand.reverseKeyMappings[filterName.value] : filterName.value,filterName.value,basicShorthand.reverseKeyMappings);
         // customHTML.addFilter(`mainstatBodyLocksInput`,`mainstatBodyLocksContainer`,`mainstatBodyLocks`,relics.Body.mainAffix)
 
         const oldValue = filterName.value;
-        console.log(greatTableKeys[basicShorthand.reverseKeyMappings[oldValue]])
+        // console.log(greatTableKeys[basicShorthand.reverseKeyMappings[oldValue]],oldValue,compareTable)
+        // console.log(compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue])
 
         // if ((!compareTable[isStat ? basicShorthand.reverseKeyMappings[oldValue] : oldValue] && oldValue && oldValue != "--")) {filterName.value = "";return;}
-        if ((!compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue] && oldValue && oldValue != "--")) {filterName.value = "";return;}
+        if (compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue] == undefined && oldValue && oldValue != "--") {filterName.value = "";return;}
         
+        // console.log("reached this point")
         let found = false;
         for (let entry in table) {
-            if (table[entry]===oldValue) {found=true;break;}
+            if (table[entry] === oldValue 
+                || (isTrashStat && table[entry] === greatTableKeys[basicShorthand.reverseKeyMappings[oldValue]])) 
+                {found=true;break;}
+
+
+            // basicShorthand.reverseKeyMappings[currentGroup.sets[innerKey].specific] = innerKey;
+
+                // basicShorthand.indexToSpecific[innerKey] = currentGroup.sets[innerKey].specific;
         }
+
+        // desired1: null,
+        // desired2: null,
+        // desired3: null,
+        // desired4: null,
+        if (isTrashStat) {
+            const internalName = greatTableKeys[basicShorthand.reverseKeyMappings[oldValue]];
+            if (internalName === filterPath.desired1 
+                || internalName === filterPath.desired2
+                || internalName === filterPath.desired3
+                || internalName === filterPath.desired4) {
+                    found = true;
+                }
+
+            const currentArray = filterPath[filterTable];
+            if (currentArray.length) {
+                //might seem pointless but I'm just making sure that a trash sub is never matching a desired sub
+                //even if the trash sub array isn't defined yet and gets spread with the default on the character
+                //bc we want to avoid a scenario where a user imports a filter set that didn't have trash defined 
+                //so it would default to the character default which might have dupes on desired subs
+                for (let i=currentArray.length-1;i>=0;i--) {
+                    const currentEntry = currentArray[i];
+
+                    if (currentEntry === filterPath.desired1 
+                        || currentEntry === filterPath.desired2
+                        || currentEntry === filterPath.desired3
+                        || currentEntry === filterPath.desired4) {
+                            currentArray.splice(i,1);
+                        }
+                }
+            }
+        }
+
         if (oldValue === "--") {filterName.value = "";}//if the user WANTS an empty filter
         
         if (!found) {table.push(

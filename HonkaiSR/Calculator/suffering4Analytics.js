@@ -1177,6 +1177,15 @@ const compare = {
         updateStep("Establishing Maslow's Hierarchy",false);
         pushDebug(`MASLOW: Begin establishing needs`);
         yield;
+
+        const filtersRef = globalUI.filters;
+
+        const char1Filters = filtersRef.char1;
+        const char2Filters = filtersRef.char2;
+        const char3Filters = filtersRef.char3;
+        const char4Filters = filtersRef.char4;
+
+
         const char1Ref = newObject.char1;
         const char2Ref = newObject.char2;
         const char3Ref = newObject.char3;
@@ -1194,14 +1203,39 @@ const compare = {
 
         // defaultMainSubs: ["CritRateBase","CritDamageBase","ATK%","SPDFlat"],
         // defaultTrashSub: "ATKFlat",
-        const char1SubsDefault = char1Maslow.defaultMainSubs;
-        const char1SubsTrash = char1Maslow.defaultTrashSub;
-        const char2SubsDefault = char2Maslow.defaultMainSubs;
-        const char2SubsTrash = char2Maslow.defaultTrashSub;
-        const char3SubsDefault = char3Maslow.defaultMainSubs;
-        const char3SubsTrash = char3Maslow.defaultTrashSub;
-        const char4SubsDefault = char4Maslow.defaultMainSubs;
-        const char4SubsTrash = char4Maslow.defaultTrashSub;
+        const char1SubsDefault = char1Filters.desired1 != undefined ? [
+            char1Filters.desired1,
+            char1Filters.desired2,
+            char1Filters.desired3,
+            char1Filters.desired4
+        ] : [...char1Maslow.defaultMainSubs];
+        const char2SubsDefault = char2Filters.desired1 != undefined ? [
+            char2Filters.desired1,
+            char2Filters.desired2,
+            char2Filters.desired3,
+            char2Filters.desired4
+        ] : [...char2Maslow.defaultMainSubs];
+        const char3SubsDefault = char3Filters.desired1 != undefined ? [
+            char3Filters.desired1,
+            char3Filters.desired2,
+            char3Filters.desired3,
+            char3Filters.desired4
+        ] : [...char3Maslow.defaultMainSubs];
+        const char4SubsDefault = char4Filters.desired1 != undefined ? [
+            char4Filters.desired1,
+            char4Filters.desired2,
+            char4Filters.desired3,
+            char4Filters.desired4
+        ] : [...char4Maslow.defaultMainSubs];
+
+
+        const char1SubsTrash = char1Filters.trashStatFilters ?? [...char1Maslow.defaultTrashSub];
+        const char2SubsTrash = char2Filters.trashStatFilters ?? [...char2Maslow.defaultTrashSub];
+        const char3SubsTrash = char3Filters.trashStatFilters ?? [...char3Maslow.defaultTrashSub];
+        const char4SubsTrash = char4Filters.trashStatFilters ?? [...char4Maslow.defaultTrashSub];
+
+
+        // trashStatFilters: null,
         
 
         // console.log(characterNeeds)
@@ -1329,13 +1363,6 @@ const compare = {
             
         }
 
-
-        const filtersRef = globalUI.filters;
-
-        const char1Filters = filtersRef.char1;
-        const char2Filters = filtersRef.char2;
-        const char3Filters = filtersRef.char3;
-        const char4Filters = filtersRef.char4;
         pushDebug(`FILTER: Lightcones - Starting`);
         const char1FilteredLightcone = applyFilters(lightconeSets,char1Filters.lightconeOcclusions,char1Filters.lightcone,null,true,characters[charObjectRef.char1.name].path);
         const char2FilteredLightcone = applyFilters(lightconeSets,char2Filters.lightconeOcclusions,char2Filters.lightcone,null,true,characters[charObjectRef.char2.name].path);

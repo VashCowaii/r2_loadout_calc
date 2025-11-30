@@ -4899,6 +4899,22 @@ div {
     text-align: center; */
     /* border: 1px solid red; */
 }
+.filterLocksContainerHolderTrash {
+    width: 100%;
+    /* height: 100%; */
+    /* flex-grow: 1; */
+    max-height: 135px;
+    min-height: 135px;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 4px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* border: 1px solid red; */
+}
 .filterLocksContainer {
     width: 100%;
     height: 100%;

@@ -2759,6 +2759,8 @@ const userTriggers = {
             //cache can work but I dislike that people clear it on the regular, so would prefer not to
 
             currentCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
+
+            pagePopulation.forceCharacterDefaultSubFilters(charSlot);
         }
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
@@ -4103,6 +4105,19 @@ const userTriggers = {
         }
 
 
+        const forceDefaults = pagePopulation.forceCharacterDefaultSubFilters;
+        for (let i=1;i<=4;i++) {
+            const newCharSlot = `char${i}`;
+            const filterPath = globalUI.filters[newCharSlot];
+
+            //if the user is an old one and imported an old filter json with no trash or desired stats, then we default to whatever I defined in maslow
+            //just so something exists in there and doesn't completely shit out the search on them.
+            if (filterPath.desired1 == undefined || filterPath.trashStatFilters == undefined) {
+                forceDefaults(newCharSlot);
+            }
+        }
+
+
         userTriggers.renewFiltersDisplayValues();
         // updateCharacterSlotSelected(slot) {
         //     globalUI.currentCharacterDisplayed = slot;
@@ -4207,6 +4222,8 @@ const userTriggers = {
             {tableName: "mainstatFeetLocks",tableElem: "mainstatFeetLocksContainer"},
             {tableName: "mainstatOrbLocks",tableElem: "mainstatOrbLocksContainer"},
             {tableName: "mainstatRopeLocks",tableElem: "mainstatRopeLocksContainer"},
+
+            {tableName: "trashStatFilters",tableElem: "trashStatBox"},
         ];
         const occlusionToggles = [
             {tableName: "lightcone",tableElem: "lightconeOcclusion"},
@@ -4266,21 +4283,23 @@ const userTriggers = {
         }
 
 
-        let trashSubString = "";
+        // trashStatFilters: null,
 
-        for (let i=0;i<maslowTrashStats.length;i++) {
-            const currentStatInternal = maslowTrashStats[i];
-            const isLastStat = i === maslowTrashStats.length - 1;
+        // let trashSubString = "";
 
-            const currentStatIndex = greatTableIndex[currentStatInternal];
-            const statFamilyName = mappedFamilies[currentStatIndex];
-            const currentStatFamily = propertyImagePaths[statFamilyName];
-            // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
-            const currentFamilySet = currentStatFamily.sets;
+        // for (let i=0;i<maslowTrashStats.length;i++) {
+        //     const currentStatInternal = maslowTrashStats[i];
+        //     const isLastStat = i === maslowTrashStats.length - 1;
 
-            trashSubString += currentFamilySet[currentStatIndex].specific + (isLastStat ? "" : " > ");
-        }
-        readSelection("statFiltersRowContainerSubstatsTrashRow").innerHTML = trashSubString;
+        //     const currentStatIndex = greatTableIndex[currentStatInternal];
+        //     const statFamilyName = mappedFamilies[currentStatIndex];
+        //     const currentStatFamily = propertyImagePaths[statFamilyName];
+        //     // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
+        //     const currentFamilySet = currentStatFamily.sets;
+
+        //     trashSubString += currentFamilySet[currentStatIndex].specific + (isLastStat ? "" : " > ");
+        // }
+        // readSelection("statFiltersRowContainerSubstatsTrashRow").innerHTML = trashSubString;
 
 
         const filterPath = globalUI.filters;
@@ -4596,10 +4615,14 @@ const pagePopulation = {
 
             {elemID: "armorSetLocks2pcList", collection: finalSets.bodySets},
             {elemID: "armorSetLocks4pcList", collection: finalSets.bodySets},//armorSetLocks2pc
+
+
+            {elemID: "filterTrashStatList", collection: relics.Head.subAffix, isStatName:true},
             
 
             // {elemID: "filterTagList", collection: maslowFrontFacingTags}
         ]
+
 
         const filterDualDefinitions = [
             {elemIDBase: "mainstatBody", collection: relics.Body.mainAffix, isStatName:true},
@@ -4640,6 +4663,30 @@ const pagePopulation = {
         });
 
         return replaced.replace(/\\n/g, "<br>");
+    },
+    pageLoadTrashDefinition() {
+
+        const forceDefaults = pagePopulation.forceCharacterDefaultSubFilters;
+        for (let i=1;i<=4;i++) {
+            const charSlot = `char${i}`;
+            forceDefaults(charSlot);
+        }
+    },
+    forceCharacterDefaultSubFilters(charSlot) {
+        const currentCharacter = globalRecords.character[charSlot].name;
+        const charMaslow = maslow[currentCharacter];
+        const trashMaslow = charMaslow.defaultTrashSub;
+        const desiredDefaults = charMaslow.defaultMainSubs;
+
+        const filterPath = globalUI.filters[charSlot];
+        filterPath.trashStatFilters = [...trashMaslow];
+
+        Object.assign(filterPath, {
+            desired1: desiredDefaults[0],
+            desired2: desiredDefaults[1],
+            desired3: desiredDefaults[2],
+            desired4: desiredDefaults[3],
+        });
     },
     // "dataListsList": [
     //     {"Name": "characterList", "DataSet": characters},
