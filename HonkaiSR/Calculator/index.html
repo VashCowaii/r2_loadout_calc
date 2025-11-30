@@ -1106,8 +1106,27 @@
 
                                                         </div>
 
-                                                        <div class="statFiltersRowHeaderSubstatsLocksRollValue hasHoverTooltip" id="trashStatHeaderExplainer">Trash Stat Priority:</div>
-                                                        <div class="statFiltersRowContainerSubstatsTrashRow" id="statFiltersRowContainerSubstatsTrashRow">asdf</div>
+                                                        <!-- <div class="filtersBoxHalf" id="statsFiltersHolder"> -->
+                                                            <div class="statFiltersRowHeader hasHoverTooltip" id="trashStatHeaderExplainer">
+                                                                Trash Stat Priority:
+                                                                <!-- <input type="button" class="clearInput clickable" onclick="customHTML.clearTagsFilter()" value="Clear Tags"> -->
+                                                            </div>
+                                                            <div class="filtersQuarterDescriptionDarkRow">Trash stats are prioritized from top to bottom.</div>
+                                                            <!-- <div class="statFiltersRowContainer">
+                                                                <div class="presetsTitle">Presets:</div>
+                                                                <div class="presetsSelectorBox"><select class="presetsSelector" id="tagPresets" onchange="filters.addPresets(`tagPresets`,`tagsBox`,`tags`,0)"></select></div>
+                                                            </div> -->
+                                                            <div class="statFiltersRowContainer">
+                                                                <div class="presetsTitle">INPUT:</div>
+                                                                <div class="presetsSelectorBox">
+                                                                    <input class="tagInput" id="trashStatInput" list="filterTrashStatList" onchange="customHTML.addFilter(`trashStatInput`,`trashStatBox`,`trashStatFilters`,greatTableKnowerOfAll,4)">
+                                                                    <datalist id="filterTrashStatList"></datalist>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filterLocksContainerHolderTrash">
+                                                                <div class="filterTagsContainer" id="trashStatBox">No tags selected yet</div>
+                                                            </div>
+                                                        <!-- </div> -->
 
                                                     </div>
 

@@ -10,6 +10,9 @@ userTriggers.updateSelectedRelicStats();
 userTriggers.updateCharacterBreakdownClicked(1);
 userTriggers.updateMainMenuDisplayed(1);
 customHTML.updateSelectedFilterDisplay('occlusionsFiltersHolder');
+
+
+pagePopulation.pageLoadTrashDefinition();
 userTriggers.renewFiltersDisplayValues();
 pagePopulation.populateQueryOptions();
 userTriggers.updateQuerySearchSettings();
