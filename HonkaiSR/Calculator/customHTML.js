@@ -1533,7 +1533,8 @@ const conditionListSustainValueArray = [
 
 ]
 const conditionListCharacterStateArray = [
-    "ultyQueued",
+    // "ultyQueued",
+    {valueName: "Ultimate is Queued", refName: "ultyQueued", isBattleValue: false, isCharacterState: true}
 ]
 const conditionListChars = [
     "Self",
@@ -1681,7 +1682,11 @@ const rotationsUISuffering = {
             targetName = charObject[targetSlot].name;
         }
         // console.log(targetName);
-        const currentRef = customDisplayValuesLog[targetName ?? globalRecords.character.char1.name] ?? [];
+        const initialRef = customDisplayValuesLog[targetName ?? globalRecords.character.char1.name] ?? [];
+        const currentRef = [
+            ...conditionListCharacterStateArray
+        ];
+        if (initialRef.length) {currentRef.push(...initialRef);}
 
         // "Saber": [
         //     {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true},
