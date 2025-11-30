@@ -25,6 +25,12 @@
                 <li>Please don't misunderstand though, even at 20 that will cut most search sizes in half. This is still a tremendous upgrade over before for most of you.</li>
             </ul>
         </li>
+        <li>Added the ability to read a character's Ultimate queue state from the "Character: State" condition.
+            <ul>
+                <li>Note that this conditions only reads true if an ultimate is currently inside the queue and not completed.</li>
+                <li>As an example, if Acheron wants to ults after Silver Wolf does in order to ensure that the DEF Shred debuff is on enemies, then you could set an ult condition on Acheron to read the queue state of SW ult first before deciding to enter the queue herself or not.</li>
+            </ul>
+        </li>
         <li>Fixed an issue that prevented relic-specific buffs from being chart options on Buff Uptime in Analytics. This is one I just straight up forgot to allow for so my bad.</li>
         <li>Fixed an issue that prevented individual character Technique toggles from working properly. Team-wide tech toggle still worked, it was the individual ones only that broke.</li>
         <li>Fixed an issue that prevented new enemies from being added to a wave. Existing enemies could still be edited, though.</li>

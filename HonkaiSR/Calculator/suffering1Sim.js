@@ -1112,6 +1112,13 @@ const sim = {
         if (FUAQueue.length) {clearFUA(battleData);}
         
         poke("UltimateReady",battleData);
+        poke("UltimateReady",battleData);
+        //THIS DUPLICATE POKE IS NOT AN ACCIDENT
+        //In the event of a user reading a queue state on an ult, say saber only wants to put her ult in queue while sunday's ult is also in queue
+        //but say saber was checked first at the same moment sunday would also be ready to ult
+        //in such a case saber would check first, fail to see sunday's ult in the queue because it wasn't there yet, and not queue her ult but sunday would right after
+        //so we double poke to make sure that dependencies in these cases are not fucked.
+
 
         if (queue.length) {
             let isLog = battleData.isLoggyLogger;
@@ -1132,6 +1139,7 @@ const sim = {
                 if (!isExtraTurn) {
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
+
                     currentUltyFunction(battleData,sourceTurn);
                     //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
                     //later I might call it here and clarify attack-type or not in the ultyQueue object entries, just not sure if it's worth doing other than my own convenience (might be less performant on cycles, though it'd be barely)
