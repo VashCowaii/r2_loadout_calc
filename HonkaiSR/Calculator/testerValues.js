@@ -83,8 +83,31 @@ const customDisplayValuesLog = {
         {valueName: "Bonanza Attacks", refName: "bonanzaStacks", isBattleValue: true},
         // {valueName: "E6 Ult Counter", refName: "e2AdvanceCooldown", isBattleValue: true, requiresEidolon: 6},
     ], 
+    "Tingyun": [
+        {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
+    ],
+    "Silver Wolf": [],
+    "Gallagher": [
+        {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
+    ],
+    "Huohuo": [
+        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
+        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
+    ],
+    "Tribbie": [
+        {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
+        {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
 
-    "Tingyun": [],
+        
+        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
+    ],
+    "Bronya": [
+        {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
+        {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
+    ],
+
+
+    
 }
 
 const permaConditionsTextLibrary = {
@@ -786,8 +809,15 @@ const defaultConditions = {
     "Gallagher": {
         "hasEnhancedState": true,
         "Skill": {
-            "type": "AND",
-            "array": []
+            "type":"AND",
+            "array": [ 
+                {
+                    "type":"Character: State",
+                    "target":"Self",
+                    "stateName":"nextBasicEnhanced",
+                    "state":false,
+                    "isBattleValue":true}
+            ]
         },
         "Ultimate": {
             "type": "AND",

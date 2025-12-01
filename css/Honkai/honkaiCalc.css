@@ -952,6 +952,20 @@ div {
     margin-bottom: 4px;
     margin-top: 4px;
 }
+
+
+/* .relicStatsSelectionMainstatIconRow {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4px;
+    margin-top: 4px;
+} */
 .characterDisplayNameBox {
     font-size: 25px;
     width: 85%;
@@ -1061,12 +1075,33 @@ div {
     padding: 5px;
     background-color: #c0c1d60D;
 }
+.characterDisplayRelicStatChoiceIconBox {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #c0c1d60D;
+    position: relative;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
 .characterDisplayRelicStatChoiceIcon {
     width: 30px;
     height: 30px;
     object-fit: contain;
     padding: 5px;
     background-color: #c0c1d60D;
+}
+.characterDisplayRelicStatChoiceIconDesired {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    /* padding: 5px; */
+}
+.characterDisplayRelicStatChoiceIconBoxUnit {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
 }
 .characterDisplayRelicStatChoiceIconCHOSEN {
     width: 30px;
@@ -1077,7 +1112,19 @@ div {
     /* filter: invert(100%); */
 
 }
-.characterDisplayRelicStatChoiceIcon:hover {
+.characterDisplayRelicStatChoiceIconCHOSENBox {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 5px;
+    background-color: #FFFFFF80;
+    /* filter: invert(100%); */
+    position: relative;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+
+}
+.characterDisplayRelicStatChoiceIcon:hover,.characterDisplayRelicStatChoiceIconCHOSENBox:hover,.characterDisplayRelicStatChoiceIconBox:hover {
     background-color: #FFFFFF80;
 }
 .characterDisplayLogStatIcon {
@@ -1090,6 +1137,45 @@ div {
     transform: none;
     bottom: 0;
     position: relative;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
+.characterDisplayLogStatIconPrefix {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    margin-right: -15px;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
+.characterDisplayLogStatIconCenter {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    margin-right: -10px;
+    margin-left: -10px;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
+.characterDisplayLogAdditionalDMGPlusBox {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
     /* padding: 5px; */
     /* background-color: #c0c1d60D; */
 }
@@ -1186,7 +1272,7 @@ div {
     filter: invert(72%) sepia(63%) saturate(528%) hue-rotate(356deg) brightness(200%) contrast(91%) drop-shadow(1px 1px 4px rgba(0,0,0,1));
     /* filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)); */
 }
-.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain {
+.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow {
     width: 60%;
     display: flex;
     justify-content: left;
@@ -1198,6 +1284,9 @@ div {
     color: #f2a33c;
     text-shadow: 1px 1px 1px rgba(0,0,0,1);
     font-size: 21px;
+}
+.imageRowStatisticNameBoxFilterRow {
+    width: 100%;
 }
 .imageRowStatisticStatBox, .imageRowStatisticStatBoxMain {
     width: 30%;
@@ -2178,6 +2267,15 @@ div {
     align-items: center;
     font-size: 20px;
 }
+.actionBarHeaderTest {
+    width: 100%;
+    border-bottom: 2px solid #434343;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
 .actionLogScrollerVertical {
     height: 100%;
     /* max-height: 400px; */
@@ -2345,6 +2443,15 @@ div {
     max-width: 100px;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+}
+.turnOrderDisplayPreviewActionExpandRowIconEnemyNumber {
+    position: absolute;
+    right: 10%;
+    bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .turnOrderDisplayPreviewActionExpandRowIcon {
     /* height: 100%;
@@ -2385,11 +2492,12 @@ div {
     max-width: 100px;
     object-fit: contain;
     /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
-    transform:translate(0%,-20%) ;
+    transform:translate(0%,-00%) ;
     /* mask-image: linear-gradient(to right, black 60%, transparent 100%); */
     scale: 1.5;
     /* border-radius: 50%;
     border: 2px solid #5f656b; */
+    z-index: 1;
     box-sizing: border-box;
 }
 
@@ -2851,6 +2959,8 @@ div {
     padding: 5px;
     white-space: normal;
     position: relative;
+
+    /* flex-wrap: wrap; */
     /* border: 1px solid red; */
 }
 .actionDetailBodyInner {
@@ -4659,6 +4769,9 @@ div {
     justify-content: center;
     align-items: center;
 }
+.statFiltersSubstatLimitStatName:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+}
 .statFiltersSubstatLimitStatHeader {
     font-size: 12px;
     height: 20px;
@@ -5356,6 +5469,18 @@ div {
     text-align: center;
     box-sizing: border-box;
 }
+.statsRowToggleFilterRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+}
 .statsRowToggleCharacterDisable {
     /* width: 150px; */
     height: 100%;
@@ -5378,6 +5503,9 @@ div {
     height: 50px;
     width: auto;
     object-fit: contain;
+}
+.queryFiltersRelicSlotIcon:hover {
+    background-color: rgba(255, 255, 255, 0.13);
 }
 .queryFiltersFilterRowIcon {
     height: 30px;

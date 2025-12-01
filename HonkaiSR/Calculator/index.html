@@ -423,7 +423,12 @@
 
             <div class="expandedDataHolderHolderBoxBattleView" id="battleViewBoxMainHolderBox">
                 <div class="actionBarHolderbox">
-                    <div class="actionBarHeader">ACTIONS</div>
+                    <!-- <div class="actionBarHeader">ACTIONS</div> -->
+                    <div class="actionBarHeaderTest">ACTIONS
+                        <div class="exportIconBoxHolder clickable" onclick="customMenu.createActionOrderFilterScreen()">
+                            <img src="/HonkaiSR/misc/filter.png" class="exportButtonIcon">
+                        </div>
+                    </div>
                     <div class="actionLogScrollerVertical" id="actionLogScrollerVertical"></div>
                 </div>
 
@@ -1012,11 +1017,11 @@
                                                             <span class="occlusionOption">Inclusion</span>
                                                         </div> -->
                                                         <div class="statFiltersRowHeaderSubstatsLocksRollValue">Current Roll Values:&nbsp;<span class="clickable" id="substatsLocksRollValueDisplay" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">High</span></div>
-                                                        
+                                                        <div class="filtersQuarterDescriptionDarkRow">To change a desired substat, click/tap its icon.<br>The "Base" value is the amount of times a stat CAN show up on all 6 relics, but due to mainstat conflicts it may actually be less in some searches.</div>
                                                         <div class="statFiltersRowContainerSubstatsLimitsRow">
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat1IMG"/>
-                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat1Name">Stat 1</div>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat1IMG" onclick="customMenu.createDesiredStatDetailMenu(1)"/>
+                                                                <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat1Name" onclick="customMenu.createDesiredStatDetailMenu(1)">Stat 1</div>
                                                                 <!-- <div class="statFiltersSubstatLimitStatHeader">MAX</div>
                                                                 <div class="statFiltersSubstatLimitStatHeader">MIN</div> -->
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat1BaseRolls">Base: asdf</div>
@@ -1039,8 +1044,8 @@
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat2IMG"/>
-                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat2Name">Stat 2</div>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat2IMG" onclick="customMenu.createDesiredStatDetailMenu(2)"/>
+                                                                <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat2Name" onclick="customMenu.createDesiredStatDetailMenu(2)">Stat 2</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat2BaseRolls">Base: asdf</div>
                                                                 <div class="statFiltersRowContainer">
                                                                     <div class="presetsTitle">MAX:</div>
@@ -1059,8 +1064,8 @@
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat3IMG"/>
-                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat3Name">Stat 3</div>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat3IMG" onclick="customMenu.createDesiredStatDetailMenu(3)"/>
+                                                                <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat3Name" onclick="customMenu.createDesiredStatDetailMenu(3)">Stat 3</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat3BaseRolls">Base: asdf</div>
                                                                 <div class="statFiltersRowContainer">
                                                                     <div class="presetsTitle">MAX:</div>
@@ -1079,8 +1084,8 @@
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon" id="substatLocksStat4IMG"/>
-                                                                <div class="statFiltersSubstatLimitStatName" id="substatLocksStat4Name">Stat 4</div>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat4IMG" onclick="customMenu.createDesiredStatDetailMenu(4)"/>
+                                                                <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat4Name" onclick="customMenu.createDesiredStatDetailMenu(4)">Stat 4</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat4BaseRolls">Base: asdf</div>
                                                                 <div class="statFiltersRowContainer">
                                                                     <div class="presetsTitle">MAX:</div>
@@ -1617,6 +1622,7 @@
 
 <script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
 <script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
 
 <!-- <script src="characterData.js"></script> -->
 <script src="dCharacters.js"></script>

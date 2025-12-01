@@ -29,6 +29,10 @@ let globalUI = {
     "currentSearchOpen": null,
     "currentSearchVolume": null,
 
+    "actionOrderFilters": {
+        
+    },
+
 
 
 

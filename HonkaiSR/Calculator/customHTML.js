@@ -1152,7 +1152,7 @@ const customHTML = {
             ];
             table = filterPath[filterTable];
         }
-        console.log(table)
+        // console.log(table)
         //If we are submitting more than the allowed locks, don't do anything, don't add, etc
         // if (table.length>=limit) {filterName.value = "";return;}
         if (table.length === limit) {
@@ -1353,11 +1353,19 @@ const customHTML = {
         // style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);"
     },
 
-    queryResultsStandardRow(charSlot,charSPD,charSubs,charMaslow,isResultInspect) {
+    queryResultsStandardRow(slotNumber,charSlot,charSPD,charSubs,charMaslow,isResultInspect) {
         const SPDIconPath = propertyImagePaths.SPD.icon;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
-        const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+        // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+        const filterPath = globalUI.filters[`char${slotNumber}`];
+
+        // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+
+        const charMaslow1 = filterPath.desired1;
+        const charMaslow2 = filterPath.desired2;
+        const charMaslow3 = filterPath.desired3;
+        const charMaslow4 = filterPath.desired4;
         const {BodyMain,FeetMain,SphereMain,RopeMain,name,planar,lcName} = charSlot;
         return `<div class="${isResultInspect ? "queryResultsQuarterBoxInspection" : "queryResultsQuarterBox"}">
             <div class="queryResultsQuarterCharacterImageBox">
@@ -1394,11 +1402,19 @@ const customHTML = {
             </div>
         </div>`;
     },
-    queryResultEquivalentRow(charSlot,charSPD,charSubs,charMaslow,uniqueRowHeaderSubs) {
+    queryResultEquivalentRow(slotNumber,charSlot,charSPD,charSubs,charMaslow,uniqueRowHeaderSubs) {
         const SPDIconPath = propertyImagePaths.SPD.icon;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
-        const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+        // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+        const filterPath = globalUI.filters[`char${slotNumber}`];
+
+        // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+
+        const charMaslow1 = filterPath.desired1;
+        const charMaslow2 = filterPath.desired2;
+        const charMaslow3 = filterPath.desired3;
+        const charMaslow4 = filterPath.desired4;
         const {BodyMain,FeetMain,SphereMain,RopeMain,name,planar,lcName} = charSlot;
         const [headerCheck1,headerCheck2,headerCheck3,headerCheck4] = uniqueRowHeaderSubs;
         // const [char1Sub1,char1Sub2,char1Sub3,char1Sub4] = charSubs;
@@ -1476,11 +1492,18 @@ const customHTML = {
         //     </div>
         // </div>
     },
-    queryResultsBestRow(charSlot,charSPD,charSubs,charMaslow) {
+    queryResultsBestRow(slotNumber,charSlot,charSPD,charSubs,charMaslow) {
         const SPDIconPath = propertyImagePaths.SPD.icon;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
-        const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+        const filterPath = globalUI.filters[`char${slotNumber}`];
+
+        // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+
+        const charMaslow1 = filterPath.desired1;
+        const charMaslow2 = filterPath.desired2;
+        const charMaslow3 = filterPath.desired3;
+        const charMaslow4 = filterPath.desired4;
         const {BodyMain,FeetMain,SphereMain,RopeMain,name,planar,lcName} = charSlot;
         
         return `<div class="queryResultsBestBox">

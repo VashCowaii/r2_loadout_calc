@@ -584,6 +584,108 @@ const customMenu = {
 
         // customMenu.updateSelectedRelicStats();
     },
+    createDesiredStatDetailMenu(slotNumber) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+
+        let currentSlot = `char${globalUI.currentCharacterDisplayed}`;
+
+        readSelection("customMenuSearchBarBox").style.display = "none";
+        readSelection("customMenuSearchTitle").innerHTML = `Desired Stat ${slotNumber}`;
+        readSelection("customMenuSearchNote").innerHTML = "";
+
+        globalUI.currentSearchOpen = "filterDesiredStat";
+        globalUI.currentSearchVolume = "filterDesiredStat"; 
+
+        const nameConversions = userTriggers.relicSlotNameConversions;
+        let subStatRef = relics.Feet.subAffix;
+        let subStatKeys = Object.keys(subStatRef);
+        // ["Head","Hands","Body","Feet","Sphere","Rope"]
+
+
+
+        // greatTableIndex
+        // greatTableKeys
+        // console.log(basicShorthand.mappedFamilies)
+
+        let mainStatRowEntries = `<div class="relicStatsSelectionMainstatIconRow">`;
+
+        const filterPath = globalUI.filters[currentSlot];
+        let mainStatTitle = "";
+        const desiredName = `desired${slotNumber}`
+        const currentMainStat = filterPath[desiredName];
+        for (let mainKey of subStatKeys) {
+            const keyIndex = greatTableIndex[mainKey];
+
+            const familySet = propertyImagePaths[basicShorthand.mappedFamilies[keyIndex]];
+            let imagePath = familySet.icon;
+
+            const currentSet = familySet.sets[keyIndex];
+
+            const isMainKey = currentMainStat === mainKey;
+            if (isMainKey) {
+                mainStatTitle = basicShorthand.findStatObject(keyIndex).sets[keyIndex].specific;
+            }
+            mainStatRowEntries += `
+            <div class="${isMainKey ? "characterDisplayRelicStatChoiceIconCHOSENBox" : "characterDisplayRelicStatChoiceIconBox"} clickable" onclick="customMenu.updateFiltersDesiredStat('${currentSlot}',${slotNumber},'${mainKey}')">
+                <img src="${imagePath}" class="characterDisplayRelicStatChoiceIconDesired"/>
+                <div class="characterDisplayRelicStatChoiceIconBoxUnit">${currentSet.unit}</div>
+            </div>
+            `;
+        }
+        mainStatRowEntries += "</div>"
+
+        let decimalsNote = `Please note whatever your selection is, after it is selected it will delete any duplicate substat entries from the Trash Stat priority, which will reorder the trash stats.`;
+        let adjustNote = "The game hides decimal places on every stat, so while you may enter \"19\" on a flat DEF substat, you will see it change to 19.051896 because that is the real value.<br><br>The calc can adjust values properly for anything but SPD."
+        let changeString = `onchange="customMenu.updateSelectedRelicStats()"`;
+
+
+
+        // ${subRolls && estRolls ? `<div class="${potentiallyInvalid ? "imageRowStatisticStatBoxRollsEstInvalid" : "imageRowStatisticStatBoxRollsEst"}">${estRolls}</div>` : ""}
+        readSelection("customMenuSearchBody").innerHTML = `
+            <div class="relicStatsSelectionMainstatRow">
+                <div class="characterDisplayNameBox">Current: ${mainStatTitle}</div>
+            </div>
+            ${mainStatRowEntries}
+            <div class="customMenuSearchNote">${decimalsNote}</div>
+            <div class="customMenuSearchNoteWarning" id="relicStatWindowWarningMessage"></div>
+        `;
+
+        // customMenu.updateSelectedRelicStats();
+    },
+    updateFiltersDesiredStat(charSlot,slotNumber,statNameInternal) {
+        const filterPath = globalUI.filters[charSlot];
+
+        for (let i=1;i<=4;i++) {
+            if (i === slotNumber) {continue;}//we don't check dupe desired stats on the slot we are changing bc that's dumb as fuck
+            const currentDesired = filterPath[`desired${i}`];
+
+            if (currentDesired === statNameInternal) {
+                alert(`Existing stat on slots ${i} is a duplicate of your selection: ${statNameInternal}`);
+                return;
+            }
+        }
+
+        const trashArray = filterPath.trashStatFilters;
+        let trashDeletedArray = [];
+        for (let i=3;i>=0;i--) {
+            const currentTrash = trashArray[i];
+
+            if (currentTrash === statNameInternal) {
+                trashDeletedArray.push(currentTrash);
+                trashArray.splice(i,1);
+            }
+        }
+        if (trashDeletedArray.length) {
+            alert(`Your selection of ${statNameInternal} had a duplicate stat under your trash priorities, making this selection has removed it from your trash priorities.`);
+        }
+
+        filterPath[`desired${slotNumber}`] = statNameInternal;
+
+        userTriggers.renewFiltersDisplayValues();
+        customMenu.createDesiredStatDetailMenu(slotNumber) ;
+    },
     createCharacterSearchMenu() {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
         readSelection("blockoutBackgroundShutter").style.display = "flex";
@@ -974,6 +1076,72 @@ const customMenu = {
         userTriggers.updateEnemyAddedMenuUI();
 
         // copyToClipboard
+    },
+    createActionOrderFilterScreen() {
+        if (globalUI.queryIsActive) {return;}
+
+        // const isEdit = index != undefined;
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = `Action Filters`;
+        readSelection("customMenuSearchBarBox").style.display = "none";
+
+        readSelection("customMenuSearchNote").innerHTML = `These filters do NOT adjust how a battle actually plays out, it only determines which actions will actually show in the action order in case you ever want to reduce clutter or only see specific things.`;
+
+        const bodyElem = readSelection("customMenuSearchBody");
+
+
+
+        const logNameConversions = userTriggers.logNameConversions;
+        const logNameCategoryHeaders = userTriggers.logNameCategoryHeaders;
+
+
+
+        function addFilterToggle(entryName,boolean,alternator) {
+
+            const actualName = logNameConversions[entryName] ?? entryName;
+            const categoryHeader = logNameCategoryHeaders[entryName];
+            return `${categoryHeader ? `<div class="teamwideImportHeader">${categoryHeader}</div>` : ""}
+            <div class="imageRowStatisticBox${alternator}">
+                <div class="imageRowStatisticNameBoxFilterRow">
+                    <div class="statsRowToggleFilterRow">
+                        ${actualName}&nbsp;
+                        <label class="toggleContainer">
+                            <input type="checkbox" class="toggleCheckbox" id="" onchange="customMenu.updateActionOrderFilter('${entryName}')" ${boolean ? "checked" : ""}><span class="toggleSlider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>`;
+        }
+        let filterToggleString = "";
+        const orderFilters = globalUI.actionOrderFilters;
+        let alternator = 1;
+        for (let entry in logNameConversions) {
+            const currentValue = orderFilters[entry];
+            filterToggleString += addFilterToggle(entry,currentValue,alternator);
+            alternator++;
+            if (alternator > 2) {alternator = 1;}
+        }
+
+
+        // <div class="teamwideImportHeader">Abilities</div>
+        // <div class="customMenuSearchNote">asdf</div>
+        bodyElem.innerHTML = `
+            ${filterToggleString}
+        `;
+        // if (isEdit) {
+        //     readSelection("addEnemyAttackTypeSelector").value = slotRef.enemyTypeAttack;
+        //     readSelection("addEnemyEnemyTypeSelector").value = slotRef.enemyType;
+        // }
+        // userTriggers.updateEnemyAddedMenuUI();
+
+        // copyToClipboard
+    },
+    updateActionOrderFilter(filterName) {
+        const orderFilters = globalUI.actionOrderFilters;
+        orderFilters[filterName] = !orderFilters[filterName];
+
+        customMenu.insertLogActions(globalRecords.battleData.battleLog)
     },
     createWaveImportsMenu() {
         if (globalUI.queryIsActive) {return;}
@@ -2049,24 +2217,29 @@ const customMenu = {
     
         for (let action of log) {
             const isEvent = action.eventOverrideImage;
+            const currentLogType = action.logType;
 
-            if (action.logType === "EndCycle") {scrollerBox.innerHTML += `<div class="cycleEndBar">End Cycle -- ${action.cycle} --<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            else if (action.logType === "StartBattle"){scrollerBox.innerHTML += `<div class="cycleEndBar">Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            const orderFilters = globalUI.actionOrderFilters;
+            const filteredCheck = orderFilters[currentLogType];
+            if (!filteredCheck && filteredCheck != undefined) {continue;}
 
-            if (action.logType === "CycleAVReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Cycle ${action.currentCycle} AV Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (action.logType === "TurnOrderReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Turn Order Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "EndCycle") {scrollerBox.innerHTML += `<div class="cycleEndBar">End Cycle -- ${action.cycle} --<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            else if (currentLogType === "StartBattle"){scrollerBox.innerHTML += `<div class="cycleEndBar">Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
+
+            if (currentLogType === "CycleAVReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Cycle ${action.currentCycle} AV Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "TurnOrderReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Turn Order Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
             // logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             // logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     
-            if (action.logType === "BattlePrep"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (action.logType === "BattleSettings"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (action.logType === "EnterCombat"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattlePrep"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattleSettings"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "EnterCombat"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
             // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});}
-            if (action.logType === "WaveStart"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "WaveStart"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
 
-            if (action.logType === "StartTurn") {
+            if (currentLogType === "StartTurn") {
                 let characterRef = characters[action.name];
                 if (!addedDefaultIndex) {
                     globalUI.defaultActionIndex = actionIndex;
@@ -2083,7 +2256,7 @@ const customMenu = {
                     <div class="turnOrderAVBox">${action.AV.toFixed(1)}</div>
                 </div>`;
             }
-            if (action.logType === "UltimateStart") {
+            if (currentLogType === "UltimateStart") {
                 let characterRef = characters[action.name];
     
                 scrollerBox.innerHTML += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
@@ -2092,7 +2265,7 @@ const customMenu = {
                     <div class="miniActionNameBox">Ult</div>
                 </div>`;
             }
-            if (action.logType === "ImmediateExtraTurn") {
+            if (currentLogType === "ImmediateExtraTurn") {
                 const isCharacter = characters?.[action.name];
                 let imagePath = isCharacter ? characters[action.name].preview : graphs.summonCustomImages[action.name];
                 // turnOrderDisplayPreviewUltimateSummon
@@ -2103,7 +2276,7 @@ const customMenu = {
                     <div class="miniActionNameBox">Ex-Turn</div>
                 </div>`;
             }
-            if (action.logType === "ActionAdvanced" || action.logType === "ActionAdvancedBreakDelay") {
+            if (currentLogType === "ActionAdvanced" || currentLogType === "ActionAdvancedBreakDelay") {
                 let characterRef = characters[action.name];
     
                 scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
@@ -2112,7 +2285,7 @@ const customMenu = {
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "DELAY" : "ADV"}: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
                 </div>`;
             }
-            if (action.logType === "SpeedAdvanced") {
+            if (currentLogType === "SpeedAdvanced") {
                 let characterRef = characters[action.name];
     
                 scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
@@ -2121,7 +2294,7 @@ const customMenu = {
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "-" : "+"}SPD AV: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
                 </div>`;
             }
-            if (action.logType === "EnemyDied") {//logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});
+            if (currentLogType === "EnemyDied") {//logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});
                 scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerAlly" : "weirdSideSemiCircleThingerEnemy"}"></div>
                     <img src="/HonkaiSR/${action.isEnemy ? characters[action.enemyKilled].preview : `misc/${action.enemyKilled.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="${action.isEnemy ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewEnemyGlorp"}"/>
@@ -2140,13 +2313,13 @@ const customMenu = {
                 "SummonOnFieldAdjustment": "",
                 "BattleStartWeakness": "Weakness",
             }
-            if (basicMiniAction[action.logType] || basicMiniAction[action.logType] === "") {
+            if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[action.name];
                 
                 scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
-                    <div class="miniActionNameBox">${action.logType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[action.logType]}${action.isEnhanced ? " Enh." : ""}</div>
+                    <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;
             }
 
@@ -3363,6 +3536,71 @@ const userTriggers = {
         //tracks whatever graph was last selected, and renews it for the current battle, doesn't strictly have to be summary data
         userTriggers.updateGraphViewDisplayed(globalUI.currentGraphViewDisplayType)
     },
+    actionHeadersSorta: new Set ([
+        "StartTurn",
+        "UltimateStart",
+        "ImmediateExtraTurn",
+        // "ActionAdvanced",
+        // "SpeedAdvanced",
+        "FUAStart",
+        "SkillStart",
+        "MemoSkillStart",
+        "BasicATKStart",
+        "TechniqueStart",
+        // "TalentStart",
+
+        "BattlePrep",
+        "BattleSettings",
+        "EnterCombat",
+        "WaveStart",
+        "SummonOnFieldAdjustment",
+        "BattleStartWeakness",
+    ]),
+    awkwardLogTypes: {
+        "EnemyDied": 1,
+        "SpeedAdvanced": 1,
+        "ActionAdvancedBreakDelay": 1,
+        "ActionAdvanced": 1,
+    },
+    logNameConversions: {
+        "BattleStartWeakness": "Battle Start Toughness Red.",
+        "BattlePrep": "Battle Prep",
+        "BattleSettings": "Battle Settings",
+        "EnterCombat": "Enter Combat",
+        "WaveStart": "Wave Start",
+
+        "TechniqueStart": "Technique Start",
+        "UltimateStart": "Ultimate Start",
+        "FUAStart": "Follow-up Attack (Action Queue)",
+        "SkillStart": "Skill Start",
+        "MemoSkillStart": "Memosprite Skill Start",
+        "BasicATKStart": "Basic ATK Start",
+
+        "StartTurn": "Turn Start",
+        "ImmediateExtraTurn": "Extra Turn (Action Queue)",
+        
+        "SummonOnFieldAdjustment": "Removed/Added to Field (Summmon)",
+
+        // "TurnOrderReset": "Turn Order Resets",
+        // "CycleAVReset": "Cycle AV Reset",
+        // "StartBattle": "Battle Start",
+        // "EndCycle": "Cycle End",
+
+        "ActionAdvanced": "Advance/Delay",
+        "SpeedAdvanced": "Advance/Delay (SPD)",
+        "ActionAdvancedBreakDelay": "Delay (Break)",
+        
+
+        "EnemyDied": "Entity Death",
+    },
+    logNameCategoryHeaders: {
+        "BattleStartWeakness": "Battle Prep",
+        "TechniqueStart": "Abilities",
+        "StartTurn": "Turns",
+        "SummonOnFieldAdjustment": "Summons",
+        "ActionAdvanced": "Action Value",
+        "EnemyDied": "Deaths",
+    },
     expandBattleLog(logIndex,silentUpdate) {
         let battleData = globalRecords.battleData;
         let logRef = battleData.battleLog;
@@ -3370,25 +3608,7 @@ const userTriggers = {
 
         let displayBox = readSelection("actionDetailMainHolderBox");
 
-        let actionHeadersSorta = new Set ([
-            "StartTurn",
-            "UltimateStart",
-            "ImmediateExtraTurn",
-            // "ActionAdvanced",
-            // "SpeedAdvanced",
-            "FUAStart",
-            "SkillStart",
-            "MemoSkillStart",
-            "BasicATKStart",
-            "TechniqueStart",
-            // "TalentStart",
-
-            "BattlePrep",
-            "BattleSettings",
-            "EnterCombat",
-            "WaveStart",
-            "SummonOnFieldAdjustment"
-        ]);
+        let actionHeadersSorta = userTriggers.actionHeadersSorta;
         // logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: netherTurnObject.eventImage, AV: battleData.sumAV});
 
         displayBox.innerHTML = "";
@@ -3402,6 +3622,16 @@ const userTriggers = {
             "Ice": "#99dbe6",
             "Physical": "#dddddd",
             "True": "#DFBCEA",
+        }
+
+        const elementToDotImage = {
+            "Imaginary": "Icon_Imprisonment.png",
+            "Fire": "Icon_Burn.png",
+            "Wind": "Icon_Wind_Shear.png",
+            "Quantum": "Icon_Entanglement.png",
+            "Lightning": "Icon_Shock.png",
+            "Ice": "Icon_Freeze.png",
+            "Physical": "Icon_Bleed.png"
         }
 
 
@@ -3856,6 +4086,14 @@ const userTriggers = {
                     // }
                     // logToBattle(battleData,{logType: "HitEnemy", hitType: superString, target: targetTurn.properName, source:charName, hitData:hitDataBreakSuper,enemyIsDead,sourceString:sourceName});
 
+                    let sourceTurnHitEnemy = JSON.parse(hitData.playerData);
+                    const sourceIsEnemy = sourceTurnHitEnemy.isEnemy;
+                    let enemyNumberSource = sourceIsEnemy ? sourceTurnHitEnemy.enemyNumber : null;
+
+                    let targetTurnHitEnemy = JSON.parse(hitData.enemyData);
+                    const targetIsEnemy = targetTurnHitEnemy.isEnemy;
+                    let enemyNumber = targetIsEnemy ? targetTurnHitEnemy.enemyNumber : null;
+
 
                     // element
 
@@ -3871,22 +4109,138 @@ const userTriggers = {
                         </div>`;
                     }
                     else if (action.hitType && action.hitType === "Break") {
+                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                        //     <img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIcon"/>
+                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                        //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[BREAK]- DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
+                        // </div>`;
+
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                            
+
+                            
+
                             <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                            <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[BREAK]- DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
+
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.source.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+
+                            <img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconCenter"/>
+
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.target.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+
+                            <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose}${action.sourceString ? ` [${action.sourceString}] ` : ""}</div>
                         </div>`;
+
+
+                        // returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
+                        //     <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                        //         <img src="/HonkaiSR/${characters[action.target].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        //     </div>
+                        //     <img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIcon"/>
+                        //     ${action.isOverflow ? "[OVERFLOW] " : ""}${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` [${action.source}]` : ""}
+                        // </div>`;
                     }
                     // DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged
                     else if (action.hitType && action.hitType === "DOT") {
+                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                        //     <div class="actionDetailBodyInner">${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[DOT] ${colorOpening}[${hitData.element}]${colorClose} - DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
+                        // </div>`;
+
+                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                            
+                        //     ${action.isBreakDOT ? `<img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconPrefix"/>` : ""}
+                        //     <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconPrefix"/>
+                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
+                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                        //     <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                        //         <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        //     </div>
+                        //     <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
+                        // </div>`;
+
+
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                            
+                            ${action.isBreakDOT ? `<img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconPrefix"/>` : ""}
+                            <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
+                            
                             <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                            <div class="actionDetailBodyInner">${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[DOT] ${colorOpening}[${hitData.element}]${colorClose} - DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.source.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+                            <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconCenter"/>
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.target.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+                            <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})</div>
                         </div>`;
+
+
+                        
+
+
+
+                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
+
+                            
+
+                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+
+                            // <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            //     <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                            // </div>
+
+                        //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""} ${action.enemyIsDead ? "[KILL] " : ""} DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
+                        // </div>`;
                     }
                     else {
+                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
+                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                        //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""}- ${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""}${action.hitType} DMG: ${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose}/${colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})--> ${action.target}</div>
+                        // </div>`;
+
+
+                        // enemyNumber
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                            <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                            <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""}${action.source} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""}- ${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""}${action.hitType} DMG: ${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose}/${colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})--> ${action.target}</div>
+
+                        <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.source.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.source] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumberSource}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+                            
+                            ${action.hitType === "Additional" ? `<div class="characterDisplayLogAdditionalDMGPlusBox">+</div>` : ""}
+                            <img src="${propertyImagePaths.ATK.icon}" class="characterDisplayLogStatIconCenter"/>
+
+                            <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                                ${action.target.toLowerCase().includes("enemy") ? `
+                                    <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                    <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${enemyNumber}</div>` :
+                                `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                            </div>
+
+                            
+                            <div class="actionDetailBodyInner">${hitData.currentSplit ? `${+(hitData.currentSplit*100).toFixed(2)}% `: ""} ${action.enemyIsDead ? "[KILL] " : ""}${action.enemyIsBroken ? "[BREAK]" : ""} ${action.hitType} DMG: ${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose}/${colorOpening}${hitData.DMGTotalCrit.toLocaleString()}${colorClose} (AVG ${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})${action.sourceString ? ` - [${action.sourceString}]` : ""}</div>
                         </div>`;
                     }
                     // battleData.battleLog.push({logType: "HitEnemy", hitType: "Single Target", target: enemyPrimary.properName, source:charName, hitData});
@@ -3991,12 +4345,7 @@ const userTriggers = {
         let eventClose = `</div>`;
         let skipEventBody = false;
 
-        let awkwardLogTypes = {
-            "EnemyDied": 1,
-            "SpeedAdvanced": 1,
-            "ActionAdvancedBreakDelay": 1,
-            "ActionAdvanced": 1,
-        }
+        let awkwardLogTypes = userTriggers.awkwardLogTypes;
 
         if (!awkwardLogTypes[currentAction.logType]) {
             //spd advance can happen in the middle of an attack, which fucks things up a bit UI-wise
@@ -4264,8 +4613,13 @@ const userTriggers = {
         // mappedUpdateStatKeys: {},
         // reverseKeyMappings: {},
         for (let i=1;i<=4;i++) {
-            const maslowSlot = maslowSubstats[i-1];
+            
             // console.log(maslowSlot,maslowSubstats)
+
+            const newFilterPath = globalUI.filters[charSlot];
+
+            // const maslowSlot = maslowSubstats[i-1];
+            const maslowSlot = newFilterPath[`desired${i}`];
 
             const currentStatIndex = greatTableIndex[maslowSlot];
             const statFamilyName = mappedFamilies[currentStatIndex];
