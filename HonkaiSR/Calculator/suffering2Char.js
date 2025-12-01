@@ -3282,7 +3282,7 @@ const battleActions = {
                 enemyData: logger ? JSON.stringify(targetTurn) : null,
                 AV:battleData.sumAV
             }
-            logToBattle(battleData,{logType: "HitEnemy", hitType: "DOT", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,sourceString:""});
+            logToBattle(battleData,{logType: "HitEnemy", hitType: "DOT", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,sourceString:"",isBreakDOT});
 
             //tracking stuff
             let dmgSlot = "DOT";
@@ -3376,7 +3376,7 @@ const battleActions = {
         
         // return {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
     },
-    attackWrapper(battleData,ATKPath,sourceTurn,ATKObject) {
+    attackWrapper(battleData,ATKPath,sourceTurn,ATKObject,targetTurnSuggestion) {
         let logging = battleData.isLoggyLogger;
         if (logging) {logToBattle(battleData,{logType: "AttackStart"});}
         
@@ -3398,7 +3398,7 @@ const battleActions = {
         const multiRef = ATKObject.multipliers;
         const {all,primary,blast,blastAOE} = multiRef;
         
-        const enemyPrimary = (!isEnemy ? battleData.primaryTarget : battleData.primaryTargetEnemy) ?? null;
+        const enemyPrimary = (!isEnemy ? (targetTurnSuggestion ?? battleData.primaryTarget) : battleData.primaryTargetEnemy) ?? null;
         const enemyBlastTargets = (!isEnemy ? battleData.blastTargets : battleData.blastTargetsEnemy) ?? null;
         const enemyBlastAOETargets = (!isEnemy ? battleData.blastAOETargets : battleData.blastAOETargetsEnemy) ?? null;
 
@@ -5865,7 +5865,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Abundance
-    "Gallagher": {//ATKOBJECTS DONE
+    "Gallagher": {
         logic(thisTurn,battleData) {//TODO: circle back for target logic for the skill
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -6148,7 +6148,7 @@ const turnLogic = {
                 logicRef.characterValuesBattle.nextBasicEnhanced = true;
                 // poke("BasicATKEnd",battleData,{source:"Gallagher"});
 
-                if (!sourceTurn.turnState) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
+                if (!sourceTurn.turnState || sourceTurn.actionAssigned) {battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");}//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             besotted(battleData,sourceTurn,targetTurn,e4,values2) {
@@ -6477,7 +6477,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Huohuo": {//ATKOBJECTS DONE //TODO: e2: ally revive shit, later when I allow for ally deaths // e4: dunno if healing final multi or just outgoing healing
+    "Huohuo": {//TODO: e2: ally revive shit, later when I allow for ally deaths // e4: dunno if healing final multi or just outgoing healing //the cleanse I didn't add yet just forgot looks like
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -6961,6 +6961,7 @@ const turnLogic = {
         },
         "ATKObjects": {},
         "characterValues": {
+            "talentProvisionIsActive": false,
             "cleanseCounter": 0
         },
         "useTechnique": true,
@@ -6976,7 +6977,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Nihility
-    "Silver Wolf": {//ATKOBJECTS DONE
+    "Silver Wolf": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
             // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
@@ -7767,7 +7768,7 @@ const turnLogic = {
     //Hunt
 
     //Harmony
-    "Tingyun": {//ATKOBJECTS DONE
+    "Tingyun": {
         logic(thisTurn,battleData) {
 
             let currentSP = battleData.skillPointCurrent;
@@ -8340,7 +8341,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Bronya": {//ATKOBJECTS DONE        ////TODO: come back later and enforce wind weakness check on e4 before launching the attack
+    "Bronya": {
         logic(thisTurn,battleData) {
             // const shortRef = this;
             // let characterName = thisTurn.properName
@@ -8410,7 +8411,7 @@ const turnLogic = {
                 const bronyaTalent = ATKObjects.bronyaTalent ??= logicRef.skillFunctions.bronyaTalent;
                 bronyaTalent(battleData,sourceTurn);
             },
-            bronyaFUABasic(battleData,sourceTurn) {
+            bronyaFUABasic(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -8454,7 +8455,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TalentStart",battleData,{sourceTurn});
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject,targetTurn);
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("TalentEnd",battleData,{sourceTurn});
             },
@@ -8517,7 +8518,7 @@ const turnLogic = {
                 battleActions.updateBuff(battleData,targetTurn,buffSheet);
 
                 if (e1) {
-                    const quickRef = logicRef.characterValuesBattle;
+                    const quickRef = sourceTurn.battleValues;
                     if (quickRef.e1SPRegenReady) {
                         quickRef.e1SPRegenReady = false;
                         battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
@@ -8810,8 +8811,23 @@ const turnLogic = {
     
                         let logicRef = turnLogic[characterName];
                         let valuesRef = ownerTurn.battleValues;
+
+                        if (!valuesRef.e4FUAReady || generalInfo.dmgSlot != "Basic ATK") {return;}//abort on non basic atk ends and if the fua wasn't ready
+
+                        const targetsGotHit = generalInfo.targetsGotHit;
+
+                        let enemyToFUA = null;
+                        const enemyTurns = battleData.enemyBasedTurns;
+
+                        for (let enemySlot in targetsGotHit) {
+                            const currentEnemy = enemyTurns[enemySlot];
+                            if (currentEnemy.statTable[WeaknessWind]) {
+                                enemyToFUA = currentEnemy;
+                                break;
+                            }
+                        }
     
-                        if (valuesRef.e4FUAReady && generalInfo.dmgSlot === "Basic ATK") {
+                        if (enemyToFUA && !enemyToFUA.isDead) {
                             valuesRef.e4FUAReady = false;
     
                             const queueObject = this.queueObject ??= {
@@ -8819,9 +8835,11 @@ const turnLogic = {
                                 target: this.target,
                                 name: this.listenerName,
                                 properName: characterName,
-                                sourceTurn: null
+                                sourceTurn: null,
+                                targetTurn: null
                             }
                             queueObject.sourceTurn = ownerTurn;
+                            queueObject.targetTurn = enemyToFUA;
                             battleActions.queueFollowUpAttack(battleData,queueObject);
                         }
                     },
@@ -8852,7 +8870,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sunday": {//ATKOBJECTS DONE
+    "Sunday": {
         logic(thisTurn,battleData) {
             // const shortRef = this;
             // let characterName = thisTurn.properName
@@ -9533,7 +9551,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Tribbie": {//ATKOBJECTS DONE
+    "Tribbie": {
         logic(thisTurn,battleData) {
             // const shortRef = this;
             // let characterName = thisTurn.properName
@@ -10310,7 +10328,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Robin": {//ATKOBJECTS DONE
+    "Robin": {
         logic(thisTurn,battleData) {
             // const shortRef = this;
             // let characterName = thisTurn.properName
@@ -10923,7 +10941,7 @@ const turnLogic = {
     },
     
     //Destruction
-    "Saber": {//ATKOBJECTS DONE
+    "Saber": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -11776,7 +11794,7 @@ const turnLogic = {
     },
     
     //Remembrance
-    "Trailblazer - Remembrance": { //ATKOBJECTS DONE
+    "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
             // if (battleData.battleIsOver) {return {action: "EndTurn", endTurn: true}}
             const shortRef = this;
@@ -12890,7 +12908,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Preservation
-    "Dan Heng • Permansor Terrae": {//ATK OBJECTS DONE
+    "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
             // let skillPointsCheck = battleData.skillPointCurrent > 4;
             // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too

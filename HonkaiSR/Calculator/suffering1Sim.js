@@ -363,6 +363,7 @@ const sim = {
             const slotRef = enemyTurns[slot] ??= {
                 // ...baseEnemyData,
                 name:slot,
+                enemyNumber: enemiesMade,
                 AV:finalStats.SPDActionValue,
                 AVBase:finalStats.SPDActionValue,
                 SPD:finalStats.SPDFinal,
@@ -1092,10 +1093,11 @@ const sim = {
                 let sourceTurn = currentFUA.sourceTurn;
                 let actionName = currentFUA.name;
                 let generalInfo = {sourceTurn,actionName};
+                const targetTurn = currentFUA.targetTurn;
 
                 if (isLog) {logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});}
                 poke("FUAStart",battleData,generalInfo);
-                currentFUA.attack(battleData,sourceTurn);
+                currentFUA.attack(battleData,sourceTurn,targetTurn);
                 poke("FUAEnd",battleData,generalInfo);
             }
         }

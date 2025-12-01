@@ -1,5 +1,25 @@
 // globalUI.pageLoadIsDone = false;
 globalUI.pageLoadIsDone = true;
+
+
+// actionHeadersSorta awkwardLogTypes
+const uiRefGlobal = globalUI.actionOrderFilters;
+const newActionFilterArray = [...userTriggers.actionHeadersSorta,...Object.keys(userTriggers.awkwardLogTypes)];
+
+//this is just populating the action order filters by default with everything set to true so that way even if I add more to the header list later, it will still recognize the entire list
+for (let entry of newActionFilterArray) {
+    uiRefGlobal[entry] = true;
+}
+
+// actionOrderFilters
+
+
+
+
+
+
+
+
 userTriggers.shiftDefaultConditionsToCharObjects();
 userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
 userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird

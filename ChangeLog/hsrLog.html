@@ -7,6 +7,66 @@
 </div> -->
 
 <div>
+    <h1>Nov 30th, 2025 - Custom Desired Substats Update</h1>
+    <ul>
+        <li>Added the ability to modify the 4 desired substats on character lock filters.
+            <ul>
+                <li>Just as an example, Tribbie in the beta has always populated with no SPD stat as a desired stat, this meant that you were always forced to search for Slow tribbie, but now you can modify any of the 4 desired stats to be speed instead for those of you with the DDD fetish.</li>
+                <li>If you attempt to select a duplicate desired stat that is already selected in another slot, you'll be alerted on which slot you would be duplicating.</li>
+                <li>If you define a new desired stat that happens to be a stat you already defined in your Trash Stat priority, it will take priority on the desired stat and delete the trash stat. This will reorder the trash stat priority you had set.</li>
+            </ul>
+        </li>
+        <li>Updated the following log actions to have more images when inspecting any action in the action order. You guys like your unga bunga picture books, I try to oblige:
+            <ul>
+                <li>Break: now shows break icon, character icon, and enemy icon.</li>
+                <li>DoT: shows dot type icon, dot icon, break icon if it was break dot, character icon and enemy icon.</li>
+                <li>Hit: shows attack icon, enemy icon, and character icon.</li>
+                <li>Additional DMG: shows attack icon with a "+" to distinguish it from regular hits, enemy icon, and character icon.</li>
+            </ul>
+        </li>
+        <li>Added the ability to filter the Action Order on the battle simulator. Note that this does not change the outcome of a battle, it only filters what "Header" actions will display on the action bar.
+            <ul>
+                <li>Later I will probably add the ability to filter by entities rather than just actions, but not today.</li>
+            </ul>
+        </li>
+        <li>Added turn start action visual displays for character internal states or values that didn't have them yet for the following character:
+            <ul>
+                <li>Tingyun
+                    <ul>
+                        <li>Benediction Target</li>
+                    </ul>
+                </li>
+                <li>Huohuo
+                    <ul>
+                        <li>Divine Provision</li>
+                    </ul>
+                </li>
+                <li>Gallagher
+                    <ul>
+                        <li>Basic Enhanced</li>
+                    </ul>
+                </li>
+                <li>Tribbie
+                    <ul>
+                        <li>Numinosity</li>
+                        <li>Ult zone</li>
+                    </ul>
+                </li>
+                <li>Bronya
+                    <ul>
+                        <li>E1 Skill point regen ready</li>
+                        <li>E4 follow-up attack ready</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Fixed an issue that prevented Gallagher's ultimate from advancing himself even if it was cast in the post-action phase of his turn(where it should work)</li>
+        <li>Fixed an issue where Bronya's E4 follow-up attack was still triggering even against non-wind-weak enemies, and when it did trigger it didn't target specifically the wind-weak enemy that was hit.</li>
+        <li>Fixed an issue where the header navigation on Mobile-View failed to expand when tapped due to a missing file I completely forgot to upload back when beta started.</li>
+    </ul>
+</div>
+
+<div>
     <h1>Nov 29th, 2025 - The Big Search Update (Substats changes)</h1>
     This changes how searches get handled in relation to substat iterations on each character. For most of you, this will reduce search sizes by about ~66%. That is a lot. If you chase perfect builds though nothing will change.<br>
     Nothing was actually wrong with how I was doing it before, but the way we're handling it now is more faithful to search settings specified by the user.

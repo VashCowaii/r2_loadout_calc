@@ -2730,10 +2730,10 @@ const compare = {
                 </div>
             </div>
             <div class="analyticsResultBestResultRowRelicsBox">
-                ${queryResultsBestRow(char1,char1SPD,char1SubsEntry,char1SubsMaslow)
-                    + queryResultsBestRow(char2,char2SPD,char2SubsEntry,char2SubsMaslow)
-                    + queryResultsBestRow(char3,char3SPD,char3SubsEntry,char3SubsMaslow)
-                    + queryResultsBestRow(char4,char4SPD,char4SubsEntry,char4SubsMaslow)
+                ${queryResultsBestRow(1,char1,char1SPD,char1SubsEntry,char1SubsMaslow)
+                    + queryResultsBestRow(2,char2,char2SPD,char2SubsEntry,char2SubsMaslow)
+                    + queryResultsBestRow(3,char3,char3SPD,char3SubsEntry,char3SubsMaslow)
+                    + queryResultsBestRow(4,char4,char4SPD,char4SubsEntry,char4SubsMaslow)
                 }
             </div>
         </div>`
@@ -2800,11 +2800,23 @@ const compare = {
                 }
 
                 if (!equivalentResultActive && !similarResultActive) {
+
+                    const globalFilters = globalUI.filters;
+                    const filterPath1 = globalFilters.char1;
+                    const filterPath2 = globalFilters.char2;
+                    const filterPath3 = globalFilters.char3;
+                    const filterPath4 = globalFilters.char4;
+                    // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
+
+                    // const charMaslow1 = filterPath.desired1;
+                    // const charMaslow2 = filterPath.desired2;
+                    // const charMaslow3 = filterPath.desired3;
+                    // const charMaslow4 = filterPath.desired4;
                     uniqueRowHeaderSubs = {
-                        "char1": [char1SubsEntry[char1SubsMaslow[0]],char1SubsEntry[char1SubsMaslow[1]],char1SubsEntry[char1SubsMaslow[2]],char1SubsEntry[char1SubsMaslow[3]]],
-                        "char2": [char2SubsEntry[char2SubsMaslow[0]],char2SubsEntry[char2SubsMaslow[1]],char2SubsEntry[char2SubsMaslow[2]],char2SubsEntry[char2SubsMaslow[3]]],
-                        "char3": [char3SubsEntry[char3SubsMaslow[0]],char3SubsEntry[char3SubsMaslow[1]],char3SubsEntry[char3SubsMaslow[2]],char3SubsEntry[char3SubsMaslow[3]]],
-                        "char4": [char4SubsEntry[char4SubsMaslow[0]],char4SubsEntry[char4SubsMaslow[1]],char4SubsEntry[char4SubsMaslow[2]],char4SubsEntry[char4SubsMaslow[3]]],
+                        "char1": [char1SubsEntry[filterPath1.desired1],char1SubsEntry[filterPath1.desired2],char1SubsEntry[filterPath1.desired3],char1SubsEntry[filterPath1.desired4]],
+                        "char2": [char2SubsEntry[filterPath2.desired1],char2SubsEntry[filterPath2.desired2],char2SubsEntry[filterPath2.desired3],char2SubsEntry[filterPath2.desired4]],
+                        "char3": [char3SubsEntry[filterPath3.desired1],char3SubsEntry[filterPath3.desired2],char3SubsEntry[filterPath3.desired3],char3SubsEntry[filterPath3.desired4]],
+                        "char4": [char4SubsEntry[filterPath4.desired1],char4SubsEntry[filterPath4.desired2],char4SubsEntry[filterPath4.desired3],char4SubsEntry[filterPath4.desired4]],
                     }
 
     
@@ -2830,10 +2842,10 @@ const compare = {
                             </div>
                         </div>
                         <div class="analyticsResultRowRelicsBox">
-                            ${queryResultsStandardRow(char1,char1SPD,char1SubsEntry,char1SubsMaslow)
-                                + queryResultsStandardRow(char2,char2SPD,char2SubsEntry,char2SubsMaslow)
-                                + queryResultsStandardRow(char3,char3SPD,char3SubsEntry,char3SubsMaslow)
-                                + queryResultsStandardRow(char4,char4SPD,char4SubsEntry,char4SubsMaslow)
+                            ${queryResultsStandardRow(1,char1,char1SPD,char1SubsEntry,char1SubsMaslow)
+                                + queryResultsStandardRow(2,char2,char2SPD,char2SubsEntry,char2SubsMaslow)
+                                + queryResultsStandardRow(3,char3,char3SPD,char3SubsEntry,char3SubsMaslow)
+                                + queryResultsStandardRow(4,char4,char4SPD,char4SubsEntry,char4SubsMaslow)
                             }
                         </div>
                     </div>`;
@@ -2871,10 +2883,10 @@ const compare = {
                     // queryResultEquivalentRow(charSlot,charSPD,charSubs,charMaslow,uniqueRowHeaderSubs)
                     equivalentContainer += `<div class="queryResultTeamRowBox">
                         <div class="analyticsResultRowRelicsBox">
-                            ${queryResultEquivalentRow(char1,char1SPD,char1SubsEntry,char1SubsMaslow,uniqueRowHeaderSubs.char1)
-                                + queryResultEquivalentRow(char2,char2SPD,char2SubsEntry,char2SubsMaslow,uniqueRowHeaderSubs.char2)
-                                + queryResultEquivalentRow(char3,char3SPD,char3SubsEntry,char3SubsMaslow,uniqueRowHeaderSubs.char3)
-                                + queryResultEquivalentRow(char4,char4SPD,char4SubsEntry,char4SubsMaslow,uniqueRowHeaderSubs.char4)
+                            ${queryResultEquivalentRow(1,char1,char1SPD,char1SubsEntry,char1SubsMaslow,uniqueRowHeaderSubs.char1)
+                                + queryResultEquivalentRow(2,char2,char2SPD,char2SubsEntry,char2SubsMaslow,uniqueRowHeaderSubs.char2)
+                                + queryResultEquivalentRow(3,char3,char3SPD,char3SubsEntry,char3SubsMaslow,uniqueRowHeaderSubs.char3)
+                                + queryResultEquivalentRow(4,char4,char4SPD,char4SubsEntry,char4SubsMaslow,uniqueRowHeaderSubs.char4)
                             }
                         </div>
                     </div>`;
@@ -2904,155 +2916,165 @@ const compare = {
                     //     "char4": [char4SubsEntry[char1SubsMaslow[0]],char4SubsEntry[char1SubsMaslow[1]],char4SubsEntry[char1SubsMaslow[2]],char4SubsEntry[char1SubsMaslow[3]]],
                     // }
 
-                    const char1Sub1 = char1SubsEntry[char1SubsMaslow[0]];
-                    const char1Sub2 = char1SubsEntry[char1SubsMaslow[1]];
-                    const char1Sub3 = char1SubsEntry[char1SubsMaslow[2]];
-                    const char1Sub4 = char1SubsEntry[char1SubsMaslow[3]];
-
-                    const char2Sub1 = char2SubsEntry[char2SubsMaslow[0]];
-                    const char2Sub2 = char2SubsEntry[char2SubsMaslow[1]];
-                    const char2Sub3 = char2SubsEntry[char2SubsMaslow[2]];
-                    const char2Sub4 = char2SubsEntry[char2SubsMaslow[3]];
-
-                    const char3Sub1 = char3SubsEntry[char3SubsMaslow[0]];
-                    const char3Sub2 = char3SubsEntry[char3SubsMaslow[1]];
-                    const char3Sub3 = char3SubsEntry[char3SubsMaslow[2]];
-                    const char3Sub4 = char3SubsEntry[char3SubsMaslow[3]];
-
-                    const char4Sub1 = char4SubsEntry[char4SubsMaslow[0]];
-                    const char4Sub2 = char4SubsEntry[char4SubsMaslow[1]];
-                    const char4Sub3 = char4SubsEntry[char4SubsMaslow[2]];
-                    const char4Sub4 = char4SubsEntry[char4SubsMaslow[3]];
-
                     similarContainer += `<div class="queryResultTeamRowBox">
                         <div class="analyticsResultRowRelicsBox">
-        
-                            <div class="queryResultsQuarterBoxEquivalent">
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <img src="/HonkaiSR/${characters[char1Name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalent">
-                                        <img src="/HonkaiSR/${relicSets[char1.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char1["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char1["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                    </div>
-                                    <div class="queryResultsCharSPDValue">
-                                        <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
-                                        ${Math.floor(entry.char1SPD)}
-                                    </div>
-                                </div>
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char1Sub1 != uniqueRowHeaderSubs.char1[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub1}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char1Sub2 != uniqueRowHeaderSubs.char1[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub2}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char1Sub3 != uniqueRowHeaderSubs.char1[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub3}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                        <div class="${char1Sub4 != uniqueRowHeaderSubs.char1[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub4}</div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="queryResultsQuarterBoxEquivalent">
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <img src="/HonkaiSR/${characters[char2.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalent">
-                                        <img src="/HonkaiSR/${relicSets[char2.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char2["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char2["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                    </div>
-                                    <div class="queryResultsCharSPDValue">
-                                        <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
-                                        ${Math.floor(entry.char2SPD)}
-                                    </div>
-                                </div>
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char2Sub1 != uniqueRowHeaderSubs.char2[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub1}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char2Sub2 != uniqueRowHeaderSubs.char2[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub2}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char2Sub3 != uniqueRowHeaderSubs.char2[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub3}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                        <div class="${char2Sub4 != uniqueRowHeaderSubs.char2[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub4}</div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="queryResultsQuarterBoxEquivalent">
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <img src="/HonkaiSR/${characters[char3.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalent">
-                                        <img src="/HonkaiSR/${relicSets[char3.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char3["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char3["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                    </div>
-                                    <div class="queryResultsCharSPDValue">
-                                        <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
-                                        ${Math.floor(entry.char3SPD)}
-                                    </div>
-                                </div>
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char3Sub1 != uniqueRowHeaderSubs.char3[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub1}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char3Sub2 != uniqueRowHeaderSubs.char3[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub2}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char3Sub3 != uniqueRowHeaderSubs.char3[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub3}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                        <div class="${char3Sub4 != uniqueRowHeaderSubs.char3[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub4}</div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="queryResultsQuarterBoxEquivalent">
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <img src="/HonkaiSR/${characters[char4.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalent">
-                                        <img src="/HonkaiSR/${relicSets[char4.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char4["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="/HonkaiSR/${relicSets[char4["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                    </div>
-                                    <div class="queryResultsCharSPDValue">
-                                        <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
-                                        ${Math.floor(entry.char4SPD)}
-                                    </div>
-                                </div>
-                                <div class="queryResultsQuarterCharacterImageBoxEquivalent">
-                                    <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char4Sub1 != uniqueRowHeaderSubs.char4[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub1}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char4Sub2 != uniqueRowHeaderSubs.char4[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub2}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
-                                        <div class="${char4Sub3 != uniqueRowHeaderSubs.char4[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub3}</div>
-                                        <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
-                                        <div class="${char4Sub4 != uniqueRowHeaderSubs.char4[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub4}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            ${queryResultEquivalentRow(1,char1,char1SPD,char1SubsEntry,char1SubsMaslow,uniqueRowHeaderSubs.char1)
+                                + queryResultEquivalentRow(2,char2,char2SPD,char2SubsEntry,char2SubsMaslow,uniqueRowHeaderSubs.char2)
+                                + queryResultEquivalentRow(3,char3,char3SPD,char3SubsEntry,char3SubsMaslow,uniqueRowHeaderSubs.char3)
+                                + queryResultEquivalentRow(4,char4,char4SPD,char4SubsEntry,char4SubsMaslow,uniqueRowHeaderSubs.char4)
+                            }
                         </div>
                     </div>`;
+
+                    // const char1Sub1 = char1SubsEntry[char1SubsMaslow[0]];
+                    // const char1Sub2 = char1SubsEntry[char1SubsMaslow[1]];
+                    // const char1Sub3 = char1SubsEntry[char1SubsMaslow[2]];
+                    // const char1Sub4 = char1SubsEntry[char1SubsMaslow[3]];
+
+                    // const char2Sub1 = char2SubsEntry[char2SubsMaslow[0]];
+                    // const char2Sub2 = char2SubsEntry[char2SubsMaslow[1]];
+                    // const char2Sub3 = char2SubsEntry[char2SubsMaslow[2]];
+                    // const char2Sub4 = char2SubsEntry[char2SubsMaslow[3]];
+
+                    // const char3Sub1 = char3SubsEntry[char3SubsMaslow[0]];
+                    // const char3Sub2 = char3SubsEntry[char3SubsMaslow[1]];
+                    // const char3Sub3 = char3SubsEntry[char3SubsMaslow[2]];
+                    // const char3Sub4 = char3SubsEntry[char3SubsMaslow[3]];
+
+                    // const char4Sub1 = char4SubsEntry[char4SubsMaslow[0]];
+                    // const char4Sub2 = char4SubsEntry[char4SubsMaslow[1]];
+                    // const char4Sub3 = char4SubsEntry[char4SubsMaslow[2]];
+                    // const char4Sub4 = char4SubsEntry[char4SubsMaslow[3]];
+
+                    // similarContainer += `<div class="queryResultTeamRowBox">
+                    //     <div class="analyticsResultRowRelicsBox">
+        
+                    //         <div class="queryResultsQuarterBoxEquivalent">
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <img src="/HonkaiSR/${characters[char1Name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalent">
+                    //                     <img src="/HonkaiSR/${relicSets[char1.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char1["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char1["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                 </div>
+                    //                 <div class="queryResultsCharSPDValue">
+                    //                     <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
+                    //                     ${Math.floor(entry.char1SPD)}
+                    //                 </div>
+                    //             </div>
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char1Sub1 != uniqueRowHeaderSubs.char1[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub1}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char1Sub2 != uniqueRowHeaderSubs.char1[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub2}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char1Sub3 != uniqueRowHeaderSubs.char1[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub3}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char1SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                     <div class="${char1Sub4 != uniqueRowHeaderSubs.char1[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char1Sub4}</div>
+                    //                 </div>
+                    //             </div>
+                    //         </div>
+        
+                    //         <div class="queryResultsQuarterBoxEquivalent">
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <img src="/HonkaiSR/${characters[char2.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalent">
+                    //                     <img src="/HonkaiSR/${relicSets[char2.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char2["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char2["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                 </div>
+                    //                 <div class="queryResultsCharSPDValue">
+                    //                     <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
+                    //                     ${Math.floor(entry.char2SPD)}
+                    //                 </div>
+                    //             </div>
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char2Sub1 != uniqueRowHeaderSubs.char2[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub1}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char2Sub2 != uniqueRowHeaderSubs.char2[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub2}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char2Sub3 != uniqueRowHeaderSubs.char2[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub3}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char2SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                     <div class="${char2Sub4 != uniqueRowHeaderSubs.char2[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char2Sub4}</div>
+                    //                 </div>
+                    //             </div>
+                    //         </div>
+        
+                    //         <div class="queryResultsQuarterBoxEquivalent">
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <img src="/HonkaiSR/${characters[char3.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalent">
+                    //                     <img src="/HonkaiSR/${relicSets[char3.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char3["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char3["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                 </div>
+                    //                 <div class="queryResultsCharSPDValue">
+                    //                     <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
+                    //                     ${Math.floor(entry.char3SPD)}
+                    //                 </div>
+                    //             </div>
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char3Sub1 != uniqueRowHeaderSubs.char3[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub1}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char3Sub2 != uniqueRowHeaderSubs.char3[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub2}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char3Sub3 != uniqueRowHeaderSubs.char3[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub3}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char3SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                     <div class="${char3Sub4 != uniqueRowHeaderSubs.char3[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char3Sub4}</div>
+                    //                 </div>
+                    //             </div>
+                    //         </div>
+        
+                    //         <div class="queryResultsQuarterBoxEquivalent">
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <img src="/HonkaiSR/${characters[char4.name].preview}" class="queryResultsQuarterCharacterImageEquivalent"/>
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalent">
+                    //                     <img src="/HonkaiSR/${relicSets[char4.planar].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char4["2pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="/HonkaiSR/${relicSets[char4["4pc"]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.BodyMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.FeetMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.SphereMain]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4.RopeMain]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                 </div>
+                    //                 <div class="queryResultsCharSPDValue">
+                    //                     <img src="${propertyImagePaths.SPD.icon}" class="analyticsResultSPDDisplayIcon"/>
+                    //                     ${Math.floor(entry.char4SPD)}
+                    //                 </div>
+                    //             </div>
+                    //             <div class="queryResultsQuarterCharacterImageBoxEquivalent">
+                    //                 <div class="queryResultsQuarterBoxMainstatsEquivalentSubsRow">
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[0]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char4Sub1 != uniqueRowHeaderSubs.char4[0] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub1}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[1]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char4Sub2 != uniqueRowHeaderSubs.char4[1] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub2}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[2]]]].icon}" class="analyticsResultEquivalentIconLeft"/>
+                    //                     <div class="${char4Sub3 != uniqueRowHeaderSubs.char4[2] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub3}</div>
+                    //                     <img src="${propertyImagePaths[mappedFamilies[greatTableIndex[char4SubsMaslow[3]]]].icon}" class="analyticsResultEquivalentIconRight"/>
+                    //                     <div class="${char4Sub4 != uniqueRowHeaderSubs.char4[3] ? "imageRowStatisticStatBoxRollsEstEquivalentChangeShown" : "imageRowStatisticStatBoxRollsEstEquivalent"}">${char4Sub4}</div>
+                    //                 </div>
+                    //             </div>
+                    //         </div>
+                            
+                    //     </div>
+                    // </div>`;
 
 
                     const nextResult = results[counter + 1];
