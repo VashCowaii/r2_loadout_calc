@@ -31,21 +31,27 @@ const customMenu = {
 
         globalUI.currentSearchOpen = null;
         globalUI.currentSearchVolume = null;
+
+        globalUI.volumeIsOcclusion = false;
+        globalUI.volumeIsLock = false;
     },
-    createLightconeSearchMenu() {
+    createLightconeSearchMenu(isOcclusion,isLock) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
         readSelection("blockoutBackgroundShutter").style.display = "flex";
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Lightcones";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME or DESCRIPTION.<br>S1 values applied for descriptions in search.";
+        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME, DESCRIPTION, or SIGNATURE CHARACTER.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.";
 
     
 
         globalUI.currentSearchOpen = "lightcones";
         globalUI.currentSearchVolume = lightcones;
         readSelection("customMenuSearchBarInput").focus();
-        customMenu.updateSearchResults();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
     },
     //for sets search
     createRelicSearchMenu(relicSet) {
@@ -108,8 +114,9 @@ const customMenu = {
         // console.log(statTableRef.tableReference)
 
         let compositeCharacterString = `<div class="characterSearchButton clickable" id="characterSearchButton" onclick="userTriggers.useResultOnCurrentTeam(${resultIndex})">Apply this result to Current Team</div>`;
-        
+        let charCounter = 0;
         for (let charSlot in characterObject) {
+            charCounter++;
             let currentCharacterString = ``;
             const currentCharacter = characterObject[charSlot];
             const returnMenu = updateFormulas(charSlot,null,characterObject,{...globalRecords.querySettings});
@@ -372,7 +379,7 @@ const customMenu = {
 
             currentCharacterString += `<div class="queryResultTeamRowBox">
                 <div class="analyticsResultRowRelicsBox">
-                    ${customHTML.queryResultsStandardRow(currentCharacter,currentResult[`${charSlot}SPD`],currentCharacter.statObject,maslow[currentCharacter.name].defaultMainSubs,true)}
+                    ${customHTML.queryResultsStandardRow(charCounter,currentCharacter,currentResult[`${charSlot}SPD`],currentCharacter.statObject,maslow[currentCharacter.name].defaultMainSubs,true)}
                 </div>
             </div>
             ${currentCharacterMenuString + exampleRelicsString}`;
@@ -2078,6 +2085,10 @@ const customMenu = {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
         let currentSlot = `char${globalUI.currentCharacterDisplayed}`;
         let currentPathCharacter = characters[globalRecords.character[currentSlot].name].path;
+        const filterPath = globalUI.filters[currentSlot];
+
+        const isOcclusion = globalUI.volumeIsOcclusion;
+        const isLock = globalUI.volumeIsLock;
 
         let volumeKeys = Object.keys(globalUI.currentSearchVolume).sort();
         let resultString = "";
@@ -2098,7 +2109,7 @@ const customMenu = {
                     </div>
                     <div class="characterDisplayPathNameBox">${pathName}</div>
                 </div>
-                `
+                `;
         }
 
         if (globalUI.currentSearchOpen === "characters") {
@@ -2156,12 +2167,32 @@ const customMenu = {
             let currentPathResults = [];
             let otherResults = [];
 
+            // lightconeOcclusions
+
+            
             for (let lcEntry of volumeKeys) {
                 let currentLightcone = lightcones[lcEntry];
                 //skip any lc name or desc that does NOT contain our search, and forced lowercase just to avoid headaches
-                let fuzzy = currentLightcone.name.toLowerCase().includes(currentInput) || currentLightcone.desc.toLowerCase().includes(currentInput);
+                const lowercaseInput = currentInput.toLowerCase();
+                let fuzzy = currentLightcone.name.toLowerCase().includes(currentInput) 
+                || currentLightcone.desc.toLowerCase().includes(currentInput)
+
+                || (compare.sigLCList[lcEntry]?.toLowerCase().includes(lowercaseInput))
+                || (lowercaseInput === "moc" && compare.MoCShopLCList.has(lcEntry))
+                || (lowercaseInput === "su" && compare.hertaShopLCList.has(lcEntry))
+                || (lowercaseInput === "battlepass" && compare.battlePassLCList.has(lcEntry))
+                || (lowercaseInput === "starlight" && compare.starlightLCList.has(lcEntry))
+                || (lowercaseInput === "stellar" && compare.stellarLCList.has(lcEntry))
+                ;
+
+
+
+                
                 // if (!fuzzy && currentInput != "" || !turnLogicLightcones[currentLightcone.name]) {continue;}
                 if (!fuzzy && currentInput != "") {continue;}
+                if (isOcclusion && new Set(filterPath.lightconeOcclusions).has(currentLightcone.name)) {continue;}
+                if (isLock && new Set(filterPath.lightconeLocks).has(currentLightcone.name)) {continue;}
+
                 if (currentLightcone.path === currentPathCharacter) {currentPathResults.push(currentLightcone);}
                 else {otherResults.push(currentLightcone);}
             }
@@ -2188,18 +2219,47 @@ const customMenu = {
                     let cleanDesc = pagePopulation.cleanDescription(result.params[0],result.desc);
                     //then limit the description to x characters, I don't see a point in showing the whole thing on a selection
                     let cleanDescTrim = fuckyCutoffFix(cleanDesc.length > 150 ? cleanDesc.slice(0, 150) + "..." : cleanDesc);
+                    const lcName = result.name;
+
+                    // isOcclusion
+                    // isLock
+
+                    const regString = `customMenu.closeMenu();userTriggers.updateSelectedLightcone(\`${lcName}\`)`;
+                    const occlusionString = `customHTML.addFilter('lightconeOcclusionsInput','lightconeOcclusionsContainer','lightconeOcclusions',null,null,\`${lcName}\`);customMenu.updateSearchResults()`;
+                    const lockString = `customMenu.closeMenu();customHTML.addFilter('lightconeLocksInput','lightconeLocksContainer','lightconeLocks',null,null,\`${lcName}\`)`;
+
+
+
+                    const functionToCall = isOcclusion ? occlusionString : (isLock ? lockString : regString);
+
+                    let tagString = "";
+
+                    if (compare.hertaShopLCList.has(lcName)) {tagString += `<div class="itemSourceTag" id="characterSearchButton">SU</div>`;}
+                    if (compare.MoCShopLCList.has(lcName)) {tagString += `<div class="itemSourceTag" id="characterSearchButton">MoC</div>`;}
+                    if (compare.battlePassLCList.has(lcName)) {tagString += `<div class="itemSourceTag" id="characterSearchButton">Battlepass</div>`;}
+
+                    if (compare.sigLCList[lcName]) {tagString += `<div class="itemSourceTag" id="characterSearchButton">${compare.sigLCList[lcName]}</div>`;}
+
+                    // hertaShopLCList
+                    // MoCShopLCList
+                    // battlePassLCList
+
+                    if (compare.starlightLCList.has(lcName)) {tagString += `<div class="itemSourceTag" id="characterSearchButton">Starlight</div>`;}
+                    if (compare.stellarLCList.has(lcName)) {tagString += `<div class="itemSourceTag" id="characterSearchButton">Stellar</div>`;}
+
                     let stringCustom = `
-                        <div class="customMenuResultRowBox clickable" onclick="customMenu.closeMenu();userTriggers.updateSelectedLightcone(\`${result.name}\`)">
+                        <div class="customMenuResultRowBox clickable" onclick="${functionToCall}">
                             <div class="customMenuResultRowIcon">
                                 <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[result.rarity]};"/>
                             </div>
                             <div class="customMenuResultBodyBox">
-                                <div class="customMenuResultBodyTitle">${result.name}</div>
+                                <div class="customMenuResultBodyTitle">${lcName}</div>
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
-                                ${turnLogicLightcones[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${turnLogicLightcones[lcName] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${tagString != "" ? `<div class="itemSourceTagRow">${tagString}</div>` : ""}
                             </div>
                         </div>
-                    `
+                    `;
                     returnString += stringCustom;
                 }
                 return returnString;
@@ -5267,6 +5327,7 @@ const pagePopulation = {
             
 
             // {elemID: "filterTagList", collection: maslowFrontFacingTags}
+            // {elemID: "lightconeLocksList", collection: lightcones},
         ]
 
 
@@ -5276,7 +5337,7 @@ const pagePopulation = {
             {elemIDBase: "mainstatOrb", collection: relics["Planar Sphere"].mainAffix, isStatName:true},
             {elemIDBase: "mainstatRope", collection: relics["Link Rope"].mainAffix, isStatName:true},
             
-            {elemIDBase: "lightcone", collection: lightcones},
+            
             {elemIDBase: "planarSet", collection: finalSets.planarSets},
 
 

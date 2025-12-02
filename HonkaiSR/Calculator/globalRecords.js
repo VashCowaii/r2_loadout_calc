@@ -17,6 +17,9 @@ let globalUI = {
     "defaultActionIndex": 0,
     "currentActionIndex": 0,
 
+    "volumeIsOcclusion": false,
+    "volumeIsLock": false,
+
     "buffGraphs": {
         graphBy: "AV",
         buffEntity: "Character",
