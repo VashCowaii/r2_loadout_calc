@@ -11,6 +11,16 @@ for (let entry of newActionFilterArray) {
     uiRefGlobal[entry] = true;
 }
 
+
+// "actionOrderFiltersChars": {
+//         "char1": true,
+//         "char2": true,
+//         "char3": true,
+//         "char4": true,
+//         "summons": true,
+//         "enemies": true,
+//     },
+
 // actionOrderFilters
 
 

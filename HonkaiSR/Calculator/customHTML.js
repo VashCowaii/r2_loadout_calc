@@ -1135,9 +1135,12 @@ const customHTML = {
         if (!isOrderedTable) {table.sort();}
         
         pathHTML.innerHTML = "";
+        let filterString = "";
         for (let filterName in table) {
-            pathHTML.innerHTML += filterHTML(table[filterName],filterBox,filterTable);
+            filterString += filterHTML(table[filterName],filterBox,filterTable);
         }
+        pathHTML.innerHTML += filterString;
+
     },
     addFilter(filterID,filterBox,filterTable,compareTable,limit) {
         let filterName = readSelection(filterID);

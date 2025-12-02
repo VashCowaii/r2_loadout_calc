@@ -3872,9 +3872,11 @@ const graphs = {
         //then check if the currently selected entity name is a valid name in the currently selected typ
         if (!entityTypeSet.has(entityNameElement.value)) {
             entityNameElement.innerHTML = "";
+            let optionsString = "";
             for (let entityTypeName of entityTypeSet) {
-                entityNameElement.innerHTML += `<option value="${entityTypeName}">${entityTypeName}</option>`
+                optionsString += `<option value="${entityTypeName}">${entityTypeName}</option>`
             }
+            entityNameElement.innerHTML = optionsString;
             buffGraphs.entityName = entityNameElement.value;
 
             //if not, then update the entity name selections and update the global selection as well
@@ -3909,9 +3911,11 @@ const graphs = {
 
         if (!buffNamesSet.has(buffNameElement.value)) {
             buffNameElement.innerHTML = "";
+            let optionsString = "";
             for (let buffName of buffNamesSet) {
-                buffNameElement.innerHTML += `<option value="${buffName}">${buffName}</option>`
+                optionsString += `<option value="${buffName}">${buffName}</option>`
             }
+            buffNameElement.innerHTML = optionsString;
             buffGraphs.buffName = buffNameElement.value;
 
             //if not, then update the entity name selections and update the global selection as well
