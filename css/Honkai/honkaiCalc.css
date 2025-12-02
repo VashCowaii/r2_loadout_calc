@@ -929,6 +929,15 @@ div {
     align-items: center;
     color: rgb(255, 125, 125);
 }
+.itemSourceTagRow {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    align-items: center;
+}
 .relicStatsSelectionMainstatRow {
     width: 100%;
     height: auto;
@@ -1456,6 +1465,14 @@ div {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+.starAndSearchRowMenuButtonRow {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 .starAndSearchRow2 {
     width: 100%;
     display: flex;
@@ -1472,6 +1489,25 @@ div {
 }
 .exportIconBoxHolder {
     font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.itemSourceTag {
+    font-size: 15px;
     width: auto;
     box-sizing: border-box;
     border-radius: 15px;

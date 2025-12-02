@@ -1142,7 +1142,7 @@ const customHTML = {
         pathHTML.innerHTML += filterString;
 
     },
-    addFilter(filterID,filterBox,filterTable,compareTable,limit) {
+    addFilter(filterID,filterBox,filterTable,compareTable,limit,valueInsert) {
         let filterName = readSelection(filterID);
         const isTrashStat = filterTable.toLowerCase().includes("trash");
         const charSlot = `char${globalUI.currentCharacterDisplayed}`;
@@ -1158,7 +1158,7 @@ const customHTML = {
         // console.log(table)
         //If we are submitting more than the allowed locks, don't do anything, don't add, etc
         // if (table.length>=limit) {filterName.value = "";return;}
-        if (table.length === limit) {
+        if (compareTable && table.length === limit) {
             filterName.value = "";
             return;
         }
@@ -1167,12 +1167,12 @@ const customHTML = {
         // console.log(isStat ? basicShorthand.reverseKeyMappings[filterName.value] : filterName.value,filterName.value,basicShorthand.reverseKeyMappings);
         // customHTML.addFilter(`mainstatBodyLocksInput`,`mainstatBodyLocksContainer`,`mainstatBodyLocks`,relics.Body.mainAffix)
 
-        const oldValue = filterName.value;
+        const oldValue = compareTable ? filterName.value : valueInsert;
         // console.log(greatTableKeys[basicShorthand.reverseKeyMappings[oldValue]],oldValue,compareTable)
         // console.log(compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue])
 
         // if ((!compareTable[isStat ? basicShorthand.reverseKeyMappings[oldValue] : oldValue] && oldValue && oldValue != "--")) {filterName.value = "";return;}
-        if (compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue] == undefined && oldValue && oldValue != "--") {filterName.value = "";return;}
+        if (compareTable && compareTable[isStat ? greatTableKeys?.[basicShorthand.reverseKeyMappings[oldValue]] : oldValue] == undefined && oldValue && oldValue != "--") {filterName.value = "";return;}
         
         // console.log("reached this point")
         let found = false;
@@ -1219,12 +1219,14 @@ const customHTML = {
             }
         }
 
-        if (oldValue === "--") {filterName.value = "";}//if the user WANTS an empty filter
+        if (compareTable && oldValue === "--") {filterName.value = "";}//if the user WANTS an empty filter
         
-        if (!found) {table.push(
-            isStat ? greatTableKeys[basicShorthand.reverseKeyMappings[filterName.value]] : filterName.value
-        )}
-        filterName.value = "";
+        if (!found) {
+            const valueToUse = compareTable ? filterName.value : valueInsert;
+            table.push(isStat ? greatTableKeys[basicShorthand.reverseKeyMappings[valueToUse]] : valueToUse)
+        }
+        if (compareTable) {filterName.value = "";}
+        
         customHTML.populateFilters(filterBox,filterTable);
         // filters.updateLockedBreakdownOptions();
     },
@@ -1365,6 +1367,7 @@ const customHTML = {
 
         // const [charMaslow1,charMaslow2,charMaslow3,charMaslow4] = charMaslow;
 
+        // console.log(filterPath,slotNumber)
         const charMaslow1 = filterPath.desired1;
         const charMaslow2 = filterPath.desired2;
         const charMaslow3 = filterPath.desired3;
