@@ -29,8 +29,14 @@ let globalUI = {
     "currentSearchOpen": null,
     "currentSearchVolume": null,
 
-    "actionOrderFilters": {
-        
+    "actionOrderFilters": {},
+    "actionOrderFiltersChars": {
+        "char1": true,
+        "char2": true,
+        "char3": true,
+        "char4": true,
+        "summons": true,
+        "enemies": true,
     },
 
 
