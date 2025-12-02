@@ -115,10 +115,15 @@
     width: 100%;
     height: auto;
     padding-left: 4px;
+    flex-direction: column;
+}
+.eidolonRowIconHolder {
+    width: 100%;
+    height: auto;
 }
 .rightDescriptionBoxEidolons  {
     width: 100%;
-    padding-left: 15px;
+    padding-left: 5px;
     box-sizing: border-box;
 }
 
