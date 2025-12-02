@@ -2215,6 +2215,7 @@ const customMenu = {
         let actionIndex = 0;
         let addedDefaultIndex = false;
     
+        let eventString = "";
         for (let action of log) {
             const isEvent = action.eventOverrideImage;
             const currentLogType = action.logType;
@@ -2223,20 +2224,20 @@ const customMenu = {
             const filteredCheck = orderFilters[currentLogType];
             if (!filteredCheck && filteredCheck != undefined) {continue;}
 
-            if (currentLogType === "EndCycle") {scrollerBox.innerHTML += `<div class="cycleEndBar">End Cycle -- ${action.cycle} --<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            else if (currentLogType === "StartBattle"){scrollerBox.innerHTML += `<div class="cycleEndBar">Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "EndCycle") {eventString += `<div class="cycleEndBar">End Cycle -- ${action.cycle} --<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            else if (currentLogType === "StartBattle"){eventString += `<div class="cycleEndBar">Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
 
-            if (currentLogType === "CycleAVReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Cycle ${action.currentCycle} AV Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (currentLogType === "TurnOrderReset"){scrollerBox.innerHTML += `<div class="cycleEndBar">Turn Order Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "CycleAVReset"){eventString += `<div class="cycleEndBar">Cycle ${action.currentCycle} AV Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "TurnOrderReset"){eventString += `<div class="cycleEndBar">Turn Order Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
             // logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             // logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     
-            if (currentLogType === "BattlePrep"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (currentLogType === "BattleSettings"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (currentLogType === "EnterCombat"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattlePrep"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattleSettings"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "EnterCombat"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
             // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});}
-            if (currentLogType === "WaveStart"){scrollerBox.innerHTML += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "WaveStart"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
 
             if (currentLogType === "StartTurn") {
@@ -2250,7 +2251,7 @@ const customMenu = {
                 //when the first turn start is found, assign it as the default action to expand on when the action detail menu is opened. This is later overwritten by w/e action was last clicked
                 //but overall default to first turn start in a log whenever the battle is remade and relogged. Dislike opening a new menu and having it blank.
     
-                scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarEnemy" : "turnStarterBarAlly"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarEnemy" : "turnStarterBarAlly"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? turnRef.eventImage : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventIcon" : "turnOrderDisplayPreview"}"/>`}
                     <div class="turnOrderAVBox">${action.AV.toFixed(1)}</div>
@@ -2259,7 +2260,7 @@ const customMenu = {
             if (currentLogType === "UltimateStart") {
                 let characterRef = characters[action.name];
     
-                scrollerBox.innerHTML += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${characterRef.preview}" class="turnOrderDisplayPreviewUltimate"/>
                     <div class="miniActionNameBox">Ult</div>
@@ -2270,7 +2271,7 @@ const customMenu = {
                 let imagePath = isCharacter ? characters[action.name].preview : graphs.summonCustomImages[action.name];
                 // turnOrderDisplayPreviewUltimateSummon
     
-                scrollerBox.innerHTML += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${imagePath}" class="${isCharacter ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewUltimateSummon"}"/>
                     <div class="miniActionNameBox">Ex-Turn</div>
@@ -2279,7 +2280,7 @@ const customMenu = {
             if (currentLogType === "ActionAdvanced" || currentLogType === "ActionAdvancedBreakDelay") {
                 let characterRef = characters[action.name];
     
-                scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "DELAY" : "ADV"}: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
@@ -2288,14 +2289,14 @@ const customMenu = {
             if (currentLogType === "SpeedAdvanced") {
                 let characterRef = characters[action.name];
     
-                scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "-" : "+"}SPD AV: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
                 </div>`;
             }
             if (currentLogType === "EnemyDied") {//logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});
-                scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerAlly" : "weirdSideSemiCircleThingerEnemy"}"></div>
                     <img src="/HonkaiSR/${action.isEnemy ? characters[action.enemyKilled].preview : `misc/${action.enemyKilled.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="${action.isEnemy ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewEnemyGlorp"}"/>
                     <div class="miniActionNameBox">Died</div>
@@ -2316,7 +2317,7 @@ const customMenu = {
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[action.name];
                 
-                scrollerBox.innerHTML += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${action.name.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
@@ -2336,6 +2337,7 @@ const customMenu = {
             // battleData.battleLog.push({logType: "StartTurn", name:currentTurn, isEnemy: thisTurn.isEnemy, AV: battleData.sumAV})
             actionIndex++;
         }
+        scrollerBox.innerHTML = eventString;
     }
 }
 
