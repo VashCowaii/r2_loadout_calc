@@ -2099,23 +2099,39 @@ div {
 
 
 
-.eidolonsMainBoxHolder {
+/* .eidolonsMainBoxHolder {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     overflow-y: scroll;
+    box-sizing: border-box;
+} */
+.eidolonsMainBoxHolder {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
 .eidolonRowBoxHolder { 
     width: 100%;
+
+    /* height: 50%;
+    max-height: 50%;
+    min-height: 50%; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
-    margin: 2px;
-    max-width: 400px;
+    align-items: flex-start;
+    /* margin: 2px; */
+    /* max-width: 400px; */
+    box-sizing: border-box;
 }
 .eidolonRowName {
     font-size: 25px;
@@ -2129,20 +2145,33 @@ div {
     box-sizing: border-box;
 }
 .eidolonRowIconHolder {
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2px;
+    box-sizing: border-box;
 }
 .eidolonRowIcon {
-    width: 30px;
+    width: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     object-fit: contain;
     border: 2px solid #e1e1e4;
     border-radius: 50%;
+    box-sizing: border-box;
+
+    background: radial-gradient(
+      circle at center,
+      #473824 0%,
+      #473824 10%,
+      transparent 80%
+    );
+}
+.eidolonRowIcon:hover {
+    opacity: 0.5;
 }
 .rightDescriptionBoxEidolons {
     width: 100%;
@@ -2150,8 +2179,11 @@ div {
     text-align: left;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: left;
-    padding-left: 15px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    padding-right: 5px;
 }
 .eidolonRankRowHolder {
     width: 100%;
@@ -2160,6 +2192,7 @@ div {
     align-items: center;
     /* border: 1px solid red; */
     box-sizing: border-box;
+    margin-bottom: 5px;
 }
 .eidolonRankRowName {
     font-size: 25px;
@@ -2188,6 +2221,13 @@ div {
     overflow: hidden;
 
     /* filter: brightness(0.5); */
+}
+.eidolonBonusLevelRow {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+    box-sizing: border-box;
 }
 
 

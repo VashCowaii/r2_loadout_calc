@@ -3411,6 +3411,44 @@ const userTriggers = {
         readSelection(`eidolonRankButton${globalPathChar.rank}`).style.backgroundColor = "#e1e1e4";
         readSelection(`eidolonRankButton${globalPathChar.rank}`).style.color = "black";
 
+        const eidolonLevelBox = readSelection("eidolonLevelBonuses");
+
+        let levelBonuses = {};
+        if (globalPathChar.rank >= 3) {
+            const path3 = charRef.eidlonLevelBonuses[3];
+            for (let entry in path3) {
+                if (!levelBonuses[entry]) {
+                    levelBonuses[entry] = path3[entry];
+                }
+                else {
+                    levelBonuses[entry] += path3[entry];
+                }
+            }
+        }
+        if (globalPathChar.rank >= 5) {
+            const path5 = charRef.eidlonLevelBonuses[5];
+            for (let entry in path5) {
+                if (!levelBonuses[entry]) {
+                    levelBonuses[entry] = path5[entry];
+                }
+                else {
+                    levelBonuses[entry] += path5[entry];
+                }
+            }
+        }
+
+        let sumLevelBonusString = "";
+        for (let levelBonus in levelBonuses) {
+            sumLevelBonusString += `<div class="eidolonBonusLevelRow">${levelBonus}: +${levelBonuses[levelBonus]}</div>`;
+        }
+
+        if (sumLevelBonusString === "") {sumLevelBonusString = "&nbsp;None"}
+        eidolonLevelBox.innerHTML = sumLevelBonusString;
+
+        // let eidoRank = globalRecords.character[charSlot].rank;
+        // if (eidoRank >= 3) {baseLevel += charRef.eidlonLevelBonuses[3][skillSlot] ?? 0;}
+        //     if (eidoRank >= 5) {baseLevel += charRef.eidlonLevelBonuses[5][skillSlot] ?? 0;}
+
     
         let src1 = "/HonkaiSR/" + lightconeRef.portrait;
         const topContainer = readSelection('testContainer');
@@ -3534,16 +3572,22 @@ const userTriggers = {
 
         let eidoRef = charRef.eidolons;
         let eidoString = ``;
+        let rankCounter = 0;
         for (let entry of eidoRef) {
+            rankCounter++;
             eidoString += `
             <div class="eidolonRowBoxHolder" style="opacity:${globalPathChar.rank >= entry.rank ? 1 : 0.5}">
                 <div class="eidolonRowIconHolder">
-                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon" id=""/>
-                    <div class="eidolonRowName">${entry.name}</div>
+                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable" onclick="userTriggers.updateEidolonRank(${rankCounter})"/>
                 </div>
-                <div class="rightDescriptionBoxEidolons smallFont">${entry.desc}</div>
+                
+                <div class="rightDescriptionBoxEidolons smallFont">
+                    <div class="eidolonRowName">${entry.name}</div>
+                    ${entry.desc}
+                </div>
             </div>
-            `
+            `;
+            
         }
         readSelection("eidolonsMainBoxHolder").innerHTML = eidoString;
 
@@ -4487,9 +4531,43 @@ const userTriggers = {
                     break;
                 case "ConsumeHP":
                     // if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:ally.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                    // returnString = `<div class="actionDetailBody">
+                    //     --${action.name} drained ${action.target} for ${action.amountEaten.toLocaleString()} HP
+                    // </div>`;
+
                     returnString = `<div class="actionDetailBody">
-                        --${action.name} drained ${action.target} for ${action.amountEaten.toLocaleString()} HP
+                        ${action.name != action.target ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            <img src="/HonkaiSR/${characters[action.name] ? characters[action.name].icon : (graphs.summonCustomImages[action.name] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                        </div>` : ""}
+
+                        <img src="/HonkaiSR/misc/consume.png" class="characterDisplayLogStatIcon"/>
+                        <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                            ${action.target.toLowerCase().includes("enemy") ? `
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.target] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                            `<img src="/HonkaiSR/${characters[action.target]?.icon ?? graphs.summonCustomImages[action.target]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                        </div>
+
+                        <div class="actionDetailBody">-${action.amountEaten.toLocaleString()} HP</div>
                     </div>`;
+
+
+                    // returnString = `<div class="turnOrderDisplayPreviewActionExpandRow">
+                    //     ${action.sourceOwner != action.name ? `<div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                    //             <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
+                    //         </div>` : ""}
+                    //     <img src="/HonkaiSR/misc/DownArrowBuffLoss.png" class="characterDisplayLogStatIcon"/>
+                    //     <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
+                    //         ${action.name.toLowerCase().includes("enemy") ? `
+                    //             <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? graphs.enemyCustomImages.default}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>` :
+                    //         `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
+                    //     </div>
+                        
+                    //     <div class="actionDetailBody">
+                    //     ${action.isShield ? ` [SHIELD]` : ""} "${action.buffName}" (${action.stacks} stack${action.stacks>1 ? "s" : ""}) -- Source: ${action.source}</div>
+                    // </div>`;
+
+
+
                     // battleData.battleLog.push({logType: "HitEnemy", hitType: "Single Target", target: enemyPrimary.properName, source:charName, hitData});
                     // logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: enemyTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
                     break;
