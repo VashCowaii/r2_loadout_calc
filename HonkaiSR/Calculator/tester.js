@@ -3726,15 +3726,21 @@ const userTriggers = {
 
 
         const displayIDOld = `actionDisplayOrderEntry${globalUI.currentActionIndex}`;
-        readSelection(displayIDOld).style.background = userTriggers.barActionHeaders.has(logRef[globalUI.currentActionIndex].logType) ? "none" : "black";
-        //shit like battle settings and whatnot have a slightly grey background because they have no background set so they default to the page's background
-        //however character actions have a black background, so this is just a quick check to see if it's bar-type action so we can maintain the greyish bg that it has when switch off the active inspect
+        const oldElement = readSelection(displayIDOld);
+        if (oldElement) {
+            oldElement.style.background = userTriggers.barActionHeaders.has(logRef[globalUI.currentActionIndex].logType) ? "none" : "black";
+            //shit like battle settings and whatnot have a slightly grey background because they have no background set so they default to the page's background
+            //however character actions have a black background, so this is just a quick check to see if it's bar-type action so we can maintain the greyish bg that it has when switch off the active inspect
+        }
 
         globalUI.currentActionIndex = logIndex;
 
         const displayID = `actionDisplayOrderEntry${logIndex}`;
-        readSelection(displayID).style.background = "linear-gradient(200deg, #0d393b,transparent)";
-        readSelection(displayID).scrollIntoView({ behavior: "smooth", block: "center"});
+        const newElement = readSelection(displayID);
+        if (newElement) {
+            readSelection(displayID).style.background = "linear-gradient(200deg, #0d393b,transparent)";
+            readSelection(displayID).scrollIntoView({ behavior: "smooth", block: "center"});
+        }
 
         // background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
 
