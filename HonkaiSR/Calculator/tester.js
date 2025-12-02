@@ -2331,19 +2331,19 @@ const customMenu = {
             }
 
             if (currentLogType === "EndCycle") {eventString += `<div class="cycleEndBar">End Cycle -- ${action.cycle} --<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            else if (currentLogType === "StartBattle"){eventString += `<div class="cycleEndBar">Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            else if (currentLogType === "StartBattle"){eventString += `<div class="cycleEndBar" >Battle Start<div class="weirdSideSemiCircleThinger"></div></div>`;}
 
             if (currentLogType === "CycleAVReset"){eventString += `<div class="cycleEndBar">Cycle ${action.currentCycle} AV Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
             if (currentLogType === "TurnOrderReset"){eventString += `<div class="cycleEndBar">Turn Order Reset<div class="weirdSideSemiCircleThinger"></div></div>`;}
             // logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             // logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     
-            if (currentLogType === "BattlePrep"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (currentLogType === "BattleSettings"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
-            if (currentLogType === "EnterCombat"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattlePrep"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "BattleSettings"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "EnterCombat"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
             // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});}
-            if (currentLogType === "WaveStart"){eventString += `<div class="cycleEndBar clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            if (currentLogType === "WaveStart"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Wave ${action.waveID}<div class="weirdSideSemiCircleThinger"></div></div>`;}
             
 
             if (currentLogType === "StartTurn") {
@@ -2357,7 +2357,7 @@ const customMenu = {
                 //when the first turn start is found, assign it as the default action to expand on when the action detail menu is opened. This is later overwritten by w/e action was last clicked
                 //but overall default to first turn start in a log whenever the battle is remade and relogged. Dislike opening a new menu and having it blank.
     
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarEnemy" : "turnStarterBarAlly"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarEnemy" : "turnStarterBarAlly"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? turnRef.eventImage : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventIcon" : "turnOrderDisplayPreview"}"/>`}
                     <div class="turnOrderAVBox">${action.AV.toFixed(1)}</div>
@@ -2366,7 +2366,7 @@ const customMenu = {
             if (currentLogType === "UltimateStart") {
                 let characterRef = characters[actionNameSource];
     
-                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${characterRef.preview}" class="turnOrderDisplayPreviewUltimate"/>
                     <div class="miniActionNameBox">Ult</div>
@@ -2377,7 +2377,7 @@ const customMenu = {
                 let imagePath = isCharacter ? characters[actionNameSource].preview : graphs.summonCustomImages[actionNameSource];
                 // turnOrderDisplayPreviewUltimateSummon
     
-                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${imagePath}" class="${isCharacter ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewUltimateSummon"}"/>
                     <div class="miniActionNameBox">Ex-Turn</div>
@@ -2386,7 +2386,7 @@ const customMenu = {
             if (currentLogType === "ActionAdvanced" || currentLogType === "ActionAdvancedBreakDelay") {
                 let characterRef = characters[actionNameSource];
     
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "DELAY" : "ADV"}: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
@@ -2395,14 +2395,14 @@ const customMenu = {
             if (currentLogType === "SpeedAdvanced") {
                 let characterRef = characters[actionNameSource];
     
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBoxAdvance">${action.newAV > action.oldAV ? "-" : "+"}SPD AV: ${Math.floor(action.oldAV)} -> ${Math.floor(action.newAV)}</div>
                 </div>`;
             }
             if (currentLogType === "EnemyDied") {//logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniAction" : "turnStarterBarMiniActionEnemy"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerAlly" : "weirdSideSemiCircleThingerEnemy"}"></div>
                     <img src="/HonkaiSR/${action.isEnemy ? characters[action.enemyKilled].preview : `misc/${action.enemyKilled.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="${action.isEnemy ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewEnemyGlorp"}"/>
                     <div class="miniActionNameBox">Died</div>
@@ -2423,7 +2423,7 @@ const customMenu = {
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[actionNameSource];
                 
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
@@ -3668,6 +3668,12 @@ const userTriggers = {
         "SummonOnFieldAdjustment",
         "BattleStartWeakness",
     ]),
+    barActionHeaders: new Set ([
+        "BattlePrep",
+        "BattleSettings",
+        "EnterCombat",
+        "WaveStart",
+    ]),
     awkwardLogTypes: {
         "EnemyDied": 1,
         "SpeedAdvanced": 1,
@@ -3718,6 +3724,20 @@ const userTriggers = {
         let logRef = battleData.battleLog;
         let currentAction = logRef[logIndex];
 
+
+        const displayIDOld = `actionDisplayOrderEntry${globalUI.currentActionIndex}`;
+        readSelection(displayIDOld).style.background = userTriggers.barActionHeaders.has(logRef[globalUI.currentActionIndex].logType) ? "none" : "black";
+        //shit like battle settings and whatnot have a slightly grey background because they have no background set so they default to the page's background
+        //however character actions have a black background, so this is just a quick check to see if it's bar-type action so we can maintain the greyish bg that it has when switch off the active inspect
+
+        globalUI.currentActionIndex = logIndex;
+
+        const displayID = `actionDisplayOrderEntry${logIndex}`;
+        readSelection(displayID).style.background = "linear-gradient(200deg, #0d393b,transparent)";
+        readSelection(displayID).scrollIntoView({ behavior: "smooth", block: "center"});
+
+        // background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
         let displayBox = readSelection("actionDetailMainHolderBox");
 
         let actionHeadersSorta = userTriggers.actionHeadersSorta;
@@ -3754,6 +3774,16 @@ const userTriggers = {
 
             // battleData.battleLog.push({logType: "EnergyChange", target: battleDataCharacterRow.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, maximum, source:sourceName});
 
+            // &#8592;  left
+            // &#8594;  right
+            let controlsString = `<div class="starAndSearchRow2">
+                <div class="exportIconBoxHolder clickable" id="characterSearchButton" onclick="userTriggers.forcePriorActionExpand()">
+                    &#8592; &nbsp; Prior
+                </div>
+                <div class="exportIconBoxHolder clickable" id="characterSearchButton" onclick="userTriggers.forceNextActionExpand()">
+                    Next &nbsp; &#8594;
+                </div>
+            </div>`;
 
             const specialEnergyData = {
                 //elements
@@ -3807,19 +3837,29 @@ const userTriggers = {
                 case "BattlePrep": 
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Battle Prep</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Battle prep is the calc's time to create character/LC entries, construct buff handlers, so on and so forth.<br>Most often nothing will show up in events here but enemy creation, but there might be other random stuff that does too.</div>
                     `
                     break;
                 case "BattleSettings": 
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Battle Settings</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">This section is for things that need to happen before combat starts. Examples would be Poet SPD checks, skill point max modifications, etc.</div>
                     `
                     break;
                 case "EnterCombat": 
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Enter Combat</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">This step initiates all bonuses that are triggered in combat that don't show up in the main character menu stats. This step also triggers all non-damaging techniques (that you as the user enabled) before combat actually begins.</div>
+                    `
+                    break;
+                case "BattleStartWeakness": 
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">Battle-start Toughness Reduction</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">Toughness reduction at the start of the battle only takes place in 2 scenarios:<br>1) Someone on the team used an attack-type technique in order to start the fight<br>2) No technique was used, but the fight still started by attacking the entity.<br><br>This reduction in particular will only show up on the action order if no attack-type technique was used.</div>
                     `
                     break;
                 case "StartTurn": 
@@ -3923,6 +3963,7 @@ const userTriggers = {
                     // onclick="customMenu.createRelicSearchMenu(3)"
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name === "Little Ica" ? "Fat Fuck" : action.name}'s Turn Start</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     <div class="actionDetailHeaderRowCharacterImageBox">
                         <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
                             <img src="/HonkaiSR/${isEnemy ? graphs.enemyCustomImages?.[turnRef.enemyRealName] ?? action.name.toLowerCase().includes("boss") ? "misc/Glorpard.png" : graphs.enemyCustomImages.default : (characters[action.name]?.preview ?? graphs.summonCustomImages[action.name] ?? turnRef.eventImage)}" class="${isEnemy || turnRef.isUniqueEvent ? "actionDetailHeaderRowEnemyImage" : "actionDetailHeaderRowCharacterImage"}"/>
@@ -3973,6 +4014,7 @@ const userTriggers = {
                     // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s ${action.actionSlot} ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     `
                     break;
@@ -3980,6 +4022,7 @@ const userTriggers = {
                     // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Follow-up Attack ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     <div class="actionDetailBody">Call: ${action.fuaName}</div>
                     `
@@ -3988,6 +4031,7 @@ const userTriggers = {
                     // logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Extra Turn ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     <div class="actionDetailBody">Call: ${action.ultName}</div>
                     `
@@ -3996,12 +4040,14 @@ const userTriggers = {
                     // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});}
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Begin Wave #${action.waveID}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     `
                     break;
                 case "UltimateStart": 
                     // battleData.battleLog.push({logType: "UltimateStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, ultName: currentUltimate.attack.name});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Ultimate ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     <div class="actionDetailBody">Call: ${action.ultName}</div>
                     `
@@ -4011,6 +4057,7 @@ const userTriggers = {
                     // battleData.battleLog.push({logType: "ActionAdvanced", name:globalRecords.character[target].name, oldAV: oldAV, newAV:targetRef.AV});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Action ${action.newAV > action.oldAV ? "Delayed" : "Advanced"}</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Action Value til next turn changed from ${+action.oldAV.toFixed(7)} --> ${+action.newAV.toFixed(7)}, Source: ${action.source}</div>
                     `
                     break;
@@ -4018,6 +4065,7 @@ const userTriggers = {
                     // logToBattle(battleData,{logType: "SpeedAdvanced", name:targetRef.properName, oldAV: oldAVRemaining, newAV:targetRef.AV, source});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s SPD Change AV Alteration</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Target's SPD has changed. As such, the % difference between their old and new AV per turn is taken and applied to the remaining AV til their next turn.<br>As a % adjustment on an already existing value, this DOES mean that action advances caused by SPD changes will NEVER fully advance a target. This is why SPD advances are noted differently in the action order.</div>
                     <div class="actionDetailBody">Action Value til next turn changed from ${+action.oldAV.toFixed(7)} --> ${+action.newAV.toFixed(7)}, Source: ${action.source}</div>
                     <div class="actionDetailBody">AV per Turn(Old): ${+action.oldAVBase.toFixed(7)} --> AV per Turn(New): ${+action.newBase.toFixed(7)}</div>
@@ -4028,6 +4076,7 @@ const userTriggers = {
                     // logToBattle(battleData,{logType: "EnemyDied", source:currentTurn.properName, enemyKilled:enemyDeath.properName});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.enemyKilled} died</span></div>
+                    ${controlsString}
                     <div class="actionDetailBody">Energy awarded to ${action.source} for the kill</div>
                     <div class="actionDetailBody">If viewed from the action order, this death took place in the attack just prior on the list.</div>
                     <div class="actionDetailBody">Events triggered after the death of this target will still show within the bounds of the attack event that killed this target, to avoid breaking up the event log in ways that don't make sense</div>
@@ -5067,6 +5116,50 @@ const userTriggers = {
         // console.log(globalRecords.character[charSlot])
 
         if (isBattleSetting) {userTriggers.getUpdatedBattleLog()}
+    },
+    forceNextActionExpand() {
+        let battleData = globalRecords.battleData;
+        let logRef = battleData.battleLog;
+        const currentIndex = globalUI.currentActionIndex;
+
+        let actionHeadersSorta = userTriggers.actionHeadersSorta;
+
+        for (let i=currentIndex+1;i<logRef.length;i++) {
+            let newAction = logRef[i];
+
+            // let postActionSPDModifications 
+            if (actionHeadersSorta.has(newAction.logType)) {
+                // break;
+                userTriggers.expandBattleLog(i);
+                return;
+            }
+            // else {
+            //     if (awkwardLogTypes[newAction.logType]) {continue;}
+            //     eventsString += lineTypeDisplays(newAction,i)
+            // }
+        }
+    },
+    forcePriorActionExpand() {
+        let battleData = globalRecords.battleData;
+        let logRef = battleData.battleLog;
+        const currentIndex = globalUI.currentActionIndex;
+
+        let actionHeadersSorta = userTriggers.actionHeadersSorta;
+
+        for (let i=currentIndex-1;i>=0;i--) {
+            let newAction = logRef[i];
+
+            // let postActionSPDModifications 
+            if (actionHeadersSorta.has(newAction.logType)) {
+                // break;
+                userTriggers.expandBattleLog(i);
+                return;
+            }
+            // else {
+            //     if (awkwardLogTypes[newAction.logType]) {continue;}
+            //     eventsString += lineTypeDisplays(newAction,i)
+            // }
+        }
     }
 }
 

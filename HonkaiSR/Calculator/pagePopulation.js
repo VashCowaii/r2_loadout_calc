@@ -24,7 +24,20 @@ for (let entry of newActionFilterArray) {
 // actionOrderFilters
 
 
+window.addEventListener("keydown", (event) => {
+    if (globalUI.currentBattleViewDisplayType === "ActionExpand" && globalUI.currentMainMenuDisplayed === 2) {
 
+        if (event.key === "ArrowLeft" || event.code === "ArrowLeft") {
+            userTriggers.forcePriorActionExpand();
+        }
+        else if (event.key === "ArrowRight" || event.code === "ArrowRight") {
+            userTriggers.forceNextActionExpand();
+        }
+    }
+    // ArrowLeft
+    // ArrowRight
+});
+  
 
 
 

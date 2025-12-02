@@ -11,6 +11,10 @@
     <ul>
         <li>Removed the lag that was caused after any change made to characters, enemies, settings etc. Made some changes in how the UI is generated after each battle. In relation to the Action Order display in particular, I had a very old method in there that was very slow and I just overlooked removing and updating it to a faster method so that's my bad. Battle updates are now instant, even on a huge battle.</li>
         <li>Added the ability to further filter the action order by entity: characters 1-4, summons, or enemies.</li>
+        <li>Added the ability to use Arrow Keys (left and right) in order to change the action inspected on Action Details on Battle View.</li>
+        <li>Added arrow buttons that accomplish the same thing as arrow keys as mentioned above, under each action's expanded header title.</li>
+        <li>Added a highlight for the current action selected, now it will display with a blue-ish gradient background and revert when switched off of.</li>
+        <li>Added auto-centering for when a new action is selected on the Action Order, this is particularly more beneficial for mobile users but still look pretty on desktop too.</li>
         <li>Fixed an issue where filtering actions would improperly assign the action number from the log, so when you filtered and opened up a new action it would open up the wrong action on the display.</li>
     </ul>
 </div>
