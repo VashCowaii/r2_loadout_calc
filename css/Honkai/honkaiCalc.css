@@ -2309,6 +2309,7 @@ div {
     position: relative;
     overflow: hidden;
     min-height: 20px;
+    /* background-color: rgb(22, 22, 22); */
 }
 
 .turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {
@@ -5880,6 +5881,8 @@ div {
 
     /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
     background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    background: linear-gradient(200deg, #0d393b,transparent,#ffffff21);
 
     /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
 }

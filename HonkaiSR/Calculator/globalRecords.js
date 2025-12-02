@@ -15,6 +15,7 @@ let globalUI = {
     "currentBattleViewDisplayType": "ActionExpand",
     "currentGraphViewDisplayType": "Summary",
     "defaultActionIndex": 0,
+    "currentActionIndex": 0,
 
     "buffGraphs": {
         graphBy: "AV",
