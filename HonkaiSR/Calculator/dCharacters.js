@@ -152,27 +152,15 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
                   "hitRatio": 0.25,
                   "energyRatio": 1,
                   "toughness": 10
-                },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -180,13 +168,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -281,13 +264,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -363,18 +343,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -486,18 +463,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -795,13 +769,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -995,13 +966,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -1314,13 +1282,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
@@ -1328,13 +1291,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -1829,41 +1787,22 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
                   "hitRatio": 0.2,
                   "energyRatio": 1,
                   "toughness": 10
-                },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
                   "hitRatio": 0.2,
                   "energyRatio": 1,
                   "toughness": 10
-                },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -1871,13 +1810,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -2430,13 +2364,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
@@ -2444,13 +2373,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -2502,27 +2426,15 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 30
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
                   "hitRatio": 0.15,
                   "energyRatio": 1,
                   "toughness": 30
-                },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -2530,13 +2442,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 30
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -2643,18 +2550,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -2745,18 +2649,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -3052,27 +2953,15 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
                   "hitRatio": 0.33,
                   "energyRatio": 1,
                   "toughness": 10
-                },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -3080,13 +2969,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -3601,13 +3485,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -4129,12 +4010,10 @@ let characters = {
                   "hitRatio": 1,
                   "toughness": 5
                 },
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -4263,18 +4142,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -4329,18 +4205,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 5
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -4686,13 +4559,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
@@ -4700,13 +4568,8 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -4868,31 +4731,21 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "toughness": null
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -4980,83 +4833,45 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.25,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.25,
                   "toughness": 20
-                },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.25,
                   "toughness": 20
-                },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.25,
                   "toughness": 20
-                },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "toughness": null
-                },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
                 "unknownTypers": {
                   "unknownTypeName": "ParamEntity",
                   "unknownType": true,
                   "upperType": "Avatar_DanHengPT_00_BE_InsertAttack_Phase02"
-                }
+                },
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -5392,13 +5207,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -5445,32 +5257,25 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "allEnemiesHit": null,
                 "isMemo": true,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -5626,17 +5431,15 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
                 "isMemo": true,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -5739,17 +5542,14 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "toughness": null
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ],
             "extraEffects": {
@@ -5804,69 +5604,38 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
                 "bounce": {
                   "hitRatio": 1,
                   "toughness": 5
                 },
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
                 "bounce": {
                   "hitRatio": 1,
                   "toughness": 5
-                },
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
                 "bounce": {
                   "hitRatio": 1,
                   "toughness": 5
-                },
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
                 "bounce": {
                   "hitRatio": 1,
                   "toughness": 5
-                },
-                "unknownTypers": false
+                }
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "toughness": 10
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -6354,13 +6123,10 @@ let characters = {
                   "energyRatio": 1,
                   "toughness": 10
                 },
-                "blast": null,
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true,
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -6410,32 +6176,22 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.5,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 0.5,
                   "energyRatio": 1,
                   "toughness": 20
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -6514,12 +6270,8 @@ let characters = {
                   "hitRatio": 0.1,
                   "toughness": 10
                 },
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
                 "primary": {
@@ -6530,13 +6282,7 @@ let characters = {
                 "blast": {
                   "hitRatio": 0.1,
                   "toughness": 10
-                },
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -6547,13 +6293,7 @@ let characters = {
                 "blast": {
                   "hitRatio": 0.1,
                   "toughness": 10
-                },
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                }
               },
               {
                 "primary": {
@@ -6565,12 +6305,8 @@ let characters = {
                   "hitRatio": 0.7,
                   "toughness": 10
                 },
-                "blastAOE": null,
-                "all": null,
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }
@@ -6635,44 +6371,27 @@ let characters = {
             ],
             "hitSplits": [
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
                   "toughness": 40
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceFirstHit": true,
+                "isAttackFirstHit": true
               },
               {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
+                "all": {
+                  "hitRatio": 1,
+                  "toughness": null
+                }
+              },
+              {
                 "all": {
                   "hitRatio": 1,
                   "toughness": null
                 },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
-              },
-              {
-                "primary": null,
-                "blast": null,
-                "blastAOE": null,
-                "all": {
-                  "hitRatio": 1,
-                  "toughness": null
-                },
-                "allEnemiesHit": null,
-                "isMemo": false,
-                "bounce": null,
-                "unknownTypers": false
+                "isSourceLastHit": true,
+                "isAttackLastHit": true
               }
             ]
           }

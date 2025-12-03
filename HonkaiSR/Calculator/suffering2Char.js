@@ -11924,9 +11924,9 @@ const turnLogic = {
                         isFUA: false,
                     }
 
-                    const hitsRef = skillRef.hitSplits;
-                    hitsRef[hitsRef.length-1].isSourceLastHit = true;
-                    hitsRef[hitsRef.length-2].isSourceLastHit = true;
+                    // const hitsRef = skillRef.hitSplits;
+                    // hitsRef[hitsRef.length-1].isSourceLastHit = true;
+                    // hitsRef[hitsRef.length-2].isSourceLastHit = true;
                 }
                 const ATKObject = ATKObjects.rmcBasicEnhancedATKOBJECT;
                 const ATKObject2 = ATKObjects.rmcBasicEnhancedMemATKOBJECT;
