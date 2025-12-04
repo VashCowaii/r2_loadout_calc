@@ -739,7 +739,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Import & Export";
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team in a file with their gear and rotation conditions.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(character or team) and assign it within the team and battle simulation.<br><br>Files are JSON, with .charHSR/.teamHSR extensions.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team in a file with their gear and rotation conditions.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(character or team) and assign it within the team and battle simulation.<br><br>Files are JSON, with .charHSR.json/.teamHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
@@ -770,7 +770,7 @@ const customMenu = {
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}','char${i}Import')">Import</div>
-                <input type="file" id="char${i}Import" accept=".charHSR" style="display: none" />
+                <input type="file" id="char${i}Import" accept=".charHSR.json" style="display: none" />
 
             </div>`;
 
@@ -805,7 +805,7 @@ const customMenu = {
                     <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('ALL','charALLImport')">Import</div>
-                    <input type="file" id="charALLImport" accept=".teamHSR" style="display: none" />
+                    <input type="file" id="charALLImport" accept=".teamHSR.json" style="display: none" />
 
                 </div>
             </div>
@@ -984,7 +984,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Filters";
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team filters in a file.<br><b style="color:white;">Import</b> will let you select a filter file that matches the slot type you clicked on (character or team) and assign it within the search.<br><br>Files are JSON, with .filterCharHSR/.filterTeamHSR extensions.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team filters in a file.<br><b style="color:white;">Import</b> will let you select a filter file that matches the slot type you clicked on (character or team) and assign it within the search.<br><br>Files are JSON, with .filterCharHSR.json/.filterTeamHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
@@ -1003,7 +1003,7 @@ const customMenu = {
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}','char${i}Import')">Import</div>
-                <input type="file" id="char${i}Import" accept=".filterCharHSR" style="display: none" />
+                <input type="file" id="char${i}Import" accept=".filterCharHSR.json" style="display: none" />
             </div>`;
         }
             
@@ -1014,7 +1014,7 @@ const customMenu = {
                     <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('ALL','charALLImport')">Import</div>
-                    <input type="file" id="charALLImport" accept=".filterTeamHSR" style="display: none" />
+                    <input type="file" id="charALLImport" accept=".filterTeamHSR.json" style="display: none" />
 
                 </div>
             </div>
@@ -1258,7 +1258,7 @@ const customMenu = {
             ${!isEdit ? `
             <div class="takeMeToBattleSettingsHolder">
                 <div class="characterSearchButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${index},false,null,false,true,'enemyImport')">Import</div>
-                <input type="file" id="enemyImport" accept=".enemyHSR" style="display:none"/>
+                <input type="file" id="enemyImport" accept=".enemyHSR.json" style="display:none"/>
             </div>
             <details class="rotationsPermaConditionsExpand">
                 <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Old Import</summary>
@@ -1437,7 +1437,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = `Wave Import`;
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save a wave or all battle waves in a file.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(wave or battle) and assign it within battle simulation.<br><br>Files are JSON, with .waveHSR/.allWaveHSR extensions.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save a wave or all battle waves in a file.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(wave or battle) and assign it within battle simulation.<br><br>Files are JSON, with .waveHSR.json/.allWaveHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
@@ -1455,7 +1455,7 @@ const customMenu = {
                         <div class="importWaveWaveName">Wave ${waveNumber}</div>
                         <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportWaveData(${waveNumber})">Export</div>
                         <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData(${waveNumber},'wave${waveNumber}Import')">Import</div>
-                        <input type="file" id="wave${waveNumber}Import" accept=".waveHSR" style="display: none" />
+                        <input type="file" id="wave${waveNumber}Import" accept=".waveHSR.json" style="display: none" />
                     </div>
                 </div>
             </div>`;
@@ -1472,7 +1472,7 @@ const customMenu = {
                 <div class="teamwideImportBoxRow">
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportWaveData('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData('ALL','waveALLImport')">Import</div>
-                    <input type="file" id="waveALLImport" accept=".allWaveHSR" style="display: none" />
+                    <input type="file" id="waveALLImport" accept=".allWaveHSR.json" style="display: none" />
                 </div>
             </div>
             ${waveString}
@@ -5177,7 +5177,7 @@ const userTriggers = {
                 return `${yyyy}-${mm}-${dd}`;
             }
 
-            saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR`,exportArray,".allWaveHSR");
+            saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR.json`,exportArray,".allWaveHSR.json");
         }
         else {
             const extractRef = battleSettings[`waveArray${waveSlot}`];
@@ -5187,11 +5187,11 @@ const userTriggers = {
                 enemyNameString += trimToFirstWordAndInitials(entry.name) + "_";
             }
 
-            saveJSON(`waveArray__${enemyNameString}.waveHSR`,extractRef,".waveHSR");
+            saveJSON(`waveArray__${enemyNameString}.waveHSR.json`,extractRef,".waveHSR.json");
         }
     },
     importWaveData(waveSlot,pathReadID) {
-        // waveHSR allWaveHSR  ${waveNumber},'wave${waveNumber}Import'
+        // waveHSR.json allWaveHSR.json  ${waveNumber},'wave${waveNumber}Import'
         const inputElem = readSelection("importTextInputTeam");
         const battleSettings = globalRecords.battleSettings;
         const addWave = userTriggers.addEnemyToWave;
@@ -5284,11 +5284,11 @@ const userTriggers = {
             const trim3 = trimToFirstWordAndInitials(characterObject.char3.name);
             const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
 
-            saveJSON(`expTeam__${trim1}_${trim2}_${trim3}_${trim4}.teamHSR`,characterObject,".teamHSR");
+            saveJSON(`expTeam__${trim1}_${trim2}_${trim3}_${trim4}.teamHSR.json`,characterObject,".teamHSR.json");
         }
         else {
             const currentCharacter = globalRecords.character[charSlot];
-            saveJSON(`expChar__${trimToFirstWordAndInitials(currentCharacter.name)}.charHSR`,currentCharacter,".charHSR");
+            saveJSON(`expChar__${trimToFirstWordAndInitials(currentCharacter.name)}.charHSR.json`,currentCharacter,".charHSR.json");
         }
         
     },
@@ -5446,12 +5446,12 @@ const userTriggers = {
             const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
 
             
-            saveJSON(`teamFilter__${trim1}_${trim2}_${trim3}_${trim4}.filterTeamHSR`,globalUI.filters,".filterTeamHSR");
+            saveJSON(`teamFilter__${trim1}_${trim2}_${trim3}_${trim4}.filterTeamHSR.json`,globalUI.filters,".filterTeamHSR.json");
         }
         else {
             const characterObject = globalRecords.character;
             const currentCharacter = globalUI.filters[charSlot];
-            saveJSON(`charFilter__${trimToFirstWordAndInitials(characterObject[charSlot].name)}.filterCharHSR`,currentCharacter,".filterCharHSR");
+            saveJSON(`charFilter__${trimToFirstWordAndInitials(characterObject[charSlot].name)}.filterCharHSR.json`,currentCharacter,".filterCharHSR.json");
         }
     },
     importCharacterDataFilter(charSlot,pathReadID) {
@@ -5684,7 +5684,7 @@ const userTriggers = {
                 const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
                 const saveJSON = userTriggers.saveJSON;
 
-                saveJSON(`enemy__${trimToFirstWordAndInitials(enemyObject.name)}.enemyHSR`,enemyObject,".enemyHSR");
+                saveJSON(`enemy__${trimToFirstWordAndInitials(enemyObject.name)}.enemyHSR.json`,enemyObject,".enemyHSR.json");
                 return;
             }
 
