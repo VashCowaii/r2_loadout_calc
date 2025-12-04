@@ -335,7 +335,9 @@ div {
     white-space: normal;
     font-size: 15px;
 }
-
+.fileInputBox {
+    width: 100%;
+}
 
 
 
@@ -4947,6 +4949,19 @@ div {
 .presetsTitle {
     /* width: 30%; */
     min-width: auto;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.presetsTitleTeamOrder {
+    /* width: 30%; */
+    /* min-width: auto; */
+    width: 15px;
     height: 100%;
     /* background-color: black; */
     display: flex;
