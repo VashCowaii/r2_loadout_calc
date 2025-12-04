@@ -739,11 +739,10 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Import & Export";
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will assign the data of a character or team to your clipboard.<br><b style="color:white;">Import</b> will take whatever text has been input into the field below, and assign it to whatever category you clicked Import for.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team in a file with their gear and rotation conditions.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(character or team) and assign it within the team and battle simulation.<br><br>Files are JSON, with .charHSR/.teamHSR extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
-
 
         let characterExportString = "";
         let characterCacheString = "";
@@ -770,9 +769,10 @@ const customMenu = {
                     <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char${i}')">Export</div>
-                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}')">Import</div>
-            </div>`;
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}','char${i}Import')">Import</div>
+                <input type="file" id="char${i}Import" accept=".charHSR" style="display: none" />
 
+            </div>`;
 
             const cacheHasCharacter = localStorage.getItem(currentCharacter);
             characterCacheString += `<div class="importCharacterBoxItem">
@@ -786,11 +786,10 @@ const customMenu = {
                 
             </div>`;
 
-
             const currentCharLoad = cachedLoadOrder ? cachedLoadArray[i-1] : defaultLoadOrder[i-1];
 
             loadOrderString += `<div class="statFiltersRowContainer">
-                <div class="presetsTitle">${i}:</div>
+                <div class="presetsTitleTeamOrder">${i}:</div>
                 <div class="presetsSelectorBox">
                     <input class="tagInput" id="importPageLoadTeamChar${i}" list="importPageLoadTeamChar${i}List" value="${currentCharLoad}"/>
                     <datalist id="importPageLoadTeamChar${i}List">${charOptionString}</datalist>
@@ -805,7 +804,9 @@ const customMenu = {
                 <div class="teamwideImportBoxRow">
                     <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('ALL')">Export</div>
-                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('ALL')">Import</div>
+                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('ALL','charALLImport')">Import</div>
+                    <input type="file" id="charALLImport" accept=".teamHSR" style="display: none" />
+
                 </div>
             </div>
 
@@ -815,17 +816,6 @@ const customMenu = {
                     ${characterExportString}
                 </div>
             </div>
-
-            <div class="teamwideImportHeader">Import Data</div>
-            <div class="customMenuSearchNote">Paste your prior exported data below, then click import on either the character slot it should go in, or the team-wide import button to assign an entire team.</div>
-
-            <div class="statFiltersRowContainer">
-                <div class="presetsTitle">INPUT:</div>
-                <div class="presetsSelectorBox">
-                    <input class="tagInput" id="importTextInputTeam"/>
-                </div>
-            </div>
-
 
             <details class="rotationsPermaConditionsExpand">
                 <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Cache</summary>
@@ -846,6 +836,18 @@ const customMenu = {
                 <div class="starAndSearchRow2">
                     <div class="exportIconBoxHolder clickable" onclick="customMenu.savePageLoadTeam()">Save Load-Team</div>
                     ${cachedLoadOrder ? `<div class="exportIconBoxHolder clickable" onclick="customMenu.deletePageLoadTeam()">Default</div>` : ""}
+                </div>
+            </details>
+
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Old Import</summary>
+                <div class="customMenuSearchNote">Paste your prior exported data below, then click import on either the character slot it should go in, or the team-wide import button to assign an entire team.<br>This feature will not stick around forever, it is advised you import your old data in here and export them into files sooner than later.</div>
+
+                <div class="statFiltersRowContainer">
+                    <div class="presetsTitle">INPUT:</div>
+                    <div class="presetsSelectorBox">
+                        <input class="tagInput" id="importTextInputTeam"/>
+                    </div>
                 </div>
             </details>
             
@@ -979,17 +981,15 @@ const customMenu = {
 
         readSelection("blockoutBackgroundShutter").style.display = "flex";
         readSelection("customMenuMainHolderBox").style.display = "flex";
-        readSelection("customMenuSearchTitle").innerHTML = "Filters<br>Import & Export";
+        readSelection("customMenuSearchTitle").innerHTML = "Filters";
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will assign the FILTER data of a character or team to your clipboard.<br><b style="color:white;">Import</b> will take whatever text has been input into the field below, and assign it to whatever category you clicked Import for.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team filters in a file.<br><b style="color:white;">Import</b> will let you select a filter file that matches the slot type you clicked on (character or team) and assign it within the search.<br><br>Files are JSON, with .filterCharHSR/.filterTeamHSR extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
 
-
         let characterExportString = "";
-
         const characterObject = globalRecords.character;
 
         for (let i=1;i<=4;i++) {
@@ -1002,36 +1002,42 @@ const customMenu = {
                     <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char${i}')">Export</div>
-                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}')">Import</div>
+                <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}','char${i}Import')">Import</div>
+                <input type="file" id="char${i}Import" accept=".filterCharHSR" style="display: none" />
             </div>`;
         }
-
-
+            
         bodyElem.innerHTML = `
         <div class="exportMenuMainBox">
             <div class="teamwideImportBox">
                 <div class="teamwideImportBoxRow">
-                    <div class="teamwideImportHeaderInner">Team Filters</div>
+                    <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('ALL')">Export</div>
-                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('ALL')">Import</div>
+                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('ALL','charALLImport')">Import</div>
+                    <input type="file" id="charALLImport" accept=".filterTeamHSR" style="display: none" />
+
                 </div>
             </div>
+
             <div class="teamwideImportBox">
-                <div class="teamwideImportHeader">Character Filters</div>
+                <div class="teamwideImportHeader">Characters</div>
                 <div class="characterImportBox">
                     ${characterExportString}
                 </div>
             </div>
 
-            <div class="teamwideImportHeader">Import Data</div>
-            <div class="customMenuSearchNote">Paste your prior exported data below, then click import on either the character slot it should go in, or the team-wide import button to assign an entire team.</div>
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Old Filter Import</summary>
+                <div class="customMenuSearchNote">Paste your prior exported filter data below, then click import on either the character slot it should go in, or the team-wide import button to assign an entire team.<br>This feature will not stick around forever, it is advised you import your old data in here and export them into files sooner than later.</div>
 
-            <div class="statFiltersRowContainer">
-                <div class="presetsTitle">INPUT:</div>
-                <div class="presetsSelectorBox">
-                    <input class="tagInput" id="importTextInputTeam"/>
+                <div class="statFiltersRowContainer">
+                    <div class="presetsTitle">INPUT:</div>
+                    <div class="presetsSelectorBox">
+                        <input class="tagInput" id="importTextInputTeam"/>
+                    </div>
                 </div>
-            </div>
+            </details>
+            
         </div>
         `;
     },
@@ -1250,17 +1256,23 @@ const customMenu = {
             ${weaknessString}
 
             ${!isEdit ? `
-            <div class="teamwideImportHeader">Import Data</div>
-            <div class="addEnemyExportNote">Paste your prior exported enemy data below, then click Add to Wave. To export an enemy, open the edit menu on any active enemy and click Export.</div>
-
-            <div class="statFiltersRowContainer">
-                <div class="presetsTitle">INPUT:</div>
-                <div class="presetsSelectorBox">
-                    <input class="tagInput" id="importTextInputTeam"/>
-                </div>
-            </div>` : `
             <div class="takeMeToBattleSettingsHolder">
-                <div class="characterSearchButton clickable" id="characterSearchButton" onclick="userTriggers.addEnemyToWave(${waveID},${index},false,null,true)">Export Enemy</div>
+                <div class="characterSearchButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${index},false,null,false,true,'enemyImport')">Import</div>
+                <input type="file" id="enemyImport" accept=".enemyHSR" style="display:none"/>
+            </div>
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Old Import</summary>
+                <div class="addEnemyExportNote">Paste your prior exported enemy data below, then click Add to Wave. To export an enemy, open the edit menu on any active enemy and click Export.</div>
+
+                <div class="statFiltersRowContainer">
+                    <div class="presetsTitle">INPUT:</div>
+                    <div class="presetsSelectorBox">
+                        <input class="tagInput" id="importTextInputTeam"/>
+                    </div>
+                </div>
+            </details>` : `
+            <div class="takeMeToBattleSettingsHolder">
+                <div class="characterSearchButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${index},false,null,true)">Export Enemy</div>
             </div>`}
 
             <div class="statFiltersRowHeader">
@@ -1269,6 +1281,8 @@ const customMenu = {
                 <div class="addEnemyToWaveButtonBottom clickable" onclick="userTriggers.addEnemyToWave(${waveID},${index})">${isEdit ? "Save Edit" : "Add"} to Wave</div>
             </div>
         `;
+
+        // <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}','char${i}Import')">Import</div>
         if (isEdit) {
             readSelection("addEnemyAttackTypeSelector").value = slotRef.enemyTypeAttack;
             readSelection("addEnemyEnemyTypeSelector").value = slotRef.enemyType;
@@ -1423,7 +1437,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = `Wave Import`;
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `Construct a custom enemy, or select a preset to add an enemy to your selected wave.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save a wave or all battle waves in a file.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(wave or battle) and assign it within battle simulation.<br><br>Files are JSON, with .waveHSR/.allWaveHSR extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
@@ -1440,7 +1454,8 @@ const customMenu = {
                     <div class="importWaveBoxItemWaveRow">
                         <div class="importWaveWaveName">Wave ${waveNumber}</div>
                         <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportWaveData(${waveNumber})">Export</div>
-                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData(${waveNumber})">Import</div>
+                        <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData(${waveNumber},'wave${waveNumber}Import')">Import</div>
+                        <input type="file" id="wave${waveNumber}Import" accept=".waveHSR" style="display: none" />
                     </div>
                 </div>
             </div>`;
@@ -1451,41 +1466,46 @@ const customMenu = {
             waveString += addWaveExportRows(i);
         }
 
-
         bodyElem.innerHTML = `
             <div class="teamwideImportBox">
                 <div class="teamwideImportHeader">ALL WAVES</div>
                 <div class="teamwideImportBoxRow">
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportWaveData('ALL')">Export</div>
-                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData('ALL')">Import</div>
+                    <div class="exportIconBoxHolder clickable" onclick="userTriggers.importWaveData('ALL','waveALLImport')">Import</div>
+                    <input type="file" id="waveALLImport" accept=".allWaveHSR" style="display: none" />
                 </div>
             </div>
             ${waveString}
 
-            <div class="teamwideImportHeader">Import Data</div>
-            <div class="customMenuSearchNote">Paste your prior exported WAVE(not single enemy) data below, then click import on either the wave slot it should go in, or the battle-wide import button to assign an array of waves to the battle.</div>
-
-            <div class="statFiltersRowContainer">
-                <div class="presetsTitle">INPUT:</div>
-                <div class="presetsSelectorBox">
-                    <input class="tagInput" id="importTextInputTeam"/>
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Vash's Presets</summary>
+                <div class="customMenuSearchNote">Wave Presets are bundles of enemies hardcoded into the site, usually for the purposes of Vash's testing. They are not guaranteed to work right now and are better left alone in the beta.</div>
+                <div class="statisticSettingsRow">
+                    <div class="statsRowName">Preset:&nbsp;</div>
+                    <div class="statsRowToggle">
+                        <select class="relicStatSelectionSelector" id="addWavePresetsSelector">
+                            <option value="Glorp-ard">Glorp-ard</option>
+                            <option value="quantumDoggo">Calyx: Destruction</option>
+                            <option value="MoX6">MoX: 6</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-
-            <div class="customMenuSearchNote">Wave Presets are bundles of enemies hardcoded into the site, usually for the purposes of Vash's testing.</div>
-            <div class="statisticSettingsRow">
-                <div class="statsRowName">Preset:&nbsp;</div>
-                <div class="statsRowToggle">
-                    <select class="relicStatSelectionSelector" id="addWavePresetsSelector">
-                        <option value="Glorp-ard">Glorp-ard</option>
-                        <option value="quantumDoggo">Calyx: Destruction</option>
-                        <option value="MoX6">MoX: 6</option>
-                    </select>
+                <div class="takeMeToBattleSettingsHolder">
+                    <div class="characterSearchButton clickable" onclick="userTriggers.addWaveApplyPreset()">Apply Preset</div>
                 </div>
-            </div>
-            <div class="takeMeToBattleSettingsHolder">
-                <div class="characterSearchButton clickable" onclick="userTriggers.addWaveApplyPreset()">Apply Preset</div>
-            </div>
+            </details>
+
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Old Wave Import</summary>
+                <div class="customMenuSearchNote">Paste your prior exported wave data below, then click import on either the wave slot it should go in, or the battle-wide import button to assign an set of waves for the whole battle.<br>This feature will not stick around forever, it is advised you import your old data in here and export them into files sooner than later.</div>
+
+                <div class="statFiltersRowContainer">
+                    <div class="presetsTitle">INPUT:</div>
+                    <div class="presetsSelectorBox">
+                        <input class="tagInput" id="importTextInputTeam"/>
+                    </div>
+                </div>
+            </details>
         `;
         // if (isEdit) {
         //     readSelection("addEnemyAttackTypeSelector").value = slotRef.enemyTypeAttack;
@@ -2936,292 +2956,6 @@ const userTriggers = {
 
         userTriggers.updateSelectedRelicStats();
         userTriggers.renewFiltersDisplayValues();
-    },
-    updateEnemyAddedMenuUI() {
-        readSelection("addEnemyLevelSliderDisplay").innerHTML = +readSelection("addEnemyLevelSlider").value;
-        readSelection("addEnemyHPBarsDisplay").innerHTML = +readSelection("addEnemyHPBars").value;
-        readSelection("addEnemyToughnessBarsDisplay").innerHTML = +readSelection("addEnemyToughnessBars").value;
-
-
-        const weaknessToggleEntries = ["Fire","Ice","Imaginary","Physical","Quantum","Lightning","Wind"];
-
-        for (let element of weaknessToggleEntries) {
-            const isWeak = readSelection(`addEnemyWeakness${element}`);
-
-            if (isWeak.checked) {
-                readSelection(`addEnemyResistanceSlider${element}`).value = 0;
-            }
-            readSelection(`addEnemyResistanceSliderDisplay${element}`).innerHTML = +readSelection(`addEnemyResistanceSlider${element}`).value;
-        }
-    },
-    addEnemyToWave(waveID,waveIndex,pageloadUIAdjustment,leftOrRight,isExport) {
-        // addEnemyStatsHP,addEnemyStatsToughness,addEnemyStatsEffectRES,addEnemyStatsSPD,addEnemyStatsATK,addEnemyStatsName
-
-        // enemyWaveHolder1
-        const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
-        const elementDeposit = readSelection(`enemyWaveHolder${waveID}`);
-
-        const importField = readSelection("importTextInputTeam");
-        let isImported = false;
-        if (importField && importField.value) {
-            isImported = true;
-            pageloadUIAdjustment = true;
-        }
-        
-        if (!pageloadUIAdjustment) {
-            const enemyName = readSelection("addEnemyStatsName").value;
-            const enemyATK = +readSelection("addEnemyStatsATK").value;
-            if (+readSelection("addEnemyStatsSPD").value > 300) {readSelection("addEnemyStatsSPD").value = 300;}
-            const enemySPD = +readSelection("addEnemyStatsSPD").value;
-            const enemyEffectRES = +readSelection("addEnemyStatsEffectRES").value;
-            const enemyToughness = +readSelection("addEnemyStatsToughness").value;
-            const enemyHP = +readSelection("addEnemyStatsHP").value;
-
-            // "Everwinter Shadewalker": {//gunner boi
-            //     name: "Everwinter Shadewalker",
-            //     lvl: 66,//95,
-            //     stats: {
-            //         "HPBase": 10892*3,//70000,//2000000,
-            //         "ATKBase": 397,
-            //         "SPDBase": 110,
-            //         "Toughness": 200,
-            //         "EffectRES": 0.164,
-            //     },
-            //     enemyTypeAttack: "Generic Boss",
-            //     enemyType: "minion",
-            // },
-
-            // {entry:"GenericMinion", weaknesses: null,weaknessOverrides: {"Lightning": true,"Ice":true,"Quantum":true},resistantTo: {}},
-
-            let missingKeyValue = false;
-            let missingValueString = "";
-            const valuesToCheck = [
-                {userFacingName: "Name", value: enemyName},
-                {userFacingName: "ATK", value: enemyATK},
-                {userFacingName: "SPD", value: enemySPD},
-                {userFacingName: "Effect RES", value: enemyEffectRES},
-                {userFacingName: "Toughness", value: enemyToughness},
-                {userFacingName: "HP", value: enemyHP},
-                // {userFacingName: "", value: 1}
-            ]
-            for (let values of valuesToCheck) {
-                if (!values.value || +values.value < 0) {
-                    missingKeyValue = true;
-                    missingValueString += values.userFacingName + ",";
-                }
-            }
-            if (missingKeyValue) {
-                alert(`Enemy could not be added, missing key definition values or values were negative.\n\nValues missing/negative:\n${missingValueString}`);
-                return;
-            }//we never want to construct an enemy unless the user has defined values on ALL parameters we would need
-
-            const weaknessToggleEntries = ["Physical","Fire","Ice","Lightning","Wind", "Quantum","Imaginary"];
-
-            const weaknessOverrides = {};
-            const resistantTo = {}
-
-            for (let element of weaknessToggleEntries) {
-                const isWeak = readSelection(`addEnemyWeakness${element}`);
-                const isResistant = readSelection(`addEnemyResistanceSlider${element}`);
-
-                if (isWeak.checked) {
-                    weaknessOverrides[element] = true;
-                }
-                resistantTo[element] = +isResistant.value;
-            }
-
-
-            const enemyLvL = +readSelection("addEnemyLevelSlider").value;
-            const baseRes = 0.20;
-            const enemyObject = {
-                image: null,
-                entry: null,
-                name: enemyName,
-                lvl: enemyLvL,
-                hpBars: +readSelection("addEnemyHPBars").value,
-                toughnessBars: +readSelection("addEnemyToughnessBars").value,
-                stats: new Array(greatTableSize).fill(0),
-                enemyTypeAttack: readSelection("addEnemyAttackTypeSelector").value,
-                enemyType: readSelection("addEnemyEnemyTypeSelector").value,
-                weaknessOverrides,
-                resistantTo,
-            }
-            const enemyStats = enemyObject.stats;
-
-            enemyStats[LVL] = enemyLvL;
-            enemyStats[HPBase] = enemyHP;
-            enemyStats[ATKBase] = enemyATK;
-            enemyStats[SPDBase] = enemySPD;
-            enemyStats[Toughness] = enemyToughness;
-            // console.log(enemyStats[Toughness])
-            enemyStats[EffectRES] = enemyEffectRES;
-            enemyStats[DEFBase] = (enemyLvL*10) + 200;
-
-            enemyStats[ResistanceImaginary] = (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100;
-            enemyStats[ResistanceQuantum] = (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100;
-            enemyStats[ResistanceWind] = (weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0))/100;
-            enemyStats[ResistanceLightning] = (weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0))/100;
-            enemyStats[ResistanceIce] = (weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0))/100;
-            enemyStats[ResistanceFire] = (weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0))/100;
-            enemyStats[ResistancePhysical] = (weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0))/100;
-
-            enemyStats[WeaknessImaginary] = weaknessOverrides.Imaginary ? 1 : 0;
-            enemyStats[WeaknessQuantum] = weaknessOverrides.Quantum ? 1 : 0;
-            enemyStats[WeaknessWind] = weaknessOverrides.Wind  ? 1 : 0;
-            enemyStats[WeaknessLightning] = weaknessOverrides.Lightning ? 1 : 0;
-            enemyStats[WeaknessIce] = weaknessOverrides.Ice ? 1 : 0;
-            enemyStats[WeaknessFire] = weaknessOverrides.Fire ? 1 : 0;
-            enemyStats[WeaknessPhysical] = weaknessOverrides.Physical ? 1 : 0;
-            // console.log(enemyObject.stats)
-
-            // Object.assign(psuedoStats,enemyObject.stats);
-            enemyObject.finalStats = updateFormulas(null,enemyStats);
-
-            if (isExport) {
-                userTriggers.copyToClipboard(enemyObject);
-                return;
-            }
-
-            
-
-            if (waveIndex != undefined) {
-                waveDeposit[waveIndex] = enemyObject;
-            }
-            else if (waveDeposit.length < 5) {
-                waveDeposit.push(enemyObject);
-            }
-        }
-        else if (isImported && waveDeposit.length < 5) {
-            const parsedValue = JSON.parse(importField.value);
-            const isArray = Array.isArray(parsedValue);
-
-            if (isArray) {
-                alert("You can't import a WAVE of enemies onto a single enemy slot.\n\nBack out of this menu, and open the Wave Import menu instead of the Add Enemy menu.");
-                return;
-            }
-            waveDeposit.push(parsedValue);
-        }
-
-
-        let enemiesDisplayedString = "";
-        function getEnemyWaveDisplay(enemyEntry,waveID,counter) {
-            let weaknessString = `<div class="characterDisplayElementWeaknessIconHolderBoxBattleSettings">`;
-            for (let weaknessType in elementImagePaths) {
-                if (!enemyEntry.weaknessOverrides[weaknessType]) {continue;}
-                const imagePath = elementImagePaths[weaknessType];
-                weaknessString += `
-                <img src="${imagePath}" class="characterDisplayElementWeaknessIcon"/>`
-            }
-            weaknessString += "</div>";
-
-            // "HPBase": 10892*3,//70000,//2000000,
-            // "ATKBase": 397,
-            // "SPDBase": 110,
-            // "Toughness": 200,
-            // "EffectRES": 0.164,
-
-            // ◀
-            // ▶
-            
-
-            const correctedEnemyTypes = {
-                "minion": "Minion",
-                "elite": "Elite",
-                "boss": "Boss",
-            }
-            const stats = enemyEntry.stats;
-
-            return `
-            <div class="enemyWaveEnemyDisplayBox">
-                <div class="enemyAddWaveEditRow">
-                    <div class="enemyAddWaveEditRowMoveButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${counter},true,'Left')">◀</div>
-                    <div class="enemyAddWaveEditRowMoveButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${counter},true,'Right')">▶</div>
-
-                    <div class="enemyAddWaveEditRowButton clickable" onclick="customMenu.createAddedEnemyMenu(${waveID},${counter},false)">Edit</div>
-                </div>
-
-                <div class="enemyWaveEnemyIconAndLevelBox">
-                    <img src="/HonkaiSR/misc/${enemyEntry.enemyType === "boss" ? "Glorpard.png" : "glorp.png"}" class="enemyWaveEnemyIcon"/>
-                    <div class="enemyWaveEnemyLevelAndWeaknessBox">
-                        <div class="enemyWaveEnemyLevel">LvL ${enemyEntry.lvl}</div>
-                        ${weaknessString}
-                    </div>
-                </div>
-                <div class="addEnemyWeaknessesHeader">${enemyEntry.name}</div>
-
-                <div class="enemyAddWaveClassAndAttackRow">
-                    <div class="enemyAddWaveClass">${correctedEnemyTypes[enemyEntry.enemyType]}</div>
-                    <div class="enemyAddWaveAttack">[${enemyEntry.enemyTypeAttack === "Single Target" ? "ST" : enemyEntry.enemyTypeAttack}]</div>
-                </div>
-
-
-                <div class="imageRowStatisticBox1">
-                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
-                    <div class="imageRowStatisticNameBox">ATK</div>
-                    <div class="imageRowStatisticStatBox">${stats[ATKBase]}</div>
-                </div>
-
-                <div class="imageRowStatisticBox2">
-                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconSpeed.png" class="imageRowStatisticImage"/></div>
-                    <div class="imageRowStatisticNameBox">SPD</div>
-                    <div class="imageRowStatisticStatBox">${stats[SPDBase]}</div>
-                </div>
-
-                <div class="imageRowStatisticBox1">
-                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconStatusResistance.png" class="imageRowStatisticImage"/></div>
-                    <div class="imageRowStatisticNameBox">Effect RES</div>
-                    <div class="imageRowStatisticStatBox">${stats[EffectRES]}</div>
-                </div>
-                <div class="imageRowStatisticBox2">
-                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"/></div>
-                    <div class="imageRowStatisticNameBox">Toughness</div>
-                    <div class="imageRowStatisticStatBox">${stats[Toughness].toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
-                </div>
-                <div class="imageRowStatisticBox1">
-                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"/></div>
-                    <div class="imageRowStatisticNameBox">HP</div>
-                    <div class="imageRowStatisticStatBox">${stats[HPBase].toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
-                </div>
-                
-            </div>`;
-        }
-
-
-        if (leftOrRight && waveIndex != undefined && waveDeposit.length > 1) {//only allow moves if the array length even has 2 entries
-            if (leftOrRight === "Left" && waveIndex > 0) {
-                waveDeposit.splice(waveIndex-1,0,waveDeposit.splice(waveIndex,1)[0]);
-            }
-            else if (leftOrRight === "Right" && waveIndex < waveDeposit.length-1) {
-                waveDeposit.splice(waveIndex+1,0,waveDeposit.splice(waveIndex,1)[0]);
-            }
-        }
-
-
-        let counter = 0;
-        for (let enemyEntry of waveDeposit) {
-            enemiesDisplayedString += getEnemyWaveDisplay(enemyEntry,waveID,counter);
-            counter++;
-        }
-
-        elementDeposit.innerHTML = enemiesDisplayedString;
-        if (!pageloadUIAdjustment || (pageloadUIAdjustment && isImported) || (pageloadUIAdjustment && leftOrRight)) {userTriggers.updateQuerySearchSettings(true);}
-    },
-    addWaveApplyPreset() {
-        const presetSelected = readSelection("addWavePresetsSelector").value;
-
-        const currentPreset = JSON.stringify(vashWavePresets[presetSelected]);
-
-        const inputElem = readSelection("importTextInputTeam");
-        inputElem.value = currentPreset;
-        userTriggers.importWaveData("ALL");
-    },
-    deleteEnemyFromWave(waveID,waveIndex) {
-        const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
-        depositRef.splice(waveIndex,1);
-
-        userTriggers.addEnemyToWave(waveID,null,true);
-        userTriggers.updateQuerySearchSettings(true);
-        customMenu.closeMenu();
     },
     updateSuperimposition(rank) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
@@ -4901,187 +4635,27 @@ const userTriggers = {
             userTriggers.updateBattleViewDisplayed("ActionExpand");
         }
     },
-    exportCharacterData(charSlot) {
-        if (charSlot === "ALL") {
-            userTriggers.copyToClipboard(globalRecords.character);
-        }
-        else {
-            const currentCharacter = globalRecords.character[charSlot];
-            userTriggers.copyToClipboard(currentCharacter);
-        }
-    },
-    importCharacterData(charSlot) {
-        const inputElem = readSelection("importTextInputTeam");
-        if (inputElem.value === "") {return;}
-        const parsedData = JSON.parse(inputElem.value);
 
-        if (charSlot === "ALL") {
-            globalRecords.character = parsedData;
-
-            for (let i=1;i<=4;i++) {
-                // const trimmedNumber = +charSlot.replace("char","");
-                userTriggers.updateCharacterSlotSelected(i);
-                userTriggers.updateCharacterBreakdownClicked(i);
-                userTriggers.updateSelectedCharacter(globalRecords.character[`char${i}`].name);
-                userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
-                userTriggers.updateSelectedRelicStats();
-            }
-        }
-        else {
-            const characterName = parsedData.name;
-            const characterObject = globalRecords.character;
-
-            const slot1Conflict = characterObject.char1.name === characterName && charSlot != "char1";
-            const slot2Conflict = characterObject.char2.name === characterName && charSlot != "char2";
-            const slot3Conflict = characterObject.char3.name === characterName && charSlot != "char3";
-            const slot4Conflict = characterObject.char4.name === characterName && charSlot != "char4";
-
-            const conflictExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
-
-            if (conflictExists) {
-                inputElem.value = "";
-                alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
-                return;
-            }
-
-            globalRecords.character[charSlot] = parsedData;
-            const trimmedNumber = +charSlot.replace("char","");
-            userTriggers.updateCharacterSlotSelected(trimmedNumber);
-            userTriggers.updateCharacterBreakdownClicked(trimmedNumber);
-            userTriggers.updateSelectedCharacter(globalRecords.character[charSlot].name);
-            userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
-            userTriggers.updateSelectedRelicStats();
-            
-            userTriggers.updateMainMenuDisplayed(1);
-        }
-
-        inputElem.value = "";
-
-        customMenu.createCharacterExportScreen();
-        // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
-        // userTriggers.updateSelectedRelicStats();
-    },
-    exportCharacterDataFilter(charSlot) {
-        if (charSlot === "ALL") {
-            userTriggers.copyToClipboard(globalUI.filters);
-        }
-        else {
-            const currentCharacter = globalUI.filters[charSlot];
-            userTriggers.copyToClipboard(currentCharacter);
-        }
-    },
-    importCharacterDataFilter(charSlot) {
-        const inputElem = readSelection("importTextInputTeam");
-        if (inputElem.value === "") {return;}
-        const parsedData = JSON.parse(inputElem.value);
-
-        if (charSlot === "ALL") {
-            globalUI.filters = parsedData;
-        }
-        else {
-            globalUI.filters[charSlot] = parsedData;
-        }
-
-
-        const forceDefaults = pagePopulation.forceCharacterDefaultSubFilters;
-        for (let i=1;i<=4;i++) {
-            const newCharSlot = `char${i}`;
-            const filterPath = globalUI.filters[newCharSlot];
-
-            //if the user is an old one and imported an old filter json with no trash or desired stats, then we default to whatever I defined in maslow
-            //just so something exists in there and doesn't completely shit out the search on them.
-            if (filterPath.desired1 == undefined || filterPath.trashStatFilters == undefined) {
-                forceDefaults(newCharSlot);
-            }
-        }
-
-
-        userTriggers.renewFiltersDisplayValues();
-        // updateCharacterSlotSelected(slot) {
-        //     globalUI.currentCharacterDisplayed = slot;
-        //     let charSlot = `char${slot}`;
-    
-        //     userTriggers.updateCharacterUI(updateFormulas(charSlot),slot,true);
-        //     userTriggers.updateSelectedRelicStats();
-        // },
-
-        
-
-        inputElem.value = "";
-        // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
-        // userTriggers.updateSelectedRelicStats();
-    },
-
-    exportWaveData(waveSlot) {
-        const battleSettings = globalRecords.battleSettings;
-        if (waveSlot === "ALL") {
-            let exportArray = [];
-            for (let i=1;i<=battleSettings.totalWaves;i++) {
-                exportArray.push(battleSettings[`waveArray${i}`]);
-            }
-            //waveArray entries are each distinct keys within battleSettings, not an array of arrays, but for the sake of bundling an entire battle's waves into one export, we can just do this
-            userTriggers.copyToClipboard(exportArray);
-        }
-        else {
-            const extractRef = battleSettings[`waveArray${waveSlot}`];
-            userTriggers.copyToClipboard(extractRef);
-        }
-    },
-    importWaveData(waveSlot) {
-        const inputElem = readSelection("importTextInputTeam");
-        const battleSettings = globalRecords.battleSettings;
-        if (inputElem.value === "") {return;}
-        const parsedData = JSON.parse(inputElem.value);
-        inputElem.value = "";
-        
-        if (!Array.isArray(parsedData)) {
-            alert("You can't import a single enemy export into a Wave import. Back out of this menu and import in the Add Enemy menu instead.\n\nIf you see this menu and you are positive that you are importing a wave array instead of an enemy object, join the discord linked at the bottom and ping Vash to let him know.");
-            return;
-            //enemy exports are done as objects, waves are exported as arrays, so just prevent anyone from importing anything that isn't an array
-        }
-
-        const addWave = userTriggers.addEnemyToWave;
-        if (waveSlot === "ALL") {
-            for (let i=1;i<=battleSettings.totalWaves;i++) {
-                const isBeyondImportedLength = i > parsedData.length;
-                if (isBeyondImportedLength) {break;}
-
-                const currentWaveArray = parsedData[i-1];
-                battleSettings[`waveArray${i}`] = currentWaveArray;
-                addWave(i,null,true);
-            }
-        }
-        else {
-            battleSettings[`waveArray${waveSlot}`] = parsedData;
-            addWave(waveSlot,null,true);
-        }
-
-        
-
-        userTriggers.updateQuerySearchSettings(true);
-    },
     useResultOnCurrentTeam(resultIndex) {
         const globalResults = globalRecords.resultsStorage;
         const currentResult = globalResults[resultIndex];
         const characterObject = currentResult.characterObject;
 
-
         const parsedData = JSON.parse(JSON.stringify(characterObject));
         globalRecords.character = parsedData;
 
+        const newCharacterObject = globalRecords.character;
         for (let i=1;i<=4;i++) {
             // const trimmedNumber = +charSlot.replace("char","");
             userTriggers.updateCharacterSlotSelected(i);
             userTriggers.updateCharacterBreakdownClicked(i);
-            userTriggers.updateSelectedCharacter(globalRecords.character[`char${i}`].name);
+            userTriggers.updateSelectedCharacter(newCharacterObject[`char${i}`].name);
             userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
             userTriggers.updateSelectedRelicStats();
         }
     },
 
     renewFiltersDisplayValues(isSubstatChange,substatChanged) {
-
-
         const filterSet = [
             {tableName: "lightconeOcclusions",tableElem: "lightconeOcclusionsContainer"},
             {tableName: "armorSetOcclusions",tableElem: "armorSetOcclusionsContainer"},
@@ -5113,7 +4687,6 @@ const userTriggers = {
             {tableName: "mainstatOrb",tableElem: "mainstatOrbOcclusion"},
             {tableName: "mainstatRope",tableElem: "mainstatRopeOcclusion"},
 
-            
             // {tableName: "substat",tableElem: "substatOcclusion"},
         ];
 
@@ -5525,7 +5098,781 @@ const userTriggers = {
             //     eventsString += lineTypeDisplays(newAction,i)
             // }
         }
-    }
+    },
+
+    trimToFirstWordAndInitials(str) {
+        const cleaned = str.replace(/[^a-zA-Z0-9\s]/g, "");//I LOVE REGEX
+        
+        const words = cleaned.trim().split(/\s+/);
+        if (words.length === 0) return "";
+        if (words.length === 1) return words[0];
+      
+        const first = words[0];
+        const initials = words.slice(1).map(w => w[0].toUpperCase()).join("");
+      
+        return first + initials;
+    },
+    async saveJSON(fileName, jsonData, extension) {
+        const jsonString = JSON.stringify(jsonData,null,2);
+        //debating if I wanna keep pretty format or condense later, for the sake of the users it's probably better to keep pretty if they edit it for w/e reason
+        
+        let abortedSave = false;
+        //NOT COMPATIBLE WITH ALL BROWSERS
+        if (window.showSaveFilePicker) {
+            try {
+                const handle = await window.showSaveFilePicker({
+                    suggestedName: fileName,
+                    types: [{
+                        description: "JSON Files",
+                        accept: {[`application/${extension}`]: ["." + extension]}
+                    }]
+                });
+            
+                const writable = await handle.createWritable();
+                await writable.write(jsonString);
+                await writable.close();
+                return;
+            }
+            catch (err) {
+                abortedSave = true;
+            }
+        }
+        //if we don't kill the call here(assuming showSavePicker works on the current browser) then if the user backs out of the save menu
+        //then it'll still save under the default name bc of the deafult save option after this
+        //this aborted save can only ever be set to true IF IT DID WORK and the user was able to reach the menu at all
+        if (abortedSave) {return;}
+        
+        //this is the default if the upper section can't process due to browser diffs
+        const blob = new Blob([jsonString],{type:`application/${extension}`});
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        
+        URL.revokeObjectURL(url);
+    },
+    exportWaveData(waveSlot) {
+        const battleSettings = globalRecords.battleSettings;
+
+        const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
+        const saveJSON = userTriggers.saveJSON;
+
+        if (waveSlot === "ALL") {
+            let exportArray = [];
+            for (let i=1;i<=battleSettings.totalWaves;i++) {
+                exportArray.push(battleSettings[`waveArray${i}`]);
+            }
+            //waveArray entries are each distinct keys within battleSettings, not an array of arrays, but for the sake of bundling an entire battle's waves into one export, we can just do this
+            // userTriggers.copyToClipboard(exportArray);
+
+            function getDateForFilename() {
+                const d = new Date();
+                const yyyy = d.getFullYear();
+                const mm = String(d.getMonth() + 1).padStart(2, "0");
+                const dd = String(d.getDate()).padStart(2, "0");
+                return `${yyyy}-${mm}-${dd}`;
+            }
+
+            saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR`,exportArray,".allWaveHSR");
+        }
+        else {
+            const extractRef = battleSettings[`waveArray${waveSlot}`];
+
+            let enemyNameString = "";
+            for (let entry of extractRef) {
+                enemyNameString += trimToFirstWordAndInitials(entry.name) + "_";
+            }
+
+            saveJSON(`waveArray__${enemyNameString}.waveHSR`,extractRef,".waveHSR");
+        }
+    },
+    importWaveData(waveSlot,pathReadID) {
+        // waveHSR allWaveHSR  ${waveNumber},'wave${waveNumber}Import'
+        const inputElem = readSelection("importTextInputTeam");
+        const battleSettings = globalRecords.battleSettings;
+        const addWave = userTriggers.addEnemyToWave;
+
+        if (inputElem.value === "") {
+            const fileInput = document.getElementById(pathReadID);
+
+            fileInput.onchange = async (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    const parsedData = JSON.parse(text);
+                    
+                    if (!Array.isArray(parsedData)) {
+                        alert("You can't import a single enemy export into a Wave import. Back out of this menu and import in the Add Enemy menu instead.\n\nIf you see this menu and you are positive that you are importing a wave or wave array instead of an enemy object, join the discord linked at the bottom and ping Vash to let him know.");
+                        return;
+                        //enemy exports are done as objects, waves are exported as arrays, so just prevent anyone from importing anything that isn't an array
+                    }
+                    
+                    if (waveSlot === "ALL") {
+                        if (!Array.isArray(parsedData[0])) {
+                            alert("You can't import a single wave into a battle array slot.\nSomehow you've manage to import a wave file into the all waves slot.\n\nIf you ever see this message and you didn't intentionally brute-force file extensions to cause this, let Vash know in the discord.");
+                            return
+                        }
+                        for (let i=1;i<=battleSettings.totalWaves;i++) {
+                            const isBeyondImportedLength = i > parsedData.length;
+                            if (isBeyondImportedLength) {break;}
+
+                            const currentWaveArray = parsedData[i-1];
+                            battleSettings[`waveArray${i}`] = currentWaveArray;
+                            addWave(i,null,true);
+                        }
+                    }
+                    else {
+                        if (Array.isArray(parsedData[0])) {
+                            alert("You can't import a battle array of waves into a single wave slot.\nSomehow you've manage to import a battle array of waves in a single wave slot.\n\nIf you ever see this message and you didn't intentionally brute-force file extensions to cause this, let Vash know in the discord.");
+                            return
+                        }
+                        battleSettings[`waveArray${waveSlot}`] = parsedData;
+                        addWave(waveSlot,null,true);
+                    }
+                }
+                catch (error) {alert(error + error.stack);}
+                finally {
+                    fileInput.value = "";
+                    fileInput.onchange = null;
+                    userTriggers.updateQuerySearchSettings(true);
+                }
+            };
+            fileInput.click();
+        }
+        else {
+            const parsedData = JSON.parse(inputElem.value);
+            inputElem.value = "";
+            
+            if (!Array.isArray(parsedData)) {
+                alert("You can't import a single enemy export into a Wave import. Back out of this menu and import in the Add Enemy menu instead.\n\nIf you see this menu and you are positive that you are importing a wave array instead of an enemy object, join the discord linked at the bottom and ping Vash to let him know.");
+                return;
+                //enemy exports are done as objects, waves are exported as arrays, so just prevent anyone from importing anything that isn't an array
+            }
+
+            if (waveSlot === "ALL") {
+                for (let i=1;i<=battleSettings.totalWaves;i++) {
+                    const isBeyondImportedLength = i > parsedData.length;
+                    if (isBeyondImportedLength) {break;}
+
+                    const currentWaveArray = parsedData[i-1];
+                    battleSettings[`waveArray${i}`] = currentWaveArray;
+                    addWave(i,null,true);
+                }
+            }
+            else {
+                battleSettings[`waveArray${waveSlot}`] = parsedData;
+                addWave(waveSlot,null,true);
+            }
+            userTriggers.updateQuerySearchSettings(true);
+        }
+    },
+    exportCharacterData(charSlot) {
+        const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
+        const saveJSON = userTriggers.saveJSON;
+
+        if (charSlot === "ALL") {
+            const characterObject = globalRecords.character;
+            
+            const trim1 = trimToFirstWordAndInitials(characterObject.char1.name);
+            const trim2 = trimToFirstWordAndInitials(characterObject.char2.name);
+            const trim3 = trimToFirstWordAndInitials(characterObject.char3.name);
+            const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
+
+            saveJSON(`expTeam__${trim1}_${trim2}_${trim3}_${trim4}.teamHSR`,characterObject,".teamHSR");
+        }
+        else {
+            const currentCharacter = globalRecords.character[charSlot];
+            saveJSON(`expChar__${trimToFirstWordAndInitials(currentCharacter.name)}.charHSR`,currentCharacter,".charHSR");
+        }
+        
+    },
+    importCharacterData(charSlot,pathReadID) {
+        // charALLImport
+
+        const inputElem = readSelection("importTextInputTeam");
+
+
+        if (inputElem.value === "") {
+            const fileInput = document.getElementById(pathReadID);
+
+            fileInput.onchange = async (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    const parsedData = JSON.parse(text);
+
+                    if (charSlot === "ALL") {
+                        if (!parsedData.char1) {
+                            alert("No character slots found, you can't import a character file into a Team import.");
+                            fileInput.value = "";
+                            fileInput.onchange = null;
+                            return;
+                        }
+                        globalRecords.character = parsedData;
+
+                        for (let i=1;i<=4;i++) {
+                            // const trimmedNumber = +charSlot.replace("char","");
+                            userTriggers.updateCharacterSlotSelected(i);
+                            userTriggers.updateCharacterBreakdownClicked(i);
+                            userTriggers.updateSelectedCharacter(globalRecords.character[`char${i}`].name);
+                            userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+                            userTriggers.updateSelectedRelicStats();
+                        }
+                    }
+                    else {
+                        if (!parsedData.name) {
+                            alert("No character name found, you can't import a team file into a character slot.");
+                            fileInput.value = "";
+                            fileInput.onchange = null;
+                            return;
+                        }
+                        const characterName = parsedData.name;
+                        const characterObject = globalRecords.character;
+
+                        const slot1Conflict = characterObject.char1.name === characterName && charSlot != "char1";
+                        const slot2Conflict = characterObject.char2.name === characterName && charSlot != "char2";
+                        const slot3Conflict = characterObject.char3.name === characterName && charSlot != "char3";
+                        const slot4Conflict = characterObject.char4.name === characterName && charSlot != "char4";
+
+                        const conflictExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
+
+                        if (conflictExists) {
+                            inputElem.value = "";
+                            alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
+                            fileInput.value = "";
+                            fileInput.onchange = null;
+                            return;
+                        }
+
+                        characterObject[charSlot] = parsedData;
+                        const trimmedNumber = +charSlot.replace("char","");
+                        userTriggers.updateCharacterSlotSelected(trimmedNumber);
+                        userTriggers.updateCharacterBreakdownClicked(trimmedNumber);
+                        userTriggers.updateSelectedCharacter(characterObject[charSlot].name);
+                        userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+                        userTriggers.updateSelectedRelicStats();
+                        
+                        userTriggers.updateMainMenuDisplayed(1);
+                    }
+                    customMenu.createCharacterExportScreen();
+
+                    // Deposit dynamically to window[targetKey] or your app state
+                    // window[targetKey] = data;
+                    // console.log(`JSON imported to ${targetKey}:`, data);
+
+                    // alert(`JSON imported to ${targetKey}!`);
+                }
+                catch (err) {
+                    // console.log(err)
+                    alert(err);
+                }
+                finally {
+                    fileInput.value = "";       // allow re-importing the same file
+                    fileInput.onchange = null;  // clean up for next click
+                }
+            };
+
+            fileInput.click(); // open file picker
+        }
+        else {
+            const parsedData = JSON.parse(inputElem.value);
+
+            if (charSlot === "ALL") {
+                globalRecords.character = parsedData;
+
+                for (let i=1;i<=4;i++) {
+                    // const trimmedNumber = +charSlot.replace("char","");
+                    userTriggers.updateCharacterSlotSelected(i);
+                    userTriggers.updateCharacterBreakdownClicked(i);
+                    userTriggers.updateSelectedCharacter(globalRecords.character[`char${i}`].name);
+                    userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+                    userTriggers.updateSelectedRelicStats();
+                }
+            }
+            else {
+                const characterName = parsedData.name;
+                const characterObject = globalRecords.character;
+
+                const slot1Conflict = characterObject.char1.name === characterName && charSlot != "char1";
+                const slot2Conflict = characterObject.char2.name === characterName && charSlot != "char2";
+                const slot3Conflict = characterObject.char3.name === characterName && charSlot != "char3";
+                const slot4Conflict = characterObject.char4.name === characterName && charSlot != "char4";
+
+                const conflictExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
+
+                if (conflictExists) {
+                    inputElem.value = "";
+                    alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
+                    return;
+                }
+
+                globalRecords.character[charSlot] = parsedData;
+                const trimmedNumber = +charSlot.replace("char","");
+                userTriggers.updateCharacterSlotSelected(trimmedNumber);
+                userTriggers.updateCharacterBreakdownClicked(trimmedNumber);
+                userTriggers.updateSelectedCharacter(globalRecords.character[charSlot].name);
+                userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+                userTriggers.updateSelectedRelicStats();
+                
+                userTriggers.updateMainMenuDisplayed(1);
+            }
+
+            inputElem.value = "";
+
+            customMenu.createCharacterExportScreen();
+        }
+
+        userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
+        userTriggers.updateSelectedRelicStats();
+    },
+    exportCharacterDataFilter(charSlot) {
+        const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
+        const saveJSON = userTriggers.saveJSON;
+
+        if (charSlot === "ALL") {
+            const characterObject = globalRecords.character;
+    
+            const trim1 = trimToFirstWordAndInitials(characterObject.char1.name);
+            const trim2 = trimToFirstWordAndInitials(characterObject.char2.name);
+            const trim3 = trimToFirstWordAndInitials(characterObject.char3.name);
+            const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
+
+            
+            saveJSON(`teamFilter__${trim1}_${trim2}_${trim3}_${trim4}.filterTeamHSR`,globalUI.filters,".filterTeamHSR");
+        }
+        else {
+            const characterObject = globalRecords.character;
+            const currentCharacter = globalUI.filters[charSlot];
+            saveJSON(`charFilter__${trimToFirstWordAndInitials(characterObject[charSlot].name)}.filterCharHSR`,currentCharacter,".filterCharHSR");
+        }
+    },
+    importCharacterDataFilter(charSlot,pathReadID) {
+        const inputElem = readSelection("importTextInputTeam");
+
+        if (inputElem.value === "") {
+            const fileInput = document.getElementById(pathReadID);
+
+            fileInput.onchange = async (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    const parsedData = JSON.parse(text);
+
+                    if (charSlot === "ALL") {
+                        if (!parsedData.char1) {
+                            alert("No character data found, you can't import a character file into a Team import.");
+                            fileInput.value = "";
+                            fileInput.onchange = null;
+                            return;
+                        }
+                        globalUI.filters = parsedData;
+                    }
+                    else {
+                        if (parsedData.char1) {
+                            alert("Team data found, you can't import a team file into a character slot.");
+                            fileInput.value = "";
+                            fileInput.onchange = null;
+                            return;
+                        }
+                        globalUI.filters[charSlot] = parsedData;
+                    }
+
+                    const forceDefaults = pagePopulation.forceCharacterDefaultSubFilters;
+                    for (let i=1;i<=4;i++) {
+                        const newCharSlot = `char${i}`;
+                        const filterPath = globalUI.filters[newCharSlot];
+
+                        //if the user is an old one and imported an old filter json with no trash or desired stats, then we default to whatever I defined in maslow
+                        //just so something exists in there and doesn't completely shit out the search on them.
+                        if (filterPath.desired1 == undefined || filterPath.trashStatFilters == undefined) {
+                            forceDefaults(newCharSlot);
+                        }
+                    }
+
+                    userTriggers.renewFiltersDisplayValues();
+                }
+                catch (err) {
+                    // console.log(err)
+                    alert(err);
+                }
+                finally {
+                    fileInput.value = "";       // allow re-importing the same file
+                    fileInput.onchange = null;  // clean up for next click
+                }
+            };
+
+            fileInput.click(); // open file picker
+        }
+        else {
+            const parsedData = JSON.parse(inputElem.value);
+
+            if (charSlot === "ALL") {
+                globalUI.filters = parsedData;
+            }
+            else {
+                globalUI.filters[charSlot] = parsedData;
+            }
+
+            const forceDefaults = pagePopulation.forceCharacterDefaultSubFilters;
+            for (let i=1;i<=4;i++) {
+                const newCharSlot = `char${i}`;
+                const filterPath = globalUI.filters[newCharSlot];
+
+                //if the user is an old one and imported an old filter json with no trash or desired stats, then we default to whatever I defined in maslow
+                //just so something exists in there and doesn't completely shit out the search on them.
+                if (filterPath.desired1 == undefined || filterPath.trashStatFilters == undefined) {
+                    forceDefaults(newCharSlot);
+                }
+            }
+
+            userTriggers.renewFiltersDisplayValues();
+
+            inputElem.value = "";
+        }
+    },
+    updateEnemyAddedMenuUI() {
+        readSelection("addEnemyLevelSliderDisplay").innerHTML = +readSelection("addEnemyLevelSlider").value;
+        readSelection("addEnemyHPBarsDisplay").innerHTML = +readSelection("addEnemyHPBars").value;
+        readSelection("addEnemyToughnessBarsDisplay").innerHTML = +readSelection("addEnemyToughnessBars").value;
+
+
+        const weaknessToggleEntries = ["Fire","Ice","Imaginary","Physical","Quantum","Lightning","Wind"];
+
+        for (let element of weaknessToggleEntries) {
+            const isWeak = readSelection(`addEnemyWeakness${element}`);
+
+            if (isWeak.checked) {
+                readSelection(`addEnemyResistanceSlider${element}`).value = 0;
+            }
+            readSelection(`addEnemyResistanceSliderDisplay${element}`).innerHTML = +readSelection(`addEnemyResistanceSlider${element}`).value;
+        }
+    },
+    addEnemyToWave(waveID,waveIndex,pageloadUIAdjustment,leftOrRight,isExport,isImport,pathReadID) {
+        // addEnemyStatsHP,addEnemyStatsToughness,addEnemyStatsEffectRES,addEnemyStatsSPD,addEnemyStatsATK,addEnemyStatsName
+
+        // enemyWaveHolder1
+        const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
+        const elementDeposit = readSelection(`enemyWaveHolder${waveID}`);
+
+        const importField = readSelection("importTextInputTeam");
+        let isImported = false;
+        if (importField && importField.value || isImport) {
+            isImported = true;
+            pageloadUIAdjustment = true;
+        }
+        
+        if (!pageloadUIAdjustment) {
+            const enemyName = readSelection("addEnemyStatsName").value;
+            const enemyATK = +readSelection("addEnemyStatsATK").value;
+            if (+readSelection("addEnemyStatsSPD").value > 300) {readSelection("addEnemyStatsSPD").value = 300;}
+            const enemySPD = +readSelection("addEnemyStatsSPD").value;
+            const enemyEffectRES = +readSelection("addEnemyStatsEffectRES").value;
+            const enemyToughness = +readSelection("addEnemyStatsToughness").value;
+            const enemyHP = +readSelection("addEnemyStatsHP").value;
+
+            // "Everwinter Shadewalker": {//gunner boi
+            //     name: "Everwinter Shadewalker",
+            //     lvl: 66,//95,
+            //     stats: {
+            //         "HPBase": 10892*3,//70000,//2000000,
+            //         "ATKBase": 397,
+            //         "SPDBase": 110,
+            //         "Toughness": 200,
+            //         "EffectRES": 0.164,
+            //     },
+            //     enemyTypeAttack: "Generic Boss",
+            //     enemyType: "minion",
+            // },
+
+            // {entry:"GenericMinion", weaknesses: null,weaknessOverrides: {"Lightning": true,"Ice":true,"Quantum":true},resistantTo: {}},
+
+            let missingKeyValue = false;
+            let missingValueString = "";
+            const valuesToCheck = [
+                {userFacingName: "Name", value: enemyName},
+                {userFacingName: "ATK", value: enemyATK},
+                {userFacingName: "SPD", value: enemySPD},
+                {userFacingName: "Effect RES", value: enemyEffectRES},
+                {userFacingName: "Toughness", value: enemyToughness},
+                {userFacingName: "HP", value: enemyHP},
+                // {userFacingName: "", value: 1}
+            ]
+            for (let values of valuesToCheck) {
+                if (!values.value || +values.value < 0) {
+                    missingKeyValue = true;
+                    missingValueString += values.userFacingName + ",";
+                }
+            }
+            if (missingKeyValue) {
+                alert(`Enemy could not be added, missing key definition values or values were negative.\n\nValues missing/negative:\n${missingValueString}`);
+                return;
+            }//we never want to construct an enemy unless the user has defined values on ALL parameters we would need
+
+            const weaknessToggleEntries = ["Physical","Fire","Ice","Lightning","Wind", "Quantum","Imaginary"];
+
+            const weaknessOverrides = {};
+            const resistantTo = {}
+
+            for (let element of weaknessToggleEntries) {
+                const isWeak = readSelection(`addEnemyWeakness${element}`);
+                const isResistant = readSelection(`addEnemyResistanceSlider${element}`);
+
+                if (isWeak.checked) {
+                    weaknessOverrides[element] = true;
+                }
+                resistantTo[element] = +isResistant.value;
+            }
+
+
+            const enemyLvL = +readSelection("addEnemyLevelSlider").value;
+            const baseRes = 0.20;
+            const enemyObject = {
+                image: null,
+                entry: null,
+                name: enemyName,
+                lvl: enemyLvL,
+                hpBars: +readSelection("addEnemyHPBars").value,
+                toughnessBars: +readSelection("addEnemyToughnessBars").value,
+                stats: new Array(greatTableSize).fill(0),
+                enemyTypeAttack: readSelection("addEnemyAttackTypeSelector").value,
+                enemyType: readSelection("addEnemyEnemyTypeSelector").value,
+                weaknessOverrides,
+                resistantTo,
+            }
+            const enemyStats = enemyObject.stats;
+
+            enemyStats[LVL] = enemyLvL;
+            enemyStats[HPBase] = enemyHP;
+            enemyStats[ATKBase] = enemyATK;
+            enemyStats[SPDBase] = enemySPD;
+            enemyStats[Toughness] = enemyToughness;
+            // console.log(enemyStats[Toughness])
+            enemyStats[EffectRES] = enemyEffectRES;
+            enemyStats[DEFBase] = (enemyLvL*10) + 200;
+
+            enemyStats[ResistanceImaginary] = (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100;
+            enemyStats[ResistanceQuantum] = (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100;
+            enemyStats[ResistanceWind] = (weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0))/100;
+            enemyStats[ResistanceLightning] = (weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0))/100;
+            enemyStats[ResistanceIce] = (weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0))/100;
+            enemyStats[ResistanceFire] = (weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0))/100;
+            enemyStats[ResistancePhysical] = (weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0))/100;
+
+            enemyStats[WeaknessImaginary] = weaknessOverrides.Imaginary ? 1 : 0;
+            enemyStats[WeaknessQuantum] = weaknessOverrides.Quantum ? 1 : 0;
+            enemyStats[WeaknessWind] = weaknessOverrides.Wind  ? 1 : 0;
+            enemyStats[WeaknessLightning] = weaknessOverrides.Lightning ? 1 : 0;
+            enemyStats[WeaknessIce] = weaknessOverrides.Ice ? 1 : 0;
+            enemyStats[WeaknessFire] = weaknessOverrides.Fire ? 1 : 0;
+            enemyStats[WeaknessPhysical] = weaknessOverrides.Physical ? 1 : 0;
+            // console.log(enemyObject.stats)
+
+            // Object.assign(psuedoStats,enemyObject.stats);
+            enemyObject.finalStats = updateFormulas(null,enemyStats);
+
+            if (isExport) {
+                const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
+                const saveJSON = userTriggers.saveJSON;
+
+                saveJSON(`enemy__${trimToFirstWordAndInitials(enemyObject.name)}.enemyHSR`,enemyObject,".enemyHSR");
+                return;
+            }
+
+            
+
+            if (waveIndex != undefined) {
+                waveDeposit[waveIndex] = enemyObject;
+            }
+            else if (waveDeposit.length < 5) {
+                waveDeposit.push(enemyObject);
+            }
+        }
+        else if (isImported && waveDeposit.length < 5) {
+            if (pathReadID) {
+                const fileInput = document.getElementById(pathReadID);
+
+                fileInput.onchange = async (event) => {
+                    const file = event.target.files[0];
+                    if (!file) return;
+
+                    try {
+                        const text = await file.text();
+                        const parsedData = JSON.parse(text);
+                        const isArray = Array.isArray(parsedData);
+
+                        if (isArray) {
+                            alert("You can't import a WAVE of enemies onto a single enemy slot.\n\nBack out of this menu, and open the Wave Import menu instead of the Add Enemy menu.");
+                            return;
+                        }
+                        waveDeposit.push(parsedData);
+                        userTriggers.updateQuerySearchSettings(true);
+
+
+                        let counter = 0;
+                        let enemiesDisplayedString = "";
+                        for (let enemyEntry of waveDeposit) {
+                            enemiesDisplayedString += getEnemyWaveDisplay(enemyEntry,waveID,counter);
+                            counter++;
+                        }
+
+                        elementDeposit.innerHTML = enemiesDisplayedString;
+                    }
+                    catch (err) {
+                        // console.log(err)
+                        alert(err);
+                    }
+                    finally {
+                        fileInput.value = "";       // allow re-importing the same file
+                        fileInput.onchange = null;  // clean up for next click
+                    }
+                };
+
+                fileInput.click(); // open file picker
+            }
+            else {
+                const parsedValue = JSON.parse(importField.value);
+                const isArray = Array.isArray(parsedValue);
+
+                if (isArray) {
+                    alert("You can't import a WAVE of enemies onto a single enemy slot.\n\nBack out of this menu, and open the Wave Import menu instead of the Add Enemy menu.");
+                    return;
+                }
+                waveDeposit.push(parsedValue);
+            }
+        }
+
+
+        let enemiesDisplayedString = "";
+        function getEnemyWaveDisplay(enemyEntry,waveID,counter) {
+            let weaknessString = `<div class="characterDisplayElementWeaknessIconHolderBoxBattleSettings">`;
+            for (let weaknessType in elementImagePaths) {
+                if (!enemyEntry.weaknessOverrides[weaknessType]) {continue;}
+                const imagePath = elementImagePaths[weaknessType];
+                weaknessString += `
+                <img src="${imagePath}" class="characterDisplayElementWeaknessIcon"/>`
+            }
+            weaknessString += "</div>";
+
+            // "HPBase": 10892*3,//70000,//2000000,
+            // "ATKBase": 397,
+            // "SPDBase": 110,
+            // "Toughness": 200,
+            // "EffectRES": 0.164,
+
+            // ◀
+            // ▶
+            
+
+            const correctedEnemyTypes = {
+                "minion": "Minion",
+                "elite": "Elite",
+                "boss": "Boss",
+            }
+            const stats = enemyEntry.stats;
+
+            return `
+            <div class="enemyWaveEnemyDisplayBox">
+                <div class="enemyAddWaveEditRow">
+                    <div class="enemyAddWaveEditRowMoveButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${counter},true,'Left')">◀</div>
+                    <div class="enemyAddWaveEditRowMoveButton clickable" onclick="userTriggers.addEnemyToWave(${waveID},${counter},true,'Right')">▶</div>
+
+                    <div class="enemyAddWaveEditRowButton clickable" onclick="customMenu.createAddedEnemyMenu(${waveID},${counter},false)">Edit</div>
+                </div>
+
+                <div class="enemyWaveEnemyIconAndLevelBox">
+                    <img src="/HonkaiSR/misc/${enemyEntry.enemyType === "boss" ? "Glorpard.png" : "glorp.png"}" class="enemyWaveEnemyIcon"/>
+                    <div class="enemyWaveEnemyLevelAndWeaknessBox">
+                        <div class="enemyWaveEnemyLevel">LvL ${enemyEntry.lvl}</div>
+                        ${weaknessString}
+                    </div>
+                </div>
+                <div class="addEnemyWeaknessesHeader">${enemyEntry.name}</div>
+
+                <div class="enemyAddWaveClassAndAttackRow">
+                    <div class="enemyAddWaveClass">${correctedEnemyTypes[enemyEntry.enemyType]}</div>
+                    <div class="enemyAddWaveAttack">[${enemyEntry.enemyTypeAttack === "Single Target" ? "ST" : enemyEntry.enemyTypeAttack}]</div>
+                </div>
+
+
+                <div class="imageRowStatisticBox1">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
+                    <div class="imageRowStatisticNameBox">ATK</div>
+                    <div class="imageRowStatisticStatBox">${stats[ATKBase]}</div>
+                </div>
+
+                <div class="imageRowStatisticBox2">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconSpeed.png" class="imageRowStatisticImage"/></div>
+                    <div class="imageRowStatisticNameBox">SPD</div>
+                    <div class="imageRowStatisticStatBox">${stats[SPDBase]}</div>
+                </div>
+
+                <div class="imageRowStatisticBox1">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconStatusResistance.png" class="imageRowStatisticImage"/></div>
+                    <div class="imageRowStatisticNameBox">Effect RES</div>
+                    <div class="imageRowStatisticStatBox">${stats[EffectRES]}</div>
+                </div>
+                <div class="imageRowStatisticBox2">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"/></div>
+                    <div class="imageRowStatisticNameBox">Toughness</div>
+                    <div class="imageRowStatisticStatBox">${stats[Toughness].toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
+                </div>
+                <div class="imageRowStatisticBox1">
+                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"/></div>
+                    <div class="imageRowStatisticNameBox">HP</div>
+                    <div class="imageRowStatisticStatBox">${stats[HPBase].toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
+                </div>
+                
+            </div>`;
+        }
+
+
+        if (leftOrRight && waveIndex != undefined && waveDeposit.length > 1) {//only allow moves if the array length even has 2 entries
+            if (leftOrRight === "Left" && waveIndex > 0) {
+                waveDeposit.splice(waveIndex-1,0,waveDeposit.splice(waveIndex,1)[0]);
+            }
+            else if (leftOrRight === "Right" && waveIndex < waveDeposit.length-1) {
+                waveDeposit.splice(waveIndex+1,0,waveDeposit.splice(waveIndex,1)[0]);
+            }
+        }
+
+
+        let counter = 0;
+        for (let enemyEntry of waveDeposit) {
+            enemiesDisplayedString += getEnemyWaveDisplay(enemyEntry,waveID,counter);
+            counter++;
+        }
+
+        if (!pathReadID) {elementDeposit.innerHTML = enemiesDisplayedString;}
+        
+        if (!pathReadID && (!pageloadUIAdjustment || (pageloadUIAdjustment && isImported) || (pageloadUIAdjustment && leftOrRight))) {userTriggers.updateQuerySearchSettings(true);}
+    },
+    addWaveApplyPreset() {
+        const presetSelected = readSelection("addWavePresetsSelector").value;
+
+        const currentPreset = JSON.stringify(vashWavePresets[presetSelected]);
+
+        const inputElem = readSelection("importTextInputTeam");
+        inputElem.value = currentPreset;
+        userTriggers.importWaveData("ALL");
+    },
+    deleteEnemyFromWave(waveID,waveIndex) {
+        const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        depositRef.splice(waveIndex,1);
+
+        userTriggers.addEnemyToWave(waveID,null,true);
+        userTriggers.updateQuerySearchSettings(true);
+        customMenu.closeMenu();
+    },
 }
 
 const pagePopulation = {
