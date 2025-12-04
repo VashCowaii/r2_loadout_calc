@@ -1880,7 +1880,7 @@ const maslowCharactersNihility = {
     },
     "Silver Wolf": {
         // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
-        defaultMainSubs: ["SPDFlat","EHR","CritRateBase","CritDamageBase"],
+        defaultMainSubs: ["SPDFlat","EffectHitRate","CritRateBase","CritDamageBase"],
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
         defaultTrashSub: ["ATK%","DamageBreak","ATKFlat","EffectRES"],
         0: {

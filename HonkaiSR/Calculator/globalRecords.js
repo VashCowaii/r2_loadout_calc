@@ -11,6 +11,7 @@ let enemyTemplate = {
 
 let globalUI = {
     "currentMainMenuDisplayed": 1,
+    "defaultTeam": ["Saber","Sunday","Dan Heng • Permansor Terrae","Robin"],
 
     "currentBattleViewDisplayType": "ActionExpand",
     "currentGraphViewDisplayType": "Summary",

@@ -66,3 +66,7 @@ userTriggers.addEnemyToWave(2,null,true);
 
 customHTML.establishZoomableTraces();
 customHTML.establishMobileSideScrollerMenu();
+
+
+// const cachedLoadOrder = localStorage.getItem("loadTeam");
+pagePopulation.checkCachedTeamData();

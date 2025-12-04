@@ -86,6 +86,17 @@ const customMenu = {
         // customMenu.updateSearchResults();
         customMenu.createOptimizerResultDetail(resultIndex);
     },
+    createCachedDataFoundPageloadMenu() {
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+
+        readSelection("customMenuSearchTitle").innerHTML = `Please Wait`;
+        readSelection("customMenuSearchBarBox").style.display = "none";
+        readSelection("customMenuSearchNote").innerHTML = "When loading the page, the site found either cached data for your team members, or a custom team to load. This window will close automatically when it is finished.<br>If somehow you think it has finished and this isn't closed yet, click anywhere outside the window.";
+
+        globalUI.currentSearchOpen = null;
+        globalUI.currentSearchVolume = null;
+    },
     createOptimizerResultDetail(resultIndex) {
         // if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
 
@@ -735,8 +746,19 @@ const customMenu = {
 
 
         let characterExportString = "";
+        let characterCacheString = "";
+        let loadOrderString = "";
 
         const characterObject = globalRecords.character;
+
+        let charOptionString = "";
+        for (let charName in characters) {
+            charOptionString += `<option value="${charName}">${charName}</option>`;
+        }
+
+        const defaultLoadOrder = globalUI.defaultTeam;
+        const cachedLoadOrder = localStorage.getItem("loadTeam");
+        const cachedLoadArray = cachedLoadOrder ? JSON.parse(cachedLoadOrder) : null;
 
         for (let i=1;i<=4;i++) {
             const currentCharacter = characterObject[`char${i}`].name;
@@ -750,7 +772,32 @@ const customMenu = {
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData('char${i}')">Import</div>
             </div>`;
+
+
+            const cacheHasCharacter = localStorage.getItem(currentCharacter);
+            characterCacheString += `<div class="importCharacterBoxItem">
+                <div class="filterCharacterExportSwitchIconBox">
+                    <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
+                </div>
+
+                <div class="exportIconBoxHolder clickable" onclick="customMenu.saveLoadoutToStorage('char${i}')">${cacheHasCharacter ? "Overwrite" : "Save To"}</div>
+                ${cacheHasCharacter ? `<div class="exportIconBoxHolder clickable" onclick="customMenu.loadLoadoutFromStorage('char${i}')">Load</div>` : ""}
+                ${cacheHasCharacter ? `<div class="exportIconBoxHolder clickable" onclick="customMenu.deleteLoadoutSlot('char${i}')">Delete</div>` : ""}
+                
+            </div>`;
+
+
+            const currentCharLoad = cachedLoadOrder ? cachedLoadArray[i-1] : defaultLoadOrder[i-1];
+
+            loadOrderString += `<div class="statFiltersRowContainer">
+                <div class="presetsTitle">${i}:</div>
+                <div class="presetsSelectorBox">
+                    <input class="tagInput" id="importPageLoadTeamChar${i}" list="importPageLoadTeamChar${i}List" value="${currentCharLoad}"/>
+                    <datalist id="importPageLoadTeamChar${i}List">${charOptionString}</datalist>
+                </div>
+            </div>`;
         }
+            
 
         bodyElem.innerHTML = `
         <div class="exportMenuMainBox">
@@ -778,8 +825,154 @@ const customMenu = {
                     <input class="tagInput" id="importTextInputTeam"/>
                 </div>
             </div>
+
+
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Cache</summary>
+                <div class="customMenuSearchNote">When character data is saved to the cache, then when that character is ever freshly selected in a slot it will autopopulate the character's data from the cache.</div>
+                <div class="customMenuSearchNoteWarning">If you ever clear your browser cache, THIS DATA WILL BE DELETED. Exports are the only guaranteed way to save your characters.</div>
+
+                <div class="teamwideImportBox">
+                    <div class="characterImportBox">
+                        ${characterCacheString}
+                    </div>
+                </div>
+            </details>
+
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Page-Load Team</summary>
+                <div class="customMenuSearchNote">What characters load when you first pull up the page on a given day.<br>Characters will try to load with cached data if it exists, otherwise they'll have some pretty stupid gear on.</div>
+                ${loadOrderString}
+                <div class="starAndSearchRow2">
+                    <div class="exportIconBoxHolder clickable" onclick="customMenu.savePageLoadTeam()">Save Load-Team</div>
+                    ${cachedLoadOrder ? `<div class="exportIconBoxHolder clickable" onclick="customMenu.deletePageLoadTeam()">Default</div>` : ""}
+                </div>
+            </details>
+            
         </div>
         `;
+    },
+    savePageLoadTeam() {
+        let foundDuplicate = false;
+        let foundInvalidName = false;
+
+        let duplicateNamesArray = [];
+        let invalidNamesArray = [];
+
+        let pageLoadArray = [];
+        
+        for (let i=1;i<=4;i++) {
+            const currentValue = readSelection(`importPageLoadTeamChar${i}`).value;
+
+            for (let z=i+1;z<=4;z++) {
+                const currentValueInner = readSelection(`importPageLoadTeamChar${z}`).value;
+
+                if (currentValue === currentValueInner) {
+                    foundDuplicate = true;
+                    duplicateNamesArray.push(currentValueInner)
+                    // break;
+                }
+            }
+            // if (foundDuplicate) {break;}
+            if (!characters[currentValue]) {
+                foundInvalidName = true;
+                invalidNamesArray.push(currentValue);
+
+                readSelection(`importPageLoadTeamChar${i}`).value = "";
+            }
+            else {pageLoadArray.push(currentValue)}
+        }
+
+        if (foundDuplicate) {
+            alert(`You cannot set duplicate characters to load, please adjust your order and try again.\n\nDuplicate names found:\n${duplicateNamesArray}`);
+            return;
+        }
+        if (foundInvalidName) {
+            alert(`Invalid names found:\n${invalidNamesArray}\n\nAny invalid names were cleared from the selection. Please try again.`);
+            return;
+        }
+
+        // const cachedLoadOrder = localStorage.getItem("loadTeam");
+        localStorage.setItem("loadTeam", JSON.stringify(pageLoadArray));
+
+        customMenu.createCharacterExportScreen();
+    },
+    deletePageLoadTeam() {
+        const confirmDelete = confirm(`Click OK to confirm that you want to DELETE the stored page-load team and go back to defaults.`);
+
+        if (confirmDelete) {
+            localStorage.removeItem("loadTeam");
+
+            customMenu.createCharacterExportScreen();//redo the menu so the menu visually will update to show that the character no longer has any cache data to delete
+        }
+    },
+    saveLoadoutToStorage(characterSlot) {
+        const currentChar = globalRecords.character[characterSlot];
+        const characterName = currentChar.name;
+        // const loadoutToSave = {
+        //   "name": characterName,
+        //   "loadout": window.location.href,
+        // }
+
+        const isOverwrite = localStorage.getItem(characterName);
+
+        if (isOverwrite) {
+            const confirmDelete = confirm(`Click OK to confirm that you want to OVERWRITE the cached data for ${characterName} with ${characterName}'s current selections.`);
+
+            if (!confirmDelete) {return;}//can just abort the function if they decline.
+        }
+    
+        localStorage.setItem(characterName, JSON.stringify(currentChar));
+
+        // const confirmDelete = confirm(`Click OK to confirm that you want to delete the cached data for ${characterName}`);
+
+        customMenu.createCharacterExportScreen();//redo the menu bc now we would technically have cache data under this character if we didn't before so the menu visually would update as well bc of that
+    
+        // loadouts.hideLoadoutSettingsBox();
+    },
+    loadLoadoutFromStorage(characterSlot) {
+        const currentChar = globalRecords.character[characterSlot];
+        const characterName = currentChar.name;
+
+        let loadout = JSON.parse(localStorage.getItem(characterName));
+        // loadout = loadout ? JSON.parse(loadout) : null;
+        // window.location.href = 
+        // const newUrl = loadout.loadoutURL;
+
+        globalRecords.character[characterSlot] = loadout;
+        const trimmedNumber = +characterSlot.replace("char","");
+        userTriggers.updateCharacterSlotSelected(trimmedNumber);
+        userTriggers.updateCharacterBreakdownClicked(trimmedNumber);
+        userTriggers.updateSelectedCharacter(globalRecords.character[characterSlot].name);
+        userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+        userTriggers.updateSelectedRelicStats();
+        
+        userTriggers.updateMainMenuDisplayed(1);
+
+
+
+
+
+
+
+
+        // window.location.href = newUrl;//For now just bc it's way simpler, I've opted to just refresh the page with the stored build's URL instead of repopulate the current page with it.
+        // history.replaceState({}, '', newUrl);
+    },
+    deleteLoadoutSlot(characterSlot) {
+        const currentChar = globalRecords.character[characterSlot];
+        const characterName = currentChar.name;
+
+        const confirmDelete = confirm(`Click OK to confirm that you want to DELETE the cached data for ${characterName}`);
+        // console.log(isconfirmed)
+
+        if (confirmDelete) {
+            localStorage.removeItem(characterName);
+
+            customMenu.createCharacterExportScreen();//redo the menu so the menu visually will update to show that the character no longer has any cache data to delete
+        }
+        
+        // loadouts.hideLoadoutSettingsBox();
     },
     createCharacterFiltersExportScreen() {
         if (globalUI.queryIsActive) {return;}
@@ -1441,7 +1634,10 @@ const customMenu = {
                     buffStringer += customHTML.createAlternatingStatRows(displayOrder,{...multiObject},null,null,true);
                 }
 
-                buffStringer += `<div class="actionDetailBodyBuffSource">${currentBuff.source}</div>`
+                buffStringer += `<div class="actionDetailBodyBuffSource">
+                    ${currentBuff.source}
+                    ${characters[currentBuff.sourceOwner]?.icon ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}
+                </div>`;
                 buffStringer += `</div>`;
                 
                 
@@ -3072,7 +3268,7 @@ const userTriggers = {
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
     },
-    updateSelectedCharacter(updated) {
+    updateSelectedCharacter(updated,forceLoadOrder) {
         let currentSlot = globalUI.currentCharacterDisplayed;
         let charSlot = `char${currentSlot}`;
 
@@ -3087,21 +3283,46 @@ const userTriggers = {
         const slot4Conflict = characterObject.char4.name === updated && currentSlot != 4;
 
         const duplicateCharacterExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
-        if (duplicateCharacterExists) {
+        if (duplicateCharacterExists && !forceLoadOrder) {
             alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
             return;
         }
 
-        if (currentCharObject.name != updated && updated && !duplicateCharacterExists) {//if we're not loading a file, but the character actually changed, assume eidolons based on rarity
-            currentCharObject.name = updated;
-            currentCharObject.rank = characters[updated].rarity === 4 || updated.toLowerCase().includes("trailblazer") ? 6 : 0;
-            //TODO: later when I have imports/exports of character data, need to look into how I wanna handle this.
-            //not sure if it's too much to feed to the URL or not, or if I should just do save files.
-            //cache can work but I dislike that people clear it on the regular, so would prefer not to
+        if (currentCharObject.name != updated && updated && !duplicateCharacterExists || forceLoadOrder) {//if we're not loading a file, but the character actually changed, assume eidolons based on rarity
+            //because the cache overwrite here will only ever be called when the name pass through is diff than the name stored, this will never conflict with imports
+            //the reason being is imports forcibly change the name stored BEFORE this function is called
+            //so for imports when we reach this portion, the stored name is impossible to mismatch with the passed through name
+            //if future me ever gets confused over that later, which I will, this is why it works
+            const charHasCache = localStorage.getItem(updated);
+            if (charHasCache) {
+                const parsedData = JSON.parse(charHasCache);
 
-            currentCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
 
-            pagePopulation.forceCharacterDefaultSubFilters(charSlot);
+
+                globalRecords.character[charSlot] = parsedData;
+                userTriggers.updateSelectedRelicStats();
+
+                const newCharObject = characterObject[charSlot];
+
+                if (!newCharObject.conditions) {//if the cached data somehow has NO conditions attached to it, then force the defaults
+                    //do note though that this does not force conditions even when there are empty conditions bc empty conditions ARE conditions and won't be overwritten
+                    newCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
+                }
+                
+                // userTriggers.updateMainMenuDisplayed(1);
+            }
+            else {
+                currentCharObject.name = updated;
+                currentCharObject.rank = characters[updated].rarity === 4 || updated.toLowerCase().includes("trailblazer") ? 6 : 0;
+                //TODO: later when I have imports/exports of character data, need to look into how I wanna handle this.
+                //not sure if it's too much to feed to the URL or not, or if I should just do save files.
+                //cache can work but I dislike that people clear it on the regular, so would prefer not to
+
+                currentCharObject.conditions = defaultConditions[updated] ? JSON.parse(JSON.stringify(defaultConditions[updated])) : null;
+
+            }
+            userTriggers.updateSelectedTraceDisplay(3);
+            pagePopulation.forceCharacterDefaultSubFilters(charSlot);//default desired stat filters still need to be a thing, we do not cache search filters, people still need to export those.
         }
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
@@ -5308,6 +5529,52 @@ const userTriggers = {
 }
 
 const pagePopulation = {
+    checkCachedTeamData() {
+        const cachedLoadOrder = localStorage.getItem("loadTeam");
+
+        if (cachedLoadOrder) {
+            customMenu.createCachedDataFoundPageloadMenu();
+
+            const parsedArray = JSON.parse(cachedLoadOrder);
+
+            for (let i=0;i<4;i++) {
+                const currentCharacterToLoad = parsedArray[i];
+                const currentSlotIndex = i+1;
+                // const charSlot = `char${currentSlotIndex}`;
+
+
+                userTriggers.updateCharacterSlotSelected(currentSlotIndex);
+                userTriggers.updateSelectedCharacter(currentCharacterToLoad,true);
+            }
+            userTriggers.updateCharacterSlotSelected(1);
+
+            customMenu.closeMenu();
+        }
+        else {//if there was no load order defined there might still be cached data on the default team, so check that next instead
+            for (let i=1;i<=4;i++) {
+                const charSlot = `char${i}`;
+                const charName = globalRecords.character[charSlot].name;
+
+                const charHasCache = localStorage.getItem(charName);
+                if (charHasCache) {
+                    customMenu.createCachedDataFoundPageloadMenu();
+                    globalRecords.character[charSlot] = JSON.parse(charHasCache);
+
+                    userTriggers.updateCharacterSlotSelected(i);
+                    userTriggers.updateCharacterBreakdownClicked(i);
+                    userTriggers.updateSelectedCharacter(globalRecords.character[charSlot].name);
+                    userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+                    userTriggers.updateSelectedRelicStats();
+                    
+                    userTriggers.updateMainMenuDisplayed(1);
+                }
+            }
+
+            customMenu.closeMenu();
+            userTriggers.updateCharacterSlotSelected(1);
+        }
+    },
+
     populateQueryOptions() {
         const populate = customHTML.populateGear;//(elemID,object);
 

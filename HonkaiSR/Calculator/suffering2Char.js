@@ -2280,6 +2280,8 @@ const battleActions = {
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+
+                if (!targetTurn.isDead) {battleActions.actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
             else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
                 const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
@@ -3434,10 +3436,10 @@ const battleActions = {
             for (let i=0;i<hitsLengthTotal;i++) {
                 isLastHit = i === hitsLengthTotal-1 ? true : false;
                 const atkEntry = hitSplits[i];
-                for (let ee=0;ee<allTargetArray.length;ee++) {
+                for (let ee=0;ee<allLength;ee++) {
                     const currentTarget = allTargetArray[ee];
                     if (currentTarget.cantBeTargeted) {continue;}
-                    hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo,isLastHit,false);
+                    hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false);
                 }
             }
         }
@@ -3483,15 +3485,14 @@ const battleActions = {
                 }
                 else if (atkEntry.all) {
                     isLastHit = i === hitsLengthTotal-1 ? true : false;
-                    for (let ee=0;ee<allTargetArray.length;ee++) {
+                    for (let ee=0;ee<allLength;ee++) {
                         const currentTarget = allTargetArray[ee];
                         if (currentTarget.cantBeTargeted) {continue;}
-                        hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo,isLastHit,false);
+                        hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false);
                     }
                 }
             }
         }
-        
 
         const bounceRef = ATKObject.bounceData;
         if (bounceRef) {
@@ -3506,7 +3507,7 @@ const battleActions = {
             const isBounce = true;
 
             if (atkEntry.all) {
-                totalHits += allTargetArray.length * bounceCount;
+                totalHits += allLength * bounceCount;
                 for (let i=0;i<bounceCount;i++) {
                     // totalHits += allTargetArray.length;
                     for (let enemyTarget of allTargetArray) {
@@ -3562,7 +3563,7 @@ const battleActions = {
         // if (ATKObject.dotApplyFunction)
 
         poke("AdditionalTriggerAttackEnd",battleData,generalInfo);
-        poke("TrueTriggerAttackEnd",battleData,generalInfo);
+        
 
     
 
@@ -3570,6 +3571,8 @@ const battleActions = {
 
         // const possibleDotMulti = ATKObject.detonateDotsByMulti;
         ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+
+        poke("TrueTriggerAttackEnd",battleData,generalInfo);
         // if (possibleDotMulti) {battleActions.dotDetonateWrapper(battleData,sourceTurn,possibleDotMulti,targetTurn);}
         // battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateDotsByMulti,targetTurn,"Kafka Talent Detonate");
 
@@ -3593,11 +3596,11 @@ const battleActions = {
         // totals.totalAVGDMG += addedDMGTally;//don't wanna include the additional dmg in the attack total for tracking, but do want it in the total atk dmg for logging/graphing, additional dmg adds to its own tracking
         // if (totals.totalBreakDMG>0) {sumSlotRef.Break = (sumSlotRef.Break ?? 0) + totals.totalBreakDMG;}
 
-        if (enemiesThatBroke.length) {
-            for (let brokenEnemy of enemiesThatBroke) {
-                if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
-            }
-        }
+        // if (enemiesThatBroke.length) {
+        //     for (let brokenEnemy of enemiesThatBroke) {
+        //         if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+        //     }
+        // }
 
         battleData.attackIsActive = false;
         // poke("AttackEnd",battleData,generalInfo);
@@ -3785,11 +3788,12 @@ const battleActions = {
             // if (ATKObject.dotApplyFunction)
 
             poke("AdditionalTriggerAttackEnd",battleData,generalInfo);
-            poke("TrueTriggerAttackEnd",battleData,generalInfo);
+            
             // poke("DetonateDOTTriggerAttackEnd",battleData,generalInfo);
 
             // const possibleDotMulti = ATKObject.detonateDotsByMulti;
             ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+            poke("TrueTriggerAttackEnd",battleData,generalInfo);
 
 
             poke("AttackEnd",battleData,generalInfo);
