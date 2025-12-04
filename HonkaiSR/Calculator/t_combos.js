@@ -216,8 +216,19 @@ const cyclesLoop = {
             }
         }
     },
+    sortResultsByDamage: (a, b) => {
+        if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
+        return a.teamSPD - b.teamSPD;
+    },
     startCycleWorker(identifier,threadCount) {
-        let cycleWorker = `cycleWorker${identifier}`
+        let cycleWorker = `cycleWorker${identifier}`;
+        // const startButton = readSelection("cycleSTART");
+        // const stopButton = readSelection("cycleSTOP");
+        const timerBox = readSelection(`cyclesTimeRemaining`);
+        const workersSentDisplay = readSelection("counterInt");
+        const displayCount = readSelection(`combinationsDisplayCount`);
+
+        const comboReceivedObject = {command:'comboReceived'};
         
         // cycles.vars.counterInt = 0;
         const currentWorker = workers[cycleWorker] ??= new Worker(`t_cycleWorker.js`);
@@ -230,7 +241,7 @@ const cyclesLoop = {
                 const comboResults = data.comboResults;
                 let increments = globalRecords.threadsAssignedCount * 10000;// * 1.5;//Determines how frequently the est time calculates, in terms of how many combos have passed
                 globalRecords.counterInt += comboResults.length;
-                const workersSentDisplay = readSelection("counterInt");
+                
                 let counterInt = globalRecords.counterInt;
                 workersSentDisplay.innerHTML = counterInt.toLocaleString();
                 const totalCombos = globalUI.comboCountFinal;
@@ -253,7 +264,7 @@ const cyclesLoop = {
                         newEst = (newEst-remainder)/60;
                         units = `hr`;
                     }
-                    readSelection(`cyclesTimeRemaining`).innerHTML = `Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`;
+                    timerBox.innerHTML = `Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`;
                     // console.log(`Completed all build cycles in ${newEst.toFixed(0)}${units}${remainderString}`)
                     globalUI.cyclesAborted = true;
                     readSelection("cycleSTOP").disabled = true;
@@ -262,7 +273,8 @@ const cyclesLoop = {
 
                 // readSelection(`optimizerReachedBox`).innerHTML = counterInt.toLocaleString();
                 //we adjust the progress bar width based on COMPLETED battles, whereas the progress bar COUNT will be based on generated combinations
-                readSelection(`combinationsDisplayCount`).style.width = `${((counterInt)/totalCombos)*100}%`;
+                // displayCount.style.width = `${((counterInt)/totalCombos)*100}%`;
+                displayCount.style.width = (100 * counterInt/totalCombos) + "%";
 
                 let timerChecker = Math.floor(counterInt/increments) * increments;
                 // if (varRef.firstBatch) {cycles.firstBatchUIAdjustment();}
@@ -282,41 +294,58 @@ const cyclesLoop = {
                     let units = adjustedTime > 1 ? "m" : "s";
                     let newEst = estTime/adjustedTime;
 
-                    remainderString = ``;
-                    if (units===`m` && newEst>60) {
+                    remainderString = "";
+                    if (units==="m" && newEst>60) {
                         const remainder = newEst%60;
-                        remainderString = ` ${remainder.toFixed(0)}m`;
+                        // remainderString = ` ${remainder.toFixed(0)}m`;
+                        remainderString = " " + remainder.toFixed(0) + "m";
                         newEst = (newEst-remainder)/60;
-                        units = `hr`;
+                        units = "hr";
                     }
-                    readSelection(`cyclesTimeRemaining`).innerHTML = `${newEst.toFixed(0)}${units}${remainderString}`;
+                    // timerBox.innerHTML = `${newEst.toFixed(0)}${units}${remainderString}`;
+                    timerBox.innerHTML = newEst.toFixed(0) + units + remainderString;
                     globalUI.lastMeasuredIncrement = timerChecker;
                 }
 
 
+                // const t0 = performance.now();
+                // // your sort or insertTopN calls
+                // const t1 = performance.now();
+                // console.log("topN/sort time:", (t1 - t0).toFixed(3), "ms");
 
                 // resultsStorage
                 const globalResults = globalRecords.resultsStorage;
+                // const t0 = performance.now();
                 globalResults.push(...comboResults);
+                // const t1 = performance.now();
                 //TODO: allow diff battle targets like lowest AV, etc
-                globalResults.sort((a, b) => {
-                    if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
-                    return a.teamSPD - b.teamSPD;
-                });
+
+                // globalResults.sort((a, b) => {
+                //     if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
+                //     return a.teamSPD - b.teamSPD;
+                // });
+                globalResults.sort(cyclesLoop.sortResultsByDamage)
+                // const t2 = performance.now();
+                // console.log(t1-t0,t2-t1)
+                
 
                 const currentWorstResult = globalResults[globalResults.length-1].battleDamageSUM;
                 //for the sake of accurate spread ranges on the "Relative to Equipped Gear" bars and whatnot, I need to know the actual worst result as we go
                 //because we trim the results after this point, and if we don't track the worst result, then the spread would only track the top 1k results, and that's not accurate
-                if (globalRecords.currentWorstResult === null) {globalRecords.currentWorstResult = currentWorstResult}
-                else if (currentWorstResult < globalRecords.currentWorstResult) { globalRecords.currentWorstResult = currentWorstResult}
+                if (globalRecords.currentWorstResult === null) {globalRecords.currentWorstResult = currentWorstResult;}
+                else if (currentWorstResult < globalRecords.currentWorstResult) {globalRecords.currentWorstResult = currentWorstResult;}
 
+                // const t3 = performance.now();
                 cyclesLoop.filterEquivalents(globalResults);
+                // const t4 = performance.now();
                 //trim results to the top 1k
                 if (globalResults.length > 1000) {globalResults.length = 1000;}
-
+                // const t5 = performance.now();
 
                 //was just for updating the actual "best combo so far" display on the R2 optimizer, can still use it here but a task for later
                 compare.displayCurrentResults(globalResults,null,null,reachedQueryEnd);
+                // const t6 = performance.now();
+                // console.log(t4-t3,t5-t4,t6-t5)
 
                 
                 // readSelection("comboTargetDisplay").innerHTML = `<div class="bestOptionsRow">Target Statistic: ${targetName}</div>`;
@@ -324,7 +353,9 @@ const cyclesLoop = {
                 // readSelection(`comboDisplay`).innerHTML = `${[fragRef[CfragmentSet[0]],fragRef[CfragmentSet[1]],fragRef[CfragmentSet[2]]]}`;
                 // //Decided not to have tooltips for frags on the query display, kinda no point? The name is obv.
 
-                if (reachedQueryEnd) {cyclesLoop.generationStop("",null,true); }
+                if (reachedQueryEnd) {
+                    cyclesLoop.generationStop("",null,true);
+                }
             }
             else {
                 switch (data.command) {
@@ -338,15 +369,16 @@ const cyclesLoop = {
                             // workers[workerIdentifier].terminate();
                             // globalRecords.workersRunning -= 1;
                         }//if distribution is done and the queue is empty, kill it
-                        else if (globalIterator) {globalIterator.next();}//otherwise if dist is still going, ask it for more
+                        // else if (globalIterator) {globalIterator.next();}//otherwise if dist is still going, ask it for more
 
+                        if (globalIterator && !queueStorage.length) {globalIterator.next();}
                         if (queueStorage.length) {//ideally this will only fail if we're out of combos to distribute //TODO: add safety handling here later
                             let messageComboArray = queueStorage[0];
                             const stringID = workerIdentifier;
                             const currentWorker = workers[stringID];
                             currentWorker.postMessage({command:`dumpCombos`,messageComboArray});
-                            globalRecords.queueStorage.shift();
-                            currentWorker.postMessage({command:'comboReceived'});//TODO: iirc this was for timeout handling but look at this later
+                            queueStorage.shift();
+                            currentWorker.postMessage(comboReceivedObject);//TODO: iirc this was for timeout handling but look at this later
                         }
                         break;
                     case `pushDebugLine`: compare.debugPushLine(data.data); break;

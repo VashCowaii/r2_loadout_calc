@@ -5584,6 +5584,15 @@ div {
 .queryFiltersRelicSlotIcon:hover {
     background-color: rgba(255, 255, 255, 0.13);
 }
+.buffSourceDisplayIconBattleLogged {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+    border: 2px solid grey;
+    box-sizing: border-box;
+    object-fit: contain;
+    margin-left: 4px;
+}
 .queryFiltersFilterRowIcon {
     height: 30px;
     width: auto;
