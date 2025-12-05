@@ -984,7 +984,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Filters";
         readSelection("customMenuSearchBarBox").style.display = "none";
 
-        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team filters in a file.<br><b style="color:white;">Import</b> will let you select a filter file that matches the slot type you clicked on (character or team) and assign it within the search.<br><br>Files are JSON, with .filterCharHSR.json/.filterTeamHSR.json extensions.`;
+        readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save your character or team filters in a file.<br><b style="color:white;">Import</b> will let you select a filter file that matches the slot type you clicked on (character or team) and assign it within the search.<br><br>Files are JSON, with .filCharHSR.json/.filTeamHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
         // customMenuSearchBody
@@ -1003,7 +1003,7 @@ const customMenu = {
                 </div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('char${i}')">Export</div>
                 <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('char${i}','char${i}Import')">Import</div>
-                <input type="file" id="char${i}Import" accept=".filterCharHSR.json" style="display: none" />
+                <input type="file" id="char${i}Import" accept=".filCharHSR.json" style="display: none" />
             </div>`;
         }
             
@@ -1014,7 +1014,7 @@ const customMenu = {
                     <div class="teamwideImportHeaderInner">Team</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterDataFilter('ALL')">Export</div>
                     <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterDataFilter('ALL','charALLImport')">Import</div>
-                    <input type="file" id="charALLImport" accept=".filterTeamHSR.json" style="display: none" />
+                    <input type="file" id="charALLImport" accept=".filTeamHSR.json" style="display: none" />
 
                 </div>
             </div>
@@ -4865,31 +4865,8 @@ const userTriggers = {
         const querySettings = globalRecords.querySettings;
         const battleSettings = globalRecords.battleSettings;
 
-        // battleSettings.enemiesArray = [
-        //     // {entry:"GenericBoss", weaknesses: "All"},
-        //     // {entry:"GenericBoss", weaknesses: "None"},
-        //     // {entry:"GenericElite", weaknesses: "None"},
-        //     // {entry:"GenericElite", weaknesses: "All"},
+        querySettings.searchTarget = readSelection("statisticInput").value;
 
-        //     //CALYX CRIMSON
-        //     {entry:"GenericMinion", weaknesses: null,weaknessOverrides: {"Lightning": true,"Ice":true,"Quantum":true},resistantTo: {}},
-        //     // {entry:"GenericMinion", weaknesses: null,weaknessOverrides: {"Lightning": true,"Wind":false,"Quantum":false}, resistantTo: {"Wind":true}},
-        //     {entry:"GenericMinion2", weaknesses: null,weaknessOverrides: {"Physical": true,"Wind":true,"Ice":true,},resistantTo: {}},
-        //     {entry:"GenericMinion2", weaknesses: null,weaknessOverrides: {"Physical": true,"Wind":true,"Ice":true,},resistantTo: {}},
-
-        //     //STAGNANT SHADOW - ICE - SHAPE OF RHIME
-        //     // {entry:"Everwinter Shadewalker", weaknesses: null,weaknessOverrides: {"Physical": true,"Fire":true,"Quantum":true,},resistantTo: {"Ice":true,}},
-        //     // {entry:"Frigid Prowler", weaknesses: null,weaknessOverrides: {"Lightning": true,"Fire":true,"Quantum":true},resistantTo: {"Ice":true,}},
-        //     // {entry:"Everwinter Shadewalker", weaknesses: null,weaknessOverrides: {"Physical": true,"Fire":true,"Quantum":true,},resistantTo: {"Ice":true,}},
-
-
-        //     // //MOC6
-        //     // {entry:"MOC6SwordBoi", weaknesses: null,weaknessOverrides: {"Ice": true,"Fire":true,"Quantum":true}, resistantTo: {"Wind":true}},
-        //     // {entry:"MOC6SwordBoi", weaknesses: null,weaknessOverrides: {"Ice": true,"Fire":true,"Quantum":true}, resistantTo: {"Wind":true}},
-        //     // {entry:"MOC6Fish", weaknesses: null,weaknessOverrides: {"Physical": true,"Lightning":true,"Imaginary":true},resistantTo: {}},
-        //     // {entry:"MOC6Fish", weaknesses: null,weaknessOverrides: {"Physical": true,"Lightning":true,"Imaginary":true},resistantTo: {}},
-            
-        // ]
 
 
 
@@ -5140,6 +5117,7 @@ const userTriggers = {
         //if we don't kill the call here(assuming showSavePicker works on the current browser) then if the user backs out of the save menu
         //then it'll still save under the default name bc of the deafult save option after this
         //this aborted save can only ever be set to true IF IT DID WORK and the user was able to reach the menu at all
+        console.log(abortedSave)
         if (abortedSave) {return;}
         
         //this is the default if the upper section can't process due to browser diffs
@@ -5177,7 +5155,7 @@ const userTriggers = {
                 return `${yyyy}-${mm}-${dd}`;
             }
 
-            saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR.json`,exportArray,".allWaveHSR.json");
+            saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR.json`,exportArray,"allWaveHSR.json");
         }
         else {
             const extractRef = battleSettings[`waveArray${waveSlot}`];
@@ -5284,11 +5262,11 @@ const userTriggers = {
             const trim3 = trimToFirstWordAndInitials(characterObject.char3.name);
             const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
 
-            saveJSON(`expTeam__${trim1}_${trim2}_${trim3}_${trim4}.teamHSR.json`,characterObject,".teamHSR.json");
+            saveJSON(`expTeam__${trim1}_${trim2}_${trim3}_${trim4}.teamHSR.json`,characterObject,"teamHSR.json");
         }
         else {
             const currentCharacter = globalRecords.character[charSlot];
-            saveJSON(`expChar__${trimToFirstWordAndInitials(currentCharacter.name)}.charHSR.json`,currentCharacter,".charHSR.json");
+            saveJSON(`expChar__${trimToFirstWordAndInitials(currentCharacter.name)}.charHSR.json`,currentCharacter,"charHSR.json");
         }
         
     },
@@ -5437,6 +5415,7 @@ const userTriggers = {
         const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
         const saveJSON = userTriggers.saveJSON;
 
+
         if (charSlot === "ALL") {
             const characterObject = globalRecords.character;
     
@@ -5445,13 +5424,12 @@ const userTriggers = {
             const trim3 = trimToFirstWordAndInitials(characterObject.char3.name);
             const trim4 = trimToFirstWordAndInitials(characterObject.char4.name);
 
-            
-            saveJSON(`teamFilter__${trim1}_${trim2}_${trim3}_${trim4}.filterTeamHSR.json`,globalUI.filters,".filterTeamHSR.json");
+            saveJSON(`teamFilter__${trim1}_${trim2}_${trim3}_${trim4}.filTeamHSR.json`,globalUI.filters,"filTeamHSR.json");
         }
         else {
             const characterObject = globalRecords.character;
             const currentCharacter = globalUI.filters[charSlot];
-            saveJSON(`charFilter__${trimToFirstWordAndInitials(characterObject[charSlot].name)}.filterCharHSR.json`,currentCharacter,".filterCharHSR.json");
+            saveJSON(`charFilter__${trimToFirstWordAndInitials(characterObject[charSlot].name)}.filCharHSR.json`,currentCharacter,"filCharHSR.json");
         }
     },
     importCharacterDataFilter(charSlot,pathReadID) {
@@ -5684,7 +5662,7 @@ const userTriggers = {
                 const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
                 const saveJSON = userTriggers.saveJSON;
 
-                saveJSON(`enemy__${trimToFirstWordAndInitials(enemyObject.name)}.enemyHSR.json`,enemyObject,".enemyHSR.json");
+                saveJSON(`enemy__${trimToFirstWordAndInitials(enemyObject.name)}.enemyHSR.json`,enemyObject,"enemyHSR.json");
                 return;
             }
 

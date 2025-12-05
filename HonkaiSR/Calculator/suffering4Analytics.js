@@ -2786,6 +2786,18 @@ const compare = {
         // let finalTime = (endTime-globalUI.startTime)/1000;
         
     },
+    visualComparisonResults: {
+        "battleAV"(ratio,refRatio) {
+            return ratio <= refRatio
+        },
+        "battleDamageSUM"(ratio,refRatio) {
+            return ratio >= refRatio
+        }
+    },
+    convertBattleValuestoSearchValues: {
+        "battleDamageSUM": "battleDamageSUM",
+        "battleAV": "sumAV",
+    },
     displayCurrentResults(results,reached,skipped,isBattleEnd) {
 
         // globalUI.startTime = performance.now();
@@ -2804,17 +2816,20 @@ const compare = {
         const limit = 100;
         let counter = 0;
         const mappedFamilies = basicShorthand.mappedFamilies;
+        const targetStatistic = globalRecords.querySettings.searchTarget;
         
-        const refPoint = globalRecords.battleData.battleDamageSUM;
+        const refPoint = globalRecords.battleData[compare.convertBattleValuestoSearchValues[targetStatistic]];
 
         // console.log(results)
         const battleFloor = globalRecords.currentWorstResult;
-        const battleCeiling = results[0].battleDamageSUM;
-        const battleSpread = battleCeiling - battleFloor;
+        const battleCeiling = results[0][targetStatistic];
+        const battleSpread = Math.abs(battleCeiling - battleFloor);
 
         const upperSpread = battleCeiling - refPoint;
         const lowerSpread = refPoint - battleFloor;
 
+
+        // console.log(targetStatistic,battleFloor,battleCeiling)
         
         const refRatio = (refPoint - battleFloor) / battleSpread;
         // const characterObject = globalRecords.character;
@@ -2823,9 +2838,10 @@ const compare = {
 
         const bestEntry = results[0];
         // console.log(bestEntry[0])
-        const currentEvalBest = bestEntry.battleDamageSUM;
+        const currentEvalBest = bestEntry[targetStatistic];
         const currentRatioBest = (currentEvalBest - battleFloor) / battleSpread;
-        const isGainBest = currentRatioBest >= refRatio;
+        const isGainBest = compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);//currentRatioBest >= refRatio;
+        // console.log(isGainBest)
         const bestCharObject = bestEntry.characterObject;
 
 
@@ -2850,11 +2866,12 @@ const compare = {
         const char3SubsEntry = char3.statObject;
         const char4SubsEntry = char4.statObject;
 
+        // console.log(currentEvalBest,refPoint)
 
         const queryResultsBestRow = customHTML.queryResultsBestRow;
         bestResultBox.innerHTML = `<div class="queryResultTeamRowBox">
             <div class="analyticsResultRowDMG">
-                <span class="queryResultRowDMGDamage">${isGainBest ? "+" : ""}${(100 * (currentEvalBest/refPoint - 1)).toLocaleString()}% (${currentEvalBest.toLocaleString()})</span>
+                <span class="queryResultRowDMGDamage">${isGainBest ? "+" : "-"}${Math.abs(100 * (currentEvalBest/refPoint - 1)).toLocaleString()}% (${currentEvalBest.toLocaleString()})</span>
                 <span class="queryResultRowDMGAV">[AV:${bestEntry.battleAV.toLocaleString()} C:${bestEntry.cycle}]</span>
             </div>
             ${isBattleEnd ? `<div class="inspectOptimizerGearResultRow">
@@ -2908,10 +2925,16 @@ const compare = {
 
             const queryResultsStandardRow = customHTML.queryResultsStandardRow;
             const queryResultEquivalentRow = customHTML.queryResultEquivalentRow;
+            const compareFunctionVisual = compare.visualComparisonResults[targetStatistic];
+            // compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);
             for (let entry of results) {
-                const currentEval = entry.battleDamageSUM;
+                const currentEval = entry[targetStatistic];
                 const currentRatio = (currentEval - battleFloor) / battleSpread;
-                const isGain = currentRatio >= refRatio;
+
+
+                // compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);
+                // const isGain = currentRatio >= refRatio;
+                const isGain = compareFunctionVisual(currentRatio,refRatio);//currentRatio >= refRatio;
                 const currentCharacterObject = entry.characterObject;
 
                 const char1 = currentCharacterObject.char1;
@@ -2966,7 +2989,7 @@ const compare = {
                     //analyticsResultRowRelicsIcon
                     resultsString += `<div class="queryResultTeamRowBox">
                         <div class="analyticsResultRowDMG">
-                            <span class="queryResultRowDMGDamage">${isGain ? "+" : ""}${(100 * (currentEval/refPoint - 1)).toLocaleString()}% (${currentEval.toLocaleString()})</span>
+                            <span class="queryResultRowDMGDamage">${isGain ? "+" : "-"}${Math.abs(100 * (currentEval/refPoint - 1)).toLocaleString()}% (${currentEval.toLocaleString()})</span>
                             <span class="queryResultRowDMGAV">[AV:${entry.battleAV.toLocaleString()} C:${entry.cycle}]</span>
                         </div>
                         <div class="inspectOptimizerGearResultRow">
@@ -2993,7 +3016,7 @@ const compare = {
                     </div>`;
 
                     const nextResult = results[counter + 1];
-                    const equivalentLookahead = nextResult?.battleDamageSUM === currentEval;
+                    const equivalentLookahead = nextResult?.[targetStatistic] === currentEval;
                     if (equivalentLookahead) {
                         equivalentResultActive = true;
                     }
@@ -3033,7 +3056,7 @@ const compare = {
                         </div>
                     </div>`;
 
-                    const equivalentLookahead = results[counter + 1]?.battleDamageSUM === currentEval;
+                    const equivalentLookahead = results[counter + 1]?.[targetStatistic] === currentEval;
                     equivalentCounter++;
                     if (!equivalentLookahead) {
                         equivalentResultActive = false;
@@ -5957,37 +5980,6 @@ const graphs = {
     
         let lineString = "";
         let pointString = "";
-
-        // logToBattle(battleData,{
-        //     logType: "StartTurn", 
-        //     name:turnName, 
-        //     isEnemy: sourceTurn.isEnemy, 
-        //     position:sourceTurn.isEnemy ? enemyPositions.indexOf(sourceTurn) : null,
-        //     positionCount:sourceTurn.isEnemy ? enemyPositions.length : null, 
-        //     isCharacter:true, 
-        //     AV: battleData.sumAV, 
-        //     turnRef: JSON.stringify(sourceTurn)
-        // });
-        
-        // <svg width="50" height="50" viewBox="0 0 50 50">
-        //             <!-- Rounded-rectangle mask -->
-        //             <defs>
-        //                 <clipPath id="characterClip" clipPathUnits="objectBoundingBox">
-        //                     <rect x="0" y="0" width="1" height="1" rx="0.2" ry="0.2"/>
-        //                 </clipPath>
-        //             </defs>
-        
-        //             <!-- Zoomed & translated image, clipped by rounded rect -->
-        //             <image 
-        //                 href="${characterIconPath}"
-        //                 width="70"    <!-- zoom (increase size) -->
-        //                 height="70"   <!-- zoom -->
-        //                 x="-10"       <!-- shift left -->
-        //                 y="-10"       <!-- shift up -->
-        //                 clip-path="url(#characterClip)"
-        //                 preserveAspectRatio="xMidYMid slice"
-        //             />
-        //         </svg>
     
         // battleData.characterObject.char1.name;
         const characterObject = globalRecords.character;
@@ -6027,122 +6019,54 @@ const graphs = {
 
         let defAndMasks = "";
         let imagesString = "";
+        // let lineStringer = `<path d="M ${viewWidth * xCushionGraph/100},${viewHeight * (startingPointY/100)} `;
+
+        let pointsArray = [];
+        let indexCounter = 0;
         for (let entry of log) {
             if (entry.logType === "StartTurn") {
                 let turnRef = JSON.parse(entry.turnRef);
 
+                const isUniqueEvent = turnRef.isUniqueEvent;
+                const isEnemy = turnRef.isEnemy;
+                const isEventOrEnemy = isUniqueEvent || isEnemy;
                 const charName = turnRef.properName;
                 const slotNumber = turnRef.eventOwner ? turnPoints[battleData.nameBasedTurns[turnRef.eventOwner].properName] : turnPoints[charName] ?? 4;
-                const characterIconPath = "/HonkaiSR/" + (characters[charName] ? characters[charName].preview : (graphs.summonCustomImages[charName] ? graphs.summonCustomImages[charName] : graphs.enemyCustomImages["default"]))
+                const characterIconPath = "/HonkaiSR/" + 
+                (turnRef.eventImage ?? (characters[charName] ? characters[charName].preview : 
+                    (graphs.summonCustomImages[charName] ? graphs.summonCustomImages[charName] : 
+                        turnRef.properName.toLowerCase().includes("boss") ? "misc/glorpard.png" : graphs.enemyCustomImages["default"])))
 
-                // turnEntryString += `
-                //     <clipPath id="clip-${heightCounter}">
-                //         <rect x="0" y="0" width="50" height="50" rx="10" ry="10" />
-                //     </clipPath>
-
-                //     <image
-                //         href="${characterIconPath}"
-                //         width="70"
-                //         height="70"
-                //         x="${slotNumber * 20}"
-                //         y="${heightCounter * 30}"
-                //         clip-path="url(#clip-${heightCounter})"
-                //         preserveAspectRatio="xMidYMid slice"
-                //     />`;
-
-                // defAndMasks += `
-                //     <clipPath id="clipRounded-${heightCounter}" clipPathUnits="userSpaceOnUse">
-                //         <rect width="${perEntryWidth}" height="100" rx="10" ry="10"/>
-                //     </clipPath>
-
-                //     <linearGradient id="fadeMask-${heightCounter}" x1="0" x2="1">
-                //         <stop offset="70%" stop-color="white" />
-                //         <stop offset="100%" stop-color="black" />
-                //     </linearGradient>
-
-                //     <mask id="combinedMask-${heightCounter}">
-                //         <rect width="${perEntryWidth}" height="40" fill="url(#fadeMask-${heightCounter})"/>
-                //     </mask>
-                // `;
-                // defAndMasks += `<clipPath id="clipRounded-${heightCounter}" clipPathUnits="userSpaceOnUse">
-                //     <rect width="${perEntryWidth}" height="100" rx="10" ry="10"/>
-                // </clipPath>
-
-                // <linearGradient id="fadeMask-${heightCounter}" x1="0" x2="1" gradientUnits="userSpaceOnUse">
-                //     <stop offset="70%" stop-color="white"/>
-                //     <stop offset="100%" stop-color="black"/>
-                // </linearGradient>
-
-                // <mask id="combinedMask-${heightCounter}" maskUnits="userSpaceOnUse">
-                //     <rect width="${perEntryWidth}" height="100" fill="url(#fadeMask-${heightCounter})"/>
-                // </mask>`;
                 const imageHeightTotal = 25;
                 defAndMasks += `<clipPath id="cropRect${heightCounter}">
                         <rect x="${perEntryWidth * slotNumber}" y="${heightCounter * imageHeightTotal}" width="${perEntryWidth}" height="20" />
                     </clipPath>`;
 
-                // imagesString += `<image 
-                //         href="${characterIconPath}"
-                //         width="${perEntryWidth}"
-                //         height="106"
-                //         x="${perEntryWidth * slotNumber}"
-                //         y="${heightCounter * 50}"
-                        
-                //         clip-path="url(#clipRounded-${heightCounter})"
-                //         preserveAspectRatio="xMidYMid meet"
-                //     />
-                // `;
-                // imagesString += `<image
-                //     href="${characterIconPath}"
-                //     width="${perEntryWidth}"
-                //     height="${100}"
-                //     x="${perEntryWidth * slotNumber}"
-                //     y="${heightCounter * 50}"
-                //     clip-path="url(#clipRounded-${heightCounter})"
-                //     mask="url(#combinedMask-${heightCounter})"
-                //     preserveAspectRatio="xMidYMid meet"
-                // />`
+                pointsArray.push([perEntryWidth * slotNumber + perEntryWidth*0.5, heightCounter * imageHeightTotal + 10]);
+
+
                 imagesString += `<image
                     href="${characterIconPath}"
-                    x="${perEntryWidth * slotNumber}" y="${heightCounter * imageHeightTotal - 20}" width="${perEntryWidth}" height="100"
-                    clip-path="url(#cropRect${heightCounter})" 
-                />`;
-
-                // <svg width="200" height="100">
-                // <defs>
-                //     <clipPath id="cropRect">
-                //     <rect x="0" y="0" width="200" height="100" />
-                //     </clipPath>
-                // </defs>
-
-                // <image 
-                //     href="path/to/image.jpg" 
-                //     x="-50" y="0"   <!-- offset to choose which part to show -->
-                //     width="300" height="100"
-                //     clip-path="url(#cropRect)" 
-                // />
-                // </svg>
-
-
-
-
-
-                // <svg width="200" height="100">
-                //     <!-- Optional rectangle background -->
-                //     <rect x="0" y="0" width="200" height="100" fill="#ddd" />
-
-                //     <!-- Image inside the rectangle -->
-                //     <image href="path/to/image.jpg" x="0" y="0" width="200" height="100" preserveAspectRatio="xMidYMid slice" />
-                // </svg>
-
-                
-                // clip-path="url(#clipRounded-${heightCounter})"
-                //         mask="url(#combinedMask-${heightCounter})"
+                    ${isEventOrEnemy ? `x="${perEntryWidth * slotNumber}" y="${heightCounter * imageHeightTotal-5}" width="${perEntryWidth}" height="25"` :
+                        `x="${perEntryWidth * slotNumber}" y="${heightCounter * imageHeightTotal - 20}" width="${perEntryWidth}" height="100"`}
+                    clip-path="url(#cropRect${heightCounter})" class="turnViewPreviewBox clickable" onclick="userTriggers.expandBattleLog(${indexCounter})"/>
+                <rect x="${perEntryWidth * slotNumber + 3}" y="${heightCounter * imageHeightTotal + 14.5}" width="20" height="6" fill="black" rx="2"/>
+                <text x="${perEntryWidth * slotNumber + 4}" y="${heightCounter * imageHeightTotal + 20}" font-size="6" fill="white">${entry.AV.toFixed(1)}</text>`;//<div class="turnOrderAVBox">${entry.AV.toFixed(1)}</div>
 
                 heightCounter++;
             }
+            indexCounter++;
         }
-    
+
+        let lineStringer = `<path d="M ${pointsArray[0][0]},${pointsArray[0][1]} `;
+        for (let i=0;i<pointsArray.length-1;i++) {
+            const currentPoint = pointsArray[i];
+            const nextPoint = pointsArray[i+1];
+
+            lineStringer += `Q ${currentPoint[0]},${currentPoint[1]} ${nextPoint[0]},${nextPoint[1]} `;
+        }
+        lineStringer += `
+        " fill="none" stroke="grey" stroke-width="0.2"/>`;
 
 
 
@@ -6163,15 +6087,17 @@ const graphs = {
         // fill="none" stroke="white" stroke-width="2"/>`;//fill="red"
         // sumLineStringer += lineStringer;
 
+
+        const compositeHeight = heightCounter * 25;
         const graphString = `
             <div id="bulletsDisplayGraphBox" class="graphContainerboxSP">
-                <svg class="weaponBulletArrayGraph" id="" viewBox="0 0 ${viewWidth} ${viewHeight}" preserveAspectRatio="none">
+                <svg class="weaponBulletArrayGraph" id="" viewBox="0 0 ${viewWidth} ${compositeHeight}" preserveAspectRatio="none">
 
                     <defs>
                         ${defAndMasks}
                     </defs>
 
-                    ${imagesString}
+                    ${lineStringer + imagesString}
                 </svg>
             </div>
             `;

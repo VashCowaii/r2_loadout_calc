@@ -482,8 +482,8 @@
                             <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="userTriggers.updateGraphViewDisplayed('Stat')">Stat</div> -->
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="alert('Stat view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Stat</div>
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSP" onclick="userTriggers.updateGraphViewDisplayed('SP')">SP</div>
-                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="userTriggers.updateGraphViewDisplayed('Turns')">Turns</div> -->
-                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="alert('Turns view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Turns</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="userTriggers.updateGraphViewDisplayed('Turns')">Turns</div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="alert('Turns view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Turns</div> -->
                             <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="userTriggers.updateGraphViewDisplayed('Custom')">Custom</div> -->
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="alert('Custom view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Custom</div>
                         </div>
@@ -1513,6 +1513,15 @@
                                 <div class="totalHealingValue" style="border-bottom: none;"><span id="queriesBattleSummaryTechniques" style="font-size: 18px;">0</span></div>
                             </div>
                         </div>
+
+                            <div class="cyclesControlBox">
+                                <!-- <span>Statistics Input:</span> -->
+                                <span>Target statistic:</span>
+                                <select class="statisticInputBox" id="statisticInput" onchange="userTriggers.updateQuerySearchSettings()">
+                                    <option value="battleDamageSUM">SUM Team DMG</option>
+                                    <option value="battleAV">Lowest AV Completed</option>
+                                </select>
+                            </div>
 
                         <div class="totalHealingBoxBreakdownRowsQueriesHeaders">
                             <div class="totalHealingBoxHalf hasHoverTooltip" id="threadCountTooltip">
