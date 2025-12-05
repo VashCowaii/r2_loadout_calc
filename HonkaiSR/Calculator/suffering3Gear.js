@@ -3283,6 +3283,20 @@ const turnLogicLightcones = {
                             "expireType": "EndTurn",
                         }
 
+                        sourceTurn.thoughWorldsDMGSummonSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.redoubtSummon,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+
 
                         sourceTurn.thoughWorldsHealObject = {
                             multipliers: {
@@ -3302,6 +3316,7 @@ const turnLogicLightcones = {
                         }
                     }
                     const buffSheet = sourceTurn.thoughWorldsDMGSHEET;
+                    const buffSheet2 = sourceTurn.thoughWorldsDMGSummonSHEET;
                     const healObject = sourceTurn.thoughWorldsHealObject;
 
                     const allyPositions = battleData.allyPositions;
@@ -3313,6 +3328,11 @@ const turnLogicLightcones = {
 
                         buffSheet.duration = ally.turnState ? 4 : 3;
                         updateBuff(battleData,ally,buffSheet);
+
+                        if (ally.activeMemosprites || ally.activeSummons) {
+                            buffSheet2.duration = ally.turnState ? 4 : 3;
+                            updateBuff(battleData,ally,buffSheet2);
+                        }
 
                         const currentHP = ally.currentHP;
                         if (currentHP < lowestHPValue) {
@@ -3332,7 +3352,8 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {
-            "redoubt": "Redoubt [LC]"
+            "redoubt": "Redoubt [LC]",
+            "redoubtSummon": "Redoubt (Summon) [LC]"
         },
     },
 }

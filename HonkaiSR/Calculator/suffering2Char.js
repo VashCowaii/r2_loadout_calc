@@ -13348,7 +13348,7 @@ const turnLogic = {
                             multipliers: {
                                 primary: null,
                                 blast: null,
-                                all: 0.70, //valuesUlt[1],
+                                all: valuesUlt[1],
                             },
                             scalar,
                             DMGTags: tags,
