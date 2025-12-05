@@ -230,6 +230,10 @@ const cyclesLoop = {
             return a.teamSPD - b.teamSPD;
         },
     },
+    isInvertedSearch: {
+        "battleDamageSUM": false,
+        "battleAV": true,
+    },
     startCycleWorker(identifier,threadCount) {
         let cycleWorker = `cycleWorker${identifier}`;
         // const startButton = readSelection("cycleSTART");
@@ -327,8 +331,10 @@ const cyclesLoop = {
                 const currentWorstResult = globalResults[globalResults.length-1][targetStatistic];
                 //for the sake of accurate spread ranges on the "Relative to Equipped Gear" bars and whatnot, I need to know the actual worst result as we go
                 //because we trim the results after this point, and if we don't track the worst result, then the spread would only track the top 1k results, and that's not accurate
+                const isInvertedSearch = cyclesLoop.isInvertedSearch[targetStatistic];
                 if (globalRecords.currentWorstResult === null) {globalRecords.currentWorstResult = currentWorstResult;}
-                else if (currentWorstResult < globalRecords.currentWorstResult) {globalRecords.currentWorstResult = currentWorstResult;}
+                else if (!isInvertedSearch && currentWorstResult < globalRecords.currentWorstResult) {globalRecords.currentWorstResult = currentWorstResult;}
+                else if (isInvertedSearch && currentWorstResult > globalRecords.currentWorstResult) {globalRecords.currentWorstResult = currentWorstResult;}
 
                 cyclesLoop.filterEquivalents(globalResults,targetStatistic);
                 if (globalResults.length > 1000) {globalResults.length = 1000;}

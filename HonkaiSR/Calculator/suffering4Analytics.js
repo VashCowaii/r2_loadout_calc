@@ -2788,7 +2788,7 @@ const compare = {
     },
     visualComparisonResults: {
         "battleAV"(ratio,refRatio) {
-            return ratio <= refRatio
+            return ratio >= refRatio
         },
         "battleDamageSUM"(ratio,refRatio) {
             return ratio >= refRatio
@@ -2819,19 +2819,50 @@ const compare = {
         const targetStatistic = globalRecords.querySettings.searchTarget;
         
         const refPoint = globalRecords.battleData[compare.convertBattleValuestoSearchValues[targetStatistic]];
+        const isInvertedRange = cyclesLoop.isInvertedSearch[targetStatistic];
 
         // console.log(results)
-        const battleFloor = globalRecords.currentWorstResult;
-        const battleCeiling = results[0][targetStatistic];
+        let battleFloor = globalRecords.currentWorstResult;
+        if (isInvertedRange) {
+            if (globalRecords.currentWorstResult < refPoint) {battleFloor = refPoint;}
+            else {battleFloor = globalRecords.currentWorstResult;}
+        }
+        else {
+            if (globalRecords.currentWorstResult > refPoint) {battleFloor = refPoint;}
+            else {battleFloor = globalRecords.currentWorstResult;}
+        }
+        let battleCeiling = results[0][targetStatistic];
+        if (isInvertedRange) {
+            if (battleCeiling > refPoint) {battleCeiling = refPoint;}
+            // else {battleFloor = globalRecords.currentWorstResult;}
+        }
+        else {
+            if (battleCeiling < refPoint) {battleCeiling = refPoint;}
+            // else {battleFloor = globalRecords.currentWorstResult;}
+        }
+
+
+
+
+
+
         const battleSpread = Math.abs(battleCeiling - battleFloor);
 
-        const upperSpread = battleCeiling - refPoint;
-        const lowerSpread = refPoint - battleFloor;
+        const upperSpread = isInvertedRange ? refPoint - battleCeiling : battleCeiling - refPoint;
+        const upperSpreadPercent = upperSpread/battleSpread;
+        /*
+        lowest av was 30
+        ref av from sim was 60
+        worst av was 100
+
+        30 - 60
+        */
+        const lowerSpread = isInvertedRange ? battleFloor - refPoint : refPoint - battleFloor;
+        const lowerSpreadPercent = lowerSpread/battleSpread;
 
 
         // console.log(targetStatistic,battleFloor,battleCeiling)
-        
-        const refRatio = (refPoint - battleFloor) / battleSpread;
+        const refRatio = (isInvertedRange ? battleFloor - refPoint : refPoint - battleFloor) / battleSpread;
         // const characterObject = globalRecords.character;
 
         const bestResultBox = readSelection("currentBestResultHolderBox");
@@ -2839,7 +2870,10 @@ const compare = {
         const bestEntry = results[0];
         // console.log(bestEntry[0])
         const currentEvalBest = bestEntry[targetStatistic];
-        const currentRatioBest = (currentEvalBest - battleFloor) / battleSpread;
+        // const currentRatioBest = (currentEvalBest - battleFloor) / battleSpread;
+        const currentRatioBest = (isInvertedRange ? battleFloor - currentEvalBest : currentEvalBest - battleFloor) / battleSpread;
+
+        
         const isGainBest = compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);//currentRatioBest >= refRatio;
         // console.log(isGainBest)
         const bestCharObject = bestEntry.characterObject;
@@ -2866,12 +2900,12 @@ const compare = {
         const char3SubsEntry = char3.statObject;
         const char4SubsEntry = char4.statObject;
 
-        // console.log(currentEvalBest,refPoint)
+        // console.log(refRatio,battleSpread,battleCeiling,battleFloor)
 
         const queryResultsBestRow = customHTML.queryResultsBestRow;
         bestResultBox.innerHTML = `<div class="queryResultTeamRowBox">
             <div class="analyticsResultRowDMG">
-                <span class="queryResultRowDMGDamage">${isGainBest ? "+" : "-"}${Math.abs(100 * (currentEvalBest/refPoint - 1)).toLocaleString()}% (${currentEvalBest.toLocaleString()})</span>
+                <span class="queryResultRowDMGDamage">${isGainBest ? "+" : ""}${((isInvertedRange ? -100 : 100) * (currentEvalBest/refPoint - 1)).toLocaleString()}% (${currentEvalBest.toLocaleString()})</span>
                 <span class="queryResultRowDMGAV">[AV:${bestEntry.battleAV.toLocaleString()} C:${bestEntry.cycle}]</span>
             </div>
             ${isBattleEnd ? `<div class="inspectOptimizerGearResultRow">
@@ -2880,11 +2914,11 @@ const compare = {
             <div class="analyticsResultRowDMGBarHolderOuter">
                 <div class="queryBarGainText">Total Gain/Loss</div>
                 <div class="analyticsResultRowDMGBarHolder">
-                    <div class="${isGainBest ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:0%;width:${isGainBest ? ((currentEvalBest - refPoint)/upperSpread) *100 : ((refPoint - currentEvalBest)/lowerSpread)*100}%;"></div>
+                    <div class="${isGainBest ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:0%;width:${isGainBest ? ((currentEvalBest - refPoint)/upperSpread) *(isInvertedRange ? -100 : 100): ((refPoint - currentEvalBest)/lowerSpread)*(isInvertedRange ? -100 : 100)}%;"></div>
                 </div>
                 <div class="queryBarGainText">Relative to Equipped Gear</div>
                 <div class="analyticsResultRowDMGBarHolder">
-                    <div class="${isGainBest ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:${isGainBest ? refRatio*100 : currentRatioBest*100}%;width:${isGainBest ? (currentRatioBest - refRatio)*100 : (refRatio - currentRatioBest)*100}%;"></div>
+                    <div class="${isGainBest ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:${isGainBest ? refRatio*100 : currentRatioBest*100}%;width:${isGainBest ? ((currentEvalBest - refPoint)/upperSpread) * upperSpreadPercent * (isInvertedRange ? -100 : 100) : ((refPoint - currentEvalBest)/lowerSpread)*lowerSpreadPercent*(isInvertedRange ? -100 : 100)}%;"></div>
                     <div class="analyticsResultRowDMGBarRefPoint" style="left:${refRatio*100}%;"></div>
                 </div>
             </div>
@@ -2895,7 +2929,12 @@ const compare = {
                     + queryResultsBestRow(4,char4,char4SPD,char4SubsEntry,char4SubsMaslow)
                 }
             </div>
-        </div>`
+        </div>`;
+
+        // <div class="analyticsResultRowDMGBarHolder">
+        //             <div class="${isGainBest ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:${isGainBest ? refRatio*100 : currentRatioBest*100}%;width:${isGainBest ? (isInvertedRange ? refRatio - currentRatioBest : currentRatioBest - refRatio)*100 : (refRatio - currentRatioBest)*100}%;"></div>
+        //             <div class="analyticsResultRowDMGBarRefPoint" style="left:${refRatio*100}%;"></div>
+        //         </div>
         
 
         if (isBattleEnd) {
@@ -2929,7 +2968,7 @@ const compare = {
             // compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);
             for (let entry of results) {
                 const currentEval = entry[targetStatistic];
-                const currentRatio = (currentEval - battleFloor) / battleSpread;
+                const currentRatio = (isInvertedRange ? battleFloor - currentEval : currentEval - battleFloor) / battleSpread;
 
 
                 // compare.visualComparisonResults[targetStatistic](currentRatioBest,refRatio);
@@ -2989,7 +3028,7 @@ const compare = {
                     //analyticsResultRowRelicsIcon
                     resultsString += `<div class="queryResultTeamRowBox">
                         <div class="analyticsResultRowDMG">
-                            <span class="queryResultRowDMGDamage">${isGain ? "+" : "-"}${Math.abs(100 * (currentEval/refPoint - 1)).toLocaleString()}% (${currentEval.toLocaleString()})</span>
+                            <span class="queryResultRowDMGDamage">${isGain ? "+" : ""}${((isInvertedRange ? -100 : 100) * (currentEval/refPoint - 1)).toLocaleString()}% (${currentEval.toLocaleString()})</span>
                             <span class="queryResultRowDMGAV">[AV:${entry.battleAV.toLocaleString()} C:${entry.cycle}]</span>
                         </div>
                         <div class="inspectOptimizerGearResultRow">
@@ -2998,11 +3037,11 @@ const compare = {
                         <div class="analyticsResultRowDMGBarHolderOuter">
                             <div class="queryBarGainText">Total Gain/Loss</div>
                             <div class="analyticsResultRowDMGBarHolder">
-                                <div class="${isGain ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:0%;width:${isGain ? ((currentEval - refPoint)/upperSpread) *100 : ((refPoint - currentEval)/lowerSpread)*100}%;"></div>
+                                <div class="${isGain ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:0%;width:${isGain ? ((currentEval - refPoint)/upperSpread) *(isInvertedRange ? -100 : 100) : ((refPoint - currentEval)/lowerSpread)*(isInvertedRange ? -100 : 100)}%;"></div>
                             </div>
                             <div class="queryBarGainText">Relative to Equipped Gear</div>
                             <div class="analyticsResultRowDMGBarHolder">
-                                <div class="${isGain ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:${isGain ? refRatio*100 : currentRatio*100}%;width:${isGain ? (currentRatio - refRatio)*100 : (refRatio - currentRatio)*100}%;"></div>
+                                <div class="${isGain ? "analyticsResultRowDMGBarGreaterThan" : "analyticsResultRowDMGBarLessThan"}" style="left:${isGain ? refRatio*100 : currentRatio*100}%;width:${isGain ? ((currentEval - refPoint)/upperSpread) *upperSpreadPercent*(isInvertedRange ? -100 : 100) : ((refPoint - currentEval)/lowerSpread)*lowerSpreadPercent*(isInvertedRange ? -100 : 100)}%;"></div>
                                 <div class="analyticsResultRowDMGBarRefPoint" style="left:${refRatio*100}%;"></div>
                             </div>
                         </div>
