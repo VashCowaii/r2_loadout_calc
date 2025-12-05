@@ -151,7 +151,7 @@ const cyclesLoop = {
         readSelection("cyclesTimeRemaining").innerHTML = "Cycles forcibly aborted";
         globalRecords.resultsStorage = [];
     },
-    filterEquivalents(globalResults) {
+    filterEquivalents(globalResults,targetStatistic) {
         // sortedResults.push({
         //     battleDamageSUM: simResult.battleDamageSUM,
         //     battleAV: simResult.sumAV,
@@ -180,7 +180,7 @@ const cyclesLoop = {
                 const currentChar = outerObject["char" + outeri];
                 outerComparisonString += currentChar.lcName + currentChar["2pc"] + currentChar["4pc"] + currentChar.planar + currentChar.BodyMain + currentChar.FeetMain + currentChar.SphereMain + currentChar.RopeMain;
             }
-            const outerComparisonDMG = currentEntry.battleDamageSUM;
+            const outerComparisonDMG = currentEntry[targetStatistic];
             const outerSPD = currentEntry.teamSPD;
 
 
@@ -190,7 +190,7 @@ const cyclesLoop = {
                 const innerObject = currentEntryInner.characterObject;
                 const innerSPD = currentEntryInner.teamSPD;
 
-                const innerComparisonDMG = currentEntryInner.battleDamageSUM;
+                const innerComparisonDMG = currentEntryInner[targetStatistic];
 
                 if (innerComparisonDMG > outerComparisonDMG) {break;}//if while climbing up, we've reached a result that is higher, then break bc we're done
                 else if (innerComparisonDMG != outerComparisonDMG) {continue;}//but otherwise if we're at a result that is less than, than skip to the next
@@ -219,6 +219,16 @@ const cyclesLoop = {
     sortResultsByDamage: (a, b) => {
         if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
         return a.teamSPD - b.teamSPD;
+    },
+    targetStatisticSorting: {
+        "battleAV": (a, b) => {
+            if (b.battleAV != a.battleAV) {return a.battleAV - b.battleAV;}
+            return a.teamSPD - b.teamSPD;
+        },
+        "battleDamageSUM": (a, b) => {
+            if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
+            return a.teamSPD - b.teamSPD;
+        },
     },
     startCycleWorker(identifier,threadCount) {
         let cycleWorker = `cycleWorker${identifier}`;
@@ -308,50 +318,22 @@ const cyclesLoop = {
                 }
 
 
-                // const t0 = performance.now();
-                // // your sort or insertTopN calls
-                // const t1 = performance.now();
-                // console.log("topN/sort time:", (t1 - t0).toFixed(3), "ms");
-
-                // resultsStorage
+                const targetStatistic = globalRecords.querySettings.searchTarget;
                 const globalResults = globalRecords.resultsStorage;
-                // const t0 = performance.now();
                 globalResults.push(...comboResults);
-                // const t1 = performance.now();
-                //TODO: allow diff battle targets like lowest AV, etc
-
-                // globalResults.sort((a, b) => {
-                //     if (b.battleDamageSUM != a.battleDamageSUM) {return b.battleDamageSUM - a.battleDamageSUM;}
-                //     return a.teamSPD - b.teamSPD;
-                // });
-                globalResults.sort(cyclesLoop.sortResultsByDamage)
-                // const t2 = performance.now();
-                // console.log(t1-t0,t2-t1)
+                globalResults.sort(cyclesLoop.targetStatisticSorting[targetStatistic])
                 
 
-                const currentWorstResult = globalResults[globalResults.length-1].battleDamageSUM;
+                const currentWorstResult = globalResults[globalResults.length-1][targetStatistic];
                 //for the sake of accurate spread ranges on the "Relative to Equipped Gear" bars and whatnot, I need to know the actual worst result as we go
                 //because we trim the results after this point, and if we don't track the worst result, then the spread would only track the top 1k results, and that's not accurate
                 if (globalRecords.currentWorstResult === null) {globalRecords.currentWorstResult = currentWorstResult;}
                 else if (currentWorstResult < globalRecords.currentWorstResult) {globalRecords.currentWorstResult = currentWorstResult;}
 
-                // const t3 = performance.now();
-                cyclesLoop.filterEquivalents(globalResults);
-                // const t4 = performance.now();
-                //trim results to the top 1k
+                cyclesLoop.filterEquivalents(globalResults,targetStatistic);
                 if (globalResults.length > 1000) {globalResults.length = 1000;}
-                // const t5 = performance.now();
 
-                //was just for updating the actual "best combo so far" display on the R2 optimizer, can still use it here but a task for later
                 compare.displayCurrentResults(globalResults,null,null,reachedQueryEnd);
-                // const t6 = performance.now();
-                // console.log(t4-t3,t5-t4,t6-t5)
-
-                
-                // readSelection("comboTargetDisplay").innerHTML = `<div class="bestOptionsRow">Target Statistic: ${targetName}</div>`;
-                // readSelection(`lastFound`).innerHTML = `Last Loadout Found at #${counterInt.toLocaleString()}`
-                // readSelection(`comboDisplay`).innerHTML = `${[fragRef[CfragmentSet[0]],fragRef[CfragmentSet[1]],fragRef[CfragmentSet[2]]]}`;
-                // //Decided not to have tooltips for frags on the query display, kinda no point? The name is obv.
 
                 if (reachedQueryEnd) {
                     cyclesLoop.generationStop("",null,true);

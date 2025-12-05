@@ -284,6 +284,7 @@ let globalRecords = {
     },
     "querySettings": {
         "enforceBattlesWon": false,
+        "searchTarget": "",
         // "allow2pcSearch": false,
 
         "substatRollValue": "High",
