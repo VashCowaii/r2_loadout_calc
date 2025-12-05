@@ -1932,7 +1932,7 @@ const maslowCharactersNihility = {
             wantsTeam: ["ATK","Quantum",...isCritCharacter,...characterDealsDamage,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             addTeamWant: [],
         },
-    }
+    },
 }
 const maslowCharactersAbundance = {
     "Huohuo": {
