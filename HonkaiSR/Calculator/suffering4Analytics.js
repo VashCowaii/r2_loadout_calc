@@ -2799,20 +2799,6 @@ const compare = {
         "battleAV": "sumAV",
     },
     displayCurrentResults(results,reached,skipped,isBattleEnd) {
-
-        // globalUI.startTime = performance.now();
-
-        // reachedBox.innerHTML = reached.toLocaleString();
-        // skippedBox.innerHTML = skipped.toLocaleString();
-
-        // // globalUI.comboCountFinal = precalcComboCount.toLocaleString();
-        // const compositeCount = reached + skipped;
-        // // console.log(100 * (compositeCount)/globalUI.comboCountFinal,compositeCount,globalUI.comboCountFinal)
-        // readSelection("combinationsDisplayCount").style.width = `${100 * (compositeCount)/globalUI.comboCountFinal}%`;
-        // readSelection("counterInt").innerHTML = compositeCount.toLocaleString();
-
-
-        // results.sort((a, b) => b.battleDamageSUM - a.battleDamageSUM);
         const limit = 100;
         let counter = 0;
         const mappedFamilies = basicShorthand.mappedFamilies;
@@ -2899,8 +2885,6 @@ const compare = {
         const char2SubsEntry = char2.statObject;
         const char3SubsEntry = char3.statObject;
         const char4SubsEntry = char4.statObject;
-
-        // console.log(refRatio,battleSpread,battleCeiling,battleFloor)
 
         const queryResultsBestRow = customHTML.queryResultsBestRow;
         bestResultBox.innerHTML = `<div class="queryResultTeamRowBox">
