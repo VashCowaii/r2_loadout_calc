@@ -479,13 +479,13 @@
                         <div class="graphsControllerBoxHolder">
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSummary" onclick="userTriggers.updateGraphViewDisplayed('Summary')">Summary</div>
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewBuffs" onclick="userTriggers.updateGraphViewDisplayed('Buffs')">Uptime</div>
-                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="userTriggers.updateGraphViewDisplayed('Stat')">Stat</div> -->
-                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="alert('Stat view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Stat</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="userTriggers.updateGraphViewDisplayed('Stat')">Stat</div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewStat" onclick="alert('Stat view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Stat</div> -->
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSP" onclick="userTriggers.updateGraphViewDisplayed('SP')">SP</div>
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="userTriggers.updateGraphViewDisplayed('Turns')">Turns</div>
                             <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewTurns" onclick="alert('Turns view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Turns</div> -->
                             <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="userTriggers.updateGraphViewDisplayed('Custom')">Custom</div> -->
-                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="alert('Custom view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, and SP')">Custom</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewCustom" onclick="alert('Custom view is removed for the Beta\n\nUsable charts are:\nSummary, Uptime, Turns, and SP')">Custom</div>
                         </div>
                         <div class="actualGraphControlsBoxBattleSummary" id="actualGraphControlsBoxBattleSummary">
                             
@@ -507,6 +507,37 @@
                                     <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeBuffName" onchange="graphs.createGraphsByBuffUptime()"></select>
                                 </div>
                             </div>
+                            <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSummary" onclick="userTriggers.updateGraphViewDisplayed('Summary')">Summary</div>
+                            <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewBuffs" onclick="userTriggers.updateGraphViewDisplayed('Buffs')">Uptime</div> -->
+                        </div>
+
+                        <div class="actualGraphControlsBoxBattleSummary" id="actualGraphControlsBoxBattleStatControls">
+                            
+                            <div class="BuffUptimeSelectionsMainBox">
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Graph by:</div>
+                                    <select class="BuffUptimeSelectionSelector" id="buffUptimeGraphByStat" onchange="graphs.createGraphsByStat()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Source Type:</div>
+                                    <select class="BuffUptimeSelectionSelector" id="buffUptimeSourceFromStat" onchange="graphs.createGraphsByStat()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Source Name:</div>
+                                    <select class="BuffUptimeSelectionSelector" id="buffUptimeSourceNameStat" onchange="graphs.createGraphsByStat()"></select>
+                                </div>
+                                <div class="relicStatSelectionRowBuffUptime">
+                                    <div class="BuffUptimeHeaderRow">Stat Name:</div>
+                                    <select class="BuffUptimeSelectionSelector" id="buffUptimeBuffNameStat" onchange="graphs.createGraphsByStat()"></select>
+                                </div>
+                            </div>
+
+                            <div class="graphByHeaderNoteBox">
+                                <div class="statFiltersRowHeader">Note</div>
+                                <div class="graphByHeaderNote">Stat graphing will only show a point to read a character's stat when they deal damage.<br>Say Sunday deals no damage in a battle, then he would not have any stats to read even if his stats did see changes.</div>
+                                <div class="graphByHeaderNote">Please note that stats are only for the main character stat sheet. If a character has a buff that only applies on say Follow-up Attacks then it will not show here. I will change this later so that it does, but not right now.</div>
+                            </div>
+                            
                             <!-- <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewSummary" onclick="userTriggers.updateGraphViewDisplayed('Summary')">Summary</div>
                             <div class="graphTypeButtonBoxHolder clickable" id="expandButtonGraphViewBuffs" onclick="userTriggers.updateGraphViewDisplayed('Buffs')">Uptime</div> -->
                         </div>
@@ -600,6 +631,12 @@
                                                 <label class="toggleContainer">
                                                     <input type="checkbox" class="toggleCheckbox" id="queriesUseStartToughness" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
                                                 </label>
+                                            </div>
+                                        </div>
+                                        <div class="statisticSettingsRow hasHoverTooltip" id="cyclesStartingEnergyCustomExplainer">
+                                            <div class="statsRowName">Starting Energy:&nbsp;<span id="cyclesStartingEnergyCustomDisplay">50</span>%</div>
+                                            <div class="statsRowToggle">
+                                                <input type="range" id="cyclesStartingEnergyCustom" name="slider" min="0" max="100" value="50" step="10" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings(true)">
                                             </div>
                                         </div>
                                     </div>

@@ -413,6 +413,7 @@ const sim = {
                 isDead: false,
                 isBroken: false,
                 turnShouldEnd: false,
+                energyGain: currentEntry.energyGain ?? 10
             };
 
             nextTurn.push(slotRef);
@@ -426,7 +427,7 @@ const sim = {
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
     },
-    battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride,battleSettings) {
+    battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
         let battleData = {
             "isLoggyLogger": isLoggyLogger ?? false,
             "sumAV": 0,
@@ -513,6 +514,8 @@ const sim = {
         const allAlliesArray = battleData.allAlliesArray;
 
         const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
+
+        const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
         for (let i=charKeys.length-1;i>=0;i--) {
             const characterEntry = charKeys[i];
             let currentCharacter = characterObject[characterEntry];
@@ -804,8 +807,7 @@ const sim = {
         return battleData;
     },
     battleStart(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
-        const startingEnergyPercent = 0.5;
-        let battleData = sim.battlePrep(characterObject,isLoggyLogger,startingEnergyPercent,querySettingsOverride,battleSettings);
+        let battleData = sim.battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings);
 
         battleData.cyclesMax = battleSettings.cyclesToRun + 1;
         battleData.techniquesAllowed = battleSettings.useTechniques;

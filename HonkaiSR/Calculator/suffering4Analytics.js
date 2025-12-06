@@ -4956,15 +4956,6 @@ const graphs = {
 
 
 
-        // <polyline points="20,80 60,20 100,80 140,20 180,80" fill="none" stroke="blue" stroke-width="3" />
-
-        // <image href="/HonkaiSR/${characters[battleData.characterObject.char1.name].icon}" x="0%" y="${((20 * 1)/100) * 80 + 4}%" width="45" height="45" />
-        // <image href="/HonkaiSR/${characters[battleData.characterObject.char2.name].icon}" x="0%" y="${((20 * 2)/100) * 80 + 4}%" width="45" height="45" />
-        // <image href="/HonkaiSR/${characters[battleData.characterObject.char3.name].icon}" x="0%" y="${((20 * 3)/100) * 80 + 4}%" width="45" height="45" />
-        // <image href="/HonkaiSR/${characters[battleData.characterObject.char4.name].icon}" x="0%" y="${((20 * 4)/100) * 80 + 4}%" width="45" height="45" />
-
-        //20,80 60,20 100,80 140,20 180,80
-        // ${lineStringer}
         const graphString = `
             <div id="bulletsDisplayGraphBox" class="graphContainerbox">
                 <svg class="weaponBulletArrayGraph" id="" viewBox="0 0 ${viewWidth} ${viewHeight}">
@@ -4978,12 +4969,7 @@ const graphs = {
                     <text x="${100-xCushionGraph}%" y="97.5%" fill="white" font-size="15" text-anchor="end">${battleData.sumAV.toFixed(2)} AV</text>
                 </svg>
             </div>
-            `;//text-anchor="end" //start middle end
-            // <text x="50%" y="97.5%" fill="white" font-size="15" text-anchor="middle">More words</text>
-            // <text x="-2.5%" y="10%" fill="white" font-size="15" text-anchor="middle" transform="rotate(-90, 50, 50)">Other words</text>
-            // <line x1="7.5%" y1="90%" x2="92.5%" y2="90%" stroke="black" /> <!-- X-axis -->
-    
-        // mainBox.innerHTML += graphString;
+            `;
 
 
         const dmgTypeColors = graphs.dmgTypeColors;
@@ -5278,16 +5264,6 @@ const graphs = {
         }
         shieldDisplayString += "</details>";
         overshieldDisplayString += "</details>";
-
-
-
-
-
-
-
-
-
-
 
 
         const actionCountTotals = battleTotalsObject.Actions;
@@ -6134,5 +6110,278 @@ const graphs = {
         
     
         tooltips.loadTooltips();
-    }
+    },
+    createGraphsByStat() {
+        const battleData = globalRecords.battleData;
+        graphs.clearGraphRelatedTooltips();
+        const log = battleData.battleLog;
+
+        const mainBox = readSelection("actualGraphHolderbox");
+        mainBox.innerHTML = "";
+
+        // const hitData = {
+        //     scalar,bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+        //     currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
+        //     DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
+        //     // breakerDMG,
+        //     overBreak,
+        //     enemyIsDead,enemyIsBroken,toughnessBase,
+        //     playerData: JSON.stringify(sourceTurn),
+        //     enemyData: JSON.stringify(targetTurn),
+        //     AV:battleData.sumAV
+        // };
+        // logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+
+
+        const buffGraphs = globalUI.buffGraphs;
+        const graphByElement = readSelection("buffUptimeGraphByStat");
+        const buffEntityElement = readSelection("buffUptimeSourceFromStat");
+        const entityNameElement = readSelection("buffUptimeSourceNameStat");
+        const buffNameElement = readSelection("buffUptimeBuffNameStat");
+
+        if (graphByElement.innerHTML === "") {
+            graphByElement.innerHTML = `
+            <option value="AV">AV</option>
+            <option value="Actions">Actions</option>
+            `;
+            buffGraphs.graphBy = "AV";
+        }
+        else {buffGraphs.graphBy = graphByElement.value;}
+
+        if (buffEntityElement.innerHTML === "") {
+            buffEntityElement.innerHTML = `
+            <option value="Character">Character</option>
+            <option value="Memosprite">Memosprite</option>
+            `;
+            buffGraphs.buffEntity = "Character";
+        }
+        else {buffGraphs.buffEntity = buffEntityElement.value;}
+
+
+
+        const currentEntityType = buffEntityElement.value;
+        let entityTypeArray = [];
+        //establish all the names possible from the given entity type
+        const characterObject = globalRecords.character;
+        if (currentEntityType === "Character") {
+            for (let characterSlot in characterObject) {
+                const currentCharacter = characterObject[characterSlot];
+                entityTypeArray.push(currentCharacter.name)
+            }
+        }
+        else if (currentEntityType === "Memosprite") {
+            for (let characterSlot in battleData.nameBasedTurns) {
+                const currentCharacter = battleData.nameBasedTurns[characterSlot];
+
+                if (currentCharacter.isMemosprite && !currentCharacter.isEnemy) {entityTypeArray.push(currentCharacter.properName)}
+            }
+        }
+        // else if (currentEntityType === "Relic") {
+        //     // "2pc": "Scholar Lost in Erudition",
+        //     // "4pc": "Scholar Lost in Erudition",
+        //     for (let characterSlot in characterObject) {
+        //         const currentCharacter = characterObject[characterSlot];
+        //         entityTypeArray.push(currentCharacter["2pc"],currentCharacter["4pc"],currentCharacter.planar)
+        //     }
+        // }
+        const entityTypeSet = new Set (entityTypeArray);
+
+        
+
+        //then check if the currently selected entity name is a valid name in the currently selected typ
+        if (!entityTypeSet.has(entityNameElement.value)) {
+            entityNameElement.innerHTML = "";
+            let optionsString = "";
+            for (let entityTypeName of entityTypeSet) {
+                optionsString += `<option value="${entityTypeName}">${entityTypeName}</option>`
+            }
+            entityNameElement.innerHTML = optionsString;
+            buffGraphs.entityName = entityNameElement.value;
+
+            //if not, then update the entity name selections and update the global selection as well
+        }
+        else {buffGraphs.entityName = entityNameElement.value;}
+
+
+        let optionsString = "";
+
+
+        // basicShorthand.reverseKeyMappings[buffNameElement.value]
+        const defaultStat = "CRIT Rate";
+        buffGraphs.statName ??= defaultStat
+        if (buffNameElement.value === "") {buffNameElement.value = defaultStat}
+        // console.log(buffGraphs.statName)
+
+        // console.log(basicShorthand.indexToSpecific["0"])
+        const refKeys = Object.keys(greatTableIndex);
+        for (let i=0;i<refKeys.length;i++) {
+            const specificName = basicShorthand.indexToSpecific[i];
+            if (specificName === "Empty" || specificName === "Level") {continue;}
+            // console.log(specificName)
+
+            optionsString += `<option value="${specificName}" ${specificName === buffNameElement.value ? "selected" : ""}>${specificName}</option>`
+        }
+
+        buffNameElement.innerHTML = optionsString;
+        buffGraphs.statName = buffNameElement.value;
+        const currentIndexStat = basicShorthand.reverseKeyMappings[buffNameElement.value];
+
+        // console.log(currentIndexStat)
+
+
+        let pointsArray = [];
+        let highestCurrentStat = null;
+        let lowestCurrentStat = null;
+        let actionCounter = 0;
+        let cycleEndPoints = []
+        for (let entry of log) {
+            if (entry.logType === "HitEnemy" && entry.source === buffGraphs.entityName) {
+                const hitData = entry.hitData;
+                const AV = hitData.AV;
+                const playerData = JSON.parse(hitData.playerData);
+                // const enemyData = JSON.parse(hitData.enemyData);
+
+                const currentStat = playerData.statTable[currentIndexStat];
+                if (highestCurrentStat === null || currentStat > highestCurrentStat) {highestCurrentStat = currentStat;}
+                if (lowestCurrentStat === null || currentStat < lowestCurrentStat) {lowestCurrentStat = currentStat;}
+                pointsArray.push([AV,currentStat,actionCounter]);
+                actionCounter++;
+            }
+            else if (entry.logType === "EndCycle") {
+                cycleEndPoints.push([entry.AV,actionCounter + 0.5])
+            }
+        }
+
+        // logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})
+        const totalActions = pointsArray.length;
+
+        if (lowestCurrentStat > 0) {lowestCurrentStat = 0;}
+
+        const viewWidth = 450;
+        const viewHeight = 300;
+        let xCushionGraph = 7.5;
+        let xWidthFull = 100 - xCushionGraph*2;
+        let yCushionGraph = 10;
+        let yDepthFull = 100 - yCushionGraph*2;
+
+        const graphByValueSpread = {
+            "AV": battleData.sumAV,
+            "Actions": totalActions,
+        }
+
+        const graphByIndexValue = {
+            "AV": 0,
+            "Actions": 2,
+        }
+
+        let xSpread = graphByValueSpread[buffGraphs.graphBy];
+        // let xSpread = totalActions;
+        let ySpread = (highestCurrentStat - lowestCurrentStat) || 1;
+
+        let xBuffer = 0.05 * xSpread;
+        let yBuffer = 0.05 * ySpread;
+
+        let xMin = 0;
+        let xMax = xSpread;//xSpread + xBuffer;
+
+        let yMin = lowestCurrentStat;
+        let yMax = ySpread;//ySpread + yBuffer
+
+        let polyStringer = "";
+        let dmgPoints = [];
+        
+        let dmgSUM = 0;
+        
+
+        let sumLineStringer = "";
+        let lineStringer = `<path d="M ${viewWidth * xCushionGraph/100},${viewHeight * (1 - yCushionGraph/100)} `;
+        // console.log(pointsArray)
+        const xIndex = graphByIndexValue[buffGraphs.graphBy];
+        for (let i=0;i<pointsArray.length-1;i++) {
+            const currentPointArray = pointsArray[i];
+            const nextPointArray = pointsArray[i+1];
+
+
+
+            // let hitData = entry.hitData;
+            // let source = entry.source;
+
+            // sourcePoints[source].total += hitData.DMGTotalAVG;
+
+            
+            let currentDMG = currentPointArray[1];//hitData.DMGTotalAVG + dmgSUM;
+            let currentAV = currentPointArray[xIndex];
+
+            let currentDMGNext = currentPointArray[1];//hitData.DMGTotalAVG + dmgSUM;
+            let currentAVNext = currentPointArray[xIndex];
+
+            let xNew = (currentAV - xMin)/xSpread * xWidthFull + xCushionGraph;
+            let yNew = 1 - ((currentDMG - yMin)/ySpread * yDepthFull - yDepthFull - (yCushionGraph - 1));
+
+            let xNewNext = nextPointArray ? (currentAVNext - xMin)/xSpread * xWidthFull + xCushionGraph : null;
+            let yNewNext = nextPointArray ? 1 - ((currentDMGNext - yMin)/ySpread * yDepthFull - yDepthFull - (yCushionGraph - 1)) : null;
+
+
+            // currentPointArray[0] = xNew;
+            // currentPointArray[1] = yNew;
+
+            // let currentPoint = currentPointArray;
+            // let nextPoint = nextPointArray;
+
+            const midX = (xNew + xNewNext) / 2;
+            const midY = (yNew + yNewNext) / 2;
+            if (i === pointsArray.length-1) {
+                lineStringer += `Q ${viewWidth * xNew/100},${viewHeight * yNew/100} ${viewWidth * xNewNext/100},${viewHeight * yNewNext/100} `;
+            }
+            else {
+                lineStringer += `Q ${viewWidth * xNew/100},${viewHeight * yNew/100} ${viewWidth * midX/100},${viewHeight * midY/100} `;
+            }
+            
+            
+        }
+        lineStringer += `
+        " 
+        fill="none" stroke="#6e2020" stroke-width="2"/>`;//fill="red"
+
+        sumLineStringer += lineStringer;
+
+        // highestCurrentStat
+        // lowestCurrentStat
+
+        let cycleLineStringer = "";
+        const cycleIndexPoint = buffGraphs.graphBy === "AV" ? 0 : 1;
+        for (let entry of cycleEndPoints) {
+            //av //action Count
+
+            const xValue = entry[cycleIndexPoint];
+            const newX = (xValue - xMin)/xSpread * xWidthFull + xCushionGraph;
+
+            const upperTick = 100-yCushionGraph - 2;
+            const lowerTick = 100-yCushionGraph + 2;
+            cycleLineStringer += `<line x1="${newX}%" y1="${lowerTick}%" x2="${newX}%" y2="${upperTick}%" stroke="grey" stroke-width="1"/>`;
+        }
+
+        const graphString = `
+            <div id="bulletsDisplayGraphBox" class="graphContainerboxUptime">
+                <svg class="weaponBulletArrayGraphUptime" id="" viewBox="0 0 ${viewWidth} ${viewHeight}">
+
+                    <text x="${xCushionGraph-45}%" y="${yCushionGraph-2}%" fill="white" font-size="12" text-anchor="middle" transform="rotate(-90, 50, 50)">${(lowestCurrentStat ?? 0).toLocaleString()}</text>
+                    <text x="${xCushionGraph+5}%" y="${yCushionGraph-2}%" fill="white" font-size="12" text-anchor="middle" transform="rotate(-90, 50, 50)">${(highestCurrentStat ?? 1).toLocaleString()}</text>
+
+                    <line x1="${xCushionGraph}%" y1="${100-yCushionGraph}%" x2="${xCushionGraph}%" y2="${yCushionGraph}%" stroke="grey" stroke-width="3"/> <!-- Y-axis -->
+                    <line x1="${xCushionGraph}%" y1="${100-yCushionGraph}%" x2="${100-xCushionGraph}%" y2="${100-yCushionGraph}%" stroke="grey" stroke-width="3"/> <!-- X-axis -->
+                    ${cycleLineStringer}
+    
+                    <text x="50%" y="7.5%" fill="white" font-size="15" text-anchor="middle">${buffGraphs.statName} by ${buffGraphs.graphBy}</text>
+                    ${sumLineStringer}
+    
+                    ${buffGraphs.graphBy === "AV" ? `<text x="${xCushionGraph}%" y="97.5%" fill="white" font-size="15" text-anchor="start">0 AV</text>
+                    <text x="${100-xCushionGraph}%" y="97.5%" fill="white" font-size="15" text-anchor="end">${battleData.sumAV.toFixed(2)} AV</text>` : ""}
+                    
+                </svg>
+            </div>
+            `;
+
+        mainBox.innerHTML = graphString;
+    },
 };

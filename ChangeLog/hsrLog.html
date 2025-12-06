@@ -8,6 +8,14 @@
 <div>
     <h1>Dec 6th, 2025</h1>
     <ul>
+        <li>Added the ability to graph by Stats on a character or memosprite across damage instances in a battle.
+            <ul>
+                <li>Note that to start the stats that we extract on this graph will only be for the character's main stat sheet. This means in the case of someone like Bronya who has a 100% crit rate trace that only applies to basic attacks, then the 100% crit rate wouldn't be found because it is action tagged to basic attacks and exists outside of the main stat sheet.</li>
+                <li>This is something I plan to change later, obviously when dealing damage we manage to extract all relevant stats from all tables and sources even on the enemy themselves, but extracting that after the fact for a chart is a little different so I'll do that tomorrow.</li>
+            </ul>
+        </li>
+        <li>Added the ability to specify on EACH enemy, how much energy they give characters they hit, each time they hit. So if your boss enemy you set to 20 energy per hit and they have a bounce attack that hits 5 times, that would be 20 * 5 = 100 total energy gain and that's obviously not very realistic so please be careful with this setting.</li>
+        <li>Added the ability in Battle Settings to dictate the starting energy % of all characters in the team. Please note though that this will not influence characters with special energy bars like Castorice or Acheron who have predined starting values for their energy.</li>
         <li>Fixed a bug where DHPT additional dmg had an improper cache access making it so the Addditional DMG procs from souldragon follow up attacks could access the wrong multi in regards to its dmg bonus or def shred etc.</li>
         <li>In regards to the above fix, it's bc of that bug that when testing I could line up dmg for souldragon's Additional DMG proc when trying to prove it didn't inherit sunday's E1 shred fully and it does. Have no problem admitting a mistake, but that's why.
             <ul>
