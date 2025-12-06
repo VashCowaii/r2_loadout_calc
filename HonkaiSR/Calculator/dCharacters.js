@@ -5260,7 +5260,7 @@ let characters = {
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
-                  "toughness": 20
+                  "toughness": 5
                 },
                 "isSourceFirstHit": true,
                 "isAttackFirstHit": true,
@@ -5270,7 +5270,7 @@ let characters = {
                 "all": {
                   "hitRatio": 1,
                   "energyRatio": 1,
-                  "toughness": 10
+                  "toughness": 5
                 },
                 "isMemo": true,
                 "isSourceFirstHit": true,
