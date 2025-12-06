@@ -1573,8 +1573,7 @@ const battleActions = {
         const base = scalarBaseKey[scalarTag];
         const perc = scalarPercKey[scalarTag];
         const flat = scalarFlatKey[scalarTag];
-
-        // greatTableIndex
+        
         return (table[base] + tableONHIT[base] + targetStatsSourceBased[base]) * (1 + table[perc] + tableONHIT[perc] + targetStatsSourceBased[perc]) + table[flat] + tableONHIT[flat] + targetStatsSourceBased[flat];
         // let bonus = table[`${scalarTag}Base`] * (1 + table[`${scalarTag}%`]) + table[`${scalarTag}Flat`];
         // let bonus = table[scalarComponents.b] * (1 + table[scalarComponents.p]) + table[scalarComponents.f];
@@ -2784,9 +2783,11 @@ const battleActions = {
 
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn});
         
-        let multiOf = scalar ? battleActions.pullScalarSum(statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
+        // pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);
+        let multiOf = scalar ? pullScalar(statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
-        let sumDMG = 1 + battleActions.pullDMGBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,realDMGKeys);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + battleActions.pullDMGBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        // let sumDMG = 1 + pullDMG(                   cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsOnTurn,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);
         
 
         //resistance and PEN
@@ -2814,6 +2815,7 @@ const battleActions = {
         let finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
         // if (isEnemy) {console.log(preDMG, sumDMG, sumRES, sumDEF, isBroken, sumVULN, sumDR)}
         let DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+        // console.log(multiOf,preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
 
 
         const finalCritDMG = fixedCritDMG ?? totalCritDMG;
@@ -9017,24 +9019,10 @@ const turnLogic = {
                         }
                         ATKObjects.sundayE1SummonSheet = {
                             "stats": [DEFShredAll],
-                            [DEFShredAll]: 0.40,
+                            [DEFShredAll]: 0.24,
                             "source": characterName,
                             "sourceOwner": characterName,
                             "buffName": buffRef.e1Summon,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "actionTags": ["Summon"],
-                        }
-                        ATKObjects.sundayE1SummonSheetAdjustment = {
-                            "stats": [DEFShredAll],
-                            [DEFShredAll]: -0.16,
-                            "source": characterName,
-                            "sourceOwner": characterName,
-                            "buffName": buffRef.e1SummonAdjustment,
                             "duration": 2,
                             "AVApplied": 0,
                             "maxStacks": 1,
@@ -9060,31 +9048,31 @@ const turnLogic = {
                     }
                     
                     const ownerSheet = ATKObjects.sundayE1OwnerSheet;
-                    ownerSheet.AVApplied = battleData.sumAV;
-                    updateBuff(battleData,targetTurn,ownerSheet);
                     const summonSheet = ATKObjects.sundayE1SummonSheet;
+                    updateBuff(battleData,targetTurn,ownerSheet);
+                    updateBuff(battleData,targetTurn,summonSheet);
                     const memoSheet = ATKObjects.sundayE1MemoSheet;
                     if (targetTurn.activeMemosprites) {
                         const memoRefName = targetTurn.memospriteEventRef;
                         const memoTurn = targetTurn[memoRefName];
                         updateBuff(battleData,memoTurn,memoSheet);
                     }
-                    if (targetTurn.activeSummons) {
-                        const summonRefName = targetTurn.summonEventRef;
-                        const adjustedSheet = ATKObjects.sundayE1SummonSheetAdjustment;
-                        // const summonTurn = targetTurn[summonRefName];
-                        if (summonRefName) {
-                            updateBuff(battleData,targetTurn,summonSheet);
-                            updateBuff(battleData,targetTurn,adjustedSheet);
-                        }
-                        //TODO: new shield dan might screw with this a bit.
-                        //right now I assume that dan assigning souldragon to an entity does NOT actually make that entity the owner of the summon, it only makes the bondmate think it owns one
-                        //for the purposes of banana planar, but I don't know if that is actually the case.
-                        //it's entirely possible that when sunday advances the bondmate, it would also advance souldragon, but I *believe* it would not since dan is the true owner.
+                    // if (targetTurn.activeSummons) {
+                    //     const summonRefName = targetTurn.summonEventRef;
+                    //     const adjustedSheet = ATKObjects.sundayE1SummonSheetAdjustment;
+                    //     // const summonTurn = targetTurn[summonRefName];
+                    //     if (summonRefName) {
+                    //         updateBuff(battleData,targetTurn,summonSheet);
+                    //         updateBuff(battleData,targetTurn,adjustedSheet);
+                    //     }
+                    //     //TODO: new shield dan might screw with this a bit.
+                    //     //right now I assume that dan assigning souldragon to an entity does NOT actually make that entity the owner of the summon, it only makes the bondmate think it owns one
+                    //     //for the purposes of banana planar, but I don't know if that is actually the case.
+                    //     //it's entirely possible that when sunday advances the bondmate, it would also advance souldragon, but I *believe* it would not since dan is the true owner.
 
-                        //for now though what I'm doing is checking not just if the active summons counter is up(bc bondmate would have a counter), but also if the summonEventRef exists on that character
-                        //done like this, bondmate wouldn't get the summon shred applied to them as the bondmate, but if applied to dan, he would have an eventref for the summon, and get it applied
-                    }
+                    //     //for now though what I'm doing is checking not just if the active summons counter is up(bc bondmate would have a counter), but also if the summonEventRef exists on that character
+                    //     //done like this, bondmate wouldn't get the summon shred applied to them as the bondmate, but if applied to dan, he would have an eventref for the summon, and get it applied
+                    // }
                 }
 
                 if (targetTurn.path != "Harmony") {
@@ -13492,7 +13480,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["Additional","Summon"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -13542,12 +13530,33 @@ const turnLogic = {
                 const enemyTurns = battleData.enemyBasedTurns;
 
                 //overwrite the element and dmg tagging to the bondmate's, otherwise this will get royally fucked up
-                ATKObject.element = allyTurn.element;
-                ATKObject.DMGTags = ["All",allyTurn.element];
-                ATKObject.compositeCacheTag = ATKObject.DMGTags + ATKObject.actionTags;
-                ATKObject2.element = allyTurn.element;
-                ATKObject2.DMGTags = ["All",allyTurn.element];
-                ATKObject2.compositeCacheTag = ATKObject2.DMGTags + ATKObject2.actionTags;
+
+                if (ATKObject.element != allyTurn.element) {
+                    const newTags = ["All",allyTurn.element];
+                    Object.assign(ATKObject,{
+                        element: allyTurn.element,
+                        DMGTags: newTags,
+                        compositeCacheTag: ATKObject.DMGTags + ATKObject.actionTags,
+
+                        realDMGKeys: basicShorthand.makeKeysArray(dmgKeys,newTags),
+                        realPENKeys: basicShorthand.makeKeysArray(resPENKeys,newTags),
+                        realShredKeys: basicShorthand.makeKeysArray(defShredKeys,newTags),
+                        realVulnKey: basicShorthand.makeKeysArray(vulnKeys,newTags),
+                    })
+
+                    Object.assign(ATKObject2,{
+                        element: allyTurn.element,
+                        DMGTags: newTags,
+                        compositeCacheTag: ATKObject2.DMGTags + ATKObject2.actionTags,
+
+                        realDMGKeys: basicShorthand.makeKeysArray(dmgKeys,newTags),
+                        realPENKeys: basicShorthand.makeKeysArray(resPENKeys,newTags),
+                        realShredKeys: basicShorthand.makeKeysArray(defShredKeys,newTags),
+                        realVulnKey: basicShorthand.makeKeysArray(vulnKeys,newTags),
+                    })
+
+
+                }
 
                 let highestHPEnemy = null;
                 let enemiesChecked = 0;
