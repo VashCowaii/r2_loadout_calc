@@ -11908,7 +11908,7 @@ const turnLogic = {
                         },
                         scalar,
                         DMGTags: tags,
-                        allToughness: false,
+                        allToughness: true,
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags: actionTags2,
