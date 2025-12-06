@@ -208,6 +208,27 @@ div {
     color: #93CCEA;
     padding: 5px;
 }
+.graphByHeaderNoteBox {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.graphByHeaderNote {
+    width: 95%;
+    white-space: normal;
+    /* display: flex; */
+    justify-content: left;
+    /* align-items: center; */
+    font-size: 12px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #93CCEA;
+    padding: 5px;
+}
 .addEnemyExportNote {
     width: 100%;
     white-space: normal;
@@ -2742,6 +2763,9 @@ div {
     /* margin: 5px; */
     box-sizing: border-box;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .weaponBulletArrayGraph {
     /* width: 100%; */

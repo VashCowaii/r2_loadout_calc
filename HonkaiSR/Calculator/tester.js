@@ -1201,6 +1201,13 @@ const customMenu = {
                     </select>
                 </div>
             </div>
+            <div class="customMenuSearchNote">Energy per Hit is the amount of energy your characters will gain PER HIT not per attack received by this enemy.</div>
+            <div class="statisticSettingsRow">
+                <div class="statsRowName">Energy per Hit:&nbsp;<span id="addEnemyEnergyGainDisplay">10</span></div>
+                <div class="statsRowToggle">
+                    <input type="range" id="addEnemyEnergyGain" name="slider" min="2" max="40" value="${isEdit ? (slotRef.energyGain ??= 10) : "10"}" step="1" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
+                </div>
+            </div>
 
             <div class="customMenuSearchNote">Enemy DEF is assigned automatically based on level selected</div>
 
@@ -2773,7 +2780,7 @@ const userTriggers = {
     updateGraphViewDisplayed(displayType) {
         globalUI.currentGraphViewDisplayType = displayType;
 
-        let mainElemID = ["actualGraphControlsBoxBattleSummary"];
+        let mainElemID = ["actualGraphControlsBoxBattleSummary","actualGraphControlsBoxBattleStatControls"];
         for (let elem of mainElemID) {
             readSelection(elem).style.display = "none";
         }
@@ -2850,6 +2857,16 @@ const userTriggers = {
             // graphs.createGraphsByBuffUptime(battleData, "Red Herring");
             // console.log("reached summary")
             graphs.createGraphsByTurn(battleData);
+        }
+        else if (displayType === "Stat") {
+            readSelection("graphsControllerBoxHolder").style.display = "flex";
+            readSelection("actualGraphControlsBoxBattleStatControls").style.display = "flex";
+
+            readSelection("expandButtonGraphViewStat").style.color = "rgb(255, 219, 145)";//color: rgb(255, 219, 145);
+            readSelection("expandButtonGraphViewStat").style.background = "linear-gradient(to top, #1e1e1e, #1e1e1e, transparent)";
+            readSelection("expandButtonGraphViewStat").style.filter = "brightness(1)";
+
+            graphs.createGraphsByStat(globalUI.buffGraphs.statName);
         }
     },
     updateMainMenuDisplayed(elementID) {
@@ -4868,8 +4885,9 @@ const userTriggers = {
         querySettings.searchTarget = readSelection("statisticInput").value;
 
 
-
-
+        const cyclesStartingEnergyCustom = +readSelection("cyclesStartingEnergyCustom").value / 100;
+        battleSettings.cyclesStartingEnergyCustom = cyclesStartingEnergyCustom;
+        readSelection("cyclesStartingEnergyCustomDisplay").innerHTML = readSelection("cyclesStartingEnergyCustom").value
 
 
         const cycleMode = readSelection("queriesModeSelector").value;
@@ -5522,6 +5540,7 @@ const userTriggers = {
         readSelection("addEnemyLevelSliderDisplay").innerHTML = +readSelection("addEnemyLevelSlider").value;
         readSelection("addEnemyHPBarsDisplay").innerHTML = +readSelection("addEnemyHPBars").value;
         readSelection("addEnemyToughnessBarsDisplay").innerHTML = +readSelection("addEnemyToughnessBars").value;
+        readSelection("addEnemyEnergyGainDisplay").innerHTML = +readSelection("addEnemyEnergyGain").value;
 
 
         const weaknessToggleEntries = ["Fire","Ice","Imaginary","Physical","Quantum","Lightning","Wind"];
@@ -5624,6 +5643,7 @@ const userTriggers = {
                 stats: new Array(greatTableSize).fill(0),
                 enemyTypeAttack: readSelection("addEnemyAttackTypeSelector").value,
                 enemyType: readSelection("addEnemyEnemyTypeSelector").value,
+                energyGain: +readSelection("addEnemyEnergyGain").value,
                 weaknessOverrides,
                 resistantTo,
             }

@@ -26,6 +26,11 @@ let globalUI = {
         buffEntity: "Character",
         entityName: "Hysilens",
         buffName: "",
+
+        graphByStat: "AV",
+        buffEntityStat: "Character",
+        entityNameStat: "Hysilens",
+        statName: null,
     },
     
     "currentCharacterDisplayed": 1,
@@ -273,6 +278,8 @@ let globalRecords = {
         "useTechniquesChar4": true,
 
         "useStartToughness": true,
+
+        "cyclesStartingEnergyCustom": 0.50,
 
         "totalWaves": 1,
 

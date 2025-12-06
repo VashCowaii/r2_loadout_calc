@@ -1398,8 +1398,8 @@ let basicShorthand = {
     mappedFamilies: {},
     mappedCacheTags: {},
     mappedUpdateStatKeys: {},
-    reverseKeyMappings: {},
-    indexToSpecific: {},
+    reverseKeyMappings: {},//specific to index
+    indexToSpecific: {},//index to specific
     findStatObject(statName) {
         let groupKeys = Object.keys(propertyImagePaths);
         let returnKey = null;

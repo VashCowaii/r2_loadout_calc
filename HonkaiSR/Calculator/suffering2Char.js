@@ -3609,16 +3609,19 @@ const battleActions = {
         if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
         battleData.addedDMGTallyAttack = 0;
 
-        if (isEnemy && battleData.onHitEnergyGain) {
+        if (isEnemy) {
             const energyGain = battleActions.updateEnergy;
-            const hitEnergyGain = battleData.onHitEnergyAmount;
+            const hitEnergyGain = sourceTurn.energyGain;
             const namedTurns = battleData.nameBasedTurns;
             for (let targetHit in targetsGotHit) {
                 // eventOwner: ownerTurn.name
                 let currentTurn = namedTurns[targetHit];
+                const hitCount = targetsGotHit[targetHit];
+
+                const sumEnergyGain = hitEnergyGain * hitCount;
                 // console.log(currentTurn)
                 if (currentTurn.isMemosprite) {currentTurn = namedTurns[currentTurn.eventOwner];}
-                energyGain(battleData,hitEnergyGain,currentTurn,false,"Hit Received");
+                energyGain(battleData,sumEnergyGain,currentTurn,false,"Hit(s) Received");
             }
         }
 
