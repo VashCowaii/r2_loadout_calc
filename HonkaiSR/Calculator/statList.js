@@ -1549,6 +1549,12 @@ taggers(weaknessKeys,possibleTags,"Weakness","",true);
 
 
 
+// scalarBaseKey[scalarTag];
+// const perc = scalarPercKey[scalarTag];
+// const flat = scalarFlatKey[scalarTag];
+
+// console.log(scalarBaseKey["ATK"],scalarPercKey["ATK"],scalarFlatKey["ATK"])
+
 
 
 
