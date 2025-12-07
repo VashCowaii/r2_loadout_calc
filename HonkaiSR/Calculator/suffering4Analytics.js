@@ -6233,7 +6233,7 @@ const graphs = {
         let highestCurrentStat = null;
         let lowestCurrentStat = null;
         let actionCounter = 0;
-        let cycleEndPoints = []
+        let cycleEndPoints = [];
         for (let entry of log) {
             if (entry.logType === "HitEnemy" && entry.source === buffGraphs.entityName) {
                 const hitData = entry.hitData;
