@@ -5891,6 +5891,21 @@ div {
     background: linear-gradient(to right, transparent, transparent, #ffffff1A);
     /* border: 1px solid red; */
 }
+.importCharacterBoxItemShowcase {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: ; */
+    border-top-right-radius: 10px;
+    min-width: 22%;
+    max-width: 15%;
+    padding: 2px;
+    background: linear-gradient(to right, transparent, transparent, #ffffff1A);
+    /* border: 1px solid red; */
+}
 .importWaveBoxItem {
     width: auto;
     display: flex;

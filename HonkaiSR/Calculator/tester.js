@@ -746,6 +746,7 @@ const customMenu = {
 
         let characterExportString = "";
         let characterCacheString = "";
+        let showcaseCacheString = "";
         let loadOrderString = "";
 
         const characterObject = globalRecords.character;
@@ -758,6 +759,9 @@ const customMenu = {
         const defaultLoadOrder = globalUI.defaultTeam;
         const cachedLoadOrder = localStorage.getItem("loadTeam");
         const cachedLoadArray = cachedLoadOrder ? JSON.parse(cachedLoadOrder) : null;
+
+        const cachedShowcase = localStorage.getItem("showcase");
+        const cachedShowcaseObject = cachedShowcase ? JSON.parse(cachedShowcase) : null;
 
         for (let i=1;i<=4;i++) {
             const currentCharacter = characterObject[`char${i}`].name;
@@ -795,9 +799,35 @@ const customMenu = {
                     <datalist id="importPageLoadTeamChar${i}List">${charOptionString}</datalist>
                 </div>
             </div>`;
+
+            if (cachedShowcaseObject && cachedShowcaseObject.detailInfo?.avatarDetailList) {
+                const currentCharacterID = characters[currentCharacter].internalID;
+                for (let entry of cachedShowcaseObject.detailInfo.avatarDetailList) {
+                    const currentID = entry.avatarId;
+
+                    if (currentID === currentCharacterID) {
+                        showcaseCacheString += `<div class="importCharacterBoxItemShowcase">
+                            <div class="filterCharacterExportSwitchIconBox">
+                                <img src="/HonkaiSR/${iconPath}" class="filterCharacterSelectionSwitchIconExportBox">
+                            </div>
+                            <div class="exportIconBoxHolder clickable" onclick="userTriggers.importCharacterData(null,null,${currentID})">Use</div>
+                        </div>`;
+                        break;
+                    }
+                }
+                
+                
+            }
+        }
+
+        if (!showcaseCacheString) {
+            showcaseCacheString += `<div class="customMenuSearchNoteWarning">
+            While you do have a cached Showcase, none of your showcase characters are the same as your currently selected characters.<br>For example, if Saber is on your Showcase, you need Saber selected on your team in order to have the option to use your Showcase Saber.
+            </div>`
         }
             
-
+        const showcaseID = localStorage.getItem("showcaseID");
+        let defaultIDValue = showcaseID ?? "";
         bodyElem.innerHTML = `
         <div class="exportMenuMainBox">
             <div class="teamwideImportBox">
@@ -816,6 +846,24 @@ const customMenu = {
                     ${characterExportString}
                 </div>
             </div>
+
+            <div class="teamwideImportHeader">UID Lookup</div>
+            <div class="customMenuSearchNote">Enter a full 9-digit UID and use Enka's API to extract your in-game profile showcase.<br>Then, if one of your showcase characters matches a currently selected character, you can import over that character's slot.</div>
+            <div class="customMenuSearchNoteWarning">Once a showcase is retrieved, it will be stored in your browser cache so we can pull it up later without needing to search again.</div>
+            <div class="statFiltersRowContainer">
+                <div class="presetsTitle">INPUT:</div>
+                <div class="presetsSelectorBox">
+                    <input class="tagInput" id="enkaUIDInput" pattern="\d*" maxlength="9" value="${defaultIDValue}"/>
+                </div>
+                <div class="exportIconBoxHolder clickable" onclick="importFuckery.getPlayerData()">Search</div>
+            </div>
+
+            ${showcaseCacheString ? `<div class="teamwideImportBox">
+                <div class="teamwideImportHeader">Showcase</div>
+                <div class="characterImportBox">
+                    ${showcaseCacheString}
+                </div>
+            </div>` : ""}
 
             <details class="rotationsPermaConditionsExpand">
                 <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Cache</summary>
@@ -3019,7 +3067,7 @@ const userTriggers = {
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
     },
-    updateSelectedCharacter(updated,forceLoadOrder) {
+    updateSelectedCharacter(updated,forceLoadOrder,isShowcaseOverwrite) {
         let currentSlot = globalUI.currentCharacterDisplayed;
         let charSlot = `char${currentSlot}`;
 
@@ -3034,7 +3082,7 @@ const userTriggers = {
         const slot4Conflict = characterObject.char4.name === updated && currentSlot != 4;
 
         const duplicateCharacterExists = slot1Conflict || slot2Conflict || slot3Conflict || slot4Conflict;
-        if (duplicateCharacterExists && !forceLoadOrder) {
+        if (duplicateCharacterExists && !forceLoadOrder && !isShowcaseOverwrite) {
             alert(`Cannot input duplicate characters into multiple slots.\n\nConflicting character slot: ${slot1Conflict ? "char1" : ""}${slot2Conflict ? "char2" : ""}${slot3Conflict ? "char3" : ""}${slot4Conflict ? "char4" : ""}`);
             return;
         }
@@ -5288,13 +5336,13 @@ const userTriggers = {
         }
         
     },
-    importCharacterData(charSlot,pathReadID) {
+    importCharacterData(charSlot,pathReadID,showcaseID) {
         // charALLImport
 
         const inputElem = readSelection("importTextInputTeam");
 
 
-        if (inputElem.value === "") {
+        if (inputElem.value === "" && !showcaseID) {
             const fileInput = document.getElementById(pathReadID);
 
             fileInput.onchange = async (event) => {
@@ -5378,6 +5426,55 @@ const userTriggers = {
 
             fileInput.click(); // open file picker
         }
+        else if (showcaseID) {
+            const cachedShowcase = localStorage.getItem("showcase");
+            const cachedShowcaseObject = JSON.parse(cachedShowcase);
+
+            const showcaseCharacters = cachedShowcaseObject.detailInfo.avatarDetailList;
+            let characterToParse = null;
+            for (let entry of showcaseCharacters) {
+                if (entry.avatarId === showcaseID) {
+                    characterToParse = entry;
+                    break
+                }
+            }
+            if (!characterToParse) {
+                alert("Invalid cache error: the character you tried to apply from your showcase doesn't exist.\n\nIf you ever see this error join the discord and let Vash know.");
+                return
+            }
+
+            let slotToInsert = null;
+            const characterObject = globalRecords.character;
+            for (let characterEntry in characterObject) {
+                const currentCharacter = characterObject[characterEntry];
+                const charName = currentCharacter.name;
+                const charID = characters[charName].internalID;
+
+                if (charID === showcaseID) {
+                    slotToInsert = characterEntry;
+                    break;
+                }
+            }
+            if (!slotToInsert) {
+                alert("Invalid deposit location: the character slot you're trying to deposit to can't find a matching character from your showcase cache.\n\nIf you ever see this error, join the discord and let Vash know.");
+                return;
+            }
+
+            let newCharacterData = importFuckery.parseEnkaCharacter(characterToParse);
+            if (!newCharacterData) {return;}//abort if we canceled the entire overwrite due to invalid data.
+            Object.assign(characterObject[slotToInsert],newCharacterData);
+
+            const trimmedNumber = +slotToInsert.replace("char","");
+            // console.log(trimmedNumber)
+            userTriggers.updateCharacterSlotSelected(trimmedNumber);
+            userTriggers.updateCharacterBreakdownClicked(trimmedNumber);
+            userTriggers.updateSelectedCharacter(characterObject[slotToInsert].name,false,true);
+            userTriggers.updateSelectedTraceDisplay(3);//default to ulty on page load, otherwise the trace desc right side will be empty, and that's fuckin weird
+            userTriggers.updateSelectedRelicStats();
+            
+            userTriggers.updateMainMenuDisplayed(1);
+            customMenu.createCharacterExportScreen();
+        }
         else {
             const parsedData = JSON.parse(inputElem.value);
 
@@ -5426,7 +5523,7 @@ const userTriggers = {
             customMenu.createCharacterExportScreen();
         }
 
-        userTriggers.updateSelectedCharacter(globalRecords.character.char1.name);
+        userTriggers.updateSelectedCharacter(globalRecords.character.char1.name,false,showcaseID ? true : false);
         userTriggers.updateSelectedRelicStats();
     },
     exportCharacterDataFilter(charSlot) {
@@ -6478,7 +6575,422 @@ const formulasValues = {
 
 
 
+const importFuckery = {
+    async getPlayerData() {
+        const uidElement = readSelection("enkaUIDInput");
+        uidElement.disabled = true;
+        const uid = readSelection("enkaUIDInput").value;
 
+
+
+        const refreshTimer = localStorage.getItem("showcaseRefresh");
+        const refreshTimerParse = refreshTimer ? +refreshTimer : null;
+
+        if (refreshTimerParse) {
+            console.log(refreshTimerParse/1000);
+            const timeDiff = Date.now() - refreshTimerParse;
+            const parseInSeconds = timeDiff/1000;
+            const parseInMinutes = parseInSeconds/60;
+
+            if (parseInMinutes < 1) {
+                alert(`At least 60 seconds need to pass before you can refresh your showcase.\n\nIt has been ${parseInSeconds.toLocaleString()}s`);
+                uidElement.disabled = false;
+                return;
+            }
+        }
+
+        if (!uid) {
+            alert("No UID was entered. Please enter a UID and try again.");
+            uidElement.disabled = false;
+            return;
+        }
+        const IDParse = uid.replace(/\D/g, "");
+        if (IDParse.length != 9) {
+            alert(`The UID you entered has an invalid length of ${IDParse.length}.\n\nUID's are 9 digits long, please try again.`);
+            uidElement.disabled = false;
+            return;
+        }
+
+        // 615703019
+        const res = await fetch(`https://solitary-haze-d724.kanoobay.workers.dev/?uid=${IDParse}`);
+        const data = await res.json();
+
+        if (!data.detailInfo) {
+            alert(`Showcase import failed\n\n${data}`);
+            uidElement.disabled = false;
+            return;
+        }
+
+
+        localStorage.setItem("showcase", JSON.stringify(data));
+        localStorage.setItem("showcaseRefresh", Date.now());
+        localStorage.setItem("showcaseID", IDParse);
+
+        customMenu.createCharacterExportScreen();
+
+        uidElement.disabled = false;
+    },
+    parseEnkaCharacter(characterParseObject) {
+        // "char1": {
+        //     "name": "Saber",
+        //     "rank": 0,
+        //     "lineup": 1,
+        //     "lcName": "A Thankless Coronation",
+        //     "lcRank": 1,
+        //     "2pc": "Scholar Lost in Erudition",
+        //     "4pc": "Scholar Lost in Erudition",
+        //     "planar": "The Wondrous BananAmusement Park",
+        //     "HeadMain": "HPFlat",
+        //     "Head1Stat": "ATKFlat",
+        //     "Head1Value": 16.935019,
+        //     "Head2Stat": "CritRateBase",
+        //     "Head2Value": 0.14904,
+        //     "Head3Stat": "CritDamageBase",
+        //     "Head3Value": 0.05184,
+        //     "Head4Stat": "EffectRES",
+        //     "Head4Value": 0.07776,
+        //     "HandsMain": "ATKFlat",
+        //     "Hands1Stat": "ATK%",
+        //     "Hands1Value": 0.12096,
+        //     "Hands2Stat": "CritRateBase",
+        //     "Hands2Value": 0.06156,
+        //     "Hands3Stat": "CritDamageBase",
+        //     "Hands3Value": 0.0648,
+        //     "Hands4Stat": "DamageBreak",
+        //     "Hands4Value": 0.17496,
+        //     "BodyMain": "CritDamageBase",
+        //     "Body1Stat": "HP%",
+        //     "Body1Value": 0.12096,
+        //     "Body2Stat": "DEF%",
+        //     "Body2Value": 0.1026,
+        //     "Body3Stat": "CritRateBase",
+        //     "Body3Value": 0.05508,
+        //     "Body4Stat": "DamageBreak",
+        //     "Body4Value": 0.0648,
+        //     "FeetMain": "ATK%",
+        //     "Feet1Stat": "SPDFlat",
+        //     "Feet1Value": 2,
+        //     "Feet2Stat": "CritRateBase",
+        //     "Feet2Value": 0.0648,
+        //     "Feet3Stat": "CritDamageBase",
+        //     "Feet3Value": 0.23328,
+        //     "Feet4Stat": "ATKFlat",
+        //     "Feet4Value": 19.051896,
+        //     "SphereMain": "ATK%",
+        //     "Sphere1Stat": "HP%",
+        //     "Sphere1Value": 0.03888,
+        //     "Sphere2Stat": "SPDFlat",
+        //     "Sphere2Value": 2,
+        //     "Sphere3Stat": "CritRateBase",
+        //     "Sphere3Value": 0.08424,
+        //     "Sphere4Stat": "CritDamageBase",
+        //     "Sphere4Value": 0.18144,
+        //     "RopeMain": "ATK%",
+        //     "Rope1Stat": "HP%",
+        //     "Rope1Value": 0.11232,
+        //     "Rope2Stat": "CritRateBase",
+        //     "Rope2Value": 0.0324,
+        //     "Rope3Stat": "CritDamageBase",
+        //     "Rope3Value": 0.23976,
+        //     "Rope4Stat": "DamageBreak",
+        //     "Rope4Value": 0.0648,
+        // }
+
+        //CHARACTER
+        const charID = characterParseObject.avatarId;
+        const charRank = characterParseObject.rank;
+        let charNameParse = "";
+
+        const invalidCharID = [];
+        let charFound = false;
+        for (let entry in characters) {
+            const currentChar = characters[entry];
+            const currentCharID = currentChar.internalID;
+
+            if (charID === currentCharID) {
+                charNameParse = currentChar.name;
+                charFound = true;
+                break;
+            }
+        }
+        if (!charFound) {invalidCharID.push(charID);}
+
+        //LIGHTCONE
+        const parseLc = characterParseObject.equipment;
+        const parseLcID = parseLc.tid;
+        const parseLcRank = parseLc.rank;
+
+        let lcNameParse = "";
+        let lcFound = false;
+        const invalidLCID = [];
+        for (let entry in lightcones) {
+            const currentLightcone = lightcones[entry];
+            const currentLcID = currentLightcone.lightconeID;
+
+            if (currentLcID === parseLcID) {
+                lcNameParse = currentLightcone.name;
+                lcFound = true;
+                break;
+            }
+        }
+        if (!lcFound) {invalidLCID.push(parseLcID);}
+        //need some handling for lc's that don't exist yet
+
+        const returnObject = {
+            name: charNameParse,
+            rank: charRank,
+            lcName: lcNameParse,
+            lcRank: parseLcRank
+        }
+
+        //RELICS
+        // relicList
+        const relicArray = characterParseObject.relicList;
+        const typeSlotConversion = {
+            1: "Head",
+            2: "Hands",
+            3: "Body",
+            4: "Feet",
+            5: "Sphere",
+            6: "Rope"
+        }
+
+        const slotNameConversions = userTriggers.relicSlotNameConversions;
+        const subAffixObject = relics.Feet.subAffix;
+        const subAffixEntries = Object.keys(subAffixObject);
+
+        const slotFinished = {
+            1: false,
+            2: false,
+            3: false,
+            4: false,
+            5: false,
+            6: false,
+        }
+        const setCounts = {};
+        let planarSetName = "";
+        let planarSecondary = "";
+
+        const invalidSetID = [];
+
+        for (let entry of relicArray) {
+            slotFinished[entry.type] = true;
+            const slotName = typeSlotConversion[entry.type];
+            const convertedSlotName = slotNameConversions[slotName];
+            const mainAffixID = entry.mainAffixId - 1;
+
+            // console.log(convertedSlotName,slotName)
+            const mainAffixObject = relics[convertedSlotName].mainAffix;
+            const mainAffixKeys = Object.keys(mainAffixObject);
+
+            const mainAffix = mainAffixKeys[mainAffixID];
+
+            // console.log(mainAffixID,mainAffixKeys,mainAffix)
+
+            const pieceObject = {
+                [`${slotName}Main`]: mainAffix,
+                [`${slotName}1Stat`]: "",
+                [`${slotName}1Value`]: 0,
+                [`${slotName}2Stat`]: "",
+                [`${slotName}2Value`]: 0,
+                [`${slotName}3Stat`]: "",
+                [`${slotName}3Value`]: 0,
+                [`${slotName}4Stat`]: "",
+                [`${slotName}4Value`]: 0,
+            }
+
+            const setID = entry._flat.setID;
+            let setFound = false;
+            for (let entrySet in relicSets) {
+                const currentSet = relicSets[entrySet];
+                const currentSetID = currentSet.setID;
+
+                // console.log(currentSetID,setID)
+                if (currentSetID === setID) {
+                    
+                    if (entry.type < 5) {
+                        setCounts[currentSet.name] ??= 0; 
+                        setCounts[currentSet.name] += 1;
+                        setFound = true;
+                        break;
+                    }
+                    else if (entry.type === 5) {
+                        planarSetName = currentSet.name;
+                        setFound = true;
+                        break;
+                    }
+                    else if (entry.type === 6) {
+                        planarSecondary = currentSet.name;
+                        setFound = true;
+                        break;
+                    }
+                }
+            }
+            if (!setFound) {
+                invalidSetID.push(setID);
+
+                if (entry.type < 5) {
+                    setCounts["Sacerdos' Relived Ordeal"] ??= 0;
+                    setCounts["Sacerdos' Relived Ordeal"] += 1;
+                }
+                else if (entry.type == 5) {
+                    // Sprightly Vonwacq
+                    planarSetName = "Sprightly Vonwacq";
+                }
+                else {
+                    planarSecondary = "Sprightly Vonwacq";
+                }
+            }
+
+            const subAffixList = entry.subAffixList;
+            for (let i=0;i<4;i++) {
+                const currentSub = subAffixList[i];
+                if (!currentSub) {continue;}
+                const statNumber = i+1;
+
+                const subAffixID = currentSub.affixId - 1;
+                const subAffixName = subAffixEntries[subAffixID];
+
+                const subAffixEntryObject = subAffixObject[subAffixName];
+
+                // if (!subAffixName) {console.log(subAffixID,subAffixName,subAffixEntries)}
+                // console.log(subAffixID,subAffixName)
+
+                // console.log(subAffixEntries,subAffixID,subAffixName)
+                const base = subAffixEntryObject.base;
+                const step = subAffixEntryObject.step;
+
+                const rollCount = currentSub.cnt;
+                const rollSteps = currentSub.step ?? 0;
+
+                const finalValue = rollCount * base + (rollSteps * step);
+
+                // "EffectRES": {
+                //     "base": 0.03456,
+                //     "step": 0.00432,
+                //     "stepsPossible": 2,
+                //     "stepRatio": 8,
+                //     "bounds": [
+                //         0.03456,
+                //         0.2592
+                //     ]
+                // }
+
+                pieceObject[`${slotName}${statNumber}Stat`] = subAffixName;
+                pieceObject[`${slotName}${statNumber}Value`] = finalValue;
+
+                // console.log(subAffixID,subAffixName,finalValue)
+            }
+
+            Object.assign(returnObject,pieceObject);
+        }
+
+
+        let sortedSetCounts = [];
+        for (let entry in setCounts) {
+            const currentSetValue = setCounts[entry];
+            sortedSetCounts.push({setName: entry, setCount: currentSetValue})
+        }
+        sortedSetCounts.sort((a, b) => b.setCount - a.setCount);
+
+        let incompleteSetsFound = false;
+        //if we ever see mismatched shit, let people know we forced a complete set bc we do NOT operate with incomplete bullshit
+        if (sortedSetCounts[0]?.setCount != 2 && sortedSetCounts[0]?.setCount != 4
+            || sortedSetCounts[1]?.setCount
+            || planarSecondary != planarSetName) {incompleteSetsFound = true;}
+
+        // console.log(sortedSetCounts,setCounts)
+        returnObject.planar = planarSetName;
+        returnObject["2pc"] = sortedSetCounts[0]?.setName;
+        returnObject["4pc"] = sortedSetCounts[0]?.setCount === 4 ? sortedSetCounts[0]?.setName : sortedSetCounts[1]?.setName ?? sortedSetCounts[0]?.setName;
+
+        // invalidSetID set ID's that couldn't be found
+        // invalidCharID invalid character array
+        // invalidLCID invalid lc array
+        // incompleteSetsFound
+
+        if (incompleteSetsFound) {
+            alert("Incomplete sets found. The calculator operates in 2pc or 4pc sets, never less than that.\n\nAs such, the calculator has forced 2pc sets where possible to make up the difference.")
+        }
+        if (invalidLCID.length) {
+            alert(`Invalid Lightcone ID found: ${invalidLCID}\n\nSince we need a lightcone to exist on this character, we have forcibly assigned it "Dance! Dance! Dance!". You should probably change it to something that applies to this character.\n\nThis happens for one of the following reasons:\n-Vash fucked up somehow\n-This lightcone doesn't exist in the calculator\n-Or you manually updated the lightcone ID to something stupid.`)
+        }
+        if (invalidSetID.length) {
+            alert(`Invalid Relic ID's found: ${invalidSetID}\n\nSince we need a relic to exist on this character, we have forcibly assigned it to Sacerdos if it was a body set, and Vonwaq if it was a planar set. You should probably change it to something that applies to this character.\n\nThis happens for one of the following reasons:\n-Vash fucked up somehow\n-This relic set doesn't exist in the calculator\n-Or you manually updated the relic ID to something stupid.`)
+        }
+        if (invalidCharID.length) {
+            alert(`Invalid Character ID found: ${invalidCharID}\n\nSince we need a character to exist in this slot, we have aborted the overwrite from your showcase.\n\nThis happens for one of the following reasons:\n-Vash fucked up somehow\n-This character doesn't exist in the calculator\n-Or you manually updated the character ID to something stupid.`)
+            return null;
+        }
+
+        //     "2pc": "Scholar Lost in Erudition",
+        //     "4pc": "Scholar Lost in Erudition",
+        //     "planar": "The Wondrous BananAmusement Park",
+
+        // {
+        //     "mainAffixId": 1,
+        //     "subAffixList": [
+        //       {
+        //         "affixId": 3,
+        //         "cnt": 2,
+        //         "step": 4
+        //       },
+        //       {
+        //         "affixId": 5,
+        //         "cnt": 1
+        //       },
+        //       {
+        //         "affixId": 7,
+        //         "cnt": 3,
+        //         "step": 3
+        //       },
+        //       {
+        //         "affixId": 12,
+        //         "cnt": 2,
+        //         "step": 2
+        //       }
+        //     ],
+        //     "tid": 61191,
+        //     "type": 1,
+        //     "level": 15,
+        //     "_flat": {
+        //       "props": [
+        //         {
+        //           "type": "HPDelta",
+        //           "value": 705.6
+        //         },
+        //         {
+        //           "type": "DefenceDelta",
+        //           "value": 42.337546
+        //         },
+        //         {
+        //           "type": "AttackAddedRatio",
+        //           "value": 0.03456
+        //         },
+        //         {
+        //           "type": "SpeedDelta",
+        //           "value": 6.9
+        //         },
+        //         {
+        //           "type": "BreakDamageAddedRatio",
+        //           "value": 0.11664
+        //         }
+        //       ],
+        //       "setName": "4739615311632545717",
+        //       "setID": 119
+        //     }
+        //   }
+
+    
+
+
+
+        // "lcName": "A Thankless Coronation",
+            // "lcRank": 1,
+            // console.log(returnObject)
+        return returnObject;
+    }
+}
 
 
 
