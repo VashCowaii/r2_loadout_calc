@@ -820,7 +820,7 @@ const customMenu = {
             }
         }
 
-        if (!showcaseCacheString) {
+        if (!showcaseCacheString && cachedShowcaseObject) {
             showcaseCacheString += `<div class="customMenuSearchNoteWarning">
             While you do have a cached Showcase, none of your showcase characters are the same as your currently selected characters.<br>For example, if Saber is on your Showcase, you need Saber selected on your team in order to have the option to use your Showcase Saber.
             </div>`
