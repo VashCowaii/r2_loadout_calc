@@ -2163,9 +2163,10 @@ const turnLogicLightcones = {
                     const sourceBuffs = sourceTurn.buffsObject;
                     const buffSheet = sourceTurn.flowingNightglowCantillationSheet;
                     const buffCheck = buffSheet ? sourceBuffs[buffSheet.buffName] : null;
-                    if (!buffCheck || buffCheck && buffCheck.currentStacks < 5) {return;}
+                    // if (!buffCheck || buffCheck && buffCheck.currentStacks < 5) {return;}
                     const updateBuff = battleActions.updateBuff;
-                    removeBuff(battleData,sourceTurn,buffSheet);
+                    if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
+                    
 
                     if (!sourceTurn.flowingNightglowCadenzaSheet) {
                         let lcNameRef = "Flowing Nightglow";

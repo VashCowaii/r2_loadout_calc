@@ -1652,7 +1652,7 @@ const compare = {
         
         const rollsPerRelic = querySettings.rollsPerRelic;
         const failedAddedRolls = querySettings.failedAddedRolls;
-        const totalRollPoolAdded = (rollsPerRelic - failedAddedRolls) * 6 - (querySettings.minimumAddedRoll * 4);
+        const totalRollPoolAdded = (rollsPerRelic - failedAddedRolls) * 6;
         const usableBaseSubstatPool = querySettings.usableBaseRolls;
 
         // querySettingsglobalUI.filters
@@ -1692,6 +1692,7 @@ const compare = {
 
         const anyoneExceedsPoolValue = char1ExceedsPoolValue || char2ExceedsPoolValue || char3ExceedsPoolValue || char4ExceedsPoolValue;
 
+        console.log(char1ExceedsPoolValue,char1MinimumTotal,totalRollPoolAdded)
         if (anyoneExceedsPoolValue) {
             alert(`The following character(s) have minimum substat values that exceed the total added rolls possible within your settings.\n
                 ${(char1ExceedsPoolValue ? "[Char1]": "")+(char2ExceedsPoolValue ? "[Char2]": "")+(char3ExceedsPoolValue ? "[Char3]": "")+(char4ExceedsPoolValue ? "[Char4]": "")}
