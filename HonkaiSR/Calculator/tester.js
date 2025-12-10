@@ -1880,12 +1880,15 @@ const customMenu = {
                 const currentToughness = enemyData.currentToughness;
                 const maxToughness = enemyData.maxToughness;
                 const toughnessRatio = currentToughness/maxToughness;
+                // rawReduction,    //total toughness after weakness break efficiency and stuff like that
+                // toughnessBase,   //total toughness after toughness modifying effects not bonuses, like firefly hitting an off element and getting the amount reduced, or foxian prayer from fugue
+                // targetWasAlreadyBroken   // whether the target was broken or not BEFORE the toughness reduction touched them
 
                 // ${hitData.toughnessBase ? `
                 //     <div class="actionDetailBodyCenterTags">Toughness: ${(enemyData.currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString()} --> ${enemyData.currentToughness.toLocaleString()}/${enemyData.maxToughness.toLocaleString()}</div>
                 //     `: ""}
 
-                const actualReductionDisplayText = hitData.toughnessBase ? (currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString() + " --> " : "";
+                const actualReductionDisplayText = hitData.toughnessBase && !hitData.targetWasAlreadyBroken ? (currentToughness + hitData.toughnessBase - (hitData.overBreak ?? 0)).toLocaleString() + " --> " : "";
                 toughnessString += `
                 <div class="buffNameBreakdownClickerHeaderBoxTOUGHNESSROW">
                     <div class="buffToughnessHealthDisplayFilled" style="width: ${toughnessRatio*100}%"></div>
@@ -2014,6 +2017,7 @@ const customMenu = {
                 </div>` : ""}
             </div>` : "";
 
+            
             const standardCheck = breakString === "" && dotString === "" && trueString === "";
             // multiOf
 
@@ -2064,6 +2068,230 @@ const customMenu = {
 
 
             // DOT
+            // enemyDEFRed,sumPEN,sumSHRED,sumVULN,enemyDEF,sumDEF,sumDR,isBroken,sumDMG
+
+            let bonusesStringMultis = "";
+            let bonusTotalString = "";
+            let bonusTotalArray = [];
+
+            if (standardString != "") {
+                if (hitData.scalar) {bonusTotalArray.push({rowName: "Scalar",rowDisplayValue: hitData.scalar})}
+                if (hitData.multiOf) {bonusTotalArray.push({rowName: "Scalar SUM",rowDisplayValue: hitData.multiOf.toLocaleString()})}
+                if (hitData.sumDMG) {bonusTotalArray.push({rowName: "DMG%",rowDisplayValue: `${((hitData.sumDMG - 1) * 100).toLocaleString()}%`})}
+                if (hitData.totalCritRate) {bonusTotalArray.push({rowName: "CRIT Rate",rowDisplayValue: `${(hitData.totalCritRate * 100).toLocaleString()}%`})}
+                if (hitData.totalCritDMG) {bonusTotalArray.push({rowName: "CRIT DMG",rowDisplayValue: `${(hitData.totalCritDMG * 100).toLocaleString()}%`})}
+
+                bonusesStringMultis = `
+                <div class="totalHealingBoxBreakdownRows">
+                    ${hitData.sumDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DMG</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDMG).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.totalCritDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Crit DMG</div>
+                        <div class="totalHealingValueBoss">${(hitData.totalCritDMG + 1).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumVULN ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Vuln</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumVULN).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDEF ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DEF</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDEF).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumRES ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">RES</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumRES).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDR ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DR</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDR).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.isBroken && hitData.isBroken != 1 ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Not Broken</div>
+                        <div class="totalHealingValueBoss">${(hitData.isBroken).toLocaleString()}x</div>
+                    </div>` : ""}
+
+
+                    ${hitData.currentSplit ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Split</div>
+                        <div class="totalHealingValueBoss">${(hitData.currentSplit).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.currentMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.currentMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    
+                </div>`;
+            }
+            else if (breakString != "") {
+                if (hitData.sumDMG) {bonusTotalArray.push({rowName: "Break Effect (SUM)",rowDisplayValue: `${((hitData.sumDMG - 1) * 100).toLocaleString()}%`})}
+
+                // baseMulti,levelMulti,toughMulti,breakMulti
+
+                // baseMulti    //this is missing when superbreak use that to identify
+                bonusesStringMultis = `
+                <div class="totalHealingBoxBreakdownRows">
+                    ${hitData.sumDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Break Effect</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDMG).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.baseMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Element Multiplier</div>
+                        <div class="totalHealingValueBoss">${(hitData.baseMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.levelMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Level Multiplier</div>
+                        <div class="totalHealingValueBoss">${(hitData.levelMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.toughMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">${hitData.baseMulti === undefined ? "Toughness" : "Reduction"} Multiplier</div>
+                        <div class="totalHealingValueBoss">${(hitData.toughMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+
+
+
+                    ${hitData.sumVULN ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Vuln</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumVULN).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDEF ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DEF</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDEF).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumRES ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">RES</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumRES).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDR ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DR</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDR).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.isBroken && hitData.isBroken != 1 ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Not Broken</div>
+                        <div class="totalHealingValueBoss">${(hitData.isBroken).toLocaleString()}x</div>
+                    </div>` : ""}
+
+
+                    ${hitData.breakMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.breakMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    
+                </div>`;
+            }
+            else if (dotString != "") {
+                if (hitData.scalar && !hitData.isBreakDOT) {bonusTotalArray.push({rowName: "Scalar",rowDisplayValue: hitData.scalar})}
+                if (hitData.multiOf && !hitData.isBreakDOT) {bonusTotalArray.push({rowName: "Scalar SUM",rowDisplayValue: hitData.multiOf.toLocaleString()})}
+                if (hitData.sumDMG) {bonusTotalArray.push({rowName: hitData.isBreakDOT ? "Break Effect (SUM)" : "DMG%",rowDisplayValue: `${((hitData.sumDMG - 1) * 100).toLocaleString()}%`})}
+                // if (hitData.totalCritRate) {bonusTotalArray.push({rowName: "CRIT Rate",rowDisplayValue: `${(hitData.totalCritRate * 100).toLocaleString()}%`})}
+                // if (hitData.totalCritDMG) {bonusTotalArray.push({rowName: "CRIT DMG",rowDisplayValue: `${(hitData.totalCritDMG * 100).toLocaleString()}%`})}
+
+                bonusesStringMultis = `
+                <div class="totalHealingBoxBreakdownRows">
+                    ${hitData.sumDMG ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DMG</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDMG).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumVULN ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Vuln</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumVULN).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDEF ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DEF</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDEF).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumRES ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">RES</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumRES).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.sumDR ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">DR</div>
+                        <div class="totalHealingValueBoss">${(hitData.sumDR).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.isBroken && hitData.isBroken != 1 ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Not Broken</div>
+                        <div class="totalHealingValueBoss">${(hitData.isBroken).toLocaleString()}x</div>
+                    </div>` : ""}
+
+
+                    ${hitData.detonateMulti && hitData.isDetonated ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Detonate Multiplier</div>
+                        <div class="totalHealingValueBoss">${(hitData.detonateMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.currentMulti && (!hitData.isBreakDOT || hitData.element === "Physical") ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Multi</div>
+                        <div class="totalHealingValueBoss">${(hitData.currentMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    
+                </div>`;
+            }
+
+            
+            if (hitData.sumVULN) {bonusTotalArray.push({rowName: "Vuln%",rowDisplayValue: ((hitData.sumVULN - 1)*100).toLocaleString() + "%"})}
+            if (hitData.enemyDEFRed || hitData.sumSHRED) {
+                const sumShredValue = Math.abs((hitData.enemyDEFRed ?? 0) - (hitData.sumSHRED ?? 0))
+                const isCapped = sumShredValue >= 1;
+
+                bonusTotalArray.push({rowName: "DEF Shred (SUM)",rowDisplayValue: `${((sumShredValue) * 100).toLocaleString()}%${isCapped ? " (OVERCAP)" : ""}`})
+            }
+            if (hitData.enemyDEF != undefined) {bonusTotalArray.push({rowName: "Target DEF Final",rowDisplayValue: hitData.enemyDEF.toLocaleString()})}
+            if (hitData.sumRES != undefined) {bonusTotalArray.push({rowName: "Target RES Final",rowDisplayValue: ((hitData.sumRES - 1) * -100).toLocaleString() + "%"})}
+
+
+
+
+
+
+            let rowAlternating = 2;
+            for (let entry of bonusTotalArray) {
+                // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="imageRowStatisticImageMain"/></div>
+                bonusTotalString += `<div class="imageRowStatisticBox${rowAlternating}DETAILS">
+                    
+                    <div class="imageRowStatisticNameBoxDMGDetails">${entry.rowName}</div>
+                    <div class="imageRowStatisticStatBox">${entry.rowDisplayValue}</div>
+                </div>`
+
+                if (rowAlternating==2) {rowAlternating--;}
+                else {rowAlternating++;}
+            }
+            const bonusesString = true ? `
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">DMG Stats</summary>
+                <div class="customMenuSearchNote">This table lists the sum total of all bonuses that fed into the action from all stat tables(general, follow-up, etc.) including debuffs or debuff bonuses on the enemy.</div>
+                ${bonusTotalString}
+
+            </details>` : "";
+
+            //TODO: come back here later and change the true to an actual condition
+            const bonusesStringMultisRow = true ? `
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">DMG Multipliers</summary>
+                ${bonusesStringMultis}
+
+            </details>` : "";
+
+            // rawReduction,    //total toughness after weakness break efficiency and stuff like that
+            // toughnessBase,   //total toughness after toughness modifying effects not bonuses, like firefly hitting an off element and getting the amount reduced, or foxian prayer from fugue
+            // targetWasAlreadyBroken   // whether the target was broken or not BEFORE the toughness reduction touched them
+            const toughnessDataRow = hitData.toughnessBase > 0 ? `<details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toughness Stats</summary>
+                <div class="customMenuSearchNote"><b>Total</b> is the amount of reduction after things like Weakness Break Efficiency.<br><b>Applicable</b> is the amount that can actually apply to the toughness bar AFTER special effects like Fugue on off-element targets. Super-Break does not use this value.</div>
+                    ${hitData.rawReduction != undefined ? `<div class="imageRowStatisticBox2DETAILS">
+                        <div class="imageRowStatisticNameBoxDMGDetails">Total Toughness</div>
+                        <div class="imageRowStatisticStatBox">${hitData.rawReduction}</div>
+                    </div>` : ""}    
+                    ${hitData.toughnessBase != undefined ? `<div class="imageRowStatisticBox1DETAILS">
+                        <div class="imageRowStatisticNameBoxDMGDetails">Applicable Toughness</div>
+                        <div class="imageRowStatisticStatBox">${hitData.toughnessBase}</div>
+                    </div>` : ""}
+                    ${hitData.targetWasAlreadyBroken != undefined ? `<div class="imageRowStatisticBox2DETAILS">
+                        <div class="imageRowStatisticNameBoxDMGDetails">Target Broken Before Hit</div>
+                        <div class="imageRowStatisticStatBox">${hitData.targetWasAlreadyBroken}</div>
+                    </div>` : ""}
+                    
+            </details>` : "";
+            // sumDMG,sumRES,enemyDEF,sumSHRED,enemyDEFRed,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
             
             if (dotString != "") {hitData.shieldOverflow = hitData.DMGTotalAVG}
             let newMainString = `
@@ -2072,6 +2300,11 @@ const customMenu = {
                 ${dotString}
                 ${trueString}
                 ${standardString}
+                <div class="customMenuSearchNote">The overview doesn't include, say, how much DMG% went into the calculation, but DMG Stats below will.</div>
+                ${bonusesString}
+                ${bonusesStringMultisRow}
+                ${toughnessDataRow}
+
                 ${hitData.isBreakDOT ? "" : tagString}
                 ${hitData.shieldOverflow>0 && hitData.shieldOverflow != hitData.DMGTotalAVG ? `<div class="actionDetailBodyCenterTags">Target shields were broken by this DMG</div>` : ""}
 
