@@ -7,6 +7,9 @@
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
+    {"author": "Vash","topic": "How Additional DMG Works","isYTVid": true,"date": 20251207,"embedLink": "bDcwxscR3FI","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "How Summons Work","isYTVid": true,"date": 20251205,"embedLink": "8LGOLu4RWTw","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+
     {"author": "Vash","topic": "Understanding Target Scope","isYTVid": true,"date": 20251110,"embedLink": "4kAr1ghkq1k","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "HSR Optimizer","isYTVid": true,"date": 20251107,"embedLink": "_4kk4EEHJKw-U","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
 
