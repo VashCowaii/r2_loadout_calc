@@ -1,7 +1,7 @@
 .smallFont,.actionDetailBody,.actionDetailBodyCenterTags,.totalHealingValueBoss,.actionDetailBodyDetailExpandHeader,.buffShieldHealthValueDisplay,.actionDetailBodyBuffSource,.actionDetailBodyInner,
 .traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
 .filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
-.rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow {
+.rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails {
     font-family: "Montserrat-Light";
 }
 
@@ -1265,7 +1265,7 @@ div {
     justify-content: center;
     align-items: center;
 }
-.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain {
+.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1274,7 +1274,12 @@ div {
     /* padding-left: 10px; */
     box-sizing: border-box;
 }
-.imageRowStatisticBox1 {
+.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+    justify-content: space-between;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.imageRowStatisticBox1,.imageRowStatisticBox1DETAILS {
     background-color: #c0c1d60D;
 }
 .imageRowStatisticBoxMain {
@@ -1304,7 +1309,7 @@ div {
     filter: invert(72%) sepia(63%) saturate(528%) hue-rotate(356deg) brightness(200%) contrast(91%) drop-shadow(1px 1px 4px rgba(0,0,0,1));
     /* filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)); */
 }
-.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow {
+.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow,.imageRowStatisticNameBoxDMGDetails {
     width: 60%;
     display: flex;
     justify-content: left;
@@ -3363,6 +3368,16 @@ div {
     box-sizing: border-box;
     padding-left: 2px;
     padding-right: 2px;
+}
+.totalHealingBoxHalfBreakdownRowsDETAILS {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 6px;
+    margin-left: 6px;
 }
 .attributeRowStarterWeapons {
     display: flex;
@@ -5617,6 +5632,13 @@ div {
 
 .queryFiltersRelicSlotIcon {
     height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+.mainMenuRowIcon {
+    height: 28px;
+    box-sizing: border-box;
+    margin-right: 4px;
     width: auto;
     object-fit: contain;
 }
