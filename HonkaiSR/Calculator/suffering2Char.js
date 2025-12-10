@@ -1706,8 +1706,6 @@ const battleActions = {
         //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
         //*DEFstuff * RESstuff * VULNstuff * brokenMulti
     },
-    //TODO: test if kinda like other action tags, break might inherit the final dmg multi of the action that caused the break
-    //until then, final dmg multi doesn't exist in break math, YET
     getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo,breakMulti) {
         const element = breakObject.element;
         const baseMulti = battleActions.breakElementMultipliers[element];
@@ -1759,7 +1757,8 @@ const battleActions = {
         //DEF
         // let sumSHRED = battleActions.pullDEFShredBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realShredKeys,tagSpecific,actionTags,actionTablesTarget);
         // let sumSHRED = battleActions.pullDEFShredBonus(attackerStats,attackerStatsONHIT,targetStatsSourceBased,realShredKeys);
-        let enemyDEF = Math.max(0, targetStats[DEFBase] * (1 + targetStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+        const enemyDEFRed = targetStats[DEFP];
+        let enemyDEF = Math.max(0, targetStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
         let attackerDiffDEF = statTable[LVL] * 10 + 200;//80 being the player's level here
         let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
 
@@ -1811,6 +1810,10 @@ const battleActions = {
                 DMGTotalAVG:DMGTotalEndBreak,DMGOverkill,element,
                 tags: newTags,enemyIsDead,
                 breakObject,
+
+                enemyDEFRed,sumPEN,sumRES,sumSHRED,sumVULN,enemyDEF,sumDEF,sumDR,isBroken,sumDMG,
+                baseMulti,levelMulti,toughMulti,breakMulti,
+
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
@@ -1882,7 +1885,8 @@ const battleActions = {
         //DEF
         // let sumSHRED = battleActions.pullDEFShredBonus(attackerStats,attackerStatsONHIT,targetStatsSourceBased,realShredKeys);
         // let sumSHRED = battleActions.pullDEFShredBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realShredKeys,tagSpecific,actionTags,actionTablesTarget);
-        let enemyDEF = Math.max(0, targetStats[DEFBase] * (1 + targetStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+        const enemyDEFRed = targetStats[DEFP];
+        let enemyDEF = Math.max(0, targetStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
         let attackerDiffDEF = statTable[LVL] * 10 + 200;//80 being the player's level here
         let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
 
@@ -1936,6 +1940,13 @@ const battleActions = {
             let hitDataBreakSuper = {
                 DMGTotalEndBreak,
                 DMGTotalAVG:DMGTotalEndBreak,DMGOverkill,element,
+
+                enemyDEFRed,sumPEN,sumRES,sumSHRED,sumVULN,enemyDEF,sumDEF,sumDR,isBroken,sumDMG,
+
+                levelMulti,
+                toughMulti,
+                breakMulti:instanceMulti,
+
                 tags: newTags,instanceMulti,rawReduction,enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
@@ -2028,13 +2039,15 @@ const battleActions = {
 
         const {sumPEN,sumSHRED,sumVULN,totalCritDMG,totalCritRate} = pullCompositeStatsWCrit(cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         // console.log(sumPEN,sumSHRED,sumVULN)
+
         let sumRES = Math.max(0.10, Math.min(2, 1 - (enemyStats[resistanceKeys[element]] ?? 0) - enemyStats[ResistanceAll] + sumPEN));//pen caps out at -100% or 2x multi, and floor at 90% res so 0.10x multi
 
         
 
         //DEF
         // let sumSHRED = pullShred(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realShredKeys,tagSpecific,actionTags,actionTablesTarget);
-        let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+        const enemyDEFRed = enemyStats[DEFP];
+        let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
         let attackerDiffDEF = statTable[LVL] * 10 + 200;//80 being the player's level here
         // console.log(playerStats[LVL],LVL)
         let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
@@ -2166,6 +2179,7 @@ const battleActions = {
 
         //TOUGHNESS MATH
         let enemyIsBroken = false;
+        let targetWasAlreadyBroken = false;
         let toughnessBase = 0;
         let rawReduction = 0
         let overBreak = 0;
@@ -2175,6 +2189,8 @@ const battleActions = {
             rawReduction = currentSplit * getToughnessSum(battleData,atkEntryRef.toughness ?? 0,sourceTurn,targetTurn);
             // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
             toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
+
+            targetWasAlreadyBroken = targetTurn.isBroken;
             // toughnessBase = currentSplit * rawReduction;
 
             let enemyWeakness = enemyStats[weaknessKeys[element]];
@@ -2217,9 +2233,12 @@ const battleActions = {
                 scalar,bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
+
+                sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
+                rawReduction,toughnessBase,targetWasAlreadyBroken,
                 // breakerDMG,
                 overBreak,
-                enemyIsDead,enemyIsBroken,toughnessBase,
+                enemyIsDead,enemyIsBroken,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
@@ -2799,7 +2818,8 @@ const battleActions = {
         //DEF
         // let sumSHRED = battleActions.pullDEFShredBonus(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,ATKObject.realShredKeys,tagSpecific,actionTags,actionTablesTarget);
         // let sumSHRED = battleActions.pullDEFShredBonus(playerStats,playerStatsONHIT,targetStatsSourceBased,ATKObject.realShredKeys);
-        let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+        const enemyDEFRed = enemyStats[DEFP];
+        let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
         let attackerDiffDEF = statTable[LVL] * 10 + 200;//80 being the player's level here
         let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
         
@@ -2851,6 +2871,9 @@ const battleActions = {
             scalar,
             currentMulti,multiOf,tags:DMGTags,element,
             DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
+
+            sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
+
             enemyIsDead,
             playerData: logger ? JSON.stringify(sourceTurn) : null,
             enemyData: logger ? JSON.stringify(targetTurn) : null,
@@ -3045,6 +3068,19 @@ const battleActions = {
         let finalMulti = null;
         let DMGTotalEnd = null;
         let DMGTotalAVG = null;
+        let enemyDEFRed = null;
+
+        let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
+        let sumDR = 1;
+
+        let XsumDMG = null;
+        let XsumPEN = null;
+        let XsumSHRED = null;
+        let XsumVULN = null;
+        let XsumRES = null;
+        let XenemyDEF = null;
+        let XsumDEF = null;
+
         if (!isBreakDOT) {
             multiOf = battleActions.pullScalarSum(playerStats,playerStatsONHIT,targetStatsSourceBased,targetStatsOnTurn,scalar);//the stat that this attacks scales off of, so ATK or HP etc
 
@@ -3097,36 +3133,37 @@ const battleActions = {
 
             //resistanced and PEN
             const {sumPEN,sumSHRED,sumVULN} = pullCompositeStats(sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            // let sumPEN = battleActions.pullPENBonus(sourceCache,targetCache,compositeCacheTag,playerStats,playerStatsONHIT,targetStatsSourceBased,targetStatsOnTurn,realPENKeys);
+            
+
+
             let sumRES = Math.max(0.10, Math.min(2, 1 - enemyStats[resistanceKeys[element]] - enemyStats[ResistanceAll] + sumPEN));//pen caps out at -100% or 2x multi, and floor at 90% res so 0.10x multi
 
             //DEF
             // let sumSHRED = battleActions.pullDEFShredBonus(sourceCache,targetCache,compositeCacheTag,playerStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realShredKeys,actionTables,actionTags,actionTablesTarget);
-            let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+            enemyDEFRed = enemyStats[DEFP];
+            let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
             let attackerDiffDEF = playerStats[LVL] * 10 + 200;//80 being the player's level here
             let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
             
 
-            //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
-            let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
-            // let sumVULN = 1 + battleActions.pullVULNBonus(sourceCache,targetCache,compositeCacheTag,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            let sumDR = 1;//dunno where we would apply actual DR values from enemies, but will include this for later.
+            
             finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
 
-            // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
-
-            // if (isEnemy) {console.log(preDMG, sumDMG, sumRES, sumDEF, isBroken, sumVULN, sumDR)}
             DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
-            // const totalCritDMG = battleActions.pullCritDamageSUM(playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,actionTables,actionTags,actionTablesTarget);
-            // const totalCritRate = battleActions.pullCritRateSUM(playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,actionTables,actionTags,actionTablesTarget);
-            // let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
-            // let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
-            // let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
 
 
             //TODO: effect res vs EHR averages, the avg chance to apply is assigned when dots are created since that is when they can reference hits involved in the application
             //for now though, I just wanna see if dmg can line up, so not yet.
             DMGTotalAVG = DMGTotalEnd * averaged;
+
+
+            XsumDMG = sumDMG; 
+            XsumPEN = sumPEN; 
+            XsumSHRED = sumSHRED; 
+            XsumVULN = sumVULN; 
+            XsumRES = sumRES; 
+            XenemyDEF = enemyDEF; 
+            XsumDEF = sumDEF; 
         }
         else {
             // multiOf = battleActions.pullScalarSum(playerStats,playerStatsONHIT,targetStatsSourceBased,scalar);
@@ -3194,34 +3231,26 @@ const battleActions = {
             //DEF
             // let sumSHRED = battleActions.pullDEFShredBonus(sourceCache,targetCache,compositeCacheTag,playerStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realShredKeys,actionTables,actionTags,actionTablesTarget);
             // let sumSHRED = battleActions.pullDEFShredBonus(playerStats,playerStatsONHIT,targetStatsSourceBased,realShredKeys);
-            let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyStats[DEFP] - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+            enemyDEFRed = enemyStats[DEFP];
+            let enemyDEF = Math.max(0, enemyStats[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
             let attackerDiffDEF = playerStats[LVL] * 10 + 200;//80 being the player's level here
             let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
 
-            //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
-            let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
 
-            // let sumVULN = 1 + battleActions.pullVULNBonus(enemyStats,playerStatsONHIT,targetStatsSourceBased,ATKObject.realVulnKeys);
-            // let sumVULN = 1 + battleActions.pullVULNBonus(sourceCache,targetCache,compositeCacheTag,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            let sumDR = 1;//dunno where we would apply actual DR values from enemies, but will include this for later.
             finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
 
-            // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
-
-            // if (isEnemy) {console.log(preDMG, sumDMG, sumRES, sumDEF, isBroken, sumVULN, sumDR)}
             DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
             
-            // const totalCritDMG = battleActions.pullCritDamageSUM(playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,actionTables,actionTags,actionTablesTarget);
-            // const totalCritRate = battleActions.pullCritRateSUM(playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,actionTables,actionTags,actionTablesTarget);
-            // let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
-            // let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
-            // let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
-
-
-            //TODO: effect res vs EHR averages, the avg chance to apply is assigned when dots are created since that is when they can reference hits involved in the application
-            //for now though, I just wanna see if dmg can line up, so not yet.
             DMGTotalAVG = DMGTotalEnd * averaged;
             
+
+            XsumDMG = breakDMGBonus; 
+            XsumPEN = sumPEN; 
+            XsumSHRED = sumSHRED; 
+            XsumVULN = sumVULN; 
+            XsumRES = sumRES; 
+            XenemyDEF = enemyDEF; 
+            XsumDEF = sumDEF; 
         }
 
 
@@ -3281,6 +3310,21 @@ const battleActions = {
                 scalar,isBreakDOT,finalMulti,
                 currentMulti,multiOf,detonateMulti,tags,element,bleedMultiOf,bleedLimit,
                 DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged,
+
+                sumDMG: XsumDMG,
+                sumPEN: XsumPEN,
+                sumSHRED: XsumSHRED,
+                sumVULN: XsumVULN,
+                sumRES: XsumRES,
+                enemyDEF: XenemyDEF,
+                sumDEF: XsumDEF,
+
+                enemyDEFRed,
+                sumDR,
+                isBroken,
+                detonateMulti,isDetonated,
+                // baseMulti,levelMulti,toughMulti,breakMulti,
+
                 enemyIsDead,buffName:currentBuff.buffName,
                 playerData: logger ? JSON.stringify(sourceTurn) : null,
                 enemyData: logger ? JSON.stringify(targetTurn) : null,
