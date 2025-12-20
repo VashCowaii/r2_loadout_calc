@@ -3057,6 +3057,21 @@ div {
     /* opacity: 0.5; */
 }
 
+.actionDetailBodyHolder {
+    width: 100%;
+    display: flex;
+
+    justify-content: left;
+    /* align-items: center; */
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    /* white-space: normal; */
+    position: relative;
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+}
 .actionDetailBody {
     width: 100%;
     display: flex;

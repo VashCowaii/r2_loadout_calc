@@ -365,17 +365,17 @@ const pathImagePaths = {
 }
 
 
-let subStatRefHead = relics.Head.subAffix;
-subStatRefHead[""] = {
-        "base": 0,
-        "step": 0,
-        "stepsPossible": 2,
-        "stepRatio": 8,
-        "bounds": [
-          0,
-          1
-        ]
-      }
+// let subStatRefHead = relics.Head.subAffix;
+// subStatRefHead[""] = {
+//         "base": 0,
+//         "step": 0,
+//         "stepsPossible": 2,
+//         "stepRatio": 8,
+//         "bounds": [
+//           0,
+//           1
+//         ]
+//       }
 
 const initialPropertyPath = "/HonkaiSR/icon/property/";
 const noIconPath = "";
@@ -1563,20 +1563,20 @@ taggers(weaknessKeys,possibleTags,"Weakness","",true);
 
 
 
-const finalSets = {
-    bodySets: {},
-    planarSets: {}
-}
+// const finalSets = {
+//     bodySets: {},
+//     planarSets: {}
+// }
 
-for (let relicSet in relicSets) {
-    const currentSet = relicSets[relicSet];
-    if (currentSet.desc.length > 1) {
-        finalSets.bodySets[relicSet] = currentSet;
-    }
-    else {
-        finalSets.planarSets[relicSet] = currentSet;
-    }
-}
+// for (let relicSet in relicSets) {
+//     const currentSet = relicSets[relicSet];
+//     if (currentSet.desc.length > 1) {
+//         finalSets.bodySets[relicSet] = currentSet;
+//     }
+//     else {
+//         finalSets.planarSets[relicSet] = currentSet;
+//     }
+// }
 
 
 
