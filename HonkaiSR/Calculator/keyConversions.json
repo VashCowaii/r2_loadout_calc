@@ -1,10 +1,18 @@
 {
     "BreakDamageAddedRatioBase": "DamageBreak",
-    "BreakDamageAddedRatio": "DamageBreakUNUSED",
-    "StanceBreakAddedRatio": "SuperBreakMaybe",
+    "BreakDamageAddedRatioConvert": "DamageBreakConverted",
+    "BreakDamageAddedRatio": "DamageBreakSUM",
+    "StanceBreakAddedRatio": "DamageBreakEfficiency",
+    "StanceBreakAddedRatioOLDDEFINITION": "SuperBreakMaybe",
+
+    "BreakDamageAddRatio": "VulnBreak[?]",
+
+    "ForceStanceBreakRatio": "ToughnessReductionForced%",
+    "StanceBreakAddRatio": "DamageBreakEfficiency[?]",
 
     "SPRatioBase": "EnergyRegenRate",
-    "SPRatio": "EnergyRegenRateUNUSED",
+    "SPRatio": "EnergyRegenRateSUM",
+    "CurrentSP": "EnergyCurrent",
     "MaxSP": "EnergyMax",
     "SpecialMaxSP": "EnergyMaxSpecial",
 
@@ -13,7 +21,8 @@
 
     "AllDamageReduce": "DamageReduction",
 
-    "AllDamageTypeTakenRatio": "EnemyDMGTaken",
+    "AllDamageTypeTakenRatio": "Vulnerability",
+    "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
 
     "ShieldAddedRatio": "Shield%",
 
@@ -47,21 +56,30 @@
     "SpeedBase": "SPDBase",
     "SpeedAddedRatio": "SPD%",
     "SpeedDelta": "SPDFlat",
+    "Speed": "Speed",
+
+    "ActionDelay": "ActionDelay",
     
     "AttackBase": "ATKBase",
     "BaseAttack": "ATKBase",
     "AttackAddedRatio": "ATK%",
     "AttackDelta": "ATKFlat",
+    "AttackConvert": "AttackConverted",
+    "Attack": "AttackSUM",
 
     "BaseHP": "HPBase",
     "HPBase": "HPBase",
     "HPDelta": "HPFlat",
     "HPAddedRatio": "HP%",
+    "MaxHP": "HPMax",
 
     "BaseDefence": "DEFBase",
     "DefenceBase": "DEFBase",
     "DefenceAddedRatio": "DEF%",
     "DefenceDelta": "DEFFlat",
+
+    "WindPenetrate": "ResistanceWindPEN",
+    "FirePenetrate": "ResistanceFirePEN",
 
     "PhysicalResistance": "ResistancePhysical",
     "FireResistance": "ResistanceFire",

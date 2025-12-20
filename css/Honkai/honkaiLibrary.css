@@ -1,0 +1,759 @@
+.imageRowStatisticStatBox,.toughnessTableRowItemValue,.actionDetailBody,.actionDetailBody2,.rotationConditionOperatorHeaderAbilityTriggerConditionHeader,.actionDetailBody2Description,.actionDetailBody2Detail {
+    font-family: "Montserrat-Light";
+}
+
+
+div {
+    color: white;
+}
+
+.updateBannerMegaBox {
+    background-color: #111;
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid #434343;
+    font-size: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.helpBarMegaBox {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    height: auto;
+}
+
+
+.mainGridRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+
+    background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right;
+    background-color: #0d0c0c;
+    background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.blockoutBackgroundShutter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 90%;
+    z-index: 10000;
+    display: none;
+}
+.customMenuMainHolderBox {
+    position: fixed;
+    z-index: 10100;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    max-height: 80%;
+    box-sizing: border-box;
+
+
+    display: none;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid #434343;
+    justify-content: top;
+    align-items: center;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+}
+.customMenuMainHolderBoxInner {
+    z-index: 10100;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+
+    /* display: none; */
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+    /* border: 2px solid #434343; */
+
+    background: linear-gradient(200deg, transparent,transparent,#0d393b3d);
+
+    /* background:
+      linear-gradient(135deg, #1e1e1e, #0d0c0c 60%) top left,
+      linear-gradient(-135deg, #1e1e1e, #0d0c0c 60%) top right,
+      linear-gradient(45deg, #1e1e1e, #0d0c0c 60%) bottom left,
+      linear-gradient(-45deg, #1e1e1e, #0d0c0c 60%) bottom right; */
+    background-color: #0d0c0c;
+    /* background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%; */
+    /* background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat; */
+    justify-content: top;
+    align-items: center;
+    overflow-y: auto;
+    /* overflow: hidden; */
+    /* z-index: 1; */
+}
+
+.customMenuMainHolderBox::before {
+    content: "";
+    position: absolute;
+    inset: 0.5%;
+    border-top-right-radius: 20px;
+    border: 2px solid #1e9a9e;
+    z-index: 10099;
+    transform: translate(-18px, 21px); 
+}
+.customMenuTitleRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    min-height: 40px;
+}
+.customMenuSearchTitleHolder {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.customMenuSearchTitle {
+    width: 100%;
+    font-size: 40px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.customMenuCloseButton {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    /* transform: translateY(-50%); */
+    font-size: 18px;
+    color: #1e9a9e;
+    /* color: #434343; */
+    border: 2px solid #434343;
+    /* border: 2px solid #1e9a9e; */
+    border-top: none;
+    border-right: none;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+}
+.customMenuCloseButton:hover {
+    color: white;
+    background-color: #ffffff80;
+}
+.customMenuSearchBarBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+.helpBarMegaBox {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: white; */
+    /* border: 1px solid white; */
+    height: auto;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+
+
+
+.eventBodyMainBox {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: white;
+}
+/* .parsingMainHolder {
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+.eventCharacterFileHeader {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* margin-left: 5px;
+    margin-top: 5px; */
+    margin: 5px;
+}
+.eventCharacterFileIcon {
+    z-index: 1;
+    /* width: 90px; */
+    height: 250px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border: 2px solid white;
+    /* border-radius: 50%; */
+    background-color: black;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.eventCharacterFileInfoBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: white;
+}
+
+
+
+.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    /* padding-left: 10px; */
+    box-sizing: border-box;
+}
+.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+    justify-content: space-between;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.imageRowStatisticBox1,.imageRowStatisticBox1DETAILS {
+    background-color: #c0c1d60D;
+}
+
+.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow,.imageRowStatisticNameBoxDMGDetails {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+    font-size: 16px;
+}
+
+.imageRowStatisticStatBox {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2px;
+    font-size: 18px;
+}
+
+
+.toughnessTableRowBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.toughnessTableRowHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.toughnessTableRowTableRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.toughnessTableRowItemBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 33%;
+}
+.toughnessTableRowItemHeader {
+    border-bottom: 2px solid #434343;
+}
+
+.eventBodyScrollerMain {
+    width: 75%;
+    height: 100%;
+    /* min-height: 100%; */
+    /* max-height: 95%; */
+    max-height: 850px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0d0c0cb7;
+    border-radius: 5px;
+}
+
+
+
+.rotationsConditionsBodyBox {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* border: 1px solid yellow; */
+}
+.rotationConditionOperatorBox {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+    /* border-left: 2px solid rgba(255, 255, 255, 0.527); */
+    border-bottom-left-radius: 10px;
+}
+.rotationConditionOperatorBoxMain {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-bottom-left-radius: 10px;
+}
+.rotationConditionOperatorBoxMainAttack {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-bottom-left-radius: 10px;
+}
+
+.rotationConditionOperatorHeaderAbilityTrigger {
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 3px;
+    box-sizing: border-box;
+
+    /* background-color: rgba(255, 255, 255, 0.082); */
+}
+.rotationConditionOperatorHeaderAbilityTriggerConditionHeader {
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    /* border-top-left-radius: 10px; */
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) top 0 left / calc(5% - 40px) 2px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) bottom 0 left / calc(5% - 40px) 2px no-repeat;
+
+    /* outline: 2px solid rgba(255, 255, 255, 0.527);
+    outline-offset: -10px; */
+
+    /* background-color: rgba(255, 255, 255, 0.082); */
+}
+.rotationConditionOperatorHeaderCondition {
+    /* width: 100%; */
+    width: fit-content;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* text-align: left; */
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.212);
+}
+.rotationConditionOperatorHeaderConditionTriggerRow {
+    /* width: 100%; */
+    width: fit-content;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* text-align: left; */
+    padding-left: 3px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.842);
+    border-top-right-radius: 10px;
+}
+
+.rotationConditionOperatorHeaderConditionTHEN {
+    /* width: 100%; */
+    width: fit-content;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    /* background-color: rgba(255, 255, 255, 0.212); */
+    background-color: rgba(40, 139, 0, 0.212);
+}
+.rotationConditionOperatorHeaderConditionELSE {
+    /* width: 100%; */
+    width: fit-content;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    background-color: rgba(235, 0, 0, 0.212);
+}
+.rotationConditionOperatorHeader {
+    /* width: 100%; */
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.rotationConditionOperatorHeaderInline {
+    /* width: 100%; */
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.rotationConditionOperatorHeaderMini {
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+
+.actionDetailBody {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+    font-size: 14px;
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+}
+.actionDetailBody2 {
+    /* width: 100%; */
+    width: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+    font-size: 14px;
+
+    /* background-color: rgba(255, 255, 255, 0.021); */
+    /* background-color: rgba(0, 0, 0, 0.274); */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.048),transparent, rgba(0, 0, 0, 0.274));
+
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+}
+.actionDetailBody2Detail {
+    /* width: 100%; */
+    width: auto;
+    width: fit-content;
+    /* display: flex; */
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+    font-size: 14px;
+
+    /* background-color: rgba(255, 255, 255, 0.021); */
+    /* background-color: rgba(0, 0, 0, 0.274); */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.048),transparent, rgba(0, 0, 0, 0.274));
+
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+}
+/* .actionDetailBody2Description {
+    width: auto;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    font-size: 14px;
+
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.048),transparent, rgba(0, 0, 0, 0.274));
+
+
+} */
+.actionDetailBody2Description {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #18fcc7ce;
+    box-sizing: border-box;
+}
+
+.descriptionNumberColor {
+    color: #dd9337;
+}
+
+
+
+.rotationsSectionRowHolder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    background: linear-gradient(340deg, #ffffff21,transparent,transparent,#0d393b7a);
+}
+
+
+.rotationsSectionRowHolder1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    background: linear-gradient(340deg, transparent,transparent,transparent,#ffffff21);
+}
+.rotationsSectionRowHolder2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
+}
+
+.rotationsConditionsBodyBox1 {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* border: 1px solid yellow; */
+
+    background: linear-gradient(340deg, transparent,transparent,transparent,#ffffff21);
+}
+.rotationsConditionsBodyBox2 {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* border: 1px solid yellow; */
+
+    background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
+}
+
+
+.isConditionContainer {
+    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: none;
+    border-top: none;
+}
+
+.isConditionContainerBox {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2px;
+}
+
+.modifierDetailsBox {
+    margin-left: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.modifierDetailsBoxAttackModification {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+
+
+.rotationsPermaConditionsExpand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    /* border: 1px solid green; */
+
+}
+
+
+.characterDisplayLogStatIconCenter {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    position:relative;
+    justify-content: center;
+    /* border: 1px solid green; */
+    transform: none;
+    bottom: 0;
+    position: relative;
+    margin-right: -5px;
+    margin-left: -5px;
+    /* padding: 5px; */
+    /* background-color: #c0c1d60D; */
+}
