@@ -1,7 +1,7 @@
 function readSelection(elemID) {return document.getElementById(elemID);}
 
 console.log("reached")
-
+let currentCharFilePrefix = null;
 
 
 const megaParsingFuckery = {
@@ -28,12 +28,13 @@ const megaParsingFuckery = {
         const bodyBox = readSelection("eventBodyMainBox");
 
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-        const configAbility = compositeAbilityObject.abilityObject[loadFile]
+        const configAbility = compositeAbilityObject.abilityObject[loadFile];
 
         let initialCounter = 1;
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
 
         let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
+        currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
         // "fileName": "Saber_Skill02",
         // "abilityType": "Skill",
@@ -266,6 +267,11 @@ const megaParsingFuckery = {
             <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                 ${refString}
             </div>` : ""}
+
+
+            <div class="triggerAbilityButtonHolderRow">
+                <div class="characterSearchButtonDMGDetails clickable" id="" onclick="megaParsingFuckery.pageLoad('${currentCharFilePrefix}_${parseRef.ability}')">Take me there</div>
+            </div>
         `;
     },
     "Update Displayed Energy Bar"(parseRef,initialCounter) {
@@ -748,7 +754,7 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.abilityName}${parseRef.enableSecondaryType ? `(and ${parseRef.enableSecondaryType})` : ""} in ${parseRef.skillSlot} slot, from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            use ${parseRef.abilityName}${parseRef.enableSecondaryType ? `(and ${parseRef.enableSecondaryType})` : ""} in ${parseRef.skillSlot} slot, from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "UI Display Event"(parseRef,initialCounter) {
@@ -840,7 +846,7 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.display} ${parseRef.abilityName} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            ${parseRef.display} ENHANCE on ${parseRef.abilityName} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Skill Type"(parseRef,initialCounter) {
