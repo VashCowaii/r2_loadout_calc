@@ -757,3 +757,64 @@ div {
     /* padding: 5px; */
     /* background-color: #c0c1d60D; */
 }
+
+
+
+
+
+
+
+
+
+
+.triggerAbilityButtonHolderRow {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+
+.characterSearchButtonDMGDetails {
+    /* font-size: 20px;
+    width: 40%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #e1e1e4;
+    border: 1px solid #cacacc;
+    outline: 1px solid #e1e1e4;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #121212;
+    margin: 2px;
+    opacity: 0.5; */
+
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    /* background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: white; */
+
+    background-color: white;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: black;
+
+    margin: 2px;
+    margin-right: 4px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.characterSearchButtonDMGDetails:hover {
+    opacity: 0.5;
+}

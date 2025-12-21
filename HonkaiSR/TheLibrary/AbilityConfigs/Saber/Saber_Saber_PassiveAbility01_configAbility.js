@@ -938,11 +938,11 @@ const configAbility = {
                           "target": "Owner of this Modifier",
                           "variableName": "Saber_00_EntityStockSP",
                           "value": {
-                            "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((Saber_00_EntityMaxStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
+                            "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
+                            "displayLines": "((Saber_00_EntityStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
                             "constants": [],
                             "variables": [
-                              "Saber_00_EntityMaxStockSP",
+                              "Saber_00_EntityStockSP",
                               "Saber_00_EntityCurrentSP",
                               "Saber_00_EntityMaxSP"
                             ]
@@ -955,11 +955,11 @@ const configAbility = {
                             "value1": "Saber_00_EntityStockSP",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                              "displayLines": "Saber_00_EntityStockSP",
+                              "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
+                              "displayLines": "Saber_00_EntityMaxStockSP",
                               "constants": [],
                               "variables": [
-                                "Saber_00_EntityStockSP"
+                                "Saber_00_EntityMaxStockSP"
                               ]
                             }
                           },
@@ -969,11 +969,11 @@ const configAbility = {
                               "target": "Owner of this Modifier",
                               "variableName": "Saber_00_EntityStockSP",
                               "value": {
-                                "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                "displayLines": "Saber_00_EntityStockSP",
+                                "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
+                                "displayLines": "Saber_00_EntityMaxStockSP",
                                 "constants": [],
                                 "variables": [
-                                  "Saber_00_EntityStockSP"
+                                  "Saber_00_EntityMaxStockSP"
                                 ]
                               }
                             }
@@ -1003,11 +1003,11 @@ const configAbility = {
                                 "value1": "_Current_Show_Value",
                                 "compareType": "<",
                                 "value2": {
-                                  "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                  "displayLines": "Saber_00_EntityMaxStockSP",
+                                  "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                  "displayLines": "Saber_00_EntityStockSP",
                                   "constants": [],
                                   "variables": [
-                                    "Saber_00_EntityMaxStockSP"
+                                    "Saber_00_EntityStockSP"
                                   ]
                                 }
                               },
@@ -1018,11 +1018,11 @@ const configAbility = {
                                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "value_0_Saber_EntityStockSPForShow": {
-                                      "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                      "displayLines": "Saber_00_EntityMaxStockSP",
+                                      "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                      "displayLines": "Saber_00_EntityStockSP",
                                       "constants": [],
                                       "variables": [
-                                        "Saber_00_EntityMaxStockSP"
+                                        "Saber_00_EntityStockSP"
                                       ]
                                     }
                                   }
@@ -1037,11 +1037,11 @@ const configAbility = {
                               "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
                                 "value_0_Saber_EntityStockSPForShow": {
-                                  "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                  "displayLines": "Saber_00_EntityMaxStockSP",
+                                  "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                  "displayLines": "Saber_00_EntityStockSP",
                                   "constants": [],
                                   "variables": [
-                                    "Saber_00_EntityMaxStockSP"
+                                    "Saber_00_EntityStockSP"
                                   ]
                                 }
                               }
@@ -1093,11 +1093,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Temp_Return_SP",
                   "value": {
-                    "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                    "displayLines": "Saber_00_EntityMaxStockSP",
+                    "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                    "displayLines": "Saber_00_EntityStockSP",
                     "constants": [],
                     "variables": [
-                      "Saber_00_EntityMaxStockSP"
+                      "Saber_00_EntityStockSP"
                     ]
                   }
                 },

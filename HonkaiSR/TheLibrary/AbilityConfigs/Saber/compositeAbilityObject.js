@@ -1158,11 +1158,11 @@ const compositeAbilityObject = {
                               "target": "Owner of this Modifier",
                               "variableName": "Saber_00_EntityStockSP",
                               "value": {
-                                "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
-                                "displayLines": "((Saber_00_EntityMaxStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
+                                "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
+                                "displayLines": "((Saber_00_EntityStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
                                 "constants": [],
                                 "variables": [
-                                  "Saber_00_EntityMaxStockSP",
+                                  "Saber_00_EntityStockSP",
                                   "Saber_00_EntityCurrentSP",
                                   "Saber_00_EntityMaxSP"
                                 ]
@@ -1175,11 +1175,11 @@ const compositeAbilityObject = {
                                 "value1": "Saber_00_EntityStockSP",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                  "displayLines": "Saber_00_EntityStockSP",
+                                  "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
+                                  "displayLines": "Saber_00_EntityMaxStockSP",
                                   "constants": [],
                                   "variables": [
-                                    "Saber_00_EntityStockSP"
+                                    "Saber_00_EntityMaxStockSP"
                                   ]
                                 }
                               },
@@ -1189,11 +1189,11 @@ const compositeAbilityObject = {
                                   "target": "Owner of this Modifier",
                                   "variableName": "Saber_00_EntityStockSP",
                                   "value": {
-                                    "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
-                                    "displayLines": "Saber_00_EntityStockSP",
+                                    "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
+                                    "displayLines": "Saber_00_EntityMaxStockSP",
                                     "constants": [],
                                     "variables": [
-                                      "Saber_00_EntityStockSP"
+                                      "Saber_00_EntityMaxStockSP"
                                     ]
                                   }
                                 }
@@ -1223,11 +1223,11 @@ const compositeAbilityObject = {
                                     "value1": "_Current_Show_Value",
                                     "compareType": "<",
                                     "value2": {
-                                      "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                      "displayLines": "Saber_00_EntityMaxStockSP",
+                                      "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                      "displayLines": "Saber_00_EntityStockSP",
                                       "constants": [],
                                       "variables": [
-                                        "Saber_00_EntityMaxStockSP"
+                                        "Saber_00_EntityStockSP"
                                       ]
                                     }
                                   },
@@ -1238,11 +1238,11 @@ const compositeAbilityObject = {
                                       "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                       "valuePerStack": {
                                         "value_0_Saber_EntityStockSPForShow": {
-                                          "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                          "displayLines": "Saber_00_EntityMaxStockSP",
+                                          "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                          "displayLines": "Saber_00_EntityStockSP",
                                           "constants": [],
                                           "variables": [
-                                            "Saber_00_EntityMaxStockSP"
+                                            "Saber_00_EntityStockSP"
                                           ]
                                         }
                                       }
@@ -1257,11 +1257,11 @@ const compositeAbilityObject = {
                                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "value_0_Saber_EntityStockSPForShow": {
-                                      "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                                      "displayLines": "Saber_00_EntityMaxStockSP",
+                                      "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                                      "displayLines": "Saber_00_EntityStockSP",
                                       "constants": [],
                                       "variables": [
-                                        "Saber_00_EntityMaxStockSP"
+                                        "Saber_00_EntityStockSP"
                                       ]
                                     }
                                   }
@@ -1313,11 +1313,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_Temp_Return_SP",
                       "value": {
-                        "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
-                        "displayLines": "Saber_00_EntityMaxStockSP",
+                        "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
+                        "displayLines": "Saber_00_EntityStockSP",
                         "constants": [],
                         "variables": [
-                          "Saber_00_EntityMaxStockSP"
+                          "Saber_00_EntityStockSP"
                         ]
                       }
                     },
@@ -2253,11 +2253,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "DV_ExtraDmgRatio",
                   "value": {
-                    "operator": "Variables[0] (DV_ExtraDmgRatio) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
-                    "displayLines": "(DV_ExtraDmgRatio * (0.07 + 0.14))",
+                    "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
+                    "displayLines": "(DV_SurgePointUse * (0.07 + 0.14))",
                     "constants": [],
                     "variables": [
-                      "DV_ExtraDmgRatio",
+                      "DV_SurgePointUse",
                       0.07,
                       0.14
                     ]
@@ -2269,11 +2269,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "DV_ExtraDmgRatio",
                   "value": {
-                    "operator": "Variables[0] (DV_ExtraDmgRatio) || Variables[1] (0.14) || MUL || RETURN",
-                    "displayLines": "(DV_ExtraDmgRatio * 0.14)",
+                    "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.14) || MUL || RETURN",
+                    "displayLines": "(DV_SurgePointUse * 0.14)",
                     "constants": [],
                     "variables": [
-                      "DV_ExtraDmgRatio",
+                      "DV_SurgePointUse",
                       0.14
                     ]
                   }
@@ -2289,14 +2289,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 1.5,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2322,14 +2322,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 0.75,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2354,14 +2354,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 1.5,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2387,14 +2387,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 0.75,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2419,14 +2419,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 1.5,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2452,14 +2452,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
               "constants": [
                 0.1
               ],
               "variables": [
                 0.75,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2484,14 +2484,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.7) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.7 * (1.5 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.7) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.7 * (1.5 + DV_ExtraDmgRatio))",
               "constants": [
                 0.7
               ],
               "variables": [
                 1.5,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2517,14 +2517,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Constants[0] (0.7) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-              "displayLines": "(0.7 * (0.75 + DV_SurgePointUse))",
+              "operator": "Constants[0] (0.7) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+              "displayLines": "(0.7 * (0.75 + DV_ExtraDmgRatio))",
               "constants": [
                 0.7
               ],
               "variables": [
                 0.75,
-                "DV_SurgePointUse"
+                "DV_ExtraDmgRatio"
               ]
             },
             "Toughness": {
@@ -2561,13 +2561,13 @@ const compositeAbilityObject = {
           "variableName": "DV_SurgePoint",
           "on": "Caster",
           "value": {
-            "operator": "Constants[0] (0) || Variables[0] (DV_ExtraDmgRatio) || SUB || RETURN",
-            "displayLines": "(0 - DV_ExtraDmgRatio)",
+            "operator": "Constants[0] (0) || Variables[0] (DV_SurgePointUse) || SUB || RETURN",
+            "displayLines": "(0 - DV_SurgePointUse)",
             "constants": [
               0
             ],
             "variables": [
-              "DV_ExtraDmgRatio"
+              "DV_SurgePointUse"
             ]
           }
         },

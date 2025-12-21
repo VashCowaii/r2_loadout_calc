@@ -238,11 +238,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "DV_ExtraDmgRatio",
               "value": {
-                "operator": "Variables[0] (DV_ExtraDmgRatio) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
-                "displayLines": "(DV_ExtraDmgRatio * (0.07 + 0.14))",
+                "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
+                "displayLines": "(DV_SurgePointUse * (0.07 + 0.14))",
                 "constants": [],
                 "variables": [
-                  "DV_ExtraDmgRatio",
+                  "DV_SurgePointUse",
                   0.07,
                   0.14
                 ]
@@ -254,11 +254,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "DV_ExtraDmgRatio",
               "value": {
-                "operator": "Variables[0] (DV_ExtraDmgRatio) || Variables[1] (0.14) || MUL || RETURN",
-                "displayLines": "(DV_ExtraDmgRatio * 0.14)",
+                "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.14) || MUL || RETURN",
+                "displayLines": "(DV_SurgePointUse * 0.14)",
                 "constants": [],
                 "variables": [
-                  "DV_ExtraDmgRatio",
+                  "DV_SurgePointUse",
                   0.14
                 ]
               }
@@ -274,14 +274,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             1.5,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -307,14 +307,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             0.75,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -339,14 +339,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             1.5,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -372,14 +372,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             0.75,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -404,14 +404,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (1.5 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (1.5 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             1.5,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -437,14 +437,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.1 * (0.75 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.1) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.1 * (0.75 + DV_ExtraDmgRatio))",
           "constants": [
             0.1
           ],
           "variables": [
             0.75,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -469,14 +469,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.7) || Variables[0] (1.5) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.7 * (1.5 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.7) || Variables[0] (1.5) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.7 * (1.5 + DV_ExtraDmgRatio))",
           "constants": [
             0.7
           ],
           "variables": [
             1.5,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -502,14 +502,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
-          "operator": "Constants[0] (0.7) || Variables[0] (0.75) || Variables[1] (DV_SurgePointUse) || ADD || MUL || RETURN",
-          "displayLines": "(0.7 * (0.75 + DV_SurgePointUse))",
+          "operator": "Constants[0] (0.7) || Variables[0] (0.75) || Variables[1] (DV_ExtraDmgRatio) || ADD || MUL || RETURN",
+          "displayLines": "(0.7 * (0.75 + DV_ExtraDmgRatio))",
           "constants": [
             0.7
           ],
           "variables": [
             0.75,
-            "DV_SurgePointUse"
+            "DV_ExtraDmgRatio"
           ]
         },
         "Toughness": {
@@ -546,13 +546,13 @@ const configAbility = {
       "variableName": "DV_SurgePoint",
       "on": "Caster",
       "value": {
-        "operator": "Constants[0] (0) || Variables[0] (DV_ExtraDmgRatio) || SUB || RETURN",
-        "displayLines": "(0 - DV_ExtraDmgRatio)",
+        "operator": "Constants[0] (0) || Variables[0] (DV_SurgePointUse) || SUB || RETURN",
+        "displayLines": "(0 - DV_SurgePointUse)",
         "constants": [
           0
         ],
         "variables": [
-          "DV_ExtraDmgRatio"
+          "DV_SurgePointUse"
         ]
       }
     },
