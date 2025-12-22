@@ -818,3 +818,42 @@ div {
 .characterSearchButtonDMGDetails:hover {
     opacity: 0.5;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+    .eventBodyMainBox {
+        flex-direction: column;
+    }
+    .eventCharacterFileHeader {
+        width: 100%;
+        max-width: 100%;
+    }
+    .eventBodyScrollerMain {
+        max-width: 100%;
+        overflow: auto;
+        max-height: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    .actionDetailBody2 {
+        width: fit-content;
+        max-width: none;
+        white-space: nowrap;
+    }
+    .rotationsSectionRowHolder2,.rotationsSectionRowHolder1,.rotationsConditionsBodyBox,.rotationConditionOperatorBoxMain,.rotationsPermaConditionsExpand {
+        width: fit-content;
+        max-width: none;
+        /* align-items: center;
+        justify-content: flex-start; */
+        align-items: flex-start;
+        justify-content: center;
+    }
+    /* .rotationsConditionsBodyBox,.actionDetailBody2,.rotationsSectionRowHolder1,.rotationsSectionRowHolder2,.rotationsPermaConditionsExpand {
+        width: auto;
+        max-width: none;
+    } */
+    
+}
