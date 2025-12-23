@@ -275,6 +275,70 @@ let lightcones = {
       1.02
     ]
   },
+  "Poised to Bloom": {
+    "lightconeID": 21046,
+    "name": "Poised to Bloom",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Lose Not, Forget Not",
+    "desc": "Increases the wearer's ATK by #1[i]%. Upon entering battle, if two or more characters follow the same Path, then these characters' CRIT DMG increases by #2[i]%. Abilities of the same type cannot stack.",
+    "params": [
+      [
+        0.16,
+        0.16
+      ],
+      [
+        0.2,
+        0.2
+      ],
+      [
+        0.24,
+        0.24
+      ],
+      [
+        0.28,
+        0.28
+      ],
+      [
+        0.32,
+        0.32
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21046.png",
+    "preview": "image/light_cone_preview/21046.png",
+    "portrait": "image/light_cone_portrait/21046.png",
+    "imageOffset": [
+      8,
+      -126,
+      1.15
+    ]
+  },
   "A Thankless Coronation": {
     "lightconeID": 23045,
     "name": "A Thankless Coronation",
