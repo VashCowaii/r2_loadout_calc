@@ -238,6 +238,7 @@ div {
     /* margin-left: 5px;
     margin-top: 5px; */
     margin: 5px;
+    max-width: 250px;
 }
 .eventCharacterFileIcon {
     z-index: 1;
@@ -263,6 +264,9 @@ div {
     padding-left: 2px;
     padding-right: 2px;
     color: white;
+}
+.selectorWidthRestriction {
+    width: 100%;
 }
 
 
@@ -820,6 +824,54 @@ div {
 }
 
 
+
+
+.superimpositionHolderbox {
+    width: 100%;
+    /* background-color: #e1e1e4; */
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 2px solid #e1e1e4; */
+    overflow: hidden;
+}
+.superimpositionButton {
+    width: 20%;
+    color: #e1e1e4;
+}
+.superimpositionButton + .superimpositionButton {
+    border-left: 1px solid #e1e1e4;
+}
+
+
+.rightDescriptionBox {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #18fcc8;
+    box-sizing: border-box;
+}
+
+.customMenuSearchNote {
+    /* width: 95%;
+    max-width: 250px; */
+    width: 100%;
+    white-space: normal;
+    /* display: flex; */
+    justify-content: left;
+    /* align-items: center; */
+    font-size: 12px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #93CCEA;
+    padding: 5px;
+}
 
 
 

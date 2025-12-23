@@ -2,6 +2,7 @@ function readSelection(elemID) {return document.getElementById(elemID);}
 
 console.log("reached")
 let currentCharFilePrefix = null;
+let currentLCSuperimposition = 1;
 
 
 const megaParsingFuckery = {
@@ -24,8 +25,22 @@ const megaParsingFuckery = {
 
         megaParsingFuckery.pageLoad(newValue);
     },
+    updateSuperimposition(superimposition) {
+        currentLCSuperimposition = superimposition;
+
+
+        // for (let i=1;i<=5;i++) {
+        //     readSelection(`superimpositionButton${i}`).style.backgroundColor = "transparent";
+        //     readSelection(`superimpositionButton${i}`).style.color = "#e1e1e4";
+        // }
+        // readSelection(`superimpositionButton${superimposition}`).style.backgroundColor = "#e1e1e4";
+        // readSelection(`superimpositionButton${superimposition}`).style.color = "black";
+
+        megaParsingFuckery.renewFileSelected();
+    },
     pageLoad(loadFile) {
         const bodyBox = readSelection("eventBodyMainBox");
+        const isLightcone = compositeAbilityObject.isLightcone;
 
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
         const configAbility = compositeAbilityObject.abilityObject[loadFile];
@@ -46,6 +61,8 @@ const megaParsingFuckery = {
         // ],
         // parse: []
         // references: []
+        // desc: currentLCEntry.desc,
+        // params: currentLCEntry.params,
 
         // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
         const characterRef = characters[compositeAbilityObject.fullCharacterName];
@@ -60,11 +77,11 @@ const megaParsingFuckery = {
         ];
         let startingString = `<div class="eventCharacterFileHeader">
             <div class="customMenuResultRowIcon">
-                <img src="/HonkaiSR/${compositeAbilityObject.isLightcone ? lightconeRef.preview : characterRef.preview}" class="eventCharacterFileIcon" style="border: 2px solid #d2ae73;">
+                <img src="/HonkaiSR/${isLightcone ? lightconeRef.preview : characterRef.preview}" class="eventCharacterFileIcon" style="border: 2px solid #d2ae73;">
             </div>
             <div class="eventCharacterFileInfoBox">
             
-            <select class="" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">`;
+            <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">`;
 
         let optionsString = "";
 
@@ -75,18 +92,20 @@ const megaParsingFuckery = {
         startingString += optionsString;
 
         let rowAlternating = 1;
-        for (let entry of startingKeys) {
-            // startingString += `<div class="">${configAbility[entry]}</div>`;
+        if (!isLightcone) {
+            for (let entry of startingKeys) {
+                // startingString += `<div class="">${configAbility[entry]}</div>`;
 
-            // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
-            // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
-            startingString +=  `<div class="imageRowStatisticBox${rowAlternating}DETAILS">
-                <div class="imageRowStatisticNameBox">${entry.leftHand}</div>
-                <div class="imageRowStatisticStatBox">${configAbility[entry.keyValue]}</div>
-            </div>`;
+                // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
+                // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
+                startingString +=  `<div class="imageRowStatisticBox${rowAlternating}DETAILS">
+                    <div class="imageRowStatisticNameBox">${entry.leftHand}</div>
+                    <div class="imageRowStatisticStatBox">${configAbility[entry.keyValue]}</div>
+                </div>`;
 
-            if (rowAlternating === 2) {rowAlternating = 1;}
-            else {rowAlternating++;}
+                if (rowAlternating === 2) {rowAlternating = 1;}
+                else {rowAlternating++;}
+            }
         }
 
 
@@ -105,14 +124,29 @@ const megaParsingFuckery = {
             }
         }
 
-        let toughnessString = `<div class="toughnessTableRowBox">
+        let toughnessString = !isLightcone ? `<div class="toughnessTableRowBox">
             <div class="toughnessTableRowHeader">Toughness</div>
 
             <div class="toughnessTableRowTableRow">
                 ${toughnessRowString}
             </div>
         
-        </div>`;
+        </div>` : "";
+
+        if (isLightcone) {
+            toughnessString += `
+            <div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
+            <div class="superimpositionHolderbox">
+                <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
+                <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
+                <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
+                <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
+                <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
+            </div>
+            
+            
+            <div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`
+        }
         startingString += toughnessString + `</div></div>`;
 
 
@@ -153,6 +187,8 @@ const megaParsingFuckery = {
         `;
 
         bodyBox.innerHTML = mainAbilityString;
+
+        // if (isLightcone) {readSelection("lightconeSkillDescription").innerHTML = pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition],lightconeRef.desc);}
     },
     fillEventBodyBox(parseRef,initialCounter) {
         // initialCounter++;
