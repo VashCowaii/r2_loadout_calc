@@ -27,7 +27,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (12)",
+                "operator": "Variables[0] (12) || RETURN",
                 "displayLines": "12",
                 "constants": [],
                 "variables": [
@@ -61,10 +61,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(No Memosprite)",
+                  "to": "Allied Team",
                   "modifier": "LC_20019_Sub[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1)",
+                    "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
                     "constants": [],
                     "variables": [

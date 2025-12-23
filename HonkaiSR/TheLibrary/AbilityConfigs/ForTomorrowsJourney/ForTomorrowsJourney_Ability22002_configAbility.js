@@ -24,7 +24,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.18)",
+                "operator": "Variables[0] (0.18) || RETURN",
                 "displayLines": "0.18",
                 "constants": [],
                 "variables": [
@@ -59,7 +59,7 @@ const configAbility = {
                   "to": "Owner of this Modifier",
                   "modifier": "LC_22002_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1)",
+                    "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
                     "constants": [],
                     "variables": [

@@ -39,7 +39,7 @@ const compositeAbilityObject = {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.12)",
+                        "operator": "Variables[0] (0.12) || RETURN",
                         "displayLines": "0.12",
                         "constants": [],
                         "variables": [
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.12)",
+                        "operator": "Variables[0] (0.12) || RETURN",
                         "displayLines": "0.12",
                         "constants": [],
                         "variables": [
@@ -117,7 +117,7 @@ const compositeAbilityObject = {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.12)",
+                        "operator": "Variables[0] (0.12) || RETURN",
                         "displayLines": "0.12",
                         "constants": [],
                         "variables": [
@@ -144,19 +144,46 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": [
+                    {
+                      "name": "Target List",
+                      "target": "Allied Team"
+                    },
+                    {
+                      "name": "Target List",
+                      "target": "All Untargetable"
+                    }
+                  ],
                   "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": [
+                    {
+                      "name": "Target List",
+                      "target": "Allied Team"
+                    },
+                    {
+                      "name": "Target List",
+                      "target": "All Untargetable"
+                    }
+                  ],
                   "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": [
+                    {
+                      "name": "Target List",
+                      "target": "Allied Team"
+                    },
+                    {
+                      "name": "Target List",
+                      "target": "All Untargetable"
+                    }
+                  ],
                   "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]",
                   "onlyRemoveOwnersInstance": true
                 }

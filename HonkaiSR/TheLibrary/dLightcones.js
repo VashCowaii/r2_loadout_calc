@@ -324,6 +324,75 @@ let lightcones = {
       1.15
     ]
   },
+  "But the Battle Isn't Over": {
+    "lightconeID": 23003,
+    "name": "But the Battle Isn't Over",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "EnergyRegenRate": 0.1
+      },
+      "2": {
+        "EnergyRegenRate": 0.12
+      },
+      "3": {
+        "EnergyRegenRate": 0.14
+      },
+      "4": {
+        "EnergyRegenRate": 0.16
+      },
+      "5": {
+        "EnergyRegenRate": 0.18
+      }
+    },
+    "skillName": "Heir",
+    "desc": "Increases the wearer's Energy Regeneration Rate by #1[i]% and regenerates 1 Skill Point when the wearer uses their Ultimate on an ally. This effect can be triggered once after every 2 uses of the wearer's Ultimate. When the wearer uses their Skill, the next ally taking action (except the wearer) deals #2[i]% more DMG for #3[i] turn(s).",
+    "params": [
+      [
+        0.1,
+        0.3,
+        1
+      ],
+      [
+        0.12,
+        0.35,
+        1
+      ],
+      [
+        0.14,
+        0.4,
+        1
+      ],
+      [
+        0.16,
+        0.45,
+        1
+      ],
+      [
+        0.18,
+        0.5,
+        1
+      ]
+    ],
+    "statRef": [
+      "SPRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23003.png",
+    "preview": "image/light_cone_preview/23003.png",
+    "portrait": "image/light_cone_portrait/23003.png",
+    "imageOffset": [
+      0,
+      -50,
+      1.15
+    ]
+  },
   "Past and Future": {
     "lightconeID": 21025,
     "name": "Past and Future",
@@ -850,6 +919,67 @@ let lightcones = {
       0,
       -78,
       1
+    ]
+  },
+  "A Grounded Ascent": {
+    "lightconeID": 23034,
+    "name": "A Grounded Ascent",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 529.2,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {},
+    "skillName": "Departing Anew",
+    "desc": "After the wearer uses Skill or Ultimate on one ally character, the wearer regenerates #1[f1] Energy and the ability's target receives 1 stack of \"Hymn\" for #4[i] turn(s), stacking up to #3[i] time(s). Each stack of \"Hymn\" increases its holder's DMG dealt by #2[i]%. After every #5[i] instance(s) of Skill or Ultimate the wearer uses on one ally character, recovers 1 Skill Point.",
+    "params": [
+      [
+        6,
+        0.15,
+        3,
+        3,
+        2
+      ],
+      [
+        6.5,
+        0.1725,
+        3,
+        3,
+        2
+      ],
+      [
+        7,
+        0.195,
+        3,
+        3,
+        2
+      ],
+      [
+        7.5,
+        0.2175,
+        3,
+        3,
+        2
+      ],
+      [
+        8,
+        0.24,
+        3,
+        3,
+        2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23034.png",
+    "preview": "image/light_cone_preview/23034.png",
+    "portrait": "image/light_cone_portrait/23034.png",
+    "imageOffset": [
+      -6,
+      -83,
+      1.1
     ]
   },
   "If Time Were a Flower": {

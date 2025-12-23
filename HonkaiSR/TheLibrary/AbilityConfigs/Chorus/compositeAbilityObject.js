@@ -43,6 +43,36 @@ const compositeAbilityObject = {
               ]
             },
             {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "LC_EquipUnique_AttackAddedRatio",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.08) || RETURN",
+                          "displayLines": "0.08",
+                          "constants": [],
+                          "variables": [
+                            0.08
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "eventTrigger": "Enter Battle",
               "execute": [
                 {
@@ -60,7 +90,7 @@ const compositeAbilityObject = {
                       "modifier": "LC_EquipUnique_AttackAddedRatio",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08)",
+                          "operator": "Variables[0] (0.08) || RETURN",
                           "displayLines": "0.08",
                           "constants": [],
                           "variables": [
@@ -112,7 +142,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue)",
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
                     "constants": [],
                     "variables": [

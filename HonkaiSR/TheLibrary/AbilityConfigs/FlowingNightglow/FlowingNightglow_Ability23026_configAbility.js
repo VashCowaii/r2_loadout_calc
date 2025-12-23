@@ -24,7 +24,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillEquip_P3_DmgAddedRatio)",
+                "operator": "Variables[0] (SkillEquip_P3_DmgAddedRatio) || RETURN",
                 "displayLines": "SkillEquip_P3_DmgAddedRatio",
                 "constants": [],
                 "variables": [
@@ -64,7 +64,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.48)",
+                "operator": "Variables[0] (0.48) || RETURN",
                 "displayLines": "0.48",
                 "constants": [],
                 "variables": [
@@ -77,7 +77,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.24)",
+                "operator": "Variables[0] (0.24) || RETURN",
                 "displayLines": "0.24",
                 "constants": [],
                 "variables": [
@@ -91,7 +91,7 @@ const configAbility = {
               "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
               "valuePerStack": {
                 "AbilityEquip_P3_DmgAddedRatio": {
-                  "operator": "Variables[0] (0.24)",
+                  "operator": "Variables[0] (0.24) || RETURN",
                   "displayLines": "0.24",
                   "constants": [],
                   "variables": [
@@ -99,6 +99,36 @@ const configAbility = {
                   ]
                 }
               }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Created [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": "Use Prior Target(s) Defined",
+                "team": "TeamLight"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Use Prior Target(s) Defined",
+                  "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
+                  "valuePerStack": {
+                    "AbilityEquip_P3_DmgAddedRatio": {
+                      "operator": "Variables[0] (0.24) || RETURN",
+                      "displayLines": "0.24",
+                      "constants": [],
+                      "variables": [
+                        0.24
+                      ]
+                    }
+                  }
+                }
+              ]
             }
           ]
         }
@@ -126,7 +156,7 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "_CurrentSPRatio",
               "value": {
-                "operator": "Variables[0] (AbilityEquip_P1_SPRatio) || Variables[1] (_CurrentLayer) || MUL",
+                "operator": "Variables[0] (AbilityEquip_P1_SPRatio) || Variables[1] (_CurrentLayer) || MUL || RETURN",
                 "displayLines": "(AbilityEquip_P1_SPRatio * _CurrentLayer)",
                 "constants": [],
                 "variables": [
@@ -140,7 +170,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (_CurrentSPRatio)",
+                "operator": "Variables[0] (_CurrentSPRatio) || RETURN",
                 "displayLines": "_CurrentSPRatio",
                 "constants": [],
                 "variables": [
@@ -167,7 +197,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "All Team Members(In Context)",
+                "of": "Allied Team(ALL) [Exclude battle mechanics]",
                 "target": "Use Prior Target(s) Defined",
                 "mustBeAlive2": true
               },
@@ -177,7 +207,7 @@ const configAbility = {
                   "to": "Owner of this Modifier",
                   "modifier": "LC_23026_Sub[<span class=\"descriptionNumberColor\">Cantillation</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (5)",
+                    "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
                     "constants": [],
                     "variables": [
@@ -186,7 +216,7 @@ const configAbility = {
                   },
                   "valuePerStack": {
                     "AbilityEquip_P1_SPRatio": {
-                      "operator": "Variables[0] (0.03)",
+                      "operator": "Variables[0] (0.03) || RETURN",
                       "displayLines": "0.03",
                       "constants": [],
                       "variables": [
@@ -220,7 +250,7 @@ const configAbility = {
                   "to": "Owner of this Modifier",
                   "modifier": "LC_23026_Sub2[<span class=\"descriptionNumberColor\">Cadenza</span>]",
                   "duration": {
-                    "operator": "Variables[0] (1)",
+                    "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
                     "constants": [],
                     "variables": [

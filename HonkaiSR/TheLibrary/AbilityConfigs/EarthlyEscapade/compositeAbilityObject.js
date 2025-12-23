@@ -22,47 +22,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Losing Modifier (Expire)",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
-                  "modifier": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
-                  "onlyRemoveOwnersInstance": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": "All Team Members(Excluding Owner, in Context)",
-                  "modifier": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue3)",
-                      "displayLines": "MDF_PropertyValue3",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue3"
-                      ]
-                    },
-                    "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (MDF_PropertyValue4)",
-                      "displayLines": "MDF_PropertyValue4",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue4"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Increases teammates' CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue4</span>.",
           "type": "Buff",
           "effectName": "Mask",
@@ -84,7 +43,7 @@ const compositeAbilityObject = {
                     "value1": null,
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (4)",
+                      "operator": "Variables[0] (4) || RETURN",
                       "displayLines": "4",
                       "constants": [],
                       "variables": [
@@ -99,7 +58,7 @@ const compositeAbilityObject = {
                       "to": "Owner of this Modifier",
                       "modifier": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
                       "duration": {
-                        "operator": "Variables[0] (4)",
+                        "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
                         "constants": [],
                         "variables": [
@@ -108,7 +67,7 @@ const compositeAbilityObject = {
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue3": {
-                          "operator": "Variables[0] (0.1)",
+                          "operator": "Variables[0] (0.1) || RETURN",
                           "displayLines": "0.1",
                           "constants": [],
                           "variables": [
@@ -116,7 +75,7 @@ const compositeAbilityObject = {
                           ]
                         },
                         "MDF_PropertyValue4": {
-                          "operator": "Variables[0] (0.28)",
+                          "operator": "Variables[0] (0.28) || RETURN",
                           "displayLines": "0.28",
                           "constants": [],
                           "variables": [
@@ -151,7 +110,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue)",
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
                     "constants": [],
                     "variables": [
@@ -164,7 +123,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2)",
+                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
                     "displayLines": "MDF_PropertyValue2",
                     "constants": [],
                     "variables": [
@@ -175,11 +134,6 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
           "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
           "type": "Buff",
           "effectName": "CRIT Rate and CRIT DMG Boost",
@@ -222,7 +176,7 @@ const compositeAbilityObject = {
                       "to": "Owner of this Modifier",
                       "modifier": "LC_23021_Sub2[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (4)",
+                        "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
                         "constants": [],
                         "variables": [
@@ -231,7 +185,7 @@ const compositeAbilityObject = {
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (4)",
+                          "operator": "Variables[0] (4) || RETURN",
                           "displayLines": "4",
                           "constants": [],
                           "variables": [
@@ -240,7 +194,7 @@ const compositeAbilityObject = {
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_BPValue)",
+                        "operator": "Variables[0] (MDF_BPValue) || RETURN",
                         "displayLines": "MDF_BPValue",
                         "constants": [],
                         "variables": [
@@ -269,7 +223,7 @@ const compositeAbilityObject = {
                       "to": "Owner of this Modifier",
                       "modifier": "LC_23021_Sub3[<span class=\"descriptionNumberColor\">Mask</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3)",
+                        "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
                         "constants": [],
                         "variables": [
@@ -278,7 +232,7 @@ const compositeAbilityObject = {
                       },
                       "valuePerStack": {
                         "MDF_PropertyValue3": {
-                          "operator": "Variables[0] (0.1)",
+                          "operator": "Variables[0] (0.1) || RETURN",
                           "displayLines": "0.1",
                           "constants": [],
                           "variables": [
@@ -286,7 +240,7 @@ const compositeAbilityObject = {
                           ]
                         },
                         "MDF_PropertyValue4": {
-                          "operator": "Variables[0] (0.28)",
+                          "operator": "Variables[0] (0.28) || RETURN",
                           "displayLines": "0.28",
                           "constants": [],
                           "variables": [
