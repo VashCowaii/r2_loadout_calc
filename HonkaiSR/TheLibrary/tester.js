@@ -41,7 +41,7 @@ const customMenu = {
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Lightcones";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME, DESCRIPTION, or SIGNATURE CHARACTER.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.";
+        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME, DESCRIPTION, or SIGNATURE CHARACTER.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.<br><br>If a lightcone is missing from this list, I simply have not gotten to it yet.";
 
     
 
@@ -2803,7 +2803,7 @@ const customMenu = {
                                 
                                 ${tagString != "" ? `<div class="itemSourceTagRow">${tagString}</div>` : ""}
                             </div>
-                        </div>
+                        </a>
                     `;//${turnLogicLightcones[lcName] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
                     returnString += stringCustom;
                 }
