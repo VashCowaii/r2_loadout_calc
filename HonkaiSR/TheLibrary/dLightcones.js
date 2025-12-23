@@ -191,6 +191,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Planetary Rendezvous": {
+    "lightconeID": 21011,
+    "name": "Planetary Rendezvous",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Departure",
+    "desc": "After entering battle, if an ally deals the same DMG Type as the wearer, DMG dealt increases by #1[i]%.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.15
+      ],
+      [
+        0.18
+      ],
+      [
+        0.21
+      ],
+      [
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21011.png",
+    "preview": "image/light_cone_preview/21011.png",
+    "portrait": "image/light_cone_portrait/21011.png",
+    "imageOffset": [
+      0,
+      -146,
+      1.15
+    ]
+  },
   "Baptism of Pure Thought": {
     "lightconeID": 23020,
     "name": "Baptism of Pure Thought",

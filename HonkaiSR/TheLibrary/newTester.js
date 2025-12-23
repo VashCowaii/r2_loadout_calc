@@ -1128,12 +1128,27 @@ const megaParsingFuckery = {
             "DamageType",
             "invertCondition",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Part Of");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Weakness");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.DamageType} Weakness is${parseRef.invertCondition ? " NOT" : ""} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>`;
+    },
+    "Has Element"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "DamageType",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Element");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.DamageType.sourceType ?? parseRef.DamageType} Element is${parseRef.invertCondition ? " NOT" : ""} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Is Part Of"(parseRef,initialCounter) {
