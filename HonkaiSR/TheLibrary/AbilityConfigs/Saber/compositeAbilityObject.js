@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
           "for": "Saber_Eidolon1",
           "execute": [
             {
-              "eventTrigger": "Deal Damage: Any",
+              "eventTrigger": "Deal Damage [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -1633,7 +1633,7 @@ const compositeAbilityObject = {
           "for": "Saber_Eidolon6",
           "execute": [
             {
-              "eventTrigger": "Deal Damage: Any",
+              "eventTrigger": "Deal Damage [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -3206,7 +3206,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Deal Damage: Any",
+              "eventTrigger": "Deal Damage [Owner]: Any",
               "execute": [
                 {
                   "name": "Adjust Target Stats",
