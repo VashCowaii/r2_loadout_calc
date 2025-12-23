@@ -1165,6 +1165,21 @@ const megaParsingFuckery = {
             target family [${parseRef.of}] includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Target is Next Turn"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "partOf",
+            "exclude"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target is Next Turn");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            target family [${parseRef.partOf}] includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}, and excludes ${Array.isArray(parseRef.exclude) ? megaParsingFuckery.makeConditionTargetBox(parseRef.exclude,initialCounter) : parseRef.exclude}
+        </div>`;
+    },
     "Compare: Variable"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
