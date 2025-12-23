@@ -175,7 +175,8 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Is Part Of",
                     "of": "All Team Members(In Context)",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": "Use Prior Target(s) Defined",
+                    "mustBeAlive2": true
                   },
                   "passed": [
                     {

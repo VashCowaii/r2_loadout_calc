@@ -294,7 +294,8 @@ const configAbility = {
                   {
                     "name": "Is Part Of",
                     "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": "Use Prior Target(s) Defined",
+                    "mustBeAlive2": true
                   },
                   {
                     "name": "Skill Type",

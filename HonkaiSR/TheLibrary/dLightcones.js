@@ -977,6 +977,85 @@ let lightcones = {
       1.27
     ]
   },
+  "Epoch Etched in Golden Blood": {
+    "lightconeID": 23048,
+    "name": "Epoch Etched in Golden Blood",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.64
+      },
+      "2": {
+        "ATK%": 0.8
+      },
+      "3": {
+        "ATK%": 0.96
+      },
+      "4": {
+        "ATK%": 1.12
+      },
+      "5": {
+        "ATK%": 1.28
+      }
+    },
+    "skillName": "Conquer",
+    "desc": "Increases the wearer's ATK by #1[i]%. After using Ultimate to attack, recovers #3[i] Skill Point(s). After the wearer uses their Skill on one ally character, increases the Skill DMG dealt by the target by #4[f1]% for #5[i] turn(s).",
+    "params": [
+      [
+        0.64,
+        1,
+        1,
+        0.54,
+        3
+      ],
+      [
+        0.8,
+        1,
+        1,
+        0.675,
+        3
+      ],
+      [
+        0.96,
+        1,
+        1,
+        0.81,
+        3
+      ],
+      [
+        1.12,
+        1,
+        1,
+        0.945,
+        3
+      ],
+      [
+        1.28,
+        1,
+        1,
+        1.08,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23048.png",
+    "preview": "image/light_cone_preview/23048.png",
+    "portrait": "image/light_cone_portrait/23048.png",
+    "imageOffset": [
+      -3,
+      -80,
+      1.38
+    ]
+  },
   "The Forever Victual": {
     "lightconeID": 22005,
     "name": "The Forever Victual",
