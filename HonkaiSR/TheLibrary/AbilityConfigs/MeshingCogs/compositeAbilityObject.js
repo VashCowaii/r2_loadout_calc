@@ -48,7 +48,7 @@ const compositeAbilityObject = {
                       "name": "Update Energy",
                       "on": "Owner of this Modifier",
                       "value": {
-                        "operator": "Variables[0] (4)",
+                        "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
                         "constants": [],
                         "variables": [
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                       "name": "Update Energy",
                       "on": "Owner of this Modifier",
                       "value": {
-                        "operator": "Variables[0] (4)",
+                        "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
                         "constants": [],
                         "variables": [

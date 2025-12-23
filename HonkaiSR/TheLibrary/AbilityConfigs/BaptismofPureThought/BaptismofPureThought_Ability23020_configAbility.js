@@ -11,7 +11,7 @@ const configAbility = {
       "valuePerStack": {
         "_DebuffCount": 0,
         "MDF_PropertyValue": {
-          "operator": "Variables[0] (0.08)",
+          "operator": "Variables[0] (0.08) || RETURN",
           "displayLines": "0.08",
           "constants": [],
           "variables": [
@@ -19,7 +19,7 @@ const configAbility = {
           ]
         },
         "MDF_MaxCount": {
-          "operator": "Variables[0] (3)",
+          "operator": "Variables[0] (3) || RETURN",
           "displayLines": "3",
           "constants": [],
           "variables": [
@@ -52,8 +52,8 @@ const configAbility = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2)",
-                    "displayLines": "MDF_PropertyValue2",
+                    "operator": "Variables[0] (MDF_PropertyValue2) || OR || RETURN",
+                    "displayLines": "(MDF_PropertyValue2 ][OR(gate)][ (Abort evaluation when false))",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue2"
@@ -72,7 +72,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue1)",
+                "operator": "Variables[0] (MDF_PropertyValue1) || RETURN",
                 "displayLines": "MDF_PropertyValue1",
                 "constants": [],
                 "variables": [
@@ -110,7 +110,7 @@ const configAbility = {
                 "value1": "_DebuffCount",
                 "compareType": ">",
                 "value2": {
-                  "operator": "Variables[0] (MDF_MaxCount)",
+                  "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                   "displayLines": "MDF_MaxCount",
                   "constants": [],
                   "variables": [
@@ -123,7 +123,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_DebuffCount",
                   "value": {
-                    "operator": "Variables[0] (MDF_MaxCount)",
+                    "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
                     "constants": [],
                     "variables": [
@@ -138,7 +138,7 @@ const configAbility = {
               "on": "Attacker",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_DebuffCount) || MUL",
+                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_DebuffCount) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * _DebuffCount)",
                 "constants": [],
                 "variables": [
@@ -173,7 +173,7 @@ const configAbility = {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.36)",
+                        "operator": "Variables[0] (0.36) || RETURN",
                         "displayLines": "0.36",
                         "constants": [],
                         "variables": [
@@ -188,7 +188,7 @@ const configAbility = {
                   "to": "Owner of this Modifier",
                   "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2)",
+                    "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
                     "constants": [],
                     "variables": [
@@ -197,7 +197,7 @@ const configAbility = {
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
-                      "operator": "Variables[0] (0.36)",
+                      "operator": "Variables[0] (0.36) || RETURN",
                       "displayLines": "0.36",
                       "constants": [],
                       "variables": [
@@ -205,7 +205,7 @@ const configAbility = {
                       ]
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (0.24)",
+                      "operator": "Variables[0] (0.24) || RETURN",
                       "displayLines": "0.24",
                       "constants": [],
                       "variables": [

@@ -764,6 +764,21 @@ const megaParsingFuckery = {
             ${parseRef.eidolon}
         </div>`;
     },
+    "Character ID"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "ID",
+            "target",
+            "characterName",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Character ID");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.target} = ${parseRef.ID}(${parseRef.characterName})
+        </div>`;
+    },
     "Trace Activated"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2816,6 +2831,53 @@ const megaParsingFuckery = {
                 ${parseString}
             </div>
         </div>`;
+    },
+    NOT(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "condition",
+            "passed",
+            "failed"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"NOT");
+
+        // conditions
+        // passed
+        // failed
+
+        // let parseString = "";
+        // let refString = "";
+        // const hasParse = parseRef.passed?.length;
+        // const hasRef = parseRef.failed?.length;
+        // if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.passed,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+        const conditionObject = parseRef.condition;
+        const conditionName = conditionObject.name;
+
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        if (!returnString) {
+            console.log(conditionObject)
+            throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)
+        }
+
+
+
+        // if (!hasParse && !hasRef) {return "";}
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+                ${returnString}
+            </summary>
+
+        </details>
+        `;
     },
     IF(parseRef,initialCounter) {
         initialCounter++;

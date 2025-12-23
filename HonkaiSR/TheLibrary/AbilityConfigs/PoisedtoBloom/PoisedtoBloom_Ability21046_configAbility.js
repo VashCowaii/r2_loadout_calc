@@ -23,7 +23,7 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.16)",
+                "operator": "Variables[0] (0.16) || RETURN",
                 "displayLines": "0.16",
                 "constants": [],
                 "variables": [
@@ -48,7 +48,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Matching Path",
-              "target": "Allied Team",
+              "target": "Allied Team(No Memosprite)",
               "matchToPathFrom": "Owner of this Modifier",
               "variableName": "SameTypeCount"
             },
@@ -81,7 +81,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": "Allied Team(No Memosprite)",
               "modifier": "LC_21046_Sub"
             }
           ],

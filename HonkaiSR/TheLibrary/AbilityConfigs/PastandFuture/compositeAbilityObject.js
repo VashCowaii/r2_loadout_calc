@@ -31,7 +31,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.16)",
+                    "operator": "Variables[0] (0.16) || RETURN",
                     "displayLines": "0.16",
                     "constants": [],
                     "variables": [
@@ -69,7 +69,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Target is Next Turn",
                         "target": "Use Prior Target(s) Defined",
-                        "partOf": "Allied Team(No Memosprite)",
+                        "partOf": "All Team Members(Excluding Owner, in Context)",
                         "exclude": "Owner of this Modifier"
                       },
                       "ifTargetFound": [
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                           "to": "Use Prior Target(s) Defined",
                           "modifier": "LC_21025_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
-                            "operator": "Variables[0] (1)",
+                            "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
                             "constants": [],
                             "variables": [

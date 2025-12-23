@@ -31,7 +31,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.06)",
+                    "operator": "Variables[0] (0.06) || RETURN",
                     "displayLines": "0.06",
                     "constants": [],
                     "variables": [
@@ -60,7 +60,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.12)",
+                    "operator": "Variables[0] (0.12) || RETURN",
                     "displayLines": "0.12",
                     "constants": [],
                     "variables": [
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1)",
+                    "operator": "Variables[0] (0.1) || RETURN",
                     "displayLines": "0.1",
                     "constants": [],
                     "variables": [
@@ -158,6 +158,26 @@ const compositeAbilityObject = {
                   "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                 }
               ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -212,6 +232,26 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": "All Team Members(In Context)",
                   "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
+                    }
+                  ]
                 }
               ]
             }
@@ -270,6 +310,26 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": "All Team Members(In Context)",
                   "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
+                    }
+                  ]
                 }
               ]
             }

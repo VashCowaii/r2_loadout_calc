@@ -29,7 +29,7 @@ const compositeAbilityObject = {
                   "name": "Update Energy",
                   "on": "Owner of this Modifier",
                   "value": {
-                    "operator": "Variables[0] (10)",
+                    "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
                     "constants": [],
                     "variables": [
@@ -56,7 +56,7 @@ const compositeAbilityObject = {
                       "name": "Update Energy",
                       "on": "Owner of this Modifier",
                       "value": {
-                        "operator": "Variables[0] (10)",
+                        "operator": "Variables[0] (10) || RETURN",
                         "displayLines": "10",
                         "constants": [],
                         "variables": [
@@ -85,7 +85,7 @@ const compositeAbilityObject = {
                   "target": "Owner of this Modifier",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.24)",
+                    "operator": "Variables[0] (0.24) || RETURN",
                     "displayLines": "0.24",
                     "constants": [],
                     "variables": [
@@ -120,7 +120,7 @@ const compositeAbilityObject = {
                       "to": "All Team Members(In Context)",
                       "modifier": "LC_23019_Sub1[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
-                        "operator": "Variables[0] (3)",
+                        "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
                         "constants": [],
                         "variables": [
@@ -136,7 +136,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (1.5)",
+                          "operator": "Variables[0] (1.5) || RETURN",
                           "displayLines": "1.5",
                           "constants": [],
                           "variables": [
@@ -170,7 +170,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": "All Team Members(In Context, NO Memosprites)",
                       "modifier": "LC_23019_Sub2"
                     }
                   ]
