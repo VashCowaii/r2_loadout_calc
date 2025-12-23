@@ -7,7 +7,7 @@ const configAbility = {
     {
       "name": "Add Events/Bonuses",
       "to": "Caster",
-      "modifier": "MEquip_23020_Main",
+      "modifier": "LC_23020_Main",
       "valuePerStack": {
         "_DebuffCount": 0,
         "MDF_PropertyValue": {
@@ -32,7 +32,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "MEquip_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+      "for": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
       "stackType": "ReplaceByCaster",
       "execute": [
         {
@@ -90,7 +90,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "MEquip_23020_Main",
+      "for": "LC_23020_Main",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
@@ -164,7 +164,7 @@ const configAbility = {
                   "conditions": {
                     "name": "Has Modifier",
                     "target": "Owner of this Modifier",
-                    "modifier": "MEquip_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+                    "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -186,7 +186,7 @@ const configAbility = {
                 {
                   "name": "Add Events/Bonuses",
                   "to": "Owner of this Modifier",
-                  "modifier": "MEquip_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
+                  "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
                   "duration": {
                     "operator": "Variables[0] (2)",
                     "displayLines": "2",
@@ -227,5 +227,48 @@ const configAbility = {
       "latentQueue": []
     }
   ],
-  "isLightcone": true
+  "isLightcone": true,
+  "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the Disputation effect, which increases DMG dealt by #4[i]% and enables their Follow-up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
+  "params": [
+    [
+      0.2,
+      0.08,
+      3,
+      0.36,
+      0.24,
+      2
+    ],
+    [
+      0.23,
+      0.09,
+      3,
+      0.42,
+      0.28,
+      2
+    ],
+    [
+      0.26,
+      0.1,
+      3,
+      0.48,
+      0.32,
+      2
+    ],
+    [
+      0.29,
+      0.11,
+      3,
+      0.54,
+      0.36,
+      2
+    ],
+    [
+      0.32,
+      0.12,
+      3,
+      0.6,
+      0.4,
+      2
+    ]
+  ]
 }
