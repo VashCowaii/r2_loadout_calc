@@ -358,5 +358,74 @@ let lightcones = {
       -101,
       1.27
     ]
+  },
+  "The Forever Victual": {
+    "lightconeID": 22005,
+    "name": "The Forever Victual",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "So good!",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses Skill, increases ATK by #2[i]%, stacking up to #3[i] times.",
+    "params": [
+      [
+        0.16,
+        0.08,
+        3
+      ],
+      [
+        0.2,
+        0.1,
+        3
+      ],
+      [
+        0.24,
+        0.12,
+        3
+      ],
+      [
+        0.28,
+        0.14,
+        3
+      ],
+      [
+        0.32,
+        0.16,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22005.png",
+    "preview": "image/light_cone_preview/22005.png",
+    "portrait": "image/light_cone_portrait/22005.png",
+    "imageOffset": [
+      -46,
+      -106,
+      1.3
+    ]
   }
 }
