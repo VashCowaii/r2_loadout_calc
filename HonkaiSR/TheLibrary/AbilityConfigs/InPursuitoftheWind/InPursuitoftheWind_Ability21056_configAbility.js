@@ -120,5 +120,35 @@ const configAbility = {
     [
       0.24
     ]
+  ],
+  "referencesGlobal": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_EquipUnique_BreakExrtaAddedRatio",
+      "execute": [
+        {
+          "eventTrigger": "When Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": "Owner of this Modifier",
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakMulti</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": []
+    }
   ]
 }

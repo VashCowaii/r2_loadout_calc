@@ -2,6 +2,7 @@
     "BreakDamageAddedRatioBase": "DamageBreak",
     "BreakDamageAddedRatioConvert": "DamageBreakConverted",
     "BreakDamageAddedRatio": "DamageBreakSUM",
+    "BreakDamageExtraAddedRatio": "DamageBreakMulti",
     "StanceBreakAddedRatio": "DamageBreakEfficiency",
     "StanceBreakAddedRatioOLDDEFINITION": "SuperBreakMaybe",
 
