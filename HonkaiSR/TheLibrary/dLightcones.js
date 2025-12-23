@@ -187,5 +187,89 @@ let lightcones = {
       -62,
       1.02
     ]
+  },
+  "A Thankless Coronation": {
+    "lightconeID": 23045,
+    "name": "A Thankless Coronation",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.45
+      },
+      "3": {
+        "CritDamageBase": 0.54
+      },
+      "4": {
+        "CritDamageBase": 0.63
+      },
+      "5": {
+        "CritDamageBase": 0.72
+      }
+    },
+    "skillName": "King of Knights",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When using Ultimate, increases the wearer's ATK by #6[i]%, and if the wearer's Max Energy is greater than or equal to #3[i], regenerates a fixed amount of Energy equal to #5[i]% of the wearer's Max Energy and once again increases the wearer's ATK by #2[i]%, lasting for #4[i] turns.",
+    "params": [
+      [
+        0.36,
+        0.4,
+        300,
+        2,
+        0.1,
+        0.4
+      ],
+      [
+        0.45,
+        0.5,
+        300,
+        2,
+        0.1,
+        0.5
+      ],
+      [
+        0.54,
+        0.6,
+        300,
+        2,
+        0.1,
+        0.6
+      ],
+      [
+        0.63,
+        0.7,
+        300,
+        2,
+        0.1,
+        0.7
+      ],
+      [
+        0.72,
+        0.8,
+        300,
+        2,
+        0.1,
+        0.8
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23045.png",
+    "preview": "image/light_cone_preview/23045.png",
+    "portrait": "image/light_cone_portrait/23045.png",
+    "imageOffset": [
+      40,
+      -101,
+      1.27
+    ]
   }
 }
