@@ -1,4 +1,45 @@
 let lightcones = {
+  "Chorus": {
+    "lightconeID": 20005,
+    "name": "Chorus",
+    "path": "Harmony",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Concerted",
+    "desc": "After entering battle, increases the ATK of all allies by #1[i]%. Abilities of the same type cannot stack.",
+    "params": [
+      [
+        0.08
+      ],
+      [
+        0.09
+      ],
+      [
+        0.1
+      ],
+      [
+        0.11
+      ],
+      [
+        0.12
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20005.png",
+    "preview": "image/light_cone_preview/20005.png",
+    "portrait": "image/light_cone_portrait/20005.png",
+    "imageOffset": [
+      0,
+      -130,
+      1.15
+    ]
+  },
   "Meshing Cogs": {
     "lightconeID": 20012,
     "name": "Meshing Cogs",
