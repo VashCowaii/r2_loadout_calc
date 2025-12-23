@@ -362,6 +362,47 @@ let lightcones = {
       1.02
     ]
   },
+  "Dreamville Adventure": {
+    "lightconeID": 21036,
+    "name": "Dreamville Adventure",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Solidarity",
+    "desc": "After the wearer uses a certain type of ability such as Basic ATK, Skill, or Ultimate, all allies gain Childishness, which increases allies' DMG for the same type of ability as used by the wearer by #1[i]%. Childishness only takes effect for the most recent type of ability the wearer used and cannot be stacked.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.14
+      ],
+      [
+        0.16
+      ],
+      [
+        0.18
+      ],
+      [
+        0.2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21036.png",
+    "preview": "image/light_cone_preview/21036.png",
+    "portrait": "image/light_cone_portrait/21036.png",
+    "imageOffset": [
+      0,
+      63,
+      1.02
+    ]
+  },
   "Poised to Bloom": {
     "lightconeID": 21046,
     "name": "Poised to Bloom",
