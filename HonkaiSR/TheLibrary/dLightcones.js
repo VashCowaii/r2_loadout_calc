@@ -232,6 +232,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Past and Future": {
+    "lightconeID": 21025,
+    "name": "Past and Future",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Kites From the Past",
+    "desc": "When the wearer uses their Skill, the next ally taking action (except the wearer) deals #1[i]% increased DMG for #2[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        1
+      ],
+      [
+        0.2,
+        1
+      ],
+      [
+        0.24,
+        1
+      ],
+      [
+        0.28,
+        1
+      ],
+      [
+        0.32,
+        1
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21025.png",
+    "preview": "image/light_cone_preview/21025.png",
+    "portrait": "image/light_cone_portrait/21025.png",
+    "imageOffset": [
+      46,
+      -200,
+      1.41
+    ]
+  },
   "Baptism of Pure Thought": {
     "lightconeID": 23020,
     "name": "Baptism of Pure Thought",
