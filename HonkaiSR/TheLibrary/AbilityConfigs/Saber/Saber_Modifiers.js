@@ -210,7 +210,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "Deal Damage: Any",
+          "eventTrigger": "Deal Damage [Owner]: Any",
           "execute": [
             {
               "name": "Adjust Target Stats",

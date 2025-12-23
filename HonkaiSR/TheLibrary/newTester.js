@@ -49,6 +49,7 @@ const megaParsingFuckery = {
 
         // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
         const characterRef = characters[compositeAbilityObject.fullCharacterName];
+        const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
         // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
 
         const startingKeys = [
@@ -59,7 +60,7 @@ const megaParsingFuckery = {
         ];
         let startingString = `<div class="eventCharacterFileHeader">
             <div class="customMenuResultRowIcon">
-                <img src="/HonkaiSR/${characterRef.preview}" class="eventCharacterFileIcon" style="border: 2px solid #d2ae73;">
+                <img src="/HonkaiSR/${compositeAbilityObject.isLightcone ? lightconeRef.preview : characterRef.preview}" class="eventCharacterFileIcon" style="border: 2px solid #d2ae73;">
             </div>
             <div class="eventCharacterFileInfoBox">
             
@@ -573,6 +574,19 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with HP%:</div>&nbsp;
             ${parseRef.variableName} = current HP Percent on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>`;
+    },
+    "Define Custom Variable with Status Counter"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with HP%");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Status Count:</div>&nbsp;
+            ${parseRef.variableName} = current Status Count on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Update Energy"(parseRef,initialCounter) {
