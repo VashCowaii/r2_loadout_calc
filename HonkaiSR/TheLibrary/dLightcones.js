@@ -273,6 +273,57 @@ let lightcones = {
       1
     ]
   },
+  "Carve the Moon, Weave the Clouds": {
+    "lightconeID": 21032,
+    "name": "Carve the Moon, Weave the Clouds",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Secret",
+    "desc": "At the start of the battle and whenever the wearer's turn begins, one of the following effects is applied randomly: All allies' ATK increases by #1[i]%, all allies' CRIT DMG increases by #2[i]%, or all allies' Energy Regeneration Rate increases by #3[i]%. The applied effect cannot be identical to the last effect applied, and will replace the previous effect. The applied effect will be removed when the wearer has been knocked down. Effects of the same type cannot be stacked.",
+    "params": [
+      [
+        0.1,
+        0.12,
+        0.06
+      ],
+      [
+        0.125,
+        0.15,
+        0.075
+      ],
+      [
+        0.15,
+        0.18,
+        0.09
+      ],
+      [
+        0.175,
+        0.21,
+        0.105
+      ],
+      [
+        0.2,
+        0.24,
+        0.12
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21032.png",
+    "preview": "image/light_cone_preview/21032.png",
+    "portrait": "image/light_cone_portrait/21032.png",
+    "imageOffset": [
+      0,
+      -58,
+      1.15
+    ]
+  },
   "Past and Future": {
     "lightconeID": 21025,
     "name": "Past and Future",

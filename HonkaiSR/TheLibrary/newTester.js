@@ -1922,6 +1922,50 @@ const megaParsingFuckery = {
         </details>
         `;
     },
+    "Random Event"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "odds",
+            "execute",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Random Event");
+
+        // conditions
+        // passed
+        // failed
+
+        let parseString = "";
+        let refString = "";
+        const hasParse = parseRef.odds?.length;
+        const hasRef = parseRef.execute?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.odds,initialCounter);}
+        if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
+
+
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </summary>
+
+            <div class="modifierDetailsBox">
+                ${parseRef.odds ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">ODDS:</div>&nbsp;
+                    ${parseRef.odds}
+                </div>` : ""}
+            </div>
+
+            <div class="rotationConditionOperatorBoxMain">
+                ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${refString}
+                </div>` : ""}
+            </div>
+        </details>
+        `;
+    },
     "Modifier Construction"(parseRef,initialCounter) {
         initialCounter++;
         const knownKeySet = new Set ([
