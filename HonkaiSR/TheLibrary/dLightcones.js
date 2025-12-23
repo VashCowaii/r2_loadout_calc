@@ -426,6 +426,75 @@ let lightcones = {
       1.15
     ]
   },
+  "For Tomorrow's Journey": {
+    "lightconeID": 22002,
+    "name": "For Tomorrow's Journey",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Bonds",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses their Ultimate, increases their DMG dealt by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.18,
+        1
+      ],
+      [
+        0.2,
+        0.21,
+        1
+      ],
+      [
+        0.24,
+        0.24,
+        1
+      ],
+      [
+        0.28,
+        0.27,
+        1
+      ],
+      [
+        0.32,
+        0.3,
+        1
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22002.png",
+    "preview": "image/light_cone_preview/22002.png",
+    "portrait": "image/light_cone_portrait/22002.png",
+    "imageOffset": [
+      -15,
+      -184,
+      1.8
+    ]
+  },
   "In Pursuit of the Wind": {
     "lightconeID": 21056,
     "name": "In Pursuit of the Wind",
