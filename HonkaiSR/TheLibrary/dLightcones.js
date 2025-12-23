@@ -40,6 +40,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Mediation": {
+    "lightconeID": 20019,
+    "name": "Mediation",
+    "path": "Harmony",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Family",
+    "desc": "Upon entering battle, increases SPD of all allies by #1[i] points for #2[i] turn(s).",
+    "params": [
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        18,
+        1
+      ],
+      [
+        20,
+        1
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20019.png",
+    "preview": "image/light_cone_preview/20019.png",
+    "portrait": "image/light_cone_portrait/20019.png",
+    "imageOffset": [
+      0,
+      20,
+      1.15
+    ]
+  },
   "Memories of the Past": {
     "lightconeID": 21004,
     "name": "Memories of the Past",
