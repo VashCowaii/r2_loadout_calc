@@ -21,6 +21,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
+              "target": "Owner of this Modifier",
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
