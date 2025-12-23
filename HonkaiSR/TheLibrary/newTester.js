@@ -51,7 +51,7 @@ const megaParsingFuckery = {
         let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
-        let referenceGlobalString = configAbility.referencesGlobal.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+        let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
         
 
         // "fileName": "Saber_Skill02",
