@@ -1165,13 +1165,16 @@ const megaParsingFuckery = {
             "name",
             "target",
             "of",
+
+            "mustBeAlive1",
+            "mustBeAlive2",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Part Of");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            target family [${parseRef.of}] includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            target family [${parseRef.of}${parseRef.mustBeAlive1 ? "(Living)" : ""}] includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.mustBeAlive2 ? "(Living)" : ""}
         </div>`;
     },
     "Is Part Of Team"(parseRef,initialCounter) {
@@ -1217,6 +1220,22 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.value1.displayLines ?? parseRef.value1} ${parseRef.compareType} ${parseRef.value2.displayLines ?? parseRef.value2} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+        </div>`;
+    },
+    "Compare: Target Count"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "compareType",
+            "livingTargets",
+            "value2",
+            "target",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Variable");
+        
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            Targets${parseRef.livingTargets ? "(Living)" : ""} in ${parseRef.target ? `${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""} ${parseRef.compareType} ${parseRef.value2.displayLines ?? parseRef.value2} 
         </div>`;
     },
     "Compare: Ability Value"(parseRef,initialCounter) {
@@ -1509,7 +1528,7 @@ const megaParsingFuckery = {
         // `;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
-            ${parseRef.adjustmentType}${parseRef.adjustmentValue}
+            ${parseRef.adjustmentType}${parseRef.adjustmentValue.displayLines ?? parseRef.adjustmentValue}
         </div>
         `;
     },
