@@ -1230,15 +1230,24 @@ const megaParsingFuckery = {
             "name",
             "to",
             "modifier",
+            "onlyRemoveOwnersInstance",
             // "value1",
             // "compareType",
             // "value2"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Events/Bonuses");
 
+        // console.log(parseRef.to)
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Remove Event/Bonus:</div>&nbsp;
             ${parseRef.modifier} from ${Array.isArray(parseRef.to) ? megaParsingFuckery.makeConditionTargetBox(parseRef.to,initialCounter) : parseRef.to}
+        </div>
+        
+        <div class="modifierDetailsBox">
+            ${parseRef.onlyRemoveOwnersInstance != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Only remove Owner's Application:</div>&nbsp;
+                ${parseRef.onlyRemoveOwnersInstance ?? parseRef.onlyRemoveOwnersInstance}
+            </div>` : ""}
         </div>`
     },
     "ATK Scaling DMG"(parseRef,initialCounter) {
