@@ -625,6 +625,21 @@ const megaParsingFuckery = {
             ${parseRef.variableName} = current Status Count on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Define Custom Variable with Modifier Values"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+            "valueType",
+            "multiplier",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with HP%");
+        // initialCounter++;
+        return `<div class="actionDetailBody2"> 
+            <div class="rotationConditionOperatorHeaderInline">Define with Modifier Attribute:</div>&nbsp;
+            ${parseRef.variableName} = ${parseRef.valueType} * ${parseRef.multiplier} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>`;
+    },
     "Update Energy"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1854,6 +1869,9 @@ const megaParsingFuckery = {
             "stackData",
             "latentQueue",
 
+            "stackLimit",
+            "addStacksPerTrigger",
+
             "abilityValueChange",
             "previewValue",
             "modifierFlags",
@@ -1902,6 +1920,7 @@ const megaParsingFuckery = {
         const previewValue = parseRef.previewValue ? megaParsingFuckery["Modifier: UI Preview"](parseRef.previewValue,initialCounter) : null;
 
         // stackData
+
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -1921,6 +1940,14 @@ const megaParsingFuckery = {
                 ${parseRef.modifierFlags ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Flags:</div>&nbsp;
                     ${parseRef.modifierFlags}
+                </div>` : ""}
+                ${parseRef.stackLimit ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Limit:</div>&nbsp;
+                    ${parseRef.stackLimit}
+                </div>` : ""}
+                ${parseRef.addStacksPerTrigger ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Stacks/Trigger:</div>&nbsp;
+                    ${parseRef.addStacksPerTrigger}
                 </div>` : ""}
 
                 
