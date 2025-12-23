@@ -774,7 +774,7 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Action Advance/Delay");
 
         const advanceType = parseRef.advanceType;
-        const displayValue = parseRef.value.displayLines ?? parseRef.value;
+        const displayValue = parseRef.value?.displayLines ?? parseRef.value;
         const finalDisplay = (displayValue * 100) + (advanceType != "Set" ? "%" : "AV")
 
         // advanceType

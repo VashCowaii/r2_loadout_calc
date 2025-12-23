@@ -232,6 +232,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Dance! Dance! Dance!": {
+    "lightconeID": 21018,
+    "name": "Dance! Dance! Dance!",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Cannot Stop It!",
+    "desc": "When the wearer uses their Ultimate, all allies' actions are Advanced Forward by #1[i]%.",
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.18
+      ],
+      [
+        0.2
+      ],
+      [
+        0.22
+      ],
+      [
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21018.png",
+    "preview": "image/light_cone_preview/21018.png",
+    "portrait": "image/light_cone_portrait/21018.png",
+    "imageOffset": [
+      0,
+      -75,
+      1
+    ]
+  },
   "Past and Future": {
     "lightconeID": 21025,
     "name": "Past and Future",
