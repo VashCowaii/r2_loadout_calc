@@ -449,6 +449,90 @@ let lightcones = {
       1.01
     ]
   },
+  "Earthly Escapade": {
+    "lightconeID": 23021,
+    "name": "Earthly Escapade",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.32
+      },
+      "2": {
+        "CritDamageBase": 0.39
+      },
+      "3": {
+        "CritDamageBase": 0.46
+      },
+      "4": {
+        "CritDamageBase": 0.53
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Capriciousness",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. At the start of the battle, the wearer gains Mask, lasting for #6[i] turn(s). While the wearer has Mask, the wearer's teammates have their CRIT Rate increased by #5[i]% and their CRIT DMG increased by #2[i]%. For every 1 Skill Point the wearer recovers (including Skill Points that exceed the limit), they gain 1 stack of Radiant Flame. And when the wearer has #4[i] stacks of Radiant Flame, all the stacks are removed, and they gain Mask, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.32,
+        0.28,
+        4,
+        4,
+        0.1,
+        3
+      ],
+      [
+        0.39,
+        0.35,
+        4,
+        4,
+        0.11,
+        3
+      ],
+      [
+        0.46,
+        0.42,
+        4,
+        4,
+        0.12,
+        3
+      ],
+      [
+        0.53,
+        0.49,
+        4,
+        4,
+        0.13,
+        3
+      ],
+      [
+        0.6,
+        0.56,
+        4,
+        4,
+        0.14,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23021.png",
+    "preview": "image/light_cone_preview/23021.png",
+    "portrait": "image/light_cone_portrait/23021.png",
+    "imageOffset": [
+      16,
+      -162,
+      1.35
+    ]
+  },
   "Baptism of Pure Thought": {
     "lightconeID": 23020,
     "name": "Baptism of Pure Thought",

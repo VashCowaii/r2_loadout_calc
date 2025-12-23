@@ -447,6 +447,19 @@ const megaParsingFuckery = {
             ${parseRef.variableName}${parseRef.type ? ` (${parseRef.type})` : ""}
         </div>`;
     },
+    "Define Custom Variable with SkillPoint Changes"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "type",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with SkillPoint Changes");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Changes in Skill Points:</div>&nbsp;
+            ${parseRef.variableName}${parseRef.type ? ` (${parseRef.type})` : ""}
+        </div>`;
+    },
     "Define Modifier Variable"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1213,13 +1226,14 @@ const megaParsingFuckery = {
             "compareType",
             "value2",
             "target",
+            "valueType",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Variable");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.value1.displayLines ?? parseRef.value1} ${parseRef.compareType} ${parseRef.value2.displayLines ?? parseRef.value2} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+            ${parseRef.value1?.displayLines ?? parseRef.value1 ?? ""}${parseRef.valueType ? `(Type: ${parseRef.valueType})` : ""} ${parseRef.compareType} ${parseRef.value2.displayLines ?? parseRef.value2} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
     "Compare: Target Count"(parseRef,initialCounter) {
