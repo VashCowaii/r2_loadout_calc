@@ -370,6 +370,85 @@ let lightcones = {
       1.41
     ]
   },
+  "Past Self in Mirror": {
+    "lightconeID": 23019,
+    "name": "Past Self in Mirror",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 529.2,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "The Plum Fragrance In My Bones",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases all allies' DMG by #2[i]%, lasting for #3[i] turn(s). Should the wearer's Break Effect exceed or equal #4[i]%, 1 Skill Point will be recovered.\\nAt the start of each wave, all allies regenerate #5[f1] Energy immediately. Abilities of the same type cannot stack.",
+    "params": [
+      [
+        0.6,
+        0.24,
+        3,
+        1.5,
+        10
+      ],
+      [
+        0.7,
+        0.28,
+        3,
+        1.5,
+        12.5
+      ],
+      [
+        0.8,
+        0.32,
+        3,
+        1.5,
+        15
+      ],
+      [
+        0.9,
+        0.36,
+        3,
+        1.5,
+        17.5
+      ],
+      [
+        1,
+        0.4,
+        3,
+        1.5,
+        20
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23019.png",
+    "preview": "image/light_cone_preview/23019.png",
+    "portrait": "image/light_cone_portrait/23019.png",
+    "imageOffset": [
+      0,
+      18,
+      1.01
+    ]
+  },
   "Baptism of Pure Thought": {
     "lightconeID": 23020,
     "name": "Baptism of Pure Thought",
@@ -626,6 +705,151 @@ let lightcones = {
       -15,
       -184,
       1.8
+    ]
+  },
+  "Flowing Nightglow": {
+    "lightconeID": 23026,
+    "name": "Flowing Nightglow",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Pacify",
+    "desc": "Every time an ally attacks, the wearer gains 1 stack of Cantillation. Each stack of Cantillation increases the wearer's Energy Regeneration Rate by #1[f1]%, stacking up to #2[i] time(s). When the wearer uses their Ultimate, removes Cantillation and gains Cadenza. Cadenza increases the Wearer's ATK by #4[i]% and increases all allies' DMG dealt by #3[i]%, lasting for #5[i] turn(s).",
+    "params": [
+      [
+        0.03,
+        5,
+        0.24,
+        0.48,
+        1
+      ],
+      [
+        0.035,
+        5,
+        0.28,
+        0.6,
+        1
+      ],
+      [
+        0.04,
+        5,
+        0.32,
+        0.72,
+        1
+      ],
+      [
+        0.044999998,
+        5,
+        0.36,
+        0.84,
+        1
+      ],
+      [
+        0.05,
+        5,
+        0.4,
+        0.96,
+        1
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23026.png",
+    "preview": "image/light_cone_preview/23026.png",
+    "portrait": "image/light_cone_portrait/23026.png",
+    "imageOffset": [
+      0,
+      -78,
+      1
+    ]
+  },
+  "If Time Were a Flower": {
+    "lightconeID": 23038,
+    "name": "If Time Were a Flower",
+    "path": "Harmony",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Aspiration",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
+    "params": [
+      [
+        0.36,
+        12,
+        2,
+        0.48,
+        21,
+        2
+      ],
+      [
+        0.42,
+        12,
+        2,
+        0.6,
+        21,
+        2
+      ],
+      [
+        0.48,
+        12,
+        2,
+        0.72,
+        21,
+        2
+      ],
+      [
+        0.54,
+        12,
+        2,
+        0.84,
+        21,
+        2
+      ],
+      [
+        0.6,
+        12,
+        2,
+        0.96,
+        21,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23038.png",
+    "preview": "image/light_cone_preview/23038.png",
+    "portrait": "image/light_cone_portrait/23038.png",
+    "imageOffset": [
+      2,
+      -86,
+      1.3
     ]
   },
   "In Pursuit of the Wind": {
