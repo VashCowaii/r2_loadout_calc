@@ -426,6 +426,47 @@ let lightcones = {
       1.15
     ]
   },
+  "In Pursuit of the Wind": {
+    "lightconeID": 21056,
+    "name": "In Pursuit of the Wind",
+    "path": "Harmony",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Flustered",
+    "desc": "After entering combat, increases all allies' Break DMG dealt by #1[i]%. Abilities of the same type cannot stack.",
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.18
+      ],
+      [
+        0.2
+      ],
+      [
+        0.22
+      ],
+      [
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21056.png",
+    "preview": "image/light_cone_preview/21056.png",
+    "portrait": "image/light_cone_portrait/21056.png",
+    "imageOffset": [
+      0,
+      -52,
+      1.02
+    ]
+  },
   "A Thankless Coronation": {
     "lightconeID": 23045,
     "name": "A Thankless Coronation",
