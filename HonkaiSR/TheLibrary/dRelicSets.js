@@ -304,5 +304,62 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Wastelander of Banditry Desert": {
+    "name": "Wastelander of Banditry Desert",
+    "setID": 112,
+    "desc": [
+      "Increases Imaginary DMG by 10%.",
+      "When dealing DMG to debuffed enemy targets, the wearer has their CRIT Rate increased by 10%. And when they deal DMG to Imprisoned enemy targets, their CRIT DMG increases by 20%."
+    ],
+    "icon": "icon/relic/112.png",
+    "fixedStats": {
+      "2": {
+        "DamageImaginary": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        0.1,
+        0.2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Longevous Disciple": {
+    "name": "Longevous Disciple",
+    "setID": 113,
+    "desc": [
+      "Increases Max HP by 12%.",
+      "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks."
+    ],
+    "icon": "icon/relic/113.png",
+    "fixedStats": {
+      "2": {
+        "HP%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.08,
+        2,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

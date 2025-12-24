@@ -177,7 +177,8 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Target Count",
+                    "name": "Compare: Variable",
+                    "value1": "ParameterValue",
                     "compareType": "<",
                     "value2": 0
                   },
