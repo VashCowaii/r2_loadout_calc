@@ -1129,6 +1129,20 @@ const megaParsingFuckery = {
             ${parseRef.invertCondition ? "NOT " : ""}${parseRef.attackTypes}
         </div>`;
     },
+    "Modifier Was"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "modifier",
+            "invertCondition"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Was");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.modifier} ${parseRef.invertCondition ? "NOT " : ""}
+        </div>`;
+    },
     "Has Modifier"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
