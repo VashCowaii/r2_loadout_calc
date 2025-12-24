@@ -52,8 +52,8 @@ const configAbility = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || OR || RETURN",
-                    "displayLines": "(MDF_PropertyValue2 ][OR(gate)][ (Abort evaluation when false))",
+                    "operator": "Variables[0] (MDF_PropertyValue2)",
+                    "displayLines": "MDF_PropertyValue2",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue2"
