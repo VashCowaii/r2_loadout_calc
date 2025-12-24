@@ -1572,9 +1572,16 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"AttackScaling");
 
 
+        // {
+        //     "name": "Damage Type Source",
+        //     "sourceType": "ReadTargetType",
+        //     "target": "Caster"
+        //   }
+
+
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">DMG:</div>&nbsp;
-            ${parseRef.Damage.displayLines ?? parseRef.Damage} (${parseRef.DamageType})
+            ${parseRef.Damage.displayLines ?? parseRef.Damage} ${typeof parseRef.DamageType === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.DamageType,initialCounter) : `(${parseRef.DamageType})`}
         </div>
         <div class="modifierDetailsBox">
             ${parseRef.HitSplit != undefined ? `<div class="actionDetailBody2">
