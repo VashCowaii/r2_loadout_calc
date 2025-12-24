@@ -24,7 +24,7 @@ const configAbility = {
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (LC_23040_PropertyValue)",
+                "operator": "Variables[0] (LC_23040_PropertyValue) || RETURN",
                 "displayLines": "LC_23040_PropertyValue",
                 "constants": [],
                 "variables": [
@@ -53,7 +53,7 @@ const configAbility = {
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio)",
+                "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
                 "displayLines": "MDF_DefenceAddedRatio",
                 "constants": [],
                 "variables": [

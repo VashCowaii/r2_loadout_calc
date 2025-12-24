@@ -361,5 +361,60 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Messenger Traversing Hackerspace": {
+    "name": "Messenger Traversing Hackerspace",
+    "setID": 114,
+    "desc": [
+      "Increases SPD by 6%.",
+      "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked."
+    ],
+    "icon": "icon/relic/114.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06
+      ],
+      [
+        0.12,
+        1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "The Ashblazing Grand Duke": {
+    "name": "The Ashblazing Grand Duke",
+    "setID": 115,
+    "desc": [
+      "Increases the DMG dealt by Follow-up ATK by 20%.",
+      "When the wearer uses a Follow-up ATK, increases the wearer's ATK by 6% for every time the Follow-up ATK deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a Follow-up ATK."
+    ],
+    "icon": "icon/relic/115.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        0.2
+      ],
+      [
+        0.06,
+        8,
+        3
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

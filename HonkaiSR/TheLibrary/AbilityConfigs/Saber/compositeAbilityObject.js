@@ -3214,7 +3214,7 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL",
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
                     "constants": [],
                     "variables": [
