@@ -103,7 +103,7 @@ const configAbility = {
       "for": "LC_21032_Sub3",
       "execute": [
         {
-          "eventTrigger": "Revert to Pre-Transformation",
+          "eventTrigger": "Turn [Pre-action Phase]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -179,7 +179,7 @@ const configAbility = {
       "for": "LC_21032_Sub2",
       "execute": [
         {
-          "eventTrigger": "Revert to Pre-Transformation",
+          "eventTrigger": "Turn [Pre-action Phase]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -257,7 +257,7 @@ const configAbility = {
       "for": "LC_21032_Sub1",
       "execute": [
         {
-          "eventTrigger": "Revert to Pre-Transformation",
+          "eventTrigger": "Turn [Pre-action Phase]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
