@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has Modifier",
+                    "name": "Modifier Was",
                     "modifier": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]"
                   },
                   "passed": [
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has Modifier",
+                    "name": "Modifier Was",
                     "modifier": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]"
                   },
                   "passed": [
