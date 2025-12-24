@@ -73,6 +73,7 @@
     "HPDelta": "HPFlat",
     "HPAddedRatio": "HP%",
     "MaxHP": "HPMax",
+    "CurrentHP": "HPCurrent",
 
     "BaseDefence": "DEFBase",
     "DefenceBase": "DEFBase",
