@@ -1,0 +1,123 @@
+const configAbility = {
+  "fileName": "TheStorysNextPage_Ability21054",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_21054_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": "Owner of this Modifier",
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (0.12) || RETURN",
+                "displayLines": "0.12",
+                "constants": [],
+                "variables": [
+                  0.12
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_HealRatio</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Outgoing Healing Boost"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_21054_Main",
+      "execute": [
+        {
+          "eventTrigger": "Attack End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of",
+                "of": "Caster's Memosprite",
+                "target": "Use Prior Target(s) Defined",
+                "mustBeAlive2": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Owner of this Modifier",
+                  "modifier": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [],
+                    "variables": [
+                      1
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Caster's Memosprite",
+                  "modifier": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [],
+                    "variables": [
+                      1
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer's memosprite attacks, the Outgoing Healing of the wearer and their memosprite increases by #2[i]%, lasting for #3[i] turn(s).",
+  "params": [
+    [
+      0.16,
+      0.12,
+      1
+    ],
+    [
+      0.2,
+      0.15,
+      1
+    ],
+    [
+      0.24,
+      0.18,
+      1
+    ],
+    [
+      0.28,
+      0.21,
+      1
+    ],
+    [
+      0.32,
+      0.24,
+      1
+    ]
+  ]
+}

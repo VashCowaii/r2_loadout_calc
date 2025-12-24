@@ -982,6 +982,52 @@ let lightcones = {
       1.1
     ]
   },
+  "Shadowburn": {
+    "lightconeID": 20021,
+    "name": "Shadowburn",
+    "path": "Remembrance",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Beautify",
+    "desc": "When the wearer summons memosprite for the first time, recovers #1[i] Skill Point(s) and regenerates #2[i] Energy for this unit.",
+    "params": [
+      [
+        1,
+        12
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        1,
+        20
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20021.png",
+    "preview": "image/light_cone_preview/20021.png",
+    "portrait": "image/light_cone_portrait/20021.png",
+    "imageOffset": [
+      12,
+      115,
+      1.1
+    ]
+  },
   "Reminiscence": {
     "lightconeID": 20022,
     "name": "Reminiscence",
@@ -1026,6 +1072,139 @@ let lightcones = {
       -6,
       -9,
       1.05
+    ]
+  },
+  "Geniuses' Greetings": {
+    "lightconeID": 21051,
+    "name": "Geniuses' Greetings",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Congratulations",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses Ultimate, increases the Basic ATK DMG dealt by the wearer and their memosprite by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.2,
+        3
+      ],
+      [
+        0.2,
+        0.25,
+        3
+      ],
+      [
+        0.24,
+        0.3,
+        3
+      ],
+      [
+        0.28,
+        0.35,
+        3
+      ],
+      [
+        0.32,
+        0.4,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21051.png",
+    "preview": "image/light_cone_preview/21051.png",
+    "portrait": "image/light_cone_portrait/21051.png",
+    "imageOffset": [
+      -9,
+      -95,
+      1.1
+    ]
+  },
+  "Sweat Now, Cry Less": {
+    "lightconeID": 21052,
+    "name": "Sweat Now, Cry Less",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 198.45,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Come Train!",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer's memosprite is on the field, increases the DMG dealt by the wearer and their memosprite by #2[i]%.",
+    "params": [
+      [
+        0.12,
+        0.24
+      ],
+      [
+        0.14,
+        0.27
+      ],
+      [
+        0.16,
+        0.3
+      ],
+      [
+        0.18,
+        0.33
+      ],
+      [
+        0.2,
+        0.36
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21052.png",
+    "preview": "image/light_cone_preview/21052.png",
+    "portrait": "image/light_cone_portrait/21052.png",
+    "imageOffset": [
+      68,
+      -114,
+      1.45
     ]
   },
   "If Time Were a Flower": {
@@ -1112,6 +1291,75 @@ let lightcones = {
       1.3
     ]
   },
+  "The Story's Next Page": {
+    "lightconeID": 21054,
+    "name": "The Story's Next Page",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.16
+      },
+      "2": {
+        "HP%": 0.2
+      },
+      "3": {
+        "HP%": 0.24
+      },
+      "4": {
+        "HP%": 0.28
+      },
+      "5": {
+        "HP%": 0.32
+      }
+    },
+    "skillName": "Written Down",
+    "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer's memosprite attacks, the Outgoing Healing of the wearer and their memosprite increases by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.12,
+        1
+      ],
+      [
+        0.2,
+        0.15,
+        1
+      ],
+      [
+        0.24,
+        0.18,
+        1
+      ],
+      [
+        0.28,
+        0.21,
+        1
+      ],
+      [
+        0.32,
+        0.24,
+        1
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21054.png",
+    "preview": "image/light_cone_preview/21054.png",
+    "portrait": "image/light_cone_portrait/21054.png",
+    "imageOffset": [
+      14,
+      -102,
+      1.2
+    ]
+  },
   "In Pursuit of the Wind": {
     "lightconeID": 21056,
     "name": "In Pursuit of the Wind",
@@ -1151,6 +1399,70 @@ let lightcones = {
       0,
       -52,
       1.02
+    ]
+  },
+  "The Flower Remembers": {
+    "lightconeID": 21057,
+    "name": "The Flower Remembers",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.24
+      },
+      "2": {
+        "CritDamageBase": 0.28
+      },
+      "3": {
+        "CritDamageBase": 0.32
+      },
+      "4": {
+        "CritDamageBase": 0.36
+      },
+      "5": {
+        "CritDamageBase": 0.4
+      }
+    },
+    "skillName": "Interdependence",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. The CRIT DMG dealt by the wearer's memosprite increases by #2[i]%.",
+    "params": [
+      [
+        0.24,
+        0.24
+      ],
+      [
+        0.28,
+        0.3
+      ],
+      [
+        0.32,
+        0.36
+      ],
+      [
+        0.36,
+        0.42
+      ],
+      [
+        0.4,
+        0.48
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21057.png",
+    "preview": "image/light_cone_preview/21057.png",
+    "portrait": "image/light_cone_portrait/21057.png",
+    "imageOffset": [
+      21,
+      27,
+      1.28
     ]
   },
   "A Thankless Coronation": {
@@ -1383,6 +1695,75 @@ let lightcones = {
       -46,
       -106,
       1.3
+    ]
+  },
+  "Fly Into a Pink Tomorrow": {
+    "lightconeID": 22006,
+    "name": "Fly Into a Pink Tomorrow",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.12
+      },
+      "2": {
+        "CritDamageBase": 0.15
+      },
+      "3": {
+        "CritDamageBase": 0.18
+      },
+      "4": {
+        "CritDamageBase": 0.21
+      },
+      "5": {
+        "CritDamageBase": 0.24
+      }
+    },
+    "skillName": "Gaze",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When equipped by Trailblazer (Remembrance), increases all ally targets' DMG dealt by #2[i]% and increases the DMG dealt by the Enhanced Basic ATK \"Together, We Script Tomorrow!\" by #3[i]%.",
+    "params": [
+      [
+        0.12,
+        0.08,
+        0.6
+      ],
+      [
+        0.15,
+        0.1,
+        0.7
+      ],
+      [
+        0.18,
+        0.12,
+        0.8
+      ],
+      [
+        0.21,
+        0.14,
+        0.9
+      ],
+      [
+        0.24,
+        0.16,
+        1
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22006.png",
+    "preview": "image/light_cone_preview/22006.png",
+    "portrait": "image/light_cone_portrait/22006.png",
+    "imageOffset": [
+      2,
+      3,
+      1.02
     ]
   }
 }
