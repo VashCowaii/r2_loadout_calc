@@ -16,7 +16,7 @@ const configAbility = {
       "for": "Relic_128_Main2",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",

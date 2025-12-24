@@ -17,7 +17,7 @@ const configAbility = {
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -46,7 +46,7 @@ const configAbility = {
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -75,7 +75,7 @@ const configAbility = {
       "stackType": "ReplaceByCasterOrUnStack",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -143,7 +143,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -219,7 +219,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -297,7 +297,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Add Events/Bonuses",

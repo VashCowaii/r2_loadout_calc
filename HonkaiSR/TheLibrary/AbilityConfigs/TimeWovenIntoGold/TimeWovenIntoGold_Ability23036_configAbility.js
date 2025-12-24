@@ -60,7 +60,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -155,7 +155,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -317,7 +317,7 @@ const configAbility = {
       "stackType": "Replace",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",

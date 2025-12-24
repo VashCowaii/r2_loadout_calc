@@ -84,7 +84,7 @@ const compositeAbilityObject = {
           "for": "Relic_116_Main",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

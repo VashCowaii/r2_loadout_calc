@@ -24,7 +24,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCasterOrUnStack",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -53,7 +53,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCasterOrUnStack",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCasterOrUnStack",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -150,7 +150,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -304,7 +304,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

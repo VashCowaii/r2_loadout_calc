@@ -17,7 +17,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -45,7 +45,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "IF",
@@ -111,7 +111,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Stacking Pre-existing Modifier",
+          "eventTrigger": "When Stacking Modifier Instance",
           "execute": [
             {
               "name": "IF",
@@ -150,7 +150,7 @@ const configAbility = {
       "for": "Relic_128_Main",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",

@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -92,7 +92,7 @@ const compositeAbilityObject = {
           "for": "Relic_124_Main",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "IF",

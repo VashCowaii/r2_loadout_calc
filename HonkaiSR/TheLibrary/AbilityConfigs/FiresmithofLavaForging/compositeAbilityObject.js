@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "Relic_107_FireDamageAddRatio[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
