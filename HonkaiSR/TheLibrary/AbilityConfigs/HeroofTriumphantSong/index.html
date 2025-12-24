@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiHome.css"> -->
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css"> -->
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>Hero of Triumphant Song: HSR Event Viewer</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="Hero of Triumphant Song: HSR Event Viewer">
+    <meta
+      property="og:description"
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
+    />
+    <meta
+      property="description"
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/HonkaiSR/icon/relic/123.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="Hero of Triumphant Song: HSR Event Viewer" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Hero of Triumphant Song: HSR Event Viewer" />
+    <meta
+      name="twitter:description"
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/HonkaiSR/icon/relic/123.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+
+<body>
+    <div id="tooltip" class="tooltip tooltipHSR"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="blockoutBackgroundShutter" id="blockoutBackgroundShutter" onclick="customMenu.closeMenu()"></div>
+    <div class="customMenuMainHolderBox" id="customMenuMainHolderBox">
+        <div class="customMenuMainHolderBoxInner">
+            <div class="customMenuTitleRow">
+                <div class="customMenuSearchTitleHolder">
+                    <div class="weirdSideSemiCircleThingerAllySnapshotBox"></div>
+                    <div class="customMenuSearchTitle" id="customMenuSearchTitle"></div>
+                </div>
+                
+            </div>
+            <div class="customMenuCloseButton clickable" id="customMenuCloseButton" onclick="customMenu.closeMenu()">x</div>
+            <div class="customMenuSearchNote" id="customMenuSearchNote"></div>
+            <div class="customMenuSearchBarBox" id="customMenuSearchBarBox">
+                Search: <input class="customMenuSearchBarInput" id="customMenuSearchBarInput" maxlength="100" oninput="customMenu.updateSearchResults();">
+            </div>
+            <div class="customMenuSearchBody" id="customMenuSearchBody"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStats" style="display: none;"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStatsAttackData" style="display: none;"></div>
+        </div>
+    </div>
+
+
+<div class="main">
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">
+            <div style="color: white;">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        </div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+            <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
+
+        </div>
+
+        
+    
+
+    </div>
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+
+<!-- <script src="/HonkaiSR/Calculator/dCharacters.js"></script> -->
+<script src="/HonkaiSR/TheLibrary/dCharacters.js"></script>
+<script src="/HonkaiSR/TheLibrary/dLightcones.js"></script>
+<script src="/HonkaiSR/TheLibrary/dRelicSets.js"></script>
+<script src="/HonkaiSR/TheLibrary/tester.js"></script>
+
+<!-- <script src="dLightcones.js"></script>
+<script src="dRelics.js"></script>
+<script src="dRelicSets.js"></script> -->
+
+<!-- <script src="/HonkaiSR/Calculator/statList.js"></script> -->
+<!-- <script src="wavePresets.js"></script> -->
+<!-- <script src="formulas.js"></script> -->
+<!-- <script src="globalRecords.js"></script> -->
+<!-- <script src="/HonkaiSR/Calculator/customHTML.js"></script> -->
+
+<script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
+<script src="/HonkaiSR/Calculator/tooltipMath.js"></script>
+<!-- <script src="/TFD/Calculator/UIHandling.js"></script> -->
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+
+
+
+<!-- <script src="/HonkaiSR/Calculator/tester.js"></script> -->
+
+<!-- <script src="su_Maslow.js"></script> -->
+<!-- <script src="suffering4Analytics.js"></script> -->
+<!-- <script src="suffering3Gear.js"></script> -->
+<!-- <script src="suffering2Char.js"></script> -->
+<!-- <script src="t_combos.js"></script> -->
+<!-- <script src="suffering1Sim.js"></script> -->
+<!-- <script src="testerValues.js"></script> -->
+<!-- <script src="tester.js"></script> -->
+<!-- <script src="pagePopulation.js"></script> -->
+
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill01.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill11.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill02.js"></script> -->
+<script src="compositeAbilityObject.js"></script>
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillP01.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillMaze.js"></script> -->
+
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Modifiers.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Functions.js"></script> -->
+
+
+
+
+<script src="/HonkaiSR/TheLibrary/newTester.js"></script>
+
+<script src="/MainJS/buildTime.js"></script>
+
+
+<!-- <script src="/HonkaiSR/characters.js"></script>
+<script src="/HonkaiSR/testing.js"></script> -->
+
+</body>
+</html> 

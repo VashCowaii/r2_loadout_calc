@@ -416,5 +416,240 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Prisoner in Deep Confinement": {
+    "name": "Prisoner in Deep Confinement",
+    "setID": 116,
+    "desc": [
+      "Increases ATK by 12%.",
+      "For every DoT the enemy target is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs."
+    ],
+    "icon": "icon/relic/116.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.06,
+        3
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Pioneer Diver of Dead Waters": {
+    "name": "Pioneer Diver of Dead Waters",
+    "setID": 117,
+    "desc": [
+      "Increases DMG dealt to enemies with debuffs by 12%.",
+      "Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s)."
+    ],
+    "icon": "icon/relic/117.png",
+    "fixedStats": {
+      "2": {},
+      "4": {
+        "CritRateBase": 0.04
+      }
+    },
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.04,
+        0.08,
+        0.12,
+        2,
+        3,
+        1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Watchmaker, Master of Dream Machinations": {
+    "name": "Watchmaker, Master of Dream Machinations",
+    "setID": 118,
+    "desc": [
+      "Increases Break Effect by 16%.",
+      "When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked."
+    ],
+    "icon": "icon/relic/118.png",
+    "fixedStats": {
+      "2": {
+        "DamageBreak": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.3,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Iron Cavalry Against the Scourge": {
+    "name": "Iron Cavalry Against the Scourge",
+    "setID": 119,
+    "desc": [
+      "Increases Break Effect by 16%.",
+      "If the wearer's Break Effect is 150% or higher, the Break DMG dealt to the enemy target ignores 10% of their DEF. If the wearer's Break Effect is 250% or higher, the Super Break DMG dealt to the enemy target additionally ignores 15% of their DEF."
+    ],
+    "icon": "icon/relic/119.png",
+    "fixedStats": {
+      "2": {
+        "DamageBreak": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        1.5,
+        2.5,
+        0.1,
+        0.15
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "The Wind-Soaring Valorous": {
+    "name": "The Wind-Soaring Valorous",
+    "setID": 120,
+    "desc": [
+      "Increases ATK by 12%.",
+      "Increases the wearer's CRIT Rate by 6%. After the wearer uses a Follow-up ATK, increases DMG dealt by Ultimate by 36%, lasting for 1 turn(s)."
+    ],
+    "icon": "icon/relic/120.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {
+        "CritRateBase": 0.06
+      }
+    },
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.06,
+        0.36,
+        1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Sacerdos' Relived Ordeal": {
+    "name": "Sacerdos' Relived Ordeal",
+    "setID": 121,
+    "desc": [
+      "Increases SPD by 6%.",
+      "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s)."
+    ],
+    "icon": "icon/relic/121.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06
+      ],
+      [
+        0.18,
+        2,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Scholar Lost in Erudition": {
+    "name": "Scholar Lost in Erudition",
+    "setID": 122,
+    "desc": [
+      "Increases CRIT Rate by 8%.",
+      "Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%."
+    ],
+    "icon": "icon/relic/122.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08
+      ],
+      [
+        0.2,
+        0.25
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Hero of Triumphant Song": {
+    "name": "Hero of Triumphant Song",
+    "setID": 123,
+    "desc": [
+      "Increases ATK by 12%.",
+      "While the wearer's memosprite is on the field, increases the wearer's SPD by 6%. When the wearer's memosprite attacks, increases the wearer's and memosprite's CRIT DMG by 30%, lasting for 2 turn(s)."
+    ],
+    "icon": "icon/relic/123.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.06,
+        0.3,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }
