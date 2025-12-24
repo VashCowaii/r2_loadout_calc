@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "LC_21056_Main",
           "execute": [
             {
-              "eventTrigger": "When Losing Modifier",
+              "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",

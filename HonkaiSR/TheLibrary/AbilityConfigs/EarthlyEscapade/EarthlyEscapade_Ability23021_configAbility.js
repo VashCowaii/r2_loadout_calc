@@ -120,7 +120,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "When Losing Modifier"
+          "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
           "eventTrigger": "When Receiving Modifier",

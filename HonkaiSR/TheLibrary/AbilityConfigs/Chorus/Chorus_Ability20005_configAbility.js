@@ -16,7 +16,7 @@ const configAbility = {
       "for": "LC_20005_Main",
       "execute": [
         {
-          "eventTrigger": "When Losing Modifier",
+          "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
