@@ -87,7 +87,7 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(Excluding Owner, in Context)",
+              "to": "All Teammates (Excluding Owner)",
               "modifier": "LC_23026_Sub3[<span class=\"descriptionNumberColor\">Cadenza</span>]",
               "valuePerStack": {
                 "AbilityEquip_P3_DmgAddedRatio": {
