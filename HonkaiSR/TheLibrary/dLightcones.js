@@ -982,6 +982,52 @@ let lightcones = {
       1.1
     ]
   },
+  "Reminiscence": {
+    "lightconeID": 20022,
+    "name": "Reminiscence",
+    "path": "Remembrance",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 264.6,
+      "HPBase": 635.04
+    },
+    "fixedStats": {},
+    "skillName": "Going to Sleep",
+    "desc": "When memosprite's turn starts, the wearer and memosprite each gain 1 stack of \"Commemoration.\" Each stack increases DMG dealt by #1[i]%, stacking up to #2[i] time(s). When memosprite disappears, removes \"Commemoration\" from the wearer and memosprite.",
+    "params": [
+      [
+        0.08,
+        4
+      ],
+      [
+        0.09,
+        4
+      ],
+      [
+        0.1,
+        4
+      ],
+      [
+        0.11,
+        4
+      ],
+      [
+        0.12,
+        4
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20022.png",
+    "preview": "image/light_cone_preview/20022.png",
+    "portrait": "image/light_cone_portrait/20022.png",
+    "imageOffset": [
+      -6,
+      -9,
+      1.05
+    ]
+  },
   "If Time Were a Flower": {
     "lightconeID": 23038,
     "name": "If Time Were a Flower",

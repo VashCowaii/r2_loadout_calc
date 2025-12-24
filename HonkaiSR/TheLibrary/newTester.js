@@ -1188,6 +1188,20 @@ const megaParsingFuckery = {
             ${parseRef.DamageType.sourceType ?? parseRef.DamageType} Element is${parseRef.invertCondition ? " NOT" : ""} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Is Entity Type"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "type",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Entity Type");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target} = ${parseRef.type}
+        </div>`;
+    },
     "Is Part Of"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
