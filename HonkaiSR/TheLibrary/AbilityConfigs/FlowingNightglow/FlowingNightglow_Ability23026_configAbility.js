@@ -24,11 +24,11 @@ const configAbility = {
               "target": "Owner of this Modifier",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (SkillEquip_P3_DmgAddedRatio) || RETURN",
-                "displayLines": "SkillEquip_P3_DmgAddedRatio",
+                "operator": "Variables[0] (AbilityEquip_P3_DmgAddedRatio) || RETURN",
+                "displayLines": "AbilityEquip_P3_DmgAddedRatio",
                 "constants": [],
                 "variables": [
-                  "SkillEquip_P3_DmgAddedRatio"
+                  "AbilityEquip_P3_DmgAddedRatio"
                 ]
               }
             }
