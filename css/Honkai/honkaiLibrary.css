@@ -254,6 +254,21 @@ div {
     box-sizing: border-box;
     border-radius: 5px;
 }
+
+.eventCharacterFileIconRelic {
+    z-index: 1;
+    /* width: 90px; */
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    border: 2px solid white;
+    /* border-radius: 50%; */
+    background-color: black;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
 .eventCharacterFileInfoBox {
     display: flex;
     width: 100%;

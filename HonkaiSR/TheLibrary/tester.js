@@ -2867,8 +2867,16 @@ const customMenu = {
                     let cleanDesc = pagePopulation.cleanDescription(result.params[0],result.desc[0]) + (result.desc.length>1 ? "<br>" + pagePopulation.cleanDescription(result.params[1],result.desc[1]) : "");
                     //then limit the description to x characters, I don't see a point in showing the whole thing on a selection
                     let cleanDescTrim = fuckyCutoffFix(cleanDesc.length > 150 ? cleanDesc.slice(0, 150) + "..." : cleanDesc);
+
+                    const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name,true);
+                    // <div class="customMenuResultRowBox clickable" onclick="${functionToCall}">
+                    // let stringCustom = `
+                    //     <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+
+                    // <div class="customMenuResultRowBox clickable" onclick="customMenu.closeMenu();userTriggers.updateSelectedRelicSet('${globalUI.currentSearchOpen}',\`${result.name}\`)">
                     let stringCustom = `
-                        <div class="customMenuResultRowBox clickable" onclick="customMenu.closeMenu();userTriggers.updateSelectedRelicSet('${globalUI.currentSearchOpen}',\`${result.name}\`)">
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+                        
                             <div class="customMenuResultRowIcon">
                                 <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[5]};"/>
                             </div>
@@ -2877,7 +2885,7 @@ const customMenu = {
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
                             
                             </div>
-                        </div>
+                        </a>
                     `;//${turnLogicRelics[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
                     returnString += stringCustom;
                 }
