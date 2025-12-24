@@ -833,7 +833,7 @@ const megaParsingFuckery = {
 
         const advanceType = parseRef.advanceType;
         const displayValue = parseRef.value?.displayLines ?? parseRef.value;
-        const finalDisplay = displayValue + (advanceType != "Set" ? "%" : "AV")
+        const finalDisplay = (+displayValue * 100) + (advanceType != "Set" ? "%" : "AV")
 
         // advanceType
 
