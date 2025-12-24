@@ -191,5 +191,118 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Genius of Brilliant Stars": {
+    "name": "Genius of Brilliant Stars",
+    "setID": 108,
+    "desc": [
+      "Increases Quantum DMG by 10%.",
+      "When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF."
+    ],
+    "icon": "icon/relic/108.png",
+    "fixedStats": {
+      "2": {
+        "DamageQuantum": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        0.1,
+        0.1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Band of Sizzling Thunder": {
+    "name": "Band of Sizzling Thunder",
+    "setID": 109,
+    "desc": [
+      "Increases Lightning DMG by 10%.",
+      "When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s)."
+    ],
+    "icon": "icon/relic/109.png",
+    "fixedStats": {
+      "2": {
+        "DamageLightning": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        0.2,
+        1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Eagle of Twilight Line": {
+    "name": "Eagle of Twilight Line",
+    "setID": 110,
+    "desc": [
+      "Increases Wind DMG by 10%.",
+      "After the wearer uses their Ultimate, their action is Advanced Forward by 25%."
+    ],
+    "icon": "icon/relic/110.png",
+    "fixedStats": {
+      "2": {
+        "DamageWind": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        0.25
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Thief of Shooting Meteor": {
+    "name": "Thief of Shooting Meteor",
+    "setID": 111,
+    "desc": [
+      "Increases Break Effect by 16%.",
+      "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy."
+    ],
+    "icon": "icon/relic/111.png",
+    "fixedStats": {
+      "2": {
+        "DamageBreak": 0.16
+      },
+      "4": {
+        "DamageBreak": 0.16
+      }
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.16,
+        3
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }
