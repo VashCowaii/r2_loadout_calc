@@ -25,7 +25,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -53,7 +53,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "IF",
@@ -119,7 +119,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Stacking Pre-existing Modifier",
+              "eventTrigger": "When Stacking Modifier Instance",
               "execute": [
                 {
                   "name": "IF",
@@ -158,7 +158,7 @@ const compositeAbilityObject = {
           "for": "Relic_128_Main",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -222,7 +222,7 @@ const compositeAbilityObject = {
           "for": "Relic_128_Main2",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",

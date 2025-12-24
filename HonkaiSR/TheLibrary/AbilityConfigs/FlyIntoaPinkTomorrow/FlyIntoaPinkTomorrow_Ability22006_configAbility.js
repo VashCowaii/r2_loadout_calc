@@ -17,7 +17,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -45,7 +45,7 @@ const configAbility = {
       "for": "LC_22006_Sub2",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -108,7 +108,7 @@ const configAbility = {
       "for": "LC_22006_Main",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "IF",

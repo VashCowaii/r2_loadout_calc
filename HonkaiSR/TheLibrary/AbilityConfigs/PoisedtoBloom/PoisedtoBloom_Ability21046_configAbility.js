@@ -16,7 +16,7 @@ const configAbility = {
       "for": "LC_21046_Bonus[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Stack Target Stat Value",
@@ -44,7 +44,7 @@ const configAbility = {
       "for": "LC_21046_Sub",
       "execute": [
         {
-          "eventTrigger": "When Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
               "name": "Define Custom Variable with Matching Path",

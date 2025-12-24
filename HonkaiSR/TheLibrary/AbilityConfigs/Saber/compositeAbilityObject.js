@@ -40,7 +40,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -486,7 +486,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -993,7 +993,7 @@ const compositeAbilityObject = {
           "for": "Saber_Trace01_Bonus[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -1026,7 +1026,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "IF",
@@ -1528,7 +1528,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -1557,7 +1557,7 @@ const compositeAbilityObject = {
           "for": "Saber_Eidolon4[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -1663,7 +1663,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3035,7 +3035,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Update Ability Binding",
@@ -3073,7 +3073,7 @@ const compositeAbilityObject = {
           "for": "Saber_DisableAbility",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Disable Abilities",
@@ -3134,7 +3134,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -3169,7 +3169,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -3242,7 +3242,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",

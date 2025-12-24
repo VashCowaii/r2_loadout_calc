@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",

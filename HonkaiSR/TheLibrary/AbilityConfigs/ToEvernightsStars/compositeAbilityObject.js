@@ -35,7 +35,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -215,7 +215,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
@@ -320,7 +320,7 @@ const compositeAbilityObject = {
           "for": "LC_23049_Main",
           "execute": [
             {
-              "eventTrigger": "When Receiving Modifier",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
