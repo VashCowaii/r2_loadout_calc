@@ -239,13 +239,13 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Times",
                           "value": {
-                            "operator": "Variables[0] (MDF_LightTeam) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_LightTeam + 1)",
+                            "operator": "Variables[0] (MDF_Times) || Constants[0] (1) || ADD || RETURN",
+                            "displayLines": "(MDF_Times + 1)",
                             "constants": [
                               1
                             ],
                             "variables": [
-                              "MDF_LightTeam"
+                              "MDF_Times"
                             ]
                           }
                         },
