@@ -1276,6 +1276,80 @@ let lightcones = {
       1.45
     ]
   },
+  "Time Woven Into Gold": {
+    "lightconeID": 23036,
+    "name": "Time Woven Into Gold",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "SPDBase": 12
+      },
+      "2": {
+        "SPDBase": 14
+      },
+      "3": {
+        "SPDBase": 16
+      },
+      "4": {
+        "SPDBase": 18
+      },
+      "5": {
+        "SPDBase": 20
+      }
+    },
+    "skillName": "Establishment",
+    "desc": "Increases the wearer's base SPD by #1[i]. After the wearer and the wearer's memosprite attacks, the wearer gains 1 stack of \"Brocade.\" Each stack of \"Brocade\" increases the wearer's and their memosprite's CRIT DMG by #4[f1]%, stacking up to #2[i] time(s). When reaching maximum stacks, each \"Brocade\" stack additionally increases Basic ATK DMG dealt by #3[f1]%.",
+    "params": [
+      [
+        12,
+        6,
+        0.09,
+        0.09
+      ],
+      [
+        14,
+        6,
+        0.105,
+        0.105
+      ],
+      [
+        16,
+        6,
+        0.12,
+        0.12
+      ],
+      [
+        18,
+        6,
+        0.135,
+        0.135
+      ],
+      [
+        20,
+        6,
+        0.15,
+        0.15
+      ]
+    ],
+    "statRef": [
+      "BaseSpeed"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23036.png",
+    "preview": "image/light_cone_preview/23036.png",
+    "portrait": "image/light_cone_portrait/23036.png",
+    "imageOffset": [
+      11,
+      -94,
+      1.2
+    ]
+  },
   "If Time Were a Flower": {
     "lightconeID": 23038,
     "name": "If Time Were a Flower",
@@ -1511,6 +1585,80 @@ let lightcones = {
       -64,
       -102,
       1.45
+    ]
+  },
+  "Make Farewells More Beautiful": {
+    "lightconeID": 23040,
+    "name": "Make Farewells More Beautiful",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.3
+      },
+      "2": {
+        "HP%": 0.375
+      },
+      "3": {
+        "HP%": 0.45
+      },
+      "4": {
+        "HP%": 0.525
+      },
+      "5": {
+        "HP%": 0.6
+      }
+    },
+    "skillName": "Engrave",
+    "desc": "Increases the wearer's Max HP by #1[i]%. When the wearer or their memosprite loses HP during their own turn, the wearer gains \"Death Flower.\" \"Death Flower\" allows the wearer and their memosprite to ignore #2[i]% of the target's DEF when dealing DMG, lasting for #3[i] turn(s).\\nWhen the wearer's memosprite disappears, advances the wearer's action by #4[i]%. This effect can only trigger up to 1 time, and the trigger count resets every time the wearer uses Ultimate.",
+    "params": [
+      [
+        0.3,
+        0.3,
+        2,
+        0.12
+      ],
+      [
+        0.375,
+        0.35,
+        2,
+        0.15
+      ],
+      [
+        0.45,
+        0.4,
+        2,
+        0.18
+      ],
+      [
+        0.525,
+        0.45,
+        2,
+        0.21
+      ],
+      [
+        0.6,
+        0.5,
+        2,
+        0.24
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23040.png",
+    "preview": "image/light_cone_preview/23040.png",
+    "portrait": "image/light_cone_portrait/23040.png",
+    "imageOffset": [
+      3,
+      -68,
+      1.03
     ]
   },
   "The Story's Next Page": {
