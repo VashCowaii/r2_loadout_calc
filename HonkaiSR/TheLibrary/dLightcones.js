@@ -982,6 +982,75 @@ let lightcones = {
       1.1
     ]
   },
+  "Victory In a Blink": {
+    "lightconeID": 21050,
+    "name": "Victory In a Blink",
+    "path": "Remembrance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.12
+      },
+      "2": {
+        "CritDamageBase": 0.15
+      },
+      "3": {
+        "CritDamageBase": 0.18
+      },
+      "4": {
+        "CritDamageBase": 0.21
+      },
+      "5": {
+        "CritDamageBase": 0.24
+      }
+    },
+    "skillName": "Final Hit",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When the wearer's memosprite uses an ability on an ally target, increases the DMG dealt by all ally targets by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.12,
+        0.08,
+        3
+      ],
+      [
+        0.15,
+        0.1,
+        3
+      ],
+      [
+        0.18,
+        0.12,
+        3
+      ],
+      [
+        0.21,
+        0.14,
+        3
+      ],
+      [
+        0.24,
+        0.16,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21050.png",
+    "preview": "image/light_cone_preview/21050.png",
+    "portrait": "image/light_cone_portrait/21050.png",
+    "imageOffset": [
+      -11,
+      -4,
+      1.2
+    ]
+  },
   "Shadowburn": {
     "lightconeID": 20021,
     "name": "Shadowburn",
@@ -1289,6 +1358,159 @@ let lightcones = {
       2,
       -86,
       1.3
+    ]
+  },
+  "Memory's Curtain Never Falls": {
+    "lightconeID": 24005,
+    "name": "Memory's Curtain Never Falls",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.06
+      },
+      "2": {
+        "SPD%": 0.075
+      },
+      "3": {
+        "SPD%": 0.09
+      },
+      "4": {
+        "SPD%": 0.105
+      },
+      "5": {
+        "SPD%": 0.12
+      }
+    },
+    "skillName": "Reception",
+    "desc": "Increases the wearer's SPD by #1[f1]%. After the wearer uses Skill, increases the DMG dealt by all allies by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.06,
+        0.08,
+        3
+      ],
+      [
+        0.075,
+        0.1,
+        3
+      ],
+      [
+        0.09,
+        0.12,
+        3
+      ],
+      [
+        0.105,
+        0.14,
+        3
+      ],
+      [
+        0.12,
+        0.16,
+        3
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24005.png",
+    "preview": "image/light_cone_preview/24005.png",
+    "portrait": "image/light_cone_portrait/24005.png",
+    "imageOffset": [
+      1,
+      -86,
+      1.1
+    ]
+  },
+  "Long May Rainbows Adorn the Sky": {
+    "lightconeID": 23042,
+    "name": "Long May Rainbows Adorn the Sky",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 529.2,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.18
+      },
+      "2": {
+        "SPD%": 0.21
+      },
+      "3": {
+        "SPD%": 0.24
+      },
+      "4": {
+        "SPD%": 0.27
+      },
+      "5": {
+        "SPD%": 0.3
+      }
+    },
+    "skillName": "Tolerant",
+    "desc": "Increases the wearer's SPD by #1[i]%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies' HP equal to #2[f1]% of their current HP, and after the next attack of the wearer's memosprite, enables it to additionally deal 1 instance of Additional DMG equal to #6[f1]% of the total consumed HP to the attacked target, with the damage type based on the memosprite's type. Then, the total consumed HP is reset. When the wearer's memosprite uses Memosprite Skill, increases the DMG taken by all enemies by #4[f1]%, lasting for #5[i] turn(s). Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.18,
+        0.01,
+        0,
+        0.18,
+        2,
+        2.5
+      ],
+      [
+        0.21,
+        0.0125,
+        0,
+        0.225,
+        2,
+        3.125
+      ],
+      [
+        0.24,
+        0.015,
+        0,
+        0.27,
+        2,
+        3.75
+      ],
+      [
+        0.27,
+        0.0175,
+        0,
+        0.315,
+        2,
+        4.375
+      ],
+      [
+        0.3,
+        0.02,
+        0,
+        0.36,
+        2,
+        5
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23042.png",
+    "preview": "image/light_cone_preview/23042.png",
+    "portrait": "image/light_cone_portrait/23042.png",
+    "imageOffset": [
+      -64,
+      -102,
+      1.45
     ]
   },
   "The Story's Next Page": {
@@ -1763,6 +1985,154 @@ let lightcones = {
     "imageOffset": [
       2,
       3,
+      1.02
+    ]
+  },
+  "To Evernight's Stars": {
+    "lightconeID": 23049,
+    "name": "To Evernight's Stars",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.3
+      },
+      "2": {
+        "HP%": 0.375
+      },
+      "3": {
+        "HP%": 0.45
+      },
+      "4": {
+        "HP%": 0.525
+      },
+      "5": {
+        "HP%": 0.6
+      }
+    },
+    "skillName": "Sleepless",
+    "desc": "Increases the wearer's Max HP by #1[i]%. When the wearer's memosprite uses an ability, the wearer gains \"Noctis.\" While the wearer has \"Noctis,\" the DMG dealt by all ally memosprites ignores #2[i]% of the targets' DEF. Increases the DMG dealt by the wearer and their memosprite by #3[i]%. When the wearer's memosprite disappears, the wearer recovers #4[i] Energy. Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.3,
+        0.2,
+        0.3,
+        8
+      ],
+      [
+        0.375,
+        0.225,
+        0.375,
+        10
+      ],
+      [
+        0.45,
+        0.25,
+        0.45,
+        12
+      ],
+      [
+        0.525,
+        0.275,
+        0.525,
+        14
+      ],
+      [
+        0.6,
+        0.3,
+        0.6,
+        16
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23049.png",
+    "preview": "image/light_cone_preview/23049.png",
+    "portrait": "image/light_cone_portrait/23049.png",
+    "imageOffset": [
+      34.5,
+      27,
+      1.3
+    ]
+  },
+  "This Love, Forever": {
+    "lightconeID": 23052,
+    "name": "This Love, Forever",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.18
+      },
+      "2": {
+        "SPD%": 0.21
+      },
+      "3": {
+        "SPD%": 0.24
+      },
+      "4": {
+        "SPD%": 0.27
+      },
+      "5": {
+        "SPD%": 0.3
+      }
+    },
+    "skillName": "A Promise",
+    "desc": "Increases the wearer's SPD by #1[i]%. When the wearer's memosprite uses Memosprite Skill on one ally, gains \"Blank,\" which increases DMG taken by all enemies by #3[i]%. When the wearer's memosprite uses Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by #2[i]%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of both \"Blank\" and \"Verse\" by #4[i]%.",
+    "params": [
+      [
+        0.18,
+        0.16,
+        0.1,
+        0.6
+      ],
+      [
+        0.21,
+        0.19,
+        0.12,
+        0.65
+      ],
+      [
+        0.24,
+        0.22,
+        0.14,
+        0.7
+      ],
+      [
+        0.27,
+        0.25,
+        0.16,
+        0.75
+      ],
+      [
+        0.3,
+        0.28,
+        0.18,
+        0.8
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23052.png",
+    "preview": "image/light_cone_preview/23052.png",
+    "portrait": "image/light_cone_portrait/23052.png",
+    "imageOffset": [
+      0,
+      -78,
       1.02
     ]
   }
