@@ -127,7 +127,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Losing Modifier (Expire)"
+              "eventTrigger": "When Losing Modifier"
             },
             {
               "eventTrigger": "When Receiving Modifier",

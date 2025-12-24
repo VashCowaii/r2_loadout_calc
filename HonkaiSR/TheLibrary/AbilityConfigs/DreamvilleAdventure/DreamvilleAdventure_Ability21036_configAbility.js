@@ -133,7 +133,7 @@ const configAbility = {
       "for": "LC_21036_Main",
       "execute": [
         {
-          "eventTrigger": "When Losing Modifier (Expire)",
+          "eventTrigger": "When Losing Modifier",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

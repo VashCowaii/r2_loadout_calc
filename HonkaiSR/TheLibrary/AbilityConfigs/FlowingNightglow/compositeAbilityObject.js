@@ -53,7 +53,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "When Losing Modifier (Expire)",
+              "eventTrigger": "When Losing Modifier",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
