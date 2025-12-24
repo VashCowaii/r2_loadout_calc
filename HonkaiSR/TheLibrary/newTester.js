@@ -1172,6 +1172,21 @@ const megaParsingFuckery = {
             ${parseRef.triggerName} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Has Param Flag"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+            "flagName",
+            "invertCondition"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Param Flag");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.flagName} ${parseRef.invertCondition ? "NOT " : ""}
+        </div>`;
+    },
     "Has Flag"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
