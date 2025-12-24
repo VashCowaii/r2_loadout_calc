@@ -46,7 +46,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "When Losing Modifier",
+          "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

@@ -651,5 +651,151 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Poet of Mourning Collapse": {
+    "name": "Poet of Mourning Collapse",
+    "setID": 124,
+    "desc": [
+      "Increases Quantum DMG by 10%.",
+      "Decreases the wearer's SPD by 8%. Before entering battle, if the wearer's SPD is lower than 110/95, increases the wearer's CRIT Rate by 20%/32%. This effect applies to the wearer's memosprite at the same time."
+    ],
+    "icon": "icon/relic/124.png",
+    "fixedStats": {
+      "2": {
+        "DamageQuantum": 0.1
+      },
+      "4": {
+        "SPD%": -0.08
+      }
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        -0.08,
+        110,
+        95,
+        0.2,
+        0.32,
+        0.08
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Warrior Goddess of Sun and Thunder": {
+    "name": "Warrior Goddess of Sun and Thunder",
+    "setID": 125,
+    "desc": [
+      "Increases SPD by 6%.",
+      "When the wearer or their memosprite provides healing to ally targets other than themselves, the wearer gains \"Gentle Rain,\" which lasts for 2 turn(s) and can only trigger once per turn. While the wearer has \"Gentle Rain,\" SPD increases by 6% and all allies' CRIT DMG increases by 15%. This effect cannot stack."
+    ],
+    "icon": "icon/relic/125.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06
+      ],
+      [
+        0.06,
+        0.15,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Wavestrider Captain": {
+    "name": "Wavestrider Captain",
+    "setID": 126,
+    "desc": [
+      "Increases CRIT DMG by 16%.",
+      "When the wearer becomes the target of another ally target's ability, gains 1 stack of \"Help,\" stacking up to 2 time(s). If there are 2 stack(s) of \"Help\" when the wearer uses their Ultimate, consumes all \"Help\" to increase the wearer's ATK by 48% for 1 turn(s)."
+    ],
+    "icon": "icon/relic/126.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        2,
+        0.48,
+        1
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "World-Remaking Deliverer": {
+    "name": "World-Remaking Deliverer",
+    "setID": 127,
+    "desc": [
+      "Increases CRIT Rate by 8%.",
+      "After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' dealt DMG by 15%, lasting until after the wearer's next use of Basic ATK or Skill."
+    ],
+    "icon": "icon/relic/127.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08
+      ],
+      [
+        0.24,
+        0.15
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Self-Enshrouded Recluse": {
+    "name": "Self-Enshrouded Recluse",
+    "setID": 128,
+    "desc": [
+      "The provided Shield Effect increases by 10%.",
+      "Increases the Shield Effect provided by the wearer by 12%. When an ally target holds a Shield provided by the wearer, the ally target's CRIT DMG increases by 15%."
+    ],
+    "icon": "icon/relic/128.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        0.1
+      ],
+      [
+        0.12,
+        0.15
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

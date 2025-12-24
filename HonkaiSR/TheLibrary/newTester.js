@@ -1179,7 +1179,8 @@ const megaParsingFuckery = {
             "name",
             "target",
             "modifier",
-            "invertCondition"
+            "invertCondition",
+            "casterFilter",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Modifier");
 
@@ -1187,6 +1188,12 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.modifier} ${parseRef.invertCondition ? "NOT " : ""}on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.casterFilter != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Caster Filter:</div>&nbsp;
+                ${parseRef.casterFilter}
+            </div>` : ""}
         </div>`;
     },
     "Modifier Has Flag"(parseRef,initialCounter) {
@@ -1237,7 +1244,8 @@ const megaParsingFuckery = {
             "name",
             "target",
             "flagName",
-            "invertCondition"
+            "invertCondition",
+            "casterFilter",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Flag");
 
@@ -1245,6 +1253,12 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.flagName} ${parseRef.invertCondition ? "NOT " : ""}on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.casterFilter != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Caster Filter:</div>&nbsp;
+                ${parseRef.casterFilter}
+            </div>` : ""}
         </div>`;
     },
     "Has Toughness Reduction Preview"(parseRef,initialCounter) {
@@ -1403,7 +1417,7 @@ const megaParsingFuckery = {
             "name",
             "target",
             "of",
-
+            "invertCondition",
             "mustBeAlive1",
             "mustBeAlive2",
         ])
@@ -1412,7 +1426,22 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            target family [${parseRef.of}${parseRef.mustBeAlive1 ? "(Living)" : ""}] includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.mustBeAlive2 ? "(Living)" : ""}
+            target family [${parseRef.of}${parseRef.mustBeAlive1 ? "(Living)" : ""}] ${parseRef.invertedCondition ? "NOT " : ""}includes ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.mustBeAlive2 ? "(Living)" : ""}
+        </div>`;
+    },
+    "Is Teammate"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "invertCondition",
+            "team",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Part Of Team");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertedCondition ? "NOT " : ""} ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Is Part Of Team"(parseRef,initialCounter) {
