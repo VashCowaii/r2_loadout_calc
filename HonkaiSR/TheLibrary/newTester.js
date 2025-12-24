@@ -5,6 +5,74 @@ let currentCharFilePrefix = null;
 let currentLCSuperimposition = 1;
 
 
+const customHTML = {
+    makeSkillCircle(x,y,r,imgHref,id,type) {
+        let fillValue = type === "skill" ? "#1e2137" : "#ffffff";
+        let borderColor = type === "skill" ? "#928d85" : "#b2c8ff"
+        if (type === "memoSkill") {
+            fillValue = "#241b5a";
+            borderColor = "#646390"
+        }
+        let borderWidth = type === "trace" ? 0 : 3;
+
+        return `<g>
+            <circle cx="${x}" cy="${y}" r="${r}" fill="${fillValue}" stroke="${borderColor}" stroke-width="${borderWidth}" class=""/>
+    
+            <clipPath id="circleClip${id}">
+                <circle cx="${x}" cy="${y}" r="${r}"/>
+            </clipPath>
+    
+            <image href="${imgHref}" x="${x - r}" y="${y - r}" width="${r * 2}" height="${r * 2}" clip-path="url(#circleClip-${id})" class="clickable hoveredTraceIcon" 
+            style="${type != "skill" && type != "memoSkill" ? "filter: brightness(0)" : ""}" onclick="userTriggers.updateSelectedTraceDisplay(${id})"/>
+        </g>`;
+    },
+    rowUniqueStatExceptions: {
+        "Multiplier": {statName: "Final Multiplier", statUnit: "x"},
+    },
+    createAlternatingStatRows(displayOrder,statLocation,isMainStat,substatRef,isStatMenuCreation,rollArray) {
+        let rowAlternating = 2
+        let returnString = "";
+
+        // console.log(displayOrder,statLocation)
+
+        let compositeRollCount = 0;
+        let loopCounter = 0;
+        for (let entry of displayOrder) {
+            const isUnique = customHTML.rowUniqueStatExceptions[entry];
+
+            if (isUnique) {
+                returnString += `
+                <div class="imageRowStatisticBox${rowAlternating}">
+                    <div class="imageRowStatisticNameBox">${isUnique.statName}</div>
+                    <div class="imageRowStatisticStatBox">${statLocation[entry]}${isUnique.statUnit}</div>
+                </div>`;
+                continue;
+            }
+
+            
+            let valuePre = statLocation[entry];
+            let valueRef = (valuePre)?.toFixed(3) || 0;
+
+            // greatTableIndex
+            // greatTableKeys
+            if (isStatMenuCreation && valuePre === 0) {continue;}
+            if (rowAlternating==2) {rowAlternating--;}
+            else {rowAlternating++;}
+            
+            returnString += `
+            <div class="imageRowStatisticBox${rowAlternating}">
+                <div class="imageRowStatisticNameBox">${entry}</div>
+                <div class="imageRowStatisticStatBox">${(+valueRef ?? 0)}</div>
+            </div>
+            `;
+            loopCounter++;
+        }
+
+        return returnString;
+    },
+}
+
+
 const megaParsingFuckery = {
     checkKnownKeys(keySet,objectToCheck,functionName) {
         if (keySet.size) {
@@ -41,6 +109,7 @@ const megaParsingFuckery = {
     pageLoad(loadFile) {
         const bodyBox = readSelection("eventBodyMainBox");
         const isLightcone = compositeAbilityObject.isLightcone;
+        const isRelic = compositeAbilityObject.isRelic;
 
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
         const configAbility = compositeAbilityObject.abilityObject[loadFile];
@@ -70,6 +139,7 @@ const megaParsingFuckery = {
         // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
         const characterRef = characters[compositeAbilityObject.fullCharacterName];
         const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
+        const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
         // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
 
         const startingKeys = [
@@ -80,7 +150,7 @@ const megaParsingFuckery = {
         ];
         let startingString = `<div class="eventCharacterFileHeader">
             <div class="customMenuResultRowIcon">
-                <img src="/HonkaiSR/${isLightcone ? lightconeRef.preview : characterRef.preview}" class="eventCharacterFileIcon" style="border: 2px solid #d2ae73;">
+                <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
             </div>
             <div class="eventCharacterFileInfoBox">
             
@@ -136,19 +206,54 @@ const megaParsingFuckery = {
         
         </div>` : "";
 
+        let statRowString1 = "";
+        let statRowString2 = "";
+
+        console.log(compositeAbilityObject.fixedStats)
+        if (isRelic) {
+            if (compositeAbilityObject.fixedStats[2]) {
+                const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
+                statRowString1 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[2]);
+            }
+            if (compositeAbilityObject.fixedStats[4]) {
+                const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[4]);
+                statRowString2 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[4]);
+            }
+        }
+
+        
+
         if (isLightcone) {
             toughnessString += `
-            <div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
+            ${!isRelic ? `<div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
             <div class="superimpositionHolderbox">
                 <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
                 <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
                 <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
                 <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
                 <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
-            </div>
+            </div>` : ""}
             
             
-            <div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`
+            
+            
+            ${isRelic ? `
+                ${statRowString1 ? `<div class="characterDisplayPathAndNameBox">
+                    <div class="characterDisplayPathNameBox">2-Piece Menu Bonuses:</div>
+                </div>` + statRowString1 : ""}
+                
+
+                ${statRowString2 ? `<div class="characterDisplayPathAndNameBox">
+                    <div class="characterDisplayPathNameBox">4-Piece Menu Bonuses:</div>
+                </div>` + statRowString2 : ""}
+
+                
+                <div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">2pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[0],relicSetRef.desc[0])}</div>
+                ${relicSetRef.params.length > 1 ? `<div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
+                
+                ` 
+                : `<div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`}
+            `
         }
         startingString += toughnessString + `</div></div>`;
 
