@@ -18,7 +18,34 @@ const configAbility = {
       "description": "Increases teammates' CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue4</span>.",
       "type": "Buff",
       "effectName": "Mask",
-      "statusName": "Mask"
+      "statusName": "Mask",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": "All Teammates + Memosprites (Excluding Owner) [Exclude battle mechanics]",
+          "modifier": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
+          "aliveOnly": "True",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_PropertyValue3) || RETURN",
+              "displayLines": "MDF_PropertyValue3",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue3"
+              ]
+            },
+            "MDF_PropertyValue2": {
+              "operator": "Variables[0] (MDF_PropertyValue4) || RETURN",
+              "displayLines": "MDF_PropertyValue4",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue4"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -127,6 +154,11 @@ const configAbility = {
           ]
         }
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "latentQueue": [],
       "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
       "type": "Buff",
       "effectName": "CRIT Rate and CRIT DMG Boost",

@@ -1297,6 +1297,45 @@ const megaParsingFuckery = {
             ${parseRef.compareType} ${parseRef.value2.displayLines ?? parseRef.value2}
         </div>`;
     },
+    "Add Sub-Events/Bonuses"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "to",
+            "modifier",
+            // "stackLimit",
+            "valuePerStack",
+            // "addStacksPerTrigger",
+            // "duration",
+            // "counter",
+            // "value1",
+            // "compareType",
+            // "value2"
+
+            "aliveOnly",
+            "haloStatus",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Events/Bonuses");
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Add Event/Bonus:</div>&nbsp;
+            ${parseRef.modifier} to ${Array.isArray(parseRef.to) ? megaParsingFuckery.makeConditionTargetBox(parseRef.to,initialCounter) : parseRef.to}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.valuePerStack != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Parameters:</div>&nbsp;
+                ${parseRef.valuePerStack.displayLines ?? typeof parseRef.valuePerStack === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.valuePerStack,initialCounter) : parseRef.valuePerStack}
+            </div>` : ""}
+            ${parseRef.haloStatus != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Is Zone/Team Buff:</div>&nbsp;
+                ${parseRef.haloStatus}
+            </div>` : ""}
+            ${parseRef.aliveOnly != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Apply to Living Only:</div>&nbsp;
+                ${parseRef.aliveOnly}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Add Events/Bonuses"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2041,6 +2080,7 @@ const megaParsingFuckery = {
             "statusName",
 
             "modifierFunctions",
+            "subModList",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Construction");
 
@@ -2048,14 +2088,17 @@ const megaParsingFuckery = {
         let refString = "";
         let abilityString = "";
         let functionString = "";
+        let subModString = "";
         const hasParse = parseRef.execute?.length;
         const hasRef = parseRef.variableValueChange?.length;
         const hasAbilityChange = parseRef.abilityValueChange?.length;
         const hasFunctions = parseRef.abilityValueChange?.length;
+        const hasSubMods = parseRef.subModList?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
         if (hasAbilityChange) {abilityString += megaParsingFuckery.fillEventBodyBox(parseRef.abilityValueChange,initialCounter);}
         if (hasFunctions) {functionString += megaParsingFuckery.fillEventBodyBox(parseRef.modifierFunctions,initialCounter);}
+        if (hasSubMods) {subModString += megaParsingFuckery.fillEventBodyBox(parseRef.subModList,initialCounter);}
 
 
         
@@ -2153,6 +2196,10 @@ const megaParsingFuckery = {
             ${hasFunctions ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Modifier Functions</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${functionString}
+                </div>` : ""}
+            ${hasSubMods ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Sub-Modifiers</div>
+                <div class="rotationsSectionRowHolder${subModString%2 === 0 ? 2 : 1}">
+                    ${subModString}
                 </div>` : ""}
 
                 

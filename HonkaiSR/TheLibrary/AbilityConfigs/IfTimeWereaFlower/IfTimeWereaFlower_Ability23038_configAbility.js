@@ -67,7 +67,25 @@ const configAbility = {
       "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "CRIT DMG Boost",
-      "statusName": "Presage"
+      "statusName": "Presage",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+          "modifier": "LC_23038_AuraBonus_Buff[<span class=\"descriptionNumberColor\">Presage</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+              "displayLines": "MDF_PropertyValue",
+              "constants": [],
+              "variables": [
+                "MDF_PropertyValue"
+              ]
+            }
+          }
+        }
+      ]
     },
     {
       "name": "Modifier Construction",

@@ -148,13 +148,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(Excluding Owner, in Context)",
+                  "from": "All Teammates (Excluding Owner)",
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target is Next Turn",
                     "target": "Use Prior Target(s) Defined",
-                    "partOf": "All Team Members(Excluding Owner, in Context)",
+                    "partOf": "All Teammates (Excluding Owner)",
                     "exclude": "Owner of this Modifier"
                   },
                   "ifTargetFound": [
