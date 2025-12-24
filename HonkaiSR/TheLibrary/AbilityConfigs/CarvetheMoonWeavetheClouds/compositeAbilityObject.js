@@ -342,7 +342,7 @@ const compositeAbilityObject = {
           "for": "LC_21032_Main",
           "execute": [
             {
-              "eventTrigger": "When Losing Modifier (Expire)",
+              "eventTrigger": "When Losing Modifier",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
