@@ -797,6 +797,20 @@ const megaParsingFuckery = {
             ${parseRef.variableName} = current Status Count on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Define Custom Variable with Flag Count"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+            "flagName"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Flag Count");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Status Count:</div>&nbsp;
+            ${parseRef.variableName} = ${parseRef.flagName} Count on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>`;
+    },
     "Define Custom Variable with Modifier Values"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -965,6 +979,22 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.target} ${parseRef.invertCondition ? "NOT" : ""}= ${parseRef.target2}
+        </div>`;
+    },
+    "Compare: Modifier Status Type"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "statusType",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Target");
+
+        // initialCounter++;
+
+        // ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            Current Status Type ${parseRef.invertCondition ? "NOT" : ""}= ${parseRef.statusType}
         </div>`;
     },
     "Current Turn Is"(parseRef,initialCounter) {
@@ -1932,6 +1962,20 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
             ${parseRef.weakTo} is${parseRef.invertCondition != undefined ? " NOT" : ""} Weak to ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        `;
+    },
+    "Has Damage Tags"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "damageTag",
+            "invertCondition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Damage Tags");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
+            ${parseRef.invertCondition != undefined ? " NOT" : ""} ${parseRef.damageTag}
         </div>
         `;
     },
