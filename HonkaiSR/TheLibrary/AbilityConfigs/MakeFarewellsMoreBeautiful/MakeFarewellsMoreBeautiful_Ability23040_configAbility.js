@@ -24,8 +24,8 @@ const configAbility = {
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (LC_23040_PropertyValue) || OR || RETURN",
-                "displayLines": "(LC_23040_PropertyValue ][OR(gate)][ (Abort evaluation when false))",
+                "operator": "Variables[0] (LC_23040_PropertyValue)",
+                "displayLines": "LC_23040_PropertyValue",
                 "constants": [],
                 "variables": [
                   "LC_23040_PropertyValue"
@@ -53,8 +53,8 @@ const configAbility = {
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_DefenceAddedRatio) || OR || RETURN",
-                "displayLines": "(MDF_DefenceAddedRatio ][OR(gate)][ (Abort evaluation when false))",
+                "operator": "Variables[0] (MDF_DefenceAddedRatio)",
+                "displayLines": "MDF_DefenceAddedRatio",
                 "constants": [],
                 "variables": [
                   "MDF_DefenceAddedRatio"
@@ -152,8 +152,8 @@ const configAbility = {
                 {
                   "name": "Action Advance/Delay",
                   "target": "Owner of this Modifier",
-                  "advanceType": "Set",
-                  "value": "(0.12 ][OR(gate)][ (Abort evaluation when false))"
+                  "advanceType": "Advance",
+                  "value": "0.12"
                 },
                 {
                   "name": "Define Custom Variable",

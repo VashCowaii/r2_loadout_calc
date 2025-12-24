@@ -187,8 +187,8 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || OR || RETURN",
-                    "displayLines": "(MDF_PropertyValue ][OR(gate)][ (Abort evaluation when false))",
+                    "operator": "Variables[0] (MDF_PropertyValue)",
+                    "displayLines": "MDF_PropertyValue",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue"

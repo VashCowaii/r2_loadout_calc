@@ -28,8 +28,8 @@ const configAbility = {
                 {
                   "name": "Action Advance/Delay",
                   "target": "Allied Team",
-                  "advanceType": "Set",
-                  "value": "(0.16 ][OR(gate)][ (Abort evaluation when false))"
+                  "advanceType": "Advance",
+                  "value": "0.16"
                 }
               ]
             }
@@ -48,8 +48,8 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.16) || OR || RETURN",
-            "displayLines": "(0.16 ][OR(gate)][ (Abort evaluation when false))",
+            "operator": "Variables[0] (0.16)",
+            "displayLines": "0.16",
             "constants": [],
             "variables": [
               0.16
