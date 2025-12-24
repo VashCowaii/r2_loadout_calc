@@ -55,7 +55,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.16)",
+                "operator": "Variables[0] (0.16) || RETURN",
                 "displayLines": "0.16",
                 "constants": [],
                 "variables": [

@@ -790,7 +790,7 @@ const megaParsingFuckery = {
             "variableName",
             "target",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with HP%");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Status Counter");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Status Count:</div>&nbsp;
@@ -804,12 +804,13 @@ const megaParsingFuckery = {
             "target",
             "valueType",
             "multiplier",
+            "modifierName",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with HP%");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Modifier Values");
         // initialCounter++;
         return `<div class="actionDetailBody2"> 
             <div class="rotationConditionOperatorHeaderInline">Define with Modifier Attribute:</div>&nbsp;
-            ${parseRef.variableName} = ${parseRef.valueType} * ${parseRef.multiplier} on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            ${parseRef.variableName} = ${parseRef.valueType} * ${parseRef.multiplier} on ${parseRef.modifierName ? `(${parseRef.modifierName})` : ""}${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Update Energy"(parseRef,initialCounter) {
