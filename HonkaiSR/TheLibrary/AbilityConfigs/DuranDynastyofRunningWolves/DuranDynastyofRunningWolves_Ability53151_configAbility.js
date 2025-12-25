@@ -91,7 +91,7 @@ const configAbility = {
           ]
         }
       ],
-      "description": "Each stack increases DMG dealt by Follow-up ATK by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P2_DamageAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> time(s). When <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> stack(s) are reached, additionally increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P3_CriticalDamage</span>.",
+      "description": "Each stack increases DMG dealt by Follow-Up ATK by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P2_DamageAddedRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> time(s). When <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P1_MaxLayer</span> stack(s) are reached, additionally increases CRIT DMG by <span class=\"descriptionNumberColor\">#SkillRelic_315_2_P3_CriticalDamage</span>.",
       "type": "Buff",
       "effectName": "Merit",
       "statusName": "Merit",
@@ -259,7 +259,7 @@ const configAbility = {
   "isLightcone": true,
   "isRelic": true,
   "desc": [
-    "When an ally uses a Follow-up ATK, the wearer gains 1 stack of Merit, stacking up to 5 time(s). Each stack of Merit increases the DMG dealt by the wearer's Follow-up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%."
+    "When an ally character uses a Follow-Up ATK, the wearer gains 1 stack of \"Merit,\" stacking up to 5 time(s). Each stack of \"Merit\" increases the DMG dealt by the wearer's Follow-Up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%."
   ],
   "params": [
     [

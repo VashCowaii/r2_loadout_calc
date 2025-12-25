@@ -790,6 +790,70 @@ let lightcones = {
       1.15
     ]
   },
+  "This Is Me!": {
+    "lightconeID": 21030,
+    "name": "This Is Me!",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 529.2,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.16
+      },
+      "2": {
+        "DEF%": 0.2
+      },
+      "3": {
+        "DEF%": 0.24
+      },
+      "4": {
+        "DEF%": 0.28
+      },
+      "5": {
+        "DEF%": 0.32
+      }
+    },
+    "skillName": "New Chapter",
+    "desc": "Increases the wearer's DEF by #1[i]%. Increases the DMG of the wearer when they use their Ultimate by #2[i]% of the wearer's DEF. This effect only applies 1 time per enemy target during each use of the wearer's Ultimate.",
+    "params": [
+      [
+        0.16,
+        0.6
+      ],
+      [
+        0.2,
+        0.75
+      ],
+      [
+        0.24,
+        0.9
+      ],
+      [
+        0.28,
+        1.05
+      ],
+      [
+        0.32,
+        1.2
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21030.png",
+    "preview": "image/light_cone_preview/21030.png",
+    "portrait": "image/light_cone_portrait/21030.png",
+    "imageOffset": [
+      0,
+      -18,
+      1.15
+    ]
+  },
   "Carve the Moon, Weave the Clouds": {
     "lightconeID": 21032,
     "name": "Carve the Moon, Weave the Clouds",
@@ -1212,7 +1276,7 @@ let lightcones = {
       }
     },
     "skillName": "The Plum Fragrance In My Bones",
-    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases all allies' DMG by #2[i]%, lasting for #3[i] turn(s). Should the wearer's Break Effect exceed or equal #4[i]%, 1 Skill Point will be recovered.\\nAt the start of each wave, all allies regenerate #5[f1] Energy immediately. Abilities of the same type cannot stack.",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases all allies' DMG by #2[i]%, lasting for #3[i] turn(s). If the wearer's Break Effect exceeds or equals #4[i]%, 1 Skill Point will be recovered.\\nAt the start of each wave, all allies regenerate #5[f1] Energy immediately. Abilities of the same type cannot stack.",
     "params": [
       [
         0.6,
@@ -1375,7 +1439,7 @@ let lightcones = {
       }
     },
     "skillName": "Mental Training",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the Disputation effect, which increases DMG dealt by #4[i]% and enables their Follow-up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the \"Disputation\" effect, which increases DMG dealt by #4[i]% and enables their Follow-Up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
     "params": [
       [
         0.2,
@@ -1541,6 +1605,80 @@ let lightcones = {
       1.02
     ]
   },
+  "Destiny's Threads Forewoven": {
+    "lightconeID": 21039,
+    "name": "Destiny's Threads Forewoven",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectRES": 0.12
+      },
+      "2": {
+        "EffectRES": 0.14
+      },
+      "3": {
+        "EffectRES": 0.16
+      },
+      "4": {
+        "EffectRES": 0.18
+      },
+      "5": {
+        "EffectRES": 0.2
+      }
+    },
+    "skillName": "Insight",
+    "desc": "Increases the wearer's Effect RES by #1[i]%. For every #2[i] of DEF the wearer has, increases the wearer's DMG dealt by #3[f1]%, up to a maximum DMG increase of #4[i]%.",
+    "params": [
+      [
+        0.12,
+        100,
+        0.007999999,
+        0.32
+      ],
+      [
+        0.14,
+        100,
+        0.009,
+        0.36
+      ],
+      [
+        0.16,
+        100,
+        0.01,
+        0.4
+      ],
+      [
+        0.18,
+        100,
+        0.011,
+        0.44
+      ],
+      [
+        0.2,
+        100,
+        0.012,
+        0.48
+      ]
+    ],
+    "statRef": [
+      "StatusResistanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21039.png",
+    "preview": "image/light_cone_preview/21039.png",
+    "portrait": "image/light_cone_portrait/21039.png",
+    "imageOffset": [
+      -90,
+      -94,
+      1.6
+    ]
+  },
   "Shared Feeling": {
     "lightconeID": 21007,
     "name": "Shared Feeling",
@@ -1672,6 +1810,70 @@ let lightcones = {
       0,
       -47,
       1.1
+    ]
+  },
+  "Concert for Two": {
+    "lightconeID": 21043,
+    "name": "Concert for Two",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.16
+      },
+      "2": {
+        "DEF%": 0.2
+      },
+      "3": {
+        "DEF%": 0.24
+      },
+      "4": {
+        "DEF%": 0.28
+      },
+      "5": {
+        "DEF%": 0.32
+      }
+    },
+    "skillName": "Inspire",
+    "desc": "Increases the wearer's DEF by #1[i]%. For every on-field character that has a Shield, the DMG dealt by the wearer increases by #2[i]%.",
+    "params": [
+      [
+        0.16,
+        0.04
+      ],
+      [
+        0.2,
+        0.05
+      ],
+      [
+        0.24,
+        0.06
+      ],
+      [
+        0.28,
+        0.07
+      ],
+      [
+        0.32,
+        0.08
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21043.png",
+    "preview": "image/light_cone_preview/21043.png",
+    "portrait": "image/light_cone_portrait/21043.png",
+    "imageOffset": [
+      45,
+      -30,
+      1.3
     ]
   },
   "Poised to Bloom": {
@@ -2473,7 +2675,7 @@ let lightcones = {
       }
     },
     "skillName": "Aspiration",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-Up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
     "params": [
       [
         0.36,
@@ -2768,7 +2970,7 @@ let lightcones = {
     },
     "fixedStats": {},
     "skillName": "Sweet Dream",
-    "desc": "Increases the wearer's provided Shield Effect by #1[i]%. When an ally target has a Shield, the DMG dealt increases by #2[i]%.",
+    "desc": "Increases the wearer's provided Shield Effect by #1[i]% and while any ally target has a Shield, the wearer's DMG dealt increases by #2[i]%.",
     "params": [
       [
         0.12,

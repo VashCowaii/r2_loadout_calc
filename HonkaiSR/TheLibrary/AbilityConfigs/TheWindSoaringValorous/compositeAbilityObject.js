@@ -100,7 +100,7 @@ const compositeAbilityObject = {
       "isRelic": true,
       "desc": [
         "Increases ATK by 12%.",
-        "Increases the wearer's CRIT Rate by 6%. After the wearer uses a Follow-up ATK, increases DMG dealt by Ultimate by 36%, lasting for 1 turn(s)."
+        "Increases the wearer's CRIT Rate by 6%. After the wearer uses a Follow-Up ATK, increases DMG dealt by Ultimate by 36%, lasting for 1 turn(s)."
       ],
       "params": [
         [

@@ -90,7 +90,7 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and Follow-up ATKs ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of target DEF.",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and Follow-Up ATKs ignore <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of target DEF.",
           "type": "Buff",
           "effectName": "Disputation",
           "statusName": "Disputation"
@@ -235,7 +235,7 @@ const compositeAbilityObject = {
         }
       ],
       "isLightcone": true,
-      "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the Disputation effect, which increases DMG dealt by #4[i]% and enables their Follow-up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
+      "desc": "Increases the wearer's CRIT DMG by #1[i]%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by #2[i]%, stacking up to #3[i] times. When using Ultimate to attack the enemy target, the wearer receives the \"Disputation\" effect, which increases DMG dealt by #4[i]% and enables their Follow-Up ATKs to ignore #5[i]% of the target's DEF. This effect lasts for #6[i] turns.",
       "params": [
         [
           0.2,
