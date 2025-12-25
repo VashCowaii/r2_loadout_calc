@@ -89,6 +89,7 @@
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",
 
+    "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",
     "FireResistance": "ResistanceFire",
     "IceResistance": "ResistanceIce",

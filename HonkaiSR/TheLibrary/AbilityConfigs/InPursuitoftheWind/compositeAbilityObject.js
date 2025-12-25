@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "InPursuitoftheWind_Ability21056"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "InPursuitoftheWind_Ability21056": {
       "fileName": "InPursuitoftheWind_Ability21056",

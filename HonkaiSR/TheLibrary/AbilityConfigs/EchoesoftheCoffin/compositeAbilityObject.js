@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "EchoesoftheCoffin_Ability23008"
   ],
+  "fixedStats": {
+    "1": {
+      "ATK%": 0.24
+    },
+    "2": {
+      "ATK%": 0.28
+    },
+    "3": {
+      "ATK%": 0.32
+    },
+    "4": {
+      "ATK%": 0.36
+    },
+    "5": {
+      "ATK%": 0.4
+    }
+  },
   "abilityObject": {
     "EchoesoftheCoffin_Ability23008": {
       "fileName": "EchoesoftheCoffin_Ability23008",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "ThisIsMe_Ability21030"
   ],
+  "fixedStats": {
+    "1": {
+      "DEF%": 0.16
+    },
+    "2": {
+      "DEF%": 0.2
+    },
+    "3": {
+      "DEF%": 0.24
+    },
+    "4": {
+      "DEF%": 0.28
+    },
+    "5": {
+      "DEF%": 0.32
+    }
+  },
   "abilityObject": {
     "ThisIsMe_Ability21030": {
       "fileName": "ThisIsMe_Ability21030",

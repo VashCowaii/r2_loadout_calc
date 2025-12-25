@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Shadowburn_Ability20021"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Shadowburn_Ability20021": {
       "fileName": "Shadowburn_Ability20021",

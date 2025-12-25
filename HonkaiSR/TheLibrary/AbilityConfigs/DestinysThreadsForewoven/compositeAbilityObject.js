@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "DestinysThreadsForewoven_Ability21039"
   ],
+  "fixedStats": {
+    "1": {
+      "EffectRES": 0.12
+    },
+    "2": {
+      "EffectRES": 0.14
+    },
+    "3": {
+      "EffectRES": 0.16
+    },
+    "4": {
+      "EffectRES": 0.18
+    },
+    "5": {
+      "EffectRES": 0.2
+    }
+  },
   "abilityObject": {
     "DestinysThreadsForewoven_Ability21039": {
       "fileName": "DestinysThreadsForewoven_Ability21039",

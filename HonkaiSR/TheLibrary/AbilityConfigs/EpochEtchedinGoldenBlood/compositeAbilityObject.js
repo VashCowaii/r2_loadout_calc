@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "EpochEtchedinGoldenBlood_Ability23048"
   ],
+  "fixedStats": {
+    "1": {
+      "ATK%": 0.64
+    },
+    "2": {
+      "ATK%": 0.8
+    },
+    "3": {
+      "ATK%": 0.96
+    },
+    "4": {
+      "ATK%": 1.12
+    },
+    "5": {
+      "ATK%": 1.28
+    }
+  },
   "abilityObject": {
     "EpochEtchedinGoldenBlood_Ability23048": {
       "fileName": "EpochEtchedinGoldenBlood_Ability23048",

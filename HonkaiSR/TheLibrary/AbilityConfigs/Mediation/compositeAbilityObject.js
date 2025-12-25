@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Mediation_Ability20019"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Mediation_Ability20019": {
       "fileName": "Mediation_Ability20019",

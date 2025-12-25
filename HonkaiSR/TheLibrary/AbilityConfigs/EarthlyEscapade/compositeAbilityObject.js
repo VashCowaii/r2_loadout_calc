@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "EarthlyEscapade_Ability23021"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.32
+    },
+    "2": {
+      "CritDamageBase": 0.39
+    },
+    "3": {
+      "CritDamageBase": 0.46
+    },
+    "4": {
+      "CritDamageBase": 0.53
+    },
+    "5": {
+      "CritDamageBase": 0.6
+    }
+  },
   "abilityObject": {
     "EarthlyEscapade_Ability23021": {
       "fileName": "EarthlyEscapade_Ability23021",

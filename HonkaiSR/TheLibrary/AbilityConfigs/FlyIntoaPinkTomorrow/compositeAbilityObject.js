@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "FlyIntoaPinkTomorrow_Ability22006"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.12
+    },
+    "2": {
+      "CritDamageBase": 0.15
+    },
+    "3": {
+      "CritDamageBase": 0.18
+    },
+    "4": {
+      "CritDamageBase": 0.21
+    },
+    "5": {
+      "CritDamageBase": 0.24
+    }
+  },
   "abilityObject": {
     "FlyIntoaPinkTomorrow_Ability22006": {
       "fileName": "FlyIntoaPinkTomorrow_Ability22006",

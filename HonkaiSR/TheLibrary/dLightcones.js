@@ -465,6 +465,70 @@ let lightcones = {
       1.15
     ]
   },
+  "Day One of My New Life": {
+    "lightconeID": 21002,
+    "name": "Day One of My New Life",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.16
+      },
+      "2": {
+        "DEF%": 0.18
+      },
+      "3": {
+        "DEF%": 0.2
+      },
+      "4": {
+        "DEF%": 0.22
+      },
+      "5": {
+        "DEF%": 0.24
+      }
+    },
+    "skillName": "At This Very Moment",
+    "desc": "Increases the wearer's DEF by #1[i]%. After entering battle, increases All-Type RES of all allies by #2[i]%. Abilities of the same type cannot stack.",
+    "params": [
+      [
+        0.16,
+        0.08
+      ],
+      [
+        0.18,
+        0.09
+      ],
+      [
+        0.2,
+        0.1
+      ],
+      [
+        0.22,
+        0.11
+      ],
+      [
+        0.24,
+        0.12
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21002.png",
+    "preview": "image/light_cone_preview/21002.png",
+    "portrait": "image/light_cone_portrait/21002.png",
+    "imageOffset": [
+      0,
+      -150,
+      1.15
+    ]
+  },
   "Memories of the Past": {
     "lightconeID": 21004,
     "name": "Memories of the Past",
@@ -526,6 +590,52 @@ let lightcones = {
     "imageOffset": [
       0,
       -12,
+      1.15
+    ]
+  },
+  "Landau's Choice": {
+    "lightconeID": 21009,
+    "name": "Landau's Choice",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Time Fleets Away",
+    "desc": "The wearer is more likely to be attacked, and DMG taken is reduced by #2[i]%.",
+    "params": [
+      [
+        2,
+        0.16
+      ],
+      [
+        2,
+        0.18
+      ],
+      [
+        2,
+        0.2
+      ],
+      [
+        2,
+        0.22
+      ],
+      [
+        2,
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21009.png",
+    "preview": "image/light_cone_preview/21009.png",
+    "portrait": "image/light_cone_portrait/21009.png",
+    "imageOffset": [
+      0,
+      -139,
       1.15
     ]
   },
@@ -639,6 +749,80 @@ let lightcones = {
       1.5
     ]
   },
+  "Trend of the Universal Market": {
+    "lightconeID": 21016,
+    "name": "Trend of the Universal Market",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.16
+      },
+      "2": {
+        "DEF%": 0.2
+      },
+      "3": {
+        "DEF%": 0.24
+      },
+      "4": {
+        "DEF%": 0.28
+      },
+      "5": {
+        "DEF%": 0.32
+      }
+    },
+    "skillName": "A New Round of Shuffling",
+    "desc": "Increases the wearer's DEF by #1[i]%. When the wearer is attacked, there is a #2[i]% base chance to Burn the enemy. For each turn, the wearer deals DoT that is equal to #3[i]% of the wearer's DEF for #4[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        1,
+        0.4,
+        2
+      ],
+      [
+        0.2,
+        1.05,
+        0.5,
+        2
+      ],
+      [
+        0.24,
+        1.1,
+        0.6,
+        2
+      ],
+      [
+        0.28,
+        1.15,
+        0.7,
+        2
+      ],
+      [
+        0.32,
+        1.2,
+        0.8,
+        2
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21016.png",
+    "preview": "image/light_cone_preview/21016.png",
+    "portrait": "image/light_cone_portrait/21016.png",
+    "imageOffset": [
+      0,
+      -129,
+      1.2
+    ]
+  },
   "Dance! Dance! Dance!": {
     "lightconeID": 21018,
     "name": "Dance! Dance! Dance!",
@@ -723,6 +907,57 @@ let lightcones = {
     "imageOffset": [
       0,
       -78,
+      1.01
+    ]
+  },
+  "We Are Wildfire": {
+    "lightconeID": 21023,
+    "name": "We Are Wildfire",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Teary-Eyed",
+    "desc": "At the start of the battle, the DMG dealt to all allies decreases by #2[i]% for #3[i] turn(s). At the same time, immediately restores HP to all allies equal to #1[i]% of the respective HP difference between the characters' Max HP and current HP.",
+    "params": [
+      [
+        0.3,
+        0.08,
+        5
+      ],
+      [
+        0.35,
+        0.1,
+        5
+      ],
+      [
+        0.4,
+        0.12,
+        5
+      ],
+      [
+        0.45,
+        0.14,
+        5
+      ],
+      [
+        0.5,
+        0.16,
+        5
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21023.png",
+    "preview": "image/light_cone_preview/21023.png",
+    "portrait": "image/light_cone_portrait/21023.png",
+    "imageOffset": [
+      0,
+      -34,
       1.01
     ]
   },
@@ -974,6 +1209,86 @@ let lightcones = {
       1.15
     ]
   },
+  "Moment of Victory": {
+    "lightconeID": 23005,
+    "name": "Moment of Victory",
+    "path": "Preservation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 595.3499999999999,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.24,
+        "EffectHitRate": 0.24
+      },
+      "2": {
+        "DEF%": 0.28,
+        "EffectHitRate": 0.28
+      },
+      "3": {
+        "DEF%": 0.32,
+        "EffectHitRate": 0.32
+      },
+      "4": {
+        "DEF%": 0.36,
+        "EffectHitRate": 0.36
+      },
+      "5": {
+        "DEF%": 0.4,
+        "EffectHitRate": 0.4
+      }
+    },
+    "skillName": "Verdict",
+    "desc": "Increases the wearer's DEF by #2[i]% and Effect Hit Rate by #4[i]%. Increases the chance for the wearer to be attacked by enemies. When the wearer is attacked, increase their DEF by an extra #3[i]% until the end of the wearer's turn.",
+    "params": [
+      [
+        2,
+        0.24,
+        0.24,
+        0.24
+      ],
+      [
+        2,
+        0.28,
+        0.28,
+        0.28
+      ],
+      [
+        2,
+        0.32,
+        0.32,
+        0.32
+      ],
+      [
+        2,
+        0.36,
+        0.36,
+        0.36
+      ],
+      [
+        2,
+        0.4,
+        0.4,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio",
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23005.png",
+    "preview": "image/light_cone_preview/23005.png",
+    "portrait": "image/light_cone_portrait/23005.png",
+    "imageOffset": [
+      0,
+      -145,
+      1.15
+    ]
+  },
   "Echoes of the Coffin": {
     "lightconeID": 23008,
     "name": "Echoes of the Coffin",
@@ -1045,6 +1360,91 @@ let lightcones = {
     "imageOffset": [
       0,
       -120,
+      1.15
+    ]
+  },
+  "She Already Shut Her Eyes": {
+    "lightconeID": 23011,
+    "name": "She Already Shut Her Eyes",
+    "path": "Preservation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 529.2,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.24,
+        "EnergyRegenRate": 0.12
+      },
+      "2": {
+        "HP%": 0.28,
+        "EnergyRegenRate": 0.14
+      },
+      "3": {
+        "HP%": 0.32,
+        "EnergyRegenRate": 0.16
+      },
+      "4": {
+        "HP%": 0.36,
+        "EnergyRegenRate": 0.18
+      },
+      "5": {
+        "HP%": 0.4,
+        "EnergyRegenRate": 0.2
+      }
+    },
+    "skillName": "Visioscape",
+    "desc": "Increases the wearer's Max HP by #1[i]% and Energy Regeneration Rate by #4[i]%. When the wearer's HP is reduced, all allies' DMG dealt increases by #2[f1]%, lasting for #5[i] turn(s).\\nAt the start of every wave, restores HP to all allies by an amount equal to #3[i]% of their respective lost HP.",
+    "params": [
+      [
+        0.24,
+        0.09,
+        0.8,
+        0.12,
+        2
+      ],
+      [
+        0.28,
+        0.105,
+        0.85,
+        0.14,
+        2
+      ],
+      [
+        0.32,
+        0.12,
+        0.9,
+        0.16,
+        2
+      ],
+      [
+        0.36,
+        0.135,
+        0.95,
+        0.18,
+        2
+      ],
+      [
+        0.4,
+        0.15,
+        1,
+        0.2,
+        2
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio",
+      "SPRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23011.png",
+    "preview": "image/light_cone_preview/23011.png",
+    "portrait": "image/light_cone_portrait/23011.png",
+    "imageOffset": [
+      0,
+      -106,
       1.15
     ]
   },
@@ -1120,6 +1520,85 @@ let lightcones = {
     "imageOffset": [
       0,
       -115,
+      1.15
+    ]
+  },
+  "Texture of Memories": {
+    "lightconeID": 24002,
+    "name": "Texture of Memories",
+    "path": "Preservation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 529.2,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "EffectRES": 0.08
+      },
+      "2": {
+        "EffectRES": 0.1
+      },
+      "3": {
+        "EffectRES": 0.12
+      },
+      "4": {
+        "EffectRES": 0.14
+      },
+      "5": {
+        "EffectRES": 0.16
+      }
+    },
+    "skillName": "Treasure",
+    "desc": "Increases the wearer's Effect RES by #1[i]%. If the wearer is attacked and has no Shield, they gain a Shield equal to #2[i]% of their Max HP for #3[i] turn(s). This effect can only be triggered once every #4[i] turn(s). If the wearer has a Shield when attacked, the DMG they receive decreases by #5[i]%.",
+    "params": [
+      [
+        0.08,
+        0.16,
+        2,
+        3,
+        0.12
+      ],
+      [
+        0.1,
+        0.2,
+        2,
+        3,
+        0.15
+      ],
+      [
+        0.12,
+        0.24,
+        2,
+        3,
+        0.18
+      ],
+      [
+        0.14,
+        0.28,
+        2,
+        3,
+        0.21
+      ],
+      [
+        0.16,
+        0.32,
+        2,
+        3,
+        0.24
+      ]
+    ],
+    "statRef": [
+      "StatusResistanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24002.png",
+    "preview": "image/light_cone_preview/24002.png",
+    "portrait": "image/light_cone_portrait/24002.png",
+    "imageOffset": [
+      0,
+      -55,
       1.15
     ]
   },
@@ -1409,6 +1888,90 @@ let lightcones = {
       16,
       -162,
       1.35
+    ]
+  },
+  "Inherently Unjust Destiny": {
+    "lightconeID": 23023,
+    "name": "Inherently Unjust Destiny",
+    "path": "Preservation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 661.5,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.4
+      },
+      "2": {
+        "DEF%": 0.46
+      },
+      "3": {
+        "DEF%": 0.52
+      },
+      "4": {
+        "DEF%": 0.58
+      },
+      "5": {
+        "DEF%": 0.64
+      }
+    },
+    "skillName": "All-In",
+    "desc": "Increases the wearer's DEF by #1[i]%. When the wearer provides a Shield to an ally, the wearer's CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s). When the wearer's Follow-Up ATK hits an enemy target, there is a #4[i]% base chance to increase the DMG taken by the attacked enemy target by #5[f1]%, lasting for #6[i] turn(s).",
+    "params": [
+      [
+        0.4,
+        0.4,
+        2,
+        1,
+        0.1,
+        2
+      ],
+      [
+        0.46,
+        0.46,
+        2,
+        1.15,
+        0.115,
+        2
+      ],
+      [
+        0.52,
+        0.52,
+        2,
+        1.3,
+        0.13,
+        2
+      ],
+      [
+        0.58,
+        0.58,
+        2,
+        1.45,
+        0.145,
+        2
+      ],
+      [
+        0.64,
+        0.64,
+        2,
+        1.6,
+        0.16,
+        2
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23023.png",
+    "preview": "image/light_cone_preview/23023.png",
+    "portrait": "image/light_cone_portrait/23023.png",
+    "imageOffset": [
+      4,
+      -130,
+      1.1
     ]
   },
   "Baptism of Pure Thought": {
@@ -3620,6 +4183,90 @@ let lightcones = {
       34.5,
       27,
       1.3
+    ]
+  },
+  "Though Worlds Apart": {
+    "lightconeID": 23051,
+    "name": "Though Worlds Apart",
+    "path": "Preservation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.64
+      },
+      "2": {
+        "ATK%": 0.8
+      },
+      "3": {
+        "ATK%": 0.96
+      },
+      "4": {
+        "ATK%": 1.12
+      },
+      "5": {
+        "ATK%": 1.28
+      }
+    },
+    "skillName": "New Scale",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer uses Ultimate, restores HP equal to #5[i]% of the wearer's ATK for all allies, and additionally restores HP equal to #6[i]% of the wearer's ATK for the character with the lowest current HP, and grants \"Redoubt\" to all allies for #4[i] turn(s). Targets with \"Redoubt\" deal #2[i]% increased DMG, which further increases by #3[i]% if the targets have summons.",
+    "params": [
+      [
+        0.64,
+        0.24,
+        0.12,
+        3,
+        0.1,
+        0.1
+      ],
+      [
+        0.8,
+        0.3,
+        0.15,
+        3,
+        0.125,
+        0.125
+      ],
+      [
+        0.96,
+        0.36,
+        0.18,
+        3,
+        0.15,
+        0.15
+      ],
+      [
+        1.12,
+        0.42,
+        0.21,
+        3,
+        0.175,
+        0.175
+      ],
+      [
+        1.28,
+        0.48,
+        0.24,
+        3,
+        0.2,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23051.png",
+    "preview": "image/light_cone_preview/23051.png",
+    "portrait": "image/light_cone_portrait/23051.png",
+    "imageOffset": [
+      16,
+      -117,
+      1.14
     ]
   },
   "This Love, Forever": {

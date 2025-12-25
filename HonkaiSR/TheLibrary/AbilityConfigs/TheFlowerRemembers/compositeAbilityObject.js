@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "TheFlowerRemembers_Ability21057"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.24
+    },
+    "2": {
+      "CritDamageBase": 0.28
+    },
+    "3": {
+      "CritDamageBase": 0.32
+    },
+    "4": {
+      "CritDamageBase": 0.36
+    },
+    "5": {
+      "CritDamageBase": 0.4
+    }
+  },
   "abilityObject": {
     "TheFlowerRemembers_Ability21057": {
       "fileName": "TheFlowerRemembers_Ability21057",

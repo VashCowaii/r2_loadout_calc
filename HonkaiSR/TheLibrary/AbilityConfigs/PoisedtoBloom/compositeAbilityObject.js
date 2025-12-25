@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "PoisedtoBloom_Ability21046"
   ],
+  "fixedStats": {
+    "1": {
+      "ATK%": 0.16
+    },
+    "2": {
+      "ATK%": 0.2
+    },
+    "3": {
+      "ATK%": 0.24
+    },
+    "4": {
+      "ATK%": 0.28
+    },
+    "5": {
+      "ATK%": 0.32
+    }
+  },
   "abilityObject": {
     "PoisedtoBloom_Ability21046": {
       "fileName": "PoisedtoBloom_Ability21046",

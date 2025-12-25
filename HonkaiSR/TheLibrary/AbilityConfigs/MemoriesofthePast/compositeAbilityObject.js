@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "MemoriesofthePast_Ability21004"
   ],
+  "fixedStats": {
+    "1": {
+      "DamageBreak": 0.28
+    },
+    "2": {
+      "DamageBreak": 0.35
+    },
+    "3": {
+      "DamageBreak": 0.42
+    },
+    "4": {
+      "DamageBreak": 0.49
+    },
+    "5": {
+      "DamageBreak": 0.56
+    }
+  },
   "abilityObject": {
     "MemoriesofthePast_Ability21004": {
       "fileName": "MemoriesofthePast_Ability21004",

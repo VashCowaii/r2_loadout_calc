@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "DreamvilleAdventure_Ability21036"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "DreamvilleAdventure_Ability21036": {
       "fileName": "DreamvilleAdventure_Ability21036",

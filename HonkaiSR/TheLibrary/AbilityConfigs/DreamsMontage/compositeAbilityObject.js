@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "DreamsMontage_Ability21048"
   ],
+  "fixedStats": {
+    "1": {
+      "SPD%": 0.08
+    },
+    "2": {
+      "SPD%": 0.09
+    },
+    "3": {
+      "SPD%": 0.1
+    },
+    "4": {
+      "SPD%": 0.11
+    },
+    "5": {
+      "SPD%": 0.12
+    }
+  },
   "abilityObject": {
     "DreamsMontage_Ability21048": {
       "fileName": "DreamsMontage_Ability21048",

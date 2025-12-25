@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "BaptismofPureThought_Ability23020"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.2
+    },
+    "2": {
+      "CritDamageBase": 0.23
+    },
+    "3": {
+      "CritDamageBase": 0.26
+    },
+    "4": {
+      "CritDamageBase": 0.29
+    },
+    "5": {
+      "CritDamageBase": 0.32
+    }
+  },
   "abilityObject": {
     "BaptismofPureThought_Ability23020": {
       "fileName": "BaptismofPureThought_Ability23020",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "ConcertforTwo_Ability21043"
   ],
+  "fixedStats": {
+    "1": {
+      "DEF%": 0.16
+    },
+    "2": {
+      "DEF%": 0.2
+    },
+    "3": {
+      "DEF%": 0.24
+    },
+    "4": {
+      "DEF%": 0.28
+    },
+    "5": {
+      "DEF%": 0.32
+    }
+  },
   "abilityObject": {
     "ConcertforTwo_Ability21043": {
       "fileName": "ConcertforTwo_Ability21043",

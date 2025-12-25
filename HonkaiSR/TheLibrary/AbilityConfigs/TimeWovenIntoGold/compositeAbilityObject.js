@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "TimeWovenIntoGold_Ability23036"
   ],
+  "fixedStats": {
+    "1": {
+      "SPDBase": 12
+    },
+    "2": {
+      "SPDBase": 14
+    },
+    "3": {
+      "SPDBase": 16
+    },
+    "4": {
+      "SPDBase": 18
+    },
+    "5": {
+      "SPDBase": 20
+    }
+  },
   "abilityObject": {
     "TimeWovenIntoGold_Ability23036": {
       "fileName": "TimeWovenIntoGold_Ability23036",

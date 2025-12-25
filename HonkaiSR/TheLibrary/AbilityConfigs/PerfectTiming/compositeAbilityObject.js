@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "PerfectTiming_Ability21014"
   ],
+  "fixedStats": {
+    "1": {
+      "EffectRES": 0.16
+    },
+    "2": {
+      "EffectRES": 0.2
+    },
+    "3": {
+      "EffectRES": 0.24
+    },
+    "4": {
+      "EffectRES": 0.28
+    },
+    "5": {
+      "EffectRES": 0.32
+    }
+  },
   "abilityObject": {
     "PerfectTiming_Ability21014": {
       "fileName": "PerfectTiming_Ability21014",

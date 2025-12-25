@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "DanceDanceDance_Ability21018"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "DanceDanceDance_Ability21018": {
       "fileName": "DanceDanceDance_Ability21018",

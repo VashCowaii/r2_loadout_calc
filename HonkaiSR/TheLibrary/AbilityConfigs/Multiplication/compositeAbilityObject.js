@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Multiplication_Ability20015"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Multiplication_Ability20015": {
       "fileName": "Multiplication_Ability20015",

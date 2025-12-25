@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "PastandFuture_Ability21025"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "PastandFuture_Ability21025": {
       "fileName": "PastandFuture_Ability21025",

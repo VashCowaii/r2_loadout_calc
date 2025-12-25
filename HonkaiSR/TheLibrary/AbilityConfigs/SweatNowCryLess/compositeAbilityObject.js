@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "SweatNowCryLess_Ability21052"
   ],
+  "fixedStats": {
+    "1": {
+      "CritRateBase": 0.12
+    },
+    "2": {
+      "CritRateBase": 0.14
+    },
+    "3": {
+      "CritRateBase": 0.16
+    },
+    "4": {
+      "CritRateBase": 0.18
+    },
+    "5": {
+      "CritRateBase": 0.2
+    }
+  },
   "abilityObject": {
     "SweatNowCryLess_Ability21052": {
       "fileName": "SweatNowCryLess_Ability21052",

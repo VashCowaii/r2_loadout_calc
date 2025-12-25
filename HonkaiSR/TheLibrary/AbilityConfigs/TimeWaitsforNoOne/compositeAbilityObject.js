@@ -4,6 +4,28 @@ const compositeAbilityObject = {
   "abilityList": [
     "TimeWaitsforNoOne_Ability23013"
   ],
+  "fixedStats": {
+    "1": {
+      "HP%": 0.18,
+      "HealingOutgoing": 0.12
+    },
+    "2": {
+      "HP%": 0.21,
+      "HealingOutgoing": 0.14
+    },
+    "3": {
+      "HP%": 0.24,
+      "HealingOutgoing": 0.16
+    },
+    "4": {
+      "HP%": 0.27,
+      "HealingOutgoing": 0.18
+    },
+    "5": {
+      "HP%": 0.3,
+      "HealingOutgoing": 0.2
+    }
+  },
   "abilityObject": {
     "TimeWaitsforNoOne_Ability23013": {
       "fileName": "TimeWaitsforNoOne_Ability23013",

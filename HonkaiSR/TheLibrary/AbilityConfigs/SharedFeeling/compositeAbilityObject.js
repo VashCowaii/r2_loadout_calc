@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "SharedFeeling_Ability21007"
   ],
+  "fixedStats": {
+    "1": {
+      "HealingOutgoing": 0.1
+    },
+    "2": {
+      "HealingOutgoing": 0.125
+    },
+    "3": {
+      "HealingOutgoing": 0.15
+    },
+    "4": {
+      "HealingOutgoing": 0.175
+    },
+    "5": {
+      "HealingOutgoing": 0.2
+    }
+  },
   "abilityObject": {
     "SharedFeeling_Ability21007": {
       "fileName": "SharedFeeling_Ability21007",

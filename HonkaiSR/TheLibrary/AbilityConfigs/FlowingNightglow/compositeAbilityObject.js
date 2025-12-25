@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "FlowingNightglow_Ability23026"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "FlowingNightglow_Ability23026": {
       "fileName": "FlowingNightglow_Ability23026",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "ButtheBattleIsntOver_Ability23003"
   ],
+  "fixedStats": {
+    "1": {
+      "EnergyRegenRate": 0.1
+    },
+    "2": {
+      "EnergyRegenRate": 0.12
+    },
+    "3": {
+      "EnergyRegenRate": 0.14
+    },
+    "4": {
+      "EnergyRegenRate": 0.16
+    },
+    "5": {
+      "EnergyRegenRate": 0.18
+    }
+  },
   "abilityObject": {
     "ButtheBattleIsntOver_Ability23003": {
       "fileName": "ButtheBattleIsntOver_Ability23003",

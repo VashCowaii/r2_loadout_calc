@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Cornucopia_Ability20001"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Cornucopia_Ability20001": {
       "fileName": "Cornucopia_Ability20001",
