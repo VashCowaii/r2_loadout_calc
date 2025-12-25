@@ -3002,6 +3002,7 @@ const megaParsingFuckery = {
             "whenEnteringRange",
             "whenLeavingRange",
             "whenValueChanges",
+            "includeMaxValueInRange",
             // "AdditionConfig",
             // "DynamicValues",
             // "stackType",
@@ -3050,6 +3051,10 @@ const megaParsingFuckery = {
                 ${parseRef.maxValue != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Upper Limit:</div>&nbsp;
                     ${parseRef.maxValue.displayLines ?? parseRef.maxValue}
+                </div>` : ""}
+                ${parseRef.includeMaxValueInRange != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Include Max Value:</div>&nbsp;
+                    ${parseRef.includeMaxValueInRange}
                 </div>` : ""}
             </div>
 
