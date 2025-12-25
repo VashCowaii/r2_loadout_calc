@@ -25,6 +25,8 @@
     "AllDamageTypeTakenRatio": "Vulnerability",
     "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
 
+    "DamageValue": "DMG%Total",
+
     "Shield": "ShieldValue",
     "ShieldAddedRatio": "Shield%",
 
@@ -81,6 +83,8 @@
     "DefenceBase": "DEFBase",
     "DefenceAddedRatio": "DEF%",
     "DefenceDelta": "DEFFlat",
+    "Defence": "DEFSUM",
+    "DefenceConvert": "DEFConverted",
 
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",

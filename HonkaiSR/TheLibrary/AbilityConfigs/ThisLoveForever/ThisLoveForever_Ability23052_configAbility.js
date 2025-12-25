@@ -106,7 +106,7 @@ const configAbility = {
       "for": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]",
       "execute": [
         {
-          "eventTrigger": "When Modifier is Added",
+          "eventTrigger": "When Modifier is Added [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -172,7 +172,7 @@ const configAbility = {
       "for": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]",
       "execute": [
         {
-          "eventTrigger": "When Modifier is Added",
+          "eventTrigger": "When Modifier is Added [Owner]",
           "execute": [
             {
               "name": "IF",

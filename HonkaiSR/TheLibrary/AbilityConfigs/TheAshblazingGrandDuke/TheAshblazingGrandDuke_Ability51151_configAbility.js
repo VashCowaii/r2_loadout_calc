@@ -236,8 +236,8 @@ const configAbility = {
   "isLightcone": true,
   "isRelic": true,
   "desc": [
-    "Increases the DMG dealt by Follow-up ATK by 20%.",
-    "When the wearer uses a Follow-up ATK, increases the wearer's ATK by 6% for every time the Follow-up ATK deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a Follow-up ATK."
+    "Increases the DMG dealt by Follow-Up ATK by 20%.",
+    "When the wearer uses a Follow-Up ATK, increases the wearer's ATK by 6% for every time the Follow-Up ATK deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a Follow-Up ATK."
   ],
   "params": [
     [

@@ -130,7 +130,7 @@ const compositeAbilityObject = {
       "isLightcone": true,
       "isRelic": true,
       "desc": [
-        "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the DMG dealt by the wearer's Ultimate and Follow-up ATK increases by 15%."
+        "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the DMG dealt by the wearer's Ultimate and Follow-Up ATK increases by 15%."
       ],
       "params": [
         [

@@ -1257,6 +1257,7 @@ const megaParsingFuckery = {
         const knownKeySet = new Set ([
             "name",
             "flagName",
+            "target",
             "invertCondition"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Has Flag");
@@ -1264,7 +1265,7 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">Has Modifier Flag:</div>&nbsp;
-            ${parseRef.flagName} ${parseRef.invertCondition ? "(Inverted) " : ""}
+            ${parseRef.flagName} ${parseRef.invertCondition ? "(Inverted) " : ""} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
     "Update Action Bar Display"(parseRef,initialCounter) {

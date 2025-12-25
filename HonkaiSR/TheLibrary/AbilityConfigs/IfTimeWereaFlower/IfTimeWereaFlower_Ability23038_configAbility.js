@@ -228,7 +228,7 @@ const configAbility = {
     }
   ],
   "isLightcone": true,
-  "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
+  "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer launches Follow-Up ATK, additionally regenerates #2[i] Energy and gains \"Presage,\" lasting for #3[i] turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by #4[i]%. When entering battle, the wearer regenerates #5[i] Energy and gains \"Presage,\" lasting for #6[i] turn(s).",
   "params": [
     [
       0.36,
