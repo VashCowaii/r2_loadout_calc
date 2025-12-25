@@ -822,11 +822,11 @@ const configAbility = {
                   "target": "Caster",
                   "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": {
-                    "operator": "Variables[0] ([Undetermined Global Hash]) || Variables[1] (Saber_00_EntityStockSPForShow) || RETURN",
-                    "displayLines": "Saber_00_EntityStockSPForShow",
+                    "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
                     "constants": [],
                     "variables": [
-                      "[Undetermined Global Hash]",
+                      "WHOLE",
                       "Saber_00_EntityStockSPForShow"
                     ]
                   }

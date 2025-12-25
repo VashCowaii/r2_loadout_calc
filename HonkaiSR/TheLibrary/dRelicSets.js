@@ -1340,5 +1340,85 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Revelry by the Sea": {
+    "name": "Revelry by the Sea",
+    "setID": 322,
+    "desc": [
+      "Increases the wearer's ATK by 12%. When the wearer's ATK is higher than or equal to 2400/3600, increases the DoT DMG dealt by 12%/24% respectively."
+    ],
+    "icon": "icon/relic/322.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        2400,
+        3600,
+        0.12,
+        0.24
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Amphoreus, The Eternal Land": {
+    "name": "Amphoreus, The Eternal Land",
+    "setID": 323,
+    "desc": [
+      "Increases the wearer's CRIT Rate by 8%. While the wearer's memosprite is on the field, increases all allies' SPD by 8%. This effect cannot be stacked."
+    ],
+    "icon": "icon/relic/323.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08,
+        0.08
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Tengoku@Livestream": {
+    "name": "Tengoku@Livestream",
+    "setID": 324,
+    "desc": [
+      "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases the wearer's CRIT DMG by 32%, lasting for 3 turns."
+    ],
+    "icon": "icon/relic/324.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16,
+        3,
+        0.32,
+        3
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }
