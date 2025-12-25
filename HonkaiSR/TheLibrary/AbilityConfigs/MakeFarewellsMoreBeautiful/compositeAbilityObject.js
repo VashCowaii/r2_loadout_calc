@@ -31,8 +31,8 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (LC_23040_PropertyValue) || RETURN",
-                    "displayLines": "LC_23040_PropertyValue",
+                    "operator": "Variables[0] (LC_23040_PropertyValue) || INVERT || RETURN",
+                    "displayLines": "-LC_23040_PropertyValue",
                     "constants": [],
                     "variables": [
                       "LC_23040_PropertyValue"
@@ -60,8 +60,8 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
-                    "displayLines": "MDF_DefenceAddedRatio",
+                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || INVERT || RETURN",
+                    "displayLines": "-MDF_DefenceAddedRatio",
                     "constants": [],
                     "variables": [
                       "MDF_DefenceAddedRatio"
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                       "name": "Action Advance/Delay",
                       "target": "Owner of this Modifier",
                       "advanceType": "Advance",
-                      "value": "0.12"
+                      "value": "-0.12"
                     },
                     {
                       "name": "Define Custom Variable",

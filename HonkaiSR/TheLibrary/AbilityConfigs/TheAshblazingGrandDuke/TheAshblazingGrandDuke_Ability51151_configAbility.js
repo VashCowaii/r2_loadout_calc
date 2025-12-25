@@ -208,8 +208,8 @@ const configAbility = {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (Old_Layer) || Variables[1] (0.06) || MUL || RETURN",
-                        "displayLines": "(Old_Layer * 0.06)",
+                        "operator": "Variables[0] (Old_Layer) || INVERT || Variables[1] (0.06) || MUL || RETURN",
+                        "displayLines": "(-Old_Layer * 0.06)",
                         "constants": [],
                         "variables": [
                           "Old_Layer",

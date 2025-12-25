@@ -49,8 +49,8 @@ const compositeAbilityObject = {
                           "on": "Defender",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue1) || Variables[1] (MDF_PropertyValue2) || SUB || RETURN",
-                            "displayLines": "(MDF_PropertyValue1 - MDF_PropertyValue2)",
+                            "operator": "Variables[0] (MDF_PropertyValue1) || INVERT || Variables[1] (MDF_PropertyValue2) || SUB || RETURN",
+                            "displayLines": "(-MDF_PropertyValue1 - MDF_PropertyValue2)",
                             "constants": [],
                             "variables": [
                               "MDF_PropertyValue1",
@@ -65,8 +65,8 @@ const compositeAbilityObject = {
                           "on": "Defender",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                           "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue1) || RETURN",
-                            "displayLines": "MDF_PropertyValue1",
+                            "operator": "Variables[0] (MDF_PropertyValue1) || INVERT || RETURN",
+                            "displayLines": "-MDF_PropertyValue1",
                             "constants": [],
                             "variables": [
                               "MDF_PropertyValue1"

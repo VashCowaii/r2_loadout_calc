@@ -30,8 +30,8 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
+                    "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                    "displayLines": "-0.1",
                     "constants": [],
                     "variables": [
                       0.1
@@ -51,8 +51,8 @@ const compositeAbilityObject = {
                       "on": "Defender",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
+                        "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                        "displayLines": "-0.1",
                         "constants": [],
                         "variables": [
                           0.1

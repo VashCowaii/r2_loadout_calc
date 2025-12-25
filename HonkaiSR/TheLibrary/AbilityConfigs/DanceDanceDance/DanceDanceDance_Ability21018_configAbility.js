@@ -29,7 +29,7 @@ const configAbility = {
                   "name": "Action Advance/Delay",
                   "target": "Allied Team",
                   "advanceType": "Advance",
-                  "value": "0.16"
+                  "value": "-0.16"
                 }
               ]
             }
@@ -48,8 +48,8 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (0.16) || RETURN",
-            "displayLines": "0.16",
+            "operator": "Variables[0] (0.16) || INVERT || RETURN",
+            "displayLines": "-0.16",
             "constants": [],
             "variables": [
               0.16

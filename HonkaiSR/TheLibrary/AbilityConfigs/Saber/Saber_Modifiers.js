@@ -217,8 +217,8 @@ const configAbility = {
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || INVERT || RETURN",
+                "displayLines": "-(MDF_PropertyValue * MDF_Layer)",
                 "constants": [],
                 "variables": [
                   "MDF_PropertyValue",

@@ -48,7 +48,7 @@ const configAbility = {
                       "name": "Action Advance/Delay",
                       "target": "Owner of this Modifier",
                       "advanceType": "Advance",
-                      "value": "0.4"
+                      "value": "-0.4"
                     }
                   ]
                 }
