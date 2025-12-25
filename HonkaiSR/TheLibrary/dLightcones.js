@@ -1,4 +1,45 @@
 let lightcones = {
+  "Cornucopia": {
+    "lightconeID": 20001,
+    "name": "Cornucopia",
+    "path": "Abundance",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 264.6,
+      "DEFBase": 264.6,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Prosperity",
+    "desc": "When the wearer uses their Skill or Ultimate, their Outgoing Healing increases by #1[i]%.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.15
+      ],
+      [
+        0.18
+      ],
+      [
+        0.21
+      ],
+      [
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20001.png",
+    "preview": "image/light_cone_preview/20001.png",
+    "portrait": "image/light_cone_portrait/20001.png",
+    "imageOffset": [
+      0,
+      -92,
+      1.15
+    ]
+  },
   "Chorus": {
     "lightconeID": 20005,
     "name": "Chorus",
@@ -40,6 +81,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Fine Fruit": {
+    "lightconeID": 20008,
+    "name": "Fine Fruit",
+    "path": "Abundance",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 198.45,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Savor",
+    "desc": "At the start of the battle, immediately regenerates #1[i] Energy for all allies.",
+    "params": [
+      [
+        6
+      ],
+      [
+        7.5
+      ],
+      [
+        9
+      ],
+      [
+        10.5
+      ],
+      [
+        12
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20008.png",
+    "preview": "image/light_cone_preview/20008.png",
+    "portrait": "image/light_cone_portrait/20008.png",
+    "imageOffset": [
+      0,
+      -4,
+      1.15
+    ]
+  },
   "Meshing Cogs": {
     "lightconeID": 20012,
     "name": "Meshing Cogs",
@@ -78,6 +160,47 @@ let lightcones = {
     "imageOffset": [
       0,
       0,
+      1.15
+    ]
+  },
+  "Multiplication": {
+    "lightconeID": 20015,
+    "name": "Multiplication",
+    "path": "Abundance",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 198.45,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Denizens of Abundance",
+    "desc": "After the wearer uses their Basic ATK, their next action will be Advanced Forward by #1[i]%.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.14
+      ],
+      [
+        0.16
+      ],
+      [
+        0.18
+      ],
+      [
+        0.2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20015.png",
+    "preview": "image/light_cone_preview/20015.png",
+    "portrait": "image/light_cone_portrait/20015.png",
+    "imageOffset": [
+      0,
+      -20,
       1.15
     ]
   },
@@ -124,6 +247,70 @@ let lightcones = {
     "imageOffset": [
       0,
       20,
+      1.15
+    ]
+  },
+  "Post-Op Conversation": {
+    "lightconeID": 21000,
+    "name": "Post-Op Conversation",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "EnergyRegenRate": 0.08
+      },
+      "2": {
+        "EnergyRegenRate": 0.1
+      },
+      "3": {
+        "EnergyRegenRate": 0.12
+      },
+      "4": {
+        "EnergyRegenRate": 0.14
+      },
+      "5": {
+        "EnergyRegenRate": 0.16
+      }
+    },
+    "skillName": "Mutual Healing",
+    "desc": "Increases the wearer's Energy Regeneration Rate by #1[i]% and increases Outgoing Healing when they use their Ultimate by #2[i]%.",
+    "params": [
+      [
+        0.08,
+        0.12
+      ],
+      [
+        0.1,
+        0.15
+      ],
+      [
+        0.12,
+        0.18
+      ],
+      [
+        0.14,
+        0.21
+      ],
+      [
+        0.16,
+        0.24
+      ]
+    ],
+    "statRef": [
+      "SPRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21000.png",
+    "preview": "image/light_cone_preview/21000.png",
+    "portrait": "image/light_cone_portrait/21000.png",
+    "imageOffset": [
+      0,
+      -128,
       1.15
     ]
   },
@@ -232,6 +419,75 @@ let lightcones = {
       1.15
     ]
   },
+  "Perfect Timing": {
+    "lightconeID": 21014,
+    "name": "Perfect Timing",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectRES": 0.16
+      },
+      "2": {
+        "EffectRES": 0.2
+      },
+      "3": {
+        "EffectRES": 0.24
+      },
+      "4": {
+        "EffectRES": 0.28
+      },
+      "5": {
+        "EffectRES": 0.32
+      }
+    },
+    "skillName": "Refraction of Sightline",
+    "desc": "Increases the wearer's Effect RES by #1[i]% and increases Outgoing Healing by an amount that is equal to #2[i]% of Effect RES. Outgoing Healing can be increased this way by up to #3[i]%.",
+    "params": [
+      [
+        0.16,
+        0.33,
+        0.15
+      ],
+      [
+        0.2,
+        0.36,
+        0.18
+      ],
+      [
+        0.24,
+        0.39,
+        0.21
+      ],
+      [
+        0.28,
+        0.42,
+        0.24
+      ],
+      [
+        0.32,
+        0.45,
+        0.27
+      ]
+    ],
+    "statRef": [
+      "StatusResistanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21014.png",
+    "preview": "image/light_cone_preview/21014.png",
+    "portrait": "image/light_cone_portrait/21014.png",
+    "imageOffset": [
+      -69,
+      -188,
+      1.5
+    ]
+  },
   "Dance! Dance! Dance!": {
     "lightconeID": 21018,
     "name": "Dance! Dance! Dance!",
@@ -271,6 +527,116 @@ let lightcones = {
       0,
       -75,
       1
+    ]
+  },
+  "Quid Pro Quo": {
+    "lightconeID": 21021,
+    "name": "Quid Pro Quo",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Enjoy With Rapture",
+    "desc": "At the start of the wearer's turn, regenerates #2[i] Energy for a randomly chosen ally (excluding the wearer) whose current Energy is lower than #1[i]%.",
+    "params": [
+      [
+        0.5,
+        8
+      ],
+      [
+        0.5,
+        10
+      ],
+      [
+        0.5,
+        12
+      ],
+      [
+        0.5,
+        14
+      ],
+      [
+        0.5,
+        16
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21021.png",
+    "preview": "image/light_cone_preview/21021.png",
+    "portrait": "image/light_cone_portrait/21021.png",
+    "imageOffset": [
+      0,
+      -78,
+      1.01
+    ]
+  },
+  "Warmth Shortens Cold Nights": {
+    "lightconeID": 21028,
+    "name": "Warmth Shortens Cold Nights",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.16
+      },
+      "2": {
+        "HP%": 0.2
+      },
+      "3": {
+        "HP%": 0.24
+      },
+      "4": {
+        "HP%": 0.28
+      },
+      "5": {
+        "HP%": 0.32
+      }
+    },
+    "skillName": "Tiny Light",
+    "desc": "Increases the wearer's Max HP by #1[i]%. When using Basic ATK or Skill, restores all allies' HP by an amount equal to #2[f1]% of their respective Max HP.",
+    "params": [
+      [
+        0.16,
+        0.02
+      ],
+      [
+        0.2,
+        0.025
+      ],
+      [
+        0.24,
+        0.03
+      ],
+      [
+        0.28,
+        0.035
+      ],
+      [
+        0.32,
+        0.04
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21028.png",
+    "preview": "image/light_cone_preview/21028.png",
+    "portrait": "image/light_cone_portrait/21028.png",
+    "imageOffset": [
+      0,
+      -64,
+      1.15
     ]
   },
   "Carve the Moon, Weave the Clouds": {
@@ -393,6 +759,155 @@ let lightcones = {
       1.15
     ]
   },
+  "Echoes of the Coffin": {
+    "lightconeID": 23008,
+    "name": "Echoes of the Coffin",
+    "path": "Abundance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.24
+      },
+      "2": {
+        "ATK%": 0.28
+      },
+      "3": {
+        "ATK%": 0.32
+      },
+      "4": {
+        "ATK%": 0.36
+      },
+      "5": {
+        "ATK%": 0.4
+      }
+    },
+    "skillName": "Thorns",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses an attack, for each different enemy target the wearer hits, regenerates #3[f1] Energy. Each attack can regenerate Energy up to #4[i] time(s) this way. After the wearer uses their Ultimate, all allies gain #2[i] SPD for 1 turn.",
+    "params": [
+      [
+        0.24,
+        12,
+        3,
+        3
+      ],
+      [
+        0.28,
+        14,
+        3.5,
+        3
+      ],
+      [
+        0.32,
+        16,
+        4,
+        3
+      ],
+      [
+        0.36,
+        18,
+        4.5,
+        3
+      ],
+      [
+        0.4,
+        20,
+        5,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23008.png",
+    "preview": "image/light_cone_preview/23008.png",
+    "portrait": "image/light_cone_portrait/23008.png",
+    "imageOffset": [
+      0,
+      -120,
+      1.15
+    ]
+  },
+  "Time Waits for No One": {
+    "lightconeID": 23013,
+    "name": "Time Waits for No One",
+    "path": "Abundance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.18,
+        "HealingOutgoing": 0.12
+      },
+      "2": {
+        "HP%": 0.21,
+        "HealingOutgoing": 0.14
+      },
+      "3": {
+        "HP%": 0.24,
+        "HealingOutgoing": 0.16
+      },
+      "4": {
+        "HP%": 0.27,
+        "HealingOutgoing": 0.18
+      },
+      "5": {
+        "HP%": 0.3,
+        "HealingOutgoing": 0.2
+      }
+    },
+    "skillName": "Morn, Noon, Dusk, and Night",
+    "desc": "Increases the wearer's Max HP by #1[i]% and Outgoing Healing by #2[i]%. When the wearer heals allies, record the amount of Outgoing Healing. When any ally launches an attack, a random attacked enemy takes Additional DMG equal to #3[i]% of the recorded Outgoing Healing value. The type of this Additional DMG is of the same Type as the wearer's. This Additional DMG is not affected by other buffs, and can only occur 1 time per turn.",
+    "params": [
+      [
+        0.18,
+        0.12,
+        0.36
+      ],
+      [
+        0.21,
+        0.14,
+        0.42
+      ],
+      [
+        0.24,
+        0.16,
+        0.48
+      ],
+      [
+        0.27,
+        0.18,
+        0.54
+      ],
+      [
+        0.3,
+        0.2,
+        0.6
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio",
+      "HealRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23013.png",
+    "preview": "image/light_cone_preview/23013.png",
+    "portrait": "image/light_cone_portrait/23013.png",
+    "imageOffset": [
+      0,
+      -115,
+      1.15
+    ]
+  },
   "Past and Future": {
     "lightconeID": 21025,
     "name": "Past and Future",
@@ -437,6 +952,85 @@ let lightcones = {
       46,
       -200,
       1.41
+    ]
+  },
+  "Night of Fright": {
+    "lightconeID": 23017,
+    "name": "Night of Fright",
+    "path": "Abundance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 529.2,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "EnergyRegenRate": 0.12
+      },
+      "2": {
+        "EnergyRegenRate": 0.14
+      },
+      "3": {
+        "EnergyRegenRate": 0.16
+      },
+      "4": {
+        "EnergyRegenRate": 0.18
+      },
+      "5": {
+        "EnergyRegenRate": 0.2
+      }
+    },
+    "skillName": "Deep, Deep Breaths",
+    "desc": "Increases the wearer's Energy Regeneration Rate by #1[i]%. When any ally uses their Ultimate, the wearer restores HP for the ally currently with the lowest HP percentage by an amount equal to #2[i]% of the healed ally's Max HP. When the wearer provides healing for an ally, increases the healed ally's ATK by #3[f1]%. This effect can stack up to #4[i] times and lasts for #5[i] turn(s).",
+    "params": [
+      [
+        0.12,
+        0.1,
+        0.024,
+        5,
+        2
+      ],
+      [
+        0.14,
+        0.11,
+        0.027999999,
+        5,
+        2
+      ],
+      [
+        0.16,
+        0.12,
+        0.032,
+        5,
+        2
+      ],
+      [
+        0.18,
+        0.13,
+        0.036,
+        5,
+        2
+      ],
+      [
+        0.2,
+        0.14,
+        0.04,
+        5,
+        2
+      ]
+    ],
+    "statRef": [
+      "SPRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23017.png",
+    "preview": "image/light_cone_preview/23017.png",
+    "portrait": "image/light_cone_portrait/23017.png",
+    "imageOffset": [
+      -12,
+      -88,
+      1.1
     ]
   },
   "Past Self in Mirror": {
@@ -686,6 +1280,75 @@ let lightcones = {
       1.02
     ]
   },
+  "What Is Real?": {
+    "lightconeID": 21035,
+    "name": "What Is Real?",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.24
+      },
+      "2": {
+        "DamageBreak": 0.3
+      },
+      "3": {
+        "DamageBreak": 0.36
+      },
+      "4": {
+        "DamageBreak": 0.42
+      },
+      "5": {
+        "DamageBreak": 0.48
+      }
+    },
+    "skillName": "Hypothesis",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. After using Basic ATK, restores HP for the wearer by an amount equal to #2[f1]% of Max HP plus #3[i].",
+    "params": [
+      [
+        0.24,
+        0.02,
+        800
+      ],
+      [
+        0.3,
+        0.025,
+        800
+      ],
+      [
+        0.36,
+        0.03,
+        800
+      ],
+      [
+        0.42,
+        0.035,
+        800
+      ],
+      [
+        0.48,
+        0.04,
+        800
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21035.png",
+    "preview": "image/light_cone_preview/21035.png",
+    "portrait": "image/light_cone_portrait/21035.png",
+    "imageOffset": [
+      0,
+      11,
+      1.05
+    ]
+  },
   "Dreamville Adventure": {
     "lightconeID": 21036,
     "name": "Dreamville Adventure",
@@ -725,6 +1388,139 @@ let lightcones = {
       0,
       63,
       1.02
+    ]
+  },
+  "Shared Feeling": {
+    "lightconeID": 21007,
+    "name": "Shared Feeling",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "HealingOutgoing": 0.1
+      },
+      "2": {
+        "HealingOutgoing": 0.125
+      },
+      "3": {
+        "HealingOutgoing": 0.15
+      },
+      "4": {
+        "HealingOutgoing": 0.175
+      },
+      "5": {
+        "HealingOutgoing": 0.2
+      }
+    },
+    "skillName": "Cure and Repair",
+    "desc": "Increases the wearer's Outgoing Healing by #1[i]%. When using Skill, regenerates #2[f1] Energy for all allies.",
+    "params": [
+      [
+        0.1,
+        2
+      ],
+      [
+        0.125,
+        2.5
+      ],
+      [
+        0.15,
+        3
+      ],
+      [
+        0.175,
+        3.5
+      ],
+      [
+        0.2,
+        4
+      ]
+    ],
+    "statRef": [
+      "HealRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21007.png",
+    "preview": "image/light_cone_preview/21007.png",
+    "portrait": "image/light_cone_portrait/21007.png",
+    "imageOffset": [
+      0,
+      -62,
+      1.15
+    ]
+  },
+  "Hey, Over Here": {
+    "lightconeID": 22001,
+    "name": "Hey, Over Here",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.08
+      },
+      "2": {
+        "HP%": 0.09
+      },
+      "3": {
+        "HP%": 0.1
+      },
+      "4": {
+        "HP%": 0.11
+      },
+      "5": {
+        "HP%": 0.12
+      }
+    },
+    "skillName": "I'm Not Afraid!",
+    "desc": "Increases the wearer's Max HP by #1[i]%. When the wearer uses their Skill, increases Outgoing Healing by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.08,
+        0.16,
+        2
+      ],
+      [
+        0.09,
+        0.19,
+        2
+      ],
+      [
+        0.1,
+        0.22,
+        2
+      ],
+      [
+        0.11,
+        0.25,
+        2
+      ],
+      [
+        0.12,
+        0.28,
+        2
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22001.png",
+    "preview": "image/light_cone_preview/22001.png",
+    "portrait": "image/light_cone_portrait/22001.png",
+    "imageOffset": [
+      0,
+      -47,
+      1.1
     ]
   },
   "Poised to Bloom": {
@@ -789,6 +1585,75 @@ let lightcones = {
       8,
       -126,
       1.15
+    ]
+  },
+  "Dream's Montage": {
+    "lightconeID": 21048,
+    "name": "Dream's Montage",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.08
+      },
+      "2": {
+        "SPD%": 0.09
+      },
+      "3": {
+        "SPD%": 0.1
+      },
+      "4": {
+        "SPD%": 0.11
+      },
+      "5": {
+        "SPD%": 0.12
+      }
+    },
+    "skillName": "Academy-Style Edit",
+    "desc": "Increases the wearer's SPD by #1[i]%. After attacking enemy targets that are Weakness Broken, regenerates #2[f1] Energy. This effect can trigger up to #3[i] time(s) per turn.",
+    "params": [
+      [
+        0.08,
+        3,
+        2
+      ],
+      [
+        0.09,
+        3.5,
+        2
+      ],
+      [
+        0.1,
+        4,
+        2
+      ],
+      [
+        0.11,
+        4.5,
+        2
+      ],
+      [
+        0.12,
+        5,
+        2
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21048.png",
+    "preview": "image/light_cone_preview/21048.png",
+    "portrait": "image/light_cone_portrait/21048.png",
+    "imageOffset": [
+      0,
+      -25,
+      1.05
     ]
   },
   "For Tomorrow's Journey": {
@@ -919,6 +1784,85 @@ let lightcones = {
       0,
       -78,
       1
+    ]
+  },
+  "Scent Alone Stays True": {
+    "lightconeID": 23032,
+    "name": "Scent Alone Stays True",
+    "path": "Abundance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 529.2,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Contentment",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. After the wearer uses Ultimate to attack enemy targets, inflicts the targets with the \"Woefree\" state, lasting for #5[i] turn(s). While in \"Woefree,\" enemy targets take #2[i]% increased DMG. The effect of increasing DMG taken is additionally boosted by #4[i]% if the wearer's current Break Effect is #3[i]% or higher.",
+    "params": [
+      [
+        0.6,
+        0.1,
+        1.5,
+        0.08,
+        2
+      ],
+      [
+        0.7,
+        0.12,
+        1.5,
+        0.1,
+        2
+      ],
+      [
+        0.8,
+        0.14,
+        1.5,
+        0.12,
+        2
+      ],
+      [
+        0.9,
+        0.16,
+        1.5,
+        0.14,
+        2
+      ],
+      [
+        1,
+        0.18,
+        1.5,
+        0.16,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23032.png",
+    "preview": "image/light_cone_preview/23032.png",
+    "portrait": "image/light_cone_portrait/23032.png",
+    "imageOffset": [
+      -33,
+      -121,
+      1.23
     ]
   },
   "A Grounded Ascent": {
@@ -1728,6 +2672,75 @@ let lightcones = {
       14,
       -102,
       1.2
+    ]
+  },
+  "Unto Tomorrow's Morrow": {
+    "lightconeID": 21055,
+    "name": "Unto Tomorrow's Morrow",
+    "path": "Abundance",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "HealingOutgoing": 0.12
+      },
+      "2": {
+        "HealingOutgoing": 0.15
+      },
+      "3": {
+        "HealingOutgoing": 0.18
+      },
+      "4": {
+        "HealingOutgoing": 0.21
+      },
+      "5": {
+        "HealingOutgoing": 0.24
+      }
+    },
+    "skillName": "Farewell",
+    "desc": "Increases the wearer's Outgoing Healing by #1[i]%. When an ally target's current HP percentage is greater than or equal to #2[i]%, increases the DMG dealt by #3[i]%.",
+    "params": [
+      [
+        0.12,
+        0.5,
+        0.12
+      ],
+      [
+        0.15,
+        0.5,
+        0.14
+      ],
+      [
+        0.18,
+        0.5,
+        0.16
+      ],
+      [
+        0.21,
+        0.5,
+        0.18
+      ],
+      [
+        0.24,
+        0.5,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "HealRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21055.png",
+    "preview": "image/light_cone_preview/21055.png",
+    "portrait": "image/light_cone_portrait/21055.png",
+    "imageOffset": [
+      2,
+      -92,
+      1.02
     ]
   },
   "In Pursuit of the Wind": {

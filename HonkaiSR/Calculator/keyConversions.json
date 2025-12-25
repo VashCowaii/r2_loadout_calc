@@ -48,10 +48,10 @@
     "CriticalDamageBase": "CritDamageBase",
 
     "HealRatioBase": "HealingOutgoing",
-    "HealRatio": "HealingOutgoingUNUSED",
+    "HealRatio": "HealingOutgoingSUM",
     "HealTakenRatio": "HealingIncoming",
 
-    "HealRatioConvert": "HealingOutgoingConversionAmount",
+    "HealRatioConvert": "HealingOutgoingConverted",
     
     "BaseSpeed": "SPDBase",
     "SpeedBase": "SPDBase",
@@ -74,6 +74,7 @@
     "HPAddedRatio": "HP%",
     "MaxHP": "HPMax",
     "CurrentHP": "HPCurrent",
+    "HPRatio": "HPCurrent%",
 
     "BaseDefence": "DEFBase",
     "DefenceBase": "DEFBase",
