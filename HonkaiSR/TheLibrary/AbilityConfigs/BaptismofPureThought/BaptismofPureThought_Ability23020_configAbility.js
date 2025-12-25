@@ -36,7 +36,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",
@@ -52,8 +52,8 @@ const configAbility = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
+                    "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
+                    "displayLines": "-MDF_PropertyValue2",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue2"
@@ -96,7 +96,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Define Custom Variable with Status Counter",

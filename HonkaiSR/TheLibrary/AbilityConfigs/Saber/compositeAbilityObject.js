@@ -1042,11 +1042,11 @@ const compositeAbilityObject = {
                       "target": "Caster",
                       "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                       "value": {
-                        "operator": "Variables[0] ([Undetermined Global Hash]) || Variables[1] (Saber_00_EntityStockSPForShow) || RETURN",
-                        "displayLines": "Saber_00_EntityStockSPForShow",
+                        "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
                         "constants": [],
                         "variables": [
-                          "[Undetermined Global Hash]",
+                          "WHOLE",
                           "Saber_00_EntityStockSPForShow"
                         ]
                       }
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
           "for": "Saber_Eidolon1",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -1634,7 +1634,7 @@ const compositeAbilityObject = {
           "for": "Saber_Eidolon6",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -3207,15 +3207,15 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Adjust Target Stats",
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || INVERT || RETURN",
+                    "displayLines": "-(MDF_PropertyValue * MDF_Layer)",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue",

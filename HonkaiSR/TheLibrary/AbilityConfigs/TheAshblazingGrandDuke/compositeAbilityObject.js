@@ -63,7 +63,7 @@ const compositeAbilityObject = {
           "for": "Relic_115_Main",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -216,8 +216,8 @@ const compositeAbilityObject = {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                           "value": {
-                            "operator": "Variables[0] (Old_Layer) || Variables[1] (0.06) || MUL || RETURN",
-                            "displayLines": "(Old_Layer * 0.06)",
+                            "operator": "Variables[0] (Old_Layer) || INVERT || Variables[1] (0.06) || MUL || RETURN",
+                            "displayLines": "(-Old_Layer * 0.06)",
                             "constants": [],
                             "variables": [
                               "Old_Layer",
@@ -276,7 +276,7 @@ const compositeAbilityObject = {
           "for": "Relic_115_Main2",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",

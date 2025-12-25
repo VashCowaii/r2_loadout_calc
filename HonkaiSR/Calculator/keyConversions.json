@@ -38,9 +38,9 @@
     "AllDamageTypeAddedRatio": "DamageAll",
 
     "StatusProbabilityBase": "EffectHitRate",
-    "StatusProbability": "EffectHitRateUNUSED",
+    "StatusProbability": "EffectHitRateSUM",
     "StatusResistanceBase": "EffectRES",
-    "StatusResistance": "EffectRESUNUSED",
+    "StatusResistance": "EffectRESSUM",
 
     "CriticalChance": "CritRateBase",
     "CriticalChanceBase": "CritRateBase",

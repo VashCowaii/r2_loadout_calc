@@ -16,15 +16,15 @@ const configAbility = {
       "for": "Relic_108_Main",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Adjust Target Stats",
               "on": "Defender",
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (0.1) || RETURN",
-                "displayLines": "0.1",
+                "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                "displayLines": "-0.1",
                 "constants": [],
                 "variables": [
                   0.1
@@ -44,8 +44,8 @@ const configAbility = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (0.1) || RETURN",
-                    "displayLines": "0.1",
+                    "operator": "Variables[0] (0.1) || INVERT || RETURN",
+                    "displayLines": "-0.1",
                     "constants": [],
                     "variables": [
                       0.1

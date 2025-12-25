@@ -121,6 +121,8 @@ const megaParsingFuckery = {
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
         let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+        let referenceGlobalFunctionString = configAbility.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
+        
         
 
         // "fileName": "Saber_Skill02",
@@ -249,7 +251,7 @@ const megaParsingFuckery = {
 
                 
                 <div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">2pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[0],relicSetRef.desc[0])}</div>
-                ${relicSetRef.params.length > 1 ? `<div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
+                ${relicSetRef.params[1].length > 1 ? `<div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
                 
                 ` 
                 : `<div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`}
@@ -297,8 +299,16 @@ const megaParsingFuckery = {
                 </summary>
                 ${referenceGlobalString}
             </details>` : ""}
+            ${referenceGlobalFunctionString ? `<details class="rotationsPermaConditionsExpand" open="">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">GLOBAL FUNCTIONS</div>
+                </summary>
+                ${referenceGlobalFunctionString}
+            </details>` : ""}
         </div>
         `;
+
+        
 
         bodyBox.innerHTML = mainAbilityString;
 
@@ -2360,7 +2370,7 @@ const megaParsingFuckery = {
         const hasParse = parseRef.execute?.length;
         const hasRef = parseRef.variableValueChange?.length;
         const hasAbilityChange = parseRef.abilityValueChange?.length;
-        const hasFunctions = parseRef.abilityValueChange?.length;
+        const hasFunctions = parseRef.modifierFunctions?.length;
         const hasSubMods = parseRef.subModList?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}

@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "Relic_116_DamageUp_Dot",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Define Custom Variable with Flag Count",
@@ -66,8 +66,8 @@ const compositeAbilityObject = {
                   "on": "Defender",
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_DotCount) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * _DotCount)",
+                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || Variables[1] (_DotCount) || MUL || RETURN",
+                    "displayLines": "(-MDF_PropertyValue * _DotCount)",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue",

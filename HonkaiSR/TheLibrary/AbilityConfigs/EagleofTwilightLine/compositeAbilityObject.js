@@ -36,7 +36,7 @@ const compositeAbilityObject = {
                       "name": "Action Advance/Delay",
                       "target": "Owner of this Modifier",
                       "advanceType": "Advance",
-                      "value": "0.25"
+                      "value": "-0.25"
                     }
                   ]
                 }
@@ -55,8 +55,8 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (0.25) || RETURN",
-                "displayLines": "0.25",
+                "operator": "Variables[0] (0.25) || INVERT || RETURN",
+                "displayLines": "-0.25",
                 "constants": [],
                 "variables": [
                   0.25
