@@ -3395,7 +3395,7 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Override Effect Advance/Delay",
+                          "name": "Assign Advance/Delay to Current Ability Use",
                           "adjustmentValue": 0,
                           "adjustmentType": "="
                         }

@@ -554,6 +554,7 @@ div {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     text-align: left;
     box-sizing: border-box;
