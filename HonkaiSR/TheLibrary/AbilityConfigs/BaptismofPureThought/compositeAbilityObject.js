@@ -43,7 +43,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Define Custom Variable with Status Counter",

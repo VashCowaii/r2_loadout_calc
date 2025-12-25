@@ -20,7 +20,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier"
         },
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",
@@ -115,7 +115,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",

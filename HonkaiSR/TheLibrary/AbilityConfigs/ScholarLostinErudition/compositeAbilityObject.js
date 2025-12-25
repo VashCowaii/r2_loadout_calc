@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "Relic_122_Sub[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
@@ -96,7 +96,7 @@ const compositeAbilityObject = {
           "for": "Relic_122_Main",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",

@@ -57,7 +57,7 @@ const compositeAbilityObject = {
           "for": "Relic_107_Main",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",

@@ -797,5 +797,548 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Space Sealing Station": {
+    "name": "Space Sealing Station",
+    "setID": 301,
+    "desc": [
+      "Increases the wearer's ATK by 12%. When the wearer's SPD reaches 120 or higher, the wearer's ATK increases by an extra 12%."
+    ],
+    "icon": "icon/relic/301.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        120,
+        0.12
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Fleet of the Ageless": {
+    "name": "Fleet of the Ageless",
+    "setID": 302,
+    "desc": [
+      "Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%."
+    ],
+    "icon": "icon/relic/302.png",
+    "fixedStats": {
+      "2": {
+        "HP%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        120,
+        0.08
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Pan-Cosmic Commercial Enterprise": {
+    "name": "Pan-Cosmic Commercial Enterprise",
+    "setID": 303,
+    "desc": [
+      "Increases the wearer's Effect Hit Rate by 10%. Meanwhile, the wearer's ATK increases by an amount that is equal to 25% of the current Effect Hit Rate, up to a maximum increase of 25%."
+    ],
+    "icon": "icon/relic/303.png",
+    "fixedStats": {
+      "2": {
+        "EffectHitRate": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1,
+        0.25,
+        0.25
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Belobog of the Architects": {
+    "name": "Belobog of the Architects",
+    "setID": 304,
+    "desc": [
+      "Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF."
+    ],
+    "icon": "icon/relic/304.png",
+    "fixedStats": {
+      "2": {
+        "DEF%": 0.15
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.15,
+        0.5,
+        0.15
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Celestial Differentiator": {
+    "name": "Celestial Differentiator",
+    "setID": 305,
+    "desc": [
+      "Increases the wearer's CRIT DMG by 16%. When the wearer's current CRIT DMG reaches 120% or higher, after entering battle, the wearer's CRIT Rate increases by 60% until the end of their first attack."
+    ],
+    "icon": "icon/relic/305.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16,
+        1.2,
+        0.6
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Inert Salsotto": {
+    "name": "Inert Salsotto",
+    "setID": 306,
+    "desc": [
+      "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the DMG dealt by the wearer's Ultimate and Follow-up ATK increases by 15%."
+    ],
+    "icon": "icon/relic/306.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08,
+        0.5,
+        0.15
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Talia: Kingdom of Banditry": {
+    "name": "Talia: Kingdom of Banditry",
+    "setID": 307,
+    "desc": [
+      "Increases the wearer's Break Effect by 16%. When the wearer's SPD reaches 145 or higher, the wearer's Break Effect increases by an extra 20%."
+    ],
+    "icon": "icon/relic/307.png",
+    "fixedStats": {
+      "2": {
+        "DamageBreak": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16,
+        145,
+        0.2
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Sprightly Vonwacq": {
+    "name": "Sprightly Vonwacq",
+    "setID": 308,
+    "desc": [
+      "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle."
+    ],
+    "icon": "icon/relic/308.png",
+    "fixedStats": {
+      "2": {
+        "EnergyRegenRate": 0.05
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.05,
+        120,
+        0.4
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Rutilant Arena": {
+    "name": "Rutilant Arena",
+    "setID": 309,
+    "desc": [
+      "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, DMG dealt by Basic ATK and Skill increases by 20%."
+    ],
+    "icon": "icon/relic/309.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08,
+        0.7,
+        0.2
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Broken Keel": {
+    "name": "Broken Keel",
+    "setID": 310,
+    "desc": [
+      "Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%."
+    ],
+    "icon": "icon/relic/310.png",
+    "fixedStats": {
+      "2": {
+        "EffectRES": 0.1
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.1,
+        0.3,
+        0.1
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Firmament Frontline: Glamoth": {
+    "name": "Firmament Frontline: Glamoth",
+    "setID": 311,
+    "desc": [
+      "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG."
+    ],
+    "icon": "icon/relic/311.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        135,
+        160,
+        0.12,
+        0.18
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Penacony, Land of the Dreams": {
+    "name": "Penacony, Land of the Dreams",
+    "setID": 312,
+    "desc": [
+      "Increases wearer's Energy Regeneration Rate by 5%. Increases DMG by 10% for all other allies that are of the same Type as the wearer."
+    ],
+    "icon": "icon/relic/312.png",
+    "fixedStats": {
+      "2": {
+        "EnergyRegenRate": 0.05
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.05,
+        0.1
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Sigonia, the Unclaimed Desolation": {
+    "name": "Sigonia, the Unclaimed Desolation",
+    "setID": 313,
+    "desc": [
+      "Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s)."
+    ],
+    "icon": "icon/relic/313.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.04
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.04,
+        10,
+        0.04
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Izumo Gensei and Takama Divine Realm": {
+    "name": "Izumo Gensei and Takama Divine Realm",
+    "setID": 314,
+    "desc": [
+      "Increases the wearer's ATK by 12%. When entering battle, if at least one teammate follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%."
+    ],
+    "icon": "icon/relic/314.png",
+    "fixedStats": {
+      "2": {
+        "ATK%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        0.12
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Duran, Dynasty of Running Wolves": {
+    "name": "Duran, Dynasty of Running Wolves",
+    "setID": 315,
+    "desc": [
+      "When an ally uses a Follow-up ATK, the wearer gains 1 stack of Merit, stacking up to 5 time(s). Each stack of Merit increases the DMG dealt by the wearer's Follow-up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%."
+    ],
+    "icon": "icon/relic/315.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        5,
+        0.05,
+        0.25
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Forge of the Kalpagni Lantern": {
+    "name": "Forge of the Kalpagni Lantern",
+    "setID": 316,
+    "desc": [
+      "Increases the wearer's SPD by 6%. When the wearer hits an enemy target that has Fire Weakness, the wearer's Break Effect increases by 40%, lasting for 1 turn(s)."
+    ],
+    "icon": "icon/relic/316.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06,
+        0.4,
+        1
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Lushaka, the Sunken Seas": {
+    "name": "Lushaka, the Sunken Seas",
+    "setID": 317,
+    "desc": [
+      "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%."
+    ],
+    "icon": "icon/relic/317.png",
+    "fixedStats": {
+      "2": {
+        "EnergyRegenRate": 0.05
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.05,
+        0.12
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "The Wondrous BananAmusement Park": {
+    "name": "The Wondrous BananAmusement Park",
+    "setID": 318,
+    "desc": [
+      "Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%."
+    ],
+    "icon": "icon/relic/318.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16,
+        0.32
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Bone Collection's Serene Demesne": {
+    "name": "Bone Collection's Serene Demesne",
+    "setID": 319,
+    "desc": [
+      "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%."
+    ],
+    "icon": "icon/relic/319.png",
+    "fixedStats": {
+      "2": {
+        "HP%": 0.12
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.12,
+        5000,
+        0.28
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Giant Tree of Rapt Brooding": {
+    "name": "Giant Tree of Rapt Brooding",
+    "setID": 320,
+    "desc": [
+      "Increases the wearer's SPD by 6%. When the wearer's SPD is 135/180 or higher, the wearer and their memosprite's Outgoing Healing increases by 12%/20%."
+    ],
+    "icon": "icon/relic/320.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06,
+        135,
+        180,
+        0.12,
+        0.2
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Arcadia of Woven Dreams": {
+    "name": "Arcadia of Woven Dreams",
+    "setID": 321,
+    "desc": [
+      "When the number of ally targets on the field is not equal to 4, for every 1 additional/missing ally target, increases the DMG dealt by the wearer and their memosprite by 9%/12%, stacking up to 4/3 time(s)."
+    ],
+    "icon": "icon/relic/321.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        0.09,
+        0.12,
+        4,
+        3
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

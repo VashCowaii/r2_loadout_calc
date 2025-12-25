@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "for": "Relic_116_DamageUp_Dot",
           "execute": [
             {
-              "eventTrigger": "Deal Damage [Owner]: Any",
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Define Custom Variable with Flag Count",

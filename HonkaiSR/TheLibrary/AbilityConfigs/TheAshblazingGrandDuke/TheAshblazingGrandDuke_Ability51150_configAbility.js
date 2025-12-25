@@ -16,7 +16,7 @@ const configAbility = {
       "for": "Relic_115_Main2",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",

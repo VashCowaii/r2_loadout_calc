@@ -16,7 +16,7 @@ const configAbility = {
       "for": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",
@@ -55,7 +55,7 @@ const configAbility = {
       "for": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",
@@ -94,7 +94,7 @@ const configAbility = {
       "for": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]",
       "execute": [
         {
-          "eventTrigger": "Deal Damage [Owner]: Any",
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "IF",
