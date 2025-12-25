@@ -40,6 +40,75 @@ let lightcones = {
       1.15
     ]
   },
+  "Amber": {
+    "lightconeID": 20003,
+    "name": "Amber",
+    "path": "Preservation",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 264.6,
+      "DEFBase": 330.75,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.16
+      },
+      "2": {
+        "DEF%": 0.2
+      },
+      "3": {
+        "DEF%": 0.24
+      },
+      "4": {
+        "DEF%": 0.28
+      },
+      "5": {
+        "DEF%": 0.32
+      }
+    },
+    "skillName": "Stasis",
+    "desc": "Increases the wearer's DEF by #1[i]%. If the wearer's current HP percentage is lower than #2[i]%, increases their DEF by a further #3[i]%.",
+    "params": [
+      [
+        0.16,
+        0.5,
+        0.16
+      ],
+      [
+        0.2,
+        0.5,
+        0.2
+      ],
+      [
+        0.24,
+        0.5,
+        0.24
+      ],
+      [
+        0.28,
+        0.5,
+        0.28
+      ],
+      [
+        0.32,
+        0.5,
+        0.32
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20003.png",
+    "preview": "image/light_cone_preview/20003.png",
+    "portrait": "image/light_cone_portrait/20003.png",
+    "imageOffset": [
+      0,
+      20,
+      1.15
+    ]
+  },
   "Chorus": {
     "lightconeID": 20005,
     "name": "Chorus",
@@ -122,6 +191,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Defense": {
+    "lightconeID": 20010,
+    "name": "Defense",
+    "path": "Preservation",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 264.6,
+      "DEFBase": 264.6,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Revitalization",
+    "desc": "When the wearer unleashes their Ultimate, they restore HP by #1[i]% of their Max HP.",
+    "params": [
+      [
+        0.18
+      ],
+      [
+        0.21
+      ],
+      [
+        0.24
+      ],
+      [
+        0.27
+      ],
+      [
+        0.3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20010.png",
+    "preview": "image/light_cone_preview/20010.png",
+    "portrait": "image/light_cone_portrait/20010.png",
+    "imageOffset": [
+      0,
+      90,
+      1.15
+    ]
+  },
   "Meshing Cogs": {
     "lightconeID": 20012,
     "name": "Meshing Cogs",
@@ -201,6 +311,47 @@ let lightcones = {
     "imageOffset": [
       0,
       -20,
+      1.15
+    ]
+  },
+  "Pioneering": {
+    "lightconeID": 20017,
+    "name": "Pioneering",
+    "path": "Preservation",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 264.6,
+      "DEFBase": 264.6,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "IPC",
+    "desc": "When the wearer Breaks an enemy's Weakness, the wearer restores HP by #1[i]% of their Max HP.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.14
+      ],
+      [
+        0.16
+      ],
+      [
+        0.18
+      ],
+      [
+        0.2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20017.png",
+    "preview": "image/light_cone_preview/20017.png",
+    "portrait": "image/light_cone_portrait/20017.png",
+    "imageOffset": [
+      0,
+      85,
       1.15
     ]
   },
@@ -2603,6 +2754,52 @@ let lightcones = {
       3,
       -68,
       1.03
+    ]
+  },
+  "Journey, Forever Peaceful": {
+    "lightconeID": 21053,
+    "name": "Journey, Forever Peaceful",
+    "path": "Preservation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 529.2,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Sweet Dream",
+    "desc": "Increases the wearer's provided Shield Effect by #1[i]%. When an ally target has a Shield, the DMG dealt increases by #2[i]%.",
+    "params": [
+      [
+        0.12,
+        0.12
+      ],
+      [
+        0.15,
+        0.14
+      ],
+      [
+        0.18,
+        0.16
+      ],
+      [
+        0.21,
+        0.18
+      ],
+      [
+        0.24,
+        0.2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21053.png",
+    "preview": "image/light_cone_preview/21053.png",
+    "portrait": "image/light_cone_portrait/21053.png",
+    "imageOffset": [
+      2,
+      -57,
+      1.05
     ]
   },
   "The Story's Next Page": {

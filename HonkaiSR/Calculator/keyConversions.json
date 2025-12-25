@@ -25,6 +25,7 @@
     "AllDamageTypeTakenRatio": "Vulnerability",
     "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
 
+    "Shield": "ShieldValue",
     "ShieldAddedRatio": "Shield%",
 
     "PhysicalAddedRatio": "DamagePhysical",
