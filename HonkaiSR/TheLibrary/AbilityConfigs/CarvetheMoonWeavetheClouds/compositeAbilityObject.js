@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "CarvetheMoonWeavetheClouds_Ability21032"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "CarvetheMoonWeavetheClouds_Ability21032": {
       "fileName": "CarvetheMoonWeavetheClouds_Ability21032",

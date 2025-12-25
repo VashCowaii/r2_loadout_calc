@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "GeniusesGreetings_Ability21051"
   ],
+  "fixedStats": {
+    "1": {
+      "ATK%": 0.16
+    },
+    "2": {
+      "ATK%": 0.2
+    },
+    "3": {
+      "ATK%": 0.24
+    },
+    "4": {
+      "ATK%": 0.28
+    },
+    "5": {
+      "ATK%": 0.32
+    }
+  },
   "abilityObject": {
     "GeniusesGreetings_Ability21051": {
       "fileName": "GeniusesGreetings_Ability21051",

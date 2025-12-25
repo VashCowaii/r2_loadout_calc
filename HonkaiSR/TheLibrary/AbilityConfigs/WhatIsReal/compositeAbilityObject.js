@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "WhatIsReal_Ability21035"
   ],
+  "fixedStats": {
+    "1": {
+      "DamageBreak": 0.24
+    },
+    "2": {
+      "DamageBreak": 0.3
+    },
+    "3": {
+      "DamageBreak": 0.36
+    },
+    "4": {
+      "DamageBreak": 0.42
+    },
+    "5": {
+      "DamageBreak": 0.48
+    }
+  },
   "abilityObject": {
     "WhatIsReal_Ability21035": {
       "fileName": "WhatIsReal_Ability21035",

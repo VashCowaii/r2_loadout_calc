@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Chorus_Ability20005"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Chorus_Ability20005": {
       "fileName": "Chorus_Ability20005",

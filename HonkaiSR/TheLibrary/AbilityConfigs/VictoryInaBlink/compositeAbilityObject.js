@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "VictoryInaBlink_Ability21050"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.12
+    },
+    "2": {
+      "CritDamageBase": 0.15
+    },
+    "3": {
+      "CritDamageBase": 0.18
+    },
+    "4": {
+      "CritDamageBase": 0.21
+    },
+    "5": {
+      "CritDamageBase": 0.24
+    }
+  },
   "abilityObject": {
     "VictoryInaBlink_Ability21050": {
       "fileName": "VictoryInaBlink_Ability21050",

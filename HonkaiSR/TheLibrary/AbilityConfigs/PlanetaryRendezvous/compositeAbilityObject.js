@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "PlanetaryRendezvous_Ability21011"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "PlanetaryRendezvous_Ability21011": {
       "fileName": "PlanetaryRendezvous_Ability21011",

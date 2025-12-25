@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "LongMayRainbowsAdorntheSky_Ability23042"
   ],
+  "fixedStats": {
+    "1": {
+      "SPD%": 0.18
+    },
+    "2": {
+      "SPD%": 0.21
+    },
+    "3": {
+      "SPD%": 0.24
+    },
+    "4": {
+      "SPD%": 0.27
+    },
+    "5": {
+      "SPD%": 0.3
+    }
+  },
   "abilityObject": {
     "LongMayRainbowsAdorntheSky_Ability23042": {
       "fileName": "LongMayRainbowsAdorntheSky_Ability23042",
@@ -217,11 +234,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_LoseHP",
                       "value": {
-                        "operator": "Variables[0] (_CurrentHP) || Variables[1] (_RealRatio) || MUL || RETURN",
-                        "displayLines": "(_CurrentHP * _RealRatio)",
+                        "operator": "Variables[0] (_MaxHP) || Variables[1] (_RealRatio) || MUL || RETURN",
+                        "displayLines": "(_MaxHP * _RealRatio)",
                         "constants": [],
                         "variables": [
-                          "_CurrentHP",
+                          "_MaxHP",
                           "_RealRatio"
                         ]
                       }
@@ -230,11 +247,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_LoseHPTotal",
                       "value": {
-                        "operator": "Variables[0] (_MaxHP) || Variables[1] (_LoseHP) || ADD || RETURN",
-                        "displayLines": "(_MaxHP + _LoseHP)",
+                        "operator": "Variables[0] (_CurrentHP) || Variables[1] (_LoseHP) || ADD || RETURN",
+                        "displayLines": "(_CurrentHP + _LoseHP)",
                         "constants": [],
                         "variables": [
-                          "_MaxHP",
+                          "_CurrentHP",
                           "_LoseHP"
                         ]
                       }

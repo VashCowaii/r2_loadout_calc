@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "IfTimeWereaFlower_Ability23038"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.36
+    },
+    "2": {
+      "CritDamageBase": 0.42
+    },
+    "3": {
+      "CritDamageBase": 0.48
+    },
+    "4": {
+      "CritDamageBase": 0.54
+    },
+    "5": {
+      "CritDamageBase": 0.6
+    }
+  },
   "abilityObject": {
     "IfTimeWereaFlower_Ability23038": {
       "fileName": "IfTimeWereaFlower_Ability23038",

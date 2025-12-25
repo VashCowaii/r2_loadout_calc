@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "ScentAloneStaysTrue_Ability23032"
   ],
+  "fixedStats": {
+    "1": {
+      "DamageBreak": 0.6
+    },
+    "2": {
+      "DamageBreak": 0.7
+    },
+    "3": {
+      "DamageBreak": 0.8
+    },
+    "4": {
+      "DamageBreak": 0.9
+    },
+    "5": {
+      "DamageBreak": 1
+    }
+  },
   "abilityObject": {
     "ScentAloneStaysTrue_Ability23032": {
       "fileName": "ScentAloneStaysTrue_Ability23032",

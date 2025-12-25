@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "JourneyForeverPeaceful_Ability21053"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "JourneyForeverPeaceful_Ability21053": {
       "fileName": "JourneyForeverPeaceful_Ability21053",

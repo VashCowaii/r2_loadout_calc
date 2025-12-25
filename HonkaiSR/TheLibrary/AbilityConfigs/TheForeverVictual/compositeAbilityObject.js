@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "TheForeverVictual_Ability22005"
   ],
+  "fixedStats": {
+    "1": {
+      "ATK%": 0.16
+    },
+    "2": {
+      "ATK%": 0.2
+    },
+    "3": {
+      "ATK%": 0.24
+    },
+    "4": {
+      "ATK%": 0.28
+    },
+    "5": {
+      "ATK%": 0.32
+    }
+  },
   "abilityObject": {
     "TheForeverVictual_Ability22005": {
       "fileName": "TheForeverVictual_Ability22005",

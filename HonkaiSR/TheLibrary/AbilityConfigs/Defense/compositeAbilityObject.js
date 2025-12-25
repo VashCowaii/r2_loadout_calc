@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "Defense_Ability20010"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "Defense_Ability20010": {
       "fileName": "Defense_Ability20010",

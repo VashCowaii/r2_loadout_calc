@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "MemorysCurtainNeverFalls_Ability24005"
   ],
+  "fixedStats": {
+    "1": {
+      "SPD%": 0.06
+    },
+    "2": {
+      "SPD%": 0.075
+    },
+    "3": {
+      "SPD%": 0.09
+    },
+    "4": {
+      "SPD%": 0.105
+    },
+    "5": {
+      "SPD%": 0.12
+    }
+  },
   "abilityObject": {
     "MemorysCurtainNeverFalls_Ability24005": {
       "fileName": "MemorysCurtainNeverFalls_Ability24005",

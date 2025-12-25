@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "TheStorysNextPage_Ability21054"
   ],
+  "fixedStats": {
+    "1": {
+      "HP%": 0.16
+    },
+    "2": {
+      "HP%": 0.2
+    },
+    "3": {
+      "HP%": 0.24
+    },
+    "4": {
+      "HP%": 0.28
+    },
+    "5": {
+      "HP%": 0.32
+    }
+  },
   "abilityObject": {
     "TheStorysNextPage_Ability21054": {
       "fileName": "TheStorysNextPage_Ability21054",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "PastSelfinMirror_Ability23019"
   ],
+  "fixedStats": {
+    "1": {
+      "DamageBreak": 0.6
+    },
+    "2": {
+      "DamageBreak": 0.7
+    },
+    "3": {
+      "DamageBreak": 0.8
+    },
+    "4": {
+      "DamageBreak": 0.9
+    },
+    "5": {
+      "DamageBreak": 1
+    }
+  },
   "abilityObject": {
     "PastSelfinMirror_Ability23019": {
       "fileName": "PastSelfinMirror_Ability23019",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "NightofFright_Ability23017"
   ],
+  "fixedStats": {
+    "1": {
+      "EnergyRegenRate": 0.12
+    },
+    "2": {
+      "EnergyRegenRate": 0.14
+    },
+    "3": {
+      "EnergyRegenRate": 0.16
+    },
+    "4": {
+      "EnergyRegenRate": 0.18
+    },
+    "5": {
+      "EnergyRegenRate": 0.2
+    }
+  },
   "abilityObject": {
     "NightofFright_Ability23017": {
       "fileName": "NightofFright_Ability23017",

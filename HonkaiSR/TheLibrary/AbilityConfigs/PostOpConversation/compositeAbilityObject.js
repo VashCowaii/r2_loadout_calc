@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "PostOpConversation_Ability21000"
   ],
+  "fixedStats": {
+    "1": {
+      "EnergyRegenRate": 0.08
+    },
+    "2": {
+      "EnergyRegenRate": 0.1
+    },
+    "3": {
+      "EnergyRegenRate": 0.12
+    },
+    "4": {
+      "EnergyRegenRate": 0.14
+    },
+    "5": {
+      "EnergyRegenRate": 0.16
+    }
+  },
   "abilityObject": {
     "PostOpConversation_Ability21000": {
       "fileName": "PostOpConversation_Ability21000",

@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "AThanklessCoronation_Ability23045"
   ],
+  "fixedStats": {
+    "1": {
+      "CritDamageBase": 0.36
+    },
+    "2": {
+      "CritDamageBase": 0.45
+    },
+    "3": {
+      "CritDamageBase": 0.54
+    },
+    "4": {
+      "CritDamageBase": 0.63
+    },
+    "5": {
+      "CritDamageBase": 0.72
+    }
+  },
   "abilityObject": {
     "AThanklessCoronation_Ability23045": {
       "fileName": "AThanklessCoronation_Ability23045",

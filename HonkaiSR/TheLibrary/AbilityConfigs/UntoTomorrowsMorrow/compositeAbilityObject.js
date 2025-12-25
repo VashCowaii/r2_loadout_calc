@@ -4,6 +4,23 @@ const compositeAbilityObject = {
   "abilityList": [
     "UntoTomorrowsMorrow_Ability21055"
   ],
+  "fixedStats": {
+    "1": {
+      "HealingOutgoing": 0.12
+    },
+    "2": {
+      "HealingOutgoing": 0.15
+    },
+    "3": {
+      "HealingOutgoing": 0.18
+    },
+    "4": {
+      "HealingOutgoing": 0.21
+    },
+    "5": {
+      "HealingOutgoing": 0.24
+    }
+  },
   "abilityObject": {
     "UntoTomorrowsMorrow_Ability21055": {
       "fileName": "UntoTomorrowsMorrow_Ability21055",

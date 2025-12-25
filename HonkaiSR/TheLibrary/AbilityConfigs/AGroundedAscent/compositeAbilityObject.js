@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "AGroundedAscent_Ability23034"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "AGroundedAscent_Ability23034": {
       "fileName": "AGroundedAscent_Ability23034",

@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "MeshingCogs_Ability20012"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "MeshingCogs_Ability20012": {
       "fileName": "MeshingCogs_Ability20012",

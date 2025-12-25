@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "QuidProQuo_Ability21021"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "QuidProQuo_Ability21021": {
       "fileName": "QuidProQuo_Ability21021",

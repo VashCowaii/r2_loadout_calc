@@ -4,6 +4,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "FineFruit_Ability20008"
   ],
+  "fixedStats": {},
   "abilityObject": {
     "FineFruit_Ability20008": {
       "fileName": "FineFruit_Ability20008",
