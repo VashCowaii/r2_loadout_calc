@@ -957,7 +957,7 @@ const megaParsingFuckery = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Modifier Values");
         // initialCounter++;
-        return `<div class="actionDetailBody2"> 
+        return `<div class="actionDetailBody2Preview"> 
             <div class="rotationConditionOperatorHeaderInline">Define with Modifier Attribute:</div>&nbsp;
             ${parseRef.variableName} = ${parseRef.valueType} * ${parseRef.multiplier} on ${parseRef.modifierName ? `(${parseRef.modifierName})` : ""}${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
@@ -2196,7 +2196,7 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Remove Events/Bonuses");
 
         // console.log(parseRef.to)
-        return `<div class="actionDetailBody2">
+        return `<div class="actionDetailBody2Preview">
             <div class="rotationConditionOperatorHeaderInline">Remove Event/Bonus:</div>&nbsp;
             ${parseRef.modifier} from ${Array.isArray(parseRef.to) ? megaParsingFuckery.makeConditionTargetBox(parseRef.to,initialCounter) : parseRef.to}
         </div>
