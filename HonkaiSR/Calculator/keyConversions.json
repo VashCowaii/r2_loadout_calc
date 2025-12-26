@@ -86,6 +86,7 @@
     "Defence": "DEFSUM",
     "DefenceConvert": "DEFConverted",
 
+    "AllDamageTypePenetrate": "ResistanceAllPEN",
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",
 

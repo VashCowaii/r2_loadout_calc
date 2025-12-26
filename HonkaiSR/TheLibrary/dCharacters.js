@@ -1,4 +1,537 @@
 let characters = {
+  "Tingyun": {
+    "internalID": 1202,
+    "name": "Tingyun",
+    "path": "Harmony",
+    "element": "Lightning",
+    "rarity": 4,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 846.72,
+      "SPDBase": 112,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "120201",
+        "name": "Windfall of Lucky Springs",
+        "rank": 1,
+        "desc": "After using their Ultimate, the ally with Benediction gains a 20% increase in SPD for 1 turn.",
+        "icon": "icon/skill/1202_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "120202",
+        "name": "Gainfully Gives, Givingly Gains",
+        "rank": 2,
+        "desc": "The ally with Benediction regenerates 5 Energy after defeating an enemy. This effect can only be triggered once per turn.",
+        "icon": "icon/skill/1202_rank2.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "120203",
+        "name": "Halcyon Bequest",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1202_ultimate.png"
+      },
+      {
+        "id": "120204",
+        "name": "Jovial Versatility",
+        "rank": 4,
+        "desc": "The DMG multiplier provided by Benediction increases by 20%.",
+        "icon": "icon/skill/1202_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "120205",
+        "name": "Sauntering Coquette",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1202_skill.png"
+      },
+      {
+        "id": "120206",
+        "name": "Peace Brings Wealth to All",
+        "rank": 6,
+        "desc": "Ultimate regenerates 10 more Energy for the target ally.",
+        "icon": "icon/skill/1202_rank6.png",
+        "paramsEido": [
+          10
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Dislodged": {
+          "variant1": {
+            "skillID": 120201,
+            "trigger": "Skill01",
+            "name": "Dislodged",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Tingyun deals Lightning DMG equal to #1[i]% of her ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Tingyun_Skill01_Camera",
+              "Avatar_TingYun_Skill01_Phase01",
+              "Avatar_TingYun_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Soothing Melody": {
+          "variant1": {
+            "skillID": 120202,
+            "trigger": "Skill02",
+            "name": "Soothing Melody",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Grants a single ally with Benediction to increase their ATK by #2[i]%, up to #4[i]% of Tingyun's current ATK.\\nWhen the ally with Benediction attacks, they will deal Lightning Additional DMG equal to #1[i]% of that ally's ATK for 1 time.\\nBenediction lasts for #3[i] turn(s) and is only effective on the most recent receiver of Tingyun's Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.325,
+                0.40625,
+                3,
+                0.2125
+              ],
+              "8": [
+                0.35,
+                0.4375,
+                3,
+                0.225
+              ],
+              "9": [
+                0.375,
+                0.46875,
+                3,
+                0.2375
+              ],
+              "10": [
+                0.4,
+                0.5,
+                3,
+                0.25
+              ],
+              "11": [
+                0.42,
+                0.525,
+                3,
+                0.26
+              ],
+              "12": [
+                0.44,
+                0.55,
+                3,
+                0.27
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Tingyun_Skill02_Camera_Self",
+              "Avatar_TingYun_Skill02_Phase01",
+              "Avatar_TingYun_Skill02_Phase02",
+              "Avatar_Tingyun_Skill02_Camera_Others"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Amidst the Rejoicing Clouds": {
+          "variant1": {
+            "skillID": 120203,
+            "trigger": "Skill03",
+            "name": "Amidst the Rejoicing Clouds",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Regenerates #1[i] Energy for a single ally and increases the target's DMG by #3[i]% for #2[i] turn(s).",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                50,
+                2,
+                0.3875
+              ],
+              "8": [
+                50,
+                2,
+                0.425
+              ],
+              "9": [
+                50,
+                2,
+                0.4625
+              ],
+              "10": [
+                50,
+                2,
+                0.5
+              ],
+              "11": [
+                50,
+                2,
+                0.53
+              ],
+              "12": [
+                50,
+                2,
+                0.56
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TingYun_Skill03_EnterReady",
+              "Avatar_Tingyun_00_Skill03_Camera",
+              "Avatar_TingYun_Skill03_Phase01",
+              "Avatar_TingYun_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Violet Sparknado": {
+          "variant1": {
+            "skillID": 120204,
+            "trigger": "SkillP01",
+            "name": "Violet Sparknado",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When an enemy is attacked by Tingyun, the ally with Benediction immediately deals Lightning Additional DMG equal to #1[i]% of that ally's ATK to the same enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.4875
+              ],
+              "8": [
+                0.525
+              ],
+              "9": [
+                0.5625
+              ],
+              "10": [
+                0.6
+              ],
+              "11": [
+                0.63
+              ],
+              "12": [
+                0.66
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TingYun_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Gentle Breeze": {
+          "variant1": {
+            "skillID": 120207,
+            "trigger": "SkillMaze",
+            "name": "Gentle Breeze",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "Tingyun immediately regenerates #1[i] Energy upon using her Technique.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                50
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1202_basic_atk.png",
+        "skillRef": {
+          "skillName": "Dislodged",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1202_skill.png",
+        "skillRef": {
+          "skillName": "Soothing Melody",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1202_ultimate.png",
+        "skillRef": {
+          "skillName": "Amidst the Rejoicing Clouds",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1202_talent.png",
+        "skillRef": {
+          "skillName": "Violet Sparknado",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1202_technique.png",
+        "skillRef": {
+          "skillName": "Gentle Breeze",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Nourished Joviality",
+        "icon": "icon/skill/1202_skilltree1.png",
+        "desc": "Tingyun's SPD increases by #1[i]% for 1 turn after using Skill.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Jubilant Passage",
+        "icon": "icon/skill/1202_skilltree3.png",
+        "desc": "Tingyun immediately regenerates #1[i] Energy at the start of her turn.",
+        "params": [
+          5
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point07": {
+        "name": "Knell Subdual",
+        "icon": "icon/skill/1202_skilltree2.png",
+        "desc": "DMG dealt by Basic ATK increases by #1[i]%.",
+        "params": [
+          0.4
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1202.png",
+    "preview": "image/character_preview/1202.png",
+    "portrait": "image/character_portrait/1202.png",
+    "bannerOffsets": [
+      -19,
+      -32,
+      0.58,
+      -19,
+      -32,
+      0.58,
+      -19,
+      -32,
+      0.58
+    ]
+  },
   "Saber": {
     "internalID": 1014,
     "name": "Saber",
