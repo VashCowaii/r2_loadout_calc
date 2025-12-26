@@ -1,4 +1,50 @@
 let lightcones = {
+  "Arrows": {
+    "lightconeID": 20000,
+    "name": "Arrows",
+    "path": "The Hunt",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Crisis",
+    "desc": "At the start of the battle, the wearer's CRIT Rate increases by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.12,
+        3
+      ],
+      [
+        0.15,
+        3
+      ],
+      [
+        0.18,
+        3
+      ],
+      [
+        0.21,
+        3
+      ],
+      [
+        0.24,
+        3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20000.png",
+    "preview": "image/light_cone_preview/20000.png",
+    "portrait": "image/light_cone_portrait/20000.png",
+    "imageOffset": [
+      0,
+      -71,
+      1.15
+    ]
+  },
   "Cornucopia": {
     "lightconeID": 20001,
     "name": "Cornucopia",
@@ -150,6 +196,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Darting Arrow": {
+    "lightconeID": 20007,
+    "name": "Darting Arrow",
+    "path": "The Hunt",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "War Cry",
+    "desc": "When the wearer defeats an enemy, increases ATK by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.24,
+        3
+      ],
+      [
+        0.3,
+        3
+      ],
+      [
+        0.36,
+        3
+      ],
+      [
+        0.42,
+        3
+      ],
+      [
+        0.48,
+        3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20007.png",
+    "preview": "image/light_cone_preview/20007.png",
+    "portrait": "image/light_cone_portrait/20007.png",
+    "imageOffset": [
+      0,
+      190,
+      1.15
+    ]
+  },
   "Fine Fruit": {
     "lightconeID": 20008,
     "name": "Fine Fruit",
@@ -270,6 +362,52 @@ let lightcones = {
     "imageOffset": [
       0,
       0,
+      1.15
+    ]
+  },
+  "Adversarial": {
+    "lightconeID": 20014,
+    "name": "Adversarial",
+    "path": "The Hunt",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Alliance",
+    "desc": "When the wearer defeats an enemy, increases SPD by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.1,
+        2
+      ],
+      [
+        0.12,
+        2
+      ],
+      [
+        0.14,
+        2
+      ],
+      [
+        0.16,
+        2
+      ],
+      [
+        0.18,
+        2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20014.png",
+    "preview": "image/light_cone_preview/20014.png",
+    "portrait": "image/light_cone_portrait/20014.png",
+    "imageOffset": [
+      0,
+      -51,
       1.15
     ]
   },
@@ -529,6 +667,70 @@ let lightcones = {
       1.15
     ]
   },
+  "Only Silence Remains": {
+    "lightconeID": 21003,
+    "name": "Only Silence Remains",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Record",
+    "desc": "Increases the wearer's ATK by #1[i]%. If there are 2 or fewer enemies on the field, increases wearer's CRIT Rate by #2[i]%.",
+    "params": [
+      [
+        0.16,
+        0.12
+      ],
+      [
+        0.2,
+        0.15
+      ],
+      [
+        0.24,
+        0.18
+      ],
+      [
+        0.28,
+        0.21
+      ],
+      [
+        0.32,
+        0.24
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21003.png",
+    "preview": "image/light_cone_preview/21003.png",
+    "portrait": "image/light_cone_portrait/21003.png",
+    "imageOffset": [
+      0,
+      -90,
+      1.15
+    ]
+  },
   "Memories of the Past": {
     "lightconeID": 21004,
     "name": "Memories of the Past",
@@ -633,6 +835,52 @@ let lightcones = {
     "icon": "icon/light_cone/21009.png",
     "preview": "image/light_cone_preview/21009.png",
     "portrait": "image/light_cone_portrait/21009.png",
+    "imageOffset": [
+      0,
+      -139,
+      1.15
+    ]
+  },
+  "Swordplay": {
+    "lightconeID": 21010,
+    "name": "Swordplay",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Answers of Their Own",
+    "desc": "For each time the wearer hits the same target, DMG dealt increases by #1[i]%, stacking up to #2[i] time(s). This effect will be dispelled when the wearer changes targets.",
+    "params": [
+      [
+        0.08,
+        5
+      ],
+      [
+        0.1,
+        5
+      ],
+      [
+        0.12,
+        5
+      ],
+      [
+        0.14,
+        5
+      ],
+      [
+        0.16,
+        5
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21010.png",
+    "preview": "image/light_cone_preview/21010.png",
+    "portrait": "image/light_cone_portrait/21010.png",
     "imageOffset": [
       0,
       -139,
@@ -823,6 +1071,52 @@ let lightcones = {
       1.2
     ]
   },
+  "Subscribe for More!": {
+    "lightconeID": 21017,
+    "name": "Subscribe for More!",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Like Before You Leave!",
+    "desc": "The wearer's Basic ATK and Skill deals #1[i]% more DMG. This effect increases by an extra #2[i]% when the wearer's current Energy reaches its max level.",
+    "params": [
+      [
+        0.24,
+        0.24
+      ],
+      [
+        0.3,
+        0.3
+      ],
+      [
+        0.36,
+        0.36
+      ],
+      [
+        0.42,
+        0.42
+      ],
+      [
+        0.48,
+        0.48
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21017.png",
+    "preview": "image/light_cone_preview/21017.png",
+    "portrait": "image/light_cone_portrait/21017.png",
+    "imageOffset": [
+      0,
+      -151,
+      1.15
+    ]
+  },
   "Dance! Dance! Dance!": {
     "lightconeID": 21018,
     "name": "Dance! Dance! Dance!",
@@ -961,6 +1255,52 @@ let lightcones = {
       1.01
     ]
   },
+  "River Flows in Spring": {
+    "lightconeID": 21024,
+    "name": "River Flows in Spring",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Stave Off the Lingering Cold",
+    "desc": "After entering battle, increases the wearer's SPD by #1[i]% and DMG by #2[i]%. When the wearer takes DMG, this effect will disappear. This effect will resume after the end of the wearer's next turn.",
+    "params": [
+      [
+        0.08,
+        0.12
+      ],
+      [
+        0.09,
+        0.15
+      ],
+      [
+        0.1,
+        0.18
+      ],
+      [
+        0.11,
+        0.21
+      ],
+      [
+        0.12,
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21024.png",
+    "preview": "image/light_cone_preview/21024.png",
+    "portrait": "image/light_cone_portrait/21024.png",
+    "imageOffset": [
+      27,
+      -204,
+      1.5
+    ]
+  },
   "Warmth Shortens Cold Nights": {
     "lightconeID": 21028,
     "name": "Warmth Shortens Cold Nights",
@@ -1089,6 +1429,70 @@ let lightcones = {
       1.15
     ]
   },
+  "Return to Darkness": {
+    "lightconeID": 21031,
+    "name": "Return to Darkness",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.15
+      },
+      "3": {
+        "CritRateBase": 0.18
+      },
+      "4": {
+        "CritRateBase": 0.21
+      },
+      "5": {
+        "CritRateBase": 0.24
+      }
+    },
+    "skillName": "Raging Waves",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. After a CRIT Hit, there is a #2[i]% fixed chance to dispel 1 buff on the target enemy. This effect can only trigger 1 time per attack.",
+    "params": [
+      [
+        0.12,
+        0.16
+      ],
+      [
+        0.15,
+        0.2
+      ],
+      [
+        0.18,
+        0.24
+      ],
+      [
+        0.21,
+        0.28
+      ],
+      [
+        0.24,
+        0.32
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21031.png",
+    "preview": "image/light_cone_preview/21031.png",
+    "portrait": "image/light_cone_portrait/21031.png",
+    "imageOffset": [
+      0,
+      -89,
+      1.01
+    ]
+  },
   "Carve the Moon, Weave the Clouds": {
     "lightconeID": 21032,
     "name": "Carve the Moon, Weave the Clouds",
@@ -1137,6 +1541,85 @@ let lightcones = {
     "imageOffset": [
       0,
       -58,
+      1.15
+    ]
+  },
+  "In the Night": {
+    "lightconeID": 23001,
+    "name": "In the Night",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "Flowers and Butterflies",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. While the wearer is in battle, for every #2[i] SPD that exceeds 100, increases DMG dealt by Basic ATK and Skill by #3[i]%. At the same time, increases the CRIT DMG of Ultimate by #4[i]%. This effect can stack up to #5[i] time(s).",
+    "params": [
+      [
+        0.18,
+        10,
+        0.06,
+        0.12,
+        6
+      ],
+      [
+        0.21,
+        10,
+        0.07,
+        0.14,
+        6
+      ],
+      [
+        0.24,
+        10,
+        0.08,
+        0.16,
+        6
+      ],
+      [
+        0.27,
+        10,
+        0.09,
+        0.18,
+        6
+      ],
+      [
+        0.3,
+        10,
+        0.1,
+        0.2,
+        6
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23001.png",
+    "preview": "image/light_cone_preview/23001.png",
+    "portrait": "image/light_cone_portrait/23001.png",
+    "imageOffset": [
+      0,
+      -133,
       1.15
     ]
   },
@@ -1448,6 +1931,80 @@ let lightcones = {
       1.15
     ]
   },
+  "Sleep Like the Dead": {
+    "lightconeID": 23012,
+    "name": "Sleep Like the Dead",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.3
+      },
+      "2": {
+        "CritDamageBase": 0.35
+      },
+      "3": {
+        "CritDamageBase": 0.4
+      },
+      "4": {
+        "CritDamageBase": 0.45
+      },
+      "5": {
+        "CritDamageBase": 0.5
+      }
+    },
+    "skillName": "Sweet Dreams",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When the wearer's Basic ATK or Skill DMG does not result in a CRIT Hit, increases their CRIT Rate by #2[i]%, lasting for #3[i] turn(s). This effect can only trigger once every #4[i] turn(s).",
+    "params": [
+      [
+        0.3,
+        0.36,
+        1,
+        3
+      ],
+      [
+        0.35,
+        0.42,
+        1,
+        3
+      ],
+      [
+        0.4,
+        0.48,
+        1,
+        3
+      ],
+      [
+        0.45,
+        0.54,
+        1,
+        3
+      ],
+      [
+        0.5,
+        0.6,
+        1,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23012.png",
+    "preview": "image/light_cone_preview/23012.png",
+    "portrait": "image/light_cone_portrait/23012.png",
+    "imageOffset": [
+      0,
+      15,
+      1.15
+    ]
+  },
   "Time Waits for No One": {
     "lightconeID": 23013,
     "name": "Time Waits for No One",
@@ -1520,6 +2077,159 @@ let lightcones = {
     "imageOffset": [
       0,
       -115,
+      1.15
+    ]
+  },
+  "Worrisome, Blissful": {
+    "lightconeID": 23016,
+    "name": "Worrisome, Blissful",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "One At A Time",
+    "desc": "Increase the wearer's CRIT Rate by #1[i]% and increases DMG dealt by Follow-Up ATK by #2[i]%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to #4[i] time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by #3[i]%.",
+    "params": [
+      [
+        0.18,
+        0.3,
+        0.12,
+        2
+      ],
+      [
+        0.21,
+        0.35,
+        0.14,
+        2
+      ],
+      [
+        0.24,
+        0.4,
+        0.16,
+        2
+      ],
+      [
+        0.27,
+        0.45,
+        0.18,
+        2
+      ],
+      [
+        0.3,
+        0.5,
+        0.2,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23016.png",
+    "preview": "image/light_cone_preview/23016.png",
+    "portrait": "image/light_cone_portrait/23016.png",
+    "imageOffset": [
+      14,
+      -210,
+      1.6
+    ]
+  },
+  "Cruising in the Stellar Sea": {
+    "lightconeID": 24001,
+    "name": "Cruising in the Stellar Sea",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.08
+      },
+      "2": {
+        "CritRateBase": 0.1
+      },
+      "3": {
+        "CritRateBase": 0.12
+      },
+      "4": {
+        "CritRateBase": 0.14
+      },
+      "5": {
+        "CritRateBase": 0.16
+      }
+    },
+    "skillName": "Chase",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%, and increases their CRIT Rate against enemies with HP percentage #2[i]% or less by an extra #3[i]%. When the wearer defeats an enemy, their ATK is increased by #4[i]% for #5[i] turn(s).",
+    "params": [
+      [
+        0.08,
+        0.5,
+        0.08,
+        0.2,
+        2
+      ],
+      [
+        0.1,
+        0.5,
+        0.1,
+        0.25,
+        2
+      ],
+      [
+        0.12,
+        0.5,
+        0.12,
+        0.3,
+        2
+      ],
+      [
+        0.14,
+        0.5,
+        0.14,
+        0.35,
+        2
+      ],
+      [
+        0.16,
+        0.5,
+        0.16,
+        0.4,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24001.png",
+    "preview": "image/light_cone_preview/24001.png",
+    "portrait": "image/light_cone_portrait/24001.png",
+    "imageOffset": [
+      20,
+      -9,
       1.15
     ]
   },
@@ -2168,6 +2878,75 @@ let lightcones = {
       1.02
     ]
   },
+  "Final Victor": {
+    "lightconeID": 21037,
+    "name": "Final Victor",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.12
+      },
+      "2": {
+        "ATK%": 0.14
+      },
+      "3": {
+        "ATK%": 0.16
+      },
+      "4": {
+        "ATK%": 0.18
+      },
+      "5": {
+        "ATK%": 0.2
+      }
+    },
+    "skillName": "Wager",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer lands a CRIT hit on enemies, gains 1 stack of Good Fortune. This can stack up to #3[i] time(s). Every stack of Good Fortune increases the wearer's CRIT DMG by #2[i]%. Good Fortune will be removed at the end of the wearer's turn.",
+    "params": [
+      [
+        0.12,
+        0.08,
+        4
+      ],
+      [
+        0.14,
+        0.09,
+        4
+      ],
+      [
+        0.16,
+        0.1,
+        4
+      ],
+      [
+        0.18,
+        0.11,
+        4
+      ],
+      [
+        0.2,
+        0.12,
+        4
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21037.png",
+    "preview": "image/light_cone_preview/21037.png",
+    "portrait": "image/light_cone_portrait/21037.png",
+    "imageOffset": [
+      29,
+      -80,
+      1.2
+    ]
+  },
   "Destiny's Threads Forewoven": {
     "lightconeID": 21039,
     "name": "Destiny's Threads Forewoven",
@@ -2439,6 +3218,80 @@ let lightcones = {
       1.3
     ]
   },
+  "Sailing Towards a Second Life": {
+    "lightconeID": 23027,
+    "name": "Sailing Towards a Second Life",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Rough Water",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. The Break DMG dealt by the wearer ignores #3[i]% of the target's DEF. When the wearer's Break Effect in battle is at #2[i]% or greater, increases their SPD by #4[i]%.",
+    "params": [
+      [
+        0.6,
+        1.5,
+        0.2,
+        0.12
+      ],
+      [
+        0.7,
+        1.5,
+        0.23,
+        0.14
+      ],
+      [
+        0.8,
+        1.5,
+        0.26,
+        0.16
+      ],
+      [
+        0.9,
+        1.5,
+        0.29,
+        0.18
+      ],
+      [
+        1,
+        1.5,
+        0.32,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23027.png",
+    "preview": "image/light_cone_preview/23027.png",
+    "portrait": "image/light_cone_portrait/23027.png",
+    "imageOffset": [
+      15,
+      -145,
+      1.25
+    ]
+  },
   "Poised to Bloom": {
     "lightconeID": 21046,
     "name": "Poised to Bloom",
@@ -2501,6 +3354,75 @@ let lightcones = {
       8,
       -126,
       1.15
+    ]
+  },
+  "Shadowed by Night": {
+    "lightconeID": 21047,
+    "name": "Shadowed by Night",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.28
+      },
+      "2": {
+        "DamageBreak": 0.35
+      },
+      "3": {
+        "DamageBreak": 0.42
+      },
+      "4": {
+        "DamageBreak": 0.49
+      },
+      "5": {
+        "DamageBreak": 0.56
+      }
+    },
+    "skillName": "Concealment",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When entering battle or after dealing Break DMG, increases SPD by #2[i]%, lasting for #3[i] turn(s). This effect can only trigger once per turn.",
+    "params": [
+      [
+        0.28,
+        0.08,
+        2
+      ],
+      [
+        0.35,
+        0.09,
+        2
+      ],
+      [
+        0.42,
+        0.1,
+        2
+      ],
+      [
+        0.49,
+        0.11,
+        2
+      ],
+      [
+        0.56,
+        0.12,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21047.png",
+    "preview": "image/light_cone_preview/21047.png",
+    "portrait": "image/light_cone_portrait/21047.png",
+    "imageOffset": [
+      -28,
+      -147,
+      1.4
     ]
   },
   "Dream's Montage": {
@@ -2700,6 +3622,75 @@ let lightcones = {
       0,
       -78,
       1
+    ]
+  },
+  "I Venture Forth to Hunt": {
+    "lightconeID": 23031,
+    "name": "I Venture Forth to Hunt",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.15
+      },
+      "2": {
+        "CritRateBase": 0.175
+      },
+      "3": {
+        "CritRateBase": 0.2
+      },
+      "4": {
+        "CritRateBase": 0.225
+      },
+      "5": {
+        "CritRateBase": 0.25
+      }
+    },
+    "skillName": "Intimidation",
+    "desc": "Increases the wearer's CRIT Rate by #1[f1]%. When the wearer launches a Follow-Up ATK, gains 1 stack of \"Luminflux,\" stacking up to #3[i] time(s). Each stack of \"Luminflux\" enables the Ultimate DMG dealt by the wearer to ignore #2[i]% of the target's DEF. When the wearer's turn ends, removes 1 stack of \"Luminflux.\"",
+    "params": [
+      [
+        0.15,
+        0.27,
+        2
+      ],
+      [
+        0.175,
+        0.3,
+        2
+      ],
+      [
+        0.2,
+        0.33,
+        2
+      ],
+      [
+        0.225,
+        0.36,
+        2
+      ],
+      [
+        0.25,
+        0.39,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23031.png",
+    "preview": "image/light_cone_preview/23031.png",
+    "portrait": "image/light_cone_portrait/23031.png",
+    "imageOffset": [
+      74,
+      -186,
+      1.65
     ]
   },
   "Scent Alone Stays True": {
@@ -3892,6 +4883,149 @@ let lightcones = {
       40,
       -101,
       1.27
+    ]
+  },
+  "The Hell Where Ideals Burn": {
+    "lightconeID": 23046,
+    "name": "The Hell Where Ideals Burn",
+    "path": "The Hunt",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.16
+      },
+      "2": {
+        "CritRateBase": 0.2
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.28
+      },
+      "5": {
+        "CritRateBase": 0.32
+      }
+    },
+    "skillName": "Hrunting",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When entering combat, if the allies' Skill Points limit is #2[i] or higher, increases the wearer's ATK by #3[i]%. After each use of the wearer's Skill, increases the wearer's ATK by #4[i]%, stacking up to #5[i] time(s).",
+    "params": [
+      [
+        0.16,
+        6,
+        0.4,
+        0.1,
+        4
+      ],
+      [
+        0.2,
+        6,
+        0.5,
+        0.125,
+        4
+      ],
+      [
+        0.24,
+        6,
+        0.6,
+        0.15,
+        4
+      ],
+      [
+        0.28,
+        6,
+        0.7,
+        0.175,
+        4
+      ],
+      [
+        0.32,
+        6,
+        0.8,
+        0.2,
+        4
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23046.png",
+    "preview": "image/light_cone_preview/23046.png",
+    "portrait": "image/light_cone_portrait/23046.png",
+    "imageOffset": [
+      26,
+      -120,
+      1.57
+    ]
+  },
+  "See You at the End": {
+    "lightconeID": 21062,
+    "name": "See You at the End",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.24
+      },
+      "2": {
+        "CritDamageBase": 0.28
+      },
+      "3": {
+        "CritDamageBase": 0.32
+      },
+      "4": {
+        "CritDamageBase": 0.36
+      },
+      "5": {
+        "CritDamageBase": 0.4
+      }
+    },
+    "skillName": "Persistence",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. The Skill DMG and Follow-Up ATK DMG dealt by the wearer increase by #2[i]%.",
+    "params": [
+      [
+        0.24,
+        0.24
+      ],
+      [
+        0.28,
+        0.28
+      ],
+      [
+        0.32,
+        0.32
+      ],
+      [
+        0.36,
+        0.36
+      ],
+      [
+        0.4,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21062.png",
+    "preview": "image/light_cone_preview/21062.png",
+    "portrait": "image/light_cone_portrait/21062.png",
+    "imageOffset": [
+      -89,
+      -145,
+      1.58
     ]
   },
   "Epoch Etched in Golden Blood": {
