@@ -60,7 +60,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Entity Death",
+              "eventTrigger": "Entity Death [Anyone]",
               "execute": [
                 {
                   "name": "Use Custom Character Function",

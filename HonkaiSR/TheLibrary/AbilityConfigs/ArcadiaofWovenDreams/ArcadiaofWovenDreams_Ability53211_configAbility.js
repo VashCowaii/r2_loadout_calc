@@ -53,7 +53,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Entity Death",
+          "eventTrigger": "Entity Death [Anyone]",
           "execute": [
             {
               "name": "IF",

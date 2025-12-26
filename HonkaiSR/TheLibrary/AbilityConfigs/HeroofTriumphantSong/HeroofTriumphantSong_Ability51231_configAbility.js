@@ -149,7 +149,7 @@ const configAbility = {
       "for": "Relic_123_Main",
       "execute": [
         {
-          "eventTrigger": "Entity Death",
+          "eventTrigger": "Entity Death [Anyone]",
           "execute": [
             {
               "name": "IF",

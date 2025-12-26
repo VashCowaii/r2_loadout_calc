@@ -87,7 +87,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Entity Death",
+              "eventTrigger": "Entity Death [Anyone]",
               "execute": [
                 {
                   "name": "IF",

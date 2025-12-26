@@ -1,0 +1,189 @@
+const configAbility = {
+  "fileName": "WorrisomeBlissful_Ability23016",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_23016_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23016_Enhance[<span class=\"descriptionNumberColor\">Tame</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Take Damage Start [Owner]: Hit",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": "Use Prior Target(s) Defined",
+                "team": "TeamLight"
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": "Owner of this Modifier",
+              "valueType": "Layer",
+              "variableName": "MDF_Layer",
+              "multiplier": 1
+            }
+          ]
+        }
+      ],
+      "description": "Each stack of Tame increases CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">#SkillEquip_P3_CriticalDamage</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P4_MaxLayer</span> stack(s).",
+      "type": "Debuff",
+      "effectName": "The received CRIT DMG increases",
+      "statusName": "Tame",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23016_Main",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Attack Type",
+                "attackTypes": [
+                  "Follow-up"
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.3) || RETURN",
+                    "displayLines": "0.3",
+                    "constants": [],
+                    "variables": [
+                      0.3
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "InsertFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "InsertFlag",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Ability Target List",
+                  "modifier": "LC_23016_Enhance[<span class=\"descriptionNumberColor\">Tame</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.12) || RETURN",
+                      "displayLines": "0.12",
+                      "constants": [],
+                      "variables": [
+                        0.12
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "InsertFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increase the wearer's CRIT Rate by #1[i]% and increases DMG dealt by Follow-Up ATK by #2[i]%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to #4[i] time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by #3[i]%.",
+  "params": [
+    [
+      0.18,
+      0.3,
+      0.12,
+      2
+    ],
+    [
+      0.21,
+      0.35,
+      0.14,
+      2
+    ],
+    [
+      0.24,
+      0.4,
+      0.16,
+      2
+    ],
+    [
+      0.27,
+      0.45,
+      0.18,
+      2
+    ],
+    [
+      0.3,
+      0.5,
+      0.2,
+      2
+    ]
+  ]
+}

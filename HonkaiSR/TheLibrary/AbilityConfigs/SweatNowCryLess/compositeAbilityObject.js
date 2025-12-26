@@ -68,7 +68,7 @@ const compositeAbilityObject = {
           "for": "LC_21052_Main",
           "execute": [
             {
-              "eventTrigger": "Entity Death",
+              "eventTrigger": "Entity Death [Anyone]",
               "execute": [
                 {
                   "name": "IF",
