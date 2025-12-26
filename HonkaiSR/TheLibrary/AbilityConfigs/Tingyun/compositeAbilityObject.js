@@ -1252,7 +1252,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Force Modifier Preprocessor [Anyone]: Start",
+              "eventTrigger": "Force Immediate Modifier [Anyone]: Start",
               "execute": [
                 {
                   "name": "Find New Target",
