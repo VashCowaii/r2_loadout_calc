@@ -3117,7 +3117,7 @@ const megaParsingFuckery = {
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
         const conditionObject = parseRef.conditions;
-        const conditionName = conditionObject.name;
+        const conditionName = conditionObject?.name;
 
         let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
         const functionExists = megaParsingFuckery[conditionName];
@@ -3273,7 +3273,7 @@ const megaParsingFuckery = {
 
 
         const conditionObject = parseRef.conditions;
-        const conditionName = conditionObject.name;
+        const conditionName = conditionObject?.name;
 
         let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
         const functionExists = megaParsingFuckery[conditionName];
@@ -4390,7 +4390,7 @@ const megaParsingFuckery = {
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
         const conditionObject = parseRef.condition;
-        const conditionName = conditionObject.name;
+        const conditionName = conditionObject?.name;
 
         let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
         const functionExists = megaParsingFuckery[conditionName];
@@ -4437,7 +4437,7 @@ const megaParsingFuckery = {
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
         const conditionObject = parseRef.conditions;
-        const conditionName = conditionObject.name;
+        const conditionName = conditionObject?.name;
 
         let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
         const functionExists = megaParsingFuckery[conditionName];
