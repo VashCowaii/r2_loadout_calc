@@ -105,8 +105,8 @@ const configAbility = {
         {
           "name": "Action Advance/Delay",
           "target": "Caster",
-          "advanceType": "Delay",
-          "value": 1
+          "advanceType": "Advance",
+          "value": -1
         }
       ]
     },
