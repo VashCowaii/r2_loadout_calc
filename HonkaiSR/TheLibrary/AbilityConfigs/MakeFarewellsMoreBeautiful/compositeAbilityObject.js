@@ -95,7 +95,7 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster's Memosprite",
+              "to": "Caster (Memosprite)",
               "modifier": "LC_23040_Sub[<span class=\"descriptionNumberColor\">Death Flower</span>]",
               "aliveOnly": "False",
               "haloStatus": true,

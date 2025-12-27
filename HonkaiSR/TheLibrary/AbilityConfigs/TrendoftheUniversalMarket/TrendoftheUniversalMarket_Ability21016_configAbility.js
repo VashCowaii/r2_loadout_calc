@@ -16,7 +16,7 @@ const configAbility = {
       "for": "LC_21016_Main",
       "execute": [
         {
-          "eventTrigger": "Being Attacked [Owner]",
+          "eventTrigger": "Being Attacked End [Owner]",
           "execute": [
             {
               "name": "Add Events/Bonuses",

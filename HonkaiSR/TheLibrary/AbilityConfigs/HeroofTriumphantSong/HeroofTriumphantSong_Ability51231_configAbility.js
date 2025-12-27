@@ -58,7 +58,7 @@ const configAbility = {
                 {
                   "name": "Adjust Target Stats",
                   "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
                     "displayLines": "0.3",
@@ -208,7 +208,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_123_Sub2"
                 }
               ]
@@ -222,7 +222,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster's Memosprite",
+                "target": "Caster (Memosprite)",
                 "compareType": ">=",
                 "value2": 1,
                 "livingTargets": true
@@ -235,7 +235,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_123_Sub2"
                 }
               ]

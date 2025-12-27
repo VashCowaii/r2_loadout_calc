@@ -80,7 +80,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
@@ -103,7 +103,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]"
                 }
               ]

@@ -73,7 +73,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked [Owner]",
+          "eventTrigger": "Being Attacked End [Owner]",
           "execute": [
             {
               "name": "Add Events/Bonuses",

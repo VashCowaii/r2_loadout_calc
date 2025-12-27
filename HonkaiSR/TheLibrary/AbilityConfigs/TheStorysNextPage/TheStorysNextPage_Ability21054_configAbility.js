@@ -51,7 +51,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Caster's Memosprite",
+                "of": "Caster (Memosprite)",
                 "target": "Use Prior Target(s) Defined",
                 "mustBeAlive2": true
               },
@@ -71,7 +71,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "LC_21054_Sub[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",

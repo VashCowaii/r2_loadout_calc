@@ -67,7 +67,7 @@ const configAbility = {
                 {
                   "name": "Adjust Target Stats",
                   "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.08) || RETURN",
                     "displayLines": "0.08",

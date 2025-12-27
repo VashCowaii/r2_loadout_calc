@@ -89,9 +89,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Modifier-Specific Variable",
                   "target": "Owner of this Modifier (Summoner)",
-                  "modifierName": {
-                    "Value": "MEquip_23042_Main"
-                  },
+                  "modifierName": "LC_23042_Main",
                   "variableName": "_LoseHPTotal",
                   "value": 0
                 }
@@ -147,14 +145,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Caster's Memosprite",
+                    "of": "Caster (Memosprite)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_23042_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {

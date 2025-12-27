@@ -303,7 +303,7 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster's Memosprite",
+              "to": "Caster (Memosprite)",
               "modifier": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
               "haloStatus": true,
               "valuePerStack": {

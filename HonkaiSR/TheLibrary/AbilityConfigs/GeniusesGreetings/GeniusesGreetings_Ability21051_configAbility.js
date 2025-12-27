@@ -80,7 +80,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

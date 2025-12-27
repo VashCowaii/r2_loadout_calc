@@ -84,7 +84,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_320_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster's Memosprite",
+                          "to": "Caster (Memosprite)",
                           "modifier": "Relic_320_Sub",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Compare: Target",
                     "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster's Memosprite"
+                    "target2": "Caster (Memosprite)"
                   },
                   "passed": [
                     {
@@ -263,7 +263,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_320_Sub",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_320_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -348,7 +348,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_320_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {

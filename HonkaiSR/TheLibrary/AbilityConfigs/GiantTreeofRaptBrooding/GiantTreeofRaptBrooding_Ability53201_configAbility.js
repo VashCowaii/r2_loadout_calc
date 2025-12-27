@@ -77,7 +77,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_320_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -126,7 +126,7 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_320_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -153,7 +153,7 @@ const configAbility = {
               "conditions": {
                 "name": "Compare: Target",
                 "target": "Use Prior Target(s) Defined",
-                "target2": "Caster's Memosprite"
+                "target2": "Caster (Memosprite)"
               },
               "passed": [
                 {
@@ -256,7 +256,7 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_320_Sub",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -298,7 +298,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_320_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -341,7 +341,7 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_320_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue": {

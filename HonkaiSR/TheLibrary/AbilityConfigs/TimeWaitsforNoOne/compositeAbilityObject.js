@@ -152,7 +152,7 @@ const compositeAbilityObject = {
                               ]
                             },
                             "indirectDMG": true,
-                            "dmgFormula": "Pure (No DMG%)",
+                            "dmgFormulaFinal": "Pure (No DMG%)",
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
