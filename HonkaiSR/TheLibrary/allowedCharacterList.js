@@ -4,6 +4,10 @@ let allowedCharacterList = [
     "trimName": "Herta"
   },
   {
+    "fullName": "Bronya",
+    "trimName": "Bronya"
+  },
+  {
     "fullName": "Tingyun",
     "trimName": "Tingyun"
   },

@@ -1,0 +1,96 @@
+const configAbility = {
+  "fileName": "Bronya_Bronya_TechniqueInLevel",
+  "abilityType": "Technique",
+  "energy": null,
+  "toughnessList": [
+    0,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "Bronya_Maze_Modifier"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "Bronya_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": "Owner of this Modifier",
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "Bronya_Maze_Modifier",
+      "execute": [
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "All Team Members(In Context)",
+                  "modifier": "Bronya_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.15) || RETURN",
+                      "displayLines": "0.15",
+                      "constants": [],
+                      "variables": [
+                        0.15
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "priorityLevel": -80
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ]
+}

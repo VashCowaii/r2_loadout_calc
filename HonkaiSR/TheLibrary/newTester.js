@@ -1365,7 +1365,7 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${advanceType === "Set" ? "AV til Next Turn = " : ""}${finalDisplay} ${advanceType != "Set" ? advanceType : ""}
+            ${advanceType === "Set" ? "AV til Next Turn = " : ""}${finalDisplay} ${advanceType != "Set" ? advanceType : ""} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
     "Compare: Target"(parseRef,initialCounter) {
@@ -1438,6 +1438,19 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>`;
+    },
+    "Current Action Holder's Team"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "team",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Action Holder's Team");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.team}
         </div>`;
     },
     "Disable Abilities"(parseRef,initialCounter) {
@@ -3444,6 +3457,7 @@ const megaParsingFuckery = {
 
             "stackData",
             "latentQueue",
+            "duration",
 
             "stackLimit",
             "addStacksPerTrigger",
@@ -3517,6 +3531,11 @@ const megaParsingFuckery = {
 
             <div class="modifierDetailsBox">
                 ${returnStringDependencies ?? ""}
+                
+                ${parseRef.duration ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Duration:</div>&nbsp;
+                    ${parseRef.duration.displayLines ?? parseRef.duration}
+                </div>` : ""}
                 ${parseRef.counter ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Counter:</div>&nbsp;
                     ${parseRef.counter.displayLines ?? parseRef.counter}
@@ -4123,6 +4142,58 @@ const megaParsingFuckery = {
         `;
 
         
+    },
+    "Shot Fired"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "execute",
+
+            // "counter",
+            // "execute",
+            // "AdditionConfig",
+            // "DynamicValues"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Shot Fired");
+
+        let parseString = "";
+        // let refString = "";
+        const hasParse = parseRef.execute?.length;
+        // const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+        // const conditionObject = parseRef.conditions;
+        // const conditionName = conditionObject.name;
+
+        // let returnString = "";
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
+
+        // rotationsSectionRowHolder
+        // rotationConditionOperatorBox
+
+
+        // <details class="rotationsPermaConditionsExpand" open="">
+        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
+        // </details>
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">Shot Fired</div>
+            </summary>
+
+            <div class="rotationConditionOperatorBoxMain">
+            ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString}
+                </div>` : ""}
+            </div>
+        </details>
+        `;
     },
     "eventTrigger"(parseRef,initialCounter) {
         initialCounter++;
