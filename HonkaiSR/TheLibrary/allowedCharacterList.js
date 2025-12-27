@@ -1,5 +1,9 @@
 let allowedCharacterList = [
   {
+    "fullName": "Herta",
+    "trimName": "Herta"
+  },
+  {
     "fullName": "Tingyun",
     "trimName": "Tingyun"
   },
