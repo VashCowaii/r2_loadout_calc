@@ -36,11 +36,11 @@ const configAbility = {
               "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_Show": {
-                  "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
-                  "displayLines": "MDF_DamageParam[?Unnamed]",
+                  "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                  "displayLines": "MDF_PropertyValue_2",
                   "constants": [],
                   "variables": [
-                    "MDF_DamageParam[?Unnamed]"
+                    "MDF_PropertyValue_2"
                   ]
                 }
               }
@@ -120,11 +120,11 @@ const configAbility = {
                   "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_Show": {
-                      "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
-                      "displayLines": "MDF_DamageParam[?Unnamed]",
+                      "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                      "displayLines": "MDF_PropertyValue_2",
                       "constants": [],
                       "variables": [
-                        "MDF_DamageParam[?Unnamed]"
+                        "MDF_PropertyValue_2"
                       ]
                     }
                   }
@@ -257,11 +257,11 @@ const configAbility = {
                   "name": "Update Energy",
                   "on": "Caster",
                   "value": {
-                    "operator": "Variables[0] (AbilityEquip_P4_SPAdd) || RETURN",
-                    "displayLines": "AbilityEquip_P4_SPAdd",
+                    "operator": "Variables[0] (MDF_PropertyValue_3) || RETURN",
+                    "displayLines": "MDF_PropertyValue_3",
                     "constants": [],
                     "variables": [
-                      "AbilityEquip_P4_SPAdd"
+                      "MDF_PropertyValue_3"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -287,19 +287,19 @@ const configAbility = {
                   ]
                 },
                 "MDF_PropertyValue_2": {
-                  "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
-                  "displayLines": "MDF_DamageParam[?Unnamed]",
+                  "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                  "displayLines": "MDF_PropertyValue_2",
                   "constants": [],
                   "variables": [
-                    "MDF_DamageParam[?Unnamed]"
+                    "MDF_PropertyValue_2"
                   ]
                 },
                 "MDF_PropertyValue_3": {
-                  "operator": "Variables[0] (AbilityEquip_P4_SPAdd) || RETURN",
-                  "displayLines": "AbilityEquip_P4_SPAdd",
+                  "operator": "Variables[0] (MDF_PropertyValue_3) || RETURN",
+                  "displayLines": "MDF_PropertyValue_3",
                   "constants": [],
                   "variables": [
-                    "AbilityEquip_P4_SPAdd"
+                    "MDF_PropertyValue_3"
                   ]
                 }
               }
