@@ -64,7 +64,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -128,7 +128,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -177,7 +177,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster's Memosprite",
+                          "to": "Caster (Memosprite)",
                           "modifier": "Relic_124_Sub[<span class=\"descriptionNumberColor\">Poet of Mourning Collapse</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {

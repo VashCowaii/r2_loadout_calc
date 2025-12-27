@@ -74,7 +74,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Compare: Ability Value",
                         "target": "Owner of this Modifier",
-                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (1.2) || RETURN",

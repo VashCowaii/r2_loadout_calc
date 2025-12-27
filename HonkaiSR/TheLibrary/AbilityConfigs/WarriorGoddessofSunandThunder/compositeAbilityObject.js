@@ -296,7 +296,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_125_Sub2"
                 }
               ]
@@ -309,7 +309,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Compare: Target",
                     "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster's Memosprite"
+                    "target2": "Caster (Memosprite)"
                   },
                   "passed": [
                     {

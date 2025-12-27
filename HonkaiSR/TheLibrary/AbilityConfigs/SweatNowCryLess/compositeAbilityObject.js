@@ -91,7 +91,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
@@ -127,7 +127,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster's Memosprite",
+                    "target": "Caster (Memosprite)",
                     "compareType": ">=",
                     "value2": 1,
                     "livingTargets": true
@@ -154,7 +154,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {

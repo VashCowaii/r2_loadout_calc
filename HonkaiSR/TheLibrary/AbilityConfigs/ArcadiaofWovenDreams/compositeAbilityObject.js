@@ -230,7 +230,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -262,7 +262,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
                 }
               ]
@@ -321,7 +321,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {

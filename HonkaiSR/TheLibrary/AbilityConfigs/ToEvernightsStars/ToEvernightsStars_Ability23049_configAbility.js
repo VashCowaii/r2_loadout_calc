@@ -36,11 +36,11 @@ const configAbility = {
               "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_Show": {
-                  "operator": "Variables[0] (AbilityEquip_P3_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "AbilityEquip_P3_AllDamageTypeAddedRatio",
+                  "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
+                  "displayLines": "MDF_DamageParam[?Unnamed]",
                   "constants": [],
                   "variables": [
-                    "AbilityEquip_P3_AllDamageTypeAddedRatio"
+                    "MDF_DamageParam[?Unnamed]"
                   ]
                 }
               }
@@ -120,11 +120,11 @@ const configAbility = {
                   "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_Show": {
-                      "operator": "Variables[0] (AbilityEquip_P3_AllDamageTypeAddedRatio) || RETURN",
-                      "displayLines": "AbilityEquip_P3_AllDamageTypeAddedRatio",
+                      "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
+                      "displayLines": "MDF_DamageParam[?Unnamed]",
                       "constants": [],
                       "variables": [
-                        "AbilityEquip_P3_AllDamageTypeAddedRatio"
+                        "MDF_DamageParam[?Unnamed]"
                       ]
                     }
                   }
@@ -287,11 +287,11 @@ const configAbility = {
                   ]
                 },
                 "MDF_PropertyValue_2": {
-                  "operator": "Variables[0] (AbilityEquip_P3_AllDamageTypeAddedRatio) || RETURN",
-                  "displayLines": "AbilityEquip_P3_AllDamageTypeAddedRatio",
+                  "operator": "Variables[0] (MDF_DamageParam[?Unnamed]) || RETURN",
+                  "displayLines": "MDF_DamageParam[?Unnamed]",
                   "constants": [],
                   "variables": [
-                    "AbilityEquip_P3_AllDamageTypeAddedRatio"
+                    "MDF_DamageParam[?Unnamed]"
                   ]
                 },
                 "MDF_PropertyValue_3": {
@@ -317,7 +317,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster's Memosprite",
+              "to": "Caster (Memosprite)",
               "modifier": "LC_23049_Listen",
               "valuePerStack": {
                 "MDF_PropertyValue": {

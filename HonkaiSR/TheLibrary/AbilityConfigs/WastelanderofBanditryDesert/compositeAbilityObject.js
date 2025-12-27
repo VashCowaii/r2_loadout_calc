@@ -46,7 +46,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Adjust Target Stats",
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
                           "value": {
                             "operator": "Variables[0] (0.1) || RETURN",
                             "displayLines": "0.1",
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Adjust Target Stats",
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                           "value": {
                             "operator": "Variables[0] (0.2) || RETURN",
                             "displayLines": "0.2",
@@ -74,7 +74,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Adjust Target Stats",
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
                           "value": {
                             "operator": "Variables[0] (0.1) || RETURN",
                             "displayLines": "0.1",

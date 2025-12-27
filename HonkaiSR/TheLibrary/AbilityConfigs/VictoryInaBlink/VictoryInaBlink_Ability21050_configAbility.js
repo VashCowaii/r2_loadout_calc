@@ -103,7 +103,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster's Memosprite",
+                  "to": "Caster (Memosprite)",
                   "modifier": "LC_21050_Sub1"
                 }
               ]

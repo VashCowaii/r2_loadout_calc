@@ -74,7 +74,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_319_Sub"
                     }
                   ]
@@ -89,7 +89,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Compare: Target",
                     "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster's Memosprite"
+                    "target2": "Caster (Memosprite)"
                   },
                   "passed": [
                     {
@@ -146,7 +146,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_319_Sub",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -159,7 +159,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "Relic_319_Sub"
                     }
                   ]

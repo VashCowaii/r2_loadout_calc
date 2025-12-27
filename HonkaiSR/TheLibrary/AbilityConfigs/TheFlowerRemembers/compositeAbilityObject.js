@@ -87,7 +87,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_21057_Sub"
                     }
                   ]
@@ -101,7 +101,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster's Memosprite",
+                    "target": "Caster (Memosprite)",
                     "compareType": ">=",
                     "value2": 1,
                     "livingTargets": true
@@ -109,7 +109,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's Memosprite",
+                      "to": "Caster (Memosprite)",
                       "modifier": "LC_21057_Sub"
                     }
                   ]

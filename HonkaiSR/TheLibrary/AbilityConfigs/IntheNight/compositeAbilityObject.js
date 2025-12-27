@@ -183,7 +183,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Target Stats",
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (_Layer) || Variables[1] (0.12) || MUL || RETURN",
                         "displayLines": "(_Layer * 0.12)",

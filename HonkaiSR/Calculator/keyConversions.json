@@ -8,6 +8,8 @@
 
     "BreakDamageAddRatio": "VulnBreak[?]",
 
+    "BaseDamageMultiRatio": "BaseAbilityMultiplier",
+
     "ForceStanceBreakRatio": "ToughnessReductionForced%",
     "StanceBreakAddRatio": "DamageBreakEfficiency[?]",
 
@@ -45,10 +47,11 @@
     "StatusResistanceBase": "EffectRES",
     "StatusResistance": "EffectRESSUM",
 
-    "CriticalChance": "CritRateBase",
+    "CriticalChance": "CritRateSUM",
     "CriticalChanceBase": "CritRateBase",
-    "CriticalDamage": "CritDamageBase",
+    "CriticalDamage": "CritDamageSUM",
     "CriticalDamageBase": "CritDamageBase",
+    "CriticalDamageConvert": "CritDamageConverted",
 
     "HealRatioBase": "HealingOutgoing",
     "HealRatio": "HealingOutgoingSUM",

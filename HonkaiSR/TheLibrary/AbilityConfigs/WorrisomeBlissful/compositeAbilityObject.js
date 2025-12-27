@@ -54,7 +54,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Adjust Target Stats",
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                         "displayLines": "(MDF_PropertyValue * MDF_Layer)",
