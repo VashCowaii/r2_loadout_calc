@@ -1068,6 +1068,584 @@ let characters = {
       0.58
     ]
   },
+  "Gallagher": {
+    "internalID": 1301,
+    "name": "Gallagher",
+    "path": "Abundance",
+    "element": "Fire",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 441,
+      "HPBase": 1305.3600000000001,
+      "SPDBase": 98,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130101",
+        "name": "Salty Dog",
+        "rank": 1,
+        "desc": "When entering the battle, Gallagher regenerates 20 Energy and increases Effect RES by 50%.",
+        "icon": "icon/skill/1301_rank1.png",
+        "paramsEido": [
+          20,
+          0.5
+        ]
+      },
+      {
+        "id": "130102",
+        "name": "Lion's Tail",
+        "rank": 2,
+        "desc": "When using the Skill, dispels 1 debuff(s) from the designated ally. At the same time, increases their Effect RES by 30% for 2 turn(s).",
+        "icon": "icon/skill/1301_rank2.png",
+        "paramsEido": [
+          1,
+          0.3,
+          2
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "130103",
+        "name": "Corpse Reviver",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1301_skill.png"
+      },
+      {
+        "id": "130104",
+        "name": "Last Word",
+        "rank": 4,
+        "desc": "Extends the duration of the Besotted state inflicted by Gallagher's Ultimate by 1 turn(s).",
+        "icon": "icon/skill/1301_rank4.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "130105",
+        "name": "Death in the Afternoon",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1301_ultimate.png"
+      },
+      {
+        "id": "130106",
+        "name": "Blood and Sand",
+        "rank": 6,
+        "desc": "Increases Gallagher's Break Effect by 20% and Weakness Break Efficiency by 20%.",
+        "icon": "icon/skill/1301_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Corkage Fee": {
+          "variant1": {
+            "skillID": 130101,
+            "trigger": "Skill01",
+            "name": "Corkage Fee",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Gallagher's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_Skill01_Camera",
+              "Avatar_Gallagher_00_Skill01_Phase01",
+              "Avatar_Gallagher_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Nectar Blitz": {
+          "variant1": {
+            "skillID": 130108,
+            "trigger": "Skill11",
+            "name": "Nectar Blitz",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Gallagher's ATK to one designated enemy target. Reduces the target's ATK by #2[f1]%, lasting for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                2.5,
+                0.15,
+                2
+              ],
+              "7": [
+                2.75,
+                0.16,
+                2
+              ],
+              "8": [
+                3,
+                0.17,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_Skill11_Camera",
+              "Avatar_Gallagher_00_Skill11_Phase01",
+              "Avatar_Gallagher_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Special Brew": {
+          "variant1": {
+            "skillID": 130102,
+            "trigger": "Skill02",
+            "name": "Special Brew",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Immediately heals a target ally for #1[i] HP.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1138
+              ],
+              "8": [
+                1292
+              ],
+              "9": [
+                1446
+              ],
+              "10": [
+                1600
+              ],
+              "11": [
+                1684
+              ],
+              "12": [
+                1768
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_Skill02_Camera",
+              "Avatar_Gallagher_00_Skill02_Camera_End",
+              "Avatar_Gallagher_00_Skill02_Phase01",
+              "Avatar_Gallagher_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Champagne Etiquette": {
+          "variant1": {
+            "skillID": 130103,
+            "trigger": "Skill03",
+            "name": "Champagne Etiquette",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts Besotted on all enemies, lasting for #2[i] turn(s). At the same time, deals Fire DMG equal to #1[i]% of Gallagher's ATK to all enemies, and enhances his next Basic ATK to Nectar Blitz.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                2
+              ],
+              "8": [
+                1.3125,
+                2
+              ],
+              "9": [
+                1.40625,
+                2
+              ],
+              "10": [
+                1.5,
+                2
+              ],
+              "11": [
+                1.575,
+                2
+              ],
+              "12": [
+                1.65,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_Skill03_Camera",
+              "Avatar_Gallagher_00_Skill03_EnterReady",
+              "Avatar_Gallagher_00_Skill03_Phase01",
+              "Avatar_Gallagher_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Tipsy Tussle": {
+          "variant1": {
+            "skillID": 130104,
+            "trigger": "SkillP01",
+            "name": "Tipsy Tussle",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "The Besotted state makes targets receive #1[f1]% more Break DMG. Every time a Besotted target gets attacked by an ally, the attacking ally's HP is restored by #2[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.0975,
+                455.2
+              ],
+              "8": [
+                0.105,
+                516.8
+              ],
+              "9": [
+                0.1125,
+                578.4
+              ],
+              "10": [
+                0.12,
+                640
+              ],
+              "11": [
+                0.126,
+                673.6
+              ],
+              "12": [
+                0.132,
+                707.2
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Artisan Elixir": {
+          "variant1": {
+            "skillID": 130107,
+            "trigger": "SkillMaze",
+            "name": "Artisan Elixir",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, inflicts Besotted on all enemies, lasting for #1[i] turn(s). And deals Fire DMG equal to #2[i]% of Gallagher's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Gallagher_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1301_basic_atk.png",
+        "skillRef": {
+          "skillName": "Corkage Fee",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1301_skill.png",
+        "skillRef": {
+          "skillName": "Special Brew",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1301_ultimate.png",
+        "skillRef": {
+          "skillName": "Champagne Etiquette",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1301_talent.png",
+        "skillRef": {
+          "skillName": "Tipsy Tussle",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1301_technique.png",
+        "skillRef": {
+          "skillName": "Artisan Elixir",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Novel Concoction",
+        "icon": "icon/skill/1301_skilltree1.png",
+        "desc": "Increases this unit's Outgoing Healing by an amount equal to #1[i]% of Break Effect, up to a maximum Outgoing Healing increase of #2[i]%.",
+        "params": [
+          0.5,
+          0.75
+        ]
+      },
+      "Point07": {
+        "name": "Organic Yeast",
+        "icon": "icon/skill/1301_skilltree2.png",
+        "desc": "After using the Ultimate, immediately advances action for this unit by 100%.",
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Bottoms Up",
+        "icon": "icon/skill/1301_skilltree3.png",
+        "desc": "When Gallagher uses Nectar Blitz to attack Besotted enemies, the HP Restore effect of his Talent will also apply to teammates for this time."
+      },
+      "Point09": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point11": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point15": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1301.png",
+    "preview": "image/character_preview/1301.png",
+    "portrait": "image/character_portrait/1301.png",
+    "bannerOffsets": [
+      -38,
+      -6,
+      0.455,
+      -38,
+      -6,
+      0.455,
+      -38,
+      -6,
+      0.455
+    ]
+  },
   "Saber": {
     "internalID": 1014,
     "name": "Saber",
