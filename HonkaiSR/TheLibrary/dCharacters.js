@@ -1,4 +1,540 @@
 let characters = {
+  "Herta": {
+    "internalID": 1013,
+    "name": "Herta",
+    "path": "Erudition",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 952.56,
+      "SPDBase": 100,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "101301",
+        "name": "Kick You When You're Down",
+        "rank": 1,
+        "desc": "When using Basic ATK, if the designated enemy's HP percentage is at 50% or less, additionally deals Ice Additional DMG equal to 40% of Herta's ATK.",
+        "icon": "icon/skill/1013_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.4
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "101302",
+        "name": "Keep the Ball Rolling",
+        "rank": 2,
+        "desc": "Every time Talent is triggered, this character's CRIT Rate increases by 3%. This effect can stack up to 5 time(s).",
+        "icon": "icon/skill/1013_rank2.png",
+        "paramsEido": [
+          0.03,
+          5
+        ]
+      },
+      {
+        "id": "101303",
+        "name": "That's the Kind of Girl I Am",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1013_skill.png"
+      },
+      {
+        "id": "101304",
+        "name": "Hit Where It Hurts",
+        "rank": 4,
+        "desc": "When Talent is triggered, DMG increases by 10%.",
+        "icon": "icon/skill/1013_rank4.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "101305",
+        "name": "Cuss Big or Cuss Nothing",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1013_ultimate.png"
+      },
+      {
+        "id": "101306",
+        "name": "No One Can Betray Me",
+        "rank": 6,
+        "desc": "After using Ultimate, this character's ATK increases by 25% for 1 turn(s).",
+        "icon": "icon/skill/1013_rank6.png",
+        "paramsEido": [
+          0.25,
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "What Are You Looking At?": {
+          "variant1": {
+            "skillID": 101301,
+            "trigger": "Skill01",
+            "name": "What Are You Looking At?",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Herta_Skill01_Camera",
+              "Avatar_Herta_Skill01_Phase01",
+              "Avatar_Herta_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "One-Time Offer": {
+          "variant1": {
+            "skillID": 101302,
+            "trigger": "Skill02",
+            "name": "One-Time Offer",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies. If the enemy's HP percentage is #2[i]% or higher, DMG dealt to this target increases by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.8125,
+                0.5,
+                0.2
+              ],
+              "8": [
+                0.875,
+                0.5,
+                0.2
+              ],
+              "9": [
+                0.9375,
+                0.5,
+                0.2
+              ],
+              "10": [
+                1,
+                0.5,
+                0.2
+              ],
+              "11": [
+                1.05,
+                0.5,
+                0.2
+              ],
+              "12": [
+                1.1,
+                0.5,
+                0.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_Skill02_Camera",
+              "Avatar_Herta_Skill02_Phase01",
+              "Avatar_Herta_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "It's Magic, I Added Some Magic": {
+          "variant1": {
+            "skillID": 101303,
+            "trigger": "Skill03",
+            "name": "It's Magic, I Added Some Magic",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7
+              ],
+              "8": [
+                1.8
+              ],
+              "9": [
+                1.9
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.08
+              ],
+              "12": [
+                2.16
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_00_Skill03_Camera",
+              "Avatar_Herta_Skill03_Phase01",
+              "Avatar_Herta_Skill03_Phase02",
+              "Avatar_Herta_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Fine, I'll Do It Myself": {
+          "variant1": {
+            "skillID": 101304,
+            "trigger": "SkillP01",
+            "name": "Fine, I'll Do It Myself",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When an ally target's attack causes an enemy target's HP percentage to fall to #1[i]% or lower, Herta will launch a Follow-Up ATK, dealing Ice DMG equal to #2[i]% of Herta's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.5,
+                0.34375
+              ],
+              "8": [
+                0.5,
+                0.3625
+              ],
+              "9": [
+                0.5,
+                0.38125
+              ],
+              "10": [
+                0.5,
+                0.4
+              ],
+              "11": [
+                0.5,
+                0.415
+              ],
+              "12": [
+                0.5,
+                0.43
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Herta_PassiveSkill01",
+              "Avatar_Herta_Passive1Atk_Ability_Camera",
+              "Avatar_Herta_00_PassiveAtkReady_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "It Can Still Be Optimized": {
+          "variant1": {
+            "skillID": 101307,
+            "trigger": "SkillMaze",
+            "name": "It Can Still Be Optimized",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using her Technique, Herta's ATK increases by #1[i]% for #2[i] turn(s) at the beginning of the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Herta_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1013_basic_atk.png",
+        "skillRef": {
+          "skillName": "What Are You Looking At?",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1013_skill.png",
+        "skillRef": {
+          "skillName": "One-Time Offer",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1013_ultimate.png",
+        "skillRef": {
+          "skillName": "It's Magic, I Added Some Magic",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1013_talent.png",
+        "skillRef": {
+          "skillName": "Fine, I'll Do It Myself",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1013_technique.png",
+        "skillRef": {
+          "skillName": "It Can Still Be Optimized",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Efficiency",
+        "icon": "icon/skill/1013_skilltree1.png",
+        "desc": "When Skill is used, the DMG Boost effect on target enemies increases by an extra #1[i]%.",
+        "params": [
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Puppet",
+        "icon": "icon/skill/1013_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Icing",
+        "icon": "icon/skill/1013_skilltree3.png",
+        "desc": "When Ultimate is used, deals #1[i]% more DMG to Frozen enemies.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1013.png",
+    "preview": "image/character_preview/1013.png",
+    "portrait": "image/character_portrait/1013.png",
+    "bannerOffsets": [
+      21.9,
+      -66,
+      0.6,
+      21.9,
+      -66,
+      0.6,
+      21.9,
+      -66,
+      0.6
+    ]
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",
@@ -11,8 +547,8 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 846.72,
       "SPDBase": 112,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
       "AggroBase": 100
     },
     "eidolons": [
@@ -544,8 +1080,8 @@ let characters = {
       "DEFBase": 654.885,
       "HPBase": 1241.8560000000002,
       "SPDBase": 101,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
       "AggroBase": 125
     },
     "eidolons": [

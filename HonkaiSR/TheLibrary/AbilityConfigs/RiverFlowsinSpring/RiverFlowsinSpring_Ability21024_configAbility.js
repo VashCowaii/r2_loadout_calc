@@ -80,7 +80,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Take Damage Start [Owner]: Hit",
+          "eventTrigger": "Take Damage Start [Owner]: Any",
           "execute": [
             {
               "name": "Define Custom Variable with HP%",

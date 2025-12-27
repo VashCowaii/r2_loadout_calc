@@ -41,7 +41,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Take Damage Start [Owner]: Hit",
+              "eventTrigger": "Take Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "Adjust Target Stats",

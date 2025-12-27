@@ -100,7 +100,7 @@ const compositeAbilityObject = {
           "for": "LC_24002_Main",
           "execute": [
             {
-              "eventTrigger": "Take Damage Start [Owner]: Hit",
+              "eventTrigger": "Take Damage Start [Owner]: Any",
               "execute": [
                 {
                   "name": "IF",
