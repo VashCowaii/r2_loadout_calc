@@ -535,6 +535,560 @@ let characters = {
       0.6
     ]
   },
+  "Bronya": {
+    "internalID": 1101,
+    "name": "Bronya",
+    "path": "Harmony",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 533.61,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 99,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "110101",
+        "name": "Hone Your Strength",
+        "rank": 1,
+        "desc": "When using Skill, there is a 50% fixed chance of recovering 1 Skill Point. This effect has a 1-turn cooldown.",
+        "icon": "icon/skill/1101_rank1.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        }
+      },
+      {
+        "id": "110102",
+        "name": "Quick March",
+        "rank": 2,
+        "desc": "When using Skill, the target ally's SPD increases by 30% after taking action, lasting for 1 turn.",
+        "icon": "icon/skill/1101_rank2.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "110103",
+        "name": "Bombardment",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1101_ultimate.png"
+      },
+      {
+        "id": "110104",
+        "name": "Take by Surprise",
+        "rank": 4,
+        "desc": "After any other ally character uses Basic ATK on an enemy target that has Wind Weakness, Bronya immediately launches 1 instance of Follow-Up ATK, dealing Wind DMG to this target equal to 80% of her Basic ATK DMG. This effect can only trigger once per turn.",
+        "icon": "icon/skill/1101_rank4.png",
+        "paramsEido": [
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "110105",
+        "name": "Unstoppable",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1101_skill.png"
+      },
+      {
+        "id": "110106",
+        "name": "Piercing Rainbow",
+        "rank": 6,
+        "desc": "The duration of the DMG Boost effect placed by the Skill on the target ally increases by 1 turn(s).",
+        "icon": "icon/skill/1101_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Windrider Bullet": {
+          "variant1": {
+            "skillID": 110101,
+            "trigger": "Skill01",
+            "name": "Windrider Bullet",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Bronya's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Bronya_00_Skill01_Camera",
+              "Bronya_00_Skill01_Phase01",
+              "Bronya_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Combat Redeployment": {
+          "variant1": {
+            "skillID": 110102,
+            "trigger": "Skill02",
+            "name": "Combat Redeployment",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Dispels a debuff from a single ally, allows them to immediately take action, and increases their DMG by #1[i]% for #3[i] turn(s).\\nWhen this Skill is used on Bronya herself, she cannot immediately take action again.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.53625,
+                0,
+                1,
+                1
+              ],
+              "8": [
+                0.5775,
+                0,
+                1,
+                1
+              ],
+              "9": [
+                0.61875,
+                0,
+                1,
+                1
+              ],
+              "10": [
+                0.66,
+                0,
+                1,
+                1
+              ],
+              "11": [
+                0.693,
+                0,
+                1,
+                1
+              ],
+              "12": [
+                0.726,
+                0,
+                1,
+                1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Bronya_00_Skill02_Others_Camera",
+              "Avatar_Bronya_00_Skill02_Self_Camera",
+              "Bronya_00_Skill02_Phase01",
+              "Bronya_00_Skill02_Others_Phase02",
+              "Bronya_00_Skill02_Self_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "The Belobog March": {
+          "variant1": {
+            "skillID": 110103,
+            "trigger": "Skill03",
+            "name": "The Belobog March",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Increases the ATK of all allies by #1[i]%, and increases their CRIT DMG equal to #2[f1]% of Bronya's CRIT DMG plus #3[f1]% for #4[i] turn(s).",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.4675,
+                0.145,
+                0.17,
+                2
+              ],
+              "8": [
+                0.495,
+                0.15,
+                0.18,
+                2
+              ],
+              "9": [
+                0.5225,
+                0.155,
+                0.19,
+                2
+              ],
+              "10": [
+                0.55,
+                0.16,
+                0.2,
+                2
+              ],
+              "11": [
+                0.572,
+                0.164,
+                0.208,
+                2
+              ],
+              "12": [
+                0.594,
+                0.168,
+                0.216,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Bronya_00_Skill03_Camera",
+              "Avatar_Bronya_00_Skill03_EnterReady",
+              "Bronya_00_Skill03_Phase01",
+              "Bronya_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Leading the Way": {
+          "variant1": {
+            "skillID": 110104,
+            "trigger": "SkillP01",
+            "name": "Leading the Way",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After using her Basic ATK, Bronya's next action will be Advanced Forward by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.24375
+              ],
+              "8": [
+                0.2625
+              ],
+              "9": [
+                0.28125
+              ],
+              "10": [
+                0.3
+              ],
+              "11": [
+                0.315
+              ],
+              "12": [
+                0.33
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Bronya_00_PassiveSkill_1",
+              "Avatar_Bronya_00_Rank04_ATK",
+              "Avatar_Bronya_00_Rank04_ATK_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Banner of Command": {
+          "variant1": {
+            "skillID": 110107,
+            "trigger": "SkillMaze",
+            "name": "Banner of Command",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Bronya's Technique, at the start of the next battle, all allies' ATK increases by #1[i]% for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Bronya_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1101_basic_atk.png",
+        "skillRef": {
+          "skillName": "Windrider Bullet",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1101_skill.png",
+        "skillRef": {
+          "skillName": "Combat Redeployment",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1101_ultimate.png",
+        "skillRef": {
+          "skillName": "The Belobog March",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1101_talent.png",
+        "skillRef": {
+          "skillName": "Leading the Way",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1101_technique.png",
+        "skillRef": {
+          "skillName": "Banner of Command",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Command",
+        "icon": "icon/skill/1101_skilltree1.png",
+        "desc": "The CRIT Rate for Basic ATK increases to 100%."
+      },
+      "Point07": {
+        "name": "Battlefield",
+        "icon": "icon/skill/1101_skilltree2.png",
+        "desc": "At the start of the battle, all allies' DEF increases by #2[i]% for #1[i] turn(s).",
+        "params": [
+          2,
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Military Might",
+        "icon": "icon/skill/1101_skilltree3.png",
+        "desc": "When Bronya is on the field, all allies deal #1[i]% more DMG.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1101.png",
+    "preview": "image/character_preview/1101.png",
+    "portrait": "image/character_portrait/1101.png",
+    "bannerOffsets": [
+      59,
+      194,
+      0.77,
+      59,
+      194,
+      0.77,
+      59,
+      194,
+      0.77
+    ]
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",
