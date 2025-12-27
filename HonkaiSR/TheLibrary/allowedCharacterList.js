@@ -8,6 +8,10 @@ let allowedCharacterList = [
     "trimName": "Tingyun"
   },
   {
+    "fullName": "Gallagher",
+    "trimName": "Gallagher"
+  },
+  {
     "fullName": "Saber",
     "trimName": "Saber"
   }

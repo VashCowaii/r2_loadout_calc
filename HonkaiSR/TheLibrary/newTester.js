@@ -1224,6 +1224,19 @@ const megaParsingFuckery = {
             ${parseRef.phase}${parseRef.target ? ` on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
+    "Technique Modifies Current Wave"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+            // "phase"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Technique Modifies Current Wave");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>`;
+    },
     "Eidolon Activated"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1857,6 +1870,7 @@ const megaParsingFuckery = {
             "name",
             "target",
             
+            "EnergyGainPercent",
             "healPercent",
             "healFlat",
             "formula",
@@ -1878,6 +1892,10 @@ const megaParsingFuckery = {
             ${parseRef.healFlat != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Heal Flat:</div>&nbsp;
                 ${parseRef.healFlat.displayLines ?? parseRef.healFlat}
+            </div>` : ""}
+            ${parseRef.EnergyGainPercent != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Energy Split:</div>&nbsp;
+                ${parseRef.EnergyGainPercent.displayLines ?? parseRef.EnergyGainPercent}
             </div>` : ""}
             ${parseRef.formula != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Heal Formula:</div>&nbsp;
@@ -2204,6 +2222,20 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.chance?.displayLines ?? parseRef.chance}
+        </div>`;
+    },
+    "Random Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "values",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Random Chance");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.variableName} from ${parseRef.values}
         </div>`;
     },
     "Target is Next Turn"(parseRef,initialCounter) {
@@ -2666,6 +2698,10 @@ const megaParsingFuckery = {
                 <div class="rotationConditionOperatorHeaderInline">Toughness:</div>&nbsp;
                 ${parseRef.Toughness.displayLines ?? parseRef.Toughness}
             </div>` : ""}
+            ${parseRef.EnergyGainPercent != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Energy Split:</div>&nbsp;
+                ${parseRef.EnergyGainPercent.displayLines ?? parseRef.EnergyGainPercent}
+            </div>` : ""}
             ${parseRef.Tags != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Tags:</div>&nbsp;
                 ${parseRef.Tags}
@@ -2683,11 +2719,6 @@ const megaParsingFuckery = {
                 <div class="rotationConditionOperatorHeaderInline">Toughness Element:</div>&nbsp;
                 ${parseRef.ToughnessDMGType.DamageType}
             </div>` : ""}
-            
-
-            
-
-            
             ${parseRef.indirectDMG != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Indirect DMG:</div>&nbsp;
                 ${parseRef.indirectDMG}
