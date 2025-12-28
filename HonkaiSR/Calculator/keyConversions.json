@@ -21,6 +21,7 @@
 
     "BaseAggro": "AggroBase",
     "AggroAddedRatio": "Aggro%",
+    "AggroDelta": "AggroFlat",
 
     "AllDamageReduce": "DamageReduction",
 
@@ -28,6 +29,8 @@
     "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
 
     "DamageValue": "DMG%Total",
+
+    "FatigueRatio": "Weaken%",
 
     "Shield": "ShieldValue",
     "ShieldAddedRatio": "Shield%",
