@@ -2595,9 +2595,10 @@ const customMenu = {
         if (isLightcone) {return words.join("")}
       
         const first = words[0];
-        const initials = words.slice(1).map(w => w[0].toUpperCase()).join("");
+        const second = words[1];
+        const initials = words.slice(2).map(w => w[0].toUpperCase()).join("");
       
-        return first + initials;
+        return first + (second ?? "") + initials;
     },
     updateSearchResults() {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
