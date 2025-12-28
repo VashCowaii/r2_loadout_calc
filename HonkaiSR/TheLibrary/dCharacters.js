@@ -1089,6 +1089,1116 @@ let characters = {
       0.77
     ]
   },
+  "Serval": {
+    "internalID": 1103,
+    "name": "Serval",
+    "path": "Erudition",
+    "element": "Lightning",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 652.6800000000001,
+      "DEFBase": 374.85,
+      "HPBase": 917.28,
+      "SPDBase": 104,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "110301",
+        "name": "Echo Chamber",
+        "rank": 1,
+        "desc": "Basic ATK deals Lightning DMG equal to 60% of Basic ATK DMG to a random target adjacent to the target enemy.",
+        "icon": "icon/skill/1103_rank1.png",
+        "paramsEido": [
+          0.6
+        ]
+      },
+      {
+        "id": "110302",
+        "name": "Encore!",
+        "rank": 2,
+        "desc": "Every time Serval's Talent is triggered to deal Additional DMG, she regenerates 4 Energy.",
+        "icon": "icon/skill/1103_rank2.png",
+        "paramsEido": [
+          4
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "110303",
+        "name": "Listen, the Heartbeat of the Gears",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1103_skill.png"
+      },
+      {
+        "id": "110304",
+        "name": "Make Some Noise!",
+        "rank": 4,
+        "desc": "Ultimate has a 100% base chance to apply Shock to any enemies not currently Shocked. This Shock has the same effects as the one applied by Skill.",
+        "icon": "icon/skill/1103_rank4.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110305",
+        "name": "Belobog's Loudest Roar!",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1103_ultimate.png"
+      },
+      {
+        "id": "110306",
+        "name": "This Song Rocks to Heaven!",
+        "rank": 6,
+        "desc": "Serval deals 30% more DMG to Shocked enemies.",
+        "icon": "icon/skill/1103_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Roaring Thunderclap": {
+          "variant1": {
+            "skillID": 110301,
+            "trigger": "Skill01",
+            "name": "Roaring Thunderclap",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill01_Camera",
+              "Avatar_Serval_Skill01_Phase01",
+              "Avatar_Serval_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Lightning Flash": {
+          "variant1": {
+            "skillID": 110302,
+            "trigger": "Skill02",
+            "name": "Lightning Flash",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy and Lightning DMG equal to #2[i]% of Serval's ATK to enemies adjacent to it, with a #3[i]% base chance for enemies hit to become Shocked for #4[i] turn(s).\\nWhile Shocked, enemies take Lightning DoT equal to #5[i]% of Serval's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.1375,
+                0.4875,
+                0.8,
+                2,
+                0.7
+              ],
+              "8": [
+                1.225,
+                0.525,
+                0.8,
+                2,
+                0.8
+              ],
+              "9": [
+                1.3125,
+                0.5625,
+                0.8,
+                2,
+                0.92
+              ],
+              "10": [
+                1.4,
+                0.6,
+                0.8,
+                2,
+                1.04
+              ],
+              "11": [
+                1.47,
+                0.63,
+                0.8,
+                2,
+                1.092
+              ],
+              "12": [
+                1.54,
+                0.66,
+                0.8,
+                2,
+                1.144
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill02_Camera",
+              "Avatar_Serval_Skill02_Phase01",
+              "Avatar_Serval_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Here Comes the Mechanical Fever": {
+          "variant1": {
+            "skillID": 110303,
+            "trigger": "Skill03",
+            "name": "Here Comes the Mechanical Fever",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to all enemies. Enemies already Shocked will extend the duration of their Shock state by #2[i] turn(s).",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.53,
+                2
+              ],
+              "8": [
+                1.62,
+                2
+              ],
+              "9": [
+                1.71,
+                2
+              ],
+              "10": [
+                1.8,
+                2
+              ],
+              "11": [
+                1.872,
+                2
+              ],
+              "12": [
+                1.944,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_00_Skill03_Camera",
+              "Avatar_Serval_Skill03_EnterReady",
+              "Avatar_Serval_Skill03_Phase01",
+              "Avatar_Serval_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Galvanic Chords": {
+          "variant1": {
+            "skillID": 110304,
+            "trigger": "SkillP01",
+            "name": "Galvanic Chords",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After Serval attacks, deals Lightning Additional DMG equal to #1[i]% of Serval's ATK to all Shocked enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.585
+              ],
+              "8": [
+                0.63
+              ],
+              "9": [
+                0.675
+              ],
+              "10": [
+                0.72
+              ],
+              "11": [
+                0.756
+              ],
+              "12": [
+                0.792
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Serval_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Good Night, Belobog": {
+          "variant1": {
+            "skillID": 110307,
+            "trigger": "SkillMaze",
+            "name": "Good Night, Belobog",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to #4[i]% of Serval's ATK to a random enemy, with a #1[i]% base chance for all enemies to become Shocked for #3[i] turn(s).\\nWhile Shocked, enemies will take Lightning DoT equal to #2[i]% of Serval's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                3,
+                0.5
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Serval_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1103_basic_atk.png",
+        "skillRef": {
+          "skillName": "Roaring Thunderclap",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1103_skill.png",
+        "skillRef": {
+          "skillName": "Lightning Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1103_ultimate.png",
+        "skillRef": {
+          "skillName": "Here Comes the Mechanical Fever",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1103_talent.png",
+        "skillRef": {
+          "skillName": "Galvanic Chords",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1103_technique.png",
+        "skillRef": {
+          "skillName": "Good Night, Belobog",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Rock 'n' Roll",
+        "icon": "icon/skill/1103_skilltree1.png",
+        "desc": "When using skill, increases the base chance for the attacked enemy target to become Shocked by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "String Vibration",
+        "icon": "icon/skill/1103_skilltree2.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point08": {
+        "name": "Mania",
+        "icon": "icon/skill/1103_skilltree3.png",
+        "desc": "Upon defeating an enemy, ATK is increased by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.2,
+          2
+        ]
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1103.png",
+    "preview": "image/character_preview/1103.png",
+    "portrait": "image/character_portrait/1103.png",
+    "bannerOffsets": [
+      -26,
+      33,
+      0.68,
+      -26,
+      33,
+      0.68,
+      -26,
+      33,
+      0.68
+    ]
+  },
+  "Natasha": {
+    "internalID": 1105,
+    "name": "Natasha",
+    "path": "Abundance",
+    "element": "Physical",
+    "rarity": 4,
+    "energyMax": 90,
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 507.15,
+      "HPBase": 1164.2399999999998,
+      "SPDBase": 98,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "110501",
+        "name": "Pharmacology Expertise",
+        "rank": 1,
+        "desc": "After being attacked, if the current HP percentage is 30% or lower, heals self for 1 time to restore HP by an amount equal to 15% of Max HP plus 400. This effect can only be triggered 1 time per battle.",
+        "icon": "icon/skill/1105_rank1.png",
+        "paramsEido": [
+          0.3,
+          0.15,
+          400
+        ]
+      },
+      {
+        "id": "110502",
+        "name": "Clinical Research",
+        "rank": 2,
+        "desc": "When Natasha uses her Ultimate, grant continuous healing for 1 turn(s) to allies whose HP percentage is at 30% or lower. And at the beginning of their turn, their HP is restored by an amount equal to 6% of Natasha's Max HP plus 160.",
+        "icon": "icon/skill/1105_rank2.png",
+        "paramsEido": [
+          0.3,
+          1,
+          0.06,
+          160
+        ]
+      },
+      {
+        "id": "110503",
+        "name": "The Right Cure",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1105_skill.png"
+      },
+      {
+        "id": "110504",
+        "name": "Miracle Cure",
+        "rank": 4,
+        "desc": "After being attacked, regenerates 5 extra Energy.",
+        "icon": "icon/skill/1105_rank4.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "110505",
+        "name": "Preventive Treatment",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1105_ultimate.png"
+      },
+      {
+        "id": "110506",
+        "name": "Doctor's Grace",
+        "rank": 6,
+        "desc": "Natasha's Basic ATK additionally deals Physical DMG equal to 40% of her Max HP.",
+        "icon": "icon/skill/1105_rank6.png",
+        "paramsEido": [
+          0.4
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Behind the Kindness": {
+          "variant1": {
+            "skillID": 110501,
+            "trigger": "Skill01",
+            "name": "Behind the Kindness",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Natasha's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Natasha_00_Skill01_Camera",
+              "Avatar_Natasha_00_Skill01_Phase01",
+              "Avatar_Natasha_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Love, Heal, and Choose": {
+          "variant1": {
+            "skillID": 110502,
+            "trigger": "Skill02",
+            "name": "Love, Heal, and Choose",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Restores a single ally for #1[f1]% of Natasha's Max HP plus #4[i]. Restores the ally for another #2[f1]% of Natasha's Max HP plus #5[i] at the beginning of each turn for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.0945,
+                0.0648,
+                2,
+                232.75,
+                159.6
+              ],
+              "8": [
+                0.098,
+                0.0672,
+                2,
+                248.5,
+                170.4
+              ],
+              "9": [
+                0.1015,
+                0.0696,
+                2,
+                264.25,
+                181.2
+              ],
+              "10": [
+                0.105,
+                0.072,
+                2,
+                280,
+                192
+              ],
+              "11": [
+                0.1085,
+                0.0744,
+                2,
+                295.75,
+                202.8
+              ],
+              "12": [
+                0.112,
+                0.0768,
+                2,
+                311.5,
+                213.6
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Natasha_00_Skill02_Camera_Self",
+              "Avatar_Natasha_00_Skill02_Camera_Other",
+              "Avatar_Natasha_00_Skill02_Phase01",
+              "Avatar_Natasha_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Gift of Rebirth": {
+          "variant1": {
+            "skillID": 110503,
+            "trigger": "Skill03",
+            "name": "Gift of Rebirth",
+            "type": "Restore",
+            "slot": "Ultimate",
+            "desc": "Heals all allies for #1[f1]% of Natasha's Max HP plus #2[i].",
+            "energyCost": 90,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.1242,
+                305.9
+              ],
+              "8": [
+                0.1288,
+                326.6
+              ],
+              "9": [
+                0.1334,
+                347.3
+              ],
+              "10": [
+                0.138,
+                368
+              ],
+              "11": [
+                0.1426,
+                388.7
+              ],
+              "12": [
+                0.1472,
+                409.4
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Natasha_00_Skill03_Camera",
+              "Avatar_Natasha_00_Skill03_EnterReady",
+              "Avatar_Natasha_00_Skill03_Phase01",
+              "Avatar_Natasha_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Innervation": {
+          "variant1": {
+            "skillID": 110504,
+            "trigger": "SkillP01",
+            "name": "Innervation",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When healing allies with HP percentage at #1[i]% or lower, increases Natasha's Outgoing Healing by #2[i]%. This effect also works on continuous healing.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.3,
+                0.40625
+              ],
+              "8": [
+                0.3,
+                0.4375
+              ],
+              "9": [
+                0.3,
+                0.46875
+              ],
+              "10": [
+                0.3,
+                0.5
+              ],
+              "11": [
+                0.3,
+                0.525
+              ],
+              "12": [
+                0.3,
+                0.55
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Natasha_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Hypnosis Research": {
+          "variant1": {
+            "skillID": 110507,
+            "trigger": "SkillMaze",
+            "name": "Hypnosis Research",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Physical DMG equal to #4[i]% of Natasha's ATK to a random enemy, with a #1[i]% base chance to Weaken all enemies.\\nWhile Weakened, enemies deal #2[i]% less DMG to allies for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.3,
+                1,
+                0.8
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Natasha_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1105_basic_atk.png",
+        "skillRef": {
+          "skillName": "Behind the Kindness",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1105_skill.png",
+        "skillRef": {
+          "skillName": "Love, Heal, and Choose",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1105_ultimate.png",
+        "skillRef": {
+          "skillName": "Gift of Rebirth",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1105_talent.png",
+        "skillRef": {
+          "skillName": "Innervation",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1105_technique.png",
+        "skillRef": {
+          "skillName": "Hypnosis Research",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Soothe",
+        "icon": "icon/skill/1105_skilltree1.png",
+        "desc": "When using Skill, dispels #1[i] debuff(s) from one designated ally.",
+        "params": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Healer",
+        "icon": "icon/skill/1105_skilltree2.png",
+        "desc": "Natasha's Outgoing Healing increases by #1[i]%.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point08": {
+        "name": "Recuperation",
+        "icon": "icon/skill/1105_skilltree3.png",
+        "desc": "Increases the duration of Skill's continuous healing effect for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1105.png",
+    "preview": "image/character_preview/1105.png",
+    "portrait": "image/character_portrait/1105.png",
+    "bannerOffsets": [
+      -11,
+      -35,
+      0.57,
+      -11,
+      -35,
+      0.57,
+      -11,
+      -35,
+      0.57
+    ]
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",
@@ -2198,6 +3308,1234 @@ let characters = {
       -38,
       -6,
       0.455
+    ]
+  },
+  "Trailblazer - Destruction": {
+    "internalID": 8001,
+    "name": "Trailblazer - Destruction",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 100,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "800101",
+        "name": "A Falling Star",
+        "rank": 1,
+        "desc": "When enemies are defeated due to the Trailblazer's Ultimate, the Trailblazer regenerates 10 extra Energy. This effect can only be triggered once per attack.",
+        "icon": "icon/skill/8001_rank1.png",
+        "paramsEido": [
+          10
+        ]
+      },
+      {
+        "id": "800102",
+        "name": "An Unwilling Host",
+        "rank": 2,
+        "desc": "Attacking enemies with Physical Weakness restores the Trailblazer's HP equal to 5% of the Trailblazer's ATK.",
+        "icon": "icon/skill/8001_rank2.png",
+        "paramsEido": [
+          0.05
+        ]
+      },
+      {
+        "id": "800103",
+        "name": "A Leading Whisper",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8001_skill.png"
+      },
+      {
+        "id": "800104",
+        "name": "A Destructing Glance",
+        "rank": 4,
+        "desc": "When attacking an enemy that is Weakness Broken, increases CRIT Rate by 25%.",
+        "icon": "icon/skill/8001_rank4.png",
+        "paramsEido": [
+          0.25
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          }
+        }
+      },
+      {
+        "id": "800105",
+        "name": "A Surviving Hope",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8001_ultimate.png"
+      },
+      {
+        "id": "800106",
+        "name": "A Trailblazing Will",
+        "rank": 6,
+        "desc": "The Trailblazer's Talent is also triggered when they defeat an enemy.",
+        "icon": "icon/skill/8001_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Farewell Hit": {
+          "variant1": {
+            "skillID": 800101,
+            "trigger": "Skill01",
+            "name": "Farewell Hit",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_Skill01_Camera",
+              "Avatar_PlayerBoy_Skill01_Phase01",
+              "Avatar_PlayerBoy_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "RIP Home Run": {
+          "variant1": {
+            "skillID": 800102,
+            "trigger": "Skill02",
+            "name": "RIP Home Run",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy and enemies adjacent to it.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.015625
+              ],
+              "8": [
+                1.09375
+              ],
+              "9": [
+                1.171875
+              ],
+              "10": [
+                1.25
+              ],
+              "11": [
+                1.3125
+              ],
+              "12": [
+                1.375
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_Skill02_Camera",
+              "Avatar_PlayerBoy_Skill02_Phase01",
+              "Avatar_PlayerBoy_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Stardust Ace": {
+          "variant1": {
+            "skillID": 800103,
+            "trigger": "Skill03",
+            "name": "Stardust Ace",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Choose between two attack modes to deliver a full strike.\\n\"Blowout: Farewell Hit\" deals Physical DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy.\\n\"Blowout: RIP Home Run\" deals Physical DMG equal to #2[i]% of the Trailblazer's ATK to one designated enemy, and Physical DMG equal to #3[i]% of the Trailblazer's ATK to enemies adjacent to it.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3.9375,
+                2.3625,
+                1.4175
+              ],
+              "8": [
+                4.125,
+                2.475,
+                1.485
+              ],
+              "9": [
+                4.3125,
+                2.5875,
+                1.5525
+              ],
+              "10": [
+                4.5,
+                2.7,
+                1.62
+              ],
+              "11": [
+                4.65,
+                2.79,
+                1.674
+              ],
+              "12": [
+                4.8,
+                2.88,
+                1.728
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_Skill03_Camera",
+              "Avatar_PlayerBoy_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Blowout: Farewell Hit": {
+          "variant1": {
+            "skillID": 800108,
+            "trigger": "Skill11",
+            "name": "Blowout: Farewell Hit",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3.9375
+              ],
+              "8": [
+                4.125
+              ],
+              "9": [
+                4.3125
+              ],
+              "10": [
+                4.5
+              ],
+              "11": [
+                4.65
+              ],
+              "12": [
+                4.8
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_Skill11_Camera",
+              "Avatar_PlayerBoy_Skill11_Phase01",
+              "Avatar_PlayerBoy_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Blowout: RIP Home Run": {
+          "variant1": {
+            "skillID": 800109,
+            "trigger": "Skill21",
+            "name": "Blowout: RIP Home Run",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of Trailblazer's ATK to one designated enemy and Physical DMG equal to #2[i]% of Trailblazer's ATK to enemies adjacent to it.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.3625,
+                1.4175
+              ],
+              "8": [
+                2.475,
+                1.485
+              ],
+              "9": [
+                2.5875,
+                1.5525
+              ],
+              "10": [
+                2.7,
+                1.62
+              ],
+              "11": [
+                2.79,
+                1.674
+              ],
+              "12": [
+                2.88,
+                1.728
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_Skill21_Camera",
+              "Avatar_PlayerBoy_Skill21_Phase01",
+              "Avatar_PlayerBoy_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Perfect Pickoff": {
+          "variant1": {
+            "skillID": 800104,
+            "trigger": "SkillP01",
+            "name": "Perfect Pickoff",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Each time after this character inflicts Weakness Break on an enemy, ATK increases by #1[i]%. This effect stacks up to #2[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.1625,
+                2
+              ],
+              "8": [
+                0.175,
+                2
+              ],
+              "9": [
+                0.1875,
+                2
+              ],
+              "10": [
+                0.2,
+                2
+              ],
+              "11": [
+                0.21,
+                2
+              ],
+              "12": [
+                0.22,
+                2
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Immortal Third Strike": {
+          "variant1": {
+            "skillID": 800107,
+            "trigger": "SkillMaze",
+            "name": "Immortal Third Strike",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "Immediately heals all allies for #1[i]% of their respective Max HP after using this Technique.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8001_basic_atk.png",
+        "skillRef": {
+          "skillName": "Farewell Hit",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8001_skill.png",
+        "skillRef": {
+          "skillName": "RIP Home Run",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8001_ultimate.png",
+        "skillRef": {
+          "skillName": "Stardust Ace",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8001_talent.png",
+        "skillRef": {
+          "skillName": "Perfect Pickoff",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8001_technique.png",
+        "skillRef": {
+          "skillName": "Immortal Third Strike",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Ready for Battle",
+        "icon": "icon/skill/8001_skilltree1.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point07": {
+        "name": "Tenacity",
+        "icon": "icon/skill/8001_skilltree2.png",
+        "desc": "Each Talent stack increases the Trailblazer's DEF by #1[i]%.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point08": {
+        "name": "Fighting Will",
+        "icon": "icon/skill/8001_skilltree3.png",
+        "desc": "When using Skill or Ultimate \"Blowout: RIP Home Run,\" DMG dealt to the target enemy is increased by #1[i]%.",
+        "params": [
+          0.25
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/8001.png",
+    "preview": "image/character_preview/8001.png",
+    "portrait": "image/character_portrait/8001.png",
+    "bannerOffsets": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Trailblazer - Preservation": {
+    "internalID": 8003,
+    "name": "Trailblazer - Preservation",
+    "path": "Preservation",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 606.375,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 95,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "800301",
+        "name": "Earth-Shaking Resonance",
+        "rank": 1,
+        "desc": "When the Trailblazer uses their Basic ATK, additionally deals Fire DMG equal to 25% of the Trailblazer's DEF. When the Trailblazer uses their enhanced Basic ATK, additionally deals Fire DMG equal to 50% of the Trailblazer's DEF.",
+        "icon": "icon/skill/8003_rank1.png",
+        "paramsEido": [
+          0.25,
+          0.5
+        ]
+      },
+      {
+        "id": "800302",
+        "name": "Time-Defying Tenacity",
+        "rank": 2,
+        "desc": "The Shield applied to all allies from the Trailblazer's Talent will block extra DMG equal to 2% of the Trailblazer's DEF plus 27.",
+        "icon": "icon/skill/8003_rank2.png",
+        "paramsEido": [
+          0.02,
+          27
+        ]
+      },
+      {
+        "id": "800303",
+        "name": "Trail-Blazing Blueprint",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8003_skill.png"
+      },
+      {
+        "id": "800304",
+        "name": "Nation-Building Oath",
+        "rank": 4,
+        "desc": "At the start of the battle, immediately gains 4 stack(s) of Magma Will.",
+        "icon": "icon/skill/8003_rank4.png",
+        "paramsEido": [
+          4
+        ]
+      },
+      {
+        "id": "800305",
+        "name": "Spirit-Warming Flame",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8003_ultimate.png"
+      },
+      {
+        "id": "800306",
+        "name": "City-Forging Bulwarks",
+        "rank": 6,
+        "desc": "After the Trailblazer uses enhanced Basic ATK or Ultimate, their DEF increases by 10%. Stacks up to 3 time(s).",
+        "icon": "icon/skill/8003_rank6.png",
+        "paramsEido": [
+          0.1,
+          3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Ice-Breaking Light": {
+          "variant1": {
+            "skillID": 800301,
+            "trigger": "Skill01",
+            "name": "Ice-Breaking Light",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy and gains 1 stack of \"Magma Will.\"",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_Skill01_Camera",
+              "Avatar_PlayerBoy_10_Skill01_Phase01",
+              "Avatar_PlayerBoy_10_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 800308,
+            "trigger": "Skill11",
+            "name": "Ice-Breaking Light",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Consumes 4 stacks of \"Magma Will\" to enhance Basic ATK, dealing Fire DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy and Fire DMG to equal to #2[i]% of the Trailblazer's ATK to enemies adjacent to it.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1.35,
+                0.54
+              ],
+              "7": [
+                1.4625,
+                0.585
+              ],
+              "8": [
+                1.575,
+                0.63
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_Skill11_Phase01",
+              "Avatar_PlayerBoy_10_Skill11_Phase02",
+              "Avatar_PlayerBoy_10_Skill11_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Ever-Burning Amber": {
+          "variant1": {
+            "skillID": 800302,
+            "trigger": "Skill02",
+            "name": "Ever-Burning Amber",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Increases the Trailblazer's DMG Reduction by #1[i]% and gains 1 stack of Magma Will, with a #2[i]% base chance to Taunt all enemies for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.4625,
+                1,
+                1
+              ],
+              "8": [
+                0.475,
+                1,
+                1
+              ],
+              "9": [
+                0.4875,
+                1,
+                1
+              ],
+              "10": [
+                0.5,
+                1,
+                1
+              ],
+              "11": [
+                0.51,
+                1,
+                1
+              ],
+              "12": [
+                0.52,
+                1,
+                1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_Skill02_Camera_Self",
+              "Avatar_PlayerBoy_10_Skill02_Phase01",
+              "Avatar_PlayerBoy_10_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "War-Flaming Lance": {
+          "variant1": {
+            "skillID": 800303,
+            "trigger": "Skill03",
+            "name": "War-Flaming Lance",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[i]% of the Trailblazer's ATK plus #2[i]% of the Trailblazer's DEF to all enemies. The next Basic ATK will be automatically enhanced and does not cost Magma Will.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.8125,
+                1.21875
+              ],
+              "8": [
+                0.875,
+                1.3125
+              ],
+              "9": [
+                0.9375,
+                1.40625
+              ],
+              "10": [
+                1,
+                1.5
+              ],
+              "11": [
+                1.05,
+                1.575
+              ],
+              "12": [
+                1.1,
+                1.65
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_Skill03_Camera",
+              "Avatar_PlayerBoy_10_Skill03_EnterReady",
+              "Avatar_PlayerBoy_10_Skill03_Phase01",
+              "Avatar_PlayerBoy_10_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Treasure of the Architects": {
+          "variant1": {
+            "skillID": 800304,
+            "trigger": "SkillP01",
+            "name": "Treasure of the Architects",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Each time the Trailblazer is hit, they gain 1 stack of \"Magma Will\" for a max of #3[i] stack(s).\\nWhen \"Magma Will\" has no fewer than 4 stacks, the Trailblazer's Basic ATK becomes enhanced, dealing DMG to one designated enemy and enemies adjacent to it.\\nWhen the Trailblazer uses Basic ATK, Skill, or Ultimate, apply a Shield to all allies that absorbs DMG equal to #1[f1]% of the Trailblazer's DEF plus #4[i]. The Shield lasts for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.054,
+                2,
+                8,
+                66.5
+              ],
+              "8": [
+                0.055999998,
+                2,
+                8,
+                71
+              ],
+              "9": [
+                0.058,
+                2,
+                8,
+                75.5
+              ],
+              "10": [
+                0.06,
+                2,
+                8,
+                80
+              ],
+              "11": [
+                0.062,
+                2,
+                8,
+                84.5
+              ],
+              "12": [
+                0.064,
+                2,
+                8,
+                89
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Call of the Guardian": {
+          "variant1": {
+            "skillID": 800307,
+            "trigger": "SkillMaze",
+            "name": "Call of the Guardian",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After using Technique, at the start of the next battle, gains a Shield that absorbs DMG equal to #1[i]% of the Trailblazer's DEF plus #2[i] for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                384,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_10_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8003_basic_atk.png",
+        "skillRef": {
+          "skillName": "Ice-Breaking Light",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8003_skill.png",
+        "skillRef": {
+          "skillName": "Ever-Burning Amber",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8003_ultimate.png",
+        "skillRef": {
+          "skillName": "War-Flaming Lance",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8003_talent.png",
+        "skillRef": {
+          "skillName": "Treasure of the Architects",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8003_technique.png",
+        "skillRef": {
+          "skillName": "Call of the Guardian",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "The Strong Defend the Weak",
+        "icon": "icon/skill/8003_skilltree1.png",
+        "desc": "After using the Skill, the DMG taken by all allies decreases by #2[i]% for #3[i] turn(s).",
+        "params": [
+          10,
+          0.15,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Unwavering Gallantry",
+        "icon": "icon/skill/8003_skilltree2.png",
+        "desc": "Using Enhanced Basic ATK restores the Trailblazer's HP by #1[i]% of their Max HP.",
+        "params": [
+          0.05
+        ]
+      },
+      "Point08": {
+        "name": "Action Beats Overthinking",
+        "icon": "icon/skill/8003_skilltree3.png",
+        "desc": "When the Trailblazer is protected by a Shield at the beginning of the turn, increases their ATK by #2[i]% and regenerates #1[i] Energy until the action is over.",
+        "params": [
+          5,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/8003.png",
+    "preview": "image/character_preview/8003.png",
+    "portrait": "image/character_portrait/8003.png",
+    "bannerOffsets": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
     ]
   },
   "Saber": {

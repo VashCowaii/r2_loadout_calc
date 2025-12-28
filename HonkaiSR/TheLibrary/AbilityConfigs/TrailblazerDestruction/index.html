@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- <link rel="stylesheet" href="/css/Honkai/honkaiHome.css"> -->
     <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css"> -->
-    
-    <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css">
-    <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css">
-
     <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
-    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryHome.css">
     <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
     <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
@@ -21,9 +16,9 @@
     <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
     <link rel="Icon" href="/images/Cowaii.png">
     <!-- <script src="code.js"></script> -->
-    <title>HSR Library</title> <!-- Browser Tab title -->
+    <title>Trailblazer - Destruction: HSR Event Viewer</title> <!-- Browser Tab title -->
 
-    <meta property="og:title" content="HSR Library">
+    <meta property="og:title" content="Trailblazer - Destruction: HSR Event Viewer">
     <meta
       property="og:description"
       content="Analytical, user-readable representations of what the game ACTUALLY does."
@@ -34,23 +29,23 @@
     />
     <meta
       property="og:image"
-      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
+      content="https://cowaii.io/HonkaiSR/icon/character/8001.png"
     />
     <meta
       property="og:url"
       content="https://cowaii.io/"
     />
-    <meta property="og:site_name" content="HSR Library" />
+    <meta property="og:site_name" content="Trailblazer - Destruction: HSR Event Viewer" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="HSR Library" />
+    <meta name="twitter:title" content="Trailblazer - Destruction: HSR Event Viewer" />
     <meta
       name="twitter:description"
       content="Analytical, user-readable representations of what the game ACTUALLY does."
     />
     <meta
       name="twitter:image"
-      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
+      content="https://cowaii.io/HonkaiSR/icon/character/8001.png"
     />
 </head>
 
@@ -102,40 +97,8 @@
 
 
         <div class="mainGridRow" style="display: flex;width: 100%;">
+            <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
 
-            <div class="mainBodyBufferleftBox">
-              <img src="/HonkaiSR/image/simulated_event/HoshinoKami_Herta.png" class="cardBoxBannerCardIcon">
-              <!-- <div class="cardBoxIconTextBanner">The Library</div> -->
-            </div>
-
-            <div class="mainBodyCardBox">
-
-              <div class="cardBoxCharacterCard cardHoverOpacity" onclick="customMenu.createCharacterSearchMenu();">
-                <img src="/HonkaiSR/image/character_portrait/1005.png" class="cardBoxCharacterCardIcon">
-                <div class="cardBoxIconText">Characters</div>
-              </div>
-
-              <div class="cardBoxLCAndRelicBox">
-                <!-- <div class="cardBoxTitleCard">
-                  asdf
-                </div> -->
-                <div class="cardBoxLightconeCard cardHoverOpacity" onclick="customMenu.createLightconeSearchMenu();">
-                  <img src="/HonkaiSR/image/light_cone_portrait/23004.png" class="cardBoxLightconeCardIcon">
-                  <div class="cardBoxIconText">Lightcones</div>
-                </div>
-
-                <div class="cardBoxRelicCard cardHoverOpacity" onclick="customMenu.createRelicSearchMenu();">
-                <!-- <div class="cardBoxRelicCard cardHoverOpacity" onclick="alert('No relics yet. The list you see on characters and lightcones are what is available to view currently.\n\nI will add more daily.')"> -->
-                  <img src="/HonkaiSR/icon/relic/308_0.png" class="cardBoxRelicCardIcon2">
-                  <img src="/HonkaiSR/icon/relic/110_0.png" class="cardBoxRelicCardIcon1">
-                  <div class="cardBoxIconText">Relics</div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- customMenuSearchBody -->
-            <!-- eventBodyMainBox -->
         </div>
 
         
@@ -150,14 +113,11 @@
 <script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 
-<script src="dCharacters.js"></script>
 <!-- <script src="/HonkaiSR/Calculator/dCharacters.js"></script> -->
-
-<script src="dLightcones.js"></script>
-<script src="dRelicSets.js"></script>
-<!-- <script src="/HonkaiSR/Calculator/dRelicSets.js"></script> -->
-<script src="/HonkaiSR/Calculator/suffering4Analytics.js"></script>
-<script src="statList.js"></script>
+<script src="/HonkaiSR/TheLibrary/dCharacters.js"></script>
+<script src="/HonkaiSR/TheLibrary/dLightcones.js"></script>
+<script src="/HonkaiSR/TheLibrary/dRelicSets.js"></script>
+<script src="/HonkaiSR/TheLibrary/tester.js"></script>
 
 <!-- <script src="dLightcones.js"></script>
 <script src="dRelics.js"></script>
@@ -166,7 +126,7 @@
 <!-- <script src="/HonkaiSR/Calculator/statList.js"></script> -->
 <!-- <script src="wavePresets.js"></script> -->
 <!-- <script src="formulas.js"></script> -->
-<script src="globalRecords.js"></script>
+<!-- <script src="globalRecords.js"></script> -->
 <!-- <script src="/HonkaiSR/Calculator/customHTML.js"></script> -->
 
 <script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
@@ -176,7 +136,7 @@
 
 
 
-<script src="/HonkaiSR/TheLibrary/tester.js"></script>
+<!-- <script src="/HonkaiSR/Calculator/tester.js"></script> -->
 
 <!-- <script src="su_Maslow.js"></script> -->
 <!-- <script src="suffering4Analytics.js"></script> -->
@@ -188,8 +148,23 @@
 <!-- <script src="tester.js"></script> -->
 <!-- <script src="pagePopulation.js"></script> -->
 
-<!-- <script src="/HonkaiSR/TheLibrary/newTester.js"></script> -->
-<script src="/HonkaiSR/TheLibrary/allowedCharacterList.js"></script>
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill01.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill11.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill02.js"></script> -->
+<script src="compositeAbilityObject.js"></script>
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillP01.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillMaze.js"></script> -->
+
+
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Modifiers.js"></script> -->
+<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Functions.js"></script> -->
+
+
+
+
+<script src="/HonkaiSR/TheLibrary/newTester.js"></script>
 
 <script src="/MainJS/buildTime.js"></script>
 
