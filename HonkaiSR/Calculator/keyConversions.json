@@ -95,6 +95,7 @@
     "AllDamageTypePenetrate": "ResistanceAllPEN",
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",
+    "QuantumPenetrate": "ResistanceQuantumPEN",
 
     "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",

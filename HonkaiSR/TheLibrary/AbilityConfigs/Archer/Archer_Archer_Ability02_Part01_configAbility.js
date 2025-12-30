@@ -1,0 +1,60 @@
+const configAbility = {
+  "fileName": "Archer_Archer_Ability02_Part01",
+  "abilityType": "Skill",
+  "energy": 30,
+  "toughnessList": [
+    20,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Unknown Action To Define(Not always an error)"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": "Caster",
+        "modifier": "Archer_BonusAbility02Ready",
+        "invertCondition": true
+      },
+      "passed": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": "Caster",
+        "modifier": "Archer_BonusAbility02Ready",
+        "invertCondition": true
+      }
+    },
+    {
+      "name": "Trigger Ability",
+      "from": "Caster",
+      "ability": "Archer_Ability02_Part02",
+      "isTrigger": true
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "MDF_InBonus",
+        "compareType": "=",
+        "value2": 0
+      },
+      "passed": [
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "failed": [
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ]
+    }
+  ],
+  "references": []
+}

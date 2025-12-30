@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Injected Action [Anyone]: Start",
+              "eventTrigger": "Follow-Up Attack [Anyone]: Start",
               "execute": [
                 {
                   "name": "Find New Target",
