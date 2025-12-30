@@ -442,6 +442,10 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderInline">Inherent Target:</div>&nbsp;
                     ${parseRef.inherentTarget}
                 </div>` : ""}
+                ${parseRef.isTrigger != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">isTrigger:</div>&nbsp;
+                    ${parseRef.isTrigger}
+                </div>` : ""}
             </div>
 
             
@@ -531,6 +535,37 @@ const megaParsingFuckery = {
         </div>
         `;
     },
+    "Is Ability Ongoing"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "invertCondition"
+            // "action",
+            // "valueList",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Ability Ongoing");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+            ${parseRef.invertCondition ? "NOT": ""}${parseRef.target ? ` from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+        </div>
+        `;
+    },
+    "Is Extra-Turn"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+
+            // "action",
+            // "valueList",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Extra-Turn");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+        </div>
+        `;
+    },
     "Implant Weaknesses"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -563,10 +598,12 @@ const megaParsingFuckery = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Allow Queued Actions(Ult?)");
         // initialCounter++;
-        return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp
-        </div>
-        `;
+
+        return "";
+        // return `<div class="actionDetailBody2">
+        //     <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp
+        // </div>
+        // `;
     },
     "Unknown Action To Define(Not always an error)"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -2362,7 +2399,7 @@ const megaParsingFuckery = {
             ${parseRef.invertCondition ? "NOT " : ""} ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
-    "Queued Action Is"(parseRef,initialCounter) {
+    "Next Extra Turn Is"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "target",
@@ -2371,7 +2408,7 @@ const megaParsingFuckery = {
             "actionType",
             "tag",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Queued Action Is");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Next Extra Turn Is");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
@@ -2394,6 +2431,7 @@ const megaParsingFuckery = {
             "name",
             "target",
             "invertCondition",
+            "includeNonTargets",
             // "team",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Enemies Still Alive");
@@ -2402,6 +2440,12 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.invertCondition ? "NOT " : ""} in relation to ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.includeNonTargets != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">With Non-Targets:</div>&nbsp;
+                ${parseRef.includeNonTargets}
+            </div>` : ""}
         </div>`;
     },
     "Is Part Of Team"(parseRef,initialCounter) {
@@ -3437,6 +3481,7 @@ const megaParsingFuckery = {
             "target",
             "followSameTagAsAction",
             "canInjectUltimates",
+            "abilityName",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Extra-Turn");
 
@@ -3481,6 +3526,12 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderInline">Use Ability:</div>&nbsp;
                     ${parseRef.skillType + (parseRef.skillType === "ControlSkill02" ? "(Auto-Skill)" : "")}
                 </div>` : ""}
+                ${parseRef.abilityName ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Use Ability(By Name):</div>&nbsp;
+                    ${parseRef.abilityName}
+                </div>` : ""}
+
+                
                 ${parseRef.forceAction ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Action is Forced:</div>&nbsp;
                     ${parseRef.forceAction}
@@ -3513,7 +3564,7 @@ const megaParsingFuckery = {
             </div>
 
             <div class="rotationConditionOperatorBoxMain">
-                ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">After Injection</div>
+                ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Injection Failure</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString}
                 </div>` : ""}
@@ -4817,7 +4868,7 @@ const megaParsingFuckery = {
         //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
         // </details>
 
-        if (!hasParse && !hasRef) {return "";}
+        // if (!hasParse && !hasRef) {return "";}
 
         return `
         <details class="rotationsPermaConditionsExpand" open="">

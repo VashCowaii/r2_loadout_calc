@@ -8,6 +8,10 @@ let allowedCharacterList = [
     "trimName": "Bronya"
   },
   {
+    "fullName": "Seele",
+    "trimName": "Seele"
+  },
+  {
     "fullName": "Serval",
     "trimName": "Serval"
   },
@@ -34,5 +38,9 @@ let allowedCharacterList = [
   {
     "fullName": "Saber",
     "trimName": "Saber"
+  },
+  {
+    "fullName": "Archer",
+    "trimName": "Archer"
   }
 ]
