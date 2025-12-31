@@ -112,7 +112,7 @@ const configAbility = {
               2
             ]
           },
-          "valueType": "LifeTime"
+          "valueType": "Duration"
         }
       ]
     },

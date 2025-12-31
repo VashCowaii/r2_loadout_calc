@@ -495,7 +495,7 @@ const compositeAbilityObject = {
                   2
                 ]
               },
-              "valueType": "LifeTime"
+              "valueType": "Duration"
             }
           ]
         },

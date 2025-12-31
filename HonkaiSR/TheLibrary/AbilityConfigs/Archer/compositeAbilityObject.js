@@ -1349,7 +1349,7 @@ const compositeAbilityObject = {
               "priorityLevel": -80
             },
             {
-              "eventTrigger": "Extra Action [Owner]: Start ",
+              "eventTrigger": "Extra Action/Turn [Owner]: Start ",
               "execute": [
                 {
                   "name": "IF",
@@ -1369,7 +1369,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Extra Action [Owner]: End ",
+              "eventTrigger": "Extra Action/Turn [Owner]: End ",
               "execute": [
                 {
                   "name": "IF",

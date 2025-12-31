@@ -3274,6 +3274,604 @@ let characters = {
       0.58
     ]
   },
+  "Huohuo": {
+    "internalID": 1217,
+    "name": "Huohuo",
+    "path": "Abundance",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 509.355,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 98,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "121701",
+        "name": "Anchored to Vessel, Specters Nestled",
+        "rank": 1,
+        "desc": "The duration of Divine Provision produced by the Talent is extended by 1 turn(s). When Huohuo possesses Divine Provision, all allies' SPD increases by 12%.",
+        "icon": "icon/skill/1217_rank1.png",
+        "paramsEido": [
+          0.12,
+          1
+        ]
+      },
+      {
+        "id": "121702",
+        "name": "Sealed in Tail, Wraith Subdued",
+        "rank": 2,
+        "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down and their HP will immediately be restored by an amount equal to 50% of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. This effect can only be triggered 2 time(s) per battle.",
+        "icon": "icon/skill/1217_rank2.png",
+        "paramsEido": [
+          0.5,
+          2
+        ],
+        "extraEffects": {
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        }
+      },
+      {
+        "id": "121703",
+        "name": "Cursed by Fate, Moths to Flame",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1217_ultimate.png"
+      },
+      {
+        "id": "121704",
+        "name": "Tied in Life, Bound to Strife",
+        "rank": 4,
+        "desc": "When healing a target ally via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is 80%.",
+        "icon": "icon/skill/1217_rank4.png",
+        "paramsEido": [
+          0.8
+        ]
+      },
+      {
+        "id": "121705",
+        "name": "Mandated by Edict, Evils Evicted",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1217_skill.png"
+      },
+      {
+        "id": "121706",
+        "name": "Woven Together, Cohere Forever",
+        "rank": 6,
+        "desc": "When healing a target ally, increases the target ally's DMG dealt by 50% for 2 turn(s).",
+        "icon": "icon/skill/1217_rank6.png",
+        "paramsEido": [
+          0.5,
+          2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Banner: Stormcaller": {
+          "variant1": {
+            "skillID": 121701,
+            "trigger": "Skill01",
+            "name": "Banner: Stormcaller",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to a target enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Huohuo_00_Skill01_Camera",
+              "Avatar_Huohuo_00_Skill01_Phase01",
+              "Avatar_Huohuo_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Talisman: Protection": {
+          "variant1": {
+            "skillID": 121702,
+            "trigger": "Skill02",
+            "name": "Talisman: Protection",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Dispels #5[i] debuff(s) from a single target ally and immediately restores this ally's HP by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, restores HP for allies that are adjacent to this target ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #4[i].",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.189,
+                465.5,
+                0.1512,
+                372.4,
+                1
+              ],
+              "8": [
+                0.196,
+                497,
+                0.1568,
+                397.6,
+                1
+              ],
+              "9": [
+                0.203,
+                528.5,
+                0.1624,
+                422.8,
+                1
+              ],
+              "10": [
+                0.21,
+                560,
+                0.168,
+                448,
+                1
+              ],
+              "11": [
+                0.217,
+                591.5,
+                0.1736,
+                473.2,
+                1
+              ],
+              "12": [
+                0.224,
+                623,
+                0.1792,
+                498.4,
+                1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Huohuo_00_Skill02_Camera",
+              "Avatar_Huohuo_00_Skill02_Phase01",
+              "Avatar_Huohuo_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Tail: Spiritual Domination": {
+          "variant1": {
+            "skillID": 121703,
+            "trigger": "Skill03",
+            "name": "Tail: Spiritual Domination",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Regenerates Energy for all teammates (i.e., excluding this unit) by an amount equal to #1[f1]% of their respective Max Energy. At the same time, increases their ATK by #2[f1]% for #3[i] turn(s).",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.18125,
+                0.34,
+                2
+              ],
+              "8": [
+                0.1875,
+                0.36,
+                2
+              ],
+              "9": [
+                0.19375,
+                0.38,
+                2
+              ],
+              "10": [
+                0.2,
+                0.4,
+                2
+              ],
+              "11": [
+                0.205,
+                0.416,
+                2
+              ],
+              "12": [
+                0.21,
+                0.432,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Huohuo_00_Skill03_Camera",
+              "Avatar_Huohuo_00_Skill03_EnterReady",
+              "Avatar_Huohuo_00_Skill03_Phase01",
+              "Avatar_Huohuo_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Possession: Ethereal Metaflow": {
+          "variant1": {
+            "skillID": 121704,
+            "trigger": "SkillP01",
+            "name": "Possession: Ethereal Metaflow",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "After using her Skill, Huohuo gains Divine Provision, lasting for #1[i] turn(s). This duration decreases by 1 turn at the start of Huohuo's every turn. If Huohuo has Divine Provision when an ally's turn starts or when an ally uses their Ultimate, restores HP for that ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #5[i]. At the same time, every ally with #6[i]% HP percentage or lower receives healing once.\\nWhen Divine Provision is triggered to heal an ally, dispel #2[i] debuff(s) from that ally. This effect can be triggered up to #7[i] time(s). Using the skill again resets the effect's trigger count.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                1,
+                0.0405,
+                0,
+                99.75,
+                0.5,
+                6
+              ],
+              "8": [
+                2,
+                1,
+                0.042,
+                0,
+                106.5,
+                0.5,
+                6
+              ],
+              "9": [
+                2,
+                1,
+                0.0435,
+                0,
+                113.25,
+                0.5,
+                6
+              ],
+              "10": [
+                2,
+                1,
+                0.044999998,
+                0,
+                120,
+                0.5,
+                6
+              ],
+              "11": [
+                2,
+                1,
+                0.0465,
+                0,
+                126.75,
+                0.5,
+                6
+              ],
+              "12": [
+                2,
+                1,
+                0.048,
+                0,
+                133.5,
+                0.5,
+                6
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Huohuo_00_PassiveSkill01",
+              "Avatar_Huohuo_00_Rank02_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Fiend: Impeachment of Evil": {
+          "variant1": {
+            "skillID": 121707,
+            "trigger": "SkillMaze",
+            "name": "Fiend: Impeachment of Evil",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "Huohuo terrorizes surrounding enemies, afflicting Horror-Struck on them. Enemies in Horror-Struck will flee away from Huohuo for #4[i] second(s). When entering battle with enemies in Horror-Struck, there is a #1[i]% base chance of reducing every single enemy's ATK by #2[i]% for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.25,
+                2,
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Huohuo_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1217_basic_atk.png",
+        "skillRef": {
+          "skillName": "Banner: Stormcaller",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1217_skill.png",
+        "skillRef": {
+          "skillName": "Talisman: Protection",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1217_ultimate.png",
+        "skillRef": {
+          "skillName": "Tail: Spiritual Domination",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1217_talent.png",
+        "skillRef": {
+          "skillName": "Possession: Ethereal Metaflow",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1217_technique.png",
+        "skillRef": {
+          "skillName": "Fiend: Impeachment of Evil",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Fearful to Act",
+        "icon": "icon/skill/1217_skilltree1.png",
+        "desc": "When battle starts, Huohuo gains Divine Provision, lasting for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point07": {
+        "name": "The Cursed One",
+        "icon": "icon/skill/1217_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Stress Reaction to Horror",
+        "icon": "icon/skill/1217_skilltree3.png",
+        "desc": "When her Talent is triggered to heal allies, Huohuo regenerates #1[i] Energy.",
+        "params": [
+          1
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1217.png",
+    "preview": "image/character_preview/1217.png",
+    "portrait": "image/character_portrait/1217.png",
+    "bannerOffsets": [
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66
+    ]
+  },
   "Gallagher": {
     "internalID": 1301,
     "name": "Gallagher",
@@ -3850,6 +4448,578 @@ let characters = {
       -38,
       -6,
       0.455
+    ]
+  },
+  "Ruan Mei": {
+    "internalID": 1303,
+    "name": "Ruan Mei",
+    "path": "Harmony",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 104,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130301",
+        "name": "Neuronic Embroidery",
+        "rank": 1,
+        "desc": "While the Ultimate's Zone is deployed, the DMG dealt by all allies ignores 20% of the target's DEF.",
+        "icon": "icon/skill/1303_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "130302",
+        "name": "Reedside Promenade",
+        "rank": 2,
+        "desc": "While Ruan Mei is on the field, all allies increase their ATK by 40% when dealing DMG to enemies that are Weakness Broken.",
+        "icon": "icon/skill/1303_rank2.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          }
+        }
+      },
+      {
+        "id": "130303",
+        "name": "Viridescent Pirouette",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1303_ultimate.png"
+      },
+      {
+        "id": "130304",
+        "name": "Chatoyant Éclat",
+        "rank": 4,
+        "desc": "When an enemy target's Weakness is Broken, Ruan Mei's Break Effect increases by 100% for 3 turn(s).",
+        "icon": "icon/skill/1303_rank4.png",
+        "paramsEido": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "130305",
+        "name": "Languid Barrette",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1303_skill.png"
+      },
+      {
+        "id": "130306",
+        "name": "Sash Cascade",
+        "rank": 6,
+        "desc": "Extends the duration of the Ultimate's Zone by 1 turn(s). The Talent's Break DMG multiplier additionally increases by 200%.",
+        "icon": "icon/skill/1303_rank6.png",
+        "paramsEido": [
+          1,
+          2
+        ],
+        "extraEffects": {
+          "Break DMG": {
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Threading Fragrance": {
+          "variant1": {
+            "skillID": 130301,
+            "trigger": "Skill01",
+            "name": "Threading Fragrance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Ruan Mei's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill01_Camera",
+              "Avatar_RuanMei_Skill01_Phase01",
+              "Avatar_RuanMei_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "String Sings Slow Swirls": {
+          "variant1": {
+            "skillID": 130302,
+            "trigger": "Skill02",
+            "name": "String Sings Slow Swirls",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "After using her Skill, Ruan Mei gains Overtone, lasting for #3[i] turn(s). This duration decreases by 1 at the start of Ruan Mei's every turn. When Ruan Mei has Overtone, all allies' DMG increases by #1[f1]% and Weakness Break Efficiency increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.26,
+                0.5,
+                3
+              ],
+              "8": [
+                0.28,
+                0.5,
+                3
+              ],
+              "9": [
+                0.3,
+                0.5,
+                3
+              ],
+              "10": [
+                0.32,
+                0.5,
+                3
+              ],
+              "11": [
+                0.336,
+                0.5,
+                3
+              ],
+              "12": [
+                0.352,
+                0.5,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill02_Camera",
+              "Avatar_RuanMei_Skill02_Phase01",
+              "Avatar_RuanMei_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Petals to Stream, Repose in Dream": {
+          "variant1": {
+            "skillID": 130303,
+            "trigger": "Skill03",
+            "name": "Petals to Stream, Repose in Dream",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Ruan Mei deploys a Zone that lasts for #2[i] turns. The Zone's duration decreases by 1 at the start of her turn.\\nWhile inside the Zone, all allies' All-Type RES PEN increases by #1[f1]% and their attacks apply Thanatoplum Rebloom to the enemies hit.\\nWhen these enemies attempt to recover from Weakness Break, Thanatoplum Rebloom is triggered, extending the duration of their Weakness Break, delaying their action by an amount equal to #3[i]% of Ruan Mei's Break Effect plus #4[i]%, and dealing Break DMG equal to #5[i]% of Ruan Mei's Ice Break DMG.\\nEnemy targets cannot have Thanatoplum Rebloom re-applied to them until they recover from Weakness Break.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.2125,
+                2,
+                0.2,
+                0.1,
+                0.425
+              ],
+              "8": [
+                0.225,
+                2,
+                0.2,
+                0.1,
+                0.45
+              ],
+              "9": [
+                0.2375,
+                2,
+                0.2,
+                0.1,
+                0.475
+              ],
+              "10": [
+                0.25,
+                2,
+                0.2,
+                0.1,
+                0.5
+              ],
+              "11": [
+                0.26,
+                2,
+                0.2,
+                0.1,
+                0.52
+              ],
+              "12": [
+                0.27,
+                2,
+                0.2,
+                0.1,
+                0.54
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_Skill03_Camera",
+              "Avatar_RuanMei_Skill03_EnterReady",
+              "Avatar_RuanMei_Skill03_Phase01",
+              "Avatar_RuanMei_Skill03_Phase02",
+              "Avatar_RuanMei_TriggerImprintEffect"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              },
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Somatotypical Helix": {
+          "variant1": {
+            "skillID": 130304,
+            "trigger": "SkillP01",
+            "name": "Somatotypical Helix",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "Increases SPD by #1[f1]% for all teammates (i.e., excluding this unit). When allies Break an enemy target's Weakness, Ruan Mei deals to this enemy target Break DMG equal to #2[f1]% of her Ice Break DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.0925,
+                0.975
+              ],
+              "8": [
+                0.095,
+                1.05
+              ],
+              "9": [
+                0.0975,
+                1.125
+              ],
+              "10": [
+                0.1,
+                1.2
+              ],
+              "11": [
+                0.102,
+                1.26
+              ],
+              "12": [
+                0.104,
+                1.32
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RuanMei_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Silken Serenade": {
+          "variant1": {
+            "skillID": 130307,
+            "trigger": "SkillMaze",
+            "name": "Silken Serenade",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using the Technique, gains Silken Serenade. At the start of the next battle, automatically triggers the Skill for #1[i] time(s) without consuming Skill Points.\\nIn Simulated Universe or Divergent Universe, when Ruan Mei has Silken Serenade, the team actively attacking enemies will always be regarded as attacking their Weakness to enter battle, and this attack can reduce all enemies' Toughness regardless of Weakness types. When breaking Weakness, triggers Weakness Break Effect corresponding to the attacker's Type. For every Blessing in possession (up to a max of #4[i] Blessings will be taken into account), additionally increases the Toughness Reduction of this attack by #2[i]%. After breaking an enemy target's Weakness, additionally deals to the enemy target Break DMG equal to #3[i]% of Ruan Mei's Ice Break DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                1,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_RuanMei_00_SkillMazeInLevel",
+              "Avatar_RuanMei_00_SkillMazeInLevel_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1303_basic_atk.png",
+        "skillRef": {
+          "skillName": "Threading Fragrance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1303_skill.png",
+        "skillRef": {
+          "skillName": "String Sings Slow Swirls",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1303_ultimate.png",
+        "skillRef": {
+          "skillName": "Petals to Stream, Repose in Dream",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1303_talent.png",
+        "skillRef": {
+          "skillName": "Somatotypical Helix",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1303_technique.png",
+        "skillRef": {
+          "skillName": "Silken Serenade",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Inert Respiration",
+        "icon": "icon/skill/1303_skilltree1.png",
+        "desc": "Increases Break Effect by #1[i]% for all allies.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Days Wane, Thoughts Wax",
+        "icon": "icon/skill/1303_skilltree2.png",
+        "desc": "Ruan Mei regenerates #1[i] Energy at the start of her turn.",
+        "params": [
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Candle Lights on Still Waters",
+        "icon": "icon/skill/1303_skilltree3.png",
+        "desc": "In battle, for every #2[i]% of Ruan Mei's Break Effect that exceeds #1[i]%, her Skill additionally increases allies' DMG by #3[i]%, up to a maximum of #4[i]%.",
+        "params": [
+          1.2,
+          0.1,
+          0.06,
+          0.36
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1303.png",
+    "preview": "image/character_preview/1303.png",
+    "portrait": "image/character_portrait/1303.png",
+    "bannerOffsets": [
+      -6.1,
+      23,
+      0.55,
+      -6.1,
+      23,
+      0.55,
+      -6.1,
+      23,
+      0.55
     ]
   },
   "Trailblazer - Destruction": {

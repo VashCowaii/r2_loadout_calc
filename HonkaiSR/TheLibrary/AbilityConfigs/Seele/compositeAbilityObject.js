@@ -795,7 +795,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Extra Action [Owner]: Start ",
+              "eventTrigger": "Extra Action/Turn [Owner]: Start ",
               "execute": [
                 {
                   "name": "IF",

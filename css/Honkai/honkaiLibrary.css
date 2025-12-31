@@ -41,6 +41,19 @@ div {
     height: auto;
 }
 
+.customMenuSearchNoteWarning {
+    width: 95%;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: lightcoral;
+}
 
 .mainGridRow {
     display: flex;

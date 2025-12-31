@@ -868,7 +868,7 @@ const configAbility = {
           "priorityLevel": -80
         },
         {
-          "eventTrigger": "Extra Action [Owner]: Start ",
+          "eventTrigger": "Extra Action/Turn [Owner]: Start ",
           "execute": [
             {
               "name": "IF",
@@ -888,7 +888,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Extra Action [Owner]: End ",
+          "eventTrigger": "Extra Action/Turn [Owner]: End ",
           "execute": [
             {
               "name": "IF",
