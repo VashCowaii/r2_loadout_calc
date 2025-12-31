@@ -138,6 +138,7 @@ const megaParsingFuckery = {
         // references: []
         // desc: currentLCEntry.desc,
         // params: currentLCEntry.params,
+        const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global");
 
         // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
         const characterRef = characters[compositeAbilityObject.fullCharacterName];
@@ -152,9 +153,10 @@ const megaParsingFuckery = {
             // {leftHand: "Toughness", keyValue: "toughnessList"},
         ];
         let startingString = `<div class="eventCharacterFileHeader">
-            <div class="customMenuResultRowIcon">
+            ${!isGlobalNoImage ? `<div class="customMenuResultRowIcon">
                 <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
-            </div>
+            </div>` : ""}
+            
             <div class="eventCharacterFileInfoBox">
             
             <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">`;
@@ -1772,13 +1774,20 @@ const megaParsingFuckery = {
             "name",
             "on",
             "stateName",
+            "state",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Action-State");
         // initialCounter++;
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Set Action-State:</div>&nbsp;
-            ${parseRef.stateName} ${parseRef.on ? `on ${Array.isArray(parseRef.on) ? megaParsingFuckery.makeConditionTargetBox(parseRef.on,initialCounter) : parseRef.on}` : ""}
+            ${parseRef.stateName ?? ""} ${parseRef.on ? `on ${Array.isArray(parseRef.on) ? megaParsingFuckery.makeConditionTargetBox(parseRef.on,initialCounter) : parseRef.on}` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.state != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">State:</div>&nbsp;
+                ${parseRef.state}
+            </div>` : ""}
         </div>
         `;
     },
@@ -1788,7 +1797,7 @@ const megaParsingFuckery = {
             "type",
             "typeValue",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Ability Use");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Insert Ability Condition");
         // initialCounter++;
 
         return `<div class="actionDetailBody2">
@@ -1838,7 +1847,7 @@ const megaParsingFuckery = {
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Inject Ability Use:</div>&nbsp;
-            ${parseRef.abilityName} ${parseRef.abilityTarget}
+            ${parseRef.abilityName} ${parseRef.abilityTarget ?? ""}
         </div>
         
         <div class="modifierDetailsBox">
@@ -2193,6 +2202,36 @@ const megaParsingFuckery = {
         </div>
         `;
     },
+    "Set HP Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "setValue",
+            
+            // "EnergyGainPercent",
+            // "healPercent",
+            // "healFlat",
+            // "formula",
+            // "healer",
+            // "livingOnly",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set HP Value");
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Set HP to:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.setValue != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Heal Flat:</div>&nbsp;
+                ${parseRef.setValue.displayLines ?? parseRef.setValue}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Action is an Attack"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2335,6 +2374,186 @@ const megaParsingFuckery = {
         </div>
         `;
     },
+    "Mark Entity as Non-Target(Unselectable) [CUSTOM]"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "blockTeams",
+            // "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Mark Entity as Non-Target(Unselectable) [CUSTOM]");
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Mark Entity as Non-Target(Unselectable) [CUSTOM]:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.blockTeams != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Block Teams:</div>&nbsp;
+                ${parseRef.blockTeams}
+            </div>` : ""}
+        </div>
+        `;
+    },
+    "Add to Team Target Grouping"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            // "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add to Team Target Grouping");
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Add to Team Target Grouping:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        `;
+    },
+    "Remove from Team Target Grouping"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "stayInTeam",
+            // "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Remove from Team Target Grouping");
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Remove from Team Target Grouping:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.stayInTeam != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Stay in Team Label:</div>&nbsp;
+                ${parseRef.stayInTeam}
+            </div>` : ""}
+        </div>
+        `;
+    },
+    "Mark for Future Revive"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            // "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Mark for Future Revive");
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Mark for Future Revive:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        `;
+    },
+    "Record Global Buff Usage"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "teamName",
+            "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Record Global Buff Usage");
+
+
+        // let addString = "";
+        // if (parseRef.variables) {
+        //     for (let variableEntry in parseRef.variables) {
+        //         const currentVariable = parseRef.variables[variableEntry];
+
+        //         addString += `<div class="actionDetailBody2">
+        //             <div class="rotationConditionOperatorHeaderInline">${variableEntry}:</div>&nbsp;
+        //             ${currentVariable.displayLines ?? currentVariable}
+        //         </div>`
+        //     }
+        // }
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Record Global Buff Usage:</div>&nbsp;
+            ${parseRef.buffID}
+        </div>
+        `;
+    },
+    "Assign Global Buff State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "teamName",
+            "buffID",
+            "variables",
+            "state",
+            "amount",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Assign Global Buff State");
+
+
+        // let addString = "";
+        // if (parseRef.variables) {
+        //     for (let variableEntry in parseRef.variables) {
+        //         const currentVariable = parseRef.variables[variableEntry];
+
+        //         addString += `<div class="actionDetailBody2">
+        //             <div class="rotationConditionOperatorHeaderInline">${variableEntry}:</div>&nbsp;
+        //             ${currentVariable.displayLines ?? currentVariable}
+        //         </div>`
+        //     }
+        // }
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Assign Global Buff State:</div>&nbsp;
+            ${parseRef.buffID}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.state != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Buff State:</div>&nbsp;
+                ${parseRef.state}
+            </div>` : ""}
+            ${parseRef.amount != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Count:</div>&nbsp;
+                ${parseRef.amount}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Preload Battle Event(s)"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2404,13 +2623,14 @@ const megaParsingFuckery = {
             "name",
             "target",
             "type",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Entity Type");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target} = ${parseRef.type}
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target} ${parseRef.invertCondition ? "(NOT)" : ""}= ${parseRef.type}
         </div>`;
     },
     "Death Animation Completed"(parseRef,initialCounter) {
@@ -2426,6 +2646,33 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.invertCondition ? `NOT ` : ""}${parseRef.team}, ${parseRef.type}
+        </div>`;
+    },
+    "Is Related Summoned Entity"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "target2",
+            // "of",
+            // "invertCondition",
+            // "mustBeAlive1",
+            // "mustBeAlive2",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Related Summoned Entity");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Summoner:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.mustBeAlive1 ? "(Living)" : ""}
+            </div>` : ""}
+            ${parseRef.target2 != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Summon:</div>&nbsp;
+                ${Array.isArray(parseRef.target2) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter) : parseRef.target2}${parseRef.mustBeAlive2 ? "(Living)" : ""}
+            </div>` : ""}
         </div>`;
     },
     "Is Part Of"(parseRef,initialCounter) {
@@ -2760,6 +3007,7 @@ const megaParsingFuckery = {
             "modifier",
             // "stackLimit",
             "valuePerStack",
+            "includeBattleEvent",
             // "addStacksPerTrigger",
             // "duration",
             // "counter",
@@ -2800,6 +3048,12 @@ const megaParsingFuckery = {
                 <div class="rotationConditionOperatorHeaderInline">Apply to Living Only:</div>&nbsp;
                 ${parseRef.aliveOnly}
             </div>` : ""}
+            ${parseRef.includeBattleEvent != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Include Battle Events:</div>&nbsp;
+                ${parseRef.includeBattleEvent}
+            </div>` : ""}
+
+            
         </div>
         `;
     },
@@ -3462,12 +3716,19 @@ const megaParsingFuckery = {
         const knownKeySet = new Set ([
             "name",
             "dependancyName",
+            "casterFilter",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Removal Dependency");
 
         return `<div class="actionDetailBody2Preview">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
             ${parseRef.dependancyName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.casterFilter ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Caster Filter:</div>&nbsp;
+                ${Array.isArray(parseRef.casterFilter) ? megaParsingFuckery.makeConditionTargetBox(parseRef.casterFilter,initialCounter) : parseRef.casterFilter}
+            </div>` : ""}
         </div>
         `;
     },
@@ -3961,7 +4222,7 @@ const megaParsingFuckery = {
                 </div>` : ""}
                 ${parseRef.removalDependencies ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Removal Dependencies:</div>&nbsp;
-                    ${parseRef.removalDependencies}
+                    ${typeof parseRef.removalDependencies === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.removalDependencies,initialCounter) : parseRef.removalDependencies}
                 </div>` : ""}
 
                 
@@ -4663,7 +4924,9 @@ const megaParsingFuckery = {
             "name",
             "target",
             "ignoreHPLossTriggers",
-            "ignoreDeathTriggers"
+            "ignoreDeathTriggers",
+            "abortInsertedAbilities",
+            "canRevive",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force Entity Death");
 
@@ -4696,6 +4959,14 @@ const megaParsingFuckery = {
                 ${parseRef.ignoreDeathTriggers != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Bypass Event: Death triggers</div>&nbsp;
                     ${parseRef.ignoreDeathTriggers}
+                </div>` : ""}
+                ${parseRef.abortInsertedAbilities != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Abort Injected Ability Actions</div>&nbsp;
+                    ${parseRef.abortInsertedAbilities}
+                </div>` : ""}
+                ${parseRef.canRevive != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Can Revive</div>&nbsp;
+                    ${parseRef.canRevive}
                 </div>` : ""}
             </div>
 
@@ -5262,6 +5533,7 @@ const megaParsingFuckery = {
             "eventType",
             "abilityList",
             "overridesArray",
+            "hardLevelEvent",
 
             "eventSpeed",
             // "DynamicValues",

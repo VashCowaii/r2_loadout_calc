@@ -65,7 +65,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Has Modifier",
                     "target": "Use Prior Target(s) Defined",
-                    "modifier": "StageAbility_MazeCommon_EnterBattle_IgnoreWeakness_Modifier"
+                    "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
                   },
                   "passed": [
                     {
@@ -273,13 +273,13 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Has Modifier",
                         "target": "Use Prior Target(s) Defined",
-                        "modifier": "StageAbility_MazeCommon_EnterBattle_IgnoreWeakness_Modifier"
+                        "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Define Modifier-Specific Variable",
                           "target": "Use Prior Target(s) Defined",
-                          "modifierName": "StageAbility_MazeCommon_EnterBattle_IgnoreWeakness_Modifier",
+                          "modifierName": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier",
                           "adjustmentType": "+",
                           "variableName": "Stance_Added_Ratio",
                           "value": {
