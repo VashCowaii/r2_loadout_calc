@@ -19,6 +19,8 @@ const customMenu = {
         readSelection("customMenuSearchBodyStats").style.display = "none";
         readSelection("customMenuSearchBodyStatsAttackData").style.display = "none";
 
+        readSelection("customMenuSearchBodyGlobalButtons").innerHTML = "";
+
 
         const elementsToClear = ["customMenuSearchTitle","customMenuSearchBarInput","customMenuSearchBody"]
         for (let elemEntry of elementsToClear) {readSelection(elemEntry).innerHTML = "";}
@@ -715,6 +717,19 @@ const customMenu = {
         globalUI.currentSearchOpen = "characters";
         globalUI.currentSearchVolume = characters;
         readSelection("customMenuSearchBarInput").focus();
+
+        // <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank"></a>
+        readSelection("customMenuSearchBodyGlobalButtons").innerHTML = `
+        <details class="rotationsPermaConditionsExpand">
+            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Global Abilities/Data</summary>
+
+            <div class="starAndSearchRow2">
+                <a class="exportIconBoxHolder clickable" id="characterSearchButton" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalAbilities/" target="_blank">
+                    Global Abilities
+                </a>
+            </div>
+        </details>`
+
         customMenu.updateSearchResults();
     },
     createCharacterStatScreen() {

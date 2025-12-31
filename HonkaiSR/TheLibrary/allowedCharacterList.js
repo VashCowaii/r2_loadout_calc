@@ -50,5 +50,9 @@ let allowedCharacterList = [
   {
     "fullName": "Archer",
     "trimName": "Archer"
+  },
+  {
+    "fullName": "GlobalAbilities",
+    "trimName": "GlobalAbilities"
   }
 ]
