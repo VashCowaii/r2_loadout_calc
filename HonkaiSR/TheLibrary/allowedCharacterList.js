@@ -24,8 +24,16 @@ let allowedCharacterList = [
     "trimName": "Tingyun"
   },
   {
+    "fullName": "Huohuo",
+    "trimName": "Huohuo"
+  },
+  {
     "fullName": "Gallagher",
     "trimName": "Gallagher"
+  },
+  {
+    "fullName": "Ruan Mei",
+    "trimName": "RuanMei"
   },
   {
     "fullName": "Trailblazer - Destruction",

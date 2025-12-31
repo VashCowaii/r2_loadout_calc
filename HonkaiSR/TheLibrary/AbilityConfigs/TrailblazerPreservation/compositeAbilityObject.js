@@ -2197,7 +2197,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Take Damage Start [Owner]: Any"
             },
             {
-              "eventTrigger": "When in Deathstate Limbo",
+              "eventTrigger": "When Put in Deathstate Limbo",
               "execute": [
                 {
                   "name": "Change Character Transformation",
