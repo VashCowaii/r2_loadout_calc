@@ -6,6 +6,8 @@
     "StanceBreakAddedRatio": "DamageBreakEfficiency",
     "StanceBreakAddedRatioOLDDEFINITION": "SuperBreakMaybe",
 
+    "MaxStance": "ToughnessMax",
+
     "BreakDamageAddRatio": "VulnBreak[?]",
 
     "BaseDamageMultiRatio": "BaseAbilityMultiplier",
@@ -17,7 +19,12 @@
     "SPRatio": "EnergyRegenRateSUM",
     "CurrentSP": "EnergyCurrent",
     "MaxSP": "EnergyMax",
+
+    "CurrentSpecialSP": "EnergyCurrentSpecial",
     "SpecialMaxSP": "EnergyMaxSpecial",
+    "MaxSpecialSP": "MaxSpecialEnergy",
+    "CurExtraSpecialSP": "EnergyCurrentSpecialOverflow",
+    "MaxExtraSpecialSP": "EnergyMaxSpecialOverflow",
 
     "BaseAggro": "AggroBase",
     "AggroAddedRatio": "Aggro%",
@@ -47,11 +54,13 @@
 
     "StatusProbabilityBase": "EffectHitRate",
     "StatusProbability": "EffectHitRateSUM",
+    "StatusProbabilityConvert": "EffectHitRateConverted",
     "StatusResistanceBase": "EffectRES",
     "StatusResistance": "EffectRESSUM",
 
     "CriticalChance": "CritRateSUM",
     "CriticalChanceBase": "CritRateBase",
+    "CriticalChanceConvert": "CritRateConverted",
     "CriticalDamage": "CritDamageSUM",
     "CriticalDamageBase": "CritDamageBase",
     "CriticalDamageConvert": "CritDamageConverted",
@@ -67,6 +76,8 @@
     "SpeedAddedRatio": "SPD%",
     "SpeedDelta": "SPDFlat",
     "Speed": "Speed",
+    "SpeedConvert": "SpeedConverted",
+    "SpeedOverride": "SpeedOverride",
 
     "ActionDelay": "ActionDelay",
     
@@ -84,6 +95,8 @@
     "MaxHP": "HPMax",
     "CurrentHP": "HPCurrent",
     "HPRatio": "HPCurrent%",
+    "HPConvert": "HPConverted",
+    "NegativeHP": "HPNegative",
 
     "BaseDefence": "DEFBase",
     "DefenceBase": "DEFBase",
@@ -96,6 +109,7 @@
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",
     "QuantumPenetrate": "ResistanceQuantumPEN",
+    "IcePenetrate": "ResistanceIcePEN",
 
     "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",

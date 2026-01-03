@@ -247,7 +247,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Follow-Up Attack [Anyone]: Start",
+          "eventTrigger": "Injected Ability Use [Anyone]: Start",
           "execute": [
             {
               "name": "Find New Target",
@@ -316,7 +316,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Force Immediate Modifier [Anyone]: Start",
+          "eventTrigger": "Force Modifier Duration Decrement [Anyone]: Start",
           "execute": [
             {
               "name": "Find New Target",

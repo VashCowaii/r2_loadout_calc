@@ -157,7 +157,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Follow-Up Attack [Anyone]: Start",
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
               "execute": [
                 "Modifier Deletes Itself"
               ]

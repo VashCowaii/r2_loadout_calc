@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Follow-Up Attack [Anyone]: Start",
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1252,7 +1252,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Force Immediate Modifier [Anyone]: Start",
+              "eventTrigger": "Force Modifier Duration Decrement [Anyone]: Start",
               "execute": [
                 {
                   "name": "Find New Target",
