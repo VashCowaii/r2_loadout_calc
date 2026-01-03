@@ -111,7 +111,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Stacking Modifier Instance",
+          "eventTrigger": "When Stacking Modifier Instance [Owner]",
           "execute": [
             {
               "name": "IF",
