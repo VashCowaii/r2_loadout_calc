@@ -36,6 +36,10 @@ let allowedCharacterList = [
     "trimName": "Pela"
   },
   {
+    "fullName": "Hook",
+    "trimName": "Hook"
+  },
+  {
     "fullName": "Tingyun",
     "trimName": "Tingyun"
   },

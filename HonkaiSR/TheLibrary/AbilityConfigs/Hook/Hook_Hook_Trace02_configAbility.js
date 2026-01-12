@@ -1,0 +1,22 @@
+const configAbility = {
+  "fileName": "Hook_Hook_Trace02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Stack Target Resistance",
+      "target": "Caster",
+      "statName": "STAT_CTRL",
+      "value": {
+        "operator": "Variables[0] (0.35) || RETURN",
+        "displayLines": "0.35",
+        "constants": [],
+        "variables": [
+          0.35
+        ]
+      }
+    }
+  ],
+  "references": []
+}
