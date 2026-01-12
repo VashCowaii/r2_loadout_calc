@@ -1,5 +1,37 @@
 let allowedCharacterList = [
   {
+    "fullName": "March 7th - Preservation",
+    "trimName": "March7thP"
+  },
+  {
+    "fullName": "Dan Heng",
+    "trimName": "DanHeng"
+  },
+  {
+    "fullName": "Himeko",
+    "trimName": "Himeko"
+  },
+  {
+    "fullName": "Welt",
+    "trimName": "Welt"
+  },
+  {
+    "fullName": "Kafka",
+    "trimName": "Kafka"
+  },
+  {
+    "fullName": "Silver Wolf",
+    "trimName": "SilverWolf"
+  },
+  {
+    "fullName": "Arlan",
+    "trimName": "Arlan"
+  },
+  {
+    "fullName": "Asta",
+    "trimName": "Asta"
+  },
+  {
     "fullName": "Herta",
     "trimName": "Herta"
   },
@@ -16,16 +48,88 @@ let allowedCharacterList = [
     "trimName": "Serval"
   },
   {
+    "fullName": "Gepard",
+    "trimName": "Gepard"
+  },
+  {
     "fullName": "Natasha",
     "trimName": "Natasha"
+  },
+  {
+    "fullName": "Pela",
+    "trimName": "Pela"
+  },
+  {
+    "fullName": "Clara",
+    "trimName": "Clara"
+  },
+  {
+    "fullName": "Hook",
+    "trimName": "Hook"
+  },
+  {
+    "fullName": "Lynx",
+    "trimName": "Lynx"
+  },
+  {
+    "fullName": "Luka",
+    "trimName": "Luka"
+  },
+  {
+    "fullName": "Qingque",
+    "trimName": "Qingque"
   },
   {
     "fullName": "Tingyun",
     "trimName": "Tingyun"
   },
   {
+    "fullName": "Luocha",
+    "trimName": "Luocha"
+  },
+  {
+    "fullName": "Jing Yuan",
+    "trimName": "JingYuan"
+  },
+  {
+    "fullName": "Sushang",
+    "trimName": "Sushang"
+  },
+  {
+    "fullName": "Yukong",
+    "trimName": "Yukong"
+  },
+  {
+    "fullName": "Yanqing",
+    "trimName": "Yanqing"
+  },
+  {
+    "fullName": "Guinaifen",
+    "trimName": "Guinaifen"
+  },
+  {
+    "fullName": "Bailu",
+    "trimName": "Bailu"
+  },
+  {
+    "fullName": "Xueyi",
+    "trimName": "Xueyi"
+  },
+  {
+    "fullName": "Hanya",
+    "trimName": "Hanya"
+  },
+  {
     "fullName": "Huohuo",
     "trimName": "Huohuo"
+  },
+  {
+    "fullName": "Moze",
+    "trimName": "Moze"
+  },
+  {
+    "fullName": "March 7th - The Hunt",
+    "trimName": "March7thTH"
   },
   {
     "fullName": "Gallagher",
@@ -42,6 +146,10 @@ let allowedCharacterList = [
   {
     "fullName": "Black Swan",
     "trimName": "BlackSwan"
+  },
+  {
+    "fullName": "Misha",
+    "trimName": "Misha"
   },
   {
     "fullName": "Tribbie",

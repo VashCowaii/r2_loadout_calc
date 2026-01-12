@@ -1,0 +1,1387 @@
+const compositeAbilityObject = {
+  "fullCharacterName": "Asta",
+  "trimCharacterName": "Asta",
+  "abilityList": [
+    "Asta_Asta_Trace02",
+    "Asta_Asta_TechniqueInLevel",
+    "Asta_Asta_PassiveAbility_1",
+    "Asta_Asta_Ability03_Part02",
+    "Asta_Asta_Ability03_Part01",
+    "Asta_Asta_Ability03_EnterReady",
+    "Asta_Asta_Ability02_Part02",
+    "Asta_Asta_Ability02_Part01",
+    "Asta_Asta_Ability01_Part02",
+    "Asta_Asta_Ability01_Part01",
+    "Asta_Modifiers"
+  ],
+  "abilityObject": {
+    "Asta_Asta_Trace02": {
+      "fileName": "Asta_Asta_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Asta_Tree02"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "M_Asta_Tree02",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": [
+                    {
+                      "name": "Target List",
+                      "target": "All Team Members(In Context)"
+                    },
+                    {
+                      "name": "Target List",
+                      "target": "All Untargetable"
+                    }
+                  ],
+                  "modifier": "Asta_FireAddedRatio",
+                  "onlyRemoveOwnersInstance": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "All Team Members(In Context)",
+                  "modifier": "Asta_FireAddedRatio",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.18) || RETURN",
+                      "displayLines": "0.18",
+                      "constants": [],
+                      "variables": [
+                        0.18
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Teammate",
+                    "target": "Use Prior Target(s) Defined"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Asta_FireAddedRatio",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Asta_Asta_TechniqueInLevel": {
+      "fileName": "Asta_Asta_TechniqueInLevel",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "StageAbility_Maze_Asta_Modifier"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "StageAbility_Maze_Asta_Modifier",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": "All Hostile Entities (AOE)",
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Fire",
+                        "Damage": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Technique",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    "Trigger: Attack End"
+                  ]
+                }
+              ],
+              "priorityLevel": -60
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Asta_Asta_PassiveAbility_1": {
+      "fileName": "Asta_Asta_PassiveAbility_1",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Asta_Passive",
+          "valuePerStack": {
+            "MDF_CostLayer": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            },
+            "MDF_MaxCount": {
+              "operator": "Variables[0] (5) || RETURN",
+              "displayLines": "5",
+              "constants": [],
+              "variables": [
+                5
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "maximum": {
+            "operator": "Variables[0] (5) || RETURN",
+            "displayLines": "5",
+            "constants": [],
+            "variables": [
+              5
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 3,
+          "cooldown": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Asta_Eidolon2Flag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Asta_AbilityPreShowModifier"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Update Ability Description",
+              "popUpText": "Deals minor Fire DMG to single enemy targets with 6 Bounces in total.",
+              "skillTrigger": "Skill02"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_AbilityPreShowModifier",
+          "stackType": "ReplaceByCaster",
+          "stackData": [],
+          "latentQueue": [],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": "Allied Team",
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Has Modifier",
+              "target": "Use Prior Target(s) Defined",
+              "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "50(SPD Change)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "M_Asta_Passive",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": "Caster",
+                    "modifier": "Asta_Eidolon2Flag"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 6
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || Variables[2] (1) || SUB || SUB || RETURN",
+                            "displayLines": "(MDF_Count - (MDF_CostLayer - 1))",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count",
+                              "MDF_CostLayer",
+                              1
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || SUB || RETURN",
+                            "displayLines": "(MDF_Count - MDF_CostLayer)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count",
+                              "MDF_CostLayer"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Count",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Count",
+                            "compareType": "<",
+                            "value2": {
+                              "operator": "Variables[0] (2) || RETURN",
+                              "displayLines": "2",
+                              "constants": [],
+                              "variables": [
+                                2
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": "Owner of this Modifier",
+                              "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Owner of this Modifier",
+                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "valuePerStack": {
+                            "MDF_AttackAddedRatio": {
+                              "operator": "Variables[0] (0.14) || RETURN",
+                              "displayLines": "0.14",
+                              "constants": [],
+                              "variables": [
+                                0.14
+                              ]
+                            },
+                            "MDF_DefenceAddedRatio": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            },
+                            "MDF_BonusLayer": {
+                              "operator": "Variables[0] (2) || RETURN",
+                              "displayLines": "2",
+                              "constants": [],
+                              "variables": [
+                                2
+                              ]
+                            },
+                            "MDF_SPRatio": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            },
+                            "MDF_CostLayer": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Modifier Variable",
+                          "target": "Caster",
+                          "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "value": 0
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": 0,
+                          "maximum": {
+                            "operator": "Variables[0] (5) || RETURN",
+                            "displayLines": "5",
+                            "constants": [],
+                            "variables": [
+                              5
+                            ]
+                          },
+                          "assignState": "True",
+                          "priorState": "Normal",
+                          "bar#": 3,
+                          "cooldown": 0
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": "Owner of this Modifier",
+                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": "Ability Target List",
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "ifTargetFound": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Weakness",
+                        "target": "Use Prior Target(s) Defined",
+                        "DamageType": "Fire"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Constants[0] (2) || ADD || RETURN",
+                            "displayLines": "(MDF_Count + 2)",
+                            "constants": [
+                              2
+                            ],
+                            "variables": [
+                              "MDF_Count"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Count",
+                            "compareType": ">",
+                            "value2": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Count",
+                              "value": {
+                                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                                "displayLines": "MDF_MaxCount",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_MaxCount"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Owner of this Modifier",
+                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "valuePerStack": {
+                            "MDF_AttackAddedRatio": {
+                              "operator": "Variables[0] (0.14) || RETURN",
+                              "displayLines": "0.14",
+                              "constants": [],
+                              "variables": [
+                                0.14
+                              ]
+                            },
+                            "MDF_DefenceAddedRatio": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            },
+                            "MDF_BonusLayer": {
+                              "operator": "Variables[0] (2) || RETURN",
+                              "displayLines": "2",
+                              "constants": [],
+                              "variables": [
+                                2
+                              ]
+                            },
+                            "MDF_SPRatio": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            },
+                            "MDF_CostLayer": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
+                            "displayLines": "(MDF_Count + 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_Count"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Count",
+                            "compareType": ">",
+                            "value2": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Count",
+                              "value": {
+                                "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                                "displayLines": "MDF_MaxCount",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_MaxCount"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Owner of this Modifier",
+                          "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                          "valuePerStack": {
+                            "MDF_AttackAddedRatio": {
+                              "operator": "Variables[0] (0.14) || RETURN",
+                              "displayLines": "0.14",
+                              "constants": [],
+                              "variables": [
+                                0.14
+                              ]
+                            },
+                            "MDF_DefenceAddedRatio": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            },
+                            "MDF_BonusLayer": {
+                              "operator": "Variables[0] (2) || RETURN",
+                              "displayLines": "2",
+                              "constants": [],
+                              "variables": [
+                                2
+                              ]
+                            },
+                            "MDF_SPRatio": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            },
+                            "MDF_CostLayer": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_CostLayer",
+            "MDF_MaxCount"
+          ],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Asta_Asta_Ability03_Part02": {
+      "fileName": "Asta_Asta_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "All Team Members(In Context)",
+          "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "duration": {
+            "operator": "Variables[0] (2) || RETURN",
+            "displayLines": "2",
+            "constants": [],
+            "variables": [
+              2
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (50) || RETURN",
+              "displayLines": "50",
+              "constants": [],
+              "variables": [
+                50
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": "Caster",
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "Asta_Eidolon2Flag"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost"
+        }
+      ]
+    },
+    "Asta_Asta_Ability03_Part01": {
+      "fileName": "Asta_Asta_Ability03_Part01",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Asta_Ability03_Part02"
+        }
+      ],
+      "references": []
+    },
+    "Asta_Asta_Ability03_EnterReady": {
+      "fileName": "Asta_Asta_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": []
+    },
+    "Asta_Asta_Ability02_Part02": {
+      "fileName": "Asta_Asta_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": "Caster",
+              "scope": "ContextCaster",
+              "variableName": "Bounce_Count",
+              "value": 5
+            }
+          ],
+          "failed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": "Caster",
+              "scope": "ContextCaster",
+              "variableName": "Bounce_Count",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (Bounce_Count) || RETURN",
+            "displayLines": "Bounce_Count",
+            "constants": [],
+            "variables": [
+              "Bounce_Count"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "Bounce_SelectTarget",
+              "target": "All Hostile Entities (AOE)",
+              "paramSequence": []
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "Asta_Asta_Ability02_Part01": {
+      "fileName": "Asta_Asta_Ability02_Part01",
+      "abilityType": "Skill",
+      "energy": 6,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Asta_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "Asta_Asta_Ability01_Part02": {
+      "fileName": "Asta_Asta_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Sparks"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Single Target (Primary)",
+              "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
+              "duration": {
+                "operator": "Variables[0] (3) || RETURN",
+                "displayLines": "3",
+                "constants": [],
+                "variables": [
+                  3
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] (0.8) || RETURN",
+                "displayLines": "0.8",
+                "constants": [],
+                "variables": [
+                  0.8
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Burn_DamagePercentage": {
+                  "operator": "Variables[0] (1) || Variables[1] (0.5) || MUL || RETURN",
+                  "displayLines": "(1 * 0.5)",
+                  "constants": [],
+                  "variables": [
+                    1,
+                    0.5
+                  ]
+                }
+              },
+              "stackFlag": "CharacterSkill"
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "Asta_Asta_Ability01_Part01": {
+      "fileName": "Asta_Asta_Ability01_Part01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Asta_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "Asta_Modifiers": {
+      "fileName": "Asta_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Energy Regeneration Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Energy Regeneration Rate Boost",
+          "statusName": "Energy Regeneration Rate Boost"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_Eidolon2Flag",
+          "stackType": "ReplaceByCaster",
+          "stackData": [],
+          "latentQueue": [],
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Modifier Variable",
+                  "modifierName": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Charge_Count) || RETURN",
+                    "displayLines": "MDF_Charge_Count",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Charge_Count"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Charge_Count) || MUL || RETURN",
+                    "displayLines": "(MDF_AttackAddedRatio * MDF_Charge_Count)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAddedRatio",
+                      "MDF_Charge_Count"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Charging"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "counter": 5,
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Count",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "maximum": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 3,
+                  "cooldown": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": [
+                    {
+                      "name": "Target List",
+                      "target": "All Team Members(In Context)"
+                    },
+                    {
+                      "name": "Target List",
+                      "target": "All Untargetable"
+                    }
+                  ],
+                  "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 4
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": "Owner of this Modifier",
+                      "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Modifier Variable",
+                  "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Count) || RETURN",
+                    "displayLines": "MDF_Count",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Count"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Count) || RETURN",
+                    "displayLines": "MDF_Count",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Count"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Active",
+                  "bar#": 3,
+                  "cooldown": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Constellation"
+                  },
+                  "passed": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": "Owner of this Modifier",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_AttackAddedRatio * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AttackAddedRatio",
+                          "MDF_Count"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": "Owner of this Modifier",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_DefenceAddedRatio * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DefenceAddedRatio",
+                          "MDF_Count"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Each stack increases ATK by #1[f1]% and DEF by #2[f1]%, up to 5 stacks."
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": "Owner of this Modifier",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_AttackAddedRatio * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AttackAddedRatio",
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "All Teammates + Unselectable (Excluding Owner)",
+                  "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                  "valuePerStack": {
+                    "MDF_AttackAddedRatio": {
+                      "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
+                      "displayLines": "MDF_AttackAddedRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_AttackAddedRatio"
+                      ]
+                    },
+                    "MDF_Charge_Count": {
+                      "operator": "Variables[0] (MDF_Count) || RETURN",
+                      "displayLines": "MDF_Count",
+                      "constants": [],
+                      "variables": [
+                        "MDF_Count"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 4
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_BuffLayer) || RETURN",
+                          "displayLines": "MDF_BuffLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_BuffLayer"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Owner of this Modifier",
+                          "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_SPRatio) || RETURN",
+                              "displayLines": "MDF_SPRatio",
+                              "constants": [],
+                              "variables": [
+                                "MDF_SPRatio"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": "Owner of this Modifier",
+                  "variableName": "MDF_Count",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Teammate",
+                    "target": "Use Prior Target(s) Defined"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
+                      "valuePerStack": {
+                        "MDF_AttackAddedRatio": {
+                          "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
+                          "displayLines": "MDF_AttackAddedRatio",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AttackAddedRatio"
+                          ]
+                        },
+                        "MDF_Charge_Count": {
+                          "operator": "Variables[0] (MDF_Count) || RETURN",
+                          "displayLines": "MDF_Count",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Count"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_AttackAddedRatio",
+            "MDF_DefenceAddedRatio",
+            "MDF_BuffLayer",
+            "MDF_SPRatio",
+            "MDF_CostLayer"
+          ],
+          "latentQueue": [],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Charging"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Asta_FireAddedRatio",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": []
+        }
+      ],
+      "references": []
+    }
+  }
+}

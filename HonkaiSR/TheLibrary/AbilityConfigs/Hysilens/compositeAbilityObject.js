@@ -2930,7 +2930,7 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Enemy targets within the Zone have their ATK decreased by #5[f1]%, DEF decreased by #3[f1]%, and All-Type RES decreased by #4[i]%. For every 1 instance of DoT they receive, they will take Physical DoT equal to #1[i]% of Hysilens's ATK. This damage triggers at the start of each turn or after one attack by an ally target, up to #2[i] time(s). And it cannot repeatedly trigger this effect."
                     }
                   ]
@@ -3285,6 +3285,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
+      "length": 3,
       "parse": [
         {
           "name": "CharacterFunctions",

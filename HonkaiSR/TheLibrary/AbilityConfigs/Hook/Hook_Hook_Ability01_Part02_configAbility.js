@@ -1,0 +1,56 @@
+const configAbility = {
+  "fileName": "Hook_Hook_Ability01_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "ATK Scaling DMG",
+      "target": "Single Target (Primary)",
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Fire",
+        "Damage": {
+          "operator": "Variables[0] (1) || RETURN",
+          "displayLines": "1",
+          "constants": [],
+          "variables": [
+            1
+          ]
+        },
+        "Toughness": {
+          "operator": "Variables[0] (ST Toughness Value) || RETURN",
+          "displayLines": "ST Toughness Value",
+          "constants": [],
+          "variables": [
+            "ST Toughness Value"
+          ]
+        },
+        "Tags": null,
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Flag",
+        "target": "Single Target (Primary)",
+        "flagName": "STAT_DOT_Burn"
+      },
+      "passed": [
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "inherentTarget": "Single Target (Primary)",
+          "ability": "Hook_PassiveAbility01_2",
+          "isTrigger": true
+        }
+      ],
+      "failed": [
+        "Trigger: Attack End"
+      ]
+    },
+    "Trigger: Ability End"
+  ],
+  "references": []
+}

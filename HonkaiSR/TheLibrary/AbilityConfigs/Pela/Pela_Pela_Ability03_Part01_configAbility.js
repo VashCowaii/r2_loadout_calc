@@ -1,0 +1,20 @@
+const configAbility = {
+  "fileName": "Pela_Pela_Ability03_Part01",
+  "abilityType": "Ultimate",
+  "energy": 5,
+  "toughnessList": [
+    0,
+    20,
+    0
+  ],
+  "parse": [
+    "Deleted bullshit",
+    {
+      "name": "Trigger Ability",
+      "from": "Caster",
+      "ability": "Pela_Ability03_Part02",
+      "isTrigger": true
+    }
+  ],
+  "references": []
+}

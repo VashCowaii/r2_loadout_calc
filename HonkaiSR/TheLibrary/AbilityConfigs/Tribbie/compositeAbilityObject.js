@@ -128,6 +128,75 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "onAbort": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": "Caster",
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": "Caster",
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": "Caster"
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "OnInsertAbort_Flg",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemies Still Alive",
+                "target": "Caster",
+                "includeNonTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertUnusedCount",
+                    "typeValue": 1
+                  },
+                  "abilityName": "Tribbie_Insert",
+                  "abilitySource": "Caster",
+                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "priorityTag": "AvatarInsertAttackSelf",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "OnInsertAbort_Flg",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     },
     "Tribbie_Tribbie_TechniqueInLevel": {

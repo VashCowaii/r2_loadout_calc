@@ -639,17 +639,13 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "TeamBpMax"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
           "for": "Sparkle_AbilityPreshow",
           "stackData": [],
-          "latentQueue": [
-            "TeamBpMax"
-          ],
+          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1609,9 +1605,7 @@ const compositeAbilityObject = {
             "MDF_PropertyValue",
             "MDF_PropertyValue2"
           ],
-          "latentQueue": [
-            "TeamBpMax"
-          ],
+          "latentQueue": [],
           "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
           "type": "Buff",
           "effectName": "Nocturne",
@@ -1706,9 +1700,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "Sparkle_PointB3_Mark",
           "stackData": [],
-          "latentQueue": [
-            "TeamBpMax"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -1813,7 +1805,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases DMG dealt by #1[f1]%. Ignores #2[i]% of the target's DEF when dealing DMG."
                     },
                     {
@@ -1988,9 +1980,7 @@ const compositeAbilityObject = {
             "MDF_PropertyValue3",
             "MDF_DefenceAddedRatio2"
           ],
-          "latentQueue": [
-            "TeamBpMax"
-          ],
+          "latentQueue": [],
           "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "DMG Boost",
@@ -2226,7 +2216,7 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases ATK by #1[i]% and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by #2[f1]%."
                     }
                   ]

@@ -556,17 +556,13 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "TeamBpMax"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",
       "for": "Sparkle_AbilityPreshow",
       "stackData": [],
-      "latentQueue": [
-        "TeamBpMax"
-      ],
+      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

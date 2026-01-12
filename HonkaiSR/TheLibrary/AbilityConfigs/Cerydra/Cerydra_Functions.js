@@ -7,6 +7,7 @@ const configAbility = {
     0,
     0
   ],
+  "length": 3,
   "parse": [
     {
       "name": "CharacterFunctions",

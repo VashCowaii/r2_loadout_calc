@@ -2821,7 +2821,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "When dealing DMG, ignores #1[i]% of enemy targets' DEF. When dealing Skill DMG, additionally ignores #2[i]% of targets' DEF."
                     }
                   ]
@@ -3543,6 +3543,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
+      "length": 3,
       "parse": [
         {
           "name": "CharacterFunctions",
