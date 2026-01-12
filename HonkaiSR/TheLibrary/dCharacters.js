@@ -7414,6 +7414,589 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Lynx": {
+    "internalID": 1110,
+    "name": "Lynx",
+    "path": "Abundance",
+    "element": "Quantum",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 493.91999999999996,
+      "DEFBase": 551.25,
+      "HPBase": 1058.4,
+      "SPDBase": 100,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "111001",
+        "name": "Morning of Snow Hike",
+        "rank": 1,
+        "desc": "When healing allies with HP percentage equal to or lower than 50%, Lynx's Outgoing Healing increases by 20%. This effect also works on continuous healing.",
+        "icon": "icon/skill/1110_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.2
+        ]
+      },
+      {
+        "id": "111002",
+        "name": "Noon of Portable Furnace",
+        "rank": 2,
+        "desc": "A target with \"Survival Response\" can resist debuff application for 1 time(s).",
+        "icon": "icon/skill/1110_rank2.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "111003",
+        "name": "Afternoon of Avalanche Beacon",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1110_skill.png"
+      },
+      {
+        "id": "111004",
+        "name": "Dusk of Warm Campfire",
+        "rank": 4,
+        "desc": "When \"Survival Response\" is gained, increases the target's ATK by an amount equal to 3.0% of Lynx's Max HP for 1 turn(s).",
+        "icon": "icon/skill/1110_rank4.png",
+        "paramsEido": [
+          0.03,
+          1
+        ]
+      },
+      {
+        "id": "111005",
+        "name": "Night of Aurora Tea",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1110_ultimate.png"
+      },
+      {
+        "id": "111006",
+        "name": "Dawn of Explorers' Chart",
+        "rank": 6,
+        "desc": "Additionally boosts the Max HP increasing effect of \"Survival Response\" by an amount equal to 6.0% of Lynx's Max HP and increases Effect RES by 30%.",
+        "icon": "icon/skill/1110_rank6.png",
+        "paramsEido": [
+          0.06,
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Ice Crampon Technique": {
+          "variant1": {
+            "skillID": 111001,
+            "trigger": "Skill01",
+            "name": "Ice Crampon Technique",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of this character's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill01_Phase01",
+              "Avatar_Lynx_00_Skill01_Phase02",
+              "Avatar_Lynx_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Salted Camping Cans": {
+          "variant1": {
+            "skillID": 111002,
+            "trigger": "Skill02",
+            "name": "Salted Camping Cans",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Applies \"Survival Response\" to a single target ally and increases their Max HP by #1[f1]% of Lynx's Max HP plus #2[i]. If the target ally is a character on the Path of Destruction or Preservation, the chance of them being attacked by enemies will greatly increase. \"Survival Response\" lasts for #3[i] turn(s).\\nRestores the target's HP by #4[f1]% of Lynx's Max HP plus #5[i].",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.065625,
+                166.25,
+                2,
+                0.108,
+                266,
+                5
+              ],
+              "8": [
+                0.06875,
+                177.5,
+                2,
+                0.112,
+                284,
+                5
+              ],
+              "9": [
+                0.071875,
+                188.75,
+                2,
+                0.116,
+                302,
+                5
+              ],
+              "10": [
+                0.075,
+                200,
+                2,
+                0.12,
+                320,
+                5
+              ],
+              "11": [
+                0.0775,
+                211.25,
+                2,
+                0.124,
+                338,
+                5
+              ],
+              "12": [
+                0.08,
+                222.5,
+                2,
+                0.128,
+                356,
+                5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill02_Phase01",
+              "Avatar_Lynx_00_Skill02_Phase02",
+              "Avatar_Lynx_00_Skill02_Camera_Self",
+              "Avatar_Lynx_00_Skill02_Camera_Other"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Snowfield First Aid": {
+          "variant1": {
+            "skillID": 111003,
+            "trigger": "Skill03",
+            "name": "Snowfield First Aid",
+            "type": "Restore",
+            "slot": "Ultimate",
+            "desc": "Dispels #1[i] debuff(s) from all allies and immediately restores their respective HP by an amount equal to #2[f1]% of Lynx's Max HP plus #3[i].",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0.1215,
+                299.25
+              ],
+              "8": [
+                1,
+                0.126,
+                319.5
+              ],
+              "9": [
+                1,
+                0.1305,
+                339.75
+              ],
+              "10": [
+                1,
+                0.135,
+                360
+              ],
+              "11": [
+                1,
+                0.1395,
+                380.25
+              ],
+              "12": [
+                1,
+                0.144,
+                400.5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_Skill03_EnterReady",
+              "Avatar_Lynx_00_Skill03_Phase01",
+              "Avatar_Lynx_00_Skill03_Phase02",
+              "Avatar_Lynx_00_Skill03_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Outdoor Survival Experience": {
+          "variant1": {
+            "skillID": 111004,
+            "trigger": "SkillP01",
+            "name": "Outdoor Survival Experience",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "When using Lynx's Skill or Ultimate, applies continuous healing to the target ally for #1[i] turn(s), restoring the target ally's HP by an amount equal to #2[f1]% of Lynx's Max HP plus #3[i] at the start of each turn. If the target has \"Survival Response,\" the continuous healing effect additionally restores HP by an amount equal to #4[f1]% of Lynx's Max HP plus #5[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                0.0324,
+                79.8,
+                0.0405,
+                99.75
+              ],
+              "8": [
+                2,
+                0.0336,
+                85.2,
+                0.042,
+                106.5
+              ],
+              "9": [
+                2,
+                0.0348,
+                90.6,
+                0.0435,
+                113.25
+              ],
+              "10": [
+                2,
+                0.036,
+                96,
+                0.044999998,
+                120
+              ],
+              "11": [
+                2,
+                0.0372,
+                101.4,
+                0.0465,
+                126.75
+              ],
+              "12": [
+                2,
+                0.038399998,
+                106.8,
+                0.048,
+                133.5
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lynx_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Chocolate Energy Bar": {
+          "variant1": {
+            "skillID": 111007,
+            "trigger": "SkillMaze",
+            "name": "Chocolate Energy Bar",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "After Lynx uses her Technique, at the start of the next battle, all allies are granted her Talent's continuous healing effect, lasting for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Lynx_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1110_basic_atk.png",
+        "skillRef": {
+          "skillName": "Ice Crampon Technique",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1110_skill.png",
+        "skillRef": {
+          "skillName": "Salted Camping Cans",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1110_ultimate.png",
+        "skillRef": {
+          "skillName": "Snowfield First Aid",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1110_talent.png",
+        "skillRef": {
+          "skillName": "Outdoor Survival Experience",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1110_technique.png",
+        "skillRef": {
+          "skillName": "Chocolate Energy Bar",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Advance Surveying",
+        "icon": "icon/skill/1110_skilltree1.png",
+        "desc": "After a target with \"Survival Response\" is hit, Lynx regenerates #1[i] Energy immediately.",
+        "params": [
+          2
+        ]
+      },
+      "Point07": {
+        "name": "Exploration Techniques",
+        "icon": "icon/skill/1110_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.35
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Survival in the Extreme",
+        "icon": "icon/skill/1110_skilltree3.png",
+        "desc": "Extends the duration of the continuous healing effect granted by Talent for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1110.png",
+    "preview": "image/character_preview/1110.png",
+    "portrait": "image/character_portrait/1110.png",
+    "bannerOffsets": [
+      -44,
+      42,
+      0.56,
+      -44,
+      42,
+      0.56,
+      -44,
+      42,
+      0.56
+    ],
+    "isBuffed": false
+  },
   "Luka": {
     "internalID": 1111,
     "name": "Luka",
