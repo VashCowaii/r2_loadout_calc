@@ -10843,6 +10843,604 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Guinaifen": {
+    "internalID": 1210,
+    "name": "Guinaifen",
+    "path": "Nihility",
+    "element": "Fire",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 441,
+      "HPBase": 882,
+      "SPDBase": 106,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "121001",
+        "name": "Slurping Noodles During Handstand",
+        "rank": 1,
+        "desc": "When Skill is used, there is a 100% base chance to reduce the attacked target enemy's Effect RES by 10% for 2 turn(s).",
+        "icon": "icon/skill/1210_rank1.png",
+        "paramsEido": [
+          1,
+          0.1,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "121002",
+        "name": "Brushing Teeth While Whistling",
+        "rank": 2,
+        "desc": "When an enemy target is being Burned, the DMG multiplier of the Burn status applied by her Basic ATK or Skill increases by 40%.",
+        "icon": "icon/skill/1210_rank2.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "121003",
+        "name": "Smashing Boulder on Chest",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1210_skill.png"
+      },
+      {
+        "id": "121004",
+        "name": "Blocking Pike with Neck",
+        "rank": 4,
+        "desc": "Every time the Burn status inflicted by Guinaifen causes DMG, Guinaifen regenerates 2 Energy.",
+        "icon": "icon/skill/1210_rank4.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "121005",
+        "name": "Swallowing Sword to Stomach",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1210_ultimate.png"
+      },
+      {
+        "id": "121006",
+        "name": "Catching Bullet with Hands",
+        "rank": 6,
+        "desc": "Increases the stackable Firekiss count by 1.",
+        "icon": "icon/skill/1210_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Standing Ovation": {
+          "variant1": {
+            "skillID": 121001,
+            "trigger": "Skill01",
+            "name": "Standing Ovation",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Guinaifen_00_Skill01_Camera",
+              "Avatar_Guinaifen_00_Skill01_Phase01",
+              "Avatar_Guinaifen_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Blazing Welcome": {
+          "variant1": {
+            "skillID": 121002,
+            "trigger": "Skill02",
+            "name": "Blazing Welcome",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to one designated enemy and Fire DMG equal to #2[i]% of Guinaifen's ATK to any adjacent enemies, with a #3[i]% base chance to Burn the target and adjacent targets. When Burned, enemies will take a Fire DoT equal to #4[i]% of Guinaifen's ATK at the beginning of each turn, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.975,
+                0.325,
+                1,
+                1.46859,
+                2
+              ],
+              "8": [
+                1.05,
+                0.35,
+                1,
+                1.67844,
+                2
+              ],
+              "9": [
+                1.125,
+                0.375,
+                1,
+                1.93026,
+                2
+              ],
+              "10": [
+                1.2,
+                0.4,
+                1,
+                2.18208,
+                2
+              ],
+              "11": [
+                1.26,
+                0.42,
+                1,
+                2.291202,
+                2
+              ],
+              "12": [
+                1.32,
+                0.44,
+                1,
+                2.400324,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Guinaifen_00_Skill02_Camera",
+              "Avatar_Guinaifen_00_Skill02_Phase01",
+              "Avatar_Guinaifen_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Watch This Showstopper": {
+          "variant1": {
+            "skillID": 121003,
+            "trigger": "Skill03",
+            "name": "Watch This Showstopper",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[f1]% of Guinaifen's ATK to all enemies. If the target enemy is currently inflicted with Burn, then their Burn status immediately produces DMG equal to #2[i]% of their original DMG.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.02,
+                0.845
+              ],
+              "8": [
+                1.08,
+                0.87
+              ],
+              "9": [
+                1.14,
+                0.895
+              ],
+              "10": [
+                1.2,
+                0.92
+              ],
+              "11": [
+                1.248,
+                0.94
+              ],
+              "12": [
+                1.296,
+                0.96
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Guinaifen_00_Skill03_Camera",
+              "Avatar_Guinaifen_00_Skill03_EnterReady",
+              "Avatar_Guinaifen_00_Skill03_Phase01",
+              "Avatar_Guinaifen_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "PatrAeon Benefits": {
+          "variant1": {
+            "skillID": 121004,
+            "trigger": "SkillP01",
+            "name": "PatrAeon Benefits",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "When Guinaifen is on the field, there is a #1[i]% base chance to apply Firekiss to an enemy after their Burn status causes DMG. While inflicted with Firekiss, the enemy receives #4[f1]% increased DMG, which lasts for #5[i] turn(s) and can stack up to #6[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0,
+                0,
+                0.05875,
+                3,
+                3
+              ],
+              "8": [
+                1,
+                0,
+                0,
+                0.0625,
+                3,
+                3
+              ],
+              "9": [
+                1,
+                0,
+                0,
+                0.06625,
+                3,
+                3
+              ],
+              "10": [
+                1,
+                0,
+                0,
+                0.07,
+                3,
+                3
+              ],
+              "11": [
+                1,
+                0,
+                0,
+                0.073,
+                3,
+                3
+              ],
+              "12": [
+                1,
+                0,
+                0,
+                0.076,
+                3,
+                3
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Guinaifen_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Skill Showcase": {
+          "variant1": {
+            "skillID": 121007,
+            "trigger": "SkillMaze",
+            "name": "Skill Showcase",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals DMG for #2[i] time(s), dealing Fire DMG equal to #1[i]% of Guinaifen's ATK to a random single enemy target each time, with a #3[i]% base chance of inflicting Firekiss on them.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                4,
+                1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Guinaifen_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1210_basic_atk.png",
+        "skillRef": {
+          "skillName": "Standing Ovation",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1210_skill.png",
+        "skillRef": {
+          "skillName": "Blazing Welcome",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1210_ultimate.png",
+        "skillRef": {
+          "skillName": "Watch This Showstopper",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1210_talent.png",
+        "skillRef": {
+          "skillName": "PatrAeon Benefits",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1210_technique.png",
+        "skillRef": {
+          "skillName": "Skill Showcase",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "High Poles",
+        "icon": "icon/skill/1210_skilltree1.png",
+        "desc": "Basic ATK has a #1[i]% base chance of inflicting an enemy with a Burn equivalent to that of Skill.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.8
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Bladed Hoop",
+        "icon": "icon/skill/1210_skilltree2.png",
+        "desc": "When the battle begins, Guinaifen's action advances by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.25
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Walking on Knives",
+        "icon": "icon/skill/1210_skilltree3.png",
+        "desc": "Deals #1[i]% more DMG to Burned enemies.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1210.png",
+    "preview": "image/character_preview/1210.png",
+    "portrait": "image/character_portrait/1210.png",
+    "bannerOffsets": [
+      43,
+      -28,
+      0.72,
+      43,
+      -28,
+      0.72,
+      43,
+      -28,
+      0.72
+    ],
+    "isBuffed": false
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",

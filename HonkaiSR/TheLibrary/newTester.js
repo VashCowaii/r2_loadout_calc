@@ -3574,6 +3574,22 @@ const megaParsingFuckery = {
             ${parseRef.flagName} ${parseRef.invertCondition ? "NOT " : ""}
         </div>`;
     },
+    "DMG Source Has Flag"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+            "flagName",
+            "invertCondition",
+            // "casterFilter",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"DMG Source Has Flag");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""} ${parseRef.flagName}
+        </div>`;
+    },
     "Has Flag"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
