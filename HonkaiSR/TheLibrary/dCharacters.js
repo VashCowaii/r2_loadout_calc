@@ -7414,6 +7414,645 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Luka": {
+    "internalID": 1111,
+    "name": "Luka",
+    "path": "Nihility",
+    "element": "Physical",
+    "rarity": 4,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 485.1,
+      "HPBase": 917.28,
+      "SPDBase": 103,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "111101",
+        "name": "Fighting Endlessly",
+        "rank": 1,
+        "desc": "When Luka takes action, if the target enemy is Bleeding, increases DMG dealt by Luka by 15% for 2 turn(s).",
+        "icon": "icon/skill/1111_rank1.png",
+        "paramsEido": [
+          0.15,
+          2
+        ]
+      },
+      {
+        "id": "111102",
+        "name": "The Enemy is Weak, I am Strong",
+        "rank": 2,
+        "desc": "If the Skill hits an enemy target with Physical Weakness, gain 1 stack(s) of Fighting Will.",
+        "icon": "icon/skill/1111_rank2.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "111103",
+        "name": "Born for the Ring",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1111_skill.png"
+      },
+      {
+        "id": "111104",
+        "name": "Never Turning Back",
+        "rank": 4,
+        "desc": "For every stack of Fighting Will obtained, increases ATK by 5%, stacking up to 4 time(s).",
+        "icon": "icon/skill/1111_rank4.png",
+        "paramsEido": [
+          0.05,
+          4
+        ]
+      },
+      {
+        "id": "111105",
+        "name": "The Spirit of Wildfire",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1111_ultimate.png"
+      },
+      {
+        "id": "111106",
+        "name": "A Champion's Applause",
+        "rank": 6,
+        "desc": "After the Enhanced Basic ATK's \"Rising Uppercut\" hits a Bleeding enemy target, the Bleed status will immediately deal DMG 1 time equal to 8% of the original DMG for every hit of Direct Punch already unleashed during the current Enhanced Basic ATK.",
+        "icon": "icon/skill/1111_rank6.png",
+        "paramsEido": [
+          0.08
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Direct Punch": {
+          "variant1": {
+            "skillID": 111101,
+            "trigger": "Skill01",
+            "name": "Direct Punch",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Luka's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Luka_Skill01_Phase01",
+              "Avatar_Luka_Skill01_Phase02",
+              "Avatar_Luka_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Sky-Shatter Fist": {
+          "variant1": {
+            "skillID": 111108,
+            "trigger": "Skill11",
+            "name": "Sky-Shatter Fist",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Consumes 2 stacks of \"Fighting Will.\" First, uses \"Direct Punch\" to deal 3 hits, with each hit dealing Physical DMG equal to #1[i]% of Luka's ATK to one designated enemy target.\\nThen, uses \"Rising Uppercut\" to deal 1 hit, dealing Physical DMG equal to #2[i]% of Luka's ATK to the designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.2,
+                0.8
+              ],
+              "7": [
+                0.22,
+                0.88
+              ],
+              "8": [
+                0.24,
+                0.96
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Luka_Skill11_Phase01",
+              "Avatar_Luka_Skill11_Phase02",
+              "Avatar_Luka_Skill11_End_Camera",
+              "Avatar_Luka_Skill11_Camera",
+              "Avatar_Luka_Skill11_Loop_Camera",
+              "Avatar_Luka_Skill11_Loop2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Lacerating Fist": {
+          "variant1": {
+            "skillID": 111102,
+            "trigger": "Skill02",
+            "name": "Lacerating Fist",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Luka's ATK to one designated enemy target. In addition, there is a #2[i]% base chance to inflict Bleed on them, lasting for #5[i] turn(s).\\nWhile Bleeding, the enemy will take #3[f1]% of their Max HP as Physical DoT at the start of each turn. This DMG will not exceed more than #4[i]% of Luka's ATK.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.975,
+                1,
+                0.24,
+                2.275,
+                3
+              ],
+              "8": [
+                1.05,
+                1,
+                0.24,
+                2.6,
+                3
+              ],
+              "9": [
+                1.125,
+                1,
+                0.24,
+                2.99,
+                3
+              ],
+              "10": [
+                1.2,
+                1,
+                0.24,
+                3.38,
+                3
+              ],
+              "11": [
+                1.26,
+                1,
+                0.24,
+                3.549,
+                3
+              ],
+              "12": [
+                1.32,
+                1,
+                0.24,
+                3.718,
+                3
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luka_Skill02_Phase01",
+              "Avatar_Luka_Skill02_Phase02",
+              "Avatar_Luka_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Coup de Grâce": {
+          "variant1": {
+            "skillID": 111103,
+            "trigger": "Skill03",
+            "name": "Coup de Grâce",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Receives #5[i] stack(s) of \"Fighting Will,\" with a #2[i]% base chance to increase one designated enemy target's DMG received by #3[f1]% for #4[i] turn(s). Then, deals Physical DMG equal to #1[i]% of Luka's ATK to the target.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.805,
+                1,
+                0.17,
+                3,
+                2
+              ],
+              "8": [
+                2.97,
+                1,
+                0.18,
+                3,
+                2
+              ],
+              "9": [
+                3.135,
+                1,
+                0.19,
+                3,
+                2
+              ],
+              "10": [
+                3.3,
+                1,
+                0.2,
+                3,
+                2
+              ],
+              "11": [
+                3.432,
+                1,
+                0.208,
+                3,
+                2
+              ],
+              "12": [
+                3.564,
+                1,
+                0.216,
+                3,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luka_Skill03_Phase01",
+              "Avatar_Luka_Skill03_Phase02",
+              "Avatar_Luka_00_Skill03_Camera",
+              "Avatar_Luka_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Flying Sparks": {
+          "variant1": {
+            "skillID": 111104,
+            "trigger": "SkillP01",
+            "name": "Flying Sparks",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After Luka uses his Basic ATK \"Direct Punch\" or Skill \"Lacerating Fist,\" he receives #1[i] stack of Fighting Will, up to 4 stacks. When he has 2 or more stacks of Fighting Will, his Basic ATK \"Direct Punch\" is enhanced to \"Sky-Shatter Fist.\" After his Enhanced Basic ATK's \"Rising Uppercut\" hits a Bleeding enemy target, the Bleed status will immediately deal DMG for 1 time equal to #2[i]% of the original DMG to the target. At the start of battle, Luka will possess 1 stack of Fighting Will.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0.78625
+              ],
+              "8": [
+                1,
+                0.8075
+              ],
+              "9": [
+                1,
+                0.82875
+              ],
+              "10": [
+                1,
+                0.85
+              ],
+              "11": [
+                1,
+                0.867
+              ],
+              "12": [
+                1,
+                0.884
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luka_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Anticipator": {
+          "variant1": {
+            "skillID": 111107,
+            "trigger": "SkillMaze",
+            "name": "Anticipator",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, Luka deals Physical DMG equal to #1[i]% of his ATK to a random single enemy with a #2[i]% base chance to inflict his Skill's Bleed effect on the target. Then, Luka gains 1 additional stack of Fighting Will.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                1
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Luka_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1111_basic_atk.png",
+        "skillRef": {
+          "skillName": "Direct Punch",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1111_skill.png",
+        "skillRef": {
+          "skillName": "Lacerating Fist",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1111_ultimate.png",
+        "skillRef": {
+          "skillName": "Coup de Grâce",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1111_talent.png",
+        "skillRef": {
+          "skillName": "Flying Sparks",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1111_technique.png",
+        "skillRef": {
+          "skillName": "Anticipator",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Kinetic Overload",
+        "icon": "icon/skill/1111_skilltree1.png",
+        "desc": "When using Skill, immediately dispels #1[i] buff(s) from the enemy target.",
+        "params": [
+          1
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+            "params": [
+              1
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Cycle Braking",
+        "icon": "icon/skill/1111_skilltree2.png",
+        "desc": "For every stack of Fighting Will obtained, additionally regenerates #1[i] Energy.",
+        "params": [
+          3
+        ]
+      },
+      "Point08": {
+        "name": "Crush Fighting Will",
+        "icon": "icon/skill/1111_skilltree3.png",
+        "desc": "When using Enhanced Basic ATK, every hit of \"Direct Punch\" has a #1[i]% fixed chance for Luka to use 1 additional hit. This effect does not apply to additional hits generated in this way.",
+        "params": [
+          0.5
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor.",
+            "params": [
+              0.5
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1111.png",
+    "preview": "image/character_preview/1111.png",
+    "portrait": "image/character_portrait/1111.png",
+    "bannerOffsets": [
+      102,
+      -95,
+      0.7,
+      102,
+      -95,
+      0.7,
+      102,
+      -95,
+      0.7
+    ],
+    "isBuffed": false
+  },
   "Qingque": {
     "internalID": 1201,
     "name": "Qingque",
