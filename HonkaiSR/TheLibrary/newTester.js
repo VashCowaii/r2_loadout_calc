@@ -2716,6 +2716,28 @@ const megaParsingFuckery = {
             </div>` : ""}
         </div>`;
     },
+    "Join Targets"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            "TargetList",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Join Targets");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.TargetList != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Defenders:</div>&nbsp;
+                ${Array.isArray(parseRef.TargetList) ? megaParsingFuckery.makeConditionTargetBox(parseRef.TargetList,initialCounter) : parseRef.TargetList}
+            </div>` : ""}
+            
+        </div>`;
+    },
     "Sort by Matching Weakness"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3578,6 +3600,28 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.invertCondition ? "NOT " : ""}${parseRef.attackTypes} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+        </div>`;
+    },
+    "Modifier Type Was"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "modifier",
+            // "casterFilter",
+            "invertCondition",
+            "statusType",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Was");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.modifier} ${parseRef.invertCondition ? "NOT " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.statusType != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Status Type:</div>&nbsp;
+                ${parseRef.statusType}
+            </div>` : ""}
         </div>`;
     },
     "Modifier Was"(parseRef,initialCounter) {
@@ -5148,10 +5192,21 @@ const megaParsingFuckery = {
 
         // initialCounter++;
         return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.partOf ? `target family [${parseRef.partOf}] includes ` : ""}${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.exclude ? `, and excludes ${Array.isArray(parseRef.exclude) ? megaParsingFuckery.makeConditionTargetBox(parseRef.exclude,initialCounter) : parseRef.exclude}` : ""}
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
         </div>
         <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            </div>` : ""}
+            ${parseRef.partOf != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Part of Target Family:</div>&nbsp;
+                ${Array.isArray(parseRef.partOf) ? megaParsingFuckery.makeConditionTargetBox(parseRef.partOf,initialCounter) : parseRef.partOf}
+            </div>` : ""}
+            ${parseRef.exclude != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Excludes:</div>&nbsp;
+                ${Array.isArray(parseRef.exclude) ? megaParsingFuckery.makeConditionTargetBox(parseRef.exclude,initialCounter) : parseRef.exclude}
+            </div>` : ""}
             ${parseRef.minOrMax != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Compare Operation:</div>&nbsp;
                 ${parseRef.minOrMax}
@@ -5360,6 +5415,7 @@ const megaParsingFuckery = {
             "name",
             "to",
             "modifier",
+            "duration",
             // "stackLimit",
             "valuePerStack",
             "includeBattleEvent",
@@ -5392,6 +5448,10 @@ const megaParsingFuckery = {
         </div>
         ${returnString ?? ""}
         <div class="modifierDetailsBox">
+            ${parseRef.duration != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Duration:</div>&nbsp;
+                ${parseRef.duration.displayLines ?? parseRef.duration}
+            </div>` : ""}
             ${parseRef.to != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
                 ${Array.isArray(parseRef.to) ? megaParsingFuckery.makeConditionTargetBox(parseRef.to,initialCounter) : parseRef.to}

@@ -12009,6 +12009,582 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Luocha": {
+    "internalID": 1203,
+    "name": "Luocha",
+    "path": "Abundance",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1280.664,
+      "SPDBase": 101,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "120301",
+        "name": "Ablution of the Quick",
+        "rank": 1,
+        "desc": "While the Zone is active, ATK of all allies increases by 20%.",
+        "icon": "icon/skill/1203_rank1.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "120302",
+        "name": "Bestowal From the Pure",
+        "rank": 2,
+        "desc": "When his Skill is triggered, if the target ally's HP percentage is lower than 50%, Luocha's Outgoing Healing increases by 30%. If the target ally's HP percentage is at 50% or higher, the ally receives a Shield that can absorb DMG equal to 18% of Luocha's ATK plus 240, lasting for 2 turns.",
+        "icon": "icon/skill/1203_rank2.png",
+        "paramsEido": [
+          0.3,
+          0.18,
+          240,
+          2
+        ]
+      },
+      {
+        "id": "120303",
+        "name": "Surveyal by the Fool",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1203_skill.png"
+      },
+      {
+        "id": "120304",
+        "name": "Heavy Lies the Crown",
+        "rank": 4,
+        "desc": "When Luocha's Zone is active, enemies become Weakened and deal 12% less DMG.",
+        "icon": "icon/skill/1203_rank4.png",
+        "paramsEido": [
+          0.12
+        ]
+      },
+      {
+        "id": "120305",
+        "name": "Cicatrix 'Neath the Pain",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1203_ultimate.png"
+      },
+      {
+        "id": "120306",
+        "name": "Reunion With the Dust",
+        "rank": 6,
+        "desc": "When Ultimate is used, there is a 100% fixed chance to reduce all enemies' All-Type RES by 20% for 2 turn(s).",
+        "icon": "icon/skill/1203_rank6.png",
+        "paramsEido": [
+          1,
+          0.2,
+          2
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Thorns of the Abyss": {
+          "variant1": {
+            "skillID": 120301,
+            "trigger": "Skill01",
+            "name": "Thorns of the Abyss",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Luocha's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill01_Camera",
+              "Avatar_Luocha_00_Skill01_Phase01",
+              "Avatar_Luocha_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Prayer of Abyss Flower": {
+          "variant1": {
+            "skillID": 120302,
+            "trigger": "Skill02",
+            "name": "Prayer of Abyss Flower",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "After using his Skill, Luocha immediately restores the target ally's HP equal to #1[i]% of Luocha's ATK plus #2[i]. Meanwhile, Luocha gains 1 stack of Abyss Flower.\\nWhen any ally's HP percentage drops to #3[i]% or lower, an effect equivalent to Luocha's Skill will immediately be triggered and applied to this ally for one time (without consuming Skill Points). This effect can be triggered again after #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.54,
+                665,
+                0.5,
+                2
+              ],
+              "8": [
+                0.56,
+                710,
+                0.5,
+                2
+              ],
+              "9": [
+                0.58,
+                755,
+                0.5,
+                2
+              ],
+              "10": [
+                0.6,
+                800,
+                0.5,
+                2
+              ],
+              "11": [
+                0.62,
+                845,
+                0.5,
+                2
+              ],
+              "12": [
+                0.64,
+                890,
+                0.5,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill02_Camera",
+              "Avatar_Luocha_00_Skill02_Phase01",
+              "Avatar_Luocha_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Death Wish": {
+          "variant1": {
+            "skillID": 120303,
+            "trigger": "Skill03",
+            "name": "Death Wish",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Removes #2[i] buff(s) from all enemies and deals all enemies Imaginary DMG equal to #1[i]% of Luocha's ATK. At the same time, Luocha gains 1 stack of Abyss Flower.",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7,
+                1
+              ],
+              "8": [
+                1.8,
+                1
+              ],
+              "9": [
+                1.9,
+                1
+              ],
+              "10": [
+                2,
+                1
+              ],
+              "11": [
+                2.08,
+                1
+              ],
+              "12": [
+                2.16,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_Skill03_Camera",
+              "Avatar_Luocha_00_Skill03_EnterReady",
+              "Avatar_Luocha_00_Skill03_Phase01",
+              "Avatar_Luocha_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Cycle of Life": {
+          "variant1": {
+            "skillID": 120304,
+            "trigger": "SkillP01",
+            "name": "Cycle of Life",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "When Abyss Flower reaches #1[i] stacks, Luocha consumes all stacks of Abyss Flower to deploy a Zone against the enemy.\\nWhen any enemy in the Zone is attacked by an ally, the attacking ally's HP is immediately restored by an amount equal to #2[f1]% of Luocha's ATK plus #4[i].\\nThe Zone's effect lasts for #3[i] turns. When Luocha is knocked down, the Zone will be dispelled.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                0.162,
+                2,
+                199.5
+              ],
+              "8": [
+                2,
+                0.168,
+                2,
+                213
+              ],
+              "9": [
+                2,
+                0.174,
+                2,
+                226.5
+              ],
+              "10": [
+                2,
+                0.18,
+                2,
+                240
+              ],
+              "11": [
+                2,
+                0.186,
+                2,
+                253.5
+              ],
+              "12": [
+                2,
+                0.192,
+                2,
+                267
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Luocha_00_PassiveSkill01_Camera",
+              "Avatar_Luocha_00_PassiveSkill01",
+              "Avatar_Luocha_00_Passive01_InsertAbility",
+              "Avatar_Luocha_00_Skill02_InsertAbility"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Mercy of a Fool": {
+          "variant1": {
+            "skillID": 120307,
+            "trigger": "SkillMaze",
+            "name": "Mercy of a Fool",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "After the Technique is used, the Talent will be immediately triggered at the start of the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Luocha_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1203_basic_atk.png",
+        "skillRef": {
+          "skillName": "Thorns of the Abyss",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1203_skill.png",
+        "skillRef": {
+          "skillName": "Prayer of Abyss Flower",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1203_ultimate.png",
+        "skillRef": {
+          "skillName": "Death Wish",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1203_talent.png",
+        "skillRef": {
+          "skillName": "Cycle of Life",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1203_technique.png",
+        "skillRef": {
+          "skillName": "Mercy of a Fool",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Cleansing Revival",
+        "icon": "icon/skill/1203_skilltree1.png",
+        "desc": "When Skill's effect is triggered, dispel #1[i] debuff(s) from one designated ally.",
+        "params": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              1
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point07": {
+        "name": "Sanctified",
+        "icon": "icon/skill/1203_skilltree2.png",
+        "desc": "When any enemy in the Zone is attacked by an ally, all allies (except the attacker) restore HP equal to #1[f1]% of Luocha's ATK plus #2[i].",
+        "params": [
+          0.07,
+          93
+        ]
+      },
+      "Point08": {
+        "name": "Through the Valley",
+        "icon": "icon/skill/1203_skilltree3.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.7
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.7
+            ]
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1203.png",
+    "preview": "image/character_preview/1203.png",
+    "portrait": "image/character_portrait/1203.png",
+    "bannerOffsets": [
+      10.4,
+      -36.6,
+      0.63,
+      10.4,
+      -36.6,
+      0.63,
+      10.4,
+      -36.6,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Sushang": {
     "internalID": 1206,
     "name": "Sushang",
