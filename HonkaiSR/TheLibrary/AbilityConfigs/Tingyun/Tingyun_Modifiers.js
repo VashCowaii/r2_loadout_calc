@@ -1254,7 +1254,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "UI Display Event",
+                  "name": "Update Modifier Description",
                   "popUpText": "Increases ATK by #1[i] points. Gains SPD Boost after using Ultimate."
                 },
                 {

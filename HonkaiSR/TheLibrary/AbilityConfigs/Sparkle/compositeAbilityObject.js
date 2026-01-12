@@ -1813,7 +1813,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases DMG dealt by #1[f1]%. Ignores #2[i]% of the target's DEF when dealing DMG."
                     },
                     {
@@ -2226,7 +2226,7 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases ATK by #1[i]% and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by #2[f1]%."
                     }
                   ]

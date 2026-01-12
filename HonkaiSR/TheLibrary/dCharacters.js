@@ -1,4 +1,608 @@
 let characters = {
+  "Kafka": {
+    "internalID": 1005,
+    "name": "Kafka",
+    "path": "Nihility",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 100,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "1100501",
+        "name": "Da Capo",
+        "rank": 1,
+        "desc": "When using an attack, has a 100% base chance to increase the DoT taken by the target by 30% for 2 turn(s).",
+        "icon": "icon/skill/1100_rank1.png",
+        "paramsEido": [
+          1,
+          0.3,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "1100502",
+        "name": "Fortississimo",
+        "rank": 2,
+        "desc": "While Kafka is on the field, DoT dealt by all allies increases by 33%.",
+        "icon": "icon/skill/1100_rank2.png",
+        "paramsEido": [
+          0.33
+        ]
+      },
+      {
+        "id": "1100503",
+        "name": "Capriccio",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1100_skill.png"
+      },
+      {
+        "id": "1100504",
+        "name": "Recitativo",
+        "rank": 4,
+        "desc": "When an enemy target takes DMG from the Shock status inflicted by Kafka, Kafka additionally regenerates 2 Energy.",
+        "icon": "icon/skill/1100_rank4.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "1100505",
+        "name": "Doloroso",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1100_ultimate.png"
+      },
+      {
+        "id": "1100506",
+        "name": "Leggiero",
+        "rank": 6,
+        "desc": "The Shock state inflicted on the enemy target by the Ultimate, Technique, or the Talent-triggered Follow-Up ATK has a DMG multiplier increase of 156% and lasts 1 turn(s) longer.",
+        "icon": "icon/skill/1100_rank6.png",
+        "paramsEido": [
+          1.56,
+          1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Midnight Tumult": {
+          "variant1": {
+            "skillID": 1100501,
+            "trigger": "Skill01",
+            "name": "Midnight Tumult",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill01_Camera",
+              "Avatar_Advanced_Kafka_00_Skill01_Phase01",
+              "Avatar_Advanced_Kafka_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Caressing Moonlight": {
+          "variant1": {
+            "skillID": 1100502,
+            "trigger": "Skill02",
+            "name": "Caressing Moonlight",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to one designated enemy and Lightning DMG equal to #3[i]% of Kafka's ATK to adjacent targets.\\nIf the designated enemy or the adjacent targets are currently afflicted with DoT, all DoTs currently placed on those enemies immediately produces DMG equal to #2[i]% or #4[i]% of the original DMG.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.3,
+                0.69375,
+                0.4875,
+                0.4625
+              ],
+              "8": [
+                1.4,
+                0.7125,
+                0.525,
+                0.475
+              ],
+              "9": [
+                1.5,
+                0.73125,
+                0.5625,
+                0.4875
+              ],
+              "10": [
+                1.6,
+                0.75,
+                0.6,
+                0.5
+              ],
+              "11": [
+                1.68,
+                0.765,
+                0.63,
+                0.51
+              ],
+              "12": [
+                1.76,
+                0.78,
+                0.66,
+                0.52
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill02_Camera",
+              "Avatar_Advanced_Kafka_00_Skill02_Phase01",
+              "Avatar_Advanced_Kafka_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Twilight Trill": {
+          "variant1": {
+            "skillID": 1100503,
+            "trigger": "Skill03",
+            "name": "Twilight Trill",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to all enemies, with a #2[i]% base chance for enemy targets hit to become Shocked and immediately take DMG from their current DoT debuff(s), equal to #5[i]% of the original DMG. Shock lasts for #3[i] turn(s).\\nWhile Shocked, enemy targets receive Lightning DoT equal to #4[i]% of Kafka's ATK at the beginning of each turn.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.68,
+                1,
+                2,
+                1.975625,
+                1.125
+              ],
+              "8": [
+                0.72,
+                1,
+                2,
+                2.2475,
+                1.15
+              ],
+              "9": [
+                0.76,
+                1,
+                2,
+                2.57375,
+                1.175
+              ],
+              "10": [
+                0.8,
+                1,
+                2,
+                2.9,
+                1.2
+              ],
+              "11": [
+                0.832,
+                1,
+                2,
+                3.041375,
+                1.22
+              ],
+              "12": [
+                0.864,
+                1,
+                2,
+                3.18275,
+                1.24
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill03_Camera",
+              "Avatar_Advanced_Kafka_00_Skill03_Phase01",
+              "Avatar_Advanced_Kafka_00_Skill03_Phase02",
+              "Avatar_Advanced_Kafka_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Gentle but Cruel": {
+          "variant1": {
+            "skillID": 1100504,
+            "trigger": "SkillP01",
+            "name": "Gentle but Cruel",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "After Kafka's teammate uses an attack on an enemy target, Kafka immediately launches Follow-Up ATK and deals Lightning DMG equal to #1[i]% of Kafka's ATK to the primary target, with a #2[i]% base chance to inflict Shock (equivalent to that applied by her Ultimate) on the attacked enemy target for #3[i] turns. This effect can trigger up to #5[i] time(s), #4[i] of which can be regained at the end of Kafka's turn.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.0325,
+                1,
+                2,
+                1,
+                2
+              ],
+              "8": [
+                1.155,
+                1,
+                2,
+                1,
+                2
+              ],
+              "9": [
+                1.2775,
+                1,
+                2,
+                1,
+                2
+              ],
+              "10": [
+                1.4,
+                1,
+                2,
+                1,
+                2
+              ],
+              "11": [
+                1.498,
+                1,
+                2,
+                1,
+                2
+              ],
+              "12": [
+                1.596,
+                1,
+                2,
+                1,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Kafka_00_PassiveSkill01",
+              "Avatar_Advanced_Kafka_00_PassiveAtk_Ability",
+              "Avatar_Kafka_Passive1Atk_Ability_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Mercy Is Not Forgiveness": {
+          "variant1": {
+            "skillID": 1100507,
+            "trigger": "SkillMaze",
+            "name": "Mercy Is Not Forgiveness",
+            "slot": "Technique",
+            "desc": "Immediately attacks all enemies within a set range. After entering combat, deals Lightning DMG equal to #3[i]% of Kafka's ATK to all enemies, with a #1[i]% base chance to inflict Shock (equivalent to that applied by her Ultimate) on every enemy target for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                0.5
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Advanced_Kafka_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1005_basic_atk.png",
+        "skillRef": {
+          "skillName": "Midnight Tumult",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1005_skill.png",
+        "skillRef": {
+          "skillName": "Caressing Moonlight",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1005_ultimate.png",
+        "skillRef": {
+          "skillName": "Twilight Trill",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1005_talent.png",
+        "skillRef": {
+          "skillName": "Gentle but Cruel",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1005_technique.png",
+        "skillRef": {
+          "skillName": "Mercy Is Not Forgiveness",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Torture",
+        "icon": "icon/skill/1005_skilltree1.png",
+        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
+        "params": [
+          0.75,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Plunder",
+        "icon": "icon/skill/1005_skilltree2.png",
+        "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
+        "params": [
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Thorns",
+        "icon": "icon/skill/1005_skilltree3.png",
+        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1005.png",
+    "preview": "image/character_preview/1005.png",
+    "portrait": "image/character_portrait/1005.png",
+    "bannerOffsets": [
+      1,
+      -50,
+      0.71,
+      1,
+      -50,
+      0.71,
+      1,
+      -50,
+      0.71
+    ]
+  },
   "Herta": {
     "internalID": 1013,
     "name": "Herta",

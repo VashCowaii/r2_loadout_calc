@@ -2387,7 +2387,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Unable to take action. Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time."
                     },
                     {

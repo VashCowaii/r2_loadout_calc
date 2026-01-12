@@ -178,7 +178,7 @@ const configAbility = {
                   }
                 },
                 {
-                  "name": "UI Display Event",
+                  "name": "Update Modifier Description",
                   "popUpText": "Reduces Effect RES by #2[i]%. DMG received increases by #1[i]% during this unit's turn. While afflicted with Arcana, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger #3[i] more time(s)."
                 },
                 {

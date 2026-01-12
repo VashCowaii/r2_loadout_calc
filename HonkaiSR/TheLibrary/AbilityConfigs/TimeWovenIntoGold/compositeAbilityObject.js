@@ -111,7 +111,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases CRIT DMG by #1[f1]% and Basic ATK DMG by #2[f1]%."
                     }
                   ]
@@ -257,7 +257,7 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "Increases CRIT DMG by #1[f1]% and Basic ATK DMG by #2[f1]%."
                     }
                   ]

@@ -1664,7 +1664,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "UI Display Event",
+                      "name": "Update Modifier Description",
                       "popUpText": "DMG dealt increases by #1[i]%, and Quantum RES PEN +#2[i]%."
                     },
                     {
