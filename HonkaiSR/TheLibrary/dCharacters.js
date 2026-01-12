@@ -1830,6 +1830,525 @@ let characters = {
     ],
     "isBuffed": true
   },
+  "Arlan": {
+    "internalID": 1008,
+    "name": "Arlan",
+    "path": "Destruction",
+    "element": "Lightning",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 599.76,
+      "DEFBase": 330.75,
+      "HPBase": 1199.52,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "100801",
+        "name": "To the Bitter End",
+        "rank": 1,
+        "desc": "When HP percentage is lower than or equal to 50% of Max HP, increases DMG dealt by Skill by 10%.",
+        "icon": "icon/skill/1008_rank1.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "100802",
+        "name": "Breaking Free",
+        "rank": 2,
+        "desc": "Using Skill or Ultimate removes 1 debuff from this unit.",
+        "icon": "icon/skill/1008_rank2.png",
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "100803",
+        "name": "Power Through",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1008_skill.png"
+      },
+      {
+        "id": "100804",
+        "name": "Turn the Tables",
+        "rank": 4,
+        "desc": "When struck by a killing blow after entering battle, instead of becoming knocked down, Arlan immediately restores his HP to 25% of his Max HP. This effect is automatically removed after it is triggered once or after 2 turn(s) have elapsed.",
+        "icon": "icon/skill/1008_rank4.png",
+        "paramsEido": [
+          0.25,
+          2
+        ],
+        "extraEffects": {
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        }
+      },
+      {
+        "id": "100805",
+        "name": "Hammer and Tongs",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1008_ultimate.png"
+      },
+      {
+        "id": "100806",
+        "name": "Self-Sacrifice",
+        "rank": 6,
+        "desc": "When the current HP percentage drops to 50% or below, Ultimate deals 20% more DMG, and the DMG multiplier for adjacent targets is raised to the same level as that for the primary target.",
+        "icon": "icon/skill/1008_rank6.png",
+        "paramsEido": [
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lightning Rush": {
+          "variant1": {
+            "skillID": 100801,
+            "trigger": "Skill01",
+            "name": "Lightning Rush",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Arlan_00_Skill01_Camera",
+              "Avatar_Arlan_Skill01_Phase01",
+              "Avatar_Arlan_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Shackle Breaker": {
+          "variant1": {
+            "skillID": 100802,
+            "trigger": "Skill02",
+            "name": "Shackle Breaker",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Consumes Arlan's HP equal to #1[i]% of his Max HP to deal Lightning DMG equal to #2[i]% of Arlan's ATK to one designated enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.15,
+                1.95
+              ],
+              "8": [
+                0.15,
+                2.1
+              ],
+              "9": [
+                0.15,
+                2.25
+              ],
+              "10": [
+                0.15,
+                2.4
+              ],
+              "11": [
+                0.15,
+                2.52
+              ],
+              "12": [
+                0.15,
+                2.64
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Arlan_Skill02_Camera",
+              "Avatar_Arlan_Skill02_Phase01",
+              "Avatar_Arlan_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Frenzied Punishment": {
+          "variant1": {
+            "skillID": 100803,
+            "trigger": "Skill03",
+            "name": "Frenzied Punishment",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to one designated enemy and Lightning DMG equal to #2[i]% of Arlan's ATK to enemies adjacent to it.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.72,
+                1.36
+              ],
+              "8": [
+                2.88,
+                1.44
+              ],
+              "9": [
+                3.04,
+                1.52
+              ],
+              "10": [
+                3.2,
+                1.6
+              ],
+              "11": [
+                3.328,
+                1.664
+              ],
+              "12": [
+                3.456,
+                1.728
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Arlan_Skill03_Camera",
+              "Avatar_Arlan_00_Skill03_EnterReady",
+              "Avatar_Arlan_Skill03_Phase01",
+              "Avatar_Arlan_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Pain and Anger": {
+          "variant1": {
+            "skillID": 100804,
+            "trigger": "SkillP01",
+            "name": "Pain and Anger",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Based on Arlan's current missing HP percentage, gains DMG bonus, up to a maximum increase of #1[i]% DMG dealt by Arlan.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.585
+              ],
+              "8": [
+                0.63
+              ],
+              "9": [
+                0.675
+              ],
+              "10": [
+                0.72
+              ],
+              "11": [
+                0.756
+              ],
+              "12": [
+                0.792
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Arlan_PassiveSkill01",
+              "Avatar_Arlan_00_PassiveSkill03_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Swift Harvest": {
+          "variant1": {
+            "skillID": 100807,
+            "trigger": "SkillMaze",
+            "name": "Swift Harvest",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to #1[i]% of Arlan's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Arlan_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1008_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lightning Rush",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1008_skill.png",
+        "skillRef": {
+          "skillName": "Shackle Breaker",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1008_ultimate.png",
+        "skillRef": {
+          "skillName": "Frenzied Punishment",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1008_talent.png",
+        "skillRef": {
+          "skillName": "Pain and Anger",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1008_technique.png",
+        "skillRef": {
+          "skillName": "Swift Harvest",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Revival",
+        "icon": "icon/skill/1008_skilltree1.png",
+        "desc": "If the current HP percentage is #1[i]% or lower when defeating an enemy, immediately restores HP equal to #2[i]% of Max HP.",
+        "params": [
+          0.3,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Endurance",
+        "icon": "icon/skill/1008_skilltree2.png",
+        "desc": "The chance to resist DoT Debuffs increases by #1[i]%.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point08": {
+        "name": "Repel",
+        "icon": "icon/skill/1008_skilltree3.png",
+        "desc": "Upon entering battle, if Arlan's HP percentage is less than or equal to #1[i]%, he can nullify all DMG received except for DoTs until he is attacked.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1008.png",
+    "preview": "image/character_preview/1008.png",
+    "portrait": "image/character_portrait/1008.png",
+    "bannerOffsets": [
+      -36,
+      16,
+      0.62,
+      -36,
+      16,
+      0.62,
+      -36,
+      16,
+      0.62
+    ],
+    "isBuffed": false
+  },
   "Asta": {
     "internalID": 1009,
     "name": "Asta",

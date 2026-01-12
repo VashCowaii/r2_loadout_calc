@@ -1,0 +1,1267 @@
+const compositeAbilityObject = {
+  "fullCharacterName": "Arlan",
+  "trimCharacterName": "Arlan",
+  "abilityList": [
+    "Arlan_Arlan_PassiveAbility03_Insert",
+    "Arlan_Arlan_Trace03",
+    "Arlan_Arlan_Trace02",
+    "Arlan_Arlan_Trace01",
+    "Arlan_Arlan_TechniqueInLevel",
+    "Arlan_Arlan_PassiveAbility01",
+    "Arlan_Arlan_Ability03_Part02",
+    "Arlan_Arlan_Ability03_Part01",
+    "Arlan_Arlan_Ability03_EnterReady",
+    "Arlan_Arlan_Ability02_Part02",
+    "Arlan_Arlan_Ability02_Part01",
+    "Arlan_Arlan_Ability01_Part02",
+    "Arlan_Arlan_Ability01_Part01",
+    "Arlan_Modifiers"
+  ],
+  "abilityObject": {
+    "Arlan_Arlan_PassiveAbility03_Insert": {
+      "fileName": "Arlan_Arlan_PassiveAbility03_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": "Caster",
+          "variableName": "Arlan_MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Set HP Value",
+          "target": "Caster",
+          "setValue": {
+            "operator": "Variables[0] (Arlan_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
+            "displayLines": "(Arlan_MaxHPValue * 0.25)",
+            "constants": [],
+            "variables": [
+              "Arlan_MaxHPValue",
+              0.25
+            ]
+          }
+        },
+        {
+          "name": "Define Modifier Variable",
+          "modifierName": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+          "function": "Add"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": "Owner of this Modifier",
+          "scope": "TargetEntity",
+          "variableName": "_Arlan_00_PassiveSkill03_InsertController"
+        }
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Trace03": {
+      "fileName": "Arlan_Arlan_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": "Caster",
+            "value1": "CurrentHP%",
+            "compareType": "<=",
+            "value2": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "BlockDamage_Count[<span class=\"descriptionNumberColor\">Repel</span>]"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Trace02": {
+      "fileName": "Arlan_Arlan_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Stack Target Resistance",
+          "target": "Caster",
+          "statName": "STAT_DOT",
+          "value": {
+            "operator": "Variables[0] (0.5) || RETURN",
+            "displayLines": "0.5",
+            "constants": [],
+            "variables": [
+              0.5
+            ]
+          }
+        }
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Trace01": {
+      "fileName": "Arlan_Arlan_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Arlan_Tree01"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "M_Arlan_Tree01",
+          "execute": [
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": "Caster",
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (0.3) || RETURN",
+                      "displayLines": "0.3",
+                      "constants": [],
+                      "variables": [
+                        0.3
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": "Owner of this Modifier",
+                      "healPercent": {
+                        "operator": "Variables[0] (0.2) || RETURN",
+                        "displayLines": "0.2",
+                        "constants": [],
+                        "variables": [
+                          0.2
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Arlan_Arlan_TechniqueInLevel": {
+      "fileName": "Arlan_Arlan_TechniqueInLevel",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Arlan_TechniqueUsage_Proc"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Arlan_TechniqueUsage_Proc",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": "All Hostile Entities (AOE)",
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (0.8) || RETURN",
+                          "displayLines": "0.8",
+                          "constants": [],
+                          "variables": [
+                            0.8
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Technique",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                "Trigger: Attack End"
+              ],
+              "priorityLevel": -60
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Arlan_Arlan_PassiveAbility01": {
+      "fileName": "Arlan_Arlan_PassiveAbility01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Arlan_Passive"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Arlan_Ability02_LoseHPPreShow"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Arlan_Eidolon1"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Arlan_Eidolon6"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "M_Arlan_Ability02_LoseHPPreShow",
+          "execute": [
+            {
+              "eventTrigger": "Update Target Selected(UI) [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Caster"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": "Caster",
+                      "variableName": "MDF_MaxHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Update UI Preview",
+                      "show": "Show",
+                      "skillType": [
+                        "Skill"
+                      ],
+                      "target": "Caster",
+                      "previewType": null,
+                      "previewValue": {
+                        "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.15) || MUL || RETURN",
+                        "displayLines": "(MDF_MaxHP * 0.15)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_MaxHP",
+                          0.15
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
+          "counter": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "TargetEntity",
+                  "variableName": "_Arlan_00_PassiveSkill03_InsertController"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "TargetEntity",
+                  "variableName": "Arlan_00_PassiveSkill03Success"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Modifier_Arlan_00_P03_Ratio",
+                  "value": {
+                    "operator": "Variables[0] (0.25) || RETURN",
+                    "displayLines": "0.25",
+                    "constants": [],
+                    "variables": [
+                      0.25
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "_Arlan_00_PassiveSkill03_InsertController",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "CurrentHP",
+                        "compareType": "<=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": "Owner of this Modifier",
+                          "scope": "TargetEntity",
+                          "variableName": "Arlan_00_PassiveSkill03Success",
+                          "value": 1
+                        },
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": "Owner of this Modifier"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Arlan_ReviveCount",
+                          "value": 0
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Arlan_PassiveAbility03_Insert",
+                          "priorityTag": "AvatarReviveSelf",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        },
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": "Owner of this Modifier",
+                          "scope": "TargetEntity",
+                          "variableName": "_Arlan_00_PassiveSkill03_InsertController",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "stackData": [],
+          "latentQueue": [],
+          "description": "When struck with a killing blow, instead of becoming downed, the character immediately restores HP equal to <span class=\"descriptionNumberColor\">Modifier_Arlan_00_P03_Ratio</span> of Max HP.",
+          "type": "Buff",
+          "statusName": "Turn the Tables"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "M_Arlan_Passive",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": "Owner of this Modifier",
+                    "value1": "CurrentHP%",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable with HP%",
+                      "target": "Owner of this Modifier",
+                      "variableName": "_HPRatio"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Owner of this Modifier",
+                      "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
+                          "displayLines": "(0.72 * (1 - _HPRatio))",
+                          "constants": [
+                            1
+                          ],
+                          "variables": [
+                            0.72,
+                            "_HPRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": "Owner of this Modifier",
+                    "value1": "CurrentHP%",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": "Owner of this Modifier",
+                      "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable with HP%",
+                      "target": "Owner of this Modifier",
+                      "variableName": "_HPRatio"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Owner of this Modifier",
+                      "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.72) || Constants[0] (1) || Variables[1] (_HPRatio) || SUB || MUL || RETURN",
+                          "displayLines": "(0.72 * (1 - _HPRatio))",
+                          "constants": [
+                            1
+                          ],
+                          "variables": [
+                            0.72,
+                            "_HPRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Arlan_Eidolon1",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "CurrentHP%",
+                        "compareType": "<=",
+                        "value2": 0.5
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (0.1) || RETURN",
+                        "displayLines": "0.1",
+                        "constants": [],
+                        "variables": [
+                          0.1
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Arlan_Eidolon6",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 6
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": "Caster",
+                        "value1": "CurrentHP%",
+                        "compareType": "<=",
+                        "value2": 0.5
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (0.2) || RETURN",
+                        "displayLines": "0.2",
+                        "constants": [],
+                        "variables": [
+                          0.2
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "Arlan_Arlan_Ability03_Part02": {
+      "fileName": "Arlan_Arlan_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Dispel Debuffs",
+              "target": "Caster",
+              "dispelCount": 1,
+              "dispelOrder": "LastAdded"
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (3.2) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "(3.2 * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                3.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              {
+                "name": "Compare: Variable",
+                "target": "Caster",
+                "value1": "CurrentHP%",
+                "compareType": "<=",
+                "value2": 0.5
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (3.2) || Constants[0] (0.3) || MUL || RETURN",
+                  "displayLines": "(3.2 * 0.3)",
+                  "constants": [
+                    0.3
+                  ],
+                  "variables": [
+                    3.2
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.3)",
+                  "constants": [
+                    0.3
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (1.6) || Constants[0] (0.3) || MUL || RETURN",
+                  "displayLines": "(1.6 * 0.3)",
+                  "constants": [
+                    0.3
+                  ],
+                  "variables": [
+                    1.6
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.3)",
+                  "constants": [
+                    0.3
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (3.2) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "(3.2 * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                3.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              {
+                "name": "Compare: Variable",
+                "target": "Caster",
+                "value1": "CurrentHP%",
+                "compareType": "<=",
+                "value2": 0.5
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (3.2) || Constants[0] (0.1) || MUL || RETURN",
+                  "displayLines": "(3.2 * 0.1)",
+                  "constants": [
+                    0.1
+                  ],
+                  "variables": [
+                    3.2
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.1)",
+                  "constants": [
+                    0.1
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (1.6) || Constants[0] (0.1) || MUL || RETURN",
+                  "displayLines": "(1.6 * 0.1)",
+                  "constants": [
+                    0.1
+                  ],
+                  "variables": [
+                    1.6
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.1) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.1)",
+                  "constants": [
+                    0.1
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (3.2) || Constants[0] (0.6) || MUL || RETURN",
+              "displayLines": "(3.2 * 0.6)",
+              "constants": [
+                0.6
+              ],
+              "variables": [
+                3.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 0.6)",
+              "constants": [
+                0.6
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "60%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              {
+                "name": "Compare: Variable",
+                "target": "Caster",
+                "value1": "CurrentHP%",
+                "compareType": "<=",
+                "value2": 0.5
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (3.2) || Constants[0] (0.6) || MUL || RETURN",
+                  "displayLines": "(3.2 * 0.6)",
+                  "constants": [
+                    0.6
+                  ],
+                  "variables": [
+                    3.2
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.6)",
+                  "constants": [
+                    0.6
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Blast (Adjacent)",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (1.6) || Constants[0] (0.6) || MUL || RETURN",
+                  "displayLines": "(1.6 * 0.6)",
+                  "constants": [
+                    0.6
+                  ],
+                  "variables": [
+                    1.6
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (Blast Toughness Value) || Constants[0] (0.6) || MUL || RETURN",
+                  "displayLines": "(Blast Toughness Value * 0.6)",
+                  "constants": [
+                    0.6
+                  ],
+                  "variables": [
+                    "Blast Toughness Value"
+                  ]
+                },
+                "Tags": null
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Skip Death Handling",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Ability03_Part01": {
+      "fileName": "Arlan_Arlan_Ability03_Part01",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        20,
+        0,
+        20
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Arlan_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Ability03_EnterReady": {
+      "fileName": "Arlan_Arlan_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": []
+    },
+    "Arlan_Arlan_Ability02_Part02": {
+      "fileName": "Arlan_Arlan_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Consume",
+          "consumeFrom": "MaxHP",
+          "target": "Caster",
+          "consumePercent": {
+            "operator": "Variables[0] (0.15) || RETURN",
+            "displayLines": "0.15",
+            "constants": [],
+            "variables": [
+              0.15
+            ]
+          },
+          "consumeFloor": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Dispel Debuffs",
+              "target": "Caster",
+              "dispelCount": 1,
+              "dispelOrder": "LastAdded"
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (2.4) || Constants[0] (1) || MUL || RETURN",
+              "displayLines": "(2.4 * 1)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                2.4
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 1)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Ability02_Part01": {
+      "fileName": "Arlan_Arlan_Ability02_Part01",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Arlan_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Ability01_Part02": {
+      "fileName": "Arlan_Arlan_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (1) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "(1 * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] (1) || Constants[0] (0.7) || MUL || RETURN",
+              "displayLines": "(1 * 0.7)",
+              "constants": [
+                0.7
+              ],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.7) || MUL || RETURN",
+              "displayLines": "(ST Toughness Value * 0.7)",
+              "constants": [
+                0.7
+              ],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "70%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "Arlan_Arlan_Ability01_Part01": {
+      "fileName": "Arlan_Arlan_Ability01_Part01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Arlan_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "Arlan_Modifiers": {
+      "fileName": "Arlan_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Pain and Anger"
+        }
+      ],
+      "references": []
+    }
+  }
+}
