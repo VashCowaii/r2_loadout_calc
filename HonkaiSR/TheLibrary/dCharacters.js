@@ -1,4 +1,594 @@
 let characters = {
+  "March 7th - Preservation": {
+    "internalID": 1001,
+    "name": "March 7th - Preservation",
+    "path": "Preservation",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 511.56,
+      "DEFBase": 573.3,
+      "HPBase": 1058.4,
+      "SPDBase": 101,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "100101",
+        "name": "Memory of You",
+        "rank": 1,
+        "desc": "Every time March 7th's Ultimate Freezes a target, she regenerates 6 Energy.",
+        "icon": "icon/skill/1001_rank1.png",
+        "paramsEido": [
+          6
+        ]
+      },
+      {
+        "id": "100102",
+        "name": "Memory of It",
+        "rank": 2,
+        "desc": "Upon entering battle, grants a Shield equal to 24% of March 7th's DEF plus 320 to the ally with the lowest HP percentage, lasting for 3 turn(s).",
+        "icon": "icon/skill/1001_rank2.png",
+        "paramsEido": [
+          0.24,
+          3,
+          320
+        ]
+      },
+      {
+        "id": "100103",
+        "name": "Memory of Everything",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1001_ultimate.png"
+      },
+      {
+        "id": "100104",
+        "name": "Never Forfeit Again",
+        "rank": 4,
+        "desc": "The Talent's Counter effect can be triggered 1 more time in each turn. The DMG dealt by Counter increases by an amount that is equal to 30% of March 7th's DEF.",
+        "icon": "icon/skill/1001_rank4.png",
+        "paramsEido": [
+          0.3
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+          }
+        }
+      },
+      {
+        "id": "100105",
+        "name": "Never Forget Again",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1001_skill.png"
+      },
+      {
+        "id": "100106",
+        "name": "Just Like This, Always...",
+        "rank": 6,
+        "desc": "Allies under the protection of the Shield granted by the Skill restore HP equal to 4% of their Max HP plus 106 at the beginning of each turn.",
+        "icon": "icon/skill/1001_rank6.png",
+        "paramsEido": [
+          0.04,
+          106
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Frigid Cold Arrow": {
+          "variant1": {
+            "skillID": 100101,
+            "trigger": "Skill01",
+            "name": "Frigid Cold Arrow",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to one enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Mar_7th_00_Skill01_Phase01",
+              "Avatar_Mar_7th_00_Skill01_Phase02",
+              "Avatar_Mar_7th_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "The Power of Cuteness": {
+          "variant1": {
+            "skillID": 100102,
+            "trigger": "Skill02",
+            "name": "The Power of Cuteness",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Provides a single ally with a Shield that can absorb DMG equal to #1[i]% of March 7th's DEF plus #4[i] for #2[i] turn(s).\\nIf the ally's current HP percentage is #3[i]% or higher, greatly increases the chance of enemies attacking that ally.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.513,
+                3,
+                0.3,
+                631.75,
+                5
+              ],
+              "8": [
+                0.532,
+                3,
+                0.3,
+                674.5,
+                5
+              ],
+              "9": [
+                0.551,
+                3,
+                0.3,
+                717.25,
+                5
+              ],
+              "10": [
+                0.57,
+                3,
+                0.3,
+                760,
+                5
+              ],
+              "11": [
+                0.589,
+                3,
+                0.3,
+                802.75,
+                5
+              ],
+              "12": [
+                0.608,
+                3,
+                0.3,
+                845.5,
+                5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_00_Skill02_Phase01",
+              "Avatar_Mar_7th_00_Skill02_Phase02",
+              "Avatar_Mar_7th_00_Skill02_Camera_Self",
+              "Avatar_Mar_7th_00_Skill02_Camera_Other"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Glacial Cascade": {
+          "variant1": {
+            "skillID": 100103,
+            "trigger": "Skill03",
+            "name": "Glacial Cascade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to all enemies. Hit enemies have a #2[i]% base chance to be Frozen for #3[i] turn(s).\\nWhile Frozen, enemies cannot take action and will receive Ice Additional DMG equal to #4[i]% of March 7th's ATK at the beginning of each turn.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.275,
+                0.5,
+                1,
+                0.4875
+              ],
+              "8": [
+                1.35,
+                0.5,
+                1,
+                0.525
+              ],
+              "9": [
+                1.425,
+                0.5,
+                1,
+                0.5625
+              ],
+              "10": [
+                1.5,
+                0.5,
+                1,
+                0.6
+              ],
+              "11": [
+                1.56,
+                0.5,
+                1,
+                0.63
+              ],
+              "12": [
+                1.62,
+                0.5,
+                1,
+                0.66
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_00_Skill03_Phase01",
+              "Avatar_Mar_7th_00_Skill03_Phase02",
+              "Avatar_Mar_7th_00_Skill03_Camera",
+              "Avatar_Mar_7th_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Girl Power": {
+          "variant1": {
+            "skillID": 100104,
+            "trigger": "SkillP01",
+            "name": "Girl Power",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "After a Shielded ally is attacked by an enemy, March 7th immediately Counters, dealing Ice DMG equal to #1[i]% of her ATK. This effect can be triggered #2[i] time(s) each turn.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.8125,
+                2
+              ],
+              "8": [
+                0.875,
+                2
+              ],
+              "9": [
+                0.9375,
+                2
+              ],
+              "10": [
+                1,
+                2
+              ],
+              "11": [
+                1.05,
+                2
+              ],
+              "12": [
+                1.1,
+                2
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_00_PassiveSkill01",
+              "Avatar_Mar_7th_00_PassiveSkill01_InsertAbility",
+              "Avatar_Mar_7th_00_PassiveSkill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Freezing Beauty": {
+          "variant1": {
+            "skillID": 100107,
+            "trigger": "SkillMaze",
+            "name": "Freezing Beauty",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, there is a #1[i]% base chance to Freeze a random enemy for #2[i] turn(s).\\nWhile Frozen, the enemy cannot take action and will take Ice Additional DMG equal to #3[i]% of March 7th's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                0.5
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Mar_7th_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1001_basic_atk.png",
+        "skillRef": {
+          "skillName": "Frigid Cold Arrow",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1001_skill.png",
+        "skillRef": {
+          "skillName": "The Power of Cuteness",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1001_ultimate.png",
+        "skillRef": {
+          "skillName": "Glacial Cascade",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1001_talent.png",
+        "skillRef": {
+          "skillName": "Girl Power",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1001_technique.png",
+        "skillRef": {
+          "skillName": "Freezing Beauty",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point06": {
+        "name": "Purify",
+        "icon": "icon/skill/1001_skilltree1.png",
+        "desc": "When using Skill, dispels 1 debuff from one designated ally.",
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": []
+          }
+        }
+      },
+      "Point07": {
+        "name": "Reinforce",
+        "icon": "icon/skill/1001_skilltree2.png",
+        "desc": "The duration of the Shield generated from Skill is extended for #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Ice Spell",
+        "icon": "icon/skill/1001_skilltree3.png",
+        "desc": "When using Ultimate, increases the base chance to Freeze enemies by #1[i]%.",
+        "params": [
+          0.15
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.15
+            ]
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1001.png",
+    "preview": "image/character_preview/1001.png",
+    "portrait": "image/character_portrait/1001.png",
+    "bannerOffsets": [
+      31,
+      29,
+      0.59,
+      31,
+      29,
+      0.59,
+      31,
+      29,
+      0.59
+    ],
+    "isBuffed": false
+  },
   "Kafka": {
     "internalID": 1005,
     "name": "Kafka",

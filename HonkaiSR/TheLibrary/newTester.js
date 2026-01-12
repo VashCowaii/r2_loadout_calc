@@ -2779,6 +2779,33 @@ const megaParsingFuckery = {
             
         </div>`;
     },
+    "Compare: Resistance Chance"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "resistanceList",
+            "target",
+            "compareValue",
+            "compareType",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Resistance Chance");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.compareType ?? "[=?]"} ${parseRef.compareValue}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            </div>` : ""}
+            ${parseRef.resistanceList != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Flag List:</div>&nbsp;
+                ${parseRef.resistanceList}
+            </div>` : ""}
+
+        </div>`;
+    },
     "Stage ID"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2796,13 +2823,11 @@ const megaParsingFuckery = {
         </div>
         <div class="modifierDetailsBox">
             ${parseRef.target != undefined ? `<div class="actionDetailBody2">
-                <div class="rotationConditionOperatorHeaderInline">Progress:</div>&nbsp;
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
                 ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
             </div>` : ""}
 
         </div>`;
-
-        
     },
     "Enemy ID"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -5652,6 +5677,8 @@ const megaParsingFuckery = {
             "name",
             "target",
             "value",
+            "formula",
+            "valuePercent",
 
             // "modifier",
             // "stackLimit",
@@ -5678,10 +5705,20 @@ const megaParsingFuckery = {
         </div>
         
         <div class="modifierDetailsBox">
+            ${parseRef.formula != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Formula:</div>&nbsp;
+                ${parseRef.formula}
+            </div>` : ""}
             ${parseRef.value != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Shield Value:</div>&nbsp;
                 ${parseRef.value.displayLines ?? parseRef.value}
             </div>` : ""}
+            ${parseRef.valuePercent != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Shield Value Percent:</div>&nbsp;
+                ${parseRef.valuePercent.displayLines ?? parseRef.valuePercent}
+            </div>` : ""}
+
+            
         </div>
         `;
     },
