@@ -4993,9 +4993,6 @@ const megaParsingFuckery = {
             "silentAdd",
             "success",
             "failed",
-            // "value1",
-            // "compareType",
-            // "value2"
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Events/Bonuses");
 
