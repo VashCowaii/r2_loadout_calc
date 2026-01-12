@@ -407,11 +407,11 @@ const configAbility = {
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT",
           "value": {
-            "operator": "Variables[0] (0.3) || RETURN",
-            "displayLines": "0.3",
+            "operator": "Variables[0] (0.8) || RETURN",
+            "displayLines": "0.8",
             "constants": [],
             "variables": [
-              0.3
+              0.8
             ]
           }
         }

@@ -486,15 +486,6 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
-      "Point06": {
-        "name": "Torture",
-        "icon": "icon/skill/1005_skilltree1.png",
-        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
-        "params": [
-          0.75,
-          1
-        ]
-      },
       "Point07": {
         "name": "Plunder",
         "icon": "icon/skill/1005_skilltree2.png",
@@ -502,19 +493,6 @@ let characters = {
         "params": [
           5
         ]
-      },
-      "Point08": {
-        "name": "Thorns",
-        "icon": "icon/skill/1005_skilltree3.png",
-        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
-        "params": [
-          0.8
-        ],
-        "extraEffects": {
-          "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
-          }
-        }
       },
       "Point09": {
         "name": "ATK Boost",
@@ -585,6 +563,31 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
+      },
+      "Point06": {
+        "name": "Torture",
+        "icon": "icon/skill/1005_skilltree1.png",
+        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
+        "params": [
+          0.75,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Thorns",
+        "icon": "icon/skill/1005_skilltree3.png",
+        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.8
+            ]
+          }
+        }
       }
     },
     "hasSummon": false,
@@ -601,7 +604,641 @@ let characters = {
       1,
       -50,
       0.71
-    ]
+    ],
+    "isBuffed": true
+  },
+  "Silver Wolf": {
+    "internalID": 1006,
+    "name": "Silver Wolf",
+    "path": "Nihility",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 107,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "1100601",
+        "name": "Social Engineering",
+        "rank": 1,
+        "desc": "After using Ultimate to attack an enemy target, Silver Wolf regenerates 7 Energy for every debuff on the target. This effect can trigger up to 5 time(s) in each use of Ultimate.",
+        "icon": "icon/skill/1100_rank1.png",
+        "paramsEido": [
+          7,
+          5
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "1100602",
+        "name": "Zombie Network",
+        "rank": 2,
+        "desc": "When an enemy target enters battle, increases their DMG taken by 20%. When an enemy target gets attacked by ally targets, Silver Wolf has a 100% base chance to implant 1 random \"Bug\" on the attacked enemy target.",
+        "icon": "icon/skill/1100_rank2.png",
+        "paramsEido": [
+          0.2,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "1100603",
+        "name": "Payload",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1100_skill.png"
+      },
+      {
+        "id": "1100604",
+        "name": "Bounce Attack",
+        "rank": 4,
+        "desc": "After using Ultimate to attack an enemy target, deals Quantum Additional DMG equal to 20% of Silver Wolf's ATK for every debuff on the target. This effect can trigger up to 5 time(s) per target during each use of Ultimate.",
+        "icon": "icon/skill/1100_rank4.png",
+        "paramsEido": [
+          0.2,
+          5
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "1100605",
+        "name": "Brute Force Attack",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1100_ultimate.png"
+      },
+      {
+        "id": "1100606",
+        "name": "Overlay Network",
+        "rank": 6,
+        "desc": "For every debuff the enemy target has, the DMG dealt by Silver Wolf to it increases by 20%, up to a max increase of 100%.",
+        "icon": "icon/skill/1100_rank6.png",
+        "paramsEido": [
+          0.2,
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "System Warning": {
+          "variant1": {
+            "skillID": 1100601,
+            "trigger": "Skill01",
+            "name": "System Warning",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Advanced_Silwolf_00_Skill01_Camera",
+              "Avatar_Advanced_Silwolf_00_Skill01_Phase01",
+              "Avatar_Advanced_Silwolf_00_Skill01_Phase02",
+              "Avatar_Advanced_Silwolf_00_PassiveSkill_RandomBug"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Allow Changes?": {
+          "variant1": {
+            "skillID": 1100602,
+            "trigger": "Skill02",
+            "name": "Allow Changes?",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "There is a #2[i]% base chance to add 1 Weakness of an on-field ally target's Type to one designated enemy target (prioritizing the implant of a Weakness that matches the first character in the team lineup). This also reduces the enemy target's RES to that Weakness Type by #4[i]% for #3[i] turn(s). If the enemy target already has that Type of Weakness, the RES reduction effect to that Type will not be triggered.\\nEach enemy target can only have 1 Weakness implanted by Silver Wolf. When Silver Wolf implants another Weakness to the target, only the most recent implanted Weakness will be retained.\\nIn addition, there is a #5[i]% base chance to further reduce the target's All-Type RES by #6[f1]% for #7[i] turn(s).\\nDeals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to this target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.5925,
+                1.05,
+                3,
+                0.2,
+                1,
+                0.120625004,
+                2
+              ],
+              "8": [
+                1.715,
+                1.1,
+                3,
+                0.2,
+                1,
+                0.12375,
+                2
+              ],
+              "9": [
+                1.8375,
+                1.15,
+                3,
+                0.2,
+                1,
+                0.126875,
+                2
+              ],
+              "10": [
+                1.96,
+                1.2,
+                3,
+                0.2,
+                1,
+                0.13,
+                2
+              ],
+              "11": [
+                2.058,
+                1.24,
+                3,
+                0.2,
+                1,
+                0.1325,
+                2
+              ],
+              "12": [
+                2.156,
+                1.28,
+                3,
+                0.2,
+                1,
+                0.135,
+                2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Silwolf_00_Skill02_Camera",
+              "Avatar_Advanced_Silwolf_00_Skill02_Phase01",
+              "Avatar_Advanced_Silwolf_00_Skill02_Phase02",
+              "Avatar_Advanced_Silwolf_00_Skill02_Success_Camera",
+              "Avatar_Advanced_Silwolf_00_Skill02_Failed_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "User Banned": {
+          "variant1": {
+            "skillID": 1100603,
+            "trigger": "Skill03",
+            "name": "User Banned",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Has a #2[i]% base chance to reduce the DEF of all enemies by #3[f1]% for #4[i] turn(s). At the same time, deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to all enemies.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3.23,
+                1.05,
+                0.41625,
+                3
+              ],
+              "8": [
+                3.42,
+                1.1,
+                0.4275,
+                3
+              ],
+              "9": [
+                3.61,
+                1.15,
+                0.43875,
+                3
+              ],
+              "10": [
+                3.8,
+                1.2,
+                0.45,
+                3
+              ],
+              "11": [
+                3.952,
+                1.24,
+                0.459,
+                3
+              ],
+              "12": [
+                4.104,
+                1.28,
+                0.468,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Silwolf_00_Skill03_Camera",
+              "Avatar_Advanced_Silwolf_00_Skill03_EnterReady",
+              "Avatar_Advanced_Silwolf_00_Skill03_Phase01",
+              "Avatar_Advanced_Silwolf_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Awaiting System Response...": {
+          "variant1": {
+            "skillID": 1100604,
+            "trigger": "SkillP01",
+            "name": "Awaiting System Response...",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Silver Wolf can create three types of \"Bugs\": Reduce ATK by #1[f1]%, reduce DEF by #2[f1]%, and reduce SPD by #3[f1]%.\\nAfter every attack launched by Silver Wolf, she has a #4[i]% base chance to implant 1 random \"Bug\" that lasts for #5[i] turn(s) in the attacked enemy target. \\nWhen the enemy target gets defeated, the Weakness Silver Wolf implanted on it will be transferred to another surviving enemy on the field that hasn't been implanted with Weakness by Silver Wolf, prioritizing targets at Elite-level and above.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.08125,
+                0.0975,
+                0.048750002,
+                0.85,
+                3
+              ],
+              "8": [
+                0.0875,
+                0.105,
+                0.052500002,
+                0.9,
+                3
+              ],
+              "9": [
+                0.09375,
+                0.1125,
+                0.05625,
+                0.95,
+                3
+              ],
+              "10": [
+                0.1,
+                0.12,
+                0.06,
+                1,
+                3
+              ],
+              "11": [
+                0.105,
+                0.126,
+                0.063,
+                1.04,
+                3
+              ],
+              "12": [
+                0.11,
+                0.132,
+                0.066,
+                1.08,
+                3
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Silwolf_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Force Quit Program": {
+          "variant1": {
+            "skillID": 1100607,
+            "trigger": "SkillMaze",
+            "name": "Force Quit Program",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering combat, deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to all enemies, and reduces Toughness of all enemies regardless of Weakness Types. Enemies with their Weakness Broken in this way will trigger the Quantum Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Advanced_Silwolf_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1006_basic_atk.png",
+        "skillRef": {
+          "skillName": "System Warning",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1006_skill.png",
+        "skillRef": {
+          "skillName": "Allow Changes?",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1006_ultimate.png",
+        "skillRef": {
+          "skillName": "User Banned",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1006_talent.png",
+        "skillRef": {
+          "skillName": "Awaiting System Response...",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1006_technique.png",
+        "skillRef": {
+          "skillName": "Force Quit Program",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Generate",
+        "icon": "icon/skill/1006_skilltree1.png",
+        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
+        "params": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              1,
+              1
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Inject",
+        "icon": "icon/skill/1006_skilltree2.png",
+        "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
+        "params": [
+          20,
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Side Note",
+        "icon": "icon/skill/1006_skilltree3.png",
+        "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
+        "params": [
+          0.1,
+          0.1,
+          0.5
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1006.png",
+    "preview": "image/character_preview/1006.png",
+    "portrait": "image/character_portrait/1006.png",
+    "bannerOffsets": [
+      -33,
+      33,
+      0.5,
+      -33,
+      33,
+      0.5,
+      -33,
+      33,
+      0.5
+    ],
+    "isBuffed": true
   },
   "Herta": {
     "internalID": 1013,
@@ -1040,7 +1677,10 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.35
+            ]
           }
         }
       },
@@ -1137,7 +1777,8 @@ let characters = {
       21.9,
       -66,
       0.6
-    ]
+    ],
+    "isBuffed": false
   },
   "Bronya": {
     "internalID": 1101,
@@ -1691,7 +2332,8 @@ let characters = {
       59,
       194,
       0.77
-    ]
+    ],
+    "isBuffed": false
   },
   "Seele": {
     "internalID": 1102,
@@ -2131,7 +2773,10 @@ let characters = {
         ],
         "extraEffects": {
           "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+            "params": [
+              0.2
+            ]
           }
         }
       },
@@ -2144,7 +2789,10 @@ let characters = {
         ],
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action."
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.2
+            ]
           }
         }
       },
@@ -2233,7 +2881,8 @@ let characters = {
       145.5,
       198.4,
       0.81
-    ]
+    ],
+    "isBuffed": false
   },
   "Serval": {
     "internalID": 1103,
@@ -2688,7 +3337,10 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.2
+            ]
           }
         }
       },
@@ -2794,7 +3446,8 @@ let characters = {
       -26,
       33,
       0.68
-    ]
+    ],
+    "isBuffed": false
   },
   "Natasha": {
     "internalID": 1105,
@@ -3238,7 +3891,10 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              1
+            ]
           }
         }
       },
@@ -3343,7 +3999,8 @@ let characters = {
       -11,
       -35,
       0.57
-    ]
+    ],
+    "isBuffed": false
   },
   "Tingyun": {
     "internalID": 1202,
@@ -3876,7 +4533,8 @@ let characters = {
       -19,
       -32,
       0.58
-    ]
+    ],
+    "isBuffed": false
   },
   "Huohuo": {
     "internalID": 1217,
@@ -4377,7 +5035,10 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.35
+            ]
           }
         }
       },
@@ -4474,7 +5135,8 @@ let characters = {
       29.3,
       11.9,
       0.66
-    ]
+    ],
+    "isBuffed": false
   },
   "Gallagher": {
     "internalID": 1301,
@@ -4958,7 +5620,8 @@ let characters = {
         "desc": "After using the Ultimate, immediately advances action for this unit by 100%.",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action."
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": []
           }
         }
       },
@@ -5052,7 +5715,8 @@ let characters = {
       -38,
       -6,
       0.455
-    ]
+    ],
+    "isBuffed": false
   },
   "Ruan Mei": {
     "internalID": 1303,
@@ -5624,7 +6288,8 @@ let characters = {
       -6.1,
       23,
       0.55
-    ]
+    ],
+    "isBuffed": false
   },
   "Sparkle": {
     "internalID": 1306,
@@ -6173,7 +6838,8 @@ let characters = {
       12,
       51,
       0.54
-    ]
+    ],
+    "isBuffed": false
   },
   "Black Swan": {
     "internalID": 1307,
@@ -6721,10 +7387,16 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.65
+            ]
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+            "params": [
+              0.65
+            ]
           }
         }
       },
@@ -6738,10 +7410,18 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.65,
+              3
+            ]
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+            "params": [
+              0.65,
+              3
+            ]
           }
         }
       },
@@ -6839,7 +7519,8 @@ let characters = {
       -4,
       -55,
       0.69
-    ]
+    ],
+    "isBuffed": false
   },
   "Tribbie": {
     "internalID": 1403,
@@ -7299,7 +7980,12 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.72,
+              3,
+              3
+            ]
           }
         }
       },
@@ -7405,7 +8091,8 @@ let characters = {
       113,
       26,
       0.64
-    ]
+    ],
+    "isBuffed": false
   },
   "Anaxa": {
     "internalID": 1405,
@@ -7932,7 +8619,8 @@ let characters = {
       0,
       12,
       0.63
-    ]
+    ],
+    "isBuffed": false
   },
   "Hysilens": {
     "internalID": 1410,
@@ -8536,7 +9224,8 @@ let characters = {
       175,
       12,
       0.63
-    ]
+    ],
+    "isBuffed": false
   },
   "Cerydra": {
     "internalID": 1412,
@@ -9119,7 +9808,8 @@ let characters = {
       57,
       -50,
       0.63
-    ]
+    ],
+    "isBuffed": false
   },
   "Trailblazer - Destruction": {
     "internalID": 8001,
@@ -9754,7 +10444,8 @@ let characters = {
       0,
       0,
       1
-    ]
+    ],
+    "isBuffed": false
   },
   "Trailblazer - Preservation": {
     "internalID": 8003,
@@ -10347,7 +11038,8 @@ let characters = {
       0,
       0,
       1
-    ]
+    ],
+    "isBuffed": false
   },
   "Saber": {
     "internalID": 1014,
@@ -11002,7 +11694,8 @@ let characters = {
       134,
       2,
       0.64
-    ]
+    ],
+    "isBuffed": false
   },
   "Archer": {
     "internalID": 1015,
@@ -11607,6 +12300,7 @@ let characters = {
       45,
       33,
       0.64
-    ]
+    ],
+    "isBuffed": false
   }
 }

@@ -117,6 +117,8 @@ const megaParsingFuckery = {
         let initialCounter = 1;
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
         let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
+        let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
+        
 
         let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
@@ -304,6 +306,14 @@ const megaParsingFuckery = {
                 </summary>
                 ${eventBodyStringOnAdd}
             </details>` : ""}
+            ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
+                </summary>
+                ${eventBodyStringOnAbort}
+            </details>` : ""}
+
+            
             ${referenceBodyString ? `<details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                     <div class="rotationConditionOperatorHeaderCondition">MODIFER LOG</div>
@@ -812,24 +822,93 @@ const megaParsingFuckery = {
 
             "element",
             "resReduction",
+            "prefWeakness",
+            "maxImplant",
+            "returnWeaknessVar",
+            "noNewWeaknesses",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Implant Weaknesses");
         // initialCounter++;
-        return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
-        </div>
-        <div class="modifierDetailsBox">
-            ${parseRef.element != undefined ? `<div class="actionDetailBody2">
-                <div class="rotationConditionOperatorHeaderInline">Element:</div>&nbsp;
-                ${parseRef.element}
-            </div>` : ""}
-            ${parseRef.resReduction != undefined ? `<div class="actionDetailBody2">
-                <div class="rotationConditionOperatorHeaderInline">RES Reduction:</div>&nbsp;
-                ${parseRef.resReduction.displayLines ?? parseRef.resReduction}
-            </div>` : ""}
-        </div>
+
+
+
+
+
+        let parseString = "";
+        // let refString = "";
+        const hasParse = parseRef.noNewWeaknesses?.length;
+        // const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.noNewWeaknesses,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+        // const conditionObject = parseRef.conditions;
+        // const conditionName = conditionObject?.name;
+
+        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        // if (!returnString) {
+        //     console.log(conditionObject)
+        //     throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)
+        // }
+
+
+        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
+
+        // rotationsSectionRowHolder
+        // rotationConditionOperatorBox
+
+
+        // <details class="rotationsPermaConditionsExpand" open="">
+        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
+        // </details>
+
+        // if (!hasParse && !hasRef) {return "";}
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </summary>
+
+            <div class="modifierDetailsBox">
+                ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Element:</div>&nbsp;
+                    ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+                </div>` : ""}
+                ${parseRef.element != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Element:</div>&nbsp;
+                    ${parseRef.element}
+                </div>` : ""}
+                ${parseRef.resReduction != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">RES Reduction:</div>&nbsp;
+                    ${parseRef.resReduction.displayLines ?? parseRef.resReduction}
+                </div>` : ""}
+                ${parseRef.maxImplant != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Max Implant Count:</div>&nbsp;
+                    ${parseRef.maxImplant.displayLines ?? parseRef.maxImplant}
+                </div>` : ""}
+                ${parseRef.prefWeakness != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Element:</div>&nbsp;
+                    ${parseRef.prefWeakness}
+                </div>` : ""}
+                ${parseRef.returnWeaknessVar != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Return Variables:</div>&nbsp;
+                    ${parseRef.returnWeaknessVar}
+                </div>` : ""}
+
+            </div>
+
+            <div class="rotationConditionOperatorBoxMain">
+                ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionELSE">NO NEW WEAKNESSES</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString}
+                </div>` : ""}
+            </div>
+        </details>
         `;
+        
     },
     "Allow Queued Actions(Ult?)"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -1201,7 +1280,7 @@ const megaParsingFuckery = {
         // if (!finalAdjustment) {throw new Error(`Unknown function key in Define Modifier Variable: ${parseRef.function}`)}
 
         // initialCounter++;
-        return `<div class="actionDetailBody2">
+        return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">Override Modifier Name:</div>&nbsp;
             ${parseRef.modifierName ?? ""} to ${parseRef.modifierNameUpdate ?? ""}${parseRef.target ? ` from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
@@ -2485,6 +2564,56 @@ const megaParsingFuckery = {
             
         </div>`;
     },
+    "Sort by Monster Rank"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            // "state",
+            // "defenders",
+            "byHighest",
+            "maxRank",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Monster Rank");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.byHighest != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">By Highest:</div>&nbsp;
+                ${parseRef.byHighest}
+            </div>` : ""}
+            ${parseRef.maxRank != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Highest Sorted Rank:</div>&nbsp;
+                ${parseRef.maxRank}
+            </div>` : ""}
+        </div>`;
+    },
+    "Sort by Life-State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            "state",
+            // "defenders",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Life-State");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.state != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Match First:</div>&nbsp;
+                ${parseRef.state}
+            </div>` : ""}
+        </div>`;
+    },
     "Sort by Matching Weakness"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2710,13 +2839,14 @@ const megaParsingFuckery = {
             "name",
             "conditionList",
             "target",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trace Activated");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.conditionList} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+            ${parseRef.invertCondition ? "NOT" : ""}${parseRef.conditionList} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
     "Is a Crit" (parseRef,initialCounter){
@@ -3948,6 +4078,7 @@ const megaParsingFuckery = {
             "name",
             "target",
             "living",
+            "invertCondition",
             
             // "healPercent",
             // "formula",
@@ -3961,7 +4092,7 @@ const megaParsingFuckery = {
         
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Target is Unselectable:</div>&nbsp;
-            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.living ? "(Living)" : ""}
+            ${parseRef.invertCondition ? "NOT " : ""}${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.living ? "(Living)" : ""}
         </div>
         `;
     },

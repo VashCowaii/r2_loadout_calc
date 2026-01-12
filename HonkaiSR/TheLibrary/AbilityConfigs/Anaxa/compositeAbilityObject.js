@@ -2482,6 +2482,7 @@ const compositeAbilityObject = {
         0,
         0
       ],
+      "length": 2,
       "parse": [
         {
           "name": "CharacterFunctions",
