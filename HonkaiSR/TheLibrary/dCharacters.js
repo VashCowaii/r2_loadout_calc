@@ -13705,6 +13705,638 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "March 7th - The Hunt": {
+    "internalID": 1224,
+    "name": "March 7th - The Hunt",
+    "path": "The Hunt",
+    "element": "Imaginary",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 564.48,
+      "DEFBase": 441,
+      "HPBase": 1058.4,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "122401",
+        "name": "My Sword Stirs Starlight",
+        "rank": 1,
+        "desc": "When Shifu is on the field, increases March 7th's SPD by 10%.",
+        "icon": "icon/skill/1224_rank1.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "122402",
+        "name": "Blade Dances on Waves' Fight",
+        "rank": 2,
+        "desc": "After \"Shifu\" uses Basic ATK or Skill to attack an enemy target, March 7th immediately launches a Follow-Up ATK and deals Imaginary DMG equal to 60% of March 7th's ATK to the primary target of this attack. Additionally, triggers the corresponding effect based on \"Shifu\"'s Path and then gains 1 point(s) of Charge. If there is no primary target available to attack, then she attacks a single random enemy instead. This effect can only trigger once per turn.",
+        "icon": "icon/skill/1224_rank2.png",
+        "paramsEido": [
+          0.6,
+          5,
+          1,
+          15
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "122403",
+        "name": "Sharp Wit in Martial Might",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1224_skill.png"
+      },
+      {
+        "id": "122404",
+        "name": "Being Fabulous Never Frights",
+        "rank": 4,
+        "desc": "At the start of the turn, regenerates 5 Energy.",
+        "icon": "icon/skill/1224_rank4.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "122405",
+        "name": "Sword Delights, Sugar Blights",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1224_ultimate.png"
+      },
+      {
+        "id": "122406",
+        "name": "Me, the Best Girl in Sight",
+        "rank": 6,
+        "desc": "After using Ultimate, increases the CRIT DMG dealt by the next Enhanced Basic ATK by 50%.",
+        "icon": "icon/skill/1224_rank6.png",
+        "paramsEido": [
+          0.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "My Sword Zaps Demons": {
+          "variant1": {
+            "skillID": 122401,
+            "trigger": "Skill01",
+            "name": "My Sword Zaps Demons",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of March 7th's ATK to one designated enemy target and gains #2[i] point(s) of Charge.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1,
+                1
+              ],
+              "7": [
+                1.1,
+                1
+              ],
+              "8": [
+                1.2,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_Skill01_Phase01",
+              "Avatar_Mar_7th_10_Skill01_Phase02",
+              "Avatar_Mar_7th_10_Skill01_Camera",
+              "Avatar_Mar_7th_10_Rank02_Insert_SelectTarget",
+              "Avatar_Mar_7th_10_Rank02_Insert_Phase01",
+              "Avatar_Mar_7th_10_Rank02_Insert_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Brows Be Smitten, Heart Be Bitten": {
+          "variant1": {
+            "skillID": 122408,
+            "trigger": "Skill11",
+            "name": "Brows Be Smitten, Heart Be Bitten",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Initially, deals #4[i] hits, each causing Imaginary DMG equal to #1[i]% of March 7th's ATK to one designated enemy target. When dealing the final hit, there is a #2[i]% fixed chance to deal 1 additional hit of DMG, up to a max of #3[i] additional hit(s). Energy regenerated from using Enhanced Basic ATK does not increase with the number of hits.\\nEnhanced Basic ATK cannot recover Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.8,
+                0.6,
+                3,
+                3
+              ],
+              "7": [
+                0.88,
+                0.6,
+                3,
+                3
+              ],
+              "8": [
+                0.96,
+                0.6,
+                3,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_Skill11_Phase01",
+              "Avatar_Mar_7th_10_Skill11_Phase02",
+              "Avatar_Mar_7th_10_Skill11_Camera",
+              "Avatar_Mar_7th_10_Skill11_Camera_Alt"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Master, It's Tea Time!": {
+          "variant1": {
+            "skillID": 122402,
+            "trigger": "Skill02",
+            "name": "Master, It's Tea Time!",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Designates a single ally (excluding this unit) as \"Shifu\" and increases \"Shifu\"'s SPD by #1[f1]%. Only the most recent target of March 7th's Skill is considered as \"Shifu.\"\\n\\n\\nWhenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if \"Shifu\" with the specified Path is present on the field:\\n\\nErudition, Destruction, The Hunt, Remembrance: Deals Additional DMG (DMG Type based on \"Shifu\"'s Combat Type) equal to #2[i]% of March 7th's ATK.\\n\\nHarmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.085,
+                0.1625,
+                1
+              ],
+              "8": [
+                0.09,
+                0.175,
+                1
+              ],
+              "9": [
+                0.095,
+                0.1875,
+                1
+              ],
+              "10": [
+                0.1,
+                0.2,
+                1
+              ],
+              "11": [
+                0.104,
+                0.21,
+                1
+              ],
+              "12": [
+                0.108,
+                0.22,
+                1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_Skill02_Phase01",
+              "Avatar_Mar_7th_10_Skill02_Phase02",
+              "Avatar_Mar_7th_10_Skill02_Camera",
+              "Avatar_Mar_7th_10_BPExtraTurn",
+              "Avatar_Mar_7th_10_Bonus_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "March 7th, the Apex Heroine": {
+          "variant1": {
+            "skillID": 122403,
+            "trigger": "Skill03",
+            "name": "March 7th, the Apex Heroine",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of March 7th's ATK to one designated enemy target.\\nIncreases the initial Hits Per Action of the next Enhanced Basic ATK by #2[i] hit(s) and increase the fixed chance of additionally dealing DMG by #3[i]%.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.04,
+                2,
+                0.2
+              ],
+              "8": [
+                2.16,
+                2,
+                0.2
+              ],
+              "9": [
+                2.28,
+                2,
+                0.2
+              ],
+              "10": [
+                2.4,
+                2,
+                0.2
+              ],
+              "11": [
+                2.496,
+                2,
+                0.2
+              ],
+              "12": [
+                2.592,
+                2,
+                0.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_Skill03_EnterReady",
+              "Avatar_Mar_7th_10_Skill03_Phase01",
+              "Avatar_Mar_7th_10_Skill03_Phase02",
+              "Avatar_Mar_7th_10_Skill03_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Master, I've Ascended!": {
+          "variant1": {
+            "skillID": 122404,
+            "trigger": "SkillP01",
+            "name": "Master, I've Ascended!",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After Shifu uses an attack or Ultimate, March 7th gains up to 1 point of Charge each time.\\nUpon reaching #1[i] or more points of Charge, March 7th immediately takes action and increases the DMG she deals by #2[i]%. Her Basic ATK gets Enhanced, and her Skill cannot be used. After using Enhanced Basic ATK, consumes #1[i] point(s) of Charge. Charge is capped at #3[i] points.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                7,
+                0.65,
+                10
+              ],
+              "8": [
+                7,
+                0.7,
+                10
+              ],
+              "9": [
+                7,
+                0.75,
+                10
+              ],
+              "10": [
+                7,
+                0.8,
+                10
+              ],
+              "11": [
+                7,
+                0.84,
+                10
+              ],
+              "12": [
+                7,
+                0.88,
+                10
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_PassiveSkill01",
+              "Avatar_Mar_7th_10_Camera_Insert",
+              "Avatar_Mar_7th_10_Ready_Special",
+              "Avatar_Mar_7th_10_Ready_Special_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Feast in One Go": {
+          "variant1": {
+            "skillID": 122407,
+            "trigger": "SkillMaze",
+            "name": "Feast in One Go",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "If March 7th is on the team, she gains 1 point of Charge at the start of the next battle whenever a teammate uses Technique, up to a max of #1[i] point(s).\\nAfter using Technique, March 7th regenerates #2[i] Energy when the next battle starts.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                30
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Mar_7th_10_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1224_basic_atk.png",
+        "skillRef": {
+          "skillName": "My Sword Zaps Demons",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1224_skill.png",
+        "skillRef": {
+          "skillName": "Master, It's Tea Time!",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1224_ultimate.png",
+        "skillRef": {
+          "skillName": "March 7th, the Apex Heroine",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1224_talent.png",
+        "skillRef": {
+          "skillName": "Master, I've Ascended!",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1224_technique.png",
+        "skillRef": {
+          "skillName": "Feast in One Go",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Swan Soar",
+        "icon": "icon/skill/1224_skilltree1.png",
+        "desc": "When the battle starts, March 7th's action advances by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.25
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Filigree",
+        "icon": "icon/skill/1224_skilltree2.png",
+        "desc": "March 7th can reduce the Toughness of enemies whose Weakness Type is the same as Shifu's Combat Type. When Breaking Weakness, triggers the Imaginary Weakness Break effect."
+      },
+      "Point08": {
+        "name": "Tide Tamer",
+        "icon": "icon/skill/1224_skilltree3.png",
+        "desc": "After using Enhanced Basic ATK, increases Shifu's CRIT DMG by #1[i]% and Break Effect by #2[i]%, lasting for #3[i] turn(s).",
+        "params": [
+          0.6,
+          0.36,
+          2
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1224.png",
+    "preview": "image/character_preview/1224.png",
+    "portrait": "image/character_portrait/1224.png",
+    "bannerOffsets": [
+      31,
+      29,
+      0.59,
+      31,
+      29,
+      0.59,
+      31,
+      29,
+      0.59
+    ],
+    "isBuffed": false
+  },
   "Gallagher": {
     "internalID": 1301,
     "name": "Gallagher",

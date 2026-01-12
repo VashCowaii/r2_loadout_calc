@@ -96,6 +96,10 @@ let allowedCharacterList = [
     "trimName": "Moze"
   },
   {
+    "fullName": "March 7th - The Hunt",
+    "trimName": "March7thTH"
+  },
+  {
     "fullName": "Gallagher",
     "trimName": "Gallagher"
   },

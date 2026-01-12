@@ -2876,6 +2876,29 @@ const megaParsingFuckery = {
             
         </div>`;
     },
+    "Compare: Animator Variable"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "paramName",
+            "paramType",
+            "compareValue",
+            "compareType",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Animator Variable");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.paramName} ${parseRef.compareType ?? "[=?]"} ${parseRef.compareValue}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.paramType != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Variable Type:</div>&nbsp;
+                ${parseRef.paramType}
+            </div>` : ""}
+
+        </div>`;
+    },
     "Compare: Resistance Chance"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
