@@ -1313,6 +1313,7 @@ const megaParsingFuckery = {
             "variableName",
             "target",
             "context",
+            "healProperty",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Healing");
         // initialCounter++;
@@ -1324,6 +1325,10 @@ const megaParsingFuckery = {
             ${parseRef.context != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
                 ${parseRef.context}
+            </div>` : ""}
+            ${parseRef.healProperty != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Healing Property:</div>&nbsp;
+                ${parseRef.healProperty}
             </div>` : ""}
         </div>`;
     },
