@@ -11441,6 +11441,556 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Xueyi": {
+    "internalID": 1214,
+    "name": "Xueyi",
+    "path": "Destruction",
+    "element": "Quantum",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 599.76,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4,
+      "SPDBase": 103,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "121401",
+        "name": "Dvesha, Inhibited",
+        "rank": 1,
+        "desc": "Increases the DMG dealt by the Talent's Follow-Up ATK by 40%.",
+        "icon": "icon/skill/1214_rank1.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "121402",
+        "name": "Klesha, Breached",
+        "rank": 2,
+        "desc": "Talent's Follow-Up ATK Reduces enemy Toughness regardless of Weakness types. At the same time, restores Xueyi's HP by an amount equal to 5% of her Max HP. When breaking Weakness, triggers the Quantum Break Effect.",
+        "icon": "icon/skill/1214_rank2.png",
+        "paramsEido": [
+          0.05
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "121403",
+        "name": "Duḥkha, Ceased",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1214_skill.png"
+      },
+      {
+        "id": "121404",
+        "name": "Karma, Severed",
+        "rank": 4,
+        "desc": "When using Ultimate, increases Break Effect by 40% for 2 turn(s).",
+        "icon": "icon/skill/1214_rank4.png",
+        "paramsEido": [
+          0.4,
+          2
+        ]
+      },
+      {
+        "id": "121405",
+        "name": "Deva, Enthralled",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1214_ultimate.png"
+      },
+      {
+        "id": "121406",
+        "name": "Saṃsāra, Mastered",
+        "rank": 6,
+        "desc": "The max stack limit for Karma decreases to 6.",
+        "icon": "icon/skill/1214_rank6.png",
+        "paramsEido": [
+          6
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Mara-Sunder Awl": {
+          "variant1": {
+            "skillID": 121401,
+            "trigger": "Skill01",
+            "name": "Mara-Sunder Awl",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals #1[i]% of Xueyi's ATK as Quantum DMG to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Xueyi_00_Skill01_Camera",
+              "Avatar_Xueyi_00_Skill01_Phase01",
+              "Avatar_Xueyi_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Iniquity Obliteration": {
+          "variant1": {
+            "skillID": 121402,
+            "trigger": "Skill02",
+            "name": "Iniquity Obliteration",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Xueyi's ATK to one designated enemy, and Quantum DMG equal to #2[i]% of Xueyi's ATK to any adjacent enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.1375,
+                0.56875
+              ],
+              "8": [
+                1.225,
+                0.6125
+              ],
+              "9": [
+                1.3125,
+                0.65625
+              ],
+              "10": [
+                1.4,
+                0.7
+              ],
+              "11": [
+                1.47,
+                0.735
+              ],
+              "12": [
+                1.54,
+                0.77
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Xueyi_00_Skill02_Camera",
+              "Avatar_Xueyi_00_Skill02_Phase01",
+              "Avatar_Xueyi_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Divine Castigation": {
+          "variant1": {
+            "skillID": 121403,
+            "trigger": "Skill03",
+            "name": "Divine Castigation",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Xueyi's ATK to one designated enemy target. This attack ignores Weakness Types and reduces the enemy's Toughness. When the enemy's Weakness is Broken, the Quantum Weakness Break effect is triggered.\\nIn this attack, the more Toughness is reduced, the higher the DMG will be dealt, up to a max of #3[f1]% increase.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 40,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.125,
+                0.1275,
+                0.51
+              ],
+              "8": [
+                2.25,
+                0.135,
+                0.54
+              ],
+              "9": [
+                2.375,
+                0.1425,
+                0.57
+              ],
+              "10": [
+                2.5,
+                0.15,
+                0.6
+              ],
+              "11": [
+                2.6,
+                0.156,
+                0.624
+              ],
+              "12": [
+                2.7,
+                0.162,
+                0.648
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Xueyi_00_Skill03_Camera",
+              "Avatar_Xueyi_00_Skill03_Phase01",
+              "Avatar_Xueyi_00_Skill03_Phase02",
+              "Avatar_Xueyi_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 120
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Karmic Perpetuation": {
+          "variant1": {
+            "skillID": 121404,
+            "trigger": "SkillP01",
+            "name": "Karmic Perpetuation",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "When Xueyi reduces enemy Toughness with attacks, \"Karma\" will be stacked. The more Toughness is reduced, the more stacks of \"Karma\" are added, up to #1[i] stacks.\\nWhen Xueyi's teammates reduce enemy Toughness with attacks, Xueyi gains #3[i] stack(s) of \"Karma.\"\\nWhen \"Karma\" reaches the max number of stacks, consumes all current \"Karma\" stacks and immediately launches Follow-Up ATK against an enemy target, dealing DMG for 3 times, with each time dealing Quantum DMG equal to #2[i]% of Xueyi's ATK to a single random enemy. This Follow-Up ATK will not add \"Karma\" stacks.",
+            "energyCost": null,
+            "energyRegen": 2,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                8,
+                0.73125,
+                1
+              ],
+              "8": [
+                8,
+                0.7875,
+                1
+              ],
+              "9": [
+                8,
+                0.84375,
+                1
+              ],
+              "10": [
+                8,
+                0.9,
+                1
+              ],
+              "11": [
+                8,
+                0.945,
+                1
+              ],
+              "12": [
+                8,
+                0.99,
+                1
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Xueyi_00_PassiveSkill01",
+              "Avatar_Xueyi_00_PassiveAtk_Insert01",
+              "Avatar_Xueyi_00_PassiveAtk_Insert02",
+              "Avatar_Xueyi_Passive1Atk_Ability_Camera",
+              "Avatar_Xueyi_Passive1Atk_Ability_Camera_01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Summary Execution": {
+          "variant1": {
+            "skillID": 121407,
+            "trigger": "SkillMaze",
+            "name": "Summary Execution",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering combat, deals #1[i]% of Xueyi's ATK as Quantum DMG to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Xueyi_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1214_basic_atk.png",
+        "skillRef": {
+          "skillName": "Mara-Sunder Awl",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1214_skill.png",
+        "skillRef": {
+          "skillName": "Iniquity Obliteration",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1214_ultimate.png",
+        "skillRef": {
+          "skillName": "Divine Castigation",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1214_talent.png",
+        "skillRef": {
+          "skillName": "Karmic Perpetuation",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1214_technique.png",
+        "skillRef": {
+          "skillName": "Summary Execution",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Clairvoyant Loom",
+        "icon": "icon/skill/1214_skilltree1.png",
+        "desc": "Increases DMG dealt by this unit by an amount equal to #1[i]% of Break Effect, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          1,
+          2.4
+        ]
+      },
+      "Point07": {
+        "name": "Intrepid Rollerbearings",
+        "icon": "icon/skill/1214_skilltree2.png",
+        "desc": "If the enemy target's Toughness is equal to or higher than #1[i]% of their Max Toughness, deals #2[i]% more DMG when using Ultimate.",
+        "params": [
+          0.5,
+          0.1
+        ]
+      },
+      "Point08": {
+        "name": "Perspicacious Mainframe",
+        "icon": "icon/skill/1214_skilltree3.png",
+        "desc": "Xueyi will keep a tally of the number of Karma stacks that exceed the max stack limit, up to #1[i] stacks in the tally. After Xueyi's Talent is triggered, she will gain a corresponding number of tallied Karma stacks.",
+        "params": [
+          6
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1214.png",
+    "preview": "image/character_preview/1214.png",
+    "portrait": "image/character_portrait/1214.png",
+    "bannerOffsets": [
+      29,
+      -58,
+      0.58,
+      29,
+      -58,
+      0.58,
+      29,
+      -58,
+      0.58
+    ],
+    "isBuffed": false
+  },
   "Hanya": {
     "internalID": 1215,
     "name": "Hanya",

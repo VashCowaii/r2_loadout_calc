@@ -1030,6 +1030,65 @@ const megaParsingFuckery = {
             </div>` : ""}
         </div>`;
     },
+    "Define Custom Variable with Toughness Reduction Est"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "targetDefender",
+            "dmgType",
+            "attackType",
+
+            "toughnessValue",
+            "reduceAllToughness",
+            "toughnessValueForcedPercent",
+            "variableName",
+            // "roundBy",
+            // "ignoreBelow",
+
+            // "target2",
+            // "modifier2",
+            // "variable2",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Toughness Reduction Est");
+        // initialCounter++;
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Toughness Red. Estimate:</div>&nbsp;
+            ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Attacker:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            </div>` : ""}
+            ${parseRef.targetDefender != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
+                ${Array.isArray(parseRef.targetDefender) ? megaParsingFuckery.makeConditionTargetBox(parseRef.targetDefender,initialCounter) : parseRef.targetDefender}
+            </div>` : ""}
+            ${parseRef.dmgType != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">DMG Type:</div>&nbsp;
+                ${parseRef.dmgType}
+            </div>` : ""}
+            ${parseRef.attackType != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Attack Type:</div>&nbsp;
+                ${parseRef.attackType}
+            </div>` : ""}
+            ${parseRef.toughnessValue != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Toughness Value:</div>&nbsp;
+                ${parseRef.toughnessValue.displayLines ?? parseRef.toughnessValue}
+            </div>` : ""}
+            ${parseRef.reduceAllToughness != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Reduce All Toughness:</div>&nbsp;
+                ${parseRef.reduceAllToughness}
+            </div>` : ""}
+            ${parseRef.toughnessValueForcedPercent != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Forced %:</div>&nbsp;
+                ${parseRef.toughnessValueForcedPercent.displayLines ?? parseRef.toughnessValueForcedPercent}
+            </div>` : ""}
+            
+        </div>
+        `;
+    },
     "Define Custom Variable with Clamp Configuration"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -5063,6 +5122,7 @@ const megaParsingFuckery = {
             "contextScope",
             "invertCondition",
             "includeInjectedActions",
+            "includeExoToughness",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Variable");
 
@@ -5079,6 +5139,10 @@ const megaParsingFuckery = {
             ${parseRef.includeInjectedActions != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Include Injected Actions:</div>&nbsp;
                 ${parseRef.includeInjectedActions}
+            </div>` : ""}
+            ${parseRef.includeExoToughness != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Include Exo-Toughness:</div>&nbsp;
+                ${parseRef.includeExoToughness}
             </div>` : ""}
         </div>`;
     },
