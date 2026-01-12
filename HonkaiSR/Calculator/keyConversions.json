@@ -31,6 +31,7 @@
     "BaseAggro": "AggroBase",
     "AggroAddedRatio": "Aggro%",
     "AggroDelta": "AggroFlat",
+    "AggroBase": "BaseAggroValue",
 
     "AllDamageReduce": "DamageReduction",
 

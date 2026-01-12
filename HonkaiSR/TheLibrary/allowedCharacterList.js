@@ -92,6 +92,10 @@ let allowedCharacterList = [
     "trimName": "Yukong"
   },
   {
+    "fullName": "Yanqing",
+    "trimName": "Yanqing"
+  },
+  {
     "fullName": "Guinaifen",
     "trimName": "Guinaifen"
   },

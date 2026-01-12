@@ -13108,6 +13108,592 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Yanqing": {
+    "internalID": 1209,
+    "name": "Yanqing",
+    "path": "The Hunt",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 412.33500000000004,
+      "HPBase": 892.5840000000001,
+      "SPDBase": 109,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "120901",
+        "name": "Svelte Saber",
+        "rank": 1,
+        "desc": "When Yanqing attacks a Frozen enemy, he deals Ice Additional DMG equal to 60% of his ATK.",
+        "icon": "icon/skill/1209_rank1.png",
+        "paramsEido": [
+          0.6
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "120902",
+        "name": "Supine Serenade",
+        "rank": 2,
+        "desc": "When Soulsteel Sync is active, Energy Regeneration Rate increases by an extra 10%.",
+        "icon": "icon/skill/1209_rank2.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "120903",
+        "name": "Sword Savant",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1209_skill.png"
+      },
+      {
+        "id": "120904",
+        "name": "Searing Sting",
+        "rank": 4,
+        "desc": "When the current HP percentage is 80% or higher, this unit's Ice RES PEN increases by 12%.",
+        "icon": "icon/skill/1209_rank4.png",
+        "paramsEido": [
+          0.8,
+          0.12
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "120905",
+        "name": "Surging Strife",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1209_ultimate.png"
+      },
+      {
+        "id": "120906",
+        "name": "Swift Swoop",
+        "rank": 6,
+        "desc": "If the buffs from \"Soulsteel Sync\" or the Ultimate are in effect when an enemy is defeated, the duration of these buffs is extended by 1 turn.",
+        "icon": "icon/skill/1209_rank6.png",
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Frost Thorn": {
+          "variant1": {
+            "skillID": 120901,
+            "trigger": "Skill01",
+            "name": "Frost Thorn",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Yanqing_00_Skill01_Camera",
+              "Avatar_Yanqing_00_Skill01_Phase01",
+              "Avatar_Yanqing_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Darting Ironthorn": {
+          "variant1": {
+            "skillID": 120902,
+            "trigger": "Skill02",
+            "name": "Darting Ironthorn",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to one designated enemy and activates \"Soulsteel Sync\" for 1 turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7875
+              ],
+              "8": [
+                1.925
+              ],
+              "9": [
+                2.0625
+              ],
+              "10": [
+                2.2
+              ],
+              "11": [
+                2.31
+              ],
+              "12": [
+                2.42
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yanqing_00_Skill02_Camera",
+              "Avatar_Yanqing_00_Skill02_Phase01",
+              "Avatar_Yanqing_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Amidst the Raining Bliss": {
+          "variant1": {
+            "skillID": 120903,
+            "trigger": "Skill03",
+            "name": "Amidst the Raining Bliss",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Increases Yanqing's CRIT Rate by #1[i]%. When \"Soulsteel Sync\" is active, increases Yanqing's CRIT DMG by an extra #2[i]%. This buff lasts for one turn. Afterwards, deals Ice DMG equal to #3[i]% of Yanqing's ATK to one designated enemy.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.6,
+                0.425,
+                2.975
+              ],
+              "8": [
+                0.6,
+                0.45,
+                3.15
+              ],
+              "9": [
+                0.6,
+                0.475,
+                3.325
+              ],
+              "10": [
+                0.6,
+                0.5,
+                3.5
+              ],
+              "11": [
+                0.6,
+                0.52,
+                3.64
+              ],
+              "12": [
+                0.6,
+                0.54,
+                3.78
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yanqing_00_Skill03_Camera",
+              "Avatar_Yanqing_00_Skill03_EnterReady",
+              "Avatar_Yanqing_00_Skill03_Phase01",
+              "Avatar_Yanqing_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "One With the Sword": {
+          "variant1": {
+            "skillID": 120904,
+            "trigger": "SkillP01",
+            "name": "One With the Sword",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "When \"Soulsteel Sync\" is active, Yanqing is less likely to be attacked by enemies. Yanqing's CRIT Rate increases by #1[f1]% and his CRIT DMG increases by #2[i]%. After Yanqing attacks an enemy, there is a #3[i]% fixed chance to launch Follow-Up ATK, dealing Ice DMG equal to #4[i]% of Yanqing's ATK to the enemy, which has a #6[i]% base chance to Freeze the enemy for 1 turn.\\nThe Frozen target cannot take action and receives Ice Additional DMG equal to #5[i]% of Yanqing's ATK at the beginning of each turn.\\nWhen Yanqing receives DMG, the \"Soulsteel Sync\" effect will disappear.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.18125,
+                0.24375,
+                0.5625,
+                0.40625,
+                0.40625,
+                0.65
+              ],
+              "8": [
+                0.1875,
+                0.2625,
+                0.575,
+                0.4375,
+                0.4375,
+                0.65
+              ],
+              "9": [
+                0.19375,
+                0.28125,
+                0.5875,
+                0.46875,
+                0.46875,
+                0.65
+              ],
+              "10": [
+                0.2,
+                0.3,
+                0.6,
+                0.5,
+                0.5,
+                0.65
+              ],
+              "11": [
+                0.205,
+                0.315,
+                0.61,
+                0.525,
+                0.525,
+                0.65
+              ],
+              "12": [
+                0.21,
+                0.33,
+                0.62,
+                0.55,
+                0.55,
+                0.65
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yanqing_00_PassiveSkill01_InsertAbility_Camera",
+              "Avatar_Yanqing_00_PassiveSkill01",
+              "Avatar_Yanqing_00_PassiveSkill01_InsertAbility",
+              "Avatar_Yanqing_00_PassiveSkill01_InsertAbilityPhase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              },
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "The One True Sword": {
+          "variant1": {
+            "skillID": 120907,
+            "trigger": "SkillMaze",
+            "name": "The One True Sword",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using his Technique, at the start of the next battle, Yanqing deals #2[i]% more DMG for #3[i] turn(s) to enemies whose current HP percentage is #1[i]% or higher.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.3,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Yanqing_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1209_basic_atk.png",
+        "skillRef": {
+          "skillName": "Frost Thorn",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1209_skill.png",
+        "skillRef": {
+          "skillName": "Darting Ironthorn",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1209_ultimate.png",
+        "skillRef": {
+          "skillName": "Amidst the Raining Bliss",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1209_talent.png",
+        "skillRef": {
+          "skillName": "One With the Sword",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1209_technique.png",
+        "skillRef": {
+          "skillName": "The One True Sword",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Icing on the Kick",
+        "icon": "icon/skill/1209_skilltree1.png",
+        "desc": "After Yanqing attacks, deals Ice Additional DMG equal to #1[i]% of Yanqing's ATK to enemies with Ice Weakness.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Frost Favors the Brave",
+        "icon": "icon/skill/1209_skilltree2.png",
+        "desc": "When Soulsteel Sync is active, Effect RES increases by #1[i]%.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Gentle Blade",
+        "icon": "icon/skill/1209_skilltree3.png",
+        "desc": "When a CRIT Hit is triggered, increases SPD by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.1,
+          2
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1209.png",
+    "preview": "image/character_preview/1209.png",
+    "portrait": "image/character_portrait/1209.png",
+    "bannerOffsets": [
+      -14,
+      -15,
+      0.58,
+      -14,
+      -15,
+      0.58,
+      -14,
+      -15,
+      0.58
+    ],
+    "isBuffed": false
+  },
   "Guinaifen": {
     "internalID": 1210,
     "name": "Guinaifen",
